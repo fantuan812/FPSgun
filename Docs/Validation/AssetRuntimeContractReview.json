@@ -1819,15 +1819,29 @@
         "id": "IMPORT_DERIVED_NAME_COLLISION",
         "scope": "Generic future stable IDs a.b versus a_b, not present in current 25 IDs",
         "action": "System author asked to preflight normalized folder/DA name uniqueness before side effects",
-        "status": "reported_to_author"
+        "status": "resolved_in_author_source_and_documentation"
       },
       {
         "id": "GLTF_INTERMEDIATE_BASIS",
         "observed": "Installed Blender 4.3.2 export_yup default=True, introspected read-only",
         "scope": "Manifest is native RH meters Z-up; GLB is Y-up intermediate. The numerical 327-check report is not an Unreal geometry import verification.",
         "action": "Document importer conversion and avoid duplicate reflection; keep basis_verified gate",
-        "status": "reported_to_author"
+        "status": "resolved_in_author_source_and_documentation"
       }
     ]
+  },
+  "runtime_matrix_cross_review": {
+    "source": "System author C++ result matrix; not independently rerun C++",
+    "rows": 675,
+    "accepted": 29,
+    "rejected": 646,
+    "expected_scope": "Isolated unoccupied parent-slot and child pairs using true visual mount contract, current requires/excludes empty",
+    "mismatches": [],
+    "artifact_sha256": "e518a5a00649052c692a6e93eda917562afa3aa8a8f423682a27279921b05e66"
+  },
+  "name_preflight_independent_check": {
+    "real_25_names_unique": true,
+    "a_dot_b_vs_a_underscore_b_rejected": true,
+    "unreal_executed": false
   }
 }
