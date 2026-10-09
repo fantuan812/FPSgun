@@ -15,6 +15,7 @@ from pathlib import Path
 import hashlib
 import json
 import unreal
+from AssemblyAssetNames import output_names
 
 
 PROPERTIES = ('id', 'weapon_root', 'tags', 'requires_all', 'excludes_any', 'slots',
@@ -33,6 +34,7 @@ def import_meshes(repo_root, destination, report_path):
     root, data, digest = read_source(repo_root)
     if not destination.startswith('/Game/') or '..' in destination:
         raise ValueError('Use a new /Game/ destination')
+    names = output_names(data['definitions'])  # Preflight the entire batch before any import.
     tools = unreal.AssetToolsHelpers.get_asset_tools()
     tasks, rows = [], []
     for part_id, definition in sorted(data['definitions'].items()):
@@ -41,12 +43,12 @@ def import_meshes(repo_root, destination, report_path):
         if not source.is_file():
             raise FileNotFoundError(source)
         # Isolated subfolder prevents material/texture name collisions across module imports.
-        folder = destination + '/Meshes/' + part_id.replace('.', '_')
+        folder = destination + '/Meshes/' + names[part_id]
         if unreal.EditorAssetLibrary.does_directory_exist(folder):
             raise RuntimeError('Refusing existing import folder: ' + folder)
         task = unreal.AssetImportTask()
         for key, value in {'filename':str(source), 'destination_path':folder,
-                           'destination_name':'SM_' + part_id.replace('.', '_'),
+                           'destination_name':'SM_' + names[part_id],
                            'automated':True, 'save':True, 'replace_existing':False}.items():
             task.set_editor_property(key, value)
         tasks.append(task)
@@ -71,6 +73,7 @@ def import_meshes(repo_root, destination, report_path):
 
 def author_definitions(repo_root, reviewed_report_path):
     root, data, digest = read_source(repo_root)
+    names = output_names(data['definitions'])  # Preflight before any asset creation.
     report = json.loads(Path(reviewed_report_path).read_text())
     if report['catalog_sha256'] != digest:
         raise RuntimeError('Import report belongs to another catalog version')
@@ -88,7 +91,7 @@ def author_definitions(repo_root, reviewed_report_path):
             raise RuntimeError('Mapping is not an actual StaticMesh: ' + part_id)
         definition['mesh'] = mesh.get_path_name()
     destination = report['destination'] + '/Definitions'
-    asset_names = ['DA_' + key.replace('.', '_') for key in sorted(rows)] + ['DA_AssemblyCatalog']
+    asset_names = ['DA_' + names[key] for key in sorted(rows)] + ['DA_AssemblyCatalog']
     for name in asset_names:
         if unreal.EditorAssetLibrary.does_asset_exist(destination + '/' + name):
             raise RuntimeError('Refusing existing data asset: ' + name)
@@ -102,7 +105,7 @@ def author_definitions(repo_root, reviewed_report_path):
     for src in transient.get_editor_property('definitions'):
         factory = unreal.DataAssetFactory()
         factory.set_editor_property('data_asset_class', unreal.FPSAssemblyDefinition)
-        name = 'DA_' + str(src.get_editor_property('id')).replace('.', '_')
+        name = 'DA_' + names[str(src.get_editor_property('id'))]
         asset = tools.create_asset(name, destination, unreal.FPSAssemblyDefinition, factory)
         if not asset:
             raise RuntimeError('Failed new asset; inspect partial import: ' + name)

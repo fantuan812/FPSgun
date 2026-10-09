@@ -4,7 +4,7 @@
 
 新仓 FPSgun 的独立 Unreal Runtime 插件，不依赖或复制 AetherLab 工程。25 份定义、7 个装配示例由资产作者的最终视觉清单生成；模型是实际 Blender/GLB 交付，JSON 是作者数据，**不是已导入 uasset**。
 
-**未编译、未运行规则测试、未运行 Unreal Engine、未完成 UE 集成。** 按执行顺序先完成代码与必要资产，再统一编译测试。本批只做源码阅读、JSON/脚本文本语法、接口与差异检查、上传字节核对；这些不表示行为验证。Blender限定的资产几何、GLB回读证据在资产目录，不推广为UE验收。
+**2026-10-09用户批准后，纯C++规则编译与测试已执行；UE/UHT/PIE、引擎编译/导入与项目集成仍未执行。** GCC 14.2.0、严格警告、优化构建及ASan/UBSan（关闭泄漏检测）的结果见Validation/PureCppValidation.json。此前静态检查报告是实现阶段快照，不替代这份后续验证记录。LSan首次运行失败并提示ptrace，未独立证实根因，泄漏检测未获通过结论。Blender限定的资产几何、GLB回读证据在资产目录，不推广为UE验收。
 
 ## 责任边界
 
@@ -54,6 +54,6 @@
 
 视觉来源为右手米制、+X前、+Z上；UE目标左手厘米制。采用Y反射S=diag(1,-1,1)：位置 `(100x,-100y,100z)`，旋转矩阵 `S R S`，四元数XYZW `(-x,y,-z,w)`。槽位是父网格原点到子网格入口原点的局部变换，逐父递推，非uniform/非正尺度拒绝。wisp侧灯有非identity源-90°X用例，不能只乘100。
 
-网格导入必须使用同一基变换；GLB importer行为需实际核验，不可把数值公式当导入证据。源网格入口枢轴均0，已给出实际坐标；未触碰角色或PR13的握持基线。
+视觉manifest为Blender Z-up，但GLB交换文件由export_yup=True写为glTF Y-up；不能把源manifest公式直接再套一次到已转换的GLB网格。网格导入必须使用一致的最终基变换；GLB importer行为需实际核验，不可把数值公式当导入证据。源网格入口枢轴均0，已给出实际坐标；未触碰角色或PR13的握持基线。
 
 当前 `mesh=null`、animation/effect映射为空是诚实占位：UE展示会报 `MissingMeshReference`，不会假装三把枪已在引擎显示。导入路线见 `AssemblyImport.zh-CN.md`。

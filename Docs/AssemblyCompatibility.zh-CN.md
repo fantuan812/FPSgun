@@ -1,6 +1,6 @@
-# 静态兼容契约与待运行夹具
+# 兼容契约与纯C++验证结果
 
-本表来自正式定义与视觉源数据的静态对照，**不是运行权威validator产生的通过报告**。最终接受仍由同一Core算法执行整树、依赖、占位、容量、锁定/绑定和版本检查；mount类型相等不等于整个请求合法。
+下方可读表来自正式定义与视觉源数据的静态对照。另有[权威Core实际执行的675项局部接边矩阵](Validation/AssemblyRulesResults.json)，覆盖25子定义×27父槽；每格只表示未占用孤立接边，不能替代整树/授权/依赖检查。最终接受仍由同一Core算法执行整树、依赖、占位、容量、锁定/绑定和版本检查；mount类型相等不等于整个请求合法。
 
 ## 平台与槽位
 
@@ -19,17 +19,17 @@
 
 不同父实例上同名token互不影响；例如两把枪各装一盏灯不会彼此占位。相同部件定义可有多个库存实例，实例ID不可复用。核心永远不能附到另一个核心的槽。跨平台弹匣即使外观相似也拒绝。
 
-## 七个已交付视觉组合及代码夹具
+## 七个已交付视觉组合及已执行Core夹具
 
 kite01.compact_optic、kite01.standard、mote03.compact_optic、mote03.standard、wisp02.compact_optic、wisp02.side_light、wisp02.standard。
 
-视觉组合有实际GLB与渲染；同名DTO和C++夹具已准备，**未运行Core/UE**。资产报告中的矩阵残差只属于Blender与GLB，不表示运行时API已通过。
+视觉组合有实际GLB与渲染；同名DTO对应的7个C++夹具已实际通过Core结构/可用性/属性求值。**UE仍未运行**。资产报告中的矩阵残差只属于Blender与GLB，不表示运行时API已通过。
 
 ## 其他规则的源码夹具
 
 `Tests/AssemblyRulesTests.cpp`覆盖错误core/弹匣、缺少micro转接、灯/握把空间冲突、批量替换、保留全部实例、旧revision、锁/绑定的子树保护、未知parent/slot、重复编辑、无效存档边、无环/深度/容量、必需槽的“可编辑但不可用”边界、非有限属性拒绝以及确定性统计。
 
-正式25定义目前 `requires_all/excludes_any` 为空，七个视觉组合依靠mount类型和占位约束。依赖/排除的通用能力在独立数据-only夹具中展示：为reflex增加requires_all=fixture.provider，缺提供者拒绝；仅给core增加对应标签就可满足；再为reflex增加excludes_any=platform.kite01则拒绝。不编造视觉资源尚不存在的配件限制，也不把未执行夹具当成功证据。
+正式25定义目前 `requires_all/excludes_any` 为空，七个视觉组合依靠mount类型和占位约束。依赖/排除的通用能力在独立数据-only夹具中展示：为reflex增加requires_all=fixture.provider，缺提供者拒绝；仅给core增加对应标签就可满足；再为reflex增加excludes_any=platform.kite01则拒绝。不编造视觉资源尚不存在的配件限制，这些独立Core夹具已运行通过，但不推导成UE/网络/存储通过。
 
 ## 未覆盖的产品功能
 

@@ -18,14 +18,14 @@
 
 ## 两阶段导入，先验证实际资源再写软引用
 
-在UE编辑器Python载入 `Scripts/ImportAssemblyAssets.py`。它提供两个函数，**本批均未执行**：
+在UE编辑器Python把本仓`Scripts`加入Python模块搜索路径，然后import `ImportAssemblyAssets`。它提供两个函数，**本批均未执行**：
 
 1. `import_meshes(repo_root, destination, report_path)`
-   - destination选新 `/Game/` 路径；逐模块隔离文件夹，拒绝覆盖已有文件夹
+   - destination选新 `/Game/` 路径；先检查全批合法ID及点/横线归一化后的名字碰撞，再逐模块隔离文件夹，拒绝覆盖已有文件夹
    - 从正式ID映射读取真实GLB，检查导入返回的真实UStaticMesh；只接受每模块恰好一个静态网格
    - 写出实际资产object path、来源SHA与catalog SHA报告，所有basis_verified初始false
    - 不猜Importer版本行为；失败可能留下已新建的部分资源，检查后处理，不掩盖成“完整成功”
-2. 在编辑器实查模型米→厘米尺度、入口枢轴、+X/+Z方向、Y反射以及wisp侧灯源-90°X目标姿态，比较正式父local变换组合与参考图。确认每模块实际导入基变换后才将该行basis_verified置true
+2. 在编辑器实查模型米→厘米尺度、入口枢轴、+X/+Z方向、Y反射以及wisp侧灯源-90°X目标姿态，比较正式父local变换组合与参考图。注意：视觉manifest是Blender右手Z-up，GLB本身经export_yup=True导出为glTF Y-up中间格式。必须先由实际Importer还原/转换该格式，再与manifest→UE目标坐标对照；不能直接把manifest的反射公式施加到原始GLB buffer，也不能重复反射。确认每模块实际导入基变换后才将该行basis_verified置true
 3. `author_definitions(repo_root, reviewed_report_path)`
    - 验证report与当前源文件/定义的SHA对应、25 ID完整且无重复、真实StaticMesh可读取、basis已确认
    - 通过同一native JSON parser/Compile创建临时定义，再生成并保存真实PrimaryDataAsset/Catalog，不在Python实现另一套兼容规则
@@ -44,7 +44,7 @@
 6. 已提交装备选择调用SelectPresentation(root)，公开只读快照随Actor复制；远端`UFPSAssemblyVisuals.BindPresentation`只看选中树。私有库存预览使用Bind(source, root)
 7. 把Visuals场景组件附到已存在、独立确认的角色握持入口。本批不更换角色，不假定骨轴，不制作完整第一/第三人称动作
 
-## 后续统一验证入口
+## 验证入口及当前结果
 
 仅在代码/资产实现完成、进入统一验证阶段后：
 
@@ -53,4 +53,4 @@
 - UE双客户端：远端公开树、owner私有字段、晚加入、同revision装备选择、异步加载完成先后、卸载销毁、缺网格、取消
 - UE实际资产：导入三平台、7组合与非identity侧灯，逐帧确认挂点/材质、碰撞/LOD与操作交互；资产目前没有制作成可用完整FPS射击流程
 
-当前这些代码测试/UE步骤都未运行。没有CI配置自动代替它们；无CI结果不能解释为“全部通过”。
+当前纯C++规则已通过直接GCC构建（CMake未安装，因此未跑CMake/CTest入口）；纯Python命名预检也通过。UE codec及本页所有UE步骤仍未运行。没有CI配置自动代替它们；无CI结果不能解释为“全部通过”。

@@ -1,0 +1,110 @@
+{
+  "scope": "Pure C++ assembly rules and pure Python asset-name preflight only; no Unreal execution",
+  "compiler": "g++ (Debian 14.2.0-19) 14.2.0",
+  "python": "3.12.14",
+  "working_directory": "repository root",
+  "cmake": "Not installed; equivalent direct GCC build used; CMake/CTest route not executed",
+  "executions": [
+    {
+      "name": "optimized_compile",
+      "command": [
+        "/usr/bin/g++",
+        "-std=c++17",
+        "-Wall",
+        "-Wextra",
+        "-Wpedantic",
+        "-Werror",
+        "-O2",
+        "-I",
+        "Plugins/FPSAssembly/Source/FPSAssembly/Public",
+        "Tests/AssemblyRulesTests.cpp",
+        "-o",
+        "/tmp/fpsgun-checks/assembly_rules"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "optimized_rules",
+      "command": [
+        "/tmp/fpsgun-checks/assembly_rules",
+        "--report",
+        "Docs/Validation/AssemblyRulesResults.json"
+      ],
+      "exit_code": 0,
+      "stdout": "Assembly rule fixtures passed: 816 rule assertions; 675 isolated edge cases; 7 presets\n",
+      "stderr": ""
+    },
+    {
+      "name": "address_undefined_compile",
+      "command": [
+        "/usr/bin/g++",
+        "-std=c++17",
+        "-Wall",
+        "-Wextra",
+        "-Wpedantic",
+        "-Werror",
+        "-O1",
+        "-g",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-I",
+        "Plugins/FPSAssembly/Source/FPSAssembly/Public",
+        "Tests/AssemblyRulesTests.cpp",
+        "-o",
+        "/tmp/fpsgun-checks/assembly_rules_sanitized"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "address_undefined_rules",
+      "command": [
+        "/tmp/fpsgun-checks/assembly_rules_sanitized"
+      ],
+      "exit_code": 0,
+      "stdout": "Assembly rule fixtures passed: 816 rule assertions; 675 isolated edge cases; 7 presets\n",
+      "stderr": ""
+    },
+    {
+      "name": "python_name_preflight",
+      "command": [
+        "python",
+        "Tests/AssetNamesTests.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "test_dash_underscore_collision (__main__.AssetNamesTest.test_dash_underscore_collision) ... ok\ntest_distinct_names (__main__.AssetNamesTest.test_distinct_names) ... ok\ntest_dot_underscore_collision (__main__.AssetNamesTest.test_dot_underscore_collision) ... ok\ntest_duplicate_id (__main__.AssetNamesTest.test_duplicate_id) ... ok\ntest_exact_length_limit (__main__.AssetNamesTest.test_exact_length_limit) ... ok\ntest_invalid_ids (__main__.AssetNamesTest.test_invalid_ids) ... ok\ntest_reserved_catalog_name (__main__.AssetNamesTest.test_reserved_catalog_name) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 0.000s\n\nOK\n"
+    }
+  ],
+  "sanitizer_environment": {
+    "ASAN_OPTIONS": "detect_leaks=0:halt_on_error=1",
+    "UBSAN_OPTIONS": "halt_on_error=1"
+  },
+  "initial_lsan_run": {
+    "exit_code": 1,
+    "stderr": "==2==LeakSanitizer has encountered a fatal error.\n==2==HINT: For debugging, try setting environment variable LSAN_OPTIONS=verbosity=1:log_threads=1\n==2==HINT: LeakSanitizer does not work under ptrace (strace, gdb, etc)\n",
+    "conclusion": "LSan run failed and hinted at ptrace; root cause not independently established. Leak detection remains unverified. ASan/UBSan later passed with leak detection disabled."
+  },
+  "source_sha256": {
+    "Tests/AssemblyRulesTests.cpp": "a4a75e9a980701c9ca3163a820b4d04043e56dce991a9f1e3c7ce6948b985270",
+    "Tests/AssemblyFixtures.h": "ee0de6b932d236c6acaef1086fabf9d20e84564d840569d9cf328690ac1da211",
+    "Plugins/FPSAssembly/Source/FPSAssembly/Public/Rules/AssemblyRules.h": "5a0b139fca87dab0e9e27c7a691d1b083c4a7056b07d8b655e46f3e1c9f9c07c",
+    "Scripts/AssemblyAssetNames.py": "2ae8f318ae771f2a5bf2af38e83d7c16a0707fc47ba09d3df81f8549c5b257f5",
+    "Scripts/ImportAssemblyAssets.py": "524fb89aa93337564a323ef33c9dcf724637a314b89b2510331229db11204302",
+    "Tests/AssetNamesTests.py": "cecb2228a000ddd56daa8d0e8b0ab0b4a03f4bd224e55d93a21163d0819f3382",
+    "Data/AssemblyCatalog.json": "bba475f8439a75055d0cbba57c5a3a3697360d5fb5cd62eb1ce25e71b04fae60"
+  },
+  "not_run": [
+    "UE/UHT/PIE/Cook",
+    "UE codec byte/JSON round-trip automation",
+    "database CommitCandidate persistence failure injection",
+    "network replication and late join",
+    "actual UE asset import and basis review",
+    "GAS/UI/full FPS gameplay",
+    "LeakSanitizer successful run"
+  ]
+}
