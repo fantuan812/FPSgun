@@ -1,0 +1,1021 @@
+{
+  "scope": "Static Blender source structure, authored transform composition, module/assembly GLB roundtrip, finite mesh-pair surface intersection queries",
+  "source_sha256": "ab91a003661b297aa48c325249561545f61d2adb8824f08543d1690a1d4f0a77",
+  "units": "meters RH +X forward +Z up",
+  "modules": [
+    {
+      "module_id": "wisp02.core",
+      "triangles": 4920,
+      "nonmanifold_edges": 0,
+      "uv_present": true,
+      "uv_in_0_1": true,
+      "identity_local_pivot": true,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "packed_images": true
+    },
+    {
+      "module_id": "wisp02.handguard.standard",
+      "triangles": 1366,
+      "nonmanifold_edges": 0,
+      "uv_present": true,
+      "uv_in_0_1": true,
+      "identity_local_pivot": true,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "packed_images": true
+    },
+    {
+      "module_id": "wisp02.stock.standard",
+      "triangles": 752,
+      "nonmanifold_edges": 0,
+      "uv_present": true,
+      "uv_in_0_1": true,
+      "identity_local_pivot": true,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "packed_images": true
+    },
+    {
+      "module_id": "wisp02.grip",
+      "triangles": 564,
+      "nonmanifold_edges": 0,
+      "uv_present": true,
+      "uv_in_0_1": true,
+      "identity_local_pivot": true,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "packed_images": true
+    },
+    {
+      "module_id": "wisp02.magazine",
+      "triangles": 752,
+      "nonmanifold_edges": 0,
+      "uv_present": true,
+      "uv_in_0_1": true,
+      "identity_local_pivot": true,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "packed_images": true
+    },
+    {
+      "module_id": "wisp02.muzzle",
+      "triangles": 568,
+      "nonmanifold_edges": 0,
+      "uv_present": true,
+      "uv_in_0_1": true,
+      "identity_local_pivot": true,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "packed_images": true
+    },
+    {
+      "module_id": "wisp02.charging_handle",
+      "triangles": 188,
+      "nonmanifold_edges": 0,
+      "uv_present": true,
+      "uv_in_0_1": true,
+      "identity_local_pivot": true,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "packed_images": true
+    },
+    {
+      "module_id": "wisp02.trigger",
+      "triangles": 236,
+      "nonmanifold_edges": 0,
+      "uv_present": true,
+      "uv_in_0_1": true,
+      "identity_local_pivot": true,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "packed_images": true
+    },
+    {
+      "module_id": "mote03.core",
+      "triangles": 4132,
+      "nonmanifold_edges": 0,
+      "uv_present": true,
+      "uv_in_0_1": true,
+      "identity_local_pivot": true,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "packed_images": true
+    },
+    {
+      "module_id": "mote03.slide",
+      "triangles": 3576,
+      "nonmanifold_edges": 0,
+      "uv_present": true,
+      "uv_in_0_1": true,
+      "identity_local_pivot": true,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "packed_images": true
+    },
+    {
+      "module_id": "mote03.magazine",
+      "triangles": 376,
+      "nonmanifold_edges": 0,
+      "uv_present": true,
+      "uv_in_0_1": true,
+      "identity_local_pivot": true,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "packed_images": true
+    },
+    {
+      "module_id": "mote03.trigger",
+      "triangles": 236,
+      "nonmanifold_edges": 0,
+      "uv_present": true,
+      "uv_in_0_1": true,
+      "identity_local_pivot": true,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "packed_images": true
+    },
+    {
+      "module_id": "shared.optic.reflex",
+      "triangles": 988,
+      "nonmanifold_edges": 0,
+      "uv_present": true,
+      "uv_in_0_1": true,
+      "identity_local_pivot": true,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "packed_images": true
+    },
+    {
+      "module_id": "shared.optic.micro",
+      "triangles": 564,
+      "nonmanifold_edges": 0,
+      "uv_present": true,
+      "uv_in_0_1": true,
+      "identity_local_pivot": true,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "packed_images": true
+    },
+    {
+      "module_id": "shared.adapter.universal_micro",
+      "triangles": 720,
+      "nonmanifold_edges": 0,
+      "uv_present": true,
+      "uv_in_0_1": true,
+      "identity_local_pivot": true,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "packed_images": true
+    },
+    {
+      "module_id": "shared.light.compact",
+      "triangles": 848,
+      "nonmanifold_edges": 0,
+      "uv_present": true,
+      "uv_in_0_1": true,
+      "identity_local_pivot": true,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "packed_images": true
+    },
+    {
+      "module_id": "shared.grip.stub",
+      "triangles": 376,
+      "nonmanifold_edges": 0,
+      "uv_present": true,
+      "uv_in_0_1": true,
+      "identity_local_pivot": true,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "packed_images": true
+    },
+    {
+      "module_id": "kite01.core",
+      "triangles": 8676,
+      "nonmanifold_edges": 0,
+      "uv_present": true,
+      "uv_in_0_1": true,
+      "identity_local_pivot": true,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "packed_images": true
+    },
+    {
+      "module_id": "kite01.handguard.standard",
+      "triangles": 4980,
+      "nonmanifold_edges": 0,
+      "uv_present": true,
+      "uv_in_0_1": true,
+      "identity_local_pivot": true,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "packed_images": true
+    },
+    {
+      "module_id": "kite01.stock.standard",
+      "triangles": 3104,
+      "nonmanifold_edges": 0,
+      "uv_present": true,
+      "uv_in_0_1": true,
+      "identity_local_pivot": true,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "packed_images": true
+    },
+    {
+      "module_id": "kite01.grip",
+      "triangles": 3588,
+      "nonmanifold_edges": 0,
+      "uv_present": true,
+      "uv_in_0_1": true,
+      "identity_local_pivot": true,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "packed_images": true
+    },
+    {
+      "module_id": "kite01.magazine",
+      "triangles": 2256,
+      "nonmanifold_edges": 0,
+      "uv_present": true,
+      "uv_in_0_1": true,
+      "identity_local_pivot": true,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "packed_images": true
+    },
+    {
+      "module_id": "kite01.muzzle",
+      "triangles": 2356,
+      "nonmanifold_edges": 0,
+      "uv_present": true,
+      "uv_in_0_1": true,
+      "identity_local_pivot": true,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "packed_images": true
+    },
+    {
+      "module_id": "kite01.charging_handle",
+      "triangles": 188,
+      "nonmanifold_edges": 0,
+      "uv_present": true,
+      "uv_in_0_1": true,
+      "identity_local_pivot": true,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "packed_images": true
+    },
+    {
+      "module_id": "kite01.trigger",
+      "triangles": 284,
+      "nonmanifold_edges": 0,
+      "uv_present": true,
+      "uv_in_0_1": true,
+      "identity_local_pivot": true,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "packed_images": true
+    }
+  ],
+  "presets": [
+    {
+      "id": "kite01.standard",
+      "nodes": 10,
+      "max_matrix_element_residual": 0,
+      "module_surface_intersections": [
+        {
+          "a": "root",
+          "b": "handguard.standard",
+          "triangle_pair_intersections": 10,
+          "direct_parent_child": true,
+          "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+        },
+        {
+          "a": "root",
+          "b": "grip",
+          "triangle_pair_intersections": 49,
+          "direct_parent_child": true,
+          "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+        },
+        {
+          "a": "root",
+          "b": "magazine",
+          "triangle_pair_intersections": 48,
+          "direct_parent_child": true,
+          "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+        },
+        {
+          "a": "root",
+          "b": "charging_handle",
+          "triangle_pair_intersections": 90,
+          "direct_parent_child": true,
+          "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+        },
+        {
+          "a": "handguard.standard",
+          "b": "muzzle",
+          "triangle_pair_intersections": 64,
+          "direct_parent_child": false,
+          "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+        },
+        {
+          "a": "handguard.standard",
+          "b": "grip_addon",
+          "triangle_pair_intersections": 8,
+          "direct_parent_child": true,
+          "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+        }
+      ]
+    },
+    {
+      "id": "kite01.compact_optic",
+      "nodes": 11,
+      "max_matrix_element_residual": 0,
+      "module_surface_intersections": [
+        {
+          "a": "root",
+          "b": "handguard.standard",
+          "triangle_pair_intersections": 10,
+          "direct_parent_child": true,
+          "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+        },
+        {
+          "a": "root",
+          "b": "grip",
+          "triangle_pair_intersections": 49,
+          "direct_parent_child": true,
+          "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+        },
+        {
+          "a": "root",
+          "b": "magazine",
+          "triangle_pair_intersections": 48,
+          "direct_parent_child": true,
+          "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+        },
+        {
+          "a": "root",
+          "b": "charging_handle",
+          "triangle_pair_intersections": 90,
+          "direct_parent_child": true,
+          "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+        },
+        {
+          "a": "handguard.standard",
+          "b": "muzzle",
+          "triangle_pair_intersections": 64,
+          "direct_parent_child": false,
+          "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+        },
+        {
+          "a": "handguard.standard",
+          "b": "light",
+          "triangle_pair_intersections": 8,
+          "direct_parent_child": true,
+          "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+        },
+        {
+          "a": "adapter",
+          "b": "sight",
+          "triangle_pair_intersections": 4,
+          "direct_parent_child": true,
+          "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+        }
+      ]
+    },
+    {
+      "id": "wisp02.standard",
+      "nodes": 10,
+      "max_matrix_element_residual": 0,
+      "module_surface_intersections": [
+        {
+          "a": "root",
+          "b": "handguard.standard",
+          "triangle_pair_intersections": 7,
+          "direct_parent_child": true,
+          "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+        },
+        {
+          "a": "root",
+          "b": "magazine",
+          "triangle_pair_intersections": 36,
+          "direct_parent_child": true,
+          "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+        },
+        {
+          "a": "root",
+          "b": "charging_handle",
+          "triangle_pair_intersections": 94,
+          "direct_parent_child": true,
+          "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+        },
+        {
+          "a": "handguard.standard",
+          "b": "muzzle",
+          "triangle_pair_intersections": 60,
+          "direct_parent_child": false,
+          "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+        }
+      ]
+    },
+    {
+      "id": "wisp02.compact_optic",
+      "nodes": 11,
+      "max_matrix_element_residual": 0,
+      "module_surface_intersections": [
+        {
+          "a": "root",
+          "b": "handguard.standard",
+          "triangle_pair_intersections": 7,
+          "direct_parent_child": true,
+          "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+        },
+        {
+          "a": "root",
+          "b": "magazine",
+          "triangle_pair_intersections": 36,
+          "direct_parent_child": true,
+          "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+        },
+        {
+          "a": "root",
+          "b": "charging_handle",
+          "triangle_pair_intersections": 94,
+          "direct_parent_child": true,
+          "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+        },
+        {
+          "a": "handguard.standard",
+          "b": "muzzle",
+          "triangle_pair_intersections": 60,
+          "direct_parent_child": false,
+          "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+        },
+        {
+          "a": "adapter",
+          "b": "sight",
+          "triangle_pair_intersections": 4,
+          "direct_parent_child": true,
+          "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+        }
+      ]
+    },
+    {
+      "id": "mote03.standard",
+      "nodes": 5,
+      "max_matrix_element_residual": 0,
+      "module_surface_intersections": [
+        {
+          "a": "root",
+          "b": "slide",
+          "triangle_pair_intersections": 36,
+          "direct_parent_child": true,
+          "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+        },
+        {
+          "a": "root",
+          "b": "magazine",
+          "triangle_pair_intersections": 65,
+          "direct_parent_child": true,
+          "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+        },
+        {
+          "a": "root",
+          "b": "trigger",
+          "triangle_pair_intersections": 34,
+          "direct_parent_child": true,
+          "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+        },
+        {
+          "a": "root",
+          "b": "light",
+          "triangle_pair_intersections": 16,
+          "direct_parent_child": true,
+          "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+        }
+      ]
+    },
+    {
+      "id": "mote03.compact_optic",
+      "nodes": 6,
+      "max_matrix_element_residual": 0,
+      "module_surface_intersections": [
+        {
+          "a": "root",
+          "b": "slide",
+          "triangle_pair_intersections": 36,
+          "direct_parent_child": true,
+          "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+        },
+        {
+          "a": "root",
+          "b": "magazine",
+          "triangle_pair_intersections": 65,
+          "direct_parent_child": true,
+          "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+        },
+        {
+          "a": "root",
+          "b": "trigger",
+          "triangle_pair_intersections": 34,
+          "direct_parent_child": true,
+          "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+        },
+        {
+          "a": "root",
+          "b": "light",
+          "triangle_pair_intersections": 16,
+          "direct_parent_child": true,
+          "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+        },
+        {
+          "a": "slide",
+          "b": "sight",
+          "triangle_pair_intersections": 48,
+          "direct_parent_child": true,
+          "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+        }
+      ]
+    },
+    {
+      "id": "wisp02.side_light",
+      "nodes": 11,
+      "max_matrix_element_residual": 4.126935237991347e-08,
+      "module_surface_intersections": [
+        {
+          "a": "root",
+          "b": "handguard.standard",
+          "triangle_pair_intersections": 7,
+          "direct_parent_child": true,
+          "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+        },
+        {
+          "a": "root",
+          "b": "magazine",
+          "triangle_pair_intersections": 36,
+          "direct_parent_child": true,
+          "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+        },
+        {
+          "a": "root",
+          "b": "charging_handle",
+          "triangle_pair_intersections": 94,
+          "direct_parent_child": true,
+          "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+        },
+        {
+          "a": "handguard.standard",
+          "b": "muzzle",
+          "triangle_pair_intersections": 60,
+          "direct_parent_child": false,
+          "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+        },
+        {
+          "a": "handguard.standard",
+          "b": "side_light",
+          "triangle_pair_intersections": 34,
+          "direct_parent_child": true,
+          "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+        }
+      ]
+    }
+  ],
+  "roundtrip": [
+    {
+      "file": "exports/kite01.compact_optic.glb",
+      "mesh_count": 11,
+      "bounds_m": [
+        0.9445000290870667,
+        0.08999999985098839,
+        0.40776513516902924
+      ],
+      "uv_all": true,
+      "finite_bounds": true
+    },
+    {
+      "file": "exports/kite01.standard.glb",
+      "mesh_count": 10,
+      "bounds_m": [
+        0.9445000290870667,
+        0.08999999985098839,
+        0.41905009746551514
+      ],
+      "uv_all": true,
+      "finite_bounds": true
+    },
+    {
+      "file": "exports/modules/kite01.charging_handle.glb",
+      "mesh_count": 1,
+      "bounds_m": [
+        0.03099999949336052,
+        0.02999999839812517,
+        0.012000000104308128
+      ],
+      "uv_all": true,
+      "finite_bounds": true
+    },
+    {
+      "file": "exports/modules/kite01.core.glb",
+      "mesh_count": 1,
+      "bounds_m": [
+        0.5099999904632568,
+        0.06600000709295273,
+        0.2264999896287918
+      ],
+      "uv_all": true,
+      "finite_bounds": true
+    },
+    {
+      "file": "exports/modules/kite01.grip.glb",
+      "mesh_count": 1,
+      "bounds_m": [
+        0.09726875275373459,
+        0.03799999877810478,
+        0.1518682325258851
+      ],
+      "uv_all": true,
+      "finite_bounds": true
+    },
+    {
+      "file": "exports/modules/kite01.handguard.standard.glb",
+      "mesh_count": 1,
+      "bounds_m": [
+        0.29380908608436584,
+        0.06399999558925629,
+        0.11400000005960464
+      ],
+      "uv_all": true,
+      "finite_bounds": true
+    },
+    {
+      "file": "exports/modules/kite01.magazine.glb",
+      "mesh_count": 1,
+      "bounds_m": [
+        0.10285940021276474,
+        0.05000000074505806,
+        0.17825285904109478
+      ],
+      "uv_all": true,
+      "finite_bounds": true
+    },
+    {
+      "file": "exports/modules/kite01.muzzle.glb",
+      "mesh_count": 1,
+      "bounds_m": [
+        0.10099998489022255,
+        0.04899999871850014,
+        0.04899999499320984
+      ],
+      "uv_all": true,
+      "finite_bounds": true
+    },
+    {
+      "file": "exports/modules/kite01.stock.standard.glb",
+      "mesh_count": 1,
+      "bounds_m": [
+        0.2735000140964985,
+        0.0560000017285347,
+        0.1882455050945282
+      ],
+      "uv_all": true,
+      "finite_bounds": true
+    },
+    {
+      "file": "exports/modules/kite01.trigger.glb",
+      "mesh_count": 1,
+      "bounds_m": [
+        0.019580453634262085,
+        0.00800000037997961,
+        0.03850495629012585
+      ],
+      "uv_all": true,
+      "finite_bounds": true
+    },
+    {
+      "file": "exports/modules/mote03.core.glb",
+      "mesh_count": 1,
+      "bounds_m": [
+        0.23938517272472382,
+        0.04600000008940697,
+        0.190785463899374
+      ],
+      "uv_all": true,
+      "finite_bounds": true
+    },
+    {
+      "file": "exports/modules/mote03.magazine.glb",
+      "mesh_count": 1,
+      "bounds_m": [
+        0.05694270133972168,
+        0.04399999976158142,
+        0.08317860588431358
+      ],
+      "uv_all": true,
+      "finite_bounds": true
+    },
+    {
+      "file": "exports/modules/mote03.slide.glb",
+      "mesh_count": 1,
+      "bounds_m": [
+        0.2493288591504097,
+        0.04800000041723251,
+        0.059487804770469666
+      ],
+      "uv_all": true,
+      "finite_bounds": true
+    },
+    {
+      "file": "exports/modules/mote03.trigger.glb",
+      "mesh_count": 1,
+      "bounds_m": [
+        0.014798004180192947,
+        0.007000000216066837,
+        0.029625496827065945
+      ],
+      "uv_all": true,
+      "finite_bounds": true
+    },
+    {
+      "file": "exports/modules/shared.adapter.universal_micro.glb",
+      "mesh_count": 1,
+      "bounds_m": [
+        0.057999998331069946,
+        0.038999997079372406,
+        0.02199999988079071
+      ],
+      "uv_all": true,
+      "finite_bounds": true
+    },
+    {
+      "file": "exports/modules/shared.grip.stub.glb",
+      "mesh_count": 1,
+      "bounds_m": [
+        0.05000000074505806,
+        0.028999999165534973,
+        0.05999999865889549
+      ],
+      "uv_all": true,
+      "finite_bounds": true
+    },
+    {
+      "file": "exports/modules/shared.light.compact.glb",
+      "mesh_count": 1,
+      "bounds_m": [
+        0.07599999941885471,
+        0.03099999949336052,
+        0.04000000283122063
+      ],
+      "uv_all": true,
+      "finite_bounds": true
+    },
+    {
+      "file": "exports/modules/shared.optic.micro.glb",
+      "mesh_count": 1,
+      "bounds_m": [
+        0.04100000113248825,
+        0.028999999165534973,
+        0.037512291222810745
+      ],
+      "uv_all": true,
+      "finite_bounds": true
+    },
+    {
+      "file": "exports/modules/shared.optic.reflex.glb",
+      "mesh_count": 1,
+      "bounds_m": [
+        0.07800000160932541,
+        0.041999999433755875,
+        0.07079724967479706
+      ],
+      "uv_all": true,
+      "finite_bounds": true
+    },
+    {
+      "file": "exports/modules/wisp02.charging_handle.glb",
+      "mesh_count": 1,
+      "bounds_m": [
+        0.03500000014901161,
+        0.024000000208616257,
+        0.010999999940395355
+      ],
+      "uv_all": true,
+      "finite_bounds": true
+    },
+    {
+      "file": "exports/modules/wisp02.core.glb",
+      "mesh_count": 1,
+      "bounds_m": [
+        0.2499999925494194,
+        0.06400000303983688,
+        0.21000000089406967
+      ],
+      "uv_all": true,
+      "finite_bounds": true
+    },
+    {
+      "file": "exports/modules/wisp02.grip.glb",
+      "mesh_count": 1,
+      "bounds_m": [
+        0.06636649370193481,
+        0.03799999877810478,
+        0.1268950141966343
+      ],
+      "uv_all": true,
+      "finite_bounds": true
+    },
+    {
+      "file": "exports/modules/wisp02.handguard.standard.glb",
+      "mesh_count": 1,
+      "bounds_m": [
+        0.18861472606658936,
+        0.054999999701976776,
+        0.10200000181794167
+      ],
+      "uv_all": true,
+      "finite_bounds": true
+    },
+    {
+      "file": "exports/modules/wisp02.magazine.glb",
+      "mesh_count": 1,
+      "bounds_m": [
+        0.05432660132646561,
+        0.03999999910593033,
+        0.20100000500679016
+      ],
+      "uv_all": true,
+      "finite_bounds": true
+    },
+    {
+      "file": "exports/modules/wisp02.muzzle.glb",
+      "mesh_count": 1,
+      "bounds_m": [
+        0.04149999842047691,
+        0.03799999877810478,
+        0.03799999877810478
+      ],
+      "uv_all": true,
+      "finite_bounds": true
+    },
+    {
+      "file": "exports/modules/wisp02.stock.standard.glb",
+      "mesh_count": 1,
+      "bounds_m": [
+        0.18111931532621384,
+        0.043000003322958946,
+        0.14582115784287453
+      ],
+      "uv_all": true,
+      "finite_bounds": true
+    },
+    {
+      "file": "exports/modules/wisp02.trigger.glb",
+      "mesh_count": 1,
+      "bounds_m": [
+        0.016742531210184097,
+        0.00800000037997961,
+        0.03160706162452698
+      ],
+      "uv_all": true,
+      "finite_bounds": true
+    },
+    {
+      "file": "exports/mote03.compact_optic.glb",
+      "mesh_count": 6,
+      "bounds_m": [
+        0.2493288666009903,
+        0.04800000041723251,
+        0.28693896532058716
+      ],
+      "uv_all": true,
+      "finite_bounds": true
+    },
+    {
+      "file": "exports/mote03.standard.glb",
+      "mesh_count": 5,
+      "bounds_m": [
+        0.2493288666009903,
+        0.04800000041723251,
+        0.25392667949199677
+      ],
+      "uv_all": true,
+      "finite_bounds": true
+    },
+    {
+      "file": "exports/wisp02.compact_optic.glb",
+      "mesh_count": 11,
+      "bounds_m": [
+        0.6714999973773956,
+        0.08000000193715096,
+        0.40751229226589203
+      ],
+      "uv_all": true,
+      "finite_bounds": true
+    },
+    {
+      "file": "exports/wisp02.side_light.glb",
+      "mesh_count": 11,
+      "bounds_m": [
+        0.6714999973773956,
+        0.09950001165270805,
+        0.41879725456237793
+      ],
+      "uv_all": true,
+      "finite_bounds": true
+    },
+    {
+      "file": "exports/wisp02.standard.glb",
+      "mesh_count": 10,
+      "bounds_m": [
+        0.6714999973773956,
+        0.08000000193715096,
+        0.41879725456237793
+      ],
+      "uv_all": true,
+      "finite_bounds": true
+    }
+  ],
+  "limitations": [
+    "Pairwise triangle intersection is not penetration depth, containment detection or continuous collision",
+    "Intentional visual mounting regions may overlap; not a zero-collision claim",
+    "No character skin, wrist limits, shoulder contact or animation sweep checked",
+    "No UE execution/import/uasset or gameplay runtime acceptance"
+  ],
+  "structural_scope_pass": true
+}

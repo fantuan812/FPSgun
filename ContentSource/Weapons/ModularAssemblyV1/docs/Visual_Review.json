@@ -1,0 +1,295 @@
+{
+  "status": "REVIEWED_LIMITED_STATIC_VIEWS",
+  "reviewed_images": [
+    "reference/ThreePlatform_Concept.png",
+    "renders/wisp02.compact_optic.png",
+    "renders/wisp02.side_light.png",
+    "renders/mote03.standard.png",
+    "renders/mote03.compact_optic.png",
+    "renders/ThreePlatform_Comparison.png"
+  ],
+  "findings": [
+    "WISP distinct compact silhouette, actual recessed cosmetic handguard pockets, slim front magazine",
+    "MOTE silhouette distinct from KITE/WISP; separate slide, magazine and trigger; optic top fully in final closeup",
+    "Side light rotates onto left-facing flank; coexistence with underside stub is visible",
+    "Surface aesthetic remains first-pass clean and angular, below reference wear/detail quality",
+    "Mount intersections are retained and enumerated in Blender report; no general penetration-free or animation claim",
+    "Six-combination comparison board inspected at original image size; framing corrected so complete silhouettes and labels remain separated. All three platforms shown at consistent scale."
+  ],
+  "coordinate_result": "All 7 authored assembly transform chains match saved scene after unhiding collections and evaluating dependency graph; max element residual 4.126935237991347e-08",
+  "surface_intersections": {
+    "kite01.standard": [
+      {
+        "a": "root",
+        "b": "handguard.standard",
+        "triangle_pair_intersections": 10,
+        "direct_parent_child": true,
+        "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+      },
+      {
+        "a": "root",
+        "b": "grip",
+        "triangle_pair_intersections": 49,
+        "direct_parent_child": true,
+        "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+      },
+      {
+        "a": "root",
+        "b": "magazine",
+        "triangle_pair_intersections": 48,
+        "direct_parent_child": true,
+        "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+      },
+      {
+        "a": "root",
+        "b": "charging_handle",
+        "triangle_pair_intersections": 90,
+        "direct_parent_child": true,
+        "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+      },
+      {
+        "a": "handguard.standard",
+        "b": "muzzle",
+        "triangle_pair_intersections": 64,
+        "direct_parent_child": false,
+        "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+      },
+      {
+        "a": "handguard.standard",
+        "b": "grip_addon",
+        "triangle_pair_intersections": 8,
+        "direct_parent_child": true,
+        "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+      }
+    ],
+    "kite01.compact_optic": [
+      {
+        "a": "root",
+        "b": "handguard.standard",
+        "triangle_pair_intersections": 10,
+        "direct_parent_child": true,
+        "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+      },
+      {
+        "a": "root",
+        "b": "grip",
+        "triangle_pair_intersections": 49,
+        "direct_parent_child": true,
+        "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+      },
+      {
+        "a": "root",
+        "b": "magazine",
+        "triangle_pair_intersections": 48,
+        "direct_parent_child": true,
+        "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+      },
+      {
+        "a": "root",
+        "b": "charging_handle",
+        "triangle_pair_intersections": 90,
+        "direct_parent_child": true,
+        "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+      },
+      {
+        "a": "handguard.standard",
+        "b": "muzzle",
+        "triangle_pair_intersections": 64,
+        "direct_parent_child": false,
+        "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+      },
+      {
+        "a": "handguard.standard",
+        "b": "light",
+        "triangle_pair_intersections": 8,
+        "direct_parent_child": true,
+        "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+      },
+      {
+        "a": "adapter",
+        "b": "sight",
+        "triangle_pair_intersections": 4,
+        "direct_parent_child": true,
+        "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+      }
+    ],
+    "wisp02.standard": [
+      {
+        "a": "root",
+        "b": "handguard.standard",
+        "triangle_pair_intersections": 7,
+        "direct_parent_child": true,
+        "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+      },
+      {
+        "a": "root",
+        "b": "magazine",
+        "triangle_pair_intersections": 36,
+        "direct_parent_child": true,
+        "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+      },
+      {
+        "a": "root",
+        "b": "charging_handle",
+        "triangle_pair_intersections": 94,
+        "direct_parent_child": true,
+        "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+      },
+      {
+        "a": "handguard.standard",
+        "b": "muzzle",
+        "triangle_pair_intersections": 60,
+        "direct_parent_child": false,
+        "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+      }
+    ],
+    "wisp02.compact_optic": [
+      {
+        "a": "root",
+        "b": "handguard.standard",
+        "triangle_pair_intersections": 7,
+        "direct_parent_child": true,
+        "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+      },
+      {
+        "a": "root",
+        "b": "magazine",
+        "triangle_pair_intersections": 36,
+        "direct_parent_child": true,
+        "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+      },
+      {
+        "a": "root",
+        "b": "charging_handle",
+        "triangle_pair_intersections": 94,
+        "direct_parent_child": true,
+        "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+      },
+      {
+        "a": "handguard.standard",
+        "b": "muzzle",
+        "triangle_pair_intersections": 60,
+        "direct_parent_child": false,
+        "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+      },
+      {
+        "a": "adapter",
+        "b": "sight",
+        "triangle_pair_intersections": 4,
+        "direct_parent_child": true,
+        "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+      }
+    ],
+    "mote03.standard": [
+      {
+        "a": "root",
+        "b": "slide",
+        "triangle_pair_intersections": 36,
+        "direct_parent_child": true,
+        "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+      },
+      {
+        "a": "root",
+        "b": "magazine",
+        "triangle_pair_intersections": 65,
+        "direct_parent_child": true,
+        "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+      },
+      {
+        "a": "root",
+        "b": "trigger",
+        "triangle_pair_intersections": 34,
+        "direct_parent_child": true,
+        "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+      },
+      {
+        "a": "root",
+        "b": "light",
+        "triangle_pair_intersections": 16,
+        "direct_parent_child": true,
+        "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+      }
+    ],
+    "mote03.compact_optic": [
+      {
+        "a": "root",
+        "b": "slide",
+        "triangle_pair_intersections": 36,
+        "direct_parent_child": true,
+        "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+      },
+      {
+        "a": "root",
+        "b": "magazine",
+        "triangle_pair_intersections": 65,
+        "direct_parent_child": true,
+        "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+      },
+      {
+        "a": "root",
+        "b": "trigger",
+        "triangle_pair_intersections": 34,
+        "direct_parent_child": true,
+        "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+      },
+      {
+        "a": "root",
+        "b": "light",
+        "triangle_pair_intersections": 16,
+        "direct_parent_child": true,
+        "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+      },
+      {
+        "a": "slide",
+        "b": "sight",
+        "triangle_pair_intersections": 48,
+        "direct_parent_child": true,
+        "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+      }
+    ],
+    "wisp02.side_light": [
+      {
+        "a": "root",
+        "b": "handguard.standard",
+        "triangle_pair_intersections": 7,
+        "direct_parent_child": true,
+        "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+      },
+      {
+        "a": "root",
+        "b": "magazine",
+        "triangle_pair_intersections": 36,
+        "direct_parent_child": true,
+        "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+      },
+      {
+        "a": "root",
+        "b": "charging_handle",
+        "triangle_pair_intersections": 94,
+        "direct_parent_child": true,
+        "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+      },
+      {
+        "a": "handguard.standard",
+        "b": "muzzle",
+        "triangle_pair_intersections": 60,
+        "direct_parent_child": false,
+        "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+      },
+      {
+        "a": "handguard.standard",
+        "b": "side_light",
+        "triangle_pair_intersections": 34,
+        "direct_parent_child": true,
+        "interpretation": "Visual surface intersection, inspect authored mounting/covered regions; not automatically a gameplay rejection"
+      }
+    ]
+  },
+  "not_checked": [
+    "Full surrounding camera orbit",
+    "Character grip/shoulder or fingers",
+    "Animated swept collision",
+    "Triangle containment without crossing",
+    "UE import/runtime"
+  ]
+}
