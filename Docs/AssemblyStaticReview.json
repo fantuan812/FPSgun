@@ -1,0 +1,20 @@
+{
+  "status": "STATIC_ONLY_NOT_COMPILED_NOT_RULE_TESTED_NOT_UE_RUN",
+  "python_ast": {
+    "Scripts/ImportAssemblyAssets.py": "AST parsed; not executed by this check",
+    "Scripts/GenerateAssemblyData.py": "AST parsed; not executed by this check",
+    "Scripts/GenerateFixtureHeader.py": "AST parsed; not executed by this check"
+  },
+  "json_syntax": "parsed",
+  "source_manifest_sha256": "181ce9a7577c38cd88ec478cdf953a347e542c178e9563b8afac0fe81c1161a2",
+  "definition_id_count": 25,
+  "preset_id_count": 7,
+  "id_sets_match": true,
+  "trailing_whitespace": "none",
+  "limitations": [
+    "No C++ compilation",
+    "No rule fixtures executed",
+    "No UHT/editor/import/replication/database/GAS behavior run"
+  ],
+  "phase": "Historical implementation-phase static snapshot; latest executed checks are in Validation/PureCppValidation.json"
+}

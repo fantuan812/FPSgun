@@ -1,0 +1,1847 @@
+{
+  "scope": "Independent readonly asset->formal catalog static contract and numerical transform review; does not invoke gameplay validator or UE",
+  "checks_count": 327,
+  "all_pass": true,
+  "slot_count": 27,
+  "max_RH_to_LH_matrix_error": 0,
+  "source_visual_manifest_sha256": "181ce9a7577c38cd88ec478cdf953a347e542c178e9563b8afac0fe81c1161a2",
+  "catalog_sha256": "bba475f8439a75055d0cbba57c5a3a3697360d5fb5cd62eb1ce25e71b04fae60",
+  "presets": [
+    {
+      "id": "kite01.standard",
+      "instances": 10,
+      "links": 9
+    },
+    {
+      "id": "kite01.compact_optic",
+      "instances": 11,
+      "links": 10
+    },
+    {
+      "id": "wisp02.standard",
+      "instances": 10,
+      "links": 9
+    },
+    {
+      "id": "wisp02.compact_optic",
+      "instances": 11,
+      "links": 10
+    },
+    {
+      "id": "mote03.standard",
+      "instances": 5,
+      "links": 4
+    },
+    {
+      "id": "mote03.compact_optic",
+      "instances": 6,
+      "links": 5
+    },
+    {
+      "id": "wisp02.side_light",
+      "instances": 11,
+      "links": 10
+    }
+  ],
+  "mesh_sources": [
+    {
+      "id": "wisp02.core",
+      "repo_path": "ContentSource/Weapons/ModularAssemblyV1/exports/modules/wisp02.core.glb",
+      "sha256": "0014979ab18ca061e298164b9a45144c40d360e597d23e989a104d01509f22cc"
+    },
+    {
+      "id": "wisp02.handguard.standard",
+      "repo_path": "ContentSource/Weapons/ModularAssemblyV1/exports/modules/wisp02.handguard.standard.glb",
+      "sha256": "549f614136a796741526e40cb2fa0d70847351b9f281722488d8d3f553d5e7b9"
+    },
+    {
+      "id": "wisp02.stock.standard",
+      "repo_path": "ContentSource/Weapons/ModularAssemblyV1/exports/modules/wisp02.stock.standard.glb",
+      "sha256": "86eea243daf63fd0c35fdbb63903d6a661ac1d2c11d49709eda3f72039dfed0c"
+    },
+    {
+      "id": "wisp02.grip",
+      "repo_path": "ContentSource/Weapons/ModularAssemblyV1/exports/modules/wisp02.grip.glb",
+      "sha256": "cb1ac7c9e5a3452d5d1ef984a6d9c1276ee0a8ece30cadb5487d7c8c736ac39f"
+    },
+    {
+      "id": "wisp02.magazine",
+      "repo_path": "ContentSource/Weapons/ModularAssemblyV1/exports/modules/wisp02.magazine.glb",
+      "sha256": "cbd32c1e71ce55307964bf15a5ba48f6d3396236314c8677f53fa5acc58ac4ec"
+    },
+    {
+      "id": "wisp02.muzzle",
+      "repo_path": "ContentSource/Weapons/ModularAssemblyV1/exports/modules/wisp02.muzzle.glb",
+      "sha256": "2e178865397bf5b5f57de51e53a0427bfc35d12228c4ed50e06408736ba8bacd"
+    },
+    {
+      "id": "wisp02.charging_handle",
+      "repo_path": "ContentSource/Weapons/ModularAssemblyV1/exports/modules/wisp02.charging_handle.glb",
+      "sha256": "d39780d79e1ecdfd898b22d0745729d97b30956fe1c811f9e70f905aa4f41461"
+    },
+    {
+      "id": "wisp02.trigger",
+      "repo_path": "ContentSource/Weapons/ModularAssemblyV1/exports/modules/wisp02.trigger.glb",
+      "sha256": "173b510bbe1d33fb31b6f34ebb135028a39893b47a621990c66e0cee3cf376c5"
+    },
+    {
+      "id": "mote03.core",
+      "repo_path": "ContentSource/Weapons/ModularAssemblyV1/exports/modules/mote03.core.glb",
+      "sha256": "e5d3a5acdfc3ccffd7a612cf66598cd335a328a09658d107cf53fd83cf136f1a"
+    },
+    {
+      "id": "mote03.slide",
+      "repo_path": "ContentSource/Weapons/ModularAssemblyV1/exports/modules/mote03.slide.glb",
+      "sha256": "35a0533545bb4af2e2ecc9e8ed8cb678d797ca318294eeb9c81674b1355222c9"
+    },
+    {
+      "id": "mote03.magazine",
+      "repo_path": "ContentSource/Weapons/ModularAssemblyV1/exports/modules/mote03.magazine.glb",
+      "sha256": "27c2d2849c7f7a3f59ae18b2cbd686e5d74b8a1e062548e692f918d46e4caefd"
+    },
+    {
+      "id": "mote03.trigger",
+      "repo_path": "ContentSource/Weapons/ModularAssemblyV1/exports/modules/mote03.trigger.glb",
+      "sha256": "a85f026430dcb78cad6a18f069d90665fb23a91779478d04a3c4df65a3ab7c1c"
+    },
+    {
+      "id": "shared.optic.reflex",
+      "repo_path": "ContentSource/Weapons/ModularAssemblyV1/exports/modules/shared.optic.reflex.glb",
+      "sha256": "c545f868f141635f9ce5d3ff707e45a8fd85ff518035d0e6ec8c5ef0bed04bb4"
+    },
+    {
+      "id": "shared.optic.micro",
+      "repo_path": "ContentSource/Weapons/ModularAssemblyV1/exports/modules/shared.optic.micro.glb",
+      "sha256": "40b6b669c50f7708de8f31f32a92e190a4b6d93bb563cdc7d3906c0215eb8f45"
+    },
+    {
+      "id": "shared.adapter.universal_micro",
+      "repo_path": "ContentSource/Weapons/ModularAssemblyV1/exports/modules/shared.adapter.universal_micro.glb",
+      "sha256": "733665455fb822bd7f39b8b6f3678f205d5325a8ae027c756498a66fd0f71582"
+    },
+    {
+      "id": "shared.light.compact",
+      "repo_path": "ContentSource/Weapons/ModularAssemblyV1/exports/modules/shared.light.compact.glb",
+      "sha256": "9c4f4b4d68945a118a481a0d8ac3b82eb53105256afdba2d2cd8465e7571cd7d"
+    },
+    {
+      "id": "shared.grip.stub",
+      "repo_path": "ContentSource/Weapons/ModularAssemblyV1/exports/modules/shared.grip.stub.glb",
+      "sha256": "6a7df236ebfb555ff67c63287b3a38fd25cfde16f366a0c5af2466913b20ea29"
+    },
+    {
+      "id": "kite01.core",
+      "repo_path": "ContentSource/Weapons/ModularAssemblyV1/exports/modules/kite01.core.glb",
+      "sha256": "073f3d58b3a705eccf9fbd9a28e123eab50430f23e5a38a0f03d9e490b1a0e9e"
+    },
+    {
+      "id": "kite01.handguard.standard",
+      "repo_path": "ContentSource/Weapons/ModularAssemblyV1/exports/modules/kite01.handguard.standard.glb",
+      "sha256": "e3f841a44be2c160d4a9568fb1dfe5152e7e30ac50b16308bb4879d560b92b64"
+    },
+    {
+      "id": "kite01.stock.standard",
+      "repo_path": "ContentSource/Weapons/ModularAssemblyV1/exports/modules/kite01.stock.standard.glb",
+      "sha256": "c0473052c3c78f24a6752a225856aa15e6e4deb78cc07a49d4c18448f97bbb6f"
+    },
+    {
+      "id": "kite01.grip",
+      "repo_path": "ContentSource/Weapons/ModularAssemblyV1/exports/modules/kite01.grip.glb",
+      "sha256": "f087df8fe0a90654a65641615db7190187dc09f00463c55132e733bee166c3a0"
+    },
+    {
+      "id": "kite01.magazine",
+      "repo_path": "ContentSource/Weapons/ModularAssemblyV1/exports/modules/kite01.magazine.glb",
+      "sha256": "37063724aca405861f142259ddf919415b9f5d60498788d21485166c58ad78bf"
+    },
+    {
+      "id": "kite01.muzzle",
+      "repo_path": "ContentSource/Weapons/ModularAssemblyV1/exports/modules/kite01.muzzle.glb",
+      "sha256": "01998ec130c8bc3e0cb5822c6a7a70bfbc83c50ca8064261f1e69c52d14adf65"
+    },
+    {
+      "id": "kite01.charging_handle",
+      "repo_path": "ContentSource/Weapons/ModularAssemblyV1/exports/modules/kite01.charging_handle.glb",
+      "sha256": "2469465868ae4401eadce2d9b15606fbfff2cbb6d03f3dd4bda6e859c027e955"
+    },
+    {
+      "id": "kite01.trigger",
+      "repo_path": "ContentSource/Weapons/ModularAssemblyV1/exports/modules/kite01.trigger.glb",
+      "sha256": "dfe5c06c19446bdb243afe4bfd212032be68bdea185d47b6d9951b933f38c505"
+    }
+  ],
+  "checks": [
+    {
+      "name": "exact_25_definition_id_set",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "source_manifest_sha256_exact",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.core:id",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.core:root",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.core:mesh_unimported",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.core:mount_tag",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.core:platform_tag",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.core:source_path",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.core:source_exists",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.core:slot_set",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.core:handguard.standard:accepts",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.core:handguard.standard:occupancy",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.core:handguard.standard:capacity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.core:handguard.standard:RH_to_LH_matrix",
+      "pass": true,
+      "detail": 0.0
+    },
+    {
+      "name": "wisp02.core:stock.standard:accepts",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.core:stock.standard:occupancy",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.core:stock.standard:capacity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.core:stock.standard:RH_to_LH_matrix",
+      "pass": true,
+      "detail": 0.0
+    },
+    {
+      "name": "wisp02.core:grip:accepts",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.core:grip:occupancy",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.core:grip:capacity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.core:grip:RH_to_LH_matrix",
+      "pass": true,
+      "detail": 0.0
+    },
+    {
+      "name": "wisp02.core:magazine:accepts",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.core:magazine:occupancy",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.core:magazine:capacity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.core:magazine:RH_to_LH_matrix",
+      "pass": true,
+      "detail": 0.0
+    },
+    {
+      "name": "wisp02.core:muzzle:accepts",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.core:muzzle:occupancy",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.core:muzzle:capacity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.core:muzzle:RH_to_LH_matrix",
+      "pass": true,
+      "detail": 0.0
+    },
+    {
+      "name": "wisp02.core:charging_handle:accepts",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.core:charging_handle:occupancy",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.core:charging_handle:capacity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.core:charging_handle:RH_to_LH_matrix",
+      "pass": true,
+      "detail": 0.0
+    },
+    {
+      "name": "wisp02.core:trigger:accepts",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.core:trigger:occupancy",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.core:trigger:capacity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.core:trigger:RH_to_LH_matrix",
+      "pass": true,
+      "detail": 0.0
+    },
+    {
+      "name": "wisp02.core:optic:accepts",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.core:optic:occupancy",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.core:optic:capacity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.core:optic:RH_to_LH_matrix",
+      "pass": true,
+      "detail": 0.0
+    },
+    {
+      "name": "wisp02.handguard.standard:id",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.handguard.standard:root",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.handguard.standard:mesh_unimported",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.handguard.standard:mount_tag",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.handguard.standard:platform_tag",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.handguard.standard:source_path",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.handguard.standard:source_exists",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.handguard.standard:slot_set",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.handguard.standard:under_light:accepts",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.handguard.standard:under_light:occupancy",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.handguard.standard:under_light:capacity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.handguard.standard:under_light:RH_to_LH_matrix",
+      "pass": true,
+      "detail": 0.0
+    },
+    {
+      "name": "wisp02.handguard.standard:under_grip:accepts",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.handguard.standard:under_grip:occupancy",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.handguard.standard:under_grip:capacity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.handguard.standard:under_grip:RH_to_LH_matrix",
+      "pass": true,
+      "detail": 0.0
+    },
+    {
+      "name": "wisp02.handguard.standard:side_light:accepts",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.handguard.standard:side_light:occupancy",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.handguard.standard:side_light:capacity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.handguard.standard:side_light:RH_to_LH_matrix",
+      "pass": true,
+      "detail": 0.0
+    },
+    {
+      "name": "wisp02.stock.standard:id",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.stock.standard:root",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.stock.standard:mesh_unimported",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.stock.standard:mount_tag",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.stock.standard:platform_tag",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.stock.standard:source_path",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.stock.standard:source_exists",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.stock.standard:slot_set",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.grip:id",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.grip:root",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.grip:mesh_unimported",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.grip:mount_tag",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.grip:platform_tag",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.grip:source_path",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.grip:source_exists",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.grip:slot_set",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.magazine:id",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.magazine:root",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.magazine:mesh_unimported",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.magazine:mount_tag",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.magazine:platform_tag",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.magazine:source_path",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.magazine:source_exists",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.magazine:slot_set",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.muzzle:id",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.muzzle:root",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.muzzle:mesh_unimported",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.muzzle:mount_tag",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.muzzle:platform_tag",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.muzzle:source_path",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.muzzle:source_exists",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.muzzle:slot_set",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.charging_handle:id",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.charging_handle:root",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.charging_handle:mesh_unimported",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.charging_handle:mount_tag",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.charging_handle:platform_tag",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.charging_handle:source_path",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.charging_handle:source_exists",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.charging_handle:slot_set",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.trigger:id",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.trigger:root",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.trigger:mesh_unimported",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.trigger:mount_tag",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.trigger:platform_tag",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.trigger:source_path",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.trigger:source_exists",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.trigger:slot_set",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "mote03.core:id",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "mote03.core:root",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "mote03.core:mesh_unimported",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "mote03.core:mount_tag",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "mote03.core:platform_tag",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "mote03.core:source_path",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "mote03.core:source_exists",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "mote03.core:slot_set",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "mote03.core:slide:accepts",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "mote03.core:slide:occupancy",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "mote03.core:slide:capacity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "mote03.core:slide:RH_to_LH_matrix",
+      "pass": true,
+      "detail": 0.0
+    },
+    {
+      "name": "mote03.core:magazine:accepts",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "mote03.core:magazine:occupancy",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "mote03.core:magazine:capacity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "mote03.core:magazine:RH_to_LH_matrix",
+      "pass": true,
+      "detail": 0.0
+    },
+    {
+      "name": "mote03.core:trigger:accepts",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "mote03.core:trigger:occupancy",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "mote03.core:trigger:capacity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "mote03.core:trigger:RH_to_LH_matrix",
+      "pass": true,
+      "detail": 0.0
+    },
+    {
+      "name": "mote03.core:under_light:accepts",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "mote03.core:under_light:occupancy",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "mote03.core:under_light:capacity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "mote03.core:under_light:RH_to_LH_matrix",
+      "pass": true,
+      "detail": 0.0
+    },
+    {
+      "name": "mote03.slide:id",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "mote03.slide:root",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "mote03.slide:mesh_unimported",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "mote03.slide:mount_tag",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "mote03.slide:platform_tag",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "mote03.slide:source_path",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "mote03.slide:source_exists",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "mote03.slide:slot_set",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "mote03.slide:optic:accepts",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "mote03.slide:optic:occupancy",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "mote03.slide:optic:capacity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "mote03.slide:optic:RH_to_LH_matrix",
+      "pass": true,
+      "detail": 0.0
+    },
+    {
+      "name": "mote03.magazine:id",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "mote03.magazine:root",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "mote03.magazine:mesh_unimported",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "mote03.magazine:mount_tag",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "mote03.magazine:platform_tag",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "mote03.magazine:source_path",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "mote03.magazine:source_exists",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "mote03.magazine:slot_set",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "mote03.trigger:id",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "mote03.trigger:root",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "mote03.trigger:mesh_unimported",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "mote03.trigger:mount_tag",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "mote03.trigger:platform_tag",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "mote03.trigger:source_path",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "mote03.trigger:source_exists",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "mote03.trigger:slot_set",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "shared.optic.reflex:id",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "shared.optic.reflex:root",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "shared.optic.reflex:mesh_unimported",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "shared.optic.reflex:mount_tag",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "shared.optic.reflex:source_path",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "shared.optic.reflex:source_exists",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "shared.optic.reflex:slot_set",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "shared.optic.micro:id",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "shared.optic.micro:root",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "shared.optic.micro:mesh_unimported",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "shared.optic.micro:mount_tag",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "shared.optic.micro:source_path",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "shared.optic.micro:source_exists",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "shared.optic.micro:slot_set",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "shared.adapter.universal_micro:id",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "shared.adapter.universal_micro:root",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "shared.adapter.universal_micro:mesh_unimported",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "shared.adapter.universal_micro:mount_tag",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "shared.adapter.universal_micro:source_path",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "shared.adapter.universal_micro:source_exists",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "shared.adapter.universal_micro:slot_set",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "shared.adapter.universal_micro:micro:accepts",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "shared.adapter.universal_micro:micro:occupancy",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "shared.adapter.universal_micro:micro:capacity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "shared.adapter.universal_micro:micro:RH_to_LH_matrix",
+      "pass": true,
+      "detail": 0.0
+    },
+    {
+      "name": "shared.light.compact:id",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "shared.light.compact:root",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "shared.light.compact:mesh_unimported",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "shared.light.compact:mount_tag",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "shared.light.compact:source_path",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "shared.light.compact:source_exists",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "shared.light.compact:slot_set",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "shared.grip.stub:id",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "shared.grip.stub:root",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "shared.grip.stub:mesh_unimported",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "shared.grip.stub:mount_tag",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "shared.grip.stub:source_path",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "shared.grip.stub:source_exists",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "shared.grip.stub:slot_set",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.core:id",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.core:root",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.core:mesh_unimported",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.core:mount_tag",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.core:platform_tag",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.core:source_path",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.core:source_exists",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.core:slot_set",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.core:handguard.standard:accepts",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.core:handguard.standard:occupancy",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.core:handguard.standard:capacity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.core:handguard.standard:RH_to_LH_matrix",
+      "pass": true,
+      "detail": 0.0
+    },
+    {
+      "name": "kite01.core:stock.standard:accepts",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.core:stock.standard:occupancy",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.core:stock.standard:capacity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.core:stock.standard:RH_to_LH_matrix",
+      "pass": true,
+      "detail": 0.0
+    },
+    {
+      "name": "kite01.core:grip:accepts",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.core:grip:occupancy",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.core:grip:capacity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.core:grip:RH_to_LH_matrix",
+      "pass": true,
+      "detail": 0.0
+    },
+    {
+      "name": "kite01.core:magazine:accepts",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.core:magazine:occupancy",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.core:magazine:capacity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.core:magazine:RH_to_LH_matrix",
+      "pass": true,
+      "detail": 0.0
+    },
+    {
+      "name": "kite01.core:muzzle:accepts",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.core:muzzle:occupancy",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.core:muzzle:capacity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.core:muzzle:RH_to_LH_matrix",
+      "pass": true,
+      "detail": 0.0
+    },
+    {
+      "name": "kite01.core:charging_handle:accepts",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.core:charging_handle:occupancy",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.core:charging_handle:capacity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.core:charging_handle:RH_to_LH_matrix",
+      "pass": true,
+      "detail": 0.0
+    },
+    {
+      "name": "kite01.core:trigger:accepts",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.core:trigger:occupancy",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.core:trigger:capacity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.core:trigger:RH_to_LH_matrix",
+      "pass": true,
+      "detail": 0.0
+    },
+    {
+      "name": "kite01.core:optic:accepts",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.core:optic:occupancy",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.core:optic:capacity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.core:optic:RH_to_LH_matrix",
+      "pass": true,
+      "detail": 0.0
+    },
+    {
+      "name": "kite01.handguard.standard:id",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.handguard.standard:root",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.handguard.standard:mesh_unimported",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.handguard.standard:mount_tag",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.handguard.standard:platform_tag",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.handguard.standard:source_path",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.handguard.standard:source_exists",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.handguard.standard:slot_set",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.handguard.standard:under_light:accepts",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.handguard.standard:under_light:occupancy",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.handguard.standard:under_light:capacity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.handguard.standard:under_light:RH_to_LH_matrix",
+      "pass": true,
+      "detail": 0.0
+    },
+    {
+      "name": "kite01.handguard.standard:under_grip:accepts",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.handguard.standard:under_grip:occupancy",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.handguard.standard:under_grip:capacity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.handguard.standard:under_grip:RH_to_LH_matrix",
+      "pass": true,
+      "detail": 0.0
+    },
+    {
+      "name": "kite01.stock.standard:id",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.stock.standard:root",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.stock.standard:mesh_unimported",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.stock.standard:mount_tag",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.stock.standard:platform_tag",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.stock.standard:source_path",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.stock.standard:source_exists",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.stock.standard:slot_set",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.grip:id",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.grip:root",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.grip:mesh_unimported",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.grip:mount_tag",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.grip:platform_tag",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.grip:source_path",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.grip:source_exists",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.grip:slot_set",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.magazine:id",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.magazine:root",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.magazine:mesh_unimported",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.magazine:mount_tag",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.magazine:platform_tag",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.magazine:source_path",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.magazine:source_exists",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.magazine:slot_set",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.muzzle:id",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.muzzle:root",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.muzzle:mesh_unimported",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.muzzle:mount_tag",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.muzzle:platform_tag",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.muzzle:source_path",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.muzzle:source_exists",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.muzzle:slot_set",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.charging_handle:id",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.charging_handle:root",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.charging_handle:mesh_unimported",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.charging_handle:mount_tag",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.charging_handle:platform_tag",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.charging_handle:source_path",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.charging_handle:source_exists",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.charging_handle:slot_set",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.trigger:id",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.trigger:root",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.trigger:mesh_unimported",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.trigger:mount_tag",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.trigger:platform_tag",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.trigger:source_path",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.trigger:source_exists",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.trigger:slot_set",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.standard:instance_map",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.standard:links",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.standard:state_fields",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.compact_optic:instance_map",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.compact_optic:links",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "kite01.compact_optic:state_fields",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.standard:instance_map",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.standard:links",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.standard:state_fields",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.compact_optic:instance_map",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.compact_optic:links",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.compact_optic:state_fields",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "mote03.standard:instance_map",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "mote03.standard:links",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "mote03.standard:state_fields",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "mote03.compact_optic:instance_map",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "mote03.compact_optic:links",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "mote03.compact_optic:state_fields",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.side_light:instance_map",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.side_light:links",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "wisp02.side_light:state_fields",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "exact_7_preset_names",
+      "pass": true,
+      "detail": null
+    }
+  ],
+  "not_run": [
+    "UE",
+    "C++ gameplay fixture suite (owned by separate author)",
+    "Blender revalidation; unchanged prior report remains separate"
+  ],
+  "static_code_review": {
+    "projection_fields": "Selected tree only: part instance ID, definition ID, links, weapon root, serial/source revision. No quality/durability/affixes/bound_owner/locked fields in public DTO. Private State uses COND_OwnerOnly; UE replication not executed.",
+    "import_findings": [
+      {
+        "id": "IMPORT_DERIVED_NAME_COLLISION",
+        "scope": "Generic future stable IDs a.b versus a_b, not present in current 25 IDs",
+        "action": "System author asked to preflight normalized folder/DA name uniqueness before side effects",
+        "status": "resolved_in_author_source_and_documentation"
+      },
+      {
+        "id": "GLTF_INTERMEDIATE_BASIS",
+        "observed": "Installed Blender 4.3.2 export_yup default=True, introspected read-only",
+        "scope": "Manifest is native RH meters Z-up; GLB is Y-up intermediate. The numerical 327-check report is not an Unreal geometry import verification.",
+        "action": "Document importer conversion and avoid duplicate reflection; keep basis_verified gate",
+        "status": "resolved_in_author_source_and_documentation"
+      }
+    ]
+  },
+  "runtime_matrix_cross_review": {
+    "source": "System author C++ result matrix; not independently rerun C++",
+    "rows": 675,
+    "accepted": 29,
+    "rejected": 646,
+    "expected_scope": "Isolated unoccupied parent-slot and child pairs using true visual mount contract, current requires/excludes empty",
+    "mismatches": [],
+    "artifact_sha256": "e518a5a00649052c692a6e93eda917562afa3aa8a8f423682a27279921b05e66"
+  },
+  "name_preflight_independent_check": {
+    "real_25_names_unique": true,
+    "a_dot_b_vs_a_underscore_b_rejected": true,
+    "unreal_executed": false
+  }
+}
