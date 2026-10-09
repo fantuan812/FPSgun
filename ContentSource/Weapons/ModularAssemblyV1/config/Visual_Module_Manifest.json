@@ -1,0 +1,1360 @@
+{
+  "schema": "aetherlab.visual-modules.v1",
+  "units": "meters",
+  "forward": "+X",
+  "up": "+Z",
+  "source_kite01_sha256": "2b33999527b2f0f44d6d44e7b828fe2732764843de3d4463fa358fadd3856513",
+  "modules": {
+    "wisp02.core": {
+      "object": "VIS_wisp02_core",
+      "mesh_glb": "modules/wisp02.core.glb",
+      "platform_id": "wisp02",
+      "mount_type": "wisp02.core",
+      "slots": {
+        "handguard.standard": {
+          "translation_m": [
+            0.13,
+            0,
+            0.063
+          ],
+          "rotation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "mount_type": "wisp02.handguard.standard",
+          "occupancy_group": "handguard.standard"
+        },
+        "stock.standard": {
+          "translation_m": [
+            -0.12,
+            0,
+            0.074
+          ],
+          "rotation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "mount_type": "wisp02.stock.standard",
+          "occupancy_group": "stock.standard"
+        },
+        "grip": {
+          "translation_m": [
+            -0.077,
+            0,
+            -0.008
+          ],
+          "rotation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "mount_type": "wisp02.grip",
+          "occupancy_group": "grip"
+        },
+        "magazine": {
+          "translation_m": [
+            0.071,
+            0,
+            -0.015
+          ],
+          "rotation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "mount_type": "wisp02.magazine",
+          "occupancy_group": "magazine"
+        },
+        "muzzle": {
+          "translation_m": [
+            0.315,
+            0,
+            0.064
+          ],
+          "rotation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "mount_type": "wisp02.muzzle",
+          "occupancy_group": "muzzle"
+        },
+        "charging_handle": {
+          "translation_m": [
+            -0.06,
+            -0.028,
+            0.073
+          ],
+          "rotation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "mount_type": "wisp02.charging_handle",
+          "occupancy_group": "charging_handle"
+        },
+        "trigger": {
+          "translation_m": [
+            -0.025,
+            0,
+            -0.019
+          ],
+          "rotation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "mount_type": "wisp02.trigger",
+          "occupancy_group": "trigger"
+        },
+        "optic": {
+          "translation_m": [
+            0,
+            0,
+            0.139
+          ],
+          "rotation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "mount_type": "universal_optic",
+          "occupancy_group": "optic"
+        }
+      },
+      "triangle_count": 4920,
+      "pivot_local": [
+        0,
+        0,
+        0
+      ],
+      "role": "visual_module",
+      "engine_soft_reference": null
+    },
+    "wisp02.handguard.standard": {
+      "object": "VIS_wisp02_handguard_standard",
+      "mesh_glb": "modules/wisp02.handguard.standard.glb",
+      "platform_id": "wisp02",
+      "mount_type": "wisp02.handguard.standard",
+      "slots": {
+        "under_light": {
+          "translation_m": [
+            0.10500000417232513,
+            0.0,
+            -0.06599999964237213
+          ],
+          "rotation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "mount_type": "utility",
+          "occupancy_group": "under_shared"
+        },
+        "under_grip": {
+          "translation_m": [
+            0.10500000417232513,
+            0.0,
+            -0.06599999964237213
+          ],
+          "rotation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "mount_type": "under_grip",
+          "occupancy_group": "under_shared"
+        },
+        "side_light": {
+          "translation_m": [
+            0.115,
+            -0.0275,
+            0.006
+          ],
+          "rotation_xyzw": [
+            -0.7071067811865476,
+            0,
+            0,
+            0.7071067811865476
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "mount_type": "utility",
+          "occupancy_group": "side_utility"
+        }
+      },
+      "triangle_count": 1366,
+      "pivot_local": [
+        0,
+        0,
+        0
+      ],
+      "role": "visual_module",
+      "engine_soft_reference": null
+    },
+    "wisp02.stock.standard": {
+      "object": "VIS_wisp02_stock_standard",
+      "mesh_glb": "modules/wisp02.stock.standard.glb",
+      "platform_id": "wisp02",
+      "mount_type": "wisp02.stock.standard",
+      "slots": {},
+      "triangle_count": 752,
+      "pivot_local": [
+        0,
+        0,
+        0
+      ],
+      "role": "visual_module",
+      "engine_soft_reference": null
+    },
+    "wisp02.grip": {
+      "object": "VIS_wisp02_grip",
+      "mesh_glb": "modules/wisp02.grip.glb",
+      "platform_id": "wisp02",
+      "mount_type": "wisp02.grip",
+      "slots": {},
+      "triangle_count": 564,
+      "pivot_local": [
+        0,
+        0,
+        0
+      ],
+      "role": "visual_module",
+      "engine_soft_reference": null
+    },
+    "wisp02.magazine": {
+      "object": "VIS_wisp02_magazine",
+      "mesh_glb": "modules/wisp02.magazine.glb",
+      "platform_id": "wisp02",
+      "mount_type": "wisp02.magazine",
+      "slots": {},
+      "triangle_count": 752,
+      "pivot_local": [
+        0,
+        0,
+        0
+      ],
+      "role": "visual_module",
+      "engine_soft_reference": null
+    },
+    "wisp02.muzzle": {
+      "object": "VIS_wisp02_muzzle",
+      "mesh_glb": "modules/wisp02.muzzle.glb",
+      "platform_id": "wisp02",
+      "mount_type": "wisp02.muzzle",
+      "slots": {},
+      "triangle_count": 568,
+      "pivot_local": [
+        0,
+        0,
+        0
+      ],
+      "role": "visual_module",
+      "engine_soft_reference": null
+    },
+    "wisp02.charging_handle": {
+      "object": "VIS_wisp02_charging_handle",
+      "mesh_glb": "modules/wisp02.charging_handle.glb",
+      "platform_id": "wisp02",
+      "mount_type": "wisp02.charging_handle",
+      "slots": {},
+      "triangle_count": 188,
+      "pivot_local": [
+        0,
+        0,
+        0
+      ],
+      "role": "visual_module",
+      "engine_soft_reference": null
+    },
+    "wisp02.trigger": {
+      "object": "VIS_wisp02_trigger",
+      "mesh_glb": "modules/wisp02.trigger.glb",
+      "platform_id": "wisp02",
+      "mount_type": "wisp02.trigger",
+      "slots": {},
+      "triangle_count": 236,
+      "pivot_local": [
+        0,
+        0,
+        0
+      ],
+      "role": "visual_module",
+      "engine_soft_reference": null
+    },
+    "mote03.core": {
+      "object": "VIS_mote03_core",
+      "mesh_glb": "modules/mote03.core.glb",
+      "platform_id": "mote03",
+      "mount_type": "mote03.core",
+      "slots": {
+        "slide": {
+          "translation_m": [
+            -0.07,
+            0,
+            0.057
+          ],
+          "rotation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "mount_type": "mote03.slide",
+          "occupancy_group": "slide"
+        },
+        "magazine": {
+          "translation_m": [
+            -0.047,
+            0,
+            -0.083
+          ],
+          "rotation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "mount_type": "mote03.magazine",
+          "occupancy_group": "magazine"
+        },
+        "trigger": {
+          "translation_m": [
+            0.029,
+            0,
+            -0.005
+          ],
+          "rotation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "mount_type": "mote03.trigger",
+          "occupancy_group": "trigger"
+        },
+        "under_light": {
+          "translation_m": [
+            0.105,
+            0,
+            -0.004
+          ],
+          "rotation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "mount_type": "utility",
+          "occupancy_group": "under_shared"
+        }
+      },
+      "triangle_count": 4132,
+      "pivot_local": [
+        0,
+        0,
+        0
+      ],
+      "role": "visual_module",
+      "engine_soft_reference": null
+    },
+    "mote03.slide": {
+      "object": "VIS_mote03_slide",
+      "mesh_glb": "modules/mote03.slide.glb",
+      "platform_id": "mote03",
+      "mount_type": "mote03.slide",
+      "slots": {
+        "optic": {
+          "translation_m": [
+            0.027,
+            0,
+            0.054
+          ],
+          "rotation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "mount_type": "micro_optic",
+          "occupancy_group": "optic"
+        }
+      },
+      "triangle_count": 3576,
+      "pivot_local": [
+        0,
+        0,
+        0
+      ],
+      "role": "visual_module",
+      "engine_soft_reference": null
+    },
+    "mote03.magazine": {
+      "object": "VIS_mote03_magazine",
+      "mesh_glb": "modules/mote03.magazine.glb",
+      "platform_id": "mote03",
+      "mount_type": "mote03.magazine",
+      "slots": {},
+      "triangle_count": 376,
+      "pivot_local": [
+        0,
+        0,
+        0
+      ],
+      "role": "visual_module",
+      "engine_soft_reference": null
+    },
+    "mote03.trigger": {
+      "object": "VIS_mote03_trigger",
+      "mesh_glb": "modules/mote03.trigger.glb",
+      "platform_id": "mote03",
+      "mount_type": "mote03.trigger",
+      "slots": {},
+      "triangle_count": 236,
+      "pivot_local": [
+        0,
+        0,
+        0
+      ],
+      "role": "visual_module",
+      "engine_soft_reference": null
+    },
+    "shared.optic.reflex": {
+      "object": "VIS_shared_optic_reflex",
+      "mesh_glb": "modules/shared.optic.reflex.glb",
+      "platform_id": null,
+      "mount_type": "universal_optic",
+      "slots": {},
+      "triangle_count": 988,
+      "pivot_local": [
+        0,
+        0,
+        0
+      ],
+      "role": "visual_module",
+      "engine_soft_reference": null
+    },
+    "shared.optic.micro": {
+      "object": "VIS_shared_optic_micro",
+      "mesh_glb": "modules/shared.optic.micro.glb",
+      "platform_id": null,
+      "mount_type": "micro_optic",
+      "slots": {},
+      "triangle_count": 564,
+      "pivot_local": [
+        0,
+        0,
+        0
+      ],
+      "role": "visual_module",
+      "engine_soft_reference": null
+    },
+    "shared.adapter.universal_micro": {
+      "object": "VIS_shared_adapter_universal_micro",
+      "mesh_glb": "modules/shared.adapter.universal_micro.glb",
+      "platform_id": null,
+      "mount_type": "universal_optic",
+      "slots": {
+        "micro": {
+          "translation_m": [
+            0,
+            0,
+            0.022
+          ],
+          "rotation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "mount_type": "micro_optic",
+          "occupancy_group": "micro"
+        }
+      },
+      "triangle_count": 720,
+      "pivot_local": [
+        0,
+        0,
+        0
+      ],
+      "role": "visual_module",
+      "engine_soft_reference": null
+    },
+    "shared.light.compact": {
+      "object": "VIS_shared_light_compact",
+      "mesh_glb": "modules/shared.light.compact.glb",
+      "platform_id": null,
+      "mount_type": "utility",
+      "slots": {},
+      "triangle_count": 848,
+      "pivot_local": [
+        0,
+        0,
+        0
+      ],
+      "role": "visual_module",
+      "engine_soft_reference": null
+    },
+    "shared.grip.stub": {
+      "object": "VIS_shared_grip_stub",
+      "mesh_glb": "modules/shared.grip.stub.glb",
+      "platform_id": null,
+      "mount_type": "under_grip",
+      "slots": {},
+      "triangle_count": 376,
+      "pivot_local": [
+        0,
+        0,
+        0
+      ],
+      "role": "visual_module",
+      "engine_soft_reference": null
+    },
+    "kite01.core": {
+      "object": "VIS_kite01_core",
+      "mesh_glb": "modules/kite01.core.glb",
+      "platform_id": "kite01",
+      "mount_type": "kite01.core",
+      "slots": {
+        "handguard.standard": {
+          "translation_m": [
+            0.15000000596046448,
+            0.0,
+            0.07900000363588333
+          ],
+          "rotation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "mount_type": "kite01.handguard.standard",
+          "occupancy_group": "handguard.standard"
+        },
+        "stock.standard": {
+          "translation_m": [
+            -0.12999999523162842,
+            0.0,
+            0.07599999755620956
+          ],
+          "rotation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "mount_type": "kite01.stock.standard",
+          "occupancy_group": "stock.standard"
+        },
+        "grip": {
+          "translation_m": [
+            -0.10499999672174454,
+            0.0,
+            -0.004999999888241291
+          ],
+          "rotation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "mount_type": "kite01.grip",
+          "occupancy_group": "grip"
+        },
+        "magazine": {
+          "translation_m": [
+            0.06400000303983688,
+            0.0,
+            -0.026000000536441803
+          ],
+          "rotation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "mount_type": "kite01.magazine",
+          "occupancy_group": "magazine"
+        },
+        "muzzle": {
+          "translation_m": [
+            0.4449999928474426,
+            0.0,
+            0.07900000363588333
+          ],
+          "rotation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "mount_type": "kite01.muzzle",
+          "occupancy_group": "muzzle"
+        },
+        "charging_handle": {
+          "translation_m": [
+            -0.07000000029802322,
+            -0.027000000700354576,
+            0.0860000029206276
+          ],
+          "rotation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "mount_type": "kite01.charging_handle",
+          "occupancy_group": "charging_handle"
+        },
+        "trigger": {
+          "translation_m": [
+            -0.029999999329447746,
+            0.0,
+            -0.017999999225139618
+          ],
+          "rotation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "mount_type": "kite01.trigger",
+          "occupancy_group": "trigger"
+        },
+        "optic": {
+          "translation_m": [
+            -0.028,
+            0,
+            0.145
+          ],
+          "rotation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "mount_type": "universal_optic",
+          "occupancy_group": "optic"
+        }
+      },
+      "triangle_count": 8676,
+      "pivot_local": [
+        0,
+        0,
+        0
+      ],
+      "role": "visual_module",
+      "engine_soft_reference": null
+    },
+    "kite01.handguard.standard": {
+      "object": "VIS_kite01_handguard_standard",
+      "mesh_glb": "modules/kite01.handguard.standard.glb",
+      "platform_id": "kite01",
+      "mount_type": "kite01.handguard.standard",
+      "slots": {
+        "under_light": {
+          "translation_m": [
+            0.1599999964237213,
+            0.0,
+            -0.07900000363588333
+          ],
+          "rotation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "mount_type": "utility",
+          "occupancy_group": "under_shared"
+        },
+        "under_grip": {
+          "translation_m": [
+            0.1599999964237213,
+            0.0,
+            -0.07900000363588333
+          ],
+          "rotation_xyzw": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "mount_type": "under_grip",
+          "occupancy_group": "under_shared"
+        }
+      },
+      "triangle_count": 4980,
+      "pivot_local": [
+        0,
+        0,
+        0
+      ],
+      "role": "visual_module",
+      "engine_soft_reference": null
+    },
+    "kite01.stock.standard": {
+      "object": "VIS_kite01_stock_standard",
+      "mesh_glb": "modules/kite01.stock.standard.glb",
+      "platform_id": "kite01",
+      "mount_type": "kite01.stock.standard",
+      "slots": {},
+      "triangle_count": 3104,
+      "pivot_local": [
+        0,
+        0,
+        0
+      ],
+      "role": "visual_module",
+      "engine_soft_reference": null
+    },
+    "kite01.grip": {
+      "object": "VIS_kite01_grip",
+      "mesh_glb": "modules/kite01.grip.glb",
+      "platform_id": "kite01",
+      "mount_type": "kite01.grip",
+      "slots": {},
+      "triangle_count": 3588,
+      "pivot_local": [
+        0,
+        0,
+        0
+      ],
+      "role": "visual_module",
+      "engine_soft_reference": null
+    },
+    "kite01.magazine": {
+      "object": "VIS_kite01_magazine",
+      "mesh_glb": "modules/kite01.magazine.glb",
+      "platform_id": "kite01",
+      "mount_type": "kite01.magazine",
+      "slots": {},
+      "triangle_count": 2256,
+      "pivot_local": [
+        0,
+        0,
+        0
+      ],
+      "role": "visual_module",
+      "engine_soft_reference": null
+    },
+    "kite01.muzzle": {
+      "object": "VIS_kite01_muzzle",
+      "mesh_glb": "modules/kite01.muzzle.glb",
+      "platform_id": "kite01",
+      "mount_type": "kite01.muzzle",
+      "slots": {},
+      "triangle_count": 2356,
+      "pivot_local": [
+        0,
+        0,
+        0
+      ],
+      "role": "visual_module",
+      "engine_soft_reference": null
+    },
+    "kite01.charging_handle": {
+      "object": "VIS_kite01_charging_handle",
+      "mesh_glb": "modules/kite01.charging_handle.glb",
+      "platform_id": "kite01",
+      "mount_type": "kite01.charging_handle",
+      "slots": {},
+      "triangle_count": 188,
+      "pivot_local": [
+        0,
+        0,
+        0
+      ],
+      "role": "visual_module",
+      "engine_soft_reference": null
+    },
+    "kite01.trigger": {
+      "object": "VIS_kite01_trigger",
+      "mesh_glb": "modules/kite01.trigger.glb",
+      "platform_id": "kite01",
+      "mount_type": "kite01.trigger",
+      "slots": {},
+      "triangle_count": 284,
+      "pivot_local": [
+        0,
+        0,
+        0
+      ],
+      "role": "visual_module",
+      "engine_soft_reference": null
+    }
+  },
+  "presets": [
+    {
+      "id": "kite01.standard",
+      "platform_id": "kite01",
+      "nodes": [
+        {
+          "instance_id": "root",
+          "module_id": "kite01.core",
+          "parent_id": null,
+          "slot_id": null
+        },
+        {
+          "instance_id": "handguard.standard",
+          "module_id": "kite01.handguard.standard",
+          "parent_id": "root",
+          "slot_id": "handguard.standard"
+        },
+        {
+          "instance_id": "stock.standard",
+          "module_id": "kite01.stock.standard",
+          "parent_id": "root",
+          "slot_id": "stock.standard"
+        },
+        {
+          "instance_id": "grip",
+          "module_id": "kite01.grip",
+          "parent_id": "root",
+          "slot_id": "grip"
+        },
+        {
+          "instance_id": "magazine",
+          "module_id": "kite01.magazine",
+          "parent_id": "root",
+          "slot_id": "magazine"
+        },
+        {
+          "instance_id": "muzzle",
+          "module_id": "kite01.muzzle",
+          "parent_id": "root",
+          "slot_id": "muzzle"
+        },
+        {
+          "instance_id": "charging_handle",
+          "module_id": "kite01.charging_handle",
+          "parent_id": "root",
+          "slot_id": "charging_handle"
+        },
+        {
+          "instance_id": "trigger",
+          "module_id": "kite01.trigger",
+          "parent_id": "root",
+          "slot_id": "trigger"
+        },
+        {
+          "instance_id": "sight",
+          "module_id": "shared.optic.reflex",
+          "parent_id": "root",
+          "slot_id": "optic"
+        },
+        {
+          "instance_id": "grip_addon",
+          "module_id": "shared.grip.stub",
+          "parent_id": "handguard.standard",
+          "slot_id": "under_grip"
+        }
+      ]
+    },
+    {
+      "id": "kite01.compact_optic",
+      "platform_id": "kite01",
+      "nodes": [
+        {
+          "instance_id": "root",
+          "module_id": "kite01.core",
+          "parent_id": null,
+          "slot_id": null
+        },
+        {
+          "instance_id": "handguard.standard",
+          "module_id": "kite01.handguard.standard",
+          "parent_id": "root",
+          "slot_id": "handguard.standard"
+        },
+        {
+          "instance_id": "stock.standard",
+          "module_id": "kite01.stock.standard",
+          "parent_id": "root",
+          "slot_id": "stock.standard"
+        },
+        {
+          "instance_id": "grip",
+          "module_id": "kite01.grip",
+          "parent_id": "root",
+          "slot_id": "grip"
+        },
+        {
+          "instance_id": "magazine",
+          "module_id": "kite01.magazine",
+          "parent_id": "root",
+          "slot_id": "magazine"
+        },
+        {
+          "instance_id": "muzzle",
+          "module_id": "kite01.muzzle",
+          "parent_id": "root",
+          "slot_id": "muzzle"
+        },
+        {
+          "instance_id": "charging_handle",
+          "module_id": "kite01.charging_handle",
+          "parent_id": "root",
+          "slot_id": "charging_handle"
+        },
+        {
+          "instance_id": "trigger",
+          "module_id": "kite01.trigger",
+          "parent_id": "root",
+          "slot_id": "trigger"
+        },
+        {
+          "instance_id": "adapter",
+          "module_id": "shared.adapter.universal_micro",
+          "parent_id": "root",
+          "slot_id": "optic"
+        },
+        {
+          "instance_id": "sight",
+          "module_id": "shared.optic.micro",
+          "parent_id": "adapter",
+          "slot_id": "micro"
+        },
+        {
+          "instance_id": "light",
+          "module_id": "shared.light.compact",
+          "parent_id": "handguard.standard",
+          "slot_id": "under_light"
+        }
+      ]
+    },
+    {
+      "id": "wisp02.standard",
+      "platform_id": "wisp02",
+      "nodes": [
+        {
+          "instance_id": "root",
+          "module_id": "wisp02.core",
+          "parent_id": null,
+          "slot_id": null
+        },
+        {
+          "instance_id": "handguard.standard",
+          "module_id": "wisp02.handguard.standard",
+          "parent_id": "root",
+          "slot_id": "handguard.standard"
+        },
+        {
+          "instance_id": "stock.standard",
+          "module_id": "wisp02.stock.standard",
+          "parent_id": "root",
+          "slot_id": "stock.standard"
+        },
+        {
+          "instance_id": "grip",
+          "module_id": "wisp02.grip",
+          "parent_id": "root",
+          "slot_id": "grip"
+        },
+        {
+          "instance_id": "magazine",
+          "module_id": "wisp02.magazine",
+          "parent_id": "root",
+          "slot_id": "magazine"
+        },
+        {
+          "instance_id": "muzzle",
+          "module_id": "wisp02.muzzle",
+          "parent_id": "root",
+          "slot_id": "muzzle"
+        },
+        {
+          "instance_id": "charging_handle",
+          "module_id": "wisp02.charging_handle",
+          "parent_id": "root",
+          "slot_id": "charging_handle"
+        },
+        {
+          "instance_id": "trigger",
+          "module_id": "wisp02.trigger",
+          "parent_id": "root",
+          "slot_id": "trigger"
+        },
+        {
+          "instance_id": "sight",
+          "module_id": "shared.optic.reflex",
+          "parent_id": "root",
+          "slot_id": "optic"
+        },
+        {
+          "instance_id": "grip_addon",
+          "module_id": "shared.grip.stub",
+          "parent_id": "handguard.standard",
+          "slot_id": "under_grip"
+        }
+      ]
+    },
+    {
+      "id": "wisp02.compact_optic",
+      "platform_id": "wisp02",
+      "nodes": [
+        {
+          "instance_id": "root",
+          "module_id": "wisp02.core",
+          "parent_id": null,
+          "slot_id": null
+        },
+        {
+          "instance_id": "handguard.standard",
+          "module_id": "wisp02.handguard.standard",
+          "parent_id": "root",
+          "slot_id": "handguard.standard"
+        },
+        {
+          "instance_id": "stock.standard",
+          "module_id": "wisp02.stock.standard",
+          "parent_id": "root",
+          "slot_id": "stock.standard"
+        },
+        {
+          "instance_id": "grip",
+          "module_id": "wisp02.grip",
+          "parent_id": "root",
+          "slot_id": "grip"
+        },
+        {
+          "instance_id": "magazine",
+          "module_id": "wisp02.magazine",
+          "parent_id": "root",
+          "slot_id": "magazine"
+        },
+        {
+          "instance_id": "muzzle",
+          "module_id": "wisp02.muzzle",
+          "parent_id": "root",
+          "slot_id": "muzzle"
+        },
+        {
+          "instance_id": "charging_handle",
+          "module_id": "wisp02.charging_handle",
+          "parent_id": "root",
+          "slot_id": "charging_handle"
+        },
+        {
+          "instance_id": "trigger",
+          "module_id": "wisp02.trigger",
+          "parent_id": "root",
+          "slot_id": "trigger"
+        },
+        {
+          "instance_id": "adapter",
+          "module_id": "shared.adapter.universal_micro",
+          "parent_id": "root",
+          "slot_id": "optic"
+        },
+        {
+          "instance_id": "sight",
+          "module_id": "shared.optic.micro",
+          "parent_id": "adapter",
+          "slot_id": "micro"
+        },
+        {
+          "instance_id": "light",
+          "module_id": "shared.light.compact",
+          "parent_id": "handguard.standard",
+          "slot_id": "under_light"
+        }
+      ]
+    },
+    {
+      "id": "mote03.standard",
+      "platform_id": "mote03",
+      "nodes": [
+        {
+          "instance_id": "root",
+          "module_id": "mote03.core",
+          "parent_id": null,
+          "slot_id": null
+        },
+        {
+          "instance_id": "slide",
+          "module_id": "mote03.slide",
+          "parent_id": "root",
+          "slot_id": "slide"
+        },
+        {
+          "instance_id": "magazine",
+          "module_id": "mote03.magazine",
+          "parent_id": "root",
+          "slot_id": "magazine"
+        },
+        {
+          "instance_id": "trigger",
+          "module_id": "mote03.trigger",
+          "parent_id": "root",
+          "slot_id": "trigger"
+        },
+        {
+          "instance_id": "light",
+          "module_id": "shared.light.compact",
+          "parent_id": "root",
+          "slot_id": "under_light"
+        }
+      ]
+    },
+    {
+      "id": "mote03.compact_optic",
+      "platform_id": "mote03",
+      "nodes": [
+        {
+          "instance_id": "root",
+          "module_id": "mote03.core",
+          "parent_id": null,
+          "slot_id": null
+        },
+        {
+          "instance_id": "slide",
+          "module_id": "mote03.slide",
+          "parent_id": "root",
+          "slot_id": "slide"
+        },
+        {
+          "instance_id": "magazine",
+          "module_id": "mote03.magazine",
+          "parent_id": "root",
+          "slot_id": "magazine"
+        },
+        {
+          "instance_id": "trigger",
+          "module_id": "mote03.trigger",
+          "parent_id": "root",
+          "slot_id": "trigger"
+        },
+        {
+          "instance_id": "sight",
+          "module_id": "shared.optic.micro",
+          "parent_id": "slide",
+          "slot_id": "optic"
+        },
+        {
+          "instance_id": "light",
+          "module_id": "shared.light.compact",
+          "parent_id": "root",
+          "slot_id": "under_light"
+        }
+      ]
+    },
+    {
+      "id": "wisp02.side_light",
+      "platform_id": "wisp02",
+      "nodes": [
+        {
+          "instance_id": "root",
+          "module_id": "wisp02.core",
+          "parent_id": null,
+          "slot_id": null
+        },
+        {
+          "instance_id": "handguard.standard",
+          "module_id": "wisp02.handguard.standard",
+          "parent_id": "root",
+          "slot_id": "handguard.standard"
+        },
+        {
+          "instance_id": "stock.standard",
+          "module_id": "wisp02.stock.standard",
+          "parent_id": "root",
+          "slot_id": "stock.standard"
+        },
+        {
+          "instance_id": "grip",
+          "module_id": "wisp02.grip",
+          "parent_id": "root",
+          "slot_id": "grip"
+        },
+        {
+          "instance_id": "magazine",
+          "module_id": "wisp02.magazine",
+          "parent_id": "root",
+          "slot_id": "magazine"
+        },
+        {
+          "instance_id": "muzzle",
+          "module_id": "wisp02.muzzle",
+          "parent_id": "root",
+          "slot_id": "muzzle"
+        },
+        {
+          "instance_id": "charging_handle",
+          "module_id": "wisp02.charging_handle",
+          "parent_id": "root",
+          "slot_id": "charging_handle"
+        },
+        {
+          "instance_id": "trigger",
+          "module_id": "wisp02.trigger",
+          "parent_id": "root",
+          "slot_id": "trigger"
+        },
+        {
+          "instance_id": "sight",
+          "module_id": "shared.optic.reflex",
+          "parent_id": "root",
+          "slot_id": "optic"
+        },
+        {
+          "instance_id": "grip_addon",
+          "module_id": "shared.grip.stub",
+          "parent_id": "handguard.standard",
+          "slot_id": "under_grip"
+        },
+        {
+          "instance_id": "side_light",
+          "module_id": "shared.light.compact",
+          "parent_id": "handguard.standard",
+          "slot_id": "side_light"
+        }
+      ]
+    }
+  ],
+  "runtime_status": "Visual fixture metadata; UE definitions/import and runtime validation owned by AetherEquipment; no uasset import claimed"
+}
