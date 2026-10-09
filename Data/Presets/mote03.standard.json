@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "revision": "0",
+  "instances": [
+    {
+      "id": "light",
+      "definition_id": "shared.light.compact",
+      "durability": 100,
+      "quality": 0,
+      "affixes": {},
+      "bound_owner": "",
+      "locked": false
+    },
+    {
+      "id": "magazine",
+      "definition_id": "mote03.magazine",
+      "durability": 100,
+      "quality": 0,
+      "affixes": {},
+      "bound_owner": "",
+      "locked": false
+    },
+    {
+      "id": "root",
+      "definition_id": "mote03.core",
+      "durability": 100,
+      "quality": 0,
+      "affixes": {},
+      "bound_owner": "",
+      "locked": false
+    },
+    {
+      "id": "slide",
+      "definition_id": "mote03.slide",
+      "durability": 100,
+      "quality": 0,
+      "affixes": {},
+      "bound_owner": "",
+      "locked": false
+    },
+    {
+      "id": "trigger",
+      "definition_id": "mote03.trigger",
+      "durability": 100,
+      "quality": 0,
+      "affixes": {},
+      "bound_owner": "",
+      "locked": false
+    }
+  ],
+  "links": [
+    {
+      "child": "light",
+      "parent": "root",
+      "slot": "under_light"
+    },
+    {
+      "child": "magazine",
+      "parent": "root",
+      "slot": "magazine"
+    },
+    {
+      "child": "slide",
+      "parent": "root",
+      "slot": "slide"
+    },
+    {
+      "child": "trigger",
+      "parent": "root",
+      "slot": "trigger"
+    }
+  ]
+}

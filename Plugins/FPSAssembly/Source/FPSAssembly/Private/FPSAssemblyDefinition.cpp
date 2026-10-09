@@ -2,6 +2,11 @@
 namespace
 {
 std::string Text(const FString& Value) { return TCHAR_TO_UTF8(*Value); }
+bool ExactId(const FString& Value)
+{
+    const auto Native = Text(Value);
+    return fpsassembly::StableId(Native) && Value.Equals(UTF8_TO_TCHAR(Native.c_str()), ESearchCase::CaseSensitive);
+}
 fpsassembly::Tags Tags(const FGameplayTagContainer& Source)
 {
     fpsassembly::Tags Result;
@@ -28,22 +33,24 @@ bool UFPSAssemblyCatalog::Compile(fpsassembly::Catalog& Out, FString& Reason) co
     Next.max_instances = MaxInstances; Next.max_depth = MaxDepth; Next.max_parts_per_weapon = MaxPartsPerWeapon;
     for (const UFPSAssemblyDefinition* Asset : Definitions)
     {
-        if (!Asset) { Reason = TEXT("Null definition"); return false; }
+        if (!Asset || !ExactId(Asset->Id)) { Reason = TEXT("Null definition"); return false; }
         fpsassembly::Definition D;
         D.id = Text(Asset->Id); D.weapon_root = Asset->WeaponRoot;
         D.tags = Tags(Asset->Tags); D.requires_all = Tags(Asset->RequiresAll); D.excludes_any = Tags(Asset->ExcludesAny);
+        for (const auto* Values : {&Asset->BaseStats, &Asset->AddStats, &Asset->MultiplyStats})
+            for (const auto& Pair : *Values) if (!ExactId(Pair.Key)) { Reason = TEXT("Invalid stat ID"); return false; }
         D.base_stats = Stats(Asset->BaseStats); D.add_stats = Stats(Asset->AddStats); D.multiply_stats = Stats(Asset->MultiplyStats);
         D.max_durability = Asset->MaxDurability;
         for (const auto& Slot : Asset->Slots)
         {
             const FVector Scale = Slot.LocalTransform.GetScale3D();
-            if (Slot.Capacity < 1 || Slot.LocalTransform.ContainsNaN() || !Slot.LocalTransform.GetRotation().IsNormalized() ||
+            if (!ExactId(Slot.Id) || Slot.Capacity < 1 || Slot.LocalTransform.ContainsNaN() || !Slot.LocalTransform.GetRotation().IsNormalized() ||
                 Scale.X <= 0 || !Scale.Equals(FVector(Scale.X), 0.0001))
             { Reason = TEXT("Invalid slot transform/capacity"); return false; }
             fpsassembly::Slot S;
             S.id = Text(Slot.Id); S.accepts_any = Tags(Slot.AcceptsAny); S.required = Slot.Required; S.capacity = Slot.Capacity;
             for (const auto& Token : Slot.OccupancyTokens)
-                if (!S.occupancy_tokens.insert(Text(Token)).second) { Reason = TEXT("Duplicate occupancy token"); return false; }
+                if (!ExactId(Token) || !S.occupancy_tokens.insert(Text(Token)).second) { Reason = TEXT("Duplicate occupancy token"); return false; }
             D.slots.push_back(std::move(S));
         }
         if (!Next.definitions.emplace(D.id, D).second) { Reason = TEXT("Duplicate definition ID"); return false; }

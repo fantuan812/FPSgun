@@ -1,4 +1,5 @@
 #include "FPSAssemblyState.h"
+#include "FPSAssemblyJson.h"
 #include "Dom/JsonObject.h"
 #include "Serialization/JsonSerializer.h"
 #include "Serialization/JsonWriter.h"
@@ -111,7 +112,7 @@ bool FPSAssemblyCodec::Decode(const FString& Json, const fpsassembly::Catalog& C
     const auto Reject = [&](const TCHAR* Why) { Reason = Why; return false; };
     if (Json.Len() > MaxBytes || FTCHARToUTF8(*Json).Length() > MaxBytes || !ExactText(Json)) return Reject(TEXT("Invalid payload size/text"));
     TSharedPtr<FJsonObject> Root;
-    if (!FJsonSerializer::Deserialize(TJsonReaderFactory<>::Create(Json), Root) ||
+    if (!FPSAssemblyJson::UniqueFields(Json) || !FJsonSerializer::Deserialize(TJsonReaderFactory<>::Create(Json), Root) ||
         !Fields(Root, {TEXT("schema_version"), TEXT("revision"), TEXT("instances"), TEXT("links")})) return Reject(TEXT("Invalid DTO object"));
     int32 Version = 0;
     if (!ReadInteger(Root, TEXT("schema_version"), Version) || Version != SchemaVersion) return Reject(TEXT("Unsupported DTO version"));

@@ -6,6 +6,6 @@ public class FPSAssembly : ModuleRules
         PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
         CppStandard = CppStandardVersion.Cpp17;
         PublicDependencyModuleNames.AddRange(new[] { "Core", "CoreUObject", "Engine", "GameplayTags", "Niagara" });
-        PrivateDependencyModuleNames.AddRange(new[] { "Json" });
+        PrivateDependencyModuleNames.AddRange(new[] { "Json", "Projects" });
     }
 }

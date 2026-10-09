@@ -1,0 +1,1330 @@
+{
+  "schema_version": 1,
+  "status": "AUTHORING_DATA_NOT_UASSET_NOT_ENGINE_VALIDATED",
+  "source_manifest_sha256": "181ce9a7577c38cd88ec478cdf953a347e542c178e9563b8afac0fe81c1161a2",
+  "transform_contract": {
+    "source": "RH meters +X forward +Z up",
+    "target": "UE LH centimeters +X forward +Z up",
+    "position": "(100*x,-100*y,100*z)",
+    "quaternion_xyzw": "(-x,y,-z,w)",
+    "mesh_import": "Mesh basis must be converted consistently; not yet imported or verified"
+  },
+  "max_instances": 256,
+  "max_depth": 8,
+  "max_parts_per_weapon": 64,
+  "definitions": {
+    "kite01.charging_handle": {
+      "id": "kite01.charging_handle",
+      "weapon_root": false,
+      "tags": [
+        "mount.kite01.charging_handle",
+        "platform.kite01"
+      ],
+      "requires_all": [],
+      "excludes_any": [],
+      "slots": [],
+      "base_stats": {},
+      "add_stats": {
+        "handling": -1.0
+      },
+      "multiply_stats": {},
+      "max_durability": 100,
+      "mesh": null,
+      "animations": {},
+      "effects": {},
+      "source_mesh_glb": "ContentSource/Weapons/ModularAssemblyV1/exports/modules/kite01.charging_handle.glb"
+    },
+    "kite01.core": {
+      "id": "kite01.core",
+      "weapon_root": true,
+      "tags": [
+        "mount.kite01.core",
+        "platform.kite01"
+      ],
+      "requires_all": [],
+      "excludes_any": [],
+      "slots": [
+        {
+          "id": "charging_handle",
+          "accepts_any": [
+            "mount.kite01.charging_handle"
+          ],
+          "required": true,
+          "capacity": 1,
+          "occupancy_tokens": [
+            "charging_handle"
+          ],
+          "local_transform": {
+            "translation_cm": [
+              -7.000000029802322,
+              2.7000000700354576,
+              8.60000029206276
+            ],
+            "rotation_xyzw": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "id": "grip",
+          "accepts_any": [
+            "mount.kite01.grip"
+          ],
+          "required": true,
+          "capacity": 1,
+          "occupancy_tokens": [
+            "grip"
+          ],
+          "local_transform": {
+            "translation_cm": [
+              -10.499999672174454,
+              -0.0,
+              -0.4999999888241291
+            ],
+            "rotation_xyzw": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "id": "handguard.standard",
+          "accepts_any": [
+            "mount.kite01.handguard.standard"
+          ],
+          "required": true,
+          "capacity": 1,
+          "occupancy_tokens": [
+            "handguard.standard"
+          ],
+          "local_transform": {
+            "translation_cm": [
+              15.000000596046448,
+              -0.0,
+              7.900000363588333
+            ],
+            "rotation_xyzw": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "id": "magazine",
+          "accepts_any": [
+            "mount.kite01.magazine"
+          ],
+          "required": true,
+          "capacity": 1,
+          "occupancy_tokens": [
+            "magazine"
+          ],
+          "local_transform": {
+            "translation_cm": [
+              6.400000303983688,
+              -0.0,
+              -2.6000000536441803
+            ],
+            "rotation_xyzw": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "id": "muzzle",
+          "accepts_any": [
+            "mount.kite01.muzzle"
+          ],
+          "required": true,
+          "capacity": 1,
+          "occupancy_tokens": [
+            "muzzle"
+          ],
+          "local_transform": {
+            "translation_cm": [
+              44.49999928474426,
+              -0.0,
+              7.900000363588333
+            ],
+            "rotation_xyzw": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "id": "optic",
+          "accepts_any": [
+            "mount.universal_optic"
+          ],
+          "required": false,
+          "capacity": 1,
+          "occupancy_tokens": [
+            "optic"
+          ],
+          "local_transform": {
+            "translation_cm": [
+              -2.8000000000000003,
+              0,
+              14.499999999999998
+            ],
+            "rotation_xyzw": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "id": "stock.standard",
+          "accepts_any": [
+            "mount.kite01.stock.standard"
+          ],
+          "required": true,
+          "capacity": 1,
+          "occupancy_tokens": [
+            "stock.standard"
+          ],
+          "local_transform": {
+            "translation_cm": [
+              -12.999999523162842,
+              -0.0,
+              7.599999755620956
+            ],
+            "rotation_xyzw": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "id": "trigger",
+          "accepts_any": [
+            "mount.kite01.trigger"
+          ],
+          "required": true,
+          "capacity": 1,
+          "occupancy_tokens": [
+            "trigger"
+          ],
+          "local_transform": {
+            "translation_cm": [
+              -2.9999999329447746,
+              -0.0,
+              -1.7999999225139618
+            ],
+            "rotation_xyzw": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ]
+          }
+        }
+      ],
+      "base_stats": {
+        "handling": 50.0,
+        "stability": 50.0
+      },
+      "add_stats": {},
+      "multiply_stats": {},
+      "max_durability": 100,
+      "mesh": null,
+      "animations": {},
+      "effects": {},
+      "source_mesh_glb": "ContentSource/Weapons/ModularAssemblyV1/exports/modules/kite01.core.glb"
+    },
+    "kite01.grip": {
+      "id": "kite01.grip",
+      "weapon_root": false,
+      "tags": [
+        "mount.kite01.grip",
+        "platform.kite01"
+      ],
+      "requires_all": [],
+      "excludes_any": [],
+      "slots": [],
+      "base_stats": {},
+      "add_stats": {
+        "handling": -1.0
+      },
+      "multiply_stats": {},
+      "max_durability": 100,
+      "mesh": null,
+      "animations": {},
+      "effects": {},
+      "source_mesh_glb": "ContentSource/Weapons/ModularAssemblyV1/exports/modules/kite01.grip.glb"
+    },
+    "kite01.handguard.standard": {
+      "id": "kite01.handguard.standard",
+      "weapon_root": false,
+      "tags": [
+        "mount.kite01.handguard.standard",
+        "platform.kite01"
+      ],
+      "requires_all": [],
+      "excludes_any": [],
+      "slots": [
+        {
+          "id": "under_grip",
+          "accepts_any": [
+            "mount.under_grip"
+          ],
+          "required": false,
+          "capacity": 1,
+          "occupancy_tokens": [
+            "under_shared"
+          ],
+          "local_transform": {
+            "translation_cm": [
+              15.999999642372131,
+              -0.0,
+              -7.900000363588333
+            ],
+            "rotation_xyzw": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "id": "under_light",
+          "accepts_any": [
+            "mount.utility"
+          ],
+          "required": false,
+          "capacity": 1,
+          "occupancy_tokens": [
+            "under_shared"
+          ],
+          "local_transform": {
+            "translation_cm": [
+              15.999999642372131,
+              -0.0,
+              -7.900000363588333
+            ],
+            "rotation_xyzw": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ]
+          }
+        }
+      ],
+      "base_stats": {},
+      "add_stats": {
+        "handling": -1.0
+      },
+      "multiply_stats": {},
+      "max_durability": 100,
+      "mesh": null,
+      "animations": {},
+      "effects": {},
+      "source_mesh_glb": "ContentSource/Weapons/ModularAssemblyV1/exports/modules/kite01.handguard.standard.glb"
+    },
+    "kite01.magazine": {
+      "id": "kite01.magazine",
+      "weapon_root": false,
+      "tags": [
+        "mount.kite01.magazine",
+        "platform.kite01"
+      ],
+      "requires_all": [],
+      "excludes_any": [],
+      "slots": [],
+      "base_stats": {},
+      "add_stats": {
+        "handling": -1.0
+      },
+      "multiply_stats": {},
+      "max_durability": 100,
+      "mesh": null,
+      "animations": {},
+      "effects": {},
+      "source_mesh_glb": "ContentSource/Weapons/ModularAssemblyV1/exports/modules/kite01.magazine.glb"
+    },
+    "kite01.muzzle": {
+      "id": "kite01.muzzle",
+      "weapon_root": false,
+      "tags": [
+        "mount.kite01.muzzle",
+        "platform.kite01"
+      ],
+      "requires_all": [],
+      "excludes_any": [],
+      "slots": [],
+      "base_stats": {},
+      "add_stats": {
+        "handling": -1.0
+      },
+      "multiply_stats": {},
+      "max_durability": 100,
+      "mesh": null,
+      "animations": {},
+      "effects": {},
+      "source_mesh_glb": "ContentSource/Weapons/ModularAssemblyV1/exports/modules/kite01.muzzle.glb"
+    },
+    "kite01.stock.standard": {
+      "id": "kite01.stock.standard",
+      "weapon_root": false,
+      "tags": [
+        "mount.kite01.stock.standard",
+        "platform.kite01"
+      ],
+      "requires_all": [],
+      "excludes_any": [],
+      "slots": [],
+      "base_stats": {},
+      "add_stats": {
+        "handling": -1.0
+      },
+      "multiply_stats": {},
+      "max_durability": 100,
+      "mesh": null,
+      "animations": {},
+      "effects": {},
+      "source_mesh_glb": "ContentSource/Weapons/ModularAssemblyV1/exports/modules/kite01.stock.standard.glb"
+    },
+    "kite01.trigger": {
+      "id": "kite01.trigger",
+      "weapon_root": false,
+      "tags": [
+        "mount.kite01.trigger",
+        "platform.kite01"
+      ],
+      "requires_all": [],
+      "excludes_any": [],
+      "slots": [],
+      "base_stats": {},
+      "add_stats": {
+        "handling": -1.0
+      },
+      "multiply_stats": {},
+      "max_durability": 100,
+      "mesh": null,
+      "animations": {},
+      "effects": {},
+      "source_mesh_glb": "ContentSource/Weapons/ModularAssemblyV1/exports/modules/kite01.trigger.glb"
+    },
+    "mote03.core": {
+      "id": "mote03.core",
+      "weapon_root": true,
+      "tags": [
+        "mount.mote03.core",
+        "platform.mote03"
+      ],
+      "requires_all": [],
+      "excludes_any": [],
+      "slots": [
+        {
+          "id": "magazine",
+          "accepts_any": [
+            "mount.mote03.magazine"
+          ],
+          "required": true,
+          "capacity": 1,
+          "occupancy_tokens": [
+            "magazine"
+          ],
+          "local_transform": {
+            "translation_cm": [
+              -4.7,
+              0,
+              -8.3
+            ],
+            "rotation_xyzw": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "id": "slide",
+          "accepts_any": [
+            "mount.mote03.slide"
+          ],
+          "required": true,
+          "capacity": 1,
+          "occupancy_tokens": [
+            "slide"
+          ],
+          "local_transform": {
+            "translation_cm": [
+              -7.000000000000001,
+              0,
+              5.7
+            ],
+            "rotation_xyzw": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "id": "trigger",
+          "accepts_any": [
+            "mount.mote03.trigger"
+          ],
+          "required": true,
+          "capacity": 1,
+          "occupancy_tokens": [
+            "trigger"
+          ],
+          "local_transform": {
+            "translation_cm": [
+              2.9000000000000004,
+              0,
+              -0.5
+            ],
+            "rotation_xyzw": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "id": "under_light",
+          "accepts_any": [
+            "mount.utility"
+          ],
+          "required": false,
+          "capacity": 1,
+          "occupancy_tokens": [
+            "under_shared"
+          ],
+          "local_transform": {
+            "translation_cm": [
+              10.5,
+              0,
+              -0.4
+            ],
+            "rotation_xyzw": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ]
+          }
+        }
+      ],
+      "base_stats": {
+        "handling": 50.0,
+        "stability": 50.0
+      },
+      "add_stats": {},
+      "multiply_stats": {},
+      "max_durability": 100,
+      "mesh": null,
+      "animations": {},
+      "effects": {},
+      "source_mesh_glb": "ContentSource/Weapons/ModularAssemblyV1/exports/modules/mote03.core.glb"
+    },
+    "mote03.magazine": {
+      "id": "mote03.magazine",
+      "weapon_root": false,
+      "tags": [
+        "mount.mote03.magazine",
+        "platform.mote03"
+      ],
+      "requires_all": [],
+      "excludes_any": [],
+      "slots": [],
+      "base_stats": {},
+      "add_stats": {
+        "handling": -1.0
+      },
+      "multiply_stats": {},
+      "max_durability": 100,
+      "mesh": null,
+      "animations": {},
+      "effects": {},
+      "source_mesh_glb": "ContentSource/Weapons/ModularAssemblyV1/exports/modules/mote03.magazine.glb"
+    },
+    "mote03.slide": {
+      "id": "mote03.slide",
+      "weapon_root": false,
+      "tags": [
+        "mount.mote03.slide",
+        "platform.mote03"
+      ],
+      "requires_all": [],
+      "excludes_any": [],
+      "slots": [
+        {
+          "id": "optic",
+          "accepts_any": [
+            "mount.micro_optic"
+          ],
+          "required": false,
+          "capacity": 1,
+          "occupancy_tokens": [
+            "optic"
+          ],
+          "local_transform": {
+            "translation_cm": [
+              2.7,
+              0,
+              5.4
+            ],
+            "rotation_xyzw": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ]
+          }
+        }
+      ],
+      "base_stats": {},
+      "add_stats": {
+        "handling": -1.0
+      },
+      "multiply_stats": {},
+      "max_durability": 100,
+      "mesh": null,
+      "animations": {},
+      "effects": {},
+      "source_mesh_glb": "ContentSource/Weapons/ModularAssemblyV1/exports/modules/mote03.slide.glb"
+    },
+    "mote03.trigger": {
+      "id": "mote03.trigger",
+      "weapon_root": false,
+      "tags": [
+        "mount.mote03.trigger",
+        "platform.mote03"
+      ],
+      "requires_all": [],
+      "excludes_any": [],
+      "slots": [],
+      "base_stats": {},
+      "add_stats": {
+        "handling": -1.0
+      },
+      "multiply_stats": {},
+      "max_durability": 100,
+      "mesh": null,
+      "animations": {},
+      "effects": {},
+      "source_mesh_glb": "ContentSource/Weapons/ModularAssemblyV1/exports/modules/mote03.trigger.glb"
+    },
+    "shared.adapter.universal_micro": {
+      "id": "shared.adapter.universal_micro",
+      "weapon_root": false,
+      "tags": [
+        "mount.universal_optic"
+      ],
+      "requires_all": [],
+      "excludes_any": [],
+      "slots": [
+        {
+          "id": "micro",
+          "accepts_any": [
+            "mount.micro_optic"
+          ],
+          "required": false,
+          "capacity": 1,
+          "occupancy_tokens": [
+            "micro"
+          ],
+          "local_transform": {
+            "translation_cm": [
+              0,
+              0,
+              2.1999999999999997
+            ],
+            "rotation_xyzw": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ]
+          }
+        }
+      ],
+      "base_stats": {},
+      "add_stats": {
+        "handling": -1.0
+      },
+      "multiply_stats": {},
+      "max_durability": 100,
+      "mesh": null,
+      "animations": {},
+      "effects": {},
+      "source_mesh_glb": "ContentSource/Weapons/ModularAssemblyV1/exports/modules/shared.adapter.universal_micro.glb"
+    },
+    "shared.grip.stub": {
+      "id": "shared.grip.stub",
+      "weapon_root": false,
+      "tags": [
+        "mount.under_grip"
+      ],
+      "requires_all": [],
+      "excludes_any": [],
+      "slots": [],
+      "base_stats": {},
+      "add_stats": {
+        "handling": -1.0
+      },
+      "multiply_stats": {},
+      "max_durability": 100,
+      "mesh": null,
+      "animations": {},
+      "effects": {},
+      "source_mesh_glb": "ContentSource/Weapons/ModularAssemblyV1/exports/modules/shared.grip.stub.glb"
+    },
+    "shared.light.compact": {
+      "id": "shared.light.compact",
+      "weapon_root": false,
+      "tags": [
+        "mount.utility"
+      ],
+      "requires_all": [],
+      "excludes_any": [],
+      "slots": [],
+      "base_stats": {},
+      "add_stats": {
+        "handling": -1.0
+      },
+      "multiply_stats": {},
+      "max_durability": 100,
+      "mesh": null,
+      "animations": {},
+      "effects": {},
+      "source_mesh_glb": "ContentSource/Weapons/ModularAssemblyV1/exports/modules/shared.light.compact.glb"
+    },
+    "shared.optic.micro": {
+      "id": "shared.optic.micro",
+      "weapon_root": false,
+      "tags": [
+        "mount.micro_optic"
+      ],
+      "requires_all": [],
+      "excludes_any": [],
+      "slots": [],
+      "base_stats": {},
+      "add_stats": {
+        "handling": -1.0
+      },
+      "multiply_stats": {},
+      "max_durability": 100,
+      "mesh": null,
+      "animations": {},
+      "effects": {},
+      "source_mesh_glb": "ContentSource/Weapons/ModularAssemblyV1/exports/modules/shared.optic.micro.glb"
+    },
+    "shared.optic.reflex": {
+      "id": "shared.optic.reflex",
+      "weapon_root": false,
+      "tags": [
+        "mount.universal_optic"
+      ],
+      "requires_all": [],
+      "excludes_any": [],
+      "slots": [],
+      "base_stats": {},
+      "add_stats": {
+        "handling": -1.0
+      },
+      "multiply_stats": {},
+      "max_durability": 100,
+      "mesh": null,
+      "animations": {},
+      "effects": {},
+      "source_mesh_glb": "ContentSource/Weapons/ModularAssemblyV1/exports/modules/shared.optic.reflex.glb"
+    },
+    "wisp02.charging_handle": {
+      "id": "wisp02.charging_handle",
+      "weapon_root": false,
+      "tags": [
+        "mount.wisp02.charging_handle",
+        "platform.wisp02"
+      ],
+      "requires_all": [],
+      "excludes_any": [],
+      "slots": [],
+      "base_stats": {},
+      "add_stats": {
+        "handling": -1.0
+      },
+      "multiply_stats": {},
+      "max_durability": 100,
+      "mesh": null,
+      "animations": {},
+      "effects": {},
+      "source_mesh_glb": "ContentSource/Weapons/ModularAssemblyV1/exports/modules/wisp02.charging_handle.glb"
+    },
+    "wisp02.core": {
+      "id": "wisp02.core",
+      "weapon_root": true,
+      "tags": [
+        "mount.wisp02.core",
+        "platform.wisp02"
+      ],
+      "requires_all": [],
+      "excludes_any": [],
+      "slots": [
+        {
+          "id": "charging_handle",
+          "accepts_any": [
+            "mount.wisp02.charging_handle"
+          ],
+          "required": true,
+          "capacity": 1,
+          "occupancy_tokens": [
+            "charging_handle"
+          ],
+          "local_transform": {
+            "translation_cm": [
+              -6.0,
+              2.8000000000000003,
+              7.3
+            ],
+            "rotation_xyzw": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "id": "grip",
+          "accepts_any": [
+            "mount.wisp02.grip"
+          ],
+          "required": true,
+          "capacity": 1,
+          "occupancy_tokens": [
+            "grip"
+          ],
+          "local_transform": {
+            "translation_cm": [
+              -7.7,
+              0,
+              -0.8
+            ],
+            "rotation_xyzw": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "id": "handguard.standard",
+          "accepts_any": [
+            "mount.wisp02.handguard.standard"
+          ],
+          "required": true,
+          "capacity": 1,
+          "occupancy_tokens": [
+            "handguard.standard"
+          ],
+          "local_transform": {
+            "translation_cm": [
+              13.0,
+              0,
+              6.3
+            ],
+            "rotation_xyzw": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "id": "magazine",
+          "accepts_any": [
+            "mount.wisp02.magazine"
+          ],
+          "required": true,
+          "capacity": 1,
+          "occupancy_tokens": [
+            "magazine"
+          ],
+          "local_transform": {
+            "translation_cm": [
+              7.1,
+              0,
+              -1.5
+            ],
+            "rotation_xyzw": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "id": "muzzle",
+          "accepts_any": [
+            "mount.wisp02.muzzle"
+          ],
+          "required": true,
+          "capacity": 1,
+          "occupancy_tokens": [
+            "muzzle"
+          ],
+          "local_transform": {
+            "translation_cm": [
+              31.5,
+              0,
+              6.4
+            ],
+            "rotation_xyzw": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "id": "optic",
+          "accepts_any": [
+            "mount.universal_optic"
+          ],
+          "required": false,
+          "capacity": 1,
+          "occupancy_tokens": [
+            "optic"
+          ],
+          "local_transform": {
+            "translation_cm": [
+              0,
+              0,
+              13.900000000000002
+            ],
+            "rotation_xyzw": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "id": "stock.standard",
+          "accepts_any": [
+            "mount.wisp02.stock.standard"
+          ],
+          "required": true,
+          "capacity": 1,
+          "occupancy_tokens": [
+            "stock.standard"
+          ],
+          "local_transform": {
+            "translation_cm": [
+              -12.0,
+              0,
+              7.3999999999999995
+            ],
+            "rotation_xyzw": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "id": "trigger",
+          "accepts_any": [
+            "mount.wisp02.trigger"
+          ],
+          "required": true,
+          "capacity": 1,
+          "occupancy_tokens": [
+            "trigger"
+          ],
+          "local_transform": {
+            "translation_cm": [
+              -2.5,
+              0,
+              -1.9
+            ],
+            "rotation_xyzw": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ]
+          }
+        }
+      ],
+      "base_stats": {
+        "handling": 50.0,
+        "stability": 50.0
+      },
+      "add_stats": {},
+      "multiply_stats": {},
+      "max_durability": 100,
+      "mesh": null,
+      "animations": {},
+      "effects": {},
+      "source_mesh_glb": "ContentSource/Weapons/ModularAssemblyV1/exports/modules/wisp02.core.glb"
+    },
+    "wisp02.grip": {
+      "id": "wisp02.grip",
+      "weapon_root": false,
+      "tags": [
+        "mount.wisp02.grip",
+        "platform.wisp02"
+      ],
+      "requires_all": [],
+      "excludes_any": [],
+      "slots": [],
+      "base_stats": {},
+      "add_stats": {
+        "handling": -1.0
+      },
+      "multiply_stats": {},
+      "max_durability": 100,
+      "mesh": null,
+      "animations": {},
+      "effects": {},
+      "source_mesh_glb": "ContentSource/Weapons/ModularAssemblyV1/exports/modules/wisp02.grip.glb"
+    },
+    "wisp02.handguard.standard": {
+      "id": "wisp02.handguard.standard",
+      "weapon_root": false,
+      "tags": [
+        "mount.wisp02.handguard.standard",
+        "platform.wisp02"
+      ],
+      "requires_all": [],
+      "excludes_any": [],
+      "slots": [
+        {
+          "id": "side_light",
+          "accepts_any": [
+            "mount.utility"
+          ],
+          "required": false,
+          "capacity": 1,
+          "occupancy_tokens": [
+            "side_utility"
+          ],
+          "local_transform": {
+            "translation_cm": [
+              11.5,
+              2.75,
+              0.6
+            ],
+            "rotation_xyzw": [
+              0.7071067811865476,
+              0,
+              0,
+              0.7071067811865476
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "id": "under_grip",
+          "accepts_any": [
+            "mount.under_grip"
+          ],
+          "required": false,
+          "capacity": 1,
+          "occupancy_tokens": [
+            "under_shared"
+          ],
+          "local_transform": {
+            "translation_cm": [
+              10.500000417232513,
+              -0.0,
+              -6.599999964237213
+            ],
+            "rotation_xyzw": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "id": "under_light",
+          "accepts_any": [
+            "mount.utility"
+          ],
+          "required": false,
+          "capacity": 1,
+          "occupancy_tokens": [
+            "under_shared"
+          ],
+          "local_transform": {
+            "translation_cm": [
+              10.500000417232513,
+              -0.0,
+              -6.599999964237213
+            ],
+            "rotation_xyzw": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ]
+          }
+        }
+      ],
+      "base_stats": {},
+      "add_stats": {
+        "handling": -1.0
+      },
+      "multiply_stats": {},
+      "max_durability": 100,
+      "mesh": null,
+      "animations": {},
+      "effects": {},
+      "source_mesh_glb": "ContentSource/Weapons/ModularAssemblyV1/exports/modules/wisp02.handguard.standard.glb"
+    },
+    "wisp02.magazine": {
+      "id": "wisp02.magazine",
+      "weapon_root": false,
+      "tags": [
+        "mount.wisp02.magazine",
+        "platform.wisp02"
+      ],
+      "requires_all": [],
+      "excludes_any": [],
+      "slots": [],
+      "base_stats": {},
+      "add_stats": {
+        "handling": -1.0
+      },
+      "multiply_stats": {},
+      "max_durability": 100,
+      "mesh": null,
+      "animations": {},
+      "effects": {},
+      "source_mesh_glb": "ContentSource/Weapons/ModularAssemblyV1/exports/modules/wisp02.magazine.glb"
+    },
+    "wisp02.muzzle": {
+      "id": "wisp02.muzzle",
+      "weapon_root": false,
+      "tags": [
+        "mount.wisp02.muzzle",
+        "platform.wisp02"
+      ],
+      "requires_all": [],
+      "excludes_any": [],
+      "slots": [],
+      "base_stats": {},
+      "add_stats": {
+        "handling": -1.0
+      },
+      "multiply_stats": {},
+      "max_durability": 100,
+      "mesh": null,
+      "animations": {},
+      "effects": {},
+      "source_mesh_glb": "ContentSource/Weapons/ModularAssemblyV1/exports/modules/wisp02.muzzle.glb"
+    },
+    "wisp02.stock.standard": {
+      "id": "wisp02.stock.standard",
+      "weapon_root": false,
+      "tags": [
+        "mount.wisp02.stock.standard",
+        "platform.wisp02"
+      ],
+      "requires_all": [],
+      "excludes_any": [],
+      "slots": [],
+      "base_stats": {},
+      "add_stats": {
+        "handling": -1.0
+      },
+      "multiply_stats": {},
+      "max_durability": 100,
+      "mesh": null,
+      "animations": {},
+      "effects": {},
+      "source_mesh_glb": "ContentSource/Weapons/ModularAssemblyV1/exports/modules/wisp02.stock.standard.glb"
+    },
+    "wisp02.trigger": {
+      "id": "wisp02.trigger",
+      "weapon_root": false,
+      "tags": [
+        "mount.wisp02.trigger",
+        "platform.wisp02"
+      ],
+      "requires_all": [],
+      "excludes_any": [],
+      "slots": [],
+      "base_stats": {},
+      "add_stats": {
+        "handling": -1.0
+      },
+      "multiply_stats": {},
+      "max_durability": 100,
+      "mesh": null,
+      "animations": {},
+      "effects": {},
+      "source_mesh_glb": "ContentSource/Weapons/ModularAssemblyV1/exports/modules/wisp02.trigger.glb"
+    }
+  }
+}

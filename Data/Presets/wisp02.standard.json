@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "revision": "0",
+  "instances": [
+    {
+      "id": "charging_handle",
+      "definition_id": "wisp02.charging_handle",
+      "durability": 100,
+      "quality": 0,
+      "affixes": {},
+      "bound_owner": "",
+      "locked": false
+    },
+    {
+      "id": "grip",
+      "definition_id": "wisp02.grip",
+      "durability": 100,
+      "quality": 0,
+      "affixes": {},
+      "bound_owner": "",
+      "locked": false
+    },
+    {
+      "id": "grip_addon",
+      "definition_id": "shared.grip.stub",
+      "durability": 100,
+      "quality": 0,
+      "affixes": {},
+      "bound_owner": "",
+      "locked": false
+    },
+    {
+      "id": "handguard.standard",
+      "definition_id": "wisp02.handguard.standard",
+      "durability": 100,
+      "quality": 0,
+      "affixes": {},
+      "bound_owner": "",
+      "locked": false
+    },
+    {
+      "id": "magazine",
+      "definition_id": "wisp02.magazine",
+      "durability": 100,
+      "quality": 0,
+      "affixes": {},
+      "bound_owner": "",
+      "locked": false
+    },
+    {
+      "id": "muzzle",
+      "definition_id": "wisp02.muzzle",
+      "durability": 100,
+      "quality": 0,
+      "affixes": {},
+      "bound_owner": "",
+      "locked": false
+    },
+    {
+      "id": "root",
+      "definition_id": "wisp02.core",
+      "durability": 100,
+      "quality": 0,
+      "affixes": {},
+      "bound_owner": "",
+      "locked": false
+    },
+    {
+      "id": "sight",
+      "definition_id": "shared.optic.reflex",
+      "durability": 100,
+      "quality": 0,
+      "affixes": {},
+      "bound_owner": "",
+      "locked": false
+    },
+    {
+      "id": "stock.standard",
+      "definition_id": "wisp02.stock.standard",
+      "durability": 100,
+      "quality": 0,
+      "affixes": {},
+      "bound_owner": "",
+      "locked": false
+    },
+    {
+      "id": "trigger",
+      "definition_id": "wisp02.trigger",
+      "durability": 100,
+      "quality": 0,
+      "affixes": {},
+      "bound_owner": "",
+      "locked": false
+    }
+  ],
+  "links": [
+    {
+      "child": "charging_handle",
+      "parent": "root",
+      "slot": "charging_handle"
+    },
+    {
+      "child": "grip",
+      "parent": "root",
+      "slot": "grip"
+    },
+    {
+      "child": "grip_addon",
+      "parent": "handguard.standard",
+      "slot": "under_grip"
+    },
+    {
+      "child": "handguard.standard",
+      "parent": "root",
+      "slot": "handguard.standard"
+    },
+    {
+      "child": "magazine",
+      "parent": "root",
+      "slot": "magazine"
+    },
+    {
+      "child": "muzzle",
+      "parent": "root",
+      "slot": "muzzle"
+    },
+    {
+      "child": "sight",
+      "parent": "root",
+      "slot": "optic"
+    },
+    {
+      "child": "stock.standard",
+      "parent": "root",
+      "slot": "stock.standard"
+    },
+    {
+      "child": "trigger",
+      "parent": "root",
+      "slot": "trigger"
+    }
+  ]
+}

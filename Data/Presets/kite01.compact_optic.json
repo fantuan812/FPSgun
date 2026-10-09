@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "revision": "0",
+  "instances": [
+    {
+      "id": "adapter",
+      "definition_id": "shared.adapter.universal_micro",
+      "durability": 100,
+      "quality": 0,
+      "affixes": {},
+      "bound_owner": "",
+      "locked": false
+    },
+    {
+      "id": "charging_handle",
+      "definition_id": "kite01.charging_handle",
+      "durability": 100,
+      "quality": 0,
+      "affixes": {},
+      "bound_owner": "",
+      "locked": false
+    },
+    {
+      "id": "grip",
+      "definition_id": "kite01.grip",
+      "durability": 100,
+      "quality": 0,
+      "affixes": {},
+      "bound_owner": "",
+      "locked": false
+    },
+    {
+      "id": "handguard.standard",
+      "definition_id": "kite01.handguard.standard",
+      "durability": 100,
+      "quality": 0,
+      "affixes": {},
+      "bound_owner": "",
+      "locked": false
+    },
+    {
+      "id": "light",
+      "definition_id": "shared.light.compact",
+      "durability": 100,
+      "quality": 0,
+      "affixes": {},
+      "bound_owner": "",
+      "locked": false
+    },
+    {
+      "id": "magazine",
+      "definition_id": "kite01.magazine",
+      "durability": 100,
+      "quality": 0,
+      "affixes": {},
+      "bound_owner": "",
+      "locked": false
+    },
+    {
+      "id": "muzzle",
+      "definition_id": "kite01.muzzle",
+      "durability": 100,
+      "quality": 0,
+      "affixes": {},
+      "bound_owner": "",
+      "locked": false
+    },
+    {
+      "id": "root",
+      "definition_id": "kite01.core",
+      "durability": 100,
+      "quality": 0,
+      "affixes": {},
+      "bound_owner": "",
+      "locked": false
+    },
+    {
+      "id": "sight",
+      "definition_id": "shared.optic.micro",
+      "durability": 100,
+      "quality": 0,
+      "affixes": {},
+      "bound_owner": "",
+      "locked": false
+    },
+    {
+      "id": "stock.standard",
+      "definition_id": "kite01.stock.standard",
+      "durability": 100,
+      "quality": 0,
+      "affixes": {},
+      "bound_owner": "",
+      "locked": false
+    },
+    {
+      "id": "trigger",
+      "definition_id": "kite01.trigger",
+      "durability": 100,
+      "quality": 0,
+      "affixes": {},
+      "bound_owner": "",
+      "locked": false
+    }
+  ],
+  "links": [
+    {
+      "child": "adapter",
+      "parent": "root",
+      "slot": "optic"
+    },
+    {
+      "child": "charging_handle",
+      "parent": "root",
+      "slot": "charging_handle"
+    },
+    {
+      "child": "grip",
+      "parent": "root",
+      "slot": "grip"
+    },
+    {
+      "child": "handguard.standard",
+      "parent": "root",
+      "slot": "handguard.standard"
+    },
+    {
+      "child": "light",
+      "parent": "handguard.standard",
+      "slot": "under_light"
+    },
+    {
+      "child": "magazine",
+      "parent": "root",
+      "slot": "magazine"
+    },
+    {
+      "child": "muzzle",
+      "parent": "root",
+      "slot": "muzzle"
+    },
+    {
+      "child": "sight",
+      "parent": "adapter",
+      "slot": "micro"
+    },
+    {
+      "child": "stock.standard",
+      "parent": "root",
+      "slot": "stock.standard"
+    },
+    {
+      "child": "trigger",
+      "parent": "root",
+      "slot": "trigger"
+    }
+  ]
+}
