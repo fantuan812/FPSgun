@@ -1,0 +1,1150 @@
+[
+  {
+    "asset_id": "SM_NPP_Pipe_Straight_4m_A",
+    "tests": [
+      {
+        "test": "visual open port short bore ray",
+        "socket": "in",
+        "offset_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "hit": null,
+        "status": "PASS"
+      },
+      {
+        "test": "visual open port short bore ray",
+        "socket": "in",
+        "offset_m": [
+          0.0,
+          0.10000000149011612,
+          -0.0
+        ],
+        "hit": null,
+        "status": "PASS"
+      },
+      {
+        "test": "visual open port short bore ray",
+        "socket": "in",
+        "offset_m": [
+          -0.0,
+          -0.10000000149011612,
+          0.0
+        ],
+        "hit": null,
+        "status": "PASS"
+      },
+      {
+        "test": "visual open port short bore ray",
+        "socket": "in",
+        "offset_m": [
+          -0.0,
+          0.0,
+          -0.10000000149011612
+        ],
+        "hit": null,
+        "status": "PASS"
+      },
+      {
+        "test": "visual open port short bore ray",
+        "socket": "in",
+        "offset_m": [
+          0.0,
+          -0.0,
+          0.10000000149011612
+        ],
+        "hit": null,
+        "status": "PASS"
+      },
+      {
+        "test": "actual annular mating face plane",
+        "socket": "in",
+        "plane_error_m": 7.450580596923828e-09,
+        "status": "PASS"
+      },
+      {
+        "test": "actual annular mating face plane",
+        "socket": "in",
+        "plane_error_m": 2.2351741790771484e-08,
+        "status": "PASS"
+      },
+      {
+        "test": "actual annular mating face plane",
+        "socket": "in",
+        "plane_error_m": 1.1175870895385742e-08,
+        "status": "PASS"
+      },
+      {
+        "test": "actual annular mating face plane",
+        "socket": "in",
+        "plane_error_m": 2.9802322387695312e-08,
+        "status": "PASS"
+      },
+      {
+        "test": "visual open port short bore ray",
+        "socket": "out",
+        "offset_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "hit": null,
+        "status": "PASS"
+      },
+      {
+        "test": "visual open port short bore ray",
+        "socket": "out",
+        "offset_m": [
+          0.0,
+          -0.10000000149011612,
+          0.0
+        ],
+        "hit": null,
+        "status": "PASS"
+      },
+      {
+        "test": "visual open port short bore ray",
+        "socket": "out",
+        "offset_m": [
+          -0.0,
+          0.10000000149011612,
+          -0.0
+        ],
+        "hit": null,
+        "status": "PASS"
+      },
+      {
+        "test": "visual open port short bore ray",
+        "socket": "out",
+        "offset_m": [
+          0.0,
+          0.0,
+          -0.10000000149011612
+        ],
+        "hit": null,
+        "status": "PASS"
+      },
+      {
+        "test": "visual open port short bore ray",
+        "socket": "out",
+        "offset_m": [
+          -0.0,
+          -0.0,
+          0.10000000149011612
+        ],
+        "hit": null,
+        "status": "PASS"
+      },
+      {
+        "test": "actual annular mating face plane",
+        "socket": "out",
+        "plane_error_m": 0.0,
+        "status": "PASS"
+      },
+      {
+        "test": "actual annular mating face plane",
+        "socket": "out",
+        "plane_error_m": 0.0,
+        "status": "PASS"
+      },
+      {
+        "test": "actual annular mating face plane",
+        "socket": "out",
+        "plane_error_m": 0.0,
+        "status": "PASS"
+      },
+      {
+        "test": "actual annular mating face plane",
+        "socket": "out",
+        "plane_error_m": 0.0,
+        "status": "PASS"
+      },
+      {
+        "test": "communicating visual bore centerline",
+        "start": [
+          -0.1,
+          0,
+          0
+        ],
+        "direction": [
+          1,
+          0,
+          0
+        ],
+        "length_m": 4.2,
+        "hit": null,
+        "status": "PASS"
+      }
+    ],
+    "uv_integrity": {
+      "UV0_TileMeters": {
+        "nonfinite_values": 0,
+        "zero_area_triangles": 0,
+        "status": "PASS"
+      },
+      "UV1_Lightmap": {
+        "nonfinite_values": 0,
+        "zero_area_triangles": 0,
+        "status": "PASS"
+      }
+    },
+    "status": "PASS",
+    "note": "Visual bore tests do not mean the simplified convex gameplay collision is hollow. No hydraulic simulation."
+  },
+  {
+    "asset_id": "SM_NPP_Pipe_Elbow90_R1_A",
+    "tests": [
+      {
+        "test": "visual open port short bore ray",
+        "socket": "in",
+        "offset_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "hit": null,
+        "status": "PASS"
+      },
+      {
+        "test": "visual open port short bore ray",
+        "socket": "in",
+        "offset_m": [
+          0.0,
+          0.10000000149011612,
+          -0.0
+        ],
+        "hit": null,
+        "status": "PASS"
+      },
+      {
+        "test": "visual open port short bore ray",
+        "socket": "in",
+        "offset_m": [
+          -0.0,
+          -0.10000000149011612,
+          0.0
+        ],
+        "hit": null,
+        "status": "PASS"
+      },
+      {
+        "test": "visual open port short bore ray",
+        "socket": "in",
+        "offset_m": [
+          -0.0,
+          0.0,
+          -0.10000000149011612
+        ],
+        "hit": null,
+        "status": "PASS"
+      },
+      {
+        "test": "visual open port short bore ray",
+        "socket": "in",
+        "offset_m": [
+          0.0,
+          -0.0,
+          0.10000000149011612
+        ],
+        "hit": null,
+        "status": "PASS"
+      },
+      {
+        "test": "actual annular mating face plane",
+        "socket": "in",
+        "plane_error_m": 7.450580596923828e-09,
+        "status": "PASS"
+      },
+      {
+        "test": "actual annular mating face plane",
+        "socket": "in",
+        "plane_error_m": 2.2351741790771484e-08,
+        "status": "PASS"
+      },
+      {
+        "test": "actual annular mating face plane",
+        "socket": "in",
+        "plane_error_m": 1.1175870895385742e-08,
+        "status": "PASS"
+      },
+      {
+        "test": "actual annular mating face plane",
+        "socket": "in",
+        "plane_error_m": 2.9802322387695312e-08,
+        "status": "PASS"
+      },
+      {
+        "test": "visual open port short bore ray",
+        "socket": "out",
+        "offset_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "hit": null,
+        "status": "PASS"
+      },
+      {
+        "test": "visual open port short bore ray",
+        "socket": "out",
+        "offset_m": [
+          0.10000000149011612,
+          0.0,
+          0.0
+        ],
+        "hit": null,
+        "status": "PASS"
+      },
+      {
+        "test": "visual open port short bore ray",
+        "socket": "out",
+        "offset_m": [
+          -0.10000000149011612,
+          -0.0,
+          -0.0
+        ],
+        "hit": null,
+        "status": "PASS"
+      },
+      {
+        "test": "visual open port short bore ray",
+        "socket": "out",
+        "offset_m": [
+          0.0,
+          0.0,
+          -0.10000000149011612
+        ],
+        "hit": null,
+        "status": "PASS"
+      },
+      {
+        "test": "visual open port short bore ray",
+        "socket": "out",
+        "offset_m": [
+          -0.0,
+          -0.0,
+          0.10000000149011612
+        ],
+        "hit": null,
+        "status": "PASS"
+      },
+      {
+        "test": "actual annular mating face plane",
+        "socket": "out",
+        "plane_error_m": 0.0,
+        "status": "PASS"
+      },
+      {
+        "test": "actual annular mating face plane",
+        "socket": "out",
+        "plane_error_m": 0.0,
+        "status": "PASS"
+      },
+      {
+        "test": "actual annular mating face plane",
+        "socket": "out",
+        "plane_error_m": 0.0,
+        "status": "PASS"
+      },
+      {
+        "test": "actual annular mating face plane",
+        "socket": "out",
+        "plane_error_m": 0.0,
+        "status": "PASS"
+      },
+      {
+        "test": "curved bore radial clearance sample",
+        "angle_degrees": -75,
+        "radius_error_m": 2.23881006240767e-05,
+        "status": "PASS"
+      },
+      {
+        "test": "curved bore radial clearance sample",
+        "angle_degrees": -45,
+        "radius_error_m": 2.1457672111369064e-08,
+        "status": "PASS"
+      },
+      {
+        "test": "curved bore radial clearance sample",
+        "angle_degrees": -15,
+        "radius_error_m": 2.240300178527055e-05,
+        "status": "PASS"
+      }
+    ],
+    "uv_integrity": {
+      "UV0_TileMeters": {
+        "nonfinite_values": 0,
+        "zero_area_triangles": 0,
+        "status": "PASS"
+      },
+      "UV1_Lightmap": {
+        "nonfinite_values": 0,
+        "zero_area_triangles": 0,
+        "status": "PASS"
+      }
+    },
+    "status": "PASS",
+    "note": "Visual bore tests do not mean the simplified convex gameplay collision is hollow. No hydraulic simulation."
+  },
+  {
+    "asset_id": "SM_NPP_Pipe_Tee_2m_A",
+    "tests": [
+      {
+        "test": "visual open port short bore ray",
+        "socket": "in",
+        "offset_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "hit": null,
+        "status": "PASS"
+      },
+      {
+        "test": "visual open port short bore ray",
+        "socket": "in",
+        "offset_m": [
+          0.0,
+          0.10000000149011612,
+          -0.0
+        ],
+        "hit": null,
+        "status": "PASS"
+      },
+      {
+        "test": "visual open port short bore ray",
+        "socket": "in",
+        "offset_m": [
+          -0.0,
+          -0.10000000149011612,
+          0.0
+        ],
+        "hit": null,
+        "status": "PASS"
+      },
+      {
+        "test": "visual open port short bore ray",
+        "socket": "in",
+        "offset_m": [
+          -0.0,
+          0.0,
+          -0.10000000149011612
+        ],
+        "hit": null,
+        "status": "PASS"
+      },
+      {
+        "test": "visual open port short bore ray",
+        "socket": "in",
+        "offset_m": [
+          0.0,
+          -0.0,
+          0.10000000149011612
+        ],
+        "hit": null,
+        "status": "PASS"
+      },
+      {
+        "test": "actual annular mating face plane",
+        "socket": "in",
+        "plane_error_m": 7.450580596923828e-09,
+        "status": "PASS"
+      },
+      {
+        "test": "actual annular mating face plane",
+        "socket": "in",
+        "plane_error_m": 2.2351741790771484e-08,
+        "status": "PASS"
+      },
+      {
+        "test": "actual annular mating face plane",
+        "socket": "in",
+        "plane_error_m": 1.1175870895385742e-08,
+        "status": "PASS"
+      },
+      {
+        "test": "actual annular mating face plane",
+        "socket": "in",
+        "plane_error_m": 2.9802322387695312e-08,
+        "status": "PASS"
+      },
+      {
+        "test": "visual open port short bore ray",
+        "socket": "out",
+        "offset_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "hit": null,
+        "status": "PASS"
+      },
+      {
+        "test": "visual open port short bore ray",
+        "socket": "out",
+        "offset_m": [
+          0.0,
+          -0.10000000149011612,
+          0.0
+        ],
+        "hit": null,
+        "status": "PASS"
+      },
+      {
+        "test": "visual open port short bore ray",
+        "socket": "out",
+        "offset_m": [
+          -0.0,
+          0.10000000149011612,
+          -0.0
+        ],
+        "hit": null,
+        "status": "PASS"
+      },
+      {
+        "test": "visual open port short bore ray",
+        "socket": "out",
+        "offset_m": [
+          0.0,
+          0.0,
+          -0.10000000149011612
+        ],
+        "hit": null,
+        "status": "PASS"
+      },
+      {
+        "test": "visual open port short bore ray",
+        "socket": "out",
+        "offset_m": [
+          -0.0,
+          -0.0,
+          0.10000000149011612
+        ],
+        "hit": null,
+        "status": "PASS"
+      },
+      {
+        "test": "actual annular mating face plane",
+        "socket": "out",
+        "plane_error_m": 0.0,
+        "status": "PASS"
+      },
+      {
+        "test": "actual annular mating face plane",
+        "socket": "out",
+        "plane_error_m": 0.0,
+        "status": "PASS"
+      },
+      {
+        "test": "actual annular mating face plane",
+        "socket": "out",
+        "plane_error_m": 0.0,
+        "status": "PASS"
+      },
+      {
+        "test": "actual annular mating face plane",
+        "socket": "out",
+        "plane_error_m": 0.0,
+        "status": "PASS"
+      },
+      {
+        "test": "visual open port short bore ray",
+        "socket": "branch",
+        "offset_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "hit": null,
+        "status": "PASS"
+      },
+      {
+        "test": "visual open port short bore ray",
+        "socket": "branch",
+        "offset_m": [
+          0.10000000149011612,
+          0.0,
+          0.0
+        ],
+        "hit": null,
+        "status": "PASS"
+      },
+      {
+        "test": "visual open port short bore ray",
+        "socket": "branch",
+        "offset_m": [
+          -0.10000000149011612,
+          -0.0,
+          -0.0
+        ],
+        "hit": null,
+        "status": "PASS"
+      },
+      {
+        "test": "visual open port short bore ray",
+        "socket": "branch",
+        "offset_m": [
+          0.0,
+          0.0,
+          -0.10000000149011612
+        ],
+        "hit": null,
+        "status": "PASS"
+      },
+      {
+        "test": "visual open port short bore ray",
+        "socket": "branch",
+        "offset_m": [
+          -0.0,
+          -0.0,
+          0.10000000149011612
+        ],
+        "hit": null,
+        "status": "PASS"
+      },
+      {
+        "test": "actual annular mating face plane",
+        "socket": "branch",
+        "plane_error_m": 0.0,
+        "status": "PASS"
+      },
+      {
+        "test": "actual annular mating face plane",
+        "socket": "branch",
+        "plane_error_m": 0.0,
+        "status": "PASS"
+      },
+      {
+        "test": "actual annular mating face plane",
+        "socket": "branch",
+        "plane_error_m": 0.0,
+        "status": "PASS"
+      },
+      {
+        "test": "actual annular mating face plane",
+        "socket": "branch",
+        "plane_error_m": 0.0,
+        "status": "PASS"
+      },
+      {
+        "test": "tee opposite exterior wall remains closed",
+        "sample_z": -0.23,
+        "hit": [
+          1.0,
+          -0.13028907775878906,
+          -0.23000000417232513
+        ],
+        "status": "PASS"
+      },
+      {
+        "test": "tee opposite exterior wall remains closed",
+        "sample_z": -0.2,
+        "hit": [
+          1.0,
+          -0.1726110577583313,
+          -0.20000000298023224
+        ],
+        "status": "PASS"
+      },
+      {
+        "test": "tee opposite exterior wall remains closed",
+        "sample_z": -0.15,
+        "hit": [
+          1.0,
+          -0.21792107820510864,
+          -0.15000000596046448
+        ],
+        "status": "PASS"
+      },
+      {
+        "test": "tee opposite exterior wall remains closed",
+        "sample_z": 0,
+        "hit": [
+          1.0,
+          -0.26500004529953003,
+          0.0
+        ],
+        "status": "PASS"
+      },
+      {
+        "test": "tee opposite exterior wall remains closed",
+        "sample_z": 0.15,
+        "hit": [
+          1.0,
+          -0.21792107820510864,
+          0.15000000596046448
+        ],
+        "status": "PASS"
+      },
+      {
+        "test": "tee opposite exterior wall remains closed",
+        "sample_z": 0.2,
+        "hit": [
+          1.0,
+          -0.17261099815368652,
+          0.20000000298023224
+        ],
+        "status": "PASS"
+      },
+      {
+        "test": "tee opposite exterior wall remains closed",
+        "sample_z": 0.23,
+        "hit": [
+          1.0,
+          -0.13028913736343384,
+          0.23000000417232513
+        ],
+        "status": "PASS"
+      },
+      {
+        "test": "communicating visual bore centerline",
+        "start": [
+          -0.1,
+          0,
+          0
+        ],
+        "direction": [
+          1,
+          0,
+          0
+        ],
+        "length_m": 2.2,
+        "hit": null,
+        "status": "PASS"
+      },
+      {
+        "test": "communicating visual bore centerline",
+        "start": [
+          1,
+          0,
+          0
+        ],
+        "direction": [
+          0,
+          1,
+          0
+        ],
+        "length_m": 1.1,
+        "hit": null,
+        "status": "PASS"
+      }
+    ],
+    "uv_integrity": {
+      "UV0_TileMeters": {
+        "nonfinite_values": 0,
+        "zero_area_triangles": 0,
+        "status": "PASS"
+      },
+      "UV1_Lightmap": {
+        "nonfinite_values": 0,
+        "zero_area_triangles": 0,
+        "status": "PASS"
+      }
+    },
+    "status": "PASS",
+    "note": "Visual bore tests do not mean the simplified convex gameplay collision is hollow. No hydraulic simulation."
+  },
+  {
+    "asset_id": "SM_NPP_Valve_1m_A",
+    "tests": [
+      {
+        "test": "visual open port short bore ray",
+        "socket": "in",
+        "offset_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "hit": null,
+        "status": "PASS"
+      },
+      {
+        "test": "visual open port short bore ray",
+        "socket": "in",
+        "offset_m": [
+          0.0,
+          0.10000000149011612,
+          -0.0
+        ],
+        "hit": null,
+        "status": "PASS"
+      },
+      {
+        "test": "visual open port short bore ray",
+        "socket": "in",
+        "offset_m": [
+          -0.0,
+          -0.10000000149011612,
+          0.0
+        ],
+        "hit": null,
+        "status": "PASS"
+      },
+      {
+        "test": "visual open port short bore ray",
+        "socket": "in",
+        "offset_m": [
+          -0.0,
+          0.0,
+          -0.10000000149011612
+        ],
+        "hit": null,
+        "status": "PASS"
+      },
+      {
+        "test": "visual open port short bore ray",
+        "socket": "in",
+        "offset_m": [
+          0.0,
+          -0.0,
+          0.10000000149011612
+        ],
+        "hit": null,
+        "status": "PASS"
+      },
+      {
+        "test": "actual annular mating face plane",
+        "socket": "in",
+        "plane_error_m": 7.450580596923828e-09,
+        "status": "PASS"
+      },
+      {
+        "test": "actual annular mating face plane",
+        "socket": "in",
+        "plane_error_m": 2.2351741790771484e-08,
+        "status": "PASS"
+      },
+      {
+        "test": "actual annular mating face plane",
+        "socket": "in",
+        "plane_error_m": 1.1175870895385742e-08,
+        "status": "PASS"
+      },
+      {
+        "test": "actual annular mating face plane",
+        "socket": "in",
+        "plane_error_m": 2.9802322387695312e-08,
+        "status": "PASS"
+      },
+      {
+        "test": "visual open port short bore ray",
+        "socket": "out",
+        "offset_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "hit": null,
+        "status": "PASS"
+      },
+      {
+        "test": "visual open port short bore ray",
+        "socket": "out",
+        "offset_m": [
+          0.0,
+          -0.10000000149011612,
+          0.0
+        ],
+        "hit": null,
+        "status": "PASS"
+      },
+      {
+        "test": "visual open port short bore ray",
+        "socket": "out",
+        "offset_m": [
+          -0.0,
+          0.10000000149011612,
+          -0.0
+        ],
+        "hit": null,
+        "status": "PASS"
+      },
+      {
+        "test": "visual open port short bore ray",
+        "socket": "out",
+        "offset_m": [
+          0.0,
+          0.0,
+          -0.10000000149011612
+        ],
+        "hit": null,
+        "status": "PASS"
+      },
+      {
+        "test": "visual open port short bore ray",
+        "socket": "out",
+        "offset_m": [
+          -0.0,
+          -0.0,
+          0.10000000149011612
+        ],
+        "hit": null,
+        "status": "PASS"
+      },
+      {
+        "test": "actual annular mating face plane",
+        "socket": "out",
+        "plane_error_m": 0.0,
+        "status": "PASS"
+      },
+      {
+        "test": "actual annular mating face plane",
+        "socket": "out",
+        "plane_error_m": 0.0,
+        "status": "PASS"
+      },
+      {
+        "test": "actual annular mating face plane",
+        "socket": "out",
+        "plane_error_m": 0.0,
+        "status": "PASS"
+      },
+      {
+        "test": "actual annular mating face plane",
+        "socket": "out",
+        "plane_error_m": 0.0,
+        "status": "PASS"
+      },
+      {
+        "test": "communicating visual bore centerline",
+        "start": [
+          -0.1,
+          0,
+          0
+        ],
+        "direction": [
+          1,
+          0,
+          0
+        ],
+        "length_m": 1.2,
+        "hit": null,
+        "status": "PASS"
+      }
+    ],
+    "uv_integrity": {
+      "UV0_TileMeters": {
+        "nonfinite_values": 0,
+        "zero_area_triangles": 0,
+        "status": "PASS"
+      },
+      "UV1_Lightmap": {
+        "nonfinite_values": 0,
+        "zero_area_triangles": 0,
+        "status": "PASS"
+      }
+    },
+    "status": "PASS",
+    "note": "Visual bore tests do not mean the simplified convex gameplay collision is hollow. No hydraulic simulation."
+  },
+  {
+    "asset_id": "SM_NPP_PumpSkid_4x2_A",
+    "tests": [
+      {
+        "test": "visual open port short bore ray",
+        "socket": "in",
+        "offset_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "hit": null,
+        "status": "PASS"
+      },
+      {
+        "test": "visual open port short bore ray",
+        "socket": "in",
+        "offset_m": [
+          0.0,
+          0.10000000149011612,
+          -0.0
+        ],
+        "hit": null,
+        "status": "PASS"
+      },
+      {
+        "test": "visual open port short bore ray",
+        "socket": "in",
+        "offset_m": [
+          -0.0,
+          -0.10000000149011612,
+          0.0
+        ],
+        "hit": null,
+        "status": "PASS"
+      },
+      {
+        "test": "visual open port short bore ray",
+        "socket": "in",
+        "offset_m": [
+          -0.0,
+          0.0,
+          -0.10000000149011612
+        ],
+        "hit": null,
+        "status": "PASS"
+      },
+      {
+        "test": "visual open port short bore ray",
+        "socket": "in",
+        "offset_m": [
+          0.0,
+          -0.0,
+          0.10000000149011612
+        ],
+        "hit": null,
+        "status": "PASS"
+      },
+      {
+        "test": "actual annular mating face plane",
+        "socket": "in",
+        "plane_error_m": 1.1175870895385742e-08,
+        "status": "PASS"
+      },
+      {
+        "test": "actual annular mating face plane",
+        "socket": "in",
+        "plane_error_m": 2.2351741790771484e-08,
+        "status": "PASS"
+      },
+      {
+        "test": "actual annular mating face plane",
+        "socket": "in",
+        "plane_error_m": 1.1175870895385742e-08,
+        "status": "PASS"
+      },
+      {
+        "test": "actual annular mating face plane",
+        "socket": "in",
+        "plane_error_m": 2.2351741790771484e-08,
+        "status": "PASS"
+      },
+      {
+        "test": "visual open port short bore ray",
+        "socket": "out",
+        "offset_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "hit": null,
+        "status": "PASS"
+      },
+      {
+        "test": "visual open port short bore ray",
+        "socket": "out",
+        "offset_m": [
+          0.10000000149011612,
+          0.0,
+          0.0
+        ],
+        "hit": null,
+        "status": "PASS"
+      },
+      {
+        "test": "visual open port short bore ray",
+        "socket": "out",
+        "offset_m": [
+          -0.10000000149011612,
+          -0.0,
+          -0.0
+        ],
+        "hit": null,
+        "status": "PASS"
+      },
+      {
+        "test": "visual open port short bore ray",
+        "socket": "out",
+        "offset_m": [
+          0.0,
+          0.0,
+          -0.10000000149011612
+        ],
+        "hit": null,
+        "status": "PASS"
+      },
+      {
+        "test": "visual open port short bore ray",
+        "socket": "out",
+        "offset_m": [
+          -0.0,
+          -0.0,
+          0.10000000149011612
+        ],
+        "hit": null,
+        "status": "PASS"
+      },
+      {
+        "test": "actual annular mating face plane",
+        "socket": "out",
+        "plane_error_m": 0.0,
+        "status": "PASS"
+      },
+      {
+        "test": "actual annular mating face plane",
+        "socket": "out",
+        "plane_error_m": 0.0,
+        "status": "PASS"
+      },
+      {
+        "test": "actual annular mating face plane",
+        "socket": "out",
+        "plane_error_m": 0.0,
+        "status": "PASS"
+      },
+      {
+        "test": "actual annular mating face plane",
+        "socket": "out",
+        "plane_error_m": 0.0,
+        "status": "PASS"
+      },
+      {
+        "test": "communicating visual bore centerline",
+        "start": [
+          -0.1,
+          0,
+          1
+        ],
+        "direction": [
+          1,
+          0,
+          0
+        ],
+        "length_m": 1.55,
+        "hit": null,
+        "status": "PASS"
+      },
+      {
+        "test": "communicating visual bore centerline",
+        "start": [
+          1.5,
+          -0.1,
+          1
+        ],
+        "direction": [
+          0,
+          1,
+          0
+        ],
+        "length_m": 1.2,
+        "hit": null,
+        "status": "PASS"
+      }
+    ],
+    "uv_integrity": {
+      "UV0_TileMeters": {
+        "nonfinite_values": 0,
+        "zero_area_triangles": 0,
+        "status": "PASS"
+      },
+      "UV1_Lightmap": {
+        "nonfinite_values": 0,
+        "zero_area_triangles": 0,
+        "status": "PASS"
+      }
+    },
+    "status": "PASS",
+    "note": "Visual bore tests do not mean the simplified convex gameplay collision is hollow. No hydraulic simulation."
+  }
+]

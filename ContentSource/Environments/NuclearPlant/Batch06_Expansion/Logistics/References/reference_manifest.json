@@ -1,0 +1,27 @@
+{
+  "generated_at_utc": "2026-10-20T10:39:40Z",
+  "source": "built-in image_gen",
+  "files": {
+    "maintenance_bay": "exec-f58945b9-18f7-441b-98db-b493b479cec6.png",
+    "stair_landing": "exec-2e41e60d-cd27-4749-8d99-62d4a70f0f37.png",
+    "dock_bay": "exec-7e4ede21-02c4-4a11-be7c-203d5411b76d.png",
+    "container": "exec-5805d410-7ad2-4afc-b4b8-c167e634927e.png",
+    "maintenance_region": "exec-30165b59-8a58-4995-9b02-a641c883792c.png",
+    "loading_region": "exec-fa84a685-aba6-45e6-bba2-f9bf6fa9b771.png",
+    "service_station": "exec-eb4dc0d0-d40b-4ffd-89e2-d57caac7a995.png"
+  },
+  "status": "AI sheets reviewed: styling only; perspective and incorrect door directions rejected. Technical SVG/specs drafted before formal rebuild govern geometry.",
+  "earlier_geometry": "scratch only, not claimed generated after references",
+  "audit_completed_utc": "2026-10-20T10:45:41.208075+00:00",
+  "new_composite_modules": [
+    "maintenance_bay",
+    "stair_landing",
+    "dock_bay",
+    "container",
+    "service_station"
+  ],
+  "reuse": [
+    "Reused/batch04_reuse.blend: REUSED_B04_StorageRack_0_0"
+  ],
+  "revision_note": "10:48 plan refinement before rebuild: service workstations shifted east1.2m after independent stair-edge obstruction report; threshold overlap extends north to18.2. Independent QA subsequently cleared198 stair samples."
+}

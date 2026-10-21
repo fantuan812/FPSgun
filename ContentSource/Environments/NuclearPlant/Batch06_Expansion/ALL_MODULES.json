@@ -1,0 +1,9 @@
+{
+  "scope":"Batch06 local modules and directly retained core; cumulative Batch01-05 catalogue is added by final delivery packager",
+  "core_source":"Sources/core_hall.blend",
+  "new_module_indexes":["connector_asset_manifest.json","Office/module_export_manifest.json","Pump/module_index.json","Logistics/module_index.json"],
+  "regional_sources":["Regions/control.blend","Regions/maintenance.blend","Regions/pumps.blend","Regions/loading.blend"],
+  "main_scene":"site_expansion.blend",
+  "rebuild":"python rebuild.py",
+  "historical_originals_preserved":true
+}

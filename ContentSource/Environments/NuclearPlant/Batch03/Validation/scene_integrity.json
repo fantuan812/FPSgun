@@ -1,0 +1,46 @@
+[
+  {
+    "scene": "pump_zone.blend",
+    "status": "PASS",
+    "south_crossroute_clearance": {
+      "width_m": 2.5,
+      "violations": [],
+      "status": "PASS"
+    },
+    "ground_recess": null,
+    "external_blend_libraries": 0,
+    "external_images": [],
+    "old_pump_placeholder_present": false,
+    "other_graybox_zone_objects": [],
+    "module_instances": 167,
+    "camera_type": "ORTHO"
+  },
+  {
+    "scene": "site_with_pump_zone.blend",
+    "status": "PASS",
+    "south_crossroute_clearance": {
+      "width_m": 2.5,
+      "violations": [],
+      "status": "PASS"
+    },
+    "ground_recess": {
+      "ground_top_under_zone_m": -0.25999999046325684,
+      "expected_max_m": -0.25,
+      "status": "PASS"
+    },
+    "external_blend_libraries": 0,
+    "external_images": [],
+    "old_pump_placeholder_present": false,
+    "other_graybox_zone_objects": [
+      "01_REACTOR",
+      "02_TURBINE",
+      "03_CONTROL",
+      "05_COOLING",
+      "06_TRANSFORMER",
+      "07_SERVICE",
+      "08_INTAKE"
+    ],
+    "module_instances": 167,
+    "camera_type": "ORTHO"
+  }
+]

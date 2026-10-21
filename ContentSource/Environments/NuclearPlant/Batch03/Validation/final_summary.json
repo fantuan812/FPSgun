@@ -1,0 +1,100 @@
+{
+  "project": "NPP / Sector K-17",
+  "batch": 3,
+  "scope": "04_PUMP zone replacement in original site coordinates, with five new pipe/equipment assets. Other seven zones remain graybox.",
+  "overall_status": "PASS",
+  "built_with": "Blender 4.3.2",
+  "assets": [
+    {
+      "asset_id": "SM_NPP_Pipe_Straight_4m_A",
+      "path": "Assets/SM_NPP_Pipe_Straight_4m_A",
+      "dimensions_m": [
+        4,
+        0.75,
+        0.75
+      ],
+      "triangles": 10432,
+      "collision_hulls": 1,
+      "status": "PASS",
+      "max_export_bounds_error_m": 3.5762786865234375e-07,
+      "max_silhouette_error_px": 0
+    },
+    {
+      "asset_id": "SM_NPP_Pipe_Elbow90_R1_A",
+      "path": "Assets/SM_NPP_Pipe_Elbow90_R1_A",
+      "dimensions_m": [
+        1.375,
+        1.375,
+        0.75
+      ],
+      "triangles": 12048,
+      "collision_hulls": 2,
+      "status": "PASS",
+      "max_export_bounds_error_m": 1.1920928955078125e-07,
+      "max_silhouette_error_px": 0.0
+    },
+    {
+      "asset_id": "SM_NPP_Pipe_Tee_2m_A",
+      "path": "Assets/SM_NPP_Pipe_Tee_2m_A",
+      "dimensions_m": [
+        2,
+        1.375,
+        0.75
+      ],
+      "triangles": 13196,
+      "collision_hulls": 2,
+      "status": "PASS",
+      "max_export_bounds_error_m": 1.1920928955078125e-07,
+      "max_silhouette_error_px": 0
+    },
+    {
+      "asset_id": "SM_NPP_Valve_1m_A",
+      "path": "Assets/SM_NPP_Valve_1m_A",
+      "dimensions_m": [
+        1,
+        0.8,
+        1.5
+      ],
+      "triangles": 12688,
+      "collision_hulls": 1,
+      "status": "PASS",
+      "max_export_bounds_error_m": 4.623869287456728e-08,
+      "max_silhouette_error_px": 0
+    },
+    {
+      "asset_id": "SM_NPP_PumpSkid_4x2_A",
+      "path": "Assets/SM_NPP_PumpSkid_4x2_A",
+      "dimensions_m": [
+        4,
+        2,
+        2
+      ],
+      "triangles": 18240,
+      "collision_hulls": 5,
+      "status": "PASS",
+      "max_export_bounds_error_m": 3.5762786865234375e-07,
+      "max_silhouette_error_px": 0
+    }
+  ],
+  "new_asset_count": 5,
+  "new_asset_triangles": 66604,
+  "orthographic_images": 15,
+  "reference_images": 5,
+  "module_instances_in_region_and_approach": 167,
+  "unique_reused_asset_types": 11,
+  "region_checks": 44,
+  "max_export_bounds_error_m": 3.5762786865234375e-07,
+  "max_orthographic_silhouette_error_px": 0,
+  "frozen_prior_files_verified": 281,
+  "realized_zone": "04_PUMP",
+  "remaining_graybox_zones": 7,
+  "ue_editor_test": "NOT_RUN",
+  "visual_review": "Validation/visual_review.md",
+  "pending": [
+    "Remaining original site zones and hero assets",
+    "Actual UE import, player traversal, vehicle and runtime performance tests",
+    "Final realistic textures, wear, decals and lighting art",
+    "LOD and lightmap production packing",
+    "Connection to whole-site upper route"
+  ]
+}

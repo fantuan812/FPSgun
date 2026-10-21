@@ -1,0 +1,57 @@
+{
+  "asset_id": "SM_NPP_Roof_4x4_A",
+  "builder": "roof",
+  "units": "meters",
+  "dimensions": [
+    4,
+    4,
+    0.25
+  ],
+  "bounds_min": [
+    0,
+    0,
+    0
+  ],
+  "bounds_max": [
+    4,
+    4,
+    0.25
+  ],
+  "origin_m": [
+    0,
+    0,
+    0
+  ],
+  "grid_size": 0.25,
+  "connection_sockets": [
+    {
+      "id": "underside",
+      "position_m": [
+        2,
+        2,
+        0
+      ],
+      "outward_normal": [
+        0,
+        0,
+        -1
+      ],
+      "role": "wall_bearing",
+      "nominal_width_m": 0
+    }
+  ],
+  "coordinate_convention": {
+    "up": "+Z",
+    "front_camera": "-Y",
+    "right_camera": "+X",
+    "top_camera": "+Z"
+  },
+  "concept_reference": "reference_sheet.png",
+  "validation_views": [
+    "front.png",
+    "right.png",
+    "top.png"
+  ],
+  "material_level": "basic exportable PBR; no final weathering/trim/decal treatment",
+  "dimension_policy": "0.25 m placement and interface grid; 0.30 m envelope includes sub-grid fabrication details. Wall structural body 0.24 m plus bonded face panels and inset anchor heads."
+}

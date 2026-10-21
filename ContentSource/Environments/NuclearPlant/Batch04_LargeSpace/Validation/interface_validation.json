@@ -1,0 +1,70 @@
+[
+  {
+    "asset_id": "SM_NPP_ServiceBayWall_8m_A",
+    "status": "PASS",
+    "checks": [
+      {
+        "test": "actual 6 x 3 m aperture ray grid",
+        "obstructions": [],
+        "status": "PASS"
+      },
+      {
+        "test": "finite UV coordinates",
+        "status": "PASS"
+      },
+      {
+        "test": "identity pivot rotation scale",
+        "status": "PASS"
+      }
+    ]
+  },
+  {
+    "asset_id": "SM_NPP_StorageRack_4m_A",
+    "status": "PASS",
+    "checks": [
+      {
+        "test": "three actual shelf deck heights",
+        "hits": [
+          {
+            "expected": 0.25,
+            "actual": 0.25,
+            "pass": true
+          },
+          {
+            "expected": 1.5,
+            "actual": 1.5,
+            "pass": true
+          },
+          {
+            "expected": 2.75,
+            "actual": 2.75,
+            "pass": true
+          }
+        ],
+        "status": "PASS"
+      },
+      {
+        "test": "finite UV coordinates",
+        "status": "PASS"
+      },
+      {
+        "test": "identity pivot rotation scale",
+        "status": "PASS"
+      }
+    ]
+  },
+  {
+    "asset_id": "SM_NPP_RoofTruss_32m_A",
+    "status": "PASS",
+    "checks": [
+      {
+        "test": "finite UV coordinates",
+        "status": "PASS"
+      },
+      {
+        "test": "identity pivot rotation scale",
+        "status": "PASS"
+      }
+    ]
+  }
+]

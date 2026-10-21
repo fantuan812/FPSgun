@@ -1,0 +1,72 @@
+{
+  "asset_id": "SM_NPP_RoofTruss_32m_A",
+  "builder": "roof_truss",
+  "units": "meters",
+  "origin_m": [
+    0,
+    0,
+    0
+  ],
+  "bounds_min": [
+    0,
+    -0.25,
+    0
+  ],
+  "bounds_max": [
+    32,
+    0.25,
+    2
+  ],
+  "dimensions": [
+    32,
+    0.5,
+    2
+  ],
+  "grid_size": 0.25,
+  "primary_module_m": 4,
+  "connection_sockets": [
+    {
+      "id": "left_bearing",
+      "position_m": [
+        0,
+        0,
+        0
+      ],
+      "outward_normal": [
+        -1,
+        0,
+        0
+      ],
+      "role": "roof bearing"
+    },
+    {
+      "id": "right_bearing",
+      "position_m": [
+        32,
+        0,
+        0
+      ],
+      "outward_normal": [
+        1,
+        0,
+        0
+      ],
+      "role": "roof bearing"
+    }
+  ],
+  "design": "32 m clear-span industrial steel lattice truss, 2 m structural depth, 0.5 m transverse width. Paired top and bottom chords, eight 4 m panels, verticals and diagonals, galvanized node plates. Appearance geometry only, no structural engineering certification.",
+  "coordinate_convention": {
+    "up": "+Z",
+    "front_camera": "-Y",
+    "right_camera": "+X",
+    "top_camera": "+Z"
+  },
+  "reference_views": [
+    "front.png",
+    "right.png",
+    "top.png"
+  ],
+  "material_level": "Basic PBR graphite steel with galvanized plates",
+  "collision_policy": "One convex overhead envelope, not traversable",
+  "ortho_scale_m": 40.96
+}

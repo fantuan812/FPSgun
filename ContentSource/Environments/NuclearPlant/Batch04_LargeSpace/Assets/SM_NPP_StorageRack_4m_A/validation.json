@@ -1,0 +1,92 @@
+{
+  "asset_id": "SM_NPP_StorageRack_4m_A",
+  "status": "PASS",
+  "errors": [],
+  "geometry": {
+    "bounds_min_m": [
+      0.0,
+      -0.5,
+      0.0
+    ],
+    "bounds_max_m": [
+      4.0,
+      0.5,
+      3.0
+    ],
+    "dimensions_m": [
+      4.0,
+      1.0,
+      3.0
+    ],
+    "vertices": 4424,
+    "triangles": 8628,
+    "nonmanifold_edges": 0,
+    "degenerate_faces": 0,
+    "exact_duplicate_faces": 0,
+    "watertight_components": 55,
+    "nonpositive_volume_components": 0,
+    "uv_layers": [
+      "UV0_TileMeters",
+      "UV1_Lightmap"
+    ],
+    "material_slots": 4
+  },
+  "collision_hulls": 1,
+  "socket_count": 2,
+  "orthographic_validation": {
+    "projection": "ORTHO",
+    "resolution_px": [
+      1024,
+      1024
+    ],
+    "ortho_scale_m": 10.24,
+    "pixels_per_meter": 100,
+    "front_camera_axis": "-Y",
+    "right_camera_axis": "+X",
+    "top_camera_axis": "+Z",
+    "camera_rotations_radians": {
+      "front": [
+        1.5707963705062866,
+        0.0,
+        0.0
+      ],
+      "right": [
+        1.5707963705062866,
+        0.0,
+        1.5707963705062866
+      ],
+      "top": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "pivot_m": [
+    0,
+    0,
+    0
+  ],
+  "rotation_radians": [
+    0,
+    0,
+    0
+  ],
+  "scale": [
+    1,
+    1,
+    1
+  ],
+  "intentional_contacts": [
+    "bonded wall skin overlap",
+    "metal frame seating",
+    "glass in frame",
+    "plate to stiffener welded joints"
+  ],
+  "limits": [
+    "Basic PBR only; no final weathering or environment art polish.",
+    "No UE editor import, runtime collision or player traversal test.",
+    "UV1 per-face atlas needs production lightmap repack.",
+    "No exhaustive arbitrary mesh intersection certification."
+  ]
+}

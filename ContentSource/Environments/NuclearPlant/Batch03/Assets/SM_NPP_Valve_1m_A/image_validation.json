@@ -1,0 +1,43 @@
+{
+  "asset_id": "SM_NPP_Valve_1m_A",
+  "pixels_per_meter": 160,
+  "views": {
+    "front": {
+      "expected_silhouette_px": [
+        160,
+        240.0
+      ],
+      "measured_silhouette_px": [
+        160,
+        240
+      ],
+      "maximum_error_px": 0,
+      "status": "PASS"
+    },
+    "right": {
+      "expected_silhouette_px": [
+        128.0,
+        240.0
+      ],
+      "measured_silhouette_px": [
+        128,
+        240
+      ],
+      "maximum_error_px": 0.0,
+      "status": "PASS"
+    },
+    "top": {
+      "expected_silhouette_px": [
+        160,
+        128.0
+      ],
+      "measured_silhouette_px": [
+        160,
+        128
+      ],
+      "maximum_error_px": 0,
+      "status": "PASS"
+    }
+  },
+  "status": "PASS"
+}

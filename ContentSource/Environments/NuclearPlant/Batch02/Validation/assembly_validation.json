@@ -1,0 +1,1951 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "connection": "StairLower:upper -> StairUpper:lower",
+      "gap_m": 9.5367431640625e-07,
+      "normals_dot": -1.000000000000038,
+      "status": "PASS"
+    },
+    {
+      "connection": "StairUpper:upper -> EntryCatwalk:start",
+      "gap_m": 9.5367431640625e-07,
+      "normals_dot": -1.000000000000038,
+      "status": "PASS"
+    },
+    {
+      "connection": "EntryCatwalk:end -> EntryDoor_L1:passage",
+      "gap_m": 9.5367431640625e-07,
+      "normals_dot": -1.0,
+      "status": "PASS"
+    },
+    {
+      "connection": "EntryCatwalk:end -> EntryFloor_L1:south",
+      "gap_m": 9.5367431640625e-07,
+      "normals_dot": -1.0,
+      "status": "PASS"
+    },
+    {
+      "connection": "column/head/slab 0",
+      "floor_instance": "Floor_L1_0",
+      "column_to_head_gap_m": 0.0,
+      "head_to_slab_gap_m": 0.0,
+      "status": "PASS"
+    },
+    {
+      "connection": "column/head/slab 1",
+      "floor_instance": "Floor_L1_0",
+      "column_to_head_gap_m": 0.0,
+      "head_to_slab_gap_m": 0.0,
+      "status": "PASS"
+    },
+    {
+      "connection": "column/head/slab 2",
+      "floor_instance": "Floor_L1_4",
+      "column_to_head_gap_m": 0.0,
+      "head_to_slab_gap_m": 0.0,
+      "status": "PASS"
+    },
+    {
+      "connection": "column/head/slab 3",
+      "floor_instance": "Floor_L1_4",
+      "column_to_head_gap_m": 0.0,
+      "head_to_slab_gap_m": 0.0,
+      "status": "PASS"
+    },
+    {
+      "connection": "column/head/slab 4",
+      "floor_instance": "Floor_L1_8",
+      "column_to_head_gap_m": 0.0,
+      "head_to_slab_gap_m": 0.0,
+      "status": "PASS"
+    },
+    {
+      "connection": "column/head/slab 5",
+      "floor_instance": "Floor_L1_8",
+      "column_to_head_gap_m": 0.0,
+      "head_to_slab_gap_m": 0.0,
+      "status": "PASS"
+    },
+    {
+      "connection": "column/head/slab 6",
+      "floor_instance": "EntryFloor_L1",
+      "column_to_head_gap_m": 0.0,
+      "head_to_slab_gap_m": 0.0,
+      "status": "PASS"
+    },
+    {
+      "connection": "column/head/slab 7",
+      "floor_instance": "EntryFloor_L1",
+      "column_to_head_gap_m": 0.0,
+      "head_to_slab_gap_m": 0.0,
+      "status": "PASS"
+    }
+  ],
+  "lineage": [
+    {
+      "asset_id": "SM_NPP_Wall_Solid_4m_A",
+      "source_batch": 2,
+      "source": "Batch02/Assets/SM_NPP_Wall_Solid_4m_A/model.blend"
+    },
+    {
+      "asset_id": "SM_NPP_Wall_Door_2m_A",
+      "source_batch": 2,
+      "source": "Batch02/Assets/SM_NPP_Wall_Door_2m_A/model.blend"
+    },
+    {
+      "asset_id": "SM_NPP_Wall_Window_4m_A",
+      "source_batch": 2,
+      "source": "Batch02/Assets/SM_NPP_Wall_Window_4m_A/model.blend"
+    },
+    {
+      "asset_id": "SM_NPP_Wall_Corner90_A",
+      "source_batch": 2,
+      "source": "Batch02/Assets/SM_NPP_Wall_Corner90_A/model.blend"
+    },
+    {
+      "asset_id": "SM_NPP_Floor_4x4_A",
+      "source_batch": 2,
+      "source": "Batch02/Assets/SM_NPP_Floor_4x4_A/model.blend"
+    },
+    {
+      "asset_id": "SM_NPP_Roof_4x4_A",
+      "source_batch": 2,
+      "source": "Batch02/Assets/SM_NPP_Roof_4x4_A/model.blend"
+    },
+    {
+      "asset_id": "SM_NPP_ColumnHead_075m_A",
+      "source_batch": 2,
+      "source": "Batch02/Assets/SM_NPP_ColumnHead_075m_A/model.blend"
+    },
+    {
+      "asset_id": "SM_NPP_Catwalk_Straight_4m_A",
+      "source_batch": 1,
+      "source": "ModularKit/Catwalks/SM_NPP_Catwalk_Straight_4m_A/model.blend"
+    },
+    {
+      "asset_id": "SM_NPP_Stair_4x2_Rise2_A",
+      "source_batch": 1,
+      "source": "ModularKit/Stairs/SM_NPP_Stair_4x2_Rise2_A/model.blend"
+    },
+    {
+      "asset_id": "SM_NPP_Railing_Open_4m_A",
+      "source_batch": 1,
+      "source": "ModularKit/Railings/SM_NPP_Railing_Open_4m_A/model.blend"
+    },
+    {
+      "asset_id": "SM_NPP_Column_4m_A",
+      "source_batch": 1,
+      "source": "ModularKit/Structure/SM_NPP_Column_4m_A/model.blend"
+    }
+  ],
+  "placements": [
+    {
+      "instance": "Floor_L0_0_0",
+      "asset_id": "SM_NPP_Floor_4x4_A",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "instance": "Floor_L0_0_4",
+      "asset_id": "SM_NPP_Floor_4x4_A",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          4.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "instance": "Floor_L0_4_0",
+      "asset_id": "SM_NPP_Floor_4x4_A",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          4.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "instance": "Floor_L0_4_4",
+      "asset_id": "SM_NPP_Floor_4x4_A",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          4.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          4.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "instance": "Floor_L0_8_0",
+      "asset_id": "SM_NPP_Floor_4x4_A",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          8.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "instance": "Floor_L0_8_4",
+      "asset_id": "SM_NPP_Floor_4x4_A",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          8.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          4.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "instance": "Approach_-12",
+      "asset_id": "SM_NPP_Floor_4x4_A",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          4.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -12.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "instance": "Approach_-8",
+      "asset_id": "SM_NPP_Floor_4x4_A",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          4.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -8.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "instance": "Approach_-4",
+      "asset_id": "SM_NPP_Floor_4x4_A",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          4.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -4.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "instance": "AnnexFloor",
+      "asset_id": "SM_NPP_Floor_4x4_A",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -5.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          4.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "instance": "AnnexCorner",
+      "asset_id": "SM_NPP_Wall_Corner90_A",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -5.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          4.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "instance": "Front_L0_0",
+      "asset_id": "SM_NPP_Wall_Solid_4m_A",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "instance": "Front_L0_4",
+      "asset_id": "SM_NPP_Wall_Door_2m_A",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          4.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "instance": "Front_L0_8",
+      "asset_id": "SM_NPP_Wall_Window_4m_A",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          8.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "instance": "Back_L0_4",
+      "asset_id": "SM_NPP_Wall_Solid_4m_A",
+      "matrix_world": [
+        [
+          -1.0,
+          -1.5099580252808664e-07,
+          0.0,
+          4.0
+        ],
+        [
+          1.5099580252808664e-07,
+          -1.0,
+          0.0,
+          8.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "instance": "Back_L0_8",
+      "asset_id": "SM_NPP_Wall_Solid_4m_A",
+      "matrix_world": [
+        [
+          -1.0,
+          -1.5099580252808664e-07,
+          0.0,
+          8.0
+        ],
+        [
+          1.5099580252808664e-07,
+          -1.0,
+          0.0,
+          8.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "instance": "Back_L0_12",
+      "asset_id": "SM_NPP_Wall_Solid_4m_A",
+      "matrix_world": [
+        [
+          -1.0,
+          -1.5099580252808664e-07,
+          0.0,
+          12.0
+        ],
+        [
+          1.5099580252808664e-07,
+          -1.0,
+          0.0,
+          8.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "instance": "Side_L0_0_0",
+      "asset_id": "SM_NPP_Wall_Solid_4m_A",
+      "matrix_world": [
+        [
+          1.9470718370939721e-07,
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          1.9470718370939721e-07,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "instance": "Side_L0_0_4",
+      "asset_id": "SM_NPP_Wall_Window_4m_A",
+      "matrix_world": [
+        [
+          1.9470718370939721e-07,
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          1.9470718370939721e-07,
+          0.0,
+          4.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "instance": "Side_L0_12_0",
+      "asset_id": "SM_NPP_Wall_Solid_4m_A",
+      "matrix_world": [
+        [
+          1.9470718370939721e-07,
+          -1.0,
+          0.0,
+          12.0
+        ],
+        [
+          1.0,
+          1.9470718370939721e-07,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "instance": "Side_L0_12_4",
+      "asset_id": "SM_NPP_Wall_Window_4m_A",
+      "matrix_world": [
+        [
+          1.9470718370939721e-07,
+          -1.0,
+          0.0,
+          12.0
+        ],
+        [
+          1.0,
+          1.9470718370939721e-07,
+          0.0,
+          4.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "instance": "Floor_L1_0",
+      "asset_id": "SM_NPP_Floor_4x4_A",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          4.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          4.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "instance": "Floor_L1_4",
+      "asset_id": "SM_NPP_Floor_4x4_A",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          4.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          4.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          4.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "instance": "Floor_L1_8",
+      "asset_id": "SM_NPP_Floor_4x4_A",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          8.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          4.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          4.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "instance": "EntryFloor_L1",
+      "asset_id": "SM_NPP_Floor_4x4_A",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          4.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          4.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "instance": "EntryDoor_L1",
+      "asset_id": "SM_NPP_Wall_Door_2m_A",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          4.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          4.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "instance": "Back_L1_4",
+      "asset_id": "SM_NPP_Wall_Solid_4m_A",
+      "matrix_world": [
+        [
+          -1.0,
+          -1.5099580252808664e-07,
+          0.0,
+          4.0
+        ],
+        [
+          1.5099580252808664e-07,
+          -1.0,
+          0.0,
+          8.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          4.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "instance": "Back_L1_8",
+      "asset_id": "SM_NPP_Wall_Window_4m_A",
+      "matrix_world": [
+        [
+          -1.0,
+          -1.5099580252808664e-07,
+          0.0,
+          8.0
+        ],
+        [
+          1.5099580252808664e-07,
+          -1.0,
+          0.0,
+          8.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          4.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "instance": "Back_L1_12",
+      "asset_id": "SM_NPP_Wall_Solid_4m_A",
+      "matrix_world": [
+        [
+          -1.0,
+          -1.5099580252808664e-07,
+          0.0,
+          12.0
+        ],
+        [
+          1.5099580252808664e-07,
+          -1.0,
+          0.0,
+          8.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          4.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "instance": "Side_L1_0",
+      "asset_id": "SM_NPP_Wall_Window_4m_A",
+      "matrix_world": [
+        [
+          1.9470718370939721e-07,
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          1.9470718370939721e-07,
+          0.0,
+          4.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          4.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "instance": "Side_L1_12",
+      "asset_id": "SM_NPP_Wall_Window_4m_A",
+      "matrix_world": [
+        [
+          1.9470718370939721e-07,
+          -1.0,
+          0.0,
+          12.0
+        ],
+        [
+          1.0,
+          1.9470718370939721e-07,
+          0.0,
+          4.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          4.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "instance": "Roof_L1_0",
+      "asset_id": "SM_NPP_Roof_4x4_A",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          4.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          8.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "instance": "Roof_L1_8",
+      "asset_id": "SM_NPP_Roof_4x4_A",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          8.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          4.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          8.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "instance": "Roof_L0_0",
+      "asset_id": "SM_NPP_Roof_4x4_A",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          4.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "instance": "Roof_L0_8",
+      "asset_id": "SM_NPP_Roof_4x4_A",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          8.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          4.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "instance": "Column_0",
+      "asset_id": "SM_NPP_Column_4m_A",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          5.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -0.5
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "instance": "ColumnHead_0",
+      "asset_id": "SM_NPP_ColumnHead_075m_A",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          5.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          3.5
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "instance": "Column_1",
+      "asset_id": "SM_NPP_Column_4m_A",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          3.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          7.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -0.5
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "instance": "ColumnHead_1",
+      "asset_id": "SM_NPP_ColumnHead_075m_A",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          3.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          7.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          3.5
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "instance": "Column_2",
+      "asset_id": "SM_NPP_Column_4m_A",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          5.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          5.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -0.5
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "instance": "ColumnHead_2",
+      "asset_id": "SM_NPP_ColumnHead_075m_A",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          5.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          5.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          3.5
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "instance": "Column_3",
+      "asset_id": "SM_NPP_Column_4m_A",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          7.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          7.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -0.5
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "instance": "ColumnHead_3",
+      "asset_id": "SM_NPP_ColumnHead_075m_A",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          7.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          7.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          3.5
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "instance": "Column_4",
+      "asset_id": "SM_NPP_Column_4m_A",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          9.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          5.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -0.5
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "instance": "ColumnHead_4",
+      "asset_id": "SM_NPP_ColumnHead_075m_A",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          9.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          5.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          3.5
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "instance": "Column_5",
+      "asset_id": "SM_NPP_Column_4m_A",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          11.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          7.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -0.5
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "instance": "ColumnHead_5",
+      "asset_id": "SM_NPP_ColumnHead_075m_A",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          11.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          7.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          3.5
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "instance": "Column_6",
+      "asset_id": "SM_NPP_Column_4m_A",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          5.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -0.5
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "instance": "ColumnHead_6",
+      "asset_id": "SM_NPP_ColumnHead_075m_A",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          5.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          3.5
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "instance": "Column_7",
+      "asset_id": "SM_NPP_Column_4m_A",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          7.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          3.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -0.5
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "instance": "ColumnHead_7",
+      "asset_id": "SM_NPP_ColumnHead_075m_A",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          7.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          3.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          3.5
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "instance": "FrontGuard_0",
+      "asset_id": "SM_NPP_Railing_Open_4m_A",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          4.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          4.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "instance": "FrontGuard_8",
+      "asset_id": "SM_NPP_Railing_Open_4m_A",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          8.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          4.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          4.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "instance": "EntryGuard_4",
+      "asset_id": "SM_NPP_Railing_Open_4m_A",
+      "matrix_world": [
+        [
+          1.9470718370939721e-07,
+          -1.0,
+          0.0,
+          4.0
+        ],
+        [
+          1.0,
+          1.9470718370939721e-07,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          4.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "instance": "EntryGuard_8",
+      "asset_id": "SM_NPP_Railing_Open_4m_A",
+      "matrix_world": [
+        [
+          1.9470718370939721e-07,
+          -1.0,
+          0.0,
+          8.0
+        ],
+        [
+          1.0,
+          1.9470718370939721e-07,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          4.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "instance": "StairLower",
+      "asset_id": "SM_NPP_Stair_4x2_Rise2_A",
+      "matrix_world": [
+        [
+          1.9470718370939721e-07,
+          -1.0,
+          0.0,
+          6.0
+        ],
+        [
+          1.0,
+          1.9470718370939721e-07,
+          0.0,
+          -12.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "instance": "StairUpper",
+      "asset_id": "SM_NPP_Stair_4x2_Rise2_A",
+      "matrix_world": [
+        [
+          1.9470718370939721e-07,
+          -1.0,
+          0.0,
+          6.0
+        ],
+        [
+          1.0,
+          1.9470718370939721e-07,
+          0.0,
+          -8.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          2.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "instance": "EntryCatwalk",
+      "asset_id": "SM_NPP_Catwalk_Straight_4m_A",
+      "matrix_world": [
+        [
+          1.9470718370939721e-07,
+          -1.0,
+          0.0,
+          6.0
+        ],
+        [
+          1.0,
+          1.9470718370939721e-07,
+          0.0,
+          -4.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          4.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "instance": "CatwalkSupport_5.25",
+      "asset_id": "SM_NPP_Column_4m_A",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          5.25
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -2.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -0.20000000298023224
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "instance": "CatwalkSupport_6.75",
+      "asset_id": "SM_NPP_Column_4m_A",
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          6.75
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -2.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -0.20000000298023224
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    }
+  ],
+  "notes": [
+    "Batch01 source assets appended read-only; original files unchanged.",
+    "Intermediate stair foundation is context geometry, not a new exported modular asset.",
+    "Roof omitted over central bay deliberately for interior inspection.",
+    "Building is a maintenance/control-area sample assembly, not the completed whole-site environment.",
+    "Blender numeric checks only; actual UE traversal remains untested."
+  ]
+}

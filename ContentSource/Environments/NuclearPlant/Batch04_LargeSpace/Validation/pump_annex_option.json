@@ -1,0 +1,181 @@
+{
+  "status": "PASS",
+  "source": "Batch03/Region/pump_zone.blend (read only)",
+  "optional": true,
+  "removed": [
+    "UpperFloor_-7.75_-28",
+    "UpperFloor_-7.75_-24",
+    "UpperFloor_-7.75_-20",
+    "UpperFloor_-7.75_-16",
+    "UpperFloor_-7.75_-12",
+    "UpperFloor_-7.75_-8",
+    "UpperFloor_-3.75_-28",
+    "UpperFloor_-3.75_-24",
+    "UpperFloor_-3.75_-20",
+    "UpperFloor_-3.75_-16",
+    "UpperFloor_-3.75_-12",
+    "BuildingColumn_0",
+    "BuildingHead_0",
+    "BuildingColumn_1",
+    "BuildingHead_1",
+    "BuildingColumn_2",
+    "BuildingHead_2",
+    "BuildingColumn_3",
+    "BuildingHead_3",
+    "BuildingColumn_4",
+    "BuildingHead_4",
+    "BuildingColumn_5",
+    "BuildingHead_5"
+  ],
+  "preserved_upper_landing_m": [
+    4,
+    4
+  ],
+  "prior_overall_interior_m": [
+    7.7,
+    23.2,
+    3.75
+  ],
+  "new_double_height_main_clear_m": [
+    7.7,
+    19.5,
+    7.495
+  ],
+  "north_landing_zone_note": "A 4 x 4 m upper entrance landing remains at the north-east corner; the full 23.2 m length is not uniformly double-height.",
+  "human_m": 1.8,
+  "eye_height_m": 1.65,
+  "lens_mm": 24,
+  "limits": [
+    "Equipment annex, not the large production hall.",
+    "No UE runtime test."
+  ],
+  "geometry_checks": {
+    "headroom_samples": [
+      {
+        "xy": [
+          -6,
+          -26
+        ],
+        "first_overhead_m": 7.495000839233398,
+        "pass": true
+      },
+      {
+        "xy": [
+          -6,
+          -22
+        ],
+        "first_overhead_m": 7.744999408721924,
+        "pass": true
+      },
+      {
+        "xy": [
+          -6,
+          -18
+        ],
+        "first_overhead_m": 7.495000839233398,
+        "pass": true
+      },
+      {
+        "xy": [
+          -6,
+          -14
+        ],
+        "first_overhead_m": 7.744999408721924,
+        "pass": true
+      },
+      {
+        "xy": [
+          -6,
+          -10
+        ],
+        "first_overhead_m": 7.495000839233398,
+        "pass": true
+      },
+      {
+        "xy": [
+          -4,
+          -26
+        ],
+        "first_overhead_m": 7.495000839233398,
+        "pass": true
+      },
+      {
+        "xy": [
+          -4,
+          -22
+        ],
+        "first_overhead_m": 7.744998931884766,
+        "pass": true
+      },
+      {
+        "xy": [
+          -4,
+          -18
+        ],
+        "first_overhead_m": 7.495000839233398,
+        "pass": true
+      },
+      {
+        "xy": [
+          -4,
+          -14
+        ],
+        "first_overhead_m": 7.744998931884766,
+        "pass": true
+      },
+      {
+        "xy": [
+          -4,
+          -10
+        ],
+        "first_overhead_m": 7.495000839233398,
+        "pass": true
+      },
+      {
+        "xy": [
+          -2,
+          -26
+        ],
+        "first_overhead_m": 7.49500036239624,
+        "pass": true
+      },
+      {
+        "xy": [
+          -2,
+          -22
+        ],
+        "first_overhead_m": 7.744999408721924,
+        "pass": true
+      },
+      {
+        "xy": [
+          -2,
+          -18
+        ],
+        "first_overhead_m": 7.49500036239624,
+        "pass": true
+      },
+      {
+        "xy": [
+          -2,
+          -14
+        ],
+        "first_overhead_m": 7.744999408721924,
+        "pass": true
+      },
+      {
+        "xy": [
+          -2,
+          -10
+        ],
+        "first_overhead_m": 7.49500036239624,
+        "pass": true
+      }
+    ],
+    "remaining_upper_floor_tiles": [
+      "UpperFloor_-3.75_-8"
+    ],
+    "missing_or_absolute_libraries": [],
+    "guardrails_present": true
+  }
+}

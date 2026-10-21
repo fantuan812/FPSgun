@@ -1,0 +1,40 @@
+{
+  "tool": "built-in image_gen, followed by deterministic matplotlib coordinate projection",
+  "created_utc": "2026-10-20T10:38:00Z",
+  "reference_only": true,
+  "AI_attempts": [
+    {
+      "file": "site_orthographic_AI_v1_REJECTED.png",
+      "prompt": "Create ONE orthographic architectural technical reference sheet for the entire original 160 m x 140 m industrial map in Image 1 (authoritative exact footprint layout) and Image 2 (appearance/concept only). This is a conceptual pre-build reference, not a final survey.\nThree clearly separated viewports ONLY: TOP PLAN in the upper half, SOUTH FRONT ELEVATION bottom left, EAST SIDE ELEVATION bottom right. Strict parallel orthographic projection. NO perspective, NO isometric view, NO camera convergence, NO dramatic shadows. All horizontal and vertical edges parallel. Clean precise monochrome CAD-like linework on light ivory paper, red outline only for the main reactor core, subtle flat grey fills for other buildings. Sparse labels: TOP, SOUTH, EAST. Thin 10 m grid for plan. The same buildings must correspond consistently across all three views.\nFootprint layout: north up. Full site rectangle x -80..80 m, y -70..70 m. Reactor at origin x -20..20, y -18..18, 20 m tall. Two attached service wings centered x +/-25, y5, each 10 x24 m, 8 m tall. North control office x -24..24,y38..62, suggested 12 m height. West maintenance workshop x-68..-42,y-16..18, suggested 10 m height. East pump compound x42..68,y-8..26, equipment up to 9 m. Southeast loading compound x18..66,y-62..-42, low shed up to 7 m. These are proposed outer-building heights, not actual measured construction.\nOuter road rectangle centerline x +/-74,y +/-66, width8m. Inner service loop near x+/-34,y-30/+26. Northwest elevated L-shaped pedestrian bridge at 6 m deck: (-24,48) west to(-54,48) then south to(-54,18), width3m. Main core south door centered x0,y-18; north door x2,y18. Workshop EAST entry x-42,y0. Office SOUTH entry x2,y38. Pump WEST entry x42,y8. Loading NORTH entry x42,y-42.\nImage2 establishes recent compact tactical organization: southwest reserve equipment compound, small shelters, concrete walls and grouped electrical equipment alongside pedestrian routes. Represent these as simple clean plan rectangles and elevation solids, not random clutter. Preserve 6-8m vehicle road corridors and 2-3m pedestrian gaps. Do not add labels to each prop. Perimeter terrain/fence shown as simple contour and line.\nThe south front elevation looks north and shows entire 160m width with west workshop LEFT, tall reactor CENTER, east tanks RIGHT, lower southeast loading shed to RIGHT; only show physically visible outlines, hidden background buildings lightly dashed. East elevation looks west, entire140m site depth, north office at RIGHT and south loading at LEFT; reactor central. Ground lines straight level z0. No exploded views. No perspective miniature of site. Output high resolution crisp technical line art.",
+      "status": "REJECTED",
+      "reasons": [
+        "Top view shows vertical building surfaces, so not strict orthographic top.",
+        "Core height and footprint do not match labelled coordinates."
+      ]
+    },
+    {
+      "file": "site_orthographic_AI_v2_REJECTED.png",
+      "prompt": "Make a STRICT ORTHOGRAPHIC architectural MASSING drawing, three views, clean minimal schematic CAD, no photorealism, NO 3D VIEW anywhere.\nInput is a true plan. Output TOP view plus SOUTH FRONT and EAST SIDE views. TOP must be PURE 2D RECTANGLES seen at exactly 90 degrees vertical downward: do not show a single facade, door front, vertical tank wall or building side. Tanks are circles. Roofs are plain rectangles, no pitched roof side shading. Elevations are PURE 2D silhouettes, no side walls, no foreshortening. Do not include any aerial perspective view.\nWhite background, crisp black thin line outlines, pale grey fills; all three views separated and aligned visually. Sparse titles TOP, SOUTH, EAST. No texture, no vegetation details, no people, no decorative machinery. All main rectangles follow the input positions. Site boundary160 by140m. Main core rectangle exactly40 by36m centered at origin,20m high. Wings10 by24m centered x+/-25,y5,height8m. North office48by24m centered x0,y50,height12m. West workshop26by34m centered x-55,y1,height10m. East pump compound26by34m centered x55,y9,height9m. Southeast loading48by20m centered x42,y-52,height7m.\nRoad outlines follow source diagram. Northwest L-shaped bridge follows source in top, height6m in elevation. Keep entire site within each view. South elevation horizontal axis is X=-80 to80, east elevation horizontal axis is Y=-70 to70. Both vertical axes Z=0..20m, core exactly reaches20 not higher. No roof equipment above20. Top plan rangeX[-80,80],Y[-70,70]. Dimension labels only the site160m,140m and core40m,36m,20m. Avoid detailed generated numeric axes. No invented tiny buildings. This simplified massing draft is for layout correspondence, not finished design.",
+      "status": "REJECTED",
+      "reasons": [
+        "Projection is flat but elevations incorrectly stack north office on top of reactor.",
+        "20 m and 12 m elevation silhouettes do not correspond to plan; dimensions not trustworthy."
+      ]
+    }
+  ],
+  "deterministic_reference": {
+    "files": [
+      "site_orthographic_exact_layout.png",
+      "site_orthographic_exact_layout.svg",
+      "site_orthographic_exact_layout.json",
+      "draw_site_orthographic.py"
+    ],
+    "method": "Coordinate projection of layout.json region envelopes and Batch05 core box; no perspective.",
+    "limits": [
+      "Regional heights are design proposals (12/10/9/7 m), not derived from as-built region geometry.",
+      "Road additions from layout.json are schematic centerline strokes; inherited Batch05 inner road geometry is not fully reconstructed in this massing sheet.",
+      "No equipment, cover module detail or gameplay/collision acceptance.",
+      "This is not an imagegen success and cannot be substituted silently for the user's hard imagegen orthographic gate."
+    ]
+  }
+}

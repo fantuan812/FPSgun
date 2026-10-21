@@ -1,0 +1,70 @@
+{
+  "projection": "ORTHO",
+  "ortho_scale_m": 17,
+  "resolution_px": [
+    1000,
+    1000
+  ],
+  "views": [
+    "front",
+    "side",
+    "top",
+    "beauty"
+  ],
+  "camera_coordinates": [
+    [
+      "front",
+      [
+        0,
+        -30,
+        7
+      ],
+      [
+        0,
+        0,
+        7
+      ]
+    ],
+    [
+      "side",
+      [
+        30,
+        0,
+        7
+      ],
+      [
+        0,
+        0,
+        7
+      ]
+    ],
+    [
+      "top",
+      [
+        0,
+        0,
+        35
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    [
+      "beauty",
+      [
+        22,
+        -28,
+        20
+      ],
+      [
+        0,
+        0,
+        7
+      ]
+    ]
+  ],
+  "scene_file": "reactor.blend",
+  "all_views_actual_blender_renders": true
+}

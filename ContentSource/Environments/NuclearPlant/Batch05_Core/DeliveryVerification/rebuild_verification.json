@@ -1,0 +1,33 @@
+{
+  "blender_version": "4.3.2",
+  "independent_directory": "Batch05_Rebuild_Test",
+  "copied_inputs": "Batch05 scripts, json config, props/reactor/Reused blend assets; no restored Batch04 directory copied",
+  "stages": [
+    "build_core.py",
+    "postprocess_core.py",
+    "fix_clearance.py",
+    "refresh_reactor.py",
+    "material_finish.py",
+    "fix_loop.py",
+    "finish_scene.py"
+  ],
+  "rebuild_exit_code": 0,
+  "configuration_variants": {
+    "cameras.core_eye_front.lens_mm": 24,
+    "equipment_placements.CP_ReactorConsole[0][0]": 0.25,
+    "palette.Sealed aggregate floor": [
+      0.06,
+      0.08,
+      0.09
+    ]
+  },
+  "structure_negative_test": {
+    "changed": "structure_template.hall_width",
+    "value": 41,
+    "exit_code": 1,
+    "error": "ValueError: Unsupported structure template change; edit topology generator and validate before changing dimensions."
+  },
+  "scope": "Actual independent generation and scene inspection. Not visual equality test, runtime UE test, or full arbitrary-configuration coverage.",
+  "final_stage_note": "The first 6 stages succeeded. For the final revised stage 7, the prior pre-stage-7 .blend1 backup was restored, then final finish_scene.py ran once successfully. Config-variant checks were rerun and passed. Incremental finish_scene.py is not idempotent; use rebuild.py from a fresh build.",
+  "final_stage_sha256": "384f7985300263a91c94105970ce850c926ccceaa1fdb9f899e6883a2f1a7b24"
+}

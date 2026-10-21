@@ -1,0 +1,42 @@
+{
+  "samples": 687,
+  "failures": [],
+  "bounds": [
+    [
+      42.0,
+      -8.0,
+      -0.30000001192092896
+    ],
+    [
+      68.0,
+      26.0,
+      8.5
+    ]
+  ],
+  "libraries": [],
+  "main_aisle": "4m wide declared; 3 sampled lines",
+  "hall_route": [
+    [
+      56,
+      8
+    ],
+    [
+      57.5,
+      9
+    ],
+    [
+      57.5,
+      18.5
+    ],
+    [
+      56,
+      20
+    ]
+  ],
+  "proxy": {
+    "height": 2.1,
+    "radius": 0.5,
+    "method": "ring floor-rays at .2m route spacing, not full physics sweep"
+  },
+  "limitations": "static vertical rays only, not capsule or UE tests"
+}

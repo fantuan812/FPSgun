@@ -1,0 +1,43 @@
+{
+  "asset_id": "SM_NPP_RoofTruss_32m_A",
+  "pixels_per_meter": 25.0,
+  "views": {
+    "front": {
+      "expected_silhouette_px": [
+        800.0,
+        50.0
+      ],
+      "measured_silhouette_px": [
+        800,
+        50
+      ],
+      "maximum_error_px": 0.0,
+      "status": "PASS"
+    },
+    "right": {
+      "expected_silhouette_px": [
+        12.5,
+        50.0
+      ],
+      "measured_silhouette_px": [
+        12,
+        50
+      ],
+      "maximum_error_px": 0.5,
+      "status": "PASS"
+    },
+    "top": {
+      "expected_silhouette_px": [
+        800.0,
+        12.5
+      ],
+      "measured_silhouette_px": [
+        800,
+        12
+      ],
+      "maximum_error_px": 0.5,
+      "status": "PASS"
+    }
+  },
+  "status": "PASS"
+}

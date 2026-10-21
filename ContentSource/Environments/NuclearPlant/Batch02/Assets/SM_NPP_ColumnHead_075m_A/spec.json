@@ -1,0 +1,80 @@
+{
+  "asset_id": "SM_NPP_ColumnHead_075m_A",
+  "builder": "column_head",
+  "units": "meters",
+  "dimensions": [
+    0.75,
+    0.75,
+    0.25
+  ],
+  "bounds_min": [
+    -0.375,
+    -0.375,
+    0
+  ],
+  "bounds_max": [
+    0.375,
+    0.375,
+    0.25
+  ],
+  "origin_m": [
+    0,
+    0,
+    0
+  ],
+  "grid_size": 0.25,
+  "connection_sockets": [
+    {
+      "id": "column",
+      "position_m": [
+        0,
+        0,
+        0
+      ],
+      "outward_normal": [
+        0,
+        0,
+        -1
+      ],
+      "role": "column_bearing",
+      "nominal_width_m": 0.5
+    },
+    {
+      "id": "slab",
+      "position_m": [
+        0,
+        0,
+        0.25
+      ],
+      "outward_normal": [
+        0,
+        0,
+        1
+      ],
+      "role": "slab_bearing",
+      "nominal_width_m": 0.75
+    }
+  ],
+  "coordinate_convention": {
+    "up": "+Z",
+    "front_camera": "-Y",
+    "right_camera": "+X",
+    "top_camera": "+Z"
+  },
+  "concept_reference": "reference_sheet.png",
+  "validation_views": [
+    "front.png",
+    "right.png",
+    "top.png"
+  ],
+  "material_level": "basic exportable PBR; no final weathering/trim/decal treatment",
+  "dimension_policy": "0.25 m placement and interface grid; 0.30 m envelope includes sub-grid fabrication details. Wall structural body 0.24 m plus bonded face panels and inset anchor heads.",
+  "assembly_height_example": {
+    "batch01_column_base_z": -0.5,
+    "batch01_column_top_z": 3.5,
+    "head_base_z": 3.5,
+    "head_top_z": 3.75,
+    "floor_surface_z": 4,
+    "floor_bottom_z": 3.75
+  }
+}

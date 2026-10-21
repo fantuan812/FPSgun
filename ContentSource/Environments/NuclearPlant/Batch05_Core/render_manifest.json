@@ -1,0 +1,121 @@
+{
+  "type": "Actual Blender rendered previews, not AI concepts",
+  "engine": "Blender 4.3.2 Eevee",
+  "samples": 64,
+  "source_sha256": "97f43189220fab7f2e776df9859050c23b64de8cec45d7352ff086f70a7e0309",
+  "config_sha256": "9fec65ab758b4c41f59b1c7f5f57c83b043a8f65e8715686b137b1ef1d4a794e",
+  "source_revision": "Last save changes cameras only. Front/cutaway remain valid unchanged cameras and identical geometry/materials. Side/platform/entry rerendered after standing-position correction.",
+  "views": {
+    "core_eye_front": {
+      "path": "renders/core_eye_front.png",
+      "sha256": "9f9d13d8eb825772eddbd9ae49191050cfa050201107dd254e96f0b410e75632",
+      "size": [
+        1400,
+        933
+      ],
+      "camera": {
+        "position": [
+          -1,
+          -17.2,
+          1.65
+        ],
+        "target": [
+          0,
+          0,
+          6.9
+        ],
+        "lens_mm": 23
+      },
+      "cutaway": false
+    },
+    "core_eye_side": {
+      "path": "renders/core_eye_side.png",
+      "sha256": "874a7b5234d08a42c2f9094a7963858d8852ff64c324b14bc26c3ed1e37ef3ed",
+      "size": [
+        1400,
+        933
+      ],
+      "camera": {
+        "position": [
+          -13.5,
+          -16,
+          1.65
+        ],
+        "target": [
+          0,
+          0,
+          6.4
+        ],
+        "lens_mm": 28
+      },
+      "cutaway": false
+    },
+    "core_platform": {
+      "path": "renders/core_platform.png",
+      "sha256": "02a62ddbb75a98589647d0397884d159e22e236c1284b7a6f715a1fc0c19eb85",
+      "size": [
+        1400,
+        933
+      ],
+      "camera": {
+        "position": [
+          17,
+          -5,
+          6.15
+        ],
+        "target": [
+          0,
+          0,
+          7
+        ],
+        "lens_mm": 29
+      },
+      "cutaway": false
+    },
+    "core_entry": {
+      "path": "renders/core_entry.png",
+      "sha256": "0645a135b9221d8e984e8f13e248bb138a2527e681cb4d22cd89bf7ed9eb80ac",
+      "size": [
+        1400,
+        933
+      ],
+      "camera": {
+        "position": [
+          -12,
+          -32,
+          1.65
+        ],
+        "target": [
+          0,
+          -17,
+          8
+        ],
+        "lens_mm": 27
+      },
+      "cutaway": false
+    },
+    "core_cutaway": {
+      "path": "renders/core_cutaway.png",
+      "sha256": "6f3cab1f3d4907dd063fd5c2fbb8d97ef8fc169730a898d0b21e3bf8781c3cd4",
+      "size": [
+        1400,
+        933
+      ],
+      "camera": {
+        "position": [
+          49,
+          -61,
+          47
+        ],
+        "target": [
+          0,
+          0,
+          5
+        ],
+        "lens_mm": 45
+      },
+      "cutaway": true
+    }
+  },
+  "scope": "Core hall v1 plus basic exterior. No UE gameplay/runtime validation."
+}

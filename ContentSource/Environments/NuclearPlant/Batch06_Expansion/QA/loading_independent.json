@@ -1,0 +1,98 @@
+{
+  "source": "/workspace/shared/NuclearPlant/Batch06_Expansion/Regions/loading.blend",
+  "proxy": {
+    "height": 2.1,
+    "radius": 0.5,
+    "official_mesh_measured": false
+  },
+  "limits": "Discrete vertical and horizontal rays; not capsule sweep, UE navigation or combat validation. Display proxy objects ignored.",
+  "routes": {
+    "entry": {
+      "samples": 57,
+      "issues": [
+        {
+          "type": "no_support",
+          "at": [
+            41.5,
+            -41.0,
+            0.0
+          ]
+        },
+        {
+          "type": "no_support",
+          "at": [
+            42.0,
+            -41.0,
+            0.0
+          ]
+        },
+        {
+          "type": "no_support",
+          "at": [
+            42.5,
+            -41.0,
+            0.0
+          ]
+        },
+        {
+          "type": "no_support",
+          "at": [
+            41.5,
+            -41.5,
+            0.0
+          ]
+        },
+        {
+          "type": "no_support",
+          "at": [
+            42.0,
+            -41.5,
+            0.0
+          ]
+        },
+        {
+          "type": "no_support",
+          "at": [
+            42.5,
+            -41.5,
+            0.0
+          ]
+        },
+        {
+          "type": "no_support",
+          "at": [
+            41.5,
+            -42.0,
+            0.0
+          ]
+        },
+        {
+          "type": "no_support",
+          "at": [
+            42.0,
+            -42.0,
+            0.0
+          ]
+        },
+        {
+          "type": "no_support",
+          "at": [
+            42.5,
+            -42.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    "ramp": {
+      "samples": 123,
+      "issues": []
+    },
+    "stairs": {
+      "samples": 30,
+      "issues": []
+    }
+  },
+  "cameras": {},
+  "dependencies": []
+}

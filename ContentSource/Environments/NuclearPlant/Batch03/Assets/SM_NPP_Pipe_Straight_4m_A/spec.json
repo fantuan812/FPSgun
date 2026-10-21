@@ -1,0 +1,78 @@
+{
+  "asset_id": "SM_NPP_Pipe_Straight_4m_A",
+  "builder": "pipe",
+  "units": "meters",
+  "origin_m": [
+    0,
+    0,
+    0
+  ],
+  "bounds_min": [
+    0,
+    -0.375,
+    -0.375
+  ],
+  "bounds_max": [
+    4,
+    0.375,
+    0.375
+  ],
+  "dimensions": [
+    4,
+    0.75,
+    0.75
+  ],
+  "grid_size": 0.25,
+  "connection_sockets": [
+    {
+      "id": "in",
+      "position_m": [
+        0,
+        0,
+        0
+      ],
+      "outward_normal": [
+        -1,
+        0,
+        0
+      ],
+      "role": "fluid_port",
+      "outer_flange_radius_m": 0.375,
+      "bore_radius_m": 0.21
+    },
+    {
+      "id": "out",
+      "position_m": [
+        4,
+        0,
+        0
+      ],
+      "outward_normal": [
+        1,
+        0,
+        0
+      ],
+      "role": "fluid_port",
+      "outer_flange_radius_m": 0.375,
+      "bore_radius_m": 0.21
+    }
+  ],
+  "pipe_outer_radius_m": 0.265,
+  "pipe_inner_radius_m": 0.21,
+  "flange_radius_m": 0.375,
+  "flange_depth_m": 0.12,
+  "coordinate_convention": {
+    "up": "+Z",
+    "front_camera": "-Y",
+    "right_camera": "+X",
+    "top_camera": "+Z"
+  },
+  "material_level": "Basic PBR painted teal / graphite / galvanized / safety yellow. No final weathering.",
+  "reference_views": [
+    "front.png",
+    "right.png",
+    "top.png"
+  ],
+  "collision_policy": "Closed convex gameplay proxies. Internal pipe bore need not be traversable.",
+  "design_limit": "Original environment art, not a certified engineering or reactor-operating design."
+}

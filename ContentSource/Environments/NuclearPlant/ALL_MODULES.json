@@ -1,0 +1,653 @@
+{
+  "project": "NuclearPlant cumulative Batch01–06",
+  "current_scene": "Batch06_Expansion/site_expansion.blend",
+  "current_rebuild": "python rebuild_current.py",
+  "counts": {
+    "Batch01": 8,
+    "Batch02": 7,
+    "Batch03": 5,
+    "Batch04": 3,
+    "Batch05": 9,
+    "Batch06": 23
+  },
+  "module_entries": 55,
+  "batch06_new_or_regional_composite_entries": 21,
+  "batch06_reused_entries": 2,
+  "historical_batch01_to05_entries": 32,
+  "count_note": "模块/组合库记录数；包括2个已标注复用记录，不是55种新增模块。Batch05 props按collection列出。",
+  "modules": [
+    {
+      "batch": "Batch01",
+      "id": "SM_NPP_Catwalk_Straight_4m_A",
+      "kind": "module",
+      "model": "ModularKit/Catwalks/SM_NPP_Catwalk_Straight_4m_A/model.blend",
+      "collection": null,
+      "reference": "ModularKit/Catwalks/SM_NPP_Catwalk_Straight_4m_A/reference_sheet.png",
+      "post_model_orthographic": "ModularKit/Catwalks/SM_NPP_Catwalk_Straight_4m_A/orthographic_sheet.png",
+      "notes": "历史参考/建模投影原样保存；本次未重新执行历史建模流程。"
+    },
+    {
+      "batch": "Batch01",
+      "id": "SM_NPP_Catwalk_Corner90_A",
+      "kind": "module",
+      "model": "ModularKit/Catwalks/SM_NPP_Catwalk_Corner90_A/model.blend",
+      "collection": null,
+      "reference": "ModularKit/Catwalks/SM_NPP_Catwalk_Corner90_A/reference_sheet.png",
+      "post_model_orthographic": "ModularKit/Catwalks/SM_NPP_Catwalk_Corner90_A/orthographic_sheet.png",
+      "notes": "历史参考/建模投影原样保存；本次未重新执行历史建模流程。"
+    },
+    {
+      "batch": "Batch01",
+      "id": "SM_NPP_Catwalk_TJunction_A",
+      "kind": "module",
+      "model": "ModularKit/Catwalks/SM_NPP_Catwalk_TJunction_A/model.blend",
+      "collection": null,
+      "reference": "ModularKit/Catwalks/SM_NPP_Catwalk_TJunction_A/reference_sheet.png",
+      "post_model_orthographic": "ModularKit/Catwalks/SM_NPP_Catwalk_TJunction_A/orthographic_sheet.png",
+      "notes": "历史参考/建模投影原样保存；本次未重新执行历史建模流程。"
+    },
+    {
+      "batch": "Batch01",
+      "id": "SM_NPP_Stair_4x2_Rise2_A",
+      "kind": "module",
+      "model": "ModularKit/Stairs/SM_NPP_Stair_4x2_Rise2_A/model.blend",
+      "collection": null,
+      "reference": "ModularKit/Stairs/SM_NPP_Stair_4x2_Rise2_A/reference_sheet.png",
+      "post_model_orthographic": "ModularKit/Stairs/SM_NPP_Stair_4x2_Rise2_A/orthographic_sheet.png",
+      "notes": "历史参考/建模投影原样保存；本次未重新执行历史建模流程。"
+    },
+    {
+      "batch": "Batch01",
+      "id": "SM_NPP_Railing_Open_4m_A",
+      "kind": "module",
+      "model": "ModularKit/Railings/SM_NPP_Railing_Open_4m_A/model.blend",
+      "collection": null,
+      "reference": "ModularKit/Railings/SM_NPP_Railing_Open_4m_A/reference_sheet.png",
+      "post_model_orthographic": "ModularKit/Railings/SM_NPP_Railing_Open_4m_A/orthographic_sheet.png",
+      "notes": "历史参考/建模投影原样保存；本次未重新执行历史建模流程。"
+    },
+    {
+      "batch": "Batch01",
+      "id": "SM_NPP_Railing_Infill_2m_B",
+      "kind": "module",
+      "model": "ModularKit/Railings/SM_NPP_Railing_Infill_2m_B/model.blend",
+      "collection": null,
+      "reference": "ModularKit/Railings/SM_NPP_Railing_Infill_2m_B/reference_sheet.png",
+      "post_model_orthographic": "ModularKit/Railings/SM_NPP_Railing_Infill_2m_B/orthographic_sheet.png",
+      "notes": "历史参考/建模投影原样保存；本次未重新执行历史建模流程。"
+    },
+    {
+      "batch": "Batch01",
+      "id": "SM_NPP_Column_4m_A",
+      "kind": "module",
+      "model": "ModularKit/Structure/SM_NPP_Column_4m_A/model.blend",
+      "collection": null,
+      "reference": "ModularKit/Structure/SM_NPP_Column_4m_A/reference_sheet.png",
+      "post_model_orthographic": "ModularKit/Structure/SM_NPP_Column_4m_A/orthographic_sheet.png",
+      "notes": "历史参考/建模投影原样保存；本次未重新执行历史建模流程。"
+    },
+    {
+      "batch": "Batch01",
+      "id": "SM_NPP_PipeSupport_2m_A",
+      "kind": "module",
+      "model": "ModularKit/Pipes/SM_NPP_PipeSupport_2m_A/model.blend",
+      "collection": null,
+      "reference": "ModularKit/Pipes/SM_NPP_PipeSupport_2m_A/reference_sheet.png",
+      "post_model_orthographic": "ModularKit/Pipes/SM_NPP_PipeSupport_2m_A/orthographic_sheet.png",
+      "notes": "历史参考/建模投影原样保存；本次未重新执行历史建模流程。"
+    },
+    {
+      "batch": "Batch02",
+      "id": "SM_NPP_Wall_Solid_4m_A",
+      "kind": "module",
+      "model": "Batch02/Assets/SM_NPP_Wall_Solid_4m_A/model.blend",
+      "collection": null,
+      "reference": "Batch02/Assets/SM_NPP_Wall_Solid_4m_A/reference_sheet.png",
+      "post_model_orthographic": "Batch02/Assets/SM_NPP_Wall_Solid_4m_A/orthographic_sheet.png",
+      "notes": "历史参考/建模投影原样保存；本次未重新执行历史建模流程。"
+    },
+    {
+      "batch": "Batch02",
+      "id": "SM_NPP_Wall_Door_2m_A",
+      "kind": "module",
+      "model": "Batch02/Assets/SM_NPP_Wall_Door_2m_A/model.blend",
+      "collection": null,
+      "reference": "Batch02/Assets/SM_NPP_Wall_Door_2m_A/reference_sheet.png",
+      "post_model_orthographic": "Batch02/Assets/SM_NPP_Wall_Door_2m_A/orthographic_sheet.png",
+      "notes": "历史参考/建模投影原样保存；本次未重新执行历史建模流程。"
+    },
+    {
+      "batch": "Batch02",
+      "id": "SM_NPP_Wall_Window_4m_A",
+      "kind": "module",
+      "model": "Batch02/Assets/SM_NPP_Wall_Window_4m_A/model.blend",
+      "collection": null,
+      "reference": "Batch02/Assets/SM_NPP_Wall_Window_4m_A/reference_sheet.png",
+      "post_model_orthographic": "Batch02/Assets/SM_NPP_Wall_Window_4m_A/orthographic_sheet.png",
+      "notes": "历史参考/建模投影原样保存；本次未重新执行历史建模流程。"
+    },
+    {
+      "batch": "Batch02",
+      "id": "SM_NPP_Wall_Corner90_A",
+      "kind": "module",
+      "model": "Batch02/Assets/SM_NPP_Wall_Corner90_A/model.blend",
+      "collection": null,
+      "reference": "Batch02/Assets/SM_NPP_Wall_Corner90_A/reference_sheet.png",
+      "post_model_orthographic": "Batch02/Assets/SM_NPP_Wall_Corner90_A/orthographic_sheet.png",
+      "notes": "历史参考/建模投影原样保存；本次未重新执行历史建模流程。"
+    },
+    {
+      "batch": "Batch02",
+      "id": "SM_NPP_Floor_4x4_A",
+      "kind": "module",
+      "model": "Batch02/Assets/SM_NPP_Floor_4x4_A/model.blend",
+      "collection": null,
+      "reference": "Batch02/Assets/SM_NPP_Floor_4x4_A/reference_sheet.png",
+      "post_model_orthographic": "Batch02/Assets/SM_NPP_Floor_4x4_A/orthographic_sheet.png",
+      "notes": "历史参考/建模投影原样保存；本次未重新执行历史建模流程。"
+    },
+    {
+      "batch": "Batch02",
+      "id": "SM_NPP_Roof_4x4_A",
+      "kind": "module",
+      "model": "Batch02/Assets/SM_NPP_Roof_4x4_A/model.blend",
+      "collection": null,
+      "reference": "Batch02/Assets/SM_NPP_Roof_4x4_A/reference_sheet.png",
+      "post_model_orthographic": "Batch02/Assets/SM_NPP_Roof_4x4_A/orthographic_sheet.png",
+      "notes": "历史参考/建模投影原样保存；本次未重新执行历史建模流程。"
+    },
+    {
+      "batch": "Batch02",
+      "id": "SM_NPP_ColumnHead_075m_A",
+      "kind": "module",
+      "model": "Batch02/Assets/SM_NPP_ColumnHead_075m_A/model.blend",
+      "collection": null,
+      "reference": "Batch02/Assets/SM_NPP_ColumnHead_075m_A/reference_sheet.png",
+      "post_model_orthographic": "Batch02/Assets/SM_NPP_ColumnHead_075m_A/orthographic_sheet.png",
+      "notes": "历史参考/建模投影原样保存；本次未重新执行历史建模流程。"
+    },
+    {
+      "batch": "Batch03",
+      "id": "SM_NPP_Pipe_Straight_4m_A",
+      "kind": "module",
+      "model": "Batch03/Assets/SM_NPP_Pipe_Straight_4m_A/model.blend",
+      "collection": null,
+      "reference": "Batch03/Assets/SM_NPP_Pipe_Straight_4m_A/reference_sheet.png",
+      "post_model_orthographic": "Batch03/Assets/SM_NPP_Pipe_Straight_4m_A/orthographic_sheet.png",
+      "notes": "历史参考/建模投影原样保存；本次未重新执行历史建模流程。"
+    },
+    {
+      "batch": "Batch03",
+      "id": "SM_NPP_Pipe_Elbow90_R1_A",
+      "kind": "module",
+      "model": "Batch03/Assets/SM_NPP_Pipe_Elbow90_R1_A/model.blend",
+      "collection": null,
+      "reference": "Batch03/Assets/SM_NPP_Pipe_Elbow90_R1_A/reference_sheet.png",
+      "post_model_orthographic": "Batch03/Assets/SM_NPP_Pipe_Elbow90_R1_A/orthographic_sheet.png",
+      "notes": "历史参考/建模投影原样保存；本次未重新执行历史建模流程。"
+    },
+    {
+      "batch": "Batch03",
+      "id": "SM_NPP_Pipe_Tee_2m_A",
+      "kind": "module",
+      "model": "Batch03/Assets/SM_NPP_Pipe_Tee_2m_A/model.blend",
+      "collection": null,
+      "reference": "Batch03/Assets/SM_NPP_Pipe_Tee_2m_A/reference_sheet.png",
+      "post_model_orthographic": "Batch03/Assets/SM_NPP_Pipe_Tee_2m_A/orthographic_sheet.png",
+      "notes": "历史参考/建模投影原样保存；本次未重新执行历史建模流程。"
+    },
+    {
+      "batch": "Batch03",
+      "id": "SM_NPP_Valve_1m_A",
+      "kind": "module",
+      "model": "Batch03/Assets/SM_NPP_Valve_1m_A/model.blend",
+      "collection": null,
+      "reference": "Batch03/Assets/SM_NPP_Valve_1m_A/reference_sheet.png",
+      "post_model_orthographic": "Batch03/Assets/SM_NPP_Valve_1m_A/orthographic_sheet.png",
+      "notes": "历史参考/建模投影原样保存；本次未重新执行历史建模流程。"
+    },
+    {
+      "batch": "Batch03",
+      "id": "SM_NPP_PumpSkid_4x2_A",
+      "kind": "module",
+      "model": "Batch03/Assets/SM_NPP_PumpSkid_4x2_A/model.blend",
+      "collection": null,
+      "reference": "Batch03/Assets/SM_NPP_PumpSkid_4x2_A/reference_sheet.png",
+      "post_model_orthographic": "Batch03/Assets/SM_NPP_PumpSkid_4x2_A/orthographic_sheet.png",
+      "notes": "历史参考/建模投影原样保存；本次未重新执行历史建模流程。"
+    },
+    {
+      "batch": "Batch04",
+      "id": "SM_NPP_ServiceBayWall_8m_A",
+      "kind": "module",
+      "model": "Batch04_LargeSpace/Assets/SM_NPP_ServiceBayWall_8m_A/model.blend",
+      "collection": null,
+      "reference": "Batch04_LargeSpace/Assets/SM_NPP_ServiceBayWall_8m_A/reference_sheet.png",
+      "post_model_orthographic": "Batch04_LargeSpace/Assets/SM_NPP_ServiceBayWall_8m_A/orthographic_sheet.png",
+      "notes": "历史参考/建模投影原样保存；本次未重新执行历史建模流程。"
+    },
+    {
+      "batch": "Batch04",
+      "id": "SM_NPP_StorageRack_4m_A",
+      "kind": "module",
+      "model": "Batch04_LargeSpace/Assets/SM_NPP_StorageRack_4m_A/model.blend",
+      "collection": null,
+      "reference": "Batch04_LargeSpace/Assets/SM_NPP_StorageRack_4m_A/reference_sheet.png",
+      "post_model_orthographic": "Batch04_LargeSpace/Assets/SM_NPP_StorageRack_4m_A/orthographic_sheet.png",
+      "notes": "历史参考/建模投影原样保存；本次未重新执行历史建模流程。"
+    },
+    {
+      "batch": "Batch04",
+      "id": "SM_NPP_RoofTruss_32m_A",
+      "kind": "module",
+      "model": "Batch04_LargeSpace/Assets/SM_NPP_RoofTruss_32m_A/model.blend",
+      "collection": null,
+      "reference": "Batch04_LargeSpace/Assets/SM_NPP_RoofTruss_32m_A/reference_sheet.png",
+      "post_model_orthographic": "Batch04_LargeSpace/Assets/SM_NPP_RoofTruss_32m_A/orthographic_sheet.png",
+      "notes": "历史参考/建模投影原样保存；本次未重新执行历史建模流程。"
+    },
+    {
+      "batch": "Batch05",
+      "id": "Reactor",
+      "kind": "reactor_assembly",
+      "model": "Batch05_Core/reactor/reactor.blend",
+      "collection": null,
+      "reference": "Batch05_Core/References/reactor_orthographic_concept.png",
+      "post_model_orthographic": "Batch05_Core/reactor/reactor_front.png",
+      "notes": ""
+    },
+    {
+      "batch": "Batch05",
+      "id": "CP_PressureSkid",
+      "kind": "module",
+      "model": "Batch05_Core/props/props.blend",
+      "collection": "CP_PressureSkid",
+      "reference": null,
+      "post_model_orthographic": "Batch05_Core/props/orthographic/CP_PressureSkid_sheet.png",
+      "notes": "共享props.blend中的独立collection；保留历史正交渲染，不将其标为建模前概念图。"
+    },
+    {
+      "batch": "Batch05",
+      "id": "CP_TransformerPad",
+      "kind": "module",
+      "model": "Batch05_Core/props/props.blend",
+      "collection": "CP_TransformerPad",
+      "reference": null,
+      "post_model_orthographic": "Batch05_Core/props/orthographic/CP_TransformerPad_sheet.png",
+      "notes": "共享props.blend中的独立collection；保留历史正交渲染，不将其标为建模前概念图。"
+    },
+    {
+      "batch": "Batch05",
+      "id": "CP_RoadBarrier",
+      "kind": "module",
+      "model": "Batch05_Core/props/props.blend",
+      "collection": "CP_RoadBarrier",
+      "reference": null,
+      "post_model_orthographic": "Batch05_Core/props/orthographic/CP_RoadBarrier_sheet.png",
+      "notes": "共享props.blend中的独立collection；保留历史正交渲染，不将其标为建模前概念图。"
+    },
+    {
+      "batch": "Batch05",
+      "id": "CP_UtilityPallet",
+      "kind": "module",
+      "model": "Batch05_Core/props/props.blend",
+      "collection": "CP_UtilityPallet",
+      "reference": null,
+      "post_model_orthographic": "Batch05_Core/props/orthographic/CP_UtilityPallet_sheet.png",
+      "notes": "共享props.blend中的独立collection；保留历史正交渲染，不将其标为建模前概念图。"
+    },
+    {
+      "batch": "Batch05",
+      "id": "CP_ReactorConsole",
+      "kind": "module",
+      "model": "Batch05_Core/props/props.blend",
+      "collection": "CP_ReactorConsole",
+      "reference": null,
+      "post_model_orthographic": "Batch05_Core/props/orthographic/CP_ReactorConsole_sheet.png",
+      "notes": "共享props.blend中的独立collection；保留历史正交渲染，不将其标为建模前概念图。"
+    },
+    {
+      "batch": "Batch05",
+      "id": "CP_ElectricalCabinetBank",
+      "kind": "module",
+      "model": "Batch05_Core/props/props.blend",
+      "collection": "CP_ElectricalCabinetBank",
+      "reference": null,
+      "post_model_orthographic": "Batch05_Core/props/orthographic/CP_ElectricalCabinetBank_sheet.png",
+      "notes": "共享props.blend中的独立collection；保留历史正交渲染，不将其标为建模前概念图。"
+    },
+    {
+      "batch": "Batch05",
+      "id": "CP_VerticalServiceTank",
+      "kind": "module",
+      "model": "Batch05_Core/props/props.blend",
+      "collection": "CP_VerticalServiceTank",
+      "reference": null,
+      "post_model_orthographic": "Batch05_Core/props/orthographic/CP_VerticalServiceTank_sheet.png",
+      "notes": "共享props.blend中的独立collection；保留历史正交渲染，不将其标为建模前概念图。"
+    },
+    {
+      "batch": "Batch05",
+      "id": "CP_RedGuardPanel",
+      "kind": "module",
+      "model": "Batch05_Core/props/props.blend",
+      "collection": "CP_RedGuardPanel",
+      "reference": null,
+      "post_model_orthographic": "Batch05_Core/props/orthographic/CP_RedGuardPanel_sheet.png",
+      "notes": "共享props.blend中的独立collection；保留历史正交渲染，不将其标为建模前概念图。"
+    },
+    {
+      "batch": "Batch06",
+      "id": "B06_BRIDGE",
+      "kind": "module",
+      "model": "Batch06_Expansion/Assets/Connectors/B06_BRIDGE.blend",
+      "collection": "B06_BRIDGE",
+      "reference": "Batch06_Expansion/References/Connectors/B06_BRIDGE_technical.svg",
+      "post_model_orthographic": null,
+      "notes": ""
+    },
+    {
+      "batch": "Batch06",
+      "id": "B06_UTILITY_SHELTER",
+      "kind": "module",
+      "model": "Batch06_Expansion/Assets/Connectors/B06_UTILITY_SHELTER.blend",
+      "collection": "B06_UTILITY_SHELTER",
+      "reference": "Batch06_Expansion/References/Connectors/B06_UTILITY_SHELTER_technical.svg",
+      "post_model_orthographic": null,
+      "notes": ""
+    },
+    {
+      "batch": "Batch06",
+      "id": "B06_SERVICE_BANK",
+      "kind": "module",
+      "model": "Batch06_Expansion/Assets/Connectors/B06_SERVICE_BANK.blend",
+      "collection": "B06_SERVICE_BANK",
+      "reference": "Batch06_Expansion/References/Connectors/B06_SERVICE_BANK_technical.svg",
+      "post_model_orthographic": null,
+      "notes": ""
+    },
+    {
+      "batch": "Batch06",
+      "id": "B06_SCREEN",
+      "kind": "module",
+      "model": "Batch06_Expansion/Assets/Connectors/B06_SCREEN.blend",
+      "collection": "B06_SCREEN",
+      "reference": "Batch06_Expansion/References/Connectors/B06_SCREEN_technical.svg",
+      "post_model_orthographic": null,
+      "notes": ""
+    },
+    {
+      "batch": "Batch06",
+      "id": "B06_GATE",
+      "kind": "module",
+      "model": "Batch06_Expansion/Assets/Connectors/B06_GATE.blend",
+      "collection": "B06_GATE",
+      "reference": "Batch06_Expansion/References/Connectors/B06_GATE_technical.svg",
+      "post_model_orthographic": null,
+      "notes": ""
+    },
+    {
+      "batch": "Batch06",
+      "id": "B06_FENCE",
+      "kind": "module",
+      "model": "Batch06_Expansion/Assets/Connectors/B06_FENCE.blend",
+      "collection": "B06_FENCE",
+      "reference": "Batch06_Expansion/References/Connectors/B06_FENCE_technical.svg",
+      "post_model_orthographic": null,
+      "notes": ""
+    },
+    {
+      "batch": "Batch06",
+      "id": "CTL_StairUnit",
+      "kind": "module",
+      "model": "Batch06_Expansion/Office/Assets/CTL_StairUnit/model.blend",
+      "collection": null,
+      "reference": "Batch06_Expansion/Office/References/CTL_StairUnit_prebuild_ortho.svg",
+      "post_model_orthographic": "Batch06_Expansion/Office/Assets/CTL_StairUnit/front.png",
+      "notes": ""
+    },
+    {
+      "batch": "Batch06",
+      "id": "CTL_Deck",
+      "kind": "module",
+      "model": "Batch06_Expansion/Office/Assets/CTL_Deck/model.blend",
+      "collection": null,
+      "reference": "Batch06_Expansion/Office/References/CTL_Deck_prebuild_ortho.svg",
+      "post_model_orthographic": "Batch06_Expansion/Office/Assets/CTL_Deck/front.png",
+      "notes": ""
+    },
+    {
+      "batch": "Batch06",
+      "id": "CTL_Island",
+      "kind": "module",
+      "model": "Batch06_Expansion/Office/Assets/CTL_Island/model.blend",
+      "collection": null,
+      "reference": "Batch06_Expansion/Office/References/CTL_Island_prebuild_ortho.svg",
+      "post_model_orthographic": "Batch06_Expansion/Office/Assets/CTL_Island/front.png",
+      "notes": ""
+    },
+    {
+      "batch": "Batch06",
+      "id": "CTL_DisplayPanel",
+      "kind": "module",
+      "model": "Batch06_Expansion/Office/Assets/CTL_DisplayPanel/model.blend",
+      "collection": null,
+      "reference": "Batch06_Expansion/Office/References/CTL_DisplayPanel_prebuild_ortho.svg",
+      "post_model_orthographic": "Batch06_Expansion/Office/Assets/CTL_DisplayPanel/front.png",
+      "notes": ""
+    },
+    {
+      "batch": "Batch06",
+      "id": "Pump/buffer_tank",
+      "kind": "module_or_regional_composite",
+      "model": "Batch06_Expansion/Pump/Modules/buffer_tank.blend",
+      "collection": "MODULE_buffer_tank",
+      "reference": "Batch06_Expansion/Pump/References/buffer_tank_technical.svg",
+      "post_model_orthographic": null,
+      "notes": "reference-following procedural rebuild"
+    },
+    {
+      "batch": "Batch06",
+      "id": "Pump/maintenance_hall",
+      "kind": "module_or_regional_composite",
+      "model": "Batch06_Expansion/Pump/Modules/maintenance_hall.blend",
+      "collection": "MODULE_maintenance_hall",
+      "reference": "Batch06_Expansion/Pump/References/maintenance_hall_technical.svg",
+      "post_model_orthographic": null,
+      "notes": "reference-following procedural rebuild"
+    },
+    {
+      "batch": "Batch06",
+      "id": "Pump/fire_screen",
+      "kind": "module_or_regional_composite",
+      "model": "Batch06_Expansion/Pump/Modules/fire_screen.blend",
+      "collection": "MODULE_fire_screen",
+      "reference": "Batch06_Expansion/Pump/References/fire_screen_technical.svg",
+      "post_model_orthographic": null,
+      "notes": "reference-following procedural rebuild"
+    },
+    {
+      "batch": "Batch06",
+      "id": "Pump/pipe_gantry",
+      "kind": "module_or_regional_composite",
+      "model": "Batch06_Expansion/Pump/Modules/pipe_gantry.blend",
+      "collection": "MODULE_pipe_gantry",
+      "reference": "Batch06_Expansion/Pump/References/pipe_gantry_technical.svg",
+      "post_model_orthographic": null,
+      "notes": "reference-following procedural rebuild"
+    },
+    {
+      "batch": "Batch06",
+      "id": "Pump/reused_pump",
+      "kind": "reused_module",
+      "model": "Batch06_Expansion/Pump/Modules/reused_pump.blend",
+      "collection": "MODULE_reused_pump",
+      "reference": null,
+      "post_model_orthographic": null,
+      "notes": "reused Batch04"
+    },
+    {
+      "batch": "Batch06",
+      "id": "Pump/reused_rack",
+      "kind": "reused_module",
+      "model": "Batch06_Expansion/Pump/Modules/reused_rack.blend",
+      "collection": "MODULE_reused_rack",
+      "reference": null,
+      "post_model_orthographic": null,
+      "notes": "reused Batch04"
+    },
+    {
+      "batch": "Batch06",
+      "id": "Logistics/maintenance_shell",
+      "kind": "module_or_regional_composite",
+      "model": "Batch06_Expansion/Logistics/Modules/maintenance_shell.blend",
+      "collection": "MODULE_maintenance_shell",
+      "reference": "Batch06_Expansion/Logistics/References/maintenance_region_technical.svg",
+      "post_model_orthographic": null,
+      "notes": "canonical composite export, no global light/camera; shell and dock are region-sized composites, repeated bays retained within"
+    },
+    {
+      "batch": "Batch06",
+      "id": "Logistics/stair_landing",
+      "kind": "module_or_regional_composite",
+      "model": "Batch06_Expansion/Logistics/Modules/stair_landing.blend",
+      "collection": "MODULE_stair_landing",
+      "reference": "Batch06_Expansion/Logistics/References/stair_landing_technical.svg",
+      "post_model_orthographic": null,
+      "notes": "canonical composite export, no global light/camera; shell and dock are region-sized composites, repeated bays retained within"
+    },
+    {
+      "batch": "Batch06",
+      "id": "Logistics/service_station",
+      "kind": "module_or_regional_composite",
+      "model": "Batch06_Expansion/Logistics/Modules/service_station.blend",
+      "collection": "MODULE_service_station",
+      "reference": "Batch06_Expansion/Logistics/References/service_station_technical.svg",
+      "post_model_orthographic": null,
+      "notes": "canonical composite export, no global light/camera; shell and dock are region-sized composites, repeated bays retained within"
+    },
+    {
+      "batch": "Batch06",
+      "id": "Logistics/loading_dock",
+      "kind": "module_or_regional_composite",
+      "model": "Batch06_Expansion/Logistics/Modules/loading_dock.blend",
+      "collection": "MODULE_loading_dock",
+      "reference": "Batch06_Expansion/Logistics/References/loading_region_technical.svg",
+      "post_model_orthographic": null,
+      "notes": "canonical composite export, no global light/camera; shell and dock are region-sized composites, repeated bays retained within"
+    },
+    {
+      "batch": "Batch06",
+      "id": "Logistics/container",
+      "kind": "module_or_regional_composite",
+      "model": "Batch06_Expansion/Logistics/Modules/container.blend",
+      "collection": "MODULE_container",
+      "reference": "Batch06_Expansion/Logistics/References/container_technical.svg",
+      "post_model_orthographic": null,
+      "notes": "canonical composite export, no global light/camera; shell and dock are region-sized composites, repeated bays retained within"
+    },
+    {
+      "batch": "Batch06",
+      "id": "Logistics/maintenance_bay",
+      "kind": "module_or_regional_composite",
+      "model": "Batch06_Expansion/Logistics/Modules/maintenance_bay.blend",
+      "collection": "MODULE_maintenance_bay",
+      "reference": "Batch06_Expansion/Logistics/References/maintenance_bay_technical.svg",
+      "post_model_orthographic": null,
+      "notes": ""
+    },
+    {
+      "batch": "Batch06",
+      "id": "Logistics/dock_bay",
+      "kind": "module_or_regional_composite",
+      "model": "Batch06_Expansion/Logistics/Modules/dock_bay.blend",
+      "collection": "MODULE_dock_bay",
+      "reference": "Batch06_Expansion/Logistics/References/dock_bay_technical.svg",
+      "post_model_orthographic": null,
+      "notes": ""
+    }
+  ],
+  "scenes": [
+    {
+      "batch": "Batch06 CURRENT",
+      "file": "Batch06_Expansion/site_expansion.blend",
+      "purpose": "当前五区完整拼装地图；以 Batch05 原尺寸核心为中心扩建。"
+    },
+    {
+      "batch": "Batch06",
+      "file": "Batch06_Expansion/Regions/control.blend",
+      "purpose": "控制办公分区"
+    },
+    {
+      "batch": "Batch06",
+      "file": "Batch06_Expansion/Regions/maintenance.blend",
+      "purpose": "维修分区"
+    },
+    {
+      "batch": "Batch06",
+      "file": "Batch06_Expansion/Regions/pumps.blend",
+      "purpose": "泵站分区"
+    },
+    {
+      "batch": "Batch06",
+      "file": "Batch06_Expansion/Regions/loading.blend",
+      "purpose": "装卸分区"
+    },
+    {
+      "batch": "Batch05 LEGACY",
+      "file": "Batch05_Core/core_hall.blend",
+      "purpose": "历史核心大厅原交付"
+    },
+    {
+      "batch": "Batch04 LEGACY",
+      "file": "Batch04_LargeSpace/Region/site_with_pump_service.blend",
+      "purpose": "历史全厂灰盒/泵站维修组合"
+    },
+    {
+      "batch": "Batch04 LEGACY",
+      "file": "Batch04_LargeSpace/Region/pump_service_connected.blend",
+      "purpose": "历史泵站维修连通区"
+    },
+    {
+      "batch": "Batch03 LEGACY",
+      "file": "Batch03/Region/site_with_pump_zone.blend",
+      "purpose": "历史全厂灰盒/泵区组合"
+    },
+    {
+      "batch": "Batch03 LEGACY",
+      "file": "Batch03/Region/pump_zone.blend",
+      "purpose": "历史泵区"
+    },
+    {
+      "batch": "Batch02 LEGACY",
+      "file": "Batch02/architecture_demo.blend",
+      "purpose": "历史建筑拼装"
+    },
+    {
+      "batch": "Batch01 LEGACY",
+      "file": "ModularKit/assembly_demo.blend",
+      "purpose": "历史模块拼装演示"
+    },
+    {
+      "batch": "Batch01 LEGACY",
+      "file": "Blockout/site_graybox.blend",
+      "purpose": "最早全厂灰盒；不是当前地图"
+    }
+  ],
+  "freeze": {
+    "builder_frozen": true,
+    "qa_final": true,
+    "site_sha256": "f19f554d9f2ba93e6f3c1d31d95b0db2ed2b5bcd78a7fecc42de8cfe1267edb3",
+    "geometry_baseline_sha256": "0218ca7d20d61d699ddcde2c16622befb2e80087b66e65b7cd92c019ebba177b",
+    "builder_release_utc": "2026-10-20T13:28:29Z",
+    "qa_freeze_received_utc": "2026-10-20T13:29:16Z",
+    "evidence": "Builder explicitly froze source/docs/exports and released Blender. Independent QA explicitly froze final bright five-image visual/hash review and reviewed lighting-only geometry audit. Static geometry checks apply to baseline through audited unchanged geometry/material/transform fingerprints.",
+    "scope_limits": [
+      "Original core large-proxy inner-ring limit retained",
+      "Not actual Manny mesh measurement",
+      "Not UE collision/navigation/runtime acceptance",
+      "Historical straight axes intentionally interrupted; current routes are detours",
+      "v1 environment art"
+    ]
+  }
+}

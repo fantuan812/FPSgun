@@ -1,0 +1,52 @@
+{
+  "asset_id": "SM_NPP_Railing_Infill_2m_B",
+  "category": "Railings",
+  "builder": "rail_infill",
+  "units": "meters",
+  "dimensions": [
+    2,
+    0.125,
+    1.1
+  ],
+  "bounds_min": [
+    0,
+    -0.0625,
+    0
+  ],
+  "bounds_max": [
+    2,
+    0.0625,
+    1.1
+  ],
+  "origin_m": [
+    0,
+    0,
+    0
+  ],
+  "grid_size": 0.25,
+  "primary_module_size": 4,
+  "walkable_surface_z": null,
+  "connection_sockets": [],
+  "coordinate_convention": {
+    "up": "+Z",
+    "front_camera": "-Y",
+    "right_camera": "+X",
+    "top_camera": "+Z"
+  },
+  "reference_views": [
+    "front.png",
+    "right.png",
+    "top.png"
+  ],
+  "concept_reference": "reference_sheet.png",
+  "materials": [
+    "M_NPP_SteelGraphite",
+    "M_NPP_Galvanized",
+    "M_NPP_SafetyYellow",
+    "M_NPP_BoltSteel"
+  ],
+  "uv_policy": "UV0 per-part box projection in real meters; UV1 non-overlap generated atlas; no textures required",
+  "collision_policy": "UCX closed convex boxes, rail blockers and stair ramp; hidden in beauty renders; exported separately and per-asset FBX",
+  "detail_note": "0.25 m is socket and assembly grid. Sub-grid fabrication details and 0.20 m stair risers are intentional.",
+  "dimension_policy": "Outer envelope exact; socket coordinates on 0.25 m grid; fabrication details and foundation seating can be sub-grid. Clear width is conservatively 1.75 m inside the 2 m nominal deck."
+}

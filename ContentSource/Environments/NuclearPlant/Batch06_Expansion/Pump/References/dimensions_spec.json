@@ -1,0 +1,99 @@
+{
+  "units": "m",
+  "buffer_tank": {
+    "diameter": 3.6,
+    "height": 8.5,
+    "footing_width": 4.8,
+    "footing_height": 0.2,
+    "nozzles_z": [
+      1.1,
+      6.8
+    ]
+  },
+  "maintenance_hall": {
+    "width": 20,
+    "depth": 6,
+    "height": 8,
+    "door_width": 6,
+    "door_height": 4
+  },
+  "fire_screen": {
+    "width": 3.6,
+    "thickness": 0.3,
+    "height": 2.3,
+    "foot_depth": 1
+  },
+  "pipe_gantry": {
+    "column_centers": 2.4,
+    "crossbeam_width": 3,
+    "frame_top": 6.4,
+    "pipe_axis": 6.8,
+    "pipe_radius": 0.22,
+    "pipe_length": 6
+  },
+  "zone": {
+    "bounds": [
+      42,
+      68,
+      -8,
+      26
+    ],
+    "hall": [
+      46,
+      66,
+      19,
+      25
+    ],
+    "tanks": [
+      [
+        64,
+        -1
+      ],
+      [
+        64,
+        13.5
+      ]
+    ],
+    "pumps": [
+      [
+        50,
+        -3
+      ],
+      [
+        56,
+        -3
+      ],
+      [
+        48,
+        14
+      ],
+      [
+        54,
+        14
+      ]
+    ],
+    "north_header_z": 3.2,
+    "hall_approach_x": [
+      57,
+      58
+    ],
+    "aisle_y": [
+      6,
+      10
+    ],
+    "fire_screens": [
+      [
+        47.5,
+        10.6
+      ],
+      [
+        54.5,
+        5.4
+      ],
+      [
+        60.5,
+        10.6
+      ]
+    ]
+  }
+}

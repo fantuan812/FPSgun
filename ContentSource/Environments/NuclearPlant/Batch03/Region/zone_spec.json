@@ -1,0 +1,115 @@
+{
+  "zone_id": "04_PUMP",
+  "source_layout": "../Blockout/layout_spec.json",
+  "bounds_min_m": [
+    -8,
+    -28,
+    0
+  ],
+  "bounds_max_m": [
+    24,
+    -4,
+    8
+  ],
+  "footprint_m": [
+    32,
+    24
+  ],
+  "function": "Pump and water-treatment service yard with a two-level maintenance/control annex",
+  "replacement": "Remove original 04_PUMP box and its label in a COPY of the site; keep seven other zone placeholders",
+  "building": {
+    "floor_x": [
+      -7.75,
+      -3.75
+    ],
+    "floor_y": [
+      -28,
+      -24,
+      -20,
+      -16,
+      -12,
+      -8
+    ],
+    "upper_floor_z": 4,
+    "roof_bottom_z": 7.745,
+    "east_wall_x": 0.25,
+    "upper_door_y": -6,
+    "ground_east_door_y": -26,
+    "roof_seating_note": "Roof is seated 5 mm below the nominal 7.75 m datum to avoid coplanar roof and wall-top faces; wall top remains Z=8 m. Fabrication seating exception to the placement grid."
+  },
+  "process": {
+    "pump_origins": [
+      [
+        7,
+        -20,
+        1
+      ],
+      [
+        7,
+        -14,
+        1
+      ],
+      [
+        7,
+        -8,
+        1
+      ]
+    ],
+    "plinth_height_m": 1,
+    "inlet_header_x": 1,
+    "return_header_x": 15.5,
+    "pipe_centerline_z": 2,
+    "bore_radius_m": 0.21,
+    "pipe_radius_m": 0.265,
+    "saddle_fit": "Batch01 inner saddle radius 0.265 m; pipe lower tangent seats at 1.735 m",
+    "header_endpoints": "Four labeled blind-flanged reserve connections, no operational fluid simulation"
+  },
+  "routes": {
+    "ground": "East service lane X=20.25..24; south cross-route clear strip X=0.5..24, Y=-28..-25.5 (2.5 m wide), plus secondary spaces between pump rows",
+    "elevated": "Z=4, east wall door at (0.25,-6), four straight modules across the north, a 90-degree corner and two east-side straight modules to two stair flights",
+    "nominal_width_m": 2,
+    "conservative_catwalk_clearance_m": 1.75,
+    "north_global_elevated_link": "Not built in this batch; access uses the east stair and ground road",
+    "south_road_approach": {
+      "floor_tiles": [
+        [
+          20,
+          -40,
+          0
+        ],
+        [
+          20,
+          -36,
+          0
+        ],
+        [
+          20,
+          -32,
+          0
+        ]
+      ],
+      "width_m": 4,
+      "length_m": 12,
+      "connects_to_original_road_y": -44,
+      "note": "External access apron outside the unchanged 32 x 24 m zone; small threshold ramp to graybox road top."
+    }
+  },
+  "reuses": {
+    "batch01": [
+      "straight",
+      "corner",
+      "stairs",
+      "column",
+      "pipe_support"
+    ],
+    "batch02": [
+      "solid_wall",
+      "door_wall",
+      "window_wall",
+      "floor",
+      "roof",
+      "column_head"
+    ]
+  },
+  "quality_boundary": "One realized functional zone in an otherwise graybox site. Basic PBR. UE traversal, final surface art and whole-map completion remain pending."
+}

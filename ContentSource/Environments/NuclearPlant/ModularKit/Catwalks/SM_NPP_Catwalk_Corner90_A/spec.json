@@ -1,0 +1,97 @@
+{
+  "asset_id": "SM_NPP_Catwalk_Corner90_A",
+  "category": "Catwalks",
+  "builder": "corner",
+  "units": "meters",
+  "dimensions": [
+    4,
+    4,
+    1.3
+  ],
+  "bounds_min": [
+    0,
+    -1,
+    -0.2
+  ],
+  "bounds_max": [
+    4,
+    3,
+    1.1
+  ],
+  "origin_m": [
+    0,
+    0,
+    0
+  ],
+  "grid_size": 0.25,
+  "primary_module_size": 4,
+  "walkable_surface_z": 0,
+  "connection_sockets": [
+    {
+      "id": "start",
+      "position_m": [
+        0,
+        0,
+        0
+      ],
+      "outward_normal": [
+        -1,
+        0,
+        0
+      ],
+      "clear_width_m": 1.75,
+      "nominal_deck_width_m": 2.0
+    },
+    {
+      "id": "turn",
+      "position_m": [
+        3,
+        3,
+        0
+      ],
+      "outward_normal": [
+        0,
+        1,
+        0
+      ],
+      "clear_width_m": 1.75,
+      "nominal_deck_width_m": 2.0
+    }
+  ],
+  "coordinate_convention": {
+    "up": "+Z",
+    "front_camera": "-Y",
+    "right_camera": "+X",
+    "top_camera": "+Z"
+  },
+  "reference_views": [
+    "front.png",
+    "right.png",
+    "top.png"
+  ],
+  "concept_reference": "reference_sheet.png",
+  "materials": [
+    "M_NPP_SteelGraphite",
+    "M_NPP_Galvanized",
+    "M_NPP_SafetyYellow",
+    "M_NPP_BoltSteel"
+  ],
+  "uv_policy": "UV0 per-part box projection in real meters; UV1 non-overlap generated atlas; no textures required",
+  "collision_policy": "UCX closed convex boxes, rail blockers and stair ramp; hidden in beauty renders; exported separately and per-asset FBX",
+  "detail_note": "0.25 m is socket and assembly grid. Sub-grid fabrication details and 0.20 m stair risers are intentional.",
+  "footprint_rects": [
+    [
+      0,
+      4,
+      -1,
+      1
+    ],
+    [
+      2,
+      4,
+      1,
+      3
+    ]
+  ],
+  "dimension_policy": "Outer envelope exact; socket coordinates on 0.25 m grid; fabrication details and foundation seating can be sub-grid. Clear width is conservatively 1.75 m inside the 2 m nominal deck."
+}

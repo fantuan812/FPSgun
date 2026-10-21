@@ -1,0 +1,79 @@
+{
+  "zone_id": "07_SERVICE",
+  "source_layout": "Blockout/layout_spec.json",
+  "zone_bounds_min_m": [
+    -28,
+    -72,
+    0
+  ],
+  "zone_bounds_max_m": [
+    20,
+    -48,
+    12
+  ],
+  "function": "Workshop, spares warehouse, east loading court, east Z=4 mezzanine",
+  "building": {
+    "west_wall_x": -25.75,
+    "east_wall_x": 6.25,
+    "south_wall_y": -70.75,
+    "north_wall_y": -51.25,
+    "height_m": 12,
+    "upper_floor_z": 4,
+    "roof_bottom_z": 11.745,
+    "north_open_bays_x": [
+      -21.75,
+      -13.75
+    ],
+    "east_upper_door_origin": [
+      6.25,
+      -63,
+      4
+    ],
+    "mezzanine_x": [
+      2.25,
+      6.25
+    ],
+    "mezzanine_y": [
+      -71,
+      -51
+    ],
+    "building_dimensions_m": [
+      32,
+      20,
+      12
+    ],
+    "roof_truss_span_m": 32,
+    "roof_truss_lower_z": 9.495,
+    "main_clear_span_m": [
+      27.4375,
+      19.2
+    ],
+    "main_aisle_m": 6
+  },
+  "connections": {
+    "pump_change_in_new_copy_only": "Replace EastWalk_1 straight with reversed T junction at (19.25,-13,4), rotation -90 deg. Original north/south sockets remain; branch opens to east at (22.25,-15,4).",
+    "elevated": "T branch at (22.25,-15,4), outer corner (29.25,-18,4), two flights rise to Z=8 at Y=-26, six straight segments end at Y=-50, two flights descend to Z=4 at Y=-58, corner and five straight segments reach upper door (6.25,-61,4).",
+    "road_crossing": {
+      "road_center_y": -44,
+      "road_bounds_y": [
+        -48,
+        -40
+      ],
+      "road_top_z": 0.07,
+      "bridge_deck_z": 8,
+      "bridge_underside_z": 7.3,
+      "vertical_clearance_m": 7.23,
+      "structural_note": "Two 12 m context I girders and pier bearings below reused deck segments; appearance plausibility, not certified engineering."
+    },
+    "ground": "Existing pump east lane and south apron to original service road. Flush approach thresholds and marked cross-road strip at X=20..24 lead into widened east court.",
+    "external_footprint_note": "Bridge, supports, north service apron and east connector strip are outside original zone; explicitly listed as connector works, not silently enlarging zone envelope."
+  },
+  "reuse_batches": [
+    1,
+    2,
+    3
+  ],
+  "new_asset_count": 3,
+  "quality_limit": "Two realized zones, six grayboxes. Large-space revision, no certified engineering or UE runtime test.",
+  "revision_reason": "User feedback: rooms feel too small. Preserve 4 m asset scale; increase clear spatial spans and height, reduce mezzanine and remove interior roof columns."
+}

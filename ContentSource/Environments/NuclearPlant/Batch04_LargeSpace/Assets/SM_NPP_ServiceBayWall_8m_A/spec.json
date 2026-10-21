@@ -1,0 +1,92 @@
+{
+  "asset_id": "SM_NPP_ServiceBayWall_8m_A",
+  "builder": "bay_wall",
+  "units": "meters",
+  "origin_m": [
+    0,
+    0,
+    0
+  ],
+  "bounds_min": [
+    0,
+    -0.15,
+    0
+  ],
+  "bounds_max": [
+    8,
+    0.15,
+    4
+  ],
+  "dimensions": [
+    8,
+    0.3,
+    4
+  ],
+  "grid_size": 0.25,
+  "primary_module_m": 4,
+  "connection_sockets": [
+    {
+      "id": "left",
+      "position_m": [
+        0,
+        0,
+        0
+      ],
+      "outward_normal": [
+        -1,
+        0,
+        0
+      ],
+      "role": "module"
+    },
+    {
+      "id": "right",
+      "position_m": [
+        8,
+        0,
+        0
+      ],
+      "outward_normal": [
+        1,
+        0,
+        0
+      ],
+      "role": "module"
+    },
+    {
+      "id": "passage",
+      "position_m": [
+        4,
+        0,
+        0
+      ],
+      "outward_normal": [
+        0,
+        -1,
+        0
+      ],
+      "role": "clear passage"
+    }
+  ],
+  "design": "8 m facade with 6 m wide by 3 m high permanently open service aperture, fully raised shutter cassette in the upper 1 m band; no leaf blocks the aperture.",
+  "coordinate_convention": {
+    "up": "+Z",
+    "front_camera": "-Y",
+    "right_camera": "+X",
+    "top_camera": "+Z"
+  },
+  "reference_views": [
+    "front.png",
+    "right.png",
+    "top.png"
+  ],
+  "material_level": "Basic PBR, no final weathering",
+  "collision_policy": "Convex UCX boxes, wall aperture remains open, rack volumes blocked as storage obstacle",
+  "quality_limit": "Original game environment art; not certified structural design",
+  "clear_opening": {
+    "x_min": 1,
+    "x_max": 7,
+    "z_min": 0,
+    "z_max": 3
+  }
+}

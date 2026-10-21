@@ -1,0 +1,118 @@
+{
+  "asset_id": "SM_NPP_Floor_4x4_A",
+  "tests": [
+    {
+      "test": "collision proxy support or walking surface",
+      "sample": [
+        2,
+        2
+      ],
+      "expected_z": 0,
+      "error_m": 0.0,
+      "status": "PASS"
+    },
+    {
+      "test": "collision proxy support or walking surface",
+      "sample": [
+        0.2,
+        0.2
+      ],
+      "expected_z": 0,
+      "error_m": 0.0,
+      "status": "PASS"
+    },
+    {
+      "test": "collision proxy support or walking surface",
+      "sample": [
+        3.8,
+        3.8
+      ],
+      "expected_z": 0,
+      "error_m": 0.0,
+      "status": "PASS"
+    },
+    {
+      "test": "visual mesh surface including recessed seams",
+      "sample": [
+        2,
+        2
+      ],
+      "expected_z": -0.025,
+      "error_m": 9.536743163923722e-08,
+      "status": "PASS"
+    },
+    {
+      "test": "visual mesh surface including recessed seams",
+      "sample": [
+        0.2,
+        0.2
+      ],
+      "expected_z": 0,
+      "error_m": 4.76837158203125e-07,
+      "status": "PASS"
+    },
+    {
+      "test": "visual mesh surface including recessed seams",
+      "sample": [
+        3.8,
+        3.8
+      ],
+      "expected_z": 0,
+      "error_m": 4.76837158203125e-07,
+      "status": "PASS"
+    },
+    {
+      "test": "visual mesh surface including recessed seams",
+      "sample": [
+        0.04,
+        2
+      ],
+      "expected_z": 0,
+      "error_m": 0.0,
+      "status": "PASS"
+    },
+    {
+      "test": "actual mesh reaches socket plane",
+      "socket": "south",
+      "plane_error_m": 0,
+      "status": "PASS"
+    },
+    {
+      "test": "actual mesh reaches socket plane",
+      "socket": "north",
+      "plane_error_m": 0,
+      "status": "PASS"
+    },
+    {
+      "test": "actual mesh reaches socket plane",
+      "socket": "west",
+      "plane_error_m": 0,
+      "status": "PASS"
+    },
+    {
+      "test": "actual mesh reaches socket plane",
+      "socket": "east",
+      "plane_error_m": 0,
+      "status": "PASS"
+    },
+    {
+      "test": "actual mesh reaches socket plane",
+      "socket": "underside",
+      "plane_error_m": 0,
+      "status": "PASS"
+    }
+  ],
+  "uv_integrity": {
+    "UV0_TileMeters": {
+      "nonfinite_values": 0,
+      "zero_area_triangles": 0,
+      "status": "PASS"
+    },
+    "UV1_Lightmap": {
+      "nonfinite_values": 0,
+      "zero_area_triangles": 0,
+      "status": "PASS"
+    }
+  },
+  "status": "PASS"
+}

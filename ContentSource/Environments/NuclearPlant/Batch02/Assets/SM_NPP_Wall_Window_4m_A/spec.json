@@ -1,0 +1,115 @@
+{
+  "asset_id": "SM_NPP_Wall_Window_4m_A",
+  "builder": "window_wall",
+  "units": "meters",
+  "dimensions": [
+    4,
+    0.3,
+    4
+  ],
+  "bounds_min": [
+    0,
+    -0.15,
+    0
+  ],
+  "bounds_max": [
+    4,
+    0.15,
+    4
+  ],
+  "origin_m": [
+    0,
+    0,
+    0
+  ],
+  "grid_size": 0.25,
+  "connection_sockets": [
+    {
+      "id": "start",
+      "position_m": [
+        0,
+        0,
+        0
+      ],
+      "outward_normal": [
+        -1,
+        0,
+        0
+      ],
+      "role": "wall_end",
+      "nominal_width_m": 0.3
+    },
+    {
+      "id": "end",
+      "position_m": [
+        4,
+        0,
+        0
+      ],
+      "outward_normal": [
+        1,
+        0,
+        0
+      ],
+      "role": "wall_end",
+      "nominal_width_m": 0.3
+    },
+    {
+      "id": "bottom",
+      "position_m": [
+        2,
+        0,
+        0
+      ],
+      "outward_normal": [
+        0,
+        0,
+        -1
+      ],
+      "role": "floor_bearing",
+      "nominal_width_m": 0
+    },
+    {
+      "id": "top",
+      "position_m": [
+        2,
+        0,
+        4
+      ],
+      "outward_normal": [
+        0,
+        0,
+        1
+      ],
+      "role": "roof_bearing",
+      "nominal_width_m": 0
+    }
+  ],
+  "coordinate_convention": {
+    "up": "+Z",
+    "front_camera": "-Y",
+    "right_camera": "+X",
+    "top_camera": "+Z"
+  },
+  "concept_reference": "reference_sheet.png",
+  "validation_views": [
+    "front.png",
+    "right.png",
+    "top.png"
+  ],
+  "material_level": "basic exportable PBR; no final weathering/trim/decal treatment",
+  "dimension_policy": "0.25 m placement and interface grid; 0.30 m envelope includes sub-grid fabrication details. Wall structural body 0.24 m plus bonded face panels and inset anchor heads.",
+  "opening": {
+    "rough_x": [
+      0.75,
+      3.25
+    ],
+    "rough_z": [
+      1,
+      3
+    ],
+    "frame_width_m": 0.125,
+    "glass_thickness_m": 0.025,
+    "traversable": false
+  }
+}

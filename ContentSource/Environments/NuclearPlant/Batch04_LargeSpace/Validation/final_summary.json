@@ -1,0 +1,96 @@
+{
+  "project": "NPP / Sector K-17",
+  "batch": 4,
+  "revision": "LargeSpace",
+  "scope": "Large-space revision: column-free high-bay service hall plus optional double-height pump annex, linked by actual ground and high-level routes.",
+  "overall_status": "PASS",
+  "built_with": "Blender 4.3.2",
+  "assets": [
+    {
+      "asset_id": "SM_NPP_ServiceBayWall_8m_A",
+      "path": "Assets/SM_NPP_ServiceBayWall_8m_A",
+      "dimensions_m": [
+        8,
+        0.3,
+        4
+      ],
+      "triangles": 22568,
+      "collision_hulls": 6,
+      "pixels_per_meter": 100.0,
+      "status": "PASS",
+      "max_export_bounds_error_m": 7.0631504059393e-07,
+      "max_silhouette_error_px": 0.0
+    },
+    {
+      "asset_id": "SM_NPP_StorageRack_4m_A",
+      "path": "Assets/SM_NPP_StorageRack_4m_A",
+      "dimensions_m": [
+        4,
+        1.0,
+        3
+      ],
+      "triangles": 8628,
+      "collision_hulls": 1,
+      "pixels_per_meter": 100,
+      "status": "PASS",
+      "max_export_bounds_error_m": 3.5762786865234375e-07,
+      "max_silhouette_error_px": 0.0
+    },
+    {
+      "asset_id": "SM_NPP_RoofTruss_32m_A",
+      "path": "Assets/SM_NPP_RoofTruss_32m_A",
+      "dimensions_m": [
+        32,
+        0.5,
+        2
+      ],
+      "triangles": 7020,
+      "collision_hulls": 1,
+      "pixels_per_meter": 25.0,
+      "status": "PASS",
+      "max_export_bounds_error_m": 2.8014183044433594e-06,
+      "max_silhouette_error_px": 0.5
+    }
+  ],
+  "new_asset_count": 3,
+  "new_asset_triangles": 38216,
+  "orthographic_images": 9,
+  "reference_images": 3,
+  "module_instances_in_connected_scene": 462,
+  "reused_asset_types": 19,
+  "region_checks": 24,
+  "scene_check_counts": [
+    6,
+    8
+  ],
+  "large_hall_clear_span_m": [
+    27.4375,
+    19.2
+  ],
+  "minimum_main_hall_overhead_m": 9.495,
+  "main_aisle_width_m": 6,
+  "minimum_road_bridge_clearance_m": 7.23,
+  "pump_option_main_clear_m": [
+    7.7,
+    19.5,
+    7.495
+  ],
+  "max_export_bounds_error_m": 2.8014183044433594e-06,
+  "max_orthographic_silhouette_error_px": 0.5,
+  "frozen_prior_files_verified": 390,
+  "realized_zones": [
+    "04_PUMP",
+    "07_SERVICE"
+  ],
+  "remaining_graybox_zones": 6,
+  "relocation_test": "PASS",
+  "ue_editor_test": "NOT_RUN",
+  "visual_review": "Validation/visual_review.md",
+  "comparison_renders": "Same camera, light setup, sampling, with 1.8 m geometry and 1.65 m camera eye height. Not AI images.",
+  "pending": [
+    "Six original graybox zones",
+    "Actual UE import, collision setup, capsule traversal, vehicle and runtime performance tests",
+    "Final realistic textures, wear, decals and lighting",
+    "LOD and lightmap production packing"
+  ]
+}

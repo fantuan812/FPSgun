@@ -1,0 +1,240 @@
+{
+  "asset_id": "SM_NPP_Wall_Door_2m_A",
+  "tests": [
+    {
+      "test": "door clear ray",
+      "sample": [
+        1.05,
+        0.05
+      ],
+      "status": "PASS",
+      "hit": null
+    },
+    {
+      "test": "door clear ray",
+      "sample": [
+        1.05,
+        1.5
+      ],
+      "status": "PASS",
+      "hit": null
+    },
+    {
+      "test": "door clear ray",
+      "sample": [
+        1.05,
+        2.95
+      ],
+      "status": "PASS",
+      "hit": null
+    },
+    {
+      "test": "door clear ray",
+      "sample": [
+        2,
+        0.05
+      ],
+      "status": "PASS",
+      "hit": null
+    },
+    {
+      "test": "door clear ray",
+      "sample": [
+        2,
+        1.5
+      ],
+      "status": "PASS",
+      "hit": null
+    },
+    {
+      "test": "door clear ray",
+      "sample": [
+        2,
+        2.95
+      ],
+      "status": "PASS",
+      "hit": null
+    },
+    {
+      "test": "door clear ray",
+      "sample": [
+        2.95,
+        0.05
+      ],
+      "status": "PASS",
+      "hit": null
+    },
+    {
+      "test": "door clear ray",
+      "sample": [
+        2.95,
+        1.5
+      ],
+      "status": "PASS",
+      "hit": null
+    },
+    {
+      "test": "door clear ray",
+      "sample": [
+        2.95,
+        2.95
+      ],
+      "status": "PASS",
+      "hit": null
+    },
+    {
+      "test": "door surround blocks",
+      "sample": [
+        0.5,
+        1.5
+      ],
+      "status": "PASS"
+    },
+    {
+      "test": "door surround blocks",
+      "sample": [
+        3.5,
+        1.5
+      ],
+      "status": "PASS"
+    },
+    {
+      "test": "door surround blocks",
+      "sample": [
+        2,
+        3.5
+      ],
+      "status": "PASS"
+    },
+    {
+      "test": "measured opening",
+      "width_m": 2.0,
+      "height_m": 3.0,
+      "status": "PASS"
+    },
+    {
+      "test": "visual mesh door clear ray",
+      "sample": [
+        1.05,
+        0.05
+      ],
+      "status": "PASS",
+      "hit": null
+    },
+    {
+      "test": "visual mesh door clear ray",
+      "sample": [
+        1.05,
+        1.5
+      ],
+      "status": "PASS",
+      "hit": null
+    },
+    {
+      "test": "visual mesh door clear ray",
+      "sample": [
+        1.05,
+        2.95
+      ],
+      "status": "PASS",
+      "hit": null
+    },
+    {
+      "test": "visual mesh door clear ray",
+      "sample": [
+        2,
+        0.05
+      ],
+      "status": "PASS",
+      "hit": null
+    },
+    {
+      "test": "visual mesh door clear ray",
+      "sample": [
+        2,
+        1.5
+      ],
+      "status": "PASS",
+      "hit": null
+    },
+    {
+      "test": "visual mesh door clear ray",
+      "sample": [
+        2,
+        2.95
+      ],
+      "status": "PASS",
+      "hit": null
+    },
+    {
+      "test": "visual mesh door clear ray",
+      "sample": [
+        2.95,
+        0.05
+      ],
+      "status": "PASS",
+      "hit": null
+    },
+    {
+      "test": "visual mesh door clear ray",
+      "sample": [
+        2.95,
+        1.5
+      ],
+      "status": "PASS",
+      "hit": null
+    },
+    {
+      "test": "visual mesh door clear ray",
+      "sample": [
+        2.95,
+        2.95
+      ],
+      "status": "PASS",
+      "hit": null
+    },
+    {
+      "test": "actual mesh reaches socket plane",
+      "socket": "start",
+      "plane_error_m": 0,
+      "status": "PASS"
+    },
+    {
+      "test": "actual mesh reaches socket plane",
+      "socket": "end",
+      "plane_error_m": 0,
+      "status": "PASS"
+    },
+    {
+      "test": "actual mesh reaches socket plane",
+      "socket": "bottom",
+      "plane_error_m": 0,
+      "status": "PASS"
+    },
+    {
+      "test": "actual mesh reaches socket plane",
+      "socket": "top",
+      "plane_error_m": 0,
+      "status": "PASS"
+    },
+    {
+      "test": "actual mesh reaches socket plane",
+      "socket": "passage",
+      "plane_error_m": 0,
+      "status": "PASS"
+    }
+  ],
+  "uv_integrity": {
+    "UV0_TileMeters": {
+      "nonfinite_values": 0,
+      "zero_area_triangles": 0,
+      "status": "PASS"
+    },
+    "UV1_Lightmap": {
+      "nonfinite_values": 0,
+      "zero_area_triangles": 0,
+      "status": "PASS"
+    }
+  },
+  "status": "PASS"
+}

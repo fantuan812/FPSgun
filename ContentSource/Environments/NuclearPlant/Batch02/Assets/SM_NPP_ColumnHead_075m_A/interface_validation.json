@@ -1,0 +1,90 @@
+{
+  "asset_id": "SM_NPP_ColumnHead_075m_A",
+  "tests": [
+    {
+      "test": "collision proxy support or walking surface",
+      "sample": [
+        0,
+        0
+      ],
+      "expected_z": 0.25,
+      "error_m": 0.0,
+      "status": "PASS"
+    },
+    {
+      "test": "collision proxy support or walking surface",
+      "sample": [
+        0.2,
+        0.2
+      ],
+      "expected_z": 0.25,
+      "error_m": 4.76837158203125e-07,
+      "status": "PASS"
+    },
+    {
+      "test": "collision proxy support or walking surface",
+      "sample": [
+        -0.2,
+        -0.2
+      ],
+      "expected_z": 0.25,
+      "error_m": 4.76837158203125e-07,
+      "status": "PASS"
+    },
+    {
+      "test": "visual mesh surface including recessed seams",
+      "sample": [
+        0,
+        0
+      ],
+      "expected_z": 0.25,
+      "error_m": 0.0,
+      "status": "PASS"
+    },
+    {
+      "test": "visual mesh surface including recessed seams",
+      "sample": [
+        0.2,
+        0.2
+      ],
+      "expected_z": 0.25,
+      "error_m": 0.0,
+      "status": "PASS"
+    },
+    {
+      "test": "visual mesh surface including recessed seams",
+      "sample": [
+        -0.2,
+        -0.2
+      ],
+      "expected_z": 0.25,
+      "error_m": 0.0,
+      "status": "PASS"
+    },
+    {
+      "test": "actual mesh reaches socket plane",
+      "socket": "column",
+      "plane_error_m": 0,
+      "status": "PASS"
+    },
+    {
+      "test": "actual mesh reaches socket plane",
+      "socket": "slab",
+      "plane_error_m": 0,
+      "status": "PASS"
+    }
+  ],
+  "uv_integrity": {
+    "UV0_TileMeters": {
+      "nonfinite_values": 0,
+      "zero_area_triangles": 0,
+      "status": "PASS"
+    },
+    "UV1_Lightmap": {
+      "nonfinite_values": 0,
+      "zero_area_triangles": 0,
+      "status": "PASS"
+    }
+  },
+  "status": "PASS"
+}

@@ -1,0 +1,72 @@
+{
+  "asset_id": "SM_NPP_StorageRack_4m_A",
+  "builder": "rack",
+  "units": "meters",
+  "origin_m": [
+    0,
+    0,
+    0
+  ],
+  "bounds_min": [
+    0,
+    -0.5,
+    0
+  ],
+  "bounds_max": [
+    4,
+    0.5,
+    3
+  ],
+  "dimensions": [
+    4,
+    1.0,
+    3
+  ],
+  "grid_size": 0.25,
+  "primary_module_m": 4,
+  "connection_sockets": [
+    {
+      "id": "left",
+      "position_m": [
+        0,
+        0,
+        0
+      ],
+      "outward_normal": [
+        -1,
+        0,
+        0
+      ],
+      "role": "module"
+    },
+    {
+      "id": "right",
+      "position_m": [
+        4,
+        0,
+        0
+      ],
+      "outward_normal": [
+        1,
+        0,
+        0
+      ],
+      "role": "module"
+    }
+  ],
+  "design": "Four graphite steel uprights, three galvanized shelf decks at Z=.25,1.5,2.75, yellow beam ends, rear X braces. Empty reusable rack, no baked cargo.",
+  "coordinate_convention": {
+    "up": "+Z",
+    "front_camera": "-Y",
+    "right_camera": "+X",
+    "top_camera": "+Z"
+  },
+  "reference_views": [
+    "front.png",
+    "right.png",
+    "top.png"
+  ],
+  "material_level": "Basic PBR, no final weathering",
+  "collision_policy": "Convex UCX boxes, wall aperture remains open, rack volumes blocked as storage obstacle",
+  "quality_limit": "Original game environment art; not certified structural design"
+}

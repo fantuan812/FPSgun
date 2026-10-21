@@ -1,0 +1,34 @@
+{
+  "project": "NPP / Sector K-17",
+  "batch": 3,
+  "scope": "04_PUMP zone replacement in original site coordinates, with five new pipe/equipment assets. Other seven zones remain graybox.",
+  "primary_module_m": 4,
+  "grid_m": 0.25,
+  "assets": [
+    {
+      "asset_id": "SM_NPP_Pipe_Straight_4m_A",
+      "kind": "pipe",
+      "path": "Assets/SM_NPP_Pipe_Straight_4m_A"
+    },
+    {
+      "asset_id": "SM_NPP_Pipe_Elbow90_R1_A",
+      "kind": "elbow",
+      "path": "Assets/SM_NPP_Pipe_Elbow90_R1_A"
+    },
+    {
+      "asset_id": "SM_NPP_Pipe_Tee_2m_A",
+      "kind": "pipe_tee",
+      "path": "Assets/SM_NPP_Pipe_Tee_2m_A"
+    },
+    {
+      "asset_id": "SM_NPP_Valve_1m_A",
+      "kind": "valve",
+      "path": "Assets/SM_NPP_Valve_1m_A"
+    },
+    {
+      "asset_id": "SM_NPP_PumpSkid_4x2_A",
+      "kind": "pump",
+      "path": "Assets/SM_NPP_PumpSkid_4x2_A"
+    }
+  ]
+}

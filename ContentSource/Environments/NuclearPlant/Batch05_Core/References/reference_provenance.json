@@ -1,0 +1,21 @@
+{
+  "status": "design_reference_not_blender_render",
+  "method": "built-in image_gen",
+  "reactor": {
+    "file": "reactor_orthographic_concept.png",
+    "created_utc": "2026-10-20T09:41:19Z",
+    "dimensions_m": {
+      "diameter": 8,
+      "height": 14
+    },
+    "design": "Stacked graphite cylindrical reactor, two muted-red bands, white-gray service panels, six evenly-spaced coolant pipes, flanged base and support ribs. Front/right/top conceptual views.",
+    "limitations": "Front and right silhouettes are near duplicates; top pipe distribution differs. Procedural geometry uses explicit dimension and sixfold symmetry specification, not inferred pixel dimensions."
+  },
+  "assembly": {
+    "file": "core_assembly_concept.png",
+    "created_utc": "2026-10-20T09:42:57Z",
+    "design": "40x36m hall, 20m high, central reactor, ring at 4.5m and 10m, side bridges, offset stairs, front console bank, right pump yard and pipe rack, entry apron and circulation.",
+    "limitations": "AI cutaway concept, not measured AZ3 plan. Roof cutaway is display only. Vehicles and distant landscape are illustrative, not mandatory modeled scope."
+  },
+  "user_preference": "AZ3 style and composition take priority. Three-view-first is guidance, explicitly not a rigid gate. Procedural reconstruction required."
+}

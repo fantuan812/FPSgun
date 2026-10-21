@@ -1,0 +1,63 @@
+{
+  "created_utc": "2026-10-20T10:37:16.983999+00:00",
+  "generator": "generate_prebuild_orthographic.py (pure 2D analytic SVG; no model import)",
+  "specs": {
+    "CTL_StairUnit": {
+      "size": [
+        3,
+        3.4,
+        3.1
+      ],
+      "rise": 2,
+      "steps": 12,
+      "rail_height": 1.1
+    },
+    "CTL_Deck": {
+      "size": [
+        4,
+        3.6,
+        0.3
+      ]
+    },
+    "CTL_Island": {
+      "size": [
+        4,
+        1.8,
+        1.95
+      ]
+    },
+    "CTL_DisplayPanel": {
+      "size": [
+        2.6,
+        0.4,
+        3.7
+      ]
+    }
+  },
+  "region": {
+    "bounds": [
+      -24,
+      24,
+      38,
+      62
+    ],
+    "entry": [
+      2,
+      38,
+      0
+    ],
+    "upper_port": [
+      -24,
+      48,
+      6
+    ]
+  },
+  "files": {
+    "CTL_DisplayPanel_prebuild_ortho.svg": "2bb9f78b95ad6ab39ebe25250299b56822eebd97148ecf8e53f10a4b5af9a713",
+    "control_region_prebuild_ortho.svg": "43f6bc1b7ad4cb86c80e0f93e65e9bf30565877b49a7eae14ed254174a4240bc",
+    "CTL_Deck_prebuild_ortho.svg": "5baedf7ea53fba6ba4dd17cc8c5d464c77c7c6d7436bc23d4685a279fd03c7c9",
+    "CTL_StairUnit_prebuild_ortho.svg": "ceca5604757981b215c6a406f3e8e1a1facdebf1a6a3cb21fbbb1206c20e242f",
+    "CTL_Island_prebuild_ortho.svg": "05279f80cf17b58833dde6d7b170886f8bfd24f4e4dccf4d8330e3de50229689"
+  },
+  "authoritative": "These exact-scale pre-build projections are dimensional authority. AI candidates have separate provenance; their pixels are not measurement evidence."
+}

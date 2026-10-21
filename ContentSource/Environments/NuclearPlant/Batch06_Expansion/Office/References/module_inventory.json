@@ -1,0 +1,22 @@
+{
+  "new_modules": [
+    "CTL_StairUnit:3m width,3.4m run,2m rise,12 treads; repeated3 units",
+    "CTL_Deck:4x3.6x0.3m repeatable deck, corner uses composition",
+    "CTL_Island:4x1.8x1.95m",
+    "CTL_DisplayPanel:2.6x0.4x3.7m, repeated5 units"
+  ],
+  "reuse_modules": [
+    "Batch04 SM_NPP_Floor_4x4_A",
+    "Batch04 SM_NPP_Roof_4x4_A",
+    "Batch04 SM_NPP_Wall_Solid_4m_A",
+    "Batch04 SM_NPP_Wall_Window_4m_A",
+    "Batch05 CP_ReactorConsole",
+    "Batch05 CP_ElectricalCabinetBank"
+  ],
+  "parameter_basic_parts": [
+    "door/frame edge closure pieces to satisfy exact non-grid interface",
+    "steel beams and railing posts in assembled circulation"
+  ],
+  "region_not_module": "48x24 office shell is region assembly, NOT one giant module",
+  "status": "prebuild projections and AI references complete; rebuilding next"
+}

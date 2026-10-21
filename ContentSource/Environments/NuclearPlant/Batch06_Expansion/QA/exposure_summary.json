@@ -1,0 +1,53 @@
+{
+  "method": "24 directions at2m path stations. Only named opaque walls/screens/building masses counted; proxies, rails, pipes, shrubs and signage excluded. Nearby cover is NOT the same as breaking forward sight. Open intervals are reset at actual path turns, not merged into a fictitious straight firing line. No enemy positions or bullet/material simulation.",
+  "routes": {
+    "south_gate_to_core": {
+      "path_length_m": 73.36121148630504,
+      "samples": 40,
+      "solid_within12m_samples": 39,
+      "no_named_solid_within20m_samples": 0,
+      "max_straight_segment_forward_open_interval_m": 8.0,
+      "limitations": "Nearby lateral shelter does not guarantee frontal crossfire protection; first-hit sampling may undercount cover behind pipes/rails"
+    },
+    "core_to_control": {
+      "path_length_m": 33.529385084963906,
+      "samples": 18,
+      "solid_within12m_samples": 18,
+      "no_named_solid_within20m_samples": 0,
+      "max_straight_segment_forward_open_interval_m": 6.0,
+      "limitations": "Nearby lateral shelter does not guarantee frontal crossfire protection; first-hit sampling may undercount cover behind pipes/rails"
+    },
+    "east_service": {
+      "path_length_m": 68.16211178692255,
+      "samples": 36,
+      "solid_within12m_samples": 36,
+      "no_named_solid_within20m_samples": 0,
+      "max_straight_segment_forward_open_interval_m": 10.0,
+      "limitations": "Nearby lateral shelter does not guarantee frontal crossfire protection; first-hit sampling may undercount cover behind pipes/rails"
+    },
+    "west_service": {
+      "path_length_m": 76.16211178692255,
+      "samples": 40,
+      "solid_within12m_samples": 40,
+      "no_named_solid_within20m_samples": 0,
+      "max_straight_segment_forward_open_interval_m": 18.0,
+      "limitations": "Nearby lateral shelter does not guarantee frontal crossfire protection; first-hit sampling may undercount cover behind pipes/rails"
+    },
+    "upper_link": {
+      "path_length_m": 62.78745977626459,
+      "samples": 35,
+      "solid_within12m_samples": 35,
+      "no_named_solid_within20m_samples": 0,
+      "max_straight_segment_forward_open_interval_m": 7.0,
+      "limitations": "Nearby lateral shelter does not guarantee frontal crossfire protection; first-hit sampling may undercount cover behind pipes/rails"
+    },
+    "loading_to_pumps": {
+      "path_length_m": 113.50971913939519,
+      "samples": 62,
+      "solid_within12m_samples": 62,
+      "no_named_solid_within20m_samples": 0,
+      "max_straight_segment_forward_open_interval_m": 18.0,
+      "limitations": "Nearby lateral shelter does not guarantee frontal crossfire protection; first-hit sampling may undercount cover behind pipes/rails"
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "mode": "built-in image_gen",
+  "generated_utc_window": [
+    "2026-10-20T10:34:00Z",
+    "2026-10-20T10:40:46Z"
+  ],
+  "prompts": [
+    {
+      "id": "B06_BRIDGE",
+      "subject": "a single straight elevated industrial pedestrian bridge module, deck length 6m, width3m, deck top6m above ground; two end portal pairs of steel supports, deck .32m thick, open ends without cross bars, 1.1m high handrails with a narrow oxide red middle band. No stairs.",
+      "shared_instruction": "Three PURE ORTHOGRAPHIC projections FRONT RIGHT TOP, common scale, no perspective, white background, gray graphite oxide-red industrial materials; exact dimensions. Pre-model reference, not Blender."
+    },
+    {
+      "id": "B06_UTILITY_SHELTER",
+      "subject": "a single three-sided electrical maintenance shelter, width14m, depth8m, height4.5m, flat graphite steel roof, pale concrete rear and side walls, fully open front. Empty interior, no equipment.",
+      "shared_instruction": "Three PURE ORTHOGRAPHIC projections FRONT RIGHT TOP, common scale, no perspective, white background, gray graphite oxide-red industrial materials; exact dimensions. Pre-model reference, not Blender."
+    },
+    {
+      "id": "B06_SERVICE_BANK",
+      "subject": "one industrial electrical switchgear bank module, width2.8m, depth2.2m, height3m. Graphite metal box, gray inset front cabinet doors, oxide-red identification strip near top, small practical handles and vent grilles. Flat back.",
+      "shared_instruction": "Three PURE ORTHOGRAPHIC projections FRONT RIGHT TOP, common scale, no perspective, white background, gray graphite oxide-red industrial materials; exact dimensions. Pre-model reference, not Blender."
+    },
+    {
+      "id": "B06_SCREEN",
+      "subject": "one solid concrete roadside safety screen module, length5m, thickness0.35m, height2.3m, graphite concrete gray with a single 0.18m oxide-red band near top, simple rectangular continuous slab, no feet projecting and no decorative elements.",
+      "shared_instruction": "Three PURE ORTHOGRAPHIC projections FRONT RIGHT TOP, common scale, no perspective, white background, gray graphite oxide-red industrial materials; exact dimensions. Pre-model reference, not Blender."
+    },
+    {
+      "id": "B06_GATE",
+      "subject": "one industrial entrance portal frame, clear width10m, total height5.6m, two dark graphite steel posts .3m square, horizontal oxide red crossbar .45m high and .3m thick. Entire central opening unobstructed, no gate leaves.",
+      "shared_instruction": "Three PURE ORTHOGRAPHIC projections FRONT RIGHT TOP, common scale, no perspective, white background, gray graphite oxide-red industrial materials; exact dimensions. Pre-model reference, not Blender."
+    },
+    {
+      "id": "B06_FENCE",
+      "subject": "one simple industrial perimeter fence span, length8m, height2.4m, two graphite steel posts .3m square, three thin horizontal rails at .8/1.7/2.3m, low gray concrete curb .44m high .35m thick. No chain mesh.",
+      "shared_instruction": "Three PURE ORTHOGRAPHIC projections FRONT RIGHT TOP, common scale, no perspective, white background, gray graphite oxide-red industrial materials; exact dimensions. Pre-model reference, not Blender."
+    }
+  ],
+  "audit": {
+    "B06_BRIDGE": "v1 blocked short end / height ambiguity; v2 removed end rail but lost6m supports. AI not dimension authority.",
+    "B06_UTILITY_SHELTER": "Both attempts retain receding front interior faces. REJECTED as strict orthographic.",
+    "B06_SERVICE_BANK": "Both attempts numeric labels conflict with pixel proportions. AI not dimension authority.",
+    "B06_SCREEN": "Three flat views usable for form, dimensions from numeric technical drawing.",
+    "B06_GATE": "Three flat views, clear-vs-overall widths ambiguous; technical specifies clear10/overall10.6/height5.6.",
+    "B06_FENCE": "Three flat views, center spacing versus outside width clarified in technical drawing."
+  },
+  "authority": "connector_spec.json + pre-model *_technical.svg",
+  "post_reference_rebuild": "pending"
+}

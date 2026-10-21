@@ -1,0 +1,227 @@
+[
+  {
+    "scene": "pump_service_connected.blend",
+    "status": "PASS",
+    "checks": [
+      {
+        "test": "all four relative geometry libraries resolve",
+        "library_count": 4,
+        "bad": [],
+        "status": "PASS"
+      },
+      {
+        "test": "upper continuous route actual floor/headroom rays",
+        "sample_count": 260,
+        "max_sample_spacing_m": 0.5,
+        "floor_tolerance_m": 0.251,
+        "probe_offsets_m": [
+          0,
+          0.025,
+          0.0625
+        ],
+        "headroom_checked_z_range_m": [
+          0.3,
+          2.0
+        ],
+        "missing_floor": [],
+        "blocked_headroom": [],
+        "status": "PASS"
+      },
+      {
+        "test": "ground road-crossing route actual floor/headroom rays",
+        "sample_count": 95,
+        "max_sample_spacing_m": 0.5,
+        "floor_tolerance_m": 0.251,
+        "probe_offsets_m": [
+          0,
+          0.025,
+          0.0625
+        ],
+        "headroom_checked_z_range_m": [
+          0.3,
+          2.0
+        ],
+        "missing_floor": [],
+        "blocked_headroom": [],
+        "status": "PASS"
+      },
+      {
+        "test": "measured column-free production hall span",
+        "x_bounds_m": [
+          -25.25,
+          2.1875
+        ],
+        "y_bounds_m": [
+          -70.5999984741211,
+          -51.400001525878906
+        ],
+        "clear_span_m": [
+          27.4375,
+          19.199996948242188
+        ],
+        "lowest_truss_m": 9.494999885559082,
+        "status": "PASS"
+      },
+      {
+        "test": "6 m main aisle free of equipment, excluding removable scale references",
+        "prism_m": [
+          -12,
+          -6,
+          -67,
+          -52,
+          0.05,
+          3
+        ],
+        "violations": [],
+        "status": "PASS"
+      },
+      {
+        "test": "storage racks do not invade interior stair envelopes",
+        "overlaps": [],
+        "status": "PASS"
+      }
+    ],
+    "limits": [
+      "Centerline floor/headroom rays are not swept-capsule, full rail collision or Unreal Engine gameplay tests.",
+      "No structural load certification."
+    ]
+  },
+  {
+    "scene": "site_with_pump_service.blend",
+    "status": "PASS",
+    "checks": [
+      {
+        "test": "all four relative geometry libraries resolve",
+        "library_count": 4,
+        "bad": [],
+        "status": "PASS"
+      },
+      {
+        "test": "upper continuous route actual floor/headroom rays",
+        "sample_count": 260,
+        "max_sample_spacing_m": 0.5,
+        "floor_tolerance_m": 0.251,
+        "probe_offsets_m": [
+          0,
+          0.025,
+          0.0625
+        ],
+        "headroom_checked_z_range_m": [
+          0.3,
+          2.0
+        ],
+        "missing_floor": [],
+        "blocked_headroom": [],
+        "status": "PASS"
+      },
+      {
+        "test": "ground road-crossing route actual floor/headroom rays",
+        "sample_count": 95,
+        "max_sample_spacing_m": 0.5,
+        "floor_tolerance_m": 0.251,
+        "probe_offsets_m": [
+          0,
+          0.025,
+          0.0625
+        ],
+        "headroom_checked_z_range_m": [
+          0.3,
+          2.0
+        ],
+        "missing_floor": [],
+        "blocked_headroom": [],
+        "status": "PASS"
+      },
+      {
+        "test": "measured column-free production hall span",
+        "x_bounds_m": [
+          -25.25,
+          2.1875
+        ],
+        "y_bounds_m": [
+          -70.5999984741211,
+          -51.400001525878906
+        ],
+        "clear_span_m": [
+          27.4375,
+          19.199996948242188
+        ],
+        "lowest_truss_m": 9.494999885559082,
+        "status": "PASS"
+      },
+      {
+        "test": "6 m main aisle free of equipment, excluding removable scale references",
+        "prism_m": [
+          -12,
+          -6,
+          -67,
+          -52,
+          0.05,
+          3
+        ],
+        "violations": [],
+        "status": "PASS"
+      },
+      {
+        "test": "storage racks do not invade interior stair envelopes",
+        "overlaps": [],
+        "status": "PASS"
+      },
+      {
+        "test": "six placeholders retained and two obsolete placeholders absent",
+        "present": [
+          "01_REACTOR",
+          "02_TURBINE",
+          "03_CONTROL",
+          "05_COOLING",
+          "06_TRANSFORMER",
+          "08_INTAKE"
+        ],
+        "obsolete": [],
+        "status": "PASS"
+      },
+      {
+        "test": "copied ground recessed under both districts and approaches",
+        "samples": [
+          {
+            "xy": [
+              0,
+              -20
+            ],
+            "z": -0.25999999046325684,
+            "pass": true
+          },
+          {
+            "xy": [
+              22,
+              -34
+            ],
+            "z": -0.25999999046325684,
+            "pass": true
+          },
+          {
+            "xy": [
+              -20,
+              -64
+            ],
+            "z": -0.25999999046325684,
+            "pass": true
+          },
+          {
+            "xy": [
+              22,
+              -50
+            ],
+            "z": -0.25999999046325684,
+            "pass": true
+          }
+        ],
+        "status": "PASS"
+      }
+    ],
+    "limits": [
+      "Centerline floor/headroom rays are not swept-capsule, full rail collision or Unreal Engine gameplay tests.",
+      "No structural load certification."
+    ]
+  }
+]

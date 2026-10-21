@@ -1,0 +1,46 @@
+{
+  "pass": true,
+  "revision": "lighting/world/exposure only; no geometry/material/camera changes",
+  "geometry_and_materials_identical": true,
+  "geometry_material_transform_fingerprint_before": "02db90f452b5ee30d36e57fe78e664e928642c655566dbe9f5d149f45c10d6ea",
+  "geometry_material_transform_fingerprint_after": "02db90f452b5ee30d36e57fe78e664e928642c655566dbe9f5d149f45c10d6ea",
+  "exported_baseline_source_sha256": "0218ca7d20d61d699ddcde2c16622befb2e80087b66e65b7cd92c019ebba177b",
+  "current_source_sha256": "f19f554d9f2ba93e6f3c1d31d95b0db2ed2b5bcd78a7fecc42de8cfe1267edb3",
+  "lighting_input": {
+    "key_sun": {
+      "energy": 2.6,
+      "angle_deg": 18,
+      "rotation_deg": [
+        35,
+        -25,
+        -35
+      ],
+      "color": [
+        1,
+        0.95,
+        0.87
+      ]
+    },
+    "fill_sun": {
+      "energy": 1.1,
+      "angle_deg": 35,
+      "rotation_deg": [
+        65,
+        15,
+        145
+      ],
+      "color": [
+        0.8,
+        0.9,
+        1
+      ]
+    },
+    "world_color": [
+      0.44,
+      0.53,
+      0.66
+    ],
+    "world_strength": 0.6,
+    "exposure": 0.45
+  }
+}

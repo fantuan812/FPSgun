@@ -1,0 +1,338 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "test": "actual transformed sockets",
+      "connection": [
+        "PUMP__EastWalk_0",
+        "start",
+        "PumpLinkTee",
+        "start"
+      ],
+      "gap_m": 0.0,
+      "normals_dot": -0.9999999999999853,
+      "status": "PASS"
+    },
+    {
+      "test": "actual transformed sockets",
+      "connection": [
+        "PumpLinkTee",
+        "end",
+        "PUMP__StairUpper",
+        "upper"
+      ],
+      "gap_m": 0.0,
+      "normals_dot": -0.9999999999999853,
+      "status": "PASS"
+    },
+    {
+      "test": "actual transformed sockets",
+      "connection": [
+        "PumpLinkTee",
+        "branch",
+        "PumpBranchWalk",
+        "start"
+      ],
+      "gap_m": 0.0,
+      "normals_dot": -1.0,
+      "status": "PASS"
+    },
+    {
+      "test": "actual transformed sockets",
+      "connection": [
+        "PumpBranchWalk",
+        "end",
+        "PumpOuterCorner",
+        "turn"
+      ],
+      "gap_m": 9.5367431640625e-07,
+      "normals_dot": -1.0,
+      "status": "PASS"
+    },
+    {
+      "test": "actual transformed sockets",
+      "connection": [
+        "PumpOuterCorner",
+        "start",
+        "BridgeRiseLower",
+        "lower"
+      ],
+      "gap_m": 0.0,
+      "normals_dot": -0.9999999999999853,
+      "status": "PASS"
+    },
+    {
+      "test": "actual transformed sockets",
+      "connection": [
+        "BridgeRiseLower",
+        "upper",
+        "BridgeRiseUpper",
+        "lower"
+      ],
+      "gap_m": 0.0,
+      "normals_dot": -1.0000000000000058,
+      "status": "PASS"
+    },
+    {
+      "test": "actual transformed sockets",
+      "connection": [
+        "BridgeRiseUpper",
+        "upper",
+        "HighBridge_0",
+        "start"
+      ],
+      "gap_m": 0.0,
+      "normals_dot": -1.0000000000000058,
+      "status": "PASS"
+    },
+    {
+      "test": "actual transformed sockets",
+      "connection": [
+        "HighBridge_0",
+        "end",
+        "HighBridge_1",
+        "start"
+      ],
+      "gap_m": 0.0,
+      "normals_dot": -1.0000000000000058,
+      "status": "PASS"
+    },
+    {
+      "test": "actual transformed sockets",
+      "connection": [
+        "HighBridge_1",
+        "end",
+        "HighBridge_2",
+        "start"
+      ],
+      "gap_m": 0.0,
+      "normals_dot": -1.0000000000000058,
+      "status": "PASS"
+    },
+    {
+      "test": "actual transformed sockets",
+      "connection": [
+        "HighBridge_2",
+        "end",
+        "HighBridge_3",
+        "start"
+      ],
+      "gap_m": 0.0,
+      "normals_dot": -1.0000000000000058,
+      "status": "PASS"
+    },
+    {
+      "test": "actual transformed sockets",
+      "connection": [
+        "HighBridge_3",
+        "end",
+        "HighBridge_4",
+        "start"
+      ],
+      "gap_m": 0.0,
+      "normals_dot": -1.0000000000000058,
+      "status": "PASS"
+    },
+    {
+      "test": "actual transformed sockets",
+      "connection": [
+        "HighBridge_4",
+        "end",
+        "HighBridge_5",
+        "start"
+      ],
+      "gap_m": 0.0,
+      "normals_dot": -1.0000000000000058,
+      "status": "PASS"
+    },
+    {
+      "test": "actual transformed sockets",
+      "connection": [
+        "HighBridge_5",
+        "end",
+        "BridgeDescendUpper",
+        "upper"
+      ],
+      "gap_m": 0.0,
+      "normals_dot": -0.9999999999999853,
+      "status": "PASS"
+    },
+    {
+      "test": "actual transformed sockets",
+      "connection": [
+        "BridgeDescendUpper",
+        "lower",
+        "BridgeDescendLower",
+        "upper"
+      ],
+      "gap_m": 0.0,
+      "normals_dot": -1.000000000000038,
+      "status": "PASS"
+    },
+    {
+      "test": "actual transformed sockets",
+      "connection": [
+        "BridgeDescendLower",
+        "lower",
+        "ServiceOuterCorner",
+        "turn"
+      ],
+      "gap_m": 0.0,
+      "normals_dot": -1.0,
+      "status": "PASS"
+    },
+    {
+      "test": "actual transformed sockets",
+      "connection": [
+        "ServiceOuterCorner",
+        "start",
+        "ServiceLink_0",
+        "end"
+      ],
+      "gap_m": 0.0,
+      "normals_dot": -1.0,
+      "status": "PASS"
+    },
+    {
+      "test": "actual transformed sockets",
+      "connection": [
+        "ServiceLink_0",
+        "start",
+        "ServiceLink_1",
+        "end"
+      ],
+      "gap_m": 0.0,
+      "normals_dot": -1.0,
+      "status": "PASS"
+    },
+    {
+      "test": "actual transformed sockets",
+      "connection": [
+        "ServiceLink_1",
+        "start",
+        "ServiceLink_2",
+        "end"
+      ],
+      "gap_m": 0.0,
+      "normals_dot": -1.0,
+      "status": "PASS"
+    },
+    {
+      "test": "actual transformed sockets",
+      "connection": [
+        "ServiceLink_2",
+        "start",
+        "ServiceLink_3",
+        "end"
+      ],
+      "gap_m": 0.0,
+      "normals_dot": -1.0,
+      "status": "PASS"
+    },
+    {
+      "test": "actual transformed sockets",
+      "connection": [
+        "ServiceLink_3",
+        "start",
+        "ServiceLink_4",
+        "end"
+      ],
+      "gap_m": 0.0,
+      "normals_dot": -1.0,
+      "status": "PASS"
+    },
+    {
+      "test": "actual transformed sockets",
+      "connection": [
+        "ServiceLink_4",
+        "start",
+        "EastWall_-63_4",
+        "passage"
+      ],
+      "gap_m": 4.76837158203125e-07,
+      "normals_dot": -1.0,
+      "status": "PASS"
+    },
+    {
+      "test": "actual transformed sockets",
+      "connection": [
+        "InteriorStairLower",
+        "upper",
+        "InteriorStairUpper",
+        "lower"
+      ],
+      "gap_m": 0.0,
+      "normals_dot": -1.0,
+      "status": "PASS"
+    },
+    {
+      "test": "revised 07 envelope, height raised from 8 to 12 m",
+      "min_m": [
+        -28.0,
+        -72.0,
+        -0.5
+      ],
+      "max_m": [
+        20.0,
+        -48.0,
+        12.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "test": "bridge crossing measured vertical clearance",
+      "road_top_z": 0.07,
+      "lowest_bridge_z": 7.299999713897705,
+      "clearance_m": 7.229999713897705,
+      "objects": [
+        [
+          "HighBridge_3",
+          7.800000190734863
+        ],
+        [
+          "HighBridge_4",
+          7.800000190734863
+        ],
+        [
+          "HighBridge_5",
+          7.800000190734863
+        ],
+        [
+          "CONTEXT_RoadGirderFlange_28.5_7.325",
+          7.299999713897705
+        ],
+        [
+          "CONTEXT_RoadGirderFlange_28.5_7.775",
+          7.75
+        ],
+        [
+          "CONTEXT_RoadGirderWeb_28.5",
+          7.350000381469727
+        ],
+        [
+          "CONTEXT_RoadGirderFlange_30_7.325",
+          7.299999713897705
+        ],
+        [
+          "CONTEXT_RoadGirderFlange_30_7.775",
+          7.75
+        ],
+        [
+          "CONTEXT_RoadGirderWeb_30",
+          7.350000381469727
+        ]
+      ],
+      "status": "PASS"
+    }
+  ],
+  "module_instance_count": 462,
+  "pump_instance_count": 166,
+  "new_zone_and_connector_instances": 296,
+  "new_assets": 3,
+  "copy_modification": "One pump straight walkway replaced by T-junction in this scene only; original ground stair remains connected.",
+  "limits": [
+    "Actual geometry and socket validation, not UE traversal.",
+    "Bridge beams are appearance plausibility, not structural certification.",
+    "Six zones remain original grayboxes. Service envelope height is explicitly revised from 8 to 12 m."
+  ]
+}

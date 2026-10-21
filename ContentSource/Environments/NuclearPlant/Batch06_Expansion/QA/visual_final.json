@@ -1,0 +1,58 @@
+{
+  "source_sha256": "f19f554d9f2ba93e6f3c1d31d95b0db2ed2b5bcd78a7fecc42de8cfe1267edb3",
+  "visual_checks": [
+    {
+      "file": "renders/site_overview.png",
+      "sha256": "13d1cc6440dd969b1fb6c3c7207047af69a12799b7f8ca82360e5db153d82b3f",
+      "sha256_match": true,
+      "visual_inspected": true
+    },
+    {
+      "file": "renders/site_cutaway.png",
+      "sha256": "5d1585edd8f3f460ca3634fb507fc8f9a5242d3211cfc2f53e749b34ef1f2c85",
+      "sha256_match": true,
+      "visual_inspected": true
+    },
+    {
+      "file": "renders/site_entry.png",
+      "sha256": "8a6a538ced57140c6119b0d2d4a931b200419cda3cba304108499023c1bc39b9",
+      "sha256_match": true,
+      "visual_inspected": true
+    },
+    {
+      "file": "renders/service_street.png",
+      "sha256": "e3176f3b428cb92b9b4059971193f06f59ee67fdc0ebf918df5fe38ed859e4f4",
+      "sha256_match": true,
+      "visual_inspected": true
+    },
+    {
+      "file": "renders/north_connection.png",
+      "sha256": "8199a1ab35284ad19b2269578aecdcb759872f612154373a583fc0cbc38e815c",
+      "sha256_match": true,
+      "visual_inspected": true
+    }
+  ],
+  "layout_manifest_matches": true,
+  "status": "PASS_WITH_DOCUMENTED_SCOPE",
+  "observations": [
+    "Four quadrants now contain grouped service masses; SE midpoint screens visibly split crossings.",
+    "Core entrance preserves reactor focal view and original scale.",
+    "Pump view shows process grouping and grounded stands.",
+    "Bridge eye view shows alternating standing-height cabinets/screens and an open bypass; sampled2m band separately passed.",
+    "Cutaway explicitly hides roof/near walls only for presentation; full-enclosure overview remains complete.",
+    "Final lighting-only revision inspected in all five frames: brighter fill reveals pumps, bridge bypass and screens without changing geometry/cameras."
+  ],
+  "limits": [
+    "Materials/architectural variation remain basic rather than final commercial game art.",
+    "No UE runtime/navigation/combat validation.",
+    "Old core larger-proxy ring limitation and superseded straight road axes remain documented."
+  ],
+  "lighting_only_bridge": {
+    "audit": "../Exports/lighting_only_source_audit.json",
+    "static_geometry_baseline_sha256": "0218ca7d20d61d699ddcde2c16622befb2e80087b66e65b7cd92c019ebba177b",
+    "geometry_material_transform_fingerprint": "02db90f452b5ee30d36e57fe78e664e928642c655566dbe9f5d149f45c10d6ea",
+    "script_review": "apply_lighting_revision.py + lighting.py inspected: SUN/world/exposure only; no route/geometry/camera edits",
+    "static_tests_rerun": false
+  },
+  "final_visual_review_utc": "2026-10-20T13:29:03.131324+00:00"
+}

@@ -1,0 +1,43 @@
+{
+  "asset_id": "SM_NPP_Wall_Solid_4m_A",
+  "pixels_per_meter": 160,
+  "views": {
+    "front": {
+      "expected_silhouette_px": [
+        640,
+        640
+      ],
+      "measured_silhouette_px": [
+        640,
+        640
+      ],
+      "maximum_error_px": 0,
+      "status": "PASS"
+    },
+    "right": {
+      "expected_silhouette_px": [
+        48.0,
+        640
+      ],
+      "measured_silhouette_px": [
+        48,
+        640
+      ],
+      "maximum_error_px": 0.0,
+      "status": "PASS"
+    },
+    "top": {
+      "expected_silhouette_px": [
+        640,
+        48.0
+      ],
+      "measured_silhouette_px": [
+        640,
+        48
+      ],
+      "maximum_error_px": 0,
+      "status": "PASS"
+    }
+  },
+  "status": "PASS"
+}

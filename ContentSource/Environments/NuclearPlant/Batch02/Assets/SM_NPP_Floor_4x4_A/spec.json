@@ -1,0 +1,117 @@
+{
+  "asset_id": "SM_NPP_Floor_4x4_A",
+  "builder": "floor",
+  "units": "meters",
+  "dimensions": [
+    4,
+    4,
+    0.25
+  ],
+  "bounds_min": [
+    0,
+    0,
+    -0.25
+  ],
+  "bounds_max": [
+    4,
+    4,
+    0
+  ],
+  "origin_m": [
+    0,
+    0,
+    0
+  ],
+  "grid_size": 0.25,
+  "connection_sockets": [
+    {
+      "id": "south",
+      "position_m": [
+        2,
+        0,
+        0
+      ],
+      "outward_normal": [
+        0,
+        -1,
+        0
+      ],
+      "role": "walkway_port",
+      "nominal_width_m": 2
+    },
+    {
+      "id": "north",
+      "position_m": [
+        2,
+        4,
+        0
+      ],
+      "outward_normal": [
+        0,
+        1,
+        0
+      ],
+      "role": "floor_edge",
+      "nominal_width_m": 4
+    },
+    {
+      "id": "west",
+      "position_m": [
+        0,
+        2,
+        0
+      ],
+      "outward_normal": [
+        -1,
+        0,
+        0
+      ],
+      "role": "floor_edge",
+      "nominal_width_m": 4
+    },
+    {
+      "id": "east",
+      "position_m": [
+        4,
+        2,
+        0
+      ],
+      "outward_normal": [
+        1,
+        0,
+        0
+      ],
+      "role": "floor_edge",
+      "nominal_width_m": 4
+    },
+    {
+      "id": "underside",
+      "position_m": [
+        2,
+        2,
+        -0.25
+      ],
+      "outward_normal": [
+        0,
+        0,
+        -1
+      ],
+      "role": "column_bearing",
+      "nominal_width_m": 0
+    }
+  ],
+  "coordinate_convention": {
+    "up": "+Z",
+    "front_camera": "-Y",
+    "right_camera": "+X",
+    "top_camera": "+Z"
+  },
+  "concept_reference": "reference_sheet.png",
+  "validation_views": [
+    "front.png",
+    "right.png",
+    "top.png"
+  ],
+  "material_level": "basic exportable PBR; no final weathering/trim/decal treatment",
+  "dimension_policy": "0.25 m placement and interface grid; 0.30 m envelope includes sub-grid fabrication details. Wall structural body 0.24 m plus bonded face panels and inset anchor heads."
+}

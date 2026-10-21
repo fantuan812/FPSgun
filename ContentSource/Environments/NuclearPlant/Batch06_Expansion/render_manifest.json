@@ -1,0 +1,162 @@
+{
+  "generated_by": "Blender4.3.2 Eevee64; actual scene renders, not AI concepts",
+  "source_sha256": "f19f554d9f2ba93e6f3c1d31d95b0db2ed2b5bcd78a7fecc42de8cfe1267edb3",
+  "layout_sha256": "4663315d1bcd56b6fa7c21145b22dc0197ecc2a6a40ffee0e398d12aa91471db",
+  "finalized_utc": "2026-10-20T13:28:05.413120+00:00",
+  "source_geometry_changed_between_frames": false,
+  "lighting": {
+    "key_sun": {
+      "energy": 2.6,
+      "angle_deg": 18,
+      "rotation_deg": [
+        35,
+        -25,
+        -35
+      ],
+      "color": [
+        1,
+        0.95,
+        0.87
+      ]
+    },
+    "fill_sun": {
+      "energy": 1.1,
+      "angle_deg": 35,
+      "rotation_deg": [
+        65,
+        15,
+        145
+      ],
+      "color": [
+        0.8,
+        0.9,
+        1
+      ]
+    },
+    "world_color": [
+      0.44,
+      0.53,
+      0.66
+    ],
+    "world_strength": 0.6,
+    "exposure": 0.45
+  },
+  "lighting_only_audit": "Exports/lighting_only_source_audit.json",
+  "images": [
+    {
+      "file": "renders/site_overview.png",
+      "sha256": "13d1cc6440dd969b1fb6c3c7207047af69a12799b7f8ca82360e5db153d82b3f",
+      "resolution": [
+        1600,
+        1000
+      ],
+      "mode": "full enclosure",
+      "camera": {
+        "position": [
+          145,
+          -170,
+          135
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "lens": 39
+      },
+      "qa_helpers_hidden": false
+    },
+    {
+      "file": "renders/site_cutaway.png",
+      "sha256": "5d1585edd8f3f460ca3634fb507fc8f9a5242d3211cfc2f53e749b34ef1f2c85",
+      "resolution": [
+        1600,
+        1000
+      ],
+      "mode": "temporary wall/roof cutaway",
+      "camera": {
+        "position": [
+          145,
+          -170,
+          135
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "lens": 39
+      },
+      "qa_helpers_hidden": false
+    },
+    {
+      "file": "renders/site_entry.png",
+      "sha256": "8a6a538ced57140c6119b0d2d4a931b200419cda3cba304108499023c1bc39b9",
+      "resolution": [
+        1600,
+        1000
+      ],
+      "mode": "full enclosure",
+      "camera": {
+        "position": [
+          0,
+          -59,
+          1.65
+        ],
+        "target": [
+          0,
+          -12,
+          8
+        ],
+        "lens": 26
+      },
+      "qa_helpers_hidden": true
+    },
+    {
+      "file": "renders/service_street.png",
+      "sha256": "e3176f3b428cb92b9b4059971193f06f59ee67fdc0ebf918df5fe38ed859e4f4",
+      "resolution": [
+        1600,
+        1000
+      ],
+      "mode": "full enclosure",
+      "camera": {
+        "position": [
+          36.5,
+          -20,
+          1.65
+        ],
+        "target": [
+          50,
+          15,
+          5
+        ],
+        "lens": 28
+      },
+      "qa_helpers_hidden": true
+    },
+    {
+      "file": "renders/north_connection.png",
+      "sha256": "8199a1ab35284ad19b2269578aecdcb759872f612154373a583fc0cbc38e815c",
+      "resolution": [
+        1600,
+        1000
+      ],
+      "mode": "full enclosure",
+      "camera": {
+        "position": [
+          -26,
+          47,
+          7.65
+        ],
+        "target": [
+          -50,
+          48,
+          8
+        ],
+        "lens": 26
+      },
+      "qa_helpers_hidden": true
+    }
+  ]
+}

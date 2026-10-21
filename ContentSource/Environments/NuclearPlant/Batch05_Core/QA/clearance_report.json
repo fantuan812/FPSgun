@@ -1,0 +1,109 @@
+{
+  "file": "/workspace/shared/NuclearPlant/Batch05_Core/core_hall.blend",
+  "objects": 1830,
+  "dependencies": [],
+  "path_samples": {
+    "main_ring_radius_5.5": {
+      "count": 120,
+      "overhead_hits_below_1p8m": [
+        {
+          "sample": 25,
+          "point": [
+            1.423504748063864,
+            5.312592044589875,
+            4.512
+          ],
+          "height": 1.183,
+          "object": "RC_main_coolant_trunk.003"
+        },
+        {
+          "sample": 35,
+          "point": [
+            -1.4235047480638647,
+            5.312592044589875,
+            4.512
+          ],
+          "height": 1.183,
+          "object": "RC_main_coolant_trunk.002"
+        },
+        {
+          "sample": 85,
+          "point": [
+            -1.4235047480638634,
+            -5.312592044589875,
+            4.512
+          ],
+          "height": 1.183,
+          "object": "RC_main_coolant_trunk"
+        },
+        {
+          "sample": 95,
+          "point": [
+            1.4235047480638663,
+            -5.312592044589875,
+            4.512
+          ],
+          "height": 1.183,
+          "object": "RC_main_coolant_trunk.001"
+        }
+      ],
+      "no_floor_within_0p25m": []
+    },
+    "main_ring_radius_6": {
+      "count": 120,
+      "overhead_hits_below_1p8m": [],
+      "no_floor_within_0p25m": []
+    },
+    "main_ring_radius_6.5": {
+      "count": 120,
+      "overhead_hits_below_1p8m": [],
+      "no_floor_within_0p25m": []
+    },
+    "main_ring_r6p4_width0p6": {
+      "count": 360,
+      "overhead_hits_below_1p8m": [],
+      "no_floor_within_0p25m": []
+    },
+    "bridge_-1": {
+      "count": 129,
+      "overhead_hits_below_1p8m": [],
+      "no_floor_within_0p25m": []
+    },
+    "stairs_-1": {
+      "count": 75,
+      "overhead_hits_below_1p8m": [],
+      "no_floor_within_0p25m": []
+    },
+    "bridge_1": {
+      "count": 129,
+      "overhead_hits_below_1p8m": [],
+      "no_floor_within_0p25m": []
+    },
+    "stairs_1": {
+      "count": 75,
+      "overhead_hits_below_1p8m": [],
+      "no_floor_within_0p25m": []
+    },
+    "ground_ring_r9": {
+      "count": 120,
+      "overhead_hits_below_1p8m": [],
+      "no_floor_within_0p25m": []
+    },
+    "front_entry": {
+      "count": 243,
+      "overhead_hits_below_1p8m": [],
+      "no_floor_within_0p25m": []
+    },
+    "rear_exit": {
+      "count": 207,
+      "overhead_hits_below_1p8m": [],
+      "no_floor_within_0p25m": []
+    },
+    "external_loop": {
+      "count": 125,
+      "overhead_hits_below_1p8m": [],
+      "no_floor_within_0p25m": []
+    }
+  },
+  "limits": "Static upward clearance samples in Blender, not swept capsule, navigation, physics or UE gameplay validation."
+}

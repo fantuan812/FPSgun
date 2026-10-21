@@ -1,0 +1,50 @@
+{
+  "method": "body/head ray centreline only, radius0.5 design allowance not swept collision",
+  "routes": {
+    "maintenance_east_entry": {
+      "centreline_clear": true,
+      "hits": []
+    },
+    "maintenance_south_entry": {
+      "centreline_clear": true,
+      "hits": []
+    },
+    "upper_bridge": {
+      "centreline_clear": true,
+      "hits": []
+    },
+    "loading_gate": {
+      "centreline_clear": true,
+      "hits": []
+    },
+    "stair_centre": {
+      "centreline_clear": true,
+      "hits": []
+    }
+  },
+  "region_collections": {
+    "B06_Maintenance": 361,
+    "B06_Loading": 259
+  },
+  "global_lights": [],
+  "cameras": [],
+  "dimensions": {
+    "east_gate_width": 6,
+    "east_gate_height": 6,
+    "south_gate_width": 3,
+    "south_gate_height": 3,
+    "north_upper_port_width": 3,
+    "north_upper_port_height": 3,
+    "stairs_width": 2.6,
+    "stairs_riser": 0.17647058823529413,
+    "stairs_tread": 0.28,
+    "loading_gate_width": 8,
+    "ramp_width": 2.6,
+    "ramp_slope": 0.09565217391304348
+  },
+  "limitations": [
+    "not UE runtime navmesh/collision",
+    "Manny exact mesh not imported",
+    "cover intervals are layout goals not tactical simulation"
+  ]
+}

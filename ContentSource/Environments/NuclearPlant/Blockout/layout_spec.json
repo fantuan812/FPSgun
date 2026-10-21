@@ -1,0 +1,168 @@
+{
+  "site_bounds_m": [
+    224,
+    192
+  ],
+  "base_grid_m": 0.25,
+  "building_grid_m": 4,
+  "zones": [
+    {
+      "id": "01_REACTOR",
+      "name": "Reactor containment",
+      "center": [
+        -48,
+        32,
+        12
+      ],
+      "size": [
+        48,
+        48,
+        24
+      ],
+      "color": [
+        0.48,
+        0.57,
+        0.58
+      ]
+    },
+    {
+      "id": "02_TURBINE",
+      "name": "Turbine hall",
+      "center": [
+        16,
+        40,
+        8
+      ],
+      "size": [
+        64,
+        32,
+        16
+      ],
+      "color": [
+        0.57,
+        0.63,
+        0.63
+      ]
+    },
+    {
+      "id": "03_CONTROL",
+      "name": "Control and security",
+      "center": [
+        -48,
+        -28,
+        6
+      ],
+      "size": [
+        32,
+        24,
+        12
+      ],
+      "color": [
+        0.68,
+        0.72,
+        0.7
+      ]
+    },
+    {
+      "id": "04_PUMP",
+      "name": "Pump and water treatment",
+      "center": [
+        8,
+        -16,
+        4
+      ],
+      "size": [
+        32,
+        24,
+        8
+      ],
+      "color": [
+        0.48,
+        0.61,
+        0.64
+      ]
+    },
+    {
+      "id": "05_COOLING",
+      "name": "Cooling yard",
+      "center": [
+        72,
+        32,
+        6
+      ],
+      "size": [
+        32,
+        48,
+        12
+      ],
+      "color": [
+        0.48,
+        0.55,
+        0.57
+      ]
+    },
+    {
+      "id": "06_TRANSFORMER",
+      "name": "Electrical switchyard",
+      "center": [
+        64,
+        -36,
+        2
+      ],
+      "size": [
+        40,
+        32,
+        4
+      ],
+      "color": [
+        0.68,
+        0.65,
+        0.55
+      ]
+    },
+    {
+      "id": "07_SERVICE",
+      "name": "Service and logistics",
+      "center": [
+        -4,
+        -60,
+        4
+      ],
+      "size": [
+        48,
+        24,
+        8
+      ],
+      "color": [
+        0.62,
+        0.65,
+        0.61
+      ]
+    },
+    {
+      "id": "08_INTAKE",
+      "name": "Water intake station",
+      "center": [
+        -84,
+        40,
+        4
+      ],
+      "size": [
+        16,
+        32,
+        8
+      ],
+      "color": [
+        0.48,
+        0.56,
+        0.62
+      ]
+    }
+  ],
+  "routes": {
+    "ground": "Main service loop at Z=0 with 8 m wide roads",
+    "maintenance": "Connected elevated walkways at Z=4",
+    "upper": "Reactor upper ring and turbine mezzanine at Z=8"
+  },
+  "gameplay_note": "Spatial planning graybox only. No UE traversal, clearance, gameplay balance or fire-code certification performed."
+}

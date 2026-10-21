@@ -1,0 +1,132 @@
+{
+  "project": "NPP / Sector K-17",
+  "batch": 2,
+  "scope": "Seven architecture modules and a two-level maintenance building assembly; basic PBR, not final environment art.",
+  "overall_status": "PASS",
+  "built_with": "Blender 4.3.2",
+  "assets": [
+    {
+      "asset_id": "SM_NPP_Wall_Solid_4m_A",
+      "path": "Assets/SM_NPP_Wall_Solid_4m_A",
+      "dimensions_m": [
+        4,
+        0.3,
+        4
+      ],
+      "triangles": 8228,
+      "collision_hulls": 1,
+      "sockets": 4,
+      "status": "PASS",
+      "max_export_bounds_error_m": 3.4868717194158627e-07
+    },
+    {
+      "asset_id": "SM_NPP_Wall_Door_2m_A",
+      "path": "Assets/SM_NPP_Wall_Door_2m_A",
+      "dimensions_m": [
+        4,
+        0.3,
+        4
+      ],
+      "triangles": 17552,
+      "collision_hulls": 6,
+      "sockets": 5,
+      "status": "PASS",
+      "max_export_bounds_error_m": 3.4868717194158627e-07
+    },
+    {
+      "asset_id": "SM_NPP_Wall_Window_4m_A",
+      "path": "Assets/SM_NPP_Wall_Window_4m_A",
+      "dimensions_m": [
+        4,
+        0.3,
+        4
+      ],
+      "triangles": 17644,
+      "collision_hulls": 5,
+      "sockets": 4,
+      "status": "PASS",
+      "max_export_bounds_error_m": 3.4868717194158627e-07
+    },
+    {
+      "asset_id": "SM_NPP_Wall_Corner90_A",
+      "path": "Assets/SM_NPP_Wall_Corner90_A",
+      "dimensions_m": [
+        4,
+        4,
+        4
+      ],
+      "triangles": 16564,
+      "collision_hulls": 3,
+      "sockets": 2,
+      "status": "PASS",
+      "max_export_bounds_error_m": 4.76837158203125e-07
+    },
+    {
+      "asset_id": "SM_NPP_Floor_4x4_A",
+      "path": "Assets/SM_NPP_Floor_4x4_A",
+      "dimensions_m": [
+        4,
+        4,
+        0.25
+      ],
+      "triangles": 972,
+      "collision_hulls": 1,
+      "sockets": 5,
+      "status": "PASS",
+      "max_export_bounds_error_m": 4.76837158203125e-07
+    },
+    {
+      "asset_id": "SM_NPP_Roof_4x4_A",
+      "path": "Assets/SM_NPP_Roof_4x4_A",
+      "dimensions_m": [
+        4,
+        4,
+        0.25
+      ],
+      "triangles": 972,
+      "collision_hulls": 1,
+      "sockets": 1,
+      "status": "PASS",
+      "max_export_bounds_error_m": 4.76837158203125e-07
+    },
+    {
+      "asset_id": "SM_NPP_ColumnHead_075m_A",
+      "path": "Assets/SM_NPP_ColumnHead_075m_A",
+      "dimensions_m": [
+        0.75,
+        0.75,
+        0.25
+      ],
+      "triangles": 1304,
+      "collision_hulls": 1,
+      "sockets": 2,
+      "status": "PASS",
+      "max_export_bounds_error_m": 2.9802322387695312e-08
+    }
+  ],
+  "asset_count": 7,
+  "total_triangles": 63236,
+  "orthographic_images": 21,
+  "reference_images": 7,
+  "max_export_bounds_error_m": 4.76837158203125e-07,
+  "orthographic_silhouette_error_px": 0,
+  "assembly_connection_checks": 12,
+  "assembly_instance_count": 60,
+  "reused_batch01_types": [
+    "SM_NPP_Column_4m_A",
+    "SM_NPP_Catwalk_Straight_4m_A",
+    "SM_NPP_Stair_4x2_Rise2_A",
+    "SM_NPP_Railing_Open_4m_A"
+  ],
+  "batch01_files_unchanged": 149,
+  "ue_editor_test": "NOT_RUN",
+  "visual_review": "See Validation/visual_review.md. Basic PBR, partial roof is an intentional inspection cutaway.",
+  "collision_surface_note": "Floor/roof proxies smooth over narrow tile joints. Render mesh seam levels were separately ray-tested.",
+  "pending": [
+    "Full original site asset production and dressing",
+    "UE editor import and player traversal testing",
+    "Final PBR texture, weathering, trim sheets and decals",
+    "LOD and runtime performance budgets",
+    "Production UV1 lightmap packing"
+  ]
+}

@@ -1,0 +1,191 @@
+{
+  "status": "FINAL_BRIGHT_GEOMETRY_AND_EXPORT_VALIDATED",
+  "scope": "Batch06 new total-scene connector modules",
+  "pre_reference_scratch": "Scratch/site_expansion_pre_reference.blend",
+  "pre_reference_built_utc": "2026-10-20T10:31:35Z",
+  "not_compliant_final": true,
+  "modules": [
+    {
+      "id": "B06_BRIDGE",
+      "status": "AI_concept_plus_pre_model_numeric_technical",
+      "concept": "3m wide elevated walkway deck/rail/post modular assembly, deck6m",
+      "reference": "References/Connectors/B06_BRIDGE_technical.svg",
+      "reference_sha256": "c29368a9e47796e3cda4a2f41c7810d887e217bedee47154cbfda128c7097ad1",
+      "reference_created_utc": "2026-10-20T10:46:31Z",
+      "ai_notes": "See References/Connectors/provenance.json; inaccurate AI projection not certified"
+    },
+    {
+      "id": "B06_UTILITY_SHELTER",
+      "status": "AI_concept_plus_pre_model_numeric_technical",
+      "concept": "14x8x4.5m three-sided service shelter",
+      "reference": "References/Connectors/B06_UTILITY_SHELTER_technical.svg",
+      "reference_sha256": "4bd25e7b5360b53c25c36e4a387daca1104633d20f4b9e7a9f103247103337bf",
+      "reference_created_utc": "2026-10-20T10:46:31Z",
+      "ai_notes": "See References/Connectors/provenance.json; inaccurate AI projection not certified"
+    },
+    {
+      "id": "B06_SERVICE_BANK",
+      "status": "AI_concept_plus_pre_model_numeric_technical",
+      "concept": "3m high solid switchgear service bank",
+      "reference": "References/Connectors/B06_SERVICE_BANK_technical.svg",
+      "reference_sha256": "d9761f4a1b1c2dc897de7765b8c3851786eb1a9595e4b941a52b70a812774ebe",
+      "reference_created_utc": "2026-10-20T10:46:31Z",
+      "ai_notes": "See References/Connectors/provenance.json; inaccurate AI projection not certified"
+    },
+    {
+      "id": "B06_SCREEN",
+      "status": "AI_concept_plus_pre_model_numeric_technical",
+      "concept": "5m long 2.3m high concrete protection screen",
+      "reference": "References/Connectors/B06_SCREEN_technical.svg",
+      "reference_sha256": "b1399524e40f1577439632251b8cd11f5d107cf16796fbb99a1ca3844dc31de4",
+      "reference_created_utc": "2026-10-20T10:46:31Z",
+      "ai_notes": "See References/Connectors/provenance.json; inaccurate AI projection not certified"
+    },
+    {
+      "id": "B06_GATE",
+      "status": "AI_concept_plus_pre_model_numeric_technical",
+      "concept": "10m wide 5.6m tall open gate frame",
+      "reference": "References/Connectors/B06_GATE_technical.svg",
+      "reference_sha256": "f902dc548f5c592a8e527675e79fb4e109beaf2be021df0a04246c214e8a2249",
+      "reference_created_utc": "2026-10-20T10:46:31Z",
+      "ai_notes": "See References/Connectors/provenance.json; inaccurate AI projection not certified"
+    },
+    {
+      "id": "B06_FENCE",
+      "status": "AI_concept_plus_pre_model_numeric_technical",
+      "concept": "8m fence span with2.4m posts and low curb",
+      "reference": "References/Connectors/B06_FENCE_technical.svg",
+      "reference_sha256": "2efe3b9df8cf83c2fce8383f5ac1a43426091d1d00294f7fe949afca084c24f6",
+      "reference_created_utc": "2026-10-20T10:46:31Z",
+      "ai_notes": "See References/Connectors/provenance.json; inaccurate AI projection not certified"
+    }
+  ],
+  "reused": [
+    "Batch05 core original source preserved unchanged; loaded Batch06 copy rear doorway sign relocated for clearance",
+    "Batch05 asphalt floor slab/road panel and markings design",
+    "Batch05 materials and process pipe cross section"
+  ],
+  "next": "Independent bright-image hash signoff and cumulative package relocation",
+  "technical_review": "QA checked all6 part bounds against declared envelopes 2026-10-20T10:43:52Z",
+  "total_reference": "References/site_orthographic_exact_layout.png + site_concept_v3_compact.png",
+  "post_reference_rebuild": {
+    "utc": "2026-10-20T10:51:43.951825+00:00",
+    "scene": "site_expansion.blend",
+    "sha256": "f0fe319848fc70d38bcc10aa62d249ef9cf88cb1af62135e07719723376e721d",
+    "region_sha256": {
+      "maintenance.blend": "77272524158f69cacfa43ae463e65dc7591f9d623164cf5286b15e73bf516dfb",
+      "loading.blend": "2b790c02efaf892c1c0219876c744121a95ccf4599735b91732e8c68779ae256",
+      "pumps.blend": "d27b89301f555a1e9eabefad657737b3896856c3b9122731f72455d7b8d0b3f7",
+      "control.blend": "cfef0b4b8440f04e5e8080197e63a00445009a3dd49d1a8eba45b256e3517f9f"
+    },
+    "reference_model_corrections": [
+      "Shelter shell now read from approved parts with walls inside14x8 footprint",
+      "Gate now clear10m overall10.6m top5.6m",
+      "Switchgear cabinet reads2.8x2.265x3 overall spec including inset face",
+      "Bridge deck segmented<=6m, corner deck and open turning rails authored from pre-model interface",
+      "Solid screen exact5x.38x2.3m envelope used; placed transverse pockets and verified zigzag routes specified"
+    ]
+  },
+  "connector_assets_built_after_reference": "2026-10-20T10:46:54.737340+00:00",
+  "final_geometry_fixes": [
+    "Inherited rear sign moved clear of actual doorway in Batch06 copy only",
+    "Bridge segment seams covered with flush joint plates",
+    "North pedestrian top separated7mm from road to avoid z-fight"
+  ],
+  "camera_only_revision": "north_connection target changed to[-12,46,6], position unchanged; eye previews hide QA helpers",
+  "static_checks": {
+    "by": "independent core_scene_qa",
+    "conservative_proxy": "h2.1m/r.5m",
+    "actual_pedestrian_routes": 6,
+    "all_route_issues": 0,
+    "bridge_two_metre_band_samples": 420,
+    "bridge_two_metre_band_issues": 0,
+    "max_open_straight_intervals_m": {
+      "south": 8,
+      "north": 6,
+      "east": 10,
+      "west": 18,
+      "bridge": 7,
+      "SE": 18
+    },
+    "all_path_samples_solid_standing_cover_within12m": true,
+    "not_ue_runtime": true
+  },
+  "previous_final_evidence": "History/PreCompact/",
+  "compact_reference": "References/compact_revision_orthographic.svg + compact_revision_overview.png",
+  "historical_post_reference_initial_scene": {
+    "utc": "2026-10-20T11:16:06.306276+00:00",
+    "scene": "site_expansion.blend",
+    "sha256": "9d4458329ffa25974015fbbcf0d923661032dcd85e2efcffbd670f9061db4823",
+    "layout_sha256": "916c26d707f4a77c24b567fb981f99f41e4b3831bf2da890a4442a4c42c8493a",
+    "revisions": "Geometry fixes recorded above; final camera-only aiming and portable render metadata saved after renders; no geometry changes after render."
+  },
+  "historical_validation_completed": {
+    "export": "Exports/export_validation.json",
+    "relocation": "QA/Relocation/complete.json",
+    "source_unchanged": "QA/Relocation/source_unchanged.json"
+  },
+  "compact_final_scene": {
+    "utc": "2026-10-20T13:10:05.666802+00:00",
+    "sha256": "0218ca7d20d61d699ddcde2c16622befb2e80087b66e65b7cd92c019ebba177b",
+    "layout_sha256": "d5a32997b1497a52de0dde416abfce05c329f534ef21dd14e8c5f16a2ab96e91",
+    "reference": "References/compact_revision_orthographic.svg",
+    "same_module_reuse": true,
+    "corrections": [
+      "four-quadrant16utility shelters with3solid banks each",
+      "east/west transverse screens with realzigzag",
+      "5.4m trimmed-stock paired-deck bridge; staggered2.8m banks+side screens",
+      "SE midpoint screens cut21m transverse spans with realend bypass",
+      "large walk hardstands top-.015 avoid coplanar localfloor",
+      "bridge joint coverplates raised2mm",
+      "north camera truebridge support6m eye7.65m"
+    ]
+  },
+  "lighting_only_revision": {
+    "pass": true,
+    "revision": "lighting/world/exposure only; no geometry/material/camera changes",
+    "geometry_and_materials_identical": true,
+    "geometry_material_transform_fingerprint_before": "02db90f452b5ee30d36e57fe78e664e928642c655566dbe9f5d149f45c10d6ea",
+    "geometry_material_transform_fingerprint_after": "02db90f452b5ee30d36e57fe78e664e928642c655566dbe9f5d149f45c10d6ea",
+    "exported_baseline_source_sha256": "0218ca7d20d61d699ddcde2c16622befb2e80087b66e65b7cd92c019ebba177b",
+    "current_source_sha256": "f19f554d9f2ba93e6f3c1d31d95b0db2ed2b5bcd78a7fecc42de8cfe1267edb3",
+    "lighting_input": {
+      "key_sun": {
+        "energy": 2.6,
+        "angle_deg": 18,
+        "rotation_deg": [
+          35,
+          -25,
+          -35
+        ],
+        "color": [
+          1,
+          0.95,
+          0.87
+        ]
+      },
+      "fill_sun": {
+        "energy": 1.1,
+        "angle_deg": 35,
+        "rotation_deg": [
+          65,
+          15,
+          145
+        ],
+        "color": [
+          0.8,
+          0.9,
+          1
+        ]
+      },
+      "world_color": [
+        0.44,
+        0.53,
+        0.66
+      ],
+      "world_strength": 0.6,
+      "exposure": 0.45
+    }
+  },
+  "final_scene_sha256": "f19f554d9f2ba93e6f3c1d31d95b0db2ed2b5bcd78a7fecc42de8cfe1267edb3"
+}

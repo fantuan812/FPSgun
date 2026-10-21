@@ -1,0 +1,131 @@
+[
+  {
+    "asset_id": "SM_NPP_ServiceBayWall_8m_A",
+    "pixels_per_meter": 100.0,
+    "views": {
+      "front": {
+        "expected_silhouette_px": [
+          800.0,
+          400.0
+        ],
+        "measured_silhouette_px": [
+          800,
+          400
+        ],
+        "maximum_error_px": 0.0,
+        "status": "PASS"
+      },
+      "right": {
+        "expected_silhouette_px": [
+          30.0,
+          400.0
+        ],
+        "measured_silhouette_px": [
+          30,
+          400
+        ],
+        "maximum_error_px": 0.0,
+        "status": "PASS"
+      },
+      "top": {
+        "expected_silhouette_px": [
+          800.0,
+          30.0
+        ],
+        "measured_silhouette_px": [
+          800,
+          30
+        ],
+        "maximum_error_px": 0.0,
+        "status": "PASS"
+      }
+    },
+    "status": "PASS"
+  },
+  {
+    "asset_id": "SM_NPP_StorageRack_4m_A",
+    "pixels_per_meter": 100.0,
+    "views": {
+      "front": {
+        "expected_silhouette_px": [
+          400.0,
+          300.0
+        ],
+        "measured_silhouette_px": [
+          400,
+          300
+        ],
+        "maximum_error_px": 0.0,
+        "status": "PASS"
+      },
+      "right": {
+        "expected_silhouette_px": [
+          100.0,
+          300.0
+        ],
+        "measured_silhouette_px": [
+          100,
+          300
+        ],
+        "maximum_error_px": 0.0,
+        "status": "PASS"
+      },
+      "top": {
+        "expected_silhouette_px": [
+          400.0,
+          100.0
+        ],
+        "measured_silhouette_px": [
+          400,
+          100
+        ],
+        "maximum_error_px": 0.0,
+        "status": "PASS"
+      }
+    },
+    "status": "PASS"
+  },
+  {
+    "asset_id": "SM_NPP_RoofTruss_32m_A",
+    "pixels_per_meter": 25.0,
+    "views": {
+      "front": {
+        "expected_silhouette_px": [
+          800.0,
+          50.0
+        ],
+        "measured_silhouette_px": [
+          800,
+          50
+        ],
+        "maximum_error_px": 0.0,
+        "status": "PASS"
+      },
+      "right": {
+        "expected_silhouette_px": [
+          12.5,
+          50.0
+        ],
+        "measured_silhouette_px": [
+          12,
+          50
+        ],
+        "maximum_error_px": 0.5,
+        "status": "PASS"
+      },
+      "top": {
+        "expected_silhouette_px": [
+          800.0,
+          12.5
+        ],
+        "measured_silhouette_px": [
+          800,
+          12
+        ],
+        "maximum_error_px": 0.5,
+        "status": "PASS"
+      }
+    },
+    "status": "PASS"
+  }
+]

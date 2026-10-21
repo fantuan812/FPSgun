@@ -1,0 +1,443 @@
+{
+  "file": "/workspace/shared/NuclearPlant/Batch05_Core/core_hall.blend",
+  "objects": 1803,
+  "dependencies": [
+    {
+      "type": "library",
+      "path": "//../../NuclearPlantRestore/source/NuclearPlant/Batch04_LargeSpace/Geometry/kit_geometry_04.blend",
+      "exists": true
+    }
+  ],
+  "path_samples": {
+    "main_ring_radius_5.5": {
+      "count": 120,
+      "overhead_hits_below_1p8m": [
+        {
+          "sample": 25,
+          "point": [
+            1.423504748063864,
+            5.312592044589875,
+            4.512
+          ],
+          "height": 0.779,
+          "object": "RC_main_coolant_trunk.003"
+        },
+        {
+          "sample": 35,
+          "point": [
+            -1.4235047480638647,
+            5.312592044589875,
+            4.512
+          ],
+          "height": 0.779,
+          "object": "RC_main_coolant_trunk.002"
+        },
+        {
+          "sample": 85,
+          "point": [
+            -1.4235047480638634,
+            -5.312592044589875,
+            4.512
+          ],
+          "height": 0.779,
+          "object": "RC_main_coolant_trunk"
+        },
+        {
+          "sample": 95,
+          "point": [
+            1.4235047480638663,
+            -5.312592044589875,
+            4.512
+          ],
+          "height": 0.779,
+          "object": "RC_main_coolant_trunk.001"
+        }
+      ],
+      "no_floor_within_0p25m": []
+    },
+    "main_ring_radius_6": {
+      "count": 120,
+      "overhead_hits_below_1p8m": [
+        {
+          "sample": 25,
+          "point": [
+            1.5529142706151244,
+            5.79555495773441,
+            4.512
+          ],
+          "height": 1.454,
+          "object": "RC_main_coolant_trunk.003"
+        },
+        {
+          "sample": 26,
+          "point": [
+            1.2474701449065568,
+            5.868885604402833,
+            4.512
+          ],
+          "height": 1.581,
+          "object": "RC_main_coolant_trunk.003"
+        },
+        {
+          "sample": 34,
+          "point": [
+            -1.2474701449065546,
+            5.868885604402834,
+            4.512
+          ],
+          "height": 1.581,
+          "object": "RC_main_coolant_trunk.002"
+        },
+        {
+          "sample": 35,
+          "point": [
+            -1.552914270615125,
+            5.79555495773441,
+            4.512
+          ],
+          "height": 1.455,
+          "object": "RC_main_coolant_trunk.002"
+        },
+        {
+          "sample": 85,
+          "point": [
+            -1.5529142706151238,
+            -5.79555495773441,
+            4.512
+          ],
+          "height": 1.454,
+          "object": "RC_main_coolant_trunk"
+        },
+        {
+          "sample": 86,
+          "point": [
+            -1.2474701449065586,
+            -5.868885604402833,
+            4.512
+          ],
+          "height": 1.581,
+          "object": "RC_main_coolant_trunk"
+        },
+        {
+          "sample": 94,
+          "point": [
+            1.2474701449065515,
+            -5.868885604402835,
+            4.512
+          ],
+          "height": 1.581,
+          "object": "RC_main_coolant_trunk.001"
+        },
+        {
+          "sample": 95,
+          "point": [
+            1.5529142706151267,
+            -5.795554957734409,
+            4.512
+          ],
+          "height": 1.455,
+          "object": "RC_main_coolant_trunk.001"
+        }
+      ],
+      "no_floor_within_0p25m": []
+    },
+    "main_ring_radius_6.5": {
+      "count": 120,
+      "overhead_hits_below_1p8m": [],
+      "no_floor_within_0p25m": []
+    },
+    "bridge_-1": {
+      "count": 129,
+      "overhead_hits_below_1p8m": [],
+      "no_floor_within_0p25m": []
+    },
+    "stairs_-1": {
+      "count": 75,
+      "overhead_hits_below_1p8m": [
+        {
+          "sample": 30,
+          "point": [
+            -17.3,
+            -12.059999999999999,
+            1.98
+          ],
+          "height": 1.168,
+          "object": "Gallery brace"
+        },
+        {
+          "sample": 31,
+          "point": [
+            -17,
+            -12.059999999999999,
+            1.98
+          ],
+          "height": 1.314,
+          "object": "Gallery brace"
+        },
+        {
+          "sample": 32,
+          "point": [
+            -16.7,
+            -12.059999999999999,
+            1.98
+          ],
+          "height": 1.459,
+          "object": "Gallery brace"
+        },
+        {
+          "sample": 37,
+          "point": [
+            -17,
+            -11.5,
+            2.34
+          ],
+          "height": 1.68,
+          "object": "Under gallery linear"
+        },
+        {
+          "sample": 40,
+          "point": [
+            -17,
+            -11.219999999999999,
+            2.52
+          ],
+          "height": 1.5,
+          "object": "Under gallery linear"
+        },
+        {
+          "sample": 43,
+          "point": [
+            -17,
+            -10.94,
+            2.6999999999999997
+          ],
+          "height": 1.32,
+          "object": "Under gallery linear"
+        },
+        {
+          "sample": 46,
+          "point": [
+            -17,
+            -10.66,
+            2.88
+          ],
+          "height": 1.14,
+          "object": "Under gallery linear"
+        },
+        {
+          "sample": 49,
+          "point": [
+            -17,
+            -10.379999999999999,
+            3.06
+          ],
+          "height": 0.96,
+          "object": "Under gallery linear"
+        },
+        {
+          "sample": 52,
+          "point": [
+            -17,
+            -10.1,
+            3.2399999999999998
+          ],
+          "height": 0.78,
+          "object": "Under gallery linear"
+        },
+        {
+          "sample": 55,
+          "point": [
+            -17,
+            -9.82,
+            3.42
+          ],
+          "height": 0.6,
+          "object": "Under gallery linear"
+        },
+        {
+          "sample": 58,
+          "point": [
+            -17,
+            -9.54,
+            3.5999999999999996
+          ],
+          "height": 0.42,
+          "object": "Under gallery linear"
+        },
+        {
+          "sample": 61,
+          "point": [
+            -17,
+            -9.26,
+            3.78
+          ],
+          "height": 0.24,
+          "object": "Under gallery linear"
+        },
+        {
+          "sample": 64,
+          "point": [
+            -17,
+            -8.98,
+            3.96
+          ],
+          "height": 0.06,
+          "object": "Under gallery linear"
+        }
+      ],
+      "no_floor_within_0p25m": []
+    },
+    "bridge_1": {
+      "count": 129,
+      "overhead_hits_below_1p8m": [],
+      "no_floor_within_0p25m": []
+    },
+    "stairs_1": {
+      "count": 75,
+      "overhead_hits_below_1p8m": [
+        {
+          "sample": 30,
+          "point": [
+            16.7,
+            -12.059999999999999,
+            1.98
+          ],
+          "height": 1.459,
+          "object": "Gallery brace.004"
+        },
+        {
+          "sample": 31,
+          "point": [
+            17,
+            -12.059999999999999,
+            1.98
+          ],
+          "height": 1.314,
+          "object": "Gallery brace.004"
+        },
+        {
+          "sample": 32,
+          "point": [
+            17.3,
+            -12.059999999999999,
+            1.98
+          ],
+          "height": 1.168,
+          "object": "Gallery brace.004"
+        },
+        {
+          "sample": 37,
+          "point": [
+            17,
+            -11.5,
+            2.34
+          ],
+          "height": 1.68,
+          "object": "Under gallery linear.002"
+        },
+        {
+          "sample": 40,
+          "point": [
+            17,
+            -11.219999999999999,
+            2.52
+          ],
+          "height": 1.5,
+          "object": "Under gallery linear.002"
+        },
+        {
+          "sample": 43,
+          "point": [
+            17,
+            -10.94,
+            2.6999999999999997
+          ],
+          "height": 1.32,
+          "object": "Under gallery linear.002"
+        },
+        {
+          "sample": 46,
+          "point": [
+            17,
+            -10.66,
+            2.88
+          ],
+          "height": 1.14,
+          "object": "Under gallery linear.002"
+        },
+        {
+          "sample": 49,
+          "point": [
+            17,
+            -10.379999999999999,
+            3.06
+          ],
+          "height": 0.96,
+          "object": "Under gallery linear.002"
+        },
+        {
+          "sample": 52,
+          "point": [
+            17,
+            -10.1,
+            3.2399999999999998
+          ],
+          "height": 0.78,
+          "object": "Under gallery linear.002"
+        },
+        {
+          "sample": 55,
+          "point": [
+            17,
+            -9.82,
+            3.42
+          ],
+          "height": 0.6,
+          "object": "Under gallery linear.002"
+        },
+        {
+          "sample": 58,
+          "point": [
+            17,
+            -9.54,
+            3.5999999999999996
+          ],
+          "height": 0.42,
+          "object": "Under gallery linear.002"
+        },
+        {
+          "sample": 61,
+          "point": [
+            17,
+            -9.26,
+            3.78
+          ],
+          "height": 0.24,
+          "object": "Under gallery linear.002"
+        },
+        {
+          "sample": 64,
+          "point": [
+            17,
+            -8.98,
+            3.96
+          ],
+          "height": 0.06,
+          "object": "Under gallery linear.002"
+        }
+      ],
+      "no_floor_within_0p25m": []
+    },
+    "ground_ring_r9": {
+      "count": 120,
+      "overhead_hits_below_1p8m": [],
+      "no_floor_within_0p25m": []
+    },
+    "front_entry": {
+      "count": 243,
+      "overhead_hits_below_1p8m": [],
+      "no_floor_within_0p25m": []
+    }
+  },
+  "limits": "Static upward clearance samples in Blender, not swept capsule, navigation, physics or UE gameplay validation."
+}

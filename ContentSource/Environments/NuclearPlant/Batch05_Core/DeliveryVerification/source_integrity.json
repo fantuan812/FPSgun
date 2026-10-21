@@ -1,0 +1,291 @@
+{
+  "old_source_files": 112,
+  "old_source_changed": [],
+  "python_parse": "PASS",
+  "scripts": [
+    {
+      "path": "Exports/render_imported.py",
+      "imports": [
+        "pathlib",
+        "mathutils",
+        "bpy",
+        "math"
+      ],
+      "absolute_workspace_references": []
+    },
+    {
+      "path": "QA/check_bridge_horizontal.py",
+      "imports": [
+        "mathutils",
+        "bpy",
+        "json",
+        "pathlib"
+      ],
+      "absolute_workspace_references": []
+    },
+    {
+      "path": "QA/check_scene.py",
+      "imports": [
+        "mathutils",
+        "bpy",
+        "json",
+        "math",
+        "pathlib"
+      ],
+      "absolute_workspace_references": []
+    },
+    {
+      "path": "audit_camera_only.py",
+      "imports": [
+        "pathlib",
+        "bpy",
+        "json",
+        "hashlib",
+        "struct",
+        "math"
+      ],
+      "absolute_workspace_references": []
+    },
+    {
+      "path": "build_core.py",
+      "imports": [
+        "mathutils",
+        "bpy",
+        "math",
+        "json",
+        "sys",
+        "pathlib",
+        "importlib.util"
+      ],
+      "absolute_workspace_references": []
+    },
+    {
+      "path": "check_cameras.py",
+      "imports": [
+        "mathutils",
+        "bpy",
+        "json",
+        "pathlib"
+      ],
+      "absolute_workspace_references": []
+    },
+    {
+      "path": "export_core.py",
+      "imports": [
+        "pathlib",
+        "mathutils",
+        "bpy",
+        "os",
+        "json",
+        "hashlib",
+        "time"
+      ],
+      "absolute_workspace_references": []
+    },
+    {
+      "path": "finalize_exports.py",
+      "imports": [
+        "pathlib",
+        "json",
+        "hashlib",
+        "struct"
+      ],
+      "absolute_workspace_references": []
+    },
+    {
+      "path": "finish_scene.py",
+      "imports": [
+        "bpy",
+        "pathlib",
+        "json"
+      ],
+      "absolute_workspace_references": []
+    },
+    {
+      "path": "fix_clearance.py",
+      "imports": [
+        "bpy",
+        "pathlib"
+      ],
+      "absolute_workspace_references": []
+    },
+    {
+      "path": "fix_loop.py",
+      "imports": [
+        "bpy",
+        "pathlib"
+      ],
+      "absolute_workspace_references": []
+    },
+    {
+      "path": "material_finish.py",
+      "imports": [
+        "bpy",
+        "pathlib",
+        "json",
+        "math"
+      ],
+      "absolute_workspace_references": []
+    },
+    {
+      "path": "postprocess_core.py",
+      "imports": [
+        "mathutils",
+        "bpy",
+        "pathlib",
+        "math",
+        "json"
+      ],
+      "absolute_workspace_references": []
+    },
+    {
+      "path": "props/core_props.py",
+      "imports": [
+        "mathutils",
+        "bpy",
+        "math",
+        "json",
+        "os"
+      ],
+      "absolute_workspace_references": []
+    },
+    {
+      "path": "props/make_sheets.py",
+      "imports": [
+        "PIL",
+        "os",
+        "json"
+      ],
+      "absolute_workspace_references": []
+    },
+    {
+      "path": "props/render_verify.py",
+      "imports": [
+        "mathutils",
+        "bpy",
+        "os",
+        "math",
+        "json"
+      ],
+      "absolute_workspace_references": []
+    },
+    {
+      "path": "reactor/fix_main_clearance.py",
+      "imports": [
+        "bpy",
+        "os",
+        "importlib.util",
+        "json",
+        "math"
+      ],
+      "absolute_workspace_references": []
+    },
+    {
+      "path": "reactor/fix_upper_safety.py",
+      "imports": [
+        "bpy",
+        "os",
+        "sys",
+        "json",
+        "importlib.util"
+      ],
+      "absolute_workspace_references": []
+    },
+    {
+      "path": "reactor/measure_route.py",
+      "imports": [
+        "bpy",
+        "json",
+        "os",
+        "math"
+      ],
+      "absolute_workspace_references": []
+    },
+    {
+      "path": "reactor/reactor_asset.py",
+      "imports": [
+        "mathutils",
+        "math",
+        "bpy",
+        "math",
+        "json",
+        "os"
+      ],
+      "absolute_workspace_references": []
+    },
+    {
+      "path": "reactor/render_orthographic.py",
+      "imports": [
+        "mathutils",
+        "bpy",
+        "math",
+        "os",
+        "json"
+      ],
+      "absolute_workspace_references": []
+    },
+    {
+      "path": "reactor/update_materials.py",
+      "imports": [
+        "bpy",
+        "os",
+        "importlib.util"
+      ],
+      "absolute_workspace_references": []
+    },
+    {
+      "path": "reactor/verify_reactor.py",
+      "imports": [
+        "mathutils",
+        "bpy",
+        "os",
+        "json",
+        "math"
+      ],
+      "absolute_workspace_references": []
+    },
+    {
+      "path": "rebuild.py",
+      "imports": [
+        "pathlib",
+        "subprocess",
+        "sys",
+        "shutil"
+      ],
+      "absolute_workspace_references": []
+    },
+    {
+      "path": "refresh_reactor.py",
+      "imports": [
+        "mathutils",
+        "bpy",
+        "pathlib",
+        "math",
+        "json"
+      ],
+      "absolute_workspace_references": []
+    },
+    {
+      "path": "render_core.py",
+      "imports": [
+        "bpy",
+        "pathlib",
+        "sys",
+        "json"
+      ],
+      "absolute_workspace_references": []
+    },
+    {
+      "path": "validate_exports.py",
+      "imports": [
+        "pathlib",
+        "bpy",
+        "json",
+        "sys",
+        "os",
+        "importlib.util"
+      ],
+      "absolute_workspace_references": []
+    }
+  ]
+}

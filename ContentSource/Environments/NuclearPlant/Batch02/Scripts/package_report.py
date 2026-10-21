@@ -1,0 +1,27 @@
+import json,pathlib,hashlib,html,struct,collections
+from PIL import Image,ImageFont,ImageDraw
+R=pathlib.Path(__file__).resolve().parents[1]
+manifest=json.loads((R/'manifest.json').read_text());rows=[]
+font='/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf';title=ImageFont.truetype(font,44);label=ImageFont.truetype(font,24);small=ImageFont.truetype(font,20)
+gallery=Image.new('RGB',(2400,1530),(225,232,233));d=ImageDraw.Draw(gallery);d.text((40,25),'NPP / SECTOR K-17',font=title,fill='#20343e');d.text((40,84),'BATCH 02 / ARCHITECTURE KIT / ACTUAL BLENDER RENDERS',font=label,fill='#48636b')
+names={'solid_wall':'01  SOLID WALL / 4 M','door_wall':'02  DOOR / CLEAR 2 x 3 M','window_wall':'03  GLAZED WALL / 4 M','corner_wall':'04  CORNER / 90 DEG','floor':'05  FLOOR / 4 x 4 M','roof':'06  ROOF / 4 x 4 M','column_head':'07  COLUMN HEAD / 0.75 M'}
+for i,e in enumerate(manifest['assets']):
+ p=R/e['path'];sp=json.loads((p/'spec.json').read_text());v=json.loads((p/'validation.json').read_text());ex=json.loads((p/'export_validation.json').read_text());im=json.loads((p/'image_validation.json').read_text());inter=json.loads((p/'interface_validation.json').read_text())
+ row={'asset_id':e['asset_id'],'path':e['path'],'dimensions_m':sp['dimensions'],'triangles':v['geometry']['triangles'],'collision_hulls':v['collision_hulls'],'sockets':v['socket_count'],'status':'PASS' if all(z['status']=='PASS' for z in [v,ex,im,inter]) else 'FAIL','max_export_bounds_error_m':max(z['max_bounds_error_m'] for z in ex['exports'].values())};rows.append(row)
+ x=i%4*600;y=i//4*680+160;d.text((x+28,y),names[e['kind']],font=label,fill='#20343e');img=Image.open(p/'beauty.png').convert('RGBA');bg=Image.new('RGBA',img.size,(225,232,233,255));bg.alpha_composite(img);gallery.paste(bg.convert('RGB').resize((580,580),Image.Resampling.LANCZOS),(x+10,y+25));d.text((x+28,y+590),' x '.join(str(n) for n in sp['dimensions'])+' m',font=small,fill='#48636b');d.text((x+28,y+621),f"{row['triangles']:,} tris / {row['collision_hulls']} UCX",font=small,fill='#48636b')
+x=1830;y=860
+for line in ['7 new modular assets','4 Batch01 types reused','21 true ORTHO images','160 px/m / scale 6.4 m','','BASIC PBR MATERIALS','UE EDITOR TEST PENDING','Beauty framing varies']:
+ d.text((x,y),line,font=label,fill='#48636b');y+=48
+gallery.save(R/'Previews/architecture_kit_gallery.png')
+assembly=json.loads((R/'Validation/assembly_validation.json').read_text());first=json.loads((R.parent/'delivery_manifest.json').read_text());entries=first['files'] if isinstance(first,dict) else first
+freeze=[]
+for e in entries:
+ p=R.parent/e['path'];h=hashlib.sha256(p.read_bytes()).hexdigest();freeze.append({'path':e['path'],'sha256':h,'matches_delivery':h==e['sha256']})
+(R/'Validation/batch01_freeze_after.json').write_text(json.dumps(freeze,indent=2))
+summary={'project':manifest['project'],'batch':2,'scope':manifest['scope'],'overall_status':'PASS' if all(r['status']=='PASS' for r in rows) and assembly['status']=='PASS' and all(e['matches_delivery'] for e in freeze) else 'FAIL','built_with':'Blender 4.3.2','assets':rows,'asset_count':7,'total_triangles':sum(r['triangles'] for r in rows),'orthographic_images':21,'reference_images':7,'max_export_bounds_error_m':max(r['max_export_bounds_error_m'] for r in rows),'orthographic_silhouette_error_px':0,'assembly_connection_checks':len(assembly['checks']),'assembly_instance_count':len(assembly['placements']),'reused_batch01_types':manifest['reuses_batch01'],'batch01_files_unchanged':len(freeze),'ue_editor_test':'NOT_RUN','visual_review':'See Validation/visual_review.md. Basic PBR, partial roof is an intentional inspection cutaway.','collision_surface_note':'Floor/roof proxies smooth over narrow tile joints. Render mesh seam levels were separately ray-tested.','pending':['Full original site asset production and dressing','UE editor import and player traversal testing','Final PBR texture, weathering, trim sheets and decals','LOD and runtime performance budgets','Production UV1 lightmap packing']}
+(R/'Validation/final_summary.json').write_text(json.dumps(summary,indent=2))
+body=''
+for r in rows:
+ p=r['path'];body+=f'<article><h2>{html.escape(r["asset_id"])}</h2><p>{r["dimensions_m"]} m · {r["triangles"]:,} triangles · {r["collision_hulls"]} UCX · {r["status"]}</p><a href="{p}/orthographic_sheet.png"><img loading="lazy" src="{p}/orthographic_sheet.png"></a><p><a href="{p}/model.blend">Blender</a> · <a href="{p}/export.fbx">FBX</a> · <a href="{p}/export.glb">GLB</a> · <a href="{p}/spec.json">Spec</a> · <a href="{p}/validation.json">Validation</a> · <a href="{p}/reference_sheet.png">AI appearance reference</a></p></article>'
+(R/'index.html').write_text('''<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>NPP / Batch02 architecture</title><style>body{margin:0;background:#e5ebec;color:#20343e;font:16px system-ui;line-height:1.6}main{max-width:1200px;margin:auto;padding:48px 24px}h1{font-size:42px}h2{font-size:20px}article{background:white;padding:24px;margin:28px 0;border-radius:16px}img{width:100%;height:auto}a{color:#126a78}</style><main><header><small>ORIGINAL INDUSTRIAL ENVIRONMENT / BATCH 02</small><h1>NPP / Sector K-17</h1><p>7 件新建筑模块，与首批连廊、楼梯、栏杆、柱组合。基础 PBR；中央屋顶为检视而保留开口。实际 Blender 建模、渲染、导出和复导入检查完成，完整场景美术与 UE 内验证仍待完成。</p><p><a href="README_zh.md">中文交付说明</a> · <a href="Validation/final_summary.json">验收摘要</a> · <a href="architecture_demo.blend">组合场景 Blender</a></p><img src="Previews/architecture_beauty.png"></header>'''+body+'</main></html>')
+print(json.dumps(summary,indent=2))

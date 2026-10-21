@@ -1,0 +1,50 @@
+{
+  "project": "NPP / Sector K-17",
+  "batch": 2,
+  "scope": "Seven architecture modules and a two-level maintenance building assembly; basic PBR, not final environment art.",
+  "primary_module_m": 4,
+  "grid_m": 0.25,
+  "assets": [
+    {
+      "asset_id": "SM_NPP_Wall_Solid_4m_A",
+      "kind": "solid_wall",
+      "path": "Assets/SM_NPP_Wall_Solid_4m_A"
+    },
+    {
+      "asset_id": "SM_NPP_Wall_Door_2m_A",
+      "kind": "door_wall",
+      "path": "Assets/SM_NPP_Wall_Door_2m_A"
+    },
+    {
+      "asset_id": "SM_NPP_Wall_Window_4m_A",
+      "kind": "window_wall",
+      "path": "Assets/SM_NPP_Wall_Window_4m_A"
+    },
+    {
+      "asset_id": "SM_NPP_Wall_Corner90_A",
+      "kind": "corner_wall",
+      "path": "Assets/SM_NPP_Wall_Corner90_A"
+    },
+    {
+      "asset_id": "SM_NPP_Floor_4x4_A",
+      "kind": "floor",
+      "path": "Assets/SM_NPP_Floor_4x4_A"
+    },
+    {
+      "asset_id": "SM_NPP_Roof_4x4_A",
+      "kind": "roof",
+      "path": "Assets/SM_NPP_Roof_4x4_A"
+    },
+    {
+      "asset_id": "SM_NPP_ColumnHead_075m_A",
+      "kind": "column_head",
+      "path": "Assets/SM_NPP_ColumnHead_075m_A"
+    }
+  ],
+  "reuses_batch01": [
+    "SM_NPP_Column_4m_A",
+    "SM_NPP_Catwalk_Straight_4m_A",
+    "SM_NPP_Stair_4x2_Rise2_A",
+    "SM_NPP_Railing_Open_4m_A"
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "project": "NPP / Sector K-17",
+  "scope": "First-batch modular kit plus whole-site graybox",
+  "built_with": "Blender 4.3.2",
+  "overall_status": "PASS",
+  "assets": [
+    {
+      "asset_id": "SM_NPP_Catwalk_Straight_4m_A",
+      "path": "ModularKit/Catwalks/SM_NPP_Catwalk_Straight_4m_A",
+      "dimensions_m": [
+        4,
+        2,
+        1.3
+      ],
+      "triangles": 17676,
+      "collision_hulls": 3,
+      "status": "PASS",
+      "max_export_bounds_error_m": 3.5762786865234375e-07,
+      "fbx_version": 7400
+    },
+    {
+      "asset_id": "SM_NPP_Catwalk_Corner90_A",
+      "path": "ModularKit/Catwalks/SM_NPP_Catwalk_Corner90_A",
+      "dimensions_m": [
+        4,
+        4,
+        1.3
+      ],
+      "triangles": 31232,
+      "collision_hulls": 6,
+      "status": "PASS",
+      "max_export_bounds_error_m": 2.384185791015625e-07,
+      "fbx_version": 7400
+    },
+    {
+      "asset_id": "SM_NPP_Catwalk_TJunction_A",
+      "path": "ModularKit/Catwalks/SM_NPP_Catwalk_TJunction_A",
+      "dimensions_m": [
+        4,
+        4,
+        1.3
+      ],
+      "triangles": 31556,
+      "collision_hulls": 7,
+      "status": "PASS",
+      "max_export_bounds_error_m": 2.384185791015625e-07,
+      "fbx_version": 7400
+    },
+    {
+      "asset_id": "SM_NPP_Stair_4x2_Rise2_A",
+      "path": "ModularKit/Stairs/SM_NPP_Stair_4x2_Rise2_A",
+      "dimensions_m": [
+        4,
+        2,
+        3.3
+      ],
+      "triangles": 24864,
+      "collision_hulls": 3,
+      "status": "PASS",
+      "max_export_bounds_error_m": 3.5762786865234375e-07,
+      "fbx_version": 7400
+    },
+    {
+      "asset_id": "SM_NPP_Railing_Open_4m_A",
+      "path": "ModularKit/Railings/SM_NPP_Railing_Open_4m_A",
+      "dimensions_m": [
+        4,
+        0.125,
+        1.1
+      ],
+      "triangles": 3812,
+      "collision_hulls": 1,
+      "status": "PASS",
+      "max_export_bounds_error_m": 3.427267074584961e-07,
+      "fbx_version": 7400
+    },
+    {
+      "asset_id": "SM_NPP_Railing_Infill_2m_B",
+      "path": "ModularKit/Railings/SM_NPP_Railing_Infill_2m_B",
+      "dimensions_m": [
+        2,
+        0.125,
+        1.1
+      ],
+      "triangles": 4560,
+      "collision_hulls": 1,
+      "status": "PASS",
+      "max_export_bounds_error_m": 1.7136335372924805e-07,
+      "fbx_version": 7400
+    },
+    {
+      "asset_id": "SM_NPP_Column_4m_A",
+      "path": "ModularKit/Structure/SM_NPP_Column_4m_A",
+      "dimensions_m": [
+        0.5,
+        0.5,
+        4
+      ],
+      "triangles": 2068,
+      "collision_hulls": 1,
+      "status": "PASS",
+      "max_export_bounds_error_m": 2.9802322387695312e-08,
+      "fbx_version": 7400
+    },
+    {
+      "asset_id": "SM_NPP_PipeSupport_2m_A",
+      "path": "ModularKit/Pipes/SM_NPP_PipeSupport_2m_A",
+      "dimensions_m": [
+        2,
+        0.5,
+        2
+      ],
+      "triangles": 3852,
+      "collision_hulls": 5,
+      "status": "PASS",
+      "max_export_bounds_error_m": 8.940696716308594e-08,
+      "fbx_version": 7400
+    }
+  ],
+  "asset_count": 8,
+  "total_triangles": 119620,
+  "orthographic_images": 24,
+  "reference_images": 8,
+  "max_export_bounds_error_m": 3.5762786865234375e-07,
+  "ue_editor_import_test": "NOT_RUN",
+  "render_samples": {
+    "validation": 32,
+    "gallery": 64,
+    "assembly": 64
+  },
+  "pending": [
+    "Unreal Engine actual import, collision visibility and player traversal test",
+    "Production LODs and draw-call budget",
+    "Final lightmap repack / resolution for static baked lighting",
+    "Weathering / trim-sheet / decal art polish",
+    "Future architecture, pipes, machinery, reactor hero and full environment dressing"
+  ],
+  "assembly_status": "PASS",
+  "assembly_connections_tested": 8,
+  "max_assembly_socket_gap_m": 0.0,
+  "max_orthographic_silhouette_error_px": 0
+}
