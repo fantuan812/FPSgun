@@ -1,0 +1,279 @@
+{
+  "status": "PASS_SIX_FINAL_AND_THREE_MATCHED_BASELINE_IMAGES_ACTUALLY_VIEWED",
+  "scene_sha256": "4ada44310aee8602d4159be3b5f582441d9ef1581bb3098fb6fa40e8f2497a7d",
+  "actual_pixels_inspected": {
+    "site_overview": {
+      "path": "renders/site_overview.png",
+      "sha256": "834008401ee63d7cc0b9a38f005246ed8159787ee2a960f2a19e2ec626565e57",
+      "source_scene_sha256": "4ada44310aee8602d4159be3b5f582441d9ef1581bb3098fb6fa40e8f2497a7d",
+      "image_hash_matches_provenance": true,
+      "preview_only": false,
+      "inspection_utc": "2026-10-21T14:00:49.732802+00:00",
+      "observation": "Whole scene framing confirms retained compact site arrangement; service bands are bounded to the east/southwest rather than a new expansion. No black roadway rectangles visible. Small cargo detail cannot be judged at this scale."
+    },
+    "site_cutaway": {
+      "path": "renders/site_cutaway.png",
+      "sha256": "815074aeb7d39628e4575c570e3b7a1a53c07441824902523025f61e78de0462",
+      "source_scene_sha256": "4ada44310aee8602d4159be3b5f582441d9ef1581bb3098fb6fa40e8f2497a7d",
+      "image_hash_matches_provenance": true,
+      "preview_only": false,
+      "inspection_utc": "2026-10-21T14:00:49.735689+00:00",
+      "observation": "Roof-hidden view shows inherited interior/core and yard assembly retained, coherent finite service detailing; no visually apparent displaced modules or floating beds. Cutaway is a presentation hide-state, not removal from saved scene."
+    },
+    "pump_connection_eye": {
+      "path": "renders/pump_connection_eye.png",
+      "sha256": "973851b1ebb4199ed690d944b5e423f1c1e2645f477c90c7fc9bfff9851a3489",
+      "source_scene_sha256": "4ada44310aee8602d4159be3b5f582441d9ef1581bb3098fb6fa40e8f2497a7d",
+      "image_hash_matches_provenance": true,
+      "preview_only": false,
+      "inspection_utc": "2026-10-21T14:00:49.738244+00:00",
+      "observation": "Service cabinet/conduit assembly reads as wall-mounted; grated raised strip meets the crossing cover and existing pump pad. Original pump/pipe/cabinet silhouettes and corridor remain readable. Foreground raised tray is outside the designated crossing itself."
+    },
+    "receiving_connection_eye": {
+      "path": "renders/receiving_connection_eye.png",
+      "sha256": "11578f23aeec7ea9b99fb16bbf671daaf841f4c69cafc51349665d2a3c99094f",
+      "source_scene_sha256": "4ada44310aee8602d4159be3b5f582441d9ef1581bb3098fb6fa40e8f2497a7d",
+      "image_hash_matches_provenance": true,
+      "preview_only": false,
+      "inspection_utc": "2026-10-21T14:00:49.740940+00:00",
+      "observation": "Repeated terminal positions remain coherent with existing shelter front walls; cover links and long drainage/service run have legible support. No exposed suspended conduit/bed or obvious label penetration seen. Long straight original wall repetition remains, now with purposeful service detail."
+    },
+    "cargo_detail_eye": {
+      "path": "renders/cargo_detail_eye.png",
+      "sha256": "0d2ba2d0fa2532771ba7e8d0bdfddf9df8c3c3b07a9cb8c8e84950f49df40973",
+      "source_scene_sha256": "4ada44310aee8602d4159be3b5f582441d9ef1581bb3098fb6fa40e8f2497a7d",
+      "image_hash_matches_provenance": true,
+      "preview_only": false,
+      "inspection_utc": "2026-10-21T14:04:33.751110+00:00",
+      "observation": "Final v04 close-up shows both main straps continuous across faceted cloth shoulders and buckles, with eyelets/cord details attached. No previous shoulder gaps or visible old-layer flicker. Tight detail framing intentionally crops cargo/pallet extents; whole assembly is judged in gallery and geometry checks."
+    },
+    "module_gallery": {
+      "path": "renders/module_gallery.png",
+      "sha256": "4f6387d8423f9589d8b4f73834683611db4d935f3b471d47a35c48e94e03871f",
+      "source_scene_sha256": "4ada44310aee8602d4159be3b5f582441d9ef1581bb3098fb6fa40e8f2497a7d",
+      "image_hash_matches_provenance": true,
+      "preview_only": false,
+      "inspection_utc": "2026-10-21T14:12:11.281188+00:00",
+      "observation": "Replacement gallery actually inspected: LOW-STEP COVER label now correct. Four standalone assemblies are visible; same geometry/framing/light as prior gallery. Wall-terminal floor label remains partially occluded by foreground cargo but module itself is intact. Gallery special lighting is not baseline comparison."
+    }
+  },
+  "matched_baseline_comparisons": {
+    "pump_connection_eye": {
+      "before_image_sha256": "1459f772b67e53ebdaa036b1fafbca0954e342738f8909782700bac1c01be009",
+      "after_image_sha256": "973851b1ebb4199ed690d944b5e423f1c1e2645f477c90c7fc9bfff9851a3489",
+      "baseline_sha256": "3b2f4e727d359b595d818551be04be7ceabaa8fe1504de1164754ada4740b25b",
+      "image_sha_matches": true,
+      "matching_settings": {
+        "camera_type": true,
+        "camera_ortho_scale": true,
+        "camera_position": true,
+        "camera_rotation": true,
+        "camera_lens": true,
+        "renderer": true,
+        "samples": true,
+        "resolution": true,
+        "baseline_lights": true,
+        "render_camera_config_sha256": true
+      },
+      "inspection_utc": "2026-10-21T14:05:36.805632+00:00",
+      "observation": "Same-camera baseline confirms added wall terminal, ground crossing and service-edge drainage detail. Pump silhouettes, retained solid cabinets/screens and open approach remain in place; improvement is functional surface detail, not additional credited cover. No camera/light substitution."
+    },
+    "receiving_connection_eye": {
+      "before_image_sha256": "44e18c3bd2ccd5fc1ab92148e0727a24ae232c305474c4dc4cb01c8a61773f55",
+      "after_image_sha256": "11578f23aeec7ea9b99fb16bbf671daaf841f4c69cafc51349665d2a3c99094f",
+      "baseline_sha256": "3b2f4e727d359b595d818551be04be7ceabaa8fe1504de1164754ada4740b25b",
+      "image_sha_matches": true,
+      "matching_settings": {
+        "camera_type": true,
+        "camera_ortho_scale": true,
+        "camera_position": true,
+        "camera_rotation": true,
+        "camera_lens": true,
+        "renderer": true,
+        "samples": true,
+        "resolution": true,
+        "baseline_lights": true,
+        "render_camera_config_sha256": true
+      },
+      "inspection_utc": "2026-10-21T14:12:11.273635+00:00",
+      "observation": "The same-camera B07 bare repeated walls/aprons acquire attached isolation cabinets, conduits and a continuous supported service edge. This adds plausible connections and surface hierarchy without relocating original shelters or turning dressing into cover."
+    },
+    "cargo_detail_eye": {
+      "before_image_sha256": "3c2ca627d16bd59a6da3f8a467dce6aca59d1690a90da8232d03600390228353",
+      "after_image_sha256": "0d2ba2d0fa2532771ba7e8d0bdfddf9df8c3c3b07a9cb8c8e84950f49df40973",
+      "baseline_sha256": "3b2f4e727d359b595d818551be04be7ceabaa8fe1504de1164754ada4740b25b",
+      "image_sha_matches": true,
+      "matching_settings": {
+        "camera_type": true,
+        "camera_ortho_scale": true,
+        "camera_position": true,
+        "camera_rotation": true,
+        "camera_lens": true,
+        "renderer": true,
+        "samples": true,
+        "resolution": true,
+        "baseline_lights": true,
+        "render_camera_config_sha256": true
+      },
+      "inspection_utc": "2026-10-21T14:12:11.278658+00:00",
+      "observation": "The matched B07 cargo has simpler flat shoulder/cloth surfaces and basic straps; current dressing adds cloth folds, seams, continuous thick straps, explicit buckles, eyelets and attached cords. Old base remains, shoulders have no v02 break. Both are intentionally tight close-ups, not full-pallet framing."
+    }
+  },
+  "limits": [
+    "Visual review is by actual raster inspection, not a runtime demonstration. Module gallery uses dedicated lighting and is not a matched comparison."
+  ],
+  "provenance_inputs": {
+    "render_script": {
+      "path": "Scripts/render_scene.py",
+      "sha256": "21b0b9d6f06d3afdc761487f29920eee0ed6c2e8c04885d963b7bc2b28c75242"
+    },
+    "camera_config": {
+      "path": "Config/render_cameras.json",
+      "sha256": "7c6f4eab99f44a965fec85aa4cbda87767722be61eb4a44fe4a9fc3dd7d92791"
+    },
+    "active_design": {
+      "path": "Config/design_v04.json",
+      "sha256": "b1b704ff745fdacd28feef8d2ee7a0981485ac394b5223b28cf28a57a308ee84"
+    }
+  },
+  "final_provenance_checks": {
+    "site_overview": {
+      "checks": {
+        "image_sha_match": true,
+        "scene_sha_match": true,
+        "render_script_sha_match": true,
+        "camera_config_sha_match": true,
+        "design_sha_match": true,
+        "not_preview": true,
+        "samples48": true,
+        "resolution1600x1000": true
+      },
+      "script": "Scripts/render_scene.py",
+      "script_sha256": "21b0b9d6f06d3afdc761487f29920eee0ed6c2e8c04885d963b7bc2b28c75242"
+    },
+    "site_cutaway": {
+      "checks": {
+        "image_sha_match": true,
+        "scene_sha_match": true,
+        "render_script_sha_match": true,
+        "camera_config_sha_match": true,
+        "design_sha_match": true,
+        "not_preview": true,
+        "samples48": true,
+        "resolution1600x1000": true
+      },
+      "script": "Scripts/render_scene.py",
+      "script_sha256": "21b0b9d6f06d3afdc761487f29920eee0ed6c2e8c04885d963b7bc2b28c75242"
+    },
+    "pump_connection_eye": {
+      "checks": {
+        "image_sha_match": true,
+        "scene_sha_match": true,
+        "render_script_sha_match": true,
+        "camera_config_sha_match": true,
+        "design_sha_match": true,
+        "not_preview": true,
+        "samples48": true,
+        "resolution1600x1000": true
+      },
+      "script": "Scripts/render_scene.py",
+      "script_sha256": "21b0b9d6f06d3afdc761487f29920eee0ed6c2e8c04885d963b7bc2b28c75242"
+    },
+    "receiving_connection_eye": {
+      "checks": {
+        "image_sha_match": true,
+        "scene_sha_match": true,
+        "render_script_sha_match": true,
+        "camera_config_sha_match": true,
+        "design_sha_match": true,
+        "not_preview": true,
+        "samples48": true,
+        "resolution1600x1000": true
+      },
+      "script": "Scripts/render_scene.py",
+      "script_sha256": "21b0b9d6f06d3afdc761487f29920eee0ed6c2e8c04885d963b7bc2b28c75242"
+    },
+    "cargo_detail_eye": {
+      "checks": {
+        "image_sha_match": true,
+        "scene_sha_match": true,
+        "render_script_sha_match": true,
+        "camera_config_sha_match": true,
+        "design_sha_match": true,
+        "not_preview": true,
+        "samples48": true,
+        "resolution1600x1000": true
+      },
+      "script": "Scripts/render_scene.py",
+      "script_sha256": "21b0b9d6f06d3afdc761487f29920eee0ed6c2e8c04885d963b7bc2b28c75242"
+    },
+    "module_gallery": {
+      "checks": {
+        "image_sha_match": true,
+        "scene_sha_match": true,
+        "render_script_sha_match": true,
+        "camera_config_sha_match": true,
+        "design_sha_match": true,
+        "not_preview": true,
+        "samples48": true,
+        "resolution1600x1000": true
+      },
+      "script": "Scripts/render_gallery.py",
+      "script_sha256": "23c7e754aa56c0b7ac2abebf703cc5b16d4005e6af50d820ad0356c6d2b7d42b"
+    },
+    "before_pump_connection_eye": {
+      "checks": {
+        "image_sha_match": true,
+        "scene_sha_match": true,
+        "render_script_sha_match": true,
+        "camera_config_sha_match": true,
+        "design_sha_match": true,
+        "not_preview": true,
+        "samples48": true,
+        "resolution1600x1000": true
+      },
+      "script": "Scripts/render_scene.py",
+      "script_sha256": "21b0b9d6f06d3afdc761487f29920eee0ed6c2e8c04885d963b7bc2b28c75242"
+    },
+    "before_receiving_connection_eye": {
+      "checks": {
+        "image_sha_match": true,
+        "scene_sha_match": true,
+        "render_script_sha_match": true,
+        "camera_config_sha_match": true,
+        "design_sha_match": true,
+        "not_preview": true,
+        "samples48": true,
+        "resolution1600x1000": true
+      },
+      "script": "Scripts/render_scene.py",
+      "script_sha256": "21b0b9d6f06d3afdc761487f29920eee0ed6c2e8c04885d963b7bc2b28c75242"
+    },
+    "before_cargo_detail_eye": {
+      "checks": {
+        "image_sha_match": true,
+        "scene_sha_match": true,
+        "render_script_sha_match": true,
+        "camera_config_sha_match": true,
+        "design_sha_match": true,
+        "not_preview": true,
+        "samples48": true,
+        "resolution1600x1000": true
+      },
+      "script": "Scripts/render_scene.py",
+      "script_sha256": "21b0b9d6f06d3afdc761487f29920eee0ed6c2e8c04885d963b7bc2b28c75242"
+    }
+  },
+  "historical_label_pre_correction": {
+    "path": "renders/module_gallery.png",
+    "sha256": "38b7d3aa6065f998711dc418e466270bdbc91132981f0297a725d66b43605638",
+    "source_scene_sha256": "4ada44310aee8602d4159be3b5f582441d9ef1581bb3098fb6fa40e8f2497a7d",
+    "image_hash_matches_provenance": true,
+    "preview_only": false,
+    "inspection_utc": "2026-10-21T14:04:33.753832+00:00",
+    "observation": "All four standalone modules are visible: raised service edge, FLUSH cover, wall terminal, dressed cargo with retained base. Overall scale, thickness and cargo connections read coherently. Dedicated presentation lighting is not used as baseline comparison; terminal floor label partly occluded by foreground cargo, but module body is visible.",
+    "superseded_reason": "Presentation label FLUSH CROSSING is being corrected to LOW-STEP COVER; geometry, framing and light unchanged. Replacement final gallery must be re-viewed."
+  },
+  "render_provenance_sha256": "aa8a865cf55eabf38cafc6cb537f01c8bc9631ba795903d8b08688b0e31654c0",
+  "visual_conclusion": "Bounded improvement to industrial service links and cargo material/attachment detail, not large layout expansion. Inherited wall/shelter repetition remains but new details have plausible support and purposeful connections; no uncorrected visible shoulder breaks, floating beds or black road rectangles in final inspected views."
+}

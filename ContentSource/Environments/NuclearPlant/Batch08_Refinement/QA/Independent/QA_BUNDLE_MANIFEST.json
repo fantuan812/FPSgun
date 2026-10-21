@@ -1,0 +1,85 @@
+{
+  "status": "FINAL_INDEPENDENT_QA",
+  "utc": "2026-10-21T14:12:11.344330+00:00",
+  "reviewed_scene_sha256": "4ada44310aee8602d4159be3b5f582441d9ef1581bb3098fb6fa40e8f2497a7d",
+  "files": {
+    "FINAL_REVIEW.md": {
+      "sha256": "50d60174f0c00c9d11e66ff9656aab13a9894218184f3d3fe703c7421144598c",
+      "bytes": 5279
+    },
+    "FINAL_QA.json": {
+      "sha256": "e47e5dd1c787b36db3da741635e068de205a1c37487e4bebc8574567b61cd69c",
+      "bytes": 278915
+    },
+    "REPRODUCE.md": {
+      "sha256": "dc75f33aeb229753cc8a29651f15ed4bcc3712d12846f0a05b79f8ce9b0ab3a7",
+      "bytes": 1908
+    },
+    "batch07_tree_before.json": {
+      "sha256": "a5f649c90634b96e68d634d4cdfec1739e2cf4dacbb8d7c941e1e7b4a165e503",
+      "bytes": 16944
+    },
+    "audit_scene.py": {
+      "sha256": "2b600bb36fc23f40093c2d6ea3d67681cddd796a4abf42694ad6239d9adfa7bf",
+      "bytes": 8712
+    },
+    "audit_intersections.py": {
+      "sha256": "c3952a66be9c6f52f82c76747820d31b4cc6b9c874931f685ce4776fcd51ec94",
+      "bytes": 3823
+    },
+    "audit_parts.py": {
+      "sha256": "ed69431f75dc51facf1aa0bf32a8e537eef1a387d1ebc027ab47a8b8a65e7922",
+      "bytes": 4038
+    },
+    "audit_support.py": {
+      "sha256": "9a10f300020cc2745a8a52b6bcf4165f04fbe98da9b083365ae941ae4828d61f",
+      "bytes": 3559
+    },
+    "audit_crossing_heights.py": {
+      "sha256": "7b05a0479705851d89c311e08bf9620b190cee5de2137ec458cbef242dc94a62",
+      "bytes": 3902
+    },
+    "audit_glb.py": {
+      "sha256": "d406c012ca0cf52e2e853b7237366c4b9a5bfa2e9529ce85c57acb947256e9d1",
+      "bytes": 3393
+    },
+    "v04/scene_audit.json": {
+      "sha256": "d6200291b04dcdfcf531da4cdb5a7b1dc64012701d57823a30b6e16c66e04a0d",
+      "bytes": 280753
+    },
+    "v04/intersections.json": {
+      "sha256": "83075180ddd74a8bc26d25b2893886c36e69932395d1583690f5122774f5d0ab",
+      "bytes": 217377
+    },
+    "v04/parts_audit.json": {
+      "sha256": "1c8106ee53aab3339a4197323347715846401425252fc888a387bdda59f1bbfd",
+      "bytes": 20405
+    },
+    "v04/support_audit.json": {
+      "sha256": "a1c522729b74ffcdae4e43f4a382f6568df7438a73539b53076903d6aacef458",
+      "bytes": 209800
+    },
+    "v04/crossing_heights.json": {
+      "sha256": "00d8526c324b5ef2a128fc8dde0606e50dc4f5438c08ec45cd73b1eb2efa6b65",
+      "bytes": 10845
+    },
+    "v04/visual_inspections.json": {
+      "sha256": "db0cd3a2f0c8b9ea0921fdd91f9449307f0bde8599a9f122ef424a7f78df63b9",
+      "bytes": 13951
+    },
+    "v04/glb_audit.json": {
+      "sha256": "d2ca6fa9ebcb09fa8b9ea947fe6a1eabcab953bf4e782c79491502833feab33e",
+      "bytes": 3083
+    },
+    "v04/replay_review.json": {
+      "sha256": "391894f5414d50c95fc6188e12ac95f1d3c30d2d62b1d43f84261dfdc8dd3548",
+      "bytes": 4452
+    },
+    "v03/band_seam_contact.json": {
+      "sha256": "207be10a66aad41d145d07abb909477cf48d44d6140fdb15dc32782760953d27",
+      "bytes": 1984
+    }
+  },
+  "copy_instruction": "Author copies this entire compact folder contents to Batch08_Refinement/QA/Independent before delivery manifest/release seal. Packager verifies; no duplicate copy.",
+  "terminology_only_updated_utc": "2026-10-21T14:13:27.171202+00:00"
+}

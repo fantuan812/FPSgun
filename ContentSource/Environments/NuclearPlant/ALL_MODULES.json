@@ -1,6 +1,6 @@
 {
-  "project": "NuclearPlant cumulative Batch01–07",
-  "current_scene": "Batch07_Refinement/site_refined.blend",
+  "project": "NuclearPlant cumulative Batch01–08",
+  "current_scene": "Batch08_Refinement/site_refined.blend",
   "current_rebuild": "python rebuild_current.py",
   "counts": {
     "Batch01": 8,
@@ -9,13 +9,14 @@
     "Batch04": 3,
     "Batch05": 9,
     "Batch06": 23,
-    "Batch07": 8
+    "Batch07": 8,
+    "Batch08": 4
   },
-  "module_entries": 63,
+  "module_entries": 67,
   "batch06_new_or_regional_composite_entries": 21,
   "batch06_reused_entries": 2,
   "historical_batch01_to05_entries": 32,
-  "count_note": "63 module/combination records: 55 legacy records (including 2 reuse records) plus 7 Batch07 families and 1 separately reusable derived variant; not 63 newly created unique modules.",
+  "count_note": "67 module/combination records: 55 Batch01–06 records (including 2 reuse records), 7 Batch07 families + 1 independent derived variant, and 3 Batch08 families + 1 low-step cover variant (legacy ID FLUSH). Not 67 new unique module families.",
   "modules": [
     {
       "batch": "Batch01",
@@ -656,13 +657,77 @@
       "post_model_orthographic": null,
       "notes": "Narrow cabinet derived variant (object X scale 0.45)",
       "reference_preview": "Batch07_Refinement/References/v04/B07_SERVICE_CABINET_narrow_045.png"
+    },
+    {
+      "batch": "Batch08",
+      "id": "B08_SERVICE_EDGE",
+      "kind": "new_module_family",
+      "model": "Batch08_Refinement/Assets/B08_SERVICE_EDGE.blend",
+      "export": "Batch08_Refinement/Exports/B08_SERVICE_EDGE.glb",
+      "collection": null,
+      "reference": "Batch08_Refinement/References/v03/B08_SERVICE_EDGE.svg",
+      "reference_preview": "Batch08_Refinement/References/v03/B08_SERVICE_EDGE.png",
+      "post_model_orthographic": null,
+      "notes": "Service duct + drainage / curb edge; Self-contained module"
+    },
+    {
+      "batch": "Batch08",
+      "id": "B08_SERVICE_EDGE_FLUSH",
+      "kind": "derived_variant",
+      "model": "Batch08_Refinement/Assets/B08_SERVICE_EDGE_FLUSH.blend",
+      "export": "Batch08_Refinement/Exports/B08_SERVICE_EDGE_FLUSH.glb",
+      "collection": null,
+      "reference": "Batch08_Refinement/References/v03/B08_SERVICE_EDGE_FLUSH.svg",
+      "reference_preview": "Batch08_Refinement/References/v03/B08_SERVICE_EDGE_FLUSH.png",
+      "post_model_orthographic": null,
+      "notes": "Service edge / low-step crossing cover; Self-contained module"
+    },
+    {
+      "batch": "Batch08",
+      "id": "B08_WALL_TERMINAL",
+      "kind": "new_module_family",
+      "model": "Batch08_Refinement/Assets/B08_WALL_TERMINAL.blend",
+      "export": "Batch08_Refinement/Exports/B08_WALL_TERMINAL.glb",
+      "collection": null,
+      "reference": "Batch08_Refinement/References/v03/B08_WALL_TERMINAL.svg",
+      "reference_preview": "Batch08_Refinement/References/v03/B08_WALL_TERMINAL.png",
+      "post_model_orthographic": null,
+      "notes": "Wall service terminal / sealed distribution point; Self-contained module"
+    },
+    {
+      "batch": "Batch08",
+      "id": "B08_CARGO_DRESSING",
+      "kind": "new_module_family",
+      "model": "Batch08_Refinement/Assets/B08_CARGO_DRESSING.blend",
+      "export": "Batch08_Refinement/Exports/B08_CARGO_DRESSING.glb",
+      "collection": null,
+      "reference": "Batch08_Refinement/References/v03/B08_CARGO_DRESSING.svg",
+      "reference_preview": "Batch08_Refinement/References/v03/B08_CARGO_DRESSING.png",
+      "post_model_orthographic": null,
+      "notes": "Cloth / pallet / shipping-case refinement; Cargo asset is complete base plus dressing; site contains dressing only over original unchanged cargo.",
+      "reference_archive": "Batch08_Refinement/References/v03/B08_CARGO_DRESSING.svg.zip"
     }
   ],
   "scenes": [
     {
-      "batch": "Batch07 CURRENT",
+      "batch": "Batch08 CURRENT",
+      "file": "Batch08_Refinement/site_refined.blend",
+      "purpose": "Current complete map, Batch07 protected objects preserved; 59 refinement placements (7 crossing groups divided into 12 ground-conforming segments)."
+    },
+    {
+      "batch": "Batch08",
+      "file": "Batch08_Refinement/Regions/east_service_link.blend",
+      "purpose": "Regional assembly with prior-scene context"
+    },
+    {
+      "batch": "Batch08",
+      "file": "Batch08_Refinement/Regions/southwest_receiving.blend",
+      "purpose": "Regional assembly with prior-scene context"
+    },
+    {
+      "batch": "Batch07 PREVIOUS",
       "file": "Batch07_Refinement/site_refined.blend",
-      "purpose": "Complete refined map; unchanged Batch06 layout and protected baseline geometry."
+      "purpose": "Prior complete map, retained unchanged."
     },
     {
       "batch": "Batch07",
@@ -764,6 +829,25 @@
     ]
   },
   "freeze": {
+    "author_frozen": true,
+    "independent_qa_passed": true,
+    "author_released_blender": true,
+    "scene_sha256": "4ada44310aee8602d4159be3b5f582441d9ef1581bb3098fb6fa40e8f2497a7d",
+    "manifest_file": "DELIVERY_MANIFEST.json",
+    "manifest_sha256": "631563ac1532b948b57b75db01c721c8943007c8e74341c891ec92569d1c403d",
+    "release_sha256": "bf2326a8ad1f8d404fb5bb8a09cbbfc06cf2ef06dc61d2af963f73761bbb0b94",
+    "qa_json_sha256": "e47e5dd1c787b36db3da741635e068de205a1c37487e4bebc8574567b61cd69c",
+    "qa_review_sha256": "50d60174f0c00c9d11e66ff9656aab13a9894218184f3d3fe703c7421144598c",
+    "independent_qa_files": [],
+    "active_design": "Config/design_v04.json",
+    "active_design_version": "v04",
+    "reference_versions": "v01–v04",
+    "received_utc": "2026-10-21T14:15:16.465639+00:00",
+    "scope": "Batch08 final v04; three families + low-step cover variant, 59 placements; Blender static+visual QA with limitations, not UE acceptance"
+  },
+  "batch08_new_families": 3,
+  "batch08_derived_variants": 1,
+  "previous_current_freeze": {
     "author_frozen": true,
     "independent_qa_passed": true,
     "author_released_blender": true,

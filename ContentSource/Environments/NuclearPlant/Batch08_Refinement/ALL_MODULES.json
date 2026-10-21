@@ -1,0 +1,90 @@
+[
+  {
+    "module_id": "B08_SERVICE_EDGE",
+    "family": "service_edge",
+    "title": "Service duct + drainage / curb edge",
+    "blend": "Assets/B08_SERVICE_EDGE.blend",
+    "glb": "Exports/B08_SERVICE_EDGE.glb",
+    "bounds_min": [
+      -2.0,
+      -0.525,
+      -0.049999999999999996
+    ],
+    "bounds_max": [
+      2.0,
+      0.525,
+      0.33999999999999997
+    ],
+    "new_vertices": 856,
+    "new_polygons": 618,
+    "composite_includes_unchanged_base": null,
+    "reference": "References/v03/B08_SERVICE_EDGE.png",
+    "note": "Self-contained module"
+  },
+  {
+    "module_id": "B08_SERVICE_EDGE_FLUSH",
+    "family": "service_edge",
+    "title": "Service edge / low-step crossing cover",
+    "blend": "Assets/B08_SERVICE_EDGE_FLUSH.blend",
+    "glb": "Exports/B08_SERVICE_EDGE_FLUSH.glb",
+    "bounds_min": [
+      -2.0,
+      -0.3,
+      -0.05
+    ],
+    "bounds_max": [
+      2.0,
+      0.3,
+      0.027
+    ],
+    "new_vertices": 392,
+    "new_polygons": 262,
+    "composite_includes_unchanged_base": null,
+    "reference": "References/v03/B08_SERVICE_EDGE_FLUSH.png",
+    "note": "Self-contained module"
+  },
+  {
+    "module_id": "B08_WALL_TERMINAL",
+    "family": "wall_terminal",
+    "title": "Wall service terminal / sealed distribution point",
+    "blend": "Assets/B08_WALL_TERMINAL.blend",
+    "glb": "Exports/B08_WALL_TERMINAL.glb",
+    "bounds_min": [
+      -0.8099999999999999,
+      -0.40950000000000003,
+      -0.05
+    ],
+    "bounds_max": [
+      0.76,
+      0.16,
+      2.277
+    ],
+    "new_vertices": 691,
+    "new_polygons": 459,
+    "composite_includes_unchanged_base": null,
+    "reference": "References/v03/B08_WALL_TERMINAL.png",
+    "note": "Self-contained module"
+  },
+  {
+    "module_id": "B08_CARGO_DRESSING",
+    "family": "cargo",
+    "title": "Cloth / pallet / shipping-case refinement",
+    "blend": "Assets/B08_CARGO_DRESSING.blend",
+    "glb": "Exports/B08_CARGO_DRESSING.glb",
+    "bounds_min": [
+      -2.1216680442759643,
+      -1.4735225414936186,
+      0.010000000000000009
+    ],
+    "bounds_max": [
+      2.2,
+      1.4663938916630883,
+      2.1994714326131573
+    ],
+    "new_vertices": 11037,
+    "new_polygons": 12178,
+    "composite_includes_unchanged_base": "B07_CARGO_SET",
+    "reference": "References/v03/B08_CARGO_DRESSING.png",
+    "note": "Cargo asset is complete base plus dressing; site contains dressing only over original unchanged cargo."
+  }
+]

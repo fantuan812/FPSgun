@@ -1,0 +1,108 @@
+{
+  "utc": "2026-10-21T14:09:00.230580+00:00",
+  "method": "Independent GLB v2 header/chunk/bufferView/accessor bounds and resource/hash parse, no Blender or game-engine import.",
+  "status": "PASS",
+  "modules": [
+    {
+      "module": "B08_SERVICE_EDGE",
+      "path": "Exports/B08_SERVICE_EDGE.glb",
+      "sha256": "d2d649a7c3e08ea44e6fa0aa9cca74b6e92fef1238ab499bbcd16730875cf24d",
+      "source_blend": "Assets/B08_SERVICE_EDGE.blend",
+      "source_blend_sha256": "996a6f59b17a9f02d4c099f9b1950b62acc118f09be9fb46efeda481c37d9462",
+      "bytes": 572220,
+      "meshes": 1,
+      "nodes": 1,
+      "materials": 6,
+      "images": 0,
+      "external_uris": [],
+      "chunks": [
+        {
+          "type": 1313821514,
+          "bytes": 4808
+        },
+        {
+          "type": 5130562,
+          "bytes": 567384
+        }
+      ],
+      "errors": []
+    },
+    {
+      "module": "B08_SERVICE_EDGE_FLUSH",
+      "path": "Exports/B08_SERVICE_EDGE_FLUSH.glb",
+      "sha256": "a8e166f347b2b32a5d65a6e88323c7bea2e3a508a483c3a45f6d801c5d381d4c",
+      "source_blend": "Assets/B08_SERVICE_EDGE_FLUSH.blend",
+      "source_blend_sha256": "d58a5e0928042c8ac24d41e4b2dca014d82d7dacadec68f61efe7a9919589867",
+      "bytes": 215016,
+      "meshes": 1,
+      "nodes": 1,
+      "materials": 3,
+      "images": 0,
+      "external_uris": [],
+      "chunks": [
+        {
+          "type": 1313821514,
+          "bytes": 2564
+        },
+        {
+          "type": 5130562,
+          "bytes": 212424
+        }
+      ],
+      "errors": []
+    },
+    {
+      "module": "B08_WALL_TERMINAL",
+      "path": "Exports/B08_WALL_TERMINAL.glb",
+      "sha256": "d505be20989bbda93c2522314eec21c69ff270bf92c8b564032fca6f4662a6ca",
+      "source_blend": "Assets/B08_WALL_TERMINAL.blend",
+      "source_blend_sha256": "a6f9fde64748785d3e5ac9d94a943f9463dc2df55102c932e267f737135ca0b5",
+      "bytes": 303556,
+      "meshes": 2,
+      "nodes": 2,
+      "materials": 8,
+      "images": 0,
+      "external_uris": [],
+      "chunks": [
+        {
+          "type": 1313821514,
+          "bytes": 7352
+        },
+        {
+          "type": 5130562,
+          "bytes": 296176
+        }
+      ],
+      "errors": []
+    },
+    {
+      "module": "B08_CARGO_DRESSING",
+      "path": "Exports/B08_CARGO_DRESSING.glb",
+      "sha256": "6929b1d0cda6cd46e11246eb0fec9ecefd4478b13b1b397258b5b3ce9d1f97db",
+      "source_blend": "Assets/B08_CARGO_DRESSING.blend",
+      "source_blend_sha256": "4341dc5697eb08f734fd6c8505f88a2c4b167d9b53d30aadbf169232d0dda9d0",
+      "bytes": 781572,
+      "meshes": 3,
+      "nodes": 3,
+      "materials": 13,
+      "images": 0,
+      "external_uris": [],
+      "chunks": [
+        {
+          "type": 1313821514,
+          "bytes": 10820
+        },
+        {
+          "type": 5130562,
+          "bytes": 770724
+        }
+      ],
+      "errors": []
+    }
+  ],
+  "script_sha256": "d406c012ca0cf52e2e853b7237366c4b9a5bfa2e9529ce85c57acb947256e9d1",
+  "limits": [
+    "No GLB runtime/import/collision test.",
+    "Base PBR export only; procedural Blender textures are not baked."
+  ]
+}

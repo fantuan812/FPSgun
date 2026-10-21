@@ -1,0 +1,222 @@
+{
+  "stage": "PRE_MODEL_LOCAL_GROUND_PROFILE",
+  "source": "Independent v03/support_audit.json original retained-ground samples; original B07 ground remains unchanged.",
+  "groups": [
+    {
+      "id": "E07",
+      "region": "east_service_link",
+      "original_v03_placement_index": 7,
+      "axis": "Y",
+      "segments": [
+        {
+          "min": -16,
+          "max": -8,
+          "old_ground_z": -0.05,
+          "cover_top_z": -0.023,
+          "relative_top_m": 0.027
+        }
+      ],
+      "old_ground_at_external_ends": [
+        -0.05,
+        0
+      ],
+      "internal_top_steps_m": [],
+      "external_end_steps_m": [
+        0.027,
+        0.023
+      ]
+    },
+    {
+      "id": "E08",
+      "region": "east_service_link",
+      "original_v03_placement_index": 8,
+      "axis": "Y",
+      "segments": [
+        {
+          "min": 4,
+          "max": 8,
+          "old_ground_z": 0,
+          "cover_top_z": 0.027,
+          "relative_top_m": 0.027
+        }
+      ],
+      "old_ground_at_external_ends": [
+        0,
+        0
+      ],
+      "internal_top_steps_m": [],
+      "external_end_steps_m": [
+        0.027,
+        0.027
+      ]
+    },
+    {
+      "id": "E09",
+      "region": "east_service_link",
+      "original_v03_placement_index": 9,
+      "axis": "Y",
+      "segments": [
+        {
+          "min": 8,
+          "max": 12,
+          "old_ground_z": 0,
+          "cover_top_z": 0.027,
+          "relative_top_m": 0.027
+        }
+      ],
+      "old_ground_at_external_ends": [
+        0,
+        0
+      ],
+      "internal_top_steps_m": [],
+      "external_end_steps_m": [
+        0.027,
+        0.027
+      ]
+    },
+    {
+      "id": "E10",
+      "region": "east_service_link",
+      "original_v03_placement_index": 10,
+      "axis": "X",
+      "segments": [
+        {
+          "min": 44.5,
+          "max": 46,
+          "old_ground_z": -0.05,
+          "cover_top_z": -0.023,
+          "relative_top_m": 0.027
+        },
+        {
+          "min": 46,
+          "max": 48,
+          "old_ground_z": -0.015,
+          "cover_top_z": -0.005,
+          "relative_top_m": 0.01
+        },
+        {
+          "min": 48,
+          "max": 49,
+          "old_ground_z": 0,
+          "cover_top_z": 0.01,
+          "relative_top_m": 0.01
+        }
+      ],
+      "old_ground_at_external_ends": [
+        -0.05,
+        0
+      ],
+      "internal_top_steps_m": [
+        0.018,
+        0.015
+      ],
+      "external_end_steps_m": [
+        0.027,
+        0.01
+      ]
+    },
+    {
+      "id": "SW19",
+      "region": "southwest_receiving",
+      "original_v03_placement_index": 19,
+      "axis": "Y",
+      "segments": [
+        {
+          "min": -38.88,
+          "max": -38,
+          "old_ground_z": 0,
+          "cover_top_z": 0.01,
+          "relative_top_m": 0.01
+        },
+        {
+          "min": -38,
+          "max": -36,
+          "old_ground_z": -0.015,
+          "cover_top_z": -0.005,
+          "relative_top_m": 0.01
+        }
+      ],
+      "old_ground_at_external_ends": [
+        0,
+        -0.015
+      ],
+      "internal_top_steps_m": [
+        0.015
+      ],
+      "external_end_steps_m": [
+        0.01,
+        0.01
+      ]
+    },
+    {
+      "id": "SW21",
+      "region": "southwest_receiving",
+      "original_v03_placement_index": 21,
+      "axis": "Y",
+      "segments": [
+        {
+          "min": -38.88,
+          "max": -38,
+          "old_ground_z": 0,
+          "cover_top_z": 0.01,
+          "relative_top_m": 0.01
+        },
+        {
+          "min": -38,
+          "max": -36,
+          "old_ground_z": -0.015,
+          "cover_top_z": -0.005,
+          "relative_top_m": 0.01
+        }
+      ],
+      "old_ground_at_external_ends": [
+        0,
+        -0.015
+      ],
+      "internal_top_steps_m": [
+        0.015
+      ],
+      "external_end_steps_m": [
+        0.01,
+        0.01
+      ]
+    },
+    {
+      "id": "SW23",
+      "region": "southwest_receiving",
+      "original_v03_placement_index": 23,
+      "axis": "Y",
+      "segments": [
+        {
+          "min": -38.88,
+          "max": -38,
+          "old_ground_z": 0,
+          "cover_top_z": 0.01,
+          "relative_top_m": 0.01
+        },
+        {
+          "min": -38,
+          "max": -36,
+          "old_ground_z": -0.015,
+          "cover_top_z": -0.005,
+          "relative_top_m": 0.01
+        }
+      ],
+      "old_ground_at_external_ends": [
+        0,
+        -0.015
+      ],
+      "internal_top_steps_m": [
+        0.015
+      ],
+      "external_end_steps_m": [
+        0.01,
+        0.01
+      ]
+    }
+  ],
+  "max_relative_cover_top_m": 0.027,
+  "max_internal_top_step_m": 0.018,
+  "max_external_end_step_m": 0.027,
+  "scope": "These are geometric cover-to-old-ground and within-cover level differences. Adjacent raised service-edge endpoints are service interfaces, not a character route certification."
+}

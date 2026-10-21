@@ -1,0 +1,39 @@
+{
+  "stage": "ISOLATED_ONE_COMMAND_REPLAY",
+  "started_utc": "2026-10-21T14:07:02.877963+00:00",
+  "finished_utc": "2026-10-21T14:07:23.737828+00:00",
+  "command": "python3 Scripts/check_rebuild.py",
+  "actual_isolated_entrypoint": "python3 rebuild_all.py",
+  "baseline_copy_sha256": "3b2f4e727d359b595d818551be04be7ceabaa8fe1504de1164754ada4740b25b",
+  "geometry_signature_equal": true,
+  "changed_objects": [],
+  "module_glb_comparison": [
+    {
+      "file": "B08_CARGO_DRESSING.glb",
+      "rebuild_sha256": "6929b1d0cda6cd46e11246eb0fec9ecefd4478b13b1b397258b5b3ce9d1f97db",
+      "original_sha256": "6929b1d0cda6cd46e11246eb0fec9ecefd4478b13b1b397258b5b3ce9d1f97db",
+      "byte_identical": true
+    },
+    {
+      "file": "B08_SERVICE_EDGE.glb",
+      "rebuild_sha256": "d2d649a7c3e08ea44e6fa0aa9cca74b6e92fef1238ab499bbcd16730875cf24d",
+      "original_sha256": "d2d649a7c3e08ea44e6fa0aa9cca74b6e92fef1238ab499bbcd16730875cf24d",
+      "byte_identical": true
+    },
+    {
+      "file": "B08_SERVICE_EDGE_FLUSH.glb",
+      "rebuild_sha256": "a8e166f347b2b32a5d65a6e88323c7bea2e3a508a483c3a45f6d801c5d381d4c",
+      "original_sha256": "a8e166f347b2b32a5d65a6e88323c7bea2e3a508a483c3a45f6d801c5d381d4c",
+      "byte_identical": true
+    },
+    {
+      "file": "B08_WALL_TERMINAL.glb",
+      "rebuild_sha256": "d505be20989bbda93c2522314eec21c69ff270bf92c8b564032fca6f4662a6ca",
+      "original_sha256": "d505be20989bbda93c2522314eec21c69ff270bf92c8b564032fca6f4662a6ca",
+      "byte_identical": true
+    }
+  ],
+  "reference_hashes_rechecked_by_builder": true,
+  "temporary_replay_outputs_removed_after_validation": true,
+  "limitations": "This establishes deterministic geometry/placement and module export, not byte-identical Blender .blend containers, runtime collision, performance or UE validation."
+}

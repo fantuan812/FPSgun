@@ -1,0 +1,70 @@
+{
+  "status": "PASS_AUTHOR_EXECUTED_ISOLATED_REPLAY_EVIDENCE_INDEPENDENTLY_REVIEWED",
+  "reviewed_utc": "2026-10-21T14:12:11.311961+00:00",
+  "method": "Read actual isolated replay/compare logs and JSON; checked script scope, source baseline SHA, final geometry hash, reported rebuilt geometry signature, current GLB bytes against both recorded sides. The independent reviewer did not launch a second isolated replay.",
+  "source_scene_sha256": "4ada44310aee8602d4159be3b5f582441d9ef1581bb3098fb6fa40e8f2497a7d",
+  "baseline_sha256": "3b2f4e727d359b595d818551be04be7ceabaa8fe1504de1164754ada4740b25b",
+  "actual_entrypoint": "python3 rebuild_all.py",
+  "started_utc": "2026-10-21T14:07:02.877963+00:00",
+  "finished_utc": "2026-10-21T14:07:23.737828+00:00",
+  "geometry_signature_equal": true,
+  "object_count": 4555,
+  "mesh_instances": 4409,
+  "unique_mesh_data": 2993,
+  "signature_sha256": "354e6934657030e85f6e80591e895fcd3efcb45ad41555b2181f7394583108fc",
+  "changed_objects": [],
+  "glb_comparison": [
+    {
+      "file": "B08_CARGO_DRESSING.glb",
+      "rebuild_sha256": "6929b1d0cda6cd46e11246eb0fec9ecefd4478b13b1b397258b5b3ce9d1f97db",
+      "original_sha256": "6929b1d0cda6cd46e11246eb0fec9ecefd4478b13b1b397258b5b3ce9d1f97db",
+      "byte_identical": true
+    },
+    {
+      "file": "B08_SERVICE_EDGE.glb",
+      "rebuild_sha256": "d2d649a7c3e08ea44e6fa0aa9cca74b6e92fef1238ab499bbcd16730875cf24d",
+      "original_sha256": "d2d649a7c3e08ea44e6fa0aa9cca74b6e92fef1238ab499bbcd16730875cf24d",
+      "byte_identical": true
+    },
+    {
+      "file": "B08_SERVICE_EDGE_FLUSH.glb",
+      "rebuild_sha256": "a8e166f347b2b32a5d65a6e88323c7bea2e3a508a483c3a45f6d801c5d381d4c",
+      "original_sha256": "a8e166f347b2b32a5d65a6e88323c7bea2e3a508a483c3a45f6d801c5d381d4c",
+      "byte_identical": true
+    },
+    {
+      "file": "B08_WALL_TERMINAL.glb",
+      "rebuild_sha256": "d505be20989bbda93c2522314eec21c69ff270bf92c8b564032fca6f4662a6ca",
+      "original_sha256": "d505be20989bbda93c2522314eec21c69ff270bf92c8b564032fca6f4662a6ca",
+      "byte_identical": true
+    }
+  ],
+  "build_reference_hashes_verified": true,
+  "evidence_files_sha256": {
+    "QA/rebuild_verification.json": "ea84240973bc5d001f0ea05cef0e65c4492b99614218fec6a289a69241ad54c8",
+    "QA/rebuild_signature_comparison.json": "68b585c9b7b1ee6221ad2d38e8b508cf3c72fdeb612c83f2b78fd57984d85348",
+    "QA/rebuild_build_record.json": "ce12f448e449fde41c29783cdd1904be8a234631c274b09263c0edbdd76baa42",
+    "QA/rebuild_replay.log": "13cc2c049f52ca6fce463a9720804c7bf98d770bb0fa6a8c97e863bcbe1caac3",
+    "QA/rebuild_compare.log": "3cd25925f38442fd2a346ffbcdda08b27a751da5f66b70b7a5bf25f3069c2204",
+    "Scripts/check_rebuild.py": "b1588e6ba31d832fd5c32dde3446db7ecd6c0d254e684de27329bd9ccaeeeb50",
+    "Scripts/scene_signature.py": "2b76efce7059d95e5a9da9ea03eae4e5fb6096d1cb4e7f5f3ea714bfdb79a87a",
+    "rebuild_all.py": "a0039a95d82e0dcc63510998f2511044337a6dfd1a8856c4c94ecf0483ebda6c",
+    "rebuild.py": "fc0c594f76e0d3bbf15098c7f3addb774d6e5027dad443ef08aa07c711f1f5c6",
+    "Scripts/export_modules.py": "ffb70f1abda4dd8c496ce1a8520b25d3af714a8e54b47f4e2a8fbbd4a2b49c92",
+    "Scripts/render_serial_queue.py": "07e30b99bd9ab3147b87505de376822b518e8904684950994faad3e5bfe00d93",
+    "QA/render_serial_queue_record.json": "73caede184215cffcff47af98a966108f7f93191f41f178594411239f3bdbc62",
+    "QA/render_queue_gallery_caption.log": "4072ab10a3616035cdadc8137bbfc5c8a2cf3da9d30dfc3d3a4169bc763a266f"
+  },
+  "limits": [
+    "No byte-identical Blend-container claim. Cameras/lights excluded from geometry signature; final render camera/light matching checked separately.",
+    "No engine/import/runtime/collision/performance claim.",
+    "Replay temporary outputs were removed by the author script after verification; actual log and signature records retained."
+  ],
+  "render_entrypoint_review": {
+    "status": "PASS",
+    "method": "Read current one-command render entrypoint, queue and completed gallery-correction log. Per-frame choice uses render_gallery.py for gallery and render_scene.py for other frames, hashes each selected script. Current completed resume record contains all 9 outputs.",
+    "gallery_correction_log_sha256": "4072ab10a3616035cdadc8137bbfc5c8a2cf3da9d30dfc3d3a4169bc763a266f",
+    "render_queue_script_sha256": "07e30b99bd9ab3147b87505de376822b518e8904684950994faad3e5bfe00d93",
+    "no_additional_blender_started_by_independent_reviewer": true
+  }
+}

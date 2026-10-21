@@ -1,0 +1,31 @@
+EGL Error (0x3009): EGL_BAD_MATCH: Arguments are inconsistent (for example, a valid context requires buffers not supplied by a valid surface).
+Failed to create /home/agent/.cache/mesa_shader_cache for shader cache (Read-only file system)---disabling.
+Failed to create /home/agent/.cache/mesa_shader_cache_db for shader cache (Read-only file system)---disabling.
+EGL Error (0x3009): EGL_BAD_MATCH: Arguments are inconsistent (for example, a valid context requires buffers not supplied by a valid surface).
+Blender 4.3.2
+Read blend: "/workspace/shared/NuclearPlant_Batch08_Work/NuclearPlant/Batch08_Refinement/site_refined.blend"
+Fra:1 Mem:805.02M (Peak 867.18M) | Time:01:21.02 | Rendering 1 / 48 samples
+Fra:1 Mem:805.02M (Peak 867.18M) | Time:01:56.97 | Rendering 25 / 48 samples
+Fra:1 Mem:805.02M (Peak 867.18M) | Time:02:31.29 | Rendering 48 / 48 samples
+Saved: '/workspace/shared/NuclearPlant_Batch08_Work/NuclearPlant/Batch08_Refinement/renders/site_overview.png'
+Time: 02:31.64 (Saving: 00:00.29)
+
+Traceback (most recent call last):
+  File "/workspace/shared/NuclearPlant_Batch08_Work/NuclearPlant/Batch08_Refinement/Scripts/render_scene.py", line 49, in <module>
+    provenance[key]={'source_scene':str(src),'active_design':active_design,'active_design_sha256':hashlib.sha256((R/active_design).read_bytes()).hexdigest(),'render_script_sha256':script_sha,'render_camera_config_sha256':camera_config_sha,'camera_type':s.camera.data.type,'camera_ortho_scale':s.camera.data.ortho_scale,'source_scene_sha256':sha,'utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'camera_position':list(s.camera.location),'camera_rotation':list(s.camera.rotation_euler),'camera_lens':s.camera.data.lens,'renderer':s.render.engine,'samples':s.eevee.taa_render_samples,'preview_only':preview,'resolution':[s.render.resolution_x,s.render.resolution_y],'baseline_lights':baseline_light_sig if name!='module_gallery' else 'Gallery only presentation lighting; not a before/after comparison.','image_sha256':hashlib.sha256((R/'renders'/f'{key}.png').read_bytes()).hexdigest()};pp.write_text(json.dumps(provenance,indent=2));print('B08_RENDER_DONE',key,flush=True)
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/pathlib/_local.py", line 557, in write_text
+    return PathBase.write_text(self, data, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/pathlib/_abc.py", line 651, in write_text
+    with self.open(mode='w', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/pathlib/_local.py", line 539, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+IsADirectoryError: [Errno 21] Is a directory: '/workspace/shared/NuclearPlant_Batch08_Work/NuclearPlant/Batch08_Refinement/QA/render_provenance.json'
+
+Error: script failed, file: '/workspace/shared/NuclearPlant_Batch08_Work/NuclearPlant/Batch08_Refinement/Scripts/render_scene.py', exiting.
+Failed to open dir (No such file or directory): /home/agent/.cache/blender/gl-shader-cache/
+
+Blender quit

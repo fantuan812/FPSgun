@@ -1,0 +1,437 @@
+{
+  "scene_sha256": "4ada44310aee8602d4159be3b5f582441d9ef1581bb3098fb6fa40e8f2497a7d",
+  "baseline_sha256": "3b2f4e727d359b595d818551be04be7ceabaa8fe1504de1164754ada4740b25b",
+  "limit_m": 0.03,
+  "definition": "Actual top minus old local ground, not world-Z. All evaluated cover mesh vertices plus 21x3 cover-surface witnesses and known ground-transition +/-1mm witnesses. New bedding never changes old ground.",
+  "covers": [
+    {
+      "object": "B08_SERVICE_EDGE_FLUSH / east_service_link / 07",
+      "bounds": [
+        [
+          44.20000076293945,
+          -16.0,
+          -0.10000000149011612
+        ],
+        [
+          44.79999923706055,
+          -8.0,
+          -0.023000000044703484
+        ]
+      ],
+      "samples": 2810,
+      "maximum_relative_height_m": 0.02700001932680607,
+      "worst": {
+        "type": "vertex",
+        "xyz": [
+          44.69048309326172,
+          -14.239033699035645,
+          -0.023000000044703484
+        ],
+        "ground": {
+          "z": -0.05000001937150955,
+          "object": "Site datum"
+        },
+        "relative_height_m": 0.02700001932680607
+      },
+      "violations_count": 0,
+      "violation_examples": [],
+      "ground_objects": [
+        "B06_P_yard slab",
+        "Site datum"
+      ]
+    },
+    {
+      "object": "B08_SERVICE_EDGE_FLUSH / east_service_link / 08",
+      "bounds": [
+        [
+          44.20000076293945,
+          4.0,
+          -0.05000000074505806
+        ],
+        [
+          44.79999923706055,
+          8.0,
+          0.027000000700354576
+        ]
+      ],
+      "samples": 2807,
+      "maximum_relative_height_m": 0.027000008150935173,
+      "worst": {
+        "type": "vertex",
+        "xyz": [
+          44.69048309326172,
+          4.100483417510986,
+          0.027000000700354576
+        ],
+        "ground": {
+          "z": -7.450580596923828e-09,
+          "object": "B06_P_yard slab"
+        },
+        "relative_height_m": 0.027000008150935173
+      },
+      "violations_count": 0,
+      "violation_examples": [],
+      "ground_objects": [
+        "B06_P_yard slab"
+      ]
+    },
+    {
+      "object": "B08_SERVICE_EDGE_FLUSH / east_service_link / 09",
+      "bounds": [
+        [
+          44.20000076293945,
+          8.0,
+          -0.05000000074505806
+        ],
+        [
+          44.79999923706055,
+          12.0,
+          0.027000000700354576
+        ]
+      ],
+      "samples": 2807,
+      "maximum_relative_height_m": 0.027000008150935173,
+      "worst": {
+        "type": "vertex",
+        "xyz": [
+          44.70000076293945,
+          8.123458862304688,
+          0.027000000700354576
+        ],
+        "ground": {
+          "z": -7.450580596923828e-09,
+          "object": "B06_P_yard slab"
+        },
+        "relative_height_m": 0.027000008150935173
+      },
+      "violations_count": 0,
+      "violation_examples": [],
+      "ground_objects": [
+        "B06_P_yard slab"
+      ]
+    },
+    {
+      "object": "B08_SERVICE_EDGE_FLUSH / east_service_link / 10",
+      "bounds": [
+        [
+          44.5,
+          -18.299999237060547,
+          -0.10000000149011612
+        ],
+        [
+          46.0,
+          -17.700000762939453,
+          -0.023000000044703484
+        ]
+      ],
+      "samples": 2810,
+      "maximum_relative_height_m": 0.02700001932680607,
+      "worst": {
+        "type": "vertex",
+        "xyz": [
+          44.83018112182617,
+          -18.19048309326172,
+          -0.023000000044703484
+        ],
+        "ground": {
+          "z": -0.05000001937150955,
+          "object": "Site datum"
+        },
+        "relative_height_m": 0.02700001932680607
+      },
+      "violations_count": 0,
+      "violation_examples": [],
+      "ground_objects": [
+        "Protected pedestrian hardstand.006",
+        "Site datum"
+      ]
+    },
+    {
+      "object": "B08_SERVICE_EDGE_FLUSH / east_service_link / 11",
+      "bounds": [
+        [
+          46.0,
+          -18.299999237060547,
+          -0.0820000022649765
+        ],
+        [
+          48.0,
+          -17.700000762939453,
+          -0.005000000819563866
+        ]
+      ],
+      "samples": 2813,
+      "maximum_relative_height_m": 0.010000007227063179,
+      "worst": {
+        "type": "vertex",
+        "xyz": [
+          46.04827117919922,
+          -18.200000762939453,
+          -0.005000000819563866
+        ],
+        "ground": {
+          "z": -0.015000008046627045,
+          "object": "Protected pedestrian hardstand.006"
+        },
+        "relative_height_m": 0.010000007227063179
+      },
+      "violations_count": 0,
+      "violation_examples": [],
+      "ground_objects": [
+        "Protected pedestrian hardstand.006",
+        "Service compound hardstand.014"
+      ]
+    },
+    {
+      "object": "B08_SERVICE_EDGE_FLUSH / east_service_link / 12",
+      "bounds": [
+        [
+          48.0,
+          -18.299999237060547,
+          -0.06700000166893005
+        ],
+        [
+          49.0,
+          -17.700000762939453,
+          0.009999999776482582
+        ]
+      ],
+      "samples": 2810,
+      "maximum_relative_height_m": 0.009999999776482582,
+      "worst": {
+        "type": "vertex",
+        "xyz": [
+          48.03086471557617,
+          -18.200000762939453,
+          0.009999999776482582
+        ],
+        "ground": {
+          "z": 0.0,
+          "object": "Service compound hardstand.014"
+        },
+        "relative_height_m": 0.009999999776482582
+      },
+      "violations_count": 0,
+      "violation_examples": [],
+      "ground_objects": [
+        "Service compound hardstand.014"
+      ]
+    },
+    {
+      "object": "B08_SERVICE_EDGE_FLUSH / southwest_receiving / 19",
+      "bounds": [
+        [
+          -56.29999923706055,
+          -38.87999725341797,
+          -0.06700000166893005
+        ],
+        [
+          -55.70000076293945,
+          -38.0,
+          0.009999999776482582
+        ]
+      ],
+      "samples": 2810,
+      "maximum_relative_height_m": 0.009999999776482582,
+      "worst": {
+        "type": "vertex",
+        "xyz": [
+          -55.79999923706055,
+          -38.85283660888672,
+          0.009999999776482582
+        ],
+        "ground": {
+          "z": 0.0,
+          "object": "Service compound hardstand.004"
+        },
+        "relative_height_m": 0.009999999776482582
+      },
+      "violations_count": 0,
+      "violation_examples": [],
+      "ground_objects": [
+        "Protected pedestrian hardstand.005",
+        "Service compound hardstand.004"
+      ]
+    },
+    {
+      "object": "B08_SERVICE_EDGE_FLUSH / southwest_receiving / 20",
+      "bounds": [
+        [
+          -56.29999923706055,
+          -38.0,
+          -0.0820000022649765
+        ],
+        [
+          -55.70000076293945,
+          -36.0,
+          -0.005000000819563866
+        ]
+      ],
+      "samples": 2810,
+      "maximum_relative_height_m": 0.027499988675117493,
+      "worst": {
+        "type": "vertex",
+        "xyz": [
+          -55.70050048828125,
+          -36.0,
+          -0.02250000089406967
+        ],
+        "ground": {
+          "z": -0.049999989569187164,
+          "object": "Site datum"
+        },
+        "relative_height_m": 0.027499988675117493
+      },
+      "violations_count": 0,
+      "violation_examples": [],
+      "ground_objects": [
+        "Protected pedestrian hardstand.005",
+        "Site datum"
+      ]
+    },
+    {
+      "object": "B08_SERVICE_EDGE_FLUSH / southwest_receiving / 22",
+      "bounds": [
+        [
+          -38.29999923706055,
+          -38.87999725341797,
+          -0.06700000166893005
+        ],
+        [
+          -37.70000076293945,
+          -38.0,
+          0.009999999776482582
+        ]
+      ],
+      "samples": 2810,
+      "maximum_relative_height_m": 0.009999999776482582,
+      "worst": {
+        "type": "vertex",
+        "xyz": [
+          -37.79999923706055,
+          -38.85283660888672,
+          0.009999999776482582
+        ],
+        "ground": {
+          "z": 0.0,
+          "object": "Service compound hardstand.002"
+        },
+        "relative_height_m": 0.009999999776482582
+      },
+      "violations_count": 0,
+      "violation_examples": [],
+      "ground_objects": [
+        "Protected pedestrian hardstand.005",
+        "Service compound hardstand.002"
+      ]
+    },
+    {
+      "object": "B08_SERVICE_EDGE_FLUSH / southwest_receiving / 23",
+      "bounds": [
+        [
+          -38.29999923706055,
+          -38.0,
+          -0.0820000022649765
+        ],
+        [
+          -37.70000076293945,
+          -36.0,
+          -0.005000000819563866
+        ]
+      ],
+      "samples": 2810,
+      "maximum_relative_height_m": 0.027500003576278687,
+      "worst": {
+        "type": "vertex",
+        "xyz": [
+          -37.70050048828125,
+          -36.0,
+          -0.02250000089406967
+        ],
+        "ground": {
+          "z": -0.05000000447034836,
+          "object": "Site datum"
+        },
+        "relative_height_m": 0.027500003576278687
+      },
+      "violations_count": 0,
+      "violation_examples": [],
+      "ground_objects": [
+        "Protected pedestrian hardstand.005",
+        "Site datum"
+      ]
+    },
+    {
+      "object": "B08_SERVICE_EDGE_FLUSH / southwest_receiving / 25",
+      "bounds": [
+        [
+          -20.299999237060547,
+          -38.87999725341797,
+          -0.06700000166893005
+        ],
+        [
+          -19.700000762939453,
+          -38.0,
+          0.009999999776482582
+        ]
+      ],
+      "samples": 2810,
+      "maximum_relative_height_m": 0.009999999776482582,
+      "worst": {
+        "type": "vertex",
+        "xyz": [
+          -19.799999237060547,
+          -38.85283660888672,
+          0.009999999776482582
+        ],
+        "ground": {
+          "z": 0.0,
+          "object": "Service compound hardstand"
+        },
+        "relative_height_m": 0.009999999776482582
+      },
+      "violations_count": 0,
+      "violation_examples": [],
+      "ground_objects": [
+        "Protected pedestrian hardstand.005",
+        "Service compound hardstand"
+      ]
+    },
+    {
+      "object": "B08_SERVICE_EDGE_FLUSH / southwest_receiving / 26",
+      "bounds": [
+        [
+          -20.299999237060547,
+          -38.0,
+          -0.0820000022649765
+        ],
+        [
+          -19.700000762939453,
+          -36.0,
+          -0.005000000819563866
+        ]
+      ],
+      "samples": 2810,
+      "maximum_relative_height_m": 0.027500003576278687,
+      "worst": {
+        "type": "vertex",
+        "xyz": [
+          -19.70050048828125,
+          -36.0,
+          -0.02250000089406967
+        ],
+        "ground": {
+          "z": -0.05000000447034836,
+          "object": "Site datum"
+        },
+        "relative_height_m": 0.027500003576278687
+      },
+      "violations_count": 0,
+      "violation_examples": [],
+      "ground_objects": [
+        "Protected pedestrian hardstand.005",
+        "Site datum"
+      ]
+    }
+  ]
+}

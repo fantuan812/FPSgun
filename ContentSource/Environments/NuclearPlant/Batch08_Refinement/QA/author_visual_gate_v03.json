@@ -1,0 +1,33 @@
+{
+  "utc": "2026-10-21T13:38:25.120336+00:00",
+  "source_scene_sha256": "130a5d444a2da2ea0e370eaf11b5f15929b9875eaa237334fd928dde266b2d6b",
+  "reviewed": [
+    "renders/preview_cargo_detail_eye.png",
+    "renders/preview_cargo_front_detail.png"
+  ],
+  "scope": "Same-camera check of the webbing shoulder discontinuity observed in v02, not a new aesthetic scope.",
+  "result": "Both actual raster previews show continuous webbing over the shoulders. No visible cloth/strap layering flicker or exposed old buckle intersection. Root independently viewed cargo_detail_eye and accepted this local correction.",
+  "pre_model_frozen_inputs_reverified": [
+    {
+      "freeze": "reference_freeze.json",
+      "utc": "2026-10-21T13:11:02.462868+00:00",
+      "inputs": 30,
+      "bad": []
+    },
+    {
+      "freeze": "reference_freeze_v02.json",
+      "utc": "2026-10-21T13:22:52.251636+00:00",
+      "inputs": 30,
+      "bad": []
+    },
+    {
+      "freeze": "reference_freeze_v03.json",
+      "utc": "2026-10-21T13:35:07.399716+00:00",
+      "inputs": 30,
+      "bad": []
+    }
+  ],
+  "stage": "HISTORICAL_V03_CARGO_VISUAL_GATE",
+  "final_images_pending_at_gate": true,
+  "images_moved_to": "QA/visual_gates/v03/"
+}

@@ -1,0 +1,109 @@
+{
+  "utc": "2026-10-21T14:06:59.341319+00:00",
+  "method": "one Blender process per image, sequential, writable temporary shader cache",
+  "environment_overrides": {
+    "XDG_CACHE_HOME": "/tmp/b08_blender_shader_cache",
+    "MESA_SHADER_CACHE_DIR": "/tmp/b08_blender_shader_cache/mesa"
+  },
+  "records": [
+    {
+      "image": "site_overview",
+      "status": "reused_hash_verified"
+    },
+    {
+      "image": "site_cutaway",
+      "status": "reused_hash_verified"
+    },
+    {
+      "image": "pump_connection_eye",
+      "status": "reused_hash_verified"
+    },
+    {
+      "image": "receiving_connection_eye",
+      "status": "reused_hash_verified"
+    },
+    {
+      "image": "cargo_detail_eye",
+      "returncode": 0,
+      "command": [
+        "blender",
+        "-b",
+        "-t",
+        "4",
+        "--python-exit-code",
+        "1",
+        "--python",
+        "/workspace/shared/NuclearPlant_Batch08_Work/NuclearPlant/Batch08_Refinement/Scripts/render_scene.py",
+        "--",
+        "cargo_detail_eye"
+      ]
+    },
+    {
+      "image": "module_gallery",
+      "returncode": 0,
+      "command": [
+        "blender",
+        "-b",
+        "-t",
+        "4",
+        "--python-exit-code",
+        "1",
+        "--python",
+        "/workspace/shared/NuclearPlant_Batch08_Work/NuclearPlant/Batch08_Refinement/Scripts/render_scene.py",
+        "--",
+        "module_gallery"
+      ]
+    },
+    {
+      "image": "before_pump_connection_eye",
+      "returncode": 0,
+      "command": [
+        "blender",
+        "-b",
+        "-t",
+        "4",
+        "--python-exit-code",
+        "1",
+        "--python",
+        "/workspace/shared/NuclearPlant_Batch08_Work/NuclearPlant/Batch08_Refinement/Scripts/render_scene.py",
+        "--",
+        "--before",
+        "pump_connection_eye"
+      ]
+    },
+    {
+      "image": "before_receiving_connection_eye",
+      "returncode": 0,
+      "command": [
+        "blender",
+        "-b",
+        "-t",
+        "4",
+        "--python-exit-code",
+        "1",
+        "--python",
+        "/workspace/shared/NuclearPlant_Batch08_Work/NuclearPlant/Batch08_Refinement/Scripts/render_scene.py",
+        "--",
+        "--before",
+        "receiving_connection_eye"
+      ]
+    },
+    {
+      "image": "before_cargo_detail_eye",
+      "returncode": 0,
+      "command": [
+        "blender",
+        "-b",
+        "-t",
+        "4",
+        "--python-exit-code",
+        "1",
+        "--python",
+        "/workspace/shared/NuclearPlant_Batch08_Work/NuclearPlant/Batch08_Refinement/Scripts/render_scene.py",
+        "--",
+        "--before",
+        "cargo_detail_eye"
+      ]
+    }
+  ]
+}

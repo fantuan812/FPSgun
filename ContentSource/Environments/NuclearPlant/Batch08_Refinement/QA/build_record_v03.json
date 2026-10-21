@@ -1,0 +1,650 @@
+{
+  "stage": "MODEL_AFTER_REFERENCE",
+  "started_utc": "2026-10-21T13:35:09.236605+00:00",
+  "finished_utc": "2026-10-21T13:35:16.017488+00:00",
+  "reference_freeze_utc": "2026-10-21T13:35:07.399716+00:00",
+  "active_design": "Config/design_v03.json",
+  "active_revision": "v03",
+  "v01_reference_freeze_utc": "2026-10-21T13:11:02.462868+00:00",
+  "reference_hashes_verified": true,
+  "source_sha256": "3b2f4e727d359b595d818551be04be7ceabaa8fe1504de1164754ada4740b25b",
+  "source_still_unchanged": true,
+  "old_objects_preserved": 4456,
+  "old_geometry_changes": [],
+  "new_placements": [
+    {
+      "object": "B08_SERVICE_EDGE / east_service_link / 00",
+      "module": "B08_SERVICE_EDGE",
+      "position": [
+        44.5,
+        -18,
+        0
+      ],
+      "rz": 90,
+      "tag": "east_spine"
+    },
+    {
+      "object": "B08_SERVICE_EDGE / east_service_link / 01",
+      "module": "B08_SERVICE_EDGE",
+      "position": [
+        44.5,
+        -6,
+        0
+      ],
+      "rz": 90,
+      "tag": "east_spine"
+    },
+    {
+      "object": "B08_SERVICE_EDGE / east_service_link / 02",
+      "module": "B08_SERVICE_EDGE",
+      "position": [
+        44.5,
+        -2,
+        0
+      ],
+      "rz": 90,
+      "tag": "east_spine"
+    },
+    {
+      "object": "B08_SERVICE_EDGE / east_service_link / 03",
+      "module": "B08_SERVICE_EDGE",
+      "position": [
+        44.5,
+        2,
+        0
+      ],
+      "rz": 90,
+      "tag": "east_spine"
+    },
+    {
+      "object": "B08_SERVICE_EDGE / east_service_link / 04",
+      "module": "B08_SERVICE_EDGE",
+      "position": [
+        44.5,
+        14,
+        0
+      ],
+      "rz": 90,
+      "tag": "east_spine"
+    },
+    {
+      "object": "B08_SERVICE_EDGE / east_service_link / 05",
+      "module": "B08_SERVICE_EDGE",
+      "position": [
+        44.5,
+        18,
+        0
+      ],
+      "rz": 90,
+      "tag": "east_spine"
+    },
+    {
+      "object": "B08_SERVICE_EDGE / east_service_link / 06",
+      "module": "B08_SERVICE_EDGE",
+      "position": [
+        44.5,
+        22,
+        0
+      ],
+      "rz": 90,
+      "tag": "east_spine"
+    },
+    {
+      "object": "B08_SERVICE_EDGE_FLUSH / east_service_link / 07",
+      "module": "B08_SERVICE_EDGE_FLUSH",
+      "position": [
+        44.5,
+        -12,
+        0
+      ],
+      "rz": 90,
+      "scale": [
+        2,
+        1,
+        1
+      ],
+      "tag": "protected_crossing"
+    },
+    {
+      "object": "B08_SERVICE_EDGE_FLUSH / east_service_link / 08",
+      "module": "B08_SERVICE_EDGE_FLUSH",
+      "position": [
+        44.5,
+        6,
+        0
+      ],
+      "rz": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tag": "protected_crossing"
+    },
+    {
+      "object": "B08_SERVICE_EDGE_FLUSH / east_service_link / 09",
+      "module": "B08_SERVICE_EDGE_FLUSH",
+      "position": [
+        44.5,
+        10,
+        0
+      ],
+      "rz": 90,
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tag": "protected_crossing"
+    },
+    {
+      "object": "B08_SERVICE_EDGE_FLUSH / east_service_link / 10",
+      "module": "B08_SERVICE_EDGE_FLUSH",
+      "position": [
+        46.75,
+        -18,
+        0
+      ],
+      "rz": 0,
+      "scale": [
+        1.125,
+        1,
+        1
+      ],
+      "tag": "yard_feed"
+    },
+    {
+      "object": "B08_WALL_TERMINAL / east_service_link / 11",
+      "module": "B08_WALL_TERMINAL",
+      "position": [
+        45.84,
+        22,
+        0
+      ],
+      "rz": -90,
+      "tag": "pump_hall_wall_contact"
+    },
+    {
+      "object": "B08_WALL_TERMINAL / east_service_link / 12",
+      "module": "B08_WALL_TERMINAL",
+      "position": [
+        48.84,
+        -18,
+        0
+      ],
+      "rz": -90,
+      "tag": "transformer_external_wall_contact"
+    },
+    {
+      "object": "B08_WALL_TERMINAL / east_service_link / 13",
+      "module": "B08_WALL_TERMINAL",
+      "position": [
+        49.41,
+        -20.0,
+        0
+      ],
+      "rz": 90,
+      "tag": "transformer_internal_wall_contact"
+    },
+    {
+      "object": "B08_SERVICE_EDGE / southwest_receiving / 00",
+      "module": "B08_SERVICE_EDGE",
+      "position": [
+        -66,
+        -18,
+        0
+      ],
+      "rz": 90,
+      "tag": "maintenance_supply"
+    },
+    {
+      "object": "B08_SERVICE_EDGE / southwest_receiving / 01",
+      "module": "B08_SERVICE_EDGE",
+      "position": [
+        -66,
+        -22,
+        0
+      ],
+      "rz": 90,
+      "tag": "maintenance_supply"
+    },
+    {
+      "object": "B08_SERVICE_EDGE / southwest_receiving / 02",
+      "module": "B08_SERVICE_EDGE",
+      "position": [
+        -66,
+        -26,
+        0
+      ],
+      "rz": 90,
+      "tag": "maintenance_supply"
+    },
+    {
+      "object": "B08_SERVICE_EDGE / southwest_receiving / 03",
+      "module": "B08_SERVICE_EDGE",
+      "position": [
+        -66,
+        -30,
+        0
+      ],
+      "rz": 90,
+      "tag": "maintenance_supply"
+    },
+    {
+      "object": "B08_SERVICE_EDGE / southwest_receiving / 04",
+      "module": "B08_SERVICE_EDGE",
+      "position": [
+        -66,
+        -34,
+        0
+      ],
+      "rz": 90,
+      "tag": "maintenance_supply"
+    },
+    {
+      "object": "B08_SERVICE_EDGE / southwest_receiving / 05",
+      "module": "B08_SERVICE_EDGE",
+      "position": [
+        -63.5,
+        -36,
+        0
+      ],
+      "rz": 0,
+      "tag": "receiving_spine"
+    },
+    {
+      "object": "B08_SERVICE_EDGE / southwest_receiving / 06",
+      "module": "B08_SERVICE_EDGE",
+      "position": [
+        -59.5,
+        -36,
+        0
+      ],
+      "rz": 0,
+      "tag": "receiving_spine"
+    },
+    {
+      "object": "B08_SERVICE_EDGE / southwest_receiving / 07",
+      "module": "B08_SERVICE_EDGE",
+      "position": [
+        -55.5,
+        -36,
+        0
+      ],
+      "rz": 0,
+      "tag": "receiving_spine"
+    },
+    {
+      "object": "B08_SERVICE_EDGE / southwest_receiving / 08",
+      "module": "B08_SERVICE_EDGE",
+      "position": [
+        -51.5,
+        -36,
+        0
+      ],
+      "rz": 0,
+      "tag": "receiving_spine"
+    },
+    {
+      "object": "B08_SERVICE_EDGE / southwest_receiving / 09",
+      "module": "B08_SERVICE_EDGE",
+      "position": [
+        -47.5,
+        -36,
+        0
+      ],
+      "rz": 0,
+      "tag": "receiving_spine"
+    },
+    {
+      "object": "B08_SERVICE_EDGE / southwest_receiving / 10",
+      "module": "B08_SERVICE_EDGE",
+      "position": [
+        -43.5,
+        -36,
+        0
+      ],
+      "rz": 0,
+      "tag": "receiving_spine"
+    },
+    {
+      "object": "B08_SERVICE_EDGE / southwest_receiving / 11",
+      "module": "B08_SERVICE_EDGE",
+      "position": [
+        -39.5,
+        -36,
+        0
+      ],
+      "rz": 0,
+      "tag": "receiving_spine"
+    },
+    {
+      "object": "B08_SERVICE_EDGE / southwest_receiving / 12",
+      "module": "B08_SERVICE_EDGE",
+      "position": [
+        -35.5,
+        -36,
+        0
+      ],
+      "rz": 0,
+      "tag": "receiving_spine"
+    },
+    {
+      "object": "B08_SERVICE_EDGE / southwest_receiving / 13",
+      "module": "B08_SERVICE_EDGE",
+      "position": [
+        -31.5,
+        -36,
+        0
+      ],
+      "rz": 0,
+      "tag": "receiving_spine"
+    },
+    {
+      "object": "B08_SERVICE_EDGE / southwest_receiving / 14",
+      "module": "B08_SERVICE_EDGE",
+      "position": [
+        -27.5,
+        -36,
+        0
+      ],
+      "rz": 0,
+      "tag": "receiving_spine"
+    },
+    {
+      "object": "B08_SERVICE_EDGE / southwest_receiving / 15",
+      "module": "B08_SERVICE_EDGE",
+      "position": [
+        -23.5,
+        -36,
+        0
+      ],
+      "rz": 0,
+      "tag": "receiving_spine"
+    },
+    {
+      "object": "B08_SERVICE_EDGE / southwest_receiving / 16",
+      "module": "B08_SERVICE_EDGE",
+      "position": [
+        -19.5,
+        -36,
+        0
+      ],
+      "rz": 0,
+      "tag": "receiving_spine"
+    },
+    {
+      "object": "B08_SERVICE_EDGE / southwest_receiving / 17",
+      "module": "B08_SERVICE_EDGE",
+      "position": [
+        -15.5,
+        -36,
+        0
+      ],
+      "rz": 0,
+      "tag": "receiving_spine"
+    },
+    {
+      "object": "B08_WALL_TERMINAL / southwest_receiving / 18",
+      "module": "B08_WALL_TERMINAL",
+      "position": [
+        -66,
+        -16.16,
+        0
+      ],
+      "rz": 0,
+      "tag": "maintenance_wall_contact"
+    },
+    {
+      "object": "B08_SERVICE_EDGE_FLUSH / southwest_receiving / 19",
+      "module": "B08_SERVICE_EDGE_FLUSH",
+      "position": [
+        -56,
+        -37.44,
+        0
+      ],
+      "rz": 90,
+      "scale": [
+        0.72,
+        1,
+        1
+      ],
+      "tag": "receiving_branch"
+    },
+    {
+      "object": "B08_WALL_TERMINAL / southwest_receiving / 20",
+      "module": "B08_WALL_TERMINAL",
+      "position": [
+        -56,
+        -38.84,
+        0
+      ],
+      "rz": 180,
+      "tag": "receiving_external_wall_contact"
+    },
+    {
+      "object": "B08_SERVICE_EDGE_FLUSH / southwest_receiving / 21",
+      "module": "B08_SERVICE_EDGE_FLUSH",
+      "position": [
+        -38,
+        -37.44,
+        0
+      ],
+      "rz": 90,
+      "scale": [
+        0.72,
+        1,
+        1
+      ],
+      "tag": "receiving_branch"
+    },
+    {
+      "object": "B08_WALL_TERMINAL / southwest_receiving / 22",
+      "module": "B08_WALL_TERMINAL",
+      "position": [
+        -38,
+        -38.84,
+        0
+      ],
+      "rz": 180,
+      "tag": "receiving_external_wall_contact"
+    },
+    {
+      "object": "B08_SERVICE_EDGE_FLUSH / southwest_receiving / 23",
+      "module": "B08_SERVICE_EDGE_FLUSH",
+      "position": [
+        -20,
+        -37.44,
+        0
+      ],
+      "rz": 90,
+      "scale": [
+        0.72,
+        1,
+        1
+      ],
+      "tag": "receiving_branch"
+    },
+    {
+      "object": "B08_WALL_TERMINAL / southwest_receiving / 24",
+      "module": "B08_WALL_TERMINAL",
+      "position": [
+        -20,
+        -38.84,
+        0
+      ],
+      "rz": 180,
+      "tag": "receiving_external_wall_contact"
+    },
+    {
+      "object": "B08_WALL_TERMINAL / southwest_receiving / 25",
+      "module": "B08_WALL_TERMINAL",
+      "position": [
+        -42.4,
+        -53.0,
+        0
+      ],
+      "rz": 0,
+      "tag": "receiving_internal_wall_contact"
+    },
+    {
+      "object": "B08_WALL_TERMINAL / southwest_receiving / 26",
+      "module": "B08_WALL_TERMINAL",
+      "position": [
+        -24.4,
+        -40.0,
+        0
+      ],
+      "rz": 0,
+      "tag": "receiving_internal_wall_contact"
+    },
+    {
+      "object": "B08_WALL_TERMINAL / southwest_receiving / 27",
+      "module": "B08_WALL_TERMINAL",
+      "position": [
+        -60.4,
+        -40.0,
+        0
+      ],
+      "rz": 0,
+      "tag": "receiving_internal_wall_contact"
+    },
+    {
+      "object": "B08_CARGO_DRESSING / southwest_receiving / 28",
+      "module": "B08_CARGO_DRESSING",
+      "position": [
+        -21.8,
+        -44.55,
+        0
+      ],
+      "rz": 0,
+      "tag": "existing_cargo_overlay"
+    },
+    {
+      "object": "B08_CARGO_DRESSING / southwest_receiving / 29",
+      "module": "B08_CARGO_DRESSING",
+      "position": [
+        -14.8,
+        -42.4,
+        0
+      ],
+      "rz": 90,
+      "tag": "existing_cargo_overlay"
+    },
+    {
+      "object": "B08_CARGO_DRESSING / southwest_receiving / 30",
+      "module": "B08_CARGO_DRESSING",
+      "position": [
+        -23.5,
+        -57.55,
+        0
+      ],
+      "rz": 0,
+      "tag": "existing_cargo_overlay"
+    },
+    {
+      "object": "B08_CARGO_DRESSING / southwest_receiving / 31",
+      "module": "B08_CARGO_DRESSING",
+      "position": [
+        -17.0,
+        -57.55,
+        0
+      ],
+      "rz": 0,
+      "tag": "existing_cargo_overlay"
+    },
+    {
+      "object": "B08_CARGO_DRESSING / southwest_receiving / 32",
+      "module": "B08_CARGO_DRESSING",
+      "position": [
+        -41.5,
+        -44.55,
+        0
+      ],
+      "rz": 0,
+      "tag": "existing_cargo_overlay"
+    },
+    {
+      "object": "B08_CARGO_DRESSING / southwest_receiving / 33",
+      "module": "B08_CARGO_DRESSING",
+      "position": [
+        -35.0,
+        -44.55,
+        0
+      ],
+      "rz": 0,
+      "tag": "existing_cargo_overlay"
+    },
+    {
+      "object": "B08_CARGO_DRESSING / southwest_receiving / 34",
+      "module": "B08_CARGO_DRESSING",
+      "position": [
+        -39.8,
+        -57.55,
+        0
+      ],
+      "rz": 180,
+      "tag": "existing_cargo_overlay"
+    },
+    {
+      "object": "B08_CARGO_DRESSING / southwest_receiving / 35",
+      "module": "B08_CARGO_DRESSING",
+      "position": [
+        -32.8,
+        -55.4,
+        0
+      ],
+      "rz": 90,
+      "tag": "existing_cargo_overlay"
+    },
+    {
+      "object": "B08_CARGO_DRESSING / southwest_receiving / 36",
+      "module": "B08_CARGO_DRESSING",
+      "position": [
+        -57.8,
+        -44.55,
+        0
+      ],
+      "rz": 0,
+      "tag": "existing_cargo_overlay"
+    },
+    {
+      "object": "B08_CARGO_DRESSING / southwest_receiving / 37",
+      "module": "B08_CARGO_DRESSING",
+      "position": [
+        -50.8,
+        -42.4,
+        0
+      ],
+      "rz": 90,
+      "tag": "existing_cargo_overlay"
+    },
+    {
+      "object": "B08_CARGO_DRESSING / southwest_receiving / 38",
+      "module": "B08_CARGO_DRESSING",
+      "position": [
+        -59.5,
+        -57.55,
+        0
+      ],
+      "rz": 0,
+      "tag": "existing_cargo_overlay"
+    },
+    {
+      "object": "B08_CARGO_DRESSING / southwest_receiving / 39",
+      "module": "B08_CARGO_DRESSING",
+      "position": [
+        -53.0,
+        -57.55,
+        0
+      ],
+      "rz": 0,
+      "tag": "existing_cargo_overlay"
+    }
+  ],
+  "family_count": 3,
+  "asset_count_including_variant": 4,
+  "full_scene_sha256": "130a5d444a2da2ea0e370eaf11b5f15929b9875eaa237334fd928dde266b2d6b",
+  "ue_runtime_tested": false,
+  "official_manny_tested": false
+}

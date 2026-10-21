@@ -1,0 +1,14 @@
+{
+  "requested_utc": "2026-10-21T13:42:08.984917+00:00",
+  "reason": "Parent requested local-ground-referenced crossing cover <=30mm revision v04. Stop current obsolete v03 queue after current image save, not during sampling.",
+  "method": "Temporarily turn the unfrozen provenance output path into a directory, so the post-frame write raises IsADirectoryError; --python-exit-code 1 prevents shell && continuation. Restore the original provenance file after process exits.",
+  "partial_images": "Work history only, not final delivery renders.",
+  "completed_utc": "2026-10-21T13:48:33.457199+00:00",
+  "process_exit_code": 1,
+  "remaining_v03_queue_executed": false,
+  "provenance_output_restored": true,
+  "saved_partial_image": "QA/visual_gates/v03/site_overview.png",
+  "saved_partial_image_sha256": "3e3368e5a0a90ab0e6444a87f43a66ec2b64d7d5801d7af55155c7e6e3592894",
+  "source_scene_sha256": "130a5d444a2da2ea0e370eaf11b5f15929b9875eaa237334fd928dde266b2d6b",
+  "note": "The saved partial overview is not final and has no completed per-frame provenance record because the deliberate stop occurred at that write. Source hash and partial image hash are retained here."
+}

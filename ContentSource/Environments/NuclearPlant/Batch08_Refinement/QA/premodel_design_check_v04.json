@@ -1,0 +1,1086 @@
+{
+  "stage": "PRE_MODEL_ANALYTIC_DESIGN_CHECK",
+  "route_width_m": 2,
+  "height_filter_m": 0.06,
+  "route_issues": [],
+  "wall_contacts": [
+    {
+      "index": 13,
+      "region": "east_service_link",
+      "tag": "pump_hall_wall_contact",
+      "back_contact_point": [
+        46.0,
+        22.0,
+        1.0
+      ],
+      "target_axis": 0,
+      "target_plane": 46,
+      "analytic_gap_m": 0.0,
+      "backplate_max_z_m": 2.277
+    },
+    {
+      "index": 14,
+      "region": "east_service_link",
+      "tag": "transformer_external_wall_contact",
+      "back_contact_point": [
+        49.0,
+        -18.0,
+        1.0
+      ],
+      "target_axis": 0,
+      "target_plane": 49,
+      "analytic_gap_m": 0.0,
+      "backplate_max_z_m": 2.277
+    },
+    {
+      "index": 15,
+      "region": "east_service_link",
+      "tag": "transformer_internal_wall_contact",
+      "back_contact_point": [
+        49.25,
+        -20.0,
+        1.0
+      ],
+      "target_axis": 0,
+      "target_plane": 49.25,
+      "analytic_gap_m": 0.0,
+      "backplate_max_z_m": 2.277
+    },
+    {
+      "index": 18,
+      "region": "southwest_receiving",
+      "tag": "maintenance_wall_contact",
+      "back_contact_point": [
+        -66.0,
+        -16.0,
+        1.0
+      ],
+      "target_axis": 1,
+      "target_plane": -16,
+      "analytic_gap_m": 0.0,
+      "backplate_max_z_m": 2.277
+    },
+    {
+      "index": 21,
+      "region": "southwest_receiving",
+      "tag": "receiving_external_wall_contact",
+      "back_contact_point": [
+        -56.0,
+        -39.0,
+        1.0
+      ],
+      "target_axis": 1,
+      "target_plane": -39,
+      "analytic_gap_m": 0.0,
+      "backplate_max_z_m": 2.277
+    },
+    {
+      "index": 24,
+      "region": "southwest_receiving",
+      "tag": "receiving_external_wall_contact",
+      "back_contact_point": [
+        -38.0,
+        -39.0,
+        1.0
+      ],
+      "target_axis": 1,
+      "target_plane": -39,
+      "analytic_gap_m": 0.0,
+      "backplate_max_z_m": 2.277
+    },
+    {
+      "index": 27,
+      "region": "southwest_receiving",
+      "tag": "receiving_external_wall_contact",
+      "back_contact_point": [
+        -20.0,
+        -39.0,
+        1.0
+      ],
+      "target_axis": 1,
+      "target_plane": -39,
+      "analytic_gap_m": 0.0,
+      "backplate_max_z_m": 2.277
+    },
+    {
+      "index": 28,
+      "region": "southwest_receiving",
+      "tag": "receiving_internal_wall_contact",
+      "back_contact_point": [
+        -42.4,
+        -52.84,
+        1.0
+      ],
+      "target_axis": 1,
+      "target_plane": -52.84,
+      "analytic_gap_m": 0.0,
+      "backplate_max_z_m": 2.277
+    },
+    {
+      "index": 29,
+      "region": "southwest_receiving",
+      "tag": "receiving_internal_wall_contact",
+      "back_contact_point": [
+        -24.4,
+        -39.84,
+        1.0
+      ],
+      "target_axis": 1,
+      "target_plane": -39.84,
+      "analytic_gap_m": 0.0,
+      "backplate_max_z_m": 2.277
+    },
+    {
+      "index": 30,
+      "region": "southwest_receiving",
+      "tag": "receiving_internal_wall_contact",
+      "back_contact_point": [
+        -60.4,
+        -39.84,
+        1.0
+      ],
+      "target_axis": 1,
+      "target_plane": -39.84,
+      "analytic_gap_m": 0.0,
+      "backplate_max_z_m": 2.277
+    }
+  ],
+  "placements": [
+    {
+      "region": "east_service_link",
+      "index": 0,
+      "module": "B08_SERVICE_EDGE",
+      "min": [
+        43.975,
+        -20.0,
+        -0.049999999999999996
+      ],
+      "max": [
+        45.025,
+        -16.0,
+        0.33999999999999997
+      ]
+    },
+    {
+      "region": "east_service_link",
+      "index": 1,
+      "module": "B08_SERVICE_EDGE",
+      "min": [
+        43.975,
+        -8.0,
+        -0.049999999999999996
+      ],
+      "max": [
+        45.025,
+        -4.0,
+        0.33999999999999997
+      ]
+    },
+    {
+      "region": "east_service_link",
+      "index": 2,
+      "module": "B08_SERVICE_EDGE",
+      "min": [
+        43.975,
+        -4.0,
+        -0.049999999999999996
+      ],
+      "max": [
+        45.025,
+        0.0,
+        0.33999999999999997
+      ]
+    },
+    {
+      "region": "east_service_link",
+      "index": 3,
+      "module": "B08_SERVICE_EDGE",
+      "min": [
+        43.975,
+        0.0,
+        -0.049999999999999996
+      ],
+      "max": [
+        45.025,
+        4.0,
+        0.33999999999999997
+      ]
+    },
+    {
+      "region": "east_service_link",
+      "index": 4,
+      "module": "B08_SERVICE_EDGE",
+      "min": [
+        43.975,
+        12.0,
+        -0.049999999999999996
+      ],
+      "max": [
+        45.025,
+        16.0,
+        0.33999999999999997
+      ]
+    },
+    {
+      "region": "east_service_link",
+      "index": 5,
+      "module": "B08_SERVICE_EDGE",
+      "min": [
+        43.975,
+        16.0,
+        -0.049999999999999996
+      ],
+      "max": [
+        45.025,
+        20.0,
+        0.33999999999999997
+      ]
+    },
+    {
+      "region": "east_service_link",
+      "index": 6,
+      "module": "B08_SERVICE_EDGE",
+      "min": [
+        43.975,
+        20.0,
+        -0.049999999999999996
+      ],
+      "max": [
+        45.025,
+        24.0,
+        0.33999999999999997
+      ]
+    },
+    {
+      "region": "east_service_link",
+      "index": 7,
+      "module": "B08_SERVICE_EDGE_FLUSH",
+      "min": [
+        44.2,
+        -16.0,
+        -0.1
+      ],
+      "max": [
+        44.8,
+        -8.0,
+        -0.023000000000000003
+      ]
+    },
+    {
+      "region": "east_service_link",
+      "index": 8,
+      "module": "B08_SERVICE_EDGE_FLUSH",
+      "min": [
+        44.2,
+        4.0,
+        -0.05
+      ],
+      "max": [
+        44.8,
+        8.0,
+        0.027
+      ]
+    },
+    {
+      "region": "east_service_link",
+      "index": 9,
+      "module": "B08_SERVICE_EDGE_FLUSH",
+      "min": [
+        44.2,
+        8.0,
+        -0.05
+      ],
+      "max": [
+        44.8,
+        12.0,
+        0.027
+      ]
+    },
+    {
+      "region": "east_service_link",
+      "index": 10,
+      "module": "B08_SERVICE_EDGE_FLUSH",
+      "min": [
+        44.5,
+        -18.3,
+        -0.1
+      ],
+      "max": [
+        46.0,
+        -17.7,
+        -0.023000000000000003
+      ]
+    },
+    {
+      "region": "east_service_link",
+      "index": 11,
+      "module": "B08_SERVICE_EDGE_FLUSH",
+      "min": [
+        46.0,
+        -18.3,
+        -0.082
+      ],
+      "max": [
+        48.0,
+        -17.7,
+        -0.005000000000000001
+      ]
+    },
+    {
+      "region": "east_service_link",
+      "index": 12,
+      "module": "B08_SERVICE_EDGE_FLUSH",
+      "min": [
+        48.0,
+        -18.3,
+        -0.067
+      ],
+      "max": [
+        49.0,
+        -17.7,
+        0.009999999999999998
+      ]
+    },
+    {
+      "region": "east_service_link",
+      "index": 13,
+      "module": "B08_WALL_TERMINAL",
+      "min": [
+        45.4305,
+        21.24,
+        -0.05
+      ],
+      "max": [
+        46.0,
+        22.81,
+        2.277
+      ]
+    },
+    {
+      "region": "east_service_link",
+      "index": 14,
+      "module": "B08_WALL_TERMINAL",
+      "min": [
+        48.4305,
+        -18.76,
+        -0.05
+      ],
+      "max": [
+        49.0,
+        -17.19,
+        2.277
+      ]
+    },
+    {
+      "region": "east_service_link",
+      "index": 15,
+      "module": "B08_WALL_TERMINAL",
+      "min": [
+        49.25,
+        -20.81,
+        -0.05
+      ],
+      "max": [
+        49.8195,
+        -19.24,
+        2.277
+      ]
+    },
+    {
+      "region": "southwest_receiving",
+      "index": 0,
+      "module": "B08_SERVICE_EDGE",
+      "min": [
+        -66.525,
+        -20.0,
+        -0.049999999999999996
+      ],
+      "max": [
+        -65.475,
+        -16.0,
+        0.33999999999999997
+      ]
+    },
+    {
+      "region": "southwest_receiving",
+      "index": 1,
+      "module": "B08_SERVICE_EDGE",
+      "min": [
+        -66.525,
+        -24.0,
+        -0.049999999999999996
+      ],
+      "max": [
+        -65.475,
+        -20.0,
+        0.33999999999999997
+      ]
+    },
+    {
+      "region": "southwest_receiving",
+      "index": 2,
+      "module": "B08_SERVICE_EDGE",
+      "min": [
+        -66.525,
+        -28.0,
+        -0.049999999999999996
+      ],
+      "max": [
+        -65.475,
+        -24.0,
+        0.33999999999999997
+      ]
+    },
+    {
+      "region": "southwest_receiving",
+      "index": 3,
+      "module": "B08_SERVICE_EDGE",
+      "min": [
+        -66.525,
+        -32.0,
+        -0.049999999999999996
+      ],
+      "max": [
+        -65.475,
+        -28.0,
+        0.33999999999999997
+      ]
+    },
+    {
+      "region": "southwest_receiving",
+      "index": 4,
+      "module": "B08_SERVICE_EDGE",
+      "min": [
+        -66.525,
+        -36.0,
+        -0.049999999999999996
+      ],
+      "max": [
+        -65.475,
+        -32.0,
+        0.33999999999999997
+      ]
+    },
+    {
+      "region": "southwest_receiving",
+      "index": 5,
+      "module": "B08_SERVICE_EDGE",
+      "min": [
+        -65.5,
+        -36.525,
+        -0.049999999999999996
+      ],
+      "max": [
+        -61.5,
+        -35.475,
+        0.33999999999999997
+      ]
+    },
+    {
+      "region": "southwest_receiving",
+      "index": 6,
+      "module": "B08_SERVICE_EDGE",
+      "min": [
+        -61.5,
+        -36.525,
+        -0.049999999999999996
+      ],
+      "max": [
+        -57.5,
+        -35.475,
+        0.33999999999999997
+      ]
+    },
+    {
+      "region": "southwest_receiving",
+      "index": 7,
+      "module": "B08_SERVICE_EDGE",
+      "min": [
+        -57.5,
+        -36.525,
+        -0.049999999999999996
+      ],
+      "max": [
+        -53.5,
+        -35.475,
+        0.33999999999999997
+      ]
+    },
+    {
+      "region": "southwest_receiving",
+      "index": 8,
+      "module": "B08_SERVICE_EDGE",
+      "min": [
+        -53.5,
+        -36.525,
+        -0.049999999999999996
+      ],
+      "max": [
+        -49.5,
+        -35.475,
+        0.33999999999999997
+      ]
+    },
+    {
+      "region": "southwest_receiving",
+      "index": 9,
+      "module": "B08_SERVICE_EDGE",
+      "min": [
+        -49.5,
+        -36.525,
+        -0.049999999999999996
+      ],
+      "max": [
+        -45.5,
+        -35.475,
+        0.33999999999999997
+      ]
+    },
+    {
+      "region": "southwest_receiving",
+      "index": 10,
+      "module": "B08_SERVICE_EDGE",
+      "min": [
+        -45.5,
+        -36.525,
+        -0.049999999999999996
+      ],
+      "max": [
+        -41.5,
+        -35.475,
+        0.33999999999999997
+      ]
+    },
+    {
+      "region": "southwest_receiving",
+      "index": 11,
+      "module": "B08_SERVICE_EDGE",
+      "min": [
+        -41.5,
+        -36.525,
+        -0.049999999999999996
+      ],
+      "max": [
+        -37.5,
+        -35.475,
+        0.33999999999999997
+      ]
+    },
+    {
+      "region": "southwest_receiving",
+      "index": 12,
+      "module": "B08_SERVICE_EDGE",
+      "min": [
+        -37.5,
+        -36.525,
+        -0.049999999999999996
+      ],
+      "max": [
+        -33.5,
+        -35.475,
+        0.33999999999999997
+      ]
+    },
+    {
+      "region": "southwest_receiving",
+      "index": 13,
+      "module": "B08_SERVICE_EDGE",
+      "min": [
+        -33.5,
+        -36.525,
+        -0.049999999999999996
+      ],
+      "max": [
+        -29.5,
+        -35.475,
+        0.33999999999999997
+      ]
+    },
+    {
+      "region": "southwest_receiving",
+      "index": 14,
+      "module": "B08_SERVICE_EDGE",
+      "min": [
+        -29.5,
+        -36.525,
+        -0.049999999999999996
+      ],
+      "max": [
+        -25.5,
+        -35.475,
+        0.33999999999999997
+      ]
+    },
+    {
+      "region": "southwest_receiving",
+      "index": 15,
+      "module": "B08_SERVICE_EDGE",
+      "min": [
+        -25.5,
+        -36.525,
+        -0.049999999999999996
+      ],
+      "max": [
+        -21.5,
+        -35.475,
+        0.33999999999999997
+      ]
+    },
+    {
+      "region": "southwest_receiving",
+      "index": 16,
+      "module": "B08_SERVICE_EDGE",
+      "min": [
+        -21.5,
+        -36.525,
+        -0.049999999999999996
+      ],
+      "max": [
+        -17.5,
+        -35.475,
+        0.33999999999999997
+      ]
+    },
+    {
+      "region": "southwest_receiving",
+      "index": 17,
+      "module": "B08_SERVICE_EDGE",
+      "min": [
+        -17.5,
+        -36.525,
+        -0.049999999999999996
+      ],
+      "max": [
+        -13.5,
+        -35.475,
+        0.33999999999999997
+      ]
+    },
+    {
+      "region": "southwest_receiving",
+      "index": 18,
+      "module": "B08_WALL_TERMINAL",
+      "min": [
+        -66.81,
+        -16.5695,
+        -0.05
+      ],
+      "max": [
+        -65.24,
+        -16.0,
+        2.277
+      ]
+    },
+    {
+      "region": "southwest_receiving",
+      "index": 19,
+      "module": "B08_SERVICE_EDGE_FLUSH",
+      "min": [
+        -56.3,
+        -38.879999999999995,
+        -0.067
+      ],
+      "max": [
+        -55.7,
+        -38.0,
+        0.009999999999999998
+      ]
+    },
+    {
+      "region": "southwest_receiving",
+      "index": 20,
+      "module": "B08_SERVICE_EDGE_FLUSH",
+      "min": [
+        -56.3,
+        -38.0,
+        -0.082
+      ],
+      "max": [
+        -55.7,
+        -36.0,
+        -0.005000000000000001
+      ]
+    },
+    {
+      "region": "southwest_receiving",
+      "index": 21,
+      "module": "B08_WALL_TERMINAL",
+      "min": [
+        -56.76,
+        -39.0,
+        -0.05
+      ],
+      "max": [
+        -55.19,
+        -38.4305,
+        2.277
+      ]
+    },
+    {
+      "region": "southwest_receiving",
+      "index": 22,
+      "module": "B08_SERVICE_EDGE_FLUSH",
+      "min": [
+        -38.3,
+        -38.879999999999995,
+        -0.067
+      ],
+      "max": [
+        -37.7,
+        -38.0,
+        0.009999999999999998
+      ]
+    },
+    {
+      "region": "southwest_receiving",
+      "index": 23,
+      "module": "B08_SERVICE_EDGE_FLUSH",
+      "min": [
+        -38.3,
+        -38.0,
+        -0.082
+      ],
+      "max": [
+        -37.7,
+        -36.0,
+        -0.005000000000000001
+      ]
+    },
+    {
+      "region": "southwest_receiving",
+      "index": 24,
+      "module": "B08_WALL_TERMINAL",
+      "min": [
+        -38.76,
+        -39.0,
+        -0.05
+      ],
+      "max": [
+        -37.19,
+        -38.4305,
+        2.277
+      ]
+    },
+    {
+      "region": "southwest_receiving",
+      "index": 25,
+      "module": "B08_SERVICE_EDGE_FLUSH",
+      "min": [
+        -20.3,
+        -38.879999999999995,
+        -0.067
+      ],
+      "max": [
+        -19.7,
+        -38.0,
+        0.009999999999999998
+      ]
+    },
+    {
+      "region": "southwest_receiving",
+      "index": 26,
+      "module": "B08_SERVICE_EDGE_FLUSH",
+      "min": [
+        -20.3,
+        -38.0,
+        -0.082
+      ],
+      "max": [
+        -19.7,
+        -36.0,
+        -0.005000000000000001
+      ]
+    },
+    {
+      "region": "southwest_receiving",
+      "index": 27,
+      "module": "B08_WALL_TERMINAL",
+      "min": [
+        -20.76,
+        -39.0,
+        -0.05
+      ],
+      "max": [
+        -19.19,
+        -38.4305,
+        2.277
+      ]
+    },
+    {
+      "region": "southwest_receiving",
+      "index": 28,
+      "module": "B08_WALL_TERMINAL",
+      "min": [
+        -43.21,
+        -53.4095,
+        -0.05
+      ],
+      "max": [
+        -41.64,
+        -52.84,
+        2.277
+      ]
+    },
+    {
+      "region": "southwest_receiving",
+      "index": 29,
+      "module": "B08_WALL_TERMINAL",
+      "min": [
+        -25.209999999999997,
+        -40.4095,
+        -0.05
+      ],
+      "max": [
+        -23.639999999999997,
+        -39.84,
+        2.277
+      ]
+    },
+    {
+      "region": "southwest_receiving",
+      "index": 30,
+      "module": "B08_WALL_TERMINAL",
+      "min": [
+        -61.21,
+        -40.4095,
+        -0.05
+      ],
+      "max": [
+        -59.64,
+        -39.84,
+        2.277
+      ]
+    },
+    {
+      "region": "southwest_receiving",
+      "index": 31,
+      "module": "B08_CARGO_DRESSING",
+      "min": [
+        -23.921668044275965,
+        -46.02352254149361,
+        0.27210023036323455
+      ],
+      "max": [
+        -19.645,
+        -43.08360610833691,
+        2.1994714326131573
+      ]
+    },
+    {
+      "region": "southwest_receiving",
+      "index": 32,
+      "module": "B08_CARGO_DRESSING",
+      "min": [
+        -16.26639389166309,
+        -44.52166804427596,
+        0.27210023036323455
+      ],
+      "max": [
+        -13.326477458506382,
+        -40.245,
+        2.1994714326131573
+      ]
+    },
+    {
+      "region": "southwest_receiving",
+      "index": 33,
+      "module": "B08_CARGO_DRESSING",
+      "min": [
+        -25.621668044275964,
+        -59.02352254149361,
+        0.27210023036323455
+      ],
+      "max": [
+        -21.345,
+        -56.08360610833691,
+        2.1994714326131573
+      ]
+    },
+    {
+      "region": "southwest_receiving",
+      "index": 34,
+      "module": "B08_CARGO_DRESSING",
+      "min": [
+        -19.121668044275964,
+        -59.02352254149361,
+        0.27210023036323455
+      ],
+      "max": [
+        -14.844999999999999,
+        -56.08360610833691,
+        2.1994714326131573
+      ]
+    },
+    {
+      "region": "southwest_receiving",
+      "index": 35,
+      "module": "B08_CARGO_DRESSING",
+      "min": [
+        -43.621668044275964,
+        -46.02352254149361,
+        0.27210023036323455
+      ],
+      "max": [
+        -39.345,
+        -43.08360610833691,
+        2.1994714326131573
+      ]
+    },
+    {
+      "region": "southwest_receiving",
+      "index": 36,
+      "module": "B08_CARGO_DRESSING",
+      "min": [
+        -37.121668044275964,
+        -46.02352254149361,
+        0.27210023036323455
+      ],
+      "max": [
+        -32.845,
+        -43.08360610833691,
+        2.1994714326131573
+      ]
+    },
+    {
+      "region": "southwest_receiving",
+      "index": 37,
+      "module": "B08_CARGO_DRESSING",
+      "min": [
+        -41.955,
+        -59.016393891663085,
+        0.27210023036323455
+      ],
+      "max": [
+        -37.67833195572403,
+        -56.07647745850638,
+        2.1994714326131573
+      ]
+    },
+    {
+      "region": "southwest_receiving",
+      "index": 38,
+      "module": "B08_CARGO_DRESSING",
+      "min": [
+        -34.266393891663085,
+        -57.52166804427596,
+        0.27210023036323455
+      ],
+      "max": [
+        -31.32647745850638,
+        -53.245,
+        2.1994714326131573
+      ]
+    },
+    {
+      "region": "southwest_receiving",
+      "index": 39,
+      "module": "B08_CARGO_DRESSING",
+      "min": [
+        -59.92166804427596,
+        -46.02352254149361,
+        0.27210023036323455
+      ],
+      "max": [
+        -55.644999999999996,
+        -43.08360610833691,
+        2.1994714326131573
+      ]
+    },
+    {
+      "region": "southwest_receiving",
+      "index": 40,
+      "module": "B08_CARGO_DRESSING",
+      "min": [
+        -52.266393891663085,
+        -44.52166804427596,
+        0.27210023036323455
+      ],
+      "max": [
+        -49.32647745850638,
+        -40.245,
+        2.1994714326131573
+      ]
+    },
+    {
+      "region": "southwest_receiving",
+      "index": 41,
+      "module": "B08_CARGO_DRESSING",
+      "min": [
+        -61.621668044275964,
+        -59.02352254149361,
+        0.27210023036323455
+      ],
+      "max": [
+        -57.345,
+        -56.08360610833691,
+        2.1994714326131573
+      ]
+    },
+    {
+      "region": "southwest_receiving",
+      "index": 42,
+      "module": "B08_CARGO_DRESSING",
+      "min": [
+        -55.121668044275964,
+        -59.02352254149361,
+        0.27210023036323455
+      ],
+      "max": [
+        -50.845,
+        -56.08360610833691,
+        2.1994714326131573
+      ]
+    }
+  ],
+  "module_bounds": {
+    "B08_SERVICE_EDGE": {
+      "min": [
+        -2.0,
+        -0.525,
+        -0.049999999999999996
+      ],
+      "max": [
+        2.0,
+        0.525,
+        0.33999999999999997
+      ]
+    },
+    "B08_SERVICE_EDGE_FLUSH": {
+      "min": [
+        -2.0,
+        -0.3,
+        -0.05
+      ],
+      "max": [
+        2.0,
+        0.3,
+        0.027
+      ]
+    },
+    "B08_WALL_TERMINAL": {
+      "min": [
+        -0.8099999999999999,
+        -0.40950000000000003,
+        -0.05
+      ],
+      "max": [
+        0.76,
+        0.16,
+        2.277
+      ]
+    },
+    "B08_CARGO_DRESSING": {
+      "min": [
+        -2.1216680442759643,
+        -1.4735225414936186,
+        0.27210023036323455
+      ],
+      "max": [
+        2.1550000000000002,
+        1.4663938916630883,
+        2.1994714326131573
+      ]
+    }
+  },
+  "limitations": "AABB and route samples on proposed axis-aligned instances; later evaluated-mesh QA remains required. Cover tops <=0.03m relative to actual old ground; not a capsule traversal test."
+}

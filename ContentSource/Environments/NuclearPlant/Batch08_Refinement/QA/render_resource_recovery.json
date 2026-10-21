@@ -1,0 +1,18 @@
+{
+  "utc": "2026-10-21T14:00:20.697613+00:00",
+  "failed_queue_exit_code": 137,
+  "completed_current_v04_images": [
+    "site_overview",
+    "site_cutaway",
+    "pump_connection_eye",
+    "receiving_connection_eye"
+  ],
+  "recovery": "No concurrent Blender process was running. Preserve four completed hash-logged images. Resume remaining two images and three before comparisons with one serial Blender process per image, writable /tmp shader caches. No scene/camera/light/sample changes.",
+  "original_log": "QA/render_serial_partial.log",
+  "recovery_completed_utc": "2026-10-21T14:08:35.989003+00:00",
+  "remaining_original_queue_outcome": "All six final views and three B07 comparisons now complete with verified image/source provenance; 4 original successful images reused, no geometry changes. Caption-only gallery correction separately recorded.",
+  "recovered_serial_queue_exit_code": 0,
+  "exports_completed": 4,
+  "isolated_rebuild_geometry_equal": true,
+  "all_four_rebuilt_glb_byte_identical": true
+}

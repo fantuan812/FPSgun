@@ -1,0 +1,19 @@
+{
+  "status": "AUTHOR_RELEASE_FOR_INDEPENDENT_PACKAGING",
+  "utc": "2026-10-21T14:14:27.254635+00:00",
+  "manifest": "DELIVERY_MANIFEST.json",
+  "manifest_sha256": "631563ac1532b948b57b75db01c721c8943007c8e74341c891ec92569d1c403d",
+  "scene": "site_refined.blend",
+  "scene_sha256": "4ada44310aee8602d4159be3b5f582441d9ef1581bb3098fb6fa40e8f2497a7d",
+  "active_config": "Config/design_v04.json",
+  "active_config_sha256": "b1b704ff745fdacd28feef8d2ee7a0981485ac394b5223b28cf28a57a308ee84",
+  "reference_freeze": "QA/reference_freeze_v04.json",
+  "reference_freeze_sha256": "adce8cf0b697cf25412a18b52fb8a9fdbfd1a8209542cf6800dff3ed43e61038",
+  "independent_report": "QA/Independent/FINAL_REVIEW.md",
+  "rebuild_command": "python3 rebuild_all.py",
+  "rebuild_with_renders": "python3 rebuild_all.py --render",
+  "verification_command": "python3 Scripts/check_rebuild.py",
+  "source_dependency": "../Batch07_Refinement/site_refined.blend",
+  "source_dependency_sha256": "3b2f4e727d359b595d818551be04be7ceabaa8fe1504de1164754ada4740b25b",
+  "publishing_authority": "Parent and cumulative packager; this author script does not publish."
+}

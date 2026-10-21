@@ -1,15 +1,21 @@
-# 全部模块与场景索引
+# NuclearPlant 全部模块与整体场景索引 — Batch01–08
 
-共 **63 条模块/组合库记录**：历史55条（含2条复用）+ Batch07的7个基础模块家族与1个独立窄柜变体；不是63个全新模块。
+当前完整地图：[`Batch08_Refinement/site_refined.blend`](Batch08_Refinement/site_refined.blend)
 
-当前完整地图：`Batch07_Refinement/site_refined.blend`；历史树均保留，无需先下载旧包。
+共 **67 条模块/组合记录**，含历史复用记录与独立派生变体；不代表67个全新模块家族。Batch08为3家族+1低台阶盖板变体；所有旧批资产保留。
 
-## 场景入口
+## 整体地图与分块
 
-|状态/批次|文件|用途|
+|批次|原生文件|说明|
 |---|---|---|
-|Batch07 CURRENT|[Batch07_Refinement/site_refined.blend](Batch07_Refinement/site_refined.blend)|最新完整地图；7家族+窄柜变体，3分块美术精化。|
-|Batch06 BASELINE|[Batch06_Expansion/site_expansion.blend](Batch06_Expansion/site_expansion.blend)|上一版五区布局基线，原字节保留；以 Batch05 核心为中心扩建。|
+|Batch08 CURRENT|[Batch08_Refinement/site_refined.blend](Batch08_Refinement/site_refined.blend)|Current complete map, Batch07 protected objects preserved; 59 refinement placements (7 crossing groups divided into 12 ground-conforming segments).|
+|Batch08|[Batch08_Refinement/Regions/east_service_link.blend](Batch08_Refinement/Regions/east_service_link.blend)|Regional assembly with prior-scene context|
+|Batch08|[Batch08_Refinement/Regions/southwest_receiving.blend](Batch08_Refinement/Regions/southwest_receiving.blend)|Regional assembly with prior-scene context|
+|Batch07 PREVIOUS|[Batch07_Refinement/site_refined.blend](Batch07_Refinement/site_refined.blend)|Prior complete map, retained unchanged.|
+|Batch07|[Batch07_Refinement/Regions/core_skin.blend](Batch07_Refinement/Regions/core_skin.blend)|Refined regional assembly|
+|Batch07|[Batch07_Refinement/Regions/east_pump_yards.blend](Batch07_Refinement/Regions/east_pump_yards.blend)|Refined regional assembly|
+|Batch07|[Batch07_Refinement/Regions/southwest_logistics.blend](Batch07_Refinement/Regions/southwest_logistics.blend)|Refined regional assembly|
+|Batch06 BASELINE|[Batch06_Expansion/site_expansion.blend](Batch06_Expansion/site_expansion.blend)|Previous Batch06 complete map; retained unchanged.|
 |Batch06|[Batch06_Expansion/Regions/control.blend](Batch06_Expansion/Regions/control.blend)|控制办公分区|
 |Batch06|[Batch06_Expansion/Regions/maintenance.blend](Batch06_Expansion/Regions/maintenance.blend)|维修分区|
 |Batch06|[Batch06_Expansion/Regions/pumps.blend](Batch06_Expansion/Regions/pumps.blend)|泵站分区|
@@ -17,114 +23,82 @@
 |Batch05 LEGACY|[Batch05_Core/core_hall.blend](Batch05_Core/core_hall.blend)|历史核心大厅原交付|
 |Batch04 LEGACY|[Batch04_LargeSpace/Region/site_with_pump_service.blend](Batch04_LargeSpace/Region/site_with_pump_service.blend)|历史全厂灰盒/泵站维修组合|
 |Batch04 LEGACY|[Batch04_LargeSpace/Region/pump_service_connected.blend](Batch04_LargeSpace/Region/pump_service_connected.blend)|历史泵站维修连通区|
-|Batch03 LEGACY|[Batch03/Region/site_with_pump_zone.blend](Batch03/Region/site_with_pump_zone.blend)|历史全厂灰盒/泵区组合|
-|Batch03 LEGACY|[Batch03/Region/pump_zone.blend](Batch03/Region/pump_zone.blend)|历史泵区|
-|Batch02 LEGACY|[Batch02/architecture_demo.blend](Batch02/architecture_demo.blend)|历史建筑拼装|
-|Batch01 LEGACY|[ModularKit/assembly_demo.blend](ModularKit/assembly_demo.blend)|历史模块拼装演示|
+|Batch03 LEGACY|[Batch03/Region/site_with_pump_zone.blend](Batch03/Region/site_with_pump_zone.blend.zip)|历史全厂灰盒/泵区组合|
+|Batch03 LEGACY|[Batch03/Region/pump_zone.blend](Batch03/Region/pump_zone.blend.zip)|历史泵区|
+|Batch02 LEGACY|[Batch02/architecture_demo.blend](Batch02/architecture_demo.blend.zip)|历史建筑拼装|
+|Batch01 LEGACY|[ModularKit/assembly_demo.blend](ModularKit/assembly_demo.blend.zip)|历史模块拼装演示|
 |Batch01 LEGACY|[Blockout/site_graybox.blend](Blockout/site_graybox.blend)|最早全厂灰盒；不是当前地图|
 
-## Batch01 — 8 条
+## 全部可复用模块
 
-|模块|原生模型 / collection|参考 / 正交图|
-|---|---|---|
-|SM_NPP_Catwalk_Straight_4m_A|[model.blend](ModularKit/Catwalks/SM_NPP_Catwalk_Straight_4m_A/model.blend)|[参考/技术图](ModularKit/Catwalks/SM_NPP_Catwalk_Straight_4m_A/reference_sheet.png)；[建模后投影](ModularKit/Catwalks/SM_NPP_Catwalk_Straight_4m_A/orthographic_sheet.png)|
-|SM_NPP_Catwalk_Corner90_A|[model.blend](ModularKit/Catwalks/SM_NPP_Catwalk_Corner90_A/model.blend)|[参考/技术图](ModularKit/Catwalks/SM_NPP_Catwalk_Corner90_A/reference_sheet.png)；[建模后投影](ModularKit/Catwalks/SM_NPP_Catwalk_Corner90_A/orthographic_sheet.png)|
-|SM_NPP_Catwalk_TJunction_A|[model.blend](ModularKit/Catwalks/SM_NPP_Catwalk_TJunction_A/model.blend)|[参考/技术图](ModularKit/Catwalks/SM_NPP_Catwalk_TJunction_A/reference_sheet.png)；[建模后投影](ModularKit/Catwalks/SM_NPP_Catwalk_TJunction_A/orthographic_sheet.png)|
-|SM_NPP_Stair_4x2_Rise2_A|[model.blend](ModularKit/Stairs/SM_NPP_Stair_4x2_Rise2_A/model.blend)|[参考/技术图](ModularKit/Stairs/SM_NPP_Stair_4x2_Rise2_A/reference_sheet.png)；[建模后投影](ModularKit/Stairs/SM_NPP_Stair_4x2_Rise2_A/orthographic_sheet.png)|
-|SM_NPP_Railing_Open_4m_A|[model.blend](ModularKit/Railings/SM_NPP_Railing_Open_4m_A/model.blend)|[参考/技术图](ModularKit/Railings/SM_NPP_Railing_Open_4m_A/reference_sheet.png)；[建模后投影](ModularKit/Railings/SM_NPP_Railing_Open_4m_A/orthographic_sheet.png)|
-|SM_NPP_Railing_Infill_2m_B|[model.blend](ModularKit/Railings/SM_NPP_Railing_Infill_2m_B/model.blend)|[参考/技术图](ModularKit/Railings/SM_NPP_Railing_Infill_2m_B/reference_sheet.png)；[建模后投影](ModularKit/Railings/SM_NPP_Railing_Infill_2m_B/orthographic_sheet.png)|
-|SM_NPP_Column_4m_A|[model.blend](ModularKit/Structure/SM_NPP_Column_4m_A/model.blend)|[参考/技术图](ModularKit/Structure/SM_NPP_Column_4m_A/reference_sheet.png)；[建模后投影](ModularKit/Structure/SM_NPP_Column_4m_A/orthographic_sheet.png)|
-|SM_NPP_PipeSupport_2m_A|[model.blend](ModularKit/Pipes/SM_NPP_PipeSupport_2m_A/model.blend)|[参考/技术图](ModularKit/Pipes/SM_NPP_PipeSupport_2m_A/reference_sheet.png)；[建模后投影](ModularKit/Pipes/SM_NPP_PipeSupport_2m_A/orthographic_sheet.png)|
+|批次|模块|原生模型|建模前参考 / 投影|说明|
+|---|---|---|---|---|
+|Batch01|SM_NPP_Catwalk_Straight_4m_A|[ModularKit/Catwalks/SM_NPP_Catwalk_Straight_4m_A/model.blend](ModularKit/Catwalks/SM_NPP_Catwalk_Straight_4m_A/model.blend)|[reference](ModularKit/Catwalks/SM_NPP_Catwalk_Straight_4m_A/reference_sheet.png) · [post_model_orthographic](ModularKit/Catwalks/SM_NPP_Catwalk_Straight_4m_A/orthographic_sheet.png)|历史参考/建模投影原样保存；本次未重新执行历史建模流程。|
+|Batch01|SM_NPP_Catwalk_Corner90_A|[ModularKit/Catwalks/SM_NPP_Catwalk_Corner90_A/model.blend](ModularKit/Catwalks/SM_NPP_Catwalk_Corner90_A/model.blend)|[reference](ModularKit/Catwalks/SM_NPP_Catwalk_Corner90_A/reference_sheet.png) · [post_model_orthographic](ModularKit/Catwalks/SM_NPP_Catwalk_Corner90_A/orthographic_sheet.png)|历史参考/建模投影原样保存；本次未重新执行历史建模流程。|
+|Batch01|SM_NPP_Catwalk_TJunction_A|[ModularKit/Catwalks/SM_NPP_Catwalk_TJunction_A/model.blend](ModularKit/Catwalks/SM_NPP_Catwalk_TJunction_A/model.blend)|[reference](ModularKit/Catwalks/SM_NPP_Catwalk_TJunction_A/reference_sheet.png) · [post_model_orthographic](ModularKit/Catwalks/SM_NPP_Catwalk_TJunction_A/orthographic_sheet.png)|历史参考/建模投影原样保存；本次未重新执行历史建模流程。|
+|Batch01|SM_NPP_Stair_4x2_Rise2_A|[ModularKit/Stairs/SM_NPP_Stair_4x2_Rise2_A/model.blend](ModularKit/Stairs/SM_NPP_Stair_4x2_Rise2_A/model.blend)|[reference](ModularKit/Stairs/SM_NPP_Stair_4x2_Rise2_A/reference_sheet.png) · [post_model_orthographic](ModularKit/Stairs/SM_NPP_Stair_4x2_Rise2_A/orthographic_sheet.png)|历史参考/建模投影原样保存；本次未重新执行历史建模流程。|
+|Batch01|SM_NPP_Railing_Open_4m_A|[ModularKit/Railings/SM_NPP_Railing_Open_4m_A/model.blend](ModularKit/Railings/SM_NPP_Railing_Open_4m_A/model.blend)|[reference](ModularKit/Railings/SM_NPP_Railing_Open_4m_A/reference_sheet.png) · [post_model_orthographic](ModularKit/Railings/SM_NPP_Railing_Open_4m_A/orthographic_sheet.png)|历史参考/建模投影原样保存；本次未重新执行历史建模流程。|
+|Batch01|SM_NPP_Railing_Infill_2m_B|[ModularKit/Railings/SM_NPP_Railing_Infill_2m_B/model.blend](ModularKit/Railings/SM_NPP_Railing_Infill_2m_B/model.blend)|[reference](ModularKit/Railings/SM_NPP_Railing_Infill_2m_B/reference_sheet.png) · [post_model_orthographic](ModularKit/Railings/SM_NPP_Railing_Infill_2m_B/orthographic_sheet.png)|历史参考/建模投影原样保存；本次未重新执行历史建模流程。|
+|Batch01|SM_NPP_Column_4m_A|[ModularKit/Structure/SM_NPP_Column_4m_A/model.blend](ModularKit/Structure/SM_NPP_Column_4m_A/model.blend)|[reference](ModularKit/Structure/SM_NPP_Column_4m_A/reference_sheet.png) · [post_model_orthographic](ModularKit/Structure/SM_NPP_Column_4m_A/orthographic_sheet.png)|历史参考/建模投影原样保存；本次未重新执行历史建模流程。|
+|Batch01|SM_NPP_PipeSupport_2m_A|[ModularKit/Pipes/SM_NPP_PipeSupport_2m_A/model.blend](ModularKit/Pipes/SM_NPP_PipeSupport_2m_A/model.blend)|[reference](ModularKit/Pipes/SM_NPP_PipeSupport_2m_A/reference_sheet.png) · [post_model_orthographic](ModularKit/Pipes/SM_NPP_PipeSupport_2m_A/orthographic_sheet.png)|历史参考/建模投影原样保存；本次未重新执行历史建模流程。|
+|Batch02|SM_NPP_Wall_Solid_4m_A|[Batch02/Assets/SM_NPP_Wall_Solid_4m_A/model.blend](Batch02/Assets/SM_NPP_Wall_Solid_4m_A/model.blend)|[reference](Batch02/Assets/SM_NPP_Wall_Solid_4m_A/reference_sheet.png) · [post_model_orthographic](Batch02/Assets/SM_NPP_Wall_Solid_4m_A/orthographic_sheet.png)|历史参考/建模投影原样保存；本次未重新执行历史建模流程。|
+|Batch02|SM_NPP_Wall_Door_2m_A|[Batch02/Assets/SM_NPP_Wall_Door_2m_A/model.blend](Batch02/Assets/SM_NPP_Wall_Door_2m_A/model.blend)|[reference](Batch02/Assets/SM_NPP_Wall_Door_2m_A/reference_sheet.png) · [post_model_orthographic](Batch02/Assets/SM_NPP_Wall_Door_2m_A/orthographic_sheet.png)|历史参考/建模投影原样保存；本次未重新执行历史建模流程。|
+|Batch02|SM_NPP_Wall_Window_4m_A|[Batch02/Assets/SM_NPP_Wall_Window_4m_A/model.blend](Batch02/Assets/SM_NPP_Wall_Window_4m_A/model.blend)|[reference](Batch02/Assets/SM_NPP_Wall_Window_4m_A/reference_sheet.png) · [post_model_orthographic](Batch02/Assets/SM_NPP_Wall_Window_4m_A/orthographic_sheet.png)|历史参考/建模投影原样保存；本次未重新执行历史建模流程。|
+|Batch02|SM_NPP_Wall_Corner90_A|[Batch02/Assets/SM_NPP_Wall_Corner90_A/model.blend](Batch02/Assets/SM_NPP_Wall_Corner90_A/model.blend)|[reference](Batch02/Assets/SM_NPP_Wall_Corner90_A/reference_sheet.png) · [post_model_orthographic](Batch02/Assets/SM_NPP_Wall_Corner90_A/orthographic_sheet.png)|历史参考/建模投影原样保存；本次未重新执行历史建模流程。|
+|Batch02|SM_NPP_Floor_4x4_A|[Batch02/Assets/SM_NPP_Floor_4x4_A/model.blend](Batch02/Assets/SM_NPP_Floor_4x4_A/model.blend)|[reference](Batch02/Assets/SM_NPP_Floor_4x4_A/reference_sheet.png) · [post_model_orthographic](Batch02/Assets/SM_NPP_Floor_4x4_A/orthographic_sheet.png)|历史参考/建模投影原样保存；本次未重新执行历史建模流程。|
+|Batch02|SM_NPP_Roof_4x4_A|[Batch02/Assets/SM_NPP_Roof_4x4_A/model.blend](Batch02/Assets/SM_NPP_Roof_4x4_A/model.blend)|[reference](Batch02/Assets/SM_NPP_Roof_4x4_A/reference_sheet.png) · [post_model_orthographic](Batch02/Assets/SM_NPP_Roof_4x4_A/orthographic_sheet.png)|历史参考/建模投影原样保存；本次未重新执行历史建模流程。|
+|Batch02|SM_NPP_ColumnHead_075m_A|[Batch02/Assets/SM_NPP_ColumnHead_075m_A/model.blend](Batch02/Assets/SM_NPP_ColumnHead_075m_A/model.blend)|[reference](Batch02/Assets/SM_NPP_ColumnHead_075m_A/reference_sheet.png) · [post_model_orthographic](Batch02/Assets/SM_NPP_ColumnHead_075m_A/orthographic_sheet.png)|历史参考/建模投影原样保存；本次未重新执行历史建模流程。|
+|Batch03|SM_NPP_Pipe_Straight_4m_A|[Batch03/Assets/SM_NPP_Pipe_Straight_4m_A/model.blend](Batch03/Assets/SM_NPP_Pipe_Straight_4m_A/model.blend)|[reference](Batch03/Assets/SM_NPP_Pipe_Straight_4m_A/reference_sheet.png) · [post_model_orthographic](Batch03/Assets/SM_NPP_Pipe_Straight_4m_A/orthographic_sheet.png)|历史参考/建模投影原样保存；本次未重新执行历史建模流程。|
+|Batch03|SM_NPP_Pipe_Elbow90_R1_A|[Batch03/Assets/SM_NPP_Pipe_Elbow90_R1_A/model.blend](Batch03/Assets/SM_NPP_Pipe_Elbow90_R1_A/model.blend)|[reference](Batch03/Assets/SM_NPP_Pipe_Elbow90_R1_A/reference_sheet.png) · [post_model_orthographic](Batch03/Assets/SM_NPP_Pipe_Elbow90_R1_A/orthographic_sheet.png)|历史参考/建模投影原样保存；本次未重新执行历史建模流程。|
+|Batch03|SM_NPP_Pipe_Tee_2m_A|[Batch03/Assets/SM_NPP_Pipe_Tee_2m_A/model.blend](Batch03/Assets/SM_NPP_Pipe_Tee_2m_A/model.blend)|[reference](Batch03/Assets/SM_NPP_Pipe_Tee_2m_A/reference_sheet.png) · [post_model_orthographic](Batch03/Assets/SM_NPP_Pipe_Tee_2m_A/orthographic_sheet.png)|历史参考/建模投影原样保存；本次未重新执行历史建模流程。|
+|Batch03|SM_NPP_Valve_1m_A|[Batch03/Assets/SM_NPP_Valve_1m_A/model.blend](Batch03/Assets/SM_NPP_Valve_1m_A/model.blend)|[reference](Batch03/Assets/SM_NPP_Valve_1m_A/reference_sheet.png) · [post_model_orthographic](Batch03/Assets/SM_NPP_Valve_1m_A/orthographic_sheet.png)|历史参考/建模投影原样保存；本次未重新执行历史建模流程。|
+|Batch03|SM_NPP_PumpSkid_4x2_A|[Batch03/Assets/SM_NPP_PumpSkid_4x2_A/model.blend](Batch03/Assets/SM_NPP_PumpSkid_4x2_A/model.blend)|[reference](Batch03/Assets/SM_NPP_PumpSkid_4x2_A/reference_sheet.png) · [post_model_orthographic](Batch03/Assets/SM_NPP_PumpSkid_4x2_A/orthographic_sheet.png)|历史参考/建模投影原样保存；本次未重新执行历史建模流程。|
+|Batch04|SM_NPP_ServiceBayWall_8m_A|[Batch04_LargeSpace/Assets/SM_NPP_ServiceBayWall_8m_A/model.blend](Batch04_LargeSpace/Assets/SM_NPP_ServiceBayWall_8m_A/model.blend)|[reference](Batch04_LargeSpace/Assets/SM_NPP_ServiceBayWall_8m_A/reference_sheet.png) · [post_model_orthographic](Batch04_LargeSpace/Assets/SM_NPP_ServiceBayWall_8m_A/orthographic_sheet.png)|历史参考/建模投影原样保存；本次未重新执行历史建模流程。|
+|Batch04|SM_NPP_StorageRack_4m_A|[Batch04_LargeSpace/Assets/SM_NPP_StorageRack_4m_A/model.blend](Batch04_LargeSpace/Assets/SM_NPP_StorageRack_4m_A/model.blend)|[reference](Batch04_LargeSpace/Assets/SM_NPP_StorageRack_4m_A/reference_sheet.png) · [post_model_orthographic](Batch04_LargeSpace/Assets/SM_NPP_StorageRack_4m_A/orthographic_sheet.png)|历史参考/建模投影原样保存；本次未重新执行历史建模流程。|
+|Batch04|SM_NPP_RoofTruss_32m_A|[Batch04_LargeSpace/Assets/SM_NPP_RoofTruss_32m_A/model.blend](Batch04_LargeSpace/Assets/SM_NPP_RoofTruss_32m_A/model.blend)|[reference](Batch04_LargeSpace/Assets/SM_NPP_RoofTruss_32m_A/reference_sheet.png) · [post_model_orthographic](Batch04_LargeSpace/Assets/SM_NPP_RoofTruss_32m_A/orthographic_sheet.png)|历史参考/建模投影原样保存；本次未重新执行历史建模流程。|
+|Batch05|Reactor|[Batch05_Core/reactor/reactor.blend](Batch05_Core/reactor/reactor.blend)|[reference](Batch05_Core/References/reactor_orthographic_concept.png) · [post_model_orthographic](Batch05_Core/reactor/reactor_front.png)||
+|Batch05|CP_PressureSkid|[Batch05_Core/props/props.blend](Batch05_Core/props/props.blend)|[post_model_orthographic](Batch05_Core/props/orthographic/CP_PressureSkid_sheet.png)|共享props.blend中的独立collection；保留历史正交渲染，不将其标为建模前概念图。|
+|Batch05|CP_TransformerPad|[Batch05_Core/props/props.blend](Batch05_Core/props/props.blend)|[post_model_orthographic](Batch05_Core/props/orthographic/CP_TransformerPad_sheet.png)|共享props.blend中的独立collection；保留历史正交渲染，不将其标为建模前概念图。|
+|Batch05|CP_RoadBarrier|[Batch05_Core/props/props.blend](Batch05_Core/props/props.blend)|[post_model_orthographic](Batch05_Core/props/orthographic/CP_RoadBarrier_sheet.png)|共享props.blend中的独立collection；保留历史正交渲染，不将其标为建模前概念图。|
+|Batch05|CP_UtilityPallet|[Batch05_Core/props/props.blend](Batch05_Core/props/props.blend)|[post_model_orthographic](Batch05_Core/props/orthographic/CP_UtilityPallet_sheet.png)|共享props.blend中的独立collection；保留历史正交渲染，不将其标为建模前概念图。|
+|Batch05|CP_ReactorConsole|[Batch05_Core/props/props.blend](Batch05_Core/props/props.blend)|[post_model_orthographic](Batch05_Core/props/orthographic/CP_ReactorConsole_sheet.png)|共享props.blend中的独立collection；保留历史正交渲染，不将其标为建模前概念图。|
+|Batch05|CP_ElectricalCabinetBank|[Batch05_Core/props/props.blend](Batch05_Core/props/props.blend)|[post_model_orthographic](Batch05_Core/props/orthographic/CP_ElectricalCabinetBank_sheet.png)|共享props.blend中的独立collection；保留历史正交渲染，不将其标为建模前概念图。|
+|Batch05|CP_VerticalServiceTank|[Batch05_Core/props/props.blend](Batch05_Core/props/props.blend)|[post_model_orthographic](Batch05_Core/props/orthographic/CP_VerticalServiceTank_sheet.png)|共享props.blend中的独立collection；保留历史正交渲染，不将其标为建模前概念图。|
+|Batch05|CP_RedGuardPanel|[Batch05_Core/props/props.blend](Batch05_Core/props/props.blend)|[post_model_orthographic](Batch05_Core/props/orthographic/CP_RedGuardPanel_sheet.png)|共享props.blend中的独立collection；保留历史正交渲染，不将其标为建模前概念图。|
+|Batch06|B06_BRIDGE|[Batch06_Expansion/Assets/Connectors/B06_BRIDGE.blend](Batch06_Expansion/Assets/Connectors/B06_BRIDGE.blend)|[reference](Batch06_Expansion/References/Connectors/B06_BRIDGE_technical.svg)||
+|Batch06|B06_UTILITY_SHELTER|[Batch06_Expansion/Assets/Connectors/B06_UTILITY_SHELTER.blend](Batch06_Expansion/Assets/Connectors/B06_UTILITY_SHELTER.blend)|[reference](Batch06_Expansion/References/Connectors/B06_UTILITY_SHELTER_technical.svg)||
+|Batch06|B06_SERVICE_BANK|[Batch06_Expansion/Assets/Connectors/B06_SERVICE_BANK.blend](Batch06_Expansion/Assets/Connectors/B06_SERVICE_BANK.blend)|[reference](Batch06_Expansion/References/Connectors/B06_SERVICE_BANK_technical.svg)||
+|Batch06|B06_SCREEN|[Batch06_Expansion/Assets/Connectors/B06_SCREEN.blend](Batch06_Expansion/Assets/Connectors/B06_SCREEN.blend)|[reference](Batch06_Expansion/References/Connectors/B06_SCREEN_technical.svg)||
+|Batch06|B06_GATE|[Batch06_Expansion/Assets/Connectors/B06_GATE.blend](Batch06_Expansion/Assets/Connectors/B06_GATE.blend)|[reference](Batch06_Expansion/References/Connectors/B06_GATE_technical.svg)||
+|Batch06|B06_FENCE|[Batch06_Expansion/Assets/Connectors/B06_FENCE.blend](Batch06_Expansion/Assets/Connectors/B06_FENCE.blend)|[reference](Batch06_Expansion/References/Connectors/B06_FENCE_technical.svg)||
+|Batch06|CTL_StairUnit|[Batch06_Expansion/Office/Assets/CTL_StairUnit/model.blend](Batch06_Expansion/Office/Assets/CTL_StairUnit/model.blend)|[reference](Batch06_Expansion/Office/References/CTL_StairUnit_prebuild_ortho.svg) · [post_model_orthographic](Batch06_Expansion/Office/Assets/CTL_StairUnit/front.png)||
+|Batch06|CTL_Deck|[Batch06_Expansion/Office/Assets/CTL_Deck/model.blend](Batch06_Expansion/Office/Assets/CTL_Deck/model.blend)|[reference](Batch06_Expansion/Office/References/CTL_Deck_prebuild_ortho.svg) · [post_model_orthographic](Batch06_Expansion/Office/Assets/CTL_Deck/front.png)||
+|Batch06|CTL_Island|[Batch06_Expansion/Office/Assets/CTL_Island/model.blend](Batch06_Expansion/Office/Assets/CTL_Island/model.blend)|[reference](Batch06_Expansion/Office/References/CTL_Island_prebuild_ortho.svg) · [post_model_orthographic](Batch06_Expansion/Office/Assets/CTL_Island/front.png)||
+|Batch06|CTL_DisplayPanel|[Batch06_Expansion/Office/Assets/CTL_DisplayPanel/model.blend](Batch06_Expansion/Office/Assets/CTL_DisplayPanel/model.blend)|[reference](Batch06_Expansion/Office/References/CTL_DisplayPanel_prebuild_ortho.svg) · [post_model_orthographic](Batch06_Expansion/Office/Assets/CTL_DisplayPanel/front.png)||
+|Batch06|Pump/buffer_tank|[Batch06_Expansion/Pump/Modules/buffer_tank.blend](Batch06_Expansion/Pump/Modules/buffer_tank.blend)|[reference](Batch06_Expansion/Pump/References/buffer_tank_technical.svg)|reference-following procedural rebuild|
+|Batch06|Pump/maintenance_hall|[Batch06_Expansion/Pump/Modules/maintenance_hall.blend](Batch06_Expansion/Pump/Modules/maintenance_hall.blend)|[reference](Batch06_Expansion/Pump/References/maintenance_hall_technical.svg)|reference-following procedural rebuild|
+|Batch06|Pump/fire_screen|[Batch06_Expansion/Pump/Modules/fire_screen.blend](Batch06_Expansion/Pump/Modules/fire_screen.blend)|[reference](Batch06_Expansion/Pump/References/fire_screen_technical.svg)|reference-following procedural rebuild|
+|Batch06|Pump/pipe_gantry|[Batch06_Expansion/Pump/Modules/pipe_gantry.blend](Batch06_Expansion/Pump/Modules/pipe_gantry.blend)|[reference](Batch06_Expansion/Pump/References/pipe_gantry_technical.svg)|reference-following procedural rebuild|
+|Batch06|Pump/reused_pump|[Batch06_Expansion/Pump/Modules/reused_pump.blend](Batch06_Expansion/Pump/Modules/reused_pump.blend)||reused Batch04|
+|Batch06|Pump/reused_rack|[Batch06_Expansion/Pump/Modules/reused_rack.blend](Batch06_Expansion/Pump/Modules/reused_rack.blend)||reused Batch04|
+|Batch06|Logistics/maintenance_shell|[Batch06_Expansion/Logistics/Modules/maintenance_shell.blend](Batch06_Expansion/Logistics/Modules/maintenance_shell.blend)|[reference](Batch06_Expansion/Logistics/References/maintenance_region_technical.svg)|canonical composite export, no global light/camera; shell and dock are region-sized composites, repeated bays retained within|
+|Batch06|Logistics/stair_landing|[Batch06_Expansion/Logistics/Modules/stair_landing.blend](Batch06_Expansion/Logistics/Modules/stair_landing.blend)|[reference](Batch06_Expansion/Logistics/References/stair_landing_technical.svg)|canonical composite export, no global light/camera; shell and dock are region-sized composites, repeated bays retained within|
+|Batch06|Logistics/service_station|[Batch06_Expansion/Logistics/Modules/service_station.blend](Batch06_Expansion/Logistics/Modules/service_station.blend)|[reference](Batch06_Expansion/Logistics/References/service_station_technical.svg)|canonical composite export, no global light/camera; shell and dock are region-sized composites, repeated bays retained within|
+|Batch06|Logistics/loading_dock|[Batch06_Expansion/Logistics/Modules/loading_dock.blend](Batch06_Expansion/Logistics/Modules/loading_dock.blend)|[reference](Batch06_Expansion/Logistics/References/loading_region_technical.svg)|canonical composite export, no global light/camera; shell and dock are region-sized composites, repeated bays retained within|
+|Batch06|Logistics/container|[Batch06_Expansion/Logistics/Modules/container.blend](Batch06_Expansion/Logistics/Modules/container.blend)|[reference](Batch06_Expansion/Logistics/References/container_technical.svg)|canonical composite export, no global light/camera; shell and dock are region-sized composites, repeated bays retained within|
+|Batch06|Logistics/maintenance_bay|[Batch06_Expansion/Logistics/Modules/maintenance_bay.blend](Batch06_Expansion/Logistics/Modules/maintenance_bay.blend)|[reference](Batch06_Expansion/Logistics/References/maintenance_bay_technical.svg)||
+|Batch06|Logistics/dock_bay|[Batch06_Expansion/Logistics/Modules/dock_bay.blend](Batch06_Expansion/Logistics/Modules/dock_bay.blend)|[reference](Batch06_Expansion/Logistics/References/dock_bay_technical.svg)||
+|Batch07|B07_VENT_CASSETTE|[Batch07_Refinement/Assets/B07_VENT_CASSETTE.blend](Batch07_Refinement/Assets/B07_VENT_CASSETTE.blend)|[reference_preview](Batch07_Refinement/References/v02/B07_VENT_CASSETTE.png) · [reference](Batch07_Refinement/References/v02/B07_VENT_CASSETTE.svg)|Ventilation / inspection cassette|
+|Batch07|B07_PIPE_RACK|[Batch07_Refinement/Assets/B07_PIPE_RACK.blend](Batch07_Refinement/Assets/B07_PIPE_RACK.blend)|[reference_preview](Batch07_Refinement/References/v02/B07_PIPE_RACK.png) · [reference](Batch07_Refinement/References/v02/B07_PIPE_RACK.svg.zip)|Twin process-pipe service rack|
+|Batch07|B07_TRANSFORMER_BAY|[Batch07_Refinement/Assets/B07_TRANSFORMER_BAY.blend](Batch07_Refinement/Assets/B07_TRANSFORMER_BAY.blend)|[reference_preview](Batch07_Refinement/References/v02/B07_TRANSFORMER_BAY.png) · [reference](Batch07_Refinement/References/v02/B07_TRANSFORMER_BAY.svg.zip)|Transformer / protective equipment bay|
+|Batch07|B07_CARGO_SET|[Batch07_Refinement/Assets/B07_CARGO_SET.blend](Batch07_Refinement/Assets/B07_CARGO_SET.blend)|[reference_preview](Batch07_Refinement/References/v02/B07_CARGO_SET.png) · [reference](Batch07_Refinement/References/v02/B07_CARGO_SET.svg)|Bound machine cargo / timber pallet set|
+|Batch07|B07_LOGISTICS_CANOPY|[Batch07_Refinement/Assets/B07_LOGISTICS_CANOPY.blend](Batch07_Refinement/Assets/B07_LOGISTICS_CANOPY.blend)|[reference_preview](Batch07_Refinement/References/v02/B07_LOGISTICS_CANOPY.png) · [reference](Batch07_Refinement/References/v02/B07_LOGISTICS_CANOPY.svg)|Short logistics receiving canopy|
+|Batch07|B07_SOLID_SCREEN|[Batch07_Refinement/Assets/B07_SOLID_SCREEN.blend](Batch07_Refinement/Assets/B07_SOLID_SCREEN.blend)|[reference_preview](Batch07_Refinement/References/v02/B07_SOLID_SCREEN.png) · [reference](Batch07_Refinement/References/v02/B07_SOLID_SCREEN.svg)|Solid upper industrial screen / cut-to-width|
+|Batch07|B07_SERVICE_CABINET|[Batch07_Refinement/Assets/B07_SERVICE_CABINET.blend](Batch07_Refinement/Assets/B07_SERVICE_CABINET.blend)|[reference_preview](Batch07_Refinement/References/v02/B07_SERVICE_CABINET.png) · [reference](Batch07_Refinement/References/v02/B07_SERVICE_CABINET.svg)|Solid process-service cabinet|
+|Batch07|B07_SERVICE_CABINET_narrow_045|[Batch07_Refinement/Assets/B07_SERVICE_CABINET_narrow_045.blend](Batch07_Refinement/Assets/B07_SERVICE_CABINET_narrow_045.blend)|[reference_preview](Batch07_Refinement/References/v04/B07_SERVICE_CABINET_narrow_045.png) · [reference](Batch07_Refinement/References/v04/B07_SERVICE_CABINET_narrow_045.svg)|Narrow cabinet derived variant (object X scale 0.45)|
+|Batch08|B08_SERVICE_EDGE|[Batch08_Refinement/Assets/B08_SERVICE_EDGE.blend](Batch08_Refinement/Assets/B08_SERVICE_EDGE.blend)|[reference_preview](Batch08_Refinement/References/v03/B08_SERVICE_EDGE.png) · [reference](Batch08_Refinement/References/v03/B08_SERVICE_EDGE.svg)|Service duct + drainage / curb edge; Self-contained module|
+|Batch08|B08_SERVICE_EDGE_FLUSH|[Batch08_Refinement/Assets/B08_SERVICE_EDGE_FLUSH.blend](Batch08_Refinement/Assets/B08_SERVICE_EDGE_FLUSH.blend)|[reference_preview](Batch08_Refinement/References/v03/B08_SERVICE_EDGE_FLUSH.png) · [reference](Batch08_Refinement/References/v03/B08_SERVICE_EDGE_FLUSH.svg)|Service edge / low-step crossing cover; Self-contained module|
+|Batch08|B08_WALL_TERMINAL|[Batch08_Refinement/Assets/B08_WALL_TERMINAL.blend](Batch08_Refinement/Assets/B08_WALL_TERMINAL.blend)|[reference_preview](Batch08_Refinement/References/v03/B08_WALL_TERMINAL.png) · [reference](Batch08_Refinement/References/v03/B08_WALL_TERMINAL.svg)|Wall service terminal / sealed distribution point; Self-contained module|
+|Batch08|B08_CARGO_DRESSING|[Batch08_Refinement/Assets/B08_CARGO_DRESSING.blend](Batch08_Refinement/Assets/B08_CARGO_DRESSING.blend)|[reference_preview](Batch08_Refinement/References/v03/B08_CARGO_DRESSING.png) · [reference](Batch08_Refinement/References/v03/B08_CARGO_DRESSING.svg.zip)|Cloth / pallet / shipping-case refinement; Cargo asset is complete base plus dressing; site contains dressing only over original unchanged cargo.|
 
-## Batch02 — 7 条
-
-|模块|原生模型 / collection|参考 / 正交图|
-|---|---|---|
-|SM_NPP_Wall_Solid_4m_A|[model.blend](Batch02/Assets/SM_NPP_Wall_Solid_4m_A/model.blend)|[参考/技术图](Batch02/Assets/SM_NPP_Wall_Solid_4m_A/reference_sheet.png)；[建模后投影](Batch02/Assets/SM_NPP_Wall_Solid_4m_A/orthographic_sheet.png)|
-|SM_NPP_Wall_Door_2m_A|[model.blend](Batch02/Assets/SM_NPP_Wall_Door_2m_A/model.blend)|[参考/技术图](Batch02/Assets/SM_NPP_Wall_Door_2m_A/reference_sheet.png)；[建模后投影](Batch02/Assets/SM_NPP_Wall_Door_2m_A/orthographic_sheet.png)|
-|SM_NPP_Wall_Window_4m_A|[model.blend](Batch02/Assets/SM_NPP_Wall_Window_4m_A/model.blend)|[参考/技术图](Batch02/Assets/SM_NPP_Wall_Window_4m_A/reference_sheet.png)；[建模后投影](Batch02/Assets/SM_NPP_Wall_Window_4m_A/orthographic_sheet.png)|
-|SM_NPP_Wall_Corner90_A|[model.blend](Batch02/Assets/SM_NPP_Wall_Corner90_A/model.blend)|[参考/技术图](Batch02/Assets/SM_NPP_Wall_Corner90_A/reference_sheet.png)；[建模后投影](Batch02/Assets/SM_NPP_Wall_Corner90_A/orthographic_sheet.png)|
-|SM_NPP_Floor_4x4_A|[model.blend](Batch02/Assets/SM_NPP_Floor_4x4_A/model.blend)|[参考/技术图](Batch02/Assets/SM_NPP_Floor_4x4_A/reference_sheet.png)；[建模后投影](Batch02/Assets/SM_NPP_Floor_4x4_A/orthographic_sheet.png)|
-|SM_NPP_Roof_4x4_A|[model.blend](Batch02/Assets/SM_NPP_Roof_4x4_A/model.blend)|[参考/技术图](Batch02/Assets/SM_NPP_Roof_4x4_A/reference_sheet.png)；[建模后投影](Batch02/Assets/SM_NPP_Roof_4x4_A/orthographic_sheet.png)|
-|SM_NPP_ColumnHead_075m_A|[model.blend](Batch02/Assets/SM_NPP_ColumnHead_075m_A/model.blend)|[参考/技术图](Batch02/Assets/SM_NPP_ColumnHead_075m_A/reference_sheet.png)；[建模后投影](Batch02/Assets/SM_NPP_ColumnHead_075m_A/orthographic_sheet.png)|
-
-## Batch03 — 5 条
-
-|模块|原生模型 / collection|参考 / 正交图|
-|---|---|---|
-|SM_NPP_Pipe_Straight_4m_A|[model.blend](Batch03/Assets/SM_NPP_Pipe_Straight_4m_A/model.blend)|[参考/技术图](Batch03/Assets/SM_NPP_Pipe_Straight_4m_A/reference_sheet.png)；[建模后投影](Batch03/Assets/SM_NPP_Pipe_Straight_4m_A/orthographic_sheet.png)|
-|SM_NPP_Pipe_Elbow90_R1_A|[model.blend](Batch03/Assets/SM_NPP_Pipe_Elbow90_R1_A/model.blend)|[参考/技术图](Batch03/Assets/SM_NPP_Pipe_Elbow90_R1_A/reference_sheet.png)；[建模后投影](Batch03/Assets/SM_NPP_Pipe_Elbow90_R1_A/orthographic_sheet.png)|
-|SM_NPP_Pipe_Tee_2m_A|[model.blend](Batch03/Assets/SM_NPP_Pipe_Tee_2m_A/model.blend)|[参考/技术图](Batch03/Assets/SM_NPP_Pipe_Tee_2m_A/reference_sheet.png)；[建模后投影](Batch03/Assets/SM_NPP_Pipe_Tee_2m_A/orthographic_sheet.png)|
-|SM_NPP_Valve_1m_A|[model.blend](Batch03/Assets/SM_NPP_Valve_1m_A/model.blend)|[参考/技术图](Batch03/Assets/SM_NPP_Valve_1m_A/reference_sheet.png)；[建模后投影](Batch03/Assets/SM_NPP_Valve_1m_A/orthographic_sheet.png)|
-|SM_NPP_PumpSkid_4x2_A|[model.blend](Batch03/Assets/SM_NPP_PumpSkid_4x2_A/model.blend)|[参考/技术图](Batch03/Assets/SM_NPP_PumpSkid_4x2_A/reference_sheet.png)；[建模后投影](Batch03/Assets/SM_NPP_PumpSkid_4x2_A/orthographic_sheet.png)|
-
-## Batch04 — 3 条
-
-|模块|原生模型 / collection|参考 / 正交图|
-|---|---|---|
-|SM_NPP_ServiceBayWall_8m_A|[model.blend](Batch04_LargeSpace/Assets/SM_NPP_ServiceBayWall_8m_A/model.blend)|[参考/技术图](Batch04_LargeSpace/Assets/SM_NPP_ServiceBayWall_8m_A/reference_sheet.png)；[建模后投影](Batch04_LargeSpace/Assets/SM_NPP_ServiceBayWall_8m_A/orthographic_sheet.png)|
-|SM_NPP_StorageRack_4m_A|[model.blend](Batch04_LargeSpace/Assets/SM_NPP_StorageRack_4m_A/model.blend)|[参考/技术图](Batch04_LargeSpace/Assets/SM_NPP_StorageRack_4m_A/reference_sheet.png)；[建模后投影](Batch04_LargeSpace/Assets/SM_NPP_StorageRack_4m_A/orthographic_sheet.png)|
-|SM_NPP_RoofTruss_32m_A|[model.blend](Batch04_LargeSpace/Assets/SM_NPP_RoofTruss_32m_A/model.blend)|[参考/技术图](Batch04_LargeSpace/Assets/SM_NPP_RoofTruss_32m_A/reference_sheet.png)；[建模后投影](Batch04_LargeSpace/Assets/SM_NPP_RoofTruss_32m_A/orthographic_sheet.png)|
-
-## Batch05 — 9 条
-
-|模块|原生模型 / collection|参考 / 正交图|
-|---|---|---|
-|Reactor|[reactor.blend](Batch05_Core/reactor/reactor.blend)|[参考/技术图](Batch05_Core/References/reactor_orthographic_concept.png)；[建模后投影](Batch05_Core/reactor/reactor_front.png)|
-|CP_PressureSkid|[props.blend](Batch05_Core/props/props.blend) / `CP_PressureSkid`|[建模后投影](Batch05_Core/props/orthographic/CP_PressureSkid_sheet.png)|
-|CP_TransformerPad|[props.blend](Batch05_Core/props/props.blend) / `CP_TransformerPad`|[建模后投影](Batch05_Core/props/orthographic/CP_TransformerPad_sheet.png)|
-|CP_RoadBarrier|[props.blend](Batch05_Core/props/props.blend) / `CP_RoadBarrier`|[建模后投影](Batch05_Core/props/orthographic/CP_RoadBarrier_sheet.png)|
-|CP_UtilityPallet|[props.blend](Batch05_Core/props/props.blend) / `CP_UtilityPallet`|[建模后投影](Batch05_Core/props/orthographic/CP_UtilityPallet_sheet.png)|
-|CP_ReactorConsole|[props.blend](Batch05_Core/props/props.blend) / `CP_ReactorConsole`|[建模后投影](Batch05_Core/props/orthographic/CP_ReactorConsole_sheet.png)|
-|CP_ElectricalCabinetBank|[props.blend](Batch05_Core/props/props.blend) / `CP_ElectricalCabinetBank`|[建模后投影](Batch05_Core/props/orthographic/CP_ElectricalCabinetBank_sheet.png)|
-|CP_VerticalServiceTank|[props.blend](Batch05_Core/props/props.blend) / `CP_VerticalServiceTank`|[建模后投影](Batch05_Core/props/orthographic/CP_VerticalServiceTank_sheet.png)|
-|CP_RedGuardPanel|[props.blend](Batch05_Core/props/props.blend) / `CP_RedGuardPanel`|[建模后投影](Batch05_Core/props/orthographic/CP_RedGuardPanel_sheet.png)|
-
-## Batch06 — 23 条
-
-|模块|原生模型 / collection|参考 / 正交图|
-|---|---|---|
-|B06_BRIDGE|[B06_BRIDGE.blend](Batch06_Expansion/Assets/Connectors/B06_BRIDGE.blend) / `B06_BRIDGE`|[参考/技术图](Batch06_Expansion/References/Connectors/B06_BRIDGE_technical.svg)|
-|B06_UTILITY_SHELTER|[B06_UTILITY_SHELTER.blend](Batch06_Expansion/Assets/Connectors/B06_UTILITY_SHELTER.blend) / `B06_UTILITY_SHELTER`|[参考/技术图](Batch06_Expansion/References/Connectors/B06_UTILITY_SHELTER_technical.svg)|
-|B06_SERVICE_BANK|[B06_SERVICE_BANK.blend](Batch06_Expansion/Assets/Connectors/B06_SERVICE_BANK.blend) / `B06_SERVICE_BANK`|[参考/技术图](Batch06_Expansion/References/Connectors/B06_SERVICE_BANK_technical.svg)|
-|B06_SCREEN|[B06_SCREEN.blend](Batch06_Expansion/Assets/Connectors/B06_SCREEN.blend) / `B06_SCREEN`|[参考/技术图](Batch06_Expansion/References/Connectors/B06_SCREEN_technical.svg)|
-|B06_GATE|[B06_GATE.blend](Batch06_Expansion/Assets/Connectors/B06_GATE.blend) / `B06_GATE`|[参考/技术图](Batch06_Expansion/References/Connectors/B06_GATE_technical.svg)|
-|B06_FENCE|[B06_FENCE.blend](Batch06_Expansion/Assets/Connectors/B06_FENCE.blend) / `B06_FENCE`|[参考/技术图](Batch06_Expansion/References/Connectors/B06_FENCE_technical.svg)|
-|CTL_StairUnit|[model.blend](Batch06_Expansion/Office/Assets/CTL_StairUnit/model.blend)|[参考/技术图](Batch06_Expansion/Office/References/CTL_StairUnit_prebuild_ortho.svg)；[建模后投影](Batch06_Expansion/Office/Assets/CTL_StairUnit/front.png)|
-|CTL_Deck|[model.blend](Batch06_Expansion/Office/Assets/CTL_Deck/model.blend)|[参考/技术图](Batch06_Expansion/Office/References/CTL_Deck_prebuild_ortho.svg)；[建模后投影](Batch06_Expansion/Office/Assets/CTL_Deck/front.png)|
-|CTL_Island|[model.blend](Batch06_Expansion/Office/Assets/CTL_Island/model.blend)|[参考/技术图](Batch06_Expansion/Office/References/CTL_Island_prebuild_ortho.svg)；[建模后投影](Batch06_Expansion/Office/Assets/CTL_Island/front.png)|
-|CTL_DisplayPanel|[model.blend](Batch06_Expansion/Office/Assets/CTL_DisplayPanel/model.blend)|[参考/技术图](Batch06_Expansion/Office/References/CTL_DisplayPanel_prebuild_ortho.svg)；[建模后投影](Batch06_Expansion/Office/Assets/CTL_DisplayPanel/front.png)|
-|Pump/buffer_tank|[buffer_tank.blend](Batch06_Expansion/Pump/Modules/buffer_tank.blend) / `MODULE_buffer_tank`|[参考/技术图](Batch06_Expansion/Pump/References/buffer_tank_technical.svg)|
-|Pump/maintenance_hall|[maintenance_hall.blend](Batch06_Expansion/Pump/Modules/maintenance_hall.blend) / `MODULE_maintenance_hall`|[参考/技术图](Batch06_Expansion/Pump/References/maintenance_hall_technical.svg)|
-|Pump/fire_screen|[fire_screen.blend](Batch06_Expansion/Pump/Modules/fire_screen.blend) / `MODULE_fire_screen`|[参考/技术图](Batch06_Expansion/Pump/References/fire_screen_technical.svg)|
-|Pump/pipe_gantry|[pipe_gantry.blend](Batch06_Expansion/Pump/Modules/pipe_gantry.blend) / `MODULE_pipe_gantry`|[参考/技术图](Batch06_Expansion/Pump/References/pipe_gantry_technical.svg)|
-|Pump/reused_pump|[reused_pump.blend](Batch06_Expansion/Pump/Modules/reused_pump.blend) / `MODULE_reused_pump`|复用或历史原始图纸见所在批次说明|
-|Pump/reused_rack|[reused_rack.blend](Batch06_Expansion/Pump/Modules/reused_rack.blend) / `MODULE_reused_rack`|复用或历史原始图纸见所在批次说明|
-|Logistics/maintenance_shell|[maintenance_shell.blend](Batch06_Expansion/Logistics/Modules/maintenance_shell.blend) / `MODULE_maintenance_shell`|[参考/技术图](Batch06_Expansion/Logistics/References/maintenance_region_technical.svg)|
-|Logistics/stair_landing|[stair_landing.blend](Batch06_Expansion/Logistics/Modules/stair_landing.blend) / `MODULE_stair_landing`|[参考/技术图](Batch06_Expansion/Logistics/References/stair_landing_technical.svg)|
-|Logistics/service_station|[service_station.blend](Batch06_Expansion/Logistics/Modules/service_station.blend) / `MODULE_service_station`|[参考/技术图](Batch06_Expansion/Logistics/References/service_station_technical.svg)|
-|Logistics/loading_dock|[loading_dock.blend](Batch06_Expansion/Logistics/Modules/loading_dock.blend) / `MODULE_loading_dock`|[参考/技术图](Batch06_Expansion/Logistics/References/loading_region_technical.svg)|
-|Logistics/container|[container.blend](Batch06_Expansion/Logistics/Modules/container.blend) / `MODULE_container`|[参考/技术图](Batch06_Expansion/Logistics/References/container_technical.svg)|
-|Logistics/maintenance_bay|[maintenance_bay.blend](Batch06_Expansion/Logistics/Modules/maintenance_bay.blend) / `MODULE_maintenance_bay`|[参考/技术图](Batch06_Expansion/Logistics/References/maintenance_bay_technical.svg)|
-|Logistics/dock_bay|[dock_bay.blend](Batch06_Expansion/Logistics/Modules/dock_bay.blend) / `MODULE_dock_bay`|[参考/技术图](Batch06_Expansion/Logistics/References/dock_bay_technical.svg)|
-
-## 图纸证据边界
-
-Batch06 的各新增模块及分区保留建模前严格正交技术图、AI造型参考和审查记录；Rejected 图明确只保留作过程证据。Batch01–05 是原交付历史档案，参考图、渲染正交图和脚本均保留；本累计封包未重新证明每个历史模块的“先图后模”时间顺序，不能将建模后正交渲染冒称建模前设计图。
-
-所有历史模块均交付，并不声称每一个历史模块在当前五区地图中都被实例化。
-
-## Batch07 — 7 基础家族 + 1 独立派生变体
-
-|模块|独立原生模型|建模前正交参考|
-|---|---|---|
-|B07_VENT_CASSETTE|[Batch07_Refinement/Assets/B07_VENT_CASSETTE.blend](Batch07_Refinement/Assets/B07_VENT_CASSETTE.blend)|[正交预览](Batch07_Refinement/References/v02/B07_VENT_CASSETTE.png) · [原始SVG或ZIP](Batch07_Refinement/References/v02/B07_VENT_CASSETTE.svg)|
-|B07_PIPE_RACK|[Batch07_Refinement/Assets/B07_PIPE_RACK.blend](Batch07_Refinement/Assets/B07_PIPE_RACK.blend)|[正交预览](Batch07_Refinement/References/v02/B07_PIPE_RACK.png) · [原始SVG或ZIP](Batch07_Refinement/References/v02/B07_PIPE_RACK.svg.zip)|
-|B07_TRANSFORMER_BAY|[Batch07_Refinement/Assets/B07_TRANSFORMER_BAY.blend](Batch07_Refinement/Assets/B07_TRANSFORMER_BAY.blend)|[正交预览](Batch07_Refinement/References/v02/B07_TRANSFORMER_BAY.png) · [原始SVG或ZIP](Batch07_Refinement/References/v02/B07_TRANSFORMER_BAY.svg.zip)|
-|B07_CARGO_SET|[Batch07_Refinement/Assets/B07_CARGO_SET.blend](Batch07_Refinement/Assets/B07_CARGO_SET.blend)|[正交预览](Batch07_Refinement/References/v02/B07_CARGO_SET.png) · [原始SVG或ZIP](Batch07_Refinement/References/v02/B07_CARGO_SET.svg)|
-|B07_LOGISTICS_CANOPY|[Batch07_Refinement/Assets/B07_LOGISTICS_CANOPY.blend](Batch07_Refinement/Assets/B07_LOGISTICS_CANOPY.blend)|[正交预览](Batch07_Refinement/References/v02/B07_LOGISTICS_CANOPY.png) · [原始SVG或ZIP](Batch07_Refinement/References/v02/B07_LOGISTICS_CANOPY.svg)|
-|B07_SOLID_SCREEN|[Batch07_Refinement/Assets/B07_SOLID_SCREEN.blend](Batch07_Refinement/Assets/B07_SOLID_SCREEN.blend)|[正交预览](Batch07_Refinement/References/v02/B07_SOLID_SCREEN.png) · [原始SVG或ZIP](Batch07_Refinement/References/v02/B07_SOLID_SCREEN.svg)|
-|B07_SERVICE_CABINET|[Batch07_Refinement/Assets/B07_SERVICE_CABINET.blend](Batch07_Refinement/Assets/B07_SERVICE_CABINET.blend)|[正交预览](Batch07_Refinement/References/v02/B07_SERVICE_CABINET.png) · [原始SVG或ZIP](Batch07_Refinement/References/v02/B07_SERVICE_CABINET.svg)|
-|B07_SERVICE_CABINET_narrow_045|[Batch07_Refinement/Assets/B07_SERVICE_CABINET_narrow_045.blend](Batch07_Refinement/Assets/B07_SERVICE_CABINET_narrow_045.blend)|[正交预览](Batch07_Refinement/References/v04/B07_SERVICE_CABINET_narrow_045.png) · [原始SVG或ZIP](Batch07_Refinement/References/v04/B07_SERVICE_CABINET_narrow_045.svg)|
-
-较大的SVG按单个普通ZIP存储，运行 `python restore_assets.py` 恢复原路径与原SHA。最终参考包括v1–v4；不是把模型渲染倒充先验参考。
+ZIP链接为单文件无损存储。运行 `python restore_assets.py` 恢复原文件名与SHA；所有模块、历史场景与当前整图齐全。历史参考/投影流程保留原证据，不把本次重开视为重新执行历史先图后模。
