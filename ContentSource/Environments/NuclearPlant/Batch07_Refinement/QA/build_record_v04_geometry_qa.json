@@ -1,0 +1,1981 @@
+{
+  "stage": "MODEL_AFTER_REFERENCE",
+  "started_utc": "2026-10-21T04:01:37.867790+00:00",
+  "finished_utc": "2026-10-21T04:01:44.821133+00:00",
+  "reference_freeze_utc": "2026-10-21T03:28:12.528151+00:00",
+  "design_sha256": "348ba93ed2906e586f0fc43f4c6e102542f8efddd484dcc327830301da2174de",
+  "v02_reference_freeze_utc": "2026-10-21T03:44:12.298000+00:00",
+  "v02_inputs_verified": true,
+  "v03_reference_freeze_utc": "2026-10-21T03:50:05.233805+00:00",
+  "v03_inputs_verified": true,
+  "v04_reference_freeze_utc": "2026-10-21T04:00:57.105268+00:00",
+  "v04_inputs_verified": true,
+  "render_camera_sha256": "ffd2e009732e32c5eaf5d796c40ede8062adc66a1197b7592e9cf2364fdf4840",
+  "reference_hashes_verified": true,
+  "baseline_sha256": "f19f554d9f2ba93e6f3c1d31d95b0db2ed2b5bcd78a7fecc42de8cfe1267edb3",
+  "baseline_unchanged": true,
+  "preserved_objects": 3589,
+  "protected_geometry_changes": [],
+  "intentional_removed_objects": [
+    "B06_UTILITY_SHELTER / 0",
+    "B06_UTILITY_SHELTER / 1",
+    "B06_UTILITY_SHELTER / 2",
+    "B06_UTILITY_SHELTER / 3",
+    "B06_SERVICE_BANK / 0.004",
+    "B06_SERVICE_BANK / 1.004",
+    "B06_SERVICE_BANK / 2.004",
+    "B06_SERVICE_BANK / 0.005",
+    "B06_SERVICE_BANK / 1.005",
+    "B06_SERVICE_BANK / 2.005",
+    "B06_SERVICE_BANK / 0.006",
+    "B06_SERVICE_BANK / 1.006",
+    "B06_SERVICE_BANK / 2.006",
+    "B06_UTILITY_SHELTER / 0.001",
+    "B06_UTILITY_SHELTER / 1.001",
+    "B06_UTILITY_SHELTER / 2.001",
+    "B06_UTILITY_SHELTER / 3.001",
+    "B06_SERVICE_BANK / 0.007",
+    "B06_SERVICE_BANK / 1.007",
+    "B06_SERVICE_BANK / 2.007",
+    "B06_SERVICE_BANK / 0.008",
+    "B06_SERVICE_BANK / 1.008",
+    "B06_SERVICE_BANK / 2.008",
+    "B06_SERVICE_BANK / 0.009",
+    "B06_SERVICE_BANK / 1.009",
+    "B06_SERVICE_BANK / 2.009",
+    "B06_UTILITY_SHELTER / 0.002",
+    "B06_UTILITY_SHELTER / 1.002",
+    "B06_UTILITY_SHELTER / 2.002",
+    "B06_UTILITY_SHELTER / 3.002",
+    "B06_SERVICE_BANK / 0.010",
+    "B06_SERVICE_BANK / 1.010",
+    "B06_SERVICE_BANK / 2.010",
+    "B06_SERVICE_BANK / 0.011",
+    "B06_SERVICE_BANK / 1.011",
+    "B06_SERVICE_BANK / 2.011",
+    "B06_SERVICE_BANK / 0.012",
+    "B06_SERVICE_BANK / 1.012",
+    "B06_SERVICE_BANK / 2.012",
+    "B06_UTILITY_SHELTER / 0.003",
+    "B06_UTILITY_SHELTER / 1.003",
+    "B06_UTILITY_SHELTER / 2.003",
+    "B06_UTILITY_SHELTER / 3.003",
+    "B06_SERVICE_BANK / 0.013",
+    "B06_SERVICE_BANK / 1.013",
+    "B06_SERVICE_BANK / 2.013",
+    "B06_SERVICE_BANK / 0.014",
+    "B06_SERVICE_BANK / 1.014",
+    "B06_SERVICE_BANK / 2.014",
+    "B06_SERVICE_BANK / 0.015",
+    "B06_SERVICE_BANK / 1.015",
+    "B06_SERVICE_BANK / 2.015",
+    "B06_UTILITY_SHELTER / 0.004",
+    "B06_UTILITY_SHELTER / 1.004",
+    "B06_UTILITY_SHELTER / 2.004",
+    "B06_UTILITY_SHELTER / 3.004",
+    "B06_SERVICE_BANK / 0.016",
+    "B06_SERVICE_BANK / 1.016",
+    "B06_SERVICE_BANK / 2.016",
+    "B06_SERVICE_BANK / 0.017",
+    "B06_SERVICE_BANK / 1.017",
+    "B06_SERVICE_BANK / 2.017",
+    "B06_SERVICE_BANK / 0.018",
+    "B06_SERVICE_BANK / 1.018",
+    "B06_SERVICE_BANK / 2.018",
+    "B06_UTILITY_SHELTER / 0.005",
+    "B06_UTILITY_SHELTER / 1.005",
+    "B06_UTILITY_SHELTER / 2.005",
+    "B06_UTILITY_SHELTER / 3.005",
+    "B06_SERVICE_BANK / 0.019",
+    "B06_SERVICE_BANK / 1.019",
+    "B06_SERVICE_BANK / 2.019",
+    "B06_SERVICE_BANK / 0.020",
+    "B06_SERVICE_BANK / 1.020",
+    "B06_SERVICE_BANK / 2.020",
+    "B06_SERVICE_BANK / 0.021",
+    "B06_SERVICE_BANK / 1.021",
+    "B06_SERVICE_BANK / 2.021",
+    "B06_UTILITY_SHELTER / 0.006",
+    "B06_UTILITY_SHELTER / 1.006",
+    "B06_UTILITY_SHELTER / 2.006",
+    "B06_UTILITY_SHELTER / 3.006",
+    "B06_SERVICE_BANK / 0.022",
+    "B06_SERVICE_BANK / 1.022",
+    "B06_SERVICE_BANK / 2.022",
+    "B06_SERVICE_BANK / 0.023",
+    "B06_SERVICE_BANK / 1.023",
+    "B06_SERVICE_BANK / 2.023",
+    "B06_SERVICE_BANK / 0.024",
+    "B06_SERVICE_BANK / 1.024",
+    "B06_SERVICE_BANK / 2.024",
+    "B06_UTILITY_SHELTER / 0.007",
+    "B06_UTILITY_SHELTER / 1.007",
+    "B06_UTILITY_SHELTER / 2.007",
+    "B06_UTILITY_SHELTER / 3.007",
+    "B06_SERVICE_BANK / 0.025",
+    "B06_SERVICE_BANK / 1.025",
+    "B06_SERVICE_BANK / 2.025",
+    "B06_SERVICE_BANK / 0.026",
+    "B06_SERVICE_BANK / 1.026",
+    "B06_SERVICE_BANK / 2.026",
+    "B06_SERVICE_BANK / 0.027",
+    "B06_SERVICE_BANK / 1.027",
+    "B06_SERVICE_BANK / 2.027",
+    "B06_UTILITY_SHELTER / 0.008",
+    "B06_UTILITY_SHELTER / 1.008",
+    "B06_UTILITY_SHELTER / 2.008",
+    "B06_UTILITY_SHELTER / 3.008",
+    "B06_SERVICE_BANK / 0.028",
+    "B06_SERVICE_BANK / 1.028",
+    "B06_SERVICE_BANK / 2.028",
+    "B06_SERVICE_BANK / 0.029",
+    "B06_SERVICE_BANK / 1.029",
+    "B06_SERVICE_BANK / 2.029",
+    "B06_SERVICE_BANK / 0.030",
+    "B06_SERVICE_BANK / 1.030",
+    "B06_SERVICE_BANK / 2.030",
+    "B06_UTILITY_SHELTER / 0.009",
+    "B06_UTILITY_SHELTER / 1.009",
+    "B06_UTILITY_SHELTER / 2.009",
+    "B06_UTILITY_SHELTER / 3.009",
+    "B06_SERVICE_BANK / 0.031",
+    "B06_SERVICE_BANK / 1.031",
+    "B06_SERVICE_BANK / 2.031",
+    "B06_SERVICE_BANK / 0.032",
+    "B06_SERVICE_BANK / 1.032",
+    "B06_SERVICE_BANK / 2.032",
+    "B06_SERVICE_BANK / 0.033",
+    "B06_SERVICE_BANK / 1.033",
+    "B06_SERVICE_BANK / 2.033",
+    "B06_UTILITY_SHELTER / 0.014",
+    "B06_UTILITY_SHELTER / 1.014",
+    "B06_UTILITY_SHELTER / 2.014",
+    "B06_UTILITY_SHELTER / 3.014",
+    "B06_SERVICE_BANK / 0.046",
+    "B06_SERVICE_BANK / 1.046",
+    "B06_SERVICE_BANK / 2.046",
+    "B06_SERVICE_BANK / 0.047",
+    "B06_SERVICE_BANK / 1.047",
+    "B06_SERVICE_BANK / 2.047",
+    "B06_SERVICE_BANK / 0.048",
+    "B06_SERVICE_BANK / 1.048",
+    "B06_SERVICE_BANK / 2.048",
+    "B06_UTILITY_SHELTER / 0.015",
+    "B06_UTILITY_SHELTER / 1.015",
+    "B06_UTILITY_SHELTER / 2.015",
+    "B06_UTILITY_SHELTER / 3.015",
+    "B06_SERVICE_BANK / 0.049",
+    "B06_SERVICE_BANK / 1.049",
+    "B06_SERVICE_BANK / 2.049",
+    "B06_SERVICE_BANK / 0.050",
+    "B06_SERVICE_BANK / 1.050",
+    "B06_SERVICE_BANK / 2.050",
+    "B06_SERVICE_BANK / 0.051",
+    "B06_SERVICE_BANK / 1.051",
+    "B06_SERVICE_BANK / 2.051",
+    "Service compound ID",
+    "Service compound ID.001",
+    "Service compound ID.002",
+    "Service compound ID.003",
+    "Service compound ID.004",
+    "Service compound ID.005",
+    "Service compound ID.006",
+    "Service compound ID.007",
+    "Service compound ID.008",
+    "Service compound ID.009",
+    "Service compound ID.014",
+    "Service compound ID.015"
+  ],
+  "placements": [
+    {
+      "object": "B07_VENT_CASSETTE / core_skin / 00",
+      "module": "B07_VENT_CASSETTE",
+      "position": [
+        -16.75,
+        -18.55,
+        3.0
+      ],
+      "rz": 0
+    },
+    {
+      "object": "B07_VENT_CASSETTE / core_skin / 01",
+      "module": "B07_VENT_CASSETTE",
+      "position": [
+        -10.75,
+        -18.55,
+        3.0
+      ],
+      "rz": 0
+    },
+    {
+      "object": "B07_VENT_CASSETTE / core_skin / 02",
+      "module": "B07_VENT_CASSETTE",
+      "position": [
+        10.75,
+        -18.55,
+        3.0
+      ],
+      "rz": 0
+    },
+    {
+      "object": "B07_VENT_CASSETTE / core_skin / 03",
+      "module": "B07_VENT_CASSETTE",
+      "position": [
+        16.75,
+        -18.55,
+        3.0
+      ],
+      "rz": 0
+    },
+    {
+      "object": "B07_VENT_CASSETTE / core_skin / 04",
+      "module": "B07_VENT_CASSETTE",
+      "position": [
+        20.55,
+        -12,
+        10
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_VENT_CASSETTE / core_skin / 05",
+      "module": "B07_VENT_CASSETTE",
+      "position": [
+        20.55,
+        -4,
+        10
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_VENT_CASSETTE / core_skin / 06",
+      "module": "B07_VENT_CASSETTE",
+      "position": [
+        20.55,
+        4,
+        10
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_VENT_CASSETTE / core_skin / 07",
+      "module": "B07_VENT_CASSETTE",
+      "position": [
+        20.55,
+        12,
+        10
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_TRANSFORMER_BAY / east_pump_yards / 00",
+      "module": "B07_TRANSFORMER_BAY",
+      "position": [
+        31.0,
+        42.6,
+        0
+      ],
+      "rz": 0
+    },
+    {
+      "object": "B07_PIPE_RACK / east_pump_yards / 01",
+      "module": "B07_PIPE_RACK",
+      "position": [
+        36.5,
+        42,
+        0
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_PIPE_RACK / east_pump_yards / 02",
+      "module": "B07_PIPE_RACK",
+      "position": [
+        30.5,
+        52.7,
+        0
+      ],
+      "rz": 0
+    },
+    {
+      "object": "B07_PIPE_RACK / east_pump_yards / 03",
+      "module": "B07_PIPE_RACK",
+      "position": [
+        37.0,
+        52.7,
+        0
+      ],
+      "rz": 0
+    },
+    {
+      "object": "B07_PIPE_RACK / east_pump_yards / 04",
+      "module": "B07_PIPE_RACK",
+      "position": [
+        48.5,
+        39.7,
+        0
+      ],
+      "rz": 0
+    },
+    {
+      "object": "B07_PIPE_RACK / east_pump_yards / 05",
+      "module": "B07_PIPE_RACK",
+      "position": [
+        55.0,
+        39.7,
+        0
+      ],
+      "rz": 0
+    },
+    {
+      "object": "B07_TRANSFORMER_BAY / east_pump_yards / 06",
+      "module": "B07_TRANSFORMER_BAY",
+      "position": [
+        49.0,
+        55.6,
+        0
+      ],
+      "rz": 0
+    },
+    {
+      "object": "B07_PIPE_RACK / east_pump_yards / 07",
+      "module": "B07_PIPE_RACK",
+      "position": [
+        54.5,
+        55,
+        0
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_TRANSFORMER_BAY / east_pump_yards / 08",
+      "module": "B07_TRANSFORMER_BAY",
+      "position": [
+        53.0,
+        -17.4,
+        0
+      ],
+      "rz": 0
+    },
+    {
+      "object": "B07_PIPE_RACK / east_pump_yards / 09",
+      "module": "B07_PIPE_RACK",
+      "position": [
+        59,
+        -20.3,
+        0
+      ],
+      "rz": 0
+    },
+    {
+      "object": "B07_PIPE_RACK / east_pump_yards / 10",
+      "module": "B07_PIPE_RACK",
+      "position": [
+        52.5,
+        -34.3,
+        0
+      ],
+      "rz": 0
+    },
+    {
+      "object": "B07_PIPE_RACK / east_pump_yards / 11",
+      "module": "B07_PIPE_RACK",
+      "position": [
+        59.0,
+        -34.3,
+        0
+      ],
+      "rz": 0
+    },
+    {
+      "object": "B07_SOLID_SCREEN / east_pump_yards / 12",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        28.75,
+        45.875,
+        2.4
+      ],
+      "rz": 0,
+      "scale": [
+        0.875,
+        1,
+        1
+      ]
+    },
+    {
+      "object": "B07_SOLID_SCREEN / east_pump_yards / 13",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        32.25,
+        45.875,
+        2.4
+      ],
+      "rz": 0,
+      "scale": [
+        0.875,
+        1,
+        1
+      ]
+    },
+    {
+      "object": "B07_SOLID_SCREEN / east_pump_yards / 14",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        35.75,
+        45.875,
+        2.4
+      ],
+      "rz": 0,
+      "scale": [
+        0.875,
+        1,
+        1
+      ]
+    },
+    {
+      "object": "B07_SOLID_SCREEN / east_pump_yards / 15",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        39.25,
+        45.875,
+        2.4
+      ],
+      "rz": 0,
+      "scale": [
+        0.875,
+        1,
+        1
+      ]
+    },
+    {
+      "object": "B07_SOLID_SCREEN / east_pump_yards / 16",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        27.125,
+        40,
+        2.4
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_SOLID_SCREEN / east_pump_yards / 17",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        27.125,
+        44,
+        2.4
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_SOLID_SCREEN / east_pump_yards / 18",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        40.875,
+        40,
+        2.4
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_SOLID_SCREEN / east_pump_yards / 19",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        40.875,
+        44,
+        2.4
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_SOLID_SCREEN / east_pump_yards / 20",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        28.75,
+        58.875,
+        2.4
+      ],
+      "rz": 0,
+      "scale": [
+        0.875,
+        1,
+        1
+      ]
+    },
+    {
+      "object": "B07_SOLID_SCREEN / east_pump_yards / 21",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        32.25,
+        58.875,
+        2.4
+      ],
+      "rz": 0,
+      "scale": [
+        0.875,
+        1,
+        1
+      ]
+    },
+    {
+      "object": "B07_SOLID_SCREEN / east_pump_yards / 22",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        35.75,
+        58.875,
+        2.4
+      ],
+      "rz": 0,
+      "scale": [
+        0.875,
+        1,
+        1
+      ]
+    },
+    {
+      "object": "B07_SOLID_SCREEN / east_pump_yards / 23",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        39.25,
+        58.875,
+        2.4
+      ],
+      "rz": 0,
+      "scale": [
+        0.875,
+        1,
+        1
+      ]
+    },
+    {
+      "object": "B07_SOLID_SCREEN / east_pump_yards / 24",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        27.125,
+        53,
+        2.4
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_SOLID_SCREEN / east_pump_yards / 25",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        27.125,
+        57,
+        2.4
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_SOLID_SCREEN / east_pump_yards / 26",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        40.875,
+        53,
+        2.4
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_SOLID_SCREEN / east_pump_yards / 27",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        40.875,
+        57,
+        2.4
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_SERVICE_CABINET / east_pump_yards / 28",
+      "module": "B07_SERVICE_CABINET",
+      "position": [
+        30.5,
+        56.5,
+        0
+      ],
+      "rz": 0
+    },
+    {
+      "object": "B07_SERVICE_CABINET / east_pump_yards / 29",
+      "module": "B07_SERVICE_CABINET",
+      "position": [
+        34,
+        56.5,
+        0
+      ],
+      "rz": 0
+    },
+    {
+      "object": "B07_SERVICE_CABINET / east_pump_yards / 30",
+      "module": "B07_SERVICE_CABINET",
+      "position": [
+        37.5,
+        56.5,
+        0
+      ],
+      "rz": 0
+    },
+    {
+      "object": "B07_SOLID_SCREEN / east_pump_yards / 31",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        46.75,
+        45.875,
+        2.4
+      ],
+      "rz": 0,
+      "scale": [
+        0.875,
+        1,
+        1
+      ]
+    },
+    {
+      "object": "B07_SOLID_SCREEN / east_pump_yards / 32",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        50.25,
+        45.875,
+        2.4
+      ],
+      "rz": 0,
+      "scale": [
+        0.875,
+        1,
+        1
+      ]
+    },
+    {
+      "object": "B07_SOLID_SCREEN / east_pump_yards / 33",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        53.75,
+        45.875,
+        2.4
+      ],
+      "rz": 0,
+      "scale": [
+        0.875,
+        1,
+        1
+      ]
+    },
+    {
+      "object": "B07_SOLID_SCREEN / east_pump_yards / 34",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        57.25,
+        45.875,
+        2.4
+      ],
+      "rz": 0,
+      "scale": [
+        0.875,
+        1,
+        1
+      ]
+    },
+    {
+      "object": "B07_SOLID_SCREEN / east_pump_yards / 35",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        45.125,
+        40,
+        2.4
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_SOLID_SCREEN / east_pump_yards / 36",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        45.125,
+        44,
+        2.4
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_SOLID_SCREEN / east_pump_yards / 37",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        58.875,
+        40,
+        2.4
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_SOLID_SCREEN / east_pump_yards / 38",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        58.875,
+        44,
+        2.4
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_SERVICE_CABINET / east_pump_yards / 39",
+      "module": "B07_SERVICE_CABINET",
+      "position": [
+        48.5,
+        43.5,
+        0
+      ],
+      "rz": 0
+    },
+    {
+      "object": "B07_SERVICE_CABINET / east_pump_yards / 40",
+      "module": "B07_SERVICE_CABINET",
+      "position": [
+        52,
+        43.5,
+        0
+      ],
+      "rz": 0
+    },
+    {
+      "object": "B07_SERVICE_CABINET / east_pump_yards / 41",
+      "module": "B07_SERVICE_CABINET",
+      "position": [
+        55.5,
+        43.5,
+        0
+      ],
+      "rz": 0
+    },
+    {
+      "object": "B07_SOLID_SCREEN / east_pump_yards / 42",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        46.75,
+        58.875,
+        2.4
+      ],
+      "rz": 0,
+      "scale": [
+        0.875,
+        1,
+        1
+      ]
+    },
+    {
+      "object": "B07_SOLID_SCREEN / east_pump_yards / 43",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        50.25,
+        58.875,
+        2.4
+      ],
+      "rz": 0,
+      "scale": [
+        0.875,
+        1,
+        1
+      ]
+    },
+    {
+      "object": "B07_SOLID_SCREEN / east_pump_yards / 44",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        53.75,
+        58.875,
+        2.4
+      ],
+      "rz": 0,
+      "scale": [
+        0.875,
+        1,
+        1
+      ]
+    },
+    {
+      "object": "B07_SOLID_SCREEN / east_pump_yards / 45",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        57.25,
+        58.875,
+        2.4
+      ],
+      "rz": 0,
+      "scale": [
+        0.875,
+        1,
+        1
+      ]
+    },
+    {
+      "object": "B07_SOLID_SCREEN / east_pump_yards / 46",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        45.125,
+        53,
+        2.4
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_SOLID_SCREEN / east_pump_yards / 47",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        45.125,
+        57,
+        2.4
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_SOLID_SCREEN / east_pump_yards / 48",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        58.875,
+        53,
+        2.4
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_SOLID_SCREEN / east_pump_yards / 49",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        58.875,
+        57,
+        2.4
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_SOLID_SCREEN / east_pump_yards / 50",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        50.75,
+        -14.125,
+        2.4
+      ],
+      "rz": 0,
+      "scale": [
+        0.875,
+        1,
+        1
+      ]
+    },
+    {
+      "object": "B07_SOLID_SCREEN / east_pump_yards / 51",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        54.25,
+        -14.125,
+        2.4
+      ],
+      "rz": 0,
+      "scale": [
+        0.875,
+        1,
+        1
+      ]
+    },
+    {
+      "object": "B07_SOLID_SCREEN / east_pump_yards / 52",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        57.75,
+        -14.125,
+        2.4
+      ],
+      "rz": 0,
+      "scale": [
+        0.875,
+        1,
+        1
+      ]
+    },
+    {
+      "object": "B07_SOLID_SCREEN / east_pump_yards / 53",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        61.25,
+        -14.125,
+        2.4
+      ],
+      "rz": 0,
+      "scale": [
+        0.875,
+        1,
+        1
+      ]
+    },
+    {
+      "object": "B07_SOLID_SCREEN / east_pump_yards / 54",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        49.125,
+        -20,
+        2.4
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_SOLID_SCREEN / east_pump_yards / 55",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        49.125,
+        -16,
+        2.4
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_SOLID_SCREEN / east_pump_yards / 56",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        62.875,
+        -20,
+        2.4
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_SOLID_SCREEN / east_pump_yards / 57",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        62.875,
+        -16,
+        2.4
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_SOLID_SCREEN / east_pump_yards / 58",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        50.75,
+        -28.125,
+        2.4
+      ],
+      "rz": 0,
+      "scale": [
+        0.875,
+        1,
+        1
+      ]
+    },
+    {
+      "object": "B07_SOLID_SCREEN / east_pump_yards / 59",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        54.25,
+        -28.125,
+        2.4
+      ],
+      "rz": 0,
+      "scale": [
+        0.875,
+        1,
+        1
+      ]
+    },
+    {
+      "object": "B07_SOLID_SCREEN / east_pump_yards / 60",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        57.75,
+        -28.125,
+        2.4
+      ],
+      "rz": 0,
+      "scale": [
+        0.875,
+        1,
+        1
+      ]
+    },
+    {
+      "object": "B07_SOLID_SCREEN / east_pump_yards / 61",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        61.25,
+        -28.125,
+        2.4
+      ],
+      "rz": 0,
+      "scale": [
+        0.875,
+        1,
+        1
+      ]
+    },
+    {
+      "object": "B07_SOLID_SCREEN / east_pump_yards / 62",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        49.125,
+        -34,
+        2.4
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_SOLID_SCREEN / east_pump_yards / 63",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        49.125,
+        -30,
+        2.4
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_SOLID_SCREEN / east_pump_yards / 64",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        62.875,
+        -34,
+        2.4
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_SOLID_SCREEN / east_pump_yards / 65",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        62.875,
+        -30,
+        2.4
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_SERVICE_CABINET / east_pump_yards / 66",
+      "module": "B07_SERVICE_CABINET",
+      "position": [
+        52.5,
+        -30.5,
+        0
+      ],
+      "rz": 0
+    },
+    {
+      "object": "B07_SERVICE_CABINET / east_pump_yards / 67",
+      "module": "B07_SERVICE_CABINET",
+      "position": [
+        56,
+        -30.5,
+        0
+      ],
+      "rz": 0
+    },
+    {
+      "object": "B07_SERVICE_CABINET / east_pump_yards / 68",
+      "module": "B07_SERVICE_CABINET",
+      "position": [
+        59.5,
+        -30.5,
+        0
+      ],
+      "rz": 0
+    },
+    {
+      "object": "B07_SERVICE_CABINET / east_pump_yards / 69",
+      "module": "B07_SERVICE_CABINET",
+      "position": [
+        59.5,
+        -16.5,
+        0
+      ],
+      "rz": 0
+    },
+    {
+      "object": "B07_SERVICE_CABINET / east_pump_yards / 70",
+      "module": "B07_SERVICE_CABINET",
+      "position": [
+        56.95,
+        -16.5,
+        0
+      ],
+      "rz": 0,
+      "scale": [
+        0.45,
+        1,
+        1
+      ],
+      "variant": "narrow_045"
+    },
+    {
+      "object": "B07_LOGISTICS_CANOPY / southwest_logistics / 00",
+      "module": "B07_LOGISTICS_CANOPY",
+      "position": [
+        -21.1,
+        -42.65,
+        0
+      ],
+      "rz": 0
+    },
+    {
+      "object": "B07_CARGO_SET / southwest_logistics / 01",
+      "module": "B07_CARGO_SET",
+      "position": [
+        -21.8,
+        -44.55,
+        0
+      ],
+      "rz": 0
+    },
+    {
+      "object": "B07_CARGO_SET / southwest_logistics / 02",
+      "module": "B07_CARGO_SET",
+      "position": [
+        -14.8,
+        -42.4,
+        0
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_CARGO_SET / southwest_logistics / 03",
+      "module": "B07_CARGO_SET",
+      "position": [
+        -23.5,
+        -57.55,
+        0
+      ],
+      "rz": 0
+    },
+    {
+      "object": "B07_CARGO_SET / southwest_logistics / 04",
+      "module": "B07_CARGO_SET",
+      "position": [
+        -17.0,
+        -57.55,
+        0
+      ],
+      "rz": 0
+    },
+    {
+      "object": "B07_CARGO_SET / southwest_logistics / 05",
+      "module": "B07_CARGO_SET",
+      "position": [
+        -41.5,
+        -44.55,
+        0
+      ],
+      "rz": 0
+    },
+    {
+      "object": "B07_CARGO_SET / southwest_logistics / 06",
+      "module": "B07_CARGO_SET",
+      "position": [
+        -35.0,
+        -44.55,
+        0
+      ],
+      "rz": 0
+    },
+    {
+      "object": "B07_LOGISTICS_CANOPY / southwest_logistics / 07",
+      "module": "B07_LOGISTICS_CANOPY",
+      "position": [
+        -39.1,
+        -55.65,
+        0
+      ],
+      "rz": 0
+    },
+    {
+      "object": "B07_CARGO_SET / southwest_logistics / 08",
+      "module": "B07_CARGO_SET",
+      "position": [
+        -39.8,
+        -57.55,
+        0
+      ],
+      "rz": 180
+    },
+    {
+      "object": "B07_CARGO_SET / southwest_logistics / 09",
+      "module": "B07_CARGO_SET",
+      "position": [
+        -32.8,
+        -55.4,
+        0
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_LOGISTICS_CANOPY / southwest_logistics / 10",
+      "module": "B07_LOGISTICS_CANOPY",
+      "position": [
+        -57.1,
+        -42.65,
+        0
+      ],
+      "rz": 0
+    },
+    {
+      "object": "B07_CARGO_SET / southwest_logistics / 11",
+      "module": "B07_CARGO_SET",
+      "position": [
+        -57.8,
+        -44.55,
+        0
+      ],
+      "rz": 0
+    },
+    {
+      "object": "B07_CARGO_SET / southwest_logistics / 12",
+      "module": "B07_CARGO_SET",
+      "position": [
+        -50.8,
+        -42.4,
+        0
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_CARGO_SET / southwest_logistics / 13",
+      "module": "B07_CARGO_SET",
+      "position": [
+        -59.5,
+        -57.55,
+        0
+      ],
+      "rz": 0
+    },
+    {
+      "object": "B07_CARGO_SET / southwest_logistics / 14",
+      "module": "B07_CARGO_SET",
+      "position": [
+        -53.0,
+        -57.55,
+        0
+      ],
+      "rz": 0
+    },
+    {
+      "object": "B07_SOLID_SCREEN / southwest_logistics / 15",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        -25.25,
+        -39.125,
+        2.4
+      ],
+      "rz": 0,
+      "scale": [
+        0.875,
+        1,
+        1
+      ]
+    },
+    {
+      "object": "B07_SOLID_SCREEN / southwest_logistics / 16",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        -21.75,
+        -39.125,
+        2.4
+      ],
+      "rz": 0,
+      "scale": [
+        0.875,
+        1,
+        1
+      ]
+    },
+    {
+      "object": "B07_SOLID_SCREEN / southwest_logistics / 17",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        -18.25,
+        -39.125,
+        2.4
+      ],
+      "rz": 0,
+      "scale": [
+        0.875,
+        1,
+        1
+      ]
+    },
+    {
+      "object": "B07_SOLID_SCREEN / southwest_logistics / 18",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        -14.75,
+        -39.125,
+        2.4
+      ],
+      "rz": 0,
+      "scale": [
+        0.875,
+        1,
+        1
+      ]
+    },
+    {
+      "object": "B07_SOLID_SCREEN / southwest_logistics / 19",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        -26.875,
+        -45,
+        2.4
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_SOLID_SCREEN / southwest_logistics / 20",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        -26.875,
+        -41,
+        2.4
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_SOLID_SCREEN / southwest_logistics / 21",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        -13.125,
+        -45,
+        2.4
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_SOLID_SCREEN / southwest_logistics / 22",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        -13.125,
+        -41,
+        2.4
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_SOLID_SCREEN / southwest_logistics / 23",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        -25.25,
+        -52.125,
+        2.4
+      ],
+      "rz": 0,
+      "scale": [
+        0.875,
+        1,
+        1
+      ]
+    },
+    {
+      "object": "B07_SOLID_SCREEN / southwest_logistics / 24",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        -21.75,
+        -52.125,
+        2.4
+      ],
+      "rz": 0,
+      "scale": [
+        0.875,
+        1,
+        1
+      ]
+    },
+    {
+      "object": "B07_SOLID_SCREEN / southwest_logistics / 25",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        -18.25,
+        -52.125,
+        2.4
+      ],
+      "rz": 0,
+      "scale": [
+        0.875,
+        1,
+        1
+      ]
+    },
+    {
+      "object": "B07_SOLID_SCREEN / southwest_logistics / 26",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        -14.75,
+        -52.125,
+        2.4
+      ],
+      "rz": 0,
+      "scale": [
+        0.875,
+        1,
+        1
+      ]
+    },
+    {
+      "object": "B07_SOLID_SCREEN / southwest_logistics / 27",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        -26.875,
+        -58,
+        2.4
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_SOLID_SCREEN / southwest_logistics / 28",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        -26.875,
+        -54,
+        2.4
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_SOLID_SCREEN / southwest_logistics / 29",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        -13.125,
+        -58,
+        2.4
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_SOLID_SCREEN / southwest_logistics / 30",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        -13.125,
+        -54,
+        2.4
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_SERVICE_CABINET / southwest_logistics / 31",
+      "module": "B07_SERVICE_CABINET",
+      "position": [
+        -23.5,
+        -54.5,
+        0
+      ],
+      "rz": 0
+    },
+    {
+      "object": "B07_SERVICE_CABINET / southwest_logistics / 32",
+      "module": "B07_SERVICE_CABINET",
+      "position": [
+        -20,
+        -54.5,
+        0
+      ],
+      "rz": 0
+    },
+    {
+      "object": "B07_SERVICE_CABINET / southwest_logistics / 33",
+      "module": "B07_SERVICE_CABINET",
+      "position": [
+        -16.5,
+        -54.5,
+        0
+      ],
+      "rz": 0
+    },
+    {
+      "object": "B07_SOLID_SCREEN / southwest_logistics / 34",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        -43.25,
+        -39.125,
+        2.4
+      ],
+      "rz": 0,
+      "scale": [
+        0.875,
+        1,
+        1
+      ]
+    },
+    {
+      "object": "B07_SOLID_SCREEN / southwest_logistics / 35",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        -39.75,
+        -39.125,
+        2.4
+      ],
+      "rz": 0,
+      "scale": [
+        0.875,
+        1,
+        1
+      ]
+    },
+    {
+      "object": "B07_SOLID_SCREEN / southwest_logistics / 36",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        -36.25,
+        -39.125,
+        2.4
+      ],
+      "rz": 0,
+      "scale": [
+        0.875,
+        1,
+        1
+      ]
+    },
+    {
+      "object": "B07_SOLID_SCREEN / southwest_logistics / 37",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        -32.75,
+        -39.125,
+        2.4
+      ],
+      "rz": 0,
+      "scale": [
+        0.875,
+        1,
+        1
+      ]
+    },
+    {
+      "object": "B07_SOLID_SCREEN / southwest_logistics / 38",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        -44.875,
+        -45,
+        2.4
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_SOLID_SCREEN / southwest_logistics / 39",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        -44.875,
+        -41,
+        2.4
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_SOLID_SCREEN / southwest_logistics / 40",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        -31.125,
+        -45,
+        2.4
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_SOLID_SCREEN / southwest_logistics / 41",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        -31.125,
+        -41,
+        2.4
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_SERVICE_CABINET / southwest_logistics / 42",
+      "module": "B07_SERVICE_CABINET",
+      "position": [
+        -41.5,
+        -41.5,
+        0
+      ],
+      "rz": 0
+    },
+    {
+      "object": "B07_SERVICE_CABINET / southwest_logistics / 43",
+      "module": "B07_SERVICE_CABINET",
+      "position": [
+        -38,
+        -41.5,
+        0
+      ],
+      "rz": 0
+    },
+    {
+      "object": "B07_SERVICE_CABINET / southwest_logistics / 44",
+      "module": "B07_SERVICE_CABINET",
+      "position": [
+        -34.5,
+        -41.5,
+        0
+      ],
+      "rz": 0
+    },
+    {
+      "object": "B07_SOLID_SCREEN / southwest_logistics / 45",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        -43.25,
+        -52.125,
+        2.4
+      ],
+      "rz": 0,
+      "scale": [
+        0.875,
+        1,
+        1
+      ]
+    },
+    {
+      "object": "B07_SOLID_SCREEN / southwest_logistics / 46",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        -39.75,
+        -52.125,
+        2.4
+      ],
+      "rz": 0,
+      "scale": [
+        0.875,
+        1,
+        1
+      ]
+    },
+    {
+      "object": "B07_SOLID_SCREEN / southwest_logistics / 47",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        -36.25,
+        -52.125,
+        2.4
+      ],
+      "rz": 0,
+      "scale": [
+        0.875,
+        1,
+        1
+      ]
+    },
+    {
+      "object": "B07_SOLID_SCREEN / southwest_logistics / 48",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        -32.75,
+        -52.125,
+        2.4
+      ],
+      "rz": 0,
+      "scale": [
+        0.875,
+        1,
+        1
+      ]
+    },
+    {
+      "object": "B07_SOLID_SCREEN / southwest_logistics / 49",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        -44.875,
+        -58,
+        2.4
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_SOLID_SCREEN / southwest_logistics / 50",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        -44.875,
+        -54,
+        2.4
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_SOLID_SCREEN / southwest_logistics / 51",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        -31.125,
+        -58,
+        2.4
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_SOLID_SCREEN / southwest_logistics / 52",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        -31.125,
+        -54,
+        2.4
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_SOLID_SCREEN / southwest_logistics / 53",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        -61.25,
+        -39.125,
+        2.4
+      ],
+      "rz": 0,
+      "scale": [
+        0.875,
+        1,
+        1
+      ]
+    },
+    {
+      "object": "B07_SOLID_SCREEN / southwest_logistics / 54",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        -57.75,
+        -39.125,
+        2.4
+      ],
+      "rz": 0,
+      "scale": [
+        0.875,
+        1,
+        1
+      ]
+    },
+    {
+      "object": "B07_SOLID_SCREEN / southwest_logistics / 55",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        -54.25,
+        -39.125,
+        2.4
+      ],
+      "rz": 0,
+      "scale": [
+        0.875,
+        1,
+        1
+      ]
+    },
+    {
+      "object": "B07_SOLID_SCREEN / southwest_logistics / 56",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        -50.75,
+        -39.125,
+        2.4
+      ],
+      "rz": 0,
+      "scale": [
+        0.875,
+        1,
+        1
+      ]
+    },
+    {
+      "object": "B07_SOLID_SCREEN / southwest_logistics / 57",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        -62.875,
+        -45,
+        2.4
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_SOLID_SCREEN / southwest_logistics / 58",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        -62.875,
+        -41,
+        2.4
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_SOLID_SCREEN / southwest_logistics / 59",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        -49.125,
+        -45,
+        2.4
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_SOLID_SCREEN / southwest_logistics / 60",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        -49.125,
+        -41,
+        2.4
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_SOLID_SCREEN / southwest_logistics / 61",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        -61.25,
+        -52.125,
+        2.4
+      ],
+      "rz": 0,
+      "scale": [
+        0.875,
+        1,
+        1
+      ]
+    },
+    {
+      "object": "B07_SOLID_SCREEN / southwest_logistics / 62",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        -57.75,
+        -52.125,
+        2.4
+      ],
+      "rz": 0,
+      "scale": [
+        0.875,
+        1,
+        1
+      ]
+    },
+    {
+      "object": "B07_SOLID_SCREEN / southwest_logistics / 63",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        -54.25,
+        -52.125,
+        2.4
+      ],
+      "rz": 0,
+      "scale": [
+        0.875,
+        1,
+        1
+      ]
+    },
+    {
+      "object": "B07_SOLID_SCREEN / southwest_logistics / 64",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        -50.75,
+        -52.125,
+        2.4
+      ],
+      "rz": 0,
+      "scale": [
+        0.875,
+        1,
+        1
+      ]
+    },
+    {
+      "object": "B07_SOLID_SCREEN / southwest_logistics / 65",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        -62.875,
+        -58,
+        2.4
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_SOLID_SCREEN / southwest_logistics / 66",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        -62.875,
+        -54,
+        2.4
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_SOLID_SCREEN / southwest_logistics / 67",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        -49.125,
+        -58,
+        2.4
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_SOLID_SCREEN / southwest_logistics / 68",
+      "module": "B07_SOLID_SCREEN",
+      "position": [
+        -49.125,
+        -54,
+        2.4
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_SERVICE_CABINET / southwest_logistics / 69",
+      "module": "B07_SERVICE_CABINET",
+      "position": [
+        -59.5,
+        -54.5,
+        0
+      ],
+      "rz": 0
+    },
+    {
+      "object": "B07_SERVICE_CABINET / southwest_logistics / 70",
+      "module": "B07_SERVICE_CABINET",
+      "position": [
+        -56,
+        -54.5,
+        0
+      ],
+      "rz": 0
+    },
+    {
+      "object": "B07_SERVICE_CABINET / southwest_logistics / 71",
+      "module": "B07_SERVICE_CABINET",
+      "position": [
+        -52.5,
+        -54.5,
+        0
+      ],
+      "rz": 0
+    },
+    {
+      "object": "B07_SERVICE_CABINET / southwest_logistics / 72",
+      "module": "B07_SERVICE_CABINET",
+      "position": [
+        -20,
+        -41.5,
+        0
+      ],
+      "rz": 0
+    },
+    {
+      "object": "B07_SERVICE_CABINET / southwest_logistics / 73",
+      "module": "B07_SERVICE_CABINET",
+      "position": [
+        -38,
+        -54.5,
+        0
+      ],
+      "rz": 0
+    },
+    {
+      "object": "B07_SERVICE_CABINET / southwest_logistics / 74",
+      "module": "B07_SERVICE_CABINET",
+      "position": [
+        -56,
+        -41.5,
+        0
+      ],
+      "rz": 0
+    }
+  ],
+  "total_objects": 4482,
+  "unique_new_modules": 7,
+  "ue_runtime_tested": false,
+  "official_manny_tested": false
+}

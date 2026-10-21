@@ -1,0 +1,958 @@
+{
+  "reviewed_at_utc": "2026-10-21T04:17:00.681780+00:00",
+  "status": "PASS_WITH_DOCUMENTED_LIMITATIONS",
+  "source_scene_sha256": "3b2f4e727d359b595d818551be04be7ceabaa8fe1504de1164754ada4740b25b",
+  "scope": "Read-only independent Blender static geometry, actual reference pixels and actual rendered images. Not Unreal runtime or bullet/capsule certification.",
+  "reference_chain": [
+    {
+      "file": "QA/reference_freeze.json",
+      "sha256": "a2b5e1c815a9bb1e2c8cd267642bc3ec3ed892684a44ebf794b82543e374b902",
+      "utc": "2026-10-21T03:28:12.528151+00:00",
+      "input_count": 27,
+      "input_hashes_pass": true
+    },
+    {
+      "file": "QA/reference_freeze_v02.json",
+      "sha256": "c87008b59706b13ab768e81d1c409c395d36d08933c42099f91a194af9f01a9e",
+      "utc": "2026-10-21T03:44:12.298000+00:00",
+      "input_count": 34,
+      "input_hashes_pass": true,
+      "parent_digest_pass": true
+    },
+    {
+      "file": "QA/reference_freeze_v03.json",
+      "sha256": "9173f850b863f403077d04f75c1ff2ad3152c2cee23b71d2c18c20de3f1ffcf6",
+      "utc": "2026-10-21T03:50:05.233805+00:00",
+      "input_count": 8,
+      "input_hashes_pass": true,
+      "parent_digest_pass": true
+    },
+    {
+      "file": "QA/reference_freeze_v04.json",
+      "sha256": "8bf0e976c0b0b51d1334150dd93b551562e4f16883e8c36ff12d4fda21b22ec9",
+      "utc": "2026-10-21T04:00:57.105268+00:00",
+      "input_count": 10,
+      "input_hashes_pass": true,
+      "parent_digest_pass": true
+    }
+  ],
+  "original_baseline_sha256": "f19f554d9f2ba93e6f3c1d31d95b0db2ed2b5bcd78a7fecc42de8cfe1267edb3",
+  "baseline_hash_pass": true,
+  "preserved_geometry_objects": 3589,
+  "unexpected_geometry_changes": [],
+  "intentional_removed_count": 168,
+  "unexpected_removed": [],
+  "module_families": 7,
+  "standalone_blend_assets_including_variant": 8,
+  "scene_module_placements": 154,
+  "placement_transform_mismatches": [],
+  "standalone_scene_open_results": {
+    "Assets/B07_CARGO_SET.blend": {
+      "opened": true,
+      "scenes": 1,
+      "active_scene_objects": 1,
+      "mesh_objects": [
+        {
+          "name": "B07_CARGO_SET",
+          "lo": [
+            -2.0250000953674316,
+            -1.4325000047683716,
+            0.009999999776482582
+          ],
+          "hi": [
+            2.200000047683716,
+            1.3910000324249268,
+            2.1600000858306885
+          ],
+          "dimensions": [
+            4.2250001430511475,
+            2.8235000371932983,
+            2.150000086054206
+          ]
+        }
+      ],
+      "dependencies": {
+        "libraries": [],
+        "images": [],
+        "fonts": []
+      }
+    },
+    "Assets/B07_LOGISTICS_CANOPY.blend": {
+      "opened": true,
+      "scenes": 1,
+      "active_scene_objects": 1,
+      "mesh_objects": [
+        {
+          "name": "B07_LOGISTICS_CANOPY",
+          "lo": [
+            -4.800000190734863,
+            -3.2699999809265137,
+            0.0
+          ],
+          "hi": [
+            4.800000190734863,
+            3.2000458240509033,
+            4.881345748901367
+          ],
+          "dimensions": [
+            9.600000381469727,
+            6.470045804977417,
+            4.881345748901367
+          ]
+        }
+      ],
+      "dependencies": {
+        "libraries": [],
+        "images": [],
+        "fonts": []
+      }
+    },
+    "Assets/B07_PIPE_RACK.blend": {
+      "opened": true,
+      "scenes": 1,
+      "active_scene_objects": 1,
+      "mesh_objects": [
+        {
+          "name": "B07_PIPE_RACK",
+          "lo": [
+            -3.0,
+            -1.440000057220459,
+            0.0
+          ],
+          "hi": [
+            3.4800000190734863,
+            1.440000057220459,
+            4.429999828338623
+          ],
+          "dimensions": [
+            6.480000019073486,
+            2.880000114440918,
+            4.429999828338623
+          ]
+        }
+      ],
+      "dependencies": {
+        "libraries": [],
+        "images": [],
+        "fonts": []
+      }
+    },
+    "Assets/B07_SERVICE_CABINET.blend": {
+      "opened": true,
+      "scenes": 1,
+      "active_scene_objects": 1,
+      "mesh_objects": [
+        {
+          "name": "B07_SERVICE_CABINET",
+          "lo": [
+            -1.4700000286102295,
+            -1.2400000095367432,
+            0.0
+          ],
+          "hi": [
+            1.4700000286102295,
+            1.190000057220459,
+            3.109999895095825
+          ],
+          "dimensions": [
+            2.940000057220459,
+            2.430000066757202,
+            3.109999895095825
+          ]
+        }
+      ],
+      "dependencies": {
+        "libraries": [],
+        "images": [],
+        "fonts": []
+      }
+    },
+    "Assets/B07_SERVICE_CABINET_narrow_045.blend": {
+      "opened": true,
+      "scenes": 1,
+      "active_scene_objects": 1,
+      "mesh_objects": [
+        {
+          "name": "B07_SERVICE_CABINET",
+          "lo": [
+            -0.6614999771118164,
+            -1.2400000095367432,
+            0.0
+          ],
+          "hi": [
+            0.6614999771118164,
+            1.190000057220459,
+            3.109999895095825
+          ],
+          "dimensions": [
+            1.3229999542236328,
+            2.430000066757202,
+            3.109999895095825
+          ]
+        }
+      ],
+      "dependencies": {
+        "libraries": [],
+        "images": [],
+        "fonts": []
+      }
+    },
+    "Assets/B07_SOLID_SCREEN.blend": {
+      "opened": true,
+      "scenes": 1,
+      "active_scene_objects": 1,
+      "mesh_objects": [
+        {
+          "name": "B07_SOLID_SCREEN",
+          "lo": [
+            -2.0799999237060547,
+            -0.1899999976158142,
+            0.0
+          ],
+          "hi": [
+            2.0799999237060547,
+            0.1899999976158142,
+            2.0999999046325684
+          ],
+          "dimensions": [
+            4.159999847412109,
+            0.3799999952316284,
+            2.0999999046325684
+          ]
+        }
+      ],
+      "dependencies": {
+        "libraries": [],
+        "images": [],
+        "fonts": []
+      }
+    },
+    "Assets/B07_TRANSFORMER_BAY.blend": {
+      "opened": true,
+      "scenes": 1,
+      "active_scene_objects": 1,
+      "mesh_objects": [
+        {
+          "name": "B07_TRANSFORMER_BAY",
+          "lo": [
+            -2.9000000953674316,
+            -2.2001240253448486,
+            0.0
+          ],
+          "hi": [
+            2.9000000953674316,
+            2.2001240253448486,
+            4.94141149520874
+          ],
+          "dimensions": [
+            5.800000190734863,
+            4.400248050689697,
+            4.94141149520874
+          ]
+        }
+      ],
+      "dependencies": {
+        "libraries": [],
+        "images": [],
+        "fonts": []
+      }
+    },
+    "Assets/B07_VENT_CASSETTE.blend": {
+      "opened": true,
+      "scenes": 1,
+      "active_scene_objects": 1,
+      "mesh_objects": [
+        {
+          "name": "B07_VENT_CASSETTE",
+          "lo": [
+            -2.049999952316284,
+            -0.3700000047683716,
+            0.0
+          ],
+          "hi": [
+            2.049999952316284,
+            0.4000000059604645,
+            6.199999809265137
+          ],
+          "dimensions": [
+            4.099999904632568,
+            0.7700000107288361,
+            6.199999809265137
+          ]
+        }
+      ],
+      "dependencies": {
+        "libraries": [],
+        "images": [],
+        "fonts": []
+      }
+    },
+    "Regions/core_skin.blend": {
+      "opened": true,
+      "scenes": 1,
+      "active_scene_objects": 22,
+      "mesh_objects": 22,
+      "dependencies": {
+        "libraries": [],
+        "images": [],
+        "fonts": []
+      }
+    },
+    "Regions/east_pump_yards.blend": {
+      "opened": true,
+      "scenes": 1,
+      "active_scene_objects": 413,
+      "mesh_objects": 413,
+      "dependencies": {
+        "libraries": [],
+        "images": [],
+        "fonts": []
+      }
+    },
+    "Regions/southwest_logistics.blend": {
+      "opened": true,
+      "scenes": 1,
+      "active_scene_objects": 417,
+      "mesh_objects": 417,
+      "dependencies": {
+        "libraries": [],
+        "images": [],
+        "fonts": []
+      }
+    },
+    "site_refined.blend": {
+      "opened": true,
+      "active_scene_objects": 4482,
+      "dependencies": {
+        "libraries": [],
+        "images": [],
+        "fonts": []
+      }
+    }
+  },
+  "module_vertex_comparison": {
+    "B07_VENT_CASSETTE": {
+      "vertex_count": 384,
+      "expected_vertex_count": 384,
+      "maximum_vertex_difference_m": 2.2888183615066282e-07,
+      "parts": 42
+    },
+    "B07_PIPE_RACK": {
+      "vertex_count": 1280,
+      "expected_vertex_count": 1280,
+      "maximum_vertex_difference_m": 2.347628598187157e-07,
+      "parts": 73
+    },
+    "B07_TRANSFORMER_BAY": {
+      "vertex_count": 1240,
+      "expected_vertex_count": 1240,
+      "maximum_vertex_difference_m": 2.037808464194768e-07,
+      "parts": 80
+    },
+    "B07_CARGO_SET": {
+      "vertex_count": 260,
+      "expected_vertex_count": 260,
+      "maximum_vertex_difference_m": 1.1062622062851801e-07,
+      "parts": 31
+    },
+    "B07_LOGISTICS_CANOPY": {
+      "vertex_count": 448,
+      "expected_vertex_count": 448,
+      "maximum_vertex_difference_m": 2.2888183615066282e-07,
+      "parts": 56
+    },
+    "B07_SOLID_SCREEN": {
+      "vertex_count": 160,
+      "expected_vertex_count": 160,
+      "maximum_vertex_difference_m": 9.536743172944284e-08,
+      "parts": 20
+    },
+    "B07_SERVICE_CABINET": {
+      "vertex_count": 120,
+      "expected_vertex_count": 120,
+      "maximum_vertex_difference_m": 1.144409176312422e-07,
+      "parts": 15
+    }
+  },
+  "narrow_variant_independent_open": {
+    "file": "B07_SERVICE_CABINET_narrow_045.blend",
+    "sha256": "5a9dec0effb392e82e01c6f54414460263bb820e172d0bc51668808a5b7064b7",
+    "opened": true,
+    "objects": [
+      {
+        "name": "B07_SERVICE_CABINET",
+        "scale": [
+          0.44999998807907104,
+          1.0,
+          1.0
+        ],
+        "lo": [
+          -0.6614999771118164,
+          -1.2400000095367432,
+          0.0
+        ],
+        "hi": [
+          0.6614999771118164,
+          1.190000057220459,
+          3.109999895095825
+        ],
+        "dimensions": [
+          1.3229999542236328,
+          2.430000066757202,
+          3.109999895095825
+        ]
+      }
+    ],
+    "libraries": [],
+    "images": [],
+    "fonts": []
+  },
+  "glb_self_contained_results": [
+    {
+      "file": "B07_CARGO_SET.glb",
+      "sha256": "4500a2a971664d66ad314912649e401aa3b31035e52185b9e87ad1279db6f373",
+      "length_matches": true,
+      "glb_v2": true,
+      "external_uris": [],
+      "meshes": 1,
+      "materials": 6,
+      "nodes": 1
+    },
+    {
+      "file": "B07_LOGISTICS_CANOPY.glb",
+      "sha256": "9a3dcae03512428853a89de82458d7538f7ee02afc9a51c9f813d0ae197e19bd",
+      "length_matches": true,
+      "glb_v2": true,
+      "external_uris": [],
+      "meshes": 1,
+      "materials": 4,
+      "nodes": 1
+    },
+    {
+      "file": "B07_PIPE_RACK.glb",
+      "sha256": "24951d950d8e9176e11e6f11351febdd9151341a8bfea3898e3a2226826210ab",
+      "length_matches": true,
+      "glb_v2": true,
+      "external_uris": [],
+      "meshes": 1,
+      "materials": 4,
+      "nodes": 1
+    },
+    {
+      "file": "B07_SERVICE_CABINET.glb",
+      "sha256": "4e3cef69b344d10d14d9b0e3bfa959ab8af5ae89eb23301c3a9aa9283bac5f42",
+      "length_matches": true,
+      "glb_v2": true,
+      "external_uris": [],
+      "meshes": 1,
+      "materials": 4,
+      "nodes": 1
+    },
+    {
+      "file": "B07_SERVICE_CABINET_narrow_045.glb",
+      "sha256": "89ff09e0c889718ccd0e21c4d1c30412d4e3ad7593f1e68786e0a01b4d3987a1",
+      "length_matches": true,
+      "glb_v2": true,
+      "external_uris": [],
+      "meshes": 1,
+      "materials": 4,
+      "nodes": 1
+    },
+    {
+      "file": "B07_SOLID_SCREEN.glb",
+      "sha256": "df32c796ebc7de47dfd5bafbde5da84d6addb5c8facbdbb87ccdd727df1a563f",
+      "length_matches": true,
+      "glb_v2": true,
+      "external_uris": [],
+      "meshes": 1,
+      "materials": 2,
+      "nodes": 1
+    },
+    {
+      "file": "B07_TRANSFORMER_BAY.glb",
+      "sha256": "2b3c0d344613176e3928438255eca62d3a807d44734414d3e676eab3ae45266a",
+      "length_matches": true,
+      "glb_v2": true,
+      "external_uris": [],
+      "meshes": 1,
+      "materials": 6,
+      "nodes": 1
+    },
+    {
+      "file": "B07_VENT_CASSETTE.glb",
+      "sha256": "2f53e81c53260176df8fb4046b41a0f64344b3c68bc9079203161737ba37a9b6",
+      "length_matches": true,
+      "glb_v2": true,
+      "external_uris": [],
+      "meshes": 1,
+      "materials": 4,
+      "nodes": 1
+    }
+  ],
+  "geometry_file_hashes": [
+    {
+      "path": "site_refined.blend",
+      "sha256": "3b2f4e727d359b595d818551be04be7ceabaa8fe1504de1164754ada4740b25b",
+      "bytes": 4689391
+    },
+    {
+      "path": "Assets/B07_CARGO_SET.blend",
+      "sha256": "e6386ae5227beb646140a264cca876dbee81fdc3cc37fd21b518c695513fab87",
+      "bytes": 88176
+    },
+    {
+      "path": "Assets/B07_LOGISTICS_CANOPY.blend",
+      "sha256": "cf6f761dc93cd1b9ae3298fbe4e348bbcc52f08a4bb437b08ea67baece37f40a",
+      "bytes": 92232
+    },
+    {
+      "path": "Assets/B07_PIPE_RACK.blend",
+      "sha256": "18f6741f90153fc7a5b5ea81e0c05aff5a8f890d8d2f31355ed2987115a9e924",
+      "bytes": 107476
+    },
+    {
+      "path": "Assets/B07_SERVICE_CABINET.blend",
+      "sha256": "966b562e9285ac3dd93c6218bab5430cf4ba1298b2f3c8b780dadc01deb72671",
+      "bytes": 86321
+    },
+    {
+      "path": "Assets/B07_SERVICE_CABINET_narrow_045.blend",
+      "sha256": "5a9dec0effb392e82e01c6f54414460263bb820e172d0bc51668808a5b7064b7",
+      "bytes": 103084
+    },
+    {
+      "path": "Assets/B07_SOLID_SCREEN.blend",
+      "sha256": "889c5ec5e14f58689fab38bdbe2a36e976b19edac58d9ffdbf6a24fc484f816f",
+      "bytes": 86613
+    },
+    {
+      "path": "Assets/B07_TRANSFORMER_BAY.blend",
+      "sha256": "6f8f84363a43e6e87c4c0a56eca4a0ec3e8cec60e631595b4b4290febd0206bc",
+      "bytes": 103557
+    },
+    {
+      "path": "Assets/B07_VENT_CASSETTE.blend",
+      "sha256": "103976dd4223ba73a48ce7ac2620f38157cb139a9000796184305dcc8d71a0b9",
+      "bytes": 90082
+    },
+    {
+      "path": "Regions/core_skin.blend",
+      "sha256": "58e4f14f238afad9672a792175b890ccba210fa1b3ce74222bb9503793a86f1a",
+      "bytes": 96186
+    },
+    {
+      "path": "Regions/east_pump_yards.blend",
+      "sha256": "7c14cc75a6d2c800463febfa1c2a052d96aeb4ffa583c5990528d2e91a366797",
+      "bytes": 196693
+    },
+    {
+      "path": "Regions/southwest_logistics.blend",
+      "sha256": "4c0669981a714c3e006ca262fa283ee4e51dd0dc427509e17e0db3f7ccfd46b0",
+      "bytes": 170730
+    }
+  ],
+  "ray_summary": {
+    "ground": {
+      "after": {
+        "rays": 2384,
+        "before_near_occluded": 1206,
+        "after_near_occluded": 1212,
+        "loss_count": 0,
+        "gain_count": 6
+      },
+      "after_excluding_open_rack": {
+        "rays": 2384,
+        "before_near_occluded": 1206,
+        "after_near_occluded": 1210,
+        "loss_count": 0,
+        "gain_count": 4
+      }
+    },
+    "rising_9degree": {
+      "after": {
+        "rays": 2384,
+        "before_near_occluded": 999,
+        "after_near_occluded": 1012,
+        "loss_count": 0,
+        "gain_count": 13
+      },
+      "after_excluding_open_rack": {
+        "rays": 2384,
+        "before_near_occluded": 999,
+        "after_near_occluded": 1007,
+        "loss_count": 0,
+        "gain_count": 8
+      }
+    },
+    "ground_dense_local": {
+      "after": {
+        "rays": 3690,
+        "before_near_occluded": 3255,
+        "after_near_occluded": 3294,
+        "loss_count": 0,
+        "gain_count": 39
+      },
+      "after_excluding_open_rack": {
+        "rays": 3690,
+        "before_near_occluded": 3255,
+        "after_near_occluded": 3267,
+        "loss_count": 0,
+        "gain_count": 12
+      }
+    }
+  },
+  "rays_definition": {
+    "eye_height_z_m": 1.65,
+    "near_hit_threshold_m": 12,
+    "maximum_reach_m": 40,
+    "standard_witnesses": 149,
+    "directions_per_standard_witness": 16,
+    "rising_vector_z_per_horizontal_unit": 0.16,
+    "dense_local_groups": 10,
+    "dense_position_offsets_m": [
+      -0.1,
+      0,
+      0.1
+    ],
+    "dense_angle_half_range_deg": 5,
+    "dense_angle_step_deg": 0.25,
+    "open_pipe_rack_excluded_for_cover_claims": true
+  },
+  "route_strips": {
+    "routes": 8,
+    "sample_count_per_scene": 9665,
+    "width_m": 2,
+    "sampled_vertical_range_m": [
+      0.06,
+      2.1
+    ],
+    "longitudinal_step_m": 0.25,
+    "lateral_offsets_m": [
+      -1,
+      -0.5,
+      0,
+      0.5,
+      1
+    ],
+    "new_b07_hits": 0,
+    "unchanged_legacy_touches": [
+      {
+        "route": "south_gate_to_core",
+        "at": [
+          -10.0,
+          -53.0,
+          0.05999999865889549
+        ],
+        "object": "B06_SCREEN / 1.016",
+        "hit": [
+          -10.0,
+          -53.0,
+          2.0900001525878906
+        ]
+      },
+      {
+        "route": "south_gate_to_core",
+        "at": [
+          -10.0,
+          -42.0,
+          0.05999999865889549
+        ],
+        "object": "B06_SCREEN / 1.017",
+        "hit": [
+          -10.0,
+          -42.0,
+          2.0900001525878906
+        ]
+      },
+      {
+        "route": "south_gate_to_core",
+        "at": [
+          -10.0,
+          -32.0,
+          0.05999999865889549
+        ],
+        "object": "B06_SCREEN / 1.018",
+        "hit": [
+          -10.0,
+          -32.0,
+          2.0900001525878906
+        ]
+      },
+      {
+        "route": "core_to_control",
+        "at": [
+          10.800000190734863,
+          32.0,
+          0.05999999865889549
+        ],
+        "object": "B06_SCREEN / 1.019",
+        "hit": [
+          10.800000190734863,
+          32.0,
+          2.0900001525878906
+        ]
+      },
+      {
+        "route": "loading_to_pumps",
+        "at": [
+          57.0,
+          -40.20000076293945,
+          0.05999999865889549
+        ],
+        "object": "B06_SCREEN / 1.028",
+        "hit": [
+          57.0,
+          -40.20000076293945,
+          2.0900001525878906
+        ]
+      },
+      {
+        "route": "loading_to_pumps",
+        "at": [
+          57.0,
+          -24.100000381469727,
+          0.05999999865889549
+        ],
+        "object": "B06_SCREEN / 1.029",
+        "hit": [
+          57.0,
+          -24.100000381469727,
+          2.0900001525878906
+        ]
+      }
+    ]
+  },
+  "intersections": {
+    "module_module_crossing_pairs": 84,
+    "classification": "All 84 are designed solid-screen panel seam/corner joints; no previously identified door/vent or cargo/canopy fault remains.",
+    "module_context_bbox_candidates": 303,
+    "module_context_surface_crossings": 99,
+    "context_classification": "Wall mounting cleats, concrete/screen joins, and floor joint/drain/mark foundations only; no non-design destructive crossing identified."
+  },
+  "camera_support": {
+    "core_entry": {
+      "position": [
+        0.0,
+        -59.0,
+        1.649999976158142
+      ],
+      "support": {
+        "point": [
+          0.0,
+          -59.0,
+          -0.004999995231628418
+        ],
+        "object": "B06 road link.003",
+        "distance": 1.6549999713897705
+      },
+      "first_half_m_block": null,
+      "eye_above_support_m": 1.6549999713897705
+    },
+    "pump_eye": {
+      "position": [
+        54.29999923706055,
+        -25.299999237060547,
+        1.649999976158142
+      ],
+      "support": {
+        "point": [
+          54.29999923706055,
+          -25.299999237060547,
+          -0.014999985694885254
+        ],
+        "object": "Protected pedestrian hardstand.006",
+        "distance": 1.6649999618530273
+      },
+      "first_half_m_block": null,
+      "eye_above_support_m": 1.6649999618530273
+    },
+    "logistics_eye": {
+      "position": [
+        -38.0,
+        -66.0,
+        1.649999976158142
+      ],
+      "support": {
+        "point": [
+          -38.0,
+          -66.0,
+          -0.004999995231628418
+        ],
+        "object": "B06 road outer",
+        "distance": 1.6549999713897705
+      },
+      "first_half_m_block": null,
+      "eye_above_support_m": 1.6549999713897705
+    }
+  },
+  "not_tested": [
+    "Unreal runtime",
+    "Navmesh",
+    "continuous character capsule sweep",
+    "official Manny mesh",
+    "bullet resistance",
+    "all enemy positions or all high-angle rays"
+  ],
+  "retained_limitations": [
+    "Six legacy screen top-trim edge touches unchanged in the sampled 2m route strips.",
+    "Cycles showed original coplanar-road artifacts; final EEVEE renders avoid them without changing protected road geometry.",
+    "No claim of globally identical visibility: finite 12m near-occlusion classification tests at ground and 9-degree rising rays only. Smaller/open roofs may differ at other elevations or longer ranges."
+  ],
+  "visual_review": {
+    "status": "PASS",
+    "final_render_provenance_checked": true,
+    "render_provenance_sha256": "ec0ce1f9b60001b6ae28222978d7d4bd1bd580daddd5449c0df06ec7523ee8a5",
+    "final_render_provenance": {
+      "site_overview": {
+        "scene_sha256": "3b2f4e727d359b595d818551be04be7ceabaa8fe1504de1164754ada4740b25b",
+        "utc": "2026-10-21T04:10:03.843654+00:00",
+        "camera_position": [
+          145.0,
+          -170.0,
+          135.0
+        ],
+        "camera_lens": 39.0,
+        "renderer": "BLENDER_EEVEE_NEXT",
+        "samples": 48,
+        "image_sha256": "63c979213db0430ae834185d1d4ef77a20d9a469f5db6458ef0eb7b26d757591"
+      },
+      "core_entry": {
+        "scene_sha256": "3b2f4e727d359b595d818551be04be7ceabaa8fe1504de1164754ada4740b25b",
+        "utc": "2026-10-21T04:11:49.510873+00:00",
+        "camera_position": [
+          0.0,
+          -59.0,
+          1.649999976158142
+        ],
+        "camera_lens": 26.0,
+        "renderer": "BLENDER_EEVEE_NEXT",
+        "samples": 48,
+        "image_sha256": "e562e824213a8e77adb50543d62a154757aa095d09df746eade448cbffcbb20d"
+      },
+      "pump_eye": {
+        "scene_sha256": "3b2f4e727d359b595d818551be04be7ceabaa8fe1504de1164754ada4740b25b",
+        "utc": "2026-10-21T04:12:54.968710+00:00",
+        "camera_position": [
+          54.29999923706055,
+          -25.299999237060547,
+          1.649999976158142
+        ],
+        "camera_lens": 24.0,
+        "renderer": "BLENDER_EEVEE_NEXT",
+        "samples": 48,
+        "image_sha256": "bc39b410a9ccedade72092c27c978b8a8821ddd7116a3f4c67856f8155122b11"
+      },
+      "logistics_eye": {
+        "scene_sha256": "3b2f4e727d359b595d818551be04be7ceabaa8fe1504de1164754ada4740b25b",
+        "utc": "2026-10-21T04:14:12.517912+00:00",
+        "camera_position": [
+          -38.0,
+          -66.0,
+          1.649999976158142
+        ],
+        "camera_lens": 27.0,
+        "renderer": "BLENDER_EEVEE_NEXT",
+        "samples": 48,
+        "image_sha256": "58028476d2968c1428f8f584ab8c12e494dab192ecadc0647caf36727705e320"
+      },
+      "site_cutaway": {
+        "scene_sha256": "3b2f4e727d359b595d818551be04be7ceabaa8fe1504de1164754ada4740b25b",
+        "utc": "2026-10-21T04:15:33.129718+00:00",
+        "camera_position": [
+          145.0,
+          -170.0,
+          135.0
+        ],
+        "camera_lens": 39.0,
+        "renderer": "BLENDER_EEVEE_NEXT",
+        "samples": 48,
+        "image_sha256": "cc0459632447d9a36c623a02077d0f6b75fba18a2f0753076b4a20f4b7d05795"
+      },
+      "module_gallery": {
+        "scene_sha256": "3b2f4e727d359b595d818551be04be7ceabaa8fe1504de1164754ada4740b25b",
+        "utc": "2026-10-21T04:16:01.070270+00:00",
+        "camera_position": [
+          43.0,
+          -48.0,
+          38.0
+        ],
+        "camera_lens": 50.0,
+        "renderer": "BLENDER_EEVEE_NEXT",
+        "samples": 48,
+        "image_sha256": "853c996ad00a5902f2f7aaeb19213e06eb5a2253a9efcef485043aa08060e989"
+      }
+    },
+    "actual_pixel_inspections": {
+      "site_overview": {
+        "image_sha256": "63c979213db0430ae834185d1d4ef77a20d9a469f5db6458ef0eb7b26d757591",
+        "scene_sha256": "3b2f4e727d359b595d818551be04be7ceabaa8fe1504de1164754ada4740b25b",
+        "inspected_utc": "2026-10-21T04:13:16.835285+00:00",
+        "status": "PASS",
+        "observations": "Actual pixels reviewed: black road rectangles absent; facade variation improved; doors clear of mounted cassettes; scene/route arrangement retained."
+      },
+      "core_entry": {
+        "image_sha256": "e562e824213a8e77adb50543d62a154757aa095d09df746eade448cbffcbb20d",
+        "scene_sha256": "3b2f4e727d359b595d818551be04be7ceabaa8fe1504de1164754ada4740b25b",
+        "inspected_utc": "2026-10-21T04:13:16.837295+00:00",
+        "status": "PASS",
+        "observations": "Actual pixels reviewed: black road rectangles absent; facade variation improved; doors clear of mounted cassettes; scene/route arrangement retained."
+      },
+      "pump_eye": {
+        "image_sha256": "bc39b410a9ccedade72092c27c978b8a8821ddd7116a3f4c67856f8155122b11",
+        "scene_sha256": "3b2f4e727d359b595d818551be04be7ceabaa8fe1504de1164754ada4740b25b",
+        "inspected_utc": "2026-10-21T04:15:37.675870+00:00",
+        "status": "PASS",
+        "observations": "Actual final pixels inspected: transformer equipment, connected canopy frame and cabinet/pipe rack assembly visible; camera no longer centered behind a column. Open pipe rack is visually open and excluded from solid-cover tests. No visible floating footing or destructive new intersection in this view."
+      },
+      "logistics_eye": {
+        "image_sha256": "58028476d2968c1428f8f584ab8c12e494dab192ecadc0647caf36727705e320",
+        "scene_sha256": "3b2f4e727d359b595d818551be04be7ceabaa8fe1504de1164754ada4740b25b",
+        "inspected_utc": "2026-10-21T04:15:37.682194+00:00",
+        "status": "PASS",
+        "observations": "Actual final pixels inspected alongside matched-camera baseline: repeated three gray cabinets replaced by differentiated cargo/pallet/cabinet grouping under visibly supported canopy; rear/side solid screen retained; foreground apron remains clear. Some extreme-edge cargo/frame cropping remains intentional, not hidden geometry acceptance."
+      },
+      "site_cutaway": {
+        "image_sha256": "cc0459632447d9a36c623a02077d0f6b75fba18a2f0753076b4a20f4b7d05795",
+        "scene_sha256": "3b2f4e727d359b595d818551be04be7ceabaa8fe1504de1164754ada4740b25b",
+        "inspected_utc": "2026-10-21T04:17:00.681780+00:00",
+        "status": "PASS",
+        "observations": "Actual final pixels inspected: original core and adjacent building interiors remain, scene arrangement not expanded; southwest cargo/canopies and eastern equipment groups distinct and assembled. No road black rectangle artifact visible. Cutaway is presentation hiding, not removed original structure."
+      },
+      "module_gallery": {
+        "image_sha256": "853c996ad00a5902f2f7aaeb19213e06eb5a2253a9efcef485043aa08060e989",
+        "scene_sha256": "3b2f4e727d359b595d818551be04be7ceabaa8fe1504de1164754ada4740b25b",
+        "inspected_utc": "2026-10-21T04:17:00.681780+00:00",
+        "status": "PASS",
+        "observations": "Actual final pixels inspected: all 7 families plus narrow cabinet variant visible; coherent feet, roof supports, braces, mounts and materials. Narrow variant lower portion/label partly overlapped in gallery projection by foreground canopy; dedicated orthographic sheet and independently opened asset supply full measurement view."
+      }
+    },
+    "matched_baseline_comparison": {
+      "views": [
+        "site_overview",
+        "logistics_eye"
+      ],
+      "baseline_scene_sha256": "f19f554d9f2ba93e6f3c1d31d95b0db2ed2b5bcd78a7fecc42de8cfe1267edb3",
+      "method": "Matched final camera settings and EEVEE_NEXT renderer. Baseline source read-only. Actual before/after pixels inspected.",
+      "before_image_sha256": {
+        "site_overview": "25e9fb872fad4dceb0b0213da3ef02fbdf155d65859cced5ff5dc25f37824ff4",
+        "logistics_eye": "2f6be9852b0c4f5b1a0f020307caa64408209555ae1ffb992a3d19ee34265c4e"
+      },
+      "conclusion": "Repetitive generic gray-box sheds/cabinets visibly improved by distinct articulated industrial modules and cargo grouping, without broad layout expansion. This is refinement, not a claim of finished production art."
+    }
+  },
+  "source_evidence_digests": {
+    "v04/independent_audit.json": "ccc02f57dc85e9ed3a5907903861f1bf2651039df63468f6fb8b45ee9001fcc5",
+    "v04/placement_intersections.json": "438e3843f77cb7e587c3b84307b75c43f26c45cc0a6a17fd05ec13fc8910eb3a",
+    "v04/module_context_candidates.json": "b46878f75ab69bca5e1c893c06ae0b44e53cd62fdb3ac8790f6e6b4d53ad6c7c",
+    "v04/detail_audit.json": "902f8b79a3de12ea17d0eb9eef7499e9c4c338cb07187faa3c71137fcefe6a0c",
+    "v04/narrow_asset_audit.json": "59fdbad27ac87fd72b12e56ebbb76fc2f4aafc42657590e5263ba787ac17ca63",
+    "v04/glb_self_contained.json": "2a71870638f38e0fe96181a47dea20cfdc4a7202afc53925a1e629596a771c60",
+    "v04/visual_inspections.json": "d81269fff313407bef607f993b2cf0a7498c98572325e9ebb829586e5d5171f2"
+  },
+  "final_file_seal": {
+    "checked_utc": "2026-10-21T04:17:00.681780+00:00",
+    "blend_files_unchanged": 12,
+    "glb_files_unchanged": 8,
+    "render_images_match_provenance": 6
+  }
+}

@@ -1,14 +1,15 @@
 # 全部模块与场景索引
 
-共 **55 条模块/组合库记录**（包含2个明确复用记录；不表示全部都是新增模块）。
+共 **63 条模块/组合库记录**：历史55条（含2条复用）+ Batch07的7个基础模块家族与1个独立窄柜变体；不是63个全新模块。
 
-当前完整地图：`Batch06_Expansion/site_expansion.blend`；历史树均保留，无需先下载旧包。
+当前完整地图：`Batch07_Refinement/site_refined.blend`；历史树均保留，无需先下载旧包。
 
 ## 场景入口
 
 |状态/批次|文件|用途|
 |---|---|---|
-|Batch06 CURRENT|[Batch06_Expansion/site_expansion.blend](Batch06_Expansion/site_expansion.blend)|当前五区完整拼装地图；以 Batch05 原尺寸核心为中心扩建。|
+|Batch07 CURRENT|[Batch07_Refinement/site_refined.blend](Batch07_Refinement/site_refined.blend)|最新完整地图；7家族+窄柜变体，3分块美术精化。|
+|Batch06 BASELINE|[Batch06_Expansion/site_expansion.blend](Batch06_Expansion/site_expansion.blend)|上一版五区布局基线，原字节保留；以 Batch05 核心为中心扩建。|
 |Batch06|[Batch06_Expansion/Regions/control.blend](Batch06_Expansion/Regions/control.blend)|控制办公分区|
 |Batch06|[Batch06_Expansion/Regions/maintenance.blend](Batch06_Expansion/Regions/maintenance.blend)|维修分区|
 |Batch06|[Batch06_Expansion/Regions/pumps.blend](Batch06_Expansion/Regions/pumps.blend)|泵站分区|
@@ -112,3 +113,18 @@
 Batch06 的各新增模块及分区保留建模前严格正交技术图、AI造型参考和审查记录；Rejected 图明确只保留作过程证据。Batch01–05 是原交付历史档案，参考图、渲染正交图和脚本均保留；本累计封包未重新证明每个历史模块的“先图后模”时间顺序，不能将建模后正交渲染冒称建模前设计图。
 
 所有历史模块均交付，并不声称每一个历史模块在当前五区地图中都被实例化。
+
+## Batch07 — 7 基础家族 + 1 独立派生变体
+
+|模块|独立原生模型|建模前正交参考|
+|---|---|---|
+|B07_VENT_CASSETTE|[Batch07_Refinement/Assets/B07_VENT_CASSETTE.blend](Batch07_Refinement/Assets/B07_VENT_CASSETTE.blend)|[正交预览](Batch07_Refinement/References/v02/B07_VENT_CASSETTE.png) · [原始SVG或ZIP](Batch07_Refinement/References/v02/B07_VENT_CASSETTE.svg)|
+|B07_PIPE_RACK|[Batch07_Refinement/Assets/B07_PIPE_RACK.blend](Batch07_Refinement/Assets/B07_PIPE_RACK.blend)|[正交预览](Batch07_Refinement/References/v02/B07_PIPE_RACK.png) · [原始SVG或ZIP](Batch07_Refinement/References/v02/B07_PIPE_RACK.svg.zip)|
+|B07_TRANSFORMER_BAY|[Batch07_Refinement/Assets/B07_TRANSFORMER_BAY.blend](Batch07_Refinement/Assets/B07_TRANSFORMER_BAY.blend)|[正交预览](Batch07_Refinement/References/v02/B07_TRANSFORMER_BAY.png) · [原始SVG或ZIP](Batch07_Refinement/References/v02/B07_TRANSFORMER_BAY.svg.zip)|
+|B07_CARGO_SET|[Batch07_Refinement/Assets/B07_CARGO_SET.blend](Batch07_Refinement/Assets/B07_CARGO_SET.blend)|[正交预览](Batch07_Refinement/References/v02/B07_CARGO_SET.png) · [原始SVG或ZIP](Batch07_Refinement/References/v02/B07_CARGO_SET.svg)|
+|B07_LOGISTICS_CANOPY|[Batch07_Refinement/Assets/B07_LOGISTICS_CANOPY.blend](Batch07_Refinement/Assets/B07_LOGISTICS_CANOPY.blend)|[正交预览](Batch07_Refinement/References/v02/B07_LOGISTICS_CANOPY.png) · [原始SVG或ZIP](Batch07_Refinement/References/v02/B07_LOGISTICS_CANOPY.svg)|
+|B07_SOLID_SCREEN|[Batch07_Refinement/Assets/B07_SOLID_SCREEN.blend](Batch07_Refinement/Assets/B07_SOLID_SCREEN.blend)|[正交预览](Batch07_Refinement/References/v02/B07_SOLID_SCREEN.png) · [原始SVG或ZIP](Batch07_Refinement/References/v02/B07_SOLID_SCREEN.svg)|
+|B07_SERVICE_CABINET|[Batch07_Refinement/Assets/B07_SERVICE_CABINET.blend](Batch07_Refinement/Assets/B07_SERVICE_CABINET.blend)|[正交预览](Batch07_Refinement/References/v02/B07_SERVICE_CABINET.png) · [原始SVG或ZIP](Batch07_Refinement/References/v02/B07_SERVICE_CABINET.svg)|
+|B07_SERVICE_CABINET_narrow_045|[Batch07_Refinement/Assets/B07_SERVICE_CABINET_narrow_045.blend](Batch07_Refinement/Assets/B07_SERVICE_CABINET_narrow_045.blend)|[正交预览](Batch07_Refinement/References/v04/B07_SERVICE_CABINET_narrow_045.png) · [原始SVG或ZIP](Batch07_Refinement/References/v04/B07_SERVICE_CABINET_narrow_045.svg)|
+
+较大的SVG按单个普通ZIP存储，运行 `python restore_assets.py` 恢复原路径与原SHA。最终参考包括v1–v4；不是把模型渲染倒充先验参考。

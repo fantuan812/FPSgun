@@ -1,0 +1,444 @@
+{
+  "scope": "New-geometry interference only across unchanged baseline route centrelines; 2m width and 2.10m height sampled. Not whole-scene capsule sweep.",
+  "route_tests": {
+    "south_gate_to_core": {
+      "width_sampled_m": 2,
+      "height_m": 2.1,
+      "sample_count": 1175,
+      "new_geometry_issues": []
+    },
+    "core_to_control": {
+      "width_sampled_m": 2,
+      "height_m": 2.1,
+      "sample_count": 535,
+      "new_geometry_issues": []
+    },
+    "east_service": {
+      "width_sampled_m": 2,
+      "height_m": 2.1,
+      "sample_count": 1075,
+      "new_geometry_issues": []
+    },
+    "west_service": {
+      "width_sampled_m": 2,
+      "height_m": 2.1,
+      "sample_count": 1190,
+      "new_geometry_issues": []
+    },
+    "upper_link": {
+      "width_sampled_m": 2,
+      "height_m": 2.1,
+      "sample_count": 995,
+      "new_geometry_issues": []
+    },
+    "loading_to_pumps": {
+      "width_sampled_m": 2,
+      "height_m": 2.1,
+      "sample_count": 1750,
+      "new_geometry_issues": []
+    },
+    "core_front": {
+      "width_sampled_m": 2,
+      "height_m": 2.1,
+      "sample_count": 235,
+      "new_geometry_issues": []
+    },
+    "core_rear": {
+      "width_sampled_m": 2,
+      "height_m": 2.1,
+      "sample_count": 235,
+      "new_geometry_issues": []
+    }
+  },
+  "cameras": {
+    "core_entry": {
+      "z": 1.649999976158142,
+      "support": "B06 road link.003",
+      "eye_above_support": 1.6549999713897705,
+      "first_0p5m_block": null
+    },
+    "pump_eye": {
+      "z": 1.649999976158142,
+      "support": "Protected pedestrian hardstand.006",
+      "eye_above_support": 1.6649999618530273,
+      "first_0p5m_block": null
+    },
+    "logistics_eye": {
+      "z": 1.649999976158142,
+      "support": "B06 road outer",
+      "eye_above_support": 1.6549999713897705,
+      "first_0p5m_block": null
+    }
+  },
+  "linked_libraries": [],
+  "new_geometry": {
+    "vertices": 287036,
+    "triangles": 515532
+  },
+  "full_scene_geometry": {
+    "vertices": 1418898,
+    "triangles": 2676386
+  },
+  "line_of_sight": {
+    "ground": {
+      "rays": 2384,
+      "before_near_occluded": 1206,
+      "after_near_occluded": 1212,
+      "changed_witnesses": [
+        {
+          "route": "south_gate_to_core",
+          "point": [
+            -8.0,
+            -62.66666793823242,
+            1.649999976158142
+          ],
+          "lost_near_occlusion_directions": [],
+          "gained_near_occlusion_directions": [
+            7
+          ]
+        },
+        {
+          "route": "south_gate_to_core",
+          "point": [
+            -11.0,
+            -55.0,
+            1.649999976158142
+          ],
+          "lost_near_occlusion_directions": [],
+          "gained_near_occlusion_directions": [
+            5
+          ]
+        },
+        {
+          "route": "loading_to_pumps",
+          "point": [
+            65.0,
+            -38.0,
+            1.649999976158142
+          ],
+          "lost_near_occlusion_directions": [],
+          "gained_near_occlusion_directions": [
+            7
+          ]
+        },
+        {
+          "route": "loading_to_pumps",
+          "point": [
+            62.0,
+            -26.299999237060547,
+            1.649999976158142
+          ],
+          "lost_near_occlusion_directions": [],
+          "gained_near_occlusion_directions": [
+            4,
+            6
+          ]
+        },
+        {
+          "route": "loading_to_pumps",
+          "point": [
+            51.0,
+            -26.299999237060547,
+            1.649999976158142
+          ],
+          "lost_near_occlusion_directions": [],
+          "gained_near_occlusion_directions": [
+            4
+          ]
+        }
+      ]
+    },
+    "rising_9degree": {
+      "rays": 2384,
+      "before_near_occluded": 999,
+      "after_near_occluded": 1012,
+      "changed_witnesses": [
+        {
+          "route": "south_gate_to_core",
+          "point": [
+            -11.0,
+            -51.0,
+            1.649999976158142
+          ],
+          "lost_near_occlusion_directions": [],
+          "gained_near_occlusion_directions": [
+            6
+          ]
+        },
+        {
+          "route": "south_gate_to_core",
+          "point": [
+            -8.0,
+            -45.0,
+            1.649999976158142
+          ],
+          "lost_near_occlusion_directions": [],
+          "gained_near_occlusion_directions": [
+            9
+          ]
+        },
+        {
+          "route": "south_gate_to_core",
+          "point": [
+            -8.0,
+            -39.0,
+            1.649999976158142
+          ],
+          "lost_near_occlusion_directions": [],
+          "gained_near_occlusion_directions": [
+            8
+          ]
+        },
+        {
+          "route": "loading_to_pumps",
+          "point": [
+            47.0,
+            -40.0,
+            1.649999976158142
+          ],
+          "lost_near_occlusion_directions": [],
+          "gained_near_occlusion_directions": [
+            2
+          ]
+        },
+        {
+          "route": "loading_to_pumps",
+          "point": [
+            51.0,
+            -38.0,
+            1.649999976158142
+          ],
+          "lost_near_occlusion_directions": [],
+          "gained_near_occlusion_directions": [
+            1,
+            2
+          ]
+        },
+        {
+          "route": "loading_to_pumps",
+          "point": [
+            62.0,
+            -38.0,
+            1.649999976158142
+          ],
+          "lost_near_occlusion_directions": [],
+          "gained_near_occlusion_directions": [
+            6
+          ]
+        },
+        {
+          "route": "loading_to_pumps",
+          "point": [
+            65.0,
+            -38.0,
+            1.649999976158142
+          ],
+          "lost_near_occlusion_directions": [],
+          "gained_near_occlusion_directions": [
+            7
+          ]
+        },
+        {
+          "route": "loading_to_pumps",
+          "point": [
+            62.0,
+            -26.299999237060547,
+            1.649999976158142
+          ],
+          "lost_near_occlusion_directions": [],
+          "gained_near_occlusion_directions": [
+            4
+          ]
+        },
+        {
+          "route": "loading_to_pumps",
+          "point": [
+            59.0,
+            -26.299999237060547,
+            1.649999976158142
+          ],
+          "lost_near_occlusion_directions": [],
+          "gained_near_occlusion_directions": [
+            4
+          ]
+        },
+        {
+          "route": "loading_to_pumps",
+          "point": [
+            51.0,
+            -26.299999237060547,
+            1.649999976158142
+          ],
+          "lost_near_occlusion_directions": [],
+          "gained_near_occlusion_directions": [
+            2
+          ]
+        },
+        {
+          "route": "core_front",
+          "point": [
+            0.0,
+            -22.799999237060547,
+            1.649999976158142
+          ],
+          "lost_near_occlusion_directions": [],
+          "gained_near_occlusion_directions": [
+            1,
+            7
+          ]
+        }
+      ]
+    },
+    "ground_excluding_open_rack": {
+      "rays": 2384,
+      "before_near_occluded": 1206,
+      "after_near_occluded": 1210,
+      "changed_witnesses": [
+        {
+          "route": "south_gate_to_core",
+          "point": [
+            -8.0,
+            -62.66666793823242,
+            1.649999976158142
+          ],
+          "lost_near_occlusion_directions": [],
+          "gained_near_occlusion_directions": [
+            7
+          ]
+        },
+        {
+          "route": "south_gate_to_core",
+          "point": [
+            -11.0,
+            -55.0,
+            1.649999976158142
+          ],
+          "lost_near_occlusion_directions": [],
+          "gained_near_occlusion_directions": [
+            5
+          ]
+        },
+        {
+          "route": "loading_to_pumps",
+          "point": [
+            62.0,
+            -26.299999237060547,
+            1.649999976158142
+          ],
+          "lost_near_occlusion_directions": [],
+          "gained_near_occlusion_directions": [
+            6
+          ]
+        },
+        {
+          "route": "loading_to_pumps",
+          "point": [
+            51.0,
+            -26.299999237060547,
+            1.649999976158142
+          ],
+          "lost_near_occlusion_directions": [],
+          "gained_near_occlusion_directions": [
+            4
+          ]
+        }
+      ]
+    },
+    "rising_9degree_excluding_open_rack": {
+      "rays": 2384,
+      "before_near_occluded": 999,
+      "after_near_occluded": 1007,
+      "changed_witnesses": [
+        {
+          "route": "south_gate_to_core",
+          "point": [
+            -11.0,
+            -51.0,
+            1.649999976158142
+          ],
+          "lost_near_occlusion_directions": [],
+          "gained_near_occlusion_directions": [
+            6
+          ]
+        },
+        {
+          "route": "south_gate_to_core",
+          "point": [
+            -8.0,
+            -45.0,
+            1.649999976158142
+          ],
+          "lost_near_occlusion_directions": [],
+          "gained_near_occlusion_directions": [
+            9
+          ]
+        },
+        {
+          "route": "south_gate_to_core",
+          "point": [
+            -8.0,
+            -39.0,
+            1.649999976158142
+          ],
+          "lost_near_occlusion_directions": [],
+          "gained_near_occlusion_directions": [
+            8
+          ]
+        },
+        {
+          "route": "loading_to_pumps",
+          "point": [
+            51.0,
+            -38.0,
+            1.649999976158142
+          ],
+          "lost_near_occlusion_directions": [],
+          "gained_near_occlusion_directions": [
+            2
+          ]
+        },
+        {
+          "route": "loading_to_pumps",
+          "point": [
+            62.0,
+            -38.0,
+            1.649999976158142
+          ],
+          "lost_near_occlusion_directions": [],
+          "gained_near_occlusion_directions": [
+            6
+          ]
+        },
+        {
+          "route": "loading_to_pumps",
+          "point": [
+            59.0,
+            -26.299999237060547,
+            1.649999976158142
+          ],
+          "lost_near_occlusion_directions": [],
+          "gained_near_occlusion_directions": [
+            4
+          ]
+        },
+        {
+          "route": "core_front",
+          "point": [
+            0.0,
+            -22.799999237060547,
+            1.649999976158142
+          ],
+          "lost_near_occlusion_directions": [],
+          "gained_near_occlusion_directions": [
+            1,
+            7
+          ]
+        }
+      ]
+    },
+    "limits": "16 rays per witness, near occlusion at 12m, 40m reach. Not bullet collision, combat cover or visibility from all enemy positions. Roof / high wall removal can change elevated exposure."
+  },
+  "baseline_sha256": "f19f554d9f2ba93e6f3c1d31d95b0db2ed2b5bcd78a7fecc42de8cfe1267edb3",
+  "ue_runtime_tested": false,
+  "official_manny_mesh_tested": false
+}

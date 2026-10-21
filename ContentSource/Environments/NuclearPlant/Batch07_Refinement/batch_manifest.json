@@ -1,0 +1,828 @@
+{
+  "units": "metres",
+  "seed": 7021,
+  "base_commit": "74249eb5b9c656e16f9c1e932a10e851f3e11a32",
+  "source_baseline": "../Batch06_Expansion/site_expansion.blend",
+  "baseline_sha256": "f19f554d9f2ba93e6f3c1d31d95b0db2ed2b5bcd78a7fecc42de8cfe1267edb3",
+  "scene": "site_refined.blend",
+  "active_design": "Config/design_v04.json",
+  "module_count": 7,
+  "derived_variant_count": 1,
+  "variant_assets": [
+    "Assets/B07_SERVICE_CABINET_narrow_045.blend"
+  ],
+  "camera_config": "Config/render_cameras.json",
+  "placement_count": 154,
+  "modified_yards": 12,
+  "regions": [
+    "core_skin",
+    "east_pump_yards",
+    "southwest_logistics"
+  ],
+  "reference_chain": [
+    "QA/reference_freeze.json",
+    "QA/reference_freeze_v02.json",
+    "QA/reference_freeze_v03.json",
+    "QA/reference_freeze_v04.json"
+  ],
+  "images": {
+    "site_overview": {
+      "width": 1600,
+      "height": 1000,
+      "sha256": "63c979213db0430ae834185d1d4ef77a20d9a469f5db6458ef0eb7b26d757591"
+    },
+    "site_cutaway": {
+      "width": 1600,
+      "height": 1000,
+      "sha256": "cc0459632447d9a36c623a02077d0f6b75fba18a2f0753076b4a20f4b7d05795"
+    },
+    "core_entry": {
+      "width": 1600,
+      "height": 1000,
+      "sha256": "e562e824213a8e77adb50543d62a154757aa095d09df746eade448cbffcbb20d"
+    },
+    "pump_eye": {
+      "width": 1600,
+      "height": 1000,
+      "sha256": "bc39b410a9ccedade72092c27c978b8a8821ddd7116a3f4c67856f8155122b11"
+    },
+    "logistics_eye": {
+      "width": 1600,
+      "height": 1000,
+      "sha256": "58028476d2968c1428f8f584ab8c12e494dab192ecadc0647caf36727705e320"
+    },
+    "module_gallery": {
+      "width": 1600,
+      "height": 1000,
+      "sha256": "853c996ad00a5902f2f7aaeb19213e06eb5a2253a9efcef485043aa08060e989"
+    },
+    "before_site_overview": {
+      "width": 1600,
+      "height": 1000,
+      "sha256": "25e9fb872fad4dceb0b0213da3ef02fbdf155d65859cced5ff5dc25f37824ff4"
+    },
+    "before_logistics_eye": {
+      "width": 1600,
+      "height": 1000,
+      "sha256": "2f6be9852b0c4f5b1a0f020307caa64408209555ae1ffb992a3d19ee34265c4e"
+    }
+  },
+  "rebuild_verified": true,
+  "unchanged_protected_baseline_objects": 3589,
+  "new_geometry_route_interference": {
+    "south_gate_to_core": 0,
+    "core_to_control": 0,
+    "east_service": 0,
+    "west_service": 0,
+    "upper_link": 0,
+    "loading_to_pumps": 0,
+    "core_front": 0,
+    "core_rear": 0
+  },
+  "static_occlusion": {
+    "ground_excluding_open_rack": {
+      "rays": 2384,
+      "before_near_occluded": 1206,
+      "after_near_occluded": 1210,
+      "lost": 0,
+      "gained": 4
+    },
+    "rising_9degree_excluding_open_rack": {
+      "rays": 2384,
+      "before_near_occluded": 999,
+      "after_near_occluded": 1007,
+      "lost": 0,
+      "gained": 8
+    }
+  },
+  "not_verified": [
+    "UE runtime",
+    "official Manny mesh or skeleton",
+    "navmesh",
+    "swept capsule",
+    "ballistic protection"
+  ],
+  "legacy_limit": "Six existing upper trim edge ray contacts retained; see QA/legacy_touchpoints.json. Coplanar roads show Cycles artifacts; final / before renders use baseline EEVEE.",
+  "artifacts": [
+    {
+      "path": "ALL_MODULES.json",
+      "bytes": 2754,
+      "sha256": "f9e7344943824d72b9684334502fd572c14514b994d024bd7e5d0cf663d6528c"
+    },
+    {
+      "path": "Assets/B07_CARGO_SET.blend",
+      "bytes": 88176,
+      "sha256": "e6386ae5227beb646140a264cca876dbee81fdc3cc37fd21b518c695513fab87"
+    },
+    {
+      "path": "Assets/B07_LOGISTICS_CANOPY.blend",
+      "bytes": 92232,
+      "sha256": "cf6f761dc93cd1b9ae3298fbe4e348bbcc52f08a4bb437b08ea67baece37f40a"
+    },
+    {
+      "path": "Assets/B07_PIPE_RACK.blend",
+      "bytes": 107476,
+      "sha256": "18f6741f90153fc7a5b5ea81e0c05aff5a8f890d8d2f31355ed2987115a9e924"
+    },
+    {
+      "path": "Assets/B07_SERVICE_CABINET.blend",
+      "bytes": 86321,
+      "sha256": "966b562e9285ac3dd93c6218bab5430cf4ba1298b2f3c8b780dadc01deb72671"
+    },
+    {
+      "path": "Assets/B07_SERVICE_CABINET_narrow_045.blend",
+      "bytes": 103084,
+      "sha256": "5a9dec0effb392e82e01c6f54414460263bb820e172d0bc51668808a5b7064b7"
+    },
+    {
+      "path": "Assets/B07_SOLID_SCREEN.blend",
+      "bytes": 86613,
+      "sha256": "889c5ec5e14f58689fab38bdbe2a36e976b19edac58d9ffdbf6a24fc484f816f"
+    },
+    {
+      "path": "Assets/B07_TRANSFORMER_BAY.blend",
+      "bytes": 103557,
+      "sha256": "6f8f84363a43e6e87c4c0a56eca4a0ec3e8cec60e631595b4b4290febd0206bc"
+    },
+    {
+      "path": "Assets/B07_VENT_CASSETTE.blend",
+      "bytes": 90082,
+      "sha256": "103976dd4223ba73a48ce7ac2620f38157cb139a9000796184305dcc8d71a0b9"
+    },
+    {
+      "path": "Config/design.json",
+      "bytes": 320574,
+      "sha256": "b87be6ab27ba49932c7d454f2f40e43c5aee9d119af66ba807018cf07d8a4536"
+    },
+    {
+      "path": "Config/design_v02.json",
+      "bytes": 360921,
+      "sha256": "e617fa17da51b68134a691f512bf3cd265b139db9a3a64ed259048d68d0877a3"
+    },
+    {
+      "path": "Config/design_v03.json",
+      "bytes": 361699,
+      "sha256": "45275ae2d9197b3578e138e7099389276d48ebfc5bfb08da1f95ef144b9b96a7"
+    },
+    {
+      "path": "Config/design_v04.json",
+      "bytes": 362503,
+      "sha256": "348ba93ed2906e586f0fc43f4c6e102542f8efddd484dcc327830301da2174de"
+    },
+    {
+      "path": "Config/render.json",
+      "bytes": 250,
+      "sha256": "e93c8e3034701dc80ff4597235b2e0a1ba55bd6b288bf4322b4fc581dc354c70"
+    },
+    {
+      "path": "Config/render_cameras.json",
+      "bytes": 607,
+      "sha256": "1d4d2d78f371acd906c566f5de4887bbe4567b0e8d0e984aaca36ecdedde6190"
+    },
+    {
+      "path": "Exports/B07_CARGO_SET.glb",
+      "bytes": 176640,
+      "sha256": "4500a2a971664d66ad314912649e401aa3b31035e52185b9e87ad1279db6f373"
+    },
+    {
+      "path": "Exports/B07_LOGISTICS_CANOPY.glb",
+      "bytes": 329884,
+      "sha256": "9a3dcae03512428853a89de82458d7538f7ee02afc9a51c9f813d0ae197e19bd"
+    },
+    {
+      "path": "Exports/B07_PIPE_RACK.glb",
+      "bytes": 446996,
+      "sha256": "24951d950d8e9176e11e6f11351febdd9151341a8bfea3898e3a2226826210ab"
+    },
+    {
+      "path": "Exports/B07_SERVICE_CABINET.glb",
+      "bytes": 90856,
+      "sha256": "4e3cef69b344d10d14d9b0e3bfa959ab8af5ae89eb23301c3a9aa9283bac5f42"
+    },
+    {
+      "path": "Exports/B07_SERVICE_CABINET_narrow_045.glb",
+      "bytes": 90892,
+      "sha256": "89ff09e0c889718ccd0e21c4d1c30412d4e3ad7593f1e68786e0a01b4d3987a1"
+    },
+    {
+      "path": "Exports/B07_SOLID_SCREEN.glb",
+      "bytes": 118376,
+      "sha256": "df32c796ebc7de47dfd5bafbde5da84d6addb5c8facbdbb87ccdd727df1a563f"
+    },
+    {
+      "path": "Exports/B07_TRANSFORMER_BAY.glb",
+      "bytes": 488324,
+      "sha256": "2b3c0d344613176e3928438255eca62d3a807d44734414d3e676eab3ae45266a"
+    },
+    {
+      "path": "Exports/B07_VENT_CASSETTE.glb",
+      "bytes": 255732,
+      "sha256": "2f53e81c53260176df8fb4046b41a0f64344b3c68bc9079203161737ba37a9b6"
+    },
+    {
+      "path": "Exports/manifest.json",
+      "bytes": 1752,
+      "sha256": "143c0daf67b103c13eabe8f93a2bf94a86900a88b9b01f466e077955daa7ab61"
+    },
+    {
+      "path": "QA/before_render_provenance.json",
+      "bytes": 1684,
+      "sha256": "7fce744936f25261cba3fa0c6acebc7cd921499eade8eec4aafc70bcd2015b72"
+    },
+    {
+      "path": "QA/build_record.json",
+      "bytes": 39642,
+      "sha256": "c04541246717b93c1440b3f290d652c1001eacbc5b9424f055cb7d9ce380fbfd"
+    },
+    {
+      "path": "QA/build_record_initial.json",
+      "bytes": 12811,
+      "sha256": "83b1a43b915430ddef84cc895e21ebdf73266c40124b7b232fcda25f0caad81c"
+    },
+    {
+      "path": "QA/build_record_v02.json",
+      "bytes": 38270,
+      "sha256": "40af0a32aa856b275af937649c20d2a0e0143f155e3c2ed73aa848935235c144"
+    },
+    {
+      "path": "QA/build_record_v03_rebuild.json",
+      "bytes": 39162,
+      "sha256": "45160ea3cc9bd46b5c439f4ed487586f541425c2db34169891bf9ec119b481d3"
+    },
+    {
+      "path": "QA/build_record_v04_geometry_qa.json",
+      "bytes": 39642,
+      "sha256": "2fe931456dbbdc504f2b76e15d785bac4197391018dd0b6141d745828e894727"
+    },
+    {
+      "path": "QA/legacy_touchpoints.json",
+      "bytes": 882,
+      "sha256": "10e525c6e538801d81a2fdff057a645429f3aede139b21ec648d8515aee11e81"
+    },
+    {
+      "path": "QA/rebuild_verification.json",
+      "bytes": 300,
+      "sha256": "479c3fb80e0ca1948722dba2a66a00ea2353bc0b6e41e23d9c4456f7d42a826b"
+    },
+    {
+      "path": "QA/reference_freeze.json",
+      "bytes": 3379,
+      "sha256": "a2b5e1c815a9bb1e2c8cd267642bc3ec3ed892684a44ebf794b82543e374b902"
+    },
+    {
+      "path": "QA/reference_freeze_v02.json",
+      "bytes": 4237,
+      "sha256": "c87008b59706b13ab768e81d1c409c395d36d08933c42099f91a194af9f01a9e"
+    },
+    {
+      "path": "QA/reference_freeze_v03.json",
+      "bytes": 2737,
+      "sha256": "9173f850b863f403077d04f75c1ff2ad3152c2cee23b71d2c18c20de3f1ffcf6"
+    },
+    {
+      "path": "QA/reference_freeze_v04.json",
+      "bytes": 1918,
+      "sha256": "8bf0e976c0b0b51d1334150dd93b551562e4f16883e8c36ff12d4fda21b22ec9"
+    },
+    {
+      "path": "QA/reference_review.md",
+      "bytes": 2167,
+      "sha256": "85e645122560c864db046695ec4c09cbfb73bc859e53564ea6fe7456c389d031"
+    },
+    {
+      "path": "QA/render_diagnosis.md",
+      "bytes": 932,
+      "sha256": "81f8747994e2d0a89b7c7a7af443b2bc15fd50cccd0c58412f4c41fe0254401e"
+    },
+    {
+      "path": "QA/render_provenance.json",
+      "bytes": 2454,
+      "sha256": "ec0ce1f9b60001b6ae28222978d7d4bd1bd580daddd5449c0df06ec7523ee8a5"
+    },
+    {
+      "path": "QA/static_geometry.json",
+      "bytes": 10953,
+      "sha256": "4be1cb9f2eadcd7cde2d8ef396cc7ba4db1fb79c0dea9eb60c9ab894e1e420e6"
+    },
+    {
+      "path": "QA/static_geometry_v01.json",
+      "bytes": 30615,
+      "sha256": "4fbc2ae73d89c024f2e982b4ff6c161e390fbe7feb667e8106a7d95c1c3c8d73"
+    },
+    {
+      "path": "QA/static_geometry_v02.json",
+      "bytes": 8971,
+      "sha256": "1eaaa55ddc6e21990d3ded6b899b8706beadc7afad1f14c51b26a887a9cb9bfc"
+    },
+    {
+      "path": "QA/visual_gates/logistics_eye.png",
+      "bytes": 511123,
+      "sha256": "825c28af377941b8fd928b0086cefc66612ac5dc4cc3dfdb3a3d54145bc2f5a4"
+    },
+    {
+      "path": "QA/visual_gates/pump_eye.png",
+      "bytes": 514625,
+      "sha256": "f658655c070f9852f20ae3bf2fde88de596f2e5096081eeb2a5fe0b696e13017"
+    },
+    {
+      "path": "QA/visual_review.md",
+      "bytes": 3281,
+      "sha256": "d3581b147f0dae6c6445fb2b58a35e7da527ab4f1bf208d1c7573dc844dfbb6d"
+    },
+    {
+      "path": "README.zh-CN.md",
+      "bytes": 4726,
+      "sha256": "6702475d70d113b75148bb3cf60a73a46490dd9e359208a81ca04408e5535b4b"
+    },
+    {
+      "path": "References/B07_CARGO_SET.png",
+      "bytes": 93123,
+      "sha256": "c7e683320a97de9316fbb68941d44f6d38ed7f25e7044bddefcd25d50e7a65ad"
+    },
+    {
+      "path": "References/B07_CARGO_SET.svg",
+      "bytes": 215857,
+      "sha256": "fccbe746bef64bb943c2db74ba947996476e402b312bd15778e2e2102407a9f7"
+    },
+    {
+      "path": "References/B07_CARGO_SET_structure.png",
+      "bytes": 74128,
+      "sha256": "d58fb022f0c3fe509e93054711c29b932c77bc6d19e03cf5fa8349a79a829a98"
+    },
+    {
+      "path": "References/B07_CARGO_SET_structure.svg",
+      "bytes": 186584,
+      "sha256": "c6a1d839e82d50fe90f3055ffe6fc09ae402c96980b1bfa8f59c5eda51d5ae7f"
+    },
+    {
+      "path": "References/B07_LOGISTICS_CANOPY.png",
+      "bytes": 84927,
+      "sha256": "3b6e3714c6f219162dce1d7efc26b22513f8cbb8fbd80d9d21eb6229b1c06d7c"
+    },
+    {
+      "path": "References/B07_LOGISTICS_CANOPY.svg",
+      "bytes": 307314,
+      "sha256": "a91e85ba7c6789ab5b166094f415f3ffe3658c691e9b30fd68ba8bb743eb6fa4"
+    },
+    {
+      "path": "References/B07_LOGISTICS_CANOPY_structure.png",
+      "bytes": 81353,
+      "sha256": "38748716b74388a0b31a55dd5ec082b3b85e18dfc4ff24093070df0e9a6c4b8f"
+    },
+    {
+      "path": "References/B07_LOGISTICS_CANOPY_structure.svg",
+      "bytes": 184394,
+      "sha256": "b8bda0061db33e149a83d66b5261a0e96b7f157e97cc0cebdf73d2dcefbe3fd0"
+    },
+    {
+      "path": "References/B07_PIPE_RACK.png",
+      "bytes": 109083,
+      "sha256": "da7d73be2fa4e44eb4df9720c15617c332a612b7877183fe9bb93db2ff949ee0"
+    },
+    {
+      "path": "References/B07_PIPE_RACK.svg",
+      "bytes": 789103,
+      "sha256": "d5b483bab1682ea15cb3057ab84e72d34c232c02d7120a360f9a45f5d18c7c37"
+    },
+    {
+      "path": "References/B07_TRANSFORMER_BAY.png",
+      "bytes": 91856,
+      "sha256": "a24ed6b84767fb4049de655e67cb5622d9660b68f2e01f6899a92da5583f750b"
+    },
+    {
+      "path": "References/B07_TRANSFORMER_BAY.svg",
+      "bytes": 698270,
+      "sha256": "1ace94472cc9b98f36cd46aa1b01b3f4aef51a9f7312da330b4e8d9e080717f3"
+    },
+    {
+      "path": "References/B07_TRANSFORMER_BAY_structure.png",
+      "bytes": 90700,
+      "sha256": "0117e10e3d8d90f9077cebadd2a392cda4945c82f2432d9a81f7528f1723f0ab"
+    },
+    {
+      "path": "References/B07_TRANSFORMER_BAY_structure.svg",
+      "bytes": 616765,
+      "sha256": "c1cc4a601af32433d91f53748390a03bfd3c94c7dd9c3dd87fbd515e4c5bf0c5"
+    },
+    {
+      "path": "References/B07_VENT_CASSETTE.png",
+      "bytes": 81952,
+      "sha256": "63927459527c633aecae87276026876a0cc9efb0445884bfff016bf2222da0de"
+    },
+    {
+      "path": "References/B07_VENT_CASSETTE.svg",
+      "bytes": 265885,
+      "sha256": "e8950f16f6fe105c839ed396f9f0cedea7b5517f45aa8239325b653e7fb632b6"
+    },
+    {
+      "path": "References/core_skin.png",
+      "bytes": 81615,
+      "sha256": "b2e40cd88b4d4b2fcf01bf9d8ede3b003bb33807d33bf6a18cc020f096079cdc"
+    },
+    {
+      "path": "References/core_skin.svg",
+      "bytes": 1654331,
+      "sha256": "7342f8c9a7a5db9d663416c006e5f9e7f5cc4a20ed0d4ae949827d96bc474b8e"
+    },
+    {
+      "path": "References/east_pump_yards.png",
+      "bytes": 84407,
+      "sha256": "026c92e5fb006f0abdcb26d414722753743d9786af3efa24ba19ebcd258f6e99"
+    },
+    {
+      "path": "References/east_pump_yards.svg",
+      "bytes": 9876763,
+      "sha256": "980fbd35130a63dca5f2bbe7993710042096d9e555f94539c8ac04941ce1b1ff"
+    },
+    {
+      "path": "References/site_layout.png",
+      "bytes": 110497,
+      "sha256": "221b1ffef4824153e860ab08eb3652fb3b8c239646b3ce82e41d92b06a25b28a"
+    },
+    {
+      "path": "References/site_layout.svg",
+      "bytes": 68407,
+      "sha256": "1bd7d81b9973d4975ec4b58908b1ee82b3b61eafceba2566aec16284fefcc9d5"
+    },
+    {
+      "path": "References/southwest_logistics.png",
+      "bytes": 97769,
+      "sha256": "95e4bea8cb26af901be718533f18c4a5492e8e0be68ad3f4d1a050eccd35ff3f"
+    },
+    {
+      "path": "References/southwest_logistics.svg",
+      "bytes": 4077549,
+      "sha256": "015b1abb9d41129f90bfe181b0e4094de92c112fb98be6fee270b8c96129c1e9"
+    },
+    {
+      "path": "References/v02/B07_CARGO_SET.png",
+      "bytes": 76326,
+      "sha256": "1375f0bbb9a8e03500b831d15c3465e42256e3606785a76a98ff8c27427378d2"
+    },
+    {
+      "path": "References/v02/B07_CARGO_SET.svg",
+      "bytes": 203921,
+      "sha256": "5df50ca1ee430c80c9e1f8d6e21737b02fa1cf1061321676a4f27b4cfb2552e3"
+    },
+    {
+      "path": "References/v02/B07_CARGO_SET_structure.png",
+      "bytes": 62814,
+      "sha256": "b446be13940cc9c627f5e0a8aaa06fda26a01506feb53adefbbdadeaa6f8f4d4"
+    },
+    {
+      "path": "References/v02/B07_CARGO_SET_structure.svg",
+      "bytes": 179489,
+      "sha256": "f623e75e0f4fae7ac942469b508f0578a2198bba3ed2203ea16ce7ec17d235d2"
+    },
+    {
+      "path": "References/v02/B07_LOGISTICS_CANOPY.png",
+      "bytes": 70255,
+      "sha256": "34f74e3c613712f8b0b1bb7af2b63657c7ad3c883b131b5374e9839993bbdaea"
+    },
+    {
+      "path": "References/v02/B07_LOGISTICS_CANOPY.svg",
+      "bytes": 320521,
+      "sha256": "7f8e926646f71c5366e94f95d3fce85c95af8be983687696312bc6f0f7a20020"
+    },
+    {
+      "path": "References/v02/B07_LOGISTICS_CANOPY_structure.png",
+      "bytes": 70382,
+      "sha256": "6919f733427cc36780c533579c07f59f9cca32289dabb6acd3fd0b11ce29e9dc"
+    },
+    {
+      "path": "References/v02/B07_LOGISTICS_CANOPY_structure.svg",
+      "bytes": 199749,
+      "sha256": "e5572f36b519e98c0a7cbbd6963f1ec7ba8ad8ceaed37a6d89c7533ce16da143"
+    },
+    {
+      "path": "References/v02/B07_PIPE_RACK.png",
+      "bytes": 91061,
+      "sha256": "a689daff7fe9835d34a0cd62f332929f04809322ecec086bfbc10ff0ea1ea832"
+    },
+    {
+      "path": "References/v02/B07_PIPE_RACK.svg",
+      "bytes": 775724,
+      "sha256": "7fe7441183568fdafba1f03bd0636b2b863a5ee37e818b8b7b067546f22a01c6"
+    },
+    {
+      "path": "References/v02/B07_SERVICE_CABINET.png",
+      "bytes": 73599,
+      "sha256": "cffd519fb0fb3e4c8c9ef9b94a3093d06e58946738813e9d64772f0bb5328497"
+    },
+    {
+      "path": "References/v02/B07_SERVICE_CABINET.svg",
+      "bytes": 151603,
+      "sha256": "f314543218c4f0ab86a8fa19072b94505d071d1b2c02351c9e9936c44f49e4e9"
+    },
+    {
+      "path": "References/v02/B07_SOLID_SCREEN.png",
+      "bytes": 56684,
+      "sha256": "2295888ed7a4655a32320094f087f7ba07dfc806737cee6a1adfe42863d68a85"
+    },
+    {
+      "path": "References/v02/B07_SOLID_SCREEN.svg",
+      "bytes": 152018,
+      "sha256": "5824c94798bce17196d9ce37eb80c7ae68628ec8bca043f35479d90c0636dd02"
+    },
+    {
+      "path": "References/v02/B07_TRANSFORMER_BAY.png",
+      "bytes": 76212,
+      "sha256": "1d6cee9da6a27fe136284d38b24ac3907fde963c579a079328495b188e1ffba0"
+    },
+    {
+      "path": "References/v02/B07_TRANSFORMER_BAY.svg",
+      "bytes": 710596,
+      "sha256": "e3b2cf49cf1e41aea3ea91fea57c1bb967885e7ed479a5e83afd0b788880a921"
+    },
+    {
+      "path": "References/v02/B07_TRANSFORMER_BAY_structure.png",
+      "bytes": 81027,
+      "sha256": "3c95968d8ddec6f0d3db07b75347e97c9ce2418fb314b66c017ae334b43571c5"
+    },
+    {
+      "path": "References/v02/B07_TRANSFORMER_BAY_structure.svg",
+      "bytes": 635631,
+      "sha256": "a5e0aa3b4843e84896042845dad177513a57cd49bf5b2f42d08d5ad9a55ea3e4"
+    },
+    {
+      "path": "References/v02/B07_VENT_CASSETTE.png",
+      "bytes": 67137,
+      "sha256": "584fba64f99bbfb902aece4b85ce7ac44b0823f9f82194e2071af126da9cda9f"
+    },
+    {
+      "path": "References/v02/B07_VENT_CASSETTE.svg",
+      "bytes": 281549,
+      "sha256": "9c9475def8b106b50d80a2ce0d7573ea9553d8fc60ebb5e4dc59aba8400f6d96"
+    },
+    {
+      "path": "References/v02/cargo_yard_detail.png",
+      "bytes": 86743,
+      "sha256": "98cf0238ffa92f5f72ae3c9bfce61c2760d7f6a0f0f4e8afd3946818dc4b5485"
+    },
+    {
+      "path": "References/v02/cargo_yard_detail.svg",
+      "bytes": 561506,
+      "sha256": "34f21da302c3338625c502b71f1f53847281c4c3d39a984c19bb84419a64833b"
+    },
+    {
+      "path": "References/v02/core_skin.png",
+      "bytes": 76283,
+      "sha256": "76575de6936a1862680295efaeaa84527041ed546cc58a56c42599551d74716e"
+    },
+    {
+      "path": "References/v02/core_skin.svg",
+      "bytes": 1859734,
+      "sha256": "c797063bb9e1542f77e83c7487076628432153d935271d53d53f92874cf1c804"
+    },
+    {
+      "path": "References/v02/east_pump_yards.png",
+      "bytes": 78144,
+      "sha256": "92007f11dc09c99f6ece7d56d1d5fc1c5c42191cdc89be261fd1f57e58b2c357"
+    },
+    {
+      "path": "References/v02/east_pump_yards.svg",
+      "bytes": 14974741,
+      "sha256": "56ff885086dc8337653dcf57f2223ee878c466be74a03be52ba86c8142905bb2"
+    },
+    {
+      "path": "References/v02/pump_yard_detail.png",
+      "bytes": 97265,
+      "sha256": "6dcd06c5dc89cca8363df3f9343cfe41e5bb74e6e11e6d3aef3fa55b15a1cf9a"
+    },
+    {
+      "path": "References/v02/pump_yard_detail.svg",
+      "bytes": 1690259,
+      "sha256": "cc11df8cd55736f8d53ee40f567fb9bf5c21a3714ab4a37b9ab884afdca1807d"
+    },
+    {
+      "path": "References/v02/site_layout.png",
+      "bytes": 79333,
+      "sha256": "b77de7606ea41e9458ba0266c1a51d18e43d95fb9693b57114d491cd3eece0e3"
+    },
+    {
+      "path": "References/v02/site_layout.svg",
+      "bytes": 85031,
+      "sha256": "8238dc88e63bc80436c4136ce800b0ca4cef6c3b4ea864dfc4b90040bb24868a"
+    },
+    {
+      "path": "References/v02/southwest_logistics.png",
+      "bytes": 88803,
+      "sha256": "ab24d7fefda68da633a6039c00755ad8922afb4e3a62858f461f6cd34f5585a3"
+    },
+    {
+      "path": "References/v02/southwest_logistics.svg",
+      "bytes": 9165928,
+      "sha256": "c6d6751127dfcf3412a2e6072bb7247e8513baa229fe02d7c92568999f9d95c6"
+    },
+    {
+      "path": "References/v03/east_pump_yards.png",
+      "bytes": 83445,
+      "sha256": "02f5a29960e6088816a8c023fab0d0ec3099c2e029cb286c4ec4a7b477895c51"
+    },
+    {
+      "path": "References/v03/east_pump_yards.svg",
+      "bytes": 15048045,
+      "sha256": "2bf3c36c410f00490a032ee7d1d6cfd6de92e4cd106a3dbb9130a57330131559"
+    },
+    {
+      "path": "References/v03/site_layout.png",
+      "bytes": 78885,
+      "sha256": "e406fb3b1b7171736c32c91b2c40aca363656de3ed51545404676ee9ce70da4c"
+    },
+    {
+      "path": "References/v03/site_layout.svg",
+      "bytes": 85784,
+      "sha256": "907bc5d61ea4472fd6a47568081e5d0ee56c71e862ee3da527031b5cd36ed67c"
+    },
+    {
+      "path": "References/v03/southwest_logistics.png",
+      "bytes": 94328,
+      "sha256": "d5f04dd7b72c21719a8d98143183ef7e9b51a018a0ae407ebc9f7cc931b4563c"
+    },
+    {
+      "path": "References/v03/southwest_logistics.svg",
+      "bytes": 9376915,
+      "sha256": "af68515cc296a877ba1dfa1fd52441030685f28e653494b45fdb7675dcfac30a"
+    },
+    {
+      "path": "References/v04/B07_SERVICE_CABINET_narrow_045.png",
+      "bytes": 77644,
+      "sha256": "dabfcd202d60b26d4b9ac2c01216eec279b6d47148cc16d6353e2fd1516d0980"
+    },
+    {
+      "path": "References/v04/B07_SERVICE_CABINET_narrow_045.svg",
+      "bytes": 154762,
+      "sha256": "c5f68c96c366c3b7758c336b92019172863dd1f784fad0f54207061990fdff70"
+    },
+    {
+      "path": "References/v04/pump_pad_56_minus18.png",
+      "bytes": 94939,
+      "sha256": "cd855e461f4a797b83c93fd5cd633f2b54d59beb4a5e148c3763a0cc6e94b2e8"
+    },
+    {
+      "path": "References/v04/pump_pad_56_minus18.svg",
+      "bytes": 2293391,
+      "sha256": "102293cd56a0b2c1f68fd8372129881c9ede9c01ae138613e1537e77978aab72"
+    },
+    {
+      "path": "References/v04/pump_pad_56_minus18_structure.png",
+      "bytes": 89746,
+      "sha256": "6df44fc1b70fe68a3d634ed78c5de674fdc2be665e30379e091fa4da1e2c3064"
+    },
+    {
+      "path": "References/v04/pump_pad_56_minus18_structure.svg",
+      "bytes": 1560262,
+      "sha256": "a4d46459edb4f3f96e9385e0d1117da04dd32cbd65aadd16e4e3b1f05df3ef37"
+    },
+    {
+      "path": "References/v04/site_layout.png",
+      "bytes": 85524,
+      "sha256": "661ec6e448742fbe329fd4f6b238d453ba022812c41232a0d97e44f1fca4122a"
+    },
+    {
+      "path": "References/v04/site_layout.svg",
+      "bytes": 87275,
+      "sha256": "fd59c2d0aec6d62663722b84b15a23657db1662b98a494094e44f2bd0dfa8478"
+    },
+    {
+      "path": "Regions/core_skin.blend",
+      "bytes": 96186,
+      "sha256": "58e4f14f238afad9672a792175b890ccba210fa1b3ce74222bb9503793a86f1a"
+    },
+    {
+      "path": "Regions/east_pump_yards.blend",
+      "bytes": 196693,
+      "sha256": "7c14cc75a6d2c800463febfa1c2a052d96aeb4ffa583c5990528d2e91a366797"
+    },
+    {
+      "path": "Regions/southwest_logistics.blend",
+      "bytes": 170730,
+      "sha256": "4c0669981a714c3e006ca262fa283ee4e51dd0dc427509e17e0db3f7ccfd46b0"
+    },
+    {
+      "path": "Scripts/analytic_geometry.py",
+      "bytes": 1847,
+      "sha256": "51029d96c5b2a562cc6a3fafc440e781ef013b2171c71a4193446684924f99de"
+    },
+    {
+      "path": "Scripts/build_scene.py",
+      "bytes": 12325,
+      "sha256": "f954512e671300050acb6e45956c48b3dab25319435a80dafb3151dc9502ddfc"
+    },
+    {
+      "path": "Scripts/check_rebuild.py",
+      "bytes": 1434,
+      "sha256": "a4f97b188a669f53782cc9d49c73041d13c49b8127c56c583a3baabf387ea77f"
+    },
+    {
+      "path": "Scripts/design_reference.py",
+      "bytes": 20190,
+      "sha256": "dbbe726481b71763620f111151a3b8f7e170f845dbfdc070ec9ceec7c5c49d7a"
+    },
+    {
+      "path": "Scripts/design_revision_v02.py",
+      "bytes": 11125,
+      "sha256": "356f4cc2367773652e74f4bd8007e5c01534b9833d28ea7d621b55cfc8a2c0da"
+    },
+    {
+      "path": "Scripts/design_revision_v03.py",
+      "bytes": 4685,
+      "sha256": "4538b0526fdbd78beaba33476465d79c68b524ad7d457aac453c4c612e0ccdb0"
+    },
+    {
+      "path": "Scripts/design_revision_v04.py",
+      "bytes": 4878,
+      "sha256": "008661ed55dfb0667a03bd18c4baee657c56e55e9656f4f7576aaec9128ae6a1"
+    },
+    {
+      "path": "Scripts/export_modules.py",
+      "bytes": 1648,
+      "sha256": "9636a2752c96c11a38e8a5cfaf6f270b528b042abccd8f584c1fc207bd5dd844"
+    },
+    {
+      "path": "Scripts/finalize_delivery.py",
+      "bytes": 7389,
+      "sha256": "737eebd8b5f1c6b14bbff1de34451a491fb5b250894a303c5fe6eecd2b0157a2"
+    },
+    {
+      "path": "Scripts/render_before.py",
+      "bytes": 1407,
+      "sha256": "d69733e711ee4976decd899a129c78c026f011079b6652ae71cdedadb01d4188"
+    },
+    {
+      "path": "Scripts/render_preview.py",
+      "bytes": 623,
+      "sha256": "7b57e371973d6cad1e8e57e10608c1445435bbb457d8411e14a65910fbcd1c73"
+    },
+    {
+      "path": "Scripts/render_scene.py",
+      "bytes": 3990,
+      "sha256": "5261938d6f85324cc14e9ac0d520b235e3f5746ce7a9d6985ecd8282e1428037"
+    },
+    {
+      "path": "Scripts/verify_scene.py",
+      "bytes": 5900,
+      "sha256": "e29264c1627b2cf18f21b6e4f76f67351bffcf197d47fe5615772bebd67d7357"
+    },
+    {
+      "path": "rebuild.py",
+      "bytes": 212,
+      "sha256": "f75a2b8c8e2dfc10fda91c6e0cfa18e8555d5e56def6d8a54e985fce5b5b7a8c"
+    },
+    {
+      "path": "renders/before_logistics_eye.png",
+      "bytes": 1580442,
+      "sha256": "2f6be9852b0c4f5b1a0f020307caa64408209555ae1ffb992a3d19ee34265c4e"
+    },
+    {
+      "path": "renders/before_site_overview.png",
+      "bytes": 1911380,
+      "sha256": "25e9fb872fad4dceb0b0213da3ef02fbdf155d65859cced5ff5dc25f37824ff4"
+    },
+    {
+      "path": "renders/comparison_logistics_eye.png",
+      "bytes": 573588,
+      "sha256": "1d9aef8ac2b02147092c46839b30d1ca426b5225460a59d07edc3bb9f4edddee"
+    },
+    {
+      "path": "renders/comparison_site_overview.png",
+      "bytes": 534903,
+      "sha256": "5ecd30ca594184748b79c76ba6eb9f17f9660887e524541853a2a323a0eb1014"
+    },
+    {
+      "path": "renders/core_entry.png",
+      "bytes": 1840507,
+      "sha256": "e562e824213a8e77adb50543d62a154757aa095d09df746eade448cbffcbb20d"
+    },
+    {
+      "path": "renders/logistics_eye.png",
+      "bytes": 1860937,
+      "sha256": "58028476d2968c1428f8f584ab8c12e494dab192ecadc0647caf36727705e320"
+    },
+    {
+      "path": "renders/module_gallery.png",
+      "bytes": 2004524,
+      "sha256": "853c996ad00a5902f2f7aaeb19213e06eb5a2253a9efcef485043aa08060e989"
+    },
+    {
+      "path": "renders/pump_eye.png",
+      "bytes": 1897595,
+      "sha256": "bc39b410a9ccedade72092c27c978b8a8821ddd7116a3f4c67856f8155122b11"
+    },
+    {
+      "path": "renders/site_cutaway.png",
+      "bytes": 2028949,
+      "sha256": "cc0459632447d9a36c623a02077d0f6b75fba18a2f0753076b4a20f4b7d05795"
+    },
+    {
+      "path": "renders/site_overview.png",
+      "bytes": 1980540,
+      "sha256": "63c979213db0430ae834185d1d4ef77a20d9a469f5db6458ef0eb7b26d757591"
+    },
+    {
+      "path": "site_refined.blend",
+      "bytes": 4689391,
+      "sha256": "3b2f4e727d359b595d818551be04be7ceabaa8fe1504de1164754ada4740b25b"
+    }
+  ]
+}

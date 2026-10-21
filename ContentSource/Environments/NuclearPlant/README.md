@@ -1,34 +1,33 @@
-# NuclearPlant — Batch01–06 完整累计交付
+# NuclearPlant — Batch01–07 完整累计工程
 
-## 从这里开始
+## 当前入口
 
-- **当前完整场景地图：`Batch06_Expansion/site_expansion.blend`**。直接用 Blender 4.3+ 打开。
-- **全部模块索引：`ALL_MODULES.md` / `ALL_MODULES.json`**，包含各批全部原生模块、共享库 collection、参考/正交图、当前和历史场景入口。
-- `Batch01` 保持原顶层布局（`ModularKit/`、`Blockout/` 等）；`Batch02/`–`Batch05_Core/` 均为 legacy 历史档案。`Batch06_Expansion/` 是 current 当前地图，不要将早期灰盒当成新版。
-- 包内包含所有历史批次，不依赖另下载旧包；保留全部历史原生总场景、模块库、导出、参考/正交图、脚本、配置与验证证据。
+- **最新完整地图：[`Batch07_Refinement/site_refined.blend`](Batch07_Refinement/site_refined.blend)**，Blender 4.3+ 可直接打开。
+- [全部模块索引](ALL_MODULES.md)：历史55条模块/组合库记录（含2条复用），新增7个模块家族与1个独立窄柜变体，共63条；不是63个全新独立模块。
+- [Batch07说明与最终限制](Batch07_Refinement/README.zh-CN.md) / [最终预览](Batch07_Refinement/index.html) / [独立QA](Batch07_Refinement/QA/Independent/FINAL_REVIEW.md)。
+- Batch07包含3个精化分块、8个独立模块资产、完整新场景、建模前v1–v4正交图、配置、生成脚本与最终实渲。原Batch01–06模块、历史总场景及导出均保留。
+- `Batch06_Expansion/site_expansion.blend` 是未改动的布局/光照基线，不是当前美术终态。旧GLB/FBX仍属Batch06；本轮当前全景交付为原生Blend，GLB仅覆盖8个模块资产。
 
-## 一键重建当前地图
+## 恢复、校验与重建
 
-在此目录运行 `python rebuild_current.py`，需要 Blender 4.3+ 在 PATH。加 `--render` 可重建并渲染。它调用 `Batch06_Expansion/rebuild.py`，从包内核心源与区域复用源重建四个扩建区域、连接模块库、完整地图，不修改历史批次。
+```bash
+python restore_assets.py
+python verify_delivery.py
+python rebuild_current.py
+# 可选：同时渲染最终视图
+python rebuild_current.py --render
+# 当前8个模块GLB；不是整图GLB/FBX
+python export_current.py
+```
 
-重新生成当前总场景 GLB/FBX：`python export_current.py`。程序材质未烘焙，交换格式不保证与 Blender 外观一致。
+少量旧大型原生/交换文件使用独立ZIP-LZMA，Batch07大型SVG使用更通用的ZIP-DEFLATE；脚本仅用Python标准库，无下载，自动恢复原文件名并校验压缩包和解压后SHA-256。它们不是二进制分卷，也不是需要外部下载的LFS占位符。手工解压旧LZMA档请使用7-Zip等支持ZIP-LZMA的工具。
 
-**历史脚本按原交付保留，部分含原工作机绝对路径；本次没有声称 Batch01–05 所有旧脚本均能异地一键全量重建。** 历史原生模型/场景与库的异地重开结果见 `DeliveryVerification/blender_open_check.json`。当前地图异地重建结果见同目录说明与报告。
+重建读取冻结v04配置与先验参考，核验Batch06基线hash。不会隐式重建旧批次；历史脚本仍可能包含旧绝对路径，未声称全部历史脚本异地可用。先在副本重建：重建会替换该副本的当前模型与构建记录，字节校验应在重建前执行。
 
-## 独立小 ZIP 备份
+## 证据边界
 
-完整 ZIP 是全部交付。另有每包小于7.9 MB的独立 ZIP 备份，解压到**同一个目录**即可合并出 `NuclearPlant/`；它们不是二进制分卷，不需要拼接字节或 `.z01`。以包外 `small_zips_manifest.json` 为精确包含清单。
+原有核心大代理窄环限制、6个约2.09m高度的屏饰条边缘触点保留；Cycles下旧共面道路伪影未修，本轮终图与同相机基线对照使用EEVEE。静态保护带/视线采样不是UE碰撞、导航、弹道、性能、联机或官方Manny网格实测。GLB不含Blender程序化材质的烘焙贴图。
 
-如果巨型交换格式使用 ZIP-LZMA 方法14，会在小包清单注明：请使用7-Zip等支持ZIP-LZMA的解压器（Python zipfile也支持），不要依赖不支持该方法的系统内置解压器。若最终交换格式仍超过单包限制，则小包仅不含清单明确列出的交换格式，全部原生源与可重建导出脚本仍保留；不能称其包含全部交换格式。
+`CUMULATIVE_MANIFEST.json` / `SHA256SUMS` 是当前恢复后清单；`REPOSITORY_MANIFEST.json` 是仓库物理存储清单。`python verify_delivery.py --baseline` 仅核验保留的旧交付字节（变更根文件取`RepositoryVerification/Batch01-06_RootSnapshot/`），不把历史几何验收改写为本轮新测试。旧`DeliveryVerification/`和`RepositoryVerification/summary.json`仍明确属于Batch01–06；当前增量发布验证见`RepositoryVerification/Batch07/`。
 
-## 证据与限制
-
-- Batch06 各新增模块、分区和整体地图保留建模前技术正交图、造型参考及时间/审查记录。严谨二维技术图是工程投影权威；AI概念图不冒充严格尺寸图。历史参考与建模后正交图分别标识，不逆向伪造历史顺序。
-- 扩建通道采用2.10 m高、半径0.50 m的保守静态检查代理，不是官方Manny网格实测。原核心大代理窄环限制保留；1.92 m/r0.42 m的官方示例胶囊尺寸静态测试不等于真实Manny或UE运行验收。
-- 这是五区连通地图与模块工程，不是UE已验收成品。碰撞、导航、跳跃、攀爬、多玩家交火、性能和最终材质烘焙尚需目标引擎验收。
-- 净空/掩体/视角最终结论以 `Batch06_Expansion/QA/` 的当前报告和 `DeliveryVerification/` 为准，不沿用被退回的旧稀疏场地报告。
-- 累计封包排除Scratch、History/PreCompact、缓存、`.blend1`、临时日志；不附第三方官方原图。原交付模块与当前必需依赖没有因去重而丢失。
-
-## 校验
-
-`CUMULATIVE_MANIFEST.json` 和 `SHA256SUMS` 记录包内文件SHA-256。`python verify_delivery.py` 检查全部清单文件；`DeliveryVerification/` 记录实际异地重开与当前重建范围。根目录旧 `manifest.json` / `delivery_manifest.json` 属于Batch01历史档案，新累计索引请使用大写命名文件。
+根`manifest.json`、`delivery_manifest.json`、`README_zh.md`为Batch01历史记录。最早预览页原字节保存在根快照中，不是当前场景。

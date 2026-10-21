@@ -1,6 +1,6 @@
 {
-  "project": "NuclearPlant cumulative Batch01–06",
-  "current_scene": "Batch06_Expansion/site_expansion.blend",
+  "project": "NuclearPlant cumulative Batch01–07",
+  "current_scene": "Batch07_Refinement/site_refined.blend",
   "current_rebuild": "python rebuild_current.py",
   "counts": {
     "Batch01": 8,
@@ -8,13 +8,14 @@
     "Batch03": 5,
     "Batch04": 3,
     "Batch05": 9,
-    "Batch06": 23
+    "Batch06": 23,
+    "Batch07": 8
   },
-  "module_entries": 55,
+  "module_entries": 63,
   "batch06_new_or_regional_composite_entries": 21,
   "batch06_reused_entries": 2,
   "historical_batch01_to05_entries": 32,
-  "count_note": "模块/组合库记录数；包括2个已标注复用记录，不是55种新增模块。Batch05 props按collection列出。",
+  "count_note": "63 module/combination records: 55 legacy records (including 2 reuse records) plus 7 Batch07 families and 1 separately reusable derived variant; not 63 newly created unique modules.",
   "modules": [
     {
       "batch": "Batch01",
@@ -565,13 +566,123 @@
       "reference": "Batch06_Expansion/Logistics/References/dock_bay_technical.svg",
       "post_model_orthographic": null,
       "notes": ""
+    },
+    {
+      "batch": "Batch07",
+      "id": "B07_VENT_CASSETTE",
+      "kind": "new_module_family",
+      "model": "Batch07_Refinement/Assets/B07_VENT_CASSETTE.blend",
+      "collection": null,
+      "reference": "Batch07_Refinement/References/v02/B07_VENT_CASSETTE.svg",
+      "post_model_orthographic": null,
+      "notes": "Ventilation / inspection cassette",
+      "reference_preview": "Batch07_Refinement/References/v02/B07_VENT_CASSETTE.png"
+    },
+    {
+      "batch": "Batch07",
+      "id": "B07_PIPE_RACK",
+      "kind": "new_module_family",
+      "model": "Batch07_Refinement/Assets/B07_PIPE_RACK.blend",
+      "collection": null,
+      "reference": "Batch07_Refinement/References/v02/B07_PIPE_RACK.svg",
+      "post_model_orthographic": null,
+      "notes": "Twin process-pipe service rack",
+      "reference_preview": "Batch07_Refinement/References/v02/B07_PIPE_RACK.png",
+      "reference_archive": "Batch07_Refinement/References/v02/B07_PIPE_RACK.svg.zip"
+    },
+    {
+      "batch": "Batch07",
+      "id": "B07_TRANSFORMER_BAY",
+      "kind": "new_module_family",
+      "model": "Batch07_Refinement/Assets/B07_TRANSFORMER_BAY.blend",
+      "collection": null,
+      "reference": "Batch07_Refinement/References/v02/B07_TRANSFORMER_BAY.svg",
+      "post_model_orthographic": null,
+      "notes": "Transformer / protective equipment bay",
+      "reference_preview": "Batch07_Refinement/References/v02/B07_TRANSFORMER_BAY.png",
+      "reference_archive": "Batch07_Refinement/References/v02/B07_TRANSFORMER_BAY.svg.zip"
+    },
+    {
+      "batch": "Batch07",
+      "id": "B07_CARGO_SET",
+      "kind": "new_module_family",
+      "model": "Batch07_Refinement/Assets/B07_CARGO_SET.blend",
+      "collection": null,
+      "reference": "Batch07_Refinement/References/v02/B07_CARGO_SET.svg",
+      "post_model_orthographic": null,
+      "notes": "Bound machine cargo / timber pallet set",
+      "reference_preview": "Batch07_Refinement/References/v02/B07_CARGO_SET.png"
+    },
+    {
+      "batch": "Batch07",
+      "id": "B07_LOGISTICS_CANOPY",
+      "kind": "new_module_family",
+      "model": "Batch07_Refinement/Assets/B07_LOGISTICS_CANOPY.blend",
+      "collection": null,
+      "reference": "Batch07_Refinement/References/v02/B07_LOGISTICS_CANOPY.svg",
+      "post_model_orthographic": null,
+      "notes": "Short logistics receiving canopy",
+      "reference_preview": "Batch07_Refinement/References/v02/B07_LOGISTICS_CANOPY.png"
+    },
+    {
+      "batch": "Batch07",
+      "id": "B07_SOLID_SCREEN",
+      "kind": "new_module_family",
+      "model": "Batch07_Refinement/Assets/B07_SOLID_SCREEN.blend",
+      "collection": null,
+      "reference": "Batch07_Refinement/References/v02/B07_SOLID_SCREEN.svg",
+      "post_model_orthographic": null,
+      "notes": "Solid upper industrial screen / cut-to-width",
+      "reference_preview": "Batch07_Refinement/References/v02/B07_SOLID_SCREEN.png"
+    },
+    {
+      "batch": "Batch07",
+      "id": "B07_SERVICE_CABINET",
+      "kind": "new_module_family",
+      "model": "Batch07_Refinement/Assets/B07_SERVICE_CABINET.blend",
+      "collection": null,
+      "reference": "Batch07_Refinement/References/v02/B07_SERVICE_CABINET.svg",
+      "post_model_orthographic": null,
+      "notes": "Solid process-service cabinet",
+      "reference_preview": "Batch07_Refinement/References/v02/B07_SERVICE_CABINET.png"
+    },
+    {
+      "batch": "Batch07",
+      "id": "B07_SERVICE_CABINET_narrow_045",
+      "kind": "derived_variant",
+      "model": "Batch07_Refinement/Assets/B07_SERVICE_CABINET_narrow_045.blend",
+      "collection": null,
+      "reference": "Batch07_Refinement/References/v04/B07_SERVICE_CABINET_narrow_045.svg",
+      "post_model_orthographic": null,
+      "notes": "Narrow cabinet derived variant (object X scale 0.45)",
+      "reference_preview": "Batch07_Refinement/References/v04/B07_SERVICE_CABINET_narrow_045.png"
     }
   ],
   "scenes": [
     {
-      "batch": "Batch06 CURRENT",
+      "batch": "Batch07 CURRENT",
+      "file": "Batch07_Refinement/site_refined.blend",
+      "purpose": "Complete refined map; unchanged Batch06 layout and protected baseline geometry."
+    },
+    {
+      "batch": "Batch07",
+      "file": "Batch07_Refinement/Regions/core_skin.blend",
+      "purpose": "Refined regional assembly"
+    },
+    {
+      "batch": "Batch07",
+      "file": "Batch07_Refinement/Regions/east_pump_yards.blend",
+      "purpose": "Refined regional assembly"
+    },
+    {
+      "batch": "Batch07",
+      "file": "Batch07_Refinement/Regions/southwest_logistics.blend",
+      "purpose": "Refined regional assembly"
+    },
+    {
+      "batch": "Batch06 BASELINE",
       "file": "Batch06_Expansion/site_expansion.blend",
-      "purpose": "当前五区完整拼装地图；以 Batch05 原尺寸核心为中心扩建。"
+      "purpose": "Previous Batch06 complete map; retained unchanged."
     },
     {
       "batch": "Batch06",
@@ -634,7 +745,9 @@
       "purpose": "最早全厂灰盒；不是当前地图"
     }
   ],
-  "freeze": {
+  "batch07_new_families": 7,
+  "batch07_derived_variants": 1,
+  "baseline_freeze": {
     "builder_frozen": true,
     "qa_final": true,
     "site_sha256": "f19f554d9f2ba93e6f3c1d31d95b0db2ed2b5bcd78a7fecc42de8cfe1267edb3",
@@ -649,5 +762,16 @@
       "Historical straight axes intentionally interrupted; current routes are detours",
       "v1 environment art"
     ]
+  },
+  "freeze": {
+    "author_frozen": true,
+    "independent_qa_passed": true,
+    "author_released_blender": true,
+    "scene_sha256": "3b2f4e727d359b595d818551be04be7ceabaa8fe1504de1164754ada4740b25b",
+    "manifest_sha256": "ee2b37b759c9ea9bc1935e348deaab4868700f3b2ea1cd675fae75e041ce20d3",
+    "qa_json_sha256": "569568ace3a67912f53fd37e44119f7fb9f492130bfd3cf3d2f7e6671148b9de",
+    "qa_review_sha256": "4ecdd7abfd6a221c86caa1ea4ec9472a067415de12df50a7924f56c8aefda0e2",
+    "received_utc": "2026-10-21T04:18:22.022916+00:00",
+    "scope": "Batch07 final v04; static geometry and visual pass with documented limitations, not UE acceptance"
   }
 }

@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "validated_utc": "2026-10-21T04:20:54.932762+00:00",
+  "blender_version": "4.3.2",
+  "author_scene_sha256": "3b2f4e727d359b595d818551be04be7ceabaa8fe1504de1164754ada4740b25b",
+  "author_files_exact": 147,
+  "archive_roundtrips": 29,
+  "new_native_files_reopened": 12,
+  "baseline_native_files_previously_reopened_unchanged": 76,
+  "native_blend_total": 88,
+  "current_rebuild_entry": "python rebuild_current.py --threads 2",
+  "current_rebuild_completed": true,
+  "module_exports_regenerated": 8,
+  "rebuild_fingerprint_matches": {
+    "lighting_and_color_management_fingerprint": true,
+    "objects": true,
+    "evaluated_geometry_instances": true,
+    "evaluated_vertices_including_instances": true,
+    "evaluated_polygons_including_instances": true,
+    "evaluated_geometry_fingerprint_round5": true,
+    "loaded_regions": true,
+    "layout_sha256_file": true,
+    "material_nodes_fingerprint": true,
+    "camera_and_render_fingerprint": true
+  },
+  "independent_author_qa": "../../Batch07_Refinement/QA/Independent/FINAL_REVIEW.md",
+  "baseline_scope": "Prior 76-file reopen and geometric acceptance are historical; this increment rechecks their preserved bytes only. Root changes retained in snapshot.",
+  "limits": [
+    "Static Blender checks only; not UE runtime/navigation/collision/Manny mesh acceptance",
+    "Existing core and six upper-trim edge limitations retained",
+    "Cycles coplanar-road artifact not fixed; before/after rendered with EEVEE",
+    "Procedural Blender material noise not baked into GLB; Batch07 full map provided as Blend, not full-site interchange export"
+  ]
+}

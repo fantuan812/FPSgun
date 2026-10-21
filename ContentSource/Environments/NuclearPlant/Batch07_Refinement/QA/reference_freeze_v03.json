@@ -1,0 +1,118 @@
+{
+  "stage": "V03_REFERENCE_BEFORE_REBUILD",
+  "utc": "2026-10-21T03:50:05.233805+00:00",
+  "parent_reference_sha256": "c87008b59706b13ab768e81d1c409c395d36d08933c42099f91a194af9f01a9e",
+  "previous_scene_sha256": "d090f0e4cf50e833d3de4e6a874e7d9dc97f0380779e9a144124009a64bc253e",
+  "inputs": {
+    "Config/design_v03.json": "45275ae2d9197b3578e138e7099389276d48ebfc5bfb08da1f95ef144b9b96a7",
+    "Scripts/design_revision_v03.py": "4538b0526fdbd78beaba33476465d79c68b524ad7d457aac453c4c612e0ccdb0",
+    "References/v03/east_pump_yards.png": "02f5a29960e6088816a8c023fab0d0ec3099c2e029cb286c4ec4a7b477895c51",
+    "References/v03/east_pump_yards.svg": "2bf3c36c410f00490a032ee7d1d6cfd6de92e4cd106a3dbb9130a57330131559",
+    "References/v03/site_layout.png": "e406fb3b1b7171736c32c91b2c40aca363656de3ed51545404676ee9ce70da4c",
+    "References/v03/site_layout.svg": "907bc5d61ea4472fd6a47568081e5d0ee56c71e862ee3da527031b5cd36ed67c",
+    "References/v03/southwest_logistics.png": "d5f04dd7b72c21719a8d98143183ef7e9b51a018a0ae407ebc9f7cc931b4563c",
+    "References/v03/southwest_logistics.svg": "af68515cc296a877ba1dfa1fd52441030685f28e653494b45fdb7675dcfac30a"
+  },
+  "changes": [
+    {
+      "cargo_before": [
+        -21.8,
+        -42.4,
+        0
+      ],
+      "cargo_after": [
+        -21.8,
+        -44.55,
+        0
+      ]
+    },
+    {
+      "solid_cabinet_added": {
+        "module": "B07_SERVICE_CABINET",
+        "position": [
+          -20,
+          -41.5,
+          0
+        ],
+        "rz": 0
+      }
+    },
+    {
+      "cargo_before": [
+        -39.8,
+        -55.4,
+        0
+      ],
+      "cargo_after": [
+        -39.8,
+        -57.55,
+        0
+      ]
+    },
+    {
+      "solid_cabinet_added": {
+        "module": "B07_SERVICE_CABINET",
+        "position": [
+          -38,
+          -54.5,
+          0
+        ],
+        "rz": 0
+      }
+    },
+    {
+      "cargo_before": [
+        -57.8,
+        -42.4,
+        0
+      ],
+      "cargo_after": [
+        -57.8,
+        -44.55,
+        0
+      ]
+    },
+    {
+      "solid_cabinet_added": {
+        "module": "B07_SERVICE_CABINET",
+        "position": [
+          -56,
+          -41.5,
+          0
+        ],
+        "rz": 0
+      }
+    },
+    {
+      "rack_before": {
+        "module": "B07_PIPE_RACK",
+        "position": [
+          58.5,
+          -18,
+          0
+        ],
+        "rz": 90
+      },
+      "rack_after": {
+        "module": "B07_PIPE_RACK",
+        "position": [
+          59,
+          -20.3,
+          0
+        ],
+        "rz": 0
+      }
+    },
+    {
+      "pump_solid_cabinet_added": {
+        "module": "B07_SERVICE_CABINET",
+        "position": [
+          59.5,
+          -16.5,
+          0
+        ],
+        "rz": 0
+      }
+    }
+  ]
+}

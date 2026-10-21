@@ -1,179 +1,29 @@
 {
-  "source_delivery_zip_sha256": "38515ec6eaadbd8e34b03728f3d9b57d5fa86066ab7ff821514566f9774945d5",
-  "original_delivery_file_count": 888,
-  "original_delivery_manifest_entries": 886,
-  "current_scene_sha256": "f19f554d9f2ba93e6f3c1d31d95b0db2ed2b5bcd78a7fecc42de8cfe1267edb3",
-  "native_blend_total_count": 76,
-  "native_blend_direct_count": 68,
-  "native_blend_archived_count": 8,
-  "all_repo_files_below_100MB": true,
-  "compressed_assets": [
-    {
-      "archive": "Batch02/architecture_demo.blend.zip",
-      "archive_sha256": "ca5ff9776d267e3b060464721f259ca7e71dc00800e2487745c0c480399ba7ef",
-      "archive_bytes": 1488926,
-      "zip_member": "architecture_demo.blend",
-      "restored_path": "Batch02/architecture_demo.blend",
-      "restored_bytes": 14184916,
-      "restored_sha256": "b755ffb94d5a0369a1fcd380aab83841d20d6ed298a007dabe216f5ec6c062cb",
-      "original_git_blob_sha1": "0dbf5a3fdf357880605b1b444bf7e50db0492d5b",
-      "roundtrip_sha256_pass": true,
-      "compression": "Standard ZIP-LZMA method14, 64MiB dictionary; independent single-file archive"
-    },
-    {
-      "archive": "Batch03/Region/pump_zone.blend.zip",
-      "archive_sha256": "0b256072a2224ddff28f32cb081506c33cea72b9ddf155de64091d3843aee127",
-      "archive_bytes": 2787767,
-      "zip_member": "pump_zone.blend",
-      "restored_path": "Batch03/Region/pump_zone.blend",
-      "restored_bytes": 24167180,
-      "restored_sha256": "823ec12d75da9a00c9882dbd843936fe981f854ace88594cbed3b8b013c9fe12",
-      "original_git_blob_sha1": "de691ac54ac7fd5bba5fd727af463c276659a932",
-      "roundtrip_sha256_pass": true,
-      "compression": "Standard ZIP-LZMA method14, 64MiB dictionary; independent single-file archive"
-    },
-    {
-      "archive": "Batch03/Region/site_with_pump_zone.blend.zip",
-      "archive_sha256": "f4efc0c275e05678ccd0852465cafe694057388d0896ccccb267c447fec4a4ac",
-      "archive_bytes": 2799071,
-      "zip_member": "site_with_pump_zone.blend",
-      "restored_path": "Batch03/Region/site_with_pump_zone.blend",
-      "restored_bytes": 24440172,
-      "restored_sha256": "4773d7b33fdddae37c1cd0a9495c12d1026034719c8d53d9afbc88caf5127262",
-      "original_git_blob_sha1": "297f48620a5b776fd3ac84090cc75903b1f69af7",
-      "roundtrip_sha256_pass": true,
-      "compression": "Standard ZIP-LZMA method14, 64MiB dictionary; independent single-file archive"
-    },
-    {
-      "archive": "Batch04_LargeSpace/Geometry/kit_geometry_01.blend.zip",
-      "archive_sha256": "34c63ac0c26e838da9d54fdaac4efae42c1ee30f7ee882c5a9eee1ac2a75b931",
-      "archive_bytes": 1017978,
-      "zip_member": "kit_geometry_01.blend",
-      "restored_path": "Batch04_LargeSpace/Geometry/kit_geometry_01.blend",
-      "restored_bytes": 8122376,
-      "restored_sha256": "be98d26a6c05bc1dd5298a39b29005efa48ba3587107acd0d7487b1b4e66cb48",
-      "original_git_blob_sha1": "786d07c8fc1dab118f09399b3dd544831bb181db",
-      "roundtrip_sha256_pass": true,
-      "compression": "Standard ZIP-LZMA method14, 64MiB dictionary; independent single-file archive"
-    },
-    {
-      "archive": "Batch04_LargeSpace/Geometry/kit_geometry_02.blend.zip",
-      "archive_sha256": "6a692176d0806aa9a466612d94457c9c7331d218e1e13acee1cd18e2035a7057",
-      "archive_bytes": 1092220,
-      "zip_member": "kit_geometry_02.blend",
-      "restored_path": "Batch04_LargeSpace/Geometry/kit_geometry_02.blend",
-      "restored_bytes": 8149284,
-      "restored_sha256": "51e1b0e4fa2bf311ca6cca9a30aec0c179efd3d3d8294e17d17409052df70bf3",
-      "original_git_blob_sha1": "5994a4f03069ec0a7ffe094f650e5bf601438328",
-      "roundtrip_sha256_pass": true,
-      "compression": "Standard ZIP-LZMA method14, 64MiB dictionary; independent single-file archive"
-    },
-    {
-      "archive": "Batch04_LargeSpace/Geometry/kit_geometry_03.blend.zip",
-      "archive_sha256": "7be366a5d249d84184a906923ce28f81ce0cc2c8151ad416cf36f4963f8e4c86",
-      "archive_bytes": 997664,
-      "zip_member": "kit_geometry_03.blend",
-      "restored_path": "Batch04_LargeSpace/Geometry/kit_geometry_03.blend",
-      "restored_bytes": 8275736,
-      "restored_sha256": "70707fca09a18e763ae59b044634bbe7ba00cc7f7d7f2a3519884776dd616f99",
-      "original_git_blob_sha1": "3200ba61599dc7f245448a9d9fbcacf623ab08be",
-      "roundtrip_sha256_pass": true,
-      "compression": "Standard ZIP-LZMA method14, 64MiB dictionary; independent single-file archive"
-    },
-    {
-      "archive": "Batch04_LargeSpace/Geometry/kit_geometry_04.blend.zip",
-      "archive_sha256": "4377d8c104953371c30d07d8447147037f0e8a6057a0916feca841e4840ab124",
-      "archive_bytes": 1212016,
-      "zip_member": "kit_geometry_04.blend",
-      "restored_path": "Batch04_LargeSpace/Geometry/kit_geometry_04.blend",
-      "restored_bytes": 8316844,
-      "restored_sha256": "84dcf43ffdbe7bb21f981b5f63212ecbe92ea4aaa2d4ff44917169f156c514b2",
-      "original_git_blob_sha1": "62e6328c506ec71469ff28c935437c53b0430d41",
-      "roundtrip_sha256_pass": true,
-      "compression": "Standard ZIP-LZMA method14, 64MiB dictionary; independent single-file archive"
-    },
-    {
-      "archive": "Batch05_Core/Exports/NuclearPlant_Core.fbx.zip",
-      "archive_sha256": "5e66afe3dc1d39bb857d41a7c72e588e8b417c31f24885a9881602206747fe04",
-      "archive_bytes": 3870746,
-      "zip_member": "NuclearPlant_Core.fbx",
-      "restored_path": "Batch05_Core/Exports/NuclearPlant_Core.fbx",
-      "restored_bytes": 16805244,
-      "restored_sha256": "6e23a8d330ce1f9c10dde705dba526de94ca40bea33b49afb920803344786a6c",
-      "original_git_blob_sha1": "e25fc63d38433ca6cc116e3ee2808e30a4259a9a",
-      "roundtrip_sha256_pass": true,
-      "compression": "Standard ZIP-LZMA method14, 64MiB dictionary; independent single-file archive"
-    },
-    {
-      "archive": "Batch05_Core/Exports/NuclearPlant_Core.glb.zip",
-      "archive_sha256": "9d6f3260adaae6c1fbf9bc17f738abcb14222d520bde348e9360582cf9445317",
-      "archive_bytes": 1124554,
-      "zip_member": "NuclearPlant_Core.glb",
-      "restored_path": "Batch05_Core/Exports/NuclearPlant_Core.glb",
-      "restored_bytes": 22714476,
-      "restored_sha256": "955efd03e2aac33d31f610a0b71079712b139572fe2ca25327b0bf032d11aedd",
-      "original_git_blob_sha1": "cb6e61940adfa18861676f1f42ee5809633cb6fd",
-      "roundtrip_sha256_pass": true,
-      "compression": "Standard ZIP-LZMA method14, 64MiB dictionary; independent single-file archive"
-    },
-    {
-      "archive": "Batch06_Expansion/Exports/NuclearPlant_FullSite.fbx.zip",
-      "archive_sha256": "b4cf980f37c60a2ecb0d79a793001c56f5d78b6277251fd4a4325ac0a36a9e72",
-      "archive_bytes": 6773682,
-      "zip_member": "NuclearPlant_FullSite.fbx",
-      "restored_path": "Batch06_Expansion/Exports/NuclearPlant_FullSite.fbx",
-      "restored_bytes": 119867740,
-      "restored_sha256": "f8c811333681ac6c5457f1f83971fbd9833d335f0a8cea8223c6593f5f89e34a",
-      "original_git_blob_sha1": "558f4745960ae78f746f27f96081da13b7947039",
-      "roundtrip_sha256_pass": true,
-      "compression": "Standard ZIP-LZMA method14, 64MiB dictionary; independent single-file archive"
-    },
-    {
-      "archive": "Batch06_Expansion/Exports/NuclearPlant_FullSite.glb.zip",
-      "archive_sha256": "b6116fd07fa501d62b9d4ea03677bfa48bc22cad891326e84e001862dfa6cd2a",
-      "archive_bytes": 2284617,
-      "zip_member": "NuclearPlant_FullSite.glb",
-      "restored_path": "Batch06_Expansion/Exports/NuclearPlant_FullSite.glb",
-      "restored_bytes": 214651748,
-      "restored_sha256": "c1e07a65e68c6d4ddfb23f1c4d3eade962fe270f43d6c3a4eb184406b61bb7de",
-      "original_git_blob_sha1": "392fe892a932ff26e3868a3d9790456cf96249f4",
-      "roundtrip_sha256_pass": true,
-      "compression": "Standard ZIP-LZMA method14, 64MiB dictionary; independent single-file archive"
-    },
-    {
-      "archive": "ModularKit/assembly_demo.blend.zip",
-      "archive_sha256": "852b00cac083d66fafbd2466c45e5f9f06565e4651d28728f44d0a0b5242fa2e",
-      "archive_bytes": 1342849,
-      "zip_member": "assembly_demo.blend",
-      "restored_path": "ModularKit/assembly_demo.blend",
-      "restored_bytes": 14633460,
-      "restored_sha256": "633bd051e7694c0d709a71d759360abbbde4e9bf0170691cfa695509c2dcebb4",
-      "original_git_blob_sha1": "a2b0166a2af8d16772caca1a92f44a15807bf6b3",
-      "roundtrip_sha256_pass": true,
-      "compression": "Standard ZIP-LZMA method14, 64MiB dictionary; independent single-file archive"
-    }
-  ],
+  "scope": "Current complete Git storage layout, excluding this manifest itself",
+  "baseline_commit": "74249eb5b9c656e16f9c1e932a10e851f3e11a32",
+  "current_scene": "Batch07_Refinement/site_refined.blend",
+  "current_scene_sha256": "3b2f4e727d359b595d818551be04be7ceabaa8fe1504de1164754ada4740b25b",
   "files": [
     {
       "path": ".gitignore",
       "repo_path": "ContentSource/Environments/NuclearPlant/.gitignore",
-      "bytes": 640,
-      "sha256": "acf91827620eb8c9727614347e112fd8fd6116669e31f9332d5568edfa1aa120",
-      "git_blob_sha1": "36ac80a7edc5da094a7b53b38533a8f5ee1c2b0a"
+      "bytes": 1604,
+      "sha256": "0e8e0ab97968c98bbb26e7f22f04cd217fea9573cb7d9d7d6c053da91314acf1",
+      "git_blob_sha1": "3c6c8d6d1c194f5e6fdd1678113838f80831439b"
     },
     {
       "path": "ALL_MODULES.json",
       "repo_path": "ContentSource/Environments/NuclearPlant/ALL_MODULES.json",
-      "bytes": 27635,
-      "sha256": "3016011cae7e6e31bc284cb6992a3092c0d29d21b53acfe003e197cca79460ee",
-      "git_blob_sha1": "2f0e0cc341783c98dba78917c3a4289ca3cbbf67"
+      "bytes": 32943,
+      "sha256": "89336bcf85ccaf540c827cdc792b0c7c6e18ed8347e153db8dc3ed6e4411acbb",
+      "git_blob_sha1": "f309f150e3b57491a775b63c7aa13103504b56f1"
     },
     {
       "path": "ALL_MODULES.md",
       "repo_path": "ContentSource/Environments/NuclearPlant/ALL_MODULES.md",
-      "bytes": 15334,
-      "sha256": "3de40e38ac7481b7f13b8a5bfc519c36e9ce8ef1da39e42539f72da8f4790784",
-      "git_blob_sha1": "d3ffc93fd3a5174f5a81808b7b547047a62ab588"
+      "bytes": 18090,
+      "sha256": "a94a10624c142d2814e26e9cc2582f9e0de1a5fa9b81922a2d07350cd84c0246",
+      "git_blob_sha1": "43b4731be0306e8c9f5b1881b0bc2bcc9efe5961"
     },
     {
       "path": "Batch02/Assets/SM_NPP_ColumnHead_075m_A/beauty.png",
@@ -5223,6 +5073,1126 @@
       "git_blob_sha1": "74a4ae143a5e6e6e810d79d1f389bdff522fc93c"
     },
     {
+      "path": "Batch07_Refinement/ALL_MODULES.json",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/ALL_MODULES.json",
+      "bytes": 2754,
+      "sha256": "f9e7344943824d72b9684334502fd572c14514b994d024bd7e5d0cf663d6528c",
+      "git_blob_sha1": "eba85693b6111d0df53d3b346b67ca7478699491"
+    },
+    {
+      "path": "Batch07_Refinement/Assets/B07_CARGO_SET.blend",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/Assets/B07_CARGO_SET.blend",
+      "bytes": 88176,
+      "sha256": "e6386ae5227beb646140a264cca876dbee81fdc3cc37fd21b518c695513fab87",
+      "git_blob_sha1": "6925eccb405eb2eebe3fe93643ddc5192f6f4992"
+    },
+    {
+      "path": "Batch07_Refinement/Assets/B07_LOGISTICS_CANOPY.blend",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/Assets/B07_LOGISTICS_CANOPY.blend",
+      "bytes": 92232,
+      "sha256": "cf6f761dc93cd1b9ae3298fbe4e348bbcc52f08a4bb437b08ea67baece37f40a",
+      "git_blob_sha1": "6d8431a820ab8c277817a699277918baa288df8a"
+    },
+    {
+      "path": "Batch07_Refinement/Assets/B07_PIPE_RACK.blend",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/Assets/B07_PIPE_RACK.blend",
+      "bytes": 107476,
+      "sha256": "18f6741f90153fc7a5b5ea81e0c05aff5a8f890d8d2f31355ed2987115a9e924",
+      "git_blob_sha1": "19dc06dcded331297b84e114f055f01f61079b2d"
+    },
+    {
+      "path": "Batch07_Refinement/Assets/B07_SERVICE_CABINET.blend",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/Assets/B07_SERVICE_CABINET.blend",
+      "bytes": 86321,
+      "sha256": "966b562e9285ac3dd93c6218bab5430cf4ba1298b2f3c8b780dadc01deb72671",
+      "git_blob_sha1": "1416318e4637d1b561440b220afbe51ca3c46454"
+    },
+    {
+      "path": "Batch07_Refinement/Assets/B07_SERVICE_CABINET_narrow_045.blend",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/Assets/B07_SERVICE_CABINET_narrow_045.blend",
+      "bytes": 103084,
+      "sha256": "5a9dec0effb392e82e01c6f54414460263bb820e172d0bc51668808a5b7064b7",
+      "git_blob_sha1": "3ec9413ec9f47ee260e9a47626fcca1efb50284d"
+    },
+    {
+      "path": "Batch07_Refinement/Assets/B07_SOLID_SCREEN.blend",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/Assets/B07_SOLID_SCREEN.blend",
+      "bytes": 86613,
+      "sha256": "889c5ec5e14f58689fab38bdbe2a36e976b19edac58d9ffdbf6a24fc484f816f",
+      "git_blob_sha1": "1474ca17e4b9b2118bab9e9233381868c726dfde"
+    },
+    {
+      "path": "Batch07_Refinement/Assets/B07_TRANSFORMER_BAY.blend",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/Assets/B07_TRANSFORMER_BAY.blend",
+      "bytes": 103557,
+      "sha256": "6f8f84363a43e6e87c4c0a56eca4a0ec3e8cec60e631595b4b4290febd0206bc",
+      "git_blob_sha1": "2590f8198ba5bcd6cf8f7f9093a19cd5037fd740"
+    },
+    {
+      "path": "Batch07_Refinement/Assets/B07_VENT_CASSETTE.blend",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/Assets/B07_VENT_CASSETTE.blend",
+      "bytes": 90082,
+      "sha256": "103976dd4223ba73a48ce7ac2620f38157cb139a9000796184305dcc8d71a0b9",
+      "git_blob_sha1": "5e06aa272b3f714b59ece2ec3aca157b61c16774"
+    },
+    {
+      "path": "Batch07_Refinement/Config/design.json",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/Config/design.json",
+      "bytes": 320574,
+      "sha256": "b87be6ab27ba49932c7d454f2f40e43c5aee9d119af66ba807018cf07d8a4536",
+      "git_blob_sha1": "591fc275d52109f1915b9058007b63a2e13bb845"
+    },
+    {
+      "path": "Batch07_Refinement/Config/design_v02.json",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/Config/design_v02.json",
+      "bytes": 360921,
+      "sha256": "e617fa17da51b68134a691f512bf3cd265b139db9a3a64ed259048d68d0877a3",
+      "git_blob_sha1": "eca1f80697a415228399c18d181a085e9f89a927"
+    },
+    {
+      "path": "Batch07_Refinement/Config/design_v03.json",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/Config/design_v03.json",
+      "bytes": 361699,
+      "sha256": "45275ae2d9197b3578e138e7099389276d48ebfc5bfb08da1f95ef144b9b96a7",
+      "git_blob_sha1": "91eafb76026634dcc10f13c954d8dd7ac010cdbe"
+    },
+    {
+      "path": "Batch07_Refinement/Config/design_v04.json",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/Config/design_v04.json",
+      "bytes": 362503,
+      "sha256": "348ba93ed2906e586f0fc43f4c6e102542f8efddd484dcc327830301da2174de",
+      "git_blob_sha1": "4ac82b8788beb7f42e83b9773a3a79052124d36b"
+    },
+    {
+      "path": "Batch07_Refinement/Config/render.json",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/Config/render.json",
+      "bytes": 250,
+      "sha256": "e93c8e3034701dc80ff4597235b2e0a1ba55bd6b288bf4322b4fc581dc354c70",
+      "git_blob_sha1": "275cbf55b62ed042ddde80cd1b853123d40739cb"
+    },
+    {
+      "path": "Batch07_Refinement/Config/render_cameras.json",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/Config/render_cameras.json",
+      "bytes": 607,
+      "sha256": "1d4d2d78f371acd906c566f5de4887bbe4567b0e8d0e984aaca36ecdedde6190",
+      "git_blob_sha1": "d5af445189cdc6351c059731e84f1303e6db087b"
+    },
+    {
+      "path": "Batch07_Refinement/Exports/B07_CARGO_SET.glb",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/Exports/B07_CARGO_SET.glb",
+      "bytes": 176640,
+      "sha256": "4500a2a971664d66ad314912649e401aa3b31035e52185b9e87ad1279db6f373",
+      "git_blob_sha1": "2a47c399e492edd6b0337bde397169dbd25b7235"
+    },
+    {
+      "path": "Batch07_Refinement/Exports/B07_LOGISTICS_CANOPY.glb",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/Exports/B07_LOGISTICS_CANOPY.glb",
+      "bytes": 329884,
+      "sha256": "9a3dcae03512428853a89de82458d7538f7ee02afc9a51c9f813d0ae197e19bd",
+      "git_blob_sha1": "6d98c072978cc60fe0fbf75bbef7effb6f8429dc"
+    },
+    {
+      "path": "Batch07_Refinement/Exports/B07_PIPE_RACK.glb",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/Exports/B07_PIPE_RACK.glb",
+      "bytes": 446996,
+      "sha256": "24951d950d8e9176e11e6f11351febdd9151341a8bfea3898e3a2226826210ab",
+      "git_blob_sha1": "8cdf75e4985dacf8bad82f85e83d6a46d2624bba"
+    },
+    {
+      "path": "Batch07_Refinement/Exports/B07_SERVICE_CABINET.glb",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/Exports/B07_SERVICE_CABINET.glb",
+      "bytes": 90856,
+      "sha256": "4e3cef69b344d10d14d9b0e3bfa959ab8af5ae89eb23301c3a9aa9283bac5f42",
+      "git_blob_sha1": "4ef8503e5bdb14d06134131f355fc63b7e54d394"
+    },
+    {
+      "path": "Batch07_Refinement/Exports/B07_SERVICE_CABINET_narrow_045.glb",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/Exports/B07_SERVICE_CABINET_narrow_045.glb",
+      "bytes": 90892,
+      "sha256": "89ff09e0c889718ccd0e21c4d1c30412d4e3ad7593f1e68786e0a01b4d3987a1",
+      "git_blob_sha1": "249b0d52887a34fafa435d3dd1d6ba7477e52186"
+    },
+    {
+      "path": "Batch07_Refinement/Exports/B07_SOLID_SCREEN.glb",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/Exports/B07_SOLID_SCREEN.glb",
+      "bytes": 118376,
+      "sha256": "df32c796ebc7de47dfd5bafbde5da84d6addb5c8facbdbb87ccdd727df1a563f",
+      "git_blob_sha1": "02cec701a8ad158cbe40a677282e9511d9b42d09"
+    },
+    {
+      "path": "Batch07_Refinement/Exports/B07_TRANSFORMER_BAY.glb",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/Exports/B07_TRANSFORMER_BAY.glb",
+      "bytes": 488324,
+      "sha256": "2b3c0d344613176e3928438255eca62d3a807d44734414d3e676eab3ae45266a",
+      "git_blob_sha1": "1d30e3972bf4f49c7a46821781815f084a1172df"
+    },
+    {
+      "path": "Batch07_Refinement/Exports/B07_VENT_CASSETTE.glb",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/Exports/B07_VENT_CASSETTE.glb",
+      "bytes": 255732,
+      "sha256": "2f53e81c53260176df8fb4046b41a0f64344b3c68bc9079203161737ba37a9b6",
+      "git_blob_sha1": "15b82efe3b4329eef94baeccfd427d695fc910ae"
+    },
+    {
+      "path": "Batch07_Refinement/Exports/manifest.json",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/Exports/manifest.json",
+      "bytes": 1752,
+      "sha256": "143c0daf67b103c13eabe8f93a2bf94a86900a88b9b01f466e077955daa7ab61",
+      "git_blob_sha1": "dae448ce4266ca48e3b74cba27783244e987665a"
+    },
+    {
+      "path": "Batch07_Refinement/QA/Independent/FINAL_QA.json",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/QA/Independent/FINAL_QA.json",
+      "bytes": 29099,
+      "sha256": "569568ace3a67912f53fd37e44119f7fb9f492130bfd3cf3d2f7e6671148b9de",
+      "git_blob_sha1": "5eb1c4111d11e1feb68bc1f00be582dc47d6e275"
+    },
+    {
+      "path": "Batch07_Refinement/QA/Independent/FINAL_REVIEW.md",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/QA/Independent/FINAL_REVIEW.md",
+      "bytes": 4844,
+      "sha256": "4ecdd7abfd6a221c86caa1ea4ec9472a067415de12df50a7924f56c8aefda0e2",
+      "git_blob_sha1": "efcdb5750e0efb818047cb59e4d380aa7b748f27"
+    },
+    {
+      "path": "Batch07_Refinement/QA/Independent/v04/detail_audit.json",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/QA/Independent/v04/detail_audit.json",
+      "bytes": 54578,
+      "sha256": "902f8b79a3de12ea17d0eb9eef7499e9c4c338cb07187faa3c71137fcefe6a0c",
+      "git_blob_sha1": "a137d6cdaa58e5544cbf4e2e11a1ea2db5439094"
+    },
+    {
+      "path": "Batch07_Refinement/QA/Independent/v04/detail_audit.py",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/QA/Independent/v04/detail_audit.py",
+      "bytes": 1829,
+      "sha256": "e7b25a22f641174e582218f976ec910d87ba9dec2fd15d3bad94dc9eee26bac0",
+      "git_blob_sha1": "8231dd24d5f895005ccc6eb77d9cc0cade8e418c"
+    },
+    {
+      "path": "Batch07_Refinement/QA/Independent/v04/glb_self_contained.json",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/QA/Independent/v04/glb_self_contained.json",
+      "bytes": 2037,
+      "sha256": "2a71870638f38e0fe96181a47dea20cfdc4a7202afc53925a1e629596a771c60",
+      "git_blob_sha1": "84c0831d3dbad9d557173fad11ee7493479f50b0"
+    },
+    {
+      "path": "Batch07_Refinement/QA/Independent/v04/independent_audit.py",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/QA/Independent/v04/independent_audit.py",
+      "bytes": 9901,
+      "sha256": "b781de339d2bc48b41c3bf5f36dd2d0492e4903a2dca52ad7259bd6bff1c0c44",
+      "git_blob_sha1": "108b00c01c935916cd906cd8c780d9e9bad570ab"
+    },
+    {
+      "path": "Batch07_Refinement/QA/Independent/v04/module_context_candidates.json",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/QA/Independent/v04/module_context_candidates.json",
+      "bytes": 185799,
+      "sha256": "b46878f75ab69bca5e1c893c06ae0b44e53cd62fdb3ac8790f6e6b4d53ad6c7c",
+      "git_blob_sha1": "c002586732ae92fcddaf625959f2ace3aec793cf"
+    },
+    {
+      "path": "Batch07_Refinement/QA/Independent/v04/module_context_candidates.py",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/QA/Independent/v04/module_context_candidates.py",
+      "bytes": 1500,
+      "sha256": "41325fcb03b790f2e8a55b60617a2e2b3e0808133a9813ca63c940ebdcbc2ab9",
+      "git_blob_sha1": "985e3afcdd493f744897f06e881ce677305c84bf"
+    },
+    {
+      "path": "Batch07_Refinement/QA/Independent/v04/narrow_asset_audit.json",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/QA/Independent/v04/narrow_asset_audit.json",
+      "bytes": 657,
+      "sha256": "59fdbad27ac87fd72b12e56ebbb76fc2f4aafc42657590e5263ba787ac17ca63",
+      "git_blob_sha1": "030e42c2b90895f2a2df399df05b2347a57bc0de"
+    },
+    {
+      "path": "Batch07_Refinement/QA/Independent/v04/narrow_asset_audit.py",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/QA/Independent/v04/narrow_asset_audit.py",
+      "bytes": 999,
+      "sha256": "7565404fdda596f21b436b12175d9df788c247b04041e8f01c19d9885eb62ce1",
+      "git_blob_sha1": "3082e9ef352bf921d97d85859462fd2e93f316e4"
+    },
+    {
+      "path": "Batch07_Refinement/QA/Independent/v04/placement_intersections.json",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/QA/Independent/v04/placement_intersections.json",
+      "bytes": 52145,
+      "sha256": "438e3843f77cb7e587c3b84307b75c43f26c45cc0a6a17fd05ec13fc8910eb3a",
+      "git_blob_sha1": "163586a1a23b1b33082ab4399c0917c9c23161b5"
+    },
+    {
+      "path": "Batch07_Refinement/QA/Independent/v04/placement_intersections.py",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/QA/Independent/v04/placement_intersections.py",
+      "bytes": 1401,
+      "sha256": "6c378f5b90ed908a3d6f7f1d8908ddb41d002e656d55a540171137abafa45455",
+      "git_blob_sha1": "e102beb4fcceb57e45081c2ec519320aeffb6925"
+    },
+    {
+      "path": "Batch07_Refinement/QA/Independent/v04/visual_inspections.json",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/QA/Independent/v04/visual_inspections.json",
+      "bytes": 3385,
+      "sha256": "d81269fff313407bef607f993b2cf0a7498c98572325e9ebb829586e5d5171f2",
+      "git_blob_sha1": "c6217ce4f9920fe5010eea39044cf9eb019574bb"
+    },
+    {
+      "path": "Batch07_Refinement/QA/before_render_provenance.json",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/QA/before_render_provenance.json",
+      "bytes": 1684,
+      "sha256": "7fce744936f25261cba3fa0c6acebc7cd921499eade8eec4aafc70bcd2015b72",
+      "git_blob_sha1": "9696be76dcf3efc92aca3d69a938d0be31f0ebdc"
+    },
+    {
+      "path": "Batch07_Refinement/QA/build_record.json",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/QA/build_record.json",
+      "bytes": 39642,
+      "sha256": "c04541246717b93c1440b3f290d652c1001eacbc5b9424f055cb7d9ce380fbfd",
+      "git_blob_sha1": "49d9035cc4dbd515b44ae9564cf50219c8457ee0"
+    },
+    {
+      "path": "Batch07_Refinement/QA/build_record_initial.json",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/QA/build_record_initial.json",
+      "bytes": 12811,
+      "sha256": "83b1a43b915430ddef84cc895e21ebdf73266c40124b7b232fcda25f0caad81c",
+      "git_blob_sha1": "6f26771ec5f3c86ea0c1059fe0a5fb476af9faa0"
+    },
+    {
+      "path": "Batch07_Refinement/QA/build_record_v02.json",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/QA/build_record_v02.json",
+      "bytes": 38270,
+      "sha256": "40af0a32aa856b275af937649c20d2a0e0143f155e3c2ed73aa848935235c144",
+      "git_blob_sha1": "889d4d1bddb79cfb82039ac37fb706f44436b154"
+    },
+    {
+      "path": "Batch07_Refinement/QA/build_record_v03_rebuild.json",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/QA/build_record_v03_rebuild.json",
+      "bytes": 39162,
+      "sha256": "45160ea3cc9bd46b5c439f4ed487586f541425c2db34169891bf9ec119b481d3",
+      "git_blob_sha1": "44ac6489c5dc6d12f7cc9a0df953bc58cd110094"
+    },
+    {
+      "path": "Batch07_Refinement/QA/build_record_v04_geometry_qa.json",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/QA/build_record_v04_geometry_qa.json",
+      "bytes": 39642,
+      "sha256": "2fe931456dbbdc504f2b76e15d785bac4197391018dd0b6141d745828e894727",
+      "git_blob_sha1": "30f52bbdf37a4d1e90b9d08367e42d88ddc5b4f4"
+    },
+    {
+      "path": "Batch07_Refinement/QA/legacy_touchpoints.json",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/QA/legacy_touchpoints.json",
+      "bytes": 882,
+      "sha256": "10e525c6e538801d81a2fdff057a645429f3aede139b21ec648d8515aee11e81",
+      "git_blob_sha1": "185d6dfe5391cbb41f16a7f8e7009b9894d2a5fe"
+    },
+    {
+      "path": "Batch07_Refinement/QA/rebuild_verification.json",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/QA/rebuild_verification.json",
+      "bytes": 300,
+      "sha256": "479c3fb80e0ca1948722dba2a66a00ea2353bc0b6e41e23d9c4456f7d42a826b",
+      "git_blob_sha1": "82cb8909bb4036daeffc4f8b4d5220521c2bb3c6"
+    },
+    {
+      "path": "Batch07_Refinement/QA/reference_freeze.json",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/QA/reference_freeze.json",
+      "bytes": 3379,
+      "sha256": "a2b5e1c815a9bb1e2c8cd267642bc3ec3ed892684a44ebf794b82543e374b902",
+      "git_blob_sha1": "289d335ff050a2eff932a89bb32037b53711458b"
+    },
+    {
+      "path": "Batch07_Refinement/QA/reference_freeze_v02.json",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/QA/reference_freeze_v02.json",
+      "bytes": 4237,
+      "sha256": "c87008b59706b13ab768e81d1c409c395d36d08933c42099f91a194af9f01a9e",
+      "git_blob_sha1": "564a801521f3a27d16459a40b7d240dabef96f57"
+    },
+    {
+      "path": "Batch07_Refinement/QA/reference_freeze_v03.json",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/QA/reference_freeze_v03.json",
+      "bytes": 2737,
+      "sha256": "9173f850b863f403077d04f75c1ff2ad3152c2cee23b71d2c18c20de3f1ffcf6",
+      "git_blob_sha1": "8e0a66163587f6aea2ccd91ca09b6ef18f9393ea"
+    },
+    {
+      "path": "Batch07_Refinement/QA/reference_freeze_v04.json",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/QA/reference_freeze_v04.json",
+      "bytes": 1918,
+      "sha256": "8bf0e976c0b0b51d1334150dd93b551562e4f16883e8c36ff12d4fda21b22ec9",
+      "git_blob_sha1": "5e9e7a8a01359409edd81b89595492116d3e0be6"
+    },
+    {
+      "path": "Batch07_Refinement/QA/reference_review.md",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/QA/reference_review.md",
+      "bytes": 2167,
+      "sha256": "85e645122560c864db046695ec4c09cbfb73bc859e53564ea6fe7456c389d031",
+      "git_blob_sha1": "a60b707cf49dc567eac03d9ec62d09c272b8875a"
+    },
+    {
+      "path": "Batch07_Refinement/QA/render_diagnosis.md",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/QA/render_diagnosis.md",
+      "bytes": 932,
+      "sha256": "81f8747994e2d0a89b7c7a7af443b2bc15fd50cccd0c58412f4c41fe0254401e",
+      "git_blob_sha1": "c92b9de15b264096305fd8a4fcb8a9d3372ac88e"
+    },
+    {
+      "path": "Batch07_Refinement/QA/render_provenance.json",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/QA/render_provenance.json",
+      "bytes": 2454,
+      "sha256": "ec0ce1f9b60001b6ae28222978d7d4bd1bd580daddd5449c0df06ec7523ee8a5",
+      "git_blob_sha1": "46c88493907856758dc9ef841682a2beaa373a64"
+    },
+    {
+      "path": "Batch07_Refinement/QA/static_geometry.json",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/QA/static_geometry.json",
+      "bytes": 10953,
+      "sha256": "4be1cb9f2eadcd7cde2d8ef396cc7ba4db1fb79c0dea9eb60c9ab894e1e420e6",
+      "git_blob_sha1": "0d0436da200e45fb04992b893e1037045cf69f0a"
+    },
+    {
+      "path": "Batch07_Refinement/QA/static_geometry_v01.json",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/QA/static_geometry_v01.json",
+      "bytes": 30615,
+      "sha256": "4fbc2ae73d89c024f2e982b4ff6c161e390fbe7feb667e8106a7d95c1c3c8d73",
+      "git_blob_sha1": "459fc23a5b287179986dcbb01d556c15026d7cd4"
+    },
+    {
+      "path": "Batch07_Refinement/QA/static_geometry_v02.json",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/QA/static_geometry_v02.json",
+      "bytes": 8971,
+      "sha256": "1eaaa55ddc6e21990d3ded6b899b8706beadc7afad1f14c51b26a887a9cb9bfc",
+      "git_blob_sha1": "6270e222e7e7ff66bc4a0e1f677ecde77ca88971"
+    },
+    {
+      "path": "Batch07_Refinement/QA/visual_gates/logistics_eye.png",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/QA/visual_gates/logistics_eye.png",
+      "bytes": 511123,
+      "sha256": "825c28af377941b8fd928b0086cefc66612ac5dc4cc3dfdb3a3d54145bc2f5a4",
+      "git_blob_sha1": "ee16b9df5320125fc7cc7d5cb3d0b6c7c90f6e07"
+    },
+    {
+      "path": "Batch07_Refinement/QA/visual_gates/pump_eye.png",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/QA/visual_gates/pump_eye.png",
+      "bytes": 514625,
+      "sha256": "f658655c070f9852f20ae3bf2fde88de596f2e5096081eeb2a5fe0b696e13017",
+      "git_blob_sha1": "69233bb8d29fdc732a35ce35ab0f74d047847d48"
+    },
+    {
+      "path": "Batch07_Refinement/QA/visual_review.md",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/QA/visual_review.md",
+      "bytes": 3281,
+      "sha256": "d3581b147f0dae6c6445fb2b58a35e7da527ab4f1bf208d1c7573dc844dfbb6d",
+      "git_blob_sha1": "f926826cf80556baa3149de7e318d87ede012910"
+    },
+    {
+      "path": "Batch07_Refinement/README.zh-CN.md",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/README.zh-CN.md",
+      "bytes": 4726,
+      "sha256": "6702475d70d113b75148bb3cf60a73a46490dd9e359208a81ca04408e5535b4b",
+      "git_blob_sha1": "7bcd792262291310eebb710b4ccda63e0e730913"
+    },
+    {
+      "path": "Batch07_Refinement/References/B07_CARGO_SET.png",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/B07_CARGO_SET.png",
+      "bytes": 93123,
+      "sha256": "c7e683320a97de9316fbb68941d44f6d38ed7f25e7044bddefcd25d50e7a65ad",
+      "git_blob_sha1": "45791b14220b9dfaf9e4c7468422cd26da00b8dd"
+    },
+    {
+      "path": "Batch07_Refinement/References/B07_CARGO_SET.svg",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/B07_CARGO_SET.svg",
+      "bytes": 215857,
+      "sha256": "fccbe746bef64bb943c2db74ba947996476e402b312bd15778e2e2102407a9f7",
+      "git_blob_sha1": "886f23bc708a5fdcf6b3d24dd6e5e89b01d37239"
+    },
+    {
+      "path": "Batch07_Refinement/References/B07_CARGO_SET_structure.png",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/B07_CARGO_SET_structure.png",
+      "bytes": 74128,
+      "sha256": "d58fb022f0c3fe509e93054711c29b932c77bc6d19e03cf5fa8349a79a829a98",
+      "git_blob_sha1": "7efb170d2e4704fc818d36492a55e5ec9bf6628d"
+    },
+    {
+      "path": "Batch07_Refinement/References/B07_CARGO_SET_structure.svg",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/B07_CARGO_SET_structure.svg",
+      "bytes": 186584,
+      "sha256": "c6a1d839e82d50fe90f3055ffe6fc09ae402c96980b1bfa8f59c5eda51d5ae7f",
+      "git_blob_sha1": "65b4b8f5f22f5afc70b672c7aa2058220c6bd0b6"
+    },
+    {
+      "path": "Batch07_Refinement/References/B07_LOGISTICS_CANOPY.png",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/B07_LOGISTICS_CANOPY.png",
+      "bytes": 84927,
+      "sha256": "3b6e3714c6f219162dce1d7efc26b22513f8cbb8fbd80d9d21eb6229b1c06d7c",
+      "git_blob_sha1": "bd35578d5b80a008cc91a01ecfc056e9dd451c02"
+    },
+    {
+      "path": "Batch07_Refinement/References/B07_LOGISTICS_CANOPY.svg",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/B07_LOGISTICS_CANOPY.svg",
+      "bytes": 307314,
+      "sha256": "a91e85ba7c6789ab5b166094f415f3ffe3658c691e9b30fd68ba8bb743eb6fa4",
+      "git_blob_sha1": "2532a949c5f9c13836a3ebf30e0e58cd9cebf2b5"
+    },
+    {
+      "path": "Batch07_Refinement/References/B07_LOGISTICS_CANOPY_structure.png",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/B07_LOGISTICS_CANOPY_structure.png",
+      "bytes": 81353,
+      "sha256": "38748716b74388a0b31a55dd5ec082b3b85e18dfc4ff24093070df0e9a6c4b8f",
+      "git_blob_sha1": "7fc6c47768ca2964231907dd121f2dde8e2bbc58"
+    },
+    {
+      "path": "Batch07_Refinement/References/B07_LOGISTICS_CANOPY_structure.svg",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/B07_LOGISTICS_CANOPY_structure.svg",
+      "bytes": 184394,
+      "sha256": "b8bda0061db33e149a83d66b5261a0e96b7f157e97cc0cebdf73d2dcefbe3fd0",
+      "git_blob_sha1": "197ec2ffdc4277c0aafaf88b4cd287c40c5fb7a9"
+    },
+    {
+      "path": "Batch07_Refinement/References/B07_PIPE_RACK.png",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/B07_PIPE_RACK.png",
+      "bytes": 109083,
+      "sha256": "da7d73be2fa4e44eb4df9720c15617c332a612b7877183fe9bb93db2ff949ee0",
+      "git_blob_sha1": "6f2ab66e95f29b898be73590b718d8a14994bcd9"
+    },
+    {
+      "path": "Batch07_Refinement/References/B07_PIPE_RACK.svg.zip",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/B07_PIPE_RACK.svg.zip",
+      "bytes": 60827,
+      "sha256": "603fc40ac179f95b6d75cdda557fac2894acd583fa60194cd604e8e05a361b98",
+      "git_blob_sha1": "43666f6e71fbc973a69f719b9dbbd17aafe1fd7f"
+    },
+    {
+      "path": "Batch07_Refinement/References/B07_TRANSFORMER_BAY.png",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/B07_TRANSFORMER_BAY.png",
+      "bytes": 91856,
+      "sha256": "a24ed6b84767fb4049de655e67cb5622d9660b68f2e01f6899a92da5583f750b",
+      "git_blob_sha1": "5d06c5d49bf7b58af79d11127eca0b3d3e1139d5"
+    },
+    {
+      "path": "Batch07_Refinement/References/B07_TRANSFORMER_BAY.svg.zip",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/B07_TRANSFORMER_BAY.svg.zip",
+      "bytes": 49537,
+      "sha256": "cde2b78f458797d8d9291d5552c9b7a73c253ac1b2d5ad306c8c030db868add7",
+      "git_blob_sha1": "35517fd122d1253506f203e80e215b9aa2d2d753"
+    },
+    {
+      "path": "Batch07_Refinement/References/B07_TRANSFORMER_BAY_structure.png",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/B07_TRANSFORMER_BAY_structure.png",
+      "bytes": 90700,
+      "sha256": "0117e10e3d8d90f9077cebadd2a392cda4945c82f2432d9a81f7528f1723f0ab",
+      "git_blob_sha1": "18e899041764f20b639c3ed3c12b6c4aa35442e1"
+    },
+    {
+      "path": "Batch07_Refinement/References/B07_TRANSFORMER_BAY_structure.svg.zip",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/B07_TRANSFORMER_BAY_structure.svg.zip",
+      "bytes": 43514,
+      "sha256": "6366ed6a8caa00757c5a998b43eae58ee8afa89333b2c0112e8efe5ded4ebb13",
+      "git_blob_sha1": "de5030c8d033dd5aec9509fae14ee608e2edf318"
+    },
+    {
+      "path": "Batch07_Refinement/References/B07_VENT_CASSETTE.png",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/B07_VENT_CASSETTE.png",
+      "bytes": 81952,
+      "sha256": "63927459527c633aecae87276026876a0cc9efb0445884bfff016bf2222da0de",
+      "git_blob_sha1": "f0ae8feb08bc8d7c314e6a59b62acd161acf311d"
+    },
+    {
+      "path": "Batch07_Refinement/References/B07_VENT_CASSETTE.svg",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/B07_VENT_CASSETTE.svg",
+      "bytes": 265885,
+      "sha256": "e8950f16f6fe105c839ed396f9f0cedea7b5517f45aa8239325b653e7fb632b6",
+      "git_blob_sha1": "9ca3b1c1fe55083ec876155057d609ea488c9ac2"
+    },
+    {
+      "path": "Batch07_Refinement/References/core_skin.png",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/core_skin.png",
+      "bytes": 81615,
+      "sha256": "b2e40cd88b4d4b2fcf01bf9d8ede3b003bb33807d33bf6a18cc020f096079cdc",
+      "git_blob_sha1": "67900ba008cc60c379ab277bd9d79ba897bb3cad"
+    },
+    {
+      "path": "Batch07_Refinement/References/core_skin.svg.zip",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/core_skin.svg.zip",
+      "bytes": 93137,
+      "sha256": "cfabfb10b376e6c72580969d44e7f4ef34544b3ea935af400c1d554ee0164971",
+      "git_blob_sha1": "c5c2aafc64afd24f09da2da66131f26f0714e3c9"
+    },
+    {
+      "path": "Batch07_Refinement/References/east_pump_yards.png",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/east_pump_yards.png",
+      "bytes": 84407,
+      "sha256": "026c92e5fb006f0abdcb26d414722753743d9786af3efa24ba19ebcd258f6e99",
+      "git_blob_sha1": "ed226a6ec0ce34f47941c975d5690dddfc5c3955"
+    },
+    {
+      "path": "Batch07_Refinement/References/east_pump_yards.svg.zip",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/east_pump_yards.svg.zip",
+      "bytes": 663320,
+      "sha256": "e6ce919bb5b107b5b23b6bf26082abf59496eecbee7a5adbaa51f6eefd56c85d",
+      "git_blob_sha1": "b9784df619c5ca137b684e8a7a4b56d19af5ec32"
+    },
+    {
+      "path": "Batch07_Refinement/References/site_layout.png",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/site_layout.png",
+      "bytes": 110497,
+      "sha256": "221b1ffef4824153e860ab08eb3652fb3b8c239646b3ce82e41d92b06a25b28a",
+      "git_blob_sha1": "687c867d9861261e618ea4d052e4168d6a4694e8"
+    },
+    {
+      "path": "Batch07_Refinement/References/site_layout.svg",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/site_layout.svg",
+      "bytes": 68407,
+      "sha256": "1bd7d81b9973d4975ec4b58908b1ee82b3b61eafceba2566aec16284fefcc9d5",
+      "git_blob_sha1": "6bd17b3aa43bdbd661a034495cdaebc230798163"
+    },
+    {
+      "path": "Batch07_Refinement/References/southwest_logistics.png",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/southwest_logistics.png",
+      "bytes": 97769,
+      "sha256": "95e4bea8cb26af901be718533f18c4a5492e8e0be68ad3f4d1a050eccd35ff3f",
+      "git_blob_sha1": "f7fa85e510e936503729b5aba3964093c34fe110"
+    },
+    {
+      "path": "Batch07_Refinement/References/southwest_logistics.svg.zip",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/southwest_logistics.svg.zip",
+      "bytes": 249736,
+      "sha256": "79c4ea767bb7f24e3ca39435b9db41ff1ea821e091204d33584541cb5cf3a3cf",
+      "git_blob_sha1": "878389fa758f380868cac52eb3391165b756e649"
+    },
+    {
+      "path": "Batch07_Refinement/References/v02/B07_CARGO_SET.png",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/v02/B07_CARGO_SET.png",
+      "bytes": 76326,
+      "sha256": "1375f0bbb9a8e03500b831d15c3465e42256e3606785a76a98ff8c27427378d2",
+      "git_blob_sha1": "d6920e3831f98e95eeab4c8bed1cfc12b261c8c2"
+    },
+    {
+      "path": "Batch07_Refinement/References/v02/B07_CARGO_SET.svg",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/v02/B07_CARGO_SET.svg",
+      "bytes": 203921,
+      "sha256": "5df50ca1ee430c80c9e1f8d6e21737b02fa1cf1061321676a4f27b4cfb2552e3",
+      "git_blob_sha1": "1d7c4ac1d1368e79dd281efe163248b328ca34a7"
+    },
+    {
+      "path": "Batch07_Refinement/References/v02/B07_CARGO_SET_structure.png",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/v02/B07_CARGO_SET_structure.png",
+      "bytes": 62814,
+      "sha256": "b446be13940cc9c627f5e0a8aaa06fda26a01506feb53adefbbdadeaa6f8f4d4",
+      "git_blob_sha1": "8a744f03e700fac9afdc3c86e82679da72bba4ed"
+    },
+    {
+      "path": "Batch07_Refinement/References/v02/B07_CARGO_SET_structure.svg",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/v02/B07_CARGO_SET_structure.svg",
+      "bytes": 179489,
+      "sha256": "f623e75e0f4fae7ac942469b508f0578a2198bba3ed2203ea16ce7ec17d235d2",
+      "git_blob_sha1": "8956f0efa9c7e29c1e32a2ccf3c6f7db1bbe2a4e"
+    },
+    {
+      "path": "Batch07_Refinement/References/v02/B07_LOGISTICS_CANOPY.png",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/v02/B07_LOGISTICS_CANOPY.png",
+      "bytes": 70255,
+      "sha256": "34f74e3c613712f8b0b1bb7af2b63657c7ad3c883b131b5374e9839993bbdaea",
+      "git_blob_sha1": "89778bffad2ec08a7dc08c7087429a5aa5abefd9"
+    },
+    {
+      "path": "Batch07_Refinement/References/v02/B07_LOGISTICS_CANOPY.svg",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/v02/B07_LOGISTICS_CANOPY.svg",
+      "bytes": 320521,
+      "sha256": "7f8e926646f71c5366e94f95d3fce85c95af8be983687696312bc6f0f7a20020",
+      "git_blob_sha1": "ed3411b36998d78528a25a63c98d21c6b4ee52c0"
+    },
+    {
+      "path": "Batch07_Refinement/References/v02/B07_LOGISTICS_CANOPY_structure.png",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/v02/B07_LOGISTICS_CANOPY_structure.png",
+      "bytes": 70382,
+      "sha256": "6919f733427cc36780c533579c07f59f9cca32289dabb6acd3fd0b11ce29e9dc",
+      "git_blob_sha1": "3a7653f6c9ad46e4abd74634ed3d60c312991a93"
+    },
+    {
+      "path": "Batch07_Refinement/References/v02/B07_LOGISTICS_CANOPY_structure.svg",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/v02/B07_LOGISTICS_CANOPY_structure.svg",
+      "bytes": 199749,
+      "sha256": "e5572f36b519e98c0a7cbbd6963f1ec7ba8ad8ceaed37a6d89c7533ce16da143",
+      "git_blob_sha1": "850ae2ed4a57895ceb15a2e8b5ee1415b49907ec"
+    },
+    {
+      "path": "Batch07_Refinement/References/v02/B07_PIPE_RACK.png",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/v02/B07_PIPE_RACK.png",
+      "bytes": 91061,
+      "sha256": "a689daff7fe9835d34a0cd62f332929f04809322ecec086bfbc10ff0ea1ea832",
+      "git_blob_sha1": "a00c484f6159a37f5d443ec770e328d831488f4e"
+    },
+    {
+      "path": "Batch07_Refinement/References/v02/B07_PIPE_RACK.svg.zip",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/v02/B07_PIPE_RACK.svg.zip",
+      "bytes": 59064,
+      "sha256": "d51b889bbd39e911a6eefaf5c5d82f52cfda1582ed7f3aa506e095861861ffe5",
+      "git_blob_sha1": "f1c8b57cdcd92f8851fbee57988908eda2fb0e3d"
+    },
+    {
+      "path": "Batch07_Refinement/References/v02/B07_SERVICE_CABINET.png",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/v02/B07_SERVICE_CABINET.png",
+      "bytes": 73599,
+      "sha256": "cffd519fb0fb3e4c8c9ef9b94a3093d06e58946738813e9d64772f0bb5328497",
+      "git_blob_sha1": "c275c28ccd5b7018a9d951440244f86ffa1933d5"
+    },
+    {
+      "path": "Batch07_Refinement/References/v02/B07_SERVICE_CABINET.svg",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/v02/B07_SERVICE_CABINET.svg",
+      "bytes": 151603,
+      "sha256": "f314543218c4f0ab86a8fa19072b94505d071d1b2c02351c9e9936c44f49e4e9",
+      "git_blob_sha1": "7ba8d9108fe7470bd5ab42fe003c341fd7439b23"
+    },
+    {
+      "path": "Batch07_Refinement/References/v02/B07_SOLID_SCREEN.png",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/v02/B07_SOLID_SCREEN.png",
+      "bytes": 56684,
+      "sha256": "2295888ed7a4655a32320094f087f7ba07dfc806737cee6a1adfe42863d68a85",
+      "git_blob_sha1": "987dab15a711afef6179e76fd80b6e2611cc8bd5"
+    },
+    {
+      "path": "Batch07_Refinement/References/v02/B07_SOLID_SCREEN.svg",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/v02/B07_SOLID_SCREEN.svg",
+      "bytes": 152018,
+      "sha256": "5824c94798bce17196d9ce37eb80c7ae68628ec8bca043f35479d90c0636dd02",
+      "git_blob_sha1": "d09f101524e00eef20d8bdac8970a2faecb67494"
+    },
+    {
+      "path": "Batch07_Refinement/References/v02/B07_TRANSFORMER_BAY.png",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/v02/B07_TRANSFORMER_BAY.png",
+      "bytes": 76212,
+      "sha256": "1d6cee9da6a27fe136284d38b24ac3907fde963c579a079328495b188e1ffba0",
+      "git_blob_sha1": "88b8000980428622505677b472f0087447a5560f"
+    },
+    {
+      "path": "Batch07_Refinement/References/v02/B07_TRANSFORMER_BAY.svg.zip",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/v02/B07_TRANSFORMER_BAY.svg.zip",
+      "bytes": 49705,
+      "sha256": "54611dc4bd11794dae5e44048cd9248aa15016360efb5ee02cb682db36fedfb9",
+      "git_blob_sha1": "f353ed9acef45daa955fd98258233f02f90297af"
+    },
+    {
+      "path": "Batch07_Refinement/References/v02/B07_TRANSFORMER_BAY_structure.png",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/v02/B07_TRANSFORMER_BAY_structure.png",
+      "bytes": 81027,
+      "sha256": "3c95968d8ddec6f0d3db07b75347e97c9ce2418fb314b66c017ae334b43571c5",
+      "git_blob_sha1": "b976e723a0f4e70caf88ae1e3df66b73b414e6dd"
+    },
+    {
+      "path": "Batch07_Refinement/References/v02/B07_TRANSFORMER_BAY_structure.svg.zip",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/v02/B07_TRANSFORMER_BAY_structure.svg.zip",
+      "bytes": 44256,
+      "sha256": "6697159244ac7034b2747f046a93574b061729c8548d7c7b9aa20ec050cf2285",
+      "git_blob_sha1": "ff0bf2f68846d2fa23f134bc773c9cc5f29b4e8d"
+    },
+    {
+      "path": "Batch07_Refinement/References/v02/B07_VENT_CASSETTE.png",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/v02/B07_VENT_CASSETTE.png",
+      "bytes": 67137,
+      "sha256": "584fba64f99bbfb902aece4b85ce7ac44b0823f9f82194e2071af126da9cda9f",
+      "git_blob_sha1": "be66ded923f2c155579d28606b9d1af78857c48d"
+    },
+    {
+      "path": "Batch07_Refinement/References/v02/B07_VENT_CASSETTE.svg",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/v02/B07_VENT_CASSETTE.svg",
+      "bytes": 281549,
+      "sha256": "9c9475def8b106b50d80a2ce0d7573ea9553d8fc60ebb5e4dc59aba8400f6d96",
+      "git_blob_sha1": "f38b910eea4abac577c7d24f479789894db6211e"
+    },
+    {
+      "path": "Batch07_Refinement/References/v02/cargo_yard_detail.png",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/v02/cargo_yard_detail.png",
+      "bytes": 86743,
+      "sha256": "98cf0238ffa92f5f72ae3c9bfce61c2760d7f6a0f0f4e8afd3946818dc4b5485",
+      "git_blob_sha1": "85498efd848b9e097045f1bd607ae8346d1038d8"
+    },
+    {
+      "path": "Batch07_Refinement/References/v02/cargo_yard_detail.svg",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/v02/cargo_yard_detail.svg",
+      "bytes": 561506,
+      "sha256": "34f21da302c3338625c502b71f1f53847281c4c3d39a984c19bb84419a64833b",
+      "git_blob_sha1": "55f7741b76f1be33ef4dfdd2c1b70adb12730e0b"
+    },
+    {
+      "path": "Batch07_Refinement/References/v02/core_skin.png",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/v02/core_skin.png",
+      "bytes": 76283,
+      "sha256": "76575de6936a1862680295efaeaa84527041ed546cc58a56c42599551d74716e",
+      "git_blob_sha1": "3b652f1f4462871438e98262ee7d92711092c6da"
+    },
+    {
+      "path": "Batch07_Refinement/References/v02/core_skin.svg.zip",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/v02/core_skin.svg.zip",
+      "bytes": 103417,
+      "sha256": "7efbb2fa432e85d7556e0484ffecd8fb1be3ae6b973d3e41d60666b20cafe4c2",
+      "git_blob_sha1": "b0f44ee4509018f44de13e2b12eb1ea52a22e0b0"
+    },
+    {
+      "path": "Batch07_Refinement/References/v02/east_pump_yards.png",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/v02/east_pump_yards.png",
+      "bytes": 78144,
+      "sha256": "92007f11dc09c99f6ece7d56d1d5fc1c5c42191cdc89be261fd1f57e58b2c357",
+      "git_blob_sha1": "0523aa7b2873056fdeef83bf2f32e3c092e13c39"
+    },
+    {
+      "path": "Batch07_Refinement/References/v02/east_pump_yards.svg.zip",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/v02/east_pump_yards.svg.zip",
+      "bytes": 953869,
+      "sha256": "1bb5836b31c1042181ea7fe881b8c6245f8045396caa4e01807f5b0eef15b0c3",
+      "git_blob_sha1": "f93cda78d5543ff86ed001366cef57003960e504"
+    },
+    {
+      "path": "Batch07_Refinement/References/v02/pump_yard_detail.png",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/v02/pump_yard_detail.png",
+      "bytes": 97265,
+      "sha256": "6dcd06c5dc89cca8363df3f9343cfe41e5bb74e6e11e6d3aef3fa55b15a1cf9a",
+      "git_blob_sha1": "7c6547eb48ab186bcee7b0cb0189b77133e0e153"
+    },
+    {
+      "path": "Batch07_Refinement/References/v02/pump_yard_detail.svg.zip",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/v02/pump_yard_detail.svg.zip",
+      "bytes": 119365,
+      "sha256": "187185f59b10614eb05e2ef3b0b16dd11efd26d5fe7888c66a10cbc2e723213d",
+      "git_blob_sha1": "45c2ce0d3bc1c973df8ac7f34fd99ed1b96e48df"
+    },
+    {
+      "path": "Batch07_Refinement/References/v02/site_layout.png",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/v02/site_layout.png",
+      "bytes": 79333,
+      "sha256": "b77de7606ea41e9458ba0266c1a51d18e43d95fb9693b57114d491cd3eece0e3",
+      "git_blob_sha1": "a6e49bfd405c8fa8dcf1040c63d82c2c31816002"
+    },
+    {
+      "path": "Batch07_Refinement/References/v02/site_layout.svg",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/v02/site_layout.svg",
+      "bytes": 85031,
+      "sha256": "8238dc88e63bc80436c4136ce800b0ca4cef6c3b4ea864dfc4b90040bb24868a",
+      "git_blob_sha1": "c8bf16ea8cdc04225620c27bdede081b390cd3a7"
+    },
+    {
+      "path": "Batch07_Refinement/References/v02/southwest_logistics.png",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/v02/southwest_logistics.png",
+      "bytes": 88803,
+      "sha256": "ab24d7fefda68da633a6039c00755ad8922afb4e3a62858f461f6cd34f5585a3",
+      "git_blob_sha1": "43c952d89cc709c56491eaac3343a08c49463e8e"
+    },
+    {
+      "path": "Batch07_Refinement/References/v02/southwest_logistics.svg.zip",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/v02/southwest_logistics.svg.zip",
+      "bytes": 511414,
+      "sha256": "f569004388d26522962a01ca30954b6dde77e2a315151c75643d938c5bcc5206",
+      "git_blob_sha1": "7c20c6317af8c6b0f7bb37809e89e0f4dd2220cf"
+    },
+    {
+      "path": "Batch07_Refinement/References/v03/east_pump_yards.png",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/v03/east_pump_yards.png",
+      "bytes": 83445,
+      "sha256": "02f5a29960e6088816a8c023fab0d0ec3099c2e029cb286c4ec4a7b477895c51",
+      "git_blob_sha1": "d8e3696c8b60d6ab52a9e885950d87338d7b5553"
+    },
+    {
+      "path": "Batch07_Refinement/References/v03/east_pump_yards.svg.zip",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/v03/east_pump_yards.svg.zip",
+      "bytes": 954166,
+      "sha256": "696249267407f6fce6a8373700b8264c0ac3ecf961ed9a00e8781e4cf15a2b9b",
+      "git_blob_sha1": "369fca0ac142132885df14a283c98c60a44e50e9"
+    },
+    {
+      "path": "Batch07_Refinement/References/v03/site_layout.png",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/v03/site_layout.png",
+      "bytes": 78885,
+      "sha256": "e406fb3b1b7171736c32c91b2c40aca363656de3ed51545404676ee9ce70da4c",
+      "git_blob_sha1": "496e0b99b809a07d2e257113e2712db6c168fe9a"
+    },
+    {
+      "path": "Batch07_Refinement/References/v03/site_layout.svg",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/v03/site_layout.svg",
+      "bytes": 85784,
+      "sha256": "907bc5d61ea4472fd6a47568081e5d0ee56c71e862ee3da527031b5cd36ed67c",
+      "git_blob_sha1": "badf0be2c4033baab8bab4296231222d743acb46"
+    },
+    {
+      "path": "Batch07_Refinement/References/v03/southwest_logistics.png",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/v03/southwest_logistics.png",
+      "bytes": 94328,
+      "sha256": "d5f04dd7b72c21719a8d98143183ef7e9b51a018a0ae407ebc9f7cc931b4563c",
+      "git_blob_sha1": "29d0a77b167d61c6a2caf0ab75ab0c1df61100e6"
+    },
+    {
+      "path": "Batch07_Refinement/References/v03/southwest_logistics.svg.zip",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/v03/southwest_logistics.svg.zip",
+      "bytes": 523014,
+      "sha256": "db7543840b1c90b231af5138f560a3337ca92167a5b323afa55d593a3ade2c92",
+      "git_blob_sha1": "a00c142639ae274b5166642abfc568398811a416"
+    },
+    {
+      "path": "Batch07_Refinement/References/v04/B07_SERVICE_CABINET_narrow_045.png",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/v04/B07_SERVICE_CABINET_narrow_045.png",
+      "bytes": 77644,
+      "sha256": "dabfcd202d60b26d4b9ac2c01216eec279b6d47148cc16d6353e2fd1516d0980",
+      "git_blob_sha1": "65b3fed6f18933049a8ed80200b6ef58474e7e6c"
+    },
+    {
+      "path": "Batch07_Refinement/References/v04/B07_SERVICE_CABINET_narrow_045.svg",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/v04/B07_SERVICE_CABINET_narrow_045.svg",
+      "bytes": 154762,
+      "sha256": "c5f68c96c366c3b7758c336b92019172863dd1f784fad0f54207061990fdff70",
+      "git_blob_sha1": "5c73127242fe584e862a2d9e89bc06e312068fa3"
+    },
+    {
+      "path": "Batch07_Refinement/References/v04/pump_pad_56_minus18.png",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/v04/pump_pad_56_minus18.png",
+      "bytes": 94939,
+      "sha256": "cd855e461f4a797b83c93fd5cd633f2b54d59beb4a5e148c3763a0cc6e94b2e8",
+      "git_blob_sha1": "5cd1116ba829c7e2d2240238194a1571244c2fd4"
+    },
+    {
+      "path": "Batch07_Refinement/References/v04/pump_pad_56_minus18.svg.zip",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/v04/pump_pad_56_minus18.svg.zip",
+      "bytes": 143051,
+      "sha256": "117333c31da8961ea99648ae0b84a7257ed4425f48e76d91e6d2d64ca31b0c65",
+      "git_blob_sha1": "4abadc8e7536ac91a165f9277dedd34d179bd748"
+    },
+    {
+      "path": "Batch07_Refinement/References/v04/pump_pad_56_minus18_structure.png",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/v04/pump_pad_56_minus18_structure.png",
+      "bytes": 89746,
+      "sha256": "6df44fc1b70fe68a3d634ed78c5de674fdc2be665e30379e091fa4da1e2c3064",
+      "git_blob_sha1": "d90585a5a49e18533ea949f62c37034fba0630f9"
+    },
+    {
+      "path": "Batch07_Refinement/References/v04/pump_pad_56_minus18_structure.svg.zip",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/v04/pump_pad_56_minus18_structure.svg.zip",
+      "bytes": 103462,
+      "sha256": "f7e29e503561e708e5cc20d50b4d5fb8564ef7ba58b3f2ce78e0cdb841202502",
+      "git_blob_sha1": "c117445bbdb45f298c0821b1b1c07096dc4afa41"
+    },
+    {
+      "path": "Batch07_Refinement/References/v04/site_layout.png",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/v04/site_layout.png",
+      "bytes": 85524,
+      "sha256": "661ec6e448742fbe329fd4f6b238d453ba022812c41232a0d97e44f1fca4122a",
+      "git_blob_sha1": "cf64a610cc12d97ac8cfc97c40bd1b60109c90a8"
+    },
+    {
+      "path": "Batch07_Refinement/References/v04/site_layout.svg",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/References/v04/site_layout.svg",
+      "bytes": 87275,
+      "sha256": "fd59c2d0aec6d62663722b84b15a23657db1662b98a494094e44f2bd0dfa8478",
+      "git_blob_sha1": "c03ba01c91b4cada5d4ac1812bac2d4ca1a7cad7"
+    },
+    {
+      "path": "Batch07_Refinement/Regions/core_skin.blend",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/Regions/core_skin.blend",
+      "bytes": 96186,
+      "sha256": "58e4f14f238afad9672a792175b890ccba210fa1b3ce74222bb9503793a86f1a",
+      "git_blob_sha1": "3df17ccc6ed2688e7c73c911547c479acdef1991"
+    },
+    {
+      "path": "Batch07_Refinement/Regions/east_pump_yards.blend",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/Regions/east_pump_yards.blend",
+      "bytes": 196693,
+      "sha256": "7c14cc75a6d2c800463febfa1c2a052d96aeb4ffa583c5990528d2e91a366797",
+      "git_blob_sha1": "941eb643342b167f2ef8c36459ac093d6c76aacb"
+    },
+    {
+      "path": "Batch07_Refinement/Regions/southwest_logistics.blend",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/Regions/southwest_logistics.blend",
+      "bytes": 170730,
+      "sha256": "4c0669981a714c3e006ca262fa283ee4e51dd0dc427509e17e0db3f7ccfd46b0",
+      "git_blob_sha1": "c88001c9179bf2354612536cb423a67a9f90a095"
+    },
+    {
+      "path": "Batch07_Refinement/SHA256SUMS",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/SHA256SUMS",
+      "bytes": 14122,
+      "sha256": "9a7445f8c018aa0248a6195f047d6ea24425e34a083f62b2e98bad6e9e02be47",
+      "git_blob_sha1": "4ed8e0819b3a3863ddc73627576c0f67d8f238e6"
+    },
+    {
+      "path": "Batch07_Refinement/Scripts/analytic_geometry.py",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/Scripts/analytic_geometry.py",
+      "bytes": 1847,
+      "sha256": "51029d96c5b2a562cc6a3fafc440e781ef013b2171c71a4193446684924f99de",
+      "git_blob_sha1": "f205a4bdb8b87f14cc6a3a5969b9f0ce7d7a3a6e"
+    },
+    {
+      "path": "Batch07_Refinement/Scripts/build_scene.py",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/Scripts/build_scene.py",
+      "bytes": 12325,
+      "sha256": "f954512e671300050acb6e45956c48b3dab25319435a80dafb3151dc9502ddfc",
+      "git_blob_sha1": "5d2cc5df4e1640789fafea5fc312f51bb3584d97"
+    },
+    {
+      "path": "Batch07_Refinement/Scripts/check_rebuild.py",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/Scripts/check_rebuild.py",
+      "bytes": 1434,
+      "sha256": "a4f97b188a669f53782cc9d49c73041d13c49b8127c56c583a3baabf387ea77f",
+      "git_blob_sha1": "eba6e783c00055bbbe972b4c8354acebce1e7c26"
+    },
+    {
+      "path": "Batch07_Refinement/Scripts/design_reference.py",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/Scripts/design_reference.py",
+      "bytes": 20190,
+      "sha256": "dbbe726481b71763620f111151a3b8f7e170f845dbfdc070ec9ceec7c5c49d7a",
+      "git_blob_sha1": "5ee1b8f34baee3e2d52f0be54be4b987b61ddc50"
+    },
+    {
+      "path": "Batch07_Refinement/Scripts/design_revision_v02.py",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/Scripts/design_revision_v02.py",
+      "bytes": 11125,
+      "sha256": "356f4cc2367773652e74f4bd8007e5c01534b9833d28ea7d621b55cfc8a2c0da",
+      "git_blob_sha1": "006c164b746a3488bb7c70b42cdb9f0effbd5c6f"
+    },
+    {
+      "path": "Batch07_Refinement/Scripts/design_revision_v03.py",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/Scripts/design_revision_v03.py",
+      "bytes": 4685,
+      "sha256": "4538b0526fdbd78beaba33476465d79c68b524ad7d457aac453c4c612e0ccdb0",
+      "git_blob_sha1": "d2ea24101953973e958dc591afd82d2c4ee13536"
+    },
+    {
+      "path": "Batch07_Refinement/Scripts/design_revision_v04.py",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/Scripts/design_revision_v04.py",
+      "bytes": 4878,
+      "sha256": "008661ed55dfb0667a03bd18c4baee657c56e55e9656f4f7576aaec9128ae6a1",
+      "git_blob_sha1": "b2788f2da1126e9d760a82cfeabf9869fed42229"
+    },
+    {
+      "path": "Batch07_Refinement/Scripts/export_modules.py",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/Scripts/export_modules.py",
+      "bytes": 1648,
+      "sha256": "9636a2752c96c11a38e8a5cfaf6f270b528b042abccd8f584c1fc207bd5dd844",
+      "git_blob_sha1": "3c40a41de881de42b170173d0a664193aed94798"
+    },
+    {
+      "path": "Batch07_Refinement/Scripts/finalize_delivery.py",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/Scripts/finalize_delivery.py",
+      "bytes": 7389,
+      "sha256": "737eebd8b5f1c6b14bbff1de34451a491fb5b250894a303c5fe6eecd2b0157a2",
+      "git_blob_sha1": "860f1424c760c0682330bb35ed4cd401232b138e"
+    },
+    {
+      "path": "Batch07_Refinement/Scripts/render_before.py",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/Scripts/render_before.py",
+      "bytes": 1407,
+      "sha256": "d69733e711ee4976decd899a129c78c026f011079b6652ae71cdedadb01d4188",
+      "git_blob_sha1": "e9de8753577bd038fdca526ea5906ed7a891d817"
+    },
+    {
+      "path": "Batch07_Refinement/Scripts/render_preview.py",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/Scripts/render_preview.py",
+      "bytes": 623,
+      "sha256": "7b57e371973d6cad1e8e57e10608c1445435bbb457d8411e14a65910fbcd1c73",
+      "git_blob_sha1": "4bde1d2d91d4d6f3bad7dfc07691310787aea306"
+    },
+    {
+      "path": "Batch07_Refinement/Scripts/render_scene.py",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/Scripts/render_scene.py",
+      "bytes": 3990,
+      "sha256": "5261938d6f85324cc14e9ac0d520b235e3f5746ce7a9d6985ecd8282e1428037",
+      "git_blob_sha1": "3d875fdb58e7e2cab06f3e28b3e44087e368d432"
+    },
+    {
+      "path": "Batch07_Refinement/Scripts/verify_scene.py",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/Scripts/verify_scene.py",
+      "bytes": 5900,
+      "sha256": "e29264c1627b2cf18f21b6e4f76f67351bffcf197d47fe5615772bebd67d7357",
+      "git_blob_sha1": "edf55701b60cd05014efd2519c590a0256f0aa40"
+    },
+    {
+      "path": "Batch07_Refinement/batch_manifest.json",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/batch_manifest.json",
+      "bytes": 27225,
+      "sha256": "ee2b37b759c9ea9bc1935e348deaab4868700f3b2ea1cd675fae75e041ce20d3",
+      "git_blob_sha1": "fa3ae2f38081b3212e945a4b8454cc7783ca7a30"
+    },
+    {
+      "path": "Batch07_Refinement/index.html",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/index.html",
+      "bytes": 4131,
+      "sha256": "558142e7aa940901f8f33a53bdc9c82c6b6033c8ed342f78effa2b4ee91c112f",
+      "git_blob_sha1": "c8b71d59bbdd6f24bd2ca0d3b2c4763ccd04b06e"
+    },
+    {
+      "path": "Batch07_Refinement/rebuild.py",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/rebuild.py",
+      "bytes": 212,
+      "sha256": "f75a2b8c8e2dfc10fda91c6e0cfa18e8555d5e56def6d8a54e985fce5b5b7a8c",
+      "git_blob_sha1": "4d1749be75dae72c784756e5fbbee4b48d3da0b1"
+    },
+    {
+      "path": "Batch07_Refinement/renders/before_logistics_eye.png",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/renders/before_logistics_eye.png",
+      "bytes": 1580442,
+      "sha256": "2f6be9852b0c4f5b1a0f020307caa64408209555ae1ffb992a3d19ee34265c4e",
+      "git_blob_sha1": "673f555082a33c8a41bc9cdbc2f4ca753c14b992"
+    },
+    {
+      "path": "Batch07_Refinement/renders/before_site_overview.png",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/renders/before_site_overview.png",
+      "bytes": 1911380,
+      "sha256": "25e9fb872fad4dceb0b0213da3ef02fbdf155d65859cced5ff5dc25f37824ff4",
+      "git_blob_sha1": "ff18bcac38e7edb45dc51219115db90d2c7bfb3b"
+    },
+    {
+      "path": "Batch07_Refinement/renders/comparison_logistics_eye.png",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/renders/comparison_logistics_eye.png",
+      "bytes": 573588,
+      "sha256": "1d9aef8ac2b02147092c46839b30d1ca426b5225460a59d07edc3bb9f4edddee",
+      "git_blob_sha1": "41da04b0d116aaee3d07bc00ab217f7c2837a78f"
+    },
+    {
+      "path": "Batch07_Refinement/renders/comparison_site_overview.png",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/renders/comparison_site_overview.png",
+      "bytes": 534903,
+      "sha256": "5ecd30ca594184748b79c76ba6eb9f17f9660887e524541853a2a323a0eb1014",
+      "git_blob_sha1": "c424078d8beb0d0317905675f8ce163834071a02"
+    },
+    {
+      "path": "Batch07_Refinement/renders/core_entry.png",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/renders/core_entry.png",
+      "bytes": 1840507,
+      "sha256": "e562e824213a8e77adb50543d62a154757aa095d09df746eade448cbffcbb20d",
+      "git_blob_sha1": "82dd551b8f0498cf6269e5898bfd6e5895bd93f3"
+    },
+    {
+      "path": "Batch07_Refinement/renders/logistics_eye.png",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/renders/logistics_eye.png",
+      "bytes": 1860937,
+      "sha256": "58028476d2968c1428f8f584ab8c12e494dab192ecadc0647caf36727705e320",
+      "git_blob_sha1": "f025024053b7950356cf836e76fad522e8a3e31a"
+    },
+    {
+      "path": "Batch07_Refinement/renders/module_gallery.png",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/renders/module_gallery.png",
+      "bytes": 2004524,
+      "sha256": "853c996ad00a5902f2f7aaeb19213e06eb5a2253a9efcef485043aa08060e989",
+      "git_blob_sha1": "86ac680a6aeac7c5c0c929cdaab9eecb8bf46ef0"
+    },
+    {
+      "path": "Batch07_Refinement/renders/pump_eye.png",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/renders/pump_eye.png",
+      "bytes": 1897595,
+      "sha256": "bc39b410a9ccedade72092c27c978b8a8821ddd7116a3f4c67856f8155122b11",
+      "git_blob_sha1": "903cac37f28c3a3e05fc88c8279b92419b4bc2ce"
+    },
+    {
+      "path": "Batch07_Refinement/renders/site_cutaway.png",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/renders/site_cutaway.png",
+      "bytes": 2028949,
+      "sha256": "cc0459632447d9a36c623a02077d0f6b75fba18a2f0753076b4a20f4b7d05795",
+      "git_blob_sha1": "afe8dd018b40e18129e059c3e38814907b5c64c1"
+    },
+    {
+      "path": "Batch07_Refinement/renders/site_overview.png",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/renders/site_overview.png",
+      "bytes": 1980540,
+      "sha256": "63c979213db0430ae834185d1d4ef77a20d9a469f5db6458ef0eb7b26d757591",
+      "git_blob_sha1": "327f72081a2449fffbbf7ac154d21df44ee22933"
+    },
+    {
+      "path": "Batch07_Refinement/site_refined.blend",
+      "repo_path": "ContentSource/Environments/NuclearPlant/Batch07_Refinement/site_refined.blend",
+      "bytes": 4689391,
+      "sha256": "3b2f4e727d359b595d818551be04be7ceabaa8fe1504de1164754ada4740b25b",
+      "git_blob_sha1": "8f5afc0b58dbb5ab878ae4989635fa014ad50569"
+    },
+    {
       "path": "Blockout/layout_spec.json",
       "repo_path": "ContentSource/Environments/NuclearPlant/Blockout/layout_spec.json",
       "bytes": 2549,
@@ -5253,9 +6223,9 @@
     {
       "path": "CUMULATIVE_MANIFEST.json",
       "repo_path": "ContentSource/Environments/NuclearPlant/CUMULATIVE_MANIFEST.json",
-      "bytes": 164991,
-      "sha256": "e3abf26fe8ab493e29739f4a1e90a5dcac9374383e045babcb8b4f5be8987fa5",
-      "git_blob_sha1": "7c854b61fdc51245fd03213573c862d01246f3e7"
+      "bytes": 206633,
+      "sha256": "92f96066c8a81a0e59fb4bfe9a5a478e103358d67f7eb5a62638001b4c34f723",
+      "git_blob_sha1": "6cb47db35808f844dd36beb7e20640251463940c"
     },
     {
       "path": "DeliveryVerification/README.md",
@@ -6191,9 +7161,9 @@
     {
       "path": "README.md",
       "repo_path": "ContentSource/Environments/NuclearPlant/README.md",
-      "bytes": 3607,
-      "sha256": "98bf61fffbd949e4e91f88f90a4a08dee1c93d23cba0260cb7c40bcca950dc9c",
-      "git_blob_sha1": "6f5fc193404625543f465a6962ef626cfdb8aa71"
+      "bytes": 2907,
+      "sha256": "4948a92963edf236890e01225adefbca6226fcd7b73a529a323f29ec532101c4",
+      "git_blob_sha1": "973900c62b4a0791217b60a832ee64e6040a236e"
     },
     {
       "path": "README_zh.md",
@@ -6205,16 +7175,177 @@
     {
       "path": "REPOSITORY_LAYOUT.md",
       "repo_path": "ContentSource/Environments/NuclearPlant/REPOSITORY_LAYOUT.md",
+      "bytes": 2072,
+      "sha256": "2b37990cb73649fda7205ea34f8455d5863f1c93f425ec99a4b2b9b73f4308eb",
+      "git_blob_sha1": "1ffc90ab572198a7de9dd3bec27fbbbee7d167f0"
+    },
+    {
+      "path": "RESTORE_ASSETS.json",
+      "repo_path": "ContentSource/Environments/NuclearPlant/RESTORE_ASSETS.json",
+      "bytes": 19247,
+      "sha256": "01cd2b3305ff549e737b304790c58a30eb183881fcf98d8794e4c4d84befc981",
+      "git_blob_sha1": "5dcb3a140ee57e80ff2279e78d4f71d7d0beddc8"
+    },
+    {
+      "path": "RepositoryVerification/Batch01-06_RootSnapshot/.gitignore",
+      "repo_path": "ContentSource/Environments/NuclearPlant/RepositoryVerification/Batch01-06_RootSnapshot/.gitignore",
+      "bytes": 640,
+      "sha256": "acf91827620eb8c9727614347e112fd8fd6116669e31f9332d5568edfa1aa120",
+      "git_blob_sha1": "36ac80a7edc5da094a7b53b38533a8f5ee1c2b0a"
+    },
+    {
+      "path": "RepositoryVerification/Batch01-06_RootSnapshot/ALL_MODULES.json",
+      "repo_path": "ContentSource/Environments/NuclearPlant/RepositoryVerification/Batch01-06_RootSnapshot/ALL_MODULES.json",
+      "bytes": 27635,
+      "sha256": "3016011cae7e6e31bc284cb6992a3092c0d29d21b53acfe003e197cca79460ee",
+      "git_blob_sha1": "2f0e0cc341783c98dba78917c3a4289ca3cbbf67"
+    },
+    {
+      "path": "RepositoryVerification/Batch01-06_RootSnapshot/ALL_MODULES.md",
+      "repo_path": "ContentSource/Environments/NuclearPlant/RepositoryVerification/Batch01-06_RootSnapshot/ALL_MODULES.md",
+      "bytes": 15334,
+      "sha256": "3de40e38ac7481b7f13b8a5bfc519c36e9ce8ef1da39e42539f72da8f4790784",
+      "git_blob_sha1": "d3ffc93fd3a5174f5a81808b7b547047a62ab588"
+    },
+    {
+      "path": "RepositoryVerification/Batch01-06_RootSnapshot/CUMULATIVE_MANIFEST.json",
+      "repo_path": "ContentSource/Environments/NuclearPlant/RepositoryVerification/Batch01-06_RootSnapshot/CUMULATIVE_MANIFEST.json",
+      "bytes": 164991,
+      "sha256": "e3abf26fe8ab493e29739f4a1e90a5dcac9374383e045babcb8b4f5be8987fa5",
+      "git_blob_sha1": "7c854b61fdc51245fd03213573c862d01246f3e7"
+    },
+    {
+      "path": "RepositoryVerification/Batch01-06_RootSnapshot/README.json",
+      "repo_path": "ContentSource/Environments/NuclearPlant/RepositoryVerification/Batch01-06_RootSnapshot/README.json",
+      "bytes": 287,
+      "sha256": "470077de2a3f2a77527c1ab5fad4273df0b2d5bfc663823fdecd51181b818b6b",
+      "git_blob_sha1": "cc8f279cc0af68f3cc508f8fc402567ef8d1cc46"
+    },
+    {
+      "path": "RepositoryVerification/Batch01-06_RootSnapshot/README.md",
+      "repo_path": "ContentSource/Environments/NuclearPlant/RepositoryVerification/Batch01-06_RootSnapshot/README.md",
+      "bytes": 3607,
+      "sha256": "98bf61fffbd949e4e91f88f90a4a08dee1c93d23cba0260cb7c40bcca950dc9c",
+      "git_blob_sha1": "6f5fc193404625543f465a6962ef626cfdb8aa71"
+    },
+    {
+      "path": "RepositoryVerification/Batch01-06_RootSnapshot/REPOSITORY_LAYOUT.md",
+      "repo_path": "ContentSource/Environments/NuclearPlant/RepositoryVerification/Batch01-06_RootSnapshot/REPOSITORY_LAYOUT.md",
       "bytes": 2322,
       "sha256": "02ca05438fe46b4b9381280c6f6aea546dfa18d9388eb771b982d2a13c824ebc",
       "git_blob_sha1": "8576e0218df0e9a4df0033d3c8603456e0844409"
     },
     {
-      "path": "RESTORE_ASSETS.json",
-      "repo_path": "ContentSource/Environments/NuclearPlant/RESTORE_ASSETS.json",
+      "path": "RepositoryVerification/Batch01-06_RootSnapshot/REPOSITORY_MANIFEST.json",
+      "repo_path": "ContentSource/Environments/NuclearPlant/RepositoryVerification/Batch01-06_RootSnapshot/REPOSITORY_MANIFEST.json",
+      "bytes": 336543,
+      "sha256": "9c866c117f5fb423a2f3f14f52d476b3568b39ea4d8a8ce35fb6d5d72bcef05c",
+      "git_blob_sha1": "e31b81a8808ee64aed4c1a173d86ae58feb6bec9"
+    },
+    {
+      "path": "RepositoryVerification/Batch01-06_RootSnapshot/RESTORE_ASSETS.json",
+      "repo_path": "ContentSource/Environments/NuclearPlant/RepositoryVerification/Batch01-06_RootSnapshot/RESTORE_ASSETS.json",
       "bytes": 7950,
       "sha256": "960a86851ccc532d51fa5bdc00640d6b58dc251630f68db558fe0b994a47f33d",
       "git_blob_sha1": "afff951911d8e2620c3ae05b11dbbe0979158b40"
+    },
+    {
+      "path": "RepositoryVerification/Batch01-06_RootSnapshot/SHA256SUMS",
+      "repo_path": "ContentSource/Environments/NuclearPlant/RepositoryVerification/Batch01-06_RootSnapshot/SHA256SUMS",
+      "bytes": 103714,
+      "sha256": "2be20fbbcd1314f0ff654a8b8ff9676fcfa484c3f180e8857657c77f8af17491",
+      "git_blob_sha1": "58dd2b44ec9d7be7b8c5c4da10eae0da067ee949"
+    },
+    {
+      "path": "RepositoryVerification/Batch01-06_RootSnapshot/export_current.py",
+      "repo_path": "ContentSource/Environments/NuclearPlant/RepositoryVerification/Batch01-06_RootSnapshot/export_current.py",
+      "bytes": 292,
+      "sha256": "1eafc6632c237c806164bd378a7cfd93a8fca1e5b8962be7178808f7defc622a",
+      "git_blob_sha1": "82df96d23a0d2b0767bf4efc1eeb72c00a3fc7d6"
+    },
+    {
+      "path": "RepositoryVerification/Batch01-06_RootSnapshot/index.html",
+      "repo_path": "ContentSource/Environments/NuclearPlant/RepositoryVerification/Batch01-06_RootSnapshot/index.html",
+      "bytes": 7421,
+      "sha256": "da755d3be6043e2f8c7d88d095f01ee825639586f7771989661e665f3b2396fd",
+      "git_blob_sha1": "ffaf6af4255f825519a256851a029a1e69f07b6c"
+    },
+    {
+      "path": "RepositoryVerification/Batch01-06_RootSnapshot/rebuild_current.py",
+      "repo_path": "ContentSource/Environments/NuclearPlant/RepositoryVerification/Batch01-06_RootSnapshot/rebuild_current.py",
+      "bytes": 177,
+      "sha256": "93a626183cc1281036234be2f9afcd95b1e0dba8cb4bdd0d3019beafb260867c",
+      "git_blob_sha1": "c71f384ea9ce9c5b93d89d8816d1f0375d83443a"
+    },
+    {
+      "path": "RepositoryVerification/Batch01-06_RootSnapshot/restore_assets.py",
+      "repo_path": "ContentSource/Environments/NuclearPlant/RepositoryVerification/Batch01-06_RootSnapshot/restore_assets.py",
+      "bytes": 941,
+      "sha256": "95ac75787323a66f9ee62257943e6560f9eb7107d77792091b9cf4683b18365f",
+      "git_blob_sha1": "30805a6aed4a51247a97b1446c34ce0a9cb1a51c"
+    },
+    {
+      "path": "RepositoryVerification/Batch01-06_RootSnapshot/verify_delivery.py",
+      "repo_path": "ContentSource/Environments/NuclearPlant/RepositoryVerification/Batch01-06_RootSnapshot/verify_delivery.py",
+      "bytes": 390,
+      "sha256": "1c85b67db3cb0d74f3c97b7e2a64dacfad7059396fc9fd04376e6473da0c2f9b",
+      "git_blob_sha1": "a82b27512531e655622242c5fefa5f7c3ecb4f79"
+    },
+    {
+      "path": "RepositoryVerification/Batch07/README.md",
+      "repo_path": "ContentSource/Environments/NuclearPlant/RepositoryVerification/Batch07/README.md",
+      "bytes": 1074,
+      "sha256": "4a75e29a6cca04bdc96400b7e7cc9f0784eabd9a8a9ca6b0c905f791a4df28d0",
+      "git_blob_sha1": "689aeb159ec5b0f78f0971cf6750b1e53ba70039"
+    },
+    {
+      "path": "RepositoryVerification/Batch07/blender_open_check.json",
+      "repo_path": "ContentSource/Environments/NuclearPlant/RepositoryVerification/Batch07/blender_open_check.json",
+      "bytes": 5125,
+      "sha256": "79eb3ed59d41e4bfbf0867fe51dfb0309ef3d38b0478513fc43ca4373df78a65",
+      "git_blob_sha1": "3e358f2cc06c0217c19127a8c2957657b1c47054"
+    },
+    {
+      "path": "RepositoryVerification/Batch07/check_increment_blends.py",
+      "repo_path": "ContentSource/Environments/NuclearPlant/RepositoryVerification/Batch07/check_increment_blends.py",
+      "bytes": 2039,
+      "sha256": "00c27b5ec46da1072dd83c4b2d7d1425f26e88eadd7f40791481766feb57aede",
+      "git_blob_sha1": "a8182b613308dca7c3444cab4cdeb5e5432651e2"
+    },
+    {
+      "path": "RepositoryVerification/Batch07/check_rebuild_current.py",
+      "repo_path": "ContentSource/Environments/NuclearPlant/RepositoryVerification/Batch07/check_rebuild_current.py",
+      "bytes": 5775,
+      "sha256": "5d08b7b74a47b674c74cd186d698d09e2998b7d01919d7a6d3293910a7717d70",
+      "git_blob_sha1": "f13cb4e2d1959f5ec402ba4e0ebd96c5bc3ff997"
+    },
+    {
+      "path": "RepositoryVerification/Batch07/export_regeneration_check.json",
+      "repo_path": "ContentSource/Environments/NuclearPlant/RepositoryVerification/Batch07/export_regeneration_check.json",
+      "bytes": 1869,
+      "sha256": "c805abae93a49d00ad8d46340a59caf320c36ebd59eba03ad859cad38d3657ba",
+      "git_blob_sha1": "bef9e249bfc10e76b08e3ec648fa0fe4540fdfd3"
+    },
+    {
+      "path": "RepositoryVerification/Batch07/rebuild_fingerprints.json",
+      "repo_path": "ContentSource/Environments/NuclearPlant/RepositoryVerification/Batch07/rebuild_fingerprints.json",
+      "bytes": 30462,
+      "sha256": "03706b56f052b08146ab4ac889867e583e875819e715e26afb9bcaa8c9a09fef",
+      "git_blob_sha1": "121a4f4c6b085925ead863ba5938264aad0ff48b"
+    },
+    {
+      "path": "RepositoryVerification/Batch07/restoration_check.json",
+      "repo_path": "ContentSource/Environments/NuclearPlant/RepositoryVerification/Batch07/restoration_check.json",
+      "bytes": 372,
+      "sha256": "5f0e7a66f22d794f4df48b2b4d0f54d4c6e05a0ef33abe64082d61ae4f4e81cb",
+      "git_blob_sha1": "0817ac41e0b0a965a9b319943ae5e380f81b3ed2"
+    },
+    {
+      "path": "RepositoryVerification/Batch07/summary.json",
+      "repo_path": "ContentSource/Environments/NuclearPlant/RepositoryVerification/Batch07/summary.json",
+      "bytes": 1620,
+      "sha256": "0faf722279bc5a5d4126707940c85962d51c0f3ffe6a6c451df0dc5177fae704",
+      "git_blob_sha1": "1a39f5d5f04560755e9c4caa256703ae635beaf9"
     },
     {
       "path": "RepositoryVerification/blender_open_check.json",
@@ -6254,9 +7385,9 @@
     {
       "path": "SHA256SUMS",
       "repo_path": "ContentSource/Environments/NuclearPlant/SHA256SUMS",
-      "bytes": 103714,
-      "sha256": "2be20fbbcd1314f0ff654a8b8ff9676fcfa484c3f180e8857657c77f8af17491",
-      "git_blob_sha1": "58dd2b44ec9d7be7b8c5c4da10eae0da067ee949"
+      "bytes": 129899,
+      "sha256": "430c26526175f1fbaae1dc82013410938b97004b1507cbc8b6b9b52789dbd4dd",
+      "git_blob_sha1": "7e4474598f0bffcd3bac9664690a21e78c20999d"
     },
     {
       "path": "Scripts/build_assembly.py",
@@ -6394,16 +7525,16 @@
     {
       "path": "export_current.py",
       "repo_path": "ContentSource/Environments/NuclearPlant/export_current.py",
-      "bytes": 292,
-      "sha256": "1eafc6632c237c806164bd378a7cfd93a8fca1e5b8962be7178808f7defc622a",
-      "git_blob_sha1": "82df96d23a0d2b0767bf4efc1eeb72c00a3fc7d6"
+      "bytes": 691,
+      "sha256": "5e3d623c258334f58346479628f67ef6b34c53247eab8b3eb5fc2c04db80293b",
+      "git_blob_sha1": "de7976a92049391049bdb78a6dd3d7a21c1ca030"
     },
     {
       "path": "index.html",
       "repo_path": "ContentSource/Environments/NuclearPlant/index.html",
-      "bytes": 7421,
-      "sha256": "da755d3be6043e2f8c7d88d095f01ee825639586f7771989661e665f3b2396fd",
-      "git_blob_sha1": "ffaf6af4255f825519a256851a029a1e69f07b6c"
+      "bytes": 1574,
+      "sha256": "100ef105914d155f388d1b8bd607b5e867dbf06e78922fbf80f37814945e6934",
+      "git_blob_sha1": "1c985348668a928f8a1f7c8f0935659dde0f3dd1"
     },
     {
       "path": "manifest.json",
@@ -6415,24 +7546,373 @@
     {
       "path": "rebuild_current.py",
       "repo_path": "ContentSource/Environments/NuclearPlant/rebuild_current.py",
-      "bytes": 177,
-      "sha256": "93a626183cc1281036234be2f9afcd95b1e0dba8cb4bdd0d3019beafb260867c",
-      "git_blob_sha1": "c71f384ea9ce9c5b93d89d8816d1f0375d83443a"
+      "bytes": 1152,
+      "sha256": "936d98004400f1a722fb912d18d77ef433037dcd4638e20c761c31e19145f414",
+      "git_blob_sha1": "437f301315328e041859da595a5530a1681ab968"
     },
     {
       "path": "restore_assets.py",
       "repo_path": "ContentSource/Environments/NuclearPlant/restore_assets.py",
-      "bytes": 941,
-      "sha256": "95ac75787323a66f9ee62257943e6560f9eb7107d77792091b9cf4683b18365f",
-      "git_blob_sha1": "30805a6aed4a51247a97b1446c34ce0a9cb1a51c"
+      "bytes": 1184,
+      "sha256": "3e2445e5b8ee7e899187a062a133384bdc359ce8687c8053290aa576ac9de43b",
+      "git_blob_sha1": "ddfcbd855369ebac3fc46f4a5eafac5b5dd5ca8a"
     },
     {
       "path": "verify_delivery.py",
       "repo_path": "ContentSource/Environments/NuclearPlant/verify_delivery.py",
-      "bytes": 390,
-      "sha256": "1c85b67db3cb0d74f3c97b7e2a64dacfad7059396fc9fd04376e6473da0c2f9b",
-      "git_blob_sha1": "a82b27512531e655622242c5fefa5f7c3ecb4f79"
+      "bytes": 972,
+      "sha256": "84549a3c0553a56b2c342492e6b3f3ebf9846a68e2a97ca4c5f47d432aa619fd",
+      "git_blob_sha1": "2f2563d3951d2f4959470aac87975e184e72df0d"
     }
   ],
-  "repository_restore_verification": "RepositoryVerification/summary.json"
+  "compressed_assets": [
+    {
+      "archive": "Batch02/architecture_demo.blend.zip",
+      "archive_sha256": "ca5ff9776d267e3b060464721f259ca7e71dc00800e2487745c0c480399ba7ef",
+      "archive_bytes": 1488926,
+      "zip_member": "architecture_demo.blend",
+      "restored_path": "Batch02/architecture_demo.blend",
+      "restored_bytes": 14184916,
+      "restored_sha256": "b755ffb94d5a0369a1fcd380aab83841d20d6ed298a007dabe216f5ec6c062cb",
+      "original_git_blob_sha1": "0dbf5a3fdf357880605b1b444bf7e50db0492d5b",
+      "roundtrip_sha256_pass": true,
+      "compression": "Standard ZIP-LZMA method14, 64MiB dictionary; independent single-file archive"
+    },
+    {
+      "archive": "Batch03/Region/pump_zone.blend.zip",
+      "archive_sha256": "0b256072a2224ddff28f32cb081506c33cea72b9ddf155de64091d3843aee127",
+      "archive_bytes": 2787767,
+      "zip_member": "pump_zone.blend",
+      "restored_path": "Batch03/Region/pump_zone.blend",
+      "restored_bytes": 24167180,
+      "restored_sha256": "823ec12d75da9a00c9882dbd843936fe981f854ace88594cbed3b8b013c9fe12",
+      "original_git_blob_sha1": "de691ac54ac7fd5bba5fd727af463c276659a932",
+      "roundtrip_sha256_pass": true,
+      "compression": "Standard ZIP-LZMA method14, 64MiB dictionary; independent single-file archive"
+    },
+    {
+      "archive": "Batch03/Region/site_with_pump_zone.blend.zip",
+      "archive_sha256": "f4efc0c275e05678ccd0852465cafe694057388d0896ccccb267c447fec4a4ac",
+      "archive_bytes": 2799071,
+      "zip_member": "site_with_pump_zone.blend",
+      "restored_path": "Batch03/Region/site_with_pump_zone.blend",
+      "restored_bytes": 24440172,
+      "restored_sha256": "4773d7b33fdddae37c1cd0a9495c12d1026034719c8d53d9afbc88caf5127262",
+      "original_git_blob_sha1": "297f48620a5b776fd3ac84090cc75903b1f69af7",
+      "roundtrip_sha256_pass": true,
+      "compression": "Standard ZIP-LZMA method14, 64MiB dictionary; independent single-file archive"
+    },
+    {
+      "archive": "Batch04_LargeSpace/Geometry/kit_geometry_01.blend.zip",
+      "archive_sha256": "34c63ac0c26e838da9d54fdaac4efae42c1ee30f7ee882c5a9eee1ac2a75b931",
+      "archive_bytes": 1017978,
+      "zip_member": "kit_geometry_01.blend",
+      "restored_path": "Batch04_LargeSpace/Geometry/kit_geometry_01.blend",
+      "restored_bytes": 8122376,
+      "restored_sha256": "be98d26a6c05bc1dd5298a39b29005efa48ba3587107acd0d7487b1b4e66cb48",
+      "original_git_blob_sha1": "786d07c8fc1dab118f09399b3dd544831bb181db",
+      "roundtrip_sha256_pass": true,
+      "compression": "Standard ZIP-LZMA method14, 64MiB dictionary; independent single-file archive"
+    },
+    {
+      "archive": "Batch04_LargeSpace/Geometry/kit_geometry_02.blend.zip",
+      "archive_sha256": "6a692176d0806aa9a466612d94457c9c7331d218e1e13acee1cd18e2035a7057",
+      "archive_bytes": 1092220,
+      "zip_member": "kit_geometry_02.blend",
+      "restored_path": "Batch04_LargeSpace/Geometry/kit_geometry_02.blend",
+      "restored_bytes": 8149284,
+      "restored_sha256": "51e1b0e4fa2bf311ca6cca9a30aec0c179efd3d3d8294e17d17409052df70bf3",
+      "original_git_blob_sha1": "5994a4f03069ec0a7ffe094f650e5bf601438328",
+      "roundtrip_sha256_pass": true,
+      "compression": "Standard ZIP-LZMA method14, 64MiB dictionary; independent single-file archive"
+    },
+    {
+      "archive": "Batch04_LargeSpace/Geometry/kit_geometry_03.blend.zip",
+      "archive_sha256": "7be366a5d249d84184a906923ce28f81ce0cc2c8151ad416cf36f4963f8e4c86",
+      "archive_bytes": 997664,
+      "zip_member": "kit_geometry_03.blend",
+      "restored_path": "Batch04_LargeSpace/Geometry/kit_geometry_03.blend",
+      "restored_bytes": 8275736,
+      "restored_sha256": "70707fca09a18e763ae59b044634bbe7ba00cc7f7d7f2a3519884776dd616f99",
+      "original_git_blob_sha1": "3200ba61599dc7f245448a9d9fbcacf623ab08be",
+      "roundtrip_sha256_pass": true,
+      "compression": "Standard ZIP-LZMA method14, 64MiB dictionary; independent single-file archive"
+    },
+    {
+      "archive": "Batch04_LargeSpace/Geometry/kit_geometry_04.blend.zip",
+      "archive_sha256": "4377d8c104953371c30d07d8447147037f0e8a6057a0916feca841e4840ab124",
+      "archive_bytes": 1212016,
+      "zip_member": "kit_geometry_04.blend",
+      "restored_path": "Batch04_LargeSpace/Geometry/kit_geometry_04.blend",
+      "restored_bytes": 8316844,
+      "restored_sha256": "84dcf43ffdbe7bb21f981b5f63212ecbe92ea4aaa2d4ff44917169f156c514b2",
+      "original_git_blob_sha1": "62e6328c506ec71469ff28c935437c53b0430d41",
+      "roundtrip_sha256_pass": true,
+      "compression": "Standard ZIP-LZMA method14, 64MiB dictionary; independent single-file archive"
+    },
+    {
+      "archive": "Batch05_Core/Exports/NuclearPlant_Core.fbx.zip",
+      "archive_sha256": "5e66afe3dc1d39bb857d41a7c72e588e8b417c31f24885a9881602206747fe04",
+      "archive_bytes": 3870746,
+      "zip_member": "NuclearPlant_Core.fbx",
+      "restored_path": "Batch05_Core/Exports/NuclearPlant_Core.fbx",
+      "restored_bytes": 16805244,
+      "restored_sha256": "6e23a8d330ce1f9c10dde705dba526de94ca40bea33b49afb920803344786a6c",
+      "original_git_blob_sha1": "e25fc63d38433ca6cc116e3ee2808e30a4259a9a",
+      "roundtrip_sha256_pass": true,
+      "compression": "Standard ZIP-LZMA method14, 64MiB dictionary; independent single-file archive"
+    },
+    {
+      "archive": "Batch05_Core/Exports/NuclearPlant_Core.glb.zip",
+      "archive_sha256": "9d6f3260adaae6c1fbf9bc17f738abcb14222d520bde348e9360582cf9445317",
+      "archive_bytes": 1124554,
+      "zip_member": "NuclearPlant_Core.glb",
+      "restored_path": "Batch05_Core/Exports/NuclearPlant_Core.glb",
+      "restored_bytes": 22714476,
+      "restored_sha256": "955efd03e2aac33d31f610a0b71079712b139572fe2ca25327b0bf032d11aedd",
+      "original_git_blob_sha1": "cb6e61940adfa18861676f1f42ee5809633cb6fd",
+      "roundtrip_sha256_pass": true,
+      "compression": "Standard ZIP-LZMA method14, 64MiB dictionary; independent single-file archive"
+    },
+    {
+      "archive": "Batch06_Expansion/Exports/NuclearPlant_FullSite.fbx.zip",
+      "archive_sha256": "b4cf980f37c60a2ecb0d79a793001c56f5d78b6277251fd4a4325ac0a36a9e72",
+      "archive_bytes": 6773682,
+      "zip_member": "NuclearPlant_FullSite.fbx",
+      "restored_path": "Batch06_Expansion/Exports/NuclearPlant_FullSite.fbx",
+      "restored_bytes": 119867740,
+      "restored_sha256": "f8c811333681ac6c5457f1f83971fbd9833d335f0a8cea8223c6593f5f89e34a",
+      "original_git_blob_sha1": "558f4745960ae78f746f27f96081da13b7947039",
+      "roundtrip_sha256_pass": true,
+      "compression": "Standard ZIP-LZMA method14, 64MiB dictionary; independent single-file archive"
+    },
+    {
+      "archive": "Batch06_Expansion/Exports/NuclearPlant_FullSite.glb.zip",
+      "archive_sha256": "b6116fd07fa501d62b9d4ea03677bfa48bc22cad891326e84e001862dfa6cd2a",
+      "archive_bytes": 2284617,
+      "zip_member": "NuclearPlant_FullSite.glb",
+      "restored_path": "Batch06_Expansion/Exports/NuclearPlant_FullSite.glb",
+      "restored_bytes": 214651748,
+      "restored_sha256": "c1e07a65e68c6d4ddfb23f1c4d3eade962fe270f43d6c3a4eb184406b61bb7de",
+      "original_git_blob_sha1": "392fe892a932ff26e3868a3d9790456cf96249f4",
+      "roundtrip_sha256_pass": true,
+      "compression": "Standard ZIP-LZMA method14, 64MiB dictionary; independent single-file archive"
+    },
+    {
+      "archive": "ModularKit/assembly_demo.blend.zip",
+      "archive_sha256": "852b00cac083d66fafbd2466c45e5f9f06565e4651d28728f44d0a0b5242fa2e",
+      "archive_bytes": 1342849,
+      "zip_member": "assembly_demo.blend",
+      "restored_path": "ModularKit/assembly_demo.blend",
+      "restored_bytes": 14633460,
+      "restored_sha256": "633bd051e7694c0d709a71d759360abbbde4e9bf0170691cfa695509c2dcebb4",
+      "original_git_blob_sha1": "a2b0166a2af8d16772caca1a92f44a15807bf6b3",
+      "roundtrip_sha256_pass": true,
+      "compression": "Standard ZIP-LZMA method14, 64MiB dictionary; independent single-file archive"
+    },
+    {
+      "archive": "Batch07_Refinement/References/B07_PIPE_RACK.svg.zip",
+      "archive_sha256": "603fc40ac179f95b6d75cdda557fac2894acd583fa60194cd604e8e05a361b98",
+      "archive_bytes": 60827,
+      "zip_member": "B07_PIPE_RACK.svg",
+      "restored_path": "Batch07_Refinement/References/B07_PIPE_RACK.svg",
+      "restored_bytes": 789103,
+      "restored_sha256": "d5b483bab1682ea15cb3057ab84e72d34c232c02d7120a360f9a45f5d18c7c37",
+      "original_git_blob_sha1": "35fe315d137f5bfcafba669ddd2e78dd244352b5",
+      "roundtrip_sha256_pass": true,
+      "compression": "Independent standard ZIP-DEFLATE method 8, no split volumes"
+    },
+    {
+      "archive": "Batch07_Refinement/References/B07_TRANSFORMER_BAY.svg.zip",
+      "archive_sha256": "cde2b78f458797d8d9291d5552c9b7a73c253ac1b2d5ad306c8c030db868add7",
+      "archive_bytes": 49537,
+      "zip_member": "B07_TRANSFORMER_BAY.svg",
+      "restored_path": "Batch07_Refinement/References/B07_TRANSFORMER_BAY.svg",
+      "restored_bytes": 698270,
+      "restored_sha256": "1ace94472cc9b98f36cd46aa1b01b3f4aef51a9f7312da330b4e8d9e080717f3",
+      "original_git_blob_sha1": "aa8d7ca53f71646cedd7d345bce033cd13601d27",
+      "roundtrip_sha256_pass": true,
+      "compression": "Independent standard ZIP-DEFLATE method 8, no split volumes"
+    },
+    {
+      "archive": "Batch07_Refinement/References/B07_TRANSFORMER_BAY_structure.svg.zip",
+      "archive_sha256": "6366ed6a8caa00757c5a998b43eae58ee8afa89333b2c0112e8efe5ded4ebb13",
+      "archive_bytes": 43514,
+      "zip_member": "B07_TRANSFORMER_BAY_structure.svg",
+      "restored_path": "Batch07_Refinement/References/B07_TRANSFORMER_BAY_structure.svg",
+      "restored_bytes": 616765,
+      "restored_sha256": "c1cc4a601af32433d91f53748390a03bfd3c94c7dd9c3dd87fbd515e4c5bf0c5",
+      "original_git_blob_sha1": "10d47332fc7ed480ba6e52c00c60157a189b4807",
+      "roundtrip_sha256_pass": true,
+      "compression": "Independent standard ZIP-DEFLATE method 8, no split volumes"
+    },
+    {
+      "archive": "Batch07_Refinement/References/core_skin.svg.zip",
+      "archive_sha256": "cfabfb10b376e6c72580969d44e7f4ef34544b3ea935af400c1d554ee0164971",
+      "archive_bytes": 93137,
+      "zip_member": "core_skin.svg",
+      "restored_path": "Batch07_Refinement/References/core_skin.svg",
+      "restored_bytes": 1654331,
+      "restored_sha256": "7342f8c9a7a5db9d663416c006e5f9e7f5cc4a20ed0d4ae949827d96bc474b8e",
+      "original_git_blob_sha1": "21ec6a59e9e3219aa33ad01111bbe32de0dd1d2f",
+      "roundtrip_sha256_pass": true,
+      "compression": "Independent standard ZIP-DEFLATE method 8, no split volumes"
+    },
+    {
+      "archive": "Batch07_Refinement/References/east_pump_yards.svg.zip",
+      "archive_sha256": "e6ce919bb5b107b5b23b6bf26082abf59496eecbee7a5adbaa51f6eefd56c85d",
+      "archive_bytes": 663320,
+      "zip_member": "east_pump_yards.svg",
+      "restored_path": "Batch07_Refinement/References/east_pump_yards.svg",
+      "restored_bytes": 9876763,
+      "restored_sha256": "980fbd35130a63dca5f2bbe7993710042096d9e555f94539c8ac04941ce1b1ff",
+      "original_git_blob_sha1": "9de391440c863392e64a3387187c756b741b7213",
+      "roundtrip_sha256_pass": true,
+      "compression": "Independent standard ZIP-DEFLATE method 8, no split volumes"
+    },
+    {
+      "archive": "Batch07_Refinement/References/southwest_logistics.svg.zip",
+      "archive_sha256": "79c4ea767bb7f24e3ca39435b9db41ff1ea821e091204d33584541cb5cf3a3cf",
+      "archive_bytes": 249736,
+      "zip_member": "southwest_logistics.svg",
+      "restored_path": "Batch07_Refinement/References/southwest_logistics.svg",
+      "restored_bytes": 4077549,
+      "restored_sha256": "015b1abb9d41129f90bfe181b0e4094de92c112fb98be6fee270b8c96129c1e9",
+      "original_git_blob_sha1": "0bac18176823bbb7340c633eafd7f60bc50da6b5",
+      "roundtrip_sha256_pass": true,
+      "compression": "Independent standard ZIP-DEFLATE method 8, no split volumes"
+    },
+    {
+      "archive": "Batch07_Refinement/References/v02/B07_PIPE_RACK.svg.zip",
+      "archive_sha256": "d51b889bbd39e911a6eefaf5c5d82f52cfda1582ed7f3aa506e095861861ffe5",
+      "archive_bytes": 59064,
+      "zip_member": "B07_PIPE_RACK.svg",
+      "restored_path": "Batch07_Refinement/References/v02/B07_PIPE_RACK.svg",
+      "restored_bytes": 775724,
+      "restored_sha256": "7fe7441183568fdafba1f03bd0636b2b863a5ee37e818b8b7b067546f22a01c6",
+      "original_git_blob_sha1": "179ac547ec50074d2b2f96c19c7d11f2fc353c69",
+      "roundtrip_sha256_pass": true,
+      "compression": "Independent standard ZIP-DEFLATE method 8, no split volumes"
+    },
+    {
+      "archive": "Batch07_Refinement/References/v02/B07_TRANSFORMER_BAY.svg.zip",
+      "archive_sha256": "54611dc4bd11794dae5e44048cd9248aa15016360efb5ee02cb682db36fedfb9",
+      "archive_bytes": 49705,
+      "zip_member": "B07_TRANSFORMER_BAY.svg",
+      "restored_path": "Batch07_Refinement/References/v02/B07_TRANSFORMER_BAY.svg",
+      "restored_bytes": 710596,
+      "restored_sha256": "e3b2cf49cf1e41aea3ea91fea57c1bb967885e7ed479a5e83afd0b788880a921",
+      "original_git_blob_sha1": "8e3186a02fbc087682a9b0f0ed656f62c3f27f41",
+      "roundtrip_sha256_pass": true,
+      "compression": "Independent standard ZIP-DEFLATE method 8, no split volumes"
+    },
+    {
+      "archive": "Batch07_Refinement/References/v02/B07_TRANSFORMER_BAY_structure.svg.zip",
+      "archive_sha256": "6697159244ac7034b2747f046a93574b061729c8548d7c7b9aa20ec050cf2285",
+      "archive_bytes": 44256,
+      "zip_member": "B07_TRANSFORMER_BAY_structure.svg",
+      "restored_path": "Batch07_Refinement/References/v02/B07_TRANSFORMER_BAY_structure.svg",
+      "restored_bytes": 635631,
+      "restored_sha256": "a5e0aa3b4843e84896042845dad177513a57cd49bf5b2f42d08d5ad9a55ea3e4",
+      "original_git_blob_sha1": "250a30ba4117cb2bef62c7ce51c96347295daf9d",
+      "roundtrip_sha256_pass": true,
+      "compression": "Independent standard ZIP-DEFLATE method 8, no split volumes"
+    },
+    {
+      "archive": "Batch07_Refinement/References/v02/core_skin.svg.zip",
+      "archive_sha256": "7efbb2fa432e85d7556e0484ffecd8fb1be3ae6b973d3e41d60666b20cafe4c2",
+      "archive_bytes": 103417,
+      "zip_member": "core_skin.svg",
+      "restored_path": "Batch07_Refinement/References/v02/core_skin.svg",
+      "restored_bytes": 1859734,
+      "restored_sha256": "c797063bb9e1542f77e83c7487076628432153d935271d53d53f92874cf1c804",
+      "original_git_blob_sha1": "3bd821e82a29ae3b05d8527d68ab3ec9eaab3ad4",
+      "roundtrip_sha256_pass": true,
+      "compression": "Independent standard ZIP-DEFLATE method 8, no split volumes"
+    },
+    {
+      "archive": "Batch07_Refinement/References/v02/east_pump_yards.svg.zip",
+      "archive_sha256": "1bb5836b31c1042181ea7fe881b8c6245f8045396caa4e01807f5b0eef15b0c3",
+      "archive_bytes": 953869,
+      "zip_member": "east_pump_yards.svg",
+      "restored_path": "Batch07_Refinement/References/v02/east_pump_yards.svg",
+      "restored_bytes": 14974741,
+      "restored_sha256": "56ff885086dc8337653dcf57f2223ee878c466be74a03be52ba86c8142905bb2",
+      "original_git_blob_sha1": "0044db0383561f1a0618481859068015183236b3",
+      "roundtrip_sha256_pass": true,
+      "compression": "Independent standard ZIP-DEFLATE method 8, no split volumes"
+    },
+    {
+      "archive": "Batch07_Refinement/References/v02/pump_yard_detail.svg.zip",
+      "archive_sha256": "187185f59b10614eb05e2ef3b0b16dd11efd26d5fe7888c66a10cbc2e723213d",
+      "archive_bytes": 119365,
+      "zip_member": "pump_yard_detail.svg",
+      "restored_path": "Batch07_Refinement/References/v02/pump_yard_detail.svg",
+      "restored_bytes": 1690259,
+      "restored_sha256": "cc11df8cd55736f8d53ee40f567fb9bf5c21a3714ab4a37b9ab884afdca1807d",
+      "original_git_blob_sha1": "a15dab5ce47d8a42f0c036fbf21229b1c9dd91f9",
+      "roundtrip_sha256_pass": true,
+      "compression": "Independent standard ZIP-DEFLATE method 8, no split volumes"
+    },
+    {
+      "archive": "Batch07_Refinement/References/v02/southwest_logistics.svg.zip",
+      "archive_sha256": "f569004388d26522962a01ca30954b6dde77e2a315151c75643d938c5bcc5206",
+      "archive_bytes": 511414,
+      "zip_member": "southwest_logistics.svg",
+      "restored_path": "Batch07_Refinement/References/v02/southwest_logistics.svg",
+      "restored_bytes": 9165928,
+      "restored_sha256": "c6d6751127dfcf3412a2e6072bb7247e8513baa229fe02d7c92568999f9d95c6",
+      "original_git_blob_sha1": "2fbe23a894a0a1e1d03bc6d177ff4c673b0a294f",
+      "roundtrip_sha256_pass": true,
+      "compression": "Independent standard ZIP-DEFLATE method 8, no split volumes"
+    },
+    {
+      "archive": "Batch07_Refinement/References/v03/east_pump_yards.svg.zip",
+      "archive_sha256": "696249267407f6fce6a8373700b8264c0ac3ecf961ed9a00e8781e4cf15a2b9b",
+      "archive_bytes": 954166,
+      "zip_member": "east_pump_yards.svg",
+      "restored_path": "Batch07_Refinement/References/v03/east_pump_yards.svg",
+      "restored_bytes": 15048045,
+      "restored_sha256": "2bf3c36c410f00490a032ee7d1d6cfd6de92e4cd106a3dbb9130a57330131559",
+      "original_git_blob_sha1": "18271ed836933d986270690bcc4f9f4f19bc1821",
+      "roundtrip_sha256_pass": true,
+      "compression": "Independent standard ZIP-DEFLATE method 8, no split volumes"
+    },
+    {
+      "archive": "Batch07_Refinement/References/v03/southwest_logistics.svg.zip",
+      "archive_sha256": "db7543840b1c90b231af5138f560a3337ca92167a5b323afa55d593a3ade2c92",
+      "archive_bytes": 523014,
+      "zip_member": "southwest_logistics.svg",
+      "restored_path": "Batch07_Refinement/References/v03/southwest_logistics.svg",
+      "restored_bytes": 9376915,
+      "restored_sha256": "af68515cc296a877ba1dfa1fd52441030685f28e653494b45fdb7675dcfac30a",
+      "original_git_blob_sha1": "bcb50ed2f26f917a222d2db27c0c4a82b874ced6",
+      "roundtrip_sha256_pass": true,
+      "compression": "Independent standard ZIP-DEFLATE method 8, no split volumes"
+    },
+    {
+      "archive": "Batch07_Refinement/References/v04/pump_pad_56_minus18.svg.zip",
+      "archive_sha256": "117333c31da8961ea99648ae0b84a7257ed4425f48e76d91e6d2d64ca31b0c65",
+      "archive_bytes": 143051,
+      "zip_member": "pump_pad_56_minus18.svg",
+      "restored_path": "Batch07_Refinement/References/v04/pump_pad_56_minus18.svg",
+      "restored_bytes": 2293391,
+      "restored_sha256": "102293cd56a0b2c1f68fd8372129881c9ede9c01ae138613e1537e77978aab72",
+      "original_git_blob_sha1": "52857e601581f9862ed748008b86a444cb068b5d",
+      "roundtrip_sha256_pass": true,
+      "compression": "Independent standard ZIP-DEFLATE method 8, no split volumes"
+    },
+    {
+      "archive": "Batch07_Refinement/References/v04/pump_pad_56_minus18_structure.svg.zip",
+      "archive_sha256": "f7e29e503561e708e5cc20d50b4d5fb8564ef7ba58b3f2ce78e0cdb841202502",
+      "archive_bytes": 103462,
+      "zip_member": "pump_pad_56_minus18_structure.svg",
+      "restored_path": "Batch07_Refinement/References/v04/pump_pad_56_minus18_structure.svg",
+      "restored_bytes": 1560262,
+      "restored_sha256": "a4d46459edb4f3f96e9385e0d1117da04dd32cbd65aadd16e4e3b1f05df3ef37",
+      "original_git_blob_sha1": "d9e6a12a5575fb079e17de3b8c2361ecf342aa8f",
+      "roundtrip_sha256_pass": true,
+      "compression": "Independent standard ZIP-DEFLATE method 8, no split volumes"
+    }
+  ]
 }

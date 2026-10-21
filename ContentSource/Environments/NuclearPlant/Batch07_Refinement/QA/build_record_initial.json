@@ -1,0 +1,538 @@
+{
+  "stage": "MODEL_AFTER_REFERENCE",
+  "started_utc": "2026-10-21T03:28:37.839766+00:00",
+  "finished_utc": "2026-10-21T03:28:44.596371+00:00",
+  "reference_freeze_utc": "2026-10-21T03:28:12.528151+00:00",
+  "design_sha256": "b87be6ab27ba49932c7d454f2f40e43c5aee9d119af66ba807018cf07d8a4536",
+  "reference_hashes_verified": true,
+  "baseline_sha256": "f19f554d9f2ba93e6f3c1d31d95b0db2ed2b5bcd78a7fecc42de8cfe1267edb3",
+  "baseline_unchanged": true,
+  "preserved_objects": 3589,
+  "protected_geometry_changes": [],
+  "intentional_removed_objects": [
+    "B06_UTILITY_SHELTER / 0",
+    "B06_UTILITY_SHELTER / 1",
+    "B06_UTILITY_SHELTER / 2",
+    "B06_UTILITY_SHELTER / 3",
+    "B06_SERVICE_BANK / 0.004",
+    "B06_SERVICE_BANK / 1.004",
+    "B06_SERVICE_BANK / 2.004",
+    "B06_SERVICE_BANK / 0.005",
+    "B06_SERVICE_BANK / 1.005",
+    "B06_SERVICE_BANK / 2.005",
+    "B06_SERVICE_BANK / 0.006",
+    "B06_SERVICE_BANK / 1.006",
+    "B06_SERVICE_BANK / 2.006",
+    "B06_UTILITY_SHELTER / 0.001",
+    "B06_UTILITY_SHELTER / 1.001",
+    "B06_UTILITY_SHELTER / 2.001",
+    "B06_UTILITY_SHELTER / 3.001",
+    "B06_SERVICE_BANK / 0.007",
+    "B06_SERVICE_BANK / 1.007",
+    "B06_SERVICE_BANK / 2.007",
+    "B06_SERVICE_BANK / 0.008",
+    "B06_SERVICE_BANK / 1.008",
+    "B06_SERVICE_BANK / 2.008",
+    "B06_SERVICE_BANK / 0.009",
+    "B06_SERVICE_BANK / 1.009",
+    "B06_SERVICE_BANK / 2.009",
+    "B06_UTILITY_SHELTER / 0.002",
+    "B06_UTILITY_SHELTER / 1.002",
+    "B06_UTILITY_SHELTER / 2.002",
+    "B06_UTILITY_SHELTER / 3.002",
+    "B06_SERVICE_BANK / 0.010",
+    "B06_SERVICE_BANK / 1.010",
+    "B06_SERVICE_BANK / 2.010",
+    "B06_SERVICE_BANK / 0.011",
+    "B06_SERVICE_BANK / 1.011",
+    "B06_SERVICE_BANK / 2.011",
+    "B06_SERVICE_BANK / 0.012",
+    "B06_SERVICE_BANK / 1.012",
+    "B06_SERVICE_BANK / 2.012",
+    "B06_UTILITY_SHELTER / 0.003",
+    "B06_UTILITY_SHELTER / 1.003",
+    "B06_UTILITY_SHELTER / 2.003",
+    "B06_UTILITY_SHELTER / 3.003",
+    "B06_SERVICE_BANK / 0.013",
+    "B06_SERVICE_BANK / 1.013",
+    "B06_SERVICE_BANK / 2.013",
+    "B06_SERVICE_BANK / 0.014",
+    "B06_SERVICE_BANK / 1.014",
+    "B06_SERVICE_BANK / 2.014",
+    "B06_SERVICE_BANK / 0.015",
+    "B06_SERVICE_BANK / 1.015",
+    "B06_SERVICE_BANK / 2.015",
+    "B06_UTILITY_SHELTER / 0.004",
+    "B06_UTILITY_SHELTER / 1.004",
+    "B06_UTILITY_SHELTER / 2.004",
+    "B06_UTILITY_SHELTER / 3.004",
+    "B06_SERVICE_BANK / 0.016",
+    "B06_SERVICE_BANK / 1.016",
+    "B06_SERVICE_BANK / 2.016",
+    "B06_SERVICE_BANK / 0.017",
+    "B06_SERVICE_BANK / 1.017",
+    "B06_SERVICE_BANK / 2.017",
+    "B06_SERVICE_BANK / 0.018",
+    "B06_SERVICE_BANK / 1.018",
+    "B06_SERVICE_BANK / 2.018",
+    "B06_UTILITY_SHELTER / 0.005",
+    "B06_UTILITY_SHELTER / 1.005",
+    "B06_UTILITY_SHELTER / 2.005",
+    "B06_UTILITY_SHELTER / 3.005",
+    "B06_SERVICE_BANK / 0.019",
+    "B06_SERVICE_BANK / 1.019",
+    "B06_SERVICE_BANK / 2.019",
+    "B06_SERVICE_BANK / 0.020",
+    "B06_SERVICE_BANK / 1.020",
+    "B06_SERVICE_BANK / 2.020",
+    "B06_SERVICE_BANK / 0.021",
+    "B06_SERVICE_BANK / 1.021",
+    "B06_SERVICE_BANK / 2.021",
+    "B06_UTILITY_SHELTER / 0.006",
+    "B06_UTILITY_SHELTER / 1.006",
+    "B06_UTILITY_SHELTER / 2.006",
+    "B06_UTILITY_SHELTER / 3.006",
+    "B06_SERVICE_BANK / 0.022",
+    "B06_SERVICE_BANK / 1.022",
+    "B06_SERVICE_BANK / 2.022",
+    "B06_SERVICE_BANK / 0.023",
+    "B06_SERVICE_BANK / 1.023",
+    "B06_SERVICE_BANK / 2.023",
+    "B06_SERVICE_BANK / 0.024",
+    "B06_SERVICE_BANK / 1.024",
+    "B06_SERVICE_BANK / 2.024",
+    "B06_UTILITY_SHELTER / 0.007",
+    "B06_UTILITY_SHELTER / 1.007",
+    "B06_UTILITY_SHELTER / 2.007",
+    "B06_UTILITY_SHELTER / 3.007",
+    "B06_SERVICE_BANK / 0.025",
+    "B06_SERVICE_BANK / 1.025",
+    "B06_SERVICE_BANK / 2.025",
+    "B06_SERVICE_BANK / 0.026",
+    "B06_SERVICE_BANK / 1.026",
+    "B06_SERVICE_BANK / 2.026",
+    "B06_SERVICE_BANK / 0.027",
+    "B06_SERVICE_BANK / 1.027",
+    "B06_SERVICE_BANK / 2.027",
+    "B06_UTILITY_SHELTER / 0.008",
+    "B06_UTILITY_SHELTER / 1.008",
+    "B06_UTILITY_SHELTER / 2.008",
+    "B06_UTILITY_SHELTER / 3.008",
+    "B06_SERVICE_BANK / 0.028",
+    "B06_SERVICE_BANK / 1.028",
+    "B06_SERVICE_BANK / 2.028",
+    "B06_SERVICE_BANK / 0.029",
+    "B06_SERVICE_BANK / 1.029",
+    "B06_SERVICE_BANK / 2.029",
+    "B06_SERVICE_BANK / 0.030",
+    "B06_SERVICE_BANK / 1.030",
+    "B06_SERVICE_BANK / 2.030",
+    "B06_UTILITY_SHELTER / 0.009",
+    "B06_UTILITY_SHELTER / 1.009",
+    "B06_UTILITY_SHELTER / 2.009",
+    "B06_UTILITY_SHELTER / 3.009",
+    "B06_SERVICE_BANK / 0.031",
+    "B06_SERVICE_BANK / 1.031",
+    "B06_SERVICE_BANK / 2.031",
+    "B06_SERVICE_BANK / 0.032",
+    "B06_SERVICE_BANK / 1.032",
+    "B06_SERVICE_BANK / 2.032",
+    "B06_SERVICE_BANK / 0.033",
+    "B06_SERVICE_BANK / 1.033",
+    "B06_SERVICE_BANK / 2.033",
+    "B06_UTILITY_SHELTER / 0.014",
+    "B06_UTILITY_SHELTER / 1.014",
+    "B06_UTILITY_SHELTER / 2.014",
+    "B06_UTILITY_SHELTER / 3.014",
+    "B06_SERVICE_BANK / 0.046",
+    "B06_SERVICE_BANK / 1.046",
+    "B06_SERVICE_BANK / 2.046",
+    "B06_SERVICE_BANK / 0.047",
+    "B06_SERVICE_BANK / 1.047",
+    "B06_SERVICE_BANK / 2.047",
+    "B06_SERVICE_BANK / 0.048",
+    "B06_SERVICE_BANK / 1.048",
+    "B06_SERVICE_BANK / 2.048",
+    "B06_UTILITY_SHELTER / 0.015",
+    "B06_UTILITY_SHELTER / 1.015",
+    "B06_UTILITY_SHELTER / 2.015",
+    "B06_UTILITY_SHELTER / 3.015",
+    "B06_SERVICE_BANK / 0.049",
+    "B06_SERVICE_BANK / 1.049",
+    "B06_SERVICE_BANK / 2.049",
+    "B06_SERVICE_BANK / 0.050",
+    "B06_SERVICE_BANK / 1.050",
+    "B06_SERVICE_BANK / 2.050",
+    "B06_SERVICE_BANK / 0.051",
+    "B06_SERVICE_BANK / 1.051",
+    "B06_SERVICE_BANK / 2.051",
+    "Service compound ID",
+    "Service compound ID.001",
+    "Service compound ID.002",
+    "Service compound ID.003",
+    "Service compound ID.004",
+    "Service compound ID.005",
+    "Service compound ID.006",
+    "Service compound ID.007",
+    "Service compound ID.008",
+    "Service compound ID.009",
+    "Service compound ID.014",
+    "Service compound ID.015"
+  ],
+  "placements": [
+    {
+      "object": "B07_VENT_CASSETTE / core_skin / 00",
+      "module": "B07_VENT_CASSETTE",
+      "position": [
+        -14,
+        -18.55,
+        3.0
+      ],
+      "rz": 0
+    },
+    {
+      "object": "B07_VENT_CASSETTE / core_skin / 01",
+      "module": "B07_VENT_CASSETTE",
+      "position": [
+        -8,
+        -18.55,
+        3.0
+      ],
+      "rz": 0
+    },
+    {
+      "object": "B07_VENT_CASSETTE / core_skin / 02",
+      "module": "B07_VENT_CASSETTE",
+      "position": [
+        8,
+        -18.55,
+        3.0
+      ],
+      "rz": 0
+    },
+    {
+      "object": "B07_VENT_CASSETTE / core_skin / 03",
+      "module": "B07_VENT_CASSETTE",
+      "position": [
+        14,
+        -18.55,
+        3.0
+      ],
+      "rz": 0
+    },
+    {
+      "object": "B07_VENT_CASSETTE / core_skin / 04",
+      "module": "B07_VENT_CASSETTE",
+      "position": [
+        20.55,
+        -12,
+        10
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_VENT_CASSETTE / core_skin / 05",
+      "module": "B07_VENT_CASSETTE",
+      "position": [
+        20.55,
+        -4,
+        10
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_VENT_CASSETTE / core_skin / 06",
+      "module": "B07_VENT_CASSETTE",
+      "position": [
+        20.55,
+        4,
+        10
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_VENT_CASSETTE / core_skin / 07",
+      "module": "B07_VENT_CASSETTE",
+      "position": [
+        20.55,
+        12,
+        10
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_TRANSFORMER_BAY / east_pump_yards / 00",
+      "module": "B07_TRANSFORMER_BAY",
+      "position": [
+        31.0,
+        42.6,
+        0
+      ],
+      "rz": 0
+    },
+    {
+      "object": "B07_PIPE_RACK / east_pump_yards / 01",
+      "module": "B07_PIPE_RACK",
+      "position": [
+        36.5,
+        42,
+        0
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_PIPE_RACK / east_pump_yards / 02",
+      "module": "B07_PIPE_RACK",
+      "position": [
+        31.0,
+        54.85,
+        0
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_PIPE_RACK / east_pump_yards / 03",
+      "module": "B07_PIPE_RACK",
+      "position": [
+        37.0,
+        54.85,
+        0
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_PIPE_RACK / east_pump_yards / 04",
+      "module": "B07_PIPE_RACK",
+      "position": [
+        49.0,
+        41.85,
+        0
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_PIPE_RACK / east_pump_yards / 05",
+      "module": "B07_PIPE_RACK",
+      "position": [
+        55.0,
+        41.85,
+        0
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_TRANSFORMER_BAY / east_pump_yards / 06",
+      "module": "B07_TRANSFORMER_BAY",
+      "position": [
+        49.0,
+        55.6,
+        0
+      ],
+      "rz": 0
+    },
+    {
+      "object": "B07_PIPE_RACK / east_pump_yards / 07",
+      "module": "B07_PIPE_RACK",
+      "position": [
+        54.5,
+        55,
+        0
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_TRANSFORMER_BAY / east_pump_yards / 08",
+      "module": "B07_TRANSFORMER_BAY",
+      "position": [
+        53.0,
+        -17.4,
+        0
+      ],
+      "rz": 0
+    },
+    {
+      "object": "B07_PIPE_RACK / east_pump_yards / 09",
+      "module": "B07_PIPE_RACK",
+      "position": [
+        58.5,
+        -18,
+        0
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_PIPE_RACK / east_pump_yards / 10",
+      "module": "B07_PIPE_RACK",
+      "position": [
+        53.0,
+        -32.15,
+        0
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_PIPE_RACK / east_pump_yards / 11",
+      "module": "B07_PIPE_RACK",
+      "position": [
+        59.0,
+        -32.15,
+        0
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_LOGISTICS_CANOPY / southwest_logistics / 00",
+      "module": "B07_LOGISTICS_CANOPY",
+      "position": [
+        -21.1,
+        -42.65,
+        0
+      ],
+      "rz": 0
+    },
+    {
+      "object": "B07_CARGO_SET / southwest_logistics / 01",
+      "module": "B07_CARGO_SET",
+      "position": [
+        -21.8,
+        -42.4,
+        0
+      ],
+      "rz": 0
+    },
+    {
+      "object": "B07_CARGO_SET / southwest_logistics / 02",
+      "module": "B07_CARGO_SET",
+      "position": [
+        -16.0,
+        -41.6,
+        0
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_CARGO_SET / southwest_logistics / 03",
+      "module": "B07_CARGO_SET",
+      "position": [
+        -23.8,
+        -55.1,
+        0
+      ],
+      "rz": -5
+    },
+    {
+      "object": "B07_CARGO_SET / southwest_logistics / 04",
+      "module": "B07_CARGO_SET",
+      "position": [
+        -18.5,
+        -54.9,
+        0
+      ],
+      "rz": 180
+    },
+    {
+      "object": "B07_CARGO_SET / southwest_logistics / 05",
+      "module": "B07_CARGO_SET",
+      "position": [
+        -41.8,
+        -42.1,
+        0
+      ],
+      "rz": -5
+    },
+    {
+      "object": "B07_CARGO_SET / southwest_logistics / 06",
+      "module": "B07_CARGO_SET",
+      "position": [
+        -36.5,
+        -41.9,
+        0
+      ],
+      "rz": 180
+    },
+    {
+      "object": "B07_LOGISTICS_CANOPY / southwest_logistics / 07",
+      "module": "B07_LOGISTICS_CANOPY",
+      "position": [
+        -39.1,
+        -55.65,
+        0
+      ],
+      "rz": 0
+    },
+    {
+      "object": "B07_CARGO_SET / southwest_logistics / 08",
+      "module": "B07_CARGO_SET",
+      "position": [
+        -39.8,
+        -55.4,
+        0
+      ],
+      "rz": 180
+    },
+    {
+      "object": "B07_CARGO_SET / southwest_logistics / 09",
+      "module": "B07_CARGO_SET",
+      "position": [
+        -34.0,
+        -54.6,
+        0
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_LOGISTICS_CANOPY / southwest_logistics / 10",
+      "module": "B07_LOGISTICS_CANOPY",
+      "position": [
+        -57.1,
+        -42.65,
+        0
+      ],
+      "rz": 0
+    },
+    {
+      "object": "B07_CARGO_SET / southwest_logistics / 11",
+      "module": "B07_CARGO_SET",
+      "position": [
+        -57.8,
+        -42.4,
+        0
+      ],
+      "rz": 0
+    },
+    {
+      "object": "B07_CARGO_SET / southwest_logistics / 12",
+      "module": "B07_CARGO_SET",
+      "position": [
+        -52.0,
+        -41.6,
+        0
+      ],
+      "rz": 90
+    },
+    {
+      "object": "B07_CARGO_SET / southwest_logistics / 13",
+      "module": "B07_CARGO_SET",
+      "position": [
+        -59.8,
+        -55.1,
+        0
+      ],
+      "rz": -5
+    },
+    {
+      "object": "B07_CARGO_SET / southwest_logistics / 14",
+      "module": "B07_CARGO_SET",
+      "position": [
+        -54.5,
+        -54.9,
+        0
+      ],
+      "rz": 180
+    }
+  ],
+  "total_objects": 4363,
+  "unique_new_modules": 5,
+  "ue_runtime_tested": false,
+  "official_manny_tested": false
+}

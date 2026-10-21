@@ -1,0 +1,36 @@
+{
+  "stage": "V04_REFERENCE_BEFORE_REBUILD",
+  "utc": "2026-10-21T04:00:57.105268+00:00",
+  "parent_reference_sha256": "9173f850b863f403077d04f75c1ff2ad3152c2cee23b71d2c18c20de3f1ffcf6",
+  "previous_scene_sha256": "92c992787eacabe40ac4aeb4803268f3eeebbda4b62c8a7ccbb83bd1d5a2c336",
+  "inputs": {
+    "Config/design_v04.json": "348ba93ed2906e586f0fc43f4c6e102542f8efddd484dcc327830301da2174de",
+    "Scripts/design_revision_v04.py": "008661ed55dfb0667a03bd18c4baee657c56e55e9656f4f7576aaec9128ae6a1",
+    "References/v04/B07_SERVICE_CABINET_narrow_045.png": "dabfcd202d60b26d4b9ac2c01216eec279b6d47148cc16d6353e2fd1516d0980",
+    "References/v04/B07_SERVICE_CABINET_narrow_045.svg": "c5f68c96c366c3b7758c336b92019172863dd1f784fad0f54207061990fdff70",
+    "References/v04/pump_pad_56_minus18.png": "cd855e461f4a797b83c93fd5cd633f2b54d59beb4a5e148c3763a0cc6e94b2e8",
+    "References/v04/pump_pad_56_minus18.svg": "102293cd56a0b2c1f68fd8372129881c9ede9c01ae138613e1537e77978aab72",
+    "References/v04/pump_pad_56_minus18_structure.png": "6df44fc1b70fe68a3d634ed78c5de674fdc2be665e30379e091fa4da1e2c3064",
+    "References/v04/pump_pad_56_minus18_structure.svg": "a4d46459edb4f3f96e9385e0d1117da04dd32cbd65aadd16e4e3b1f05df3ef37",
+    "References/v04/site_layout.png": "661ec6e448742fbe329fd4f6b238d453ba022812c41232a0d97e44f1fca4122a",
+    "References/v04/site_layout.svg": "fd59c2d0aec6d62663722b84b15a23657db1662b98a494094e44f2bd0dfa8478"
+  },
+  "changes": [
+    {
+      "module": "B07_SERVICE_CABINET",
+      "position": [
+        56.95,
+        -16.5,
+        0
+      ],
+      "rz": 0,
+      "scale": [
+        0.45,
+        1,
+        1
+      ],
+      "variant": "narrow_045"
+    }
+  ],
+  "purpose": "Close independently found continuous 113.5-117.5 degree pump-approach visibility gap with one narrow solid cabinet. No additional yard / route expansion; stop at existing standard and discovered dense sample sets."
+}
