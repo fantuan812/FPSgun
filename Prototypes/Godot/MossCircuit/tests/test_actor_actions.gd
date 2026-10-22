@@ -9,14 +9,15 @@ func run()->void:
 	var game=load("res://scenes/main.tscn").instantiate()
 	root.add_child(game);game.set_process(false);game._start_run(770)
 	var director=game.actor_anim
-	var expected_ids:Array=["hero_attack","hero_hurt","hero_death","hero_dash","boss_warden_attack","boss_core_attack","charger_charge","charger_hurt","charger_death","spitter_shoot","spitter_hurt","spitter_death"]
+	var expected_ids:Array=["hero_attack","hero_hurt","hero_death","hero_dash","boss_warden_attack","boss_core_attack","charger_charge","charger_hurt","charger_death","spitter_shoot","spitter_hurt","spitter_death","brood_keeper_summon","brood_keeper_hurt","brood_keeper_death"]
 	var actual_ids:Array=director.assets.keys();expected_ids.sort();actual_ids.sort()
 	check(actual_ids==expected_ids,"exact approved authored action ID set")
 	for id in director.assets:
-		check(director.assets[id].frames.get_frame_count("action")==9,"nine authored frames "+id)
+		var count:int=16 if id in ["brood_keeper_summon","brood_keeper_death"] else 9
+		check(director.assets[id].frames.get_frame_count("action")==count,"exact authored clip length "+id)
 		check(director.assets[id].frames.get_animation_loop("action")==false,"one shot "+id)
 		var size:Vector2=director.assets[id].frames.get_frame_texture("action",0).get_size()
-		for i in range(9):check(director.assets[id].frames.get_frame_texture("action",i).get_size()==size,"fixed canvas "+id)
+		for i in range(count):check(director.assets[id].frames.get_frame_texture("action",i).get_size()==size,"fixed canvas "+id)
 	director.set_phase(0,"warning",.9)
 	check(game.hero.frame<director.assets.hero_attack.release_frame,"windup excludes release")
 	director.trigger(0,"attack")

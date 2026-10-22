@@ -25,9 +25,12 @@ func load_default() -> void:
 				for id in extra.actions:
 					if not manifest.actions.has(id):manifest.actions[id]=extra.actions[id]
 	for id in manifest.get("actions",{}):
-		var asset: Dictionary=manifest.actions[id]
-		if not ResourceLoader.exists(asset.path) or asset.frames.size()!=9: continue
-		var source:Texture2D=load(asset.path)
+		var asset=manifest.actions[id]
+		if not asset is Dictionary or not asset.get("path") is String:continue
+		if not ResourceLoader.exists(asset.path):continue
+		var source=load(asset.path)
+		if not source is Texture2D or not valid_records(asset.get("frames"),source.get_size()):continue
+		var count:int=asset.frames.size()
 		var frames:=SpriteFrames.new()
 		frames.remove_animation("default")
 		frames.add_animation("action")
@@ -36,10 +39,12 @@ func load_default() -> void:
 			var atlas:=AtlasTexture.new()
 			atlas.atlas=source
 			atlas.region=Rect2(record.region[0],record.region[1],record.region[2],record.region[3])
+			var padding:Array=record.get("margin",[0,0,0,0])
+			atlas.margin=Rect2(padding[0],padding[1],padding[2],padding[3])
 			atlas.filter_clip=true
 			frames.add_frame("action",atlas)
-		var box:Array=asset.frames[0].alpha_bbox
-		assets[id]={"records":asset.frames,"frames":frames,"anchor":asset.get("anchor",[.5,.8]),"reference_height":asset.get("reference_height",box[3]),"release_frame":clampi(int(asset.get("release_frame",4)),1,8)}
+		var box:Array=asset.frames[0].get("alpha_bbox",[0,0,asset.frames[0].region[2],asset.frames[0].region[3]])
+		assets[id]={"records":asset.frames,"frames":frames,"anchor":asset.get("anchor",[.5,.8]),"reference_height":asset.get("reference_height",box[3]),"release_frame":clampi(int(asset.get("release_frame",4)),1,count-1)}
 func register_actor(key:int,sprite:AnimatedSprite2D,profile:String,height:float) -> void:
 	var first:AtlasTexture=sprite.sprite_frames.get_frame_texture("walk",0) as AtlasTexture
 	var foot:=Vector2(0,height*.5)
@@ -119,21 +124,22 @@ func _present(actor:Dictionary) -> void:
 	if id!="" and assets.has(id):
 		var asset:Dictionary=assets[id]
 		sprite.sprite_frames=asset.frames;sprite.animation="action"
-		var index:int=mini(8,floori(progress*9+.0000001))
+		var count:int=asset.frames.get_frame_count("action")
+		var index:int=mini(count-1,floori(progress*count+.0000001))
 		if state=="warning":index=mini(asset.release_frame-1,floori(progress*asset.release_frame+.0000001))
-		elif state=="attack":index=asset.release_frame+mini(8-asset.release_frame,floori(progress*(9-asset.release_frame)+.0000001))
-		elif state=="recover":index=8
+		elif state=="attack":index=asset.release_frame+mini(count-1-asset.release_frame,floori(progress*(count-asset.release_frame)+.0000001))
+		elif state=="recover":index=count-1
 		var phase_frames=profile.get("phase_frames",{})
 		if phase_frames is Dictionary and phase_frames.has(state):
 			var segment=phase_frames[state]
-			if valid_segment(segment):
+			if valid_segment(segment,count):
 				index=int(segment[0])+mini(int(segment[1]-segment[0]),floori(progress*(segment[1]-segment[0]+1)+.0000001))
 		sprite.frame=index
 		var texture:Texture2D=asset.frames.get_frame_texture("action",0)
 		var scale_value:float=actor.height/maxf(1,asset.reference_height)
 		sprite.scale=Vector2.ONE*scale_value
 		sprite.offset=texture.get_size()*(Vector2(.5,.5)-Vector2(asset.anchor[0],asset.anchor[1]))+actor.base_foot/scale_value
-		actor.source="authored nine-frame"
+		actor.source="authored nine-frame" if count==9 else "authored %d-frame"%count
 	else:
 		sprite.sprite_frames=actor.base_frames;sprite.animation="walk" if state=="move" else "idle"
 		sprite.frame=int(actor.walk_time*9)%9 if state=="move" else 0
@@ -193,9 +199,43 @@ func observe_enemy(enemy:Dictionary,previous_ai:String,player_position:Vector2)-
 		set_phase(enemy.id,"warning",1-enemy.pos.distance_to(player_position)/85)
 	else:set_phase(enemy.id,"move")
 
-static func valid_segment(value:Variant)->bool:
+static func valid_segment(value:Variant,frame_count:int=9)->bool:
+	if frame_count<2 or frame_count>256:return false
 	if not value is Array or value.size()!=2:return false
 	for index in value:
 		if not (index is int or index is float):return false
-		if not is_finite(float(index)) or index<0 or index>8 or float(index)!=floorf(float(index)):return false
+		if not is_finite(float(index)) or index<0 or index>=frame_count or float(index)!=floorf(float(index)):return false
 	return value[0]<=value[1]
+
+## A clip is 2..256 authored frame records from one source image.
+## Sheet grid dimensions do not set animation length; metadata windows must be safe.
+## Optional AtlasTexture.margin pads row windows to one fixed logical canvas (<=4096²).
+## Multi-source clips are intentionally unsupported: do not silently ignore a frame path.
+static func valid_records(value:Variant,source_size:Vector2)->bool:
+	if not is_finite(source_size.x) or not is_finite(source_size.y) or source_size.x<=0 or source_size.y<=0:return false
+	if not value is Array or value.size()<2 or value.size()>256:return false
+	var canvas:=Vector2.ZERO
+	for record in value:
+		if not record is Dictionary or record.has("path"):return false
+		var region=record.get("region")
+		if not region is Array or region.size()!=4:return false
+		for n in region:
+			if not (n is int or n is float) or not is_finite(float(n)) or n<0 or float(n)!=floorf(float(n)):return false
+		var size:=Vector2(region[2],region[3])
+		if size.x<=0 or size.y<=0 or region[0]+size.x>source_size.x or region[1]+size.y>source_size.y:return false
+		var margin=record.get("margin",[0,0,0,0])
+		if not margin is Array or margin.size()!=4:return false
+		for n in margin:
+			if not (n is int or n is float) or not is_finite(float(n)) or n<0 or float(n)!=floorf(float(n)):return false
+		if margin[0]>margin[2] or margin[1]>margin[3]:return false
+		var logical_size:=size+Vector2(margin[2],margin[3])
+		if logical_size.x>4096 or logical_size.y>4096:return false
+		if canvas!=Vector2.ZERO and logical_size!=canvas:return false
+		canvas=logical_size
+		if record.has("alpha_bbox"):
+			var box=record.alpha_bbox
+			if not box is Array or box.size()!=4:return false
+			for n in box:
+				if not (n is int or n is float) or not is_finite(float(n)) or n<0:return false
+			if box[2]<=0 or box[3]<=0 or box[0]<margin[0] or box[1]<margin[1] or box[0]+box[2]>margin[0]+size.x or box[1]+box[3]>margin[1]+size.y:return false
+	return true

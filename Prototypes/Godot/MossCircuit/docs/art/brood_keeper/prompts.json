@@ -1,0 +1,47 @@
+{
+  "tool": "OpenAI built-in image_gen",
+  "reference": "v11 assets/enemies/brood_keeper.png",
+  "prompts": {
+    "brood_keeper_summon": "Use case: identity-preserve. Production game character animation sheet, genuine transparent background. Reference image defines Moss Broodkeeper: squat moss-green mechanical four-legged turtle-shaped machine, ivory oval faceplate with two black vertical slots, gold/orange short mechanical feet and round brass joints, tall ivory-paneled mossy hive on back with FIVE dark honeycomb holes framed in gold. Preserve identity and LEFT-facing three-quarter camera exactly. Match reference high-resolution cartoon sprite rendering with pixel-art-inspired texture. Create EXACTLY SIXTEEN individual chronological poses in a perfectly regular FOUR COLUMNS by FOUR ROWS (4x4) grid, read left to right then top to bottom. Sixteen cells, not nine. Full character in every cell, identical camera and body scale. Fixed foot contact baseline at 80 percent of cell height, center at 50 percent cell width, broad transparent gutters. Keep entire sprite in central 78 percent of each cell. NO labels/text/grid lines, no ground shadow, no environment, no glow haze. No children, hatchlings, eggs, projectiles, external effects, floating pieces, new weapons, smoke, flashing tint. FIVE hive holes throughout. Each successive pose has a genuine subtle mechanical transition, not copied repeated frames; make a coherent animation rather than random poses. Preserve clear safe gutters, no neighbor contamination. ACTION sixteen-frame grounded summoning ATTEMPT, ONLY body and hive articulation, nothing ever exits hive holes. Pose1 neutral grounded original stance. Poses2,3,4 progressively brace feet and lower shell with increasingly bent knees. Poses5,6,7 incrementally tension and compress hive structure, maximum anticipation in pose7. Pose8 FIRST decisive mechanical hive extension/opening and body push, the release/attempt keyframe. Feet remain grounded, no jump. Poses9,10,11,12 progressively release tension and ease hive/body down from raised posture with mild recoil. Poses13,14,15,16 settle progressively back into neutral starting posture; genuine subtle settling changes, no duplicated holds. Keep machine scale consistent, body width steady, no ballooning; only legs/hive articulate. No generated child, egg, light or particle: attempt can produce nothing.",
+    "brood_keeper_death": "Use case: identity-preserve. Production game character animation sheet, genuine transparent background. Reference image defines Moss Broodkeeper: squat moss-green mechanical four-legged turtle-shaped machine, ivory oval faceplate with two black vertical slots, gold/orange short mechanical feet and round brass joints, tall ivory-paneled mossy hive on back with FIVE dark honeycomb holes framed in gold. Preserve identity and LEFT-facing three-quarter camera exactly. Match reference high-resolution cartoon sprite rendering with pixel-art-inspired texture. Create EXACTLY SIXTEEN individual chronological poses in a perfectly regular FOUR COLUMNS by FOUR ROWS (4x4) grid, read left to right then top to bottom. Sixteen cells, not nine. Full character in every cell, identical camera and body scale. Fixed foot contact baseline at 80 percent of cell height, center at 50 percent cell width, broad transparent gutters. Keep entire sprite in central 78 percent of each cell. NO labels/text/grid lines, no ground shadow, no environment, no glow haze. No children, hatchlings, eggs, projectiles, external effects, floating pieces, new weapons, smoke, flashing tint. FIVE hive holes throughout. Each successive pose has a genuine subtle mechanical transition, not copied repeated frames; make a coherent animation rather than random poses. Preserve clear safe gutters, no neighbor contamination. ACTION sixteen-frame grounded mechanical death collapse. Pose1 neutral standing grounded reference stance with full original standing height. Pose2 begins knee buckle, toes all remain grounded. Poses3,4 progressively lose strength with intact hive dipping slightly. Poses5,6,7,8 progressively fold mechanical legs and sink shell toward ground. Poses9,10,11,12 progressively lean and compress body into low resting wreck, belly and faceplate settle onto ground, attached hive leans only slightly and stays recognizable. Poses13,14,15,16 subtle diminishing settling movements, each an actual micro-transition as joints stop and hive settles, last pose terminal inert collapsed body. Never rises again, never explodes, never disintegrates, no repeated identical copies, no detached parts. Fixed foot/ground baseline while top of body naturally lowers. Hive remains five-hole and whole.",
+    "brood_keeper_hurt": "Use case: identity-preserve. Original game character action sprite sheet with actual transparent background. Reference image defines the EXACT existing Moss Broodkeeper identity: a squat olive moss-green mechanical four-legged turtle-like machine, ivory oval faceplate with two tiny vertical black slots, round brass side joints, orange-gold stubby robot feet, tall ivory-and-green hive backpack with FIVE black honeycomb holes framed by gold rims, moss on top. Face LEFT in same three-quarter camera. Match reference high-resolution cartoon sprite rendering with pixel-art-inspired textures, not a different art style. Exactly NINE separate poses, perfectly regular 3x3 row-major grid. One complete character per cell, same scale throughout, fixed horizontal center and fixed foot ground line at 78 percent of every cell. Broad transparent gutters, character confined inside central 70 percent of cell. No text, labels, grid lines, ground shadows, background, haze or ambient glow. Keep clean hard alpha silhouette. Do NOT add hatchlings, eggs, projectiles, particles, external effects, aura, explosion, new weapons, floating pieces or detached parts. Keep all FIVE hive holes consistently in every pose. Frame 1 is always the original neutral standing stance. ACTION: one brief damage flinch then recover, NOT walking. Frame 1 neutral. Frame 2 torso rocks backward slightly, feet grounded. Frame 3 head lifts and front knees buckle. Frame 4 strongest protective contraction, hive leaning slightly backward but intact. Frame 5 starts to straighten. Frame 6 lowers head toward normal. Frame 7 steadies. Frame 8 almost neutral. Frame 9 neutral. No injury source, flashing tint or spark. Restrained clear mechanical body recoil with unchanged machine parts."
+  },
+  "death_layout_revision": "Use case: precise-object-edit. Edit this exact SIXTEEN-pose 4x4 mechanical Broodkeeper death animation sheet. Keep all sixteen poses in their current chronological order and same identity, five-hole hive, LEFT facing camera, colors and death progression unchanged. ONLY FIX THE SHEET LAYOUT: uniformly reduce every character's visual scale to about 75 percent of its current size, all sixteen by the SAME scale, and place each complete pose inside its own perfectly equal 4 by 4 cell with WIDE EMPTY transparent gutters on ALL four sides. Fixed foot ground baseline at 80 percent cell height. No pose may touch any cell boundary. Aim character maximum width 65 percent of cell width, maximum standing height 65 percent cell height. This is vital, especially flat final-row corpses: each must have 15 percent blank margin on both sides. Preserve genuine alpha transparency; no shadow, glow, text, grid, background or new objects. Maintain frame1 neutral and frame2 buckling on same grounded foot baseline. Preserve all 16 real poses, do not collapse into nine.",
+  "source_paths": {
+    "brood_keeper_summon": "/workspace/scratch/234c8048d85d/generated_images/exec-358fce73-b3f1-40b6-875f-678bbdbb0f26.png",
+    "brood_keeper_death_initial": "/workspace/scratch/234c8048d85d/generated_images/exec-73279be9-34dc-479d-8877-2fe64bbe7085.png",
+    "brood_keeper_death_final": "/workspace/scratch/234c8048d85d/generated_images/exec-470a9ccb-d8d4-4d9c-b9ea-8ba543870ba4.png",
+    "brood_keeper_hurt": "/workspace/scratch/234c8048d85d/generated_images/exec-2ef4aba6-0847-4306-a45b-f47edd363998.png"
+  },
+  "raster_postprocessing": "none",
+  "counts": {
+    "summon": 16,
+    "hurt": 9,
+    "death": 16
+  },
+  "candidate_history": "Original nine-frame summon/death are superseded, retained in moss-art-v12; not runtime clips",
+  "metadata_revision": {
+    "kind": "artist_reviewed_death_timeline",
+    "source_order": [
+      0,
+      1,
+      4,
+      5,
+      2,
+      3,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "png_changed": false,
+    "reason": "Remove rejected standing rebound after collapse; reorder complete existing source pose records after visual leg and shell continuity review",
+    "previous_evidence": "docs/art/brood_keeper/history/before_death_timeline_fix/"
+  }
+}

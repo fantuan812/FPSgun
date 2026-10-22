@@ -68,11 +68,36 @@
         "warning",
         "recover"
       ]
+    },
+    "brood_keeper": {
+      "attack": "brood_keeper_summon",
+      "hurt": "brood_keeper_hurt",
+      "death": "brood_keeper_death",
+      "phase_frames": {
+        "warning": [
+          0,
+          6
+        ],
+        "attack": [
+          7,
+          7
+        ],
+        "recover": [
+          7,
+          15
+        ]
+      },
+      "phase_driven_attack": true,
+      "locked_aim_states": [
+        "warning",
+        "recover"
+      ]
     }
   },
   "hero_modular_manifest": "res://assets/weapon_mounts/hero_modular_manifest.json",
   "additional_manifests": [
     "res://assets/actions/charger/action_manifest.json",
-    "res://assets/actions/spitter/action_manifest.json"
+    "res://assets/actions/spitter/action_manifest.json",
+    "res://assets/actions/brood_keeper/action_manifest.json"
   ]
 }

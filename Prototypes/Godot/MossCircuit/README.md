@@ -1,15 +1,17 @@
-# MOSS CIRCUIT · 苔芯幸存者 v11
+# MOSS CIRCUIT · 苔芯幸存者 v12
 
 原创 Godot 4.6 像素风 arena-survivor 原型。参考“移动避敌、自动攻击、波次升级”的品类结构，不使用《土豆兄弟》的模型、图像、名称或代码。
 
-本版基于已发布 v10，**只补远程 Violet Spitter 的射击、受击、死亡三套九帧**。现有表现接口通过数据映射就能复用：原 AI 预警 0.65 秒后同 tick 生成弹体并显示射击帧，再随真实 0.7 秒恢复阶段推进。受击遮挡不延迟发弹、不补播过期射击；接触反馈不会伪造开火。全部运行脚本不改，伤害/弹速/起点/随机与经济不变。见 [远程敌人动作合同与边界](docs/SPITTER_ACTIONS.md)。
+本版基于已发布 v11，**补召唤者 Moss Broodkeeper 的召唤16帧、受击9帧、死亡16帧**。九帧只是方便生图的批次，不是动作上限；长动作改为单张4×4，短受击保留9帧。ActorDirector按真实剪辑长度播放，不改变AI/伤害/生成/经济/RNG。原0.65秒预警之后的释放帧表示“召唤尝试”，不是无条件保证出怪：3只活子体或全局上限满时可新增0只；随后按原0.7秒恢复推进。受击不拖延或补播召唤，父体死亡不会凭动画杀掉既有子体。见 [召唤者动作合同](docs/BROODKEEPER_ACTIONS.md)。
+
+v11 Spitter 的射击/受击/死亡及其真实同tick发弹合同完整保留，见 [远程敌人合同](docs/SPITTER_ACTIONS.md)。
 
 v10 冲锋者的蓄力/冲锋/恢复、受击、死亡九帧与已校准接地关键帧完整保留，见 [冲锋者合同](docs/CHARGER_ACTIONS.md)。
 
 v9 已完成的共享战斗/构筑与模式策略继续保留：原 Arena 和 3 房间有限遭遇原型使用同一套战斗，支持受控测试的非相邻推进/不开店结算；仍不是完整地牢。见 [架构与模式合同](docs/ARCHITECTURE_AND_MODES.md)。
 
 v8 的空手九帧身体、六种独立世界武器、主手与三个辅助挂位、独立枪口特效完整保留；[装配与共享发射几何](docs/MODULAR_WEAPONS.md) 不回退成烘焙手枪。
-保留 **6 武器、26 道具、4 武器槽、构筑加权刷新、五种普通敌人与两 Boss**，以及 [此前动作覆盖与本版修正](docs/ACTION_COVERAGE.md)、[六种像素 VFX](docs/PIXEL_VFX.md)、[装备刷新](docs/SHOP_AFFINITY.md)、[道具机制](docs/MECHANISMS.md)、[敌人/Boss](docs/ENEMIES_AND_BOSSES.md)、[经济](docs/BUILD_SYSTEM.md) 和 [UI](ui/README.md)。本批只有 Spitter 新增原画，冲锋者沿用 v10，其他普通怪的独立攻击/受击/死亡仍未全部补齐，没有增加音频、存档或联网。
+保留 **6 武器、26 道具、4 武器槽、构筑加权刷新、五种普通敌人与两 Boss**，以及 [此前动作覆盖与本版修正](docs/ACTION_COVERAGE.md)、[六种像素 VFX](docs/PIXEL_VFX.md)、[装备刷新](docs/SHOP_AFFINITY.md)、[道具机制](docs/MECHANISMS.md)、[敌人/Boss](docs/ENEMIES_AND_BOSSES.md)、[经济](docs/BUILD_SYSTEM.md) 和 [UI](ui/README.md)。本批只有 Broodkeeper 新增原画，Spitter/冲锋者沿用此前版本，其他普通怪的独立攻击/受击/死亡仍未全部补齐，没有增加音频、存档或联网。
 
 所有分包请按 [合并解压说明](docs/DELIVERY.md) 放到同一父目录；完整单包直接解压。
 
@@ -63,9 +65,13 @@ v9 房间 HUD 候选图没有通过去环境光晕验收，隔离存入 `art_sou
 
 12. v11 Spitter 射击、受击、死亡三张九帧（27帧）已通过源图目视/结构门槛并接入，见 [来源与限制](docs/art/spitter/README.md)。它们是高分辨率像素风sprite，并非严格原生低分辨率逐像素动画；最终全回归结果见验证节。
 
-idle 暂复用 walk 第一帧；弹丸/经验/判定轮廓保留简单代码绘制，六主题事件特效已使用九帧PNG动画。**不是“所有动作都已制作九帧”**。原PNG未经重绘、缩放或抠图；Godot 中以纹理区域与透明边距处理帧不整齐问题。
+13. v12 Broodkeeper 召唤16帧、短受击9帧、死亡16帧（共41真实姿态）已通过源图/裁片/透明padding检查并接入。长动作单张4×4，九帧不是动作上限；死亡原序列回站问题已用显式作者播放顺序修正，未改PNG或逐帧缩放。见 [新素材来源与边界](docs/art/brood_keeper/README.md)。
+
+idle 暂复用 walk 第一帧；弹丸/经验/判定轮廓保留简单代码绘制，六主题事件特效已使用九帧PNG动画。**不是所有动作都已补齐，也不要求所有动作只有九帧**。原PNG未经重绘、缩放或抠图；Godot 中以纹理区域与透明边距处理帧不整齐问题。
 
 ## 验证
+
+v12 修订后真正 clean headless 导入，**37 个入口全部通过**：旧33、作者229项、独立610/66/374共1050项。221个已测运行输入前后及干净副本hash一致；142个旧权威/配置/资产原字节不变。仅ActorDirector表现层泛化真实帧数与安全透明padding，不改AI/伤害/生成/RNG。见 [v12独立报告](docs/validation/independent-v12/QA_REPORT.md)。旧九帧候选及死亡顺序修正前的结果未冒充本版证据；GUI/Windows未运行。下列保留历史版本结果。
 
 v11 已真正 clean headless 导入，**33 个入口全部通过**：旧29入口、作者162项、独立608/50/199共857项。206个已测运行输入与独立快照前后hash完全一致；另核3个独立脚本。136个旧运行脚本/权威配置/资产保持原字节。见 [v11独立报告](docs/validation/independent-v11/QA_REPORT.md)；GUI/Windows实玩仍未运行。以下各版结果保留为历史证据。
 
@@ -91,7 +97,7 @@ HOME=/tmp/moss-home XDG_CONFIG_HOME=/tmp/moss-config XDG_DATA_HOME=/tmp/moss-dat
 
 历史 v6：v6六类真实特效加载共54帧，作者161项表现层检查及独立130项检查通过，包含逐帧边界、固定锚点/scale、链电端点、回收池、暂停重开、伤害/RNG隔离及预警层级。旧全套玩法、经济、敌人、构筑与UI回归继续通过（193/11/213/28/72/25/20/109/133/35/565/216/26及UI结构）。600帧headless smoke通过。详细证据见 `docs/validation/independent-v6/`，历史结果在对应子目录。
 
-自动测试覆盖有限 seed/升级、九帧区域/统一画布/脚底枢轴、动画速度缓存、场景启动/射击击杀/升级重复点击/六波胜利/死亡重开。日志见 `docs/validation/`（v1 历史保留在子目录）；不要只看进程退出码，Godot 某些脚本解析错误也会返回 0，应同时核无 SCRIPT ERROR/ERROR 且出现通过汇总。
+自动测试覆盖有限 seed/升级、真实剪辑长度/区域/统一画布/脚底枢轴、动画速度缓存、场景启动/射击击杀/升级重复点击/六波胜利/死亡重开。日志见 `docs/validation/`（v1 历史保留在子目录）；不要只看进程退出码，Godot 某些脚本解析错误也会返回 0，应同时核无 SCRIPT ERROR/ERROR 且出现通过汇总。
 
 窗口运行与屏幕截图 **BLOCKED**：本云环境 Xorg 无法建立本地监听 socket；一次正常提权启动也在沙箱挂载阶段失败。未绕过权限，未伪造游戏截图。headless 规则通过不等于视觉、手感、性能或 Windows 验收。
 
@@ -105,6 +111,14 @@ HOME=/tmp/moss-home XDG_CONFIG_HOME=/tmp/moss-config XDG_DATA_HOME=/tmp/moss-dat
 godot --headless --editor --path . --import --quit
 godot --headless --path . --script tests/test_game.gd
 godot --headless --path . --script tests/test_modes.gd
+godot --headless --path . --script tests/test_brood_actions.gd
+godot --headless --path . --script tests/independent_brood_parity.gd
+godot --headless --path . --script tests/independent_brood_events.gd
+godot --headless --path . --script tests/independent_brood_assets.gd
+godot --headless --path . --script tests/test_spitter_actions.gd
+godot --headless --path . --script tests/independent_spitter_parity.gd
+godot --headless --path . --script tests/independent_spitter_events.gd
+godot --headless --path . --script tests/independent_spitter_assets.gd
 godot --headless --path . --script tests/test_charger_actions.gd
 godot --headless --path . --script tests/independent_charger_gameplay_parity.gd
 godot --headless --path . --script tests/independent_charger_lifecycle.gd
