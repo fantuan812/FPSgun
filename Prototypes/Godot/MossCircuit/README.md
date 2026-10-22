@@ -1,13 +1,15 @@
-# MOSS CIRCUIT · 苔芯幸存者 v10
+# MOSS CIRCUIT · 苔芯幸存者 v11
 
 原创 Godot 4.6 像素风 arena-survivor 原型。参考“移动避敌、自动攻击、波次升级”的品类结构，不使用《土豆兄弟》的模型、图像、名称或代码。
 
-本版从冻结 v9 复制，**只补冲锋者一种普通敌人的独立动作**：蓄力/冲锋/恢复共用一张分段九帧，受击、死亡各一张九帧。动作按真实 AI 阶段显示，受击结束回到当时的真实阶段，已锁定方向不会追着绕背玩家翻转。帧不会产生二次伤害，不改变伤害、碰撞、生成、经济或 RNG。详见 [冲锋者动作合同与边界](docs/CHARGER_ACTIONS.md)。
+本版基于已发布 v10，**只补远程 Violet Spitter 的射击、受击、死亡三套九帧**。现有表现接口通过数据映射就能复用：原 AI 预警 0.65 秒后同 tick 生成弹体并显示射击帧，再随真实 0.7 秒恢复阶段推进。受击遮挡不延迟发弹、不补播过期射击；接触反馈不会伪造开火。全部运行脚本不改，伤害/弹速/起点/随机与经济不变。见 [远程敌人动作合同与边界](docs/SPITTER_ACTIONS.md)。
+
+v10 冲锋者的蓄力/冲锋/恢复、受击、死亡九帧与已校准接地关键帧完整保留，见 [冲锋者合同](docs/CHARGER_ACTIONS.md)。
 
 v9 已完成的共享战斗/构筑与模式策略继续保留：原 Arena 和 3 房间有限遭遇原型使用同一套战斗，支持受控测试的非相邻推进/不开店结算；仍不是完整地牢。见 [架构与模式合同](docs/ARCHITECTURE_AND_MODES.md)。
 
 v8 的空手九帧身体、六种独立世界武器、主手与三个辅助挂位、独立枪口特效完整保留；[装配与共享发射几何](docs/MODULAR_WEAPONS.md) 不回退成烘焙手枪。
-保留 **6 武器、26 道具、4 武器槽、构筑加权刷新、五种普通敌人与两 Boss**，以及 [此前动作覆盖与本版修正](docs/ACTION_COVERAGE.md)、[六种像素 VFX](docs/PIXEL_VFX.md)、[装备刷新](docs/SHOP_AFFINITY.md)、[道具机制](docs/MECHANISMS.md)、[敌人/Boss](docs/ENEMIES_AND_BOSSES.md)、[经济](docs/BUILD_SYSTEM.md) 和 [UI](ui/README.md)。本批只有冲锋者新增原画，其他普通怪的独立攻击/受击/死亡仍未全部补齐，没有增加音频、存档或联网。
+保留 **6 武器、26 道具、4 武器槽、构筑加权刷新、五种普通敌人与两 Boss**，以及 [此前动作覆盖与本版修正](docs/ACTION_COVERAGE.md)、[六种像素 VFX](docs/PIXEL_VFX.md)、[装备刷新](docs/SHOP_AFFINITY.md)、[道具机制](docs/MECHANISMS.md)、[敌人/Boss](docs/ENEMIES_AND_BOSSES.md)、[经济](docs/BUILD_SYSTEM.md) 和 [UI](ui/README.md)。本批只有 Spitter 新增原画，冲锋者沿用 v10，其他普通怪的独立攻击/受击/死亡仍未全部补齐，没有增加音频、存档或联网。
 
 所有分包请按 [合并解压说明](docs/DELIVERY.md) 放到同一父目录；完整单包直接解压。
 
@@ -59,9 +61,13 @@ v9 房间 HUD 候选图没有通过去环境光晕验收，隔离存入 `art_sou
 
 11. v10 冲锋者三张九帧（27 帧），见 [素材来源与源图限制](docs/art/charger/README.md)。death 首两帧已显式校准接地裁片窗口；PNG/统一尺度不改，仍未做 GUI 整合验收。
 
+12. v11 Spitter 射击、受击、死亡三张九帧（27帧）已通过源图目视/结构门槛并接入，见 [来源与限制](docs/art/spitter/README.md)。它们是高分辨率像素风sprite，并非严格原生低分辨率逐像素动画；最终全回归结果见验证节。
+
 idle 暂复用 walk 第一帧；弹丸/经验/判定轮廓保留简单代码绘制，六主题事件特效已使用九帧PNG动画。**不是“所有动作都已制作九帧”**。原PNG未经重绘、缩放或抠图；Godot 中以纹理区域与透明边距处理帧不整齐问题。
 
 ## 验证
+
+v11 已真正 clean headless 导入，**33 个入口全部通过**：旧29入口、作者162项、独立608/50/199共857项。206个已测运行输入与独立快照前后hash完全一致；另核3个独立脚本。136个旧运行脚本/权威配置/资产保持原字节。见 [v11独立报告](docs/validation/independent-v11/QA_REPORT.md)；GUI/Windows实玩仍未运行。以下各版结果保留为历史证据。
 
 v10 接地关键帧修订后重新 clean headless 导入与 **29 个入口全部通过**：旧 25 个、作者冲锋动作 130 项、独立权威状态 parity/生命周期/资源 366+30+194 项；191 个已测运行输入 hash 一致，见 [最终独立报告](docs/validation/independent-v10/QA_REPORT.md)。旧动作资源计数断言改为精确批准 ID 集合，其余旧断言保留，原 6 动作和旧资源不改。
 

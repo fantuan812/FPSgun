@@ -44,10 +44,35 @@
         "charging",
         "recover"
       ]
+    },
+    "spitter": {
+      "attack": "spitter_shoot",
+      "hurt": "spitter_hurt",
+      "death": "spitter_death",
+      "phase_frames": {
+        "warning": [
+          0,
+          3
+        ],
+        "attack": [
+          4,
+          4
+        ],
+        "recover": [
+          4,
+          8
+        ]
+      },
+      "phase_driven_attack": true,
+      "locked_aim_states": [
+        "warning",
+        "recover"
+      ]
     }
   },
   "hero_modular_manifest": "res://assets/weapon_mounts/hero_modular_manifest.json",
   "additional_manifests": [
-    "res://assets/actions/charger/action_manifest.json"
+    "res://assets/actions/charger/action_manifest.json",
+    "res://assets/actions/spitter/action_manifest.json"
   ]
 }

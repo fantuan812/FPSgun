@@ -9,7 +9,7 @@ func run()->void:
 	var game=load("res://scenes/main.tscn").instantiate()
 	root.add_child(game);game.set_process(false);game._start_run(770)
 	var director=game.actor_anim
-	var expected_ids:Array=["hero_attack","hero_hurt","hero_death","hero_dash","boss_warden_attack","boss_core_attack","charger_charge","charger_hurt","charger_death"]
+	var expected_ids:Array=["hero_attack","hero_hurt","hero_death","hero_dash","boss_warden_attack","boss_core_attack","charger_charge","charger_hurt","charger_death","spitter_shoot","spitter_hurt","spitter_death"]
 	var actual_ids:Array=director.assets.keys();expected_ids.sort();actual_ids.sort()
 	check(actual_ids==expected_ids,"exact approved authored action ID set")
 	for id in director.assets:

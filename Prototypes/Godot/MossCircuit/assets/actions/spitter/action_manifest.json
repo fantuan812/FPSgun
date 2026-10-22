@@ -1,0 +1,437 @@
+{
+  "schema_version": 1,
+  "actions": {
+    "spitter_shoot": {
+      "path": "res://assets/actions/spitter/spitter_shoot.png",
+      "frames": [
+        {
+          "region": [
+            0,
+            36,
+            418,
+            320
+          ],
+          "alpha_bbox": [
+            98,
+            87,
+            225,
+            213
+          ]
+        },
+        {
+          "region": [
+            418,
+            36,
+            418,
+            320
+          ],
+          "alpha_bbox": [
+            85,
+            101,
+            247,
+            202
+          ]
+        },
+        {
+          "region": [
+            836,
+            36,
+            418,
+            320
+          ],
+          "alpha_bbox": [
+            86,
+            95,
+            238,
+            209
+          ]
+        },
+        {
+          "region": [
+            0,
+            451,
+            418,
+            320
+          ],
+          "alpha_bbox": [
+            88,
+            103,
+            262,
+            196
+          ]
+        },
+        {
+          "region": [
+            418,
+            451,
+            418,
+            320
+          ],
+          "alpha_bbox": [
+            66,
+            83,
+            285,
+            217
+          ]
+        },
+        {
+          "region": [
+            836,
+            451,
+            418,
+            320
+          ],
+          "alpha_bbox": [
+            77,
+            89,
+            260,
+            214
+          ]
+        },
+        {
+          "region": [
+            0,
+            840,
+            418,
+            320
+          ],
+          "alpha_bbox": [
+            98,
+            85,
+            230,
+            215
+          ]
+        },
+        {
+          "region": [
+            418,
+            840,
+            418,
+            320
+          ],
+          "alpha_bbox": [
+            95,
+            89,
+            235,
+            211
+          ]
+        },
+        {
+          "region": [
+            836,
+            840,
+            418,
+            320
+          ],
+          "alpha_bbox": [
+            85,
+            92,
+            232,
+            211
+          ]
+        }
+      ],
+      "anchor": [
+        0.5,
+        0.9375
+      ],
+      "reference_height": 213,
+      "release_frame": 4,
+      "facing": "left",
+      "source_sha256": "c5da82006497fce441104b245528c5ef5a414176983e120a304536cf9e6eab48",
+      "row_origins_y": [
+        36,
+        451,
+        840
+      ]
+    },
+    "spitter_hurt": {
+      "path": "res://assets/actions/spitter/spitter_hurt.png",
+      "frames": [
+        {
+          "region": [
+            0,
+            40,
+            418,
+            320
+          ],
+          "alpha_bbox": [
+            82,
+            78,
+            244,
+            222
+          ]
+        },
+        {
+          "region": [
+            418,
+            40,
+            418,
+            320
+          ],
+          "alpha_bbox": [
+            84,
+            75,
+            248,
+            225
+          ]
+        },
+        {
+          "region": [
+            836,
+            40,
+            418,
+            320
+          ],
+          "alpha_bbox": [
+            85,
+            87,
+            260,
+            208
+          ]
+        },
+        {
+          "region": [
+            0,
+            458,
+            418,
+            320
+          ],
+          "alpha_bbox": [
+            109,
+            89,
+            233,
+            206
+          ]
+        },
+        {
+          "region": [
+            418,
+            458,
+            418,
+            320
+          ],
+          "alpha_bbox": [
+            68,
+            87,
+            260,
+            210
+          ]
+        },
+        {
+          "region": [
+            836,
+            458,
+            418,
+            320
+          ],
+          "alpha_bbox": [
+            72,
+            88,
+            260,
+            212
+          ]
+        },
+        {
+          "region": [
+            0,
+            857,
+            418,
+            320
+          ],
+          "alpha_bbox": [
+            82,
+            82,
+            243,
+            218
+          ]
+        },
+        {
+          "region": [
+            418,
+            857,
+            418,
+            320
+          ],
+          "alpha_bbox": [
+            78,
+            79,
+            244,
+            221
+          ]
+        },
+        {
+          "region": [
+            836,
+            857,
+            418,
+            320
+          ],
+          "alpha_bbox": [
+            82,
+            77,
+            244,
+            223
+          ]
+        }
+      ],
+      "anchor": [
+        0.5,
+        0.9375
+      ],
+      "reference_height": 222,
+      "release_frame": 0,
+      "facing": "left",
+      "source_sha256": "979a1912618d20bffcd44fc8d497329aa920c53fa5f71fe7bfd791bfd0dc4b80",
+      "row_origins_y": [
+        40,
+        458,
+        857
+      ]
+    },
+    "spitter_death": {
+      "path": "res://assets/actions/spitter/spitter_death.png",
+      "frames": [
+        {
+          "region": [
+            0,
+            68,
+            418,
+            320
+          ],
+          "alpha_bbox": [
+            78,
+            48,
+            264,
+            252
+          ]
+        },
+        {
+          "region": [
+            418,
+            68,
+            418,
+            320
+          ],
+          "alpha_bbox": [
+            76,
+            73,
+            276,
+            227
+          ]
+        },
+        {
+          "region": [
+            836,
+            68,
+            418,
+            320
+          ],
+          "alpha_bbox": [
+            66,
+            97,
+            285,
+            203
+          ]
+        },
+        {
+          "region": [
+            0,
+            492,
+            418,
+            320
+          ],
+          "alpha_bbox": [
+            67,
+            87,
+            303,
+            212
+          ]
+        },
+        {
+          "region": [
+            418,
+            492,
+            418,
+            320
+          ],
+          "alpha_bbox": [
+            60,
+            126,
+            313,
+            174
+          ]
+        },
+        {
+          "region": [
+            836,
+            492,
+            418,
+            320
+          ],
+          "alpha_bbox": [
+            46,
+            151,
+            331,
+            150
+          ]
+        },
+        {
+          "region": [
+            0,
+            885,
+            418,
+            320
+          ],
+          "alpha_bbox": [
+            43,
+            146,
+            329,
+            153
+          ]
+        },
+        {
+          "region": [
+            418,
+            885,
+            418,
+            320
+          ],
+          "alpha_bbox": [
+            48,
+            147,
+            329,
+            152
+          ]
+        },
+        {
+          "region": [
+            836,
+            885,
+            418,
+            320
+          ],
+          "alpha_bbox": [
+            46,
+            148,
+            333,
+            153
+          ]
+        }
+      ],
+      "anchor": [
+        0.5,
+        0.9375
+      ],
+      "reference_height": 252,
+      "release_frame": 0,
+      "facing": "left",
+      "source_sha256": "5f19f18ff386439fd75780311776217b993cdf72e5b24b854fc6ac32a7cd9807",
+      "row_origins_y": [
+        68,
+        492,
+        885
+      ]
+    }
+  }
+}

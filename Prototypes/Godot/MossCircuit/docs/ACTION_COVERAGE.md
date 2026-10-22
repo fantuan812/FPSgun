@@ -72,3 +72,7 @@ DISPLAY SETTINGS 的 Reduce flashes 会立即取消受击额外白色提亮，�
 ## v10 局部补齐（不改历史记录）
 
 冲锋者已新增 charger_charge（0–3蓄力/4–6冲锋/7–8恢复）、charger_hurt、charger_death，各9帧；walk/idle沿用旧图。采用profile段映射、锁定aim镜像和实时phase恢复，不改变EnemyAI。其他普通敌人仍使用原来的共享程序化反馈，不能把本节解释成五类都已完成。详见 [本版合同](CHARGER_ACTIONS.md) 和 [原图限制](art/charger/README.md)。
+
+## v11：普通远程 Spitter
+
+本批仅射击0–3预警/4释放/5–8恢复、受击与死亡三套原画；三张源图已通过目视/结构门槛并接入，33入口最终clean全回归已通过（非GUI渲染验收）。运行脚本不改，复用v10数据驱动映射；其他三种普通敌人仍非全独立原画。详见 [本批合同](SPITTER_ACTIONS.md)。
