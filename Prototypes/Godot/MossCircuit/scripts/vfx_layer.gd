@@ -1,6 +1,7 @@
 extends Node2D
 ## Presentation only: no game state references, signals, RNG or damage callbacks.
 ## A bounded reusable Sprite2D pool advances only when main explicitly ticks it.
+var reduced_flashes := false
 var specs: Dictionary = {}
 var resources: Dictionary = {}
 var active: Array = []
@@ -81,6 +82,8 @@ func play(id: String,pos: Vector2,options: Dictionary = {}) -> bool:
 func _present(item: Dictionary) -> void:
 	var sprite: Sprite2D = item.sprite
 	var spec: Dictionary = specs[item.id]
+	sprite.modulate = item.options.get("tint",Color.WHITE)
+	if reduced_flashes: sprite.modulate.a *= .4
 	sprite.position = item.pos
 	sprite.rotation = float(item.options.get("angle",0))
 	sprite.visible = not item.fallback and item.age >= float(spec.get("start_delay",0))
@@ -139,9 +142,9 @@ func _draw() -> void:
 	for item in active:
 		if not item.fallback or item.age < float(specs[item.id].get("start_delay",0)): continue
 		if item.options.has("end"):
-			draw_line(item.pos,item.options.end,Color("bbf1fa"),2)
+			draw_line(item.pos,item.options.end,Color(.73,.95,.98,.4 if reduced_flashes else 1.0),2)
 		else:
-			draw_circle(item.pos,minf(12,item.options.get("radius",12)),Color("f8d48b"),false,2)
+			draw_circle(item.pos,minf(12,item.options.get("radius",12)),Color(.97,.83,.55,.4 if reduced_flashes else 1.0),false,2)
 
 static func valid_spec(spec: Dictionary) -> bool:
 	for key in ["fps","duration","start_delay"]:
@@ -155,3 +158,7 @@ static func valid_spec(spec: Dictionary) -> bool:
 	for number in size:
 		if not (number is int or number is float) or not is_finite(float(number)) or number <= 0: return false
 	return true
+
+func refresh_style() -> void:
+	for item in active:_present(item)
+	queue_redraw()

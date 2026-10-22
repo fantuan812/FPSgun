@@ -1,0 +1,950 @@
+{
+  "schema_version": 1,
+  "actions": {
+    "boss_core_attack": {
+      "path": "res://assets/actions/boss_core_attack.png",
+      "frames": [
+        {
+          "region": [
+            0,
+            67,
+            418,
+            340
+          ],
+          "alpha_bbox": [
+            114,
+            92,
+            212,
+            231
+          ],
+          "source_frame": 0
+        },
+        {
+          "region": [
+            418,
+            67,
+            418,
+            340
+          ],
+          "alpha_bbox": [
+            100,
+            87,
+            231,
+            241
+          ],
+          "source_frame": 1
+        },
+        {
+          "region": [
+            836,
+            67,
+            418,
+            340
+          ],
+          "alpha_bbox": [
+            82,
+            87,
+            266,
+            236
+          ],
+          "source_frame": 2
+        },
+        {
+          "region": [
+            0,
+            458,
+            418,
+            340
+          ],
+          "alpha_bbox": [
+            88,
+            73,
+            270,
+            255
+          ],
+          "source_frame": 3
+        },
+        {
+          "region": [
+            418,
+            458,
+            418,
+            340
+          ],
+          "alpha_bbox": [
+            79,
+            84,
+            264,
+            244
+          ],
+          "source_frame": 4
+        },
+        {
+          "region": [
+            836,
+            458,
+            418,
+            340
+          ],
+          "alpha_bbox": [
+            102,
+            98,
+            246,
+            229
+          ],
+          "source_frame": 5
+        },
+        {
+          "region": [
+            0,
+            844,
+            418,
+            340
+          ],
+          "alpha_bbox": [
+            102,
+            95,
+            262,
+            232
+          ],
+          "source_frame": 6
+        },
+        {
+          "region": [
+            418,
+            844,
+            418,
+            340
+          ],
+          "alpha_bbox": [
+            62,
+            101,
+            280,
+            227
+          ],
+          "source_frame": 7
+        },
+        {
+          "region": [
+            836,
+            844,
+            418,
+            340
+          ],
+          "alpha_bbox": [
+            113,
+            102,
+            209,
+            226
+          ],
+          "source_frame": 8
+        }
+      ],
+      "anchor": [
+        0.5,
+        0.9647058823529412
+      ],
+      "reference_height": 231,
+      "sheet_size": [
+        1254,
+        1254
+      ],
+      "row_region_origins_y": [
+        67,
+        458,
+        844
+      ],
+      "loop": false,
+      "sha256": "aff001c3a1a5ad5b479f6e7c0cc6d598bcc98c7fb49254df49e7bbad7472728b",
+      "alpha_threshold": 8,
+      "release_frame": 4
+    },
+    "boss_warden_attack": {
+      "path": "res://assets/actions/boss_warden_attack.png",
+      "frames": [
+        {
+          "region": [
+            0,
+            125,
+            418,
+            340
+          ],
+          "alpha_bbox": [
+            80,
+            114,
+            280,
+            213
+          ],
+          "source_frame": 0
+        },
+        {
+          "region": [
+            418,
+            125,
+            418,
+            340
+          ],
+          "alpha_bbox": [
+            87,
+            136,
+            247,
+            191
+          ],
+          "source_frame": 1
+        },
+        {
+          "region": [
+            836,
+            125,
+            418,
+            340
+          ],
+          "alpha_bbox": [
+            63,
+            71,
+            284,
+            257
+          ],
+          "source_frame": 2
+        },
+        {
+          "region": [
+            0,
+            508,
+            418,
+            340
+          ],
+          "alpha_bbox": [
+            105,
+            17,
+            266,
+            302
+          ],
+          "source_frame": 3
+        },
+        {
+          "region": [
+            418,
+            508,
+            418,
+            340
+          ],
+          "alpha_bbox": [
+            78,
+            103,
+            267,
+            225
+          ],
+          "source_frame": 4
+        },
+        {
+          "region": [
+            836,
+            508,
+            418,
+            340
+          ],
+          "alpha_bbox": [
+            24,
+            160,
+            345,
+            167
+          ],
+          "source_frame": 5
+        },
+        {
+          "region": [
+            0,
+            843,
+            418,
+            340
+          ],
+          "alpha_bbox": [
+            78,
+            157,
+            314,
+            171
+          ],
+          "source_frame": 6
+        },
+        {
+          "region": [
+            418,
+            843,
+            418,
+            340
+          ],
+          "alpha_bbox": [
+            77,
+            98,
+            264,
+            224
+          ],
+          "source_frame": 7
+        },
+        {
+          "region": [
+            836,
+            843,
+            418,
+            340
+          ],
+          "alpha_bbox": [
+            53,
+            123,
+            282,
+            205
+          ],
+          "source_frame": 8
+        }
+      ],
+      "anchor": [
+        0.5,
+        0.9647058823529412
+      ],
+      "reference_height": 213,
+      "sheet_size": [
+        1254,
+        1254
+      ],
+      "row_region_origins_y": [
+        125,
+        508,
+        843
+      ],
+      "loop": false,
+      "sha256": "4a2865fcd775af7503630c67146f05537f9ec987af15705a92c8d51f10fa49d5",
+      "alpha_threshold": 8,
+      "release_frame": 5
+    },
+    "hero_attack": {
+      "path": "res://assets/actions/hero_attack.png",
+      "frames": [
+        {
+          "region": [
+            0,
+            37,
+            418,
+            340
+          ],
+          "alpha_bbox": [
+            136,
+            120,
+            151,
+            208
+          ],
+          "source_frame": 0
+        },
+        {
+          "region": [
+            418,
+            37,
+            418,
+            340
+          ],
+          "alpha_bbox": [
+            131,
+            123,
+            179,
+            205
+          ],
+          "source_frame": 1
+        },
+        {
+          "region": [
+            836,
+            37,
+            418,
+            340
+          ],
+          "alpha_bbox": [
+            125,
+            120,
+            188,
+            208
+          ],
+          "source_frame": 2
+        },
+        {
+          "region": [
+            0,
+            441,
+            418,
+            340
+          ],
+          "alpha_bbox": [
+            130,
+            123,
+            259,
+            204
+          ],
+          "source_frame": 3
+        },
+        {
+          "region": [
+            418,
+            441,
+            418,
+            340
+          ],
+          "alpha_bbox": [
+            118,
+            117,
+            244,
+            211
+          ],
+          "source_frame": 4
+        },
+        {
+          "region": [
+            836,
+            441,
+            418,
+            340
+          ],
+          "alpha_bbox": [
+            127,
+            122,
+            192,
+            205
+          ],
+          "source_frame": 5
+        },
+        {
+          "region": [
+            0,
+            830,
+            418,
+            340
+          ],
+          "alpha_bbox": [
+            129,
+            119,
+            166,
+            209
+          ],
+          "source_frame": 6
+        },
+        {
+          "region": [
+            418,
+            830,
+            418,
+            340
+          ],
+          "alpha_bbox": [
+            125,
+            119,
+            152,
+            209
+          ],
+          "source_frame": 7
+        },
+        {
+          "region": [
+            836,
+            830,
+            418,
+            340
+          ],
+          "alpha_bbox": [
+            124,
+            119,
+            153,
+            209
+          ],
+          "source_frame": 8
+        }
+      ],
+      "anchor": [
+        0.5,
+        0.9647058823529412
+      ],
+      "reference_height": 208,
+      "sheet_size": [
+        1254,
+        1254
+      ],
+      "row_region_origins_y": [
+        37,
+        441,
+        830
+      ],
+      "loop": false,
+      "sha256": "7aa9c18439497b7fd43f8ac8f1fa95d4fef20cc398ff359e8e370da24781ce58",
+      "alpha_threshold": 8,
+      "release_frame": 3
+    },
+    "hero_dash": {
+      "path": "res://assets/actions/hero_dash.png",
+      "frames": [
+        {
+          "region": [
+            0,
+            74,
+            418,
+            340
+          ],
+          "alpha_bbox": [
+            115,
+            53,
+            195,
+            275
+          ],
+          "source_frame": 0
+        },
+        {
+          "region": [
+            418,
+            74,
+            418,
+            340
+          ],
+          "alpha_bbox": [
+            123,
+            100,
+            211,
+            228
+          ],
+          "source_frame": 1
+        },
+        {
+          "region": [
+            836,
+            74,
+            418,
+            340
+          ],
+          "alpha_bbox": [
+            125,
+            86,
+            218,
+            242
+          ],
+          "source_frame": 2
+        },
+        {
+          "region": [
+            0,
+            448,
+            418,
+            340
+          ],
+          "alpha_bbox": [
+            101,
+            102,
+            267,
+            226
+          ],
+          "source_frame": 3
+        },
+        {
+          "region": [
+            418,
+            448,
+            418,
+            340
+          ],
+          "alpha_bbox": [
+            76,
+            120,
+            327,
+            191
+          ],
+          "source_frame": 4
+        },
+        {
+          "region": [
+            836,
+            448,
+            418,
+            340
+          ],
+          "alpha_bbox": [
+            93,
+            117,
+            241,
+            211
+          ],
+          "source_frame": 5
+        },
+        {
+          "region": [
+            0,
+            858,
+            418,
+            340
+          ],
+          "alpha_bbox": [
+            127,
+            68,
+            207,
+            256
+          ],
+          "source_frame": 6
+        },
+        {
+          "region": [
+            418,
+            858,
+            418,
+            340
+          ],
+          "alpha_bbox": [
+            115,
+            67,
+            196,
+            261
+          ],
+          "source_frame": 7
+        },
+        {
+          "region": [
+            836,
+            858,
+            418,
+            340
+          ],
+          "alpha_bbox": [
+            116,
+            57,
+            203,
+            271
+          ],
+          "source_frame": 8
+        }
+      ],
+      "anchor": [
+        0.5,
+        0.9647058823529412
+      ],
+      "reference_height": 275,
+      "sheet_size": [
+        1254,
+        1254
+      ],
+      "row_region_origins_y": [
+        74,
+        448,
+        858
+      ],
+      "loop": false,
+      "sha256": "9dd43ba5700313334fa7ddf479d55c5ef2703a2cd5e98b43cc0f61f202d47da4",
+      "alpha_threshold": 8
+    },
+    "hero_death": {
+      "path": "res://assets/actions/hero_death.png",
+      "frames": [
+        {
+          "region": [
+            0,
+            88,
+            418,
+            340
+          ],
+          "alpha_bbox": [
+            138,
+            51,
+            197,
+            276
+          ],
+          "source_frame": 0
+        },
+        {
+          "region": [
+            418,
+            88,
+            418,
+            340
+          ],
+          "alpha_bbox": [
+            119,
+            69,
+            202,
+            258
+          ],
+          "source_frame": 1
+        },
+        {
+          "region": [
+            836,
+            88,
+            418,
+            340
+          ],
+          "alpha_bbox": [
+            97,
+            103,
+            202,
+            225
+          ],
+          "source_frame": 2
+        },
+        {
+          "region": [
+            0,
+            487,
+            418,
+            340
+          ],
+          "alpha_bbox": [
+            142,
+            99,
+            208,
+            225
+          ],
+          "source_frame": 3
+        },
+        {
+          "region": [
+            418,
+            487,
+            418,
+            340
+          ],
+          "alpha_bbox": [
+            86,
+            111,
+            241,
+            213
+          ],
+          "source_frame": 4
+        },
+        {
+          "region": [
+            836,
+            487,
+            418,
+            340
+          ],
+          "alpha_bbox": [
+            63,
+            147,
+            277,
+            181
+          ],
+          "source_frame": 5
+        },
+        {
+          "region": [
+            0,
+            850,
+            418,
+            340
+          ],
+          "alpha_bbox": [
+            81,
+            147,
+            302,
+            181
+          ],
+          "source_frame": 6
+        },
+        {
+          "region": [
+            418,
+            850,
+            418,
+            340
+          ],
+          "alpha_bbox": [
+            74,
+            156,
+            293,
+            172
+          ],
+          "source_frame": 7
+        },
+        {
+          "region": [
+            836,
+            850,
+            418,
+            340
+          ],
+          "alpha_bbox": [
+            67,
+            155,
+            291,
+            173
+          ],
+          "source_frame": 8
+        }
+      ],
+      "anchor": [
+        0.5,
+        0.9647058823529412
+      ],
+      "reference_height": 276,
+      "sheet_size": [
+        1254,
+        1254
+      ],
+      "row_region_origins_y": [
+        88,
+        487,
+        850
+      ],
+      "loop": false,
+      "sha256": "2deec59bdb8527c97f36528eb1bdd650bc6410c34ac050b77546a20550206e1a",
+      "alpha_threshold": 8
+    },
+    "hero_hurt": {
+      "path": "res://assets/actions/hero_hurt.png",
+      "frames": [
+        {
+          "region": [
+            0,
+            59,
+            418,
+            340
+          ],
+          "alpha_bbox": [
+            123,
+            74,
+            179,
+            254
+          ],
+          "source_frame": 0
+        },
+        {
+          "region": [
+            418,
+            59,
+            418,
+            340
+          ],
+          "alpha_bbox": [
+            108,
+            84,
+            204,
+            244
+          ],
+          "source_frame": 1
+        },
+        {
+          "region": [
+            836,
+            59,
+            418,
+            340
+          ],
+          "alpha_bbox": [
+            83,
+            95,
+            231,
+            233
+          ],
+          "source_frame": 2
+        },
+        {
+          "region": [
+            0,
+            452,
+            418,
+            340
+          ],
+          "alpha_bbox": [
+            96,
+            96,
+            238,
+            230
+          ],
+          "source_frame": 3
+        },
+        {
+          "region": [
+            418,
+            452,
+            418,
+            340
+          ],
+          "alpha_bbox": [
+            112,
+            85,
+            208,
+            243
+          ],
+          "source_frame": 4
+        },
+        {
+          "region": [
+            836,
+            452,
+            418,
+            340
+          ],
+          "alpha_bbox": [
+            111,
+            66,
+            192,
+            262
+          ],
+          "source_frame": 5
+        },
+        {
+          "region": [
+            0,
+            843,
+            418,
+            340
+          ],
+          "alpha_bbox": [
+            122,
+            60,
+            195,
+            268
+          ],
+          "source_frame": 6
+        },
+        {
+          "region": [
+            418,
+            843,
+            418,
+            340
+          ],
+          "alpha_bbox": [
+            113,
+            63,
+            179,
+            265
+          ],
+          "source_frame": 7
+        },
+        {
+          "region": [
+            836,
+            843,
+            418,
+            340
+          ],
+          "alpha_bbox": [
+            109,
+            72,
+            181,
+            256
+          ],
+          "source_frame": 8
+        }
+      ],
+      "anchor": [
+        0.5,
+        0.9647058823529412
+      ],
+      "reference_height": 254,
+      "sheet_size": [
+        1254,
+        1254
+      ],
+      "row_region_origins_y": [
+        59,
+        452,
+        843
+      ],
+      "loop": false,
+      "sha256": "062e38b2513ef87d1496368ccc500774df44804b4fcadfb0b13b91cf804fdb02",
+      "alpha_threshold": 8
+    }
+  }
+}

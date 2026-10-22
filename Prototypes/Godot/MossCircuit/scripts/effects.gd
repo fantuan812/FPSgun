@@ -64,7 +64,7 @@ func process(event: Dictionary, context: Dictionary) -> Array:
 			if phase_charge > 0 and active.has("phase_capacitor"):
 				phase_charge = 0
 				result.append({"kind":"phase","pos":event.pos})
-			if event.get("weapon","") == "return_disc" and event.get("returning",false) and ready("return_spool",time,.6): result.append({"kind":"heal","amount":1.0})
+			if event.get("weapon","") == "return_disc" and event.get("returning",false) and ready("return_spool",time,.6): result.append({"kind":"heal","amount":1.0,"source_item":"return_spool"})
 			if ready("arc_relay",time,.6):
 				var candidates: Array = context.enemies.filter(func(e): return e.hp > 0 and e.id != event.target and e.pos.distance_to(event.pos) <= 220)
 				candidates.sort_custom(func(a,b):
@@ -79,11 +79,11 @@ func process(event: Dictionary, context: Dictionary) -> Array:
 				if not ids.is_empty():
 					if chain_charges > 0: chain_charges -= 1
 					result.append({"kind":"chain","targets":ids,"pos":event.pos,"damage":context.damage * .4,"source":"chain","depth":1})
-			if context.hp < context.max_hp * .4 and ready("blood_valve",time,1): result.append({"kind":"heal","amount":3.0})
+			if context.hp < context.max_hp * .4 and ready("blood_valve",time,1): result.append({"kind":"heal","amount":3.0,"source_item":"blood_valve"})
 		"kill":
 			if source == "primary" and event.get("depth",0) == 0 and active.has("kill_cell"):
 				result.append({"kind":"orb","pos":event.pos})
-			if source == "mine" and pair("blood_valve","scrap_mine"): result.append({"kind":"heal","amount":5.0})
+			if source == "mine" and pair("blood_valve","scrap_mine"): result.append({"kind":"heal","amount":5.0,"source_item":"blood_mines"})
 		"pickup":
 			if source == "energy":
 				if pair("arc_relay","kill_cell"): chain_charges = mini(3,chain_charges + 1)

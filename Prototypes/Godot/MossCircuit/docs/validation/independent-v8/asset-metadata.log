@@ -1,0 +1,9 @@
+PASS hero_attack regions, alpha, safe gutters, unique frames, normalized anchors, checksum
+PASS rivet_gun regions, alpha, safe gutters, unique frames, normalized anchors, checksum
+PASS scrap_shotgun regions, alpha, safe gutters, unique frames, normalized anchors, checksum
+PASS rail_lance regions, alpha, safe gutters, unique frames, normalized anchors, checksum
+PASS orbit_saw regions, alpha, safe gutters, unique frames, normalized anchors, checksum
+PASS return_disc regions, alpha, safe gutters, unique frames, normalized anchors, checksum
+PASS shock_mortar regions, alpha, safe gutters, unique frames, normalized anchors, checksum
+LIMITATION: archived atlas has visible halo and is no longer loaded. Individual sprites visually improved; minor low-alpha edge specks remain; GUI acceptance not established.
+PASS: empty-hand and six weapon identity were visually inspected; code cannot prove semantic absence of baked weapons. GUI compositing/timing not covered.

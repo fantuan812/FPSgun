@@ -1,0 +1,25 @@
+{
+  "manifest": "res://assets/actions/action_manifest.json",
+  "corpse_cap": 40,
+  "durations": {
+    "attack": 0.28,
+    "hurt": 0.27,
+    "dash": 0.16,
+    "death": 0.72
+  },
+  "profiles": {
+    "hero": {
+      "attack": "hero_attack",
+      "hurt": "hero_hurt",
+      "dash": "hero_dash",
+      "death": "hero_death"
+    },
+    "boss_warden": {
+      "attack": "boss_warden_attack"
+    },
+    "boss_core": {
+      "attack": "boss_core_attack"
+    }
+  },
+  "hero_modular_manifest": "res://assets/weapon_mounts/hero_modular_manifest.json"
+}

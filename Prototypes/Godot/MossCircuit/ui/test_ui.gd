@@ -166,6 +166,46 @@ func run() -> void:
 	check(bias_text.contains("PREFERRED TAGS: melee") and not bias_text.contains("PREFERRED TAGS: electric"), "sold-build snapshot updates immediately")
 	check(bias_text.contains("DRAW-TIME RELATIVE WEIGHT: x2.50"), "existing offer weight remains draw-time snapshot")
 	check(view.offers[1].weight_multiplier == 2.5, "UI did not recalculate sampling weight")
+	view.actor_state = "dash"; view.dash_cooldown = 2.3
+	ui.update_hud(view)
+	check(ui.hud_action.text == "DASH  /  DASH 2.3s", "actual actor state and cooldown shown")
+	await process_frame; await process_frame
+	check(ui.hud_action.text == "DASH  /  DASH 2.3s", "UI does not advance cooldown itself")
+	check(ui.hud.size.x <= 960 and ui.hud_action.get_global_rect().end.x <= 960, "action readout fits HUD")
+	view.actor_state = "idle"; view.dash_cooldown = 0
+	ui.update_hud(view)
+	check(ui.hud_action.text == "IDLE  /  DASH READY", "ready state resets after restart snapshot")
+	view.actor_state = "death"; ui.update_hud(view)
+	check(ui.hud_action.text.contains("LOCKED"), "death does not misleadingly advertise dash ready")
+	view.erase("actor_state"); ui.update_hud(view)
+	check(ui.hud_action.text.is_empty(), "missing actor snapshot clears stale readout")
+	view.settings = {"reduced_flashes": false}
+	var before := received.size()
+	ui.show_settings(view); await process_frame; await process_frame
+	check(received.size() == before, "opening settings emits no change")
+	check(ui.body.size.x <= ui.modal.size.x and ui.body.size.y <= ui.modal.size.y, "settings fits viewport")
+	var toggle: CheckButton
+	for button in buttons(ui.modal):
+		if button is CheckButton: toggle = button
+	check(toggle != null and toggle.has_focus() and not toggle.button_pressed, "settings toggle initial value and keyboard focus")
+	toggle.button_pressed = true
+	check(received.back() == ["set_setting", {"key": "reduced_flashes", "value": true}], "toggle emits controller-owned setting intent")
+	check(view.settings.reduced_flashes == false, "UI does not mutate settings snapshot")
+	view.settings.reduced_flashes = true
+	ui.show_settings(view); await process_frame
+	for button in buttons(ui.modal):
+		if button is CheckButton: check(button.button_pressed, "reopened settings reflects session value")
+		if button.text == "BACK": button.pressed.emit()
+	check(received.back() == ["close_settings", {}], "settings close intent")
+	check(all_text(ui.modal).contains("not saved to disk") and all_text(ui.modal).contains("shared frames"), "settings states persistence and animation limitations")
+	ui.show_pause(); await process_frame
+	for button in buttons(ui.modal):
+		if button.text == "DISPLAY SETTINGS": button.pressed.emit()
+	check(received.back() == ["settings", {}], "pause opens settings")
+	ui.show_title(); await process_frame
+	for button in buttons(ui.modal):
+		if button.text == "DISPLAY SETTINGS": button.pressed.emit()
+	check(received.back() == ["settings", {}], "title opens settings")
 	ui.hide_modal()
 	check(not ui.modal_visible(), "hide modal")
 	check(view.coins == 0, "UI did not mutate coins")

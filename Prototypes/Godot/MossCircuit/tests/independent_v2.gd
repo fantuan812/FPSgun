@@ -66,8 +66,11 @@ func run() -> void:
 	coins = game.build.coins
 	check(not game._refresh_shop(gen) and game.build.coins == coins, "old refresh rejected")
 	var elapsed_before: float = game.elapsed
+	var frame_before:int=game.hero.frame
+	var age_before:float=game.actor_anim.actors[0].age
+	var walk_before:float=game.actor_anim.actors[0].walk_time
 	game._process(1)
-	check(game.elapsed == elapsed_before and game.hero.speed_scale == 0, "shop pauses simulation")
+	check(game.elapsed == elapsed_before and game.hero.frame==frame_before and game.actor_anim.actors[0].age==age_before and game.actor_anim.actors[0].walk_time==walk_before and not game.hero.is_playing(), "shop pauses simulation")
 	gen = game.shop_generation
 	game._leave_shop(gen)
 	check(game.state == "playing" and not game._buy(0,gen), "leave rejects purchases")

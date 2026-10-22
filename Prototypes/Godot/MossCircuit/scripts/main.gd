@@ -1,4 +1,13 @@
 extends Node2D
+const WeaponRig = preload("res://scripts/weapon_rig.gd")
+var weapon_rig:Node2D
+const ActorDirector = preload("res://scripts/actor_director.gd")
+var actor_anim = ActorDirector.new()
+var settings := {"reduced_flashes":false}
+var settings_return := "title"
+var visual_cooldowns:Dictionary={}
+var result_pending := false
+var result_wait := 0.0
 const Rules = preload("res://scripts/rules.gd")
 const Effects = preload("res://scripts/effects.gd")
 const EnemyAI = preload("res://scripts/enemy_ai.gd")
@@ -94,6 +103,12 @@ func _ready() -> void:
 	camera.zoom = Vector2.ONE
 	hero = Art.actor("res://assets/hero_walk.png", 64.0, 11.0)
 	add_child(hero)
+	actor_anim.load_default()
+	actor_anim.register_actor(0,hero,"hero",64.0)
+	hero.z_index=2
+	weapon_rig=WeaponRig.new()
+	add_child(weapon_rig)
+	weapon_rig.load_default()
 	vfx = VFX.new()
 	add_child(vfx)
 	vfx.load_default()
@@ -116,6 +131,18 @@ func _build_ui() -> void:
 
 
 func _title() -> void:
+	weapon_rig.clear()
+	enemies.clear()
+	bullets.clear()
+	enemy_bullets.clear()
+	pickups.clear()
+	flashes.clear()
+	pending_blasts.clear()
+	hazards.clear()
+	effect_visuals.clear()
+	visual_cooldowns.clear()
+	result_pending = false
+	actor_anim.clear()
 	vfx.clear()
 	telegraphs.show_markers([])
 	state = "title"
@@ -123,10 +150,14 @@ func _title() -> void:
 
 
 func _start_run(seed_value: int) -> void:
+	weapon_rig.clear()
+	visual_cooldowns.clear()
+	result_pending = false
+	actor_anim.clear()
 	vfx.clear()
 	telegraphs.show_markers([])
 	for e in enemies:
-		e.sprite.queue_free()
+		if is_instance_valid(e.sprite):e.sprite.queue_free()
 	enemies.clear()
 	bullets.clear()
 	pickups.clear()
@@ -196,11 +227,19 @@ func _resume() -> void:
 
 func _process(delta: float) -> void:
 	if state == "playing":
+		weapon_rig.advance(minf(delta,.05))
+		actor_anim.advance(minf(delta,.05))
 		vfx.advance(minf(delta,0.05))
 		_simulate(minf(delta, 0.05))
-	hero.speed_scale = 1.0 if state == "playing" else 0.0
-	for e in enemies: e.sprite.speed_scale = 1.0 if state == "playing" else 0.0
+	elif state in ["dead","won"]:
+		actor_anim.advance(minf(delta,.05),true)
+		if state=="dead" and result_pending:
+			result_wait-=minf(delta,.05)
+			if result_wait<=0:
+				result_pending=false
+				_show_result(false)
 	hero.position = player_pos.round()
+	_sync_weapon_rig()
 	camera.position = Vector2(clampf(player_pos.x, 480, config.arena.width - 480) if config.arena.width >= 960 else config.arena.width * 0.5, clampf(player_pos.y, 270, config.arena.height - 270) if config.arena.height >= 540 else config.arena.height * 0.5)
 	_update_hud()
 	_sync_telegraphs()
@@ -221,15 +260,22 @@ func _simulate(dt: float) -> void:
 	player_pos += direction * stats.speed * dt * (3.0 if stats.dash_time > 0 else 1.0)
 	player_pos = player_pos.clamp(Vector2(24, 24), Vector2(config.arena.width - 24, config.arena.height - 24))
 	if direction != Vector2.ZERO:
-		hero.play("walk")
-		if direction.x != 0: hero.flip_h = direction.x < 0
-	else: hero.play("idle")
+		actor_anim.set_phase(0,"move")
+		if direction.x != 0 and actor_anim.state_of(0)!="attack": hero.flip_h = direction.x < 0
+	else: actor_anim.set_phase(0,"idle")
 	hero.modulate = Color(1, 0.5, 0.45) if hurt_clock > 0.5 else Color.WHITE
 	_ensure_boss()
 	spawn_clock -= dt
 	if spawn_clock <= 0:
 		_spawn_enemy()
 		spawn_clock = maxf(0.13, float(config.waves.spawn_interval) / (1.0 + wave * 0.3))
+	for prep_slot in range(build.weapons.size()):
+		var soon:float=weapon_clocks[prep_slot]
+		var prep_weapon:Dictionary=Rules.catalog_entry(catalog,build.weapons[prep_slot])
+		var prep_range:float=prep_weapon.range*(1.0+stats.range_bonus)
+		if prep_slot==0 and prep_weapon.behavior!="orbit" and soon>0 and soon<.12 and enemies.any(func(e):return e.hp>0 and e.pos.distance_to(player_pos)<=prep_range):
+			actor_anim.set_phase(0,"warning",1-soon/.12)
+			break
 	for slot in range(build.weapons.size()):
 		weapon_clocks[slot] -= dt
 		if weapon_clocks[slot] <= 0 and not enemies.is_empty():
@@ -243,11 +289,19 @@ func _simulate(dt: float) -> void:
 		if e.hp <= 0: continue
 		var normal_speed: float = e.speed
 		if e.get("slow_until",0.0) > elapsed: e.speed *= .55
+		var previous_ai:String=e.ai_state
 		var events: Array = EnemyAI.tick(e,player_pos,dt,elapsed)
 		e.speed = normal_speed
 		e.pos = e.pos.clamp(Vector2(20,20),Vector2(config.arena.width - 20,config.arena.height - 20))
 		e.sprite.position = e.pos.round()
 		e.sprite.flip_h = player_pos.x > e.pos.x
+		if previous_ai=="warning" and e.ai_state not in ["warning","charging"]:actor_anim.trigger(e.id,"attack",.35)
+		if e.ai_state=="warning":actor_anim.set_phase(e.id,"warning",1-e.warning_left/e.warning)
+		elif e.ai_state=="recover":actor_anim.set_phase(e.id,"recover")
+		elif e.ai_state=="charging":actor_anim.set_phase(e.id,"attack",1-e.charge_left/e.charge_duration)
+		elif e.behavior in ["chase","flank"] and e.pos.distance_to(player_pos)<85:
+			actor_anim.set_phase(e.id,"warning",1-e.pos.distance_to(player_pos)/85)
+		else:actor_anim.set_phase(e.id,"move")
 		for event in events:
 			match event.kind:
 				"shot", "ring":
@@ -265,6 +319,7 @@ func _simulate(dt: float) -> void:
 		if state != "playing": return
 		# Warning/recovery windows are contact-safe; charges damage only while moving.
 		if e.ai_state in ["move","charging"] and e.pos.distance_to(player_pos) < 16.0 * float(e.scale) + 9.0:
+			actor_anim.trigger(e.id,"attack")
 			_hurt(e.damage)
 		if state != "playing": return
 	for request in spawn_requests: _spawn_kind("crawler",request.pos,request.parent_id)
@@ -293,6 +348,9 @@ func _simulate(dt: float) -> void:
 		else:
 			_advance_bullet(b,dt)
 		if b.life <= 0: bullets.remove_at(i)
+	for enemy in enemies:
+		if enemy.hp>0 and enemy.hp<enemy.get("anim_hp",enemy.hp):actor_anim.trigger(enemy.id,"hurt")
+		enemy.anim_hp=enemy.hp
 	for i in range(enemies.size() - 1, -1, -1):
 		var e: Dictionary = enemies[i]
 		if e.hp <= 0:
@@ -301,7 +359,8 @@ func _simulate(dt: float) -> void:
 			_effect_event("kill",{"pos":e.pos,"source":source,"depth":0 if source == "primary" else 1})
 			enemy_bullets = enemy_bullets.filter(func(projectile): return projectile.owner != e.id)
 			pickups.append({"pos": e.pos, "xp": e.xp, "coins":maxi(1, int(e.xp / 2))})
-			e.sprite.queue_free()
+			e.sprite.position=e.pos
+			actor_anim.die(e.id)
 			enemies.remove_at(i)
 			kills += 1
 	for i in range(pickups.size() - 1, -1, -1):
@@ -353,6 +412,8 @@ func _spawn_kind(kind: String, pos: Vector2, parent_id: int = -1) -> Dictionary:
 	data.hp *= 1.0 if data.boss else 1.0 + (wave - 1) * .12
 	data.max_hp = data.hp
 	data.sprite = sprite
+	data.anim_hp = data.hp
+	actor_anim.register_actor(data.id,sprite,kind,57.0*float(data.scale))
 	data.parent_id = parent_id
 	data.last_source = "primary"
 	data.phase = 1
@@ -382,6 +443,7 @@ func _hurt(damage: float) -> void:
 	if _effect_event("before_hurt",{}):
 		hurt_clock = .25
 		return
+	actor_anim.trigger(0,"hurt")
 	_vfx("hit_spark",player_pos)
 	var actual_loss := minf(stats.hp,damage)
 	stats.hp = maxf(0,stats.hp - damage)
@@ -413,6 +475,9 @@ func _fire_weapon(id: String, slot: int) -> void:
 	if "electric" in weapon.tags: damage *= 1.0 + stats.electric_bonus
 	if "melee" in weapon.tags: damage *= 1.0 + stats.melee_bonus
 	if weapon.behavior == "orbit":
+		_sync_weapon_rig()
+		var rotor_pose:Dictionary=_launch_pose(id,slot,player_pos+Vector2.RIGHT*100)
+		weapon_rig.fire(slot,rotor_pose)
 		# A timed rotating radial sweep: damages each nearby target once per attack.
 		for enemy in enemies:
 			if enemy.hp > 0 and enemy.pos.distance_to(player_pos) <= weapon.range:
@@ -428,17 +493,23 @@ func _fire_weapon(id: String, slot: int) -> void:
 		if player_pos.distance_squared_to(enemy.pos) < player_pos.distance_squared_to(nearest.pos): nearest = enemy
 	var reach: float = weapon.range * (1.0 + stats.range_bonus)
 	if player_pos.distance_to(nearest.pos) > reach: return
-	var aim: Vector2 = (nearest.pos-player_pos).normalized()
-	_vfx("muzzle_flash",player_pos+aim*16,{"angle":aim.angle()})
+	if slot==0:actor_anim.trigger(0,"attack")
+	if absf(nearest.pos.x-player_pos.x)>.01:hero.flip_h=nearest.pos.x<player_pos.x
+	var pose:Dictionary=_launch_pose(id,slot,nearest.pos)
+	weapon_rig.fire(slot,pose)
+	var aim:Vector2=pose.direction
+	if weapon.behavior!="return":_vfx("muzzle_flash",pose.muzzle,{"angle":aim.angle(),"weapon":id,"slot":slot})
 	if weapon.behavior == "mortar":
-		pending_blasts.append({"pos":nearest.pos,"delay":.6,"damage":damage,"radius":85.0,"weapon":id})
+		pending_blasts.append({"pos":nearest.pos,"delay":.6,"damage":damage,"radius":85.0,"weapon":id,"visual_origin":pose.muzzle})
 		return
-	var direction: Vector2 = (nearest.pos - player_pos).normalized()
+	var direction: Vector2 = aim
 	var count: int = weapon.projectiles + (int(stats.extra_pellets) if weapon.behavior == "spread" else 0)
 	for i in range(count):
 		var angle: float = (float(i) / maxf(1, count - 1) - .5) * float(weapon.spread) if count > 1 else 0.0
 		var vector := direction.rotated(angle)
-		bullets.append({"pos":player_pos + vector * 16, "velocity":vector * stats.bullet_speed, "life":2.5 if weapon.behavior == "return" else reach / stats.bullet_speed, "damage":damage, "pierce":int(weapon.pierce) + int(stats.pierce), "hit":[], "weapon":id, "slot":slot, "returning":false,"outbound_left":reach / stats.bullet_speed})
+		var travel:float=WeaponRig.range_distance(player_pos,pose.muzzle,vector,reach)
+		if travel<=.000001:continue
+		bullets.append({"pos":pose.muzzle,"launch_start":pose.mount,"launch_end":pose.muzzle, "velocity":vector * stats.bullet_speed, "life":2.5 if weapon.behavior == "return" else maxf(.000001,travel / stats.bullet_speed), "damage":damage, "pierce":int(weapon.pierce) + int(stats.pierce), "hit":[], "weapon":id, "slot":slot, "returning":false,"outbound_left":travel / stats.bullet_speed})
 
 func _complete_wave() -> void:
 	if state != "playing": return
@@ -453,6 +524,7 @@ func _complete_wave() -> void:
 		xp += int(p.xp)
 		Rules.credit(build, p.get("coins", 1) * (1.0 + stats.coin_bonus))
 	pickups.clear()
+	actor_anim.clear(true,true)
 	for e in enemies: e.sprite.queue_free()
 	enemies.clear()
 	bullets.clear()
@@ -500,11 +572,21 @@ func _take_upgrade(index: int, generation: int) -> void:
 		_hide_modal()
 
 func _finish(won: bool) -> void:
+	weapon_rig.clear()
 	_clear_transients()
 	state = "won" if won else "dead"
-	stats.hp = maxf(0, stats.hp)
-	var view := _view()
-	view.won = won
+	stats.hp = maxf(0,stats.hp)
+	if won:
+		_show_result(true)
+	else:
+		actor_anim.die(0)
+		result_pending=true
+		result_wait=float(actor_anim.config.durations.death)*10.0/9.0
+		ui.hide_modal()
+
+func _show_result(won:bool) -> void:
+	var view:=_view()
+	view.won=won
 	ui.show_result(view)
 
 
@@ -559,6 +641,11 @@ func _draw() -> void:
 		draw_circle(player_pos, 24, Color("b6f2df"), false, 2)
 
 func _recompute() -> void:
+	if weapon_rig.slots.map(func(slot):return slot.id)!=build.weapons:
+		weapon_rig.sync_loadout(build.weapons)
+		bullets.clear()
+		pending_blasts.clear()
+		vfx.clear()
 	var hp: float = stats.get("hp", config.player.hp)
 	var dash: float = stats.get("dash_time", 0.0)
 	var cooldown: float = stats.get("dash_cooldown", 0.0)
@@ -599,6 +686,11 @@ func _buy(index: int, generation: int, replace_slot: int = -1) -> bool:
 		shop_message = error
 		_render_shop()
 		return false
+	if replace_slot>=0 and Rules.catalog_entry(catalog,shop_offers[index].id).kind=="weapon":
+		weapon_rig.clear()
+		bullets.clear()
+		pending_blasts.clear()
+		vfx.clear()
 	shop_offers[index].sold = true
 	shop_generation += 1
 	_recompute()
@@ -650,8 +742,11 @@ func _leave_shop(generation: int) -> void:
 	_hide_modal()
 
 func _view() -> Dictionary:
-	if build.is_empty(): return {"seed":run_seed}
+	if build.is_empty(): return {"seed":run_seed,"settings":settings.duplicate(true)}
 	var view := {"coins":build.coins,"wave":wave,"level":level,"hp":stats.hp,"max_hp":stats.max_hp,"xp":xp,"xp_max":Rules.xp_threshold(level),"time":elapsed,"kills":kills,"seed":run_seed,"stats":stats,"weapons":[],"items":[],"synergies":stats.synergies,"generation":shop_generation,"refresh_price":catalog.refresh_price,"weapon_slots":catalog.weapon_slots,"item_slots":catalog.item_slots,"message":shop_message,"offers":[],"rewards":rewards,"synergy_status":[],"mechanics":{"shield":effects.shield,"chain_charges":effects.chain_charges,"hazards":hazards.size(),"echo_hits":effects.echo_hits,"phase_charge":effects.phase_charge,"medic_damage":effects.medic_damage,"cooldowns":{}}}
+	view.actor_state=actor_anim.state_of(0)
+	view.dash_cooldown=stats.get("dash_cooldown",0.0)
+	view.settings=settings.duplicate(true)
 	var affinity := Rules.shop_affinity(build,catalog)
 	var missing_names: Array = []
 	for id in affinity.missing_ids: missing_names.append(Rules.catalog_entry(catalog,id).name)
@@ -690,6 +785,25 @@ func _view() -> Dictionary:
 
 func _on_intent(action: String, payload: Dictionary) -> void:
 	match action:
+		"settings":
+			if state in ["title","paused"]:
+				settings_return=state
+				state="settings"
+				ui.show_settings(_view())
+		"set_setting":
+			if state=="settings" and payload.get("key","")=="reduced_flashes" and payload.get("value") is bool:
+				settings.reduced_flashes=payload.value
+				vfx.reduced_flashes=payload.value
+				actor_anim.reduced_flashes=payload.value
+				vfx.refresh_style()
+				actor_anim.refresh_style()
+				ui.show_settings(_view())
+		"close_settings":
+			if state=="settings":
+				if settings_return=="title":_title()
+				else:
+					state="paused"
+					_present_pause()
 		"codex":
 			if state in ["title","paused"]:
 				codex_return = state
@@ -747,6 +861,7 @@ func _hide_modal() -> void:
 
 
 func _clear_transients() -> void:
+	visual_cooldowns.clear()
 	vfx.clear()
 	telegraphs.show_markers([])
 	effects.invalidate()
@@ -762,7 +877,9 @@ func _clear_transients() -> void:
 func _effect_event(kind: String, data: Dictionary) -> bool:
 	if state != "playing": return false
 	if kind == "hit": _vfx("hit_spark",data.pos)
-	elif kind == "dash": _vfx("dash_trail",data.pos,{"angle":data.get("angle",0.0)})
+	elif kind == "dash":
+		actor_anim.trigger(0,"dash",float(stats.dash_time) if stats.dash_time>0 else .16)
+		_vfx("dash_trail",data.pos,{"angle":data.get("angle",0.0)})
 	effect_sequence += 1
 	var event := data.duplicate(true)
 	event.kind = kind
@@ -774,22 +891,27 @@ func _effect_event(kind: String, data: Dictionary) -> bool:
 	for command in commands:
 		match command.kind:
 			"block":
-				_vfx("shield_impact",player_pos)
+				_vfx("shield_impact",player_pos,{"source_item":"mirror_shell"})
 				blocked = true
 				effect_visuals.append({"kind":"block","pos":player_pos,"radius":30,"life":.3})
-			"heal": stats.hp = minf(stats.max_hp,stats.hp + command.amount)
+			"heal":
+				stats.hp = minf(stats.max_hp,stats.hp + command.amount)
+				_mechanism_vfx(command.get("source_item","healing"),"shield_impact",player_pos,{"size":Vector2(32,32),"tint":Color("83e8a5")})
 			"medical":
+				_mechanism_vfx("medic_seed","hit_spark",command.pos,{"tint":Color("f69eb5")})
 				var medical: Array = pickups.filter(func(p): return p.get("source","") == "medical")
 				if medical.size() >= 8: pickups.erase(medical[0])
 				pickups.append({"pos":command.pos,"xp":0,"coins":0,"heal":8.0,"source":"medical"})
-			"orb": pickups.append({"pos":command.pos,"xp":2,"coins":1,"source":"energy"})
+			"orb":
+				pickups.append({"pos":command.pos,"xp":2,"coins":1,"source":"energy"})
+				_mechanism_vfx("kill_cell","hit_spark",command.pos,{"tint":Color("f8d569")})
 			"chain":
 				for id in command.targets:
 					for enemy in enemies:
 						if enemy.id == id and enemy.hp > 0:
 							enemy.hp -= command.damage
 							enemy.last_source = "chain"
-							_vfx("chain_arc",command.pos,{"end":enemy.pos})
+							_vfx("chain_arc",command.pos,{"end":enemy.pos,"source_item":"arc_relay"})
 							_vfx("hit_spark",enemy.pos)
 							effect_visuals.append({"kind":"chain","pos":command.pos,"end":enemy.pos,"life":.2})
 			"echo":
@@ -797,30 +919,35 @@ func _effect_event(kind: String, data: Dictionary) -> bool:
 					if enemy.id == command.target and enemy.hp > 0:
 						enemy.hp -= 12
 						enemy.last_source = "echo"
+						_mechanism_vfx("echo_chamber","hit_spark",enemy.pos,{"tint":Color("c5a4f6")})
 						effect_visuals.append({"kind":"echo","pos":enemy.pos,"radius":18,"life":.25})
 			"phase":
 				for enemy in enemies:
 					if enemy.hp > 0 and enemy.pos.distance_to(command.pos) <= 95:
 						enemy.hp -= 12
 						enemy.last_source = "phase"
-				_vfx("explosion",command.pos,{"radius":95})
+				_mechanism_vfx("phase_capacitor","explosion",command.pos,{"radius":95,"tint":Color("94c5ff")})
 				effect_visuals.append({"kind":"phase","pos":command.pos,"radius":95,"life":.25})
 			"pull":
+				_mechanism_vfx("gravity_anchor","shield_impact",command.pos,{"radius":100,"tint":Color("cb92e8")})
 				for enemy in enemies:
 					if enemy.hp > 0 and enemy.pos.distance_to(command.pos) <= 150:
 						enemy.pos = enemy.pos.move_toward(command.pos,60)
 				effect_visuals.append({"kind":"pull","pos":command.pos,"radius":150,"life":.3})
 			"scorch":
+				_mechanism_vfx("blast_fuse","hit_spark",command.pos,{"tint":Color("f7a95c")})
 				var same: Array = hazards.filter(func(h): return h.kind == "scorch")
 				if same.size() >= 3: hazards.erase(same[0])
 				hazards.append({"kind":"scorch","pos":command.pos,"life":1.4,"age":0.0,"tick":0.0,"radius":60.0,"slow":false})
 			"thorns":
+				_mechanism_vfx("thorn_crown","shield_impact",command.pos,{"radius":130,"tint":Color("ff947d")})
 				for enemy in enemies:
 					if enemy.hp > 0 and enemy.pos.distance_to(command.pos) <= 130:
 						enemy.hp -= command.damage
 						enemy.last_source = "thorns"
 				effect_visuals.append({"kind":"thorns","pos":command.pos,"radius":130,"life":.25})
 			"push":
+				_mechanism_vfx("pulse_boots","dash_trail",command.pos,{"tint":Color("7fe9cb")})
 				for enemy in enemies:
 					if enemy.hp > 0 and enemy.pos.distance_to(command.pos) <= command.radius:
 						var away: Vector2 = (enemy.pos-command.pos).normalized()
@@ -828,6 +955,7 @@ func _effect_event(kind: String, data: Dictionary) -> bool:
 						enemy.pos += away * command.distance
 				effect_visuals.append({"kind":"push","pos":command.pos,"radius":150,"life":.25})
 			"mine", "trail":
+				_mechanism_vfx("scrap_mine" if command.kind=="mine" else "dash_resin","hit_spark",command.pos,{"tint":Color("f3cd62")})
 				var maximum := 4 if command.kind == "mine" else 3
 				var same: Array = hazards.filter(func(h): return h.kind == command.kind)
 				if same.size() >= maximum: hazards.erase(same[0])
@@ -852,7 +980,7 @@ func _update_hazards(dt: float) -> void:
 				for enemy in targets:
 					enemy.hp -= 24
 					enemy.last_source = "mine"
-				_vfx("explosion",hazard.pos,{"radius":70})
+				_vfx("explosion",hazard.pos,{"radius":70,"source_item":"scrap_mine"})
 				_effect_event("mine_detonate",{"pos":hazard.pos,"source":"mine","depth":1})
 				effect_visuals.append({"kind":"mine","pos":hazard.pos,"radius":70,"life":.25})
 				hazards.remove_at(i)
@@ -878,24 +1006,46 @@ func _update_mortars(dt: float) -> void:
 		effect_visuals.append({"kind":"mortar","pos":blast.pos,"radius":blast.radius,"life":.25})
 		pending_blasts.remove_at(i)
 
+func _hit_segment(b:Dictionary,start:Vector2,end:Vector2)->void:
+	var candidates:Array=[]
+	for enemy in enemies:
+		if enemy.hp<=0 or b.hit.has(enemy.id):continue
+		var closest:Vector2=Geometry2D.get_closest_point_to_segment(enemy.pos,start,end)
+		if closest.distance_to(enemy.pos)<16*float(enemy.scale):
+			var segment:Vector2=end-start
+			var first_contact:float=0.0
+			if segment.length_squared()>.000001:
+				var projection:float=(enemy.pos-start).dot(segment.normalized())
+				var perpendicular_sq:float=maxf(0,enemy.pos.distance_squared_to(start)-projection*projection)
+				first_contact=maxf(0,projection-sqrt(maxf(0,pow(16*float(enemy.scale),2)-perpendicular_sq)))
+			candidates.append({"enemy":enemy,"distance":first_contact})
+	candidates.sort_custom(func(a,c):return a.distance<c.distance or (is_equal_approx(a.distance,c.distance) and a.enemy.id<c.enemy.id))
+	for candidate in candidates:
+		var enemy:Dictionary=candidate.enemy
+		if enemy.hp<=0 or b.hit.has(enemy.id):continue
+		enemy.hp-=b.damage;enemy.last_source="primary"
+		_effect_event("hit",{"target":enemy.id,"pos":enemy.pos,"damage":b.damage,"weapon":b.get("weapon",""),"returning":b.get("returning",false)})
+		b.hit.append(enemy.id)
+		flashes.append({"pos":enemy.pos,"life":.14})
+		if b.hit.size()>b.get("pierce",stats.pierce):b.life=-1;break
+
 func _advance_bullet(b: Dictionary,dt: float) -> void:
+	if b.life<=0:return
+	if b.has("launch_start"):
+		_hit_segment(b,b.launch_start,b.pos)
+		b.erase("launch_start")
+		if b.life<=0:return
 	var previous: Vector2 = b.pos
 	var step := minf(dt,maxf(0,b.life))
 	b.pos += b.velocity * step
 	b.life -= step
-	for enemy in enemies:
-		if enemy.hp > 0 and not b.hit.has(enemy.id) and Geometry2D.get_closest_point_to_segment(enemy.pos,previous,b.pos).distance_to(enemy.pos) < 16 * float(enemy.scale):
-			enemy.hp -= b.damage
-			enemy.last_source = "primary"
-			_effect_event("hit",{"target":enemy.id,"pos":enemy.pos,"damage":b.damage,"weapon":b.get("weapon",""),"returning":b.get("returning",false)})
-			b.hit.append(enemy.id)
-			flashes.append({"pos":enemy.pos,"life":.14})
-			if b.hit.size() > b.get("pierce",stats.pierce): b.life = -1
-			if b.life < 0: break
+	_hit_segment(b,previous,b.pos)
 
 func _advance_disc(b: Dictionary,dt: float) -> void:
 	var remaining := minf(dt,maxf(0,b.life))
 	if not b.returning:
+		if b.has("launch_start"):_advance_bullet(b,0)
+		if b.life<=0:return
 		var outbound := minf(remaining,maxf(0,b.outbound_left))
 		if outbound > 0: _advance_bullet(b,outbound)
 		b.outbound_left -= outbound
@@ -933,3 +1083,36 @@ func _sync_telegraphs() -> void:
 		if flash.get("radius",0)>=70:
 			markers.append({"kind":"circle","pos":flash.pos,"radius":flash.radius,"color":Color("f4d692")})
 	telegraphs.show_markers(markers)
+
+func _mechanism_vfx(source:String,id:String,pos:Vector2,options:Dictionary={}) -> void:
+	if elapsed<float(visual_cooldowns.get(source,-1.0)):return
+	visual_cooldowns[source]=elapsed+.08
+	var decorated:=options.duplicate(true)
+	decorated.source_item=source
+	_vfx(id,pos,decorated)
+
+func _launch_pose(id:String,slot:int,target:Vector2)->Dictionary:
+	hero.position=player_pos.round()
+	weapon_rig.sync_loadout(build.weapons)
+	var hand:Vector2=actor_anim.socket_world(0,"grip")
+	var body:Vector2=actor_anim.socket_world(0,"body")
+	var offset:Vector2=WeaponRig.OFFSETS[clampi(slot,0,3)]
+	if hero.flip_h:offset.x=-offset.x
+	var mount:Vector2=hand if slot==0 else body+offset
+	var fallback:Vector2=weapon_rig.slots[slot].aim if slot>=0 and slot<weapon_rig.slots.size() else Vector2.RIGHT
+	return WeaponRig.muzzle_pose(mount,target,weapon_rig.geometry.get(id,{}),fallback)
+
+func _sync_weapon_rig()->void:
+	if not is_instance_valid(weapon_rig):return
+	if state in ["title","dead","won"] or build.is_empty():
+		if not weapon_rig.slots.is_empty():weapon_rig.clear()
+		return
+	weapon_rig.sync_loadout(build.weapons)
+	var target:Vector2=player_pos+Vector2(-100 if hero.flip_h else 100,0)
+	var living:Array=enemies.filter(func(e):return e.hp>0)
+	if not living.is_empty():
+		var nearest:Dictionary=living[0]
+		for e in living:
+			if e.pos.distance_squared_to(player_pos)<nearest.pos.distance_squared_to(player_pos):nearest=e
+		target=nearest.pos
+	weapon_rig.update_poses(actor_anim.socket_world(0,"grip"),actor_anim.socket_world(0,"body"),target,hero.flip_h,bullets,pending_blasts,true)

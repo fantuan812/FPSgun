@@ -10,6 +10,7 @@ var root: Control
 var hud: PanelContainer
 var hud_title: Label
 var hud_detail: Label
+var hud_action: Label
 var hp: ProgressBar
 var xp: ProgressBar
 var shade: ColorRect
@@ -46,6 +47,8 @@ func _ready() -> void:
 	var bars := HBoxContainer.new(); hv.add_child(bars)
 	_label(bars, "HP", 14); hp = _bar(bars, Color("88b98a"))
 	_label(bars, "XP", 14); xp = _bar(bars, AMBER)
+	hud_action = _label(bars, "", 12)
+	hud_action.add_theme_color_override("font_color", AMBER)
 	hud_detail = _label(hv, "", 13)
 	boss_panel = PanelContainer.new()
 	boss_panel.set_anchors_and_offsets_preset(Control.PRESET_BOTTOM_WIDE)
@@ -207,6 +210,14 @@ func _card(parent: Node, data: Dictionary, suffix := "", statuses: Array = []) -
 	return v
 
 func update_hud(view: Dictionary) -> void:
+	var actor_state: String = str(view.get("actor_state", ""))
+	var dash_remaining: float = maxf(0, float(view.get("dash_cooldown", 0)))
+	if actor_state.is_empty():
+		hud_action.text = ""
+	else:
+		var dash_status: String = "LOCKED" if actor_state == "death" else ("READY" if dash_remaining <= 0 else "%.1fs" % dash_remaining)
+		hud_action.text = "%s  /  DASH %s" % [actor_state.to_upper(), dash_status]
+		hud_action.tooltip_text = "Controller action state; dash cooldown in simulation seconds. Paused menus do not advance it."
 	hud_title.text = "MOSS CIRCUIT   /   WAVE %s   /   LV %s   /   SCRAP %s" % [view.get("wave", 1), view.get("level", 1), view.get("coins", 0)]
 	hp.max_value = maxf(1, float(view.get("max_hp", 100))); hp.value = float(view.get("hp", 0))
 	xp.max_value = maxf(1, float(view.get("xp_max", 1))); xp.value = float(view.get("xp", 0))
@@ -229,6 +240,7 @@ func show_title(seed_value: int = 240102) -> void:
 	start.pressed.connect(func(): intent.emit("start", {"seed": seed_edit.text.to_int()}))
 	body.add_child(start); first_focus = start
 	_button(body, "ENEMY FIELD GUIDE", "codex")
+	_button(body, "DISPLAY SETTINGS", "settings")
 	_finish()
 
 func show_shop(view: Dictionary) -> void:
@@ -348,6 +360,7 @@ func show_pause(_view: Dictionary = {}) -> void:
 	_button(body, "RESUME", "resume")
 	_button(body, "INSPECT BUILD", "inventory")
 	_button(body, "ENEMY FIELD GUIDE", "codex")
+	_button(body, "DISPLAY SETTINGS", "settings")
 	_button(body, "RETURN TO TITLE", "title")
 	_finish()
 
@@ -445,4 +458,22 @@ func show_codex(entries: Array) -> void:
 		_text(description, "TELL: " + str(entry.get("tell", "")), 13)
 		_text(description, "EVADE: " + str(entry.get("dodge", "")), 13)
 	_button(body, "BACK", "close_codex")
+	_finish()
+
+func show_settings(view: Dictionary) -> void:
+	_begin("settings", "DISPLAY SETTINGS", "Presentation only. Changes apply immediately and last for this session.")
+	var content := _scroll(body)
+	var values: Dictionary = view.get("settings", {})
+	var reduced := CheckButton.new()
+	reduced.text = "REDUCE DECORATIVE FLASHES"
+	reduced.custom_minimum_size.y = 44
+	reduced.set_pressed_no_signal(bool(values.get("reduced_flashes", false)))
+	reduced.toggled.connect(func(enabled: bool): intent.emit("set_setting", {"key": "reduced_flashes", "value": enabled}))
+	content.add_child(reduced)
+	first_focus = reduced
+	_text(content, "Lowers decorative effect brightness and the hit-white flash. Attack warnings and collision timing remain unchanged, so hazards are still readable.", 15)
+	_text(content, "This is a flash-reduction option, not a guarantee that every flashing image is removed. Preferences are not saved to disk in this prototype.", 13)
+	_text(content, "ANIMATION COVERAGE", 16).add_theme_color_override("font_color", AMBER)
+	_text(content, "Action-state feedback is controller-driven. Some effects and actor states use shared frames or procedural presentation rather than separate hand-drawn animation sheets. Not every action has independent artwork.", 13)
+	_button(body, "BACK", "close_settings")
 	_finish()
