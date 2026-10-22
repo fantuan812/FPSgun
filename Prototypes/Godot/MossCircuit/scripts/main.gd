@@ -3,6 +3,10 @@ const Rules = preload("res://scripts/rules.gd")
 const Effects = preload("res://scripts/effects.gd")
 const EnemyAI = preload("res://scripts/enemy_ai.gd")
 const MossUI = preload("res://ui/moss_ui.gd")
+const Telegraphs = preload("res://scripts/telegraph_layer.gd")
+var telegraphs: Node2D
+const VFX = preload("res://scripts/vfx_layer.gd")
+var vfx: Node2D
 const Art = preload("res://scripts/art.gd")
 var effects = Effects.new()
 var effect_sequence := 0
@@ -90,6 +94,11 @@ func _ready() -> void:
 	camera.zoom = Vector2.ONE
 	hero = Art.actor("res://assets/hero_walk.png", 64.0, 11.0)
 	add_child(hero)
+	vfx = VFX.new()
+	add_child(vfx)
+	vfx.load_default()
+	telegraphs = Telegraphs.new()
+	add_child(telegraphs)
 	_build_ui()
 	grid_size = Rules.grid_dimensions(config.arena)
 	map_data = Rules.map_cells(run_seed, grid_size.x, grid_size.y)
@@ -107,11 +116,15 @@ func _build_ui() -> void:
 
 
 func _title() -> void:
+	vfx.clear()
+	telegraphs.show_markers([])
 	state = "title"
 	ui.show_title(run_seed)
 
 
 func _start_run(seed_value: int) -> void:
+	vfx.clear()
+	telegraphs.show_markers([])
 	for e in enemies:
 		e.sprite.queue_free()
 	enemies.clear()
@@ -182,12 +195,15 @@ func _resume() -> void:
 	_hide_modal()
 
 func _process(delta: float) -> void:
-	if state == "playing": _simulate(minf(delta, 0.05))
+	if state == "playing":
+		vfx.advance(minf(delta,0.05))
+		_simulate(minf(delta, 0.05))
 	hero.speed_scale = 1.0 if state == "playing" else 0.0
 	for e in enemies: e.sprite.speed_scale = 1.0 if state == "playing" else 0.0
 	hero.position = player_pos.round()
 	camera.position = Vector2(clampf(player_pos.x, 480, config.arena.width - 480) if config.arena.width >= 960 else config.arena.width * 0.5, clampf(player_pos.y, 270, config.arena.height - 270) if config.arena.height >= 540 else config.arena.height * 0.5)
 	_update_hud()
+	_sync_telegraphs()
 	queue_redraw()
 
 func _simulate(dt: float) -> void:
@@ -201,7 +217,7 @@ func _simulate(dt: float) -> void:
 	if Input.is_physical_key_pressed(KEY_SPACE) and stats.dash_cooldown <= 0 and direction != Vector2.ZERO:
 		stats.dash_time = 0.16
 		stats.dash_cooldown = 2.5
-		_effect_event("dash",{"pos":player_pos})
+		_effect_event("dash",{"pos":player_pos,"angle":direction.angle()})
 	player_pos += direction * stats.speed * dt * (3.0 if stats.dash_time > 0 else 1.0)
 	player_pos = player_pos.clamp(Vector2(24, 24), Vector2(config.arena.width - 24, config.arena.height - 24))
 	if direction != Vector2.ZERO:
@@ -239,6 +255,7 @@ func _simulate(dt: float) -> void:
 						var enemy_direction: Vector2 = Vector2.from_angle(TAU * index / event.count + .13) if event.kind == "ring" else event.direction.rotated((index - (event.count - 1) * .5) * .22)
 						enemy_bullets.append({"pos":e.pos,"velocity":enemy_direction * e.projectile_speed,"life":4.0,"damage":e.damage,"owner":e.id})
 				"blast":
+					_vfx("explosion",event.pos,{"radius":event.radius})
 					flashes.append({"pos":event.pos,"radius":event.radius,"life":.2})
 					if player_pos.distance_to(event.pos) <= event.radius: _hurt(event.damage)
 				"summon":
@@ -365,6 +382,7 @@ func _hurt(damage: float) -> void:
 	if _effect_event("before_hurt",{}):
 		hurt_clock = .25
 		return
+	_vfx("hit_spark",player_pos)
 	var actual_loss := minf(stats.hp,damage)
 	stats.hp = maxf(0,stats.hp - damage)
 	_effect_event("hurt",{"amount":actual_loss})
@@ -410,6 +428,8 @@ func _fire_weapon(id: String, slot: int) -> void:
 		if player_pos.distance_squared_to(enemy.pos) < player_pos.distance_squared_to(nearest.pos): nearest = enemy
 	var reach: float = weapon.range * (1.0 + stats.range_bonus)
 	if player_pos.distance_to(nearest.pos) > reach: return
+	var aim: Vector2 = (nearest.pos-player_pos).normalized()
+	_vfx("muzzle_flash",player_pos+aim*16,{"angle":aim.angle()})
 	if weapon.behavior == "mortar":
 		pending_blasts.append({"pos":nearest.pos,"delay":.6,"damage":damage,"radius":85.0,"weapon":id})
 		return
@@ -426,6 +446,8 @@ func _complete_wave() -> void:
 	if boss_id != "" and not boss_defeated:
 		_ensure_boss()
 		return
+	vfx.clear()
+	telegraphs.show_markers([])
 	for p in pickups:
 		stats.hp = minf(stats.max_hp,stats.hp+p.get("heal",0.0))
 		xp += int(p.xp)
@@ -515,13 +537,6 @@ func _draw() -> void:
 		if visual.kind == "chain": draw_line(visual.pos,visual.end,Color("79e8ff"),3)
 		else: draw_circle(visual.pos,visual.radius,Color("b0e7cf"),false,3)
 	if effects.shield > 0 and not build.is_empty(): draw_circle(player_pos,25,Color("a7e5ff"),false,2)
-	for enemy in enemies:
-		if enemy.hp <= 0 or enemy.ai_state != "warning": continue
-		var color := Color(1,.35,.18,.75)
-		if enemy.attack == "charge":
-			draw_line(enemy.pos,enemy.pos + enemy.aim * enemy.charge_speed * enemy.charge_duration,color,2 * (16 * enemy.scale + 9))
-		elif enemy.attack == "blast": draw_circle(enemy.target,105,color,false,4)
-		else: draw_circle(enemy.pos,34 * enemy.scale,color,false,3)
 	for projectile in enemy_bullets:
 		draw_circle(projectile.pos,6,Color("f6827c"))
 	for p in pickups:
@@ -732,6 +747,8 @@ func _hide_modal() -> void:
 
 
 func _clear_transients() -> void:
+	vfx.clear()
+	telegraphs.show_markers([])
 	effects.invalidate()
 	effects.chain_charges = 0
 	effects.echo_hits = 0
@@ -744,6 +761,8 @@ func _clear_transients() -> void:
 
 func _effect_event(kind: String, data: Dictionary) -> bool:
 	if state != "playing": return false
+	if kind == "hit": _vfx("hit_spark",data.pos)
+	elif kind == "dash": _vfx("dash_trail",data.pos,{"angle":data.get("angle",0.0)})
 	effect_sequence += 1
 	var event := data.duplicate(true)
 	event.kind = kind
@@ -755,6 +774,7 @@ func _effect_event(kind: String, data: Dictionary) -> bool:
 	for command in commands:
 		match command.kind:
 			"block":
+				_vfx("shield_impact",player_pos)
 				blocked = true
 				effect_visuals.append({"kind":"block","pos":player_pos,"radius":30,"life":.3})
 			"heal": stats.hp = minf(stats.max_hp,stats.hp + command.amount)
@@ -769,6 +789,8 @@ func _effect_event(kind: String, data: Dictionary) -> bool:
 						if enemy.id == id and enemy.hp > 0:
 							enemy.hp -= command.damage
 							enemy.last_source = "chain"
+							_vfx("chain_arc",command.pos,{"end":enemy.pos})
+							_vfx("hit_spark",enemy.pos)
 							effect_visuals.append({"kind":"chain","pos":command.pos,"end":enemy.pos,"life":.2})
 			"echo":
 				for enemy in enemies:
@@ -781,6 +803,7 @@ func _effect_event(kind: String, data: Dictionary) -> bool:
 					if enemy.hp > 0 and enemy.pos.distance_to(command.pos) <= 95:
 						enemy.hp -= 12
 						enemy.last_source = "phase"
+				_vfx("explosion",command.pos,{"radius":95})
 				effect_visuals.append({"kind":"phase","pos":command.pos,"radius":95,"life":.25})
 			"pull":
 				for enemy in enemies:
@@ -829,6 +852,7 @@ func _update_hazards(dt: float) -> void:
 				for enemy in targets:
 					enemy.hp -= 24
 					enemy.last_source = "mine"
+				_vfx("explosion",hazard.pos,{"radius":70})
 				_effect_event("mine_detonate",{"pos":hazard.pos,"source":"mine","depth":1})
 				effect_visuals.append({"kind":"mine","pos":hazard.pos,"radius":70,"life":.25})
 				hazards.remove_at(i)
@@ -849,6 +873,7 @@ func _update_mortars(dt: float) -> void:
 				enemy.hp -= blast.damage
 				enemy.last_source = "primary"
 				_effect_event("hit",{"target":enemy.id,"pos":enemy.pos,"damage":blast.damage,"weapon":blast.weapon})
+		_vfx("explosion",blast.pos,{"radius":blast.radius})
 		_effect_event("mortar",{"pos":blast.pos})
 		effect_visuals.append({"kind":"mortar","pos":blast.pos,"radius":blast.radius,"life":.25})
 		pending_blasts.remove_at(i)
@@ -886,3 +911,25 @@ func _advance_disc(b: Dictionary,dt: float) -> void:
 		b.velocity = (player_pos-b.pos).normalized() * stats.bullet_speed
 		_advance_bullet(b,minf(remaining,distance/stats.bullet_speed))
 		if b.pos.distance_to(player_pos) < 14: b.life = -1
+
+func _vfx(id: String,pos: Vector2,options: Dictionary = {}) -> void:
+	if is_instance_valid(vfx): vfx.play(id,pos,options)
+
+func _sync_telegraphs() -> void:
+	var markers: Array = []
+	for blast in pending_blasts:
+		markers.append({"kind":"circle","pos":blast.pos,"radius":blast.radius,"color":Color("9ddcf6")})
+	for enemy in enemies:
+		if enemy.hp <= 0 or enemy.ai_state != "warning": continue
+		var color := Color(1,.35,.18,.9)
+		if enemy.attack == "charge":
+			markers.append({"kind":"line","pos":enemy.pos,"end":enemy.pos+enemy.aim*enemy.charge_speed*enemy.charge_duration,"width":2*(16*enemy.scale+9),"color":color})
+		else:
+			markers.append({"kind":"circle","pos":enemy.target if enemy.attack=="blast" else enemy.pos,"radius":105 if enemy.attack=="blast" else 34*enemy.scale,"color":color})
+	for visual in effect_visuals:
+		if visual.kind in ["mine","mortar","phase"]:
+			markers.append({"kind":"circle","pos":visual.pos,"radius":visual.radius,"color":Color("b0e7cf")})
+	for flash in flashes:
+		if flash.get("radius",0)>=70:
+			markers.append({"kind":"circle","pos":flash.pos,"radius":flash.radius,"color":Color("f4d692")})
+	telegraphs.show_markers(markers)

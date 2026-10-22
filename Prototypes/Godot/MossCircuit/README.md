@@ -1,10 +1,10 @@
-# MOSS CIRCUIT · 苔芯幸存者 v5
+# MOSS CIRCUIT · 苔芯幸存者 v6
 
 原创 Godot 4.6 像素风 arena-survivor 原型。参考“移动避敌、自动攻击、波次升级”的品类结构，不使用《土豆兄弟》的模型、图像、名称或代码。
 
-本版在独立目录扩展 v4，保留已交付 v1–v4。现有 **6种武器、26件道具、4武器槽、波间商店、构筑加权无放回刷新**。新增回旋飞盘、定点迫击炮和6件事件机制道具；刷新偏好提高相关装备与缺失联动伙伴的权重，但不保证出现。见 [v5装备与刷新规则](docs/SHOP_AFFINITY.md)。保留 [v4机制道具](docs/MECHANISMS.md)、[5类敌人与2个两阶段Boss](docs/ENEMIES_AND_BOSSES.md)、[构筑与经济](docs/BUILD_SYSTEM.md) 和 [UI](ui/README.md)。
+本版在独立目录扩展 v5，保留已交付 v1–v5。新增 **六主题九帧像素动画特效**：枪口、命中、爆炸、链电、护盾、冲刺，接入真实战斗结果，逻辑伤害与表现隔离；精确预警独立置于特效上层。见 [动画特效管线](docs/PIXEL_VFX.md)。保留 **6武器、26道具、4武器槽、构筑加权无放回刷新**，见 [装备与刷新规则](docs/SHOP_AFFINITY.md)、[机制道具](docs/MECHANISMS.md)、[敌人与Boss](docs/ENEMIES_AND_BOSSES.md)、[构筑与经济](docs/BUILD_SYSTEM.md) 和 [UI](ui/README.md)。
 
-两份下载包请按 [合并解压说明](docs/DELIVERY.md) 放到同一父目录；完整单包直接解压。
+所有分包请按 [合并解压说明](docs/DELIVERY.md) 放到同一父目录；完整单包直接解压。
 
 ## 运行
 
@@ -41,10 +41,11 @@
 3. 3×3 共 9 种地面方块。
 4. v3 新增六张敌人/Boss九帧图，甲虫沿用原图，共七种；见 [角色美术与限制](docs/art/enemies/README.md)。
 5. v4 新增8个机制道具图标，合计24个装备图标（4武器+20道具），见 [v4图标说明](docs/art/mechanism_icons.md)。
-6. v5 新增独立8图标（2武器+6道具），旧24图标逐字节保留；见 [新增图标](docs/art/build_expansion_icons.md)。
-7. v2 新增 4×4 装备图标：4 武器 + 12 道具，商店、背包与升级界面已使用；见 [图标来源与检查](docs/art/README.md)。
+6. v6 新增六张3×3九帧特效（54帧），见 [动画特效](docs/PIXEL_VFX.md)。
+7. v5 新增独立8图标（2武器+6道具），旧24图标逐字节保留；见 [新增图标](docs/art/build_expansion_icons.md)。
+8. v2 新增 4×4 装备图标：4 武器 + 12 道具，商店、背包与升级界面已使用；见 [图标来源与检查](docs/art/README.md)。
 
-idle 暂复用 walk 第一帧；弹丸/经验/命中用代码绘制的简单像素效果。**不是“所有动作都已制作九帧”**。原PNG未经重绘、缩放或抠图；Godot 中以纹理区域与透明边距处理帧不整齐问题。
+idle 暂复用 walk 第一帧；弹丸/经验/判定轮廓保留简单代码绘制，六主题事件特效已使用九帧PNG动画。**不是“所有动作都已制作九帧”**。原PNG未经重绘、缩放或抠图；Godot 中以纹理区域与透明边距处理帧不整齐问题。
 
 ## 验证
 
@@ -60,7 +61,7 @@ HOME=/tmp/moss-home XDG_CONFIG_HOME=/tmp/moss-config XDG_DATA_HOME=/tmp/moss-dat
 
 这不会写用户真实存档；临时测试和初始化只在上述目录写 Godot 缓存。首次导入可以先 `godot --headless --editor --path . --import --quit`，沿用这些环境变量。
 
-历史 v1–v4 日志完整保留。v5 独立干净导入和14套检查全部通过：基础193、场景11、构筑213、独立v2 28、独立UI 72、敌人25、独立v3 20、敌资源/UI 109、旧机制133、独立v4 35、新扩展565、独立加权商店216、新机制独验26，另UI结构/intent通过；32图标加载通过。4000固定seed的首槽采样表明偏好提高出现率，并不保证每次出现。600帧headless smoke通过。详细证据见 `docs/validation/independent-v5/` 及作者日志。
+历史v1–v5代码与日志保留。v6六类真实特效加载共54帧，作者161项表现层检查及独立130项检查通过，包含逐帧边界、固定锚点/scale、链电端点、回收池、暂停重开、伤害/RNG隔离及预警层级。旧全套玩法、经济、敌人、构筑与UI回归继续通过（193/11/213/28/72/25/20/109/133/35/565/216/26及UI结构）。600帧headless smoke通过。详细证据见 `docs/validation/independent-v6/`，历史结果在对应子目录。
 
 自动测试覆盖有限 seed/升级、九帧区域/统一画布/脚底枢轴、动画速度缓存、场景启动/射击击杀/升级重复点击/六波胜利/死亡重开。日志见 `docs/validation/`（v1 历史保留在子目录）；不要只看进程退出码，Godot 某些脚本解析错误也会返回 0，应同时核无 SCRIPT ERROR/ERROR 且出现通过汇总。
 
@@ -79,6 +80,8 @@ godot --headless --path . --script tests/test_builds.gd
 godot --headless --path . --script tests/test_encounters.gd
 godot --headless --path . --script tests/test_effects.gd
 godot --headless --path . --script tests/test_expansion.gd
+godot --headless --path . --script tests/test_vfx.gd
+godot --headless --path . --script tests/independent_vfx.gd
 godot --headless --path . --script tests/independent_shop.gd
 godot --headless --path . --script tests/independent_v5.gd
 godot --headless --path . --script tests/independent_v4.gd

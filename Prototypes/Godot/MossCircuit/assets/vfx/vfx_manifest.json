@@ -1,0 +1,948 @@
+{
+  "schema_version": 1,
+  "generator": "built-in image_gen",
+  "runtime_fps_authority": "data/vfx.json",
+  "notes": "Fixed full-cell canvas. alpha_bbox is QA only; never crop/recenter each frame. Nine nonempty frames, then remove instance. High-resolution pixel-inspired art, not certified low-resolution pixel grid.",
+  "effects": {
+    "chain_arc": {
+      "path": "res://assets/vfx/chain_arc.png",
+      "sheet_size": [
+        1254,
+        1254
+      ],
+      "frames": [
+        {
+          "region": [
+            0,
+            0,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            48,
+            201,
+            336,
+            56
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            418,
+            0,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            38,
+            197,
+            341,
+            81
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            836,
+            0,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            34,
+            153,
+            338,
+            168
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            0,
+            418,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            48,
+            147,
+            337,
+            157
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            418,
+            418,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            40,
+            148,
+            340,
+            137
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            836,
+            418,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            34,
+            191,
+            338,
+            63
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            0,
+            836,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            48,
+            185,
+            336,
+            55
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            418,
+            836,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            40,
+            171,
+            340,
+            69
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            836,
+            836,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            34,
+            175,
+            338,
+            71
+          ],
+          "empty": false
+        }
+      ],
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "recommended_fps": 24,
+      "recommended_duration_seconds": 0.375,
+      "loop": false,
+      "frame_order": "row-major",
+      "alpha_threshold_for_bbox": 8,
+      "empty_frames_allowed": false,
+      "sha256": "3367aa7bf9736a5058cb8ae5e5932169fbf7f2a3ec78123d03ca917b7f2e0eae",
+      "endpoints": [
+        [
+          0.14,
+          0.54
+        ],
+        [
+          0.87,
+          0.54
+        ]
+      ]
+    },
+    "dash_trail": {
+      "path": "res://assets/vfx/dash_trail.png",
+      "sheet_size": [
+        1254,
+        1254
+      ],
+      "frames": [
+        {
+          "region": [
+            0,
+            0,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            302,
+            223,
+            32,
+            26
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            418,
+            0,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            188,
+            218,
+            119,
+            46
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            836,
+            0,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            105,
+            207,
+            190,
+            66
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            0,
+            418,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            96,
+            168,
+            254,
+            115
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            418,
+            418,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            96,
+            178,
+            214,
+            79
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            836,
+            418,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            105,
+            178,
+            195,
+            68
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            0,
+            836,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            190,
+            153,
+            153,
+            62
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            418,
+            836,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            201,
+            164,
+            108,
+            35
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            836,
+            836,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            209,
+            172,
+            86,
+            27
+          ],
+          "empty": false
+        }
+      ],
+      "anchor": [
+        0.76,
+        0.52
+      ],
+      "recommended_fps": 24,
+      "recommended_duration_seconds": 0.375,
+      "loop": false,
+      "frame_order": "row-major",
+      "alpha_threshold_for_bbox": 8,
+      "empty_frames_allowed": false,
+      "sha256": "376cfbd3b4a8958ae18d77865069f5f1ec6ec32cba012405dc368a52716c5d3f"
+    },
+    "explosion": {
+      "path": "res://assets/vfx/explosion.png",
+      "sheet_size": [
+        1254,
+        1254
+      ],
+      "frames": [
+        {
+          "region": [
+            0,
+            0,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            167,
+            165,
+            119,
+            118
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            418,
+            0,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            124,
+            132,
+            173,
+            176
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            836,
+            0,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            70,
+            99,
+            247,
+            247
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            0,
+            418,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            34,
+            19,
+            372,
+            369
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            418,
+            418,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            54,
+            25,
+            328,
+            345
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            836,
+            418,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            38,
+            44,
+            330,
+            326
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            0,
+            836,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            95,
+            64,
+            264,
+            264
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            418,
+            836,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            131,
+            126,
+            155,
+            160
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            836,
+            836,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            174,
+            173,
+            48,
+            47
+          ],
+          "empty": false
+        }
+      ],
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "recommended_fps": 18,
+      "recommended_duration_seconds": 0.5,
+      "loop": false,
+      "frame_order": "row-major",
+      "alpha_threshold_for_bbox": 8,
+      "empty_frames_allowed": false,
+      "sha256": "c66cd61d38ce0f6acab3f4064a6f3423fb0c32584859f176c243ffd8048e20dd"
+    },
+    "hit_spark": {
+      "path": "res://assets/vfx/hit_spark.png",
+      "sheet_size": [
+        1254,
+        1254
+      ],
+      "frames": [
+        {
+          "region": [
+            0,
+            0,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            168,
+            197,
+            73,
+            77
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            418,
+            0,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            133,
+            146,
+            152,
+            160
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            836,
+            0,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            94,
+            108,
+            238,
+            242
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            0,
+            418,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            57,
+            56,
+            317,
+            315
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            418,
+            418,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            57,
+            76,
+            297,
+            283
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            836,
+            418,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            84,
+            90,
+            254,
+            258
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            0,
+            836,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            94,
+            112,
+            246,
+            180
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            418,
+            836,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            171,
+            159,
+            64,
+            63
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            836,
+            836,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            199,
+            180,
+            21,
+            17
+          ],
+          "empty": false
+        }
+      ],
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "recommended_fps": 30,
+      "recommended_duration_seconds": 0.3,
+      "loop": false,
+      "frame_order": "row-major",
+      "alpha_threshold_for_bbox": 8,
+      "empty_frames_allowed": false,
+      "sha256": "3995cea2b90ffc0530e90833fa83e6f9d251ff7eaf0c5172403e5fcef466899e"
+    },
+    "muzzle_flash": {
+      "path": "res://assets/vfx/muzzle_flash.png",
+      "sheet_size": [
+        1254,
+        1254
+      ],
+      "frames": [
+        {
+          "region": [
+            0,
+            0,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            104,
+            198,
+            87,
+            58
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            418,
+            0,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            79,
+            161,
+            184,
+            138
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            836,
+            0,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            37,
+            114,
+            357,
+            222
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            0,
+            418,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            96,
+            83,
+            281,
+            270
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            418,
+            418,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            88,
+            118,
+            285,
+            235
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            836,
+            418,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            84,
+            150,
+            264,
+            164
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            0,
+            836,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            102,
+            180,
+            227,
+            98
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            418,
+            836,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            102,
+            181,
+            126,
+            64
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            836,
+            836,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            103,
+            183,
+            52,
+            53
+          ],
+          "empty": false
+        }
+      ],
+      "anchor": [
+        0.28,
+        0.52
+      ],
+      "recommended_fps": 30,
+      "recommended_duration_seconds": 0.3,
+      "loop": false,
+      "frame_order": "row-major",
+      "alpha_threshold_for_bbox": 8,
+      "empty_frames_allowed": false,
+      "sha256": "6d69af60154377ba00c2b3383b58a30234757c909346a2c04dde19364db0a2c8"
+    },
+    "shield_impact": {
+      "path": "res://assets/vfx/shield_impact.png",
+      "sheet_size": [
+        1254,
+        1254
+      ],
+      "frames": [
+        {
+          "region": [
+            0,
+            0,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            208,
+            160,
+            89,
+            144
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            418,
+            0,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            160,
+            143,
+            115,
+            172
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            836,
+            0,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            134,
+            131,
+            159,
+            207
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            0,
+            418,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            128,
+            56,
+            213,
+            308
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            418,
+            418,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            130,
+            85,
+            205,
+            253
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            836,
+            418,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            109,
+            97,
+            172,
+            218
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            0,
+            836,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            192,
+            104,
+            127,
+            156
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            418,
+            836,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            201,
+            159,
+            65,
+            93
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            836,
+            836,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            192,
+            176,
+            49,
+            56
+          ],
+          "empty": false
+        }
+      ],
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "recommended_fps": 24,
+      "recommended_duration_seconds": 0.375,
+      "loop": false,
+      "frame_order": "row-major",
+      "alpha_threshold_for_bbox": 8,
+      "empty_frames_allowed": false,
+      "sha256": "fb63a02e36c2c73ea717c2671d21844cca28166672c79adac89c4e209dc7bb4b"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "max_active": 96,
+  "manifest": "res://assets/vfx/vfx_manifest.json",
+  "effects": {
+    "muzzle_flash": {"fps":30,"frames":9,"start_delay":0,"duration":0.3,"blend":"mix","size":[36,28]},
+    "hit_spark": {"fps":27,"frames":9,"start_delay":0,"duration":0.3333333333333333,"blend":"mix","size":[32,32]},
+    "explosion": {"fps":18,"frames":9,"start_delay":0,"duration":0.5,"blend":"mix","size":[64,64]},
+    "chain_arc": {"fps":24,"frames":9,"start_delay":0,"duration":0.375,"blend":"mix","size":[100,28]},
+    "shield_impact": {"fps":18,"frames":9,"start_delay":0,"duration":0.5,"blend":"mix","size":[56,56]},
+    "dash_trail": {"fps":24,"frames":9,"start_delay":0,"duration":0.375,"blend":"mix","size":[72,32]}
+  }
+}
