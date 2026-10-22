@@ -19,7 +19,35 @@
     },
     "boss_core": {
       "attack": "boss_core_attack"
+    },
+    "charger": {
+      "attack": "charger_charge",
+      "hurt": "charger_hurt",
+      "death": "charger_death",
+      "phase_frames": {
+        "warning": [
+          0,
+          3
+        ],
+        "attack": [
+          4,
+          6
+        ],
+        "recover": [
+          7,
+          8
+        ]
+      },
+      "phase_driven_attack": true,
+      "locked_aim_states": [
+        "warning",
+        "charging",
+        "recover"
+      ]
     }
   },
-  "hero_modular_manifest": "res://assets/weapon_mounts/hero_modular_manifest.json"
+  "hero_modular_manifest": "res://assets/weapon_mounts/hero_modular_manifest.json",
+  "additional_manifests": [
+    "res://assets/actions/charger/action_manifest.json"
+  ]
 }

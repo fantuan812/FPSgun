@@ -18,6 +18,12 @@ func load_default() -> void:
 	if FileAccess.file_exists(modular_path):
 		var modular:Dictionary=JSON.parse_string(FileAccess.get_file_as_string(modular_path))
 		manifest.actions.merge(modular.get("actions",{}),true)
+	for extra_path in config.get("additional_manifests",[]):
+		if FileAccess.file_exists(extra_path):
+			var extra=JSON.parse_string(FileAccess.get_file_as_string(extra_path))
+			if extra is Dictionary and extra.get("actions") is Dictionary:
+				for id in extra.actions:
+					if not manifest.actions.has(id):manifest.actions[id]=extra.actions[id]
 	for id in manifest.get("actions",{}):
 		var asset: Dictionary=manifest.actions[id]
 		if not ResourceLoader.exists(asset.path) or asset.frames.size()!=9: continue
@@ -40,7 +46,7 @@ func register_actor(key:int,sprite:AnimatedSprite2D,profile:String,height:float)
 	if first!=null:
 		height=first.region.size.y*absf(sprite.scale.y)
 		foot=(first.margin.position+Vector2(first.region.size.x*.5,first.region.size.y)-first.get_size()*.5+sprite.offset)*sprite.scale
-	actors[key]={"sprite":sprite,"profile":profile,"height":height,"base_foot":foot,"base_frames":sprite.sprite_frames,"base_scale":sprite.scale,"base_offset":sprite.offset,"base_color":sprite.modulate,"base_flip":sprite.flip_h,"state":"idle","reaction":"","age":0.0,"duration":0.0,"phase":"idle","phase_progress":0.0,"walk_time":0.0,"corpse":false,"generation":generation,"source":"reused walk/idle"}
+	actors[key]={"sprite":sprite,"profile":profile,"height":height,"base_foot":foot,"base_frames":sprite.sprite_frames,"base_scale":sprite.scale,"base_offset":sprite.offset,"base_color":sprite.modulate,"base_flip":sprite.flip_h,"state":"idle","reaction":"","age":0.0,"duration":0.0,"phase":"idle","phase_progress":0.0,"recover_span":0.0,"walk_time":0.0,"corpse":false,"generation":generation,"source":"reused walk/idle"}
 	sprite.stop()
 	_present(actors[key])
 func set_phase(key:int,phase:String,progress:float=0) -> void:
@@ -52,6 +58,7 @@ func trigger(key:int,action:String,duration:float=-1) -> bool:
 	if not actors.has(key):return false
 	var actor:Dictionary=actors[key]
 	if actor.reaction=="death":return false
+	if action=="attack" and config.profiles.get(actor.profile,{}).get("phase_driven_attack",false):return false
 	var priority:Dictionary={"":0,"attack":1,"dash":2,"hurt":3,"death":4}
 	if not priority.has(action):return false
 	if priority.get(actor.reaction,0)>priority[action]:return false
@@ -80,6 +87,7 @@ func clear(keep_hero:bool=true,preserve_corpses:bool=false) -> void:
 	if actors.has(0):
 		var actor:Dictionary=actors[0]
 		actor.reaction="";actor.corpse=false;actor.age=0.0;actor.duration=0.0;actor.phase="idle";actor.phase_progress=0.0;actor.walk_time=0.0;actor.generation=generation
+		actor.recover_span=0.0
 		actor.sprite.flip_h=actor.base_flip
 		_present(actor)
 func advance(dt:float,death_only:bool=false) -> void:
@@ -115,6 +123,11 @@ func _present(actor:Dictionary) -> void:
 		if state=="warning":index=mini(asset.release_frame-1,floori(progress*asset.release_frame+.0000001))
 		elif state=="attack":index=asset.release_frame+mini(8-asset.release_frame,floori(progress*(9-asset.release_frame)+.0000001))
 		elif state=="recover":index=8
+		var phase_frames=profile.get("phase_frames",{})
+		if phase_frames is Dictionary and phase_frames.has(state):
+			var segment=phase_frames[state]
+			if valid_segment(segment):
+				index=int(segment[0])+mini(int(segment[1]-segment[0]),floori(progress*(segment[1]-segment[0]+1)+.0000001))
 		sprite.frame=index
 		var texture:Texture2D=asset.frames.get_frame_texture("action",0)
 		var scale_value:float=actor.height/maxf(1,asset.reference_height)
@@ -158,3 +171,31 @@ func socket_world(key:int,name:String="grip")->Vector2:
 		uv=Vector2(point[0],point[1])
 	if sprite.flip_h:uv.x=1-uv.x
 	return sprite.to_global(texture.get_size()*(uv-Vector2(.5,.5))+sprite.offset)
+
+## Read-only adapter from authoritative enemy state to presentation.
+## Recovery span is observed at its actual entry, never written back to EnemyAI.
+func observe_enemy(enemy:Dictionary,previous_ai:String,player_position:Vector2)->void:
+	if not actors.has(enemy.id) or enemy.hp<=0:return
+	var actor:Dictionary=actors[enemy.id]
+	if actor.corpse:return
+	var profile:Dictionary=config.profiles.get(actor.profile,{})
+	var locked_states=profile.get("locked_aim_states",[])
+	if locked_states is Array and enemy.ai_state in locked_states:
+		if absf(enemy.aim.x)>.001:enemy.sprite.flip_h=enemy.aim.x>0
+	else:enemy.sprite.flip_h=player_position.x>enemy.pos.x
+	if previous_ai=="warning" and enemy.ai_state not in ["warning","charging"]:trigger(enemy.id,"attack",.35)
+	if enemy.ai_state=="warning":set_phase(enemy.id,"warning",1-enemy.warning_left/enemy.warning)
+	elif enemy.ai_state=="recover":
+		if previous_ai!="recover" or actor.recover_span<=0:actor.recover_span=maxf(.001,enemy.recover_left)
+		set_phase(enemy.id,"recover",1-enemy.recover_left/actor.recover_span)
+	elif enemy.ai_state=="charging":set_phase(enemy.id,"attack",1-enemy.charge_left/enemy.charge_duration)
+	elif enemy.behavior in ["chase","flank"] and enemy.pos.distance_to(player_position)<85:
+		set_phase(enemy.id,"warning",1-enemy.pos.distance_to(player_position)/85)
+	else:set_phase(enemy.id,"move")
+
+static func valid_segment(value:Variant)->bool:
+	if not value is Array or value.size()!=2:return false
+	for index in value:
+		if not (index is int or index is float):return false
+		if not is_finite(float(index)) or index<0 or index>8 or float(index)!=floorf(float(index)):return false
+	return value[0]<=value[1]

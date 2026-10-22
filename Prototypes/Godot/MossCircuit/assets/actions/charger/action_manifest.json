@@ -1,0 +1,447 @@
+{
+  "schema_version": 1,
+  "actions": {
+    "charger_charge": {
+      "path": "res://assets/actions/charger/charger_charge.png",
+      "frames": [
+        {
+          "region": [
+            0,
+            41,
+            418,
+            320
+          ],
+          "alpha_bbox": [
+            60,
+            115,
+            278,
+            183
+          ]
+        },
+        {
+          "region": [
+            418,
+            41,
+            418,
+            320
+          ],
+          "alpha_bbox": [
+            51,
+            136,
+            288,
+            164
+          ]
+        },
+        {
+          "region": [
+            836,
+            41,
+            418,
+            320
+          ],
+          "alpha_bbox": [
+            26,
+            156,
+            325,
+            144
+          ]
+        },
+        {
+          "region": [
+            0,
+            445,
+            418,
+            320
+          ],
+          "alpha_bbox": [
+            56,
+            155,
+            321,
+            145
+          ]
+        },
+        {
+          "region": [
+            418,
+            445,
+            418,
+            320
+          ],
+          "alpha_bbox": [
+            37,
+            144,
+            350,
+            156
+          ]
+        },
+        {
+          "region": [
+            836,
+            445,
+            418,
+            320
+          ],
+          "alpha_bbox": [
+            32,
+            152,
+            336,
+            148
+          ]
+        },
+        {
+          "region": [
+            0,
+            854,
+            418,
+            320
+          ],
+          "alpha_bbox": [
+            55,
+            144,
+            315,
+            154
+          ]
+        },
+        {
+          "region": [
+            418,
+            854,
+            418,
+            320
+          ],
+          "alpha_bbox": [
+            77,
+            125,
+            282,
+            175
+          ]
+        },
+        {
+          "region": [
+            836,
+            854,
+            418,
+            320
+          ],
+          "alpha_bbox": [
+            61,
+            117,
+            278,
+            182
+          ]
+        }
+      ],
+      "anchor": [
+        0.5,
+        0.9375
+      ],
+      "reference_height": 183,
+      "release_frame": 4,
+      "facing": "left",
+      "source_sha256": "dd6340053f224e0bc166a88ea6d59ac4ddf16de6e522cfd2f16b75c445358d73",
+      "row_origins_y": [
+        41,
+        445,
+        854
+      ]
+    },
+    "charger_hurt": {
+      "path": "res://assets/actions/charger/charger_hurt.png",
+      "frames": [
+        {
+          "region": [
+            0,
+            37,
+            418,
+            320
+          ],
+          "alpha_bbox": [
+            70,
+            126,
+            266,
+            174
+          ]
+        },
+        {
+          "region": [
+            418,
+            37,
+            418,
+            320
+          ],
+          "alpha_bbox": [
+            97,
+            116,
+            240,
+            184
+          ]
+        },
+        {
+          "region": [
+            836,
+            37,
+            418,
+            320
+          ],
+          "alpha_bbox": [
+            117,
+            112,
+            224,
+            187
+          ]
+        },
+        {
+          "region": [
+            0,
+            436,
+            418,
+            320
+          ],
+          "alpha_bbox": [
+            111,
+            110,
+            239,
+            190
+          ]
+        },
+        {
+          "region": [
+            418,
+            436,
+            418,
+            320
+          ],
+          "alpha_bbox": [
+            117,
+            78,
+            227,
+            219
+          ]
+        },
+        {
+          "region": [
+            836,
+            436,
+            418,
+            320
+          ],
+          "alpha_bbox": [
+            118,
+            118,
+            232,
+            182
+          ]
+        },
+        {
+          "region": [
+            0,
+            837,
+            418,
+            320
+          ],
+          "alpha_bbox": [
+            83,
+            131,
+            252,
+            168
+          ]
+        },
+        {
+          "region": [
+            418,
+            837,
+            418,
+            320
+          ],
+          "alpha_bbox": [
+            81,
+            130,
+            255,
+            170
+          ]
+        },
+        {
+          "region": [
+            836,
+            837,
+            418,
+            320
+          ],
+          "alpha_bbox": [
+            85,
+            128,
+            258,
+            169
+          ]
+        }
+      ],
+      "anchor": [
+        0.5,
+        0.9375
+      ],
+      "reference_height": 174,
+      "release_frame": 0,
+      "facing": "left",
+      "source_sha256": "80d04dcaf0c153567c939052154a429a9a3f93b030807ee852488388f7b4014d",
+      "row_origins_y": [
+        37,
+        436,
+        837
+      ]
+    },
+    "charger_death": {
+      "path": "res://assets/actions/charger/charger_death.png",
+      "frames": [
+        {
+          "region": [
+            0,
+            59,
+            418,
+            320
+          ],
+          "alpha_bbox": [
+            53,
+            101,
+            302,
+            199
+          ]
+        },
+        {
+          "region": [
+            418,
+            63,
+            418,
+            320
+          ],
+          "alpha_bbox": [
+            64,
+            117,
+            300,
+            183
+          ]
+        },
+        {
+          "region": [
+            836,
+            70,
+            418,
+            320
+          ],
+          "alpha_bbox": [
+            56,
+            141,
+            326,
+            159
+          ]
+        },
+        {
+          "region": [
+            0,
+            474,
+            418,
+            320
+          ],
+          "alpha_bbox": [
+            55,
+            147,
+            321,
+            153
+          ]
+        },
+        {
+          "region": [
+            418,
+            474,
+            418,
+            320
+          ],
+          "alpha_bbox": [
+            33,
+            157,
+            350,
+            143
+          ]
+        },
+        {
+          "region": [
+            836,
+            474,
+            418,
+            320
+          ],
+          "alpha_bbox": [
+            42,
+            162,
+            328,
+            138
+          ]
+        },
+        {
+          "region": [
+            0,
+            875,
+            418,
+            320
+          ],
+          "alpha_bbox": [
+            46,
+            160,
+            333,
+            140
+          ]
+        },
+        {
+          "region": [
+            418,
+            875,
+            418,
+            320
+          ],
+          "alpha_bbox": [
+            44,
+            161,
+            343,
+            137
+          ]
+        },
+        {
+          "region": [
+            836,
+            875,
+            418,
+            320
+          ],
+          "alpha_bbox": [
+            34,
+            157,
+            341,
+            142
+          ]
+        }
+      ],
+      "anchor": [
+        0.5,
+        0.9375
+      ],
+      "reference_height": 199,
+      "release_frame": 0,
+      "facing": "left",
+      "source_sha256": "a0ec5143ac1b3cdbefd4481984a135fa1c278f067f1af0c781866af545eb24e8",
+      "row_origins_y": [
+        70,
+        474,
+        875
+      ],
+      "authored_contact_corrections": {
+        "0": {
+          "region_y_delta": -11,
+          "reason": "grounded_neutral_keyframe"
+        },
+        "1": {
+          "region_y_delta": -7,
+          "reason": "grounded_knee_buckle_keyframe"
+        }
+      }
+    }
+  }
+}

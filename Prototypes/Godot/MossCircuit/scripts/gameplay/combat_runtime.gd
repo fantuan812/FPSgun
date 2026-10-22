@@ -31,14 +31,7 @@ static func step(frame:Context,dt:float)->void:
 		e.speed = normal_speed
 		e.pos = e.pos.clamp(Vector2(20,20),Vector2(frame.area.width - 20,frame.area.height - 20))
 		e.sprite.position = e.pos.round()
-		e.sprite.flip_h = frame.world.player_pos.x > e.pos.x
-		if previous_ai=="warning" and e.ai_state not in ["warning","charging"]:frame.actor.trigger(e.id,"attack",.35)
-		if e.ai_state=="warning":frame.actor.set_phase(e.id,"warning",1-e.warning_left/e.warning)
-		elif e.ai_state=="recover":frame.actor.set_phase(e.id,"recover")
-		elif e.ai_state=="charging":frame.actor.set_phase(e.id,"attack",1-e.charge_left/e.charge_duration)
-		elif e.behavior in ["chase","flank"] and e.pos.distance_to(frame.world.player_pos)<85:
-			frame.actor.set_phase(e.id,"warning",1-e.pos.distance_to(frame.world.player_pos)/85)
-		else:frame.actor.set_phase(e.id,"move")
+		frame.actor.observe_enemy(e,previous_ai,frame.world.player_pos)
 		for event in events:
 			match event.kind:
 				"shot", "ring":

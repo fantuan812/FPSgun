@@ -1,11 +1,13 @@
-# MOSS CIRCUIT · 苔芯幸存者 v9
+# MOSS CIRCUIT · 苔芯幸存者 v10
 
 原创 Godot 4.6 像素风 arena-survivor 原型。参考“移动避敌、自动攻击、波次升级”的品类结构，不使用《土豆兄弟》的模型、图像、名称或代码。
 
-本版从冻结 v8 复制，保留历史版本。完成**角色/战斗/武器与效果、运行状态/奖励、模式与刷怪/场地生命周期的可运行分离**。原 Arena 幸存者继续可玩，新增 **3 房间有限遭遇原型**，复用同一套六武器/构筑/商店，而非复制另一个游戏。模式决定下一目标、是否胜利与是否商店；受控测试证明可跳目标且不开店。不是完整地牢。详见 [架构与模式合同](docs/ARCHITECTURE_AND_MODES.md)。
+本版从冻结 v9 复制，**只补冲锋者一种普通敌人的独立动作**：蓄力/冲锋/恢复共用一张分段九帧，受击、死亡各一张九帧。动作按真实 AI 阶段显示，受击结束回到当时的真实阶段，已锁定方向不会追着绕背玩家翻转。帧不会产生二次伤害，不改变伤害、碰撞、生成、经济或 RNG。详见 [冲锋者动作合同与边界](docs/CHARGER_ACTIONS.md)。
+
+v9 已完成的共享战斗/构筑与模式策略继续保留：原 Arena 和 3 房间有限遭遇原型使用同一套战斗，支持受控测试的非相邻推进/不开店结算；仍不是完整地牢。见 [架构与模式合同](docs/ARCHITECTURE_AND_MODES.md)。
 
 v8 的空手九帧身体、六种独立世界武器、主手与三个辅助挂位、独立枪口特效完整保留；[装配与共享发射几何](docs/MODULAR_WEAPONS.md) 不回退成烘焙手枪。
-保留 **6 武器、26 道具、4 武器槽、构筑加权刷新、五种普通敌人与两 Boss**，以及 [此前动作覆盖与本版修正](docs/ACTION_COVERAGE.md)、[六种像素 VFX](docs/PIXEL_VFX.md)、[装备刷新](docs/SHOP_AFFINITY.md)、[道具机制](docs/MECHANISMS.md)、[敌人/Boss](docs/ENEMIES_AND_BOSSES.md)、[经济](docs/BUILD_SYSTEM.md) 和 [UI](ui/README.md)。本批没有假称所有敌人都新增独立原画，没有增加音频、存档或联网。
+保留 **6 武器、26 道具、4 武器槽、构筑加权刷新、五种普通敌人与两 Boss**，以及 [此前动作覆盖与本版修正](docs/ACTION_COVERAGE.md)、[六种像素 VFX](docs/PIXEL_VFX.md)、[装备刷新](docs/SHOP_AFFINITY.md)、[道具机制](docs/MECHANISMS.md)、[敌人/Boss](docs/ENEMIES_AND_BOSSES.md)、[经济](docs/BUILD_SYSTEM.md) 和 [UI](ui/README.md)。本批只有冲锋者新增原画，其他普通怪的独立攻击/受击/死亡仍未全部补齐，没有增加音频、存档或联网。
 
 所有分包请按 [合并解压说明](docs/DELIVERY.md) 放到同一父目录；完整单包直接解压。
 
@@ -55,9 +57,13 @@ v8 的空手九帧身体、六种独立世界武器、主手与三个辅助挂�
 
 v9 房间 HUD 候选图没有通过去环境光晕验收，隔离存入 `art_source/v9-room-candidates/`，默认使用代码像素锁/勾，未把失败图当运行素材。
 
+11. v10 冲锋者三张九帧（27 帧），见 [素材来源与源图限制](docs/art/charger/README.md)。death 首两帧已显式校准接地裁片窗口；PNG/统一尺度不改，仍未做 GUI 整合验收。
+
 idle 暂复用 walk 第一帧；弹丸/经验/判定轮廓保留简单代码绘制，六主题事件特效已使用九帧PNG动画。**不是“所有动作都已制作九帧”**。原PNG未经重绘、缩放或抠图；Godot 中以纹理区域与透明边距处理帧不整齐问题。
 
 ## 验证
+
+v10 接地关键帧修订后重新 clean headless 导入与 **29 个入口全部通过**：旧 25 个、作者冲锋动作 130 项、独立权威状态 parity/生命周期/资源 366+30+194 项；191 个已测运行输入 hash 一致，见 [最终独立报告](docs/validation/independent-v10/QA_REPORT.md)。旧动作资源计数断言改为精确批准 ID 集合，其余旧断言保留，原 6 动作和旧资源不改。
 
 v9 真正 clean headless 导入及 **25 个入口全部通过**：旧 20 个、作者模式 70 项、独立模式/边界/配置/策略 42+20+109+9 项。170 个运行源码/资源/import 文件与独立测试快照逐字节一致；6 个独立脚本另有 SHA。见 [最终独立报告](docs/validation/independent-v9/QA_REPORT.md)。未运行 GUI/Windows 验收。
 
@@ -93,6 +99,10 @@ HOME=/tmp/moss-home XDG_CONFIG_HOME=/tmp/moss-config XDG_DATA_HOME=/tmp/moss-dat
 godot --headless --editor --path . --import --quit
 godot --headless --path . --script tests/test_game.gd
 godot --headless --path . --script tests/test_modes.gd
+godot --headless --path . --script tests/test_charger_actions.gd
+godot --headless --path . --script tests/independent_charger_gameplay_parity.gd
+godot --headless --path . --script tests/independent_charger_lifecycle.gd
+godot --headless --path . --script tests/independent_charger_assets.gd
 godot --headless --path . --script tests/independent_modes.gd
 godot --headless --path . --script tests/independent_room_boundaries.gd
 godot --headless --path . --script tests/independent_policy_validation.gd

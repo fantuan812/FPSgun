@@ -67,3 +67,8 @@ DISPLAY SETTINGS 的 Reduce flashes 会立即取消受击额外白色提亮，�
 - 两个旧独验原来把 `hero.speed_scale==0` 当暂停条件，已改为手动动画的 frame/age/walk_time 不变且未引擎自动播放；保留 elapsed 不变断言。这是实现变化后的语义检查，不是删除暂停测试。
 
 未完成：普通敌人和 Boss 每种独立 hurt/death 原画、各武器独立握持/装填、音效音乐、存档/局外成长、随机障碍连通地图、真人平衡与 Windows 导出。GUI 仍受环境权限限制，没有实玩或真实窗口截图，headless 通过不能替代这些验收。
+
+
+## v10 局部补齐（不改历史记录）
+
+冲锋者已新增 charger_charge（0–3蓄力/4–6冲锋/7–8恢复）、charger_hurt、charger_death，各9帧；walk/idle沿用旧图。采用profile段映射、锁定aim镜像和实时phase恢复，不改变EnemyAI。其他普通敌人仍使用原来的共享程序化反馈，不能把本节解释成五类都已完成。详见 [本版合同](CHARGER_ACTIONS.md) 和 [原图限制](art/charger/README.md)。
