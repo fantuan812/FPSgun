@@ -1,4 +1,27 @@
 extends Node2D
+const ModeStatus=preload("res://ui/mode_status.gd")
+var mode_status:CanvasLayer
+const EffectRuntime=preload("res://scripts/gameplay/effect_runtime.gd")
+const CombatContext=preload("res://scripts/gameplay/combat_context.gd")
+const CombatRuntime=preload("res://scripts/gameplay/combat_runtime.gd")
+var effect_runtime:EffectRuntime
+var combat_frame=CombatContext.new()
+const ArenaMode=preload("res://scripts/modes/arena_mode.gd")
+const RoomMode=preload("res://scripts/modes/room_mode.gd")
+const RunFlow=preload("res://scripts/gameplay/run_flow.gd")
+const FieldLayout=preload("res://scripts/gameplay/field_layout.gd")
+var mode:RefCounted=ArenaMode.new()
+var base_arena:Dictionary
+var room_profile:Dictionary
+const CharacterMotor=preload("res://scripts/gameplay/character_motor.gd")
+const WeaponCombat=preload("res://scripts/gameplay/weapon_combat.gd")
+const WeaponPresentation=preload("res://scripts/gameplay/weapon_presentation.gd")
+var weapon_combat:WeaponCombat
+var weapon_presentation:WeaponPresentation
+const RunSession=preload("res://scripts/gameplay/run_session.gd")
+var run=RunSession.new()
+const CombatState=preload("res://scripts/gameplay/combat_state.gd")
+var combat=CombatState.new()
 const WeaponRig = preload("res://scripts/weapon_rig.gd")
 var weapon_rig:Node2D
 const ActorDirector = preload("res://scripts/actor_director.gd")
@@ -18,29 +41,64 @@ const VFX = preload("res://scripts/vfx_layer.gd")
 var vfx: Node2D
 const Art = preload("res://scripts/art.gd")
 var effects = Effects.new()
-var effect_sequence := 0
-var pending_blasts: Array = []
-var hazards: Array = []
-var effect_visuals: Array = []
+var effect_sequence:int:
+	get:return effect_runtime.sequence if effect_runtime else 0
+	set(value):
+		if effect_runtime:effect_runtime.sequence=value
+var pending_blasts: Array:
+	get: return combat.pending_blasts
+	set(value): combat.pending_blasts=value
+var hazards: Array:
+	get: return combat.hazards
+	set(value): combat.hazards=value
+var effect_visuals: Array:
+	get: return combat.effect_visuals
+	set(value): combat.effect_visuals=value
 var encounters: Dictionary
-var enemy_bullets: Array = []
-var boss_spawned := false
-var boss_defeated := false
-var boss_rewards: Dictionary = {}
-var rewards: Array = []
+var enemy_bullets: Array:
+	get: return combat.enemy_bullets
+	set(value): combat.enemy_bullets=value
+var boss_spawned: bool:
+	get: return run.boss_spawned
+	set(value): run.boss_spawned=value
+var boss_defeated: bool:
+	get: return run.boss_defeated
+	set(value): run.boss_defeated=value
+var boss_rewards: Dictionary:
+	get: return run.boss_rewards
+	set(value): run.boss_rewards=value
+var rewards: Array:
+	get: return run.rewards
+	set(value): run.rewards=value
 var codex_return := "title"
 var catalog: Dictionary
-var build: Dictionary
+var build: Dictionary:
+	get: return run.build
+	set(value): run.build=value
 var shop_rng := RandomNumberGenerator.new()
-var shop_offers: Array = []
-var shop_generation := 0
-var shop_pending := false
-var weapon_clocks: Array = []
-var shop_message := ""
+var shop_offers: Array:
+	get: return run.shop_offers
+	set(value): run.shop_offers=value
+var shop_generation: int:
+	get: return run.shop_generation
+	set(value): run.shop_generation=value
+var shop_pending: bool:
+	get: return run.shop_pending
+	set(value): run.shop_pending=value
+var weapon_clocks: Array:
+	get: return combat.weapon_clocks
+	set(value): combat.weapon_clocks=value
+var shop_message: String:
+	get: return run.shop_message
+	set(value): run.shop_message=value
 var inventory_return := "paused"
 var config: Dictionary
-var stats: Dictionary
-var run_seed := 240102
+var stats: Dictionary:
+	get: return combat.stats
+	set(value): combat.stats=value
+var run_seed: int:
+	get: return run.run_seed
+	set(value): run.run_seed=value
 var rng := RandomNumberGenerator.new()
 var loot_rng := RandomNumberGenerator.new()
 var map_data: Array = []
@@ -48,27 +106,65 @@ var grid_size := Vector2i.ZERO
 var ground: Texture2D
 var hero: AnimatedSprite2D
 var camera: Camera2D
-var enemies: Array = []
-var bullets: Array = []
-var pickups: Array = []
-var flashes: Array = []
-var player_pos := Vector2.ZERO
-var wave := 1
-var wave_time := 0.0
-var elapsed := 0.0
-var spawn_clock := 0.0
+var enemies: Array:
+	get: return combat.enemies
+	set(value): combat.enemies=value
+var bullets: Array:
+	get: return combat.bullets
+	set(value): combat.bullets=value
+var pickups: Array:
+	get: return combat.pickups
+	set(value): combat.pickups=value
+var flashes: Array:
+	get: return combat.flashes
+	set(value): combat.flashes=value
+var player_pos: Vector2:
+	get: return combat.player_pos
+	set(value): combat.player_pos=value
+var wave: int:
+	get: return run.wave
+	set(value): run.wave=value
+var wave_time: float:
+	get: return run.wave_time
+	set(value): run.wave_time=value
+var elapsed: float:
+	get: return run.elapsed
+	set(value): run.elapsed=value
+var spawn_clock:float:
+	get:return mode.spawn_clock
+	set(value):mode.spawn_clock=value
 var shot_clock := 0.0
-var hurt_clock := 0.0
-var level := 1
-var xp := 0
-var kills := 0
-var state := "title"
-var resume_state := "playing"
-var next_enemy_id := 0
+var hurt_clock: float:
+	get: return combat.hurt_clock
+	set(value): combat.hurt_clock=value
+var level: int:
+	get: return run.level
+	set(value): run.level=value
+var xp: int:
+	get: return run.xp
+	set(value): run.xp=value
+var kills: int:
+	get: return run.kills
+	set(value): run.kills=value
+var state: String:
+	get: return run.state
+	set(value): run.state=value
+var resume_state: String:
+	get: return run.resume_state
+	set(value): run.resume_state=value
+var next_enemy_id: int:
+	get: return combat.next_enemy_id
+	set(value): combat.next_enemy_id=value
 var ui: CanvasLayer
-var choices: Array = []
-var upgrade_pending := 0
-var choice_generation := 0
+var choices: Array:
+	get: return run.choices
+	set(value): run.choices=value
+var upgrade_pending: int:
+	get: return run.upgrade_pending
+	set(value): run.upgrade_pending=value
+var choice_generation: int:
+	get: return run.choice_generation
+	set(value): run.choice_generation=value
 var automation := false
 
 func _ready() -> void:
@@ -79,6 +175,13 @@ func _ready() -> void:
 		set_process(false)
 		return
 	config = raw_balance
+	base_arena=config.arena.duplicate(true)
+	var raw_rooms=JSON.parse_string(FileAccess.get_file_as_string("res://data/room_encounters.json"))
+	if not raw_rooms is Dictionary:
+		push_error("Room policy must be a JSON object")
+		set_process(false)
+		return
+	room_profile=raw_rooms
 	catalog = raw_catalog
 	var catalog_errors := Rules.validate_catalog(catalog)
 	if not catalog_errors.is_empty():
@@ -91,6 +194,11 @@ func _ready() -> void:
 		set_process(false)
 		return
 	encounters = raw_encounters
+	var mode_errors:=RoomMode.validate(room_profile,encounters)
+	if not mode_errors.is_empty():
+		push_error("Invalid room policy: "+str(mode_errors))
+		set_process(false)
+		return
 	if not EnemyAI.validate(encounters).is_empty() or encounters.waves.size() != int(config.waves.count):
 		push_error("Invalid encounter definitions: " + str(EnemyAI.validate(encounters)))
 		set_process(false)
@@ -112,13 +220,18 @@ func _ready() -> void:
 	vfx = VFX.new()
 	add_child(vfx)
 	vfx.load_default()
+	weapon_presentation=WeaponPresentation.new(combat,run,actor_anim,weapon_rig,hero)
+	weapon_combat=WeaponCombat.new(combat,run,catalog,weapon_presentation,_effect_event,_vfx)
+	effect_runtime=EffectRuntime.new(combat,run,effects,actor_anim,_vfx,_mechanism_vfx)
+	combat_frame.world=combat;combat_frame.session=run;combat_frame.catalog=catalog
+	combat_frame.weapons=weapon_combat;combat_frame.procs=effect_runtime;combat_frame.actor=actor_anim
+	combat_frame.hurt=_hurt;combat_frame.spawn_kind=_spawn_kind;combat_frame.boss_killed=_boss_killed;combat_frame.play_vfx=_vfx
 	telegraphs = Telegraphs.new()
 	add_child(telegraphs)
 	_build_ui()
-	grid_size = Rules.grid_dimensions(config.arena)
-	map_data = Rules.map_cells(run_seed, grid_size.x, grid_size.y)
-	player_pos = camera.position
-	hero.position = player_pos
+	mode_status=ModeStatus.new()
+	add_child(mode_status)
+	_enter_field(run_seed)
 	_title()
 	if "--smoke" in OS.get_cmdline_user_args():
 		automation = true
@@ -146,7 +259,7 @@ func _title() -> void:
 	vfx.clear()
 	telegraphs.show_markers([])
 	state = "title"
-	ui.show_title(run_seed)
+	ui.show_title(run_seed,mode.id)
 
 
 func _start_run(seed_value: int) -> void:
@@ -183,8 +296,7 @@ func _start_run(seed_value: int) -> void:
 	enemy_bullets.clear()
 	shop_offers.clear()
 	weapon_clocks = [0.0]
-	grid_size = Rules.grid_dimensions(config.arena)
-	map_data = Rules.map_cells(run_seed, grid_size.x, grid_size.y)
+	_enter_field(run_seed)
 	stats = Rules.derive(config.player, build, catalog)
 	stats.max_hp = stats.hp
 	stats.pierce = 0
@@ -192,6 +304,9 @@ func _start_run(seed_value: int) -> void:
 	stats.dash_time = 0.0
 	player_pos = Vector2(config.arena.width, config.arena.height) * 0.5
 	wave = 1
+	mode.reset()
+	mode.begin_stage(wave)
+	resume_state="playing"
 	wave_time = 0.0
 	elapsed = 0.0
 	spawn_clock = 0.0
@@ -209,7 +324,8 @@ func _start_run(seed_value: int) -> void:
 func _input(event: InputEvent) -> void:
 	if event is InputEventKey and event.pressed and not event.echo:
 		if event.keycode == KEY_ESCAPE:
-			if state == "playing":
+			if state in ["playing","room_clear"]:
+				resume_state=state
 				state = "paused"
 				_present_pause()
 			elif state == "paused": _resume()
@@ -222,7 +338,7 @@ func _input(event: InputEvent) -> void:
 
 
 func _resume() -> void:
-	state = "playing"
+	state = resume_state if resume_state in ["playing","room_clear"] else "playing"
 	_hide_modal()
 
 func _process(delta: float) -> void:
@@ -231,6 +347,10 @@ func _process(delta: float) -> void:
 		actor_anim.advance(minf(delta,.05))
 		vfx.advance(minf(delta,0.05))
 		_simulate(minf(delta, 0.05))
+	elif state=="room_clear":
+		mode.advance_clear(minf(delta,.05),combat)
+		actor_anim.advance(minf(delta,.05))
+		if mode.is_due(run,combat,config):_complete_wave()
 	elif state in ["dead","won"]:
 		actor_anim.advance(minf(delta,.05),true)
 		if state=="dead" and result_pending:
@@ -240,158 +360,43 @@ func _process(delta: float) -> void:
 				_show_result(false)
 	hero.position = player_pos.round()
 	_sync_weapon_rig()
-	camera.position = Vector2(clampf(player_pos.x, 480, config.arena.width - 480) if config.arena.width >= 960 else config.arena.width * 0.5, clampf(player_pos.y, 270, config.arena.height - 270) if config.arena.height >= 540 else config.arena.height * 0.5)
+	camera.position = FieldLayout.camera_position(player_pos,config.arena)
 	_update_hud()
 	_sync_telegraphs()
 	queue_redraw()
 
 func _simulate(dt: float) -> void:
+	if state!="playing":return
 	elapsed += dt
 	wave_time += dt
-	hurt_clock = maxf(0, hurt_clock - dt)
-	stats.dash_cooldown = maxf(0, stats.dash_cooldown - dt)
-	stats.dash_time = maxf(0, stats.dash_time - dt)
 	var direction := Vector2(float(Input.is_physical_key_pressed(KEY_D) or Input.is_physical_key_pressed(KEY_RIGHT)) - float(Input.is_physical_key_pressed(KEY_A) or Input.is_physical_key_pressed(KEY_LEFT)), float(Input.is_physical_key_pressed(KEY_S) or Input.is_physical_key_pressed(KEY_DOWN)) - float(Input.is_physical_key_pressed(KEY_W) or Input.is_physical_key_pressed(KEY_UP))).normalized()
 	if automation: direction = Vector2(cos(elapsed * 0.7), sin(elapsed * 0.7))
-	if Input.is_physical_key_pressed(KEY_SPACE) and stats.dash_cooldown <= 0 and direction != Vector2.ZERO:
-		stats.dash_time = 0.16
-		stats.dash_cooldown = 2.5
-		_effect_event("dash",{"pos":player_pos,"angle":direction.angle()})
-	player_pos += direction * stats.speed * dt * (3.0 if stats.dash_time > 0 else 1.0)
-	player_pos = player_pos.clamp(Vector2(24, 24), Vector2(config.arena.width - 24, config.arena.height - 24))
+	var dash_origin:=player_pos
+	if CharacterMotor.step(combat,config.arena,direction,Input.is_physical_key_pressed(KEY_SPACE),dt):
+		_effect_event("dash",{"pos":dash_origin,"angle":direction.angle()})
 	if direction != Vector2.ZERO:
 		actor_anim.set_phase(0,"move")
 		if direction.x != 0 and actor_anim.state_of(0)!="attack": hero.flip_h = direction.x < 0
 	else: actor_anim.set_phase(0,"idle")
 	hero.modulate = Color(1, 0.5, 0.45) if hurt_clock > 0.5 else Color.WHITE
 	_ensure_boss()
-	spawn_clock -= dt
-	if spawn_clock <= 0:
-		_spawn_enemy()
-		spawn_clock = maxf(0.13, float(config.waves.spawn_interval) / (1.0 + wave * 0.3))
-	for prep_slot in range(build.weapons.size()):
-		var soon:float=weapon_clocks[prep_slot]
-		var prep_weapon:Dictionary=Rules.catalog_entry(catalog,build.weapons[prep_slot])
-		var prep_range:float=prep_weapon.range*(1.0+stats.range_bonus)
-		if prep_slot==0 and prep_weapon.behavior!="orbit" and soon>0 and soon<.12 and enemies.any(func(e):return e.hp>0 and e.pos.distance_to(player_pos)<=prep_range):
-			actor_anim.set_phase(0,"warning",1-soon/.12)
-			break
-	for slot in range(build.weapons.size()):
-		weapon_clocks[slot] -= dt
-		if weapon_clocks[slot] <= 0 and not enemies.is_empty():
-			_fire_weapon(build.weapons[slot], slot)
-			var weapon := Rules.catalog_entry(catalog, build.weapons[slot])
-			weapon_clocks[slot] = maxf(.09, weapon.interval / (1.0 + stats.haste))
-	_update_mortars(dt)
-	_update_hazards(dt)
-	var spawn_requests: Array = []
-	for e in enemies:
-		if e.hp <= 0: continue
-		var normal_speed: float = e.speed
-		if e.get("slow_until",0.0) > elapsed: e.speed *= .55
-		var previous_ai:String=e.ai_state
-		var events: Array = EnemyAI.tick(e,player_pos,dt,elapsed)
-		e.speed = normal_speed
-		e.pos = e.pos.clamp(Vector2(20,20),Vector2(config.arena.width - 20,config.arena.height - 20))
-		e.sprite.position = e.pos.round()
-		e.sprite.flip_h = player_pos.x > e.pos.x
-		if previous_ai=="warning" and e.ai_state not in ["warning","charging"]:actor_anim.trigger(e.id,"attack",.35)
-		if e.ai_state=="warning":actor_anim.set_phase(e.id,"warning",1-e.warning_left/e.warning)
-		elif e.ai_state=="recover":actor_anim.set_phase(e.id,"recover")
-		elif e.ai_state=="charging":actor_anim.set_phase(e.id,"attack",1-e.charge_left/e.charge_duration)
-		elif e.behavior in ["chase","flank"] and e.pos.distance_to(player_pos)<85:
-			actor_anim.set_phase(e.id,"warning",1-e.pos.distance_to(player_pos)/85)
-		else:actor_anim.set_phase(e.id,"move")
-		for event in events:
-			match event.kind:
-				"shot", "ring":
-					for index in range(event.count):
-						var enemy_direction: Vector2 = Vector2.from_angle(TAU * index / event.count + .13) if event.kind == "ring" else event.direction.rotated((index - (event.count - 1) * .5) * .22)
-						enemy_bullets.append({"pos":e.pos,"velocity":enemy_direction * e.projectile_speed,"life":4.0,"damage":e.damage,"owner":e.id})
-				"blast":
-					_vfx("explosion",event.pos,{"radius":event.radius})
-					flashes.append({"pos":event.pos,"radius":event.radius,"life":.2})
-					if player_pos.distance_to(event.pos) <= event.radius: _hurt(event.damage)
-				"summon":
-					var children := enemies.filter(func(child): return child.get("parent_id",-1) == e.id and child.hp > 0).size()
-					for index in range(mini(event.count,maxi(0,int(e.summon_limit) - children))):
-						spawn_requests.append({"parent_id":e.id,"pos":e.pos + Vector2.from_angle(index * PI + elapsed) * 50})
-		if state != "playing": return
-		# Warning/recovery windows are contact-safe; charges damage only while moving.
-		if e.ai_state in ["move","charging"] and e.pos.distance_to(player_pos) < 16.0 * float(e.scale) + 9.0:
-			actor_anim.trigger(e.id,"attack")
-			_hurt(e.damage)
-		if state != "playing": return
-	for request in spawn_requests: _spawn_kind("crawler",request.pos,request.parent_id)
-	var living_owners: Array = enemies.filter(func(enemy): return enemy.hp > 0).map(func(enemy): return enemy.id)
-	enemy_bullets = enemy_bullets.filter(func(projectile): return projectile.owner in living_owners)
-	for i in range(enemy_bullets.size() - 1,-1,-1):
-		var projectile: Dictionary = enemy_bullets[i]
-		if projectile.life <= 0:
-			enemy_bullets.remove_at(i)
-			continue
-		var previous: Vector2 = projectile.pos
-		projectile.pos += projectile.velocity * minf(dt,projectile.life)
-		projectile.life -= dt
-		if Geometry2D.get_closest_point_to_segment(player_pos,previous,projectile.pos).distance_to(player_pos) < 12:
-			_hurt(projectile.damage)
-			projectile.life = -1
-		if projectile.life <= 0: enemy_bullets.remove_at(i)
-		if state != "playing": return
-	for i in range(bullets.size() - 1, -1, -1):
-		var b: Dictionary = bullets[i]
-		if b.life <= 0:
-			bullets.remove_at(i)
-			continue
-		if b.get("weapon","") == "return_disc":
-			_advance_disc(b,dt)
-		else:
-			_advance_bullet(b,dt)
-		if b.life <= 0: bullets.remove_at(i)
-	for enemy in enemies:
-		if enemy.hp>0 and enemy.hp<enemy.get("anim_hp",enemy.hp):actor_anim.trigger(enemy.id,"hurt")
-		enemy.anim_hp=enemy.hp
-	for i in range(enemies.size() - 1, -1, -1):
-		var e: Dictionary = enemies[i]
-		if e.hp <= 0:
-			if e.boss: _boss_killed(e)
-			var source: String = e.get("last_source","primary")
-			_effect_event("kill",{"pos":e.pos,"source":source,"depth":0 if source == "primary" else 1})
-			enemy_bullets = enemy_bullets.filter(func(projectile): return projectile.owner != e.id)
-			pickups.append({"pos": e.pos, "xp": e.xp, "coins":maxi(1, int(e.xp / 2))})
-			e.sprite.position=e.pos
-			actor_anim.die(e.id)
-			enemies.remove_at(i)
-			kills += 1
-	for i in range(pickups.size() - 1, -1, -1):
-		var p: Dictionary = pickups[i]
-		var distance: float = p.pos.distance_to(player_pos)
-		if distance < stats.pickup_radius: p.pos = p.pos.move_toward(player_pos, dt * 260)
-		if distance < 14:
-			stats.hp = minf(stats.max_hp,stats.hp + p.get("heal",0.0))
-			xp += int(p.xp)
-			Rules.credit(build, p.get("coins", 1) * (1.0 + stats.coin_bonus))
-			_effect_event("pickup",{"pos":p.pos,"source":p.get("source","normal")})
-			pickups.remove_at(i)
-	for i in range(flashes.size() - 1, -1, -1):
-		flashes[i].life -= dt
-		if flashes[i].life <= 0: flashes.remove_at(i)
-	while xp >= Rules.xp_threshold(level):
-		xp -= Rules.xp_threshold(level)
-		level += 1
-		upgrade_pending += 1
+	if mode.tick_spawn(dt,run,config):_spawn_enemy()
+	combat_frame.area=config.arena
+	CombatRuntime.step(combat_frame,dt)
+	if state!="playing":return
+	RunFlow.accrue_levels(run)
 	if upgrade_pending > 0:
 		_show_upgrades()
 		return
-	if wave_time >= float(config.waves.duration): _complete_wave()
+	if mode.wants_clear_pause(combat):
+		_begin_room_clear()
+	elif mode.is_due(run,combat,config):_complete_wave()
 
 func _spawn_enemy() -> void:
-	if enemies.size() >= int(config.waves.max_enemies): return
-	var pos := player_pos + Vector2.from_angle(rng.randf_range(0,TAU)) * rng.randf_range(330,440)
-	pos = pos.clamp(Vector2(20,20),Vector2(config.arena.width - 20,config.arena.height - 20))
-	if pos.distance_to(player_pos) < 180: return
-	var pool: Array = encounters.waves[mini(wave - 1,encounters.waves.size() - 1)].pool
-	_spawn_kind(pool[rng.randi_range(0,pool.size() - 1)],pos)
+	var request:Dictionary=mode.regular_request(run,combat,config,encounters,rng)
+	if request.is_empty():return
+	var spawned:=_spawn_kind(request.kind,request.pos)
+	mode.acknowledge(request,spawned)
 
 func _spawn_kind(kind: String, pos: Vector2, parent_id: int = -1) -> Dictionary:
 	if enemies.size() >= int(config.waves.max_enemies): return {}
@@ -430,13 +435,10 @@ func _spawn_kind(kind: String, pos: Vector2, parent_id: int = -1) -> Dictionary:
 	return data
 
 func _ensure_boss() -> void:
-	var boss_id: String = encounters.waves[mini(wave - 1,encounters.waves.size() - 1)].boss
-	if boss_id == "" or boss_spawned: return
-	var pos := player_pos + Vector2(360,0)
-	pos = pos.clamp(Vector2(80,80),Vector2(config.arena.width - 80,config.arena.height - 80))
-	if pos.distance_to(player_pos) < 220: pos = player_pos - Vector2(360,0)
-	var spawned := _spawn_kind(boss_id,pos)
-	if not spawned.is_empty(): boss_spawned = true
+	var request:Dictionary=mode.boss_request(run,combat,config.arena,encounters)
+	if request.is_empty():return
+	var spawned:=_spawn_kind(request.kind,request.pos)
+	if not spawned.is_empty():boss_spawned=true
 
 func _hurt(damage: float) -> void:
 	if state != "playing" or hurt_clock > 0 or stats.dash_time > 0: return
@@ -445,107 +447,45 @@ func _hurt(damage: float) -> void:
 		return
 	actor_anim.trigger(0,"hurt")
 	_vfx("hit_spark",player_pos)
-	var actual_loss := minf(stats.hp,damage)
-	stats.hp = maxf(0,stats.hp - damage)
+	var actual_loss := CharacterMotor.apply_damage(combat,damage)
 	_effect_event("hurt",{"amount":actual_loss})
 	hurt_clock = .75
 	if stats.hp <= 0: _finish(false)
 
 func _boss_killed(enemy: Dictionary) -> void:
-	if not enemy.get("boss",false) or enemy.hp > 0 or boss_rewards.has(enemy.kind) or state != "playing": return
-	boss_rewards[enemy.kind] = true
-	boss_defeated = true
-	if enemy.kind == "boss_warden":
-		build.boss_protocol = true
-		rewards.append("WARDEN PROTOCOL: +25 max HP, +10% damage")
+	if RunFlow.award_boss(combat,run,enemy):
 		_recompute()
-		stats.hp = minf(stats.max_hp,stats.hp + 25)
-		Rules.credit(build,50)
-	else:
-		rewards.append("REACTOR CROWN: final trophy")
-		Rules.credit(build,100)
+		stats.hp=minf(stats.max_hp,stats.hp+25)
+
 
 func _shoot() -> void:
 	_fire_weapon("rivet_gun", 0)
 
 func _fire_weapon(id: String, slot: int) -> void:
-	if enemies.is_empty(): return
-	var weapon := Rules.catalog_entry(catalog, id)
-	var damage: float = weapon.damage * (1.0 + stats.damage_bonus)
-	if "electric" in weapon.tags: damage *= 1.0 + stats.electric_bonus
-	if "melee" in weapon.tags: damage *= 1.0 + stats.melee_bonus
-	if weapon.behavior == "orbit":
-		_sync_weapon_rig()
-		var rotor_pose:Dictionary=_launch_pose(id,slot,player_pos+Vector2.RIGHT*100)
-		weapon_rig.fire(slot,rotor_pose)
-		# A timed rotating radial sweep: damages each nearby target once per attack.
-		for enemy in enemies:
-			if enemy.hp > 0 and enemy.pos.distance_to(player_pos) <= weapon.range:
-				enemy.hp -= damage
-				enemy.last_source = "primary"
-				_effect_event("hit",{"target":enemy.id,"pos":enemy.pos,"damage":damage,"weapon":id})
-		flashes.append({"pos":player_pos, "life":.25, "radius":weapon.range})
-		return
-	var living: Array = enemies.filter(func(enemy): return enemy.hp > 0)
-	if living.is_empty(): return
-	var nearest: Dictionary = living[0]
-	for enemy in living:
-		if player_pos.distance_squared_to(enemy.pos) < player_pos.distance_squared_to(nearest.pos): nearest = enemy
-	var reach: float = weapon.range * (1.0 + stats.range_bonus)
-	if player_pos.distance_to(nearest.pos) > reach: return
-	if slot==0:actor_anim.trigger(0,"attack")
-	if absf(nearest.pos.x-player_pos.x)>.01:hero.flip_h=nearest.pos.x<player_pos.x
-	var pose:Dictionary=_launch_pose(id,slot,nearest.pos)
-	weapon_rig.fire(slot,pose)
-	var aim:Vector2=pose.direction
-	if weapon.behavior!="return":_vfx("muzzle_flash",pose.muzzle,{"angle":aim.angle(),"weapon":id,"slot":slot})
-	if weapon.behavior == "mortar":
-		pending_blasts.append({"pos":nearest.pos,"delay":.6,"damage":damage,"radius":85.0,"weapon":id,"visual_origin":pose.muzzle})
-		return
-	var direction: Vector2 = aim
-	var count: int = weapon.projectiles + (int(stats.extra_pellets) if weapon.behavior == "spread" else 0)
-	for i in range(count):
-		var angle: float = (float(i) / maxf(1, count - 1) - .5) * float(weapon.spread) if count > 1 else 0.0
-		var vector := direction.rotated(angle)
-		var travel:float=WeaponRig.range_distance(player_pos,pose.muzzle,vector,reach)
-		if travel<=.000001:continue
-		bullets.append({"pos":pose.muzzle,"launch_start":pose.mount,"launch_end":pose.muzzle, "velocity":vector * stats.bullet_speed, "life":2.5 if weapon.behavior == "return" else maxf(.000001,travel / stats.bullet_speed), "damage":damage, "pierce":int(weapon.pierce) + int(stats.pierce), "hit":[], "weapon":id, "slot":slot, "returning":false,"outbound_left":travel / stats.bullet_speed})
+	weapon_combat.fire(id,slot)
 
 func _complete_wave() -> void:
-	if state != "playing": return
-	var boss_id: String = encounters.waves[mini(wave - 1,encounters.waves.size() - 1)].boss
-	if boss_id != "" and not boss_defeated:
+	if state not in ["playing","room_clear"]:return
+	if not mode.can_end(run,combat,encounters):
 		_ensure_boss()
 		return
-	vfx.clear()
-	telegraphs.show_markers([])
-	for p in pickups:
-		stats.hp = minf(stats.max_hp,stats.hp+p.get("heal",0.0))
-		xp += int(p.xp)
-		Rules.credit(build, p.get("coins", 1) * (1.0 + stats.coin_bonus))
-	pickups.clear()
+	var retiring:Array=enemies.duplicate()
+	var outcome:=RunFlow.settle(combat,run,mode,config,effects,encounters)
+	if outcome in ["invalid","ignored"]:return
+	vfx.clear();telegraphs.show_markers([])
 	actor_anim.clear(true,true)
-	for e in enemies: e.sprite.queue_free()
-	enemies.clear()
-	bullets.clear()
-	enemy_bullets.clear()
-	hazards.clear()
-	pending_blasts.clear()
-	effect_visuals.clear()
-	effects.reset(build.items)
-	if wave >= int(config.waves.count):
-		_finish(true)
-		return
-	wave += 1
-	wave_time = 0
-	boss_spawned = false
-	boss_defeated = false
-	enemy_bullets.clear()
-	stats.hp = minf(stats.max_hp, stats.hp + stats.wave_heal)
-	Rules.credit(build, 15 + wave * 3)
-	shop_pending = true
-	upgrade_pending += 1
-	_show_upgrades()
+	for enemy in retiring:
+		if is_instance_valid(enemy.sprite):enemy.sprite.queue_free()
+	if outcome=="won":_finish(true)
+	elif outcome=="next":
+		mode.begin_stage(wave)
+		if mode.refresh_field_between_stages:_enter_field(run_seed^(wave*17041))
+		if upgrade_pending>0:_show_upgrades()
+		elif shop_pending:_open_shop()
+		else:
+			state="playing"
+			_hide_modal()
+
 
 func _show_upgrades() -> void:
 	effects.invalidate()
@@ -591,6 +531,7 @@ func _show_result(won:bool) -> void:
 
 
 func _update_hud() -> void:
+	if is_instance_valid(mode_status):mode_status.present(mode.id,state,mode.objective(run,combat,config),mode.progress())
 	if not stats.is_empty(): ui.update_hud(_view())
 	if ui.has_method("update_bosses"):
 		var bars: Array = []
@@ -742,8 +683,13 @@ func _leave_shop(generation: int) -> void:
 	_hide_modal()
 
 func _view() -> Dictionary:
-	if build.is_empty(): return {"seed":run_seed,"settings":settings.duplicate(true)}
+	if build.is_empty(): return {"seed":run_seed,"settings":settings.duplicate(true),"mode_id":mode.id,"mode_name":mode.name,"objective":""}
 	var view := {"coins":build.coins,"wave":wave,"level":level,"hp":stats.hp,"max_hp":stats.max_hp,"xp":xp,"xp_max":Rules.xp_threshold(level),"time":elapsed,"kills":kills,"seed":run_seed,"stats":stats,"weapons":[],"items":[],"synergies":stats.synergies,"generation":shop_generation,"refresh_price":catalog.refresh_price,"weapon_slots":catalog.weapon_slots,"item_slots":catalog.item_slots,"message":shop_message,"offers":[],"rewards":rewards,"synergy_status":[],"mechanics":{"shield":effects.shield,"chain_charges":effects.chain_charges,"hazards":hazards.size(),"echo_hits":effects.echo_hits,"phase_charge":effects.phase_charge,"medic_damage":effects.medic_damage,"cooldowns":{}}}
+	view.mode_id=mode.id
+	view.mode_name=mode.name
+	view.objective=mode.objective(run,combat,config)
+	view.stage_count=mode.count(config)
+	view.room_clear_progress=mode.progress()
 	view.actor_state=actor_anim.state_of(0)
 	view.dash_cooldown=stats.get("dash_cooldown",0.0)
 	view.settings=settings.duplicate(true)
@@ -785,6 +731,10 @@ func _view() -> Dictionary:
 
 func _on_intent(action: String, payload: Dictionary) -> void:
 	match action:
+		"select_mode":
+			if state=="title" and payload.get("id","") in ["arena","rooms"]:
+				run_seed=int(payload.get("seed",run_seed))
+				_select_mode(str(payload.id))
 		"settings":
 			if state in ["title","paused"]:
 				settings_return=state
@@ -818,7 +768,8 @@ func _on_intent(action: String, payload: Dictionary) -> void:
 		"start":
 			if state == "title": _start_run(int(payload.get("seed",run_seed)))
 		"pause":
-			if state == "playing":
+			if state in ["playing","room_clear"]:
+				resume_state=state
 				state = "paused"
 				_present_pause()
 		"resume":
@@ -835,7 +786,7 @@ func _on_intent(action: String, payload: Dictionary) -> void:
 		"continue": _leave_shop(int(payload.get("generation",-1)))
 		"upgrade": _take_upgrade(int(payload.get("index",-1)),int(payload.get("generation",-1)))
 		"inventory":
-			if state in ["playing","paused","shop"]:
+			if state in ["playing","paused","shop","room_clear"]:
 				inventory_return = state
 				state = "inventory"
 				_present_inventory()
@@ -875,192 +826,22 @@ func _clear_transients() -> void:
 	for enemy in enemies: enemy.slow_until = 0.0
 
 func _effect_event(kind: String, data: Dictionary) -> bool:
-	if state != "playing": return false
-	if kind == "hit": _vfx("hit_spark",data.pos)
-	elif kind == "dash":
-		actor_anim.trigger(0,"dash",float(stats.dash_time) if stats.dash_time>0 else .16)
-		_vfx("dash_trail",data.pos,{"angle":data.get("angle",0.0)})
-	effect_sequence += 1
-	var event := data.duplicate(true)
-	event.kind = kind
-	event.epoch = effects.epoch
-	event.sequence = effect_sequence
-	var context := {"time":elapsed,"enemies":enemies,"damage":event.get("damage",stats.damage),"hp":stats.hp,"max_hp":stats.max_hp,"pos":player_pos}
-	var commands: Array = effects.process(event,context)
-	var blocked := false
-	for command in commands:
-		match command.kind:
-			"block":
-				_vfx("shield_impact",player_pos,{"source_item":"mirror_shell"})
-				blocked = true
-				effect_visuals.append({"kind":"block","pos":player_pos,"radius":30,"life":.3})
-			"heal":
-				stats.hp = minf(stats.max_hp,stats.hp + command.amount)
-				_mechanism_vfx(command.get("source_item","healing"),"shield_impact",player_pos,{"size":Vector2(32,32),"tint":Color("83e8a5")})
-			"medical":
-				_mechanism_vfx("medic_seed","hit_spark",command.pos,{"tint":Color("f69eb5")})
-				var medical: Array = pickups.filter(func(p): return p.get("source","") == "medical")
-				if medical.size() >= 8: pickups.erase(medical[0])
-				pickups.append({"pos":command.pos,"xp":0,"coins":0,"heal":8.0,"source":"medical"})
-			"orb":
-				pickups.append({"pos":command.pos,"xp":2,"coins":1,"source":"energy"})
-				_mechanism_vfx("kill_cell","hit_spark",command.pos,{"tint":Color("f8d569")})
-			"chain":
-				for id in command.targets:
-					for enemy in enemies:
-						if enemy.id == id and enemy.hp > 0:
-							enemy.hp -= command.damage
-							enemy.last_source = "chain"
-							_vfx("chain_arc",command.pos,{"end":enemy.pos,"source_item":"arc_relay"})
-							_vfx("hit_spark",enemy.pos)
-							effect_visuals.append({"kind":"chain","pos":command.pos,"end":enemy.pos,"life":.2})
-			"echo":
-				for enemy in enemies:
-					if enemy.id == command.target and enemy.hp > 0:
-						enemy.hp -= 12
-						enemy.last_source = "echo"
-						_mechanism_vfx("echo_chamber","hit_spark",enemy.pos,{"tint":Color("c5a4f6")})
-						effect_visuals.append({"kind":"echo","pos":enemy.pos,"radius":18,"life":.25})
-			"phase":
-				for enemy in enemies:
-					if enemy.hp > 0 and enemy.pos.distance_to(command.pos) <= 95:
-						enemy.hp -= 12
-						enemy.last_source = "phase"
-				_mechanism_vfx("phase_capacitor","explosion",command.pos,{"radius":95,"tint":Color("94c5ff")})
-				effect_visuals.append({"kind":"phase","pos":command.pos,"radius":95,"life":.25})
-			"pull":
-				_mechanism_vfx("gravity_anchor","shield_impact",command.pos,{"radius":100,"tint":Color("cb92e8")})
-				for enemy in enemies:
-					if enemy.hp > 0 and enemy.pos.distance_to(command.pos) <= 150:
-						enemy.pos = enemy.pos.move_toward(command.pos,60)
-				effect_visuals.append({"kind":"pull","pos":command.pos,"radius":150,"life":.3})
-			"scorch":
-				_mechanism_vfx("blast_fuse","hit_spark",command.pos,{"tint":Color("f7a95c")})
-				var same: Array = hazards.filter(func(h): return h.kind == "scorch")
-				if same.size() >= 3: hazards.erase(same[0])
-				hazards.append({"kind":"scorch","pos":command.pos,"life":1.4,"age":0.0,"tick":0.0,"radius":60.0,"slow":false})
-			"thorns":
-				_mechanism_vfx("thorn_crown","shield_impact",command.pos,{"radius":130,"tint":Color("ff947d")})
-				for enemy in enemies:
-					if enemy.hp > 0 and enemy.pos.distance_to(command.pos) <= 130:
-						enemy.hp -= command.damage
-						enemy.last_source = "thorns"
-				effect_visuals.append({"kind":"thorns","pos":command.pos,"radius":130,"life":.25})
-			"push":
-				_mechanism_vfx("pulse_boots","dash_trail",command.pos,{"tint":Color("7fe9cb")})
-				for enemy in enemies:
-					if enemy.hp > 0 and enemy.pos.distance_to(command.pos) <= command.radius:
-						var away: Vector2 = (enemy.pos-command.pos).normalized()
-						if away == Vector2.ZERO: away = Vector2.RIGHT
-						enemy.pos += away * command.distance
-				effect_visuals.append({"kind":"push","pos":command.pos,"radius":150,"life":.25})
-			"mine", "trail":
-				_mechanism_vfx("scrap_mine" if command.kind=="mine" else "dash_resin","hit_spark",command.pos,{"tint":Color("f3cd62")})
-				var maximum := 4 if command.kind == "mine" else 3
-				var same: Array = hazards.filter(func(h): return h.kind == command.kind)
-				if same.size() >= maximum: hazards.erase(same[0])
-				hazards.append({"kind":command.kind,"pos":command.pos,"life":5.0 if command.kind == "mine" else 2.4,"age":0.0,"tick":0.0,"radius":70.0,"slow":command.get("slow",false)})
-	return blocked
+	return effect_runtime.emit_event(kind,data)
 
 func _update_hazards(dt: float) -> void:
-	for i in range(effect_visuals.size()-1,-1,-1):
-		effect_visuals[i].life -= dt
-		if effect_visuals[i].life <= 0: effect_visuals.remove_at(i)
-	for i in range(hazards.size()-1,-1,-1):
-		var hazard: Dictionary = hazards[i]
-		hazard.age += dt
-		hazard.life -= dt
-		hazard.tick -= dt
-		if hazard.life <= 0:
-			hazards.remove_at(i)
-			continue
-		var targets: Array = enemies.filter(func(e): return e.hp > 0 and e.pos.distance_to(hazard.pos) <= hazard.radius)
-		if hazard.kind == "mine":
-			if hazard.age >= .3 and not targets.is_empty():
-				for enemy in targets:
-					enemy.hp -= 24
-					enemy.last_source = "mine"
-				_vfx("explosion",hazard.pos,{"radius":70,"source_item":"scrap_mine"})
-				_effect_event("mine_detonate",{"pos":hazard.pos,"source":"mine","depth":1})
-				effect_visuals.append({"kind":"mine","pos":hazard.pos,"radius":70,"life":.25})
-				hazards.remove_at(i)
-		elif hazard.tick <= 0:
-			hazard.tick = .35
-			for enemy in targets:
-				enemy.hp -= 6 if hazard.kind == "scorch" else 8
-				enemy.last_source = "scorch" if hazard.kind == "scorch" else "trail"
-				if hazard.slow: enemy.slow_until = elapsed + .6
+	effect_runtime.advance_hazards(dt)
 
 func _update_mortars(dt: float) -> void:
-	for i in range(pending_blasts.size()-1,-1,-1):
-		var blast: Dictionary = pending_blasts[i]
-		blast.delay -= dt
-		if blast.delay > 0: continue
-		for enemy in enemies:
-			if enemy.hp > 0 and enemy.pos.distance_to(blast.pos) <= blast.radius:
-				enemy.hp -= blast.damage
-				enemy.last_source = "primary"
-				_effect_event("hit",{"target":enemy.id,"pos":enemy.pos,"damage":blast.damage,"weapon":blast.weapon})
-		_vfx("explosion",blast.pos,{"radius":blast.radius})
-		_effect_event("mortar",{"pos":blast.pos})
-		effect_visuals.append({"kind":"mortar","pos":blast.pos,"radius":blast.radius,"life":.25})
-		pending_blasts.remove_at(i)
+	effect_runtime.advance_mortars(dt)
 
 func _hit_segment(b:Dictionary,start:Vector2,end:Vector2)->void:
-	var candidates:Array=[]
-	for enemy in enemies:
-		if enemy.hp<=0 or b.hit.has(enemy.id):continue
-		var closest:Vector2=Geometry2D.get_closest_point_to_segment(enemy.pos,start,end)
-		if closest.distance_to(enemy.pos)<16*float(enemy.scale):
-			var segment:Vector2=end-start
-			var first_contact:float=0.0
-			if segment.length_squared()>.000001:
-				var projection:float=(enemy.pos-start).dot(segment.normalized())
-				var perpendicular_sq:float=maxf(0,enemy.pos.distance_squared_to(start)-projection*projection)
-				first_contact=maxf(0,projection-sqrt(maxf(0,pow(16*float(enemy.scale),2)-perpendicular_sq)))
-			candidates.append({"enemy":enemy,"distance":first_contact})
-	candidates.sort_custom(func(a,c):return a.distance<c.distance or (is_equal_approx(a.distance,c.distance) and a.enemy.id<c.enemy.id))
-	for candidate in candidates:
-		var enemy:Dictionary=candidate.enemy
-		if enemy.hp<=0 or b.hit.has(enemy.id):continue
-		enemy.hp-=b.damage;enemy.last_source="primary"
-		_effect_event("hit",{"target":enemy.id,"pos":enemy.pos,"damage":b.damage,"weapon":b.get("weapon",""),"returning":b.get("returning",false)})
-		b.hit.append(enemy.id)
-		flashes.append({"pos":enemy.pos,"life":.14})
-		if b.hit.size()>b.get("pierce",stats.pierce):b.life=-1;break
+	weapon_combat.hit_segment(b,start,end)
 
 func _advance_bullet(b: Dictionary,dt: float) -> void:
-	if b.life<=0:return
-	if b.has("launch_start"):
-		_hit_segment(b,b.launch_start,b.pos)
-		b.erase("launch_start")
-		if b.life<=0:return
-	var previous: Vector2 = b.pos
-	var step := minf(dt,maxf(0,b.life))
-	b.pos += b.velocity * step
-	b.life -= step
-	_hit_segment(b,previous,b.pos)
+	weapon_combat.advance_bullet(b,dt)
 
 func _advance_disc(b: Dictionary,dt: float) -> void:
-	var remaining := minf(dt,maxf(0,b.life))
-	if not b.returning:
-		if b.has("launch_start"):_advance_bullet(b,0)
-		if b.life<=0:return
-		var outbound := minf(remaining,maxf(0,b.outbound_left))
-		if outbound > 0: _advance_bullet(b,outbound)
-		b.outbound_left -= outbound
-		remaining -= outbound
-		if b.outbound_left <= .000001:
-			b.returning = true
-			b.hit.clear()
-	if b.returning and remaining > 0 and b.life > 0:
-		var distance: float = b.pos.distance_to(player_pos)
-		if distance < 14:
-			b.life = -1
-			return
-		b.velocity = (player_pos-b.pos).normalized() * stats.bullet_speed
-		_advance_bullet(b,minf(remaining,distance/stats.bullet_speed))
-		if b.pos.distance_to(player_pos) < 14: b.life = -1
+	weapon_combat.advance_disc(b,dt)
 
 func _vfx(id: String,pos: Vector2,options: Dictionary = {}) -> void:
 	if is_instance_valid(vfx): vfx.play(id,pos,options)
@@ -1092,15 +873,7 @@ func _mechanism_vfx(source:String,id:String,pos:Vector2,options:Dictionary={}) -
 	_vfx(id,pos,decorated)
 
 func _launch_pose(id:String,slot:int,target:Vector2)->Dictionary:
-	hero.position=player_pos.round()
-	weapon_rig.sync_loadout(build.weapons)
-	var hand:Vector2=actor_anim.socket_world(0,"grip")
-	var body:Vector2=actor_anim.socket_world(0,"body")
-	var offset:Vector2=WeaponRig.OFFSETS[clampi(slot,0,3)]
-	if hero.flip_h:offset.x=-offset.x
-	var mount:Vector2=hand if slot==0 else body+offset
-	var fallback:Vector2=weapon_rig.slots[slot].aim if slot>=0 and slot<weapon_rig.slots.size() else Vector2.RIGHT
-	return WeaponRig.muzzle_pose(mount,target,weapon_rig.geometry.get(id,{}),fallback)
+	return weapon_presentation.pose(id,slot,target)
 
 func _sync_weapon_rig()->void:
 	if not is_instance_valid(weapon_rig):return
@@ -1116,3 +889,26 @@ func _sync_weapon_rig()->void:
 			if e.pos.distance_squared_to(player_pos)<nearest.pos.distance_squared_to(player_pos):nearest=e
 		target=nearest.pos
 	weapon_rig.update_poses(actor_anim.socket_world(0,"grip"),actor_anim.socket_world(0,"body"),target,hero.flip_h,bullets,pending_blasts,true)
+
+func _select_mode(id:String)->bool:
+	if state!="title" or id not in ["arena","rooms"]:return false
+	if id=="rooms" and not RoomMode.validate(room_profile,encounters).is_empty():return false
+	mode=ArenaMode.new() if id=="arena" else RoomMode.new(room_profile)
+	config.arena=mode.field(base_arena)
+	_enter_field(run_seed)
+	_title()
+	return true
+func _enter_field(seed_value:int)->void:
+	var field:=FieldLayout.make(config.arena,seed_value)
+	grid_size=field.grid
+	map_data=field.cells
+	player_pos=field.center
+	hero.position=player_pos
+	camera.position=FieldLayout.camera_position(player_pos,config.arena)
+func _begin_room_clear()->void:
+	if state!="playing":return
+	state="room_clear"
+	bullets.clear();enemy_bullets.clear();pending_blasts.clear();hazards.clear();flashes.clear()
+	_clear_transients()
+	weapon_rig.clear()
+	actor_anim.set_phase(0,"idle")

@@ -1,0 +1,16 @@
+extends RefCounted
+const CombatState=preload("res://scripts/gameplay/combat_state.gd")
+const RunSession=preload("res://scripts/gameplay/run_session.gd")
+const WeaponCombat=preload("res://scripts/gameplay/weapon_combat.gd")
+const EffectRuntime=preload("res://scripts/gameplay/effect_runtime.gd")
+var world:CombatState
+var session:RunSession
+var area:Dictionary
+var catalog:Dictionary
+var weapons:WeaponCombat
+var procs:EffectRuntime
+var actor:RefCounted
+var hurt:Callable
+var spawn_kind:Callable
+var boss_killed:Callable
+var play_vfx:Callable

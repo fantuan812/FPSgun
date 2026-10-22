@@ -219,23 +219,29 @@ func update_hud(view: Dictionary) -> void:
 		hud_action.text = "%s  /  DASH %s" % [actor_state.to_upper(), dash_status]
 		hud_action.tooltip_text = "Controller action state; dash cooldown in simulation seconds. Paused menus do not advance it."
 	hud_title.text = "MOSS CIRCUIT   /   WAVE %s   /   LV %s   /   SCRAP %s" % [view.get("wave", 1), view.get("level", 1), view.get("coins", 0)]
+	if view.get("mode_id","")=="rooms":hud_title.text="ROOM %s / %s   ·   LV %s   ·   SCRAP %s"%[view.get("wave",1),view.get("stage_count",3),view.get("level",1),view.get("coins",0)]
 	hp.max_value = maxf(1, float(view.get("max_hp", 100))); hp.value = float(view.get("hp", 0))
 	xp.max_value = maxf(1, float(view.get("xp_max", 1))); xp.value = float(view.get("xp", 0))
 	hud_detail.text = "HP %.0f / %.0f   |   XP %.0f / %.0f   |   %.0fs   |   KILLS %s   |   WASD / arrows: move   SPACE: dash" % [hp.value, hp.max_value, xp.value, xp.max_value, float(view.get("time", 0)), view.get("kills", 0)]
+	hud_title.tooltip_text=str(view.get("mode_name",""))+" · "+str(view.get("objective",""))
 	hud_detail.tooltip_text = ""
 	var mechanics: Dictionary = view.get("mechanics", {})
 	if not mechanics.is_empty():
 		hud_detail.text = "HP %.0f/%.0f  |  XP %.0f/%.0f  |  %.0fs  |  KILLS %s  |  SHIELD %s  CHAIN %s  FIELDS %s" % [hp.value, hp.max_value, xp.value, xp.max_value, float(view.get("time", 0)), view.get("kills", 0), mechanics.get("shield", 0), mechanics.get("chain_charges", 0), mechanics.get("hazards", 0)]
 		hud_detail.tooltip_text = "WASD / arrows: move; Space: dash. Open BUILD for exact per-item cooldowns."
 
-func show_title(seed_value: int = 240102) -> void:
+func show_title(seed_value: int = 240102,mode_id:String="arena") -> void:
 	_begin("title", "MOSS CIRCUIT", "SURVIVE / SALVAGE / REBUILD")
 	var content := _scroll(body)
-	_text(content, "A small machine. Six hostile waves. Build your own salvage engine.", 20)
-	_text(content, "Move: WASD / arrow keys   |   Dash: Space   |   Auto-fire: nearest target\nPause: Esc   |   Build: I   |   Menus: Tab / Shift+Tab, Enter or Space\nBuy weapons and modules between waves. Matching tags unlock synergies.")
+	_text(content,"A small machine. Six hostile waves. Build your own salvage engine." if mode_id=="arena" else "Three finite room encounters. Clear every enemy, then rebuild. This is not a complete dungeon.",20)
+	_text(content, "Move: WASD / arrow keys   |   Dash: Space   |   Auto-fire: nearest target\nPause: Esc   |   Build: I   |   Menus: Tab / Shift+Tab, Enter or Space\nBuy weapons and modules between encounters. Matching tags unlock synergies.")
+	_label(content,"MODE: "+("ARENA SURVIVAL" if mode_id=="arena" else "3 ROOM ENCOUNTERS / PROTOTYPE"),14)
+	var mode_button:=Button.new();mode_button.text="SWITCH TO "+("ROOM ENCOUNTERS" if mode_id=="arena" else "ARENA SURVIVAL")
+	mode_button.custom_minimum_size.y=38;content.add_child(mode_button)
 	_label(content, "RUN SEED", 14)
 	var seed_edit := LineEdit.new(); seed_edit.text = str(seed_value); seed_edit.max_length = 10
 	seed_edit.custom_minimum_size.y = 38; content.add_child(seed_edit)
+	mode_button.pressed.connect(func():intent.emit("select_mode",{"id":"rooms" if mode_id=="arena" else "arena","seed":seed_edit.text.to_int()}))
 	var start := Button.new(); start.text = "START RUN"; start.custom_minimum_size.y = 44
 	start.pressed.connect(func(): intent.emit("start", {"seed": seed_edit.text.to_int()}))
 	body.add_child(start); first_focus = start
@@ -278,7 +284,7 @@ func show_shop(view: Dictionary) -> void:
 	_inventory(bag, view, true)
 	var footer := HBoxContainer.new(); body.add_child(footer)
 	_button(footer, "REFRESH  /  %s SCRAP" % view.get("refresh_price", 5), "refresh", {"generation": generation}, int(view.get("coins", 0)) < int(view.get("refresh_price", 5)))
-	_button(footer, "DEPLOY NEXT WAVE", "continue", {"generation": generation})
+	_button(footer, "DEPLOY NEXT ROOM" if view.get("mode_id","")=="rooms" else "DEPLOY NEXT WAVE", "continue", {"generation": generation})
 	_finish()
 
 func _shop_bias(parent: Node, bias: Dictionary) -> void:
@@ -366,7 +372,7 @@ func show_pause(_view: Dictionary = {}) -> void:
 
 func show_result(view: Dictionary) -> void:
 	var won: bool = bool(view.get("won", view.get("victory", false)))
-	_begin("result", "CIRCUIT COMPLETE" if won else "SIGNAL LOST", "Wave %s  /  Level %s  /  Kills %s  /  Seed %s" % [view.get("wave", 1), view.get("level", 1), view.get("kills", 0), view.get("seed", 0)])
+	_begin("result", "CIRCUIT COMPLETE" if won else "SIGNAL LOST", "%s · %s %s / %s  ·  LV %s  ·  KILLS %s  ·  SEED %s" % [view.get("mode_name","ARENA SURVIVAL"),"Room" if view.get("mode_id","")=="rooms" else "Wave",view.get("wave",1),view.get("stage_count",6),view.get("level",1),view.get("kills",0),view.get("seed",0)])
 	_inventory(_scroll(body), view)
 	var actions := HBoxContainer.new(); body.add_child(actions)
 	_button(actions, "RETRY SAME SEED", "retry")
