@@ -1,0 +1,171 @@
+{
+  "version": 1,
+  "atlas": "res://assets/items/build_expansion_atlas_v5.png",
+  "size": [
+    1774,
+    887
+  ],
+  "grid": {
+    "columns": 4,
+    "rows": 2,
+    "order": "row-major",
+    "edges": "floor(i*size/cells)"
+  },
+  "source_sha256": "e729eae41caa9ee73cf9382468f5efba65aa60dd125f14175ed3946241571d1a",
+  "icons": {
+    "return_disc": {
+      "rect": [
+        0,
+        0,
+        443,
+        443
+      ],
+      "name": "回旋飞盘",
+      "category": "weapon",
+      "visible_alpha_bbox_local": [
+        30,
+        61,
+        425,
+        400
+      ],
+      "cell_rgba_sha256": "1b97f6958542391ed754bc0d1e8926c17a25a4e2172a8ab16cf415fbad2c86ef"
+    },
+    "shock_mortar": {
+      "rect": [
+        443,
+        0,
+        444,
+        443
+      ],
+      "name": "震荡迫击炮",
+      "category": "weapon",
+      "visible_alpha_bbox_local": [
+        39,
+        32,
+        418,
+        419
+      ],
+      "cell_rgba_sha256": "af80fc8fff5d3a34e8b73955dcdbc6e9b243ae0eb6722519cf522fde07be98c1"
+    },
+    "return_spool": {
+      "rect": [
+        887,
+        0,
+        443,
+        443
+      ],
+      "name": "回收线轴",
+      "category": "item",
+      "visible_alpha_bbox_local": [
+        64,
+        62,
+        426,
+        406
+      ],
+      "cell_rgba_sha256": "5923e03c0e555675487eb74c62171a4d31460e1bc5bd31030048883681661892"
+    },
+    "blast_fuse": {
+      "rect": [
+        1330,
+        0,
+        444,
+        443
+      ],
+      "name": "余烬引信",
+      "category": "item",
+      "visible_alpha_bbox_local": [
+        101,
+        50,
+        420,
+        399
+      ],
+      "cell_rgba_sha256": "765999f16ae7e3d09157bc1bb22d777b93a80faafffad0f13bf5d2bbb6a994ba"
+    },
+    "echo_chamber": {
+      "rect": [
+        0,
+        443,
+        443,
+        444
+      ],
+      "name": "回声腔",
+      "category": "item",
+      "visible_alpha_bbox_local": [
+        19,
+        15,
+        435,
+        392
+      ],
+      "cell_rgba_sha256": "3f5e354947b3fe9642163635bf84f90b4800e06a6da5dbb118c8e7b3e4dc3f6a"
+    },
+    "gravity_anchor": {
+      "rect": [
+        443,
+        443,
+        444,
+        444
+      ],
+      "name": "重力锚",
+      "category": "item",
+      "visible_alpha_bbox_local": [
+        33,
+        16,
+        418,
+        405
+      ],
+      "cell_rgba_sha256": "57e6969f64f33d656c58f3b444d6972840a6218ea8abf0a57e861270f033910a"
+    },
+    "medic_seed": {
+      "rect": [
+        887,
+        443,
+        443,
+        444
+      ],
+      "name": "医疗种子",
+      "category": "item",
+      "visible_alpha_bbox_local": [
+        64,
+        35,
+        364,
+        392
+      ],
+      "cell_rgba_sha256": "f8e76bbf33feb40f27c553066a78208926e75029cf3e5c8bc8ec23191bdc75e5"
+    },
+    "phase_capacitor": {
+      "rect": [
+        1330,
+        443,
+        444,
+        444
+      ],
+      "name": "相位电容",
+      "category": "item",
+      "visible_alpha_bbox_local": [
+        11,
+        80,
+        427,
+        327
+      ],
+      "cell_rgba_sha256": "08b0fd4f5c9bad9346b21be00b2ffcdfdc9f2b41c3842f9a4c386c66e20a5495"
+    }
+  },
+  "generation": {
+    "tool": "image_gen built-in",
+    "date": "2026-10-22",
+    "source": "exec-3a8a8eaf-7b4a-43c0-afd8-9866c998ffa6.png",
+    "prompt": "docs/art/build_expansion_generation_prompt.txt",
+    "pixel_edits": "None, byte-identical PNG copy; runtime AtlasTexture slicing."
+  },
+  "qa": {
+    "nonempty_cells": 8,
+    "unique_rgba_cell_hashes": 8,
+    "visible_alpha_threshold": 32,
+    "all_visible_content_inside_cells": true,
+    "limits": [
+      "High-resolution pixel-art aesthetic, not strict native low-resolution grid.",
+      "Prompts request more spacing than generated; actual visible silhouettes inside bounds.",
+      "Near-transparent alpha residue preserved; no Python pixel edits."
+    ]
+  }
+}

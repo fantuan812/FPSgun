@@ -1,0 +1,172 @@
+{
+  "version": 1,
+  "atlas": "res://assets/items/mechanism_atlas_v4.png",
+  "size": [
+    1774,
+    887
+  ],
+  "grid": {
+    "columns": 4,
+    "rows": 2,
+    "order": "row-major",
+    "edges": "floor(i*size/cells)"
+  },
+  "source_sha256": "0ca0aa10d67ce1fd7b2d6097cc75c4b653fdc6ae659a7c282f1807609f6149a6",
+  "icons": {
+    "arc_relay": {
+      "rect": [
+        0,
+        0,
+        443,
+        443
+      ],
+      "name": "链电继电器",
+      "category": "item",
+      "visible_alpha_bbox_local": [
+        57,
+        83,
+        435,
+        404
+      ],
+      "cell_rgba_sha256": "f424991f63f68606460efba1ba238114ad813733b42345c67045e2dfaf134251"
+    },
+    "kill_cell": {
+      "rect": [
+        443,
+        0,
+        444,
+        443
+      ],
+      "name": "战利电池",
+      "category": "item",
+      "visible_alpha_bbox_local": [
+        122,
+        42,
+        322,
+        412
+      ],
+      "cell_rgba_sha256": "fdaf3c7561afc63bffbbd030d4f292d5546dd2e484194d1328cd136f10466815"
+    },
+    "dash_resin": {
+      "rect": [
+        887,
+        0,
+        443,
+        443
+      ],
+      "name": "冲刺树脂",
+      "category": "item",
+      "visible_alpha_bbox_local": [
+        70,
+        63,
+        383,
+        416
+      ],
+      "cell_rgba_sha256": "4d460f050fef31c4c4f8272342c2432cfdbf682db4b4fced22fadd0f2a1e3d4f"
+    },
+    "mirror_shell": {
+      "rect": [
+        1330,
+        0,
+        444,
+        443
+      ],
+      "name": "镜面护壳",
+      "category": "item",
+      "visible_alpha_bbox_local": [
+        50,
+        66,
+        391,
+        408
+      ],
+      "cell_rgba_sha256": "7748b1285d8b2bd78a4066e95f640983b8b41d2399e9214dba3b4da6fc3e3f6c"
+    },
+    "thorn_crown": {
+      "rect": [
+        0,
+        443,
+        443,
+        444
+      ],
+      "name": "荆棘冠",
+      "category": "item",
+      "visible_alpha_bbox_local": [
+        33,
+        50,
+        435,
+        386
+      ],
+      "cell_rgba_sha256": "55eb38245a140ab0727f320f8e396f0dd1e9a25b9e2d043bc55bcaf1a27033c8"
+    },
+    "blood_valve": {
+      "rect": [
+        443,
+        443,
+        444,
+        444
+      ],
+      "name": "血能阀",
+      "category": "item",
+      "visible_alpha_bbox_local": [
+        40,
+        24,
+        410,
+        403
+      ],
+      "cell_rgba_sha256": "7c418f7f4415d11b19a1120d49f5920264f12ca907d4d33b70152629cf4b0cb1"
+    },
+    "scrap_mine": {
+      "rect": [
+        887,
+        443,
+        443,
+        444
+      ],
+      "name": "拾荒地雷",
+      "category": "item",
+      "visible_alpha_bbox_local": [
+        33,
+        49,
+        399,
+        378
+      ],
+      "cell_rgba_sha256": "3e817a59e391b69e3f1c801721972a6b8b2aced20f9be70d2629d0eb49b99222"
+    },
+    "pulse_boots": {
+      "rect": [
+        1330,
+        443,
+        444,
+        444
+      ],
+      "name": "脉冲靴",
+      "category": "item",
+      "visible_alpha_bbox_local": [
+        13,
+        42,
+        422,
+        378
+      ],
+      "cell_rgba_sha256": "4ec706cdbba1c140cf09d172f7e631ad97e42873e558a3c573badc6d7c4576a0"
+    }
+  },
+  "generation": {
+    "tool": "image_gen built-in",
+    "date": "2026-10-22",
+    "source": "exec-f6596186-824e-4082-adb3-f6b3992465c2.png",
+    "prompt": "docs/art/mechanism_generation_prompt.txt",
+    "pixel_edits": "None; byte-identical PNG copy. AtlasTexture runtime slices only."
+  },
+  "qa": {
+    "visual_review": "Eight mechanisms visibly distinct and correct order, no cut-off parts. Unified moss/industrial palette.",
+    "visible_alpha_threshold": 32,
+    "nonempty_cells": 8,
+    "unique_rgba_cell_hashes": 8,
+    "all_visible_content_inside_cells": true,
+    "limitations": [
+      "Stylized pixel-art appearance, not native low-resolution integer-grid artwork.",
+      "Fine near-transparent edge pixels preserved; no background removal or resampling.",
+      "Generated spacing is not exactly the prompted 17 percent; visible silhouettes remain wholly inside each cell."
+    ]
+  }
+}

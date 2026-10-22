@@ -1,0 +1,1156 @@
+{
+  "schema_version": 1,
+  "bbox_format": "xywh, frame-local",
+  "alpha_threshold": 8,
+  "slice_policy": "integer floor equal 3x3 row-major; unmodified PNG",
+  "enemies": {
+    "crawler": {
+      "name": "锈甲虫",
+      "path": "res://assets/beetle_walk.png",
+      "size": [
+        1268,
+        1241
+      ],
+      "grid": [
+        3,
+        3
+      ],
+      "action": "walk",
+      "frames": [
+        {
+          "region": [
+            0,
+            0,
+            422,
+            413
+          ],
+          "alpha_bbox": [
+            75,
+            112,
+            316,
+            257
+          ],
+          "minimum_clear_margin": 31,
+          "pixel_sha256": "6e09067ac572c6aee9ce6dfe7823b166114c8c4ff33259622d0c341e87d32858"
+        },
+        {
+          "region": [
+            422,
+            0,
+            423,
+            413
+          ],
+          "alpha_bbox": [
+            71,
+            116,
+            293,
+            253
+          ],
+          "minimum_clear_margin": 44,
+          "pixel_sha256": "e01624adcbac11a164c5a3f8eff807673eca365aeb81208ff756d16a64713bfd"
+        },
+        {
+          "region": [
+            845,
+            0,
+            423,
+            413
+          ],
+          "alpha_bbox": [
+            47,
+            114,
+            302,
+            255
+          ],
+          "minimum_clear_margin": 44,
+          "pixel_sha256": "0c7e8f6e50b3c3955769fa904f0bf7390ef700b0eeb9660fb5bda8732708d5ec"
+        },
+        {
+          "region": [
+            0,
+            413,
+            422,
+            414
+          ],
+          "alpha_bbox": [
+            94,
+            81,
+            284,
+            247
+          ],
+          "minimum_clear_margin": 44,
+          "pixel_sha256": "456d82063b86cca21d35e6a14bd7643390e973aff030493ce11c7e717389fffa"
+        },
+        {
+          "region": [
+            422,
+            413,
+            423,
+            414
+          ],
+          "alpha_bbox": [
+            69,
+            87,
+            295,
+            251
+          ],
+          "minimum_clear_margin": 59,
+          "pixel_sha256": "ab7db003d38a87eea14e3892dca772d5a03b0cccf342e92530a791af36d94d95"
+        },
+        {
+          "region": [
+            845,
+            413,
+            423,
+            414
+          ],
+          "alpha_bbox": [
+            42,
+            80,
+            307,
+            258
+          ],
+          "minimum_clear_margin": 42,
+          "pixel_sha256": "25370e98cc8572450035477cb73a1b2a2f2fdeeb3291829c62739a042f0bde22"
+        },
+        {
+          "region": [
+            0,
+            827,
+            422,
+            414
+          ],
+          "alpha_bbox": [
+            92,
+            62,
+            292,
+            255
+          ],
+          "minimum_clear_margin": 38,
+          "pixel_sha256": "43dfb4539fea4681e045f8dcec78d89487966859436976dbffbf5baa9d1ce3c9"
+        },
+        {
+          "region": [
+            422,
+            827,
+            423,
+            414
+          ],
+          "alpha_bbox": [
+            68,
+            56,
+            294,
+            249
+          ],
+          "minimum_clear_margin": 56,
+          "pixel_sha256": "1328eddc9c538426d40dda271be953cb39bd6353621269f53489484b35d78cb2"
+        },
+        {
+          "region": [
+            845,
+            827,
+            423,
+            414
+          ],
+          "alpha_bbox": [
+            46,
+            62,
+            297,
+            258
+          ],
+          "minimum_clear_margin": 46,
+          "pixel_sha256": "0ee975c8a7a4936254b7125547aad27dae9915a1eb8a443de8a41eac55110362"
+        }
+      ],
+      "source_sha256": "2068796ffc83d19a44c047ec672c4e176d9b4b2f7001929ae42a52f53c38dada",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    "charger": {
+      "name": "琥珀犀牛机",
+      "path": "res://assets/enemies/charger.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "grid": [
+        3,
+        3
+      ],
+      "action": "walk",
+      "frames": [
+        {
+          "region": [
+            0,
+            0,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            115,
+            167,
+            192,
+            126
+          ],
+          "minimum_clear_margin": 111,
+          "pixel_sha256": "d3e4ab62835f3e4a857ba24dd0ad2a964b861748f439969f1dc3689e3b65aafa"
+        },
+        {
+          "region": [
+            418,
+            0,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            111,
+            165,
+            192,
+            127
+          ],
+          "minimum_clear_margin": 111,
+          "pixel_sha256": "2209811833e6b1d86dfce7734d62e57cd1050d1123a0c27da66139836ec1f7ab"
+        },
+        {
+          "region": [
+            836,
+            0,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            114,
+            168,
+            189,
+            125
+          ],
+          "minimum_clear_margin": 114,
+          "pixel_sha256": "da631d9628c621b2c28f2fdabee8dc1c9d403e48df283886e2dc6f9c2d8d9089"
+        },
+        {
+          "region": [
+            0,
+            418,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            114,
+            154,
+            200,
+            129
+          ],
+          "minimum_clear_margin": 104,
+          "pixel_sha256": "8b32c66fe4b565dfafab19ba43e0002f17af8a5d4fbfc29fdfbaa798b0b2f95f"
+        },
+        {
+          "region": [
+            418,
+            418,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            111,
+            154,
+            203,
+            129
+          ],
+          "minimum_clear_margin": 104,
+          "pixel_sha256": "bb41af63a584fb8f6e28bda30a07e543db477d035b711b9c99caf0752f04bde2"
+        },
+        {
+          "region": [
+            836,
+            418,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            114,
+            154,
+            194,
+            129
+          ],
+          "minimum_clear_margin": 110,
+          "pixel_sha256": "0a22f82f9be9adbbc0f1e5fbc992c63414a0e80b265a303f0a3378541c64fb4b"
+        },
+        {
+          "region": [
+            0,
+            836,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            115,
+            146,
+            191,
+            128
+          ],
+          "minimum_clear_margin": 112,
+          "pixel_sha256": "9a2e2bfca5beb4d2b6e94f06815e627d545a2dfa2e46336e7b5ad4f46922ce58"
+        },
+        {
+          "region": [
+            418,
+            836,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            111,
+            146,
+            197,
+            130
+          ],
+          "minimum_clear_margin": 110,
+          "pixel_sha256": "474cbc51b4f4c2c4e989e687732717338c205884509d337de52a131ec5bebbcf"
+        },
+        {
+          "region": [
+            836,
+            836,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            114,
+            150,
+            193,
+            126
+          ],
+          "minimum_clear_margin": 111,
+          "pixel_sha256": "da9b92ecab3412d9325ca6e797fe1bdf14a69d336b4c92ee5fd1e17b05e52ff9"
+        }
+      ],
+      "source_sha256": "ba72977655eaf057031460c93e4d85f3e0c53bc85a63a6463e1408fcc4086934",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    "spitter": {
+      "name": "青紫炮口虫",
+      "path": "res://assets/enemies/spitter.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "grid": [
+        3,
+        3
+      ],
+      "action": "walk",
+      "frames": [
+        {
+          "region": [
+            0,
+            0,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            114,
+            126,
+            199,
+            185
+          ],
+          "minimum_clear_margin": 105,
+          "pixel_sha256": "b3a2b33cc4cc926ba1341da061cd77ab48ce2a636946dc84715d2f917f7403c9"
+        },
+        {
+          "region": [
+            418,
+            0,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            101,
+            125,
+            201,
+            188
+          ],
+          "minimum_clear_margin": 101,
+          "pixel_sha256": "ca28400cb5be9ea642fc65131e8b49bdec1999123cb76cebd60e261123f91ff7"
+        },
+        {
+          "region": [
+            836,
+            0,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            94,
+            125,
+            202,
+            187
+          ],
+          "minimum_clear_margin": 94,
+          "pixel_sha256": "2ba4354e551620fde85376db0277efa538b646ad7c1a1361b85f433ab5d4c1cf"
+        },
+        {
+          "region": [
+            0,
+            418,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            114,
+            119,
+            201,
+            188
+          ],
+          "minimum_clear_margin": 103,
+          "pixel_sha256": "a43e0f345a5b9963ca3fbbba15465e4453f2eafa32f35d1b23021cc5f2280643"
+        },
+        {
+          "region": [
+            418,
+            418,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            98,
+            115,
+            204,
+            193
+          ],
+          "minimum_clear_margin": 98,
+          "pixel_sha256": "b9413b5eb9dd4f587e3721c8e8501e9da149bae3ac8d1e15e36e3e590f9b27f8"
+        },
+        {
+          "region": [
+            836,
+            418,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            94,
+            118,
+            209,
+            188
+          ],
+          "minimum_clear_margin": 94,
+          "pixel_sha256": "812b6cb3ed54b770a3bd2b67d7cabb6a83feadb155c53cac1d990633e7c8fbf6"
+        },
+        {
+          "region": [
+            0,
+            836,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            112,
+            98,
+            202,
+            190
+          ],
+          "minimum_clear_margin": 98,
+          "pixel_sha256": "a1dcfe1535ac45aabf59ef21c8703a5acd03c4d753502b4f696aff6dadea9a52"
+        },
+        {
+          "region": [
+            418,
+            836,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            97,
+            98,
+            204,
+            190
+          ],
+          "minimum_clear_margin": 97,
+          "pixel_sha256": "f01a028253c8a50d8db2f1ab9d949a8a93ceca461359564eb8e47c3896f8737c"
+        },
+        {
+          "region": [
+            836,
+            836,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            92,
+            98,
+            206,
+            190
+          ],
+          "minimum_clear_margin": 92,
+          "pixel_sha256": "ef89845ee358180ceec63691a285259679de0de05347ad807f3f60ac457f9ee9"
+        }
+      ],
+      "source_sha256": "d49d9ba91916850fa28f28db3c1ec5da9e602c315ace60460ccd2b29655332d4",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    "flanker": {
+      "name": "蓝刀足蛛",
+      "path": "res://assets/enemies/flanker.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "grid": [
+        3,
+        3
+      ],
+      "action": "walk",
+      "frames": [
+        {
+          "region": [
+            0,
+            0,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            96,
+            180,
+            237,
+            153
+          ],
+          "minimum_clear_margin": 85,
+          "pixel_sha256": "7d858eb96862c10d0b2b7148053f494235fa42bfeb563f32851b3fb8b7288a6d"
+        },
+        {
+          "region": [
+            418,
+            0,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            96,
+            190,
+            229,
+            143
+          ],
+          "minimum_clear_margin": 85,
+          "pixel_sha256": "5591ae7fc21442db1493bafa27a688ea957d1ae37406a5938a991a4dc0e1106e"
+        },
+        {
+          "region": [
+            836,
+            0,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            85,
+            190,
+            238,
+            143
+          ],
+          "minimum_clear_margin": 85,
+          "pixel_sha256": "1626e07dff07b26d37473ff3a59a8d162c421aa79172d9e354b4695408b89a0e"
+        },
+        {
+          "region": [
+            0,
+            418,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            100,
+            159,
+            251,
+            150
+          ],
+          "minimum_clear_margin": 67,
+          "pixel_sha256": "e84146244b265597934485069880aa069acf3ab471782b52179c08cbcf4dcdba"
+        },
+        {
+          "region": [
+            418,
+            418,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            98,
+            172,
+            232,
+            137
+          ],
+          "minimum_clear_margin": 88,
+          "pixel_sha256": "5c5e4d51493cd61b02692b32f6cc0abb81591270fddd14261f55cb072d2cbf1b"
+        },
+        {
+          "region": [
+            836,
+            418,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            71,
+            164,
+            261,
+            134
+          ],
+          "minimum_clear_margin": 71,
+          "pixel_sha256": "af7931c20450af23a4fd29770042ae45b78f7367286d9140992f20f932c821a8"
+        },
+        {
+          "region": [
+            0,
+            836,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            102,
+            129,
+            235,
+            154
+          ],
+          "minimum_clear_margin": 81,
+          "pixel_sha256": "9ce88202d64f01c3c8118ee1b31e0fa1a9ce5cf35b18e32f05284352171ee9a7"
+        },
+        {
+          "region": [
+            418,
+            836,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            89,
+            132,
+            246,
+            150
+          ],
+          "minimum_clear_margin": 83,
+          "pixel_sha256": "5b42cb122827137e740ff274d2873b0d5e4a8b9a21f98b21736f40631a6a5f1f"
+        },
+        {
+          "region": [
+            836,
+            836,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            82,
+            138,
+            252,
+            145
+          ],
+          "minimum_clear_margin": 82,
+          "pixel_sha256": "97142a6c0be005b456d92397c1af8655ba6dd720f86d4e6f9eba5b55272a95a9"
+        }
+      ],
+      "source_sha256": "90717d00348d4d72521c199d8a45666abecb98d261d7135737ae6ed0c811aab5",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    "brood_keeper": {
+      "name": "苔绿巢母",
+      "path": "res://assets/enemies/brood_keeper.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "grid": [
+        3,
+        3
+      ],
+      "action": "walk",
+      "frames": [
+        {
+          "region": [
+            0,
+            0,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            113,
+            147,
+            210,
+            204
+          ],
+          "minimum_clear_margin": 67,
+          "pixel_sha256": "810a1a8f897bec1d289eb4b035453058b39f7440165797aebb88b6eba011a608"
+        },
+        {
+          "region": [
+            418,
+            0,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            107,
+            145,
+            212,
+            206
+          ],
+          "minimum_clear_margin": 67,
+          "pixel_sha256": "c74490c3ae329bdd8ed463a731d123210f1a72c5eef31aa4060877023e0388dd"
+        },
+        {
+          "region": [
+            836,
+            0,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            99,
+            146,
+            213,
+            205
+          ],
+          "minimum_clear_margin": 67,
+          "pixel_sha256": "db268a4977cae60977d81e2f003f9f268c0b9d1f3daacee836f11a3b79b2d9dc"
+        },
+        {
+          "region": [
+            0,
+            418,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            111,
+            124,
+            216,
+            202
+          ],
+          "minimum_clear_margin": 91,
+          "pixel_sha256": "ff1954c876d89b2bff95e069d2d9c515d3502375dfb89912c2b2ec90e40d9947"
+        },
+        {
+          "region": [
+            418,
+            418,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            104,
+            123,
+            217,
+            210
+          ],
+          "minimum_clear_margin": 85,
+          "pixel_sha256": "cea850bd92e1dbbec23410bdb4f568455cad51e7fa7aacd0d354e7b78f39bd07"
+        },
+        {
+          "region": [
+            836,
+            418,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            97,
+            123,
+            208,
+            212
+          ],
+          "minimum_clear_margin": 83,
+          "pixel_sha256": "b54c86c3611e57b661313784be25d5ba6d4fdd805d16333617895e1ed8f90722"
+        },
+        {
+          "region": [
+            0,
+            836,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            111,
+            108,
+            207,
+            202
+          ],
+          "minimum_clear_margin": 100,
+          "pixel_sha256": "21ec4b245d4d72de64bb80202c4d81dc01900d1bf230be383d0fa5ab7fc505fa"
+        },
+        {
+          "region": [
+            418,
+            836,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            104,
+            108,
+            220,
+            204
+          ],
+          "minimum_clear_margin": 94,
+          "pixel_sha256": "132bb5d20be0ad1bd0613fada8cb49b7f9172da75b0897a0d792324b784dc2b0"
+        },
+        {
+          "region": [
+            836,
+            836,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            99,
+            108,
+            212,
+            202
+          ],
+          "minimum_clear_margin": 99,
+          "pixel_sha256": "27848fce4c66b3cc1333b71757630f55e102b37f93ceb5a52080c5ee42875ff0"
+        }
+      ],
+      "source_sha256": "097786195cb741058bec4631eb2f9896986c7d9d41f7090172431a3eda4345a2",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    "boss_warden": {
+      "name": "废铁守卫",
+      "path": "res://assets/enemies/boss_warden.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "grid": [
+        3,
+        3
+      ],
+      "action": "body_pulse",
+      "frames": [
+        {
+          "region": [
+            0,
+            0,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            91,
+            139,
+            235,
+            184
+          ],
+          "minimum_clear_margin": 91,
+          "pixel_sha256": "207f4c535a55755836ccfa7383c874384a019b4867ed59f0f9891e8c7b2c5663"
+        },
+        {
+          "region": [
+            418,
+            0,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            85,
+            139,
+            237,
+            184
+          ],
+          "minimum_clear_margin": 85,
+          "pixel_sha256": "78f4e7a486b7da30c875277c11d7b6d74b581e2153f78fcf3414b7ba0b5b7304"
+        },
+        {
+          "region": [
+            836,
+            0,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            83,
+            139,
+            228,
+            184
+          ],
+          "minimum_clear_margin": 83,
+          "pixel_sha256": "4818ce7165bf8b382360461d049c8a90f7c5ce2da488f96b3572b8fe67c64920"
+        },
+        {
+          "region": [
+            0,
+            418,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            95,
+            116,
+            238,
+            185
+          ],
+          "minimum_clear_margin": 85,
+          "pixel_sha256": "7e14cc273ab28dc29704ccfb00759cbee9a2aa9f37f5d9993fbce651ed35f0bd"
+        },
+        {
+          "region": [
+            418,
+            418,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            87,
+            116,
+            236,
+            185
+          ],
+          "minimum_clear_margin": 87,
+          "pixel_sha256": "f8d55fdb0b403be10c2a9a7f654c3ef2e291f4770e659b3a1728e66c84a84d71"
+        },
+        {
+          "region": [
+            836,
+            418,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            82,
+            115,
+            235,
+            186
+          ],
+          "minimum_clear_margin": 82,
+          "pixel_sha256": "b0b964a2601a524addefb9347dab0ab39b115e2d30d282e3c1b72e9f77840b8d"
+        },
+        {
+          "region": [
+            0,
+            836,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            92,
+            99,
+            240,
+            182
+          ],
+          "minimum_clear_margin": 86,
+          "pixel_sha256": "b65d9e63047f8088477cc0dcc465d745c7251cf1e575e96d4fc81cfd1854c99e"
+        },
+        {
+          "region": [
+            418,
+            836,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            84,
+            98,
+            240,
+            183
+          ],
+          "minimum_clear_margin": 84,
+          "pixel_sha256": "493e9ebe02d32073882dce2f8f8724083b656f3bd6ac88c8e69bb8e51fc33796"
+        },
+        {
+          "region": [
+            836,
+            836,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            83,
+            98,
+            236,
+            183
+          ],
+          "minimum_clear_margin": 83,
+          "pixel_sha256": "009bc8b784c550ab6b8e8cf14a15db5dbd338579590743752d6d7a1679648dcc"
+        }
+      ],
+      "source_sha256": "fcdc4d60e545f606c1c8c6d942c1c07f1f37767f20202074f47f51e6a582d0a0",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    "boss_core": {
+      "name": "孢子反应堆",
+      "path": "res://assets/enemies/boss_core.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "grid": [
+        3,
+        3
+      ],
+      "action": "hover_pulse",
+      "frames": [
+        {
+          "region": [
+            0,
+            0,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            124,
+            136,
+            201,
+            218
+          ],
+          "minimum_clear_margin": 64,
+          "pixel_sha256": "630ef6afb48650e2f01426070d0d8b971569392a1639bc8e432d1ea4429e4525"
+        },
+        {
+          "region": [
+            418,
+            0,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            113,
+            132,
+            203,
+            230
+          ],
+          "minimum_clear_margin": 56,
+          "pixel_sha256": "fe07de9c2e708893d47774b4afe77a1f1128da4d24931966378d11f70bd391f9"
+        },
+        {
+          "region": [
+            836,
+            0,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            113,
+            132,
+            203,
+            222
+          ],
+          "minimum_clear_margin": 64,
+          "pixel_sha256": "3c0f0a51dbed4071fe9f17559a57e01fde3d858b93b46edc93a7bdaa8c0ca600"
+        },
+        {
+          "region": [
+            0,
+            418,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            119,
+            119,
+            210,
+            225
+          ],
+          "minimum_clear_margin": 74,
+          "pixel_sha256": "9dadeebe094a6f43bb779262f135b6b742d78471b9ac7663bd1c34f51b4ec663"
+        },
+        {
+          "region": [
+            418,
+            418,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            110,
+            116,
+            209,
+            228
+          ],
+          "minimum_clear_margin": 74,
+          "pixel_sha256": "bde52782d1b55c5f1c441e8d5b693723cd705dd97953d1de6f71d29972c0ebff"
+        },
+        {
+          "region": [
+            836,
+            418,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            108,
+            117,
+            215,
+            227
+          ],
+          "minimum_clear_margin": 74,
+          "pixel_sha256": "9d2c34f0d5ac3aa3c47e2f6eeaf5ab48b269ac932848fd1f07c5eb6117e1f8ef"
+        },
+        {
+          "region": [
+            0,
+            836,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            123,
+            87,
+            203,
+            220
+          ],
+          "minimum_clear_margin": 87,
+          "pixel_sha256": "05e4e1f8cd16c49b01ee02af3b3f35d408368bef1a89cb4990257d76c8d9a7bc"
+        },
+        {
+          "region": [
+            418,
+            836,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            108,
+            82,
+            211,
+            231
+          ],
+          "minimum_clear_margin": 82,
+          "pixel_sha256": "35cb74a204d890ef69e9b23cfd334b0a8a5bdc4b9ab301b6f4f77cb77de41d5e"
+        },
+        {
+          "region": [
+            836,
+            836,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            114,
+            86,
+            207,
+            227
+          ],
+          "minimum_clear_margin": 86,
+          "pixel_sha256": "10febb34ad1b36ddd5f9d4588958f5a4aa3f3b74e11b0fa5632b928dba157bb5"
+        }
+      ],
+      "source_sha256": "372c220e98f76e4b5f23dda5149741c0f48c20ed42ba03f8499f38ad9a5b3b60",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    }
+  }
+}

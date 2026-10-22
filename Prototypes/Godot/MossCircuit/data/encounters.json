@@ -1,0 +1,225 @@
+{
+  "enemies": [
+    {
+      "id": "crawler",
+      "name": "Scrap Crawler",
+      "behavior": "chase",
+      "hp": 22,
+      "speed": 53,
+      "damage": 9,
+      "xp": 4,
+      "scale": 1,
+      "color": "ffffff",
+      "boss": false,
+      "cooldown": 1,
+      "warning": 0.65,
+      "projectile_speed": 145,
+      "charge_speed": 310,
+      "charge_duration": 0.6,
+      "desired_distance": 230,
+      "summon_limit": 3,
+      "phase_threshold": 0.5,
+      "phase_speed": 1.25,
+      "description": "Direct pursuit; contact damage.",
+      "tell": "No ranged attack.",
+      "dodge": "Keep moving and create distance."
+    },
+    {
+      "id": "charger",
+      "name": "Amber Ram",
+      "behavior": "charge",
+      "hp": 42,
+      "speed": 36,
+      "damage": 15,
+      "xp": 7,
+      "scale": 1.2,
+      "color": "e9b660",
+      "boss": false,
+      "cooldown": 3.2,
+      "warning": 0.65,
+      "projectile_speed": 145,
+      "charge_speed": 310,
+      "charge_duration": 0.6,
+      "desired_distance": 230,
+      "summon_limit": 3,
+      "phase_threshold": 0.5,
+      "phase_speed": 1.25,
+      "description": "Locks direction, warns, then charges in a straight line.",
+      "tell": "Orange line marks the locked dash route for 0.65 s.",
+      "dodge": "Step sideways; warning and recovery are contact-safe."
+    },
+    {
+      "id": "spitter",
+      "name": "Violet Spitter",
+      "behavior": "ranged",
+      "hp": 30,
+      "speed": 46,
+      "damage": 8,
+      "xp": 6,
+      "scale": 0.95,
+      "color": "be9ae6",
+      "boss": false,
+      "cooldown": 2,
+      "warning": 0.65,
+      "projectile_speed": 145,
+      "charge_speed": 310,
+      "charge_duration": 0.6,
+      "desired_distance": 230,
+      "summon_limit": 3,
+      "phase_threshold": 0.5,
+      "phase_speed": 1.25,
+      "description": "Maintains 230 px distance and fires aimed projectiles.",
+      "tell": "Orange ring marks its 0.65 s firing preparation.",
+      "dodge": "Strafe after its aim locks; pink bullets can be dodged."
+    },
+    {
+      "id": "flanker",
+      "name": "Knifeleg Flanker",
+      "behavior": "flank",
+      "hp": 26,
+      "speed": 72,
+      "damage": 8,
+      "xp": 6,
+      "scale": 0.9,
+      "color": "90d7e0",
+      "boss": false,
+      "cooldown": 1,
+      "warning": 0.65,
+      "projectile_speed": 145,
+      "charge_speed": 310,
+      "charge_duration": 0.6,
+      "desired_distance": 230,
+      "summon_limit": 3,
+      "phase_threshold": 0.5,
+      "phase_speed": 1.25,
+      "description": "Weaves sideways while approaching rather than taking a direct line.",
+      "tell": "Alternating lateral path; no ranged attack.",
+      "dodge": "Avoid retreating into its side path."
+    },
+    {
+      "id": "brood_keeper",
+      "name": "Moss Broodkeeper",
+      "behavior": "summon",
+      "hp": 75,
+      "speed": 22,
+      "damage": 11,
+      "xp": 12,
+      "scale": 1.35,
+      "color": "90bd74",
+      "boss": false,
+      "cooldown": 6,
+      "warning": 0.65,
+      "projectile_speed": 145,
+      "charge_speed": 310,
+      "charge_duration": 0.6,
+      "desired_distance": 230,
+      "summon_limit": 3,
+      "phase_threshold": 0.5,
+      "phase_speed": 1.25,
+      "description": "Retreats from close range and summons at most 3 living children.",
+      "tell": "Orange ring before each spawn.",
+      "dodge": "Kill the keeper or thin its children; summons count toward the global cap."
+    },
+    {
+      "id": "boss_warden",
+      "name": "Scrap Warden",
+      "behavior": "warden",
+      "hp": 950,
+      "speed": 35,
+      "damage": 18,
+      "xp": 60,
+      "scale": 2.6,
+      "color": "e9bd74",
+      "boss": true,
+      "cooldown": 3,
+      "warning": 0.85,
+      "projectile_speed": 145,
+      "charge_speed": 310,
+      "charge_duration": 0.6,
+      "desired_distance": 230,
+      "summon_limit": 3,
+      "phase_threshold": 0.5,
+      "phase_speed": 1.25,
+      "description": "Wave 3 boss: alternates a locked charge and targeted ground blast. Below half HP it moves and attacks faster.",
+      "tell": "0.85 s line or ground circle. Warning/recovery have no contact damage.",
+      "dodge": "Dodge sideways from line; leave the marked circle before detonation."
+    },
+    {
+      "id": "boss_core",
+      "name": "Spore Reactor",
+      "behavior": "core",
+      "hp": 1600,
+      "speed": 25,
+      "damage": 15,
+      "xp": 100,
+      "scale": 2.9,
+      "color": "9de0c4",
+      "boss": true,
+      "cooldown": 3.4,
+      "warning": 0.85,
+      "projectile_speed": 145,
+      "charge_speed": 310,
+      "charge_duration": 0.6,
+      "desired_distance": 230,
+      "summon_limit": 3,
+      "phase_threshold": 0.5,
+      "phase_speed": 1.25,
+      "description": "Wave 6 boss: maintains distance and fires ring volleys. Below half HP, 12-shot rings alternate with summons.",
+      "tell": "0.85 s orange ring before each release.",
+      "dodge": "Use gaps in the slow ring; dash is briefly invulnerable. Clear summons."
+    }
+  ],
+  "waves": [
+    {
+      "number": 1,
+      "pool": [
+        "crawler"
+      ],
+      "boss": ""
+    },
+    {
+      "number": 2,
+      "pool": [
+        "crawler",
+        "charger",
+        "spitter"
+      ],
+      "boss": ""
+    },
+    {
+      "number": 3,
+      "pool": [
+        "crawler",
+        "flanker"
+      ],
+      "boss": "boss_warden"
+    },
+    {
+      "number": 4,
+      "pool": [
+        "charger",
+        "spitter",
+        "flanker"
+      ],
+      "boss": ""
+    },
+    {
+      "number": 5,
+      "pool": [
+        "spitter",
+        "flanker",
+        "brood_keeper"
+      ],
+      "boss": ""
+    },
+    {
+      "number": 6,
+      "pool": [
+        "crawler",
+        "spitter",
+        "brood_keeper"
+      ],
+      "boss": "boss_core"
+    }
+  ]
+}

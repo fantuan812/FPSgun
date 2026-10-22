@@ -1,0 +1,53 @@
+{
+  "schema": 1,
+  "assets": [
+    {
+      "path": "assets/hero_walk.png",
+      "sha256": "503ec7f1284e31c0994e09723a75cc12110767e0ecdbf77b41012c262cb94c29",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "tool": "image_gen.imagegen",
+      "generated_date_utc": "2026-10-22",
+      "transparent_background": true,
+      "prompt": "Use case: stylized-concept. Production game asset: one transparent sprite sheet, exactly 3 columns x 3 rows, nine sequential frames of ONE looping walking action. Original tiny moss-green scavenger robot with cream round visor, amber eyes, small backpack, short dark boots, carrying no weapon. Three-quarter top-down 2D view, facing right in EVERY frame, same character proportions and palette, fixed camera and fixed foot pivot at each cell center-bottom. Crisp deliberate pixel art, hard square pixel clusters, 24-color palette, 32x32-style low-resolution sprite magnified with nearest-neighbor pixels. Each cell equally sized, generous transparent padding, character occupies center 60% of cell, no overlap across cell boundaries. Frames row-major 1..9 show alternating feet, subtle body bob and backpack bounce, seamless run cycle. Entire image square, 3x3 uniform cell grid without drawn gridlines. Actual transparent alpha background, no text, no numbers, no panels, no shadows outside the sprite, no labels, no gradients, no blur, no watermark. Ensure exactly nine distinct frames.",
+      "pixel_edits": "None. Copied original output bytes; runtime AtlasTexture region and margin only."
+    },
+    {
+      "path": "assets/ground_atlas.png",
+      "sha256": "8a9ca2b20d21e22ed0065427ef0067e9128ccf3a666b429085c05b684e0af5b1",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "tool": "image_gen.imagegen",
+      "generated_date_utc": "2026-10-22",
+      "transparent_background": false,
+      "prompt": "Use case: stylized-concept. Production 2D top-down pixel-game tile atlas, EXACT 3 by 3 equal square tiles, no gutters, no borders, no labels. Nine seamless variant ground tiles for mossy ruined machine garden. Every tile has the SAME dark desaturated blue-green ground color on all four outer edges so each tile can connect in any order. Texture is flat orthographic top-down, no perspective, no shadows cast outside tile. Row1: plain speckled soil, tiny moss patches, hairline cracked stone. Row2: sparse amber pebble flecks, buried square paving slab, sparse grass tufts. Row3: faint cable fragments embedded in ground, mossy square stone fragments, plain quiet dirt variant. Sparse low-contrast detail concentrated inside each tile, keep edges visually uniform dark teal. Crisp retro pixel art with large hard square pixels, roughly 32x32 design per tile magnified. Tight 16-color palette, no gradients, no blur, no characters, no props projecting past tiles. Entire atlas square, fill every pixel, no text. Original game assets, not a copy of any existing game.",
+      "pixel_edits": "None. Copied original output bytes; runtime AtlasTexture region and margin only."
+    },
+    {
+      "path": "assets/beetle_walk.png",
+      "sha256": "2068796ffc83d19a44c047ec672c4e176d9b4b2f7001929ae42a52f53c38dada",
+      "dimensions": [
+        1268,
+        1241
+      ],
+      "mode": "RGBA",
+      "tool": "image_gen.imagegen",
+      "generated_date_utc": "2026-10-22",
+      "transparent_background": true,
+      "prompt": "Use case stylized-concept. Original production sprite sheet for a top-down pixel game. EXACT nine animation frames in one uniform 3x3 square grid, each cell equal. ONE small rust-red beetle robot enemy, two cream glowing eye pixels, dark short jointed legs, copper shell with a tiny moss tuft. Fixed three-quarter top-down view facing left in EVERY frame. Nine sequential frames of one looping scuttling walk, alternate legs and subtle shell bob, consistent scale and silhouette and center-bottom foot pivot. Crisp retro pixel art with bold hard square pixel clusters, 32x32 style enlarged nearest-neighbor. Sprite occupies 55% of each cell, lots of transparent padding, never overlap cells. Actual transparent alpha background, no floor, no label, no gridlines, no text, no watermark, no blur or gradients. Row-major sequence, exactly nine sprites.",
+      "pixel_edits": "None. Copied original output bytes; runtime AtlasTexture region and margin only."
+    }
+  ],
+  "notes": [
+    "Prompts are generation targets, not a claim that every target was met.",
+    "Generated high-resolution pixel-style art; not final hand-authored low-resolution sprites.",
+    "Ground has visible slab seams; not mathematically seamless terrain.",
+    "No third-party game assets or source code were imported."
+  ]
+}
