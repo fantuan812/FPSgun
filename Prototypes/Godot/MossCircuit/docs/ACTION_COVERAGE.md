@@ -1,3 +1,5 @@
+> **v15当前覆盖**：七种敌人（五普通+两Boss）hurt/death已补齐；各Boss独立招式攻击图、GUI手感/Windows等仍未验。见[完整反应矩阵与收口边界](REACTION_COVERAGE.md)。以下各版本段落为历史，不代表新增范围。
+
 > **v14当前覆盖**：Warden新增独立hurt9/death16，旧通用attack9保持；Core的独立hurt/death仍待补齐。以下v13及更早段落是历史范围，不代表本批新增。见[守门者合同](WARDEN_REACTIONS.md)。
 
 > **v13 当前覆盖**：五种普通敌人已有独立 hurt/death；crawler/flanker 本次新增 hurt9/death16，近身虚假 warning 已删除，但真实接触攻击仍为程序化脉冲。Boss 独立 hurt/death 尚缺。下面 v7–v12 各段为历史记录，不代表当前全部缺口。见 [接触敌人合同](CONTACT_ENEMY_ACTIONS.md)。

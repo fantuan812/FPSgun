@@ -1,0 +1,36 @@
+{
+  "baseline_commit": "51a6f3ce4ae91e08212c7675df9a9f21620fee9f",
+  "reference": {
+    "project_path": "assets/enemies/boss_core.png",
+    "local_path": "reference-boss-core.png",
+    "sha256": "372c220e98f76e4b5f23dda5149741c0f48c20ed42ba03f8499f38ad9a5b3b60"
+  },
+  "method": "Built-in image_gen; referenced_image_paths with actually inspected existing Core; transparent_background=true; original output PNG bytes retained unchanged",
+  "prompt_file": "generation-prompts.json",
+  "generated_files": [
+    {
+      "action": "boss_core_hurt",
+      "original_generated_file": "exec-3b400d65-e7f0-4a18-84ce-21676f759e97.png",
+      "delivered_file": "boss_core_hurt.png",
+      "sha256": "06032a84184dc2331177eb0bf3bc237edff4c6c981802e393fe1be492775fc89",
+      "git_blob_sha1": "378b686be1cbab161c80ea8c9f72377fe7b91b21",
+      "bytes": 1132323,
+      "size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "action": "boss_core_death",
+      "original_generated_file": "exec-72a2cd7e-3236-4104-adb2-b312a6a1c91b.png",
+      "delivered_file": "boss_core_death.png",
+      "sha256": "5e019c8810e00f013796c0b2c14f041ed637a12174eeb2fcea7a593dcfce9b4b",
+      "git_blob_sha1": "e8c4aa5661c22970deb38a5f92044f295ad77d8b",
+      "bytes": 1434039,
+      "size": [
+        1254,
+        1254
+      ]
+    }
+  ]
+}

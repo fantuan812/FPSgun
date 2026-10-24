@@ -1,0 +1,832 @@
+{
+  "boss_core_hurt": {
+    "size": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "sha256": "06032a84184dc2331177eb0bf3bc237edff4c6c981802e393fe1be492775fc89",
+    "git_blob_sha1": "378b686be1cbab161c80ea8c9f72377fe7b91b21",
+    "bytes": 1132323,
+    "alpha_zero_pixels": 1137375,
+    "alpha_nonzero_pixels": 435141,
+    "frame_count": 9,
+    "unique_pose_hashes": 9,
+    "source_row_registration_y": [
+      393,
+      793,
+      1185
+    ],
+    "explicit_source_row_translation_y": [
+      -73,
+      -473,
+      -865
+    ],
+    "registration_policy": "Manually chosen fixed row layout registration using hover/core trajectory; no automatic tail-bottom alignment.",
+    "source_partition_x_by_row": [
+      [
+        0,
+        418,
+        836,
+        1254
+      ],
+      [
+        0,
+        418,
+        836,
+        1254
+      ],
+      [
+        0,
+        418,
+        836,
+        1254
+      ]
+    ],
+    "source_partition_y": [
+      0,
+      418,
+      836,
+      1254
+    ],
+    "source_pose_order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "logical_canvas": [
+      512,
+      400
+    ],
+    "fixed_action_anchor": [
+      0.5,
+      0.8
+    ],
+    "fixed_action_registration_x_offset": -12,
+    "registration_calibration": "One constant X offset per action; calibrated from independent cyan-core first-frame center to original hover, with centered anchor for correct horizontal flip. Never per-frame.",
+    "height_trajectory": [
+      278,
+      276,
+      274,
+      273,
+      266,
+      266,
+      273,
+      271,
+      270
+    ],
+    "logical_top_trajectory": [
+      42,
+      39,
+      45,
+      47,
+      45,
+      52,
+      42,
+      45,
+      41
+    ],
+    "visible_lower_edge_trajectory": [
+      320,
+      315,
+      319,
+      320,
+      311,
+      318,
+      315,
+      316,
+      311
+    ],
+    "frames": [
+      {
+        "source_pose_index": 0,
+        "source_alpha_bbox": [
+          88,
+          115,
+          261,
+          278
+        ],
+        "source_cell_center_x": 209.0,
+        "source_row_registration_y": 393,
+        "translation": [
+          35,
+          -73
+        ],
+        "logical_alpha_bbox": [
+          123,
+          42,
+          261,
+          278
+        ],
+        "visible_bottom": 320,
+        "pixel_sha256": "7a32a82415fffbd014440a50a41b034a7604ad0a5b90744bdec1bb15801626a1"
+      },
+      {
+        "source_pose_index": 1,
+        "source_alpha_bbox": [
+          508,
+          112,
+          259,
+          276
+        ],
+        "source_cell_center_x": 627.0,
+        "source_row_registration_y": 393,
+        "translation": [
+          -383,
+          -73
+        ],
+        "logical_alpha_bbox": [
+          125,
+          39,
+          259,
+          276
+        ],
+        "visible_bottom": 315,
+        "pixel_sha256": "57b3269b5f4ebcda40f7c751f21e184e70120005ff5a5abfe4f158936216b90e"
+      },
+      {
+        "source_pose_index": 2,
+        "source_alpha_bbox": [
+          934,
+          118,
+          259,
+          274
+        ],
+        "source_cell_center_x": 1045.0,
+        "source_row_registration_y": 393,
+        "translation": [
+          -801,
+          -73
+        ],
+        "logical_alpha_bbox": [
+          133,
+          45,
+          259,
+          274
+        ],
+        "visible_bottom": 319,
+        "pixel_sha256": "22ac91420b2f4167b4726ba1c8609f417f4bfb1c43e4fc615cae7a64a505b42d"
+      },
+      {
+        "source_pose_index": 3,
+        "source_alpha_bbox": [
+          93,
+          520,
+          254,
+          273
+        ],
+        "source_cell_center_x": 209.0,
+        "source_row_registration_y": 793,
+        "translation": [
+          35,
+          -473
+        ],
+        "logical_alpha_bbox": [
+          128,
+          47,
+          254,
+          273
+        ],
+        "visible_bottom": 320,
+        "pixel_sha256": "bc30947b53f7c27efd61c384077b0bd05cd833fa71889f2a0694841c925b9a70"
+      },
+      {
+        "source_pose_index": 4,
+        "source_alpha_bbox": [
+          501,
+          518,
+          254,
+          266
+        ],
+        "source_cell_center_x": 627.0,
+        "source_row_registration_y": 793,
+        "translation": [
+          -383,
+          -473
+        ],
+        "logical_alpha_bbox": [
+          118,
+          45,
+          254,
+          266
+        ],
+        "visible_bottom": 311,
+        "pixel_sha256": "91572ec42d0fdbfeb44d21b7756243dd022c29bb2e3833a0f8ba49a1707bc5f2"
+      },
+      {
+        "source_pose_index": 5,
+        "source_alpha_bbox": [
+          934,
+          525,
+          256,
+          266
+        ],
+        "source_cell_center_x": 1045.0,
+        "source_row_registration_y": 793,
+        "translation": [
+          -801,
+          -473
+        ],
+        "logical_alpha_bbox": [
+          133,
+          52,
+          256,
+          266
+        ],
+        "visible_bottom": 318,
+        "pixel_sha256": "0c852d7640f1dd2c92ff3a0dde264c32f540b0d5ca8341fa12a5daac498199f9"
+      },
+      {
+        "source_pose_index": 6,
+        "source_alpha_bbox": [
+          94,
+          907,
+          258,
+          273
+        ],
+        "source_cell_center_x": 209.0,
+        "source_row_registration_y": 1185,
+        "translation": [
+          35,
+          -865
+        ],
+        "logical_alpha_bbox": [
+          129,
+          42,
+          258,
+          273
+        ],
+        "visible_bottom": 315,
+        "pixel_sha256": "e5ba088c64d668005f14a37de571fc35021bfb769cb813198cb26fbc5bccf82c"
+      },
+      {
+        "source_pose_index": 7,
+        "source_alpha_bbox": [
+          506,
+          910,
+          256,
+          271
+        ],
+        "source_cell_center_x": 627.0,
+        "source_row_registration_y": 1185,
+        "translation": [
+          -383,
+          -865
+        ],
+        "logical_alpha_bbox": [
+          123,
+          45,
+          256,
+          271
+        ],
+        "visible_bottom": 316,
+        "pixel_sha256": "a7de8e96cfaee4c34056f5e4ed73481151451a015249b7a7acd0e97fea8464d5"
+      },
+      {
+        "source_pose_index": 8,
+        "source_alpha_bbox": [
+          937,
+          906,
+          255,
+          270
+        ],
+        "source_cell_center_x": 1045.0,
+        "source_row_registration_y": 1185,
+        "translation": [
+          -801,
+          -865
+        ],
+        "logical_alpha_bbox": [
+          136,
+          41,
+          255,
+          270
+        ],
+        "visible_bottom": 311,
+        "pixel_sha256": "464d6d1da0bda3192119900470186bd4e50ac430d0e874c4bbe52a51fb77f5bb"
+      }
+    ]
+  },
+  "boss_core_death": {
+    "size": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "sha256": "5e019c8810e00f013796c0b2c14f041ed637a12174eeb2fcea7a593dcfce9b4b",
+    "git_blob_sha1": "e8c4aa5661c22970deb38a5f92044f295ad77d8b",
+    "bytes": 1434039,
+    "alpha_zero_pixels": 993457,
+    "alpha_nonzero_pixels": 579059,
+    "frame_count": 16,
+    "unique_pose_hashes": 16,
+    "source_row_registration_y": [
+      337,
+      657,
+      955,
+      1200
+    ],
+    "explicit_source_row_translation_y": [
+      -17,
+      -337,
+      -635,
+      -880
+    ],
+    "registration_policy": "Manually chosen fixed row layout registration using hover/core trajectory; no automatic tail-bottom alignment.",
+    "source_partition_x_by_row": [
+      [
+        0,
+        313,
+        627,
+        940,
+        1254
+      ],
+      [
+        0,
+        313,
+        627,
+        940,
+        1254
+      ],
+      [
+        0,
+        313,
+        627,
+        940,
+        1254
+      ],
+      [
+        0,
+        313,
+        627,
+        940,
+        1254
+      ]
+    ],
+    "source_partition_y": [
+      0,
+      390,
+      730,
+      1000,
+      1254
+    ],
+    "source_pose_order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "logical_canvas": [
+      512,
+      400
+    ],
+    "fixed_action_anchor": [
+      0.5,
+      0.8
+    ],
+    "fixed_action_registration_x_offset": -16,
+    "registration_calibration": "One constant X offset per action; calibrated from independent cyan-core first-frame center to original hover, with centered anchor for correct horizontal flip. Never per-frame.",
+    "height_trajectory": [
+      248,
+      243,
+      241,
+      234,
+      231,
+      221,
+      202,
+      178,
+      171,
+      167,
+      167,
+      165,
+      161,
+      148,
+      147,
+      139
+    ],
+    "logical_top_trajectory": [
+      72,
+      75,
+      81,
+      92,
+      92,
+      105,
+      124,
+      155,
+      155,
+      156,
+      155,
+      161,
+      172,
+      181,
+      182,
+      191
+    ],
+    "visible_lower_edge_trajectory": [
+      320,
+      318,
+      322,
+      326,
+      323,
+      326,
+      326,
+      333,
+      326,
+      323,
+      322,
+      326,
+      333,
+      329,
+      329,
+      330
+    ],
+    "frames": [
+      {
+        "source_pose_index": 0,
+        "source_alpha_bbox": [
+          58,
+          89,
+          225,
+          248
+        ],
+        "source_cell_center_x": 156.75,
+        "source_row_registration_y": 337,
+        "translation": [
+          83,
+          -17
+        ],
+        "logical_alpha_bbox": [
+          141,
+          72,
+          225,
+          248
+        ],
+        "visible_bottom": 320,
+        "pixel_sha256": "5a6b44397f4f3f332ee5371ee3d2a11b4df92c11c706c945ab1206b739ae4f5d"
+      },
+      {
+        "source_pose_index": 1,
+        "source_alpha_bbox": [
+          374,
+          92,
+          222,
+          243
+        ],
+        "source_cell_center_x": 470.25,
+        "source_row_registration_y": 337,
+        "translation": [
+          -230,
+          -17
+        ],
+        "logical_alpha_bbox": [
+          144,
+          75,
+          222,
+          243
+        ],
+        "visible_bottom": 318,
+        "pixel_sha256": "cefac3dfd84b2bb28db889f60bb8d22240029375b11706c166fbaad0405c5255"
+      },
+      {
+        "source_pose_index": 2,
+        "source_alpha_bbox": [
+          689,
+          98,
+          215,
+          241
+        ],
+        "source_cell_center_x": 783.75,
+        "source_row_registration_y": 337,
+        "translation": [
+          -544,
+          -17
+        ],
+        "logical_alpha_bbox": [
+          145,
+          81,
+          215,
+          241
+        ],
+        "visible_bottom": 322,
+        "pixel_sha256": "c0e8381c505fbadf8379cfec752860f052b52520c4084aa9d35e486bd8412b8d"
+      },
+      {
+        "source_pose_index": 3,
+        "source_alpha_bbox": [
+          998,
+          109,
+          214,
+          234
+        ],
+        "source_cell_center_x": 1097.25,
+        "source_row_registration_y": 337,
+        "translation": [
+          -857,
+          -17
+        ],
+        "logical_alpha_bbox": [
+          141,
+          92,
+          214,
+          234
+        ],
+        "visible_bottom": 326,
+        "pixel_sha256": "961cc154ce5bb03d54ca2a4eb206e3ee4825a67b0d58b7e456620a05292d5fcd"
+      },
+      {
+        "source_pose_index": 4,
+        "source_alpha_bbox": [
+          76,
+          429,
+          216,
+          231
+        ],
+        "source_cell_center_x": 156.75,
+        "source_row_registration_y": 657,
+        "translation": [
+          83,
+          -337
+        ],
+        "logical_alpha_bbox": [
+          159,
+          92,
+          216,
+          231
+        ],
+        "visible_bottom": 323,
+        "pixel_sha256": "57d9c15a7dfd41d82ab4c485ae99c880aa7f4de9314fce4e856972b80a77c82d"
+      },
+      {
+        "source_pose_index": 5,
+        "source_alpha_bbox": [
+          386,
+          442,
+          213,
+          221
+        ],
+        "source_cell_center_x": 470.25,
+        "source_row_registration_y": 657,
+        "translation": [
+          -230,
+          -337
+        ],
+        "logical_alpha_bbox": [
+          156,
+          105,
+          213,
+          221
+        ],
+        "visible_bottom": 326,
+        "pixel_sha256": "310e8108e663161577c721ce008a0029a4c8720165dba69d9a47a53765e8684e"
+      },
+      {
+        "source_pose_index": 6,
+        "source_alpha_bbox": [
+          694,
+          461,
+          213,
+          202
+        ],
+        "source_cell_center_x": 783.75,
+        "source_row_registration_y": 657,
+        "translation": [
+          -544,
+          -337
+        ],
+        "logical_alpha_bbox": [
+          150,
+          124,
+          213,
+          202
+        ],
+        "visible_bottom": 326,
+        "pixel_sha256": "efd4947b5e6acae8fc70b7e8b7d9b5f9a4209231b4f8cb41097d6ea0ef77111e"
+      },
+      {
+        "source_pose_index": 7,
+        "source_alpha_bbox": [
+          1003,
+          492,
+          216,
+          178
+        ],
+        "source_cell_center_x": 1097.25,
+        "source_row_registration_y": 657,
+        "translation": [
+          -857,
+          -337
+        ],
+        "logical_alpha_bbox": [
+          146,
+          155,
+          216,
+          178
+        ],
+        "visible_bottom": 333,
+        "pixel_sha256": "075334d0b68d67bb9edc0797ab2df7f3f73596d519900ac2d0dd564becd39109"
+      },
+      {
+        "source_pose_index": 8,
+        "source_alpha_bbox": [
+          76,
+          790,
+          214,
+          171
+        ],
+        "source_cell_center_x": 156.75,
+        "source_row_registration_y": 955,
+        "translation": [
+          83,
+          -635
+        ],
+        "logical_alpha_bbox": [
+          159,
+          155,
+          214,
+          171
+        ],
+        "visible_bottom": 326,
+        "pixel_sha256": "023b918198230b9470b34772aa249d39caaa0f0d29d9c6cc65fd9cc07c794530"
+      },
+      {
+        "source_pose_index": 9,
+        "source_alpha_bbox": [
+          390,
+          791,
+          214,
+          167
+        ],
+        "source_cell_center_x": 470.25,
+        "source_row_registration_y": 955,
+        "translation": [
+          -230,
+          -635
+        ],
+        "logical_alpha_bbox": [
+          160,
+          156,
+          214,
+          167
+        ],
+        "visible_bottom": 323,
+        "pixel_sha256": "85ab93a5de97eec413af3f78b020e106da3f99c3baf1b16d486cd23a95295264"
+      },
+      {
+        "source_pose_index": 10,
+        "source_alpha_bbox": [
+          683,
+          790,
+          230,
+          167
+        ],
+        "source_cell_center_x": 783.75,
+        "source_row_registration_y": 955,
+        "translation": [
+          -544,
+          -635
+        ],
+        "logical_alpha_bbox": [
+          139,
+          155,
+          230,
+          167
+        ],
+        "visible_bottom": 322,
+        "pixel_sha256": "3faaa86e0166c19e6f299c9db38c252eb3c34bd423f19918a777ff41f3453e00"
+      },
+      {
+        "source_pose_index": 11,
+        "source_alpha_bbox": [
+          987,
+          796,
+          234,
+          165
+        ],
+        "source_cell_center_x": 1097.25,
+        "source_row_registration_y": 955,
+        "translation": [
+          -857,
+          -635
+        ],
+        "logical_alpha_bbox": [
+          130,
+          161,
+          234,
+          165
+        ],
+        "visible_bottom": 326,
+        "pixel_sha256": "7aef50d587ade04a4644ffd6bcfe5831a1516194df94a738cffcc87245a9ca60"
+      },
+      {
+        "source_pose_index": 12,
+        "source_alpha_bbox": [
+          52,
+          1052,
+          243,
+          161
+        ],
+        "source_cell_center_x": 156.75,
+        "source_row_registration_y": 1200,
+        "translation": [
+          83,
+          -880
+        ],
+        "logical_alpha_bbox": [
+          135,
+          172,
+          243,
+          161
+        ],
+        "visible_bottom": 333,
+        "pixel_sha256": "13f4e751333125554c494e412936a23101f1b928475a7c047c52c6df2102c41d"
+      },
+      {
+        "source_pose_index": 13,
+        "source_alpha_bbox": [
+          368,
+          1061,
+          245,
+          148
+        ],
+        "source_cell_center_x": 470.25,
+        "source_row_registration_y": 1200,
+        "translation": [
+          -230,
+          -880
+        ],
+        "logical_alpha_bbox": [
+          138,
+          181,
+          245,
+          148
+        ],
+        "visible_bottom": 329,
+        "pixel_sha256": "aa203a96e09352ffaeb63212eb3df75890de0630b09a5d5560acbfec521c5395"
+      },
+      {
+        "source_pose_index": 14,
+        "source_alpha_bbox": [
+          665,
+          1062,
+          264,
+          147
+        ],
+        "source_cell_center_x": 783.75,
+        "source_row_registration_y": 1200,
+        "translation": [
+          -544,
+          -880
+        ],
+        "logical_alpha_bbox": [
+          121,
+          182,
+          264,
+          147
+        ],
+        "visible_bottom": 329,
+        "pixel_sha256": "fa150b24dbc5a3f1eb5dcfeda2c3b3f785abcf2a82322d12da0ae188ff2c6ca6"
+      },
+      {
+        "source_pose_index": 15,
+        "source_alpha_bbox": [
+          971,
+          1071,
+          258,
+          139
+        ],
+        "source_cell_center_x": 1097.25,
+        "source_row_registration_y": 1200,
+        "translation": [
+          -857,
+          -880
+        ],
+        "logical_alpha_bbox": [
+          114,
+          191,
+          258,
+          139
+        ],
+        "visible_bottom": 330,
+        "pixel_sha256": "db6a83656bdacd3711dd485d0de20d0394edb09235715b3eb8f06bf56b87d16e"
+      }
+    ]
+  }
+}

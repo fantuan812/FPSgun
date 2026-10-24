@@ -1,0 +1,104 @@
+{
+  "passed": true,
+  "scope": "Authored hurt/death resources for seven existing enemy archetypes only. Not complete attack variants, all gameplay, GUI feel, or Windows-export acceptance.",
+  "enemies": {
+    "crawler": {
+      "hurt": {
+        "asset": "crawler_hurt",
+        "frames": 9,
+        "duration": 0.27,
+        "png_sha256": "ba7ac243d092efc4df4078011fcc80f93945b9254d7e9ac4a15c7b3f20ff7230"
+      },
+      "death": {
+        "asset": "crawler_death",
+        "frames": 16,
+        "duration": 0.72,
+        "png_sha256": "bd7db67cd7e5d9e37e3c89119b09ca3fff6c701c94cb35b9d350bca340c76ecd"
+      }
+    },
+    "charger": {
+      "hurt": {
+        "asset": "charger_hurt",
+        "frames": 9,
+        "duration": 0.27,
+        "png_sha256": "80d04dcaf0c153567c939052154a429a9a3f93b030807ee852488388f7b4014d"
+      },
+      "death": {
+        "asset": "charger_death",
+        "frames": 9,
+        "duration": 0.72,
+        "png_sha256": "a0ec5143ac1b3cdbefd4481984a135fa1c278f067f1af0c781866af545eb24e8"
+      }
+    },
+    "spitter": {
+      "hurt": {
+        "asset": "spitter_hurt",
+        "frames": 9,
+        "duration": 0.27,
+        "png_sha256": "979a1912618d20bffcd44fc8d497329aa920c53fa5f71fe7bfd791bfd0dc4b80"
+      },
+      "death": {
+        "asset": "spitter_death",
+        "frames": 9,
+        "duration": 0.72,
+        "png_sha256": "5f19f18ff386439fd75780311776217b993cdf72e5b24b854fc6ac32a7cd9807"
+      }
+    },
+    "flanker": {
+      "hurt": {
+        "asset": "flanker_hurt",
+        "frames": 9,
+        "duration": 0.27,
+        "png_sha256": "bfebee1f99fc08335e0224294c88687b7308d48b5cc067e4c95ef9da5ed6a8dc"
+      },
+      "death": {
+        "asset": "flanker_death",
+        "frames": 16,
+        "duration": 0.72,
+        "png_sha256": "c8a20f57ca87a10715b711f37dd606637e60daa3898082f0a6cef084b3bb57ac"
+      }
+    },
+    "brood_keeper": {
+      "hurt": {
+        "asset": "brood_keeper_hurt",
+        "frames": 9,
+        "duration": 0.27,
+        "png_sha256": "266f9110e1c3c2d730e9b89dd1802ddc2ca58ce59ef39afbca7cb1cd5d8a7a0d"
+      },
+      "death": {
+        "asset": "brood_keeper_death",
+        "frames": 16,
+        "duration": 0.72,
+        "png_sha256": "fe51277b16ac8bf7a58d4f12c02b30c72074415975847f524ff689f524daf7c3"
+      }
+    },
+    "boss_warden": {
+      "hurt": {
+        "asset": "boss_warden_hurt",
+        "frames": 9,
+        "duration": 0.27,
+        "png_sha256": "b67f2cd14042b441982e44080f26258ade3804961e42a0395b3cf1846c64b899"
+      },
+      "death": {
+        "asset": "boss_warden_death",
+        "frames": 16,
+        "duration": 0.72,
+        "png_sha256": "40d6c1c70a7881c20410f7e8ba70e505e59eb06b1f39bb4b56e09ffd401c286d"
+      }
+    },
+    "boss_core": {
+      "hurt": {
+        "asset": "boss_core_hurt",
+        "frames": 9,
+        "duration": 0.27,
+        "png_sha256": "06032a84184dc2331177eb0bf3bc237edff4c6c981802e393fe1be492775fc89"
+      },
+      "death": {
+        "asset": "boss_core_death",
+        "frames": 16,
+        "duration": 0.72,
+        "png_sha256": "5e019c8810e00f013796c0b2c14f041ed637a12174eeb2fcea7a593dcfce9b4b"
+      }
+    }
+  }
+}

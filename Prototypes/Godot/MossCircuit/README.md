@@ -1,4 +1,9 @@
-# MOSS CIRCUIT · 苔芯幸存者 v14 · 守门者反应层
+# MOSS CIRCUIT · 苔芯幸存者 v15 · 反应层覆盖收口
+
+本版从已发布v14 commit `51a6f3ce4ae91e08212c7675df9a9f21620fee9f`延续，仅补Core的hurt9帧/0.27秒、death16帧/0.72秒。至此五种普通敌人和两Boss都有独立受击/死亡反应图；**这不是所有招式/整款游戏完成**，原攻击与所有玩法权威不变。本轮到反应层完整性里程碑收口，不继续扩新功能。见[Core合同](docs/CORE_REACTIONS.md)及[当前覆盖与GUI/手感未验项](docs/REACTION_COVERAGE.md)。
+
+## v14记录（历史）
+
 
 本版从已发布v13 commit `56a6c721850fc3ef67caa0f766661a3970eb6a59` 延续，只补现有Wave3守门者的 **hurt9帧/0.27秒与death16帧/0.72秒**。不新增Boss或招式、不改攻击/伤害/AI/移动/RNG；旧charge/blast通用attack九帧仍保留其限制。详情见 [守门者反应层合同](docs/WARDEN_REACTIONS.md)。
 
@@ -81,6 +86,8 @@ idle 暂复用 walk 第一帧；弹丸/经验/判定轮廓保留简单代码绘�
 
 ## 验证
 
+**v15反应层收口（2026-10-24）：**最终镜像安全metadata下，删缓存cold导入及46测试入口全通过；Core作者56项、独立403项、旧动作精确集合343项。164旧权威/配置/资源/场景/UI字节不变，runtime `.gd` 零改；同种子与包后验证见[工程报告](docs/validation/v15-core/QA_REPORT.md)及[独立报告](docs/validation/independent-v15-core/QA_REPORT.md)。以下v14及更早仅为历史。GUI/真人手感/Windows未验，见[收口清单](docs/REACTION_COVERAGE.md)。
+
 **v14守门者反应层（2026-10-24）：**删除生成缓存后cold headless导入与44个测试入口全部通过；作者38项、独立942项，旧动作精确ID/帧数回归314项。159个旧权威/配置/资产/UI/场景字节不变，runtime `.gd` 零修改。见[工程报告](docs/validation/v14-warden/QA_REPORT.md)及[独立报告](docs/validation/independent-v14-warden/QA_REPORT.md)。下列v13及更早均为历史结果。没有GUI或Windows导出验收。
 
 **v13 恢复重建（2026-10-24）：**当前最终metadata下 clean headless 导入 + 42个测试入口全部通过，日志无ERROR；包括旧36个测试、新作者/独立接触敌人测试、UI与3个图标检查。140个v12旧权威/配置/资产字节不变；新素材manifest可由源码分析脚本逐字节重现。见 [本次工程报告](docs/validation/v13-rebuild/QA_REPORT.md) 与 [本次独立报告](docs/validation/independent-v13-rebuild/QA_REPORT.md)。以下v12及更早结果仅是历史。GUI与Windows导出未运行。
@@ -129,6 +136,8 @@ godot --headless --path . --script tests/test_brood_actions.gd
 godot --headless --path . --script tests/independent_brood_parity.gd
 godot --headless --path . --script tests/independent_brood_events.gd
 godot --headless --path . --script tests/independent_brood_assets.gd
+godot --headless --path . --script tests/test_core_reactions.gd
+godot --headless --path . --script tests/independent_core_reactions.gd
 godot --headless --path . --script tests/test_warden_reactions.gd
 godot --headless --path . --script tests/independent_warden_reactions.gd
 godot --headless --path . --script tests/test_contact_enemy_actions.gd

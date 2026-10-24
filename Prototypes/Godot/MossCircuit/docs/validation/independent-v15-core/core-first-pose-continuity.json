@@ -1,0 +1,24 @@
+{
+  "method": "Actual RGBA cyan-color area-centroid proxy using pixel-center coordinates; apply baseline Art bounding-box registration and new fixed centered-anchor canvas registration. Flipped X changes sign because source texture canvas is mirrored; no GPU screenshot claim.",
+  "baseline_normalized_centroid_from_logical_anchor": [
+    -0.060136734414428496,
+    -0.5878650652373779
+  ],
+  "reference_image_sha256": "372c220e98f76e4b5f23dda5149741c0f48c20ed42ba03f8499f38ad9a5b3b60",
+  "actor_visible_height": 165.3,
+  "actions": {
+    "boss_core_hurt": {
+      "first_pose_x_residual_world_px": -0.20334744158274118,
+      "flipped_x_residual_world_px": 0.20334744158274118,
+      "first_pose_y_residual_world_px": 1.1930665067601625,
+      "passed_x_tolerance_0_25_world_px": true
+    },
+    "boss_core_death": {
+      "first_pose_x_residual_world_px": 0.03526631160826289,
+      "flipped_x_residual_world_px": -0.03526631160826289,
+      "first_pose_y_residual_world_px": 2.0672739127708413,
+      "passed_x_tolerance_0_25_world_px": true
+    }
+  },
+  "passed": true
+}

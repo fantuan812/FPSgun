@@ -20,7 +20,9 @@
       "death": "boss_warden_death"
     },
     "boss_core": {
-      "attack": "boss_core_attack"
+      "attack": "boss_core_attack",
+      "hurt": "boss_core_hurt",
+      "death": "boss_core_death"
     },
     "charger": {
       "attack": "charger_charge",
@@ -111,6 +113,7 @@
     "res://assets/actions/brood_keeper/action_manifest.json",
     "res://assets/actions/crawler/action_manifest.json",
     "res://assets/actions/flanker/action_manifest.json",
-    "res://assets/actions/boss_warden/action_manifest.json"
+    "res://assets/actions/boss_warden/action_manifest.json",
+    "res://assets/actions/boss_core/action_manifest.json"
   ]
 }

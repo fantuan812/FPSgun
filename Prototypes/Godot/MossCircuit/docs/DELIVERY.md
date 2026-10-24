@@ -1,13 +1,13 @@
-# v14 守门者反应层完整工程
+# v15 反应层收口完整工程
 
-本次完整单ZIP为 `MossCircuit-v14-WardenReactions-2026-10-24.zip`。解压后在Godot 4.6导入目录中的`project.godot`；这是累计源码/素材完整包，不是补丁或Windows安装程序。没有分包，分包union不适用。
+完整单ZIP：`MossCircuit-v15-CoreReactions-2026-10-24.zip`。解压后在Godot 4.6导入`project.godot`；这是累计源码/素材完整包，不是补丁或Windows安装程序。没有分包，分包union不适用。
 
-主要交付仍为FPSgun仓库的 `Prototypes/Godot/MossCircuit`。发布状态以真实远端commit与读回收据为准，本文不是已上传证明。Library保留完整包作为持久备份。
+主要交付为FPSgun仓库 `Prototypes/Godot/MossCircuit`；发布成功以真实commit/远端读回收据为准，本文不是已上传证明。Library持久保留完整包作为备份。
 
-- 基线：已发布v13 commit `56a6c721850fc3ef67caa0f766661a3970eb6a59`，870文件逐manifest SHA核对。
-- 新增范围：现有Warden的hurt9/death16两动作与必要manifest、测试、说明；不新增玩法机制。
-- v13全部路径保留，历史证据仍属原版本；最终本批报告在 `docs/validation/v14-warden/`。
-- `MANIFEST.json`逐文件列出SHA-256（不含它自身）；独立验包核CRC、清单、基线路径和解压后cold测试。
-- 不含`.godot`缓存或Godot引擎；首次导入生成缓存。Linux测试需为HOME及三XDG设置可写目录，可使用交付的run_regression.py自动配置。
+- 已发布v14基线：`51a6f3ce4ae91e08212c7675df9a9f21620fee9f`，1001文件逐SHA核对后在新目录延续，v14冻结工程不动。
+- v15只新增Core hurt9/death16与必要metadata、测试、说明；本轮五普通敌人+两Boss受击/死亡覆盖收口，不增加技能或玩法机制。
+- 保留原1001路径。历史报告只属于原版本；本次证据在`docs/validation/v15-core/`与`independent-v15-core/`。
+- `MANIFEST.json`列出除自身外全部交付文件SHA-256。独立验包核CRC、清单、基线路径与解压后的冷启动测试。
+- 不带`.godot`缓存或引擎二进制，首次导入生成缓存。命令行验收需可写HOME/XDG，交付runner自动设置。
 
-真实GUI/真人操作、Windows导出、平衡及完整Boss招式差异化仍非本批验收范围。
+GUI/真人手感、平衡、Windows导出及其他未完成项见`docs/REACTION_COVERAGE.md`；不能将headless通过等同这些验收。
