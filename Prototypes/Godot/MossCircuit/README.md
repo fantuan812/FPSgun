@@ -1,4 +1,9 @@
-# MOSS CIRCUIT · 苔芯幸存者 v13 · 恢复重建版
+# MOSS CIRCUIT · 苔芯幸存者 v14 · 守门者反应层
+
+本版从已发布v13 commit `56a6c721850fc3ef67caa0f766661a3970eb6a59` 延续，只补现有Wave3守门者的 **hurt9帧/0.27秒与death16帧/0.72秒**。不新增Boss或招式、不改攻击/伤害/AI/移动/RNG；旧charge/blast通用attack九帧仍保留其限制。详情见 [守门者反应层合同](docs/WARDEN_REACTIONS.md)。
+
+## v13 恢复记录（历史）
+
 
 
 本版从 GitHub v12 commit `6d393134da0a29a7c62a821abf50440e6d304f25` 的 699 个文件逐 Git blob SHA 校验恢复后重建，不冒充遗失的旧 v13 工程原包。新增 crawler/flanker 各受击9帧（0.27秒）与死亡16帧（0.72秒）；四张 PNG 源字节由原 Git blob 恢复，裁片 manifest、集成与验收在 2026-10-24 重新制作/运行。九帧不是动作上限，详见 [接触型敌人动作合同](docs/CONTACT_ENEMY_ACTIONS.md)。
@@ -76,6 +81,8 @@ idle 暂复用 walk 第一帧；弹丸/经验/判定轮廓保留简单代码绘�
 
 ## 验证
 
+**v14守门者反应层（2026-10-24）：**删除生成缓存后cold headless导入与44个测试入口全部通过；作者38项、独立942项，旧动作精确ID/帧数回归314项。159个旧权威/配置/资产/UI/场景字节不变，runtime `.gd` 零修改。见[工程报告](docs/validation/v14-warden/QA_REPORT.md)及[独立报告](docs/validation/independent-v14-warden/QA_REPORT.md)。下列v13及更早均为历史结果。没有GUI或Windows导出验收。
+
 **v13 恢复重建（2026-10-24）：**当前最终metadata下 clean headless 导入 + 42个测试入口全部通过，日志无ERROR；包括旧36个测试、新作者/独立接触敌人测试、UI与3个图标检查。140个v12旧权威/配置/资产字节不变；新素材manifest可由源码分析脚本逐字节重现。见 [本次工程报告](docs/validation/v13-rebuild/QA_REPORT.md) 与 [本次独立报告](docs/validation/independent-v13-rebuild/QA_REPORT.md)。以下v12及更早结果仅是历史。GUI与Windows导出未运行。
 
 v12 修订后真正 clean headless 导入，**37 个入口全部通过**：旧33、作者229项、独立610/66/374共1050项。221个已测运行输入前后及干净副本hash一致；142个旧权威/配置/资产原字节不变。仅ActorDirector表现层泛化真实帧数与安全透明padding，不改AI/伤害/生成/RNG。见 [v12独立报告](docs/validation/independent-v12/QA_REPORT.md)。旧九帧候选及死亡顺序修正前的结果未冒充本版证据；GUI/Windows未运行。下列保留历史版本结果。
@@ -122,6 +129,8 @@ godot --headless --path . --script tests/test_brood_actions.gd
 godot --headless --path . --script tests/independent_brood_parity.gd
 godot --headless --path . --script tests/independent_brood_events.gd
 godot --headless --path . --script tests/independent_brood_assets.gd
+godot --headless --path . --script tests/test_warden_reactions.gd
+godot --headless --path . --script tests/independent_warden_reactions.gd
 godot --headless --path . --script tests/test_contact_enemy_actions.gd
 godot --headless --path . --script tests/independent_crawler_flanker.gd
 godot --headless --path . --script tests/test_spitter_actions.gd

@@ -1,0 +1,557 @@
+{
+  "schema_version": 1,
+  "alpha_threshold": 8,
+  "actions": {
+    "boss_warden_hurt": {
+      "path": "res://assets/actions/boss_warden/boss_warden_hurt.png",
+      "frames": [
+        {
+          "region": [
+            32,
+            124,
+            344,
+            266
+          ],
+          "margin": [
+            79,
+            58,
+            168,
+            134
+          ],
+          "alpha_bbox": [
+            83,
+            62,
+            336,
+            258
+          ],
+          "source_pose_index": 0
+        },
+        {
+          "region": [
+            464,
+            124,
+            336,
+            266
+          ],
+          "margin": [
+            93,
+            58,
+            176,
+            134
+          ],
+          "alpha_bbox": [
+            97,
+            62,
+            328,
+            258
+          ],
+          "source_pose_index": 1
+        },
+        {
+          "region": [
+            879,
+            146,
+            333,
+            244
+          ],
+          "margin": [
+            90,
+            80,
+            179,
+            156
+          ],
+          "alpha_bbox": [
+            94,
+            84,
+            325,
+            236
+          ],
+          "source_pose_index": 2
+        },
+        {
+          "region": [
+            48,
+            536,
+            334,
+            246
+          ],
+          "margin": [
+            95,
+            78,
+            178,
+            154
+          ],
+          "alpha_bbox": [
+            99,
+            82,
+            326,
+            238
+          ],
+          "source_pose_index": 3
+        },
+        {
+          "region": [
+            459,
+            513,
+            338,
+            269
+          ],
+          "margin": [
+            88,
+            55,
+            174,
+            131
+          ],
+          "alpha_bbox": [
+            92,
+            59,
+            330,
+            261
+          ],
+          "source_pose_index": 4
+        },
+        {
+          "region": [
+            881,
+            506,
+            328,
+            276
+          ],
+          "margin": [
+            92,
+            48,
+            184,
+            124
+          ],
+          "alpha_bbox": [
+            96,
+            52,
+            320,
+            268
+          ],
+          "source_pose_index": 5
+        },
+        {
+          "region": [
+            452,
+            890,
+            340,
+            276
+          ],
+          "margin": [
+            81,
+            48,
+            172,
+            124
+          ],
+          "alpha_bbox": [
+            85,
+            52,
+            332,
+            268
+          ],
+          "source_pose_index": 7
+        },
+        {
+          "region": [
+            46,
+            898,
+            331,
+            268
+          ],
+          "margin": [
+            93,
+            56,
+            181,
+            132
+          ],
+          "alpha_bbox": [
+            97,
+            60,
+            323,
+            260
+          ],
+          "source_pose_index": 6
+        },
+        {
+          "region": [
+            866,
+            898,
+            341,
+            268
+          ],
+          "margin": [
+            77,
+            56,
+            171,
+            132
+          ],
+          "alpha_bbox": [
+            81,
+            60,
+            333,
+            260
+          ],
+          "source_pose_index": 8
+        }
+      ],
+      "anchor": [
+        0.5,
+        0.8
+      ],
+      "reference_height": 258,
+      "duration_seconds": 0.27,
+      "loop": false,
+      "source": "Built-in image_gen identity-preserving candidate; original PNG bytes unmodified."
+    },
+    "boss_warden_death": {
+      "path": "res://assets/actions/boss_warden/boss_warden_death.png",
+      "frames": [
+        {
+          "region": [
+            36,
+            122,
+            275,
+            221
+          ],
+          "margin": [
+            135,
+            98,
+            237,
+            179
+          ],
+          "alpha_bbox": [
+            139,
+            102,
+            267,
+            213
+          ],
+          "source_pose_index": 0
+        },
+        {
+          "region": [
+            351,
+            128,
+            265,
+            220
+          ],
+          "margin": [
+            137,
+            104,
+            247,
+            180
+          ],
+          "alpha_bbox": [
+            141,
+            108,
+            257,
+            212
+          ],
+          "source_pose_index": 1
+        },
+        {
+          "region": [
+            36,
+            450,
+            275,
+            215
+          ],
+          "margin": [
+            135,
+            107,
+            237,
+            185
+          ],
+          "alpha_bbox": [
+            139,
+            111,
+            267,
+            207
+          ],
+          "source_pose_index": 4
+        },
+        {
+          "region": [
+            342,
+            460,
+            273,
+            205
+          ],
+          "margin": [
+            128,
+            117,
+            239,
+            195
+          ],
+          "alpha_bbox": [
+            132,
+            121,
+            265,
+            197
+          ],
+          "source_pose_index": 5
+        },
+        {
+          "region": [
+            652,
+            143,
+            265,
+            205
+          ],
+          "margin": [
+            124,
+            119,
+            247,
+            195
+          ],
+          "alpha_bbox": [
+            128,
+            123,
+            257,
+            197
+          ],
+          "source_pose_index": 2
+        },
+        {
+          "region": [
+            638,
+            467,
+            275,
+            200
+          ],
+          "margin": [
+            110,
+            124,
+            237,
+            200
+          ],
+          "alpha_bbox": [
+            114,
+            128,
+            267,
+            192
+          ],
+          "source_pose_index": 6
+        },
+        {
+          "region": [
+            952,
+            149,
+            266,
+            199
+          ],
+          "margin": [
+            111,
+            125,
+            246,
+            201
+          ],
+          "alpha_bbox": [
+            115,
+            129,
+            258,
+            191
+          ],
+          "source_pose_index": 3
+        },
+        {
+          "region": [
+            25,
+            781,
+            287,
+            184
+          ],
+          "margin": [
+            124,
+            139,
+            225,
+            216
+          ],
+          "alpha_bbox": [
+            128,
+            143,
+            279,
+            176
+          ],
+          "source_pose_index": 8
+        },
+        {
+          "region": [
+            935,
+            488,
+            297,
+            179
+          ],
+          "margin": [
+            94,
+            145,
+            215,
+            221
+          ],
+          "alpha_bbox": [
+            98,
+            149,
+            289,
+            171
+          ],
+          "source_pose_index": 7
+        },
+        {
+          "region": [
+            340,
+            801,
+            284,
+            165
+          ],
+          "margin": [
+            126,
+            159,
+            228,
+            235
+          ],
+          "alpha_bbox": [
+            130,
+            163,
+            276,
+            157
+          ],
+          "source_pose_index": 9
+        },
+        {
+          "region": [
+            638,
+            813,
+            295,
+            153
+          ],
+          "margin": [
+            110,
+            171,
+            217,
+            247
+          ],
+          "alpha_bbox": [
+            114,
+            175,
+            287,
+            145
+          ],
+          "source_pose_index": 10
+        },
+        {
+          "region": [
+            946,
+            832,
+            283,
+            134
+          ],
+          "margin": [
+            105,
+            190,
+            229,
+            266
+          ],
+          "alpha_bbox": [
+            109,
+            194,
+            275,
+            126
+          ],
+          "source_pose_index": 11
+        },
+        {
+          "region": [
+            27,
+            1087,
+            285,
+            126
+          ],
+          "margin": [
+            126,
+            198,
+            227,
+            274
+          ],
+          "alpha_bbox": [
+            130,
+            202,
+            277,
+            118
+          ],
+          "source_pose_index": 12
+        },
+        {
+          "region": [
+            339,
+            1096,
+            279,
+            117
+          ],
+          "margin": [
+            125,
+            207,
+            233,
+            283
+          ],
+          "alpha_bbox": [
+            129,
+            211,
+            271,
+            109
+          ],
+          "source_pose_index": 13
+        },
+        {
+          "region": [
+            643,
+            1102,
+            279,
+            111
+          ],
+          "margin": [
+            115,
+            213,
+            233,
+            289
+          ],
+          "alpha_bbox": [
+            119,
+            217,
+            271,
+            103
+          ],
+          "source_pose_index": 14
+        },
+        {
+          "region": [
+            946,
+            1105,
+            282,
+            108
+          ],
+          "margin": [
+            105,
+            216,
+            230,
+            292
+          ],
+          "alpha_bbox": [
+            109,
+            220,
+            274,
+            100
+          ],
+          "source_pose_index": 15
+        }
+      ],
+      "anchor": [
+        0.5,
+        0.8
+      ],
+      "reference_height": 213,
+      "duration_seconds": 0.72,
+      "loop": false,
+      "source": "Built-in image_gen identity-preserving candidate; original PNG bytes unmodified."
+    }
+  }
+}

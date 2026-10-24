@@ -9,11 +9,11 @@ func run()->void:
 	var game=load("res://scenes/main.tscn").instantiate()
 	root.add_child(game);game.set_process(false);game._start_run(770)
 	var director=game.actor_anim
-	var expected_ids:Array=["hero_attack","hero_hurt","hero_death","hero_dash","boss_warden_attack","boss_core_attack","charger_charge","charger_hurt","charger_death","spitter_shoot","spitter_hurt","spitter_death","brood_keeper_summon","brood_keeper_hurt","brood_keeper_death","crawler_hurt","crawler_death","flanker_hurt","flanker_death"]
+	var expected_ids:Array=["hero_attack","hero_hurt","hero_death","hero_dash","boss_warden_attack","boss_core_attack","charger_charge","charger_hurt","charger_death","spitter_shoot","spitter_hurt","spitter_death","brood_keeper_summon","brood_keeper_hurt","brood_keeper_death","crawler_hurt","crawler_death","flanker_hurt","flanker_death","boss_warden_hurt","boss_warden_death"]
 	var actual_ids:Array=director.assets.keys();expected_ids.sort();actual_ids.sort()
 	check(actual_ids==expected_ids,"exact approved authored action ID set")
 	for id in director.assets:
-		var count:int=16 if id in ["brood_keeper_summon","brood_keeper_death","crawler_death","flanker_death"] else 9
+		var count:int=16 if id in ["brood_keeper_summon","brood_keeper_death","crawler_death","flanker_death","boss_warden_death"] else 9
 		check(director.assets[id].frames.get_frame_count("action")==count,"exact authored clip length "+id)
 		check(director.assets[id].frames.get_animation_loop("action")==false,"one shot "+id)
 		var size:Vector2=director.assets[id].frames.get_frame_texture("action",0).get_size()

@@ -1,13 +1,13 @@
-# v13 恢复重建完整工程
+# v14 守门者反应层完整工程
 
-本次交付 `MossCircuit-v13-Rebuild-2026-10-24.zip`，标准单 ZIP，解压得到同名工程目录，直接在 Godot 4.6 中导入其中 `project.godot`。本包是完整源码与累计资源，不是仅含四张新图的补丁，也不是 Windows 安装程序。
+本次完整单ZIP为 `MossCircuit-v14-WardenReactions-2026-10-24.zip`。解压后在Godot 4.6导入目录中的`project.godot`；这是累计源码/素材完整包，不是补丁或Windows安装程序。没有分包，分包union不适用。
 
-若从 FPSgun 仓库取得完整 `Prototypes/Godot/MossCircuit` 目录，无需下载历史v12分包，直接导入该目录。远端是否已发布以实际 commit 为准，本文不是上传成功证明。
+主要交付仍为FPSgun仓库的 `Prototypes/Godot/MossCircuit`。发布状态以真实远端commit与读回收据为准，本文不是已上传证明。Library保留完整包作为持久备份。
 
-- 基线：v12 commit `6d393134da0a29a7c62a821abf50440e6d304f25`，699个文件逐 Git blob SHA验证。
-- 新增：crawler/flanker受击9帧、死亡16帧及本次重建的metadata、测试、文档。
-- 保留v12全部累计文件；历史验证报告仍标注各自版本。没有恢复/复用遗失旧v13的验收结论，也不宣称与旧841文件原包相同。
-- `MANIFEST.json` 列出除其自己外全部交付文件 SHA-256；ZIP逐项验证解包字节与清单一致。
-- 不含 `.godot` 缓存或 Godot 引擎二进制。首次导入由本机生成缓存。
+- 基线：已发布v13 commit `56a6c721850fc3ef67caa0f766661a3970eb6a59`，870文件逐manifest SHA核对。
+- 新增范围：现有Warden的hurt9/death16两动作与必要manifest、测试、说明；不新增玩法机制。
+- v13全部路径保留，历史证据仍属原版本；最终本批报告在 `docs/validation/v14-warden/`。
+- `MANIFEST.json`逐文件列出SHA-256（不含它自身）；独立验包核CRC、清单、基线路径和解压后cold测试。
+- 不含`.godot`缓存或Godot引擎；首次导入生成缓存。Linux测试需为HOME及三XDG设置可写目录，可使用交付的run_regression.py自动配置。
 
-Linux云环境运行测试时，HOME和XDG_DATA_HOME/XDG_CONFIG_HOME/XDG_CACHE_HOME均需指向可写目录；仅设HOME不足以覆盖继承的XDG设置。headless测试不等于真人实玩或Windows导出验收。
+真实GUI/真人操作、Windows导出、平衡及完整Boss招式差异化仍非本批验收范围。

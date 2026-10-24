@@ -1,0 +1,36 @@
+{
+  "baseline_commit": "56a6c721850fc3ef67caa0f766661a3970eb6a59",
+  "reference": {
+    "project_path": "assets/enemies/boss_warden.png",
+    "local_path": "reference-boss-warden.png",
+    "sha256": "fcdc4d60e545f606c1c8c6d942c1c07f1f37767f20202074f47f51e6a582d0a0"
+  },
+  "method": "Built-in image_gen with referenced_image_paths and transparent_background=true; no CLI/API fallback; no raster edits after generation",
+  "prompt_file": "generation-prompts.json",
+  "generated_files": [
+    {
+      "action": "boss_warden_hurt",
+      "original_generated_file": "exec-d769a5db-aa00-4926-829f-1d64a4bf38f3.png",
+      "delivered_file": "boss_warden_hurt.png",
+      "sha256": "b67f2cd14042b441982e44080f26258ade3804961e42a0395b3cf1846c64b899",
+      "git_blob_sha1": "83862b766aaa8618672db0764f161ea404220582",
+      "bytes": 1394293,
+      "size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "action": "boss_warden_death",
+      "original_generated_file": "exec-89f345f7-601c-42a1-99c2-14e2c02d33ec.png",
+      "delivered_file": "boss_warden_death.png",
+      "sha256": "40d6c1c70a7881c20410f7e8ba70e505e59eb06b1f39bb4b56e09ffd401c286d",
+      "git_blob_sha1": "a681fee70c8a45a6c896b4f4da3dd919b90df879",
+      "bytes": 1387707,
+      "size": [
+        1254,
+        1254
+      ]
+    }
+  ]
+}

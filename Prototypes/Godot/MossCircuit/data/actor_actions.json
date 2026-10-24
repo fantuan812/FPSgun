@@ -15,7 +15,9 @@
       "death": "hero_death"
     },
     "boss_warden": {
-      "attack": "boss_warden_attack"
+      "attack": "boss_warden_attack",
+      "hurt": "boss_warden_hurt",
+      "death": "boss_warden_death"
     },
     "boss_core": {
       "attack": "boss_core_attack"
@@ -108,6 +110,7 @@
     "res://assets/actions/spitter/action_manifest.json",
     "res://assets/actions/brood_keeper/action_manifest.json",
     "res://assets/actions/crawler/action_manifest.json",
-    "res://assets/actions/flanker/action_manifest.json"
+    "res://assets/actions/flanker/action_manifest.json",
+    "res://assets/actions/boss_warden/action_manifest.json"
   ]
 }
