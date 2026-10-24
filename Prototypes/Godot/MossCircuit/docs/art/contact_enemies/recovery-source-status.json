@@ -1,0 +1,28 @@
+{
+  "status": "recovered_original_pngs_metadata_and_fresh_static_qa_complete",
+  "baseline_commit": "6d393134da0a29a7c62a821abf50440e6d304f25",
+  "old_blob_shas": {
+    "crawler_death": "187b84636defc2901ba62d0cb61bacbe2bd1c64a",
+    "crawler_hurt": "177b16fccdad85fb1fef427700373fdcca917c45",
+    "flanker_death": "80e65894d4aa6035fce27872d8ef1f5899476304",
+    "flanker_hurt": "6b3968c6c0a23d3197a800c609d29545eade42ce"
+  },
+  "evidence": [
+    "Local PNG scan: 110 files; zero matching old Git blob SHA-1s.",
+    "Current GitHub fetch_blob schema has no base64 encoding option.",
+    "Current GitHub fetch_file schema supports encoding=base64 but requires a tree path.",
+    "No additional binary request retried; no external mutation performed by art agent.",
+    "Public official Git API JSON/base64 recovered all four supplied blobs; their hashes matched exactly."
+  ],
+  "targets": {
+    "hurt": {
+      "frames": 9,
+      "duration_seconds": 0.27
+    },
+    "death": {
+      "frames": 16,
+      "duration_seconds": 0.72
+    }
+  },
+  "qa": "Fresh static art QA complete. Runtime integration/playback QA pending programming agent."
+}

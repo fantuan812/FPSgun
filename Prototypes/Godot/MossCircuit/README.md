@@ -1,8 +1,13 @@
-# MOSS CIRCUIT · 苔芯幸存者 v12
+# MOSS CIRCUIT · 苔芯幸存者 v13 · 恢复重建版
+
+
+本版从 GitHub v12 commit `6d393134da0a29a7c62a821abf50440e6d304f25` 的 699 个文件逐 Git blob SHA 校验恢复后重建，不冒充遗失的旧 v13 工程原包。新增 crawler/flanker 各受击9帧（0.27秒）与死亡16帧（0.72秒）；四张 PNG 源字节由原 Git blob 恢复，裁片 manifest、集成与验收在 2026-10-24 重新制作/运行。九帧不是动作上限，详见 [接触型敌人动作合同](docs/CONTACT_ENEMY_ACTIONS.md)。
+
+修正：追踪/侧袭怪距离玩家85以内仍在移动，表现不再凭距离伪造 warning、停播 walk 或压缩身体。只删除 ActorDirector 的两行表现分支；移动、接触伤害、奖励、AI 与随机数不改变。真实接触的程序化攻击脉冲保留，没有新增可躲避攻击前摇。
 
 原创 Godot 4.6 像素风 arena-survivor 原型。参考“移动避敌、自动攻击、波次升级”的品类结构，不使用《土豆兄弟》的模型、图像、名称或代码。
 
-本版基于已发布 v11，**补召唤者 Moss Broodkeeper 的召唤16帧、受击9帧、死亡16帧**。九帧只是方便生图的批次，不是动作上限；长动作改为单张4×4，短受击保留9帧。ActorDirector按真实剪辑长度播放，不改变AI/伤害/生成/经济/RNG。原0.65秒预警之后的释放帧表示“召唤尝试”，不是无条件保证出怪：3只活子体或全局上限满时可新增0只；随后按原0.7秒恢复推进。受击不拖延或补播召唤，父体死亡不会凭动画杀掉既有子体。见 [召唤者动作合同](docs/BROODKEEPER_ACTIONS.md)。
+v12 基于已发布 v11，**补召唤者 Moss Broodkeeper 的召唤16帧、受击9帧、死亡16帧**。九帧只是方便生图的批次，不是动作上限；长动作改为单张4×4，短受击保留9帧。ActorDirector按真实剪辑长度播放，不改变AI/伤害/生成/经济/RNG。原0.65秒预警之后的释放帧表示“召唤尝试”，不是无条件保证出怪：3只活子体或全局上限满时可新增0只；随后按原0.7秒恢复推进。受击不拖延或补播召唤，父体死亡不会凭动画杀掉既有子体。见 [召唤者动作合同](docs/BROODKEEPER_ACTIONS.md)。
 
 v11 Spitter 的射击/受击/死亡及其真实同tick发弹合同完整保留，见 [远程敌人合同](docs/SPITTER_ACTIONS.md)。
 
@@ -11,7 +16,7 @@ v10 冲锋者的蓄力/冲锋/恢复、受击、死亡九帧与已校准接地�
 v9 已完成的共享战斗/构筑与模式策略继续保留：原 Arena 和 3 房间有限遭遇原型使用同一套战斗，支持受控测试的非相邻推进/不开店结算；仍不是完整地牢。见 [架构与模式合同](docs/ARCHITECTURE_AND_MODES.md)。
 
 v8 的空手九帧身体、六种独立世界武器、主手与三个辅助挂位、独立枪口特效完整保留；[装配与共享发射几何](docs/MODULAR_WEAPONS.md) 不回退成烘焙手枪。
-保留 **6 武器、26 道具、4 武器槽、构筑加权刷新、五种普通敌人与两 Boss**，以及 [此前动作覆盖与本版修正](docs/ACTION_COVERAGE.md)、[六种像素 VFX](docs/PIXEL_VFX.md)、[装备刷新](docs/SHOP_AFFINITY.md)、[道具机制](docs/MECHANISMS.md)、[敌人/Boss](docs/ENEMIES_AND_BOSSES.md)、[经济](docs/BUILD_SYSTEM.md) 和 [UI](ui/README.md)。本批只有 Broodkeeper 新增原画，Spitter/冲锋者沿用此前版本，其他普通怪的独立攻击/受击/死亡仍未全部补齐，没有增加音频、存档或联网。
+保留 **6 武器、26 道具、4 武器槽、构筑加权刷新、五种普通敌人与两 Boss**，以及 [此前动作覆盖与本版修正](docs/ACTION_COVERAGE.md)、[六种像素 VFX](docs/PIXEL_VFX.md)、[装备刷新](docs/SHOP_AFFINITY.md)、[道具机制](docs/MECHANISMS.md)、[敌人/Boss](docs/ENEMIES_AND_BOSSES.md)、[经济](docs/BUILD_SYSTEM.md) 和 [UI](ui/README.md)。本版补齐五种普通敌人的独立受击/死亡图；crawler/flanker 接触攻击仍为程序化表现，两 Boss 的独立受击/死亡仍未补齐，没有增加音频、存档或联网。
 
 所有分包请按 [合并解压说明](docs/DELIVERY.md) 放到同一父目录；完整单包直接解压。
 
@@ -71,6 +76,8 @@ idle 暂复用 walk 第一帧；弹丸/经验/判定轮廓保留简单代码绘�
 
 ## 验证
 
+**v13 恢复重建（2026-10-24）：**当前最终metadata下 clean headless 导入 + 42个测试入口全部通过，日志无ERROR；包括旧36个测试、新作者/独立接触敌人测试、UI与3个图标检查。140个v12旧权威/配置/资产字节不变；新素材manifest可由源码分析脚本逐字节重现。见 [本次工程报告](docs/validation/v13-rebuild/QA_REPORT.md) 与 [本次独立报告](docs/validation/independent-v13-rebuild/QA_REPORT.md)。以下v12及更早结果仅是历史。GUI与Windows导出未运行。
+
 v12 修订后真正 clean headless 导入，**37 个入口全部通过**：旧33、作者229项、独立610/66/374共1050项。221个已测运行输入前后及干净副本hash一致；142个旧权威/配置/资产原字节不变。仅ActorDirector表现层泛化真实帧数与安全透明padding，不改AI/伤害/生成/RNG。见 [v12独立报告](docs/validation/independent-v12/QA_REPORT.md)。旧九帧候选及死亡顺序修正前的结果未冒充本版证据；GUI/Windows未运行。下列保留历史版本结果。
 
 v11 已真正 clean headless 导入，**33 个入口全部通过**：旧29入口、作者162项、独立608/50/199共857项。206个已测运行输入与独立快照前后hash完全一致；另核3个独立脚本。136个旧运行脚本/权威配置/资产保持原字节。见 [v11独立报告](docs/validation/independent-v11/QA_REPORT.md)；GUI/Windows实玩仍未运行。以下各版结果保留为历史证据。
@@ -103,7 +110,7 @@ HOME=/tmp/moss-home XDG_CONFIG_HOME=/tmp/moss-config XDG_DATA_HOME=/tmp/moss-dat
 
 ## 修改与后续
 
-新房间配置的有限数值/类型/4096 格预算见架构文档，非法输入在分配前拒绝。旧 balance 仍须按有效范围修改：arena 宽高至少 48、tile_size 必须大于 0；waves 与 max_enemies 为正整数、波时长/生成间隔为正数，升级 id 与字段须保持代码约定。本原型不提供任意 JSON 的运行时校验器。添加新的动作时按美术说明生成新九帧 sheet，先检查每帧轮廓/脚底，再登记 alpha 元数据；不要将新动作9张不同立绘当连续动画。下一批优先：真实窗口实玩与截图、构筑经济平衡、普通敌人与 Boss 各自的受击/死亡原画、挂点与遮挡的真实窗口微调、随机障碍连通验证、声音。
+新房间配置的有限数值/类型/4096 格预算见架构文档，非法输入在分配前拒绝。旧 balance 仍须按有效范围修改：arena 宽高至少 48、tile_size 必须大于 0；waves 与 max_enemies 为正整数、波时长/生成间隔为正数，升级 id 与字段须保持代码约定。本原型不提供任意 JSON 的运行时校验器。添加新的动作时按美术说明生成新九帧 sheet，先检查每帧轮廓/脚底，再登记 alpha 元数据；不要将新动作9张不同立绘当连续动画。下一批优先：真实窗口实玩与截图、构筑经济平衡、Boss 独立受击/死亡原画、挂点与遮挡的真实窗口微调、随机障碍连通验证、声音。
 
 ## 检查入口
 
@@ -115,6 +122,8 @@ godot --headless --path . --script tests/test_brood_actions.gd
 godot --headless --path . --script tests/independent_brood_parity.gd
 godot --headless --path . --script tests/independent_brood_events.gd
 godot --headless --path . --script tests/independent_brood_assets.gd
+godot --headless --path . --script tests/test_contact_enemy_actions.gd
+godot --headless --path . --script tests/independent_crawler_flanker.gd
 godot --headless --path . --script tests/test_spitter_actions.gd
 godot --headless --path . --script tests/independent_spitter_parity.gd
 godot --headless --path . --script tests/independent_spitter_events.gd

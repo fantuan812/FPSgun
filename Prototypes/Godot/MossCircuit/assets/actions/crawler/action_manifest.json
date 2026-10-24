@@ -1,0 +1,557 @@
+{
+  "schema_version": 1,
+  "alpha_threshold": 8,
+  "actions": {
+    "crawler_hurt": {
+      "path": "res://assets/actions/crawler/crawler_hurt.png",
+      "frames": [
+        {
+          "region": [
+            70,
+            106,
+            327,
+            268
+          ],
+          "margin": [
+            115,
+            56,
+            185,
+            132
+          ],
+          "alpha_bbox": [
+            119,
+            60,
+            319,
+            260
+          ],
+          "source_pose_index": 0
+        },
+        {
+          "region": [
+            483,
+            135,
+            315,
+            238
+          ],
+          "margin": [
+            105,
+            85,
+            197,
+            162
+          ],
+          "alpha_bbox": [
+            109,
+            89,
+            307,
+            230
+          ],
+          "source_pose_index": 1
+        },
+        {
+          "region": [
+            880,
+            147,
+            317,
+            226
+          ],
+          "margin": [
+            79,
+            97,
+            195,
+            174
+          ],
+          "alpha_bbox": [
+            83,
+            101,
+            309,
+            218
+          ],
+          "source_pose_index": 2
+        },
+        {
+          "region": [
+            82,
+            525,
+            315,
+            230
+          ],
+          "margin": [
+            127,
+            90,
+            197,
+            170
+          ],
+          "alpha_bbox": [
+            131,
+            94,
+            307,
+            222
+          ],
+          "source_pose_index": 3
+        },
+        {
+          "region": [
+            482,
+            506,
+            312,
+            249
+          ],
+          "margin": [
+            104,
+            71,
+            200,
+            151
+          ],
+          "alpha_bbox": [
+            108,
+            75,
+            304,
+            241
+          ],
+          "source_pose_index": 4
+        },
+        {
+          "region": [
+            879,
+            499,
+            318,
+            260
+          ],
+          "margin": [
+            78,
+            64,
+            194,
+            140
+          ],
+          "alpha_bbox": [
+            82,
+            68,
+            310,
+            252
+          ],
+          "source_pose_index": 5
+        },
+        {
+          "region": [
+            87,
+            888,
+            310,
+            258
+          ],
+          "margin": [
+            132,
+            66,
+            202,
+            142
+          ],
+          "alpha_bbox": [
+            136,
+            70,
+            302,
+            250
+          ],
+          "source_pose_index": 6
+        },
+        {
+          "region": [
+            488,
+            886,
+            306,
+            256
+          ],
+          "margin": [
+            110,
+            64,
+            206,
+            144
+          ],
+          "alpha_bbox": [
+            114,
+            68,
+            298,
+            248
+          ],
+          "source_pose_index": 7
+        },
+        {
+          "region": [
+            879,
+            885,
+            314,
+            260
+          ],
+          "margin": [
+            78,
+            63,
+            198,
+            140
+          ],
+          "alpha_bbox": [
+            82,
+            67,
+            306,
+            252
+          ],
+          "source_pose_index": 8
+        }
+      ],
+      "anchor": [
+        0.5,
+        0.8
+      ],
+      "reference_height": 260,
+      "duration_seconds": 0.27,
+      "loop": false,
+      "source": "Recovered original Git blob, unchanged raster; new 2026-10-24 region/margin metadata"
+    },
+    "crawler_death": {
+      "path": "res://assets/actions/crawler/crawler_death.png",
+      "frames": [
+        {
+          "region": [
+            47,
+            78,
+            290,
+            223
+          ],
+          "margin": [
+            126,
+            95,
+            222,
+            177
+          ],
+          "alpha_bbox": [
+            130,
+            99,
+            282,
+            215
+          ],
+          "source_pose_index": 0
+        },
+        {
+          "region": [
+            403,
+            87,
+            281,
+            220
+          ],
+          "margin": [
+            128,
+            104,
+            231,
+            180
+          ],
+          "alpha_bbox": [
+            132,
+            108,
+            273,
+            212
+          ],
+          "source_pose_index": 1
+        },
+        {
+          "region": [
+            60,
+            359,
+            278,
+            214
+          ],
+          "margin": [
+            139,
+            110,
+            234,
+            186
+          ],
+          "alpha_bbox": [
+            143,
+            114,
+            270,
+            206
+          ],
+          "source_pose_index": 4
+        },
+        {
+          "region": [
+            741,
+            102,
+            292,
+            205
+          ],
+          "margin": [
+            111,
+            119,
+            220,
+            195
+          ],
+          "alpha_bbox": [
+            115,
+            123,
+            284,
+            197
+          ],
+          "source_pose_index": 2
+        },
+        {
+          "region": [
+            1092,
+            109,
+            288,
+            198
+          ],
+          "margin": [
+            108,
+            126,
+            224,
+            202
+          ],
+          "alpha_bbox": [
+            112,
+            130,
+            280,
+            190
+          ],
+          "source_pose_index": 3
+        },
+        {
+          "region": [
+            404,
+            379,
+            286,
+            194
+          ],
+          "margin": [
+            129,
+            130,
+            226,
+            206
+          ],
+          "alpha_bbox": [
+            133,
+            134,
+            278,
+            186
+          ],
+          "source_pose_index": 5
+        },
+        {
+          "region": [
+            54,
+            651,
+            285,
+            189
+          ],
+          "margin": [
+            133,
+            134,
+            227,
+            211
+          ],
+          "alpha_bbox": [
+            137,
+            138,
+            277,
+            181
+          ],
+          "source_pose_index": 8
+        },
+        {
+          "region": [
+            741,
+            396,
+            296,
+            177
+          ],
+          "margin": [
+            111,
+            147,
+            216,
+            223
+          ],
+          "alpha_bbox": [
+            115,
+            151,
+            288,
+            169
+          ],
+          "source_pose_index": 6
+        },
+        {
+          "region": [
+            396,
+            664,
+            293,
+            177
+          ],
+          "margin": [
+            121,
+            147,
+            219,
+            223
+          ],
+          "alpha_bbox": [
+            125,
+            151,
+            285,
+            169
+          ],
+          "source_pose_index": 9
+        },
+        {
+          "region": [
+            1092,
+            402,
+            288,
+            170
+          ],
+          "margin": [
+            108,
+            153,
+            224,
+            230
+          ],
+          "alpha_bbox": [
+            112,
+            157,
+            280,
+            162
+          ],
+          "source_pose_index": 7
+        },
+        {
+          "region": [
+            742,
+            679,
+            292,
+            162
+          ],
+          "margin": [
+            112,
+            162,
+            220,
+            238
+          ],
+          "alpha_bbox": [
+            116,
+            166,
+            284,
+            154
+          ],
+          "source_pose_index": 10
+        },
+        {
+          "region": [
+            60,
+            918,
+            284,
+            156
+          ],
+          "margin": [
+            139,
+            168,
+            228,
+            244
+          ],
+          "alpha_bbox": [
+            143,
+            172,
+            276,
+            148
+          ],
+          "source_pose_index": 12
+        },
+        {
+          "region": [
+            1090,
+            691,
+            290,
+            150
+          ],
+          "margin": [
+            106,
+            174,
+            222,
+            250
+          ],
+          "alpha_bbox": [
+            110,
+            178,
+            282,
+            142
+          ],
+          "source_pose_index": 11
+        },
+        {
+          "region": [
+            398,
+            930,
+            295,
+            144
+          ],
+          "margin": [
+            123,
+            180,
+            217,
+            256
+          ],
+          "alpha_bbox": [
+            127,
+            184,
+            287,
+            136
+          ],
+          "source_pose_index": 13
+        },
+        {
+          "region": [
+            739,
+            947,
+            291,
+            127
+          ],
+          "margin": [
+            109,
+            197,
+            221,
+            273
+          ],
+          "alpha_bbox": [
+            113,
+            201,
+            283,
+            119
+          ],
+          "source_pose_index": 14
+        },
+        {
+          "region": [
+            1087,
+            964,
+            293,
+            109
+          ],
+          "margin": [
+            103,
+            214,
+            219,
+            291
+          ],
+          "alpha_bbox": [
+            107,
+            218,
+            285,
+            101
+          ],
+          "source_pose_index": 15
+        }
+      ],
+      "anchor": [
+        0.5,
+        0.8
+      ],
+      "reference_height": 215,
+      "duration_seconds": 0.72,
+      "loop": false,
+      "source": "Recovered original Git blob, unchanged raster; new 2026-10-24 region/margin metadata"
+    }
+  }
+}

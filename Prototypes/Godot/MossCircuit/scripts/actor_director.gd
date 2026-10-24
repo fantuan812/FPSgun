@@ -195,8 +195,6 @@ func observe_enemy(enemy:Dictionary,previous_ai:String,player_position:Vector2)-
 		if previous_ai!="recover" or actor.recover_span<=0:actor.recover_span=maxf(.001,enemy.recover_left)
 		set_phase(enemy.id,"recover",1-enemy.recover_left/actor.recover_span)
 	elif enemy.ai_state=="charging":set_phase(enemy.id,"attack",1-enemy.charge_left/enemy.charge_duration)
-	elif enemy.behavior in ["chase","flank"] and enemy.pos.distance_to(player_position)<85:
-		set_phase(enemy.id,"warning",1-enemy.pos.distance_to(player_position)/85)
 	else:set_phase(enemy.id,"move")
 
 static func valid_segment(value:Variant,frame_count:int=9)->bool:

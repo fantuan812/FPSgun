@@ -1,3 +1,5 @@
+> **v13 当前覆盖**：五种普通敌人已有独立 hurt/death；crawler/flanker 本次新增 hurt9/death16，近身虚假 warning 已删除，但真实接触攻击仍为程序化脉冲。Boss 独立 hurt/death 尚缺。下面 v7–v12 各段为历史记录，不代表当前全部缺口。见 [接触敌人合同](CONTACT_ENEMY_ACTIONS.md)。
+
 > **v8 修正**：本文保留 v7 动作批次的覆盖记录。运行时主角攻击已改为 `assets/weapon_mounts/clean_hero_attack.png` 空手动作，不再使用旧枪火烘焙图；只有主手非环绕锯触发身体攻击，辅助位仅播放独立武器反馈。新装配、挂点与几何边界见 [MODULAR_WEAPONS.md](MODULAR_WEAPONS.md)。
 
 # v7 动作、事件与缺口覆盖矩阵

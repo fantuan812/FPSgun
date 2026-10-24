@@ -1,0 +1,1208 @@
+{
+  "crawler_hurt": {
+    "png_size": [
+      1268,
+      1241
+    ],
+    "frame_count": 9,
+    "unique_pixel_hashes": 9,
+    "source_pose_order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "heights": [
+      260,
+      230,
+      218,
+      222,
+      241,
+      252,
+      250,
+      248,
+      252
+    ],
+    "fixed_logical_canvas": [
+      512,
+      400
+    ],
+    "foot_anchor_px": [
+      256,
+      320
+    ],
+    "alpha_threshold": 8,
+    "source_row_baselines_y": [
+      370,
+      755,
+      1142
+    ],
+    "source_cell_centers_x": [
+      211.33333333333334,
+      634.0,
+      1056.6666666666667
+    ],
+    "foot_baseline_range": [
+      316,
+      320
+    ],
+    "frames": [
+      {
+        "source_pose_index": 0,
+        "source_alpha_bbox": [
+          74,
+          110,
+          319,
+          260
+        ],
+        "height": 260,
+        "visible_bottom": 320,
+        "source_cell_center_x": 211.33333333333334,
+        "source_row_baseline_y": 370,
+        "source_to_canvas_translation": [
+          45,
+          -50
+        ],
+        "registration_reason": "Fixed source-column center and common source-row baseline; retains within-row pose offsets; no per-pose bbox centering.",
+        "pixel_sha256": "af29ce1923742072d500a66b02ba4ad9941ce2db9c2950c244aef47568cb05ba"
+      },
+      {
+        "source_pose_index": 1,
+        "source_alpha_bbox": [
+          487,
+          139,
+          307,
+          230
+        ],
+        "height": 230,
+        "visible_bottom": 319,
+        "source_cell_center_x": 634.0,
+        "source_row_baseline_y": 370,
+        "source_to_canvas_translation": [
+          -378,
+          -50
+        ],
+        "registration_reason": "Fixed source-column center and common source-row baseline; retains within-row pose offsets; no per-pose bbox centering.",
+        "pixel_sha256": "80f1634f4b896667a1d6abea15950278faa628c9858f8dc333269b73a009e109"
+      },
+      {
+        "source_pose_index": 2,
+        "source_alpha_bbox": [
+          884,
+          151,
+          309,
+          218
+        ],
+        "height": 218,
+        "visible_bottom": 319,
+        "source_cell_center_x": 1056.6666666666667,
+        "source_row_baseline_y": 370,
+        "source_to_canvas_translation": [
+          -801,
+          -50
+        ],
+        "registration_reason": "Fixed source-column center and common source-row baseline; retains within-row pose offsets; no per-pose bbox centering.",
+        "pixel_sha256": "d3ea121d3d0257948a130e2b837b4290be0a8bbb8a28ca476e6ef80f89703e5d"
+      },
+      {
+        "source_pose_index": 3,
+        "source_alpha_bbox": [
+          86,
+          529,
+          307,
+          222
+        ],
+        "height": 222,
+        "visible_bottom": 316,
+        "source_cell_center_x": 211.33333333333334,
+        "source_row_baseline_y": 755,
+        "source_to_canvas_translation": [
+          45,
+          -435
+        ],
+        "registration_reason": "Fixed source-column center and common source-row baseline; retains within-row pose offsets; no per-pose bbox centering.",
+        "pixel_sha256": "8e85712e7d81640ee8b7db0721b1b2a79960bfc1ef16d1e8dd2343dbf266251b"
+      },
+      {
+        "source_pose_index": 4,
+        "source_alpha_bbox": [
+          486,
+          510,
+          304,
+          241
+        ],
+        "height": 241,
+        "visible_bottom": 316,
+        "source_cell_center_x": 634.0,
+        "source_row_baseline_y": 755,
+        "source_to_canvas_translation": [
+          -378,
+          -435
+        ],
+        "registration_reason": "Fixed source-column center and common source-row baseline; retains within-row pose offsets; no per-pose bbox centering.",
+        "pixel_sha256": "2ae8827afde6c373fe917e389da2b2764324d5a81c303efac856001e386db276"
+      },
+      {
+        "source_pose_index": 5,
+        "source_alpha_bbox": [
+          883,
+          503,
+          310,
+          252
+        ],
+        "height": 252,
+        "visible_bottom": 320,
+        "source_cell_center_x": 1056.6666666666667,
+        "source_row_baseline_y": 755,
+        "source_to_canvas_translation": [
+          -801,
+          -435
+        ],
+        "registration_reason": "Fixed source-column center and common source-row baseline; retains within-row pose offsets; no per-pose bbox centering.",
+        "pixel_sha256": "df4e4b7e138622a57a3bdd0ff0f9c331bc4090a3de4884f37d5064298a7983d4"
+      },
+      {
+        "source_pose_index": 6,
+        "source_alpha_bbox": [
+          91,
+          892,
+          302,
+          250
+        ],
+        "height": 250,
+        "visible_bottom": 320,
+        "source_cell_center_x": 211.33333333333334,
+        "source_row_baseline_y": 1142,
+        "source_to_canvas_translation": [
+          45,
+          -822
+        ],
+        "registration_reason": "Fixed source-column center and common source-row baseline; retains within-row pose offsets; no per-pose bbox centering.",
+        "pixel_sha256": "256580689d3214053a9b597da22a4bd232ff1ce5368794c23d034c2bec9a6445"
+      },
+      {
+        "source_pose_index": 7,
+        "source_alpha_bbox": [
+          492,
+          890,
+          298,
+          248
+        ],
+        "height": 248,
+        "visible_bottom": 316,
+        "source_cell_center_x": 634.0,
+        "source_row_baseline_y": 1142,
+        "source_to_canvas_translation": [
+          -378,
+          -822
+        ],
+        "registration_reason": "Fixed source-column center and common source-row baseline; retains within-row pose offsets; no per-pose bbox centering.",
+        "pixel_sha256": "465f47ccc05b0c94ae2c988ed9ee1032d28ffe61a971e7c2ff2c7c2dafd99f42"
+      },
+      {
+        "source_pose_index": 8,
+        "source_alpha_bbox": [
+          883,
+          889,
+          306,
+          252
+        ],
+        "height": 252,
+        "visible_bottom": 319,
+        "source_cell_center_x": 1056.6666666666667,
+        "source_row_baseline_y": 1142,
+        "source_to_canvas_translation": [
+          -801,
+          -822
+        ],
+        "registration_reason": "Fixed source-column center and common source-row baseline; retains within-row pose offsets; no per-pose bbox centering.",
+        "pixel_sha256": "8c81b68eb39b91c2c0ebe2cdf473f0f5ea8714aa147ef7e497ea082e9d5243d8"
+      }
+    ],
+    "sha256": "ba7ac243d092efc4df4078011fcc80f93945b9254d7e9ac4a15c7b3f20ff7230"
+  },
+  "flanker_hurt": {
+    "png_size": [
+      1254,
+      1254
+    ],
+    "frame_count": 9,
+    "unique_pixel_hashes": 9,
+    "source_pose_order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "heights": [
+      222,
+      184,
+      161,
+      170,
+      189,
+      195,
+      200,
+      191,
+      200
+    ],
+    "fixed_logical_canvas": [
+      512,
+      400
+    ],
+    "foot_anchor_px": [
+      256,
+      320
+    ],
+    "alpha_threshold": 8,
+    "source_row_baselines_y": [
+      384,
+      778,
+      1152
+    ],
+    "source_cell_centers_x": [
+      209.0,
+      627.0,
+      1045.0
+    ],
+    "foot_baseline_range": [
+      317,
+      320
+    ],
+    "frames": [
+      {
+        "source_pose_index": 0,
+        "source_alpha_bbox": [
+          41,
+          162,
+          366,
+          222
+        ],
+        "height": 222,
+        "visible_bottom": 320,
+        "source_cell_center_x": 209.0,
+        "source_row_baseline_y": 384,
+        "source_to_canvas_translation": [
+          47,
+          -64
+        ],
+        "registration_reason": "Fixed source-column center and common source-row baseline; retains within-row pose offsets; no per-pose bbox centering.",
+        "pixel_sha256": "3e956571061a32a1578518ada9568496c97cdccd59bb908c50f18ecf14ceec2d"
+      },
+      {
+        "source_pose_index": 1,
+        "source_alpha_bbox": [
+          479,
+          197,
+          343,
+          184
+        ],
+        "height": 184,
+        "visible_bottom": 317,
+        "source_cell_center_x": 627.0,
+        "source_row_baseline_y": 384,
+        "source_to_canvas_translation": [
+          -371,
+          -64
+        ],
+        "registration_reason": "Fixed source-column center and common source-row baseline; retains within-row pose offsets; no per-pose bbox centering.",
+        "pixel_sha256": "adcbece01cb34d08cf574139c05c7cb9b3f522e38d78efef6ff0dc7951131643"
+      },
+      {
+        "source_pose_index": 2,
+        "source_alpha_bbox": [
+          923,
+          222,
+          293,
+          161
+        ],
+        "height": 161,
+        "visible_bottom": 319,
+        "source_cell_center_x": 1045.0,
+        "source_row_baseline_y": 384,
+        "source_to_canvas_translation": [
+          -789,
+          -64
+        ],
+        "registration_reason": "Fixed source-column center and common source-row baseline; retains within-row pose offsets; no per-pose bbox centering.",
+        "pixel_sha256": "56fe06ee185ac1f2586fa7de55b44878cdebd5854eed9e3c2c3a1506eda66ea9"
+      },
+      {
+        "source_pose_index": 3,
+        "source_alpha_bbox": [
+          57,
+          608,
+          337,
+          170
+        ],
+        "height": 170,
+        "visible_bottom": 320,
+        "source_cell_center_x": 209.0,
+        "source_row_baseline_y": 778,
+        "source_to_canvas_translation": [
+          47,
+          -458
+        ],
+        "registration_reason": "Fixed source-column center and common source-row baseline; retains within-row pose offsets; no per-pose bbox centering.",
+        "pixel_sha256": "96adc003ede49c003cd0c37e27573430101cc90da9859a8b3704edb38ad97a0f"
+      },
+      {
+        "source_pose_index": 4,
+        "source_alpha_bbox": [
+          472,
+          589,
+          334,
+          189
+        ],
+        "height": 189,
+        "visible_bottom": 320,
+        "source_cell_center_x": 627.0,
+        "source_row_baseline_y": 778,
+        "source_to_canvas_translation": [
+          -371,
+          -458
+        ],
+        "registration_reason": "Fixed source-column center and common source-row baseline; retains within-row pose offsets; no per-pose bbox centering.",
+        "pixel_sha256": "40b5242d3c1e040b6fa4279fb4234b289b5a71824fb5cc0205ec105849357ea4"
+      },
+      {
+        "source_pose_index": 5,
+        "source_alpha_bbox": [
+          884,
+          581,
+          338,
+          195
+        ],
+        "height": 195,
+        "visible_bottom": 318,
+        "source_cell_center_x": 1045.0,
+        "source_row_baseline_y": 778,
+        "source_to_canvas_translation": [
+          -789,
+          -458
+        ],
+        "registration_reason": "Fixed source-column center and common source-row baseline; retains within-row pose offsets; no per-pose bbox centering.",
+        "pixel_sha256": "b4898b9ccf3e64259bc42be7fd17da0ee5f024d00227c4d07618f5adb9111b65"
+      },
+      {
+        "source_pose_index": 6,
+        "source_alpha_bbox": [
+          64,
+          952,
+          340,
+          200
+        ],
+        "height": 200,
+        "visible_bottom": 320,
+        "source_cell_center_x": 209.0,
+        "source_row_baseline_y": 1152,
+        "source_to_canvas_translation": [
+          47,
+          -832
+        ],
+        "registration_reason": "Fixed source-column center and common source-row baseline; retains within-row pose offsets; no per-pose bbox centering.",
+        "pixel_sha256": "d5533dbfec8faf9f4dcfb3d41cc337f53522bcf11f330d088316a5cee9ca3b63"
+      },
+      {
+        "source_pose_index": 7,
+        "source_alpha_bbox": [
+          467,
+          959,
+          336,
+          191
+        ],
+        "height": 191,
+        "visible_bottom": 318,
+        "source_cell_center_x": 627.0,
+        "source_row_baseline_y": 1152,
+        "source_to_canvas_translation": [
+          -371,
+          -832
+        ],
+        "registration_reason": "Fixed source-column center and common source-row baseline; retains within-row pose offsets; no per-pose bbox centering.",
+        "pixel_sha256": "d541166a8486c4ea9fce30d6f0b222f97ca45c636968f10ccb2fa1cb44c42e4f"
+      },
+      {
+        "source_pose_index": 8,
+        "source_alpha_bbox": [
+          882,
+          951,
+          348,
+          200
+        ],
+        "height": 200,
+        "visible_bottom": 319,
+        "source_cell_center_x": 1045.0,
+        "source_row_baseline_y": 1152,
+        "source_to_canvas_translation": [
+          -789,
+          -832
+        ],
+        "registration_reason": "Fixed source-column center and common source-row baseline; retains within-row pose offsets; no per-pose bbox centering.",
+        "pixel_sha256": "55674378c96516a9b971d566c3910f21120de0c083dbbfa9bb701f4c943dc5b7"
+      }
+    ],
+    "sha256": "bfebee1f99fc08335e0224294c88687b7308d48b5cc067e4c95ef9da5ed6a8dc"
+  },
+  "crawler_death": {
+    "png_size": [
+      1417,
+      1110
+    ],
+    "frame_count": 16,
+    "unique_pixel_hashes": 16,
+    "source_pose_order": [
+      0,
+      1,
+      4,
+      2,
+      3,
+      5,
+      8,
+      6,
+      9,
+      7,
+      10,
+      12,
+      11,
+      13,
+      14,
+      15
+    ],
+    "heights": [
+      215,
+      212,
+      206,
+      197,
+      190,
+      186,
+      181,
+      169,
+      169,
+      162,
+      154,
+      148,
+      142,
+      136,
+      119,
+      101
+    ],
+    "fixed_logical_canvas": [
+      512,
+      400
+    ],
+    "foot_anchor_px": [
+      256,
+      320
+    ],
+    "alpha_threshold": 8,
+    "source_row_baselines_y": [
+      303,
+      569,
+      837,
+      1070
+    ],
+    "source_cell_centers_x": [
+      177.125,
+      531.375,
+      885.625,
+      1239.875
+    ],
+    "foot_baseline_range": [
+      314,
+      320
+    ],
+    "frames": [
+      {
+        "source_pose_index": 0,
+        "source_alpha_bbox": [
+          51,
+          82,
+          282,
+          215
+        ],
+        "height": 215,
+        "visible_bottom": 314,
+        "source_cell_center_x": 177.125,
+        "source_row_baseline_y": 303,
+        "source_to_canvas_translation": [
+          79,
+          17
+        ],
+        "registration_reason": "Fixed source-column center and common source-row baseline; retains within-row pose offsets; no per-pose bbox centering.",
+        "pixel_sha256": "bdf7089fb6f70df596955d729acf5e17c530d2fe44249faa10a4d6c2fb98bd5f"
+      },
+      {
+        "source_pose_index": 1,
+        "source_alpha_bbox": [
+          407,
+          91,
+          273,
+          212
+        ],
+        "height": 212,
+        "visible_bottom": 320,
+        "source_cell_center_x": 531.375,
+        "source_row_baseline_y": 303,
+        "source_to_canvas_translation": [
+          -275,
+          17
+        ],
+        "registration_reason": "Fixed source-column center and common source-row baseline; retains within-row pose offsets; no per-pose bbox centering.",
+        "pixel_sha256": "3266c8351ea18757a94cf7b912639971225e05a35c96f19312b39a5406bc33fd"
+      },
+      {
+        "source_pose_index": 4,
+        "source_alpha_bbox": [
+          64,
+          363,
+          270,
+          206
+        ],
+        "height": 206,
+        "visible_bottom": 320,
+        "source_cell_center_x": 177.125,
+        "source_row_baseline_y": 569,
+        "source_to_canvas_translation": [
+          79,
+          -249
+        ],
+        "registration_reason": "Fixed source-column center and common source-row baseline; retains within-row pose offsets; no per-pose bbox centering.",
+        "pixel_sha256": "75519ae947ad02e1ead600ebaaa428d0e9deb01a67bfeb16e1d8c2daf64b23fa"
+      },
+      {
+        "source_pose_index": 2,
+        "source_alpha_bbox": [
+          745,
+          106,
+          284,
+          197
+        ],
+        "height": 197,
+        "visible_bottom": 320,
+        "source_cell_center_x": 885.625,
+        "source_row_baseline_y": 303,
+        "source_to_canvas_translation": [
+          -630,
+          17
+        ],
+        "registration_reason": "Fixed source-column center and common source-row baseline; retains within-row pose offsets; no per-pose bbox centering.",
+        "pixel_sha256": "de7fe30cb10ec9ceaa2bd2fb7301c1de01c7ccdebebffe0705bd9708785d58c2"
+      },
+      {
+        "source_pose_index": 3,
+        "source_alpha_bbox": [
+          1096,
+          113,
+          280,
+          190
+        ],
+        "height": 190,
+        "visible_bottom": 320,
+        "source_cell_center_x": 1239.875,
+        "source_row_baseline_y": 303,
+        "source_to_canvas_translation": [
+          -984,
+          17
+        ],
+        "registration_reason": "Fixed source-column center and common source-row baseline; retains within-row pose offsets; no per-pose bbox centering.",
+        "pixel_sha256": "6a577f6fcdd2970e219f2f829d014c924fd1fce0612837bc287a8cfaa86f0ab0"
+      },
+      {
+        "source_pose_index": 5,
+        "source_alpha_bbox": [
+          408,
+          383,
+          278,
+          186
+        ],
+        "height": 186,
+        "visible_bottom": 320,
+        "source_cell_center_x": 531.375,
+        "source_row_baseline_y": 569,
+        "source_to_canvas_translation": [
+          -275,
+          -249
+        ],
+        "registration_reason": "Fixed source-column center and common source-row baseline; retains within-row pose offsets; no per-pose bbox centering.",
+        "pixel_sha256": "871695983e4c7809b2a4aa18d820f50c538c70deb219e67fc2278a74720f62af"
+      },
+      {
+        "source_pose_index": 8,
+        "source_alpha_bbox": [
+          58,
+          655,
+          277,
+          181
+        ],
+        "height": 181,
+        "visible_bottom": 319,
+        "source_cell_center_x": 177.125,
+        "source_row_baseline_y": 837,
+        "source_to_canvas_translation": [
+          79,
+          -517
+        ],
+        "registration_reason": "Fixed source-column center and common source-row baseline; retains within-row pose offsets; no per-pose bbox centering.",
+        "pixel_sha256": "5ce38ef5c157af4f1adca2166f897bac5812b0d3bf59151576a48e8376259203"
+      },
+      {
+        "source_pose_index": 6,
+        "source_alpha_bbox": [
+          745,
+          400,
+          288,
+          169
+        ],
+        "height": 169,
+        "visible_bottom": 320,
+        "source_cell_center_x": 885.625,
+        "source_row_baseline_y": 569,
+        "source_to_canvas_translation": [
+          -630,
+          -249
+        ],
+        "registration_reason": "Fixed source-column center and common source-row baseline; retains within-row pose offsets; no per-pose bbox centering.",
+        "pixel_sha256": "b7d2cfd5cb7b7f437a401a3953bb49a2d2413e8f0b51f74b0160c0b697583045"
+      },
+      {
+        "source_pose_index": 9,
+        "source_alpha_bbox": [
+          400,
+          668,
+          285,
+          169
+        ],
+        "height": 169,
+        "visible_bottom": 320,
+        "source_cell_center_x": 531.375,
+        "source_row_baseline_y": 837,
+        "source_to_canvas_translation": [
+          -275,
+          -517
+        ],
+        "registration_reason": "Fixed source-column center and common source-row baseline; retains within-row pose offsets; no per-pose bbox centering.",
+        "pixel_sha256": "00b5576569143f07a9fee45f9b814cb6eddfc92ff2619ec2b018129004489238"
+      },
+      {
+        "source_pose_index": 7,
+        "source_alpha_bbox": [
+          1096,
+          406,
+          280,
+          162
+        ],
+        "height": 162,
+        "visible_bottom": 319,
+        "source_cell_center_x": 1239.875,
+        "source_row_baseline_y": 569,
+        "source_to_canvas_translation": [
+          -984,
+          -249
+        ],
+        "registration_reason": "Fixed source-column center and common source-row baseline; retains within-row pose offsets; no per-pose bbox centering.",
+        "pixel_sha256": "4e447466a8475b35cf5638e8677465db2ac2a5acd56d0aa923c79f8812830ed7"
+      },
+      {
+        "source_pose_index": 10,
+        "source_alpha_bbox": [
+          746,
+          683,
+          284,
+          154
+        ],
+        "height": 154,
+        "visible_bottom": 320,
+        "source_cell_center_x": 885.625,
+        "source_row_baseline_y": 837,
+        "source_to_canvas_translation": [
+          -630,
+          -517
+        ],
+        "registration_reason": "Fixed source-column center and common source-row baseline; retains within-row pose offsets; no per-pose bbox centering.",
+        "pixel_sha256": "094aacbd48e7e0a383d203701ca0f9ebcab3237ef132bd4dd571600939dffc73"
+      },
+      {
+        "source_pose_index": 12,
+        "source_alpha_bbox": [
+          64,
+          922,
+          276,
+          148
+        ],
+        "height": 148,
+        "visible_bottom": 320,
+        "source_cell_center_x": 177.125,
+        "source_row_baseline_y": 1070,
+        "source_to_canvas_translation": [
+          79,
+          -750
+        ],
+        "registration_reason": "Fixed source-column center and common source-row baseline; retains within-row pose offsets; no per-pose bbox centering.",
+        "pixel_sha256": "eb39d725bf0ede7ff6ac7ad018541b0287f60678a3a554b009f67bcbfeeb7384"
+      },
+      {
+        "source_pose_index": 11,
+        "source_alpha_bbox": [
+          1094,
+          695,
+          282,
+          142
+        ],
+        "height": 142,
+        "visible_bottom": 320,
+        "source_cell_center_x": 1239.875,
+        "source_row_baseline_y": 837,
+        "source_to_canvas_translation": [
+          -984,
+          -517
+        ],
+        "registration_reason": "Fixed source-column center and common source-row baseline; retains within-row pose offsets; no per-pose bbox centering.",
+        "pixel_sha256": "6c5b657c54bd09dc2cd9d1b93058cca666f5ad9d7a3d3b7155436c0fe42daf72"
+      },
+      {
+        "source_pose_index": 13,
+        "source_alpha_bbox": [
+          402,
+          934,
+          287,
+          136
+        ],
+        "height": 136,
+        "visible_bottom": 320,
+        "source_cell_center_x": 531.375,
+        "source_row_baseline_y": 1070,
+        "source_to_canvas_translation": [
+          -275,
+          -750
+        ],
+        "registration_reason": "Fixed source-column center and common source-row baseline; retains within-row pose offsets; no per-pose bbox centering.",
+        "pixel_sha256": "8253f32e0bedd0b1e626e8c9f5bfba29368d4e01476079e3abb682b4e17ce008"
+      },
+      {
+        "source_pose_index": 14,
+        "source_alpha_bbox": [
+          743,
+          951,
+          283,
+          119
+        ],
+        "height": 119,
+        "visible_bottom": 320,
+        "source_cell_center_x": 885.625,
+        "source_row_baseline_y": 1070,
+        "source_to_canvas_translation": [
+          -630,
+          -750
+        ],
+        "registration_reason": "Fixed source-column center and common source-row baseline; retains within-row pose offsets; no per-pose bbox centering.",
+        "pixel_sha256": "58998367434b89b63daedb5ec9f437175885634ff025f9ce54e9c942fe9af809"
+      },
+      {
+        "source_pose_index": 15,
+        "source_alpha_bbox": [
+          1091,
+          968,
+          285,
+          101
+        ],
+        "height": 101,
+        "visible_bottom": 319,
+        "source_cell_center_x": 1239.875,
+        "source_row_baseline_y": 1070,
+        "source_to_canvas_translation": [
+          -984,
+          -750
+        ],
+        "registration_reason": "Fixed source-column center and common source-row baseline; retains within-row pose offsets; no per-pose bbox centering.",
+        "pixel_sha256": "65697a1d60e143efa3a06c03cf7efc2499fd728a981c8874bfa3c5dbdc0f76e8"
+      }
+    ],
+    "sha256": "bd7db67cd7e5d9e37e3c89119b09ca3fff6c701c94cb35b9d350bca340c76ecd"
+  },
+  "flanker_death": {
+    "png_size": [
+      1254,
+      1254
+    ],
+    "frame_count": 16,
+    "unique_pixel_hashes": 16,
+    "source_pose_order": [
+      0,
+      1,
+      4,
+      2,
+      5,
+      3,
+      8,
+      6,
+      9,
+      7,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "heights": [
+      178,
+      163,
+      159,
+      144,
+      136,
+      132,
+      120,
+      117,
+      108,
+      107,
+      95,
+      94,
+      86,
+      73,
+      66,
+      53
+    ],
+    "fixed_logical_canvas": [
+      512,
+      400
+    ],
+    "foot_anchor_px": [
+      256,
+      320
+    ],
+    "alpha_threshold": 8,
+    "source_row_baselines_y": [
+      378,
+      672,
+      981,
+      1209
+    ],
+    "source_cell_centers_x": [
+      156.75,
+      470.25,
+      783.75,
+      1097.25
+    ],
+    "foot_baseline_range": [
+      308,
+      320
+    ],
+    "frames": [
+      {
+        "source_pose_index": 0,
+        "source_alpha_bbox": [
+          34,
+          188,
+          273,
+          178
+        ],
+        "height": 178,
+        "visible_bottom": 308,
+        "source_cell_center_x": 156.75,
+        "source_row_baseline_y": 378,
+        "source_to_canvas_translation": [
+          99,
+          -58
+        ],
+        "registration_reason": "Fixed source-column center and common source-row baseline; retains within-row pose offsets; no per-pose bbox centering.",
+        "pixel_sha256": "74589d536117eda29a7e7bb3323b36471ca3222512b6a60ae183a06f617b5573"
+      },
+      {
+        "source_pose_index": 1,
+        "source_alpha_bbox": [
+          349,
+          211,
+          270,
+          163
+        ],
+        "height": 163,
+        "visible_bottom": 316,
+        "source_cell_center_x": 470.25,
+        "source_row_baseline_y": 378,
+        "source_to_canvas_translation": [
+          -214,
+          -58
+        ],
+        "registration_reason": "Fixed source-column center and common source-row baseline; retains within-row pose offsets; no per-pose bbox centering.",
+        "pixel_sha256": "709387c4bf3c8209a8d2d0093018ba0a2e1e308687bd38fe8268297a9d656a51"
+      },
+      {
+        "source_pose_index": 4,
+        "source_alpha_bbox": [
+          41,
+          507,
+          271,
+          159
+        ],
+        "height": 159,
+        "visible_bottom": 314,
+        "source_cell_center_x": 156.75,
+        "source_row_baseline_y": 672,
+        "source_to_canvas_translation": [
+          99,
+          -352
+        ],
+        "registration_reason": "Fixed source-column center and common source-row baseline; retains within-row pose offsets; no per-pose bbox centering.",
+        "pixel_sha256": "014c00b69fb0f66f86f73f6eff6a39742e7a17e58a48d0123608ea2207c12b29"
+      },
+      {
+        "source_pose_index": 2,
+        "source_alpha_bbox": [
+          658,
+          234,
+          270,
+          144
+        ],
+        "height": 144,
+        "visible_bottom": 320,
+        "source_cell_center_x": 783.75,
+        "source_row_baseline_y": 378,
+        "source_to_canvas_translation": [
+          -528,
+          -58
+        ],
+        "registration_reason": "Fixed source-column center and common source-row baseline; retains within-row pose offsets; no per-pose bbox centering.",
+        "pixel_sha256": "86f7f59140deccae6c9a3294575fe59593f32aac24f08289a0f8b060977cb209"
+      },
+      {
+        "source_pose_index": 5,
+        "source_alpha_bbox": [
+          345,
+          531,
+          273,
+          136
+        ],
+        "height": 136,
+        "visible_bottom": 315,
+        "source_cell_center_x": 470.25,
+        "source_row_baseline_y": 672,
+        "source_to_canvas_translation": [
+          -214,
+          -352
+        ],
+        "registration_reason": "Fixed source-column center and common source-row baseline; retains within-row pose offsets; no per-pose bbox centering.",
+        "pixel_sha256": "da771bb24c70aaeffd272990b6f50142935d5c5e81806ed27ad1d29243b04231"
+      },
+      {
+        "source_pose_index": 3,
+        "source_alpha_bbox": [
+          966,
+          246,
+          263,
+          132
+        ],
+        "height": 132,
+        "visible_bottom": 320,
+        "source_cell_center_x": 1097.25,
+        "source_row_baseline_y": 378,
+        "source_to_canvas_translation": [
+          -841,
+          -58
+        ],
+        "registration_reason": "Fixed source-column center and common source-row baseline; retains within-row pose offsets; no per-pose bbox centering.",
+        "pixel_sha256": "2222e71e84124ca6b31be62e06da6f21e3c382bdd4e0a9df92d31cf8f5b9d416"
+      },
+      {
+        "source_pose_index": 8,
+        "source_alpha_bbox": [
+          28,
+          858,
+          287,
+          120
+        ],
+        "height": 120,
+        "visible_bottom": 317,
+        "source_cell_center_x": 156.75,
+        "source_row_baseline_y": 981,
+        "source_to_canvas_translation": [
+          99,
+          -661
+        ],
+        "registration_reason": "Fixed source-column center and common source-row baseline; retains within-row pose offsets; no per-pose bbox centering.",
+        "pixel_sha256": "55e97d87393f21f9a5911dc29b8ab253c877702140fbf5501c7c7bb474762081"
+      },
+      {
+        "source_pose_index": 6,
+        "source_alpha_bbox": [
+          649,
+          552,
+          282,
+          117
+        ],
+        "height": 117,
+        "visible_bottom": 317,
+        "source_cell_center_x": 783.75,
+        "source_row_baseline_y": 672,
+        "source_to_canvas_translation": [
+          -528,
+          -352
+        ],
+        "registration_reason": "Fixed source-column center and common source-row baseline; retains within-row pose offsets; no per-pose bbox centering.",
+        "pixel_sha256": "495f8eba193d939113115d477a7b46a45a7a8e767431a9d629390f9e5b1f896d"
+      },
+      {
+        "source_pose_index": 9,
+        "source_alpha_bbox": [
+          338,
+          870,
+          286,
+          108
+        ],
+        "height": 108,
+        "visible_bottom": 317,
+        "source_cell_center_x": 470.25,
+        "source_row_baseline_y": 981,
+        "source_to_canvas_translation": [
+          -214,
+          -661
+        ],
+        "registration_reason": "Fixed source-column center and common source-row baseline; retains within-row pose offsets; no per-pose bbox centering.",
+        "pixel_sha256": "c3fc5cff4252855d4956c41025aded70758cc108dcf15878bd15eeb2d500cb8b"
+      },
+      {
+        "source_pose_index": 7,
+        "source_alpha_bbox": [
+          954,
+          565,
+          285,
+          107
+        ],
+        "height": 107,
+        "visible_bottom": 320,
+        "source_cell_center_x": 1097.25,
+        "source_row_baseline_y": 672,
+        "source_to_canvas_translation": [
+          -841,
+          -352
+        ],
+        "registration_reason": "Fixed source-column center and common source-row baseline; retains within-row pose offsets; no per-pose bbox centering.",
+        "pixel_sha256": "a5d508cea4e1ba5c7b548e65c9fe9506b3d3d4dc76ceabe04efb17dbe8f9218c"
+      },
+      {
+        "source_pose_index": 10,
+        "source_alpha_bbox": [
+          645,
+          885,
+          286,
+          95
+        ],
+        "height": 95,
+        "visible_bottom": 319,
+        "source_cell_center_x": 783.75,
+        "source_row_baseline_y": 981,
+        "source_to_canvas_translation": [
+          -528,
+          -661
+        ],
+        "registration_reason": "Fixed source-column center and common source-row baseline; retains within-row pose offsets; no per-pose bbox centering.",
+        "pixel_sha256": "7f72036b98caa8c34ffca22594c1a865fb6b9d4dcbb12e4c4db56af97a93db82"
+      },
+      {
+        "source_pose_index": 11,
+        "source_alpha_bbox": [
+          945,
+          887,
+          286,
+          94
+        ],
+        "height": 94,
+        "visible_bottom": 320,
+        "source_cell_center_x": 1097.25,
+        "source_row_baseline_y": 981,
+        "source_to_canvas_translation": [
+          -841,
+          -661
+        ],
+        "registration_reason": "Fixed source-column center and common source-row baseline; retains within-row pose offsets; no per-pose bbox centering.",
+        "pixel_sha256": "092741d9e746ae238b5c14e0a593d314b59719675dfb0adb0bc0156ca98d88a6"
+      },
+      {
+        "source_pose_index": 12,
+        "source_alpha_bbox": [
+          31,
+          1122,
+          274,
+          86
+        ],
+        "height": 86,
+        "visible_bottom": 319,
+        "source_cell_center_x": 156.75,
+        "source_row_baseline_y": 1209,
+        "source_to_canvas_translation": [
+          99,
+          -889
+        ],
+        "registration_reason": "Fixed source-column center and common source-row baseline; retains within-row pose offsets; no per-pose bbox centering.",
+        "pixel_sha256": "bce590372a3523959680005056baf73d10ea1df58c02ab72d4bf989e58aeafc0"
+      },
+      {
+        "source_pose_index": 13,
+        "source_alpha_bbox": [
+          347,
+          1135,
+          270,
+          73
+        ],
+        "height": 73,
+        "visible_bottom": 319,
+        "source_cell_center_x": 470.25,
+        "source_row_baseline_y": 1209,
+        "source_to_canvas_translation": [
+          -214,
+          -889
+        ],
+        "registration_reason": "Fixed source-column center and common source-row baseline; retains within-row pose offsets; no per-pose bbox centering.",
+        "pixel_sha256": "ab0369c00aed01a2555b88e136a392e7451adeffa9886f9316e2f9c4b0074776"
+      },
+      {
+        "source_pose_index": 14,
+        "source_alpha_bbox": [
+          652,
+          1143,
+          264,
+          66
+        ],
+        "height": 66,
+        "visible_bottom": 320,
+        "source_cell_center_x": 783.75,
+        "source_row_baseline_y": 1209,
+        "source_to_canvas_translation": [
+          -528,
+          -889
+        ],
+        "registration_reason": "Fixed source-column center and common source-row baseline; retains within-row pose offsets; no per-pose bbox centering.",
+        "pixel_sha256": "3b6dd503b48454a496909cb80985bd97b0b36d1b016292295950c6e165b44127"
+      },
+      {
+        "source_pose_index": 15,
+        "source_alpha_bbox": [
+          953,
+          1154,
+          270,
+          53
+        ],
+        "height": 53,
+        "visible_bottom": 318,
+        "source_cell_center_x": 1097.25,
+        "source_row_baseline_y": 1209,
+        "source_to_canvas_translation": [
+          -841,
+          -889
+        ],
+        "registration_reason": "Fixed source-column center and common source-row baseline; retains within-row pose offsets; no per-pose bbox centering.",
+        "pixel_sha256": "21996dfb670adf905c7e47313ef9a53e90ba74c9b9418778a4ee127d3769a8e2"
+      }
+    ],
+    "sha256": "c8a20f57ca87a10715b711f37dd606637e60daa3898082f0a6cef084b3bb57ac"
+  }
+}

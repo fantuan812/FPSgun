@@ -1,18 +1,13 @@
-# v12 完整工程解压
+# v13 恢复重建完整工程
 
-六个文件都是标准 ZIP，不是 `.001` 分卷：
+本次交付 `MossCircuit-v13-Rebuild-2026-10-24.zip`，标准单 ZIP，解压得到同名工程目录，直接在 Godot 4.6 中导入其中 `project.godot`。本包是完整源码与累计资源，不是仅含四张新图的补丁，也不是 Windows 安装程序。
 
-1. `MossCircuit-v12-01-Project.zip`：代码、配置、旧基础资源、说明及全部验证。
-2. `MossCircuit-v12-02-AnimationArt.zip`：累计敌人和六主题 VFX PNG。
-3. `MossCircuit-v12-03-ActorActions.zip`：v7 身体/Boss 与 v10 冲锋者动作 PNG（旧烘焙主角枪图仅保留历史）。
-4. `MossCircuit-v12-04-WeaponMounts.zip`：累计v8空手动作、六种世界武器及历史 atlas PNG。
+若从 FPSgun 仓库取得完整 `Prototypes/Godot/MossCircuit` 目录，无需下载历史v12分包，直接导入该目录。远端是否已发布以实际 commit 为准，本文不是上传成功证明。
 
-5. `MossCircuit-v12-05-RoomCandidates.zip`：隔离的未达标 HUD 原稿与出处（默认运行不加载）。
+- 基线：v12 commit `6d393134da0a29a7c62a821abf50440e6d304f25`，699个文件逐 Git blob SHA验证。
+- 新增：crawler/flanker受击9帧、死亡16帧及本次重建的metadata、测试、文档。
+- 保留v12全部累计文件；历史验证报告仍标注各自版本。没有恢复/复用遗失旧v13的验收结论，也不宣称与旧841文件原包相同。
+- `MANIFEST.json` 列出除其自己外全部交付文件 SHA-256；ZIP逐项验证解包字节与清单一致。
+- 不含 `.godot` 缓存或 Godot 引擎二进制。首次导入由本机生成缓存。
 
-6. `MossCircuit-v12-06-RecentEnemyActions.zip`：累计 v11 Spitter 与 v12 Broodkeeper 六张动作 PNG。
-
-**六包解压到同一个父目录，合并同名 `MossCircuit-v12` 文件夹。全部解压完才导入 project.godot。** 不要把后续包再解压进已经存在的项目目录而多嵌套一层。六包之间无同路径文件；最终验包确认六包合集逐文件等于完整单 ZIP，包含所有源码和累计资源，并非补丁。
-
-若从 FPSgun 仓库取得已发布完整 `Prototypes/Godot/MossCircuit` 目录，则无需附件步骤，直接导入该目录的 project.godot。完整单包 `MossCircuit-v12-BroodkeeperActions-2026-10-22.zip` 也可直接解压。仓库版本以实际发布 commit 为准，源码中的这段说明不是上传成功证明。
-
-`MANIFEST.json` 列出除它自己以外全部交付文件的 SHA-256。工程不包含 `.godot` 缓存或 Godot 引擎二进制。首次导入由本机 Godot 4.6 生成资源缓存。
+Linux云环境运行测试时，HOME和XDG_DATA_HOME/XDG_CONFIG_HOME/XDG_CACHE_HOME均需指向可写目录；仅设HOME不足以覆盖继承的XDG设置。headless测试不等于真人实玩或Windows导出验收。
