@@ -29,11 +29,19 @@ for name,(xs,ys,order) in CONFIG.items():
   b=mask.crop((x,y,xx,yy)).getbbox();assert b
   x0,y0,x1,y1=x+b[0],y+b[1],x+b[2],y+b[3];w,h=x1-x0,y1-y0
   assert x0-4>=x and x1+4<=xx and y0-4>=y and y1+4<=yy,(name,source_index,b)
-  region=[x0-4,y0-4,w+8,h+8];source_center=im.width/(len(xs)-1)*(c+.5);shift_x=round(256-source_center);shift_y=320-row_baselines[r];left=region[0]+shift_x;top=region[1]+shift_y
+  region=[x0-4,y0-4,w+8,h+8];source_center=im.width/(len(xs)-1)*(c+.5);shift_x=round(256-source_center);shift_y=320-row_baselines[r]
+  # Authored fixed-column layout calibration for crawler hurt only.
+  # Source columns are ~400px apart, not the assumed422.667px; preserve recoil Y.
+  # Eye/neutral reference audit: layout[0,21,51] plus one action-wide-25.
+  if name=='crawler_hurt':shift_x += [-25,-4,26][c]
+  left=region[0]+shift_x;top=region[1]+shift_y
   rec={'region':region,'margin':[left,top,512-region[2],400-region[3]],'alpha_bbox':[left+4,top+4,w,h],'source_pose_index':source_index}
-  records.append(rec);facts.append({'source_pose_index':source_index,'source_alpha_bbox':[x0,y0,w,h],'height':h,'visible_bottom':y1+shift_y,'source_cell_center_x':source_center,'source_row_baseline_y':row_baselines[r],'source_to_canvas_translation':[shift_x,shift_y],'registration_reason':'Fixed source-column center and common source-row baseline; retains within-row pose offsets; no per-pose bbox centering.','pixel_sha256':hashlib.sha256(im.crop((x0,y0,x1,y1)).tobytes()).hexdigest()})
+  records.append(rec);facts.append({'source_pose_index':source_index,'source_alpha_bbox':[x0,y0,w,h],'height':h,'visible_bottom':y1+shift_y,'source_cell_center_x':source_center,'source_row_baseline_y':row_baselines[r],'source_to_canvas_translation':[shift_x,shift_y],'registration_reason':('Fixed source-column layout correction[-25,-4,26] and common source-row baseline; retains recoil and no per-pose bbox centering.' if name=='crawler_hurt' else 'Fixed source-column center and common source-row baseline; retains within-row pose offsets; no per-pose bbox centering.'),'pixel_sha256':hashlib.sha256(im.crop((x0,y0,x1,y1)).tobytes()).hexdigest()})
  kind=name.split('_')[0];duration=.72 if 'death' in name else .27
  asset={'path':f'res://assets/actions/{kind}/{name}.png','frames':records,'anchor':[.5,.8],'reference_height':facts[0]['height'],'duration_seconds':duration,'loop':False,'source':'Recovered original Git blob, unchanged raster; new 2026-10-24 region/margin metadata'}
+ if name=='crawler_hurt':
+  asset['source_column_x_corrections']=[-25,-4,26]
+  asset['registration_policy']='Fixed source-column layout calibration plus one action-wide neutral-eye registration; no per-frame normalization or scale changes.'
  manifests[kind]['actions'][name]=asset
  unique=len({f['pixel_sha256'] for f in facts});assert unique==len(order)
  heights=[f['height'] for f in facts]

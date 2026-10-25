@@ -209,7 +209,7 @@ func _card(parent: Node, data: Dictionary, suffix := "", statuses: Array = [], c
 	_text(v, str(data.get("description", "")), 13)
 	if data.get("kind", "") == "item":
 		var facts:VBoxContainer=_disclosure(v,"ITEM DETAILS") if compact else v
-		var details := "TRIGGER: %s\nTRADE-OFF: %s\nICD: %.2fs  /  STACK CAP: %s\nSTACKING: %s" % [data.get("trigger", "Passive while equipped"), data.get("cost", "No additional combat cost"), float(data.get("cooldown", 0)), data.get("max_stack", "?"), data.get("stack_rule", "Each owned copy adds the listed effect, up to the cap.")]
+		var details := "TRIGGER: %s\nTRADE-OFF: %s\nICD: %.2fs  /  STACK CAP: %s\nSTACKING: %s" % [data.get("trigger", "Passive while equipped"), data.get("cost", "No additional combat cost"), float(data.get("cooldown", 0)), str(int(data.max_stack)) if data.has("max_stack") else "?", data.get("stack_rule", "Each owned copy adds the listed effect, up to the cap.")]
 		_text(facts, details, 12)
 		var targets: Array = data.get("synergy_targets", [])
 		if not targets.is_empty():
@@ -263,7 +263,7 @@ func show_title(seed_value: int = 240102,mode_id:String="arena") -> void:
 
 func show_shop(view: Dictionary) -> void:
 	var generation: int = int(view.get("generation", 0))
-	_begin("shop", "SALVAGE EXCHANGE  /  %s SCRAP" % view.get("coins", 0), str(view.get("message", "Buy, combine tags, then deploy. Selling returns only the shown scrap.")))
+	_begin("shop", "SALVAGE EXCHANGE  /  %d SCRAP" % int(view.get("coins", 0)), str(view.get("message", "Buy, combine tags, then deploy. Selling returns only the shown scrap.")))
 	var columns := HBoxContainer.new(); columns.size_flags_vertical = Control.SIZE_EXPAND_FILL; body.add_child(columns)
 	var offers := _scroll(columns); offers.custom_minimum_size.x = 420
 	var bag := _scroll(columns)
@@ -285,7 +285,7 @@ func show_shop(view: Dictionary) -> void:
 			var select := OptionButton.new(); select.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 			for w in view.get("weapons", []): select.add_item("Replace %s" % w.get("name", w.get("id", "")), int(w.get("slot", 0)))
 			c.add_child(select)
-			var buy := Button.new(); buy.text = "REPLACE  /  %s SCRAP" % offer.get("price", 0)
+			var buy := Button.new(); buy.text = "REPLACE  /  %d SCRAP" % int(offer.get("price", 0))
 			buy.custom_minimum_size.y = 34
 			buy.disabled = not can_buy or int(view.get("coins", 0)) < int(offer.get("price", 0))
 			buy.pressed.connect(func():
@@ -294,11 +294,11 @@ func show_shop(view: Dictionary) -> void:
 			c.move_child(replacement_notice,1);c.move_child(select,2);c.move_child(buy,3)
 			if first_focus == null and not buy.disabled: first_focus = select
 		else:
-			var purchase:=_button(c, "SOLD" if sold else "BUY  /  %s SCRAP" % offer.get("price", 0), "buy", payload, sold or not can_buy)
+			var purchase:=_button(c, "SOLD" if sold else "BUY  /  %d SCRAP" % int(offer.get("price", 0)), "buy", payload, sold or not can_buy)
 			c.move_child(purchase,1)
 	_inventory(bag, view, true)
 	var footer := HBoxContainer.new(); body.add_child(footer)
-	_button(footer, "REFRESH  /  %s SCRAP" % view.get("refresh_price", 5), "refresh", {"generation": generation}, int(view.get("coins", 0)) < int(view.get("refresh_price", 5)))
+	_button(footer, "REFRESH  /  %d SCRAP" % int(view.get("refresh_price", 5)), "refresh", {"generation": generation}, int(view.get("coins", 0)) < int(view.get("refresh_price", 5)))
 	_button(footer, "DEPLOY NEXT ROOM" if view.get("mode_id","")=="rooms" else "DEPLOY NEXT WAVE", "continue", {"generation": generation})
 	_finish()
 
@@ -318,15 +318,15 @@ func _shop_bias(parent: Node, bias: Dictionary) -> void:
 	_text(details, "Buying/selling updates the preference above immediately, for the NEXT refresh. Existing offers retain their draw-time weight and do not reroll. Next draws exclude max-stack items. Full weapon slots allow replacement. Unaffordable offers can appear; their purchase is disabled.", 12)
 
 func _inventory(parent: Node, view: Dictionary, selling := false) -> void:
-	_label(parent, "WEAPONS  %s / %s" % [view.get("weapons", []).size(), view.get("weapon_slots", 4)], 16)
+	_label(parent, "WEAPONS  %d / %d" % [view.get("weapons", []).size(), int(view.get("weapon_slots", 4))], 16)
 	for w in view.get("weapons", []):
 		var c := _card(parent, w, "  [SLOT %s]" % (int(w.get("slot", 0)) + 1))
-		if selling: _button(c, "SELL  +%s" % w.get("sell_price", 0), "sell_weapon", {"slot": w.get("slot", 0), "generation": view.get("generation", 0)}, view.get("weapons", []).size() <= 1)
-	_label(parent, "MODULES  %s / %s" % [view.get("items", []).size(), view.get("item_slots", 8)], 16)
+		if selling: _button(c, "SELL  +%d" % int(w.get("sell_price", 0)), "sell_weapon", {"slot": w.get("slot", 0), "generation": view.get("generation", 0)}, view.get("weapons", []).size() <= 1)
+	_label(parent, "MODULES  %d / %d" % [view.get("items", []).size(), int(view.get("item_slots", 8))], 16)
 	if view.get("items", []).is_empty(): _text(parent, "No modules yet. Buy one to begin your build.")
 	for item in view.get("items", []):
-		var c := _card(parent, item, "  x%s / %s" % [item.get("count", 1), item.get("max_stack", "?")], view.get("synergy_status", []))
-		if selling: _button(c, "SELL ONE  +%s" % item.get("sell_price", 0), "sell_item", {"id": item.get("id", ""), "generation": view.get("generation", 0)})
+		var c := _card(parent, item, "  x%d / %s" % [int(item.get("count", 1)), str(int(item.max_stack)) if item.has("max_stack") else "?"], view.get("synergy_status", []))
+		if selling: _button(c, "SELL ONE  +%d" % int(item.get("sell_price", 0)), "sell_item", {"id": item.get("id", ""), "generation": view.get("generation", 0)})
 	var rewards: Array = view.get("rewards", [])
 	if not rewards.is_empty():
 		_label(parent, "BOSS REWARDS / SECURED", 16).add_theme_color_override("font_color", AMBER)

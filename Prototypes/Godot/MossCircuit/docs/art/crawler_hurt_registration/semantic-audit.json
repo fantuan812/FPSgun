@@ -1,0 +1,634 @@
+{
+  "scope": "Authored fixed-column registration candidate, pending native small-scale GUI acceptance. Original source and gameplay authority unchanged.",
+  "source_sha256": "ba7ac243d092efc4df4078011fcc80f93945b9254d7e9ac4a15c7b3f20ff7230",
+  "source_size": [
+    1268,
+    1241
+  ],
+  "frame_count": 9,
+  "reference_height": 260,
+  "duration": 0.27,
+  "method": "Visually identified two white eyes: alpha>128 & R>220 & G>220 & B>200; not whole-body bbox normalization. Column offsets [0,21,51] plus action-wide neutral-eye registration -25.",
+  "fixed_column_x_corrections": [
+    -25,
+    -4,
+    26
+  ],
+  "death_unchanged": true,
+  "unchanged_contract": [
+    "source regions",
+    "source PNG bytes",
+    "all Y coordinates",
+    "logical canvas",
+    "fixed scale/reference_height",
+    "anchor",
+    "frame order/count",
+    "reaction duration",
+    "all death data"
+  ],
+  "frames": [
+    {
+      "source_pose_index": 0,
+      "column": 0,
+      "source_region": [
+        70,
+        106,
+        327,
+        268
+      ],
+      "source_eye_centroid": [
+        132.06148867313917,
+        247.4304207119741
+      ],
+      "before_eye": [
+        177.06148867313917,
+        197.4304207119741
+      ],
+      "after_eye": [
+        152.06148867313917,
+        197.4304207119741
+      ],
+      "column_x_correction": -25,
+      "before_record": {
+        "region": [
+          70,
+          106,
+          327,
+          268
+        ],
+        "margin": [
+          115,
+          56,
+          185,
+          132
+        ],
+        "alpha_bbox": [
+          119,
+          60,
+          319,
+          260
+        ],
+        "source_pose_index": 0
+      },
+      "after_record": {
+        "region": [
+          70,
+          106,
+          327,
+          268
+        ],
+        "margin": [
+          90,
+          56,
+          185,
+          132
+        ],
+        "alpha_bbox": [
+          94,
+          60,
+          319,
+          260
+        ],
+        "source_pose_index": 0
+      }
+    },
+    {
+      "source_pose_index": 1,
+      "column": 1,
+      "source_region": [
+        483,
+        135,
+        315,
+        238
+      ],
+      "source_eye_centroid": [
+        535.0361842105264,
+        271.49342105263156
+      ],
+      "before_eye": [
+        157.0361842105263,
+        221.4934210526316
+      ],
+      "after_eye": [
+        153.0361842105263,
+        221.4934210526316
+      ],
+      "column_x_correction": -4,
+      "before_record": {
+        "region": [
+          483,
+          135,
+          315,
+          238
+        ],
+        "margin": [
+          105,
+          85,
+          197,
+          162
+        ],
+        "alpha_bbox": [
+          109,
+          89,
+          307,
+          230
+        ],
+        "source_pose_index": 1
+      },
+      "after_record": {
+        "region": [
+          483,
+          135,
+          315,
+          238
+        ],
+        "margin": [
+          101,
+          85,
+          197,
+          162
+        ],
+        "alpha_bbox": [
+          105,
+          89,
+          307,
+          230
+        ],
+        "source_pose_index": 1
+      }
+    },
+    {
+      "source_pose_index": 2,
+      "column": 2,
+      "source_region": [
+        880,
+        147,
+        317,
+        226
+      ],
+      "source_eye_centroid": [
+        927.7307692307693,
+        291.06089743589746
+      ],
+      "before_eye": [
+        126.73076923076923,
+        241.06089743589743
+      ],
+      "after_eye": [
+        152.73076923076923,
+        241.06089743589743
+      ],
+      "column_x_correction": 26,
+      "before_record": {
+        "region": [
+          880,
+          147,
+          317,
+          226
+        ],
+        "margin": [
+          79,
+          97,
+          195,
+          174
+        ],
+        "alpha_bbox": [
+          83,
+          101,
+          309,
+          218
+        ],
+        "source_pose_index": 2
+      },
+      "after_record": {
+        "region": [
+          880,
+          147,
+          317,
+          226
+        ],
+        "margin": [
+          105,
+          97,
+          195,
+          174
+        ],
+        "alpha_bbox": [
+          109,
+          101,
+          309,
+          218
+        ],
+        "source_pose_index": 2
+      }
+    },
+    {
+      "source_pose_index": 3,
+      "column": 0,
+      "source_region": [
+        82,
+        525,
+        315,
+        230
+      ],
+      "source_eye_centroid": [
+        129.5141955835962,
+        664.7223974763407
+      ],
+      "before_eye": [
+        174.5141955835962,
+        229.7223974763407
+      ],
+      "after_eye": [
+        149.5141955835962,
+        229.7223974763407
+      ],
+      "column_x_correction": -25,
+      "before_record": {
+        "region": [
+          82,
+          525,
+          315,
+          230
+        ],
+        "margin": [
+          127,
+          90,
+          197,
+          170
+        ],
+        "alpha_bbox": [
+          131,
+          94,
+          307,
+          222
+        ],
+        "source_pose_index": 3
+      },
+      "after_record": {
+        "region": [
+          82,
+          525,
+          315,
+          230
+        ],
+        "margin": [
+          102,
+          90,
+          197,
+          170
+        ],
+        "alpha_bbox": [
+          106,
+          94,
+          307,
+          222
+        ],
+        "source_pose_index": 3
+      }
+    },
+    {
+      "source_pose_index": 4,
+      "column": 1,
+      "source_region": [
+        482,
+        506,
+        312,
+        249
+      ],
+      "source_eye_centroid": [
+        529.8149350649351,
+        642.6071428571429
+      ],
+      "before_eye": [
+        151.81493506493507,
+        207.60714285714286
+      ],
+      "after_eye": [
+        147.81493506493507,
+        207.60714285714286
+      ],
+      "column_x_correction": -4,
+      "before_record": {
+        "region": [
+          482,
+          506,
+          312,
+          249
+        ],
+        "margin": [
+          104,
+          71,
+          200,
+          151
+        ],
+        "alpha_bbox": [
+          108,
+          75,
+          304,
+          241
+        ],
+        "source_pose_index": 4
+      },
+      "after_record": {
+        "region": [
+          482,
+          506,
+          312,
+          249
+        ],
+        "margin": [
+          100,
+          71,
+          200,
+          151
+        ],
+        "alpha_bbox": [
+          104,
+          75,
+          304,
+          241
+        ],
+        "source_pose_index": 4
+      }
+    },
+    {
+      "source_pose_index": 5,
+      "column": 2,
+      "source_region": [
+        879,
+        499,
+        318,
+        260
+      ],
+      "source_eye_centroid": [
+        927.559633027523,
+        646.223241590214
+      ],
+      "before_eye": [
+        126.55963302752293,
+        211.22324159021406
+      ],
+      "after_eye": [
+        152.55963302752292,
+        211.22324159021406
+      ],
+      "column_x_correction": 26,
+      "before_record": {
+        "region": [
+          879,
+          499,
+          318,
+          260
+        ],
+        "margin": [
+          78,
+          64,
+          194,
+          140
+        ],
+        "alpha_bbox": [
+          82,
+          68,
+          310,
+          252
+        ],
+        "source_pose_index": 5
+      },
+      "after_record": {
+        "region": [
+          879,
+          499,
+          318,
+          260
+        ],
+        "margin": [
+          104,
+          64,
+          194,
+          140
+        ],
+        "alpha_bbox": [
+          108,
+          68,
+          310,
+          252
+        ],
+        "source_pose_index": 5
+      }
+    },
+    {
+      "source_pose_index": 6,
+      "column": 0,
+      "source_region": [
+        87,
+        888,
+        310,
+        258
+      ],
+      "source_eye_centroid": [
+        132.9163763066202,
+        1027.6062717770035
+      ],
+      "before_eye": [
+        177.9163763066202,
+        205.60627177700349
+      ],
+      "after_eye": [
+        152.9163763066202,
+        205.60627177700349
+      ],
+      "column_x_correction": -25,
+      "before_record": {
+        "region": [
+          87,
+          888,
+          310,
+          258
+        ],
+        "margin": [
+          132,
+          66,
+          202,
+          142
+        ],
+        "alpha_bbox": [
+          136,
+          70,
+          302,
+          250
+        ],
+        "source_pose_index": 6
+      },
+      "after_record": {
+        "region": [
+          87,
+          888,
+          310,
+          258
+        ],
+        "margin": [
+          107,
+          66,
+          202,
+          142
+        ],
+        "alpha_bbox": [
+          111,
+          70,
+          302,
+          250
+        ],
+        "source_pose_index": 6
+      }
+    },
+    {
+      "source_pose_index": 7,
+      "column": 1,
+      "source_region": [
+        488,
+        886,
+        306,
+        256
+      ],
+      "source_eye_centroid": [
+        534.7257525083612,
+        1027.4247491638796
+      ],
+      "before_eye": [
+        156.7257525083612,
+        205.4247491638796
+      ],
+      "after_eye": [
+        152.7257525083612,
+        205.4247491638796
+      ],
+      "column_x_correction": -4,
+      "before_record": {
+        "region": [
+          488,
+          886,
+          306,
+          256
+        ],
+        "margin": [
+          110,
+          64,
+          206,
+          144
+        ],
+        "alpha_bbox": [
+          114,
+          68,
+          298,
+          248
+        ],
+        "source_pose_index": 7
+      },
+      "after_record": {
+        "region": [
+          488,
+          886,
+          306,
+          256
+        ],
+        "margin": [
+          106,
+          64,
+          206,
+          144
+        ],
+        "alpha_bbox": [
+          110,
+          68,
+          298,
+          248
+        ],
+        "source_pose_index": 7
+      }
+    },
+    {
+      "source_pose_index": 8,
+      "column": 2,
+      "source_region": [
+        879,
+        885,
+        314,
+        260
+      ],
+      "source_eye_centroid": [
+        925.1383647798742,
+        1028.6666666666667
+      ],
+      "before_eye": [
+        124.13836477987422,
+        206.66666666666666
+      ],
+      "after_eye": [
+        150.13836477987422,
+        206.66666666666666
+      ],
+      "column_x_correction": 26,
+      "before_record": {
+        "region": [
+          879,
+          885,
+          314,
+          260
+        ],
+        "margin": [
+          78,
+          63,
+          198,
+          140
+        ],
+        "alpha_bbox": [
+          82,
+          67,
+          306,
+          252
+        ],
+        "source_pose_index": 8
+      },
+      "after_record": {
+        "region": [
+          879,
+          885,
+          314,
+          260
+        ],
+        "margin": [
+          104,
+          63,
+          198,
+          140
+        ],
+        "alpha_bbox": [
+          108,
+          67,
+          306,
+          252
+        ],
+        "source_pose_index": 8
+      }
+    }
+  ],
+  "before_column_mean_eye_x": [
+    176.49735352111853,
+    155.19229059460753,
+    125.80958901272213
+  ],
+  "after_column_mean_eye_x": [
+    151.49735352111853,
+    151.19229059460753,
+    151.8095890127221
+  ],
+  "before_terminal_eye_delta": [
+    -52.92312389326494,
+    9.23624595469255
+  ],
+  "after_terminal_eye_delta": [
+    -1.9231238932649433,
+    9.23624595469255
+  ]
+}

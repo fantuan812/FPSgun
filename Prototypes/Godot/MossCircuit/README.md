@@ -1,4 +1,8 @@
-# MOSS CIRCUIT · 苔芯幸存者 v17 · 结算与商店节奏
+# MOSS CIRCUIT · 苔芯幸存者 v18 · 受击对齐与整数显示
+
+本批只修正crawler既有受击九帧的固定列横向对齐，以及商店/背包价格、槽位和叠层的整数显示；不改源PNG、战斗权威、交易数据或时间。范围与验收边界见 [v18说明](docs/V18_REGISTRATION_AND_NUMBERS.md)。
+
+## v17记录（历史）
 
 本版把清场地面经验升级放到商店之前，消除Deploy后立即补弹升级页；商店优先显示购买/替换按钮，详细概率和机制说明可展开；Core真正summon使用独立16帧，原ring保持。范围及v16数值估算纠正见 [v17说明](docs/V17_FLOW_AND_SUMMON.md)。最终验收未写成全游戏完成。
 
@@ -117,8 +121,8 @@ v9 真正 clean headless 导入及 **25 个入口全部通过**：旧 20 个、�
 若云环境默认 HOME 不可写，用独立可写路径：
 
 ```bash
-mkdir -p /tmp/moss-home /tmp/moss-config /tmp/moss-data /tmp/moss-cache
-HOME=/tmp/moss-home XDG_CONFIG_HOME=/tmp/moss-config XDG_DATA_HOME=/tmp/moss-data XDG_CACHE_HOME=/tmp/moss-cache \
+mkdir -p ../moss-test-home ../moss-test-config ../moss-test-data ../moss-test-cache
+HOME="$PWD/../moss-test-home" XDG_CONFIG_HOME="$PWD/../moss-test-config" XDG_DATA_HOME="$PWD/../moss-test-data" XDG_CACHE_HOME="$PWD/../moss-test-cache" \
   godot --headless --path . --script tests/test_game.gd
 ```
 
