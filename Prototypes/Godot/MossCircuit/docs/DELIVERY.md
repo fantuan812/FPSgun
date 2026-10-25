@@ -1,13 +1,11 @@
-# v18 完整工程交付
+# v19 源码与桌面包交付
 
-完整源码ZIP：`MossCircuit-v18-RegistrationNumbers-2026-10-25.zip`。解压后在Godot4.6.3导入`project.godot`；这是累计源码/素材包，不是Windows安装程序。
+- `MossCircuit-v19-DesktopExports-2026-10-25.zip`：累计完整Godot源码/素材/预设/构建工具与证据。
+- `MossCircuit-v19-Linux-x86_64-2026-10-25.zip`：Linux可运行包；原生云端Linux窗口验证的精确ELF/PCK，附许可证与校验。
+- `MossCircuit-v19-Windows-ExportOnly-x86_64-2026-10-25.zip`：Windows x86-64导出包，**仅结构/资源包检查，未在Windows运行验收**；不是安装程序，也未签名。
 
-基线是已发布且逐字节核验的v17 commit `e5176670b2f478a187f7f98b09554baa3c50a6f7`。全部v17路径及历史证据保留。本批只改crawler既有hurt图的固定列X对齐和商店/背包离散数值格式。
+源码基线为v18 commit `217867b88e7225ef7c7e88b455685e5661436491`。本批不改玩法、输入、场景结构、AI、经济或源素材。大平台二进制只在独立交付包，不加入源码分支；已验收的ELF/PCK不会被之后的复现构建偷偷替换。
 
-- `MANIFEST.json`覆盖除自身外全部交付文件；无`.godot`缓存、引擎、导出模板、临时HOME或签名密钥。
-- 作者和独立冷导入均通过58个独立入口及import；生产输入无测试期间修改。
-- 独立真实Linux窗口覆盖完整槽位替换、重复SOLD点击、购买/出售、背包返回、整数与小数格式；crawler两朝向原生尺寸A/B和真实hit-segment管线证据分别注明范围。
-- 受控QA夹具、截图和日志在带`.gdignore`的证据目录内；不是自动加载的游戏代码。
-- Windows导出/运行、真人完整平衡及完整地牢未验，不以headless或截图冒充。
+运行时要完整解压并保持可执行文件与`MossCircuit.pck`同目录。Linux窗口证据不代表Windows或音频验收；云端缺少ALSA输出设备以及llvmpipe VSync限制已单独记录。
 
-复现：`python3 tests/run_regression.py --project . --output ../moss-v18-checks`。测试输出必须在工程外；使用新解压工程进行cold import。详见`V18_REGISTRATION_AND_NUMBERS.md`及独立报告。
+源码检查：`python3 tests/run_regression.py --project . --output ../moss-v19-checks`，另执行`python3 tests/test_export_tools.py`。冷构建方法和固定官方模板SHA见`V19_DESKTOP_EXPORTS.md`。完整源码由`MANIFEST.json`校验；各平台包自带逐文件校验。原始版本源码/证据均保留，后续发布状态须以真实Git提交和读回记录为准。

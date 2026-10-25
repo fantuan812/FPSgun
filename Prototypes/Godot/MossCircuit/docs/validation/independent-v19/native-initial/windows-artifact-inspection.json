@@ -1,0 +1,24 @@
+{
+  "scope": "Windows file inspection only; never executed",
+  "sha256": "91724f15024a3a545e28ccd83134403d31ce2323a38e51c95e4dfa282f732ab6",
+  "bytes": 104659456,
+  "dos_magic": "MZ",
+  "pe_signature": true,
+  "machine_hex": "0x8664",
+  "architecture": "x86-64",
+  "optional_header": "PE32+",
+  "subsystem": 2,
+  "subsystem_label": "Windows GUI",
+  "sections": 12,
+  "entry_point_rva": 5232,
+  "authenticode_certificate_table_bytes": 0,
+  "signed_status": "no embedded Authenticode certificate table",
+  "companion_pck_identical_to_linux": true,
+  "pck_header": {
+    "magic": "GDPC",
+    "format_version": 3,
+    "engine_major": 4,
+    "engine_minor": 6,
+    "engine_patch": 3
+  }
+}

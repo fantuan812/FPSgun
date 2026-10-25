@@ -1,0 +1,25 @@
+{
+  "scope": "Separate Library delivery archives; no platform binaries in the source repository.",
+  "files": [
+    {
+      "platform": "linux",
+      "name": "MossCircuit-v19-Linux-x86_64-2026-10-25.zip",
+      "bytes": 62312887,
+      "sha256": "edb66b67ef3b039cf8a5161d25b229345903ca931b5ea5c6873aeaf6222e607d",
+      "core_runtime_bytes_unchanged_after_gui": true,
+      "windows_runtime_tested": false
+    },
+    {
+      "platform": "windows",
+      "name": "MossCircuit-v19-Windows-ExportOnly-x86_64-2026-10-25.zip",
+      "bytes": 71082905,
+      "sha256": "2222e699fde95f296033f61a69e8a1f579e1a90b14b8851552e82d87fb9c8200",
+      "core_runtime_bytes_unchanged_after_gui": true,
+      "windows_runtime_tested": false
+    }
+  ],
+  "core_runtime_manifest": "validation/v19-desktop-export/selected-runtime-core.json",
+  "source_production_fingerprint": "validation/v19-desktop-export/production-fingerprint.json",
+  "windows_runtime_tested": false,
+  "readme_revision": "Platform README now explicitly states session-only display settings; runtime binaries/PCK unchanged. Original archive approval is supplemented by a doc-only correction receipt."
+}

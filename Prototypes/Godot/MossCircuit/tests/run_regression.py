@@ -28,9 +28,9 @@ for key, folder in {"HOME": "home", "XDG_CONFIG_HOME": "config", "XDG_DATA_HOME"
     env[key] = str(path)
 
 def input_hashes():
-    paths = [project / "project.godot"]
-    for folder in ("scripts", "data", "ui", "scenes", "assets", "tests"):
-        paths.extend(p for p in (project / folder).rglob("*") if p.is_file() and p.suffix != ".uid")
+    paths = [project / name for name in ("project.godot", "export_presets.cfg", "art_source/alpha_bounds.json") if (project / name).is_file()]
+    for folder in ("scripts", "data", "ui", "scenes", "assets", "tests", "tools"):
+        paths.extend(p for p in (project / folder).rglob("*") if p.is_file() and p.suffix not in (".uid", ".pyc") and "__pycache__" not in p.parts)
     return {str(p.relative_to(project)): hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(paths)}
 
 def success_marker(log):

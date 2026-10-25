@@ -1,0 +1,42 @@
+[
+  {
+    "platform": "linux",
+    "archive": "MossCircuit-v19-Linux-x86_64-2026-10-25.zip",
+    "bytes": 62312887,
+    "sha256": "edb66b67ef3b039cf8a5161d25b229345903ca931b5ea5c6873aeaf6222e607d",
+    "members": 9,
+    "missing": [],
+    "extra": [],
+    "duplicates": 0,
+    "unsafe_members": [],
+    "member_mismatches": [],
+    "index_mismatches": [],
+    "index_complete": true,
+    "changed_from_first_package": [
+      "ARTIFACT_SHA256.json",
+      "README.txt"
+    ],
+    "runtime_mismatches_from_initial_tested": [],
+    "readme": "MOSS CIRCUIT v19 \u2014 Linux x86-64\n\nExtract every file together. Keep MossCircuit.pck beside the executable.\nRun ./MossCircuit.x86_64. If your extractor removed the executable permission, restore it with chmod +x MossCircuit.x86_64.\n\nWASD/arrows: move. Space: dash. Esc: pause/back. I: build inventory.\nAuto-fire targets nearby enemies. Tab/Shift+Tab and Enter/Space navigate menus.\nDisplay settings are session-only; preferences are not saved to disk in this prototype.\n\nThe exact Linux executable/PCK passed finite native-window controls, shop, inventory, Rooms victory and retry checks. That is not human balance or full-game certification. Cloud ALSA audio-device failure fell back to dummy audio; audio was not validated. Cloud llvmpipe also warned about VSync control. Windows received PE/resource inspection only.\n\nGodot engine and third-party license notices accompany this archive. They do not grant a new license to the game source/artwork. ARTIFACT_SHA256.json covers all other files; the delivery receipt separately records this ZIP hash.\n"
+  },
+  {
+    "platform": "windows",
+    "archive": "MossCircuit-v19-Windows-ExportOnly-x86_64-2026-10-25.zip",
+    "bytes": 71082905,
+    "sha256": "2222e699fde95f296033f61a69e8a1f579e1a90b14b8851552e82d87fb9c8200",
+    "members": 9,
+    "missing": [],
+    "extra": [],
+    "duplicates": 0,
+    "unsafe_members": [],
+    "member_mismatches": [],
+    "index_mismatches": [],
+    "index_complete": true,
+    "changed_from_first_package": [
+      "ARTIFACT_SHA256.json",
+      "README.txt"
+    ],
+    "runtime_mismatches_from_initial_tested": [],
+    "readme": "MOSS CIRCUIT v19 \u2014 Windows-ExportOnly x86-64\n\nExtract every file together. Keep MossCircuit.pck beside the executable.\nRun MossCircuit.exe on a compatible Windows x86-64 system. This is an unsigned portable export, not an installer. It was NOT executed or runtime-validated on Windows.\n\nWASD/arrows: move. Space: dash. Esc: pause/back. I: build inventory.\nAuto-fire targets nearby enemies. Tab/Shift+Tab and Enter/Space navigate menus.\nDisplay settings are session-only; preferences are not saved to disk in this prototype.\n\nThe exact Linux executable/PCK passed finite native-window controls, shop, inventory, Rooms victory and retry checks. That is not human balance or full-game certification. Cloud ALSA audio-device failure fell back to dummy audio; audio was not validated. Cloud llvmpipe also warned about VSync control. Windows received PE/resource inspection only.\n\nGodot engine and third-party license notices accompany this archive. They do not grant a new license to the game source/artwork. ARTIFACT_SHA256.json covers all other files; the delivery receipt separately records this ZIP hash.\n"
+  }
+]

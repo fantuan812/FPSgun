@@ -1,4 +1,8 @@
-# MOSS CIRCUIT · 苔芯幸存者 v18 · 受击对齐与整数显示
+# MOSS CIRCUIT · 苔芯幸存者 v19 · 桌面导出
+
+本批加入固定Godot4.6.3模板校验、隔离冷构建、Linux/Windows x86-64预设及PCK动态资源校验，不改v18玩法、素材或输入。Linux独立可运行包与Windows“已导出但未在Windows运行验收”包分别交付；源码仓库不放平台大二进制。见 [导出与复现说明](docs/V19_DESKTOP_EXPORTS.md)。
+
+## v18记录（历史）
 
 本批只修正crawler既有受击九帧的固定列横向对齐，以及商店/背包价格、槽位和叠层的整数显示；不改源PNG、战斗权威、交易数据或时间。范围与验收边界见 [v18说明](docs/V18_REGISTRATION_AND_NUMBERS.md)。
 
