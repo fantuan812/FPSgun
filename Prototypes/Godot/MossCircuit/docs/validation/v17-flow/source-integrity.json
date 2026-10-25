@@ -1,0 +1,16 @@
+{
+  "baseline_commit": "453960ffd8f3354cee0d0ca8b0abc762ad8b91a0",
+  "tested_manifest_sha256": "2d4c9d8f465cf1863a2da6dee5b5304b654fbb3a298672dbab14e8e73859bc7f",
+  "baseline_files": 1317,
+  "candidate_files": 1342,
+  "missing_baseline_paths": [],
+  "changed_baseline_paths": [
+    "README.md",
+    "data/actor_actions.json",
+    "docs/DELIVERY.md",
+    "scripts/gameplay/run_flow.gd",
+    "tests/test_actor_actions.gd",
+    "ui/moss_ui.gd"
+  ],
+  "expected_gameplay_change": "scripts/gameplay/run_flow.gd settlement XP ordering only; AI/combat/balance unchanged"
+}

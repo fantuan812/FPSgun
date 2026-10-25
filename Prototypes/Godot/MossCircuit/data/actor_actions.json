@@ -47,7 +47,31 @@
     "boss_core": {
       "attack": "boss_core_attack",
       "hurt": "boss_core_hurt",
-      "death": "boss_core_death"
+      "death": "boss_core_death",
+      "attack_profiles": {
+        "summon": {
+          "attack": "boss_core_summon",
+          "phase_frames": {
+            "warning": [
+              0,
+              6
+            ],
+            "attack": [
+              7,
+              7
+            ],
+            "recover": [
+              7,
+              15
+            ]
+          },
+          "phase_driven_attack": true,
+          "locked_aim_states": [
+            "warning",
+            "recover"
+          ]
+        }
+      }
     },
     "charger": {
       "attack": "charger_charge",
@@ -140,6 +164,7 @@
     "res://assets/actions/flanker/action_manifest.json",
     "res://assets/actions/boss_warden/action_manifest.json",
     "res://assets/actions/boss_core/action_manifest.json",
-    "res://assets/actions/boss_warden/attack_manifest.json"
+    "res://assets/actions/boss_warden/attack_manifest.json",
+    "res://assets/actions/boss_core/attack_manifest.json"
   ]
 }

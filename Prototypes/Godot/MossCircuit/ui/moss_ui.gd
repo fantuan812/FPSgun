@@ -117,6 +117,16 @@ func _text(parent: Node, text: String, font_size := 14) -> Label:
 	l.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	return l
 
+func _disclosure(parent:Node,title:String)->VBoxContainer:
+	# Read-only local presentation state: expanding information never emits an intent.
+	var toggle:=Button.new();toggle.text="SHOW "+title;toggle.toggle_mode=true
+	toggle.custom_minimum_size.y=30;parent.add_child(toggle)
+	var details:=VBoxContainer.new();details.visible=false;parent.add_child(details)
+	toggle.toggled.connect(func(expanded:bool):
+		details.visible=expanded
+		toggle.text=("HIDE " if expanded else "SHOW ")+title)
+	return details
+
 func _button(parent: Node, text: String, action: String, payload: Dictionary = {}, disabled := false) -> Button:
 	var b := Button.new(); b.text = text; b.disabled = disabled
 	b.custom_minimum_size.y = 34
@@ -186,7 +196,7 @@ func icon(id: String) -> Texture2D:
 	tex.region = Rect2(rect[0], rect[1], rect[2], rect[3]); tex.filter_clip = true
 	icon_cache[id] = tex; return tex
 
-func _card(parent: Node, data: Dictionary, suffix := "", statuses: Array = []) -> VBoxContainer:
+func _card(parent: Node, data: Dictionary, suffix := "", statuses: Array = [], compact:=false) -> VBoxContainer:
 	var p := PanelContainer.new(); parent.add_child(p)
 	var row := HBoxContainer.new(); p.add_child(row)
 	var image := TextureRect.new(); image.texture = icon(str(data.get("id", "")))
@@ -198,14 +208,15 @@ func _card(parent: Node, data: Dictionary, suffix := "", statuses: Array = []) -
 	_text(v, str(data.get("name", data.get("id", ""))) + suffix, 16).add_theme_color_override("font_color", AMBER)
 	_text(v, str(data.get("description", "")), 13)
 	if data.get("kind", "") == "item":
+		var facts:VBoxContainer=_disclosure(v,"ITEM DETAILS") if compact else v
 		var details := "TRIGGER: %s\nTRADE-OFF: %s\nICD: %.2fs  /  STACK CAP: %s\nSTACKING: %s" % [data.get("trigger", "Passive while equipped"), data.get("cost", "No additional combat cost"), float(data.get("cooldown", 0)), data.get("max_stack", "?"), data.get("stack_rule", "Each owned copy adds the listed effect, up to the cap.")]
-		_text(v, details, 12)
+		_text(facts, details, 12)
 		var targets: Array = data.get("synergy_targets", [])
 		if not targets.is_empty():
-			_text(v, "PAIR WITH: " + ", ".join(targets.map(func(target): return str(target).replace("_", " ").capitalize())), 12)
+			_text(facts, "PAIR WITH: " + ", ".join(targets.map(func(target): return str(target).replace("_", " ").capitalize())), 12)
 		for status in statuses:
 			if str(data.get("name", "")) in status.get("requires", []):
-				_synergy_line(v, status)
+				_synergy_line(facts, status)
 		image.tooltip_text = str(data.get("description", "")) + "\n" + details
 	return v
 
@@ -258,18 +269,19 @@ func show_shop(view: Dictionary) -> void:
 	var bag := _scroll(columns)
 	_shop_bias(offers, view.get("shop_bias", {}))
 	for offer in view.get("offers", []):
-		var c := _card(offers, offer, "", view.get("synergy_status", []))
+		var c := _card(offers, offer, "", view.get("synergy_status", []),true)
 		_text(c, "%s / %s" % [str(offer.get("rarity", "common")).to_upper(), ", ".join(offer.get("tags", []))], 12)
 		if offer.has("weight_multiplier"):
-			_text(c, "DRAW-TIME RELATIVE WEIGHT: x%.2f (not a chance)" % float(offer.weight_multiplier), 12)
+			var weight_details:=_disclosure(c,"DRAW-TIME WEIGHT")
+			_text(weight_details, "DRAW-TIME RELATIVE WEIGHT: x%.2f (not a chance)" % float(offer.weight_multiplier), 12)
 			var reasons: Array = offer.get("bias_reasons", [])
-			if not reasons.is_empty(): _text(c, "AT DRAW: " + "; ".join(reasons), 12)
+			if not reasons.is_empty(): _text(weight_details, "AT DRAW: " + "; ".join(reasons), 12)
 		var sold: bool = bool(offer.get("sold", false))
 		var can_buy: bool = bool(offer.get("can_buy", false))
 		var payload := {"index": int(offer.get("index", 0)), "generation": generation, "replace_slot": -1}
 		var full: bool = offer.get("kind", "") == "weapon" and view.get("weapons", []).size() >= int(view.get("weapon_slots", 4))
 		if full and not sold:
-			_text(c, "Slots full: replace destroys the old weapon (no refund).", 12)
+			var replacement_notice:=_text(c, "Slots full: replace destroys the old weapon (no refund).", 12)
 			var select := OptionButton.new(); select.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 			for w in view.get("weapons", []): select.add_item("Replace %s" % w.get("name", w.get("id", "")), int(w.get("slot", 0)))
 			c.add_child(select)
@@ -279,9 +291,11 @@ func show_shop(view: Dictionary) -> void:
 			buy.pressed.connect(func():
 				var p: Dictionary = payload.duplicate(); p.replace_slot = select.get_selected_id(); intent.emit("buy", p))
 			c.add_child(buy)
+			c.move_child(replacement_notice,1);c.move_child(select,2);c.move_child(buy,3)
 			if first_focus == null and not buy.disabled: first_focus = select
 		else:
-			_button(c, "SOLD" if sold else "BUY  /  %s SCRAP" % offer.get("price", 0), "buy", payload, sold or not can_buy)
+			var purchase:=_button(c, "SOLD" if sold else "BUY  /  %s SCRAP" % offer.get("price", 0), "buy", payload, sold or not can_buy)
+			c.move_child(purchase,1)
 	_inventory(bag, view, true)
 	var footer := HBoxContainer.new(); body.add_child(footer)
 	_button(footer, "REFRESH  /  %s SCRAP" % view.get("refresh_price", 5), "refresh", {"generation": generation}, int(view.get("coins", 0)) < int(view.get("refresh_price", 5)))
@@ -296,11 +310,12 @@ func _shop_bias(parent: Node, bias: Dictionary) -> void:
 	var tags: Array = bias.get("preferred_tags", [])
 	var partners: Array = bias.get("missing_partners", [])
 	_text(content, "PREFERRED TAGS: " + (", ".join(tags) if not tags.is_empty() else "None"), 12)
-	_text(content, "MISSING PARTNERS: " + (", ".join(partners) if not partners.is_empty() else "None"), 12)
-	if not str(bias.get("summary", "")).is_empty(): _text(content, str(bias.summary), 12)
-	for source in bias.get("sources", []): _text(content, "WEIGHT SOURCE: " + str(source), 12)
-	_text(content, "Higher weight improves likelihood, NOT a guarantee. Draws are without replacement; slot chances change. These are relative weights, not percentages.", 12)
-	_text(content, "Buying/selling updates the preference above immediately, for the NEXT refresh. Existing offers retain their draw-time weight and do not reroll. Next draws exclude max-stack items. Full weapon slots allow replacement. Unaffordable offers can appear; their purchase is disabled.", 12)
+	var details:=_disclosure(content,"DRAW DETAILS")
+	_text(details, "MISSING PARTNERS: " + (", ".join(partners) if not partners.is_empty() else "None"), 12)
+	if not str(bias.get("summary", "")).is_empty(): _text(details, str(bias.summary), 12)
+	for source in bias.get("sources", []): _text(details, "WEIGHT SOURCE: " + str(source), 12)
+	_text(details, "Higher weight improves likelihood, NOT a guarantee. Draws are without replacement; slot chances change. These are relative weights, not percentages.", 12)
+	_text(details, "Buying/selling updates the preference above immediately, for the NEXT refresh. Existing offers retain their draw-time weight and do not reroll. Next draws exclude max-stack items. Full weapon slots allow replacement. Unaffordable offers can appear; their purchase is disabled.", 12)
 
 func _inventory(parent: Node, view: Dictionary, selling := false) -> void:
 	_label(parent, "WEAPONS  %s / %s" % [view.get("weapons", []).size(), view.get("weapon_slots", 4)], 16)

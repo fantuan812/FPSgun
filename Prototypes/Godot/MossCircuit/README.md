@@ -1,4 +1,8 @@
-# MOSS CIRCUIT · 苔芯幸存者 v16 · 可玩性与冲锋辨识
+# MOSS CIRCUIT · 苔芯幸存者 v17 · 结算与商店节奏
+
+本版把清场地面经验升级放到商店之前，消除Deploy后立即补弹升级页；商店优先显示购买/替换按钮，详细概率和机制说明可展开；Core真正summon使用独立16帧，原ring保持。范围及v16数值估算纠正见 [v17说明](docs/V17_FLOW_AND_SUMMON.md)。最终验收未写成全游戏完成。
+
+## v16记录（历史）
 
 本版修复标题seed跨设置/图鉴丢失、设置页Esc不能返回、失焦不暂停及HUD目标被遮挡；为Warden真实冲锋新增独立16帧，原blast砸地保持不变。已有真实云端Linux窗口验收，不把headless当作GUI；Windows导出与真人平衡验收仍未完成。范围、合同、回归及剩余问题见 [v16说明](docs/V16_PLAYABILITY.md)。
 
@@ -90,6 +94,8 @@ idle 暂复用 walk 第一帧；弹丸/经验/判定轮廓保留简单代码绘�
 
 ## 验证
 
+**v17最终（2026-10-25）：**作者与独立cold import及55入口全通过，运行输入hash零变化；实际Linux窗口核清场升级先于商店、首屏购买、键盘详情/交易/返回、完整Rooms结果，以及真实Boss尺度Core两方向召唤/受击返回/原ring。原生截图只证明受控逐阶段姿态，不冒充连续录像或真人手感。见 [v17工程报告](docs/validation/v17-flow/QA_REPORT.md)。
+
 **v16最终r2（2026-10-25）：**作者与独立fresh-copy cold import及51个测试入口全通过，运行输入hash零变化；实际Linux窗口已核输入/失焦、HUD、完整三房间普通操作，以及受控Warden两方向动作/中断/预警可读性。初稿虽通过headless但未通过视觉验收，已明确留作拒绝记录；最终证据见 [v16报告](docs/validation/v16-runtime/QA_REPORT.md)。Windows/真人平衡仍未验。
 
 **v15反应层收口（2026-10-24）：**最终镜像安全metadata下，删缓存cold导入及46测试入口全通过；Core作者56项、独立403项、旧动作精确集合343项。164旧权威/配置/资源/场景/UI字节不变，runtime `.gd` 零改；同种子与包后验证见[工程报告](docs/validation/v15-core/QA_REPORT.md)及[独立报告](docs/validation/independent-v15-core/QA_REPORT.md)。以下v14及更早仅为历史。GUI/真人手感/Windows未验，见[收口清单](docs/REACTION_COVERAGE.md)。
@@ -130,7 +136,7 @@ HOME=/tmp/moss-home XDG_CONFIG_HOME=/tmp/moss-config XDG_DATA_HOME=/tmp/moss-dat
 
 ## 修改与后续
 
-新房间配置的有限数值/类型/4096 格预算见架构文档，非法输入在分配前拒绝。旧 balance 仍须按有效范围修改：arena 宽高至少 48、tile_size 必须大于 0；waves 与 max_enemies 为正整数、波时长/生成间隔为正数，升级 id 与字段须保持代码约定。本原型不提供任意 JSON 的运行时校验器。添加新的动作时按美术说明生成新九帧 sheet，先检查每帧轮廓/脚底，再登记 alpha 元数据；不要将新动作9张不同立绘当连续动画。下一批优先：商店初屏可操作性、清场经验升级时机、Core独立召唤表现、构筑经济平衡、挂点与遮挡的真实窗口微调、随机障碍连通验证、声音。
+新房间配置的有限数值/类型/4096 格预算见架构文档，非法输入在分配前拒绝。旧 balance 仍须按有效范围修改：arena 宽高至少 48、tile_size 必须大于 0；waves 与 max_enemies 为正整数、波时长/生成间隔为正数，升级 id 与字段须保持代码约定。本原型不提供任意 JSON 的运行时校验器。添加新的动作时按美术说明生成新九帧 sheet，先检查每帧轮廓/脚底，再登记 alpha 元数据；不要将新动作9张不同立绘当连续动画。后续优先：最终版本真实窗口回归、构筑经济平衡、动作衔接/挂点/遮挡的窗口微调、随机障碍连通验证、声音。
 
 ## 检查入口
 

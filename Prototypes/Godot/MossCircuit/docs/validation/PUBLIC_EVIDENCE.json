@@ -1,0 +1,26 @@
+{
+  "purpose": "Privacy-reduced public QA evidence; original reports retained in the private historical backup.",
+  "runtime_source_unchanged": true,
+  "tested_source_manifest_sha256": "2d4c9d8f465cf1863a2da6dee5b5304b654fbb3a298672dbab14e8e73859bc7f",
+  "redacted_documents": [
+    {
+      "repository_relative_path": "docs/validation/independent-v17/QA_REPORT.md",
+      "private_original_sha256": "285f84c3a2ba66fa794145558152813aceb9fcd84c8963b57941dc2270b3f0ee",
+      "public_sha256": "2cbea0ff92dfdd360085e4f9ec78f453580865409cb7952db1101e0d399a5e0f",
+      "change": "Replace temporary execution workspace locations with stable snapshot labels; no result, version, file fingerprint or limitation altered."
+    },
+    {
+      "repository_relative_path": "docs/validation/independent-v17/source-verification.json",
+      "private_original_sha256": "a63e56a031ab97508bcf0611f96af6c87fc11ba0d858fa306a14ba89a3c21264",
+      "public_sha256": "d4fb5dde4dc44135b690946457a68e7d513b78f9f5b4a01374b254f0a3038fcb",
+      "change": "Replace temporary execution workspace locations with stable snapshot labels; no result, version, file fingerprint or limitation altered."
+    },
+    {
+      "repository_relative_path": "docs/validation/v17-flow/v16-arena-supplement/ARENA_SUPPLEMENT.md",
+      "private_original_sha256": "68d4503baa9f78cc456cb9674f7d2256d945d0da1c7566a9658efb534f25ddda",
+      "public_sha256": "82069f3d923dd7a890ec0623eb74d3a5a6d4b9dd456c0c9012e2587f3fc59929",
+      "change": "Replace temporary execution workspace locations with stable snapshot labels; no result, version, file fingerprint or limitation altered."
+    }
+  ],
+  "redaction_scope": "Only newly added v17 evidence. Existing v16 history is byte-identical."
+}

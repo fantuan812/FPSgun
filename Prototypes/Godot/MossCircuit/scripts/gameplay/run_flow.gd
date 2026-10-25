@@ -11,6 +11,10 @@ static func settle(world:CombatState,session:RunSession,mode:RefCounted,config:D
 	for pickup in world.pickups:
 		collect_pickup(world,session,pickup)
 	world.pickups.clear()
+	# Floor XP belongs to the encounter being settled, not the first next-stage tick.
+	# Ended runs still report earned levels, but have no post-victory choice screen.
+	accrue_levels(session,not decision.terminal)
+	if decision.terminal:session.upgrade_pending=0
 	world.enemies.clear();world.bullets.clear();world.enemy_bullets.clear()
 	world.hazards.clear();world.pending_blasts.clear();world.effect_visuals.clear();world.flashes.clear()
 	effects.reset(session.build.items)
@@ -36,11 +40,11 @@ static func validate_resolution(data:Dictionary)->Array:
 	if data.get("terminal")==true and (data.get("shop")==true or (data.get("upgrades") is int and data.upgrades>0)):errors.append("terminal cannot open shop or upgrade")
 	return errors
 
-static func accrue_levels(session:RunSession)->void:
+static func accrue_levels(session:RunSession,queue_choices:bool=true)->void:
 	while session.xp>=Rules.xp_threshold(session.level):
 		session.xp-=Rules.xp_threshold(session.level)
 		session.level+=1
-		session.upgrade_pending+=1
+		if queue_choices:session.upgrade_pending+=1
 
 static func collect_pickup(world:CombatState,session:RunSession,pickup:Dictionary)->void:
 	world.stats.hp=minf(world.stats.max_hp,world.stats.hp+pickup.get("heal",0.0))

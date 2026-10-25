@@ -1,3 +1,5 @@
+> v17更新：Core实际summon已使用独立16帧，ring保留旧9帧。反应层不变；当前验收与v16像素估算纠正见 [v17说明](V17_FLOW_AND_SUMMON.md)。
+
 > v16更新：两Boss受击/死亡保持；Warden新增独立charge16帧，blast保持旧图。真实Linux窗口已可验证；当前证据与边界见 [v16说明](V16_PLAYABILITY.md)，下文保留v15历史收口记录。
 
 # 受击/死亡反应层覆盖：v15里程碑收口

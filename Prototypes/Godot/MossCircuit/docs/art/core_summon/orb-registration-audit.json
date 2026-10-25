@@ -1,0 +1,284 @@
+{
+  "method": "Core-color mask alpha>128, G>150, G>1.12R, B>70, G>1.13B. New-pose mask restricted to first200px of row-partition to exclude lower seed cue; reference full neutral cell. Color centroid is a registration aid, not pixel-perfect semantic ground truth.",
+  "reference_core_centroid": [
+    207.36799350121854,
+    222.89764419171405
+  ],
+  "reference_neutral_bounds": [
+    124,
+    136,
+    201,
+    218
+  ],
+  "reference_normalized_core": [
+    -0.07858718577422691,
+    -0.6013869532490181
+  ],
+  "new_neutral_core_offset_error_fraction": [
+    -0.00047956730419178306,
+    0.0036758108751187013
+  ],
+  "terminal_to_initial_source_pixel_delta": [
+    8.376347183216865,
+    3.2515379738703416
+  ],
+  "poses": [
+    {
+      "source_pose_index": 0,
+      "source_core_centroid": [
+        150.549578742709,
+        142.96305897602073
+      ],
+      "mask_pixels": 1543,
+      "logical_core_centroid": [
+        236.549578742709,
+        172.96305897602073
+      ],
+      "relative_to_reference_height": [
+        -0.07906675307841869,
+        -0.5977111423738994
+      ]
+    },
+    {
+      "source_pose_index": 1,
+      "source_core_centroid": [
+        481.26513911620293,
+        142.25531914893617
+      ],
+      "mask_pixels": 1833,
+      "logical_core_centroid": [
+        239.26513911620293,
+        172.25531914893617
+      ],
+      "relative_to_reference_height": [
+        -0.0680278897715328,
+        -0.6005881335409099
+      ]
+    },
+    {
+      "source_pose_index": 2,
+      "source_core_centroid": [
+        809.7556536127964,
+        142.59238830667402
+      ],
+      "mask_pixels": 1813,
+      "logical_core_centroid": [
+        239.75565361279644,
+        172.59238830667402
+      ],
+      "relative_to_reference_height": [
+        -0.06603392840326652,
+        -0.5992179337127073
+      ]
+    },
+    {
+      "source_pose_index": 3,
+      "source_core_centroid": [
+        1141.050081654872,
+        142.5443658138269
+      ],
+      "mask_pixels": 1837,
+      "logical_core_centroid": [
+        243.05008165487197,
+        172.5443658138269
+      ],
+      "relative_to_reference_height": [
+        -0.05264194449239035,
+        -0.5994131470982647
+      ]
+    },
+    {
+      "source_pose_index": 4,
+      "source_core_centroid": [
+        156.54924056834884,
+        438.0039196472318
+      ],
+      "mask_pixels": 2041,
+      "logical_core_centroid": [
+        242.54924056834884,
+        174.00391964723178
+      ],
+      "relative_to_reference_height": [
+        -0.05467788386850067,
+        -0.5934800014340171
+      ]
+    },
+    {
+      "source_pose_index": 5,
+      "source_core_centroid": [
+        489.7575354609929,
+        438.9126773049645
+      ],
+      "mask_pixels": 2256,
+      "logical_core_centroid": [
+        247.75753546099293,
+        174.91267730496452
+      ],
+      "relative_to_reference_height": [
+        -0.03350595341059786,
+        -0.5897858646139654
+      ]
+    },
+    {
+      "source_pose_index": 6,
+      "source_core_centroid": [
+        817.75608544461,
+        441.20765027322403
+      ],
+      "mask_pixels": 2013,
+      "logical_core_centroid": [
+        247.75608544461,
+        177.20765027322403
+      ],
+      "relative_to_reference_height": [
+        -0.033511847786138235,
+        -0.5804567062064063
+      ]
+    },
+    {
+      "source_pose_index": 7,
+      "source_core_centroid": [
+        1141.8839541547277,
+        445.15616045845275
+      ],
+      "mask_pixels": 2094,
+      "logical_core_centroid": [
+        243.8839541547277,
+        181.15616045845275
+      ],
+      "relative_to_reference_height": [
+        -0.049252218883220775,
+        -0.5644058517949075
+      ]
+    },
+    {
+      "source_pose_index": 8,
+      "source_core_centroid": [
+        155.1728332488596,
+        738.6401419158642
+      ],
+      "mask_pixels": 1973,
+      "logical_core_centroid": [
+        241.1728332488596,
+        173.6401419158642
+      ],
+      "relative_to_reference_height": [
+        -0.060273035573741446,
+        -0.594958772699739
+      ]
+    },
+    {
+      "source_pose_index": 9,
+      "source_core_centroid": [
+        483.52488455618266,
+        738.8645459209852
+      ],
+      "mask_pixels": 1949,
+      "logical_core_centroid": [
+        241.52488455618266,
+        173.86454592098517
+      ],
+      "relative_to_reference_height": [
+        -0.05884193269844449,
+        -0.5940465612968082
+      ]
+    },
+    {
+      "source_pose_index": 10,
+      "source_core_centroid": [
+        814.6624557857504,
+        740.356745831228
+      ],
+      "mask_pixels": 1979,
+      "logical_core_centroid": [
+        244.66245578575035,
+        175.35674583122795
+      ],
+      "relative_to_reference_height": [
+        -0.046087578106705884,
+        -0.5879807080031384
+      ]
+    },
+    {
+      "source_pose_index": 11,
+      "source_core_centroid": [
+        1141.2141689373298,
+        740.4948228882834
+      ],
+      "mask_pixels": 1835,
+      "logical_core_centroid": [
+        243.21416893732976,
+        175.49482288828335
+      ],
+      "relative_to_reference_height": [
+        -0.051974923018984716,
+        -0.5874194191533197
+      ]
+    },
+    {
+      "source_pose_index": 12,
+      "source_core_centroid": [
+        155.31207169214548,
+        1021.7274644175013
+      ],
+      "mask_pixels": 1897,
+      "logical_core_centroid": [
+        241.31207169214548,
+        174.72746441750132
+      ],
+      "relative_to_reference_height": [
+        -0.05970702564168504,
+        -0.5905387625304824
+      ]
+    },
+    {
+      "source_pose_index": 13,
+      "source_core_centroid": [
+        485.8527302813017,
+        1022.1389961389962
+      ],
+      "mask_pixels": 1813,
+      "logical_core_centroid": [
+        243.85273028130172,
+        175.13899613899616
+      ],
+      "relative_to_reference_height": [
+        -0.0493791451979605,
+        -0.5888658693536741
+      ]
+    },
+    {
+      "source_pose_index": 14,
+      "source_core_centroid": [
+        812.6863387978142,
+        1021.9224043715847
+      ],
+      "mask_pixels": 1830,
+      "logical_core_centroid": [
+        242.6863387978142,
+        174.92240437158466
+      ],
+      "relative_to_reference_height": [
+        -0.05412057399262526,
+        -0.5897463236927453
+      ]
+    },
+    {
+      "source_pose_index": 15,
+      "source_core_centroid": [
+        1142.9259259259259,
+        1023.2145969498911
+      ],
+      "mask_pixels": 1836,
+      "logical_core_centroid": [
+        244.92592592592587,
+        176.21459694989107
+      ],
+      "relative_to_reference_height": [
+        -0.04501656127672412,
+        -0.5844935083337761
+      ]
+    }
+  ],
+  "conclusion": "Body/orb stable across source rows; lowest root purposely moves. Source neutral/terminal differences still require real rendered-window acceptance."
+}
