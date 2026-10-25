@@ -1,0 +1,78 @@
+{
+  "method": "4-connected components of upper-half alpha>=128 & R>140 & G>130 & B>90 & G>0.72R & B>0.5R; visually matched neutral bright faceplate and shoulder. Not a whole-body bbox-center measurement.",
+  "poses": [
+    {
+      "source_pose_index": 0,
+      "authored_x_correction": 0,
+      "features": {
+        "faceplate": {
+          "pixels": 723,
+          "source_centroid": [
+            144.62793914246197,
+            143.73029045643153
+          ],
+          "logical_centroid_before": [
+            223.62793914246197,
+            162.73029045643153
+          ],
+          "logical_centroid_after": [
+            223.62793914246197,
+            162.73029045643153
+          ]
+        },
+        "shoulder": {
+          "pixels": 182,
+          "source_centroid": [
+            229.2197802197802,
+            150.3021978021978
+          ],
+          "logical_centroid_before": [
+            308.2197802197802,
+            169.3021978021978
+          ],
+          "logical_centroid_after": [
+            308.2197802197802,
+            169.3021978021978
+          ]
+        }
+      }
+    },
+    {
+      "source_pose_index": 15,
+      "authored_x_correction": 31,
+      "features": {
+        "faceplate": {
+          "pixels": 654,
+          "source_centroid": [
+            1053.9923547400613,
+            1028.0504587155963
+          ],
+          "logical_centroid_before": [
+            192.99235474006127,
+            163.05045871559628
+          ],
+          "logical_centroid_after": [
+            223.99235474006127,
+            163.05045871559628
+          ]
+        },
+        "shoulder": {
+          "pixels": 183,
+          "source_centroid": [
+            1133.3879781420765,
+            1033.9781420765028
+          ],
+          "logical_centroid_before": [
+            272.38797814207646,
+            168.97814207650276
+          ],
+          "logical_centroid_after": [
+            303.38797814207646,
+            168.97814207650276
+          ]
+        }
+      }
+    }
+  ],
+  "interpretation": "Same-height neutral semantic anchors translated left in uncorrected final pose. Author recovery X correction restores terminal neutral without source edit, per-frame scaling or bbox normalization."
+}

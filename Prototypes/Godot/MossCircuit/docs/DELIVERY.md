@@ -1,13 +1,13 @@
-# v15 反应层收口完整工程
+# v16 完整工程交付
 
-完整单ZIP：`MossCircuit-v15-CoreReactions-2026-10-24.zip`。解压后在Godot 4.6导入`project.godot`；这是累计源码/素材完整包，不是补丁或Windows安装程序。没有分包，分包union不适用。
+完整源码单ZIP：`MossCircuit-v16-PlayabilityCharge-2026-10-25.zip`。解压后在Godot4.6导入`project.godot`；这是累计源码/素材完整包，不是补丁或Windows安装程序。
 
-主要交付为FPSgun仓库 `Prototypes/Godot/MossCircuit`；发布成功以真实commit/远端读回收据为准，本文不是已上传证明。Library持久保留完整包作为备份。
+主要交付路径仍是FPSgun仓库 `Prototypes/Godot/MossCircuit`。发布成功须以真实commit及远端读回收据为准，本文不是已上传证明。v15旧Library包保持独立历史身份；v16另存新完整包，不覆盖v15。
 
-- 已发布v14基线：`51a6f3ce4ae91e08212c7675df9a9f21620fee9f`，1001文件逐SHA核对后在新目录延续，v14冻结工程不动。
-- v15只新增Core hurt9/death16与必要metadata、测试、说明；本轮五普通敌人+两Boss受击/死亡覆盖收口，不增加技能或玩法机制。
-- 保留原1001路径。历史报告只属于原版本；本次证据在`docs/validation/v15-core/`与`independent-v15-core/`。
-- `MANIFEST.json`列出除自身外全部交付文件SHA-256。独立验包核CRC、清单、基线路径与解压后的冷启动测试。
-- 不带`.godot`缓存或引擎二进制，首次导入生成缓存。命令行验收需可写HOME/XDG，交付runner自动设置。
+- v15基线：`14ebe583f911b66f36200d05e886fe6e0176c456`。原ZIP SHA256为 `be77a6280235247b1c02ff8f75b1124fba54b126c079c512a74ac68e91610cdc`，恢复1140文件，1139项清单SHA256全匹配。
+- v16保留全部v15路径，仅改输入/界面生命周期、HUD布局及Warden charge表现选择；详情见 `V16_PLAYABILITY.md`。
+- 历史报告仅属于原版本；本次作者证据在 `docs/validation/v16-runtime/`，独立证据另有报告。
+- `MANIFEST.json`列出除自身之外全部交付文件SHA256。打包校验CRC、清单、基线路径；源包不带`.godot`缓存、引擎或临时GUI驱动。
+- 真正冷导入请使用新解压目录。测试入口：`python3 tests/run_regression.py --output /tmp/moss-checks`，结果必须在工程外；runner自动使用可写HOME/XDG。
 
-GUI/真人手感、平衡、Windows导出及其他未完成项见`docs/REACTION_COVERAGE.md`；不能将headless通过等同这些验收。
+v16已取得真实Linux窗口的部分流程证据，不能扩展为Windows、真人平衡或所有动作整合都已验收。精确范围见本次报告。

@@ -17,7 +17,32 @@
     "boss_warden": {
       "attack": "boss_warden_attack",
       "hurt": "boss_warden_hurt",
-      "death": "boss_warden_death"
+      "death": "boss_warden_death",
+      "attack_profiles": {
+        "charge": {
+          "attack": "boss_warden_charge",
+          "phase_frames": {
+            "warning": [
+              0,
+              5
+            ],
+            "attack": [
+              6,
+              11
+            ],
+            "recover": [
+              12,
+              15
+            ]
+          },
+          "phase_driven_attack": true,
+          "locked_aim_states": [
+            "warning",
+            "charging",
+            "recover"
+          ]
+        }
+      }
     },
     "boss_core": {
       "attack": "boss_core_attack",
@@ -114,6 +139,7 @@
     "res://assets/actions/crawler/action_manifest.json",
     "res://assets/actions/flanker/action_manifest.json",
     "res://assets/actions/boss_warden/action_manifest.json",
-    "res://assets/actions/boss_core/action_manifest.json"
+    "res://assets/actions/boss_core/action_manifest.json",
+    "res://assets/actions/boss_warden/attack_manifest.json"
   ]
 }

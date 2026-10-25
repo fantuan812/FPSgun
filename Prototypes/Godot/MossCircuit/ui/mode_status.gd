@@ -14,6 +14,14 @@ func _ready()->void:
 	objective.add_theme_font_size_override("font_size",16)
 	objective.add_theme_color_override("font_color",Color("b4dfb0"))
 	objective.mouse_filter=Control.MOUSE_FILTER_IGNORE
+	objective.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART
+func place_below(hud_rect:Rect2)->void:
+	# Container minimum sizes and font metrics can exceed authored HUD offsets.
+	# Use its measured rectangle instead of a fixed overlapping screen position.
+	badge.position=Vector2(hud_rect.position.x+10,hud_rect.end.y+8)
+	var text_offset:float=66 if visible_rooms else 10
+	objective.position=Vector2(hud_rect.position.x+text_offset,hud_rect.end.y+8)
+	objective.size=Vector2(maxf(1,hud_rect.size.x-text_offset-10),42)
 func present(mode_id:String,state:String,text:String,progress:float)->void:
 	visible_rooms=mode_id=="rooms"
 	visible=state in ["playing","room_clear"]

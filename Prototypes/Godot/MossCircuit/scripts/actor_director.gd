@@ -51,7 +51,7 @@ func register_actor(key:int,sprite:AnimatedSprite2D,profile:String,height:float)
 	if first!=null:
 		height=first.region.size.y*absf(sprite.scale.y)
 		foot=(first.margin.position+Vector2(first.region.size.x*.5,first.region.size.y)-first.get_size()*.5+sprite.offset)*sprite.scale
-	actors[key]={"sprite":sprite,"profile":profile,"height":height,"base_foot":foot,"base_frames":sprite.sprite_frames,"base_scale":sprite.scale,"base_offset":sprite.offset,"base_color":sprite.modulate,"base_flip":sprite.flip_h,"state":"idle","reaction":"","age":0.0,"duration":0.0,"phase":"idle","phase_progress":0.0,"recover_span":0.0,"walk_time":0.0,"corpse":false,"generation":generation,"source":"reused walk/idle"}
+	actors[key]={"sprite":sprite,"profile":profile,"attack_variant":"","height":height,"base_foot":foot,"base_frames":sprite.sprite_frames,"base_scale":sprite.scale,"base_offset":sprite.offset,"base_color":sprite.modulate,"base_flip":sprite.flip_h,"state":"idle","reaction":"","age":0.0,"duration":0.0,"phase":"idle","phase_progress":0.0,"recover_span":0.0,"walk_time":0.0,"corpse":false,"generation":generation,"source":"reused walk/idle"}
 	sprite.stop()
 	_present(actors[key])
 func set_phase(key:int,phase:String,progress:float=0) -> void:
@@ -63,7 +63,7 @@ func trigger(key:int,action:String,duration:float=-1) -> bool:
 	if not actors.has(key):return false
 	var actor:Dictionary=actors[key]
 	if actor.reaction=="death":return false
-	if action=="attack" and config.profiles.get(actor.profile,{}).get("phase_driven_attack",false):return false
+	if action=="attack" and _profile(actor).get("phase_driven_attack",false):return false
 	var priority:Dictionary={"":0,"attack":1,"dash":2,"hurt":3,"death":4}
 	if not priority.has(action):return false
 	if priority.get(actor.reaction,0)>priority[action]:return false
@@ -93,6 +93,7 @@ func clear(keep_hero:bool=true,preserve_corpses:bool=false) -> void:
 		var actor:Dictionary=actors[0]
 		actor.reaction="";actor.corpse=false;actor.age=0.0;actor.duration=0.0;actor.phase="idle";actor.phase_progress=0.0;actor.walk_time=0.0;actor.generation=generation
 		actor.recover_span=0.0
+		actor.attack_variant=""
 		actor.sprite.flip_h=actor.base_flip
 		_present(actor)
 func advance(dt:float,death_only:bool=false) -> void:
@@ -115,7 +116,7 @@ func _present(actor:Dictionary) -> void:
 	var sprite:AnimatedSprite2D=actor.sprite
 	var state:String=actor.reaction if actor.reaction!="" else actor.phase
 	actor.state=state
-	var profile:Dictionary=config.profiles.get(actor.profile,{})
+	var profile:Dictionary=_profile(actor)
 	var action:String="attack" if state in ["warning","recover","attack"] else state
 	var id:String=profile.get(action,"")
 	actor.asset_id=id if assets.has(id) else ""
@@ -180,11 +181,24 @@ func socket_world(key:int,name:String="grip")->Vector2:
 
 ## Read-only adapter from authoritative enemy state to presentation.
 ## Recovery span is observed at its actual entry, never written back to EnemyAI.
+func _profile(actor:Dictionary)->Dictionary:
+	var base:Dictionary=config.profiles.get(actor.profile,{})
+	var variants=base.get("attack_profiles",{})
+	if not variants is Dictionary:return base
+	var variant=variants.get(actor.get("attack_variant",""),{})
+	if not variant is Dictionary or variant.is_empty():return base
+	var resolved:Dictionary=base.duplicate(false)
+	# Variants select attack presentation only; hurt/death contracts stay shared.
+	for key in ["attack","phase_frames","phase_driven_attack","locked_aim_states"]:
+		if variant.has(key):resolved[key]=variant[key]
+	return resolved
+
 func observe_enemy(enemy:Dictionary,previous_ai:String,player_position:Vector2)->void:
 	if not actors.has(enemy.id) or enemy.hp<=0:return
 	var actor:Dictionary=actors[enemy.id]
 	if actor.corpse:return
-	var profile:Dictionary=config.profiles.get(actor.profile,{})
+	actor.attack_variant=str(enemy.get("attack","")) if enemy.ai_state in ["warning","charging","recover"] else ""
+	var profile:Dictionary=_profile(actor)
 	var locked_states=profile.get("locked_aim_states",[])
 	if locked_states is Array and enemy.ai_state in locked_states:
 		if absf(enemy.aim.x)>.001:enemy.sprite.flip_h=enemy.aim.x>0

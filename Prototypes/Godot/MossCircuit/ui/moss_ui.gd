@@ -241,6 +241,7 @@ func show_title(seed_value: int = 240102,mode_id:String="arena") -> void:
 	_label(content, "RUN SEED", 14)
 	var seed_edit := LineEdit.new(); seed_edit.text = str(seed_value); seed_edit.max_length = 10
 	seed_edit.custom_minimum_size.y = 38; content.add_child(seed_edit)
+	seed_edit.text_changed.connect(func(value:String):intent.emit("seed_changed",{"seed":value.to_int()}))
 	mode_button.pressed.connect(func():intent.emit("select_mode",{"id":"rooms" if mode_id=="arena" else "arena","seed":seed_edit.text.to_int()}))
 	var start := Button.new(); start.text = "START RUN"; start.custom_minimum_size.y = 44
 	start.pressed.connect(func(): intent.emit("start", {"seed": seed_edit.text.to_int()}))

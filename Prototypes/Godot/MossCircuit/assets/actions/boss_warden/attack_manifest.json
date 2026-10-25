@@ -1,0 +1,384 @@
+{
+  "schema_version": 1,
+  "alpha_threshold": 8,
+  "actions": {
+    "boss_warden_charge": {
+      "path": "res://assets/actions/boss_warden/boss_warden_charge.png",
+      "frames": [
+        {
+          "region": [
+            39,
+            90,
+            273,
+            215
+          ],
+          "margin": [
+            118,
+            109,
+            239,
+            185
+          ],
+          "alpha_bbox": [
+            122,
+            113,
+            265,
+            207
+          ],
+          "source_pose_index": 0
+        },
+        {
+          "region": [
+            364,
+            102,
+            238,
+            204
+          ],
+          "margin": [
+            130,
+            121,
+            274,
+            196
+          ],
+          "alpha_bbox": [
+            134,
+            125,
+            230,
+            196
+          ],
+          "source_pose_index": 1
+        },
+        {
+          "region": [
+            665,
+            107,
+            233,
+            199
+          ],
+          "margin": [
+            117,
+            126,
+            279,
+            201
+          ],
+          "alpha_bbox": [
+            121,
+            130,
+            225,
+            191
+          ],
+          "source_pose_index": 2
+        },
+        {
+          "region": [
+            971,
+            118,
+            240,
+            189
+          ],
+          "margin": [
+            110,
+            137,
+            272,
+            211
+          ],
+          "alpha_bbox": [
+            114,
+            141,
+            232,
+            181
+          ],
+          "source_pose_index": 3
+        },
+        {
+          "region": [
+            46,
+            432,
+            257,
+            186
+          ],
+          "margin": [
+            125,
+            138,
+            255,
+            214
+          ],
+          "alpha_bbox": [
+            129,
+            142,
+            249,
+            178
+          ],
+          "source_pose_index": 4
+        },
+        {
+          "region": [
+            355,
+            435,
+            260,
+            183
+          ],
+          "margin": [
+            121,
+            141,
+            252,
+            217
+          ],
+          "alpha_bbox": [
+            125,
+            145,
+            252,
+            175
+          ],
+          "source_pose_index": 5
+        },
+        {
+          "region": [
+            666,
+            432,
+            243,
+            183
+          ],
+          "margin": [
+            118,
+            138,
+            269,
+            217
+          ],
+          "alpha_bbox": [
+            122,
+            142,
+            235,
+            175
+          ],
+          "source_pose_index": 6
+        },
+        {
+          "region": [
+            943,
+            417,
+            262,
+            198
+          ],
+          "margin": [
+            82,
+            123,
+            250,
+            202
+          ],
+          "alpha_bbox": [
+            86,
+            127,
+            254,
+            190
+          ],
+          "source_pose_index": 7
+        },
+        {
+          "region": [
+            24,
+            713,
+            299,
+            194
+          ],
+          "margin": [
+            103,
+            130,
+            213,
+            206
+          ],
+          "alpha_bbox": [
+            107,
+            134,
+            294,
+            186
+          ],
+          "source_pose_index": 8
+        },
+        {
+          "region": [
+            323,
+            715,
+            288,
+            192
+          ],
+          "margin": [
+            89,
+            132,
+            224,
+            208
+          ],
+          "alpha_bbox": [
+            90,
+            136,
+            283,
+            184
+          ],
+          "source_pose_index": 9
+        },
+        {
+          "region": [
+            627,
+            717,
+            298,
+            189
+          ],
+          "margin": [
+            79,
+            134,
+            214,
+            211
+          ],
+          "alpha_bbox": [
+            83,
+            138,
+            290,
+            181
+          ],
+          "source_pose_index": 10
+        },
+        {
+          "region": [
+            943,
+            717,
+            286,
+            190
+          ],
+          "margin": [
+            82,
+            134,
+            226,
+            210
+          ],
+          "alpha_bbox": [
+            86,
+            138,
+            278,
+            182
+          ],
+          "source_pose_index": 11
+        },
+        {
+          "region": [
+            34,
+            988,
+            275,
+            201
+          ],
+          "margin": [
+            113,
+            123,
+            237,
+            199
+          ],
+          "alpha_bbox": [
+            117,
+            127,
+            267,
+            193
+          ],
+          "source_pose_index": 12
+        },
+        {
+          "region": [
+            332,
+            987,
+            261,
+            202
+          ],
+          "margin": [
+            108,
+            122,
+            251,
+            198
+          ],
+          "alpha_bbox": [
+            112,
+            126,
+            253,
+            194
+          ],
+          "source_pose_index": 13
+        },
+        {
+          "region": [
+            640,
+            986,
+            263,
+            204
+          ],
+          "margin": [
+            112,
+            121,
+            249,
+            196
+          ],
+          "alpha_bbox": [
+            116,
+            125,
+            255,
+            196
+          ],
+          "source_pose_index": 14
+        },
+        {
+          "region": [
+            955,
+            972,
+            265,
+            217
+          ],
+          "margin": [
+            125,
+            107,
+            247,
+            183
+          ],
+          "alpha_bbox": [
+            129,
+            111,
+            257,
+            209
+          ],
+          "source_pose_index": 15
+        }
+      ],
+      "anchor": [
+        0.5,
+        0.8
+      ],
+      "reference_height": 207,
+      "release_frame": 6,
+      "loop": false,
+      "facing": "left",
+      "phase_frames": {
+        "warning": [
+          0,
+          5
+        ],
+        "attack": [
+          6,
+          11
+        ],
+        "recover": [
+          12,
+          15
+        ]
+      },
+      "source_sha256": "1c27e2bda27f3ef64b318261612cfb64433277d3f8e7b3301c5e49c5e3779f99",
+      "action_registration_offset_x": -20,
+      "authored_recovery_x_corrections": {
+        "12": 0,
+        "13": 10,
+        "14": 20,
+        "15": 31
+      },
+      "source_row_translation_y": [
+        19,
+        -294,
+        -583,
+        -865
+      ],
+      "source": "Built-in image_gen; original PNG preserved, no resize/repaint/mask."
+    }
+  }
+}

@@ -331,10 +331,18 @@ func _input(event: InputEvent) -> void:
 			elif state == "paused": _resume()
 			elif state == "inventory": _on_intent("close_inventory",{})
 			elif state == "codex": _on_intent("close_codex",{})
+			elif state == "settings": _on_intent("close_settings",{})
 		if event.keycode == KEY_I:
 			_on_intent("close_inventory" if state == "inventory" else "inventory",{})
 		if state == "upgrade" and event.keycode in [KEY_1, KEY_2, KEY_3]:
 			_take_upgrade(int(event.keycode - KEY_1), choice_generation)
+
+
+func _notification(what:int) -> void:
+	# Losing application focus must never spend combat or room-clear time.
+	# Focus returning is deliberately not a resume action.
+	if what==NOTIFICATION_APPLICATION_FOCUS_OUT and is_instance_valid(ui):
+		_on_intent("pause",{})
 
 
 func _resume() -> void:
@@ -533,6 +541,7 @@ func _show_result(won:bool) -> void:
 func _update_hud() -> void:
 	if is_instance_valid(mode_status):mode_status.present(mode.id,state,mode.objective(run,combat,config),mode.progress())
 	if not stats.is_empty(): ui.update_hud(_view())
+	if is_instance_valid(mode_status):mode_status.place_below(ui.hud.get_global_rect())
 	if ui.has_method("update_bosses"):
 		var bars: Array = []
 		for enemy in enemies:
@@ -731,6 +740,9 @@ func _view() -> Dictionary:
 
 func _on_intent(action: String, payload: Dictionary) -> void:
 	match action:
+		"seed_changed":
+			if state=="title" and payload.get("seed") is int:
+				run_seed=payload.seed
 		"select_mode":
 			if state=="title" and payload.get("id","") in ["arena","rooms"]:
 				run_seed=int(payload.get("seed",run_seed))

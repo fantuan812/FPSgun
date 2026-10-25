@@ -1,4 +1,8 @@
-# MOSS CIRCUIT · 苔芯幸存者 v15 · 反应层覆盖收口
+# MOSS CIRCUIT · 苔芯幸存者 v16 · 可玩性与冲锋辨识
+
+本版修复标题seed跨设置/图鉴丢失、设置页Esc不能返回、失焦不暂停及HUD目标被遮挡；为Warden真实冲锋新增独立16帧，原blast砸地保持不变。已有真实云端Linux窗口验收，不把headless当作GUI；Windows导出与真人平衡验收仍未完成。范围、合同、回归及剩余问题见 [v16说明](docs/V16_PLAYABILITY.md)。
+
+## v15记录（历史）
 
 本版从已发布v14 commit `51a6f3ce4ae91e08212c7675df9a9f21620fee9f`延续，仅补Core的hurt9帧/0.27秒、death16帧/0.72秒。至此五种普通敌人和两Boss都有独立受击/死亡反应图；**这不是所有招式/整款游戏完成**，原攻击与所有玩法权威不变。本轮到反应层完整性里程碑收口，不继续扩新功能。见[Core合同](docs/CORE_REACTIONS.md)及[当前覆盖与GUI/手感未验项](docs/REACTION_COVERAGE.md)。
 
@@ -26,7 +30,7 @@ v10 冲锋者的蓄力/冲锋/恢复、受击、死亡九帧与已校准接地�
 v9 已完成的共享战斗/构筑与模式策略继续保留：原 Arena 和 3 房间有限遭遇原型使用同一套战斗，支持受控测试的非相邻推进/不开店结算；仍不是完整地牢。见 [架构与模式合同](docs/ARCHITECTURE_AND_MODES.md)。
 
 v8 的空手九帧身体、六种独立世界武器、主手与三个辅助挂位、独立枪口特效完整保留；[装配与共享发射几何](docs/MODULAR_WEAPONS.md) 不回退成烘焙手枪。
-保留 **6 武器、26 道具、4 武器槽、构筑加权刷新、五种普通敌人与两 Boss**，以及 [此前动作覆盖与本版修正](docs/ACTION_COVERAGE.md)、[六种像素 VFX](docs/PIXEL_VFX.md)、[装备刷新](docs/SHOP_AFFINITY.md)、[道具机制](docs/MECHANISMS.md)、[敌人/Boss](docs/ENEMIES_AND_BOSSES.md)、[经济](docs/BUILD_SYSTEM.md) 和 [UI](ui/README.md)。本版补齐五种普通敌人的独立受击/死亡图；crawler/flanker 接触攻击仍为程序化表现，两 Boss 的独立受击/死亡仍未补齐，没有增加音频、存档或联网。
+保留 **6 武器、26 道具、4 武器槽、构筑加权刷新、五种普通敌人与两 Boss**，以及 [此前动作覆盖与本版修正](docs/ACTION_COVERAGE.md)、[六种像素 VFX](docs/PIXEL_VFX.md)、[装备刷新](docs/SHOP_AFFINITY.md)、[道具机制](docs/MECHANISMS.md)、[敌人/Boss](docs/ENEMIES_AND_BOSSES.md)、[经济](docs/BUILD_SYSTEM.md) 和 [UI](ui/README.md)。五种普通敌人和两Boss已有独立受击/死亡图；crawler/flanker接触攻击仍为程序化表现。v16新增Warden独立冲锋；Core仍复用原attack表现ring/summon，没有增加音频、存档或联网。
 
 所有分包请按 [合并解压说明](docs/DELIVERY.md) 放到同一父目录；完整单包直接解压。
 
@@ -34,14 +38,14 @@ v8 的空手九帧身体、六种独立世界武器、主手与三个辅助挂�
 
 1. 安装 Godot 4.6 标准版（非 .NET 即可）。本次实际版本为官方 **4.6.3**。
 2. 解压后在 Godot 项目管理器选择 `project.godot`，导入后按 F6/F5，或者命令行 `godot --path .`。
-3. 标题界面选择 ARENA SURVIVAL 或 ROOM ENCOUNTERS，输入整数 seed，然后 START SALVAGE。只有标题允许切换模式；切换保留当前输入 seed，新局不会继承上局构筑。
+3. 标题界面选择 ARENA SURVIVAL 或 ROOM ENCOUNTERS，输入整数 seed，然后 START RUN。只有标题允许切换模式；切换保留当前输入 seed，新局不会继承上局构筑。
 
-这是**可导入的完整源码工程**，不是 Windows 安装包；没有运行 Windows 导出或真人操作验收。UI 暂为英文以避免系统中文字体依赖，中文说明见本文。
+这是**可导入的完整源码工程**，不是 Windows 安装包；没有运行 Windows 导出或真人平衡验收；v16已开始真实Linux窗口操作验收。UI 暂为英文以避免系统中文字体依赖，中文说明见本文。
 
 - WASD / 方向键：移动；自动瞄准最近敌人发射。
 - Space：短距离冲刺，2.5 秒冷却，冲刺期间免疫接触伤害。
 - 标题/暂停的 DISPLAY SETTINGS：降低受击提亮与特效透明度，仅会话内生效。
-- Esc：暂停/恢复；I：查看构筑/关闭背包；鼠标点击或数字 1/2/3 选升级。
+- Esc：暂停/恢复或退出设置；I：查看构筑/关闭背包；鼠标点击或数字 1/2/3 选升级。失焦时自动暂停，返回窗口后需要明确恢复。
 - 波间商店：购买、刷新、单件出售、满槽选择替换；替换会丢弃旧武器无返款。Tab/方向键切焦点、Enter 激活，长列表可滚动。
 - Arena：六波，每波至少 30 秒（Boss 波还需击杀 Boss）；波间回收地面经验、修复 15 HP 并选择升级。
 - Rooms：三份有限敌群计划，必须清完计划和所有召唤子体；清场安全过渡 0.6 秒，再升级/商店或终局。没有门交互或迷宫探索。
@@ -86,6 +90,8 @@ idle 暂复用 walk 第一帧；弹丸/经验/判定轮廓保留简单代码绘�
 
 ## 验证
 
+**v16最终r2（2026-10-25）：**作者与独立fresh-copy cold import及51个测试入口全通过，运行输入hash零变化；实际Linux窗口已核输入/失焦、HUD、完整三房间普通操作，以及受控Warden两方向动作/中断/预警可读性。初稿虽通过headless但未通过视觉验收，已明确留作拒绝记录；最终证据见 [v16报告](docs/validation/v16-runtime/QA_REPORT.md)。Windows/真人平衡仍未验。
+
 **v15反应层收口（2026-10-24）：**最终镜像安全metadata下，删缓存cold导入及46测试入口全通过；Core作者56项、独立403项、旧动作精确集合343项。164旧权威/配置/资源/场景/UI字节不变，runtime `.gd` 零改；同种子与包后验证见[工程报告](docs/validation/v15-core/QA_REPORT.md)及[独立报告](docs/validation/independent-v15-core/QA_REPORT.md)。以下v14及更早仅为历史。GUI/真人手感/Windows未验，见[收口清单](docs/REACTION_COVERAGE.md)。
 
 **v14守门者反应层（2026-10-24）：**删除生成缓存后cold headless导入与44个测试入口全部通过；作者38项、独立942项，旧动作精确ID/帧数回归314项。159个旧权威/配置/资产/UI/场景字节不变，runtime `.gd` 零修改。见[工程报告](docs/validation/v14-warden/QA_REPORT.md)及[独立报告](docs/validation/independent-v14-warden/QA_REPORT.md)。下列v13及更早均为历史结果。没有GUI或Windows导出验收。
@@ -120,11 +126,11 @@ HOME=/tmp/moss-home XDG_CONFIG_HOME=/tmp/moss-config XDG_DATA_HOME=/tmp/moss-dat
 
 自动测试覆盖有限 seed/升级、真实剪辑长度/区域/统一画布/脚底枢轴、动画速度缓存、场景启动/射击击杀/升级重复点击/六波胜利/死亡重开。日志见 `docs/validation/`（v1 历史保留在子目录）；不要只看进程退出码，Godot 某些脚本解析错误也会返回 0，应同时核无 SCRIPT ERROR/ERROR 且出现通过汇总。
 
-窗口运行与屏幕截图 **BLOCKED**：本云环境 Xorg 无法建立本地监听 socket；一次正常提权启动也在沙箱挂载阶段失败。未绕过权限，未伪造游戏截图。headless 规则通过不等于视觉、手感、性能或 Windows 验收。
+历史v1–v15窗口验收曾 **BLOCKED**：当时云环境 Xorg 无法建立本地监听 socket；一次正常提权启动也在沙箱挂载阶段失败。未绕过权限，未伪造游戏截图。headless 规则通过不等于视觉、手感、性能或 Windows 验收。
 
 ## 修改与后续
 
-新房间配置的有限数值/类型/4096 格预算见架构文档，非法输入在分配前拒绝。旧 balance 仍须按有效范围修改：arena 宽高至少 48、tile_size 必须大于 0；waves 与 max_enemies 为正整数、波时长/生成间隔为正数，升级 id 与字段须保持代码约定。本原型不提供任意 JSON 的运行时校验器。添加新的动作时按美术说明生成新九帧 sheet，先检查每帧轮廓/脚底，再登记 alpha 元数据；不要将新动作9张不同立绘当连续动画。下一批优先：真实窗口实玩与截图、构筑经济平衡、Boss 独立受击/死亡原画、挂点与遮挡的真实窗口微调、随机障碍连通验证、声音。
+新房间配置的有限数值/类型/4096 格预算见架构文档，非法输入在分配前拒绝。旧 balance 仍须按有效范围修改：arena 宽高至少 48、tile_size 必须大于 0；waves 与 max_enemies 为正整数、波时长/生成间隔为正数，升级 id 与字段须保持代码约定。本原型不提供任意 JSON 的运行时校验器。添加新的动作时按美术说明生成新九帧 sheet，先检查每帧轮廓/脚底，再登记 alpha 元数据；不要将新动作9张不同立绘当连续动画。下一批优先：商店初屏可操作性、清场经验升级时机、Core独立召唤表现、构筑经济平衡、挂点与遮挡的真实窗口微调、随机障碍连通验证、声音。
 
 ## 检查入口
 

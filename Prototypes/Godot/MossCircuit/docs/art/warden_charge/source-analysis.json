@@ -1,0 +1,667 @@
+{
+  "name": "boss_warden_charge",
+  "size": [
+    1254,
+    1254
+  ],
+  "mode": "RGBA",
+  "bytes": 1474139,
+  "sha256": "1c27e2bda27f3ef64b318261612cfb64433277d3f8e7b3301c5e49c5e3779f99",
+  "git_blob_sha1": "b34f0c0304d5f2f43404074d68bc6d11d0d75996",
+  "frame_count": 16,
+  "unique_pose_hashes": 16,
+  "complete_threshold_alpha_coverage": true,
+  "alpha_zero_pixels": 939935,
+  "alpha_threshold_pixels": 512719,
+  "logical_canvas": [
+    512,
+    400
+  ],
+  "fixed_anchor": [
+    0.5,
+    0.8
+  ],
+  "reference_height": 207,
+  "source_pose_order": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "source_row_baselines": [
+    301,
+    614,
+    903,
+    1185
+  ],
+  "source_partition_x_by_row": [
+    [
+      0,
+      338,
+      633,
+      934,
+      1254
+    ],
+    [
+      0,
+      329,
+      640,
+      926,
+      1254
+    ],
+    [
+      0,
+      323,
+      619,
+      934,
+      1254
+    ],
+    [
+      0,
+      320,
+      616,
+      929,
+      1254
+    ]
+  ],
+  "source_partition_y": [
+    0,
+    365,
+    659,
+    942,
+    1254
+  ],
+  "logical_visible_bottom_trajectory": [
+    320,
+    321,
+    321,
+    322,
+    320,
+    320,
+    317,
+    317,
+    320,
+    320,
+    319,
+    320,
+    320,
+    320,
+    321,
+    320
+  ],
+  "registration_policy": "Fixed scale/anchor, action-wide X and row-layout registration. Explicit semantic-anchor recovery keyframes13/14/15 add10/20/31px X; not per-frame bbox normalization.",
+  "frames": [
+    {
+      "source_pose_index": 0,
+      "source_partition": [
+        0,
+        0,
+        338,
+        365
+      ],
+      "source_alpha_bbox": [
+        43,
+        94,
+        265,
+        207
+      ],
+      "translation": [
+        79,
+        19
+      ],
+      "authored_x_correction": 0,
+      "source_guard_ltrb": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "logical_alpha_bbox": [
+        122,
+        113,
+        265,
+        207
+      ],
+      "visible_bottom": 320,
+      "alpha_threshold_pixels": 39645,
+      "pixel_sha256": "317e9280ff07be6373697c0c6db320f86f55f7a3d7bb2cdd82be088cd02e074f"
+    },
+    {
+      "source_pose_index": 1,
+      "source_partition": [
+        338,
+        0,
+        633,
+        365
+      ],
+      "source_alpha_bbox": [
+        368,
+        106,
+        230,
+        196
+      ],
+      "translation": [
+        -234,
+        19
+      ],
+      "authored_x_correction": 0,
+      "source_guard_ltrb": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "logical_alpha_bbox": [
+        134,
+        125,
+        230,
+        196
+      ],
+      "visible_bottom": 321,
+      "alpha_threshold_pixels": 33088,
+      "pixel_sha256": "70f6e4348f5d5a28e59998c65a44e73fa3e095b1054342b165e26b8f5f42c4aa"
+    },
+    {
+      "source_pose_index": 2,
+      "source_partition": [
+        633,
+        0,
+        934,
+        365
+      ],
+      "source_alpha_bbox": [
+        669,
+        111,
+        225,
+        191
+      ],
+      "translation": [
+        -548,
+        19
+      ],
+      "authored_x_correction": 0,
+      "source_guard_ltrb": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "logical_alpha_bbox": [
+        121,
+        130,
+        225,
+        191
+      ],
+      "visible_bottom": 321,
+      "alpha_threshold_pixels": 31291,
+      "pixel_sha256": "15cd367e95efaf2bb0ed36ada1c2f2b9fabec708e0b6660a4e885b51953c3933"
+    },
+    {
+      "source_pose_index": 3,
+      "source_partition": [
+        934,
+        0,
+        1254,
+        365
+      ],
+      "source_alpha_bbox": [
+        975,
+        122,
+        232,
+        181
+      ],
+      "translation": [
+        -861,
+        19
+      ],
+      "authored_x_correction": 0,
+      "source_guard_ltrb": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "logical_alpha_bbox": [
+        114,
+        141,
+        232,
+        181
+      ],
+      "visible_bottom": 322,
+      "alpha_threshold_pixels": 30395,
+      "pixel_sha256": "fbd64edcec0e8b5017ca149c59d1a16a81014eac1090bf4b57fe681bbdd7e439"
+    },
+    {
+      "source_pose_index": 4,
+      "source_partition": [
+        0,
+        365,
+        329,
+        659
+      ],
+      "source_alpha_bbox": [
+        50,
+        436,
+        249,
+        178
+      ],
+      "translation": [
+        79,
+        -294
+      ],
+      "authored_x_correction": 0,
+      "source_guard_ltrb": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "logical_alpha_bbox": [
+        129,
+        142,
+        249,
+        178
+      ],
+      "visible_bottom": 320,
+      "alpha_threshold_pixels": 30258,
+      "pixel_sha256": "f5f97061d5f788d3371960e138af43bd92052662ebc41b3ac824bacde4dac528"
+    },
+    {
+      "source_pose_index": 5,
+      "source_partition": [
+        329,
+        365,
+        640,
+        659
+      ],
+      "source_alpha_bbox": [
+        359,
+        439,
+        252,
+        175
+      ],
+      "translation": [
+        -234,
+        -294
+      ],
+      "authored_x_correction": 0,
+      "source_guard_ltrb": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "logical_alpha_bbox": [
+        125,
+        145,
+        252,
+        175
+      ],
+      "visible_bottom": 320,
+      "alpha_threshold_pixels": 29101,
+      "pixel_sha256": "15c8df3b7213b49d143e080986eaa4c08de23ec8698b160d6323f075e6395b6f"
+    },
+    {
+      "source_pose_index": 6,
+      "source_partition": [
+        640,
+        365,
+        926,
+        659
+      ],
+      "source_alpha_bbox": [
+        670,
+        436,
+        235,
+        175
+      ],
+      "translation": [
+        -548,
+        -294
+      ],
+      "authored_x_correction": 0,
+      "source_guard_ltrb": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "logical_alpha_bbox": [
+        122,
+        142,
+        235,
+        175
+      ],
+      "visible_bottom": 317,
+      "alpha_threshold_pixels": 29228,
+      "pixel_sha256": "3468cbf1fdc06be102e600c2f29e3da848677df301a674364bb7ddba93a6b931"
+    },
+    {
+      "source_pose_index": 7,
+      "source_partition": [
+        926,
+        365,
+        1254,
+        659
+      ],
+      "source_alpha_bbox": [
+        947,
+        421,
+        254,
+        190
+      ],
+      "translation": [
+        -861,
+        -294
+      ],
+      "authored_x_correction": 0,
+      "source_guard_ltrb": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "logical_alpha_bbox": [
+        86,
+        127,
+        254,
+        190
+      ],
+      "visible_bottom": 317,
+      "alpha_threshold_pixels": 29269,
+      "pixel_sha256": "19cbd88ac7ee6893bfd8c48cce9623a108e9a916adf8d65734e26ca40d8a9437"
+    },
+    {
+      "source_pose_index": 8,
+      "source_partition": [
+        0,
+        659,
+        323,
+        942
+      ],
+      "source_alpha_bbox": [
+        28,
+        717,
+        294,
+        186
+      ],
+      "translation": [
+        79,
+        -583
+      ],
+      "authored_x_correction": 0,
+      "source_guard_ltrb": [
+        4,
+        4,
+        1,
+        4
+      ],
+      "logical_alpha_bbox": [
+        107,
+        134,
+        294,
+        186
+      ],
+      "visible_bottom": 320,
+      "alpha_threshold_pixels": 30858,
+      "pixel_sha256": "30191fbe9d940bc9b3053f46c68ff8fda0b00780d9036e027adc1d66b4c86fa4"
+    },
+    {
+      "source_pose_index": 9,
+      "source_partition": [
+        323,
+        659,
+        619,
+        942
+      ],
+      "source_alpha_bbox": [
+        324,
+        719,
+        283,
+        184
+      ],
+      "translation": [
+        -234,
+        -583
+      ],
+      "authored_x_correction": 0,
+      "source_guard_ltrb": [
+        1,
+        4,
+        4,
+        4
+      ],
+      "logical_alpha_bbox": [
+        90,
+        136,
+        283,
+        184
+      ],
+      "visible_bottom": 320,
+      "alpha_threshold_pixels": 29139,
+      "pixel_sha256": "7c5fdbe615a24f40ef501f6993f981e1b7ec9a158fcc9fdda423669a4fca34ae"
+    },
+    {
+      "source_pose_index": 10,
+      "source_partition": [
+        619,
+        659,
+        934,
+        942
+      ],
+      "source_alpha_bbox": [
+        631,
+        721,
+        290,
+        181
+      ],
+      "translation": [
+        -548,
+        -583
+      ],
+      "authored_x_correction": 0,
+      "source_guard_ltrb": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "logical_alpha_bbox": [
+        83,
+        138,
+        290,
+        181
+      ],
+      "visible_bottom": 319,
+      "alpha_threshold_pixels": 28158,
+      "pixel_sha256": "db262ae5786cddb0dd734f5b7963e32c43a1a0b46bfc45658f834a9be1be1115"
+    },
+    {
+      "source_pose_index": 11,
+      "source_partition": [
+        934,
+        659,
+        1254,
+        942
+      ],
+      "source_alpha_bbox": [
+        947,
+        721,
+        278,
+        182
+      ],
+      "translation": [
+        -861,
+        -583
+      ],
+      "authored_x_correction": 0,
+      "source_guard_ltrb": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "logical_alpha_bbox": [
+        86,
+        138,
+        278,
+        182
+      ],
+      "visible_bottom": 320,
+      "alpha_threshold_pixels": 30230,
+      "pixel_sha256": "85a5b2b7a38b2aef40616c2afec044eaa195661a0abd24b5c4e0a7d7a0320b2a"
+    },
+    {
+      "source_pose_index": 12,
+      "source_partition": [
+        0,
+        942,
+        320,
+        1254
+      ],
+      "source_alpha_bbox": [
+        38,
+        992,
+        267,
+        193
+      ],
+      "translation": [
+        79,
+        -865
+      ],
+      "authored_x_correction": 0,
+      "source_guard_ltrb": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "logical_alpha_bbox": [
+        117,
+        127,
+        267,
+        193
+      ],
+      "visible_bottom": 320,
+      "alpha_threshold_pixels": 33229,
+      "pixel_sha256": "446cde0a63e481a056f15fb91ee443eb9ff0437479cf1a3bab55f032b390b5b6"
+    },
+    {
+      "source_pose_index": 13,
+      "source_partition": [
+        320,
+        942,
+        616,
+        1254
+      ],
+      "source_alpha_bbox": [
+        336,
+        991,
+        253,
+        194
+      ],
+      "translation": [
+        -224,
+        -865
+      ],
+      "authored_x_correction": 10,
+      "source_guard_ltrb": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "logical_alpha_bbox": [
+        112,
+        126,
+        253,
+        194
+      ],
+      "visible_bottom": 320,
+      "alpha_threshold_pixels": 35347,
+      "pixel_sha256": "475bdf28eb95a185b0c07a23fdefc307335f93aa1d049d24b544285fbb9ebeaa"
+    },
+    {
+      "source_pose_index": 14,
+      "source_partition": [
+        616,
+        942,
+        929,
+        1254
+      ],
+      "source_alpha_bbox": [
+        644,
+        990,
+        255,
+        196
+      ],
+      "translation": [
+        -528,
+        -865
+      ],
+      "authored_x_correction": 20,
+      "source_guard_ltrb": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "logical_alpha_bbox": [
+        116,
+        125,
+        255,
+        196
+      ],
+      "visible_bottom": 321,
+      "alpha_threshold_pixels": 35433,
+      "pixel_sha256": "c2e035e65d15cb15c8e82156b0491a4621868bc21bfdd03229481e9ff7bd29e0"
+    },
+    {
+      "source_pose_index": 15,
+      "source_partition": [
+        929,
+        942,
+        1254,
+        1254
+      ],
+      "source_alpha_bbox": [
+        959,
+        976,
+        257,
+        209
+      ],
+      "translation": [
+        -830,
+        -865
+      ],
+      "authored_x_correction": 31,
+      "source_guard_ltrb": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "logical_alpha_bbox": [
+        129,
+        111,
+        257,
+        209
+      ],
+      "visible_bottom": 320,
+      "alpha_threshold_pixels": 38050,
+      "pixel_sha256": "aac0ab7faac20bbd4da37be5051bb58f4a94a716d5d11dae6c2a81b7fa8b2340"
+    }
+  ]
+}
