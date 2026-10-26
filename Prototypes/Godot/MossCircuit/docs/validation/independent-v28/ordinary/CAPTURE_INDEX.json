@@ -1,0 +1,205 @@
+{
+  "scope": "Unchanged actual game-window-only captures; automated CUA keyboard/mouse and tactical pauses on exact exported Linux artifact. No programmatic game-state/build/economy injection. Some early filenames were optimistic; captions explicitly correct them rather than renaming or discarding evidence.",
+  "captures": [
+    {
+      "file": "captures/01-title.png",
+      "sha256": "556fef5dd9486021e68262fb3ebd536ff69874a2201bda7d2215ee112d09e545",
+      "bytes": 124810,
+      "pixels": [
+        65536,
+        4290773009
+      ],
+      "caption": "Initial ordinary exported title, before changing mode/seed."
+    },
+    {
+      "file": "captures/02-seed128-rooms.png",
+      "sha256": "129eb28d868ba7d435902944c1881d2ca214f1a614b958a70f6007a15edbe46e",
+      "bytes": 123912,
+      "pixels": [
+        65536,
+        4290773009
+      ],
+      "caption": "Failed first seed-field focus attempt after title reflow: Rooms selected, default seed still present. Filename is not seed-confirmation evidence. No run began here."
+    },
+    {
+      "file": "captures/03-seed-confirmed.png",
+      "sha256": "7cdb2474e88d2dc431fa05281a711540821ea3ef2f6706ecc8214a9e14090a12",
+      "bytes": 124005,
+      "pixels": [
+        65536,
+        4290773009
+      ],
+      "caption": "Rooms mode and seed128 visibly confirmed before starting."
+    },
+    {
+      "file": "captures/04-room1-combat.png",
+      "sha256": "e6931d332db860b8f6c663812aa9ef955f680c1b53a0dcc2e90484b055f26672",
+      "bytes": 187318,
+      "pixels": [
+        65536,
+        4290773009
+      ],
+      "caption": "Ordinary Room1 combat start: starter Rivet,100HP,0kills."
+    },
+    {
+      "file": "captures/05-room1-progress.png",
+      "sha256": "ae6ab6667af1d02cc820772217b62c72fdf28e4cda8d8e714431892e58a2ecab",
+      "bytes": 190501,
+      "pixels": [
+        65536,
+        4290773009
+      ],
+      "caption": "Room1 ordinary combat:2kills,100HP."
+    },
+    {
+      "file": "captures/06-first-settlement-choice.png",
+      "sha256": "4560f6f5d43a4fc3c72cb748c0a006b1897dd1f732f4170eb129992e6a0429c3",
+      "bytes": 187089,
+      "pixels": [
+        65536,
+        4290773009
+      ],
+      "caption": "Despite filename, still Room1 combat at7seconds,2kills,100HP; NOT a settlement choice."
+    },
+    {
+      "file": "captures/07-room1-outcome-observation.png",
+      "sha256": "506283de2d4de36892384aa1afd1f7672de1825a3faa224de4c60c6d9afeedcc",
+      "bytes": 100367,
+      "pixels": [
+        65536,
+        4290773009
+      ],
+      "caption": "First naturally reached upgrade prompt; chose Light Feet."
+    },
+    {
+      "file": "captures/08-first-shop.png",
+      "sha256": "8171387cd0323e2ac144689badb536311c4a8207cb2035c3039cdffdb2041160",
+      "bytes": 101322,
+      "pixels": [
+        65536,
+        4290773009
+      ],
+      "caption": "Despite filename, second queued upgrade prompt, not shop; chose Repair Plating. Existing Rooms settlement adds a choice beyond earned XP."
+    },
+    {
+      "file": "captures/09-after-health-choice.png",
+      "sha256": "6f5b20dbe7911571577980c46b35ec4c51751057dde014f6f3484d3461392fec",
+      "bytes": 140913,
+      "pixels": [
+        65536,
+        4290773009
+      ],
+      "caption": "Actual first shop:66scrap, starterRivet, first Bankshot offer."
+    },
+    {
+      "file": "captures/10-rail-reserved.png",
+      "sha256": "678c08fed22d122b8f9840038332fe767116721dce3b858ddac835ceb1bb33ee",
+      "bytes": 131109,
+      "pixels": [
+        65536,
+        4290773009
+      ],
+      "caption": "Actual free reservation of Rail at original slot1;66scrap and Rivet-only ownership remain."
+    },
+    {
+      "file": "captures/11-power-purchased.png",
+      "sha256": "9aac77c909ea6615685a01f09a79cfd501e26ca1e2b56646e41f8787e82816a2",
+      "bytes": 135604,
+      "pixels": [
+        65536,
+        4290773009
+      ],
+      "caption": "Actual Power Coil purchase18:66→48scrap, module1/8, Rail still reserved."
+    },
+    {
+      "file": "captures/12-first-paid-refresh.png",
+      "sha256": "9b2bc19e98c9467a502fdaa49e7e56a485a4e01cd7c09b04983b58a45579fee8",
+      "bytes": 131194,
+      "pixels": [
+        65536,
+        4290773009
+      ],
+      "caption": "First paid refresh5:48→43scrap, three new offers plus reservation retained; Power remains owned."
+    },
+    {
+      "file": "captures/13-held-unaffordable.png",
+      "sha256": "03f5dd1cad359abfef90eaf991d70226c86fd630a05709c915dad43c5a284ce7",
+      "bytes": 129160,
+      "pixels": [
+        65536,
+        4290773009
+      ],
+      "caption": "Second paid refresh5:43→38scrap. Rail remains RESERVED, BUY42 disabled, RELEASE enabled."
+    },
+    {
+      "file": "captures/14-room2-start.png",
+      "sha256": "011da6e7da52dacc52ed2aa9083cdeb34b95b7af49a2cf92dbc358427997ab62",
+      "bytes": 89940,
+      "pixels": [
+        65536,
+        4290773009
+      ],
+      "caption": "Paused menu immediately after deploying Room2; opaque menu does not itself prove combat position."
+    },
+    {
+      "file": "captures/15-room2-combat.png",
+      "sha256": "37ec87924f3dff9088893a37a005befb0277e7dfb42e9e3b89dd83dfdcb52873",
+      "bytes": 186654,
+      "pixels": [
+        65536,
+        4290773009
+      ],
+      "caption": "Ordinary Room2 combat:13seconds,120/120HP,6kills,1enemy alive. HP is observed here, not claimed from later shop."
+    },
+    {
+      "file": "captures/16-room2-settlement.png",
+      "sha256": "1a555bea04b2614d180cfaafca2e9020bbd5cab658f2efe7cc93dabbcac5cf53",
+      "bytes": 100336,
+      "pixels": [
+        65536,
+        4290773009
+      ],
+      "caption": "Natural post-Room2 upgrade prompt; chose Light Feet. No injected clear or reward."
+    },
+    {
+      "file": "captures/17-second-shop-entry.png",
+      "sha256": "d9e7f6f2f726a491242b3655d0414b349bd1d8a758c99859a68f4d5ac6d1f267",
+      "bytes": 102369,
+      "pixels": [
+        65536,
+        4290773009
+      ],
+      "caption": "Despite filename, second queued upgrade prompt before second shop; chose Salvage Magnet."
+    },
+    {
+      "file": "captures/18-second-shop-held.png",
+      "sha256": "93678612932d5691a13a556c579c3ccfaba7c912345f557228324b66e200fbb1",
+      "bytes": 132970,
+      "pixels": [
+        65536,
+        4290773009
+      ],
+      "caption": "Actual second natural shop:73scrap, retained Rail at original slot1, still not owned; BUY42 enabled."
+    },
+    {
+      "file": "captures/19-reserved-purchase.png",
+      "sha256": "4721155354997ef396e5069cd00440aee63c4365ae25a275d073fbc43e72f172",
+      "bytes": 131069,
+      "pixels": [
+        65536,
+        4290773009
+      ],
+      "caption": "Actual reserved Rail purchase42:73→31scrap, message Purchased reserved offer, weapons2/4, Rail SLOT2."
+    },
+    {
+      "file": "captures/20-sold-and-owned.png",
+      "sha256": "6b8b6036a477ac6fa53fd1f67a262a37c1bf0c4a61847e1cf04830ae7a238d0e",
+      "bytes": 132759,
+      "pixels": [
+        65536,
+        4290773009
+      ],
+      "caption": "Original Rail offer visibly SOLD with reserve disabled; owned SLOT2 Rail current34.50damage,1.150s interval. Reservation cleared; no new stock drawn."
+    }
+  ]
+}

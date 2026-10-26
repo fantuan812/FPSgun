@@ -1,0 +1,18 @@
+{
+  "production_input_changes": [],
+  "comparisons": [
+    {
+      "trace": "no-reservation",
+      "equal": true,
+      "sha256": "f674dddff3f6d5e60d275bd1bd0f1062f9dd76b6d3dc921317ac9192f544b490",
+      "bytes": 473926
+    },
+    {
+      "trace": "no-reservation-combat",
+      "equal": true,
+      "sha256": "fc4ee95d328213030489817950151f31f9c3a7e95712b3ca1765714f43e74722",
+      "bytes": 1853347
+    }
+  ],
+  "scope": "Exact finite declared old-state/RNG projections; no reservation used, not all inputs or balance certification"
+}

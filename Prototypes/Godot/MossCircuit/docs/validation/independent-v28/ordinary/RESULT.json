@@ -1,0 +1,77 @@
+{
+  "verdict": "PASS finite two-shop carry/purchase route",
+  "mode": "rooms",
+  "seed": 128,
+  "seed_planning": "Offline first-shop offer search only; actual purchase/build/scrap and progression used ordinary controls. Intended one refresh became two after observed66scrap so heldRail42 was genuinely unaffordable at38. No state injection.",
+  "first_stock": [
+    "bankshot_driver",
+    "rail_lance",
+    "power_coil",
+    "bounce_guide"
+  ],
+  "first_shop_scrap": 66,
+  "reserved": {
+    "id": "rail_lance",
+    "original_slot": 1,
+    "price": 42
+  },
+  "ordinary_transactions": [
+    {
+      "action": "reserve Rail",
+      "before": 66,
+      "after": 66
+    },
+    {
+      "action": "buy Power Coil18",
+      "before": 66,
+      "after": 48
+    },
+    {
+      "action": "paid refresh5",
+      "before": 48,
+      "after": 43
+    },
+    {
+      "action": "paid refresh5",
+      "before": 43,
+      "after": 38
+    },
+    {
+      "action": "natural Room2 settlement and nextshop",
+      "before": 38,
+      "after": 73
+    },
+    {
+      "action": "buy reserved Rail42",
+      "before": 73,
+      "after": 31
+    }
+  ],
+  "upgrades": [
+    "Light Feet",
+    "Repair Plating",
+    "Light Feet",
+    "Salvage Magnet"
+  ],
+  "final_owned_weapons": [
+    "rivet_gun",
+    "rail_lance"
+  ],
+  "final_owned_modules": {
+    "power_coil": 1
+  },
+  "observed_final": "Rail card SOLD, Rail SLOT2, no reservation,31scrap. Test ends at second shop; no Room3 or terminal-outcome claim.",
+  "health_limit": "120/120 visible before last Room2 enemy died; later shop does not display HP.",
+  "closure": "External terminal Ctrl+C after completed bounded route; native game window absence observed. Not graceful in-game quit.",
+  "diagnostics": [
+    "unsupported V-Sync warning",
+    "ALSA ERR_CANT_OPEN followed by dummy audio fallback; no audio certification"
+  ],
+  "limits": [
+    "one Rooms seed only",
+    "controlled tests separately cover Arena and unavailable transaction edges",
+    "no physical controller or shipped joypad mapping claim",
+    "Windows pack equality only; Windows runtime untested",
+    "not full campaign, balance, fun, all-seed, persistence or performance certification"
+  ]
+}

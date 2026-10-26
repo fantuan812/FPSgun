@@ -1,0 +1,10 @@
+{
+  "production_fix": "Invalid held-ID association now recognizes detached original offer ID before rejection; R1 rejected on 2/901 controlled checks, normal cases passed.",
+  "harness_adjustment": "Views R1 assumed default Joypad A mapping. Accepted v27 probe shows ui_accept only Enter, KP Enter and Space. No controller binding injected. Revised test dispatches existing ui_accept action and labels it synthetic action-level coverage only. Original script/log/result retained.",
+  "r2_helper_sha256": "d4e6b770acbcfa216c56079366ad9c7129b13a4262a8e7c186b0f2e4891d8e11",
+  "r1_files": {
+    "independent_reservation_runtime.gd": "938f0cabdb6e24531ee3a786a1ae7d827cba13f6f87d965b290adf0b011ef8cb",
+    "independent_reservation_views.gd": "6d56be48df3785b7d2f109950060602d05e47bad0748cc27e9fedcf6d945f9ec",
+    "shop_reservation.gd": "960edaf583e733e2de7d2b9d4ec04119a1a17eee7379fe64849ad4db8522c073"
+  }
+}

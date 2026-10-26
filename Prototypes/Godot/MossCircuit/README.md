@@ -1,3 +1,18 @@
+# MossCircuit v28 — reserve one shop offer
+
+A build-planning decision, not another stat item: **RESERVE one unsold offer for free**, even when unaffordable or equipment slots are full. Its original price and draw metadata survive refreshes and later shops. The trade-off is one occupied stock slot: the unchanged 5-scrap refresh draws only three fresh offers. It is not owned equipment and grants no stats, tags or synergy. Explicit RELEASE leaves current stock untouched; successful purchase consumes the hold; terminal results and new runs clear it.
+
+- All 37 catalog entries, six upgrades, economy amounts, art and combat remain unchanged. Without a reservation, 80 controlled shop/transaction cases, 800 seeded draws and 3,200 combat steps match v27 exactly. Using a hold intentionally changes the fresh-draw path.
+- Final author and independent suites: 87 standalone entries + import, with unchanged tested inputs. Independent reservation checks 901, malformed-record/data checks 285, UI layout/callback/action checks 3,170; exact pack 837 and packed reservation 901 pass.
+- Actual native keyboard/mouse review covers both modes at 960×540 and 1280×720. Default ui_accept has keyboard bindings only; synthetic action dispatch is not physical-controller support. No binding was added.
+- One ordinary seed-128 Rooms attempt reserved Rail, bought Power, refreshed into unaffordability (38 scrap), carried Rail into the next natural shop (73), then purchased it for 42 (31 remaining), with SOLD/clear and equipped SLOT2 observed. Automated CUA/tactical pauses; no state injection or full-campaign/balance claim.
+
+[GitHub runtime restoration and manual backup/replacement](../../../Deliveries/MossCircuit/v28/READ_ME_v28.txt) uses a complete new PCK with the unchanged verified executable. Windows remains existing executable + resource pack, not runtime-tested; cloud audio/VSync limitations remain explicit. No chat attachments.
+
+See the [exact contract](docs/V28_RESERVED_OFFER_CONTRACT.md), [implementation and validation notes](docs/V28_RESERVED_OFFER.md), and [independent evidence](docs/validation/independent-v28/QA_REPORT.md). Earlier version documentation below is retained history, not an assertion that every old acceptance scope was repeated.
+
+---
+
 # MOSS CIRCUIT · v27 · Broodkeeper 空心脉冲
 
 现有 Moss Broodkeeper 现在先预警 1 秒，在固定中心的 **70–180 像素闭环带**尝试一次原有 **11 点伤害**，再与旧召唤交替。两条橙边均危险；可以向内进入空洞，或向外离开环带，但其他攻击仍会命中。没有新敌人/道具/场地或随机抽取；召唤机会改为隔次，明确属于遭遇内容变化。复用原有 16 帧撑起/收势素材，不称为新绘制动画。

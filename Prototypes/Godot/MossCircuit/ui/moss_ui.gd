@@ -325,19 +325,24 @@ func show_shop(view: Dictionary) -> void:
 	var columns := HBoxContainer.new(); columns.size_flags_vertical = Control.SIZE_EXPAND_FILL; body.add_child(columns)
 	var offers := _scroll(columns); offers.custom_minimum_size.x = 420
 	var bag := _scroll(columns)
-	_shop_bias(offers, view.get("shop_bias", {}))
+	var reservation:Dictionary=view.get("reserved_offer",{})
+	_shop_bias(offers, view.get("shop_bias", {}),reservation)
 	for offer in view.get("offers", []):
-		var c := _card(offers, offer, "", view.get("synergy_status", []),true)
+		var held:bool=bool(offer.get("reserved",false))
+		var c := _card(offers, offer, "  [RESERVED]" if held else "", view.get("synergy_status", []),true)
 		_text(c, "%s / %s" % [str(offer.get("rarity", "common")).to_upper(), ", ".join(offer.get("tags", []))], 12)
+		if held: _text(c,"NOT OWNED / retained for later shops; only three fresh offers per draw.",12)
 		if offer.has("weight_multiplier"):
-			var weight_details:=_disclosure(c,"DRAW-TIME WEIGHT")
+			var weight_details:=_disclosure(c,"ORIGINAL DRAW / RETAINED" if held else "DRAW-TIME WEIGHT")
 			_text(weight_details, "DRAW-TIME RELATIVE WEIGHT: x%.2f (not a chance)" % float(offer.weight_multiplier), 12)
+			if held: _text(weight_details,"Retained metadata, not a new draw or current chance.",12)
 			var reasons: Array = offer.get("bias_reasons", [])
 			if not reasons.is_empty(): _text(weight_details, "AT DRAW: " + "; ".join(reasons), 12)
 		var sold: bool = bool(offer.get("sold", false))
 		var can_buy: bool = bool(offer.get("can_buy", false))
 		var payload := {"index": int(offer.get("index", 0)), "generation": generation, "replace_slot": -1}
 		var full: bool = offer.get("kind", "") == "weapon" and view.get("weapons", []).size() >= int(view.get("weapon_slots", 4))
+		var actions:=HBoxContainer.new(); c.add_child(actions)
 		if full and not sold:
 			var replacement_notice:=_text(c, "Slots full: replace destroys the old weapon (no refund).", 12)
 			var select := OptionButton.new(); select.size_flags_horizontal = Control.SIZE_EXPAND_FILL
@@ -348,27 +353,39 @@ func show_shop(view: Dictionary) -> void:
 			buy.disabled = not can_buy or int(view.get("coins", 0)) < int(offer.get("price", 0))
 			buy.pressed.connect(func():
 				var p: Dictionary = payload.duplicate(); p.replace_slot = select.get_selected_id(); intent.emit("buy", p))
-			c.add_child(buy)
-			c.move_child(replacement_notice,1);c.move_child(select,2);c.move_child(buy,3)
+			buy.size_flags_horizontal=Control.SIZE_EXPAND_FILL; actions.add_child(buy)
+			c.move_child(replacement_notice,1);c.move_child(select,2);c.move_child(actions,3)
 			if first_focus == null and not buy.disabled: first_focus = select
 		else:
-			var purchase:=_button(c, "SOLD" if sold else "BUY  /  %d SCRAP" % int(offer.get("price", 0)), "buy", payload, sold or not can_buy)
-			c.move_child(purchase,1)
+			var purchase:=_button(actions, "SOLD" if sold else "BUY  /  %d SCRAP" % int(offer.get("price", 0)), "buy", payload, sold or not can_buy)
+			purchase.size_flags_horizontal=Control.SIZE_EXPAND_FILL
+			c.move_child(actions,1)
+		var reserve:Button
+		if held:
+			reserve=_button(actions,"RELEASE","release_offer",{"token":int(offer.get("reservation_token",-1)),"generation":generation})
+			reserve.tooltip_text="Release this reservation for free. Current stock stays unchanged."
+		else:
+			reserve=_button(actions,"RESERVE","reserve_offer",{"index":int(offer.get("index",-1)),"generation":generation},not bool(offer.get("can_reserve",false)))
+			reserve.tooltip_text="Reserve one unsold offer for later shops, free. Not ownership: only three fresh slots remain." if reservation.is_empty() else "One reservation at a time. Release the held offer first."
 	_inventory(bag, view, true)
 	var footer := HBoxContainer.new(); body.add_child(footer)
-	_button(footer, "REFRESH  /  %d SCRAP" % int(view.get("refresh_price", 5)), "refresh", {"generation": generation}, int(view.get("coins", 0)) < int(view.get("refresh_price", 5)))
+	_button(footer, ("REFRESH 3  /  %d SCRAP" if reservation.get("valid",false) else "REFRESH  /  %d SCRAP") % int(view.get("refresh_price", 5)), "refresh", {"generation": generation}, int(view.get("coins", 0)) < int(view.get("refresh_price", 5)))
 	_button(footer, "DEPLOY NEXT ROOM" if view.get("mode_id","")=="rooms" else "DEPLOY NEXT WAVE", "continue", {"generation": generation})
 	_finish()
 
-func _shop_bias(parent: Node, bias: Dictionary) -> void:
+func _shop_bias(parent: Node, bias: Dictionary, reservation:Dictionary={}) -> void:
 	if bias.is_empty(): return
 	var panel := PanelContainer.new(); parent.add_child(panel)
 	var content := VBoxContainer.new(); panel.add_child(content)
-	_text(content, "NEXT REFRESH / BUILD PREFERENCE", 15).add_theme_color_override("font_color", AMBER)
+	_text(content, "NEXT REFRESH / 3 NEW + 1 RESERVED" if reservation.get("valid",false) else "NEXT REFRESH / BUILD PREFERENCE", 15).add_theme_color_override("font_color", AMBER)
 	var tags: Array = bias.get("preferred_tags", [])
 	var partners: Array = bias.get("missing_partners", [])
 	_text(content, "PREFERRED TAGS: " + (", ".join(tags) if not tags.is_empty() else "None"), 12)
 	var details:=_disclosure(content,"DRAW DETAILS")
+	_text(details,"Reserve one unsold offer for free, even if unaffordable or equipment slots are full. It stays through later shops, occupies one stock slot, and grants no ownership or build bonus. Release first to reserve a different offer.",12)
+	if not reservation.is_empty():
+		_text(details,"RESERVED: "+str(reservation.get("name","Unknown"))+" / NOT OWNED",12)
+		if not reservation.get("valid",false): _text(details,"Will release before the next successful stock draw: "+str(reservation.get("invalid_reason","unavailable")),12)
 	_text(details, "MISSING PARTNERS: " + (", ".join(partners) if not partners.is_empty() else "None"), 12)
 	if not str(bias.get("summary", "")).is_empty(): _text(details, str(bias.summary), 12)
 	for source in bias.get("sources", []): _text(details, "WEIGHT SOURCE: " + str(source), 12)

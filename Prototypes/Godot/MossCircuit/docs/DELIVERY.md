@@ -1,35 +1,9 @@
-# v27 Broodkeeper hollow pulse — GitHub-only 交付
+# v28 GitHub-only delivery
 
-现有 Broodkeeper 的空心预警创造向内/向外两种走位选择，与原召唤交替；没有新敌人、道具或随机抽取变化。有限源码、受控原生、精确 PCK 与一次普通 Rooms 流程已通过，精确语义和限制见 `V27_BROOD_PULSE_CONTRACT.md` / `V27_BROOD_PULSE.md`。
+Source, finite evidence and a complete runtime resource pack are published on the existing FPSgun development branch. No redundant executable or ZIP chain is produced. `Deliveries/MossCircuit/CATALOG.json` preserves all earlier 54 logical delivery records and appends v28 PCK/instructions; historical original bytes remain intact.
 
-源码/证据以正常 Git 提交交付，目录追加 v27 完整 PCK 与说明，旧 52 条版本文件记录保留。14 个不超过 3,000,000 字节的存储分块由未改动的 `restore_deliveries.py --version v27` 恢复为一个完整 PCK，不是差分补丁，不再合并 ZIP。不发送聊天附件或重复未改动的平台程序。
+Use the unchanged verified restore helper with `--version v28`, then follow the versioned instructions: verify the accepted ELF/EXE and new PCK hashes, close the game, make a distinct verified old-PCK backup, and replace only the adjacent PCK manually. First installs must recover the complete historical v19 platform bundle and licenses. No automatic installation, network request or overwrite occurs in the helper. Hardlinks are required; publication is atomic per file, not a whole-version transaction. Windows helper/runtime execution is not claimed.
 
-当前 PCK：`dae99ca5e7b967a6cc7d6493f7a662cd8927f4009fd17049619983a846cfde89`，41,352,052 字节。程序必须匹配说明中已有 Linux/Windows 哈希；先关闭游戏、备份并核对旧 PCK，再手动替换。首次安装先恢复完整 v19 平台包并保留许可证。Windows 未运行验收，显示设置仅会话内有效，云端声音/VSync 限制明确；实际远端提交和逐对象字节读回另由发布记录证明。
+PCK: 41,361,216 bytes; SHA-256 `5db5ded8a5b18eb6ac391b58a261e245588aa52cd7dbc65575f5101fb5828f69`, stored in 14 ordered chunks. Existing Linux executable SHA-256 `2c78919325d7f29fa7607287c7c1eeac367ea4c94e7b8b6f5f4c6b20492f73d0`; Windows executable `91724f15024a3a545e28ccd83134403d31ce2323a38e51c95e4dfa282f732ab6`. Both preset packs match; neither executable was rebuilt.
 
----
-
-## v26 交付记录（历史原文）
-
-# v26 Feedback Diode — GitHub-only 交付
-
-新增一个独特的冲刺接触反击模块，精确语义与有限验证边界见 `V26_FEEDBACK_CONTRACT.md` / `V26_FEEDBACK_DIODE.md`。旧源码和历史验证路径全部保留。
-
-本次不生成重复整包或聊天附件。当前源码与证据以正常 Git 提交交付；`Deliveries/MossCircuit/CATALOG.json` 新增 v26 完整 PCK 与说明记录，旧 50 个已发送原件记录不变。PCK 以不超过 3,000,000 字节的连续 Git 存储分块保存，用未改动的 `restore_deliveries.py --version v26` 校验并恢复成一个 `MossCircuit.pck`，不需要再次合并 ZIP。
-
-这不是独立安装包。使用说明中哈希一致的原 Linux/Windows 程序，关闭游戏、备份并校验旧 PCK 后再手动替换；首次安装先恢复完整 v19 平台包及许可证。程序没有重编译，两个预设的新资源包字节一致。Windows 只是既有已检查程序 + 新 PCK，未在 Windows 运行。普通 Linux 操作仅证明有限购买、显示与接触尝试，不能把未捕获的紫色回线称为成功反击。
-
-当前 PCK：`59096e791e270250a7c6a314d741d7295100016863be2ba85455795c88017e33`，41,347,432 字节。最终远端可达性与逐对象字节读回由发布记录证明，不从本地测试推断。显示设置仅当前会话有效；已知原生诊断和声音/平台限制详见独立报告。
-
----
-
-## 先前交付记录（原文）
-
-# v25 标签协同进度交付（有限验收）
-
-仅显示三个既有标签规则的当前进度与准确作用范围；不新增内容或修改平衡。规则定义、计数和启用状态由权威计算与只读视图共用。机制配对仍是独立章节，不把当前没有匹配武器误写成协同未启用。详见 `V25_TAG_SYNERGY_PROGRESS.md`。
-
-源码采用覆盖增量：先按 `V25_SOURCE_BASE.json` 恢复完整 v23 源码与已验收 v24 覆盖包，再叠加本批。保留所有未出现的历史文件，不删除。运行更新是另一份手动 v24→v25 PCK 包，要求旧 PCK 与程序校验匹配，关闭游戏并独立备份旧 PCK 后再手动替换；不是独立安装包，也不自动操作用户文件。
-
-复用已验收 Linux 程序和此前检查过的 Windows EXE，不复制或重新构建程序。Windows 表示既有程序加新资源包，未在 Windows 执行。显示设置仅当前会话有效；已知云端音频与 VSync 限制仍在。本批固定资源包与手动更新/分卷已通过独立字节检查和有限 Linux 原生显示验收；源码增量另以重建清单和独立归档检查固定范围。
-
-GitHub 发布依赖实际授权、分支更新和读回；本地通过不等于远端已更新。旧版本源码、运行包和证据保持独立不变。
+Read `docs/validation/independent-v28/QA_REPORT.md` for source, controlled, native, ordinary and packed-resource evidence boundaries. Exact run diagnostics, closure and before/after identity checks are explicit. A branch/tree match alone is not a fresh file-byte download: publication verification separately records fresh distinct-object readback and eligible prior exact SHA-256/Git-SHA/size proofs. Immutable version records link the accepted source commit after publication.

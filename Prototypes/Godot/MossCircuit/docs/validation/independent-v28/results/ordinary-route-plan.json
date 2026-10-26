@@ -1,0 +1,122 @@
+{
+  "routes": [
+    {
+      "offers": [
+        {
+          "bias_reasons": [
+            "Shared tag: ballistic"
+          ],
+          "id": "bankshot_driver",
+          "sold": false,
+          "weight": 1.35,
+          "weight_multiplier": 1.35
+        },
+        {
+          "bias_reasons": [],
+          "id": "rail_lance",
+          "sold": false,
+          "weight": 1.0,
+          "weight_multiplier": 1.0
+        },
+        {
+          "bias_reasons": [],
+          "id": "power_coil",
+          "sold": false,
+          "weight": 1.0,
+          "weight_multiplier": 1.0
+        },
+        {
+          "bias_reasons": [],
+          "id": "bounce_guide",
+          "sold": false,
+          "weight": 1.0,
+          "weight_multiplier": 1.0
+        }
+      ],
+      "power_slot": 2,
+      "rail_slot": 1,
+      "seed": 128,
+      "shop_rng_after": -7920488206782313457
+    },
+    {
+      "offers": [
+        {
+          "bias_reasons": [],
+          "id": "power_coil",
+          "sold": false,
+          "weight": 1.0,
+          "weight_multiplier": 1.0
+        },
+        {
+          "bias_reasons": [
+            "Shared tag: ballistic",
+            "Duplicate weapon fits current loadout"
+          ],
+          "id": "rivet_gun",
+          "sold": false,
+          "weight": 1.85,
+          "weight_multiplier": 1.85
+        },
+        {
+          "bias_reasons": [],
+          "id": "rail_lance",
+          "sold": false,
+          "weight": 1.0,
+          "weight_multiplier": 1.0
+        },
+        {
+          "bias_reasons": [
+            "Shared tag: ballistic"
+          ],
+          "id": "return_disc",
+          "sold": false,
+          "weight": 1.35,
+          "weight_multiplier": 1.35
+        }
+      ],
+      "power_slot": 0,
+      "rail_slot": 2,
+      "seed": 313,
+      "shop_rng_after": -738817385724642166
+    },
+    {
+      "offers": [
+        {
+          "bias_reasons": [
+            "Shared tag: ballistic"
+          ],
+          "id": "echo_chamber",
+          "sold": false,
+          "weight": 1.35,
+          "weight_multiplier": 1.35
+        },
+        {
+          "bias_reasons": [],
+          "id": "power_coil",
+          "sold": false,
+          "weight": 1.0,
+          "weight_multiplier": 1.0
+        },
+        {
+          "bias_reasons": [],
+          "id": "pulse_boots",
+          "sold": false,
+          "weight": 1.0,
+          "weight_multiplier": 1.0
+        },
+        {
+          "bias_reasons": [],
+          "id": "rail_lance",
+          "sold": false,
+          "weight": 1.0,
+          "weight_multiplier": 1.0
+        }
+      ],
+      "power_slot": 1,
+      "rail_slot": 3,
+      "seed": 408,
+      "shop_rng_after": 947350028034567543
+    }
+  ],
+  "scope": "Offline seed planning only; no game state injection or ordinary acquisition claim. Starter Rivet plus level upgrades leaves affinity tags unchanged. Intended ordinary route: reserve Rail, buy Power if earned scrap permits, pay one refresh, deploy and observe next natural shop before purchasing or explicitly unlocking."
+}

@@ -1,0 +1,27 @@
+{
+  "scope": "One losslessly compressed accepted-v27 output per finite trace; R1 and R2 output bytes were exactly equal, as recorded in equality receipts. Raw originals remain preserved separately. This is declared old-state projection equality, not new reservation-state equality or general balance certification.",
+  "traces": [
+    {
+      "file": "no-reservation-v27.json.gz",
+      "uncompressed_bytes": 473926,
+      "uncompressed_sha256": "f674dddff3f6d5e60d275bd1bd0f1062f9dd76b6d3dc921317ac9192f544b490",
+      "compressed_sha256": "2784d54a2b23014fb88e29f610c5b0d0716a5e916c03d90ea659373510489c0d",
+      "compared": [
+        "accepted-v27",
+        "v28-r1",
+        "v28-r2"
+      ]
+    },
+    {
+      "file": "no-reservation-combat-v27.json.gz",
+      "uncompressed_bytes": 1853347,
+      "uncompressed_sha256": "fc4ee95d328213030489817950151f31f9c3a7e95712b3ca1765714f43e74722",
+      "compressed_sha256": "0b64dee99a4f263fbcfc5db931149021f7835afd641056f56f011b9a04b92261",
+      "compared": [
+        "accepted-v27",
+        "v28-r1",
+        "v28-r2"
+      ]
+    }
+  ]
+}
