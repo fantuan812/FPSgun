@@ -1,0 +1,135 @@
+{
+  "evidence_label": "v31-r3-controlled-native-appearance",
+  "verdict": "PASS",
+  "scope": "Personal pixel review of 13 supplied controlled source-native stills; no desktop interactions or production edits.",
+  "captures": [
+    {
+      "path": "captures/04-arena960-initial-r3.jpg",
+      "sha256": "8c6903571ec85d6948d589ced6f19bae243c0548fffdd89f632fdd2fcfa84fd1",
+      "dimensions": [
+        960,
+        540
+      ]
+    },
+    {
+      "path": "captures/05-arena960-scatter-r3.jpg",
+      "sha256": "4d2940926b1a9a4b5996dffea7c9e660b95202c610a0d7adc893603dff57d7fc",
+      "dimensions": [
+        960,
+        540
+      ]
+    },
+    {
+      "path": "captures/08-rooms960-retained-scatter-r3.jpg",
+      "sha256": "0f02bdd3cc916358e247c504aebb93b0c7a6ccec602235b45895827770bf390c",
+      "dimensions": [
+        960,
+        540
+      ]
+    },
+    {
+      "path": "captures/12-rooms1280-all-choices-r3.jpg",
+      "sha256": "2f14040abe4d64648dca19d417dfb7ba54b6a42383b756eaf4292a2b69e90a3c",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "captures/14-rooms1280-rail-selected-r3.jpg",
+      "sha256": "2609c2ef5e122a2d7af140bf216532dbe758fe46da21af30927dd650ad8af553",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "captures/20-arena1280-all-choices-r3.jpg",
+      "sha256": "90a17add451eb110a387e9e79706fe0d86c110661593351b10c5177b15963923",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "captures/22-rivet-keyboard-selected-r3.jpg",
+      "sha256": "e595129decf75b800ab07a49e5ed4dd690ed48cc655595bb9e9bb2660b45b9a7",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "captures/23-scatter-base-details-r3.jpg",
+      "sha256": "ddd89b57226364adeb08328062293ce5cbb99d8027ec32795ac47c5fea18db4e",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "captures/24-scatter-primary-notes-r3.jpg",
+      "sha256": "f545b49247416164516a6e16b9648db007abbb7d3e215bf7e3f85434077e0020",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "captures/15-rail-started-inventory-r3.jpg",
+      "sha256": "b62a3f292e65ad69be9766100d6bc3d3ad920832704239f3e30a356867947e75",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "captures/16-controlled-changed-gear-origin-r3.jpg",
+      "sha256": "8934ec48cc474395d2d571bf5fda919ab8c670069bb9d0238bf9b3098f57a57d",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "captures/17-controlled-result-origin-r3.jpg",
+      "sha256": "992709af1309ad3ea81c611572e3b173876ed386d0b55b882c63bc134da13766",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "captures/25-scatter-inventory960-r3.jpg",
+      "sha256": "6e8ba87d99e3446c899e46139f1cf47f526f563b40fe55dc9f0d5e9a92f2f80e",
+      "dimensions": [
+        960,
+        540
+      ]
+    }
+  ],
+  "asset_identity": [
+    {
+      "path": "assets/items/equipment_atlas_v2.png",
+      "sha256": "5ac0811ec65274ed650c6ed75890561ed27070f4e5f996de14c34a5fdc5fa807",
+      "identical_to_v30": true
+    },
+    {
+      "path": "assets/items/icon_manifest.json",
+      "sha256": "ad978274d7d3e86ce68f02c80e1473b59c3464076765270f1ae3e6612327bb33",
+      "identical_to_v30": true
+    }
+  ],
+  "findings": [
+    "All three distinct existing weapon icons, choice controls and fixed START summary are visible in initial 960 and 1280 title samples.",
+    "SELECTED text and border identify current choice without color alone; summary shows Rivet35, Scatter23 or Rail17 consistently in reviewed states.",
+    "Scrolled BASE details and primary notes remain readable while START remains visible; pellet-contact wording does not promise whole-volley damage.",
+    "STARTED WITH labels explicitly distinguish origin from current equipment, including controlled replacement and result examples.",
+    "Existing icon silhouettes, aspect and pixel filtering show no visible regression or new class/character art claim."
+  ],
+  "limits": [
+    "Controlled frozen-simulation source fixtures, not exported ordinary play or natural victory. Forced changed gear/result samples establish presentation only.",
+    "No independent keyboard execution, damage, RNG, balance or continuous-motion certification from these stills.",
+    "Rejected R2 captures01/02 excluded. No new raster, source or QA capture edits."
+  ]
+}

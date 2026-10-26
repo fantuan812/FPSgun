@@ -1,0 +1,21 @@
+{
+  "baseline": "accepted-v30-final-production",
+  "candidate": "v31-R3-and-final-byte-identical",
+  "baseline_paths": 119,
+  "candidate_paths": 121,
+  "old_paths_identical": 115,
+  "changed_old_paths": [
+    "scripts/gameplay/run_session.gd",
+    "scripts/main.gd",
+    "ui/README.md",
+    "ui/moss_ui.gd"
+  ],
+  "additions": [
+    "data/starting_loadouts.json",
+    "scripts/gameplay/starting_loadouts.gd"
+  ],
+  "deletions": [],
+  "default_rules_factory_and_old_data_assets_byte_identical": true,
+  "new_six_display_fields": "R3_DISPLAY_ONLY_DATA_DELTA.json",
+  "limits": "ui/README.md is engineering documentation, not gameplay. Actual old-schema behavior/RNG equality is separately recorded in DEFAULT_PARITY.json; alternative starter ownership intentionally changes later affinity."
+}

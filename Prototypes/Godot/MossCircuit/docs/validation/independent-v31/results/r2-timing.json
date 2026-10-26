@@ -1,0 +1,143 @@
+{
+  "checks": 36,
+  "failures": [],
+  "records": [
+    {
+      "first": {
+        "clocks": [
+          0.65,
+          0.65
+        ],
+        "hp": 955.0,
+        "mark": false
+      },
+      "ids": [
+        "cryo_sprayer",
+        "orbit_saw"
+      ],
+      "mode": "arena",
+      "second": {
+        "clocks": [
+          0.65,
+          0.65
+        ],
+        "hp": 910.0,
+        "mark": false
+      }
+    },
+    {
+      "first": {
+        "clocks": [
+          0.65,
+          0.65
+        ],
+        "hp": 971.0,
+        "mark": true
+      },
+      "ids": [
+        "orbit_saw",
+        "cryo_sprayer"
+      ],
+      "mode": "arena",
+      "second": {
+        "clocks": [
+          0.65,
+          0.65
+        ],
+        "hp": 926.0,
+        "mark": true
+      }
+    },
+    {
+      "after_later_contact": {
+        "hp": 960.0,
+        "mark": false
+      },
+      "ids": [
+        "cryo_sprayer",
+        "rivet_gun"
+      ],
+      "mode": "arena"
+    },
+    {
+      "after_later_contact": {
+        "hp": 960.0,
+        "mark": false
+      },
+      "ids": [
+        "rivet_gun",
+        "cryo_sprayer"
+      ],
+      "mode": "arena"
+    },
+    {
+      "first": {
+        "clocks": [
+          0.65,
+          0.65
+        ],
+        "hp": 955.0,
+        "mark": false
+      },
+      "ids": [
+        "cryo_sprayer",
+        "orbit_saw"
+      ],
+      "mode": "rooms",
+      "second": {
+        "clocks": [
+          0.65,
+          0.65
+        ],
+        "hp": 910.0,
+        "mark": false
+      }
+    },
+    {
+      "first": {
+        "clocks": [
+          0.65,
+          0.65
+        ],
+        "hp": 971.0,
+        "mark": true
+      },
+      "ids": [
+        "orbit_saw",
+        "cryo_sprayer"
+      ],
+      "mode": "rooms",
+      "second": {
+        "clocks": [
+          0.65,
+          0.65
+        ],
+        "hp": 926.0,
+        "mark": true
+      }
+    },
+    {
+      "after_later_contact": {
+        "hp": 960.0,
+        "mark": false
+      },
+      "ids": [
+        "cryo_sprayer",
+        "rivet_gun"
+      ],
+      "mode": "rooms"
+    },
+    {
+      "after_later_contact": {
+        "hp": 960.0,
+        "mark": false
+      },
+      "ids": [
+        "rivet_gun",
+        "cryo_sprayer"
+      ],
+      "mode": "rooms"
+    }
+  ],
+  "scope": "Controlled actual existing combat semantics only; no reorder action or ordinary acquisition. Fresh stationary target90units away, base stats, Coil, both clocks0; second cycle .65later. Conditional timing example, not balance/DPS guarantee."
+}

@@ -1,0 +1,12 @@
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+ERROR: Lambda capture at index 1 was freed. Passed "null" instead.
+   at: call (modules/gdscript/gdscript_lambda_callable.cpp:242)
+   GDScript backtrace (most recent call first):
+       [0] run (qa-snapshot/checks/stale_mode_probe.gd:14)
+SCRIPT ERROR: Invalid access to property or key 'text' on a base object of type 'Nil'.
+          at: <anonymous lambda> (res://ui/moss_ui.gd:314)
+          GDScript backtrace (most recent call first):
+              [0] <anonymous lambda> (res://ui/moss_ui.gd:314)
+              [1] run (qa-snapshot/checks/stale_mode_probe.gd:14)
+{"authority_unchanged":true,"retained_mode_callback":true}

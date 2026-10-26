@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "default_id": "rivet",
+  "loadouts": [
+    {
+      "id": "rivet",
+      "name": "Rivet Starter",
+      "weapon": "rivet_gun",
+      "starting_scrap": 35,
+      "strength": "Accurate, frequent fire.",
+      "limitation": "One target per basic shot."
+    },
+    {
+      "id": "scatter",
+      "name": "Scatter Starter",
+      "weapon": "scrap_shotgun",
+      "starting_scrap": 23,
+      "strength": "Close-range pellet spread.",
+      "limitation": "Short reach; pellets can miss."
+    },
+    {
+      "id": "rail",
+      "name": "Rail Starter",
+      "weapon": "rail_lance",
+      "starting_scrap": 17,
+      "strength": "Long-range piercing shots.",
+      "limitation": "Slow attacks; least spare scrap."
+    }
+  ]
+}

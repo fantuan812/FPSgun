@@ -1,0 +1,7 @@
+{
+  "only_changed_production": "ui/moss_ui.gd",
+  "old_sha256": "96f5fd6ca96a7317a882f9ae31af1383c7fdb2a8f64545d4d5d39e6f9b83892b",
+  "new_sha256": "9ff7e7f6c13bc9ffde16cce2b0419ea3b9cd7a258a6d437de4d76baad4a59c23",
+  "reason": "New guarded START callback retained freed LineEdit before controller-generation check; capture WeakRef instead, return on expiry. No authority/legacy title changes.",
+  "tests": "Independent repro and replay pending; author engine idle."
+}

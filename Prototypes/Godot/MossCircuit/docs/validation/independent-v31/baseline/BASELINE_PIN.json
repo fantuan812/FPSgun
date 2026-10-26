@@ -1,0 +1,61 @@
+{
+  "pass": true,
+  "accepted_baseline": "v30",
+  "accepted_implementation_commit": "51139ff31a422e499975ca9e13b4155bcf746854",
+  "source_inputs": 611,
+  "source_changes": [],
+  "scope": "Carry forward accepted terminal v30 trace and timing results with freshly verified unchanged611source inputs; no duplicate baseline engine execution. Candidate must replay unchanged scripts and compare exact bytes. New title/origin fields are separately tested and explicitly outside old-schema trace.",
+  "trace_bytes": 2207907,
+  "trace_sha256": "e7d93a1fcf01345c540bf9f868632310fd3e85572dbe431dbe12d43bf19212ec",
+  "trace_script_sha256": "628ea8e860c627b9be1c700544c97c699c8ed3d80f68c6e46310bce55cfcb0ef",
+  "timing_script_sha256": "d721c8d512cf88d313ba3587f971029b3015410ff9cb0474f5075ea904b02852",
+  "final_full_suite_pass": true,
+  "timing_sha256": "5185cf511148bd65a6e2fd5afc2eed0b283411288afc4a90a74e9ae94f94d9d6",
+  "timing_checks": 36,
+  "timing_cases": 8,
+  "accepted_evidence_index_sha256": "e417ec3a8d08e516cad65e4ff478b6fc6f2d18f6e03a35ecdebe65e7b3a74fce",
+  "accepted_proofs": [
+    {
+      "relative_path": "checks/no_reorder_trace.gd",
+      "sha256": "628ea8e860c627b9be1c700544c97c699c8ed3d80f68c6e46310bce55cfcb0ef",
+      "size": 4960,
+      "published_git_blob_sha": "b9ba134add8e594bf34399cc0ea280974dac6079",
+      "accepted_byte_proof": "fresh"
+    },
+    {
+      "relative_path": "checks/existing_order_timing.gd",
+      "sha256": "d721c8d512cf88d313ba3587f971029b3015410ff9cb0474f5075ea904b02852",
+      "size": 3141,
+      "published_git_blob_sha": "5f842283e8b592c376a86cc4ed219ca3bb11c7f8",
+      "accepted_byte_proof": "fresh"
+    },
+    {
+      "relative_path": "results/r1-timing.json",
+      "sha256": "5185cf511148bd65a6e2fd5afc2eed0b283411288afc4a90a74e9ae94f94d9d6",
+      "size": 2514,
+      "published_git_blob_sha": "3b4d7312b63d612fcdfdf5e898f2f137983a9d39",
+      "accepted_byte_proof": "fresh"
+    },
+    {
+      "relative_path": "results/r1-timing.log",
+      "sha256": "5db4d20d0d4a52e3f4ce757d4d78d15180e63d5c295738a236fdd01223dac3bf",
+      "size": 111,
+      "published_git_blob_sha": "e864f2ca07ec4069bfcf76466b9afb92aac9d6ce",
+      "accepted_byte_proof": "fresh"
+    },
+    {
+      "relative_path": "results/r1-trace.log",
+      "sha256": "33ab18c267b5f40da1c9e3dac7f426bf44f63dc2353f69a08057322a9bfdace5",
+      "size": 181,
+      "published_git_blob_sha": "3403b4f968f7199e30c43d9074c7b639b59ad26b",
+      "accepted_byte_proof": "fresh"
+    },
+    {
+      "relative_path": "baseline/no-reorder-v29.json.gz",
+      "sha256": "5c1acaeb2f51f4b2f9a8bf17b2eef5e6425f8c37b8ca84cf3f4465177355bb2d",
+      "size": 56420,
+      "published_git_blob_sha": "e15295ef7dfb4b1be1a691d863362ca8175f4700",
+      "accepted_byte_proof": "fresh"
+    }
+  ]
+}

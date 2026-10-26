@@ -1,0 +1,42 @@
+{
+  "scope": "Existing accepted baseline reused, not executed anew; actual candidate replay. Old-schema default traces exclude newly added title/run origin metadata.",
+  "baseline_trace": {
+    "bytes": 2207907,
+    "sha256": "e7d93a1fcf01345c540bf9f868632310fd3e85572dbe431dbe12d43bf19212ec"
+  },
+  "candidate_trace": {
+    "bytes": 2207907,
+    "sha256": "e7d93a1fcf01345c540bf9f868632310fd3e85572dbe431dbe12d43bf19212ec"
+  },
+  "trace_equal": true,
+  "trace_cases": 24,
+  "timing_equal": true,
+  "timing_checks": 36,
+  "timing_cases": 8,
+  "baseline_timing": {
+    "bytes": 2514,
+    "sha256": "5185cf511148bd65a6e2fd5afc2eed0b283411288afc4a90a74e9ae94f94d9d6"
+  },
+  "candidate_timing": {
+    "bytes": 2514,
+    "sha256": "5185cf511148bd65a6e2fd5afc2eed0b283411288afc4a90a74e9ae94f94d9d6"
+  },
+  "trace_script": {
+    "bytes": 4960,
+    "sha256": "628ea8e860c627b9be1c700544c97c699c8ed3d80f68c6e46310bce55cfcb0ef"
+  },
+  "timing_script": {
+    "bytes": 3141,
+    "sha256": "d721c8d512cf88d313ba3587f971029b3015410ff9cb0474f5075ea904b02852"
+  },
+  "limit": "The legacy trace does not invoke weapon reordering; actual reordering is covered separately by new controlled lifecycle checks.",
+  "final_R3_trace": {
+    "bytes": 2207907,
+    "sha256": "e7d93a1fcf01345c540bf9f868632310fd3e85572dbe431dbe12d43bf19212ec"
+  },
+  "final_R3_timing": {
+    "bytes": 2514,
+    "sha256": "5185cf511148bd65a6e2fd5afc2eed0b283411288afc4a90a74e9ae94f94d9d6"
+  },
+  "final_R3_equal": true
+}

@@ -1,3 +1,15 @@
+# v31 GitHub-only complete resource pack
+
+The complete v31 PCK is 41,379,260 bytes, SHA-256 `ceba66d0091b2dfdcea3cb80c659fa252758b1c06e6bbb3b5f7d9edb3c99d37c`. Both platform presets produce identical bytes and reuse the unchanged verified executable. This is not a standalone program, executable rebuild, delta patch or ZIP-part chain.
+
+From a complete repository checkout, use `python Deliveries/MossCircuit/restore_deliveries.py --version v31 --output restored-v31`, then follow [the exact prerequisite, unique backup and manual rollback instructions](../../../../Deliveries/MossCircuit/v31/READ_ME_v31.txt). First installation still requires the complete v19 platform package and licenses. The unchanged helper does not download, install, execute or overwrite; it verifies ordered chunks and full-file hashes, requires hardlinks and publishes atomically per file, not as one batch transaction. Never install a single chunk.
+
+All 60 earlier catalog rows and old delivery files remain unchanged; the two new v31 rows are explicitly new GitHub-only files, not historical attachments. Source and validation history are inherited through the accepted base, with a complete logical manifest rather than another local history copy. Source/native/packed/restoration evidence is in `validation/independent-v31`; author gates and preserved candidate corrections are in `validation/author-v31`. Generated profiles/config/cache and runtime binaries are excluded from source evidence. Actual publication/ref/byte identities are recorded separately after reachable verification.
+
+Windows execution, cloud audio, physical-controller support, full campaigns and overall balance are not certified. The starting choices use the same hero and existing equipment; they do not add persistence, account or unlock behavior.
+
+---
+
 # v30 GitHub-only resource-pack update
 
 The complete v30 PCK is 41,368,536 bytes, SHA-256 `c7485c5a423312fac0c064e5a5a2815cc36284f6018a020c9c54e64b6dcec894`. It reuses the unchanged accepted executable and is not a standalone program, a delta patch or another ZIP-part chain. Restore `--version v30` with the existing `Deliveries/MossCircuit/restore_deliveries.py`, then follow [the exact prerequisite/backup/rollback instructions](../../../../Deliveries/MossCircuit/v30/READ_ME_v30.txt). First installations still need the complete v19 platform package and licenses. Never install individual chunks or overwrite an existing backup.

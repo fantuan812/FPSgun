@@ -1,4 +1,8 @@
 extends Node2D
+const StartingLoadouts = preload("res://scripts/gameplay/starting_loadouts.gd")
+var starting_loadouts:Dictionary={}
+var selected_loadout_id:String=StartingLoadouts.DEFAULT_ID
+var title_generation:int=0
 const WeaponOrder = preload("res://scripts/gameplay/weapon_order.gd")
 const WeaponReadout=preload("res://scripts/weapon_readout.gd")
 const ModeStatus=preload("res://ui/mode_status.gd")
@@ -195,6 +199,13 @@ func _ready() -> void:
 		push_error("Invalid catalog: " + str(catalog_errors))
 		set_process(false)
 		return
+	var raw_loadouts=JSON.parse_string(FileAccess.get_file_as_string("res://data/starting_loadouts.json"))
+	var loadout_errors:=StartingLoadouts.validate(raw_loadouts,catalog)
+	if not loadout_errors.is_empty():
+		push_error("Invalid starting loadouts: "+str(loadout_errors))
+		set_process(false)
+		return
+	starting_loadouts=raw_loadouts
 	effects.configure(catalog)
 	var raw_encounters = JSON.parse_string(FileAccess.get_file_as_string("res://data/encounters.json"))
 	if not raw_encounters is Dictionary:
@@ -269,10 +280,29 @@ func _title() -> void:
 	vfx.clear()
 	telegraphs.show_markers([])
 	state = "title"
-	ui.show_title(run_seed,mode.id)
+	_present_title()
 
+func _present_title()->void:
+	title_generation+=1
+	ui.show_title(run_seed,mode.id,_starting_loadout_context())
 
-func _start_run(seed_value: int) -> void:
+func _starting_loadout_context()->Dictionary:
+	return {"generation":title_generation,"selected_id":selected_loadout_id,"loadouts":StartingLoadouts.previews(starting_loadouts,catalog)}
+
+func _select_starting_loadout(id:Variant,generation:Variant)->bool:
+	if state!="title" or not generation is int or generation!=title_generation or not id is String:return false
+	if id==selected_loadout_id or StartingLoadouts.entry(starting_loadouts,catalog,id).is_empty():return false
+	selected_loadout_id=id
+	_present_title()
+	return true
+
+func _start_selected_loadout(id:Variant,generation:Variant,seed_value:Variant)->bool:
+	if state!="title" or not generation is int or generation!=title_generation or not id is String or id!=selected_loadout_id or not seed_value is int:return false
+	return _start_run(seed_value,id)
+
+func _start_run(seed_value: int,loadout_id:Variant=StartingLoadouts.DEFAULT_ID) -> bool:
+	var fresh_build:=StartingLoadouts.make_build(starting_loadouts,catalog,loadout_id)
+	if fresh_build.is_empty():return false
 	weapon_rig.clear()
 	reserved_offer.clear()
 	visual_cooldowns.clear()
@@ -290,7 +320,8 @@ func _start_run(seed_value: int) -> void:
 	rng.seed = run_seed
 	loot_rng.seed = run_seed ^ 58349
 	shop_rng.seed = run_seed ^ 92137
-	build = Rules.new_build(catalog)
+	build = fresh_build
+	run.starting_loadout_id=loadout_id
 	effects.reset(build.items)
 	effect_sequence = 0
 	pending_blasts.clear()
@@ -331,6 +362,7 @@ func _start_run(seed_value: int) -> void:
 	state = "playing"
 	_hide_modal()
 	_update_hud()
+	return true
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventKey and event.pressed and not event.echo:
@@ -828,6 +860,7 @@ func _leave_shop(generation: int) -> void:
 func _view() -> Dictionary:
 	if build.is_empty(): return {"seed":run_seed,"settings":settings.duplicate(true),"mode_id":mode.id,"mode_name":mode.name,"objective":""}
 	var view := {"coins":build.coins,"wave":wave,"level":level,"hp":stats.hp,"max_hp":stats.max_hp,"xp":xp,"xp_max":Rules.xp_threshold(level),"time":elapsed,"kills":kills,"seed":run_seed,"stats":stats,"weapons":[],"items":[],"synergies":stats.synergies,"generation":shop_generation,"refresh_price":catalog.refresh_price,"weapon_slots":catalog.weapon_slots,"item_slots":catalog.item_slots,"message":shop_message,"offers":[],"rewards":rewards,"synergy_status":[],"mechanics":{"shield":effects.shield,"chain_charges":effects.chain_charges,"hazards":hazards.size(),"echo_hits":effects.echo_hits,"phase_charge":effects.phase_charge,"medic_damage":effects.medic_damage,"cooldowns":{}}}
+	view.starting_loadout=StartingLoadouts.entry(starting_loadouts,catalog,run.starting_loadout_id)
 	view.mode_id=mode.id
 	view.mode_name=mode.name
 	view.objective=mode.objective(run,combat,config)
@@ -896,9 +929,11 @@ func _view() -> Dictionary:
 func _on_intent(action: String, payload: Dictionary) -> void:
 	match action:
 		"seed_changed":
+			if payload.has("generation") and (not payload.generation is int or payload.generation!=title_generation):return
 			if state=="title" and payload.get("seed") is int:
 				run_seed=payload.seed
 		"select_mode":
+			if payload.has("generation") and (not payload.generation is int or payload.generation!=title_generation):return
 			if state=="title" and payload.get("id","") in ["arena","rooms"]:
 				run_seed=int(payload.get("seed",run_seed))
 				_select_mode(str(payload.id))
@@ -932,6 +967,8 @@ func _on_intent(action: String, payload: Dictionary) -> void:
 				else:
 					state = "paused"
 					_present_pause()
+		"select_starting_loadout": _select_starting_loadout(payload.get("id"),payload.get("generation"))
+		"start_loadout": _start_selected_loadout(payload.get("id"),payload.get("generation"),payload.get("seed"))
 		"start":
 			if state == "title": _start_run(int(payload.get("seed",run_seed)))
 		"pause":
@@ -943,9 +980,9 @@ func _on_intent(action: String, payload: Dictionary) -> void:
 			if state == "paused": _resume()
 		"title": _title()
 		"retry":
-			if state in ["won","dead"]: _start_run(run_seed)
+			if state in ["won","dead"]: _start_run(run_seed,run.starting_loadout_id)
 		"new_seed":
-			if state in ["won","dead"]: _start_run(run_seed + 1)
+			if state in ["won","dead"]: _start_run(run_seed + 1,run.starting_loadout_id)
 		"buy": _buy(int(payload.get("index",-1)),int(payload.get("generation",-1)),int(payload.get("replace_slot",-1)))
 		"move_weapon": _move_weapon(payload.get("slot"),payload.get("step"),payload.get("generation"),payload.get("id"))
 		"sell_weapon": _sell_weapon(int(payload.get("slot",-1)),int(payload.get("generation",-1)))

@@ -1,0 +1,56 @@
+{
+  "pass": true,
+  "exact_file_count": 61,
+  "images": 58,
+  "source_imported_fingerprint_equal_to_author": true,
+  "independently_regenerated": true,
+  "preset_packs_equal": true,
+  "artifacts": {
+    "MossCircuit.pck": {
+      "bytes": 41379260,
+      "sha256": "ceba66d0091b2dfdcea3cb80c659fa252758b1c06e6bbb3b5f7d9edb3c99d37c"
+    },
+    "MossCircuit.x86_64": {
+      "bytes": 71075864,
+      "sha256": "2c78919325d7f29fa7607287c7c1eeac367ea4c94e7b8b6f5f4c6b20492f73d0"
+    }
+  },
+  "steps": [
+    {
+      "name": "python_safety",
+      "exit": 0,
+      "error": false,
+      "seconds": 0.502,
+      "pass": true
+    },
+    {
+      "name": "independent_source_imported",
+      "exit": 0,
+      "error": false,
+      "seconds": 6.872,
+      "pass": true
+    },
+    {
+      "name": "packed_resources",
+      "exit": 0,
+      "error": false,
+      "seconds": 9.146,
+      "pass": true
+    },
+    {
+      "name": "packed_independent_loadouts",
+      "exit": 0,
+      "error": false,
+      "seconds": 4.824,
+      "pass": true
+    },
+    {
+      "name": "packed_independent_views",
+      "exit": 0,
+      "error": false,
+      "seconds": 5.162,
+      "pass": true
+    }
+  ],
+  "scope": "Editor packed-resource reader from empty cwd, not exported GUI or Windows execution."
+}

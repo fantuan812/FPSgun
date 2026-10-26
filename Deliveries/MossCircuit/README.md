@@ -2,7 +2,13 @@
 
 这里保留曾经发送的 50 个原始文件，并继续接收新版本的 GitHub-only 交付。历史文件不改写；当前可编辑源码位于 [`Prototypes/Godot/MossCircuit`](../../Prototypes/Godot/MossCircuit)。
 
-## 最新 v30：保留武器副本，决定槽位顺序
+## 最新 v31：从不同起始装备出发
+
+同一角色可在标题页选择 Rivet Gun +35 scrap、Scrap Shotgun +23 或 Rail Lance +17。只有一个普通起始武器，基础生命/移动相同，没有新模块、职业被动或解锁。玩家在准确频繁射击/余钱、近距散射、长距慢速穿透之间选择；当前价格加废料同为59只是调值依据，不代表等强度。起始标签沿用原有商店倾向，同种子不同构筑不保证同报价。重试保留本局起始身份，不会把后买的装备当作新起点；会话内记住标题选择，程序重开默认 Rivet。见 [v31 前提、哈希、备份和有限验证](v31/READ_ME_v31.txt)。
+
+v31 直接恢复完整 PCK，依赖原有已核验 EXE/ELF；先关闭游戏，独立备份旧 PCK，再手动替换。首次安装仍先恢复完整 v19 平台包和许可证。不会自动安装或修改旧交付。
+
+## 历史 v30：保留武器副本，决定槽位顺序
 
 商店中的 MOVE EARLIER / MOVE LATER 免费交换相邻已拥有武器，原有冷却、瞄准和后坐年龄随副本移动。玩家可改变已就绪武器的处理顺序及手持/侧挂位置，不必卖掉重买。重复同类副本按当前槽位区分；不改属性、货币、装备目录或 RNG，也不重置冷却。实际弹丸和延迟命中仍按旧时序运行，不能把更靠前的槽位当作通用增伤。商店中若仍有玩家弹丸/待爆榴弹则拒绝换位，不清除在途攻击。见 [v30 前提、哈希、备份和有限验证](v30/READ_ME_v30.txt)。
 
@@ -21,13 +27,13 @@ v29 直接恢复完整 PCK，无需合并 ZIP，也不重复未改变的 EXE/ELF
 在包含此目录及其分块的 FPSgun 本地检出目录内，使用 Python 3.8 或更新版本：
 
 ```sh
-python Deliveries/MossCircuit/restore_deliveries.py --version v30 --output recovered-v30
+python Deliveries/MossCircuit/restore_deliveries.py --version v31 --output recovered-v31
 ```
 
 Windows 也可用 `py -3` 替代 `python`。输出目录中的同名文件会被拒绝覆盖。只核验、不写出原件：
 
 ```sh
-python Deliveries/MossCircuit/restore_deliveries.py --version v30 --verify-only
+python Deliveries/MossCircuit/restore_deliveries.py --version v31 --verify-only
 ```
 
 恢复操作按单个文件原子发布，不是整批回滚事务；若后续文件失败，先前已成功恢复的文件会保留。
@@ -46,4 +52,4 @@ python Deliveries/MossCircuit/restore_deliveries.py --version v30 --verify-only
 
 `SOURCE_VERSIONS.json` 将已验收的源码快照对应到不可变 Git 提交。源目录中的验证记录保留各自范围、失败过的候选及修正说明，不能把受控夹具、普通输入、静态检查和真实运行混为一谈。
 
-旧 50 个实际发送文件的目录记录保持不变；新 v26–v30 PCK/说明明确标为 GitHub-only 交付，不伪称旧聊天附件。内部恢复备份、私人路径和内部 Library 标识不在此发布。
+旧 50 个实际发送文件的目录记录保持不变；新 v26–v31 PCK/说明明确标为 GitHub-only 交付，不伪称旧聊天附件。内部恢复备份、私人路径和内部 Library 标识不在此发布。

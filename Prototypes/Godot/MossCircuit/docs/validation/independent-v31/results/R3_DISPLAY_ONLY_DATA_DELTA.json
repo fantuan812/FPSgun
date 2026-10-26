@@ -1,0 +1,41 @@
+{
+  "changes": [
+    {
+      "id": "rivet",
+      "field": "strength",
+      "old": "Accurate, frequent shots with the most spare scrap for later build decisions.",
+      "new": "Accurate, frequent fire."
+    },
+    {
+      "id": "rivet",
+      "field": "limitation",
+      "old": "One target per basic shot; no starting spread or piercing.",
+      "new": "One target per basic shot."
+    },
+    {
+      "id": "scatter",
+      "field": "strength",
+      "old": "Five short-range pellets reward close positioning; each contact deals its own damage.",
+      "new": "Close-range pellet spread."
+    },
+    {
+      "id": "scatter",
+      "field": "limitation",
+      "old": "Less spare scrap, shorter reach and a longer attack interval. Not every pellet will hit.",
+      "new": "Short reach; pellets can miss."
+    },
+    {
+      "id": "rail",
+      "field": "strength",
+      "old": "Long-reaching piercing shots can hit enemies lined up along their path.",
+      "new": "Long-range piercing shots."
+    },
+    {
+      "id": "rail",
+      "field": "limitation",
+      "old": "Least spare scrap and the slowest attack interval of these starters.",
+      "new": "Slow attacks; least spare scrap."
+    }
+  ],
+  "all_other_values_exact": true
+}

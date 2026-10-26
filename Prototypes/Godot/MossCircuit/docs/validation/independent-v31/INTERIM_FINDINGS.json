@@ -1,0 +1,77 @@
+{
+  "status": "Interim findings, not final v31 acceptance",
+  "entries": [
+    {
+      "kind": "production callback lifetime",
+      "revision": "R1",
+      "facts": "Retained new START callback after title selection rerender dereferenced freed LineEdit before controller generation guard. Authority unchanged but engine emitted freed capture and Nil.text errors.",
+      "evidence": [
+        {
+          "path": "rejected-r1/moss_ui.gd",
+          "bytes": 39670,
+          "sha256": "96f5fd6ca96a7317a882f9ae31af1383c7fdb2a8f64545d4d5d39e6f9b83892b"
+        },
+        {
+          "path": "rejected-r1/views-r1.log",
+          "bytes": 8578,
+          "sha256": "bebcc429ff789d8d67eb4ed5cc450074d75bc8a73b353c1c53d0755db4ff8e2a"
+        }
+      ],
+      "resolution": "R2 external WeakRef; 416-case UI checks clean after separate oracle correction."
+    },
+    {
+      "kind": "rejected independent oracle",
+      "revision": "views R1",
+      "facts": "12 name assertions expected one space before [SLOT], existing actual card uses two. Origin labels themselves were correct. Only expected string whitespace corrected.",
+      "evidence": [
+        {
+          "path": "rejected-r1/views-original-oracle.gd",
+          "bytes": 7852,
+          "sha256": "63a1880ef47597328766bbcc7e9fe275391437c0f8a63b1d7c3d459af515b160"
+        },
+        {
+          "path": "rejected-r1/views-r1.json",
+          "bytes": 901,
+          "sha256": "f42f54b80a7b2bb9acb361c174e7d7ef6daf755cd531606be981027550a70227"
+        }
+      ]
+    },
+    {
+      "kind": "production discoverability",
+      "revision": "R2",
+      "facts": "Both native target sizes initially hide every loadout card and clip STARTING LOADOUT heading. Scroll makes cards reachable; feature not missing.",
+      "evidence": [
+        {
+          "path": "captures/01-arena960-initial-r2.jpg",
+          "bytes": 82431,
+          "sha256": "d81a509589faee252c23c5cf905310cb16d7875b4c0c3ccd81015938bc03994f"
+        },
+        {
+          "path": "captures/02-arena1280-initial-r2.jpg",
+          "bytes": 117176,
+          "sha256": "0119c2499e4258dc4366c4f054b2ee958becf4b9743ee565e9d682a705c02680"
+        }
+      ],
+      "resolution": "R3 compact three-card row pending."
+    },
+    {
+      "kind": "production callback lifetime",
+      "revision": "R2",
+      "facts": "Retained new-context mode callback after selection rerender also dereferences freed seed editor. Authority unchanged; controlled callback test, no ordinary crash claim.",
+      "evidence": [
+        {
+          "path": "checks/stale_mode_probe.gd",
+          "bytes": 969,
+          "sha256": "d7d5268b494cc55f263a3913ccdbe9364cf1e8298433810dd9d69d9053c62275"
+        },
+        {
+          "path": "results/stale-mode-r2.log",
+          "bytes": 736,
+          "sha256": "f7e99668ccf3d675f8e4b0b88f595ddae6fb1d41fdd6957342bb50d55be473a4"
+        }
+      ],
+      "resolution": "R3 new-context WeakRef plus current-generation guard pending."
+    }
+  ],
+  "privacy": "Raw logs with private backtrace paths remain private; any public copy requires explicit stable-label sanitization and original/public hash linkage."
+}
