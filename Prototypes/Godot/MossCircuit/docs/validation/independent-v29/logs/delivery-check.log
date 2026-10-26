@@ -1,0 +1,70 @@
+{
+  "verdict": "PASS",
+  "helper_sha256": "3228782b92e9ec6573b7ba9842d950b3cb6c4dbe928fb3bdcb9a2b4f930b55ad",
+  "catalog_sha256": "10b3aeec2fb83484616517276e3362e63ccffd1714abefa854c7b55c1b39d005",
+  "readme_sha256": "fcc9e1dc99058293ef1378fb31af571e7a9b461fab2e8da98f3f4e95259e343d",
+  "general_readme_sha256": "f5b2b119edbaa95c1617b326b7d194deb1c4ee3b99b0fb083133424231c81284",
+  "old_catalog_records_preserved": 56,
+  "new_records": 2,
+  "chunks": 14,
+  "restored": {
+    "MossCircuit.pck": {
+      "bytes": 41363792,
+      "sha256": "77d6b41df3cea5036f99608a837983767f31c2e680c2622c1a83654adf2e6cfc",
+      "git_blob_sha": "a2a167b15b4f11e1a83186c5751731c7ed7fbeb7"
+    },
+    "READ_ME_v29.txt": {
+      "bytes": 6010,
+      "sha256": "fcc9e1dc99058293ef1378fb31af571e7a9b461fab2e8da98f3f4e95259e343d",
+      "git_blob_sha": "9e752fb8a3575da183ba1a7915b0e64795f5a32b"
+    }
+  },
+  "literal_helper_runs": [
+    {
+      "action": "verify-only",
+      "exit": 0,
+      "stdout_sha256": "bf73cb5132498579512344ad4f70d3261ed2fe918abdb7108675b7b1173d92c6",
+      "expected_failure": false
+    },
+    {
+      "action": "restore",
+      "exit": 0,
+      "stdout_sha256": "bf73cb5132498579512344ad4f70d3261ed2fe918abdb7108675b7b1173d92c6",
+      "expected_failure": false
+    },
+    {
+      "action": "reject existing output",
+      "exit": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "expected_failure": true
+    }
+  ],
+  "negative_cases": [
+    {
+      "case": "reordered chunks",
+      "rejected": true,
+      "reason": "Non-contiguous or reordered chunks"
+    },
+    {
+      "case": "wrong chunk SHA256",
+      "rejected": true,
+      "reason": "Chunk identity mismatch: Deliveries/MossCircuit/v29/chunks/MossCircuit.pck/chunk-001.bin"
+    },
+    {
+      "case": "wrong whole SHA256",
+      "rejected": true,
+      "reason": "Original identity mismatch: MossCircuit.pck"
+    },
+    {
+      "case": "unsafe source path",
+      "rejected": true,
+      "reason": "Unsafe relative path"
+    }
+  ],
+  "limits": [
+    "Linux helper executed; Windows/NTFS not executed",
+    "per-original atomic restoration, not batch rollback",
+    "manual replacement/rollback only; no automatic installation or full platform extraction",
+    "native exact runtime already tested separately; no recampaign"
+  ]
+}

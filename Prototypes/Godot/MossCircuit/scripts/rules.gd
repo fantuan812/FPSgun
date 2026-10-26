@@ -11,6 +11,21 @@ const TAG_SYNERGY_RULES := [
 	 "qualifier":"Applies once to spread attacks only. Adds to Pellet Pouch; not extra projectiles for every weapon."}
 ]
 
+# A fixed alternative resolution, not a seventh upgrade or caller-tuned reward.
+const UPGRADE_SALVAGE := {
+	"id":"salvage_upgrade", "scrap":10, "name":"SALVAGE THIS UPGRADE",
+	"description":"Forfeit this permanent stat choice. Keep earned level / XP.",
+	"spending":"Scrap credited now; spend at a later normal shop, if reached."
+}
+
+static func upgrade_salvage_definition() -> Dictionary:
+	return UPGRADE_SALVAGE.duplicate(true)
+
+static func credit_upgrade_salvage(build: Dictionary) -> void:
+	# Whole fixed scrap must not round a previously accrued fractional remainder.
+	# The run controller owns eligibility and exactly-once choice resolution.
+	build.coins += UPGRADE_SALVAGE.scrap
+
 static func xp_threshold(level: int) -> int:
 	return 12 + (level - 1) * 9
 

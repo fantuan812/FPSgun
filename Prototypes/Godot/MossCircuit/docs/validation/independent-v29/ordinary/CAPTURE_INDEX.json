@@ -1,0 +1,125 @@
+{
+  "scope": "Unchanged actual game-window-only captures; automated CUA keyboard/mouse and tactical pauses, no programmatic game-state control. Captions correct premature filenames; no inferred uncaptured transition.",
+  "captures": [
+    {
+      "file": "captures/01-title.png",
+      "sha256": "556fef5dd9486021e68262fb3ebd536ff69874a2201bda7d2215ee112d09e545",
+      "bytes": 124810,
+      "pixels": [
+        65536,
+        4290773009
+      ],
+      "caption": "Actual exported Linux title before changing mode/seed."
+    },
+    {
+      "file": "captures/02-rooms-seed128.png",
+      "sha256": "129eb28d868ba7d435902944c1881d2ca214f1a614b958a70f6007a15edbe46e",
+      "bytes": 123912,
+      "pixels": [
+        65536,
+        4290773009
+      ],
+      "caption": "Despite filename, Rooms selected but default seed240102 still present after an ineffective field-focus attempt. No run started here."
+    },
+    {
+      "file": "captures/03-rooms-seed128-confirmed.png",
+      "sha256": "7cdb2474e88d2dc431fa05281a711540821ea3ef2f6706ecc8214a9e14090a12",
+      "bytes": 124005,
+      "pixels": [
+        65536,
+        4290773009
+      ],
+      "caption": "Actual Rooms seed128 visibly confirmed before starting."
+    },
+    {
+      "file": "captures/04-room1-start-pause.png",
+      "sha256": "d23bcd4b1c78813cd96a6fa585294d13681b2cecec2acb0ffa08eefebec29c49",
+      "bytes": 89714,
+      "pixels": [
+        65536,
+        4290773009
+      ],
+      "caption": "Pause menu after beginning the ordinary run and movement; not a combat-position image."
+    },
+    {
+      "file": "captures/05-room1-combat.png",
+      "sha256": "a327c4a99d848e4e6abe5a80d8b5f13c33b9313e36de40c3f48b9b0489d32993",
+      "bytes": 188927,
+      "pixels": [
+        65536,
+        4290773009
+      ],
+      "caption": "Ordinary Room1 combat:4s,2kills,100/100HP,35scrap,1enemy alive."
+    },
+    {
+      "file": "captures/06-first-choice.png",
+      "sha256": "0357b2fac9357f96d16394524340414e66cce98399d27ae253f2c5cc339d0692",
+      "bytes": 118796,
+      "pixels": [
+        65536,
+        4290773009
+      ],
+      "caption": "First naturally reached upgrade page after the initial encounter;66scrap, three ordinary options and separate salvage footer."
+    },
+    {
+      "file": "captures/07-salvage-keyboard-focus.png",
+      "sha256": "263b0dc9179e230a3bbe4e1639cc64094c53b755eb209d03032f538cd7afdc33",
+      "bytes": 119825,
+      "pixels": [
+        65536,
+        4290773009
+      ],
+      "caption": "Three native Tab inputs focus the separate salvage footer, still66scrap; third ordinary SELECT remains visible through scrolling."
+    },
+    {
+      "file": "captures/08-after-salvage-next-choice.png",
+      "sha256": "cc1efc867e2a30750a8dad5e48710a0504f49467659860b80653aaf904089c17",
+      "bytes": 118368,
+      "pixels": [
+        65536,
+        4290773009
+      ],
+      "caption": "Native Space completed salvage: next already-earned page now76scrap, default first ordinary Repair Plating SELECT."
+    },
+    {
+      "file": "captures/09-normal-health-first-shop.png",
+      "sha256": "cc1efc867e2a30750a8dad5e48710a0504f49467659860b80653aaf904089c17",
+      "bytes": 118368,
+      "pixels": [
+        65536,
+        4290773009
+      ],
+      "caption": "Despite filename, captured preceding choice page before deferred ordinary-selection transition; not first-shop proof. No extra input was sent until a fresh observation showed the shop."
+    },
+    {
+      "file": "captures/10-first-shop-confirmed.png",
+      "sha256": "c903ae3fb4cedcb5ebc49bd10aa1ef9e03e71f09e0b2b972dcb2704c1d17ac3a",
+      "bytes": 141024,
+      "pixels": [
+        65536,
+        4290773009
+      ],
+      "caption": "Actual first normal shop after default Return selects Repair Plating:76scrap, starterRivet current15damage, no purchase."
+    },
+    {
+      "file": "captures/11-shop-stats.png",
+      "sha256": "9e2ca1525a96f292f8f0aacef57c137ace2f49f671aba7ad73ca57a8c7c3f12b",
+      "bytes": 154227,
+      "pixels": [
+        65536,
+        4290773009
+      ],
+      "caption": "Right-pane scroll exposes existing mechanism pairs, not yet derived stats;76scrap remains."
+    },
+    {
+      "file": "captures/12-shop-derived-stats.png",
+      "sha256": "5568104be46af39823d4f835b31a2676909e8804faba1f97778730f42f639af8",
+      "bytes": 137177,
+      "pixels": [
+        65536,
+        4290773009
+      ],
+      "caption": "Actual first-shop derived stats: globaldamagebonus0%,HP/maxHP120 following ordinary Repair Plating;76scrap unchanged."
+    }
+  ]
+}

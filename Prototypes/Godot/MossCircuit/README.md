@@ -1,3 +1,19 @@
+# MossCircuit v29 — trade one stat choice for 10 scrap
+
+Each earned upgrade page still offers three of the same six permanent stats. A separate optional **SALVAGE THIS UPGRADE / +10 SCRAP** resolution forfeits that one stat choice, retaining earned level/XP. This trades lasting growth for equipment budget at a later normal shop, if reached; no extra shop, reroll, choice, discount or automatic purchase is created. Ten is experimental tuning, not a general balance guarantee.
+
+The payout is one guarded integer credit, unaffected by coin bonuses and preserving fractional credit exactly. Existing selection order and ordinary automation remain unchanged. Catalog, art, encounters and the reserved-offer policy are untouched. The complete 40-case no-salvage old-state/RNG projection equals v28.
+
+- Author and independent final engine gates: 90 standalone entries + import, with all 601 frozen inputs unchanged; initial cold import and final reused-cache revalidation are distinguished. Independent runner-only success-marker false negatives were explicitly reconciled against retained successful logs, not hidden or treated as product failures.
+- Independent runtime 294 and UI 901 checks pass in source and the exact exported PCK; independent resource verification 837 and Python safety 3 pass. Controlled actual 960/1280 keyboard/mouse review covers both modes, default SELECT, optional salvage, scrolling, mixed queues and held-Rail affordability/purchase. No controller binding was added.
+- One ordinary exact-Linux seed-128 Rooms route earned the first encounter's choices: 66 scrap → salvage via Tab/Space → next queued choice 76 → normal Repair Plating SELECT → normal first shop 76. Rivet remained at 15 primary damage/0% global damage bonus; the subsequent Repair selection accounts for 120 HP/max HP. Automated CUA/tactical pauses, no injected state, no purchase or full-campaign claim.
+
+Restore the [complete PCK and manual backup instructions](../../../Deliveries/MossCircuit/v29/READ_ME_v29.txt) using the unchanged verified executable. Windows is existing executable + new resource pack, not Windows runtime acceptance. Native ALSA/dummy-audio and unsupported-VSync limits remain explicit; terminal Ctrl+C closure is not in-game graceful quit. GitHub-only delivery, no chat attachments.
+
+See the [frozen contract](docs/V29_UPGRADE_SALVAGE_CONTRACT.md), [implementation and finite findings](docs/V29_UPGRADE_SALVAGE.md), and [independent evidence](docs/validation/independent-v29/QA_REPORT.md). Final reachable commit identities are recorded separately in the delivery version index; local acceptance alone is not a publication claim.
+
+---
+
 # MossCircuit v28 — reserve one shop offer
 
 A build-planning decision, not another stat item: **RESERVE one unsold offer for free**, even when unaffordable or equipment slots are full. Its original price and draw metadata survive refreshes and later shops. The trade-off is one occupied stock slot: the unchanged 5-scrap refresh draws only three fresh offers. It is not owned equipment and grants no stats, tags or synergy. Explicit RELEASE leaves current stock untouched; successful purchase consumes the hold; terminal results and new runs clear it.

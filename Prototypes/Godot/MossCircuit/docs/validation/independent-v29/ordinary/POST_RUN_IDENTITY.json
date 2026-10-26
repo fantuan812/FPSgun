@@ -1,0 +1,29 @@
+{
+  "files": {
+    "MossCircuit.x86_64": {
+      "bytes": 71075864,
+      "sha256": "2c78919325d7f29fa7607287c7c1eeac367ea4c94e7b8b6f5f4c6b20492f73d0"
+    },
+    "MossCircuit.pck": {
+      "bytes": 41363792,
+      "sha256": "77d6b41df3cea5036f99608a837983767f31c2e680c2622c1a83654adf2e6cfc"
+    }
+  },
+  "source_inputs": 601,
+  "input_changes": [],
+  "ordinary": {
+    "mode": "Rooms",
+    "seed": 128,
+    "one_first_settlement": true,
+    "coins_before": 66,
+    "salvage": 10,
+    "coins_next_choice": 76,
+    "next_choice": "Repair Plating via native Return",
+    "coins_shop": 76,
+    "hp_and_max_hp": 120,
+    "global_weapon_damage_bonus": 0,
+    "no_purchase": true,
+    "end": "first shop; external Ctrl+C; game window absent"
+  },
+  "scope": "Ordinary controls through automated CUA and tactical pauses; no programmatic game-state control. Not full campaign, all seeds, balance, Windows or audio acceptance."
+}

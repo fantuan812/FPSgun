@@ -1,0 +1,15 @@
+{
+  "verdict": "PASS narrow wording delta",
+  "change": "Exactly 18 kinds of old success summaries \u219218 test entries old success summaries; no test/runtime semantics change.",
+  "old_readme_sha256": "fcc9e1dc99058293ef1378fb31af571e7a9b461fab2e8da98f3f4e95259e343d",
+  "current_readme_sha256": "76bd0c94298960475c3d5fd1411aaf343e3baf6666c0c1dd76710bd004ed9db1",
+  "current_catalog_sha256": "0cdfb9e33dcb8170317cafe62fea3323c7ec17c3db3147e542c25dc0b53046a3",
+  "current_readme_bytes": 6019,
+  "old_56_catalog_records_exact": true,
+  "pck_record_and_14_chunks_exact": true,
+  "catalog_aggregate_bytes_delta": 9,
+  "helper_and_general_readme_unchanged": true,
+  "verified_new_readme_through_unchanged_helper": true,
+  "review_adjustment": "Initial metadata comparison incorrectly expected aggregate original_bytes unchanged; rejected assertion before any output mutation. Corrected oracle independently sums all58 record sizes and confirms exactly+9 bytes from the phrase.",
+  "prior_restore_negative_backup_rollback_proof": "DELIVERY_VERIFICATION.json remains valid for unchanged PCK/helper; old instruction identity retained there historically. No repeated full reconstruction or game run."
+}

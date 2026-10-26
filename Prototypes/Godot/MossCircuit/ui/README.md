@@ -7,7 +7,7 @@
 - `show_title(seed)` → `start {seed}`.
 - `update_hud(view)` displays health, XP, wave, level, scrap, time and kills. Buttons emit `inventory {}` and `pause {}`.
 - `show_shop(view)` offers item cards, real atlas icons, price, rarity, tags, effect, buy/replace, refresh, current build, sell and deploy.
-- `show_upgrade(options, generation)` → `upgrade {index,generation}`.
+- `show_upgrade(options, generation, salvage={})` → `upgrade {index,generation}` for the unchanged three stat cards; an optional detached salvage view adds `salvage_upgrade {id,generation}`. The controller owns fixed payout and one-choice eligibility; UI never sends a reward amount.
 - `show_inventory(view)` → `close_inventory {}`.
 - `show_pause(view)` → `resume {}`, `inventory {}`, `title {}`.
 - `show_result(view)` reads `won` (or `victory`) and offers `retry {}`, `new_seed {}`, `title {}`.

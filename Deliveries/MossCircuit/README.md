@@ -1,12 +1,12 @@
 # MossCircuit 版本交付与历史归档
 
-这里保留曾经发送的 50 个原始文件，并继续接收新版本的 GitHub-only 交付。历史项目 ZIP、运行包分卷、更新包分卷、说明文件和预览图不变；当前可编辑源码位于 [`Prototypes/Godot/MossCircuit`](../../Prototypes/Godot/MossCircuit)。原始文件内容不重打包、不改写。
+这里保留曾经发送的 50 个原始文件，并继续接收新版本的 GitHub-only 交付。历史文件不改写；当前可编辑源码位于 [`Prototypes/Godot/MossCircuit`](../../Prototypes/Godot/MossCircuit)。
 
-## 最新 v28：保留一个商店报价
+## 最新 v29：放弃一次属性选择，换取 10 废料
 
-可免费保留一个未售出报价，跨付费刷新和后续商店继续等待合适的购买时机。保留不是拥有：不会获得属性或联动，且占用一个货位，原刷新费只换来另外三个新报价。可以明确释放，购买成功后消耗保留；失败交易不丢失，终局/新一局清除。未使用保留时旧 RNG、交易和战斗行为保持一致。见 [v28 前提、哈希、备份与手动替换说明](v28/READ_ME_v28.txt) 及其精确有限验证范围。
+保留原有三选一属性卡，另提供明确的可选决策：放弃本次永久属性选择，立即获得固定 10 scrap，已获得的等级和经验不变。这是长期属性与较早购买装备/刷新之间的取舍，不是免费重抽，也不额外开启或保证商店。可以在之后正常到达的商店购买已保留的报价；不自动购买、不打折、不增加额外升级。10 是实验性调值，不代表整体经济平衡验收。见 [v29 前提、哈希、备份和有限验证](v29/READ_ME_v29.txt)。
 
-v28 直接恢复完整 PCK，无需再合并 ZIP，也不重复未改变的 EXE/ELF。必须使用校验一致的原程序，关闭游戏并独立备份旧 PCK 后手动替换；首次安装先恢复完整 v19 平台包并保留许可证。[v26 Feedback Diode](v26/READ_ME_v26.txt) 和 [v27 Broodkeeper 空心脉冲](v27/READ_ME_v27.txt) 的历史交付独立保留。
+v29 直接恢复完整 PCK，无需合并 ZIP，也不重复未改变的 EXE/ELF。必须使用校验一致的原程序，关闭游戏并独立备份旧 PCK 后手动替换；首次安装先恢复完整 v19 平台包并保留许可证。[v26 Feedback Diode](v26/READ_ME_v26.txt)、[v27 空心脉冲](v27/READ_ME_v27.txt) 和 [v28 保留报价](v28/READ_ME_v28.txt) 的历史交付独立保留。
 
 ## 取回版本文件
 
@@ -15,13 +15,13 @@ v28 直接恢复完整 PCK，无需再合并 ZIP，也不重复未改变的 EXE/
 在包含此目录及其分块的 FPSgun 本地检出目录内，使用 Python 3.8 或更新版本：
 
 ```sh
-python Deliveries/MossCircuit/restore_deliveries.py --version v28 --output recovered-v28
+python Deliveries/MossCircuit/restore_deliveries.py --version v29 --output recovered-v29
 ```
 
 Windows 也可用 `py -3` 替代 `python`。输出目录中的同名文件会被拒绝覆盖。只核验、不写出原件：
 
 ```sh
-python Deliveries/MossCircuit/restore_deliveries.py --version v28 --verify-only
+python Deliveries/MossCircuit/restore_deliveries.py --version v29 --verify-only
 ```
 
 恢复操作按单个文件原子发布，不是整批回滚事务；若后续文件失败，先前已成功恢复的文件会保留。
@@ -40,4 +40,4 @@ python Deliveries/MossCircuit/restore_deliveries.py --version v28 --verify-only
 
 `SOURCE_VERSIONS.json` 将已验收的源码快照对应到不可变 Git 提交。源目录中的验证记录保留各自范围、失败过的候选及修正说明，不能把受控夹具、普通输入、静态检查和真实运行混为一谈。
 
-旧 50 个实际发送文件的目录记录保持不变；新 v26–v28 PCK/说明明确标为 GitHub-only 交付，不伪称旧聊天附件。内部恢复备份、私人路径和内部 Library 标识不在此发布。
+旧 50 个实际发送文件的目录记录保持不变；新 v26–v29 PCK/说明明确标为 GitHub-only 交付，不伪称旧聊天附件。内部恢复备份、私人路径和内部 Library 标识不在此发布。

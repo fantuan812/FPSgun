@@ -1,0 +1,2918 @@
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+ERROR: Unable to open file: res://.godot/imported/hero_walk.png-f2caa8263ec49e9cd9111b5779f2959b.ctex.
+   at: _load_data (scene/resources/compressed_texture.cpp:42)
+   GDScript backtrace (most recent call first):
+       [0] frames (res://scripts/art.gd:18)
+       [1] actor (res://scripts/art.gd:53)
+       [2] _ready (res://scripts/main.gd:219)
+       [3] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Failed loading resource: res://.godot/imported/hero_walk.png-f2caa8263ec49e9cd9111b5779f2959b.ctex.
+   at: _load (core/io/resource_loader.cpp:343)
+   GDScript backtrace (most recent call first):
+       [0] frames (res://scripts/art.gd:18)
+       [1] actor (res://scripts/art.gd:53)
+       [2] _ready (res://scripts/main.gd:219)
+       [3] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Failed loading resource: res://assets/hero_walk.png.
+   at: _load (core/io/resource_loader.cpp:343)
+   GDScript backtrace (most recent call first):
+       [0] frames (res://scripts/art.gd:18)
+       [1] actor (res://scripts/art.gd:53)
+       [2] _ready (res://scripts/main.gd:219)
+       [3] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+SCRIPT ERROR: Cannot call method 'get_width' on a null value.
+          at: frames (res://scripts/art.gd:28)
+          GDScript backtrace (most recent call first):
+              [0] frames (res://scripts/art.gd:28)
+              [1] actor (res://scripts/art.gd:53)
+              [2] _ready (res://scripts/main.gd:219)
+              [3] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+SCRIPT ERROR: Cannot call method 'get_frame_texture' on a null value.
+          at: actor (res://scripts/art.gd:55)
+          GDScript backtrace (most recent call first):
+              [0] actor (res://scripts/art.gd:55)
+              [1] _ready (res://scripts/main.gd:219)
+              [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Required object "rp_child" is null.
+   at: add_child (scene/main/node.cpp:1703)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://scripts/main.gd:220)
+       [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Unable to open file: res://.godot/imported/boss_core_attack.png-460b7193f47be7dae77881e512ab0696.ctex.
+   at: _load_data (scene/resources/compressed_texture.cpp:42)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Failed loading resource: res://.godot/imported/boss_core_attack.png-460b7193f47be7dae77881e512ab0696.ctex.
+   at: _load (core/io/resource_loader.cpp:343)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Failed loading resource: res://assets/actions/boss_core_attack.png.
+   at: _load (core/io/resource_loader.cpp:343)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Unable to open file: res://.godot/imported/boss_warden_attack.png-4463a8395e537f87570bca01a6f8fe9e.ctex.
+   at: _load_data (scene/resources/compressed_texture.cpp:42)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Failed loading resource: res://.godot/imported/boss_warden_attack.png-4463a8395e537f87570bca01a6f8fe9e.ctex.
+   at: _load (core/io/resource_loader.cpp:343)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Failed loading resource: res://assets/actions/boss_warden_attack.png.
+   at: _load (core/io/resource_loader.cpp:343)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Unable to open file: res://.godot/imported/hero_dash.png-7b1205adff7ef884d814527948d8275f.ctex.
+   at: _load_data (scene/resources/compressed_texture.cpp:42)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Failed loading resource: res://.godot/imported/hero_dash.png-7b1205adff7ef884d814527948d8275f.ctex.
+   at: _load (core/io/resource_loader.cpp:343)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Failed loading resource: res://assets/actions/hero_dash.png.
+   at: _load (core/io/resource_loader.cpp:343)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Unable to open file: res://.godot/imported/hero_death.png-1153be8bde7c46c84bdb29b13c7445c7.ctex.
+   at: _load_data (scene/resources/compressed_texture.cpp:42)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Failed loading resource: res://.godot/imported/hero_death.png-1153be8bde7c46c84bdb29b13c7445c7.ctex.
+   at: _load (core/io/resource_loader.cpp:343)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Failed loading resource: res://assets/actions/hero_death.png.
+   at: _load (core/io/resource_loader.cpp:343)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Unable to open file: res://.godot/imported/hero_hurt.png-53d4ad39302412573f3e1d45197bf417.ctex.
+   at: _load_data (scene/resources/compressed_texture.cpp:42)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Failed loading resource: res://.godot/imported/hero_hurt.png-53d4ad39302412573f3e1d45197bf417.ctex.
+   at: _load (core/io/resource_loader.cpp:343)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Failed loading resource: res://assets/actions/hero_hurt.png.
+   at: _load (core/io/resource_loader.cpp:343)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Unable to open file: res://.godot/imported/charger_charge.png-e19899fc344d7c286bc0f7e057cef0a9.ctex.
+   at: _load_data (scene/resources/compressed_texture.cpp:42)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Failed loading resource: res://.godot/imported/charger_charge.png-e19899fc344d7c286bc0f7e057cef0a9.ctex.
+   at: _load (core/io/resource_loader.cpp:343)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Failed loading resource: res://assets/actions/charger/charger_charge.png.
+   at: _load (core/io/resource_loader.cpp:343)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Unable to open file: res://.godot/imported/charger_hurt.png-ec9edd070cde6795cf508b769e927b4b.ctex.
+   at: _load_data (scene/resources/compressed_texture.cpp:42)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Failed loading resource: res://.godot/imported/charger_hurt.png-ec9edd070cde6795cf508b769e927b4b.ctex.
+   at: _load (core/io/resource_loader.cpp:343)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Failed loading resource: res://assets/actions/charger/charger_hurt.png.
+   at: _load (core/io/resource_loader.cpp:343)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Unable to open file: res://.godot/imported/charger_death.png-dd12cf50ae0a7d3bf40247b1eaf5a144.ctex.
+   at: _load_data (scene/resources/compressed_texture.cpp:42)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Failed loading resource: res://.godot/imported/charger_death.png-dd12cf50ae0a7d3bf40247b1eaf5a144.ctex.
+   at: _load (core/io/resource_loader.cpp:343)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Failed loading resource: res://assets/actions/charger/charger_death.png.
+   at: _load (core/io/resource_loader.cpp:343)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Unable to open file: res://.godot/imported/spitter_shoot.png-e335b3106d83122f204fce5a185df8bb.ctex.
+   at: _load_data (scene/resources/compressed_texture.cpp:42)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Failed loading resource: res://.godot/imported/spitter_shoot.png-e335b3106d83122f204fce5a185df8bb.ctex.
+   at: _load (core/io/resource_loader.cpp:343)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Failed loading resource: res://assets/actions/spitter/spitter_shoot.png.
+   at: _load (core/io/resource_loader.cpp:343)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Unable to open file: res://.godot/imported/spitter_hurt.png-b2a812668bd580898c5fcf6a9f687034.ctex.
+   at: _load_data (scene/resources/compressed_texture.cpp:42)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Failed loading resource: res://.godot/imported/spitter_hurt.png-b2a812668bd580898c5fcf6a9f687034.ctex.
+   at: _load (core/io/resource_loader.cpp:343)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Failed loading resource: res://assets/actions/spitter/spitter_hurt.png.
+   at: _load (core/io/resource_loader.cpp:343)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Unable to open file: res://.godot/imported/spitter_death.png-d84ebabfcd716ac6298e13c8ee0c15da.ctex.
+   at: _load_data (scene/resources/compressed_texture.cpp:42)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Failed loading resource: res://.godot/imported/spitter_death.png-d84ebabfcd716ac6298e13c8ee0c15da.ctex.
+   at: _load (core/io/resource_loader.cpp:343)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Failed loading resource: res://assets/actions/spitter/spitter_death.png.
+   at: _load (core/io/resource_loader.cpp:343)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Unable to open file: res://.godot/imported/brood_keeper_hurt.png-a55a011aa80814b913b9c860d3c0cccd.ctex.
+   at: _load_data (scene/resources/compressed_texture.cpp:42)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Failed loading resource: res://.godot/imported/brood_keeper_hurt.png-a55a011aa80814b913b9c860d3c0cccd.ctex.
+   at: _load (core/io/resource_loader.cpp:343)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Failed loading resource: res://assets/actions/brood_keeper/brood_keeper_hurt.png.
+   at: _load (core/io/resource_loader.cpp:343)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Unable to open file: res://.godot/imported/brood_keeper_summon.png-283c2f8e2055d5965a920b21bc300865.ctex.
+   at: _load_data (scene/resources/compressed_texture.cpp:42)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Failed loading resource: res://.godot/imported/brood_keeper_summon.png-283c2f8e2055d5965a920b21bc300865.ctex.
+   at: _load (core/io/resource_loader.cpp:343)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Failed loading resource: res://assets/actions/brood_keeper/brood_keeper_summon.png.
+   at: _load (core/io/resource_loader.cpp:343)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Unable to open file: res://.godot/imported/brood_keeper_death.png-0de947dce711722b4ce1cbf976d91571.ctex.
+   at: _load_data (scene/resources/compressed_texture.cpp:42)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Failed loading resource: res://.godot/imported/brood_keeper_death.png-0de947dce711722b4ce1cbf976d91571.ctex.
+   at: _load (core/io/resource_loader.cpp:343)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Failed loading resource: res://assets/actions/brood_keeper/brood_keeper_death.png.
+   at: _load (core/io/resource_loader.cpp:343)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Unable to open file: res://.godot/imported/crawler_hurt.png-9c9f849630a0ff70fba1e60d109978b8.ctex.
+   at: _load_data (scene/resources/compressed_texture.cpp:42)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Failed loading resource: res://.godot/imported/crawler_hurt.png-9c9f849630a0ff70fba1e60d109978b8.ctex.
+   at: _load (core/io/resource_loader.cpp:343)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Failed loading resource: res://assets/actions/crawler/crawler_hurt.png.
+   at: _load (core/io/resource_loader.cpp:343)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Unable to open file: res://.godot/imported/crawler_death.png-58ddcf6efef128aec466958e28fe0ed9.ctex.
+   at: _load_data (scene/resources/compressed_texture.cpp:42)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Failed loading resource: res://.godot/imported/crawler_death.png-58ddcf6efef128aec466958e28fe0ed9.ctex.
+   at: _load (core/io/resource_loader.cpp:343)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Failed loading resource: res://assets/actions/crawler/crawler_death.png.
+   at: _load (core/io/resource_loader.cpp:343)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Unable to open file: res://.godot/imported/flanker_hurt.png-7605a7e4d5ff8a1baee64a6aa79c2051.ctex.
+   at: _load_data (scene/resources/compressed_texture.cpp:42)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Failed loading resource: res://.godot/imported/flanker_hurt.png-7605a7e4d5ff8a1baee64a6aa79c2051.ctex.
+   at: _load (core/io/resource_loader.cpp:343)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Failed loading resource: res://assets/actions/flanker/flanker_hurt.png.
+   at: _load (core/io/resource_loader.cpp:343)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Unable to open file: res://.godot/imported/flanker_death.png-11649df910160241c13c7f9f7f83b0f6.ctex.
+   at: _load_data (scene/resources/compressed_texture.cpp:42)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Failed loading resource: res://.godot/imported/flanker_death.png-11649df910160241c13c7f9f7f83b0f6.ctex.
+   at: _load (core/io/resource_loader.cpp:343)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Failed loading resource: res://assets/actions/flanker/flanker_death.png.
+   at: _load (core/io/resource_loader.cpp:343)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Unable to open file: res://.godot/imported/boss_warden_hurt.png-7d665673bd633b039f75c4d709cd4581.ctex.
+   at: _load_data (scene/resources/compressed_texture.cpp:42)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Failed loading resource: res://.godot/imported/boss_warden_hurt.png-7d665673bd633b039f75c4d709cd4581.ctex.
+   at: _load (core/io/resource_loader.cpp:343)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Failed loading resource: res://assets/actions/boss_warden/boss_warden_hurt.png.
+   at: _load (core/io/resource_loader.cpp:343)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Unable to open file: res://.godot/imported/boss_warden_death.png-c22b2ebf7ddf2d70b1c43b90b11746b0.ctex.
+   at: _load_data (scene/resources/compressed_texture.cpp:42)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Failed loading resource: res://.godot/imported/boss_warden_death.png-c22b2ebf7ddf2d70b1c43b90b11746b0.ctex.
+   at: _load (core/io/resource_loader.cpp:343)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Failed loading resource: res://assets/actions/boss_warden/boss_warden_death.png.
+   at: _load (core/io/resource_loader.cpp:343)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Unable to open file: res://.godot/imported/boss_core_hurt.png-68baf823382b401446fe22509c9173be.ctex.
+   at: _load_data (scene/resources/compressed_texture.cpp:42)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Failed loading resource: res://.godot/imported/boss_core_hurt.png-68baf823382b401446fe22509c9173be.ctex.
+   at: _load (core/io/resource_loader.cpp:343)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Failed loading resource: res://assets/actions/boss_core/boss_core_hurt.png.
+   at: _load (core/io/resource_loader.cpp:343)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Unable to open file: res://.godot/imported/boss_core_death.png-bfe150dd1661e8ea299d8e61ede5ae85.ctex.
+   at: _load_data (scene/resources/compressed_texture.cpp:42)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Failed loading resource: res://.godot/imported/boss_core_death.png-bfe150dd1661e8ea299d8e61ede5ae85.ctex.
+   at: _load (core/io/resource_loader.cpp:343)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Failed loading resource: res://assets/actions/boss_core/boss_core_death.png.
+   at: _load (core/io/resource_loader.cpp:343)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Unable to open file: res://.godot/imported/boss_warden_charge.png-d6a1779b611b48e067bbc08c8d4b2dfd.ctex.
+   at: _load_data (scene/resources/compressed_texture.cpp:42)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Failed loading resource: res://.godot/imported/boss_warden_charge.png-d6a1779b611b48e067bbc08c8d4b2dfd.ctex.
+   at: _load (core/io/resource_loader.cpp:343)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Failed loading resource: res://assets/actions/boss_warden/boss_warden_charge.png.
+   at: _load (core/io/resource_loader.cpp:343)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Unable to open file: res://.godot/imported/boss_core_summon.png-cd8d6ac2323f14cd7ff4465ad3c592a1.ctex.
+   at: _load_data (scene/resources/compressed_texture.cpp:42)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Failed loading resource: res://.godot/imported/boss_core_summon.png-cd8d6ac2323f14cd7ff4465ad3c592a1.ctex.
+   at: _load (core/io/resource_loader.cpp:343)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+ERROR: Failed loading resource: res://assets/actions/boss_core/boss_core_summon.png.
+   at: _load (core/io/resource_loader.cpp:343)
+   GDScript backtrace (most recent call first):
+       [0] load_default (res://scripts/actor_director.gd:31)
+       [1] _ready (res://scripts/main.gd:221)
+       [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+SCRIPT ERROR: Invalid access to property or key 'sprite_frames' on a base object of type 'Nil'.
+          at: register_actor (res://scripts/actor_director.gd:49)
+          GDScript backtrace (most recent call first):
+              [0] register_actor (res://scripts/actor_director.gd:49)
+              [1] _ready (res://scripts/main.gd:222)
+              [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+SCRIPT ERROR: Invalid assignment of property or key 'z_index' with value of type 'int' on a base object of type 'Nil'.
+          at: _ready (res://scripts/main.gd:223)
+          GDScript backtrace (most recent call first):
+              [0] _ready (res://scripts/main.gd:223)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:27)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _title (res://scripts/main.gd:254)
+          GDScript backtrace (most recent call first):
+              [0] _title (res://scripts/main.gd:254)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid assignment of property or key 'position' with value of type 'Vector2' on a base object of type 'Nil'.
+          at: _enter_field (res://scripts/main.gd:1054)
+          GDScript backtrace (most recent call first):
+              [0] _enter_field (res://scripts/main.gd:1054)
+              [1] _select_mode (res://scripts/main.gd:1046)
+              [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _title (res://scripts/main.gd:254)
+          GDScript backtrace (most recent call first):
+              [0] _title (res://scripts/main.gd:254)
+              [1] _select_mode (res://scripts/main.gd:1047)
+              [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _start_run (res://scripts/main.gd:275)
+          GDScript backtrace (most recent call first):
+              [0] _start_run (res://scripts/main.gd:275)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid access to property or key 'slots' on a base object of type 'Nil'.
+          at: _recompute (res://scripts/main.gd:667)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:667)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:36)
+SCRIPT ERROR: Invalid call. Nonexistent function 'show_upgrade' in base 'Nil'.
+          at: _show_upgrades (res://scripts/main.gd:513)
+          GDScript backtrace (most recent call first):
+              [0] _show_upgrades (res://scripts/main.gd:513)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:42)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'weapons' on a base object of type 'Dictionary'.
+          at: _draw (res://scripts/main.gd:595)
+          GDScript backtrace (most recent call first):
+              [0] _draw (res://scripts/main.gd:595)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _title (res://scripts/main.gd:254)
+          GDScript backtrace (most recent call first):
+              [0] _title (res://scripts/main.gd:254)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _start_run (res://scripts/main.gd:275)
+          GDScript backtrace (most recent call first):
+              [0] _start_run (res://scripts/main.gd:275)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid access to property or key 'slots' on a base object of type 'Nil'.
+          at: _recompute (res://scripts/main.gd:667)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:667)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:36)
+SCRIPT ERROR: Invalid access to property or key 'items' on a base object of type 'Dictionary'.
+          at: owned_ids (res://scripts/rules.gd:281)
+          GDScript backtrace (most recent call first):
+              [0] owned_ids (res://scripts/rules.gd:281)
+              [1] shop_affinity (res://scripts/rules.gd:286)
+              [2] weighted_pool (res://scripts/rules.gd:301)
+              [3] draw_shop (res://scripts/rules.gd:325)
+              [4] draw (res://scripts/gameplay/shop_reservation.gd:35)
+              [5] _roll_offers (res://scripts/main.gd:689)
+              [6] _open_shop (res://scripts/main.gd:717)
+              [7] run (QA_WORKSPACE/checks/no_salvage_trace.gd:39)
+SCRIPT ERROR: Invalid access to property or key 'weapons' on a base object of type 'Dictionary'.
+          at: weighted_pool (res://scripts/rules.gd:305)
+          GDScript backtrace (most recent call first):
+              [0] weighted_pool (res://scripts/rules.gd:305)
+              [1] draw_shop (res://scripts/rules.gd:325)
+              [2] draw (res://scripts/gameplay/shop_reservation.gd:35)
+              [3] _roll_offers (res://scripts/main.gd:689)
+              [4] _open_shop (res://scripts/main.gd:717)
+              [5] run (QA_WORKSPACE/checks/no_salvage_trace.gd:39)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _view (res://scripts/main.gd:800)
+          GDScript backtrace (most recent call first):
+              [0] _view (res://scripts/main.gd:800)
+              [1] _render_shop (res://scripts/main.gd:724)
+              [2] _open_shop (res://scripts/main.gd:720)
+              [3] run (QA_WORKSPACE/checks/no_salvage_trace.gd:39)
+SCRIPT ERROR: Invalid call. Nonexistent function 'show_shop' in base 'Nil'.
+          at: _render_shop (res://scripts/main.gd:724)
+          GDScript backtrace (most recent call first):
+              [0] _render_shop (res://scripts/main.gd:724)
+              [1] _open_shop (res://scripts/main.gd:720)
+              [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:39)
+SCRIPT ERROR: Invalid call. Nonexistent function 'hide_modal' in base 'Nil'.
+          at: _hide_modal (res://scripts/main.gd:952)
+          GDScript backtrace (most recent call first):
+              [0] _hide_modal (res://scripts/main.gd:952)
+              [1] _leave_shop (res://scripts/main.gd:796)
+              [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:41)
+SCRIPT ERROR: Invalid call. Nonexistent function 'show_upgrade' in base 'Nil'.
+          at: _show_upgrades (res://scripts/main.gd:513)
+          GDScript backtrace (most recent call first):
+              [0] _show_upgrades (res://scripts/main.gd:513)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:42)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _title (res://scripts/main.gd:254)
+          GDScript backtrace (most recent call first):
+              [0] _title (res://scripts/main.gd:254)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _start_run (res://scripts/main.gd:275)
+          GDScript backtrace (most recent call first):
+              [0] _start_run (res://scripts/main.gd:275)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid access to property or key 'slots' on a base object of type 'Nil'.
+          at: _recompute (res://scripts/main.gd:667)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:667)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:36)
+SCRIPT ERROR: Invalid call. Nonexistent function 'show_upgrade' in base 'Nil'.
+          at: _show_upgrades (res://scripts/main.gd:513)
+          GDScript backtrace (most recent call first):
+              [0] _show_upgrades (res://scripts/main.gd:513)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:42)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _title (res://scripts/main.gd:254)
+          GDScript backtrace (most recent call first):
+              [0] _title (res://scripts/main.gd:254)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _start_run (res://scripts/main.gd:275)
+          GDScript backtrace (most recent call first):
+              [0] _start_run (res://scripts/main.gd:275)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid access to property or key 'slots' on a base object of type 'Nil'.
+          at: _recompute (res://scripts/main.gd:667)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:667)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:36)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _view (res://scripts/main.gd:800)
+          GDScript backtrace (most recent call first):
+              [0] _view (res://scripts/main.gd:800)
+              [1] _render_shop (res://scripts/main.gd:724)
+              [2] _open_shop (res://scripts/main.gd:720)
+              [3] run (QA_WORKSPACE/checks/no_salvage_trace.gd:39)
+SCRIPT ERROR: Invalid call. Nonexistent function 'show_shop' in base 'Nil'.
+          at: _render_shop (res://scripts/main.gd:724)
+          GDScript backtrace (most recent call first):
+              [0] _render_shop (res://scripts/main.gd:724)
+              [1] _open_shop (res://scripts/main.gd:720)
+              [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:39)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _view (res://scripts/main.gd:800)
+          GDScript backtrace (most recent call first):
+              [0] _view (res://scripts/main.gd:800)
+              [1] _render_shop (res://scripts/main.gd:724)
+              [2] _reserve_offer (res://scripts/main.gd:702)
+              [3] run (QA_WORKSPACE/checks/no_salvage_trace.gd:40)
+SCRIPT ERROR: Invalid call. Nonexistent function 'show_shop' in base 'Nil'.
+          at: _render_shop (res://scripts/main.gd:724)
+          GDScript backtrace (most recent call first):
+              [0] _render_shop (res://scripts/main.gd:724)
+              [1] _reserve_offer (res://scripts/main.gd:702)
+              [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:40)
+SCRIPT ERROR: Invalid call. Nonexistent function 'hide_modal' in base 'Nil'.
+          at: _hide_modal (res://scripts/main.gd:952)
+          GDScript backtrace (most recent call first):
+              [0] _hide_modal (res://scripts/main.gd:952)
+              [1] _leave_shop (res://scripts/main.gd:796)
+              [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:41)
+SCRIPT ERROR: Invalid call. Nonexistent function 'show_upgrade' in base 'Nil'.
+          at: _show_upgrades (res://scripts/main.gd:513)
+          GDScript backtrace (most recent call first):
+              [0] _show_upgrades (res://scripts/main.gd:513)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:42)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _title (res://scripts/main.gd:254)
+          GDScript backtrace (most recent call first):
+              [0] _title (res://scripts/main.gd:254)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _start_run (res://scripts/main.gd:275)
+          GDScript backtrace (most recent call first):
+              [0] _start_run (res://scripts/main.gd:275)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid access to property or key 'slots' on a base object of type 'Nil'.
+          at: _recompute (res://scripts/main.gd:667)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:667)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:36)
+SCRIPT ERROR: Invalid call. Nonexistent function 'show_upgrade' in base 'Nil'.
+          at: _show_upgrades (res://scripts/main.gd:513)
+          GDScript backtrace (most recent call first):
+              [0] _show_upgrades (res://scripts/main.gd:513)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:42)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _title (res://scripts/main.gd:254)
+          GDScript backtrace (most recent call first):
+              [0] _title (res://scripts/main.gd:254)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _start_run (res://scripts/main.gd:275)
+          GDScript backtrace (most recent call first):
+              [0] _start_run (res://scripts/main.gd:275)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid access to property or key 'slots' on a base object of type 'Nil'.
+          at: _recompute (res://scripts/main.gd:667)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:667)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:36)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _view (res://scripts/main.gd:800)
+          GDScript backtrace (most recent call first):
+              [0] _view (res://scripts/main.gd:800)
+              [1] _render_shop (res://scripts/main.gd:724)
+              [2] _open_shop (res://scripts/main.gd:720)
+              [3] run (QA_WORKSPACE/checks/no_salvage_trace.gd:39)
+SCRIPT ERROR: Invalid call. Nonexistent function 'show_shop' in base 'Nil'.
+          at: _render_shop (res://scripts/main.gd:724)
+          GDScript backtrace (most recent call first):
+              [0] _render_shop (res://scripts/main.gd:724)
+              [1] _open_shop (res://scripts/main.gd:720)
+              [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:39)
+SCRIPT ERROR: Invalid call. Nonexistent function 'hide_modal' in base 'Nil'.
+          at: _hide_modal (res://scripts/main.gd:952)
+          GDScript backtrace (most recent call first):
+              [0] _hide_modal (res://scripts/main.gd:952)
+              [1] _leave_shop (res://scripts/main.gd:796)
+              [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:41)
+SCRIPT ERROR: Invalid call. Nonexistent function 'show_upgrade' in base 'Nil'.
+          at: _show_upgrades (res://scripts/main.gd:513)
+          GDScript backtrace (most recent call first):
+              [0] _show_upgrades (res://scripts/main.gd:513)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:42)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _title (res://scripts/main.gd:254)
+          GDScript backtrace (most recent call first):
+              [0] _title (res://scripts/main.gd:254)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _start_run (res://scripts/main.gd:275)
+          GDScript backtrace (most recent call first):
+              [0] _start_run (res://scripts/main.gd:275)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid access to property or key 'slots' on a base object of type 'Nil'.
+          at: _recompute (res://scripts/main.gd:667)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:667)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:36)
+SCRIPT ERROR: Invalid call. Nonexistent function 'show_upgrade' in base 'Nil'.
+          at: _show_upgrades (res://scripts/main.gd:513)
+          GDScript backtrace (most recent call first):
+              [0] _show_upgrades (res://scripts/main.gd:513)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:42)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _title (res://scripts/main.gd:254)
+          GDScript backtrace (most recent call first):
+              [0] _title (res://scripts/main.gd:254)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _start_run (res://scripts/main.gd:275)
+          GDScript backtrace (most recent call first):
+              [0] _start_run (res://scripts/main.gd:275)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid access to property or key 'slots' on a base object of type 'Nil'.
+          at: _recompute (res://scripts/main.gd:667)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:667)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:36)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _view (res://scripts/main.gd:800)
+          GDScript backtrace (most recent call first):
+              [0] _view (res://scripts/main.gd:800)
+              [1] _render_shop (res://scripts/main.gd:724)
+              [2] _open_shop (res://scripts/main.gd:720)
+              [3] run (QA_WORKSPACE/checks/no_salvage_trace.gd:39)
+SCRIPT ERROR: Invalid call. Nonexistent function 'show_shop' in base 'Nil'.
+          at: _render_shop (res://scripts/main.gd:724)
+          GDScript backtrace (most recent call first):
+              [0] _render_shop (res://scripts/main.gd:724)
+              [1] _open_shop (res://scripts/main.gd:720)
+              [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:39)
+SCRIPT ERROR: Invalid call. Nonexistent function 'hide_modal' in base 'Nil'.
+          at: _hide_modal (res://scripts/main.gd:952)
+          GDScript backtrace (most recent call first):
+              [0] _hide_modal (res://scripts/main.gd:952)
+              [1] _leave_shop (res://scripts/main.gd:796)
+              [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:41)
+SCRIPT ERROR: Invalid call. Nonexistent function 'show_upgrade' in base 'Nil'.
+          at: _show_upgrades (res://scripts/main.gd:513)
+          GDScript backtrace (most recent call first):
+              [0] _show_upgrades (res://scripts/main.gd:513)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:42)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _title (res://scripts/main.gd:254)
+          GDScript backtrace (most recent call first):
+              [0] _title (res://scripts/main.gd:254)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _start_run (res://scripts/main.gd:275)
+          GDScript backtrace (most recent call first):
+              [0] _start_run (res://scripts/main.gd:275)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid access to property or key 'slots' on a base object of type 'Nil'.
+          at: _recompute (res://scripts/main.gd:667)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:667)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:36)
+SCRIPT ERROR: Invalid call. Nonexistent function 'show_upgrade' in base 'Nil'.
+          at: _show_upgrades (res://scripts/main.gd:513)
+          GDScript backtrace (most recent call first):
+              [0] _show_upgrades (res://scripts/main.gd:513)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:42)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _title (res://scripts/main.gd:254)
+          GDScript backtrace (most recent call first):
+              [0] _title (res://scripts/main.gd:254)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _start_run (res://scripts/main.gd:275)
+          GDScript backtrace (most recent call first):
+              [0] _start_run (res://scripts/main.gd:275)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid access to property or key 'slots' on a base object of type 'Nil'.
+          at: _recompute (res://scripts/main.gd:667)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:667)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:36)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _view (res://scripts/main.gd:800)
+          GDScript backtrace (most recent call first):
+              [0] _view (res://scripts/main.gd:800)
+              [1] _render_shop (res://scripts/main.gd:724)
+              [2] _open_shop (res://scripts/main.gd:720)
+              [3] run (QA_WORKSPACE/checks/no_salvage_trace.gd:39)
+SCRIPT ERROR: Invalid call. Nonexistent function 'show_shop' in base 'Nil'.
+          at: _render_shop (res://scripts/main.gd:724)
+          GDScript backtrace (most recent call first):
+              [0] _render_shop (res://scripts/main.gd:724)
+              [1] _open_shop (res://scripts/main.gd:720)
+              [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:39)
+SCRIPT ERROR: Invalid call. Nonexistent function 'hide_modal' in base 'Nil'.
+          at: _hide_modal (res://scripts/main.gd:952)
+          GDScript backtrace (most recent call first):
+              [0] _hide_modal (res://scripts/main.gd:952)
+              [1] _leave_shop (res://scripts/main.gd:796)
+              [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:41)
+SCRIPT ERROR: Invalid call. Nonexistent function 'show_upgrade' in base 'Nil'.
+          at: _show_upgrades (res://scripts/main.gd:513)
+          GDScript backtrace (most recent call first):
+              [0] _show_upgrades (res://scripts/main.gd:513)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:42)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _title (res://scripts/main.gd:254)
+          GDScript backtrace (most recent call first):
+              [0] _title (res://scripts/main.gd:254)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _start_run (res://scripts/main.gd:275)
+          GDScript backtrace (most recent call first):
+              [0] _start_run (res://scripts/main.gd:275)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid access to property or key 'slots' on a base object of type 'Nil'.
+          at: _recompute (res://scripts/main.gd:667)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:667)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:36)
+SCRIPT ERROR: Invalid call. Nonexistent function 'show_upgrade' in base 'Nil'.
+          at: _show_upgrades (res://scripts/main.gd:513)
+          GDScript backtrace (most recent call first):
+              [0] _show_upgrades (res://scripts/main.gd:513)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:42)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _title (res://scripts/main.gd:254)
+          GDScript backtrace (most recent call first):
+              [0] _title (res://scripts/main.gd:254)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _start_run (res://scripts/main.gd:275)
+          GDScript backtrace (most recent call first):
+              [0] _start_run (res://scripts/main.gd:275)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid access to property or key 'slots' on a base object of type 'Nil'.
+          at: _recompute (res://scripts/main.gd:667)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:667)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:36)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _view (res://scripts/main.gd:800)
+          GDScript backtrace (most recent call first):
+              [0] _view (res://scripts/main.gd:800)
+              [1] _render_shop (res://scripts/main.gd:724)
+              [2] _open_shop (res://scripts/main.gd:720)
+              [3] run (QA_WORKSPACE/checks/no_salvage_trace.gd:39)
+SCRIPT ERROR: Invalid call. Nonexistent function 'show_shop' in base 'Nil'.
+          at: _render_shop (res://scripts/main.gd:724)
+          GDScript backtrace (most recent call first):
+              [0] _render_shop (res://scripts/main.gd:724)
+              [1] _open_shop (res://scripts/main.gd:720)
+              [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:39)
+SCRIPT ERROR: Invalid call. Nonexistent function 'hide_modal' in base 'Nil'.
+          at: _hide_modal (res://scripts/main.gd:952)
+          GDScript backtrace (most recent call first):
+              [0] _hide_modal (res://scripts/main.gd:952)
+              [1] _leave_shop (res://scripts/main.gd:796)
+              [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:41)
+SCRIPT ERROR: Invalid call. Nonexistent function 'show_upgrade' in base 'Nil'.
+          at: _show_upgrades (res://scripts/main.gd:513)
+          GDScript backtrace (most recent call first):
+              [0] _show_upgrades (res://scripts/main.gd:513)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:42)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _title (res://scripts/main.gd:254)
+          GDScript backtrace (most recent call first):
+              [0] _title (res://scripts/main.gd:254)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _start_run (res://scripts/main.gd:275)
+          GDScript backtrace (most recent call first):
+              [0] _start_run (res://scripts/main.gd:275)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid access to property or key 'slots' on a base object of type 'Nil'.
+          at: _recompute (res://scripts/main.gd:667)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:667)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:36)
+SCRIPT ERROR: Invalid call. Nonexistent function 'show_upgrade' in base 'Nil'.
+          at: _show_upgrades (res://scripts/main.gd:513)
+          GDScript backtrace (most recent call first):
+              [0] _show_upgrades (res://scripts/main.gd:513)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:42)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _title (res://scripts/main.gd:254)
+          GDScript backtrace (most recent call first):
+              [0] _title (res://scripts/main.gd:254)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _start_run (res://scripts/main.gd:275)
+          GDScript backtrace (most recent call first):
+              [0] _start_run (res://scripts/main.gd:275)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid access to property or key 'slots' on a base object of type 'Nil'.
+          at: _recompute (res://scripts/main.gd:667)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:667)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:36)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _view (res://scripts/main.gd:800)
+          GDScript backtrace (most recent call first):
+              [0] _view (res://scripts/main.gd:800)
+              [1] _render_shop (res://scripts/main.gd:724)
+              [2] _open_shop (res://scripts/main.gd:720)
+              [3] run (QA_WORKSPACE/checks/no_salvage_trace.gd:39)
+SCRIPT ERROR: Invalid call. Nonexistent function 'show_shop' in base 'Nil'.
+          at: _render_shop (res://scripts/main.gd:724)
+          GDScript backtrace (most recent call first):
+              [0] _render_shop (res://scripts/main.gd:724)
+              [1] _open_shop (res://scripts/main.gd:720)
+              [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:39)
+SCRIPT ERROR: Invalid call. Nonexistent function 'hide_modal' in base 'Nil'.
+          at: _hide_modal (res://scripts/main.gd:952)
+          GDScript backtrace (most recent call first):
+              [0] _hide_modal (res://scripts/main.gd:952)
+              [1] _leave_shop (res://scripts/main.gd:796)
+              [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:41)
+SCRIPT ERROR: Invalid call. Nonexistent function 'show_upgrade' in base 'Nil'.
+          at: _show_upgrades (res://scripts/main.gd:513)
+          GDScript backtrace (most recent call first):
+              [0] _show_upgrades (res://scripts/main.gd:513)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:42)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _title (res://scripts/main.gd:254)
+          GDScript backtrace (most recent call first):
+              [0] _title (res://scripts/main.gd:254)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _start_run (res://scripts/main.gd:275)
+          GDScript backtrace (most recent call first):
+              [0] _start_run (res://scripts/main.gd:275)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid access to property or key 'slots' on a base object of type 'Nil'.
+          at: _recompute (res://scripts/main.gd:667)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:667)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:36)
+SCRIPT ERROR: Invalid call. Nonexistent function 'show_upgrade' in base 'Nil'.
+          at: _show_upgrades (res://scripts/main.gd:513)
+          GDScript backtrace (most recent call first):
+              [0] _show_upgrades (res://scripts/main.gd:513)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:42)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _title (res://scripts/main.gd:254)
+          GDScript backtrace (most recent call first):
+              [0] _title (res://scripts/main.gd:254)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _start_run (res://scripts/main.gd:275)
+          GDScript backtrace (most recent call first):
+              [0] _start_run (res://scripts/main.gd:275)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid access to property or key 'slots' on a base object of type 'Nil'.
+          at: _recompute (res://scripts/main.gd:667)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:667)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:36)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _view (res://scripts/main.gd:800)
+          GDScript backtrace (most recent call first):
+              [0] _view (res://scripts/main.gd:800)
+              [1] _render_shop (res://scripts/main.gd:724)
+              [2] _open_shop (res://scripts/main.gd:720)
+              [3] run (QA_WORKSPACE/checks/no_salvage_trace.gd:39)
+SCRIPT ERROR: Invalid call. Nonexistent function 'show_shop' in base 'Nil'.
+          at: _render_shop (res://scripts/main.gd:724)
+          GDScript backtrace (most recent call first):
+              [0] _render_shop (res://scripts/main.gd:724)
+              [1] _open_shop (res://scripts/main.gd:720)
+              [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:39)
+SCRIPT ERROR: Invalid call. Nonexistent function 'hide_modal' in base 'Nil'.
+          at: _hide_modal (res://scripts/main.gd:952)
+          GDScript backtrace (most recent call first):
+              [0] _hide_modal (res://scripts/main.gd:952)
+              [1] _leave_shop (res://scripts/main.gd:796)
+              [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:41)
+SCRIPT ERROR: Invalid call. Nonexistent function 'show_upgrade' in base 'Nil'.
+          at: _show_upgrades (res://scripts/main.gd:513)
+          GDScript backtrace (most recent call first):
+              [0] _show_upgrades (res://scripts/main.gd:513)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:42)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _title (res://scripts/main.gd:254)
+          GDScript backtrace (most recent call first):
+              [0] _title (res://scripts/main.gd:254)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _start_run (res://scripts/main.gd:275)
+          GDScript backtrace (most recent call first):
+              [0] _start_run (res://scripts/main.gd:275)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid access to property or key 'slots' on a base object of type 'Nil'.
+          at: _recompute (res://scripts/main.gd:667)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:667)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:36)
+SCRIPT ERROR: Invalid call. Nonexistent function 'show_upgrade' in base 'Nil'.
+          at: _show_upgrades (res://scripts/main.gd:513)
+          GDScript backtrace (most recent call first):
+              [0] _show_upgrades (res://scripts/main.gd:513)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:42)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _title (res://scripts/main.gd:254)
+          GDScript backtrace (most recent call first):
+              [0] _title (res://scripts/main.gd:254)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _start_run (res://scripts/main.gd:275)
+          GDScript backtrace (most recent call first):
+              [0] _start_run (res://scripts/main.gd:275)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid access to property or key 'slots' on a base object of type 'Nil'.
+          at: _recompute (res://scripts/main.gd:667)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:667)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:36)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _view (res://scripts/main.gd:800)
+          GDScript backtrace (most recent call first):
+              [0] _view (res://scripts/main.gd:800)
+              [1] _render_shop (res://scripts/main.gd:724)
+              [2] _open_shop (res://scripts/main.gd:720)
+              [3] run (QA_WORKSPACE/checks/no_salvage_trace.gd:39)
+SCRIPT ERROR: Invalid call. Nonexistent function 'show_shop' in base 'Nil'.
+          at: _render_shop (res://scripts/main.gd:724)
+          GDScript backtrace (most recent call first):
+              [0] _render_shop (res://scripts/main.gd:724)
+              [1] _open_shop (res://scripts/main.gd:720)
+              [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:39)
+SCRIPT ERROR: Invalid call. Nonexistent function 'hide_modal' in base 'Nil'.
+          at: _hide_modal (res://scripts/main.gd:952)
+          GDScript backtrace (most recent call first):
+              [0] _hide_modal (res://scripts/main.gd:952)
+              [1] _leave_shop (res://scripts/main.gd:796)
+              [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:41)
+SCRIPT ERROR: Invalid call. Nonexistent function 'show_upgrade' in base 'Nil'.
+          at: _show_upgrades (res://scripts/main.gd:513)
+          GDScript backtrace (most recent call first):
+              [0] _show_upgrades (res://scripts/main.gd:513)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:42)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _title (res://scripts/main.gd:254)
+          GDScript backtrace (most recent call first):
+              [0] _title (res://scripts/main.gd:254)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _start_run (res://scripts/main.gd:275)
+          GDScript backtrace (most recent call first):
+              [0] _start_run (res://scripts/main.gd:275)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid access to property or key 'slots' on a base object of type 'Nil'.
+          at: _recompute (res://scripts/main.gd:667)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:667)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:36)
+SCRIPT ERROR: Invalid call. Nonexistent function 'show_upgrade' in base 'Nil'.
+          at: _show_upgrades (res://scripts/main.gd:513)
+          GDScript backtrace (most recent call first):
+              [0] _show_upgrades (res://scripts/main.gd:513)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:42)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _title (res://scripts/main.gd:254)
+          GDScript backtrace (most recent call first):
+              [0] _title (res://scripts/main.gd:254)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _start_run (res://scripts/main.gd:275)
+          GDScript backtrace (most recent call first):
+              [0] _start_run (res://scripts/main.gd:275)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid access to property or key 'slots' on a base object of type 'Nil'.
+          at: _recompute (res://scripts/main.gd:667)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:667)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:36)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _view (res://scripts/main.gd:800)
+          GDScript backtrace (most recent call first):
+              [0] _view (res://scripts/main.gd:800)
+              [1] _render_shop (res://scripts/main.gd:724)
+              [2] _open_shop (res://scripts/main.gd:720)
+              [3] run (QA_WORKSPACE/checks/no_salvage_trace.gd:39)
+SCRIPT ERROR: Invalid call. Nonexistent function 'show_shop' in base 'Nil'.
+          at: _render_shop (res://scripts/main.gd:724)
+          GDScript backtrace (most recent call first):
+              [0] _render_shop (res://scripts/main.gd:724)
+              [1] _open_shop (res://scripts/main.gd:720)
+              [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:39)
+SCRIPT ERROR: Invalid call. Nonexistent function 'hide_modal' in base 'Nil'.
+          at: _hide_modal (res://scripts/main.gd:952)
+          GDScript backtrace (most recent call first):
+              [0] _hide_modal (res://scripts/main.gd:952)
+              [1] _leave_shop (res://scripts/main.gd:796)
+              [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:41)
+SCRIPT ERROR: Invalid call. Nonexistent function 'show_upgrade' in base 'Nil'.
+          at: _show_upgrades (res://scripts/main.gd:513)
+          GDScript backtrace (most recent call first):
+              [0] _show_upgrades (res://scripts/main.gd:513)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:42)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _title (res://scripts/main.gd:254)
+          GDScript backtrace (most recent call first):
+              [0] _title (res://scripts/main.gd:254)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _start_run (res://scripts/main.gd:275)
+          GDScript backtrace (most recent call first):
+              [0] _start_run (res://scripts/main.gd:275)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid access to property or key 'slots' on a base object of type 'Nil'.
+          at: _recompute (res://scripts/main.gd:667)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:667)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:36)
+SCRIPT ERROR: Invalid call. Nonexistent function 'show_upgrade' in base 'Nil'.
+          at: _show_upgrades (res://scripts/main.gd:513)
+          GDScript backtrace (most recent call first):
+              [0] _show_upgrades (res://scripts/main.gd:513)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:42)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _title (res://scripts/main.gd:254)
+          GDScript backtrace (most recent call first):
+              [0] _title (res://scripts/main.gd:254)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _start_run (res://scripts/main.gd:275)
+          GDScript backtrace (most recent call first):
+              [0] _start_run (res://scripts/main.gd:275)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid access to property or key 'slots' on a base object of type 'Nil'.
+          at: _recompute (res://scripts/main.gd:667)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:667)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:36)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _view (res://scripts/main.gd:800)
+          GDScript backtrace (most recent call first):
+              [0] _view (res://scripts/main.gd:800)
+              [1] _render_shop (res://scripts/main.gd:724)
+              [2] _open_shop (res://scripts/main.gd:720)
+              [3] run (QA_WORKSPACE/checks/no_salvage_trace.gd:39)
+SCRIPT ERROR: Invalid call. Nonexistent function 'show_shop' in base 'Nil'.
+          at: _render_shop (res://scripts/main.gd:724)
+          GDScript backtrace (most recent call first):
+              [0] _render_shop (res://scripts/main.gd:724)
+              [1] _open_shop (res://scripts/main.gd:720)
+              [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:39)
+SCRIPT ERROR: Invalid call. Nonexistent function 'hide_modal' in base 'Nil'.
+          at: _hide_modal (res://scripts/main.gd:952)
+          GDScript backtrace (most recent call first):
+              [0] _hide_modal (res://scripts/main.gd:952)
+              [1] _leave_shop (res://scripts/main.gd:796)
+              [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:41)
+SCRIPT ERROR: Invalid call. Nonexistent function 'show_upgrade' in base 'Nil'.
+          at: _show_upgrades (res://scripts/main.gd:513)
+          GDScript backtrace (most recent call first):
+              [0] _show_upgrades (res://scripts/main.gd:513)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:42)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _title (res://scripts/main.gd:254)
+          GDScript backtrace (most recent call first):
+              [0] _title (res://scripts/main.gd:254)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _start_run (res://scripts/main.gd:275)
+          GDScript backtrace (most recent call first):
+              [0] _start_run (res://scripts/main.gd:275)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid access to property or key 'slots' on a base object of type 'Nil'.
+          at: _recompute (res://scripts/main.gd:667)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:667)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:36)
+SCRIPT ERROR: Invalid call. Nonexistent function 'show_upgrade' in base 'Nil'.
+          at: _show_upgrades (res://scripts/main.gd:513)
+          GDScript backtrace (most recent call first):
+              [0] _show_upgrades (res://scripts/main.gd:513)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:42)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _title (res://scripts/main.gd:254)
+          GDScript backtrace (most recent call first):
+              [0] _title (res://scripts/main.gd:254)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _start_run (res://scripts/main.gd:275)
+          GDScript backtrace (most recent call first):
+              [0] _start_run (res://scripts/main.gd:275)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid access to property or key 'slots' on a base object of type 'Nil'.
+          at: _recompute (res://scripts/main.gd:667)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:667)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:36)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _view (res://scripts/main.gd:800)
+          GDScript backtrace (most recent call first):
+              [0] _view (res://scripts/main.gd:800)
+              [1] _render_shop (res://scripts/main.gd:724)
+              [2] _open_shop (res://scripts/main.gd:720)
+              [3] run (QA_WORKSPACE/checks/no_salvage_trace.gd:39)
+SCRIPT ERROR: Invalid call. Nonexistent function 'show_shop' in base 'Nil'.
+          at: _render_shop (res://scripts/main.gd:724)
+          GDScript backtrace (most recent call first):
+              [0] _render_shop (res://scripts/main.gd:724)
+              [1] _open_shop (res://scripts/main.gd:720)
+              [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:39)
+SCRIPT ERROR: Invalid call. Nonexistent function 'hide_modal' in base 'Nil'.
+          at: _hide_modal (res://scripts/main.gd:952)
+          GDScript backtrace (most recent call first):
+              [0] _hide_modal (res://scripts/main.gd:952)
+              [1] _leave_shop (res://scripts/main.gd:796)
+              [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:41)
+SCRIPT ERROR: Invalid call. Nonexistent function 'show_upgrade' in base 'Nil'.
+          at: _show_upgrades (res://scripts/main.gd:513)
+          GDScript backtrace (most recent call first):
+              [0] _show_upgrades (res://scripts/main.gd:513)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:42)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _title (res://scripts/main.gd:254)
+          GDScript backtrace (most recent call first):
+              [0] _title (res://scripts/main.gd:254)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _start_run (res://scripts/main.gd:275)
+          GDScript backtrace (most recent call first):
+              [0] _start_run (res://scripts/main.gd:275)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid access to property or key 'slots' on a base object of type 'Nil'.
+          at: _recompute (res://scripts/main.gd:667)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:667)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:36)
+SCRIPT ERROR: Invalid call. Nonexistent function 'show_upgrade' in base 'Nil'.
+          at: _show_upgrades (res://scripts/main.gd:513)
+          GDScript backtrace (most recent call first):
+              [0] _show_upgrades (res://scripts/main.gd:513)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:42)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _title (res://scripts/main.gd:254)
+          GDScript backtrace (most recent call first):
+              [0] _title (res://scripts/main.gd:254)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _start_run (res://scripts/main.gd:275)
+          GDScript backtrace (most recent call first):
+              [0] _start_run (res://scripts/main.gd:275)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid access to property or key 'slots' on a base object of type 'Nil'.
+          at: _recompute (res://scripts/main.gd:667)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:667)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:36)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _view (res://scripts/main.gd:800)
+          GDScript backtrace (most recent call first):
+              [0] _view (res://scripts/main.gd:800)
+              [1] _render_shop (res://scripts/main.gd:724)
+              [2] _open_shop (res://scripts/main.gd:720)
+              [3] run (QA_WORKSPACE/checks/no_salvage_trace.gd:39)
+SCRIPT ERROR: Invalid call. Nonexistent function 'show_shop' in base 'Nil'.
+          at: _render_shop (res://scripts/main.gd:724)
+          GDScript backtrace (most recent call first):
+              [0] _render_shop (res://scripts/main.gd:724)
+              [1] _open_shop (res://scripts/main.gd:720)
+              [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:39)
+SCRIPT ERROR: Invalid call. Nonexistent function 'hide_modal' in base 'Nil'.
+          at: _hide_modal (res://scripts/main.gd:952)
+          GDScript backtrace (most recent call first):
+              [0] _hide_modal (res://scripts/main.gd:952)
+              [1] _leave_shop (res://scripts/main.gd:796)
+              [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:41)
+SCRIPT ERROR: Invalid call. Nonexistent function 'show_upgrade' in base 'Nil'.
+          at: _show_upgrades (res://scripts/main.gd:513)
+          GDScript backtrace (most recent call first):
+              [0] _show_upgrades (res://scripts/main.gd:513)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:42)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _title (res://scripts/main.gd:254)
+          GDScript backtrace (most recent call first):
+              [0] _title (res://scripts/main.gd:254)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _start_run (res://scripts/main.gd:275)
+          GDScript backtrace (most recent call first):
+              [0] _start_run (res://scripts/main.gd:275)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid access to property or key 'slots' on a base object of type 'Nil'.
+          at: _recompute (res://scripts/main.gd:667)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:667)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:36)
+SCRIPT ERROR: Invalid call. Nonexistent function 'show_upgrade' in base 'Nil'.
+          at: _show_upgrades (res://scripts/main.gd:513)
+          GDScript backtrace (most recent call first):
+              [0] _show_upgrades (res://scripts/main.gd:513)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:42)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _title (res://scripts/main.gd:254)
+          GDScript backtrace (most recent call first):
+              [0] _title (res://scripts/main.gd:254)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _start_run (res://scripts/main.gd:275)
+          GDScript backtrace (most recent call first):
+              [0] _start_run (res://scripts/main.gd:275)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid access to property or key 'slots' on a base object of type 'Nil'.
+          at: _recompute (res://scripts/main.gd:667)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:667)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:36)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _view (res://scripts/main.gd:800)
+          GDScript backtrace (most recent call first):
+              [0] _view (res://scripts/main.gd:800)
+              [1] _render_shop (res://scripts/main.gd:724)
+              [2] _open_shop (res://scripts/main.gd:720)
+              [3] run (QA_WORKSPACE/checks/no_salvage_trace.gd:39)
+SCRIPT ERROR: Invalid call. Nonexistent function 'show_shop' in base 'Nil'.
+          at: _render_shop (res://scripts/main.gd:724)
+          GDScript backtrace (most recent call first):
+              [0] _render_shop (res://scripts/main.gd:724)
+              [1] _open_shop (res://scripts/main.gd:720)
+              [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:39)
+SCRIPT ERROR: Invalid call. Nonexistent function 'hide_modal' in base 'Nil'.
+          at: _hide_modal (res://scripts/main.gd:952)
+          GDScript backtrace (most recent call first):
+              [0] _hide_modal (res://scripts/main.gd:952)
+              [1] _leave_shop (res://scripts/main.gd:796)
+              [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:41)
+SCRIPT ERROR: Invalid call. Nonexistent function 'show_upgrade' in base 'Nil'.
+          at: _show_upgrades (res://scripts/main.gd:513)
+          GDScript backtrace (most recent call first):
+              [0] _show_upgrades (res://scripts/main.gd:513)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:42)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _title (res://scripts/main.gd:254)
+          GDScript backtrace (most recent call first):
+              [0] _title (res://scripts/main.gd:254)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _start_run (res://scripts/main.gd:275)
+          GDScript backtrace (most recent call first):
+              [0] _start_run (res://scripts/main.gd:275)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid access to property or key 'slots' on a base object of type 'Nil'.
+          at: _recompute (res://scripts/main.gd:667)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:667)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:36)
+SCRIPT ERROR: Invalid call. Nonexistent function 'show_upgrade' in base 'Nil'.
+          at: _show_upgrades (res://scripts/main.gd:513)
+          GDScript backtrace (most recent call first):
+              [0] _show_upgrades (res://scripts/main.gd:513)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:42)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _title (res://scripts/main.gd:254)
+          GDScript backtrace (most recent call first):
+              [0] _title (res://scripts/main.gd:254)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _start_run (res://scripts/main.gd:275)
+          GDScript backtrace (most recent call first):
+              [0] _start_run (res://scripts/main.gd:275)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid access to property or key 'slots' on a base object of type 'Nil'.
+          at: _recompute (res://scripts/main.gd:667)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:667)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:36)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _view (res://scripts/main.gd:800)
+          GDScript backtrace (most recent call first):
+              [0] _view (res://scripts/main.gd:800)
+              [1] _render_shop (res://scripts/main.gd:724)
+              [2] _open_shop (res://scripts/main.gd:720)
+              [3] run (QA_WORKSPACE/checks/no_salvage_trace.gd:39)
+SCRIPT ERROR: Invalid call. Nonexistent function 'show_shop' in base 'Nil'.
+          at: _render_shop (res://scripts/main.gd:724)
+          GDScript backtrace (most recent call first):
+              [0] _render_shop (res://scripts/main.gd:724)
+              [1] _open_shop (res://scripts/main.gd:720)
+              [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:39)
+SCRIPT ERROR: Invalid call. Nonexistent function 'hide_modal' in base 'Nil'.
+          at: _hide_modal (res://scripts/main.gd:952)
+          GDScript backtrace (most recent call first):
+              [0] _hide_modal (res://scripts/main.gd:952)
+              [1] _leave_shop (res://scripts/main.gd:796)
+              [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:41)
+SCRIPT ERROR: Invalid call. Nonexistent function 'show_upgrade' in base 'Nil'.
+          at: _show_upgrades (res://scripts/main.gd:513)
+          GDScript backtrace (most recent call first):
+              [0] _show_upgrades (res://scripts/main.gd:513)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:42)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _title (res://scripts/main.gd:254)
+          GDScript backtrace (most recent call first):
+              [0] _title (res://scripts/main.gd:254)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _start_run (res://scripts/main.gd:275)
+          GDScript backtrace (most recent call first):
+              [0] _start_run (res://scripts/main.gd:275)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid access to property or key 'slots' on a base object of type 'Nil'.
+          at: _recompute (res://scripts/main.gd:667)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:667)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:36)
+SCRIPT ERROR: Invalid call. Nonexistent function 'show_upgrade' in base 'Nil'.
+          at: _show_upgrades (res://scripts/main.gd:513)
+          GDScript backtrace (most recent call first):
+              [0] _show_upgrades (res://scripts/main.gd:513)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:42)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _title (res://scripts/main.gd:254)
+          GDScript backtrace (most recent call first):
+              [0] _title (res://scripts/main.gd:254)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _start_run (res://scripts/main.gd:275)
+          GDScript backtrace (most recent call first):
+              [0] _start_run (res://scripts/main.gd:275)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid access to property or key 'slots' on a base object of type 'Nil'.
+          at: _recompute (res://scripts/main.gd:667)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:667)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:36)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _view (res://scripts/main.gd:800)
+          GDScript backtrace (most recent call first):
+              [0] _view (res://scripts/main.gd:800)
+              [1] _render_shop (res://scripts/main.gd:724)
+              [2] _open_shop (res://scripts/main.gd:720)
+              [3] run (QA_WORKSPACE/checks/no_salvage_trace.gd:39)
+SCRIPT ERROR: Invalid call. Nonexistent function 'show_shop' in base 'Nil'.
+          at: _render_shop (res://scripts/main.gd:724)
+          GDScript backtrace (most recent call first):
+              [0] _render_shop (res://scripts/main.gd:724)
+              [1] _open_shop (res://scripts/main.gd:720)
+              [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:39)
+SCRIPT ERROR: Invalid call. Nonexistent function 'hide_modal' in base 'Nil'.
+          at: _hide_modal (res://scripts/main.gd:952)
+          GDScript backtrace (most recent call first):
+              [0] _hide_modal (res://scripts/main.gd:952)
+              [1] _leave_shop (res://scripts/main.gd:796)
+              [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:41)
+SCRIPT ERROR: Invalid call. Nonexistent function 'show_upgrade' in base 'Nil'.
+          at: _show_upgrades (res://scripts/main.gd:513)
+          GDScript backtrace (most recent call first):
+              [0] _show_upgrades (res://scripts/main.gd:513)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:42)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _title (res://scripts/main.gd:254)
+          GDScript backtrace (most recent call first):
+              [0] _title (res://scripts/main.gd:254)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _start_run (res://scripts/main.gd:275)
+          GDScript backtrace (most recent call first):
+              [0] _start_run (res://scripts/main.gd:275)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid access to property or key 'slots' on a base object of type 'Nil'.
+          at: _recompute (res://scripts/main.gd:667)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:667)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:36)
+SCRIPT ERROR: Invalid call. Nonexistent function 'show_upgrade' in base 'Nil'.
+          at: _show_upgrades (res://scripts/main.gd:513)
+          GDScript backtrace (most recent call first):
+              [0] _show_upgrades (res://scripts/main.gd:513)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:42)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _title (res://scripts/main.gd:254)
+          GDScript backtrace (most recent call first):
+              [0] _title (res://scripts/main.gd:254)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _start_run (res://scripts/main.gd:275)
+          GDScript backtrace (most recent call first):
+              [0] _start_run (res://scripts/main.gd:275)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid access to property or key 'slots' on a base object of type 'Nil'.
+          at: _recompute (res://scripts/main.gd:667)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:667)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:36)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _view (res://scripts/main.gd:800)
+          GDScript backtrace (most recent call first):
+              [0] _view (res://scripts/main.gd:800)
+              [1] _render_shop (res://scripts/main.gd:724)
+              [2] _open_shop (res://scripts/main.gd:720)
+              [3] run (QA_WORKSPACE/checks/no_salvage_trace.gd:39)
+SCRIPT ERROR: Invalid call. Nonexistent function 'show_shop' in base 'Nil'.
+          at: _render_shop (res://scripts/main.gd:724)
+          GDScript backtrace (most recent call first):
+              [0] _render_shop (res://scripts/main.gd:724)
+              [1] _open_shop (res://scripts/main.gd:720)
+              [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:39)
+SCRIPT ERROR: Invalid call. Nonexistent function 'hide_modal' in base 'Nil'.
+          at: _hide_modal (res://scripts/main.gd:952)
+          GDScript backtrace (most recent call first):
+              [0] _hide_modal (res://scripts/main.gd:952)
+              [1] _leave_shop (res://scripts/main.gd:796)
+              [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:41)
+SCRIPT ERROR: Invalid call. Nonexistent function 'show_upgrade' in base 'Nil'.
+          at: _show_upgrades (res://scripts/main.gd:513)
+          GDScript backtrace (most recent call first):
+              [0] _show_upgrades (res://scripts/main.gd:513)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:42)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _title (res://scripts/main.gd:254)
+          GDScript backtrace (most recent call first):
+              [0] _title (res://scripts/main.gd:254)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _start_run (res://scripts/main.gd:275)
+          GDScript backtrace (most recent call first):
+              [0] _start_run (res://scripts/main.gd:275)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid access to property or key 'slots' on a base object of type 'Nil'.
+          at: _recompute (res://scripts/main.gd:667)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:667)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:36)
+SCRIPT ERROR: Invalid call. Nonexistent function 'show_upgrade' in base 'Nil'.
+          at: _show_upgrades (res://scripts/main.gd:513)
+          GDScript backtrace (most recent call first):
+              [0] _show_upgrades (res://scripts/main.gd:513)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:42)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _title (res://scripts/main.gd:254)
+          GDScript backtrace (most recent call first):
+              [0] _title (res://scripts/main.gd:254)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _start_run (res://scripts/main.gd:275)
+          GDScript backtrace (most recent call first):
+              [0] _start_run (res://scripts/main.gd:275)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid access to property or key 'slots' on a base object of type 'Nil'.
+          at: _recompute (res://scripts/main.gd:667)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:667)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:36)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _view (res://scripts/main.gd:800)
+          GDScript backtrace (most recent call first):
+              [0] _view (res://scripts/main.gd:800)
+              [1] _render_shop (res://scripts/main.gd:724)
+              [2] _open_shop (res://scripts/main.gd:720)
+              [3] run (QA_WORKSPACE/checks/no_salvage_trace.gd:39)
+SCRIPT ERROR: Invalid call. Nonexistent function 'show_shop' in base 'Nil'.
+          at: _render_shop (res://scripts/main.gd:724)
+          GDScript backtrace (most recent call first):
+              [0] _render_shop (res://scripts/main.gd:724)
+              [1] _open_shop (res://scripts/main.gd:720)
+              [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:39)
+SCRIPT ERROR: Invalid call. Nonexistent function 'hide_modal' in base 'Nil'.
+          at: _hide_modal (res://scripts/main.gd:952)
+          GDScript backtrace (most recent call first):
+              [0] _hide_modal (res://scripts/main.gd:952)
+              [1] _leave_shop (res://scripts/main.gd:796)
+              [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:41)
+SCRIPT ERROR: Invalid call. Nonexistent function 'show_upgrade' in base 'Nil'.
+          at: _show_upgrades (res://scripts/main.gd:513)
+          GDScript backtrace (most recent call first):
+              [0] _show_upgrades (res://scripts/main.gd:513)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:42)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _title (res://scripts/main.gd:254)
+          GDScript backtrace (most recent call first):
+              [0] _title (res://scripts/main.gd:254)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _start_run (res://scripts/main.gd:275)
+          GDScript backtrace (most recent call first):
+              [0] _start_run (res://scripts/main.gd:275)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid access to property or key 'slots' on a base object of type 'Nil'.
+          at: _recompute (res://scripts/main.gd:667)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:667)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:36)
+SCRIPT ERROR: Invalid call. Nonexistent function 'show_upgrade' in base 'Nil'.
+          at: _show_upgrades (res://scripts/main.gd:513)
+          GDScript backtrace (most recent call first):
+              [0] _show_upgrades (res://scripts/main.gd:513)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:42)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _title (res://scripts/main.gd:254)
+          GDScript backtrace (most recent call first):
+              [0] _title (res://scripts/main.gd:254)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _start_run (res://scripts/main.gd:275)
+          GDScript backtrace (most recent call first):
+              [0] _start_run (res://scripts/main.gd:275)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid access to property or key 'slots' on a base object of type 'Nil'.
+          at: _recompute (res://scripts/main.gd:667)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:667)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:36)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _view (res://scripts/main.gd:800)
+          GDScript backtrace (most recent call first):
+              [0] _view (res://scripts/main.gd:800)
+              [1] _render_shop (res://scripts/main.gd:724)
+              [2] _open_shop (res://scripts/main.gd:720)
+              [3] run (QA_WORKSPACE/checks/no_salvage_trace.gd:39)
+SCRIPT ERROR: Invalid call. Nonexistent function 'show_shop' in base 'Nil'.
+          at: _render_shop (res://scripts/main.gd:724)
+          GDScript backtrace (most recent call first):
+              [0] _render_shop (res://scripts/main.gd:724)
+              [1] _open_shop (res://scripts/main.gd:720)
+              [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:39)
+SCRIPT ERROR: Invalid call. Nonexistent function 'hide_modal' in base 'Nil'.
+          at: _hide_modal (res://scripts/main.gd:952)
+          GDScript backtrace (most recent call first):
+              [0] _hide_modal (res://scripts/main.gd:952)
+              [1] _leave_shop (res://scripts/main.gd:796)
+              [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:41)
+SCRIPT ERROR: Invalid call. Nonexistent function 'show_upgrade' in base 'Nil'.
+          at: _show_upgrades (res://scripts/main.gd:513)
+          GDScript backtrace (most recent call first):
+              [0] _show_upgrades (res://scripts/main.gd:513)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:42)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _title (res://scripts/main.gd:254)
+          GDScript backtrace (most recent call first):
+              [0] _title (res://scripts/main.gd:254)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _start_run (res://scripts/main.gd:275)
+          GDScript backtrace (most recent call first):
+              [0] _start_run (res://scripts/main.gd:275)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid access to property or key 'slots' on a base object of type 'Nil'.
+          at: _recompute (res://scripts/main.gd:667)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:667)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:36)
+SCRIPT ERROR: Invalid call. Nonexistent function 'show_upgrade' in base 'Nil'.
+          at: _show_upgrades (res://scripts/main.gd:513)
+          GDScript backtrace (most recent call first):
+              [0] _show_upgrades (res://scripts/main.gd:513)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:42)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _title (res://scripts/main.gd:254)
+          GDScript backtrace (most recent call first):
+              [0] _title (res://scripts/main.gd:254)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid call. Nonexistent function 'clear' in base 'Nil'.
+          at: _start_run (res://scripts/main.gd:275)
+          GDScript backtrace (most recent call first):
+              [0] _start_run (res://scripts/main.gd:275)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:31)
+SCRIPT ERROR: Invalid access to property or key 'slots' on a base object of type 'Nil'.
+          at: _recompute (res://scripts/main.gd:667)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:667)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:36)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _view (res://scripts/main.gd:800)
+          GDScript backtrace (most recent call first):
+              [0] _view (res://scripts/main.gd:800)
+              [1] _render_shop (res://scripts/main.gd:724)
+              [2] _open_shop (res://scripts/main.gd:720)
+              [3] run (QA_WORKSPACE/checks/no_salvage_trace.gd:39)
+SCRIPT ERROR: Invalid call. Nonexistent function 'show_shop' in base 'Nil'.
+          at: _render_shop (res://scripts/main.gd:724)
+          GDScript backtrace (most recent call first):
+              [0] _render_shop (res://scripts/main.gd:724)
+              [1] _open_shop (res://scripts/main.gd:720)
+              [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:39)
+SCRIPT ERROR: Invalid call. Nonexistent function 'hide_modal' in base 'Nil'.
+          at: _hide_modal (res://scripts/main.gd:952)
+          GDScript backtrace (most recent call first):
+              [0] _hide_modal (res://scripts/main.gd:952)
+              [1] _leave_shop (res://scripts/main.gd:796)
+              [2] run (QA_WORKSPACE/checks/no_salvage_trace.gd:41)
+SCRIPT ERROR: Invalid call. Nonexistent function 'show_upgrade' in base 'Nil'.
+          at: _show_upgrades (res://scripts/main.gd:513)
+          GDScript backtrace (most recent call first):
+              [0] _show_upgrades (res://scripts/main.gd:513)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:42)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:51)
+SCRIPT ERROR: Invalid access to property or key 'levels' on a base object of type 'Dictionary'.
+          at: _take_upgrade (res://scripts/main.gd:526)
+          GDScript backtrace (most recent call first):
+              [0] _take_upgrade (res://scripts/main.gd:526)
+              [1] run (QA_WORKSPACE/checks/no_salvage_trace.gd:53)
+{"case_sha256":"035152a6c980a972766fa1c8f99b6c2b8b352e5fd1d6ce5948155f12df59957b","cases":40,"failures":["setup reservation","setup reservation","setup reservation","setup reservation","setup reservation","setup reservation","setup reservation","setup reservation","setup reservation","setup reservation","setup reservation","setup reservation","setup reservation","setup reservation","setup reservation","setup reservation","setup reservation","setup reservation","setup reservation"]}
+WARNING: 1 RID of type "CanvasItem" was leaked.
+   at: _free_rids (servers/rendering/renderer_canvas_cull.cpp:2690)
+WARNING: ObjectDB instances leaked at exit (run with --verbose for details).
+   at: cleanup (core/object/object.cpp:2663)

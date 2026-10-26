@@ -1,0 +1,1 @@
+The initial authored harness failed to parse because its recursive button collector omitted return result. The before-return source is reconstructed exactly by reversing the sole one-line correction; the original failed execution log is retained separately. The production source did not change. Corrected author checks pass147.
