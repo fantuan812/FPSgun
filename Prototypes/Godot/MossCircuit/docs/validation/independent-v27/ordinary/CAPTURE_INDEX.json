@@ -1,0 +1,95 @@
+{
+  "scope": "Normal game controls delivered by automated CUA with tactical pauses; no injected game state. Filenames are not semantic assertions; observations below govern.",
+  "captures": [
+    {
+      "path": "ordinary/captures/01-title.png",
+      "sha256": "556fef5dd9486021e68262fb3ebd536ff69874a2201bda7d2215ee112d09e545",
+      "observation": "Initial Arena title; exact native export."
+    },
+    {
+      "path": "ordinary/captures/02-rooms-seed.png",
+      "sha256": "129eb28d868ba7d435902944c1881d2ca214f1a614b958a70f6007a15edbe46e",
+      "observation": "Rooms selected; attempted seed input missed field. This image still shows old default seed, not confirmed2701."
+    },
+    {
+      "path": "ordinary/captures/03-seed-confirmed.png",
+      "sha256": "3d652f6b217f03ccfc7a01b46236fe41b676d09ee17127d6253d7a8f798af023",
+      "observation": "Actual editable field visibly contains2701 before Start."
+    },
+    {
+      "path": "ordinary/captures/04-room1-pause.png",
+      "sha256": "f10e134ac1493068d95a7cbd795aeff79af8467c770c87b11d99ca891baecad0",
+      "observation": "Ordinary run paused through Escape; tactical pause disclosed."
+    },
+    {
+      "path": "ordinary/captures/05-room1-combat.png",
+      "sha256": "2142d3790f7e3923f50ad6b7e8818084be80ab4e238c24503adfc0b9012cf0fe",
+      "observation": "Filename is chronological only: image is first upgrade menu, not a combat image."
+    },
+    {
+      "path": "ordinary/captures/06-room1-after-health.png",
+      "sha256": "0501aface41efbf460706dd1ba650b651de93c61bbd93a157b6ce5fb2ea03688",
+      "observation": "Next upgrade menu after choosing Repair Plating; not direct combat proof."
+    },
+    {
+      "path": "ordinary/captures/07-room1-settlement.png",
+      "sha256": "f7a7bd2b96a6244fe4553180f78ce58aac39eec04c022d767fba5ce284b80a33",
+      "observation": "First shop,66scrap,Rivet15.00/.400,0modules; no purchase."
+    },
+    {
+      "path": "ordinary/captures/08-room2-combat.png",
+      "sha256": "198a0e2754bbdddcf2e9876822850b9d197484353835e75a531212bf0c082821",
+      "observation": "Room2/3,LV2,120/120HP,5kills,ordinary enemies/projectiles."
+    },
+    {
+      "path": "ordinary/captures/09-room2-progress.png",
+      "sha256": "948e93762f7d6d3c32deb1488083146b617666d41a4f5f46a1e8b188310f528d",
+      "observation": "Upgrade menu during second room."
+    },
+    {
+      "path": "ordinary/captures/10-room2-settlement.png",
+      "sha256": "bd5827c22eec33488ec897845a40f3729d7e1310f37aefc3b56941795cc56466",
+      "observation": "Another upgrade menu, not shop despite filename."
+    },
+    {
+      "path": "ordinary/captures/11-room2-shop.png",
+      "sha256": "781af1352c610feaa35ec7d4fd4965c6bc85dc420d078a7b4b8cd5c749dc76a0",
+      "observation": "Second shop101scrap,Rivet15.00/.400,0modules; no purchase."
+    },
+    {
+      "path": "ordinary/captures/12-room3-entry.png",
+      "sha256": "f26d105de9ec3cf520a6c9b4b967fe01e7b0bb5d7caa5e8560312ade17c342f2",
+      "observation": "Natural first hollow warning; visible annulus arcs,upper portion physically outsideviewport;140HP."
+    },
+    {
+      "path": "ordinary/captures/13-room3-after-first-warning.png",
+      "sha256": "245f56714158c7ca498f753d2d4430cf692b884e3bc6049c2f156d73c68e7321",
+      "observation": "Warning gone,keeperstillalive,playeroutsideand140HP; narrowimpactinstantnotcaptured."
+    },
+    {
+      "path": "ordinary/captures/14-room3-approach.png",
+      "sha256": "af9bd4a9fb655a319b67a8c320abcc4da31d546a2103b8cd988766ac906902e2",
+      "observation": "Keeperalive and normal Rivet approaching/fire;140HP."
+    },
+    {
+      "path": "ordinary/captures/15-room3-next-transition.png",
+      "sha256": "efd9d4f736d92ade78f030cf576e47a218044b96b53c37acdffe9d805d0656f1",
+      "observation": "Keeper dying/corpse and only1livingenemy; no confirmed second summon."
+    },
+    {
+      "path": "ordinary/captures/16-room3-final-enemy.png",
+      "sha256": "ea84fb6113e6c475498394415ccd8889b6ed24b9a58cd02f74d6ac876f0861e8",
+      "observation": "Filename chronological only: actual image is terminal CIRCUIT COMPLETE."
+    },
+    {
+      "path": "ordinary/captures/17-terminal-outcome.png",
+      "sha256": "ea84fb6113e6c475498394415ccd8889b6ed24b9a58cd02f74d6ac876f0861e8",
+      "observation": "Direct terminalRoom3/3,LV4,11kills,seed2701,Rivet1,module0."
+    },
+    {
+      "path": "ordinary/captures/18-title-return.png",
+      "sha256": "092ee3bef7be5acd2fa8acd5cee3f104df2a183f3e87c83377b9b9133de3e986",
+      "observation": "Returned to Rooms title, seed2701 retained; externalCtrl+C then closed."
+    }
+  ]
+}

@@ -1,3 +1,15 @@
+# v27 Broodkeeper hollow pulse — GitHub-only 交付
+
+现有 Broodkeeper 的空心预警创造向内/向外两种走位选择，与原召唤交替；没有新敌人、道具或随机抽取变化。有限源码、受控原生、精确 PCK 与一次普通 Rooms 流程已通过，精确语义和限制见 `V27_BROOD_PULSE_CONTRACT.md` / `V27_BROOD_PULSE.md`。
+
+源码/证据以正常 Git 提交交付，目录追加 v27 完整 PCK 与说明，旧 52 条版本文件记录保留。14 个不超过 3,000,000 字节的存储分块由未改动的 `restore_deliveries.py --version v27` 恢复为一个完整 PCK，不是差分补丁，不再合并 ZIP。不发送聊天附件或重复未改动的平台程序。
+
+当前 PCK：`dae99ca5e7b967a6cc7d6493f7a662cd8927f4009fd17049619983a846cfde89`，41,352,052 字节。程序必须匹配说明中已有 Linux/Windows 哈希；先关闭游戏、备份并核对旧 PCK，再手动替换。首次安装先恢复完整 v19 平台包并保留许可证。Windows 未运行验收，显示设置仅会话内有效，云端声音/VSync 限制明确；实际远端提交和逐对象字节读回另由发布记录证明。
+
+---
+
+## v26 交付记录（历史原文）
+
 # v26 Feedback Diode — GitHub-only 交付
 
 新增一个独特的冲刺接触反击模块，精确语义与有限验证边界见 `V26_FEEDBACK_CONTRACT.md` / `V26_FEEDBACK_DIODE.md`。旧源码和历史验证路径全部保留。

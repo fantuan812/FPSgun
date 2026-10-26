@@ -1,0 +1,180 @@
+{
+  "evidence_label": "v27-hollow-pulse-bounded-art-acceptance",
+  "verdict": "PASS within selected static/stepped appearance scope; no revisions requested",
+  "pck_sha256": "dae99ca5e7b967a6cc7d6493f7a662cd8927f4009fd17049619983a846cfde89",
+  "unchanged_source_identities": [
+    {
+      "path": "assets/enemies/brood_keeper.png",
+      "sha256": "097786195cb741058bec4631eb2f9896986c7d9d41f7090172431a3eda4345a2",
+      "matches_v26": true
+    },
+    {
+      "path": "assets/enemies/enemy_manifest.json",
+      "sha256": "d092fc93e7d1e872f2e87da4dc46081207c4e6143fb9834224ae2ea7eac37dbb",
+      "matches_v26": true
+    },
+    {
+      "path": "assets/actions/brood_keeper/brood_keeper_summon.png",
+      "sha256": "1f5faa0c330891fb2ffc4f0b6f3f398b4871452b6401e79407e5b3b0aceaf748",
+      "matches_v26": true
+    },
+    {
+      "path": "assets/actions/brood_keeper/action_manifest.json",
+      "sha256": "be8abe0519f37d30650efd816d094318e21bafdc03ad0ffa3fb7433bb0db2766",
+      "matches_v26": true
+    }
+  ],
+  "reviewed": [
+    {
+      "path": "captures/rooms-1280-overlap.png",
+      "sha256": "2fd818962e071fa6b021a3d9745bea81dda75098a41f0d88d3bea841825652c2",
+      "size": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "captures/rooms-1280-tells.png",
+      "sha256": "6827e4ff6eb9b176463004585a1ebd396d3dad7571d9bfa27b584f9bdac82eec",
+      "size": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "captures/rooms-1280-impact.png",
+      "sha256": "e67286e9e23756c950d13e62698f0bb72a2894f56761a431246dc7fc7f6f8d2d",
+      "size": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "captures/rooms-1280-pushed.png",
+      "sha256": "40dc67ac413a53b6218ade3c3b311cd186c0ec2be8b2fb1ca49c9011fcb7b4fc",
+      "size": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "captures/arena-960-hole-r2.png",
+      "sha256": "e8a8e5c01d0e650e6d7895f674cc9fdccefba8210cf6b4975c8cdf6b9a5c48e4",
+      "size": [
+        960,
+        540
+      ]
+    },
+    {
+      "path": "captures/arena-960-reduced.png",
+      "sha256": "1424feb3ae28807aea13c59ed61ced45ebb59ed48ced1ea3d9ab1e9ffc4ab4a4",
+      "size": [
+        960,
+        540
+      ]
+    },
+    {
+      "path": "captures/guide-brood-960.png",
+      "sha256": "44c605e75b277544556a21626e8ebf86fcd31f0ec0cb62b614532fcfad18ce77",
+      "size": [
+        960,
+        540
+      ]
+    },
+    {
+      "path": "captures/phase-arena-right-warn60.png",
+      "sha256": "28231f1ebea8b9431fcc71cc8b720b69a920d731e543db318d8f4c4c747757de",
+      "size": [
+        960,
+        540
+      ]
+    },
+    {
+      "path": "captures/phase-arena-right-hurt.png",
+      "sha256": "758b0153aa14659f7069bf4a856ae7b7d4d490a110d835a33cedaeaf55a0e420",
+      "size": [
+        960,
+        540
+      ]
+    },
+    {
+      "path": "captures/phase-arena-right-hurt-return.png",
+      "sha256": "ae9112f0227ee454ff51e34ae7f3bcdc60b4687eeb330062322e44b65c422ad7",
+      "size": [
+        960,
+        540
+      ]
+    },
+    {
+      "path": "captures/phase-arena-right-summon-reference.png",
+      "sha256": "db05ed37f35611180def675b4e0a2507a37386f54a76f8a71de50ce4bc11dac6",
+      "size": [
+        960,
+        540
+      ]
+    },
+    {
+      "path": "captures/phase-rooms-left-warn60.png",
+      "sha256": "922df555b3f2beab772da1d2c888b89c21bd02c4cc265a8287c399f0f728ed11",
+      "size": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "captures/phase-rooms-left-hurt-return.png",
+      "sha256": "f04bb9bdc6a57a36baf97c9e244794317e4df9933adda7d55fecd6aa9278d154",
+      "size": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "captures/phase-rooms-left-walk.png",
+      "sha256": "77679d263b7007681271d70446c0bcb4fdc629d12a2326bc446f345f6f737e5a",
+      "size": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "ordinary/captures/12-room3-entry.png",
+      "sha256": "f26d105de9ec3cf520a6c9b4b967fe01e7b0bb5d7caa5e8560312ade17c342f2",
+      "size": [
+        1180,
+        812
+      ]
+    },
+    {
+      "path": "ordinary/captures/13-room3-after-first-warning.png",
+      "sha256": "245f56714158c7ca498f753d2d4430cf692b884e3bc6049c2f156d73c68e7321",
+      "size": [
+        1180,
+        812
+      ]
+    },
+    {
+      "path": "ordinary/captures/17-terminal-outcome.png",
+      "sha256": "ea84fb6113e6c475498394415ccd8889b6ed24b9a58cd02f74d6ac876f0861e8",
+      "size": [
+        1180,
+        812
+      ]
+    }
+  ],
+  "findings": [
+    "Both orange edges and faint band-only fill are readable; hole remains unfilled in warning and impact, including reduced-flash and overlapping annuli.",
+    "Charge/Core tells remain individually discernible; overlapping hazards correctly do not imply globally safe inner pocket.",
+    "Pushed-owner sample visually retains a displaced actor and separate locked annulus; mint effect belongs to existing Pulse Boots.",
+    "Existing brace reuse is honest: right/left warning, hurt and return samples retain registration/crop; return matches shown current warning pose. Old summon retains distinct small ring.",
+    "Field-guide copy clearly states70\u2013180 band/1s/both dangerous edges/other enemies may hit.",
+    "Ordinary room3 entry visibly shows hollow orange arcs; upper part physically clips outside viewport and remaining arcs are visible through HUD. Following still shows140HP; terminal still visibly says CIRCUIT COMPLETE, Room3/3, seed2701."
+  ],
+  "limits": [
+    "14 controlled and3 ordinary selected images inspected, not every QA capture.",
+    "Controlled phase stills are not continuous animation certification.",
+    "Ordinary stills do not prove exact11 damage, full pulse/summon alternation, or general balance/safety.",
+    "Rejected arena-960-hole.png fixture explicitly excluded; accepted hole-r2 used.",
+    "No new raster, no production edits, no Windows/audio claims."
+  ]
+}

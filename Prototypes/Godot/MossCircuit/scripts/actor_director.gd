@@ -204,7 +204,7 @@ func observe_enemy(enemy:Dictionary,previous_ai:String,player_position:Vector2)-
 		if absf(enemy.aim.x)>.001:enemy.sprite.flip_h=enemy.aim.x>0
 	else:enemy.sprite.flip_h=player_position.x>enemy.pos.x
 	if previous_ai=="warning" and enemy.ai_state not in ["warning","charging"]:trigger(enemy.id,"attack",.35)
-	if enemy.ai_state=="warning":set_phase(enemy.id,"warning",1-enemy.warning_left/enemy.warning)
+	if enemy.ai_state=="warning":set_phase(enemy.id,"warning",1-enemy.warning_left/float(enemy.get("warning_span",enemy.warning)))
 	elif enemy.ai_state=="recover":
 		if previous_ai!="recover" or actor.recover_span<=0:actor.recover_span=maxf(.001,enemy.recover_left)
 		set_phase(enemy.id,"recover",1-enemy.recover_left/actor.recover_span)

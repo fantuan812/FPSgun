@@ -1,0 +1,10 @@
+{
+  "source_snapshot": "accepted-v26-candidate",
+  "script_sha256": "47ba017ada917e01fb78233cd3174a08f68e90c61f658d3fa3b9261f890254fc",
+  "output_sha256": "20b82fa88f1b1cb87af9cd25752089b268cd506cb914a54a715dd6391e5c6d4e",
+  "steps": 3200,
+  "shop_draws": 800,
+  "failures": [],
+  "input_changes": [],
+  "scope": "controlled finite accepted-v26-schema authority/event/RNG trace and unchanged full v26 shop; includes Feedback, all 8 weapons, non-Broodkeeper actors and both bosses. No Broodkeeper because its new attack behavior intentionally changes. Controlled diagnostic builds include over-cap combinations to observe hook ordering, not legal-build acquisition evidence; excludes rendering object identity"
+}

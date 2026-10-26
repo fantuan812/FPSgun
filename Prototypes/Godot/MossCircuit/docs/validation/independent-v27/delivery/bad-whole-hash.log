@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "v27-delivery-stage/BASE_restore_deliveries.py", line 137, in <module>
+    main()
+  File "v27-delivery-stage/BASE_restore_deliveries.py", line 131, in main
+    restore(root, record, args.output)
+  File "v27-delivery-stage/BASE_restore_deliveries.py", line 93, in restore
+    stream_verified(root, record, out)
+  File "v27-delivery-stage/BASE_restore_deliveries.py", line 79, in stream_verified
+    raise ValueError("Original identity mismatch: " + record["name"])
+ValueError: Original identity mismatch: MossCircuit.pck

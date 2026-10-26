@@ -2,9 +2,11 @@
 
 这里保留曾经发送的 50 个原始文件，并继续接收新版本的 GitHub-only 交付。历史项目 ZIP、运行包分卷、更新包分卷、说明文件和预览图不变；当前可编辑源码位于 [`Prototypes/Godot/MossCircuit`](../../Prototypes/Godot/MossCircuit)。原始文件内容不重打包、不改写。
 
-## 最新 v26：直接恢复完整 PCK
+## 最新 v27：Broodkeeper 空心脉冲
 
-v26 新增 Feedback Diode 冲刺接触反击模块。此版本只新增完整 `MossCircuit.pck` 与手动替换说明，不重复保存未改变的 EXE/ELF，也不是新的聊天附件。恢复后不需要再合并 ZIP 分卷；必须使用说明中校验一致的原可执行程序，关闭游戏并备份旧 PCK 后手动替换。首次安装仍需先恢复完整 v19 平台包，保留程序和许可证。见 [v26 前提、哈希与操作说明](v26/READ_ME_v26.txt)。
+现有 Broodkeeper 在固定中心施放两条橙边之间的空心脉冲，再与原召唤交替：可向内进入空洞或向外离开环带，其他敌人仍能攻击。源码/受控机制/精确资源包和一次有限普通 Rooms 流程分别验收；不从截图推断精确伤害或完整交替周期。见 [v27 前提、哈希、备份与手动替换说明](v27/READ_ME_v27.txt)。
+
+v27 与 v26 一样直接恢复完整 PCK，无需再合并 ZIP，也不重复未改变的 EXE/ELF。必须使用校验一致的原程序，关闭游戏并独立备份旧 PCK 后手动替换；首次安装先恢复完整 v19 平台包并保留许可证。[v26 Feedback Diode 记录](v26/READ_ME_v26.txt) 独立保留。
 
 ## 取回版本文件
 
@@ -13,13 +15,13 @@ v26 新增 Feedback Diode 冲刺接触反击模块。此版本只新增完整 `M
 在包含此目录及其分块的 FPSgun 本地检出目录内，使用 Python 3.8 或更新版本：
 
 ```sh
-python Deliveries/MossCircuit/restore_deliveries.py --version v26 --output recovered-v26
+python Deliveries/MossCircuit/restore_deliveries.py --version v27 --output recovered-v27
 ```
 
 Windows 也可用 `py -3` 替代 `python`。输出目录中的同名文件会被拒绝覆盖。只核验、不写出原件：
 
 ```sh
-python Deliveries/MossCircuit/restore_deliveries.py --version v26 --verify-only
+python Deliveries/MossCircuit/restore_deliveries.py --version v27 --verify-only
 ```
 
 恢复操作按单个文件原子发布，不是整批回滚事务；若后续文件失败，先前已成功恢复的文件会保留。
@@ -38,4 +40,4 @@ python Deliveries/MossCircuit/restore_deliveries.py --version v26 --verify-only
 
 `SOURCE_VERSIONS.json` 将已验收的源码快照对应到不可变 Git 提交。源目录中的验证记录保留各自范围、失败过的候选及修正说明，不能把受控夹具、普通输入、静态检查和真实运行混为一谈。
 
-旧 50 个实际发送文件的目录记录保持不变；新 v26 PCK/说明明确标为 GitHub-only 交付，不伪称旧聊天附件。内部恢复备份、私人路径和内部 Library 标识不在此发布。
+旧 50 个实际发送文件的目录记录保持不变；新 v26/v27 PCK/说明明确标为 GitHub-only 交付，不伪称旧聊天附件。内部恢复备份、私人路径和内部 Library 标识不在此发布。

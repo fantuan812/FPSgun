@@ -14,6 +14,9 @@ func setup(mode_id:String,legacy:bool):
 		g.actor_anim.config.profiles.erase("brood_keeper")
 		for key in ["brood_keeper_summon","brood_keeper_hurt","brood_keeper_death"]:g.actor_anim.assets.erase(key)
 	var e:Dictionary=g._spawn_kind("brood_keeper",g.player_pos+Vector2(-160,0))
+	# Preserve the original summon-art/fallback oracle, including its child-count proof.
+	# Natural v27 pulse/summon alternation is covered by dedicated runtime tests.
+	e.behavior="summon"
 	e.cooldown_left=.01
 	return g
 func snapshot(g)->Dictionary:

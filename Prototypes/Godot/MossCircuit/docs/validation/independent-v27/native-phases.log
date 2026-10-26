@@ -1,0 +1,49 @@
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+WARNING: Could not set V-Sync mode, as changing V-Sync mode is not supported by the graphics driver.
+     at: set_use_vsync (platform/linuxbsd/x11/gl_manager_x11.cpp:364)
+OpenGL API 4.5 (Core Profile) Mesa 25.0.7-2+deb13u1 - Compatibility - Using Device: Mesa - llvmpipe (LLVM 19.1.7, 256 bits)
+ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
+ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
+ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
+ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+ALSA lib confmisc.c:1342:(snd_func_refer) error evaluating name
+ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+ALSA lib conf.c:5728:(snd_config_expand) Evaluate error: No such file or directory
+ALSA lib pcm.c:2722:(snd_pcm_open_noupdate) Unknown PCM default
+ERROR: Condition "status < 0" is true. Returning: ERR_CANT_OPEN
+   at: init_output_device (drivers/alsa/audio_driver_alsa.cpp:90)
+WARNING: All audio drivers failed, falling back to the dummy driver.
+     at: initialize (servers/audio/audio_server.cpp:247)
+
+{"actor_state":"warning","ai_state":"warning","attack":"annulus","case":1,"hp":100,"mirrored":false,"mode":"arena","phase_progress":0.0,"recover_left":0.0,"warning_left":1.0}
+{"mode":"arena","window_size":[960,540]}
+{"actor_state":"warning","ai_state":"warning","attack":"annulus","case":1,"hp":100,"mirrored":false,"mode":"arena","phase_progress":0.0,"recover_left":0.0,"warning_left":1.0}
+{"mode":"arena","window_size":[960,540]}
+{"actor_state":"warning","ai_state":"warning","attack":"annulus","case":2,"hp":100,"mirrored":false,"mode":"arena","phase_progress":0.4,"recover_left":0.0,"warning_left":0.6}
+{"mode":"arena","window_size":[960,540]}
+{"actor_state":"warning","ai_state":"warning","attack":"annulus","case":3,"hp":100,"mirrored":false,"mode":"arena","phase_progress":0.6,"recover_left":0.0,"warning_left":0.4}
+{"mode":"arena","window_size":[960,540]}
+{"actor_state":"hurt","ai_state":"warning","attack":"annulus","case":4,"hp":100,"mirrored":false,"mode":"arena","phase_progress":0.6,"recover_left":0.0,"warning_left":0.4}
+{"mode":"arena","window_size":[960,540]}
+{"actor_state":"warning","ai_state":"warning","attack":"annulus","case":5,"hp":100,"mirrored":false,"mode":"arena","phase_progress":0.6,"recover_left":0.0,"warning_left":0.4}
+{"mode":"arena","window_size":[960,540]}
+{"actor_state":"recover","ai_state":"recover","attack":"annulus","case":6,"hp":100,"mirrored":false,"mode":"arena","phase_progress":0.0,"recover_left":0.7,"warning_left":0.0}
+{"mode":"arena","window_size":[960,540]}
+{"actor_state":"recover","ai_state":"recover","attack":"annulus","case":7,"hp":100,"mirrored":false,"mode":"arena","phase_progress":0.5,"recover_left":0.35,"warning_left":0.0}
+{"mode":"arena","window_size":[960,540]}
+{"actor_state":"move","ai_state":"move","attack":"annulus","case":8,"hp":100,"mirrored":false,"mode":"arena","phase_progress":0.0,"recover_left":0.0,"warning_left":0.0}
+{"mode":"arena","window_size":[960,540]}
+{"actor_state":"warning","ai_state":"warning","attack":"summon","case":9,"hp":100,"mirrored":false,"mode":"arena","phase_progress":0.538461538461538,"recover_left":0.0,"warning_left":0.3}
+{"mode":"arena","window_size":[960,540]}
+{"actor_state":"warning","ai_state":"warning","attack":"summon","case":9,"hp":100,"mirrored":true,"mode":"arena","phase_progress":0.538461538461538,"recover_left":0.0,"warning_left":0.3}
+{"actor_state":"warning","ai_state":"warning","attack":"summon","case":9,"hp":100,"mirrored":true,"mode":"rooms","phase_progress":0.538461538461538,"recover_left":0.0,"warning_left":0.3}
+{"mode":"rooms","window_size":[960,540]}
+{"mode":"rooms","window_size":[1280,720]}
+{"actor_state":"warning","ai_state":"warning","attack":"annulus","case":3,"hp":100,"mirrored":true,"mode":"rooms","phase_progress":0.6,"recover_left":0.0,"warning_left":0.4}
+{"mode":"rooms","window_size":[1280,720]}
+{"actor_state":"hurt","ai_state":"warning","attack":"annulus","case":4,"hp":100,"mirrored":true,"mode":"rooms","phase_progress":0.6,"recover_left":0.0,"warning_left":0.4}
+{"mode":"rooms","window_size":[1280,720]}
+{"actor_state":"warning","ai_state":"warning","attack":"annulus","case":5,"hp":100,"mirrored":true,"mode":"rooms","phase_progress":0.6,"recover_left":0.0,"warning_left":0.4}
+{"mode":"rooms","window_size":[1280,720]}
+{"actor_state":"move","ai_state":"move","attack":"annulus","case":8,"hp":100,"mirrored":true,"mode":"rooms","phase_progress":0.0,"recover_left":0.0,"warning_left":0.0}
+{"mode":"rooms","window_size":[1280,720]}

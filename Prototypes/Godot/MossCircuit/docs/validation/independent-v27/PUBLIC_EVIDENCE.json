@@ -1,0 +1,41 @@
+{
+  "scope": "Stable-label path redaction only; private originals retained separately. Captures and mechanical/source fingerprints unchanged.",
+  "transforms": [
+    {
+      "path": "independent_annulus_runtime-r1.log",
+      "original_sha256": "de8a2d9ec0e6765a3257a839c3cefb3ca0e773ba77e558693ce354225b4e974f",
+      "public_sha256": "de47799ecaea41d0a7a3225332f4db79731f360c1249b93c8387c387618bb492",
+      "change": "private execution roots replaced with stable snapshot/evidence labels only"
+    },
+    {
+      "path": "delivery/bad-chunk-hash.log",
+      "original_sha256": "c45a6611a0de2b1bf5a4f967ad46348228a194e2107b4f5e0b4e92cf36e5ddd3",
+      "public_sha256": "95fa47f436ae0ec80eb583b15c329cc9ad7e2577a53a19829a8dfe7c695d6ad1",
+      "change": "private execution roots replaced with stable snapshot/evidence labels only"
+    },
+    {
+      "path": "delivery/bad-whole-hash.log",
+      "original_sha256": "f6192f309591e23cf41585bad9e3ea74934aadaa0b1ebd0aa75237aaee1c0d45",
+      "public_sha256": "0c3d5a74f002e333bd271a75a4af08a0bbcd588bea057e65ba680252db813718",
+      "change": "private execution roots replaced with stable snapshot/evidence labels only"
+    },
+    {
+      "path": "delivery/no-overwrite.log",
+      "original_sha256": "38e3f6c01fc9254dbe820f1cc753505b4cc1268035c3084e26b87c08ff70cbae",
+      "public_sha256": "56c781c6308d573b6592597703b1033253532d025fad8ea78fa675e26f7f7903",
+      "change": "private execution roots replaced with stable snapshot/evidence labels only"
+    },
+    {
+      "path": "delivery/reordered-offset.log",
+      "original_sha256": "674c69687b2cf096b9f25b4f7a71e0b379c083e144832401d040495559dd4c81",
+      "public_sha256": "0701d891dea19d65ad6ab3f252de0e3d23f7b1c83175939fa292384ab9f806c6",
+      "change": "private execution roots replaced with stable snapshot/evidence labels only"
+    },
+    {
+      "path": "delivery/unsafe-name.log",
+      "original_sha256": "729368c22b8ea50c34a5f5ba0bc5f382dd43e43ae511fa15a84dcd68b327714a",
+      "public_sha256": "ad2c1b1db18a43107497cfd495a95b5c8e894edb45cb9a8bc725a63e7fe6630b",
+      "change": "private execution roots replaced with stable snapshot/evidence labels only"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "status": "frozen independent expectations before candidate",
+  "contract_sha256": "fbec3de3845369cb9342d2daa43dccb67547334758bc7b9152aab6240e00b4d0",
+  "baseline_source": "58a1e447ba3ed1b38cb508c1b86c0c63e436c3cf",
+  "enemy": "brood_keeper",
+  "behavior": "brood_cycle",
+  "cycle": [
+    "annulus",
+    "summon"
+  ],
+  "inner_radius": 70,
+  "outer_radius": 180,
+  "epsilon": 0.0001,
+  "containment": "inner-epsilon <= player-center distance <= outer+epsilon, release-only",
+  "pulse_warning": 1.0,
+  "summon_warning": 0.65,
+  "initial_cooldown": 0.8,
+  "attack_start_cooldown": 6,
+  "recovery": 0.7,
+  "raw_damage": 11,
+  "impact_echo_seconds": 0.2,
+  "lifecycle": [
+    "pause/settings/inventory freezes",
+    "owner death before AI cancels",
+    "later same-step projectile kill does not undo emitted pulse",
+    "title/result/retry/clear/stage removes transients"
+  ],
+  "defense": "existing _hurt pipeline unchanged; Feedback remains unspent; no projectile/contact event",
+  "unaffected_trace_script_sha256": "47ba017ada917e01fb78233cd3174a08f68e90c61f658d3fa3b9261f890254fc",
+  "native_gate": "controlled both modes/sizes plus finite exact-pack ordinary Rooms3 attempt, no campaign/balance guarantee",
+  "contract_hash_history": [
+    "458fca5005688fed58a117f5800358c9ee9fc5505c9889c246bb2582cdf5ff38",
+    "c645bbf0379ab717c9150d42d413b8c2e1ac25848936e8af8c5847278820790b",
+    "fbec3de3845369cb9342d2daa43dccb67547334758bc7b9152aab6240e00b4d0"
+  ],
+  "clarifications": "Index advances at warning start even if summon capped; no actual armor mechanism; unblocked raw11 HP loss capped by remaining HP. No mechanic expansion.",
+  "index_rule": "advance at warning start; no hurt/pause reset; new actor starts0",
+  "marker_fields": [
+    "kind=annulus",
+    "pos",
+    "inner_radius",
+    "outer_radius"
+  ],
+  "impact_kind": "annulus_impact",
+  "center_field": "pulse_center",
+  "phase_warning_span_field": "warning_span"
+}

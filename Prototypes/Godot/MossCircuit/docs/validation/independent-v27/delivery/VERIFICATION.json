@@ -1,0 +1,58 @@
+{
+  "scope": "Offline exact helper on staged v27 delivery; Linux manual v26 backup/update/rollback. Not remote publication or Windows execution.",
+  "helper_sha256": "3228782b92e9ec6573b7ba9842d950b3cb6c4dbe928fb3bdcb9a2b4f930b55ad",
+  "catalog_sha256": "b0709eef48477b684e6285e09fcf8fa0d46452dd811ec524a7c94a45b4e918de",
+  "old_52_rows_exact": true,
+  "new_records": {
+    "MossCircuit.pck": {
+      "size": 41352052,
+      "sha256": "dae99ca5e7b967a6cc7d6493f7a662cd8927f4009fd17049619983a846cfde89"
+    },
+    "READ_ME_v27.txt": {
+      "size": 4897,
+      "sha256": "910721ba9d07930fcbeedaa058127f2ae668098ac2d132ca252085028d8d535c"
+    }
+  },
+  "cases": [
+    {
+      "case": "verify",
+      "exit": 0,
+      "expected_success": true
+    },
+    {
+      "case": "restore",
+      "exit": 0,
+      "expected_success": true
+    },
+    {
+      "case": "no-overwrite",
+      "exit": 1,
+      "expected_success": false
+    },
+    {
+      "case": "bad-whole-hash",
+      "exit": 1,
+      "expected_success": false
+    },
+    {
+      "case": "bad-chunk-hash",
+      "exit": 1,
+      "expected_success": false
+    },
+    {
+      "case": "reordered-offset",
+      "exit": 1,
+      "expected_success": false
+    },
+    {
+      "case": "unsafe-name",
+      "exit": 1,
+      "expected_success": false
+    }
+  ],
+  "original_members": 9,
+  "unchanged_non_pack_members": 8,
+  "rollback_exact_bytes_and_modes": true,
+  "canonical_files_unchanged": true,
+  "base_pack_sha256": "59096e791e270250a7c6a314d741d7295100016863be2ba85455795c88017e33"
+}
