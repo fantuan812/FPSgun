@@ -1,0 +1,23 @@
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+SCRIPT ERROR: Invalid operands 'String' and 'int' in operator '!='.
+          at: validate_catalog (res://scripts/rules.gd:163)
+          GDScript backtrace (most recent call first):
+              [0] validate_catalog (res://scripts/rules.gd:163)
+              [1] _initialize (QA_ROOT/checks/probe_feedback_validation.gd:11)
+SCRIPT ERROR: Invalid operands 'bool' and 'int' in operator '!='.
+          at: validate_catalog (res://scripts/rules.gd:163)
+          GDScript backtrace (most recent call first):
+              [0] validate_catalog (res://scripts/rules.gd:163)
+              [1] _initialize (QA_ROOT/checks/probe_feedback_validation.gd:11)
+SCRIPT ERROR: Invalid operands 'Dictionary' and 'int' in operator '!='.
+          at: validate_catalog (res://scripts/rules.gd:163)
+          GDScript backtrace (most recent call first):
+              [0] validate_catalog (res://scripts/rules.gd:163)
+              [1] _initialize (QA_ROOT/checks/probe_feedback_validation.gd:11)
+SCRIPT ERROR: Invalid operands 'Array' and 'int' in operator '!='.
+          at: validate_catalog (res://scripts/rules.gd:163)
+          GDScript backtrace (most recent call first):
+              [0] validate_catalog (res://scripts/rules.gd:163)
+              [1] _initialize (QA_ROOT/checks/probe_feedback_validation.gd:11)
+[{"errors":[],"type":4,"value":"bad"},{"errors":[],"type":1,"value":"true"},{"errors":["Invalid max_stack","Feedback Diode must remain unique"],"type":0,"value":"<null>"},{"errors":[],"type":27,"value":"{  }"},{"errors":[],"type":28,"value":"[]"},{"errors":["Invalid max_stack","Feedback Diode must remain unique"],"type":2,"value":"0"},{"errors":["Invalid max_stack","Feedback Diode must remain unique"],"type":2,"value":"-1"},{"errors":["Noninteger max_stack","Feedback Diode must remain unique"],"type":3,"value":"1.5"},{"errors":["Feedback Diode must remain unique"],"type":2,"value":"2"},{"errors":["Invalid max_stack","Feedback Diode must remain unique"],"type":3,"value":"inf"},{"errors":["Invalid max_stack","Feedback Diode must remain unique"],"type":3,"value":"nan"}]

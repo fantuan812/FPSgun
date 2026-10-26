@@ -1,0 +1,52 @@
+{
+  "godot_version": "4.6.3.stable.official.7d41c59c4",
+  "source_manifest_sha256": "f84c5842bdbe2c274932f215a303bd26b15db3be5c3fdbf687dcdeadb28f104b",
+  "steps": [
+    {
+      "step": "linux-pack",
+      "exit": 0,
+      "engine_error": false,
+      "pass": true
+    },
+    {
+      "step": "windows-pack",
+      "exit": 0,
+      "engine_error": false,
+      "pass": true
+    },
+    {
+      "step": "source-fingerprint",
+      "exit": 0,
+      "engine_error": false,
+      "pass": true
+    },
+    {
+      "step": "packed-resources",
+      "exit": 0,
+      "engine_error": false,
+      "pass": true
+    }
+  ],
+  "files": [
+    {
+      "path": "linux/MossCircuit.pck",
+      "size": 41347432,
+      "sha256": "59096e791e270250a7c6a314d741d7295100016863be2ba85455795c88017e33"
+    },
+    {
+      "path": "windows/MossCircuit.pck",
+      "size": 41347432,
+      "sha256": "59096e791e270250a7c6a314d741d7295100016863be2ba85455795c88017e33"
+    },
+    {
+      "path": "source-imported-fingerprints.json",
+      "size": 30243,
+      "sha256": "03e965cfe8dc238d29f0fc634fe8e9f302cc0e29679db05d703c5600e6d51205"
+    }
+  ],
+  "input_changes": [],
+  "windows_runtime_tested": false,
+  "new_executable_exported": false,
+  "native_gui_tested": false,
+  "scope": "Both preset resource packs; source-imported pixels and exact packed bytes. Existing accepted executable reused later; native GUI remains separate."
+}

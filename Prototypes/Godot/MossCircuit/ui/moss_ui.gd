@@ -83,7 +83,7 @@ func _ready() -> void:
 	if FileAccess.file_exists("res://assets/items/icon_manifest.json"):
 		var parsed = JSON.parse_string(FileAccess.get_file_as_string("res://assets/items/icon_manifest.json"))
 		if parsed is Dictionary: manifest = parsed
-	for extra_path in ["res://assets/items/mechanism_icon_manifest.json", "res://assets/items/build_expansion_icon_manifest.json", "res://assets/items/cryo_icon_manifest.json", "res://assets/items/bankshot_icon_manifest.json"]:
+	for extra_path in ["res://assets/items/mechanism_icon_manifest.json", "res://assets/items/build_expansion_icon_manifest.json", "res://assets/items/cryo_icon_manifest.json", "res://assets/items/bankshot_icon_manifest.json", "res://assets/items/feedback_icon_manifest.json"]:
 		if FileAccess.file_exists(extra_path):
 			var extra = JSON.parse_string(FileAccess.get_file_as_string(extra_path))
 			if extra is Dictionary:
@@ -399,6 +399,7 @@ func _inventory(parent: Node, view: Dictionary, selling := false) -> void:
 		_text(parent, "Shield: %s  /  Chain charges: %s  /  Friendly fields: %s" % [mechanics.get("shield", 0), mechanics.get("chain_charges", 0), mechanics.get("hazards", 0)], 13)
 		for key in ["echo_hits", "phase_charge", "medic_damage"]:
 			if mechanics.has(key): _text(parent, "%s: %s" % [str(key).replace("_", " ").capitalize(), mechanics[key]], 13)
+		if mechanics.has("feedback_status"): _text(parent, "Feedback Diode: " + str(mechanics.feedback_status), 13)
 		for id in mechanics.get("cooldowns", {}):
 			_text(parent, "%s: %.2fs until ready" % [str(id).replace("_", " ").capitalize(), maxf(0, float(mechanics.cooldowns[id]))], 12)
 	_label(parent, "TAG SYNERGY PROGRESS", 16)

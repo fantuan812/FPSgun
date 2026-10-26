@@ -1,0 +1,19 @@
+{
+  "evidence_label": "v26-feedback-diode-source-art",
+  "passed": 11,
+  "checks": [
+    "original PNG SHA256 unchanged",
+    "RGBA source",
+    "source dimensions",
+    "transparent and opaque coverage",
+    "measured alpha>32 bounds",
+    "visible transparent padding",
+    "exact one icon mapping",
+    "correct PNG path",
+    "exact UI crop",
+    "mapped source hash",
+    "module category"
+  ],
+  "sha256": "f7ee2ab11d194498a64f3218798f210004f6a3d43894e948be656630b69e95f3",
+  "limits": "Source resource checks; native integrated appearance acceptance separate."
+}

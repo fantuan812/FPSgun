@@ -12,6 +12,9 @@ var sequence:=0
 func _init(w:CombatState,r:RunSession,e:RefCounted,a:RefCounted,v:Callable,m:Callable)->void:
 	world=w;session=r;engine=e;actor=a;play_vfx=v;mechanism_vfx=m
 
+func can_feedback() -> bool:
+	return engine.can_feedback(float(world.stats.get("dash_time",0.0)) > 0)
+
 func emit_event(kind: String, data: Dictionary) -> bool:
 	if session.state != "playing": return false
 	if kind == "hit": play_vfx.call("hit_spark",data.pos)
@@ -23,11 +26,21 @@ func emit_event(kind: String, data: Dictionary) -> bool:
 	event.kind = kind
 	event.epoch = engine.epoch
 	event.sequence = sequence
-	var context := {"time":session.elapsed,"enemies":world.enemies,"damage":event.get("damage",world.stats.damage),"hp":world.stats.hp,"max_hp":world.stats.max_hp,"pos":world.player_pos}
+	var context := {"time":session.elapsed,"enemies":world.enemies,"damage":event.get("damage",world.stats.damage),"hp":world.stats.hp,"max_hp":world.stats.max_hp,"pos":world.player_pos,"dash_active":float(world.stats.get("dash_time",0.0)) > 0}
 	var commands: Array = engine.process(event,context)
 	var blocked := false
 	for command in commands:
 		match command.kind:
+			"feedback":
+				for enemy in world.enemies:
+					if enemy.id == command.target and enemy.hp > 0:
+						enemy.hp -= command.damage
+						enemy.last_source = "feedback"
+						mechanism_vfx.call("feedback_diode","hit_spark",enemy.pos,{"tint":Color("c8a0ed")})
+						var existing: Array = world.effect_visuals.filter(func(v): return v.kind == "feedback")
+						if existing.size() >= 4: world.effect_visuals.erase(existing[0])
+						world.effect_visuals.append({"kind":"feedback","pos":command.pos,"end":enemy.pos,"life":.18})
+						break
 			"fracture":
 				for enemy in world.enemies:
 					if enemy.id==command.target and Status.can_fracture(enemy,session.elapsed,command.weapon):
@@ -111,6 +124,7 @@ func emit_event(kind: String, data: Dictionary) -> bool:
 	return blocked
 
 func advance_hazards(dt: float) -> void:
+	engine.update_dash_window(float(world.stats.get("dash_time",0.0)) > 0)
 	for i in range(world.effect_visuals.size()-1,-1,-1):
 		world.effect_visuals[i].life -= dt
 		if world.effect_visuals[i].life <= 0: world.effect_visuals.remove_at(i)

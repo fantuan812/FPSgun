@@ -28,7 +28,12 @@ func run()->void:
  # v23 adds exactly one reviewed weapon/module/pair/link; old definitions remain strict.
  var additions:Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://docs/V23_CATALOG_ADDITIONS.json"))
  check(entry(catalog,"bankshot_driver")==additions.weapon and entry(catalog,"bounce_guide")==additions.item,"exact v23 additions separately asserted")
- check(catalog.version==4,"explicit new content version")
+ check(catalog.version==5,"explicit new content version")
+ var v26:Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://docs/V26_CATALOG_ADDITIONS.json"))
+ check(entry(catalog,"feedback_diode")==v26.item,"exact v26 module separately asserted")
+ check(masked_catalog.mechanism_synergies[-1]==v26.pair and masked_catalog.affinity_links[-1]==v26.link,"only reviewed v26 appended pair/link")
+ masked_catalog.items=masked_catalog.items.filter(func(x):return x.id!="feedback_diode")
+ masked_catalog.mechanism_synergies.pop_back();masked_catalog.affinity_links.pop_back()
  masked_catalog.version=baseline.catalog.version
  masked_catalog.weapons=masked_catalog.weapons.filter(func(x):return x.id!="bankshot_driver")
  masked_catalog.items=masked_catalog.items.filter(func(x):return x.id!="bounce_guide")
@@ -94,5 +99,5 @@ func run()->void:
    game.ui.show_inventory(view);await process_frame;await process_frame
    for id in ["power_coil","cryo_sprayer","fracture_coil"]:check(entry(catalog,id).description in labels(game.ui.modal),"shared inventory exact copy "+id)
  game.queue_free();await process_frame
- print(JSON.stringify({"modifier_copy_checks":checks,"failures":failures,"scope":"v22 four-field copy preservation within the old catalog; exact v23 additions separately asserted; native appearance separate"}))
+ print(JSON.stringify({"modifier_copy_checks":checks,"failures":failures,"scope":"v22 four-field copy preservation within the old catalog; exact v23/v26 additions separately asserted; native appearance separate"}))
  quit(0 if failures.is_empty() else 1)

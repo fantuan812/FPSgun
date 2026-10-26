@@ -1,0 +1,92 @@
+{
+  "exact_old_catalog_after_only_version_and_three_appended_entries_removed": true,
+  "expected_weapon_ids": [
+    "rivet_gun",
+    "scrap_shotgun",
+    "rail_lance",
+    "orbit_saw",
+    "return_disc",
+    "shock_mortar",
+    "cryo_sprayer",
+    "bankshot_driver"
+  ],
+  "expected_module_ids": [
+    "power_coil",
+    "cooling_fan",
+    "iron_plate",
+    "moss_patch",
+    "running_boots",
+    "salvage_magnet",
+    "lucky_chip",
+    "lens",
+    "capacitor",
+    "gear",
+    "pellet_pouch",
+    "recycler",
+    "arc_relay",
+    "kill_cell",
+    "dash_resin",
+    "mirror_shell",
+    "thorn_crown",
+    "blood_valve",
+    "scrap_mine",
+    "pulse_boots",
+    "return_spool",
+    "blast_fuse",
+    "echo_chamber",
+    "gravity_anchor",
+    "medic_seed",
+    "phase_capacitor",
+    "fracture_coil",
+    "bounce_guide",
+    "feedback_diode"
+  ],
+  "old_source_changed_paths": [
+    "README.md",
+    "MANIFEST.json",
+    "tests/independent_cryo_shop.gd",
+    "tests/test_bankshot_build.gd",
+    "tests/test_modifier_copy.gd",
+    "data/catalog.json",
+    "scripts/effects.gd",
+    "scripts/main.gd",
+    "scripts/rules.gd",
+    "ui/moss_ui.gd",
+    "scripts/gameplay/combat_runtime.gd",
+    "scripts/gameplay/effect_runtime.gd"
+  ],
+  "new_module": {
+    "id": "feedback_diode",
+    "name": "Feedback Diode",
+    "kind": "item",
+    "price": 28,
+    "max_stack": 1,
+    "rarity": "rare",
+    "tags": [
+      "mobility"
+    ],
+    "effects": {},
+    "feedback_damage": 24,
+    "description": "First hostile shot touching you during an equipped dash deals fixed 24 secondary damage to its living shooter. Once per dash; no extra immunity.",
+    "trigger": "Actual hostile-shot contact during a dash that began while equipped",
+    "cost": "1 module slot; no contact/blast counter; weapon bonuses do not scale feedback",
+    "cooldown": 0,
+    "stack_rule": "Unique: maximum 1; buying or syncing never arms an ongoing dash",
+    "synergy_targets": [
+      "pulse_boots"
+    ]
+  },
+  "new_pair": {
+    "id": "crosscurrent",
+    "name": "CROSSCURRENT",
+    "requires": [
+      "feedback_diode",
+      "pulse_boots"
+    ],
+    "description": "Dash pushes nearby enemies and can counter one hostile shot to its living shooter. Complementary effects; no extra multiplier."
+  },
+  "new_affinity_link": [
+    "feedback_diode",
+    "pulse_boots"
+  ]
+}

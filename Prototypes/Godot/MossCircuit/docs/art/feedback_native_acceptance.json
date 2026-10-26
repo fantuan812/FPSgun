@@ -1,0 +1,154 @@
+{
+  "evidence_label": "v26-native-controlled-feedback-art-r1",
+  "verdict": "PASS bounded appearance scope; no asset/render revisions requested",
+  "reviewed": [
+    {
+      "path": "captures/arena-960-shop.png",
+      "sha256": "e6e6675c22ba3a4ce25e346d6081af8f1c39f57b694b334854af12929726180f",
+      "size": [
+        960,
+        540
+      ]
+    },
+    {
+      "path": "captures/arena-960-inventory-module.png",
+      "sha256": "bcb67fddc1e7d037e3fb22577b9406c9b1b9096860f3cfb5e16cc2f2ec1e2c3f",
+      "size": [
+        960,
+        540
+      ]
+    },
+    {
+      "path": "captures/arena-960-case3.png",
+      "sha256": "9fc9db486a949151f55045f48375f25058d2d95572954fe99d8e4a218511464c",
+      "size": [
+        960,
+        540
+      ]
+    },
+    {
+      "path": "captures/arena-960-case4.png",
+      "sha256": "9490be84c6f68d66c703dc949ff43dc576373093d2ed60519cd163c2fcb2be04",
+      "size": [
+        960,
+        540
+      ]
+    },
+    {
+      "path": "captures/arena-960-case5.png",
+      "sha256": "9aab69068c0037a07cf4601e9692b01fd25d5a4837cc21b1abfc88fc776ac160",
+      "size": [
+        960,
+        540
+      ]
+    },
+    {
+      "path": "captures/arena-960-case6.png",
+      "sha256": "6efb3c36d05af74f6cae7137b08915c888bf71c52f38b15dffc04f1bac3c4c1a",
+      "size": [
+        960,
+        540
+      ]
+    },
+    {
+      "path": "captures/rooms-1280-case5.png",
+      "sha256": "4af4279799769a2fcb91b774a2cc04cf4e1e8c58b08a77de83397ad6fb2f64b4",
+      "size": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "captures/rooms-1280-case6.png",
+      "sha256": "3fe247a4af31870eb4b2f24b5766cf82f00ac69510410b1bfbeeeb428f11f04d",
+      "size": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "captures/rooms-1280-mechanics-ready.png",
+      "sha256": "40ecb3de130c24c498b2f5db3b271f28cc8f25ebd045ee10cbb12d102e5492e5",
+      "size": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "captures/rooms-1280-mechanics-unarmed.png",
+      "sha256": "24ea303b94d5fc05f7245103811266702dd05a61c6891a0e410e87604c6bcf91",
+      "size": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "captures/rooms-1280-shop.png",
+      "sha256": "0f9151bc012ffdf3df969dab4957bcfd1908ee00e01c2f5f6679334c5f73bf53",
+      "size": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "captures/rooms-1280-case3.png",
+      "sha256": "701defefd813a2927e43591408bcf5ca4a41a0e259c8f72a8dd5909d5484c92a",
+      "size": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "captures/rooms-1280-case4.png",
+      "sha256": "ef6365583889bdb1d069fe49b12b6c69fafc4ca4e9ac95a733d8f2db2cf91a7e",
+      "size": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "captures/rooms-960-case5.png",
+      "sha256": "05cfe8b0c7258114df87e3fc57c36da94e3d034bbd8b5c7c1c4e29ffaa7b3cf9",
+      "size": [
+        960,
+        540
+      ]
+    },
+    {
+      "path": "captures/rooms-960-case6.png",
+      "sha256": "41881c0edefa19d48972280b5424a5e4995b49f21c9c0fcece5b4b16cb0ad614",
+      "size": [
+        960,
+        540
+      ]
+    },
+    {
+      "path": "captures/arena-1280-case5.png",
+      "sha256": "aa5aecf6ea42add7875232ffbbbdce916e01f84efdcb9971a28e576e3aad4ce6",
+      "size": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "captures/arena-1280-case6.png",
+      "sha256": "6f97d8fe2084786d4b08b02a4a7a6e1b217cfac3cfe34aa1a65d572231185906",
+      "size": [
+        1280,
+        720
+      ]
+    }
+  ],
+  "findings": [
+    "Elongated two-terminal/U-return icon is readable at actual native shop/inventory size with violet inset and clean transparent silhouette.",
+    "Small violet armed cue is visible around hero but deliberately subordinate; READY THIS DASH versus UNARMED THIS DASH labels clearly distinguish the live state.",
+    "Thin violet return line remains visible in both modes at960/1280 and reduced-flash setting without covering actors.",
+    "Orange Warden warning perimeter stays distinct and unobscured; existing large mint Pulse Boots circle is not Feedback Diode art.",
+    "Source pixel filtering and crop show no opaque-background/halo regression in these samples."
+  ],
+  "limits": [
+    "17 selected actual native controlled stationary/stepped captures inspected; not ordinary acquisition or exact-export evidence.",
+    "Still appearance does not independently establish fixed24 damage, ordering, lifecycle correctness or full-motion readability.",
+    "Production r2 catalog malformed-input guard reported separately; no valid-case/render byte changes reported."
+  ]
+}

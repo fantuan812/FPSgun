@@ -1,0 +1,39 @@
+{
+  "checks": 249,
+  "failures": [],
+  "observations": [
+    {
+      "contact_step": 330,
+      "emitted": 1,
+      "enemy": "spitter",
+      "mode": "arena",
+      "owner_hp": 176.0,
+      "player_hp": 100
+    },
+    {
+      "contact_step": 370,
+      "emitted": 8,
+      "enemy": "boss_core",
+      "mode": "arena",
+      "owner_hp": 176.0,
+      "player_hp": 100
+    },
+    {
+      "contact_step": 330,
+      "emitted": 1,
+      "enemy": "spitter",
+      "mode": "rooms",
+      "owner_hp": 176.0,
+      "player_hp": 100
+    },
+    {
+      "contact_step": 370,
+      "emitted": 8,
+      "enemy": "boss_core",
+      "mode": "rooms",
+      "owner_hp": 176.0,
+      "player_hp": 100
+    }
+  ],
+  "scope": "Controlled shared-runtime and actual AI/Motor integration; proc isolation profile intentionally exceeds equipment slots; not native ordinary play"
+}

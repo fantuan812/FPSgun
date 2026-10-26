@@ -1,0 +1,58 @@
+{
+  "scope": "Linux staged catalog/helper verification and isolated manual backup/update/rollback; not remote publication, auto-install or Windows helper execution",
+  "helper_sha256": "3228782b92e9ec6573b7ba9842d950b3cb6c4dbe928fb3bdcb9a2b4f930b55ad",
+  "catalog_sha256": "8a6b22b370d17acc5cfad3308d8c962e4745958851b9a4a359daf51dbcfa1f67",
+  "old_50_records_unchanged": true,
+  "new_records": {
+    "MossCircuit.pck": {
+      "bytes": 41347432,
+      "sha256": "59096e791e270250a7c6a314d741d7295100016863be2ba85455795c88017e33"
+    },
+    "READ_ME_v26.txt": {
+      "bytes": 4983,
+      "sha256": "f9f3c92024f269be9a208b06646fb57590f59bb4ef5775659237b78bd96c0d47"
+    }
+  },
+  "checks": [
+    {
+      "case": "verify",
+      "exit": 0,
+      "expected_success": true
+    },
+    {
+      "case": "restore",
+      "exit": 0,
+      "expected_success": true
+    },
+    {
+      "case": "no-overwrite",
+      "exit": 1,
+      "expected_success": false
+    },
+    {
+      "case": "bad-whole-hash",
+      "exit": 1,
+      "expected_success": false
+    },
+    {
+      "case": "bad-chunk-hash",
+      "exit": 1,
+      "expected_success": false
+    },
+    {
+      "case": "reordered-offset",
+      "exit": 1,
+      "expected_success": false
+    },
+    {
+      "case": "unsafe-name",
+      "exit": 1,
+      "expected_success": false
+    }
+  ],
+  "manual_original_members": 9,
+  "non_pack_members_unchanged": 8,
+  "rollback_all_original_bytes_and_modes_exact": true,
+  "canonical_v19_zip_sha256": "edb66b67ef3b039cf8a5161d25b229345903ca931b5ea5c6873aeaf6222e607d",
+  "canonical_files_unchanged": true
+}

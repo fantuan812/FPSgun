@@ -1,5 +1,5 @@
 {
-  "version": 4,
+  "version": 5,
   "weapon_slots": 4,
   "item_slots": 8,
   "starting_coins": 35,
@@ -661,6 +661,27 @@
       "synergy_targets": [
         "bankshot_driver"
       ]
+    },
+    {
+      "id": "feedback_diode",
+      "name": "Feedback Diode",
+      "kind": "item",
+      "price": 28,
+      "max_stack": 1,
+      "rarity": "rare",
+      "tags": [
+        "mobility"
+      ],
+      "effects": {},
+      "feedback_damage": 24,
+      "description": "First hostile shot touching you during an equipped dash deals fixed 24 secondary damage to its living shooter. Once per dash; no extra immunity.",
+      "trigger": "Actual hostile-shot contact during a dash that began while equipped",
+      "cost": "1 module slot; no contact/blast counter; weapon bonuses do not scale feedback",
+      "cooldown": 0,
+      "stack_rule": "Unique: maximum 1; buying or syncing never arms an ongoing dash",
+      "synergy_targets": [
+        "pulse_boots"
+      ]
     }
   ],
   "synergies": [
@@ -774,6 +795,15 @@
         "bounce_guide"
       ],
       "description": "First Bankshot reflection redirects once toward an eligible target. Field-edge positioning matters; the 900 total path never resets."
+    },
+    {
+      "id": "crosscurrent",
+      "name": "CROSSCURRENT",
+      "requires": [
+        "feedback_diode",
+        "pulse_boots"
+      ],
+      "description": "Dash pushes nearby enemies and can counter one hostile shot to its living shooter. Complementary effects; no extra multiplier."
     }
   ],
   "affinity_links": [
@@ -816,6 +846,10 @@
     [
       "bankshot_driver",
       "bounce_guide"
+    ],
+    [
+      "feedback_diode",
+      "pulse_boots"
     ]
   ],
   "shop_weighting": {

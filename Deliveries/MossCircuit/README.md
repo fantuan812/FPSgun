@@ -1,37 +1,41 @@
-# MossCircuit 已交付文件归档
+# MossCircuit 版本交付与历史归档
 
-这里归档曾经发送的原始项目 ZIP、运行包分卷、更新包分卷、说明文件和预览图；当前可编辑源码位于 [`Prototypes/Godot/MossCircuit`](../../Prototypes/Godot/MossCircuit)。原始文件内容不重打包、不改写。
+这里保留曾经发送的 50 个原始文件，并继续接收新版本的 GitHub-only 交付。历史项目 ZIP、运行包分卷、更新包分卷、说明文件和预览图不变；当前可编辑源码位于 [`Prototypes/Godot/MossCircuit`](../../Prototypes/Godot/MossCircuit)。原始文件内容不重打包、不改写。
 
-## 取回原始文件
+## 最新 v26：直接恢复完整 PCK
+
+v26 新增 Feedback Diode 冲刺接触反击模块。此版本只新增完整 `MossCircuit.pck` 与手动替换说明，不重复保存未改变的 EXE/ELF，也不是新的聊天附件。恢复后不需要再合并 ZIP 分卷；必须使用说明中校验一致的原可执行程序，关闭游戏并备份旧 PCK 后手动替换。首次安装仍需先恢复完整 v19 平台包，保留程序和许可证。见 [v26 前提、哈希与操作说明](v26/READ_ME_v26.txt)。
+
+## 取回版本文件
 
 较大的原始文件以不超过 3,000,000 字节的 Git 分块保存，**不是同名原文件的直接下载链接**。`CATALOG.json` 记录原始文件名、大小、SHA-256、存储形式以及有序分块校验值。小文件直接保存；已有预览图沿用已核验的原仓库路径及不可变提交链接，不重复存一份。
 
 在包含此目录及其分块的 FPSgun 本地检出目录内，使用 Python 3.8 或更新版本：
 
 ```sh
-python Deliveries/MossCircuit/restore_deliveries.py --version v25 --output recovered-v25
+python Deliveries/MossCircuit/restore_deliveries.py --version v26 --output recovered-v26
 ```
 
 Windows 也可用 `py -3` 替代 `python`。输出目录中的同名文件会被拒绝覆盖。只核验、不写出原件：
 
 ```sh
-python Deliveries/MossCircuit/restore_deliveries.py --version v25 --verify-only
+python Deliveries/MossCircuit/restore_deliveries.py --version v26 --verify-only
 ```
 
 恢复操作按单个文件原子发布，不是整批回滚事务；若后续文件失败，先前已成功恢复的文件会保留。
 
 程序仅读取本地仓库文件、校验并恢复指定版本的原始文件；不联网、不解压、不安装、不执行游戏或其他程序。它拒绝目录穿越与符号链接。最终发布使用同文件系统的原子硬链接，因此输出磁盘需要支持硬链接（例如 Linux 常见文件系统或 Windows NTFS）；不支持时会明确失败，不改为不安全覆盖。
 
-恢复出来的 `.zip.part001` 等仍是**当时交付的分卷**。按同版本恢复出来的中文说明合并，核对 `CATALOG.json` 的 `reassembled_archives` 完整 ZIP 哈希后再手动解压。该列表是可重建 ZIP 的校验记录，**不表示另有一份完整 ZIP 已上传**。
+对于历史版本，恢复出来的 `.zip.part001` 等仍是**当时交付的分卷**。按同版本恢复出来的中文说明合并，核对 `CATALOG.json` 的 `reassembled_archives` 完整 ZIP 哈希后再手动解压。该列表是可重建 ZIP 的校验记录，**不表示另有一份完整 ZIP 已上传**。
 
 ## 版本和运行前提
 
 - v1–v8 中的早期 ZIP 是原型源码/资源交付，保留原始文件与历史意义，不代表最新可运行桌面包。
 - 首次使用已交付桌面运行包，可从 v19 的 Linux 或 Windows 全套原始分卷开始。
-- 已交付的手动更新链是 **v19 → v20 → v21 → v23 → v24 → v25**。每次按该版本说明核对原 PCK 哈希、先备份、再手动替换；不要跳过前置校验。v22 是源码说明修正，没有独立运行更新包，其修正随 v23 运行内容进入。
+- 历史手动更新链是 **v19 → v20 → v21 → v23 → v24 → v25**。每次按该版本说明核对原 PCK 哈希、先备份、再手动替换；不要跳过前置校验。v22 是源码说明修正，没有独立运行更新包，其修正随 v23 运行内容进入。
 - Linux 在云端真实窗口进行了各版本记录所述的有限验收；不是每个版本都重跑完整战役。Windows 包/已有可执行文件与新 PCK 仅做导出、格式和资源检查，**没有真实 Windows 运行验收**。云端音频设备不可用，未宣称音频验收通过。
 - 显示设置是单次会话内设置，不是磁盘存档。恢复脚本不会自动修改任何游戏安装。
 
 `SOURCE_VERSIONS.json` 将已验收的源码快照对应到不可变 Git 提交。源目录中的验证记录保留各自范围、失败过的候选及修正说明，不能把受控夹具、普通输入、静态检查和真实运行混为一谈。
 
-本目录只归档实际发送过的文件及必要索引；内部恢复备份、私人路径和内部 Library 标识不在此发布。
+旧 50 个实际发送文件的目录记录保持不变；新 v26 PCK/说明明确标为 GitHub-only 交付，不伪称旧聊天附件。内部恢复备份、私人路径和内部 Library 标识不在此发布。

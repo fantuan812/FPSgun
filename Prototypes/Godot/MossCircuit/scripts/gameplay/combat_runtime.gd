@@ -65,6 +65,9 @@ static func step(frame:Context,dt:float)->void:
 		projectile.pos += projectile.velocity * minf(dt,projectile.life)
 		projectile.life -= dt
 		if Geometry2D.get_closest_point_to_segment(frame.world.player_pos,previous,projectile.pos).distance_to(frame.world.player_pos) < 12:
+			# Use the exact old collision/window, and do not change old-build event sequences.
+			if frame.procs.can_feedback():
+				frame.procs.emit_event("projectile_contact",{"owner":projectile.owner,"source":"hostile_projectile","depth":0})
 			frame.hurt.call(projectile.damage)
 			projectile.life = -1
 		if projectile.life <= 0: frame.world.enemy_bullets.remove_at(i)
