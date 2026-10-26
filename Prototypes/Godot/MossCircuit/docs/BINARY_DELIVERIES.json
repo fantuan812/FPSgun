@@ -1,25 +1,59 @@
 {
-  "scope": "Separate Library delivery archives; no platform binaries in the source repository.",
+  "version": "v20",
+  "scope": "Separate Library runtime archives and manual v19-to-v20 update; no platform binaries in the source repository.",
   "files": [
     {
-      "platform": "linux",
-      "name": "MossCircuit-v19-Linux-x86_64-2026-10-25.zip",
-      "bytes": 62312887,
-      "sha256": "edb66b67ef3b039cf8a5161d25b229345903ca931b5ea5c6873aeaf6222e607d",
-      "core_runtime_bytes_unchanged_after_gui": true,
+      "kind": "linux",
+      "name": "MossCircuit-v20-Linux-x86_64-2026-10-25.zip",
+      "bytes": 62313895,
+      "sha256": "9d4e7371556633f0ee10fbd79c2f2bf54457ced8c8a0af927fcb21c1247ea208",
+      "runtime_core_unchanged_after_native_qa": true,
       "windows_runtime_tested": false
     },
     {
-      "platform": "windows",
-      "name": "MossCircuit-v19-Windows-ExportOnly-x86_64-2026-10-25.zip",
-      "bytes": 71082905,
-      "sha256": "2222e699fde95f296033f61a69e8a1f579e1a90b14b8851552e82d87fb9c8200",
-      "core_runtime_bytes_unchanged_after_gui": true,
+      "kind": "windows",
+      "name": "MossCircuit-v20-Windows-ExportOnly-x86_64-2026-10-25.zip",
+      "bytes": 71083894,
+      "sha256": "76d36f388e6adeba8b7ad9b292a95fd17be6a5d00f4d4cf7ac76132e1026cab4",
+      "runtime_core_unchanged_after_native_qa": true,
+      "windows_runtime_tested": false
+    },
+    {
+      "kind": "manual_update",
+      "name": "MossCircuit-v19-to-v20-Update-2026-10-25.zip",
+      "bytes": 35139328,
+      "sha256": "434a4ea2b15ffc52cd2c84ea0d2340087da20a37c8f2c59581ad7a0d77aa8c28",
+      "runtime_core_unchanged_after_native_qa": true,
       "windows_runtime_tested": false
     }
   ],
-  "core_runtime_manifest": "validation/v19-desktop-export/selected-runtime-core.json",
-  "source_production_fingerprint": "validation/v19-desktop-export/production-fingerprint.json",
+  "update_parts": {
+    "archive": "MossCircuit-v19-to-v20-Update-2026-10-25.zip",
+    "archive_bytes": 35139328,
+    "archive_sha256": "434a4ea2b15ffc52cd2c84ea0d2340087da20a37c8f2c59581ad7a0d77aa8c28",
+    "exact_reassembly_verified": true,
+    "parts": [
+      {
+        "name": "MossCircuit-v19-to-v20-Update-2026-10-25.zip.part001",
+        "bytes": 20000000,
+        "sha256": "718a943eaec1a7e8d132dbc94c1c175a90d71ed4602ed49a071cb1fabab3361e"
+      },
+      {
+        "name": "MossCircuit-v19-to-v20-Update-2026-10-25.zip.part002",
+        "bytes": 15139328,
+        "sha256": "00b4354ba8d0b3e8d26bf533b1652e688400fc0e7a6fc94ac6ee9a2b36843380"
+      }
+    ],
+    "readme": {
+      "name": "MossCircuit-v20-\u66f4\u65b0\u4e0e\u5206\u5377\u8bf4\u660e.txt",
+      "bytes": 3205,
+      "sha256": "49e98ffa8a2c3f0889c3e3377df3f96dccd5a0bdbe87a3a76d64d2a54768eda6"
+    }
+  },
+  "new_pck_sha256": "e433dc5f3cb8a57c36e821e7dd3920783dcd8374c6e2dda8f1c849e04b110fc0",
+  "expected_v19_base_pck_sha256": "d454fba8eb3b6ceff3686303b4ad7e4ac2c176659af8c4bf85de610d57af7298",
   "windows_runtime_tested": false,
-  "readme_revision": "Platform README now explicitly states session-only display settings; runtime binaries/PCK unchanged. Original archive approval is supplemented by a doc-only correction receipt."
+  "native_scope": "Finite ordinary Linux controls and first live Warden edge, brief Rooms startup/combat; controlled source 24-case matrix separately.",
+  "full_campaign_tested": false,
+  "manual_user_update_only": true
 }

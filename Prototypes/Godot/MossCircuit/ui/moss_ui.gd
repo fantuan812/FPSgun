@@ -26,6 +26,10 @@ var boss_widgets: Array[Dictionary] = []
 var enemy_manifest: Dictionary = {}
 var enemy_icon_cache: Dictionary = {}
 
+# Combat overlays must not be opaque playfield masks. Modal panels retain their theme.
+const COMBAT_PANEL_ALPHA := 0.08
+const COMBAT_BAR_ALPHA := 0.55
+
 func _ready() -> void:
 	layer = 20
 	root = Control.new()
@@ -38,25 +42,35 @@ func _ready() -> void:
 	hud.set_anchors_and_offsets_preset(Control.PRESET_TOP_WIDE)
 	hud.offset_left = 16; hud.offset_top = 12; hud.offset_right = -16; hud.offset_bottom = 90
 	root.add_child(hud)
+	hud.add_theme_stylebox_override("panel", _combat_panel())
 	var hv := VBoxContainer.new(); hud.add_child(hv)
 	var line := HBoxContainer.new(); hv.add_child(line)
 	hud_title = _label(line, "MOSS CIRCUIT", 18)
 	hud_title.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	_button(line, "BUILD [I]", "inventory")
-	_button(line, "PAUSE [ESC]", "pause")
+	_combat_button(_button(line, "BUILD [I]", "inventory"))
+	_combat_button(_button(line, "PAUSE [ESC]", "pause"))
 	var bars := HBoxContainer.new(); hv.add_child(bars)
 	_label(bars, "HP", 14); hp = _bar(bars, Color("88b98a"))
 	_label(bars, "XP", 14); xp = _bar(bars, AMBER)
 	hud_action = _label(bars, "", 12)
 	hud_action.add_theme_color_override("font_color", AMBER)
 	hud_detail = _label(hv, "", 13)
+	_combat_labels(hud)
+	_combat_bar(hp, MOSS)
+	_combat_bar(xp, AMBER)
 	boss_panel = PanelContainer.new()
 	boss_panel.set_anchors_and_offsets_preset(Control.PRESET_BOTTOM_WIDE)
 	boss_panel.offset_left = 16; boss_panel.offset_right = -16
-	boss_panel.offset_top = -104; boss_panel.offset_bottom = -12
+	boss_panel.offset_top = -52; boss_panel.offset_bottom = -12
 	boss_panel.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	root.add_child(boss_panel)
+	# No bottom-wide filled rectangle: retain only compact text and a thin HP line.
+	var boss_style := StyleBoxEmpty.new()
+	boss_style.content_margin_left = 6; boss_style.content_margin_right = 6
+	boss_style.content_margin_top = 4; boss_style.content_margin_bottom = 4
+	boss_panel.add_theme_stylebox_override("panel", boss_style)
 	boss_rows = VBoxContainer.new(); boss_rows.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	boss_rows.add_theme_constant_override("separation", 6)
 	boss_panel.add_child(boss_rows); boss_panel.hide()
 	shade = ColorRect.new(); shade.color = Color(0.025, 0.05, 0.06, 0.90)
 	shade.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
@@ -87,6 +101,35 @@ func _box(fill: Color, border: Color, padding := 10) -> StyleBoxFlat:
 	s.content_margin_left = padding; s.content_margin_right = padding
 	s.content_margin_top = padding; s.content_margin_bottom = padding
 	return s
+
+func _combat_panel() -> StyleBoxFlat:
+	var s := _box(Color(PANEL, COMBAT_PANEL_ALPHA), Color(MOSS, 0.25))
+	s.set_border_width_all(1)
+	return s
+
+func _combat_labels(node: Node) -> void:
+	if node is Label:
+		node.add_theme_color_override("font_outline_color", Color(0.01, 0.025, 0.03, 0.95))
+		node.add_theme_constant_override("outline_size", 3)
+	for child in node.get_children(): _combat_labels(child)
+
+func _combat_bar(bar: ProgressBar, color: Color) -> void:
+	var background := _box(Color(INK, 0.14), Color.TRANSPARENT, 0)
+	var fill := _box(Color(color, COMBAT_BAR_ALPHA), Color.TRANSPARENT, 0)
+	background.set_border_width_all(0); fill.set_border_width_all(0)
+	bar.add_theme_stylebox_override("background", background)
+	bar.add_theme_stylebox_override("fill", fill)
+	bar.mouse_filter = Control.MOUSE_FILTER_IGNORE
+
+func _combat_button(button: Button) -> void:
+	# Keep clickable controls recognizable without a solid rectangle over actors.
+	for state in ["normal", "hover", "pressed", "focus", "disabled"]:
+		var alpha := 0.30 if state in ["hover", "pressed", "focus"] else 0.12
+		var style := _box(Color(INK, alpha), Color(AMBER if state in ["hover", "focus"] else MOSS, 0.70), 7)
+		style.set_border_width_all(1)
+		button.add_theme_stylebox_override(state, style)
+	button.add_theme_color_override("font_outline_color", Color(0.01, 0.025, 0.03, 0.95))
+	button.add_theme_constant_override("outline_size", 3)
 
 func _theme() -> Theme:
 	var t := Theme.new(); t.default_font_size = 15
@@ -421,11 +464,19 @@ func update_bosses(bosses: Array) -> void:
 		boss_rows.remove_child(old.row); old.row.queue_free()
 	while boss_widgets.size() < live.size():
 		var row := VBoxContainer.new(); row.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		row.add_theme_constant_override("separation", 3)
 		boss_rows.add_child(row)
-		var title := _label(row, "", 15)
+		var line := HBoxContainer.new(); line.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		row.add_child(line)
+		var title := _label(line, "", 14)
+		title.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		title.clip_text = true
 		title.add_theme_color_override("font_color", AMBER)
-		var bar := _bar(row, Color("df8958")); bar.custom_minimum_size.y = 10
-		var hint := _text(row, "", 12)
+		var hint := _label(line, "", 12)
+		hint.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
+		var bar := _bar(row, Color("df8958")); bar.custom_minimum_size.y = 4
+		_combat_bar(bar, Color("df8958"))
+		_combat_labels(row)
 		boss_widgets.append({"row": row, "title": title, "bar": bar, "hint": hint})
 	for i in live.size():
 		var boss: Dictionary = live[i]; var widgets: Dictionary = boss_widgets[i]
@@ -433,7 +484,7 @@ func update_bosses(bosses: Array) -> void:
 		widgets.bar.max_value = float(boss.max_hp)
 		widgets.bar.value = clampf(float(boss.hp), 0, float(boss.max_hp))
 		widgets.hint.text = str(boss.get("hint", ""))
-	boss_panel.offset_top = -12 - maxf(92, live.size() * 80)
+	boss_panel.offset_top = -12 - (8 + live.size() * 26 + maxi(0, live.size() - 1) * 6)
 	boss_panel.show()
 
 func _portrait(entry: Dictionary) -> Texture2D:

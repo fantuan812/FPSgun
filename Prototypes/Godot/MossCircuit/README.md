@@ -1,4 +1,8 @@
-# MOSS CIRCUIT · 苔芯幸存者 v19 · 桌面导出
+# MOSS CIRCUIT · 苔芯幸存者 v20 · 战斗HUD可读性
+
+本批只调整战斗HUD的透明度、文字描边和Boss状态行布局，针对下沿Boss面板遮挡玩家与预警的问题；不改碰撞、伤害、AI、技能几何、时间、RNG或素材。具体测试和实际窗口验收边界见 [v20说明](docs/V20_HUD_READABILITY.md)。
+
+## v19记录（历史）
 
 本批加入固定Godot4.6.3模板校验、隔离冷构建、Linux/Windows x86-64预设及PCK动态资源校验，不改v18玩法、素材或输入。Linux独立可运行包与Windows“已导出但未在Windows运行验收”包分别交付；源码仓库不放平台大二进制。见 [导出与复现说明](docs/V19_DESKTOP_EXPORTS.md)。
 
@@ -42,7 +46,7 @@ v10 冲锋者的蓄力/冲锋/恢复、受击、死亡九帧与已校准接地�
 v9 已完成的共享战斗/构筑与模式策略继续保留：原 Arena 和 3 房间有限遭遇原型使用同一套战斗，支持受控测试的非相邻推进/不开店结算；仍不是完整地牢。见 [架构与模式合同](docs/ARCHITECTURE_AND_MODES.md)。
 
 v8 的空手九帧身体、六种独立世界武器、主手与三个辅助挂位、独立枪口特效完整保留；[装配与共享发射几何](docs/MODULAR_WEAPONS.md) 不回退成烘焙手枪。
-保留 **6 武器、26 道具、4 武器槽、构筑加权刷新、五种普通敌人与两 Boss**，以及 [此前动作覆盖与本版修正](docs/ACTION_COVERAGE.md)、[六种像素 VFX](docs/PIXEL_VFX.md)、[装备刷新](docs/SHOP_AFFINITY.md)、[道具机制](docs/MECHANISMS.md)、[敌人/Boss](docs/ENEMIES_AND_BOSSES.md)、[经济](docs/BUILD_SYSTEM.md) 和 [UI](ui/README.md)。五种普通敌人和两Boss已有独立受击/死亡图；crawler/flanker接触攻击仍为程序化表现。v16新增Warden独立冲锋；Core仍复用原attack表现ring/summon，没有增加音频、存档或联网。
+保留 **6 武器、26 道具、4 武器槽、构筑加权刷新、五种普通敌人与两 Boss**，以及 [此前动作覆盖与本版修正](docs/ACTION_COVERAGE.md)、[六种像素 VFX](docs/PIXEL_VFX.md)、[装备刷新](docs/SHOP_AFFINITY.md)、[道具机制](docs/MECHANISMS.md)、[敌人/Boss](docs/ENEMIES_AND_BOSSES.md)、[经济](docs/BUILD_SYSTEM.md) 和 [UI](ui/README.md)。五种普通敌人和两Boss已有独立受击/死亡图；crawler/flanker接触攻击仍为程序化表现。v16新增Warden独立冲锋，v17新增Core独立summon并保留原ring；没有增加音频、存档或联网。
 
 所有分包请按 [合并解压说明](docs/DELIVERY.md) 放到同一父目录；完整单包直接解压。
 

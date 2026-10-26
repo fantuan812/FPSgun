@@ -1,0 +1,26 @@
+{
+  "all_pass": true,
+  "steps_per_build": 1600,
+  "authority_traces_equal": true,
+  "production_changed_paths": [
+    "ui/moss_ui.gd"
+  ],
+  "baseline_trace_sha256": "5d077c028cb873b1b71a9521723390a7529047c7ad07c613f1396c62ca3b77cd",
+  "candidate_trace_sha256": "5d077c028cb873b1b71a9521723390a7529047c7ad07c613f1396c62ca3b77cd",
+  "observed_boss_states": [
+    "boss_core/move/ring",
+    "boss_core/move/summon",
+    "boss_core/recover/ring",
+    "boss_core/recover/summon",
+    "boss_core/warning/ring",
+    "boss_core/warning/summon",
+    "boss_warden/charging/charge",
+    "boss_warden/move/blast",
+    "boss_warden/move/charge",
+    "boss_warden/recover/blast",
+    "boss_warden/recover/charge",
+    "boss_warden/warning/blast",
+    "boss_warden/warning/charge"
+  ],
+  "scope": "controlled fixed-step actual combat, primary hits, lower/upper boundary positions; no GUI claim"
+}

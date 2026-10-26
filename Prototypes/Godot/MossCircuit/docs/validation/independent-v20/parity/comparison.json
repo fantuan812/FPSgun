@@ -1,0 +1,22 @@
+{
+  "match": true,
+  "steps_per_build": 1600,
+  "trace_sha256": "5d077c028cb873b1b71a9521723390a7529047c7ad07c613f1396c62ca3b77cd",
+  "harness_sha256": "bf0c1a79e4cf7794c96a72145beb1147e55a86c3460bace44f643b6a473d4d32",
+  "observed_boss_states": {
+    "boss_core/move/ring": true,
+    "boss_core/move/summon": true,
+    "boss_core/recover/ring": true,
+    "boss_core/recover/summon": true,
+    "boss_core/warning/ring": true,
+    "boss_core/warning/summon": true,
+    "boss_warden/charging/charge": true,
+    "boss_warden/move/blast": true,
+    "boss_warden/move/charge": true,
+    "boss_warden/recover/blast": true,
+    "boss_warden/recover/charge": true,
+    "boss_warden/warning/blast": true,
+    "boss_warden/warning/charge": true
+  },
+  "scope": "Independent execution of author fixed-step controlled combat trace; not GUI/ordinary play"
+}
