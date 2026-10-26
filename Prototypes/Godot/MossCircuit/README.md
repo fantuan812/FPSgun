@@ -1,3 +1,11 @@
+# v30 development candidate — explicit weapon order (UNVERIFIED)
+
+Shop-only **MOVE EARLIER / MOVE LATER** lets an owned weapon copy trade places with its neighbor without selling it. Its exact remaining cooldown travels with it; no clock reset, scrap, stat or RNG change. This changes existing ready-weapon processing order and existing mount assignment, not projectile travel rules or guaranteed damage. Duplicate copies remain separate slots. Outstanding shots/mortars block the action rather than being discarded.
+
+This candidate is **not yet accepted**. True cold import, 321 focused author checks and retained reservation520/salvage147/weapon-rig245 checks pass. Independent candidate/native/final-pack acceptance is still pending. Implementation is scoped to the [frozen contract](docs/V30_WEAPON_ORDER_CONTRACT.md). Old no-action parity, strict stale/type guards, copy-clock/rig preservation, finite actual Cryo/Saw timing, native controls and exact-pack acceptance remain pending. No new art/catalog content or chat attachment is planned. Accepted v29 below is immutable.
+
+---
+
 # MossCircuit v29 — trade one stat choice for 10 scrap
 
 Each earned upgrade page still offers three of the same six permanent stats. A separate optional **SALVAGE THIS UPGRADE / +10 SCRAP** resolution forfeits that one stat choice, retaining earned level/XP. This trades lasting growth for equipment budget at a later normal shop, if reached; no extra shop, reroll, choice, discount or automatic purchase is created. Ten is experimental tuning, not a general balance guarantee.

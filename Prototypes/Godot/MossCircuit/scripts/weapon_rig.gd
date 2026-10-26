@@ -51,6 +51,17 @@ func sync_loadout(ids:Array)->void:
 	for i in range(ids.size()):
 		var sprite:=Sprite2D.new();sprite.texture=assets.get(ids[i]);sprite.centered=false;sprite.texture_filter=CanvasItem.TEXTURE_FILTER_NEAREST;add_child(sprite)
 		slots.append({"id":ids[i],"slot":i,"sprite":sprite,"age":10.0,"pose":{},"target":Vector2.RIGHT,"aim":Vector2.RIGHT,"hidden":false})
+func swap_copies(first:int,second:int)->void:
+	# Shop controller has already rejected outstanding flight state. Keep copy-local aim/age.
+	if first<0 or second<0 or first>=slots.size() or second>=slots.size() or first==second:return
+	var moved:Dictionary=slots[first]
+	slots[first]=slots[second]
+	slots[second]=moved
+	for index in [first,second]:
+		slots[index].slot=index
+		slots[index].pose={}
+	# last_shot remains an honest historical launch, not a new shot in the moved slot.
+	queue_redraw()
 func clear()->void:
 	for slot in slots:
 		if is_instance_valid(slot.sprite):slot.sprite.queue_free()
