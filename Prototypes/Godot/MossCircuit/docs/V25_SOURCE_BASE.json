@@ -1,0 +1,17 @@
+{
+  "version": "accepted v24 source, reconstructed without deleting history",
+  "full_v23": {
+    "archive": "MossCircuit-v23-Bankshot-2026-10-25.zip",
+    "bytes": 103125754,
+    "sha256": "084033c40003fa8aa0cb8c1c08e58d5929f5c8c472c572411b878a4228720d61",
+    "manifest_sha256": "d71e54505c54911cb38a32e3e3d8aa2981c3b62b7c8fd8800dcf59dc2eff79ae"
+  },
+  "then_v24_overlay": {
+    "archive": "MossCircuit-v23-to-v24-Source-Overlay-2026-10-26.zip",
+    "bytes": 4536348,
+    "sha256": "4b095ea6b18d9bc209280f8b6c1c5dda64660fd6b38d34e2b02b3328b904f93c"
+  },
+  "required_v24_manifest_sha256": "7f3a62a744f582826f6780951a005d48b6e58fe4977fe6438c2dcdaf88c37c8a",
+  "required_v24_files": 3309,
+  "scope": "These are source archives, not runtime updates. Apply overlay/ only; preserve all absent paths. The new v25 source overlay is applied after this exact base."
+}

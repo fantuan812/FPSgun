@@ -401,9 +401,9 @@ func _inventory(parent: Node, view: Dictionary, selling := false) -> void:
 			if mechanics.has(key): _text(parent, "%s: %s" % [str(key).replace("_", " ").capitalize(), mechanics[key]], 13)
 		for id in mechanics.get("cooldowns", {}):
 			_text(parent, "%s: %.2fs until ready" % [str(id).replace("_", " ").capitalize(), maxf(0, float(mechanics.cooldowns[id]))], 12)
-	_label(parent, "ACTIVE TAG SYNERGIES", 16)
-	var synergies: Array = view.get("synergies", [])
-	_text(parent, "None yet. Match electric / melee / spread tags." if synergies.is_empty() else "\n".join(synergies), 13)
+	_label(parent, "TAG SYNERGY PROGRESS", 16)
+	_text(parent, "Current equipment copies: each weapon slot and each owned module copy counts. Offers do not count.", 12)
+	for status in view.get("tag_synergy_status", []): _tag_synergy_line(parent, status)
 	_label(parent, "DERIVED STATS", 16)
 	_text(parent,"See each weapon card for its primary damage and attack interval.",12)
 	var derived:Dictionary=view.get("stats",{})
@@ -412,6 +412,16 @@ func _inventory(parent: Node, view: Dictionary, selling := false) -> void:
 	for key in derived:
 		if key in ["damage","fire_interval","damage_bonus","haste"]:continue
 		_text(parent, "%s: %s" % [str(key).replace("_", " ").capitalize(), str(derived[key])], 13)
+
+func _tag_synergy_line(parent: Node, status: Dictionary) -> void:
+	var active := bool(status.active)
+	_text(parent, "%s / %s / %d / %d %s" % [status.name, "ACTIVE" if active else "INACTIVE", int(status.count), int(status.threshold), status.tag], 13).add_theme_color_override("font_color", MOSS if active else AMBER)
+	_text(parent, str(status.description), 12)
+	_text(parent, str(status.qualifier), 12)
+	if active and status.matching_weapons.is_empty():
+		_text(parent, "Active, but no equipped %s weapon currently benefits." % status.tag, 12)
+	else:
+		_text(parent, "Matching equipped weapon slots: %d" % status.matching_weapons.size(), 12)
 
 func _synergy_line(parent: Node, status: Dictionary) -> void:
 	var active: bool = bool(status.get("active", false))

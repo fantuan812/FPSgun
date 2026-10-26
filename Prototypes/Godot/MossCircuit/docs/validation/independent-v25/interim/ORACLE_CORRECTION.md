@@ -1,0 +1,3 @@
+# Baseline harness correction
+
+The first unchanged-v24 run recorded 13 failures, preserved in rejected-oracle-r1/. One was a strict Dictionary comparison between JSON floating threshold 3.0 and a literal integer 3; exact fields/order/count and numeric threshold are now checked explicitly. Twelve were an invalid assumption that the outermost spread pellet hits a small target from every mounted slot. The corrected oracle selects the closest actually emitted pellet using its existing segment, then calls the real primary-contact path and asserts the expected single-hit HP loss. Target, weapon, geometry and damage authority are unchanged. This does not claim every pellet hits or total-volley damage. No product defect or production correction was made.

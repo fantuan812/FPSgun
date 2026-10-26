@@ -737,6 +737,7 @@ func _view() -> Dictionary:
 	view.actor_state=actor_anim.state_of(0)
 	view.dash_cooldown=stats.get("dash_cooldown",0.0)
 	view.settings=settings.duplicate(true)
+	view.tag_synergy_status=Rules.tag_synergy_status(build,catalog)
 	var affinity := Rules.shop_affinity(build,catalog)
 	var missing_names: Array = []
 	for id in affinity.missing_ids: missing_names.append(Rules.catalog_entry(catalog,id).name)

@@ -1,21 +1,21 @@
 {
-  "version": "v24 resource-only update",
-  "source_candidate_manifest_sha256": "be3729dbb7e96b0b3dbc69bd4a4e1a65448ceeec25b111b17e7f4c5e98342c4d",
+  "version": "v25 resource-only tag-progress update",
+  "source_candidate_manifest_sha256": "afb69ff2199510bbfa7e4488a15858e92fdd3b0aace1151ec8037b26af1a3e22",
   "source_production_inputs": 116,
   "pck": {
-    "bytes": 40679992,
-    "sha256": "c6538ac76c04bfe5698c983574fb1a235e07c5dfdbe9eff7cac2784755402596"
+    "bytes": 40683384,
+    "sha256": "a7a9064413fc7bfdc1713f516ffc7d99ad6a2af2aa796089b0ddf1372779d42a"
   },
   "update_archive": {
-    "name": "MossCircuit-v23-to-v24-Update-2026-10-26.zip",
-    "bytes": 40215073,
-    "sha256": "e560248d7b681065ea3be29e6ce3a9598c117a187e5878af1e7a0f79b3661a4f"
+    "name": "MossCircuit-v24-to-v25-Update-2026-10-26.zip",
+    "bytes": 40216341,
+    "sha256": "2330a4d172825e91d19182d89af0b445e9890d19020794e78097ec468f375ea8"
   },
   "base_required": {
-    "required": "core files matching accepted v23; not a standalone game",
+    "required": "accepted v24 core; not a standalone game and not a direct v23 update",
     "MossCircuit.pck": {
-      "bytes": 40675956,
-      "sha256": "a8ef8b7720ac374f10e5d5378bd413b5d415e845a35495bb89399a4ee5f3864a"
+      "bytes": 40679992,
+      "sha256": "c6538ac76c04bfe5698c983574fb1a235e07c5dfdbe9eff7cac2784755402596"
     },
     "Linux executable": {
       "name": "MossCircuit.x86_64",
@@ -27,53 +27,75 @@
       "bytes": 104659456,
       "sha256": "91724f15024a3a545e28ccd83134403d31ce2323a38e51c95e4dfa282f732ab6"
     },
-    "recovery_bundles": [
+    "recovery_order": [
       {
-        "name": "MossCircuit-v23-Linux-x86_64-2026-10-25.zip",
-        "bytes": 67501890,
-        "sha256": "cbd28d1eb48ef53eb0437fddb7ff8c2d48ab28ebdedd2268440f20dacdad1703"
+        "step": 1,
+        "choose_one_platform": [
+          {
+            "name": "MossCircuit-v23-Linux-x86_64-2026-10-25.zip",
+            "bytes": 67501890,
+            "sha256": "cbd28d1eb48ef53eb0437fddb7ff8c2d48ab28ebdedd2268440f20dacdad1703"
+          },
+          {
+            "name": "MossCircuit-v23-Windows-ExportOnly-x86_64-2026-10-25.zip",
+            "bytes": 76343361,
+            "sha256": "33d30c7059e7628b1e9e0af89bdac0660c08f68e5687b6f07125e2d35fbcb959"
+          }
+        ]
       },
       {
-        "name": "MossCircuit-v23-Windows-ExportOnly-x86_64-2026-10-25.zip",
-        "bytes": 76343361,
-        "sha256": "33d30c7059e7628b1e9e0af89bdac0660c08f68e5687b6f07125e2d35fbcb959"
+        "step": 2,
+        "name": "MossCircuit-v23-to-v24-Update-2026-10-26.zip",
+        "bytes": 40215073,
+        "sha256": "e560248d7b681065ea3be29e6ce3a9598c117a187e5878af1e7a0f79b3661a4f"
+      },
+      {
+        "step": 3,
+        "name": "this v24-to-v25 resource update; only after matching the required v24 PCK"
       }
     ]
   },
   "new_executable_build": false,
   "windows_runtime_tested": false,
-  "source_overlay": "MossCircuit-v23-to-v24-Source-Overlay-2026-10-26.zip",
+  "source_overlay": "MossCircuit-v24-to-v25-Source-Overlay-2026-10-26.zip",
   "source_base": {
-    "version": "v23 full source required",
-    "archive": "MossCircuit-v23-Bankshot-2026-10-25.zip",
-    "bytes": 103125754,
-    "sha256": "084033c40003fa8aa0cb8c1c08e58d5929f5c8c472c572411b878a4228720d61",
-    "source_manifest_sha256": "d71e54505c54911cb38a32e3e3d8aa2981c3b62b7c8fd8800dcf59dc2eff79ae",
-    "source_file_count": 3001,
-    "overlay_deletes_no_files": true,
-    "note": "Apply only to this exact complete source base; source overlay is not a runtime update."
+    "version": "accepted v24 source, reconstructed without deleting history",
+    "full_v23": {
+      "archive": "MossCircuit-v23-Bankshot-2026-10-25.zip",
+      "bytes": 103125754,
+      "sha256": "084033c40003fa8aa0cb8c1c08e58d5929f5c8c472c572411b878a4228720d61",
+      "manifest_sha256": "d71e54505c54911cb38a32e3e3d8aa2981c3b62b7c8fd8800dcf59dc2eff79ae"
+    },
+    "then_v24_overlay": {
+      "archive": "MossCircuit-v23-to-v24-Source-Overlay-2026-10-26.zip",
+      "bytes": 4536348,
+      "sha256": "4b095ea6b18d9bc209280f8b6c1c5dda64660fd6b38d34e2b02b3328b904f93c"
+    },
+    "required_v24_manifest_sha256": "7f3a62a744f582826f6780951a005d48b6e58fe4977fe6438c2dcdaf88c37c8a",
+    "required_v24_files": 3309,
+    "scope": "These are source archives, not runtime updates. Apply overlay/ only; preserve all absent paths. The new v25 source overlay is applied after this exact base."
   },
   "parts": [
     {
-      "name": "MossCircuit-v23-to-v24-Update-2026-10-26.zip.part001",
+      "name": "MossCircuit-v24-to-v25-Update-2026-10-26.zip.part001",
       "bytes": 20000000,
-      "sha256": "f089629ffb7c30ffaef226467a0cfdabeeaa391508c5b5609d1cc6ded6f0d71a"
+      "sha256": "a59916ba6bfffc2c3cbbd798c7dc335573dbf5d8bfb45d0cfd52b93ee9c73043"
     },
     {
-      "name": "MossCircuit-v23-to-v24-Update-2026-10-26.zip.part002",
+      "name": "MossCircuit-v24-to-v25-Update-2026-10-26.zip.part002",
       "bytes": 20000000,
-      "sha256": "3bdeb929901f59237e9b2708f8f7f731fb3ee4eebd1ebd4464f8b055ac3053fc"
+      "sha256": "f611adae20826d4922f066be30b4bdbae670d3c7ea01e2045616d37f5318c83e"
     },
     {
-      "name": "MossCircuit-v23-to-v24-Update-2026-10-26.zip.part003",
-      "bytes": 215073,
-      "sha256": "1a4b6f0b03c6da7634b234299a13ea5a980b02bb826330516fffff3ab7f59852"
+      "name": "MossCircuit-v24-to-v25-Update-2026-10-26.zip.part003",
+      "bytes": 216341,
+      "sha256": "8c5c10330a35acb3839bbddd5af03f6ee14c708e3f77f9992d54db28550aa75e"
     }
   ],
   "outer_instructions": {
-    "name": "MossCircuit-v24-更新与分卷说明.txt",
-    "bytes": 3106,
-    "sha256": "b54a96281ef41b29caa040b01913bd06d5729c9589a6c023e163aa0199d2844b"
+    "name": "MossCircuit-v25-更新与分卷说明.txt",
+    "bytes": 3203,
+    "sha256": "81f7d130df472846c86bf20c50dd5fdf7f95411cde89e2ee76cbd236fb2a7020"
   },
-  "scope": "Existing v23 full bundles plus this update are the recovery pair. Same accepted ELF/EXE, no fresh Windows build/run. Source overlay is separate and not executable/PCK content."
+  "scope": "Full v23 bundles, then accepted v23-to-v24 update, then this exact v24-to-v25 PCK update form runtime recovery. Same executable identities, no fresh Windows build/run. Source overlay is separate."
 }

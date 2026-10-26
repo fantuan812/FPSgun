@@ -1,0 +1,516 @@
+{
+  "actions": {
+    "boss_core_attack": 9,
+    "boss_core_death": 16,
+    "boss_core_hurt": 9,
+    "boss_core_summon": 16,
+    "boss_warden_attack": 9,
+    "boss_warden_charge": 16,
+    "boss_warden_death": 16,
+    "boss_warden_hurt": 9,
+    "brood_keeper_death": 16,
+    "brood_keeper_hurt": 9,
+    "brood_keeper_summon": 16,
+    "charger_charge": 9,
+    "charger_death": 9,
+    "charger_hurt": 9,
+    "crawler_death": 16,
+    "crawler_hurt": 9,
+    "flanker_death": 16,
+    "flanker_hurt": 9,
+    "hero_attack": 9,
+    "hero_dash": 9,
+    "hero_death": 9,
+    "hero_hurt": 9,
+    "spitter_death": 9,
+    "spitter_hurt": 9,
+    "spitter_shoot": 9
+  },
+  "exact_files": {
+    "art_source/alpha_bounds.json": "95ef8a5a17693439b4d96c20208a144b49c417711a86981f4347fda5f58a121d",
+    "assets/actions/action_manifest.json": "935794d18a623b8877ed0565cf1b2711ea40ae9592aec695a7fef2a2ee867d1b",
+    "assets/actions/boss_core/action_manifest.json": "72028a64383be9350e6142731f7a8042cf6085d494e9e2e28cdf8b7aea1c59fa",
+    "assets/actions/boss_core/attack_manifest.json": "8d4e7106fcb9cec908f37ae4f2419708a73fa289ed5330ee82a21d815cacaa2c",
+    "assets/actions/boss_warden/action_manifest.json": "27cd51c4a60fedfbf76fdc8d861d3748528b9ce9ec84cbeea06cb02f56e6bba7",
+    "assets/actions/boss_warden/attack_manifest.json": "ea0d989a82c269559c7ef28b7f2852a91976f5413942b294b0b2272802c0ce68",
+    "assets/actions/brood_keeper/action_manifest.json": "be8abe0519f37d30650efd816d094318e21bafdc03ad0ffa3fb7433bb0db2766",
+    "assets/actions/charger/action_manifest.json": "22963394019261d700f5a1bb00d8dc1f67f991b894447aec92d40ec15f95a8cb",
+    "assets/actions/crawler/action_manifest.json": "99546710d4015da3bd91f1c3c770bb13add88ba2124405c5d52a57dabd2861d8",
+    "assets/actions/flanker/action_manifest.json": "1402758cc1e50247967e348022390cfa41c63dad90c714653b8ee509c78b33d4",
+    "assets/actions/spitter/action_manifest.json": "7dabdfe3c7d8d08f09cb4af0fffc75162609d40f450e5b924341f692b3716db6",
+    "assets/enemies/enemy_manifest.json": "d092fc93e7d1e872f2e87da4dc46081207c4e6143fb9834224ae2ea7eac37dbb",
+    "assets/items/bankshot_icon_manifest.json": "0674903041158a1619d135bf7d7b55ee76d285f03af0fa27e38b68144ae507c9",
+    "assets/items/build_expansion_icon_manifest.json": "491ca4d2ccc42714c708dc3fc42cc4cce7a6a5804fddcdb0d637f9ae2519a656",
+    "assets/items/cryo_icon_manifest.json": "9ba752d3dcbbd5140fb761ff1bef697d7f05a3eedad72e1b10516852952b31be",
+    "assets/items/icon_manifest.json": "ad978274d7d3e86ce68f02c80e1473b59c3464076765270f1ae3e6612327bb33",
+    "assets/items/mechanism_icon_manifest.json": "9a3d690bb873e7b200164e240914f428c1c0a465fae0742925fad3d98e9dc527",
+    "assets/vfx/vfx_manifest.json": "f29c7963d89612b04c7c441f7e96a00209438f42f654f8ede58b1b1c209c1dc4",
+    "assets/weapon_mounts/bankshot_world_weapon_manifest.json": "4df726dd0a8877529713c29201b7ed91a7e86445b38c87cec8f15ee9162df31e",
+    "assets/weapon_mounts/cryo_world_weapon_manifest.json": "2cdcabf8df60c36ef3ab72f032712b126f1c978e5e36efc1c51487f977e0be30",
+    "assets/weapon_mounts/hero_modular_manifest.json": "9410acd56c7d62a850dc8423ecff2539fe71d9497d5eed5b031554d813978227",
+    "assets/weapon_mounts/world_weapon_manifest.json": "328423ebcd72b386ac4f1e5ca5b5ad7a718d3686c10d72b1b59a4eaf99ad2db5",
+    "data/actor_actions.json": "d752f41f35f776f6943b499262736ca189a37131a6a675cc6988588109e89fb2",
+    "data/balance.json": "180c521a222f737a93498768acccdb98e6bb93f606de7e6719f88261eb41815c",
+    "data/catalog.json": "9c4ce7dc57fd5f46d09cac65ddc39b6c39cfdaeb8efb02c8cfebc9cc7488f2c3",
+    "data/encounters.json": "5017a8d4295d38416615b51fdedbfe23fd411b5dffb1fa42b9a7b04adaabf655",
+    "data/hero_sockets.json": "3d348eefdc7e301f7a644507cd5bd37acd5b0064bbbe86d64fd7ec6d3a6286a6",
+    "data/room_encounters.json": "4a0067faa08241d91042505d72b3a027956ef27571710d74d8559462ac2c5131",
+    "data/vfx.json": "0602bb81d016a6e5c61f4b9be5f81a092a2e65e4a6b6164a4e7a06529527c3da",
+    "scripts/actor_director.gd": "19c4bff935af78edbd80741e767509dc98a78e4ec491b94120e925f509356023",
+    "scripts/art.gd": "cb0e4ac9c5d3a30cfe2fdc462aada0409cfcdb663d0e6df9526dc3929438dbee",
+    "scripts/effects.gd": "80a4eaae096ce8d4798e2db7692be670caa10288615252f674fa355d4be39a36",
+    "scripts/enemy_ai.gd": "7edf8f8021389969fab986f6b5eba4fa586c508f2144059a63875f029e5bd2f4",
+    "scripts/gameplay/boundary_shot.gd": "a16ff996810c5b078cf73056941a1736ea91ef8653830a839af33b19c6e7faf1",
+    "scripts/gameplay/character_motor.gd": "9945b4bf200c04e4eb170dd022d16be958edd5e28f1d5fa5bbc61738b828412e",
+    "scripts/gameplay/combat_context.gd": "933948349b79674824763d7eb1e4558bd2faff0f3f6aa0e4617c053eb64165d5",
+    "scripts/gameplay/combat_runtime.gd": "2c1a90927aa91cf73f1ab786f5eada9a6e07a8dd424dd6da80a88675a246d973",
+    "scripts/gameplay/combat_state.gd": "dc5da6e449642bb7d9908d46e1e023034b1fbd815eaeef42ff97488537727000",
+    "scripts/gameplay/effect_runtime.gd": "8c8511f10e94623f820bc2ab9d9e3e8314e93902cfafc4167a6f4b1ab2d048e0",
+    "scripts/gameplay/field_layout.gd": "9dbf663d66fe2c07d5de7b9df03d2c4c82d570c3994486f98d67c8061366c4c4",
+    "scripts/gameplay/run_flow.gd": "a714a0fec860850b8def70193dc28e0bb38ba1287fccad531ec1204e9c82d036",
+    "scripts/gameplay/run_session.gd": "68c7ca1d5c400ae5bc38d5a40a85dfde4748cd994c2a146fe9538967ba12d1c6",
+    "scripts/gameplay/target_status.gd": "b6e6b9c1dd3ccef87a74b65196a433137f7b394a4eba9f86b6eccc79851a09c3",
+    "scripts/gameplay/weapon_combat.gd": "052832f8f8864b5d4ff8ba7035357029787bb78a7523fa968a0b8b6b1bd00256",
+    "scripts/gameplay/weapon_presentation.gd": "1957c8c96be9b8eb0105aa7c8691402d622b8c5d5e08e601e6504cbd2ade0c88",
+    "scripts/main.gd": "52bc3c465a9208fb7fd579ffcfe141cc2d2941e7af519df22f89c3242a1e09d0",
+    "scripts/modes/arena_mode.gd": "6e9ad0205d8f3474375ce5d893784a483b4caa387c5d00765369a79fa36d7a2e",
+    "scripts/modes/room_mode.gd": "114ca354bee08c92880c3ceb51d1ba10de8d06cb55680ec3eb6a24386195ea81",
+    "scripts/rules.gd": "2222b3c66b9e875fa03028e7fba3d3e71dcf51ea71a0a2bb7641a1e394b22c6f",
+    "scripts/telegraph_layer.gd": "439735cfbd870425a3053fe7b27b11f1ec5719026786003b54c26738b1cdccf4",
+    "scripts/vfx_layer.gd": "a0473cccf84083fff122517bafd34a3eae1741ce63d90689e4159e9c2c8910bf",
+    "scripts/weapon_readout.gd": "8c4aa49e6645553a681e3202d7010a9495d85400c3249ae55e65629038edbec9",
+    "scripts/weapon_rig.gd": "2f36eff1ee48f3fbcba4fc6131590392d57b32a9e0a7990a816924c8cfe0f9aa",
+    "ui/mode_status.gd": "b271227f8daa7c8260a9380e75e9d24890113795dc0785a7555835a2216d5751",
+    "ui/moss_ui.gd": "3c165d1f13625c2e778043d23a5c3e4c6d4c6ff8cd32f7f95e60166455ce4444"
+  },
+  "images": {
+    "assets/actions/boss_core/boss_core_death.png": {
+      "height": 1254,
+      "import_settings_sha256": "0716770d10e231c7c3b98861b90e6448028e94660b3f36cef1cb5d6adc71a7e6",
+      "imported_rgba_sha256": "e4ccd23500423bcdf1c7d3dc8e62a9f9502c5fac5e8216bbd301973421b4aac6",
+      "raw_png_sha256": "5e019c8810e00f013796c0b2c14f041ed637a12174eeb2fcea7a593dcfce9b4b",
+      "width": 1254
+    },
+    "assets/actions/boss_core/boss_core_hurt.png": {
+      "height": 1254,
+      "import_settings_sha256": "63a4bed05dfb0e0c095dcb35b64c0d987ffc3bd445fb3e521d8880305d6449c4",
+      "imported_rgba_sha256": "0355c857eac90b94f8fc44a3cfe7fb0b767ce35c0896f31394c7493daef6ebcf",
+      "raw_png_sha256": "06032a84184dc2331177eb0bf3bc237edff4c6c981802e393fe1be492775fc89",
+      "width": 1254
+    },
+    "assets/actions/boss_core/boss_core_summon.png": {
+      "height": 1199,
+      "import_settings_sha256": "ff95cc276a85885898407ea66deb97b7c682753a82eba09e0fd11e2a7a34f350",
+      "imported_rgba_sha256": "8de650aa609be0640a9c61ec8363ba4501c3eec31fa1d4f44870956c9604982e",
+      "raw_png_sha256": "06db7c54121f75bccd25998f8973a065ff9f376669ff794b8ed569b2855522e0",
+      "width": 1312
+    },
+    "assets/actions/boss_core_attack.png": {
+      "height": 1254,
+      "import_settings_sha256": "d362ebb3c34c6925d2528c1a7f8b7b2e34dc571309fb6bf343e2a0fb79701520",
+      "imported_rgba_sha256": "d1617c4db949399a919c1b3fd5d8216b4ecf005adc7f6f7c434155db5998d5b0",
+      "raw_png_sha256": "aff001c3a1a5ad5b479f6e7c0cc6d598bcc98c7fb49254df49e7bbad7472728b",
+      "width": 1254
+    },
+    "assets/actions/boss_warden/boss_warden_charge.png": {
+      "height": 1254,
+      "import_settings_sha256": "296301ff47a0dcae1f7d1d34a069b964f829b90f203444a04604891e488fa5b0",
+      "imported_rgba_sha256": "087334cfb3db64049e88174644da54449f86c1ad290d4f4b307d104169c6fa91",
+      "raw_png_sha256": "1c27e2bda27f3ef64b318261612cfb64433277d3f8e7b3301c5e49c5e3779f99",
+      "width": 1254
+    },
+    "assets/actions/boss_warden/boss_warden_death.png": {
+      "height": 1254,
+      "import_settings_sha256": "05347053fefac9ea6ef84b644bf0ee426f307ba1a68db2fce5e1c88651feaf8d",
+      "imported_rgba_sha256": "2c8dfc536022585fc23ab0ee95d015b39a91c3ad9e69cd3acfe8d383eb46fe3d",
+      "raw_png_sha256": "40d6c1c70a7881c20410f7e8ba70e505e59eb06b1f39bb4b56e09ffd401c286d",
+      "width": 1254
+    },
+    "assets/actions/boss_warden/boss_warden_hurt.png": {
+      "height": 1254,
+      "import_settings_sha256": "d78244459a5f8f1df98e7062d4c7e3b7430bc3170c0d741667b9b5b9766ee410",
+      "imported_rgba_sha256": "58690402ca613ff5bb7d0a6886ca5d5dbb0f599a192f04b59d2d641f9d2f70bd",
+      "raw_png_sha256": "b67f2cd14042b441982e44080f26258ade3804961e42a0395b3cf1846c64b899",
+      "width": 1254
+    },
+    "assets/actions/boss_warden_attack.png": {
+      "height": 1254,
+      "import_settings_sha256": "614a6f1e89e65a5cbc6ee05249388f96290b55cc55fe843f67558480bb364dc1",
+      "imported_rgba_sha256": "aa7d8719f286829106bb84d259b6cdedd70b03546d655f0f497bd16ba6d46cc8",
+      "raw_png_sha256": "4a2865fcd775af7503630c67146f05537f9ec987af15705a92c8d51f10fa49d5",
+      "width": 1254
+    },
+    "assets/actions/brood_keeper/brood_keeper_death.png": {
+      "height": 1254,
+      "import_settings_sha256": "c5ca11dc287f0d8a568b8d4fac6d3b6acd6b96b597db2d1e199ca4f6cdf463c3",
+      "imported_rgba_sha256": "a8a96aacff4c8df6327b66d5e4a63963521c05dffb7a51da2f1a611409c9f49a",
+      "raw_png_sha256": "fe51277b16ac8bf7a58d4f12c02b30c72074415975847f524ff689f524daf7c3",
+      "width": 1254
+    },
+    "assets/actions/brood_keeper/brood_keeper_hurt.png": {
+      "height": 1254,
+      "import_settings_sha256": "79cd048fbe29b1b0aa2bb14c91e7136c25b1ecbe3ef0f86c3fc37b69c4f30e56",
+      "imported_rgba_sha256": "e9a4a2daf3fa477b3724bfc0c9c2f2d7a57774a1c85cef59224f19b23cde28e4",
+      "raw_png_sha256": "266f9110e1c3c2d730e9b89dd1802ddc2ca58ce59ef39afbca7cb1cd5d8a7a0d",
+      "width": 1254
+    },
+    "assets/actions/brood_keeper/brood_keeper_summon.png": {
+      "height": 1254,
+      "import_settings_sha256": "e1a18f19943262b3248f8455fb54d607af17f37360b4b51dc558527cc8d86227",
+      "imported_rgba_sha256": "e3a3e7ba531189ef88c1f9c061cb87ccb078ad72dcc860511272cc97a6240a8d",
+      "raw_png_sha256": "1f5faa0c330891fb2ffc4f0b6f3f398b4871452b6401e79407e5b3b0aceaf748",
+      "width": 1254
+    },
+    "assets/actions/charger/charger_charge.png": {
+      "height": 1254,
+      "import_settings_sha256": "01fc8d71f82f2fc2af037ac46811cd83a0126bce0ecc266376e05e74463418a3",
+      "imported_rgba_sha256": "80115ebb886934a222e4db5fe174ce3ae623670614c88503d3157c77e7b6d81c",
+      "raw_png_sha256": "dd6340053f224e0bc166a88ea6d59ac4ddf16de6e522cfd2f16b75c445358d73",
+      "width": 1254
+    },
+    "assets/actions/charger/charger_death.png": {
+      "height": 1254,
+      "import_settings_sha256": "bc884b56bd48739655c6c97665dfe33313b7ebfc7d7c419a2aabe7abcd93908a",
+      "imported_rgba_sha256": "51ce3360a53c82871dcbcc1314b0af31de995704740f9da692f4a415c1738c82",
+      "raw_png_sha256": "a0ec5143ac1b3cdbefd4481984a135fa1c278f067f1af0c781866af545eb24e8",
+      "width": 1254
+    },
+    "assets/actions/charger/charger_hurt.png": {
+      "height": 1254,
+      "import_settings_sha256": "ca1ad06b0ca7d1d2ce0633411c84b3592d7dd8b3170370b5218f5cf49058dbd8",
+      "imported_rgba_sha256": "4ccdc32c927ecbdae367c6f1e5ea84ec25aa3a77e9416102496e63dbc7ee666e",
+      "raw_png_sha256": "80d04dcaf0c153567c939052154a429a9a3f93b030807ee852488388f7b4014d",
+      "width": 1254
+    },
+    "assets/actions/crawler/crawler_death.png": {
+      "height": 1110,
+      "import_settings_sha256": "c3c8e52509d1f7ab5a198a94e5f6d17c2244750bfc607375c60f1984197db6da",
+      "imported_rgba_sha256": "10df58326828d4e165f7e23bbf003610cd2652ac80e942fb5eb859500efa098b",
+      "raw_png_sha256": "bd7db67cd7e5d9e37e3c89119b09ca3fff6c701c94cb35b9d350bca340c76ecd",
+      "width": 1417
+    },
+    "assets/actions/crawler/crawler_hurt.png": {
+      "height": 1241,
+      "import_settings_sha256": "4f7b6e8f147d0cc77badd8ef5d9e4e9cf171fdfab824debc60f39a3f53fd4f5c",
+      "imported_rgba_sha256": "0d87cfe7ecdd3042ee78ea1ebd9c8dcca14accf97620a7732dd94eb5724b3617",
+      "raw_png_sha256": "ba7ac243d092efc4df4078011fcc80f93945b9254d7e9ac4a15c7b3f20ff7230",
+      "width": 1268
+    },
+    "assets/actions/flanker/flanker_death.png": {
+      "height": 1254,
+      "import_settings_sha256": "3396b5e6cd98dbb90ee4f27fe76a92dc1a5c801bb881a9728039d6cfc362759f",
+      "imported_rgba_sha256": "1de5c016babf64eea96d7db8bd6349fb1626500cd64ace06522a0de2c5c57ceb",
+      "raw_png_sha256": "c8a20f57ca87a10715b711f37dd606637e60daa3898082f0a6cef084b3bb57ac",
+      "width": 1254
+    },
+    "assets/actions/flanker/flanker_hurt.png": {
+      "height": 1254,
+      "import_settings_sha256": "9821a11eb6beac1217c7e27bbd45f230936d7cb69e55029db2f35478df902f3d",
+      "imported_rgba_sha256": "229fb1881a2cd75db47335e4624ae00a49d6731d8e568b3e8ebf7992f0a6d3b3",
+      "raw_png_sha256": "bfebee1f99fc08335e0224294c88687b7308d48b5cc067e4c95ef9da5ed6a8dc",
+      "width": 1254
+    },
+    "assets/actions/hero_attack.png": {
+      "height": 1254,
+      "import_settings_sha256": "0aecd04390c8165b4b190f7e92132ba77130cfb6f6727821ca915b9e07c4803e",
+      "imported_rgba_sha256": "d30ab93c4c10d29d5ff331e15d2631d0f366cc1309bce9596e8b40b19203a169",
+      "raw_png_sha256": "7aa9c18439497b7fd43f8ac8f1fa95d4fef20cc398ff359e8e370da24781ce58",
+      "width": 1254
+    },
+    "assets/actions/hero_dash.png": {
+      "height": 1254,
+      "import_settings_sha256": "eff7b44fb0ab78c04bd061f2c88e7ddae83301d6096e6a8916f700cd2efdbb4c",
+      "imported_rgba_sha256": "33239c44a5d49414d1dfaac0ff78c3ba7226999bb6a81c8b00bdbffa894ae960",
+      "raw_png_sha256": "9dd43ba5700313334fa7ddf479d55c5ef2703a2cd5e98b43cc0f61f202d47da4",
+      "width": 1254
+    },
+    "assets/actions/hero_death.png": {
+      "height": 1254,
+      "import_settings_sha256": "1a7d6de76cdffb6369facc876b6bcc76a279a1791a647dc0b6557c8d627b442c",
+      "imported_rgba_sha256": "e4f5c88b749aaa432188afdf6adb998b49f5beb1604f93b06b55538dcbba1c8c",
+      "raw_png_sha256": "2deec59bdb8527c97f36528eb1bdd650bc6410c34ac050b77546a20550206e1a",
+      "width": 1254
+    },
+    "assets/actions/hero_hurt.png": {
+      "height": 1254,
+      "import_settings_sha256": "d5269898068e2410f6ab6f2fd5e796c7df5eec7e522093a411bb1297daa92fcc",
+      "imported_rgba_sha256": "1c06ecb8d0de1718ec7501c92dbc65c745756464d73b5b0073d8d2e3cb68d0b7",
+      "raw_png_sha256": "062e38b2513ef87d1496368ccc500774df44804b4fcadfb0b13b91cf804fdb02",
+      "width": 1254
+    },
+    "assets/actions/spitter/spitter_death.png": {
+      "height": 1254,
+      "import_settings_sha256": "6d8af77997c0ea054f83d6d0a15af6cdeb2a43870537fc2a5c7fb29c5c9bbcea",
+      "imported_rgba_sha256": "b51fab313929befb5f53986a03d786027334463a80986322fac88e5ebbdc77a5",
+      "raw_png_sha256": "5f19f18ff386439fd75780311776217b993cdf72e5b24b854fc6ac32a7cd9807",
+      "width": 1254
+    },
+    "assets/actions/spitter/spitter_hurt.png": {
+      "height": 1254,
+      "import_settings_sha256": "60916fccd535f0adbd5629868388c561c92e9fc2d2697e0d252eb67bcb847ed5",
+      "imported_rgba_sha256": "181057f69accd6c6bf59d010ce0911386af9986d45ba7713264e4a66851436b0",
+      "raw_png_sha256": "979a1912618d20bffcd44fc8d497329aa920c53fa5f71fe7bfd791bfd0dc4b80",
+      "width": 1254
+    },
+    "assets/actions/spitter/spitter_shoot.png": {
+      "height": 1254,
+      "import_settings_sha256": "d07ef205d596d0e79009c419e37f35dea5d2f9bc9d09be62840a70d16eb0bc70",
+      "imported_rgba_sha256": "2a56d49c5c22149ae5cd3f737947e6ca40aaa62679f8007d79d73db610070c9c",
+      "raw_png_sha256": "c5da82006497fce441104b245528c5ef5a414176983e120a304536cf9e6eab48",
+      "width": 1254
+    },
+    "assets/beetle_walk.png": {
+      "height": 1241,
+      "import_settings_sha256": "159d8b00e0ad3fadccbfbb5a19db1536852bc455606a9b4f7478c46847c2bbea",
+      "imported_rgba_sha256": "6b7f6230b10490b3922198c2501097480e9b97772b5e8aaf7537e1aa5f8360ac",
+      "raw_png_sha256": "2068796ffc83d19a44c047ec672c4e176d9b4b2f7001929ae42a52f53c38dada",
+      "width": 1268
+    },
+    "assets/enemies/boss_core.png": {
+      "height": 1254,
+      "import_settings_sha256": "905e50408922d87d1f7112b29932c657423f790747dac8a86833c560370fb2dc",
+      "imported_rgba_sha256": "c1faf492113764207bad093c86cfd57912ffe88a2d84d35a250c4fe1e80df04d",
+      "raw_png_sha256": "372c220e98f76e4b5f23dda5149741c0f48c20ed42ba03f8499f38ad9a5b3b60",
+      "width": 1254
+    },
+    "assets/enemies/boss_warden.png": {
+      "height": 1254,
+      "import_settings_sha256": "cc98016c01f41ccd72098c13f0e8ca43669eaba698188f4fb9526c1881ae5166",
+      "imported_rgba_sha256": "ccfa9c0ab09fd588d5e9c2a9b641ec9d848939a961b568913871cb247c30e47d",
+      "raw_png_sha256": "fcdc4d60e545f606c1c8c6d942c1c07f1f37767f20202074f47f51e6a582d0a0",
+      "width": 1254
+    },
+    "assets/enemies/brood_keeper.png": {
+      "height": 1254,
+      "import_settings_sha256": "649ac5db8a57efe131c3fde3ea7ede3c5fe148a0a45f49aa8aa52595a2e8fc5a",
+      "imported_rgba_sha256": "7e56e242a928097d884659c3f99ab8dfa12514d65e632441366347ef31c20c04",
+      "raw_png_sha256": "097786195cb741058bec4631eb2f9896986c7d9d41f7090172431a3eda4345a2",
+      "width": 1254
+    },
+    "assets/enemies/charger.png": {
+      "height": 1254,
+      "import_settings_sha256": "d37a99ac59bb440690e516bc6ef630187e09b4718e552046624c4612964ffd0b",
+      "imported_rgba_sha256": "97cd48b328894287e4aa7bddb06da9cf899cd8b6751c904acc4afbf7cf083653",
+      "raw_png_sha256": "ba72977655eaf057031460c93e4d85f3e0c53bc85a63a6463e1408fcc4086934",
+      "width": 1254
+    },
+    "assets/enemies/flanker.png": {
+      "height": 1254,
+      "import_settings_sha256": "93df5da927a92b771673e67e0f33bc40560edc92257258675ef9efd272dacc86",
+      "imported_rgba_sha256": "4e2ca5629b8cc2130d2714753b3eb91853437479dfb0fc101e670d1c365e5479",
+      "raw_png_sha256": "90717d00348d4d72521c199d8a45666abecb98d261d7135737ae6ed0c811aab5",
+      "width": 1254
+    },
+    "assets/enemies/spitter.png": {
+      "height": 1254,
+      "import_settings_sha256": "5a3a21cc1810f462a5cc7f714bf17671b0e3c6eb3b86e3a2c1d8e28dad5885e2",
+      "imported_rgba_sha256": "aa29562e677d77cd8ed8ec70423df9c60e7cb8b62d446a3b025d1524a2f881ba",
+      "raw_png_sha256": "d49d9ba91916850fa28f28db3c1ec5da9e602c315ace60460ccd2b29655332d4",
+      "width": 1254
+    },
+    "assets/ground_atlas.png": {
+      "height": 1254,
+      "import_settings_sha256": "d1ec170e947ba86083d51ed6267f81bdad34e386645b22c994eea1fe4a0f68da",
+      "imported_rgba_sha256": "f8400dea7115af1ea77d2c27a23d58bb10a9f700d27b8ee3615bf9847f7ee768",
+      "raw_png_sha256": "8a9ca2b20d21e22ed0065427ef0067e9128ccf3a666b429085c05b684e0af5b1",
+      "width": 1254
+    },
+    "assets/hero_walk.png": {
+      "height": 1254,
+      "import_settings_sha256": "98ee3143e802b3f1865653df15d23c84a5b4876c151dfb3d2583bad2f668c4f8",
+      "imported_rgba_sha256": "48549bd1f39f8c86a5411bb3f70570ee68b8146f85caaed788055c7210159576",
+      "raw_png_sha256": "503ec7f1284e31c0994e09723a75cc12110767e0ecdbf77b41012c262cb94c29",
+      "width": 1254
+    },
+    "assets/items/bankshot_driver_icon.png": {
+      "height": 1024,
+      "import_settings_sha256": "b4ae2055cdee33bfcb0900c1934a2e617fe51d845c8f775c91abad05b6cb026e",
+      "imported_rgba_sha256": "b5e9a26967875907e2a4d25aa5cf6ac8bd8fc2fe1a84968769f8795e90aca4a7",
+      "raw_png_sha256": "eda1ffc99a76e604a789008e26525fad048b246f81820124e80c02a0bfaab0d3",
+      "width": 1536
+    },
+    "assets/items/bounce_guide.png": {
+      "height": 1087,
+      "import_settings_sha256": "7e65918a37f15c1c73753f858c3369b69a40013469021cbcfbf66bad35bdf5f3",
+      "imported_rgba_sha256": "5767de1e13ffe9375944ac351af8f1504fefdd1249484567251c8f934bf6aba4",
+      "raw_png_sha256": "6e6ec0c165102d179599bdf66a75c6ecdc37ac9ea65b141bc84dba79980a0889",
+      "width": 1447
+    },
+    "assets/items/build_expansion_atlas_v5.png": {
+      "height": 887,
+      "import_settings_sha256": "082e9bfec7da83cd37e2ec08c49180aadbb5e5525a303842575f80ee16931de1",
+      "imported_rgba_sha256": "f051fa5f05930410354683938dfc5cafeb4021df369d9607b7e7a8055c67de33",
+      "raw_png_sha256": "e729eae41caa9ee73cf9382468f5efba65aa60dd125f14175ed3946241571d1a",
+      "width": 1774
+    },
+    "assets/items/cryo_sprayer_icon.png": {
+      "height": 1122,
+      "import_settings_sha256": "b6c2d34ed09ed4034447063319cd7e262da6922e317bcf3d918c9dd1656c37d1",
+      "imported_rgba_sha256": "26c4a8641ab4ad4cf730be5bb4dfd2379a8f43922d3ef6bda758866e35fdc557",
+      "raw_png_sha256": "3013bc9aab42dce9a6d44eb42fd89617da565dea7f893828372f273941dee7e3",
+      "width": 1402
+    },
+    "assets/items/equipment_atlas_v2.png": {
+      "height": 1254,
+      "import_settings_sha256": "25c033ebfd02072ae99f984db8bdbae4ff8245808ac89515af26a75b67621f18",
+      "imported_rgba_sha256": "4c323de88a841c30e38425271dcfea03f78f6a773557f98dfff6af2f619add3a",
+      "raw_png_sha256": "5ac0811ec65274ed650c6ed75890561ed27070f4e5f996de14c34a5fdc5fa807",
+      "width": 1254
+    },
+    "assets/items/fracture_coil.png": {
+      "height": 1199,
+      "import_settings_sha256": "338beb3fb225ca61a1436c3d7e790dabcc8f8e2135d1476da0d7e0d49c865e8a",
+      "imported_rgba_sha256": "dfa896b0bf8918befacc586a80a1a24b682124a5d1d6483aad2522ab67320436",
+      "raw_png_sha256": "49262d6e14f9d311eafed4e83af62150ff8cdc3b4c7fca690e41805f6acd1351",
+      "width": 1312
+    },
+    "assets/items/mechanism_atlas_v4.png": {
+      "height": 887,
+      "import_settings_sha256": "b1ff81633995ccd73add8cfb26fe208fe14dc79c0ae7a21d334e85c4c424f96e",
+      "imported_rgba_sha256": "00b9af0a0ef0573b4a8076874630b922bc00f63b52d89841f46b9bfddaa9cf89",
+      "raw_png_sha256": "0ca0aa10d67ce1fd7b2d6097cc75c4b653fdc6ae659a7c282f1807609f6149a6",
+      "width": 1774
+    },
+    "assets/vfx/chain_arc.png": {
+      "height": 1254,
+      "import_settings_sha256": "b4402376451629cee46c14ce9d409344801dcca4956eee62d1e86f630a3e0d6b",
+      "imported_rgba_sha256": "eac869d6b4b207b07be988a92a54c3284a5d9d3ab9eda417a44981635d89d7fc",
+      "raw_png_sha256": "3367aa7bf9736a5058cb8ae5e5932169fbf7f2a3ec78123d03ca917b7f2e0eae",
+      "width": 1254
+    },
+    "assets/vfx/dash_trail.png": {
+      "height": 1254,
+      "import_settings_sha256": "b4eb821f5faafcc3f198f2b9eafbffc67dffef07531db72b975f5aa3df3b449c",
+      "imported_rgba_sha256": "3f1df117ace9e9a2b1e920459a4bb47afc7342314aa201d3f24890c239fe5e0b",
+      "raw_png_sha256": "376cfbd3b4a8958ae18d77865069f5f1ec6ec32cba012405dc368a52716c5d3f",
+      "width": 1254
+    },
+    "assets/vfx/explosion.png": {
+      "height": 1254,
+      "import_settings_sha256": "1612292664dcaf651edd942f141318493ab0902f16f55f5d6e9589812170ac55",
+      "imported_rgba_sha256": "1f19f54aae41c7a792dd3ad6fbaca199e99db1782190c9db7fd6c35e4ec56ff5",
+      "raw_png_sha256": "c66cd61d38ce0f6acab3f4064a6f3423fb0c32584859f176c243ffd8048e20dd",
+      "width": 1254
+    },
+    "assets/vfx/hit_spark.png": {
+      "height": 1254,
+      "import_settings_sha256": "a44953de67cce7173f7ec7089ec4493673c9a23ffb6806236bb66cf6fa3c4cd9",
+      "imported_rgba_sha256": "38dbd074bf1088e667c0896ff086c8a7de77d40334fb5a7e60611d103e77dc1b",
+      "raw_png_sha256": "3995cea2b90ffc0530e90833fa83e6f9d251ff7eaf0c5172403e5fcef466899e",
+      "width": 1254
+    },
+    "assets/vfx/muzzle_flash.png": {
+      "height": 1254,
+      "import_settings_sha256": "ed326de9ffba0aa607f071d47cff3feb2c167cf18da5ea20a411b53fd141e899",
+      "imported_rgba_sha256": "cf7367fd8a58d0170631a56567aadfaf50010bcbb31a6325d5c9e0620bd57e62",
+      "raw_png_sha256": "6d69af60154377ba00c2b3383b58a30234757c909346a2c04dde19364db0a2c8",
+      "width": 1254
+    },
+    "assets/vfx/shield_impact.png": {
+      "height": 1254,
+      "import_settings_sha256": "3c0d8c19beb0faec1ed15841fdf275d6dd30bc0e37e1c7a40039812b7d3402b5",
+      "imported_rgba_sha256": "9831ae3111bf1f172c082c909a74caa1966e24d2e3173e615482c9d1aa760c96",
+      "raw_png_sha256": "fb63a02e36c2c73ea717c2671d21844cca28166672c79adac89c4e209dc7bb4b",
+      "width": 1254
+    },
+    "assets/weapon_mounts/bankshot_driver.png": {
+      "height": 887,
+      "import_settings_sha256": "7d609be24036ab2f7304d00bc218d0e9bf4341f25a70c6ddbc93e6fec341c5a6",
+      "imported_rgba_sha256": "5655dc01214375ccc646d14fa18d4c9c5f496b1cc91cac47f95cff3398030f0f",
+      "raw_png_sha256": "0e3e8b49a0d4bcca6b7e83a2c5f29e0effa9581ab33df8eb6817eb4f6e966c0c",
+      "width": 1774
+    },
+    "assets/weapon_mounts/clean_hero_attack.png": {
+      "height": 1254,
+      "import_settings_sha256": "79d50ce2409c71c00d1fcb3d4584bf6013edf9c1a7c126fd6f82dfba7afc4255",
+      "imported_rgba_sha256": "b8aad73e25b5eb616ae1b210d04c0c1bd406427841c3a1d83e990dcbf7fd08e2",
+      "raw_png_sha256": "b81294ed9b92f09f7030b86cf21d489daaa4ff2d402f4451b6d2c9b7bb068f46",
+      "width": 1254
+    },
+    "assets/weapon_mounts/cryo_sprayer.png": {
+      "height": 887,
+      "import_settings_sha256": "70eda8bfb81fea984f03c130832576542b2845242391dab157913c0c87d299b1",
+      "imported_rgba_sha256": "8b2911f676cdd4ef1b212220705d4b1cf68e13ace3ab02d936178b2d0e7d43c0",
+      "raw_png_sha256": "f9723cac96652639c4d6e0e6750ce9fca58fe87c187ca4bb6736c58ccf3996fd",
+      "width": 1774
+    },
+    "assets/weapon_mounts/orbit_saw.png": {
+      "height": 887,
+      "import_settings_sha256": "0ac49ea48f9de8f77b276fd868c3b9da35e4df2529d3b8383fe6e1dbec1a5390",
+      "imported_rgba_sha256": "39d7115afd5f346563f860693e46f048b3942fa9bfde3d2c5521ea379c91bbb2",
+      "raw_png_sha256": "fcbd9230c3b9510cced1a3723c4838104a116df878307799342650114d335e32",
+      "width": 1774
+    },
+    "assets/weapon_mounts/rail_lance.png": {
+      "height": 887,
+      "import_settings_sha256": "7b0accf1d527624b56813cf4813115b1c7b13b33b44e7ce11ca0c1c057904ed4",
+      "imported_rgba_sha256": "c9ae2972d638f0714ad34fcb7c0033768ee74156c97a6334d613e2bfe65daea0",
+      "raw_png_sha256": "85803ef79ae37be35f89f82ffd67215863ec77df594d19897aaf0291258f908d",
+      "width": 1774
+    },
+    "assets/weapon_mounts/return_disc.png": {
+      "height": 1254,
+      "import_settings_sha256": "7846ac9e1a16d9a5637b357912f3e8f46ca0b679cc9cdd13b56100900716f1f3",
+      "imported_rgba_sha256": "c3f8f3a29fa373f5484f026d932b449f56c60e08a63c1505f3f552a38ae609f4",
+      "raw_png_sha256": "e779978affb19aaa681c1b7087d936c714f1fd042ea40af2642040041760911e",
+      "width": 1254
+    },
+    "assets/weapon_mounts/rivet_gun.png": {
+      "height": 887,
+      "import_settings_sha256": "7de774759fe6848c80ff0773545257c7507853baa6767f161f3ec9ec26a9a156",
+      "imported_rgba_sha256": "e302b4fc93241e5b5ac76b50ee7eee4f76640a3650346426a37df632d5c162a9",
+      "raw_png_sha256": "38368dbf5fd26d516d151ab1f3222f9e4db0d3c4247aabe9c390cce7a983e32b",
+      "width": 1774
+    },
+    "assets/weapon_mounts/scrap_shotgun.png": {
+      "height": 887,
+      "import_settings_sha256": "0e1deaed562935a6935d110837b29084344d9c30c761df68719569006c8a755f",
+      "imported_rgba_sha256": "a08cd633daeb4640872761c0af3c2bac48c8d45a7556c4c34b4722a616701cb6",
+      "raw_png_sha256": "9584418ae603032c73939237ba78b82472583c632b5c1205ddf40bc8afe6db11",
+      "width": 1774
+    },
+    "assets/weapon_mounts/shock_mortar.png": {
+      "height": 887,
+      "import_settings_sha256": "6d1ea8658479011f957ef7e7f59dbd3290c7ac9289e312a5f3b3cf07e5e205b8",
+      "imported_rgba_sha256": "0f656a0497602f3105fa93d4ed6dcf7e631c0ab5be51febd737b024c4195ecb3",
+      "raw_png_sha256": "aa8d73cc69ec3329dc6bc709480a0f311957d82345c009fded62859e5bd80877",
+      "width": 1774
+    },
+    "assets/weapon_mounts/world_weapons_atlas.png": {
+      "height": 1024,
+      "import_settings_sha256": "dec3b30ec4a5853e501d8b9a8b950add3e40319f1ddfe8d2af865a11e00ee3af",
+      "imported_rgba_sha256": "39ceb5b8668888517d100917746434a91d32dd828ab3684866a83be7b39d91f6",
+      "raw_png_sha256": "b064fe1415819b5dfb353ccc9cbfe187ddc7a8b54b06764ea3bd66ca2e9e82e1",
+      "width": 1536
+    }
+  },
+  "main_scene_structure": [
+    {
+      "name": "MossCircuit",
+      "path": ".",
+      "properties": {
+        "script": {
+          "class": "GDScript",
+          "resource": "res://scripts/main.gd"
+        }
+      },
+      "type": "Node2D"
+    }
+  ],
+  "project_settings": {
+    "application/config/name": "\"Moss Circuit · 苔芯幸存者\"",
+    "application/run/main_scene": "\"res://scenes/main.tscn\"",
+    "display/window/size/viewport_height": "540",
+    "display/window/size/viewport_width": "960",
+    "display/window/size/window_height_override": "720",
+    "display/window/size/window_width_override": "1280",
+    "display/window/stretch/mode": "\"viewport\"",
+    "rendering/environment/defaults/default_clear_color": "Color(0.035, 0.065, 0.075, 1)",
+    "rendering/renderer/rendering_method": "\"gl_compatibility\"",
+    "rendering/renderer/rendering_method.mobile": "\"gl_compatibility\"",
+    "rendering/textures/canvas_textures/default_texture_filter": "0",
+    "rendering/textures/default_filters/use_nearest_mipmap_filter": "false"
+  },
+  "schema_version": 2,
+  "texture_comparison_basis": "Source-imported texture RGBA, after Godot import processing including alpha-border handling; not raw source PNG RGBA."
+}

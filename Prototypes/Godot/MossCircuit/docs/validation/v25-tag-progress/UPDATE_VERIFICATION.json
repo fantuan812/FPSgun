@@ -1,0 +1,94 @@
+{
+  "verdict": "PASS",
+  "archive": {
+    "name": "MossCircuit-v24-to-v25-Update-2026-10-26.zip",
+    "bytes": 40216341,
+    "sha256": "2330a4d172825e91d19182d89af0b445e9890d19020794e78097ec468f375ea8"
+  },
+  "members": {
+    "EXPECTED_BASE_SHA256.json": {
+      "bytes": 1386,
+      "sha256": "aca9d1e54ad7b50951bb3e2a4e4dca86d3699122cfb1d28e81abb8f293f4a8c3",
+      "mode": "0644"
+    },
+    "MossCircuit.pck": {
+      "bytes": 40683384,
+      "sha256": "a7a9064413fc7bfdc1713f516ffc7d99ad6a2af2aa796089b0ddf1372779d42a",
+      "mode": "0644"
+    },
+    "README_UPDATE.txt": {
+      "bytes": 2066,
+      "sha256": "efb9503a5e4bf1736992b0cf6f847cef26179fae6400cbcecb9c88e6614352a3",
+      "mode": "0644"
+    },
+    "UPDATE_SHA256.json": {
+      "bytes": 721,
+      "sha256": "e098db923fd392c3a9189ac00cdc384624a7262922759b41f38abbae5ae5ca42",
+      "mode": "0644"
+    },
+    "VALIDATION.md": {
+      "bytes": 2993,
+      "sha256": "aad3daeeada35e43e42ad63add1a2eb35536618d89a449cf3d364819a1a71b6e",
+      "mode": "0644"
+    }
+  },
+  "crc_safe_unique_regular": true,
+  "update_index_exact": true,
+  "stage_exact": true,
+  "accepted_new_pck_exact": true,
+  "base_overlay_proofs": [
+    {
+      "platform": "linux",
+      "full_v23_archive_sha256": "cbd28d1eb48ef53eb0437fddb7ff8c2d48ab28ebdedd2268440f20dacdad1703",
+      "v23_to_v24_update_sha256": "e560248d7b681065ea3be29e6ce3a9598c117a187e5878af1e7a0f79b3661a4f",
+      "v24_base_members": 9,
+      "only_replaced_member": "MossCircuit.pck",
+      "preserved_members": 8,
+      "executable_mode_preserved": "0755",
+      "backup_hash": "c6538ac76c04bfe5698c983574fb1a235e07c5dfdbe9eff7cac2784755402596",
+      "new_pack_hash": "a7a9064413fc7bfdc1713f516ffc7d99ad6a2af2aa796089b0ddf1372779d42a",
+      "rollback_exact": true,
+      "scope": "streamed complete full-v23 + v24-update member-map recovery, then v25 update/rollback proof; not a filesystem install or Windows execution"
+    },
+    {
+      "platform": "windows",
+      "full_v23_archive_sha256": "33d30c7059e7628b1e9e0af89bdac0660c08f68e5687b6f07125e2d35fbcb959",
+      "v23_to_v24_update_sha256": "e560248d7b681065ea3be29e6ce3a9598c117a187e5878af1e7a0f79b3661a4f",
+      "v24_base_members": 9,
+      "only_replaced_member": "MossCircuit.pck",
+      "preserved_members": 8,
+      "executable_mode_preserved": "0644",
+      "backup_hash": "c6538ac76c04bfe5698c983574fb1a235e07c5dfdbe9eff7cac2784755402596",
+      "new_pack_hash": "a7a9064413fc7bfdc1713f516ffc7d99ad6a2af2aa796089b0ddf1372779d42a",
+      "rollback_exact": true,
+      "scope": "streamed complete full-v23 + v24-update member-map recovery, then v25 update/rollback proof; not a filesystem install or Windows execution"
+    }
+  ],
+  "parts": [
+    {
+      "name": "MossCircuit-v24-to-v25-Update-2026-10-26.zip.part001",
+      "bytes": 20000000,
+      "sha256": "a59916ba6bfffc2c3cbbd798c7dc335573dbf5d8bfb45d0cfd52b93ee9c73043"
+    },
+    {
+      "name": "MossCircuit-v24-to-v25-Update-2026-10-26.zip.part002",
+      "bytes": 20000000,
+      "sha256": "f611adae20826d4922f066be30b4bdbae670d3c7ea01e2045616d37f5318c83e"
+    },
+    {
+      "name": "MossCircuit-v24-to-v25-Update-2026-10-26.zip.part003",
+      "bytes": 216341,
+      "sha256": "8c5c10330a35acb3839bbddd5af03f6ee14c708e3f77f9992d54db28550aa75e"
+    }
+  ],
+  "literal_linux_command_executed": "cat \"MossCircuit-v24-to-v25-Update-2026-10-26.zip.part001\" \"MossCircuit-v24-to-v25-Update-2026-10-26.zip.part002\" \"MossCircuit-v24-to-v25-Update-2026-10-26.zip.part003\" > \"MossCircuit-v24-to-v25-Update-2026-10-26.zip\"",
+  "reconstruction_sha256": "2330a4d172825e91d19182d89af0b445e9890d19020794e78097ec468f375ea8",
+  "cmd_review": "syntax and explicit001→002→003 order only; not Windows execution",
+  "instructions": {
+    "name": "MossCircuit-v25-更新与分卷说明.txt",
+    "bytes": 3203,
+    "sha256": "81f7d130df472846c86bf20c50dd5fdf7f95411cde89e2ee76cbd236fb2a7020"
+  },
+  "claims_review": "matching v24 prerequisite and explicit full-v23 then v24-update recovery chain, unique verified backup, only-PCK replacement, preserved executable/licenses/history, manual rollback, CUA/tactical pauses/no injected state, exact import provenance, session-only settings and platform/audio limits are accurate",
+  "no_runtime_or_source_changes": true
+}

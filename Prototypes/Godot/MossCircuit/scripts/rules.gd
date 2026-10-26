@@ -1,5 +1,16 @@
 extends RefCounted
 ## Pure run rules; configuration owns balance, presentation owns no damage logic.
+# These are the three existing rules, not an open-ended catalog effect engine.
+# One definition supplies authority, activation and the read-only progress view.
+const TAG_SYNERGY_RULES := [
+	{"id":"arc_grid", "name":"ARC GRID", "tag":"electric", "threshold":3, "effect":"electric_bonus", "amount":0.2,
+	 "qualifier":"Applies once. Additive matching-weapon damage bonus, not a final-damage multiplier. Fixed module damage is not scaled."},
+	{"id":"saw_rig", "name":"SAW RIG", "tag":"melee", "threshold":3, "effect":"melee_bonus", "amount":0.2,
+	 "qualifier":"Applies once. Additive matching-weapon damage bonus, not a final-damage multiplier. Fixed module damage is not scaled."},
+	{"id":"scatter_rig", "name":"SCATTER RIG", "tag":"spread", "threshold":3, "effect":"extra_pellets", "amount":1,
+	 "qualifier":"Applies once to spread attacks only. Adds to Pellet Pouch; not extra projectiles for every weapon."}
+]
+
 static func xp_threshold(level: int) -> int:
 	return 12 + (level - 1) * 9
 
@@ -60,15 +71,54 @@ static func weapon_reach(weapon: Dictionary, stats: Dictionary) -> float:
 static func weapon_projectiles(weapon: Dictionary, stats: Dictionary) -> int:
 	return weapon.projectiles + (int(stats.extra_pellets) if weapon.behavior == "spread" else 0)
 
+static func owned_tag_counts(build: Dictionary, catalog: Dictionary) -> Dictionary:
+	var tags := {}
+	for id in build.weapons:
+		for tag in catalog_entry(catalog, id).tags: tags[tag] = tags.get(tag, 0) + 1
+	for id in build.items:
+		for tag in catalog_entry(catalog, id).tags: tags[tag] = tags.get(tag, 0) + int(build.items[id])
+	return tags
+
+static func tag_synergy_status(build: Dictionary, catalog: Dictionary) -> Array:
+	var tags := owned_tag_counts(build, catalog)
+	var result: Array = []
+	for rule in TAG_SYNERGY_RULES:
+		var row: Dictionary = rule.duplicate(true)
+		row.count = int(tags.get(rule.tag, 0))
+		row.active = row.count >= rule.threshold
+		row.description = ""
+		for definition in catalog.get("synergies", []):
+			if definition.id == rule.id: row.description = definition.description; break
+		row.matching_weapons = []
+		for id in build.weapons:
+			var entry := catalog_entry(catalog, id)
+			if rule.tag in entry.tags: row.matching_weapons.append(entry.name)
+		result.append(row)
+	return result
+
 static func _positive_number(value: Variant, allow_zero: bool = false) -> bool:
 	return (value is int or value is float) and is_finite(float(value)) and (float(value) >= 0 if allow_zero else float(value) > 0)
 
 static func validate_catalog(catalog: Dictionary) -> Array:
 	var errors: Array = []
-	for key in ["weapons", "items", "weapon_slots", "item_slots", "starting_coins", "refresh_price"]:
+	for key in ["weapons", "items", "weapon_slots", "item_slots", "starting_coins", "refresh_price", "synergies"]:
 		if not catalog.has(key): errors.append("Missing " + key)
 	if not errors.is_empty(): return errors
 	if not catalog.weapons is Array or not catalog.items is Array: return ["Invalid lists"]
+	var tag_rules: Variant = catalog.synergies
+	if not tag_rules is Array or tag_rules.size() != TAG_SYNERGY_RULES.size():
+		errors.append("Expected the three fixed tag synergies")
+	else:
+		for i in range(TAG_SYNERGY_RULES.size()):
+			var definition: Variant = tag_rules[i]
+			var rule: Dictionary = TAG_SYNERGY_RULES[i]
+			if not definition is Dictionary: errors.append("Invalid tag synergy"); continue
+			if definition.get("id") != rule.id or definition.get("tag") != rule.tag:
+				errors.append("Tag synergy ID/tag/order differs from fixed rules")
+			if not _positive_number(definition.get("threshold")) or definition.get("threshold") != rule.threshold:
+				errors.append("Tag synergy threshold differs from fixed rules")
+			if not definition.get("description") is String or definition.get("description", "").is_empty():
+				errors.append("Invalid tag synergy description")
 	for key in ["weapon_slots","item_slots","starting_coins","refresh_price"]:
 		if not _positive_number(catalog[key],key in ["starting_coins","refresh_price"]): errors.append("Invalid " + key)
 		elif floorf(float(catalog[key])) != float(catalog[key]): errors.append("Noninteger " + key)
@@ -155,17 +205,14 @@ static func derive(base: Dictionary, build: Dictionary, catalog: Dictionary) -> 
 	out.melee_bonus = 0.0
 	out.extra_pellets = 0
 	out.sell_bonus = 0.0
-	var tags := {}
-	for id in build.weapons:
-		for tag in catalog_entry(catalog, id).tags: tags[tag] = tags.get(tag, 0) + 1
 	for id in build.items:
 		var entry := catalog_entry(catalog, id)
 		for effect in entry.effects: out[effect] = out.get(effect, 0.0) + entry.effects[effect] * build.items[id]
-		for tag in entry.tags: tags[tag] = tags.get(tag, 0) + int(build.items[id])
 	out.synergies = []
-	if tags.get("electric", 0) >= 3: out.electric_bonus += .2; out.synergies.append("ARC GRID")
-	if tags.get("melee", 0) >= 3: out.melee_bonus += .2; out.synergies.append("SAW RIG")
-	if tags.get("spread", 0) >= 3: out.extra_pellets += 1; out.synergies.append("SCATTER RIG")
+	for status in tag_synergy_status(build, catalog):
+		if status.active:
+			out[status.effect] += status.amount
+			out.synergies.append(status.name)
 	for id in build.levels:
 		var n: int = build.levels[id]
 		match id:

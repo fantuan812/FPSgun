@@ -1,0 +1,18 @@
+{
+  "scope": "Initial v25 read-only tag-synergy progress; three reviewed production source paths only. Catalog, all other production paths, art and existing tests unchanged. Native/final gates pending.",
+  "changed": {
+    "scripts/rules.gd": {
+      "base_sha256": "a28d8981784badb61d1ecd660908934176b9c0673c3aab6b0388917b0bef5968",
+      "candidate_sha256": "2222b3c66b9e875fa03028e7fba3d3e71dcf51ea71a0a2bb7641a1e394b22c6f"
+    },
+    "scripts/main.gd": {
+      "base_sha256": "99fb50daeb2c34ef8b711701fafac4e7dbde0285b50634faa33613f1feca357b",
+      "candidate_sha256": "52bc3c465a9208fb7fd579ffcfe141cc2d2941e7af519df22f89c3242a1e09d0"
+    },
+    "ui/moss_ui.gd": {
+      "base_sha256": "fe2128e196468673aabe29e327e76b11e7c71018b9f7104c500b249de50b97d3",
+      "candidate_sha256": "3c165d1f13625c2e778043d23a5c3e4c6d4c6ff8cd32f7f95e60166455ce4444"
+    }
+  },
+  "author_r1_note": "All test processes passed, but UI intro stack->copy was edited during run; input guard correctly rejects final acceptance. Rerun final stable input."
+}
