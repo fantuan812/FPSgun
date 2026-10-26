@@ -34,6 +34,7 @@ var visual_cooldowns:Dictionary={}
 var result_pending := false
 var result_wait := 0.0
 const Rules = preload("res://scripts/rules.gd")
+const Reservation=preload("res://scripts/gameplay/shop_reservation.gd")
 const Effects = preload("res://scripts/effects.gd")
 const EnemyAI = preload("res://scripts/enemy_ai.gd")
 const MossUI = preload("res://ui/moss_ui.gd")
@@ -81,6 +82,9 @@ var shop_rng := RandomNumberGenerator.new()
 var shop_offers: Array:
 	get: return run.shop_offers
 	set(value): run.shop_offers=value
+var reserved_offer: Dictionary:
+	get: return run.reserved_offer
+	set(value): run.reserved_offer=value
 var shop_generation: int:
 	get: return run.shop_generation
 	set(value): run.shop_generation=value
@@ -248,6 +252,7 @@ func _build_ui() -> void:
 
 func _title() -> void:
 	weapon_rig.clear()
+	reserved_offer.clear()
 	effects.feedback_armed = false
 	enemies.clear()
 	bullets.clear()
@@ -268,6 +273,7 @@ func _title() -> void:
 
 func _start_run(seed_value: int) -> void:
 	weapon_rig.clear()
+	reserved_offer.clear()
 	visual_cooldowns.clear()
 	result_pending = false
 	actor_anim.clear()
@@ -525,6 +531,7 @@ func _take_upgrade(index: int, generation: int) -> void:
 
 func _finish(won: bool) -> void:
 	weapon_rig.clear()
+	reserved_offer.clear()
 	_clear_transients()
 	state = "won" if won else "dead"
 	stats.hp = maxf(0,stats.hp)
@@ -657,15 +664,38 @@ func _recompute() -> void:
 		for enemy in enemies: enemy.slow_until = 0.0
 		for hazard in hazards: hazard.slow = false
 
-func _roll_offers() -> void:
-	shop_offers = Rules.draw_shop(build,catalog,shop_rng,4)
+func _roll_offers() -> String:
+	var result:=Reservation.draw(build,catalog,shop_rng,reserved_offer)
+	shop_offers = result.offers
+	if result.clear: reserved_offer.clear()
 	shop_generation += 1
+	return result.notice
+
+func _reserve_offer(index:int,generation:int)->bool:
+	if state!="shop" or generation!=shop_generation or index<0 or index>=shop_offers.size() or not reserved_offer.is_empty(): return false
+	var record:=Reservation.create(build,catalog,shop_offers[index],index,shop_generation+1)
+	if record.is_empty(): return false
+	reserved_offer=record
+	shop_generation+=1
+	shop_message="Reserved "+str(Rules.catalog_entry(catalog,record.id).name)+". Not owned; three fresh slots per draw."
+	_render_shop()
+	return true
+
+func _release_offer(token:int,generation:int)->bool:
+	if state!="shop" or generation!=shop_generation or reserved_offer.is_empty() or not reserved_offer.get("token") is int or token!=reserved_offer.token: return false
+	reserved_offer.clear()
+	shop_generation+=1
+	shop_message="Reservation released. Current stock is unchanged."
+	_render_shop()
+	return true
 
 func _open_shop() -> void:
 	state = "shop"
 	shop_pending = false
 	shop_message = "Buy, sell or replace. Replacement discards old weapon without refund."
-	_roll_offers()
+	var notice:=_roll_offers()
+	if not notice.is_empty(): shop_message=notice
+	elif not reserved_offer.is_empty(): shop_message="Reserved: "+str(Rules.catalog_entry(catalog,reserved_offer.id).name)+" (not owned). Other three slots are new."
 	_render_shop()
 	if automation: call_deferred("_leave_shop", shop_generation)
 
@@ -676,6 +706,13 @@ func _render_shop() -> void:
 func _buy(index: int, generation: int, replace_slot: int = -1) -> bool:
 	if state != "shop" or generation != shop_generation or index < 0 or index >= shop_offers.size(): return false
 	if shop_offers[index].sold: return false
+	var held:bool=Reservation.matches(reserved_offer,shop_offers[index].id)
+	if held:
+		var reason:=Reservation.invalid_reason(build,catalog,reserved_offer)
+		if not reason.is_empty():
+			shop_message="Reserved offer unavailable: "+reason+". Unlock or refresh."
+			_render_shop()
+			return false
 	var error := Rules.transaction(build, catalog, shop_offers[index].id, replace_slot)
 	if error != "":
 		shop_message = error
@@ -687,9 +724,10 @@ func _buy(index: int, generation: int, replace_slot: int = -1) -> bool:
 		pending_blasts.clear()
 		vfx.clear()
 	shop_offers[index].sold = true
+	if held: reserved_offer.clear()
 	shop_generation += 1
 	_recompute()
-	shop_message = "Purchased."
+	shop_message = "Purchased reserved offer." if held else "Purchased."
 	_render_shop()
 	return true
 
@@ -697,8 +735,8 @@ func _refresh_shop(generation: int) -> bool:
 	if state != "shop" or generation != shop_generation or build.coins < catalog.refresh_price: return false
 	build.coins -= int(catalog.refresh_price)
 	build.revision += 1
-	_roll_offers()
-	shop_message = "New stock."
+	var notice:=_roll_offers()
+	shop_message = notice if not notice.is_empty() else ("New stock; reserved offer retained." if not reserved_offer.is_empty() else "New stock.")
 	_render_shop()
 	return true
 
@@ -747,6 +785,7 @@ func _view() -> Dictionary:
 	view.actor_state=actor_anim.state_of(0)
 	view.dash_cooldown=stats.get("dash_cooldown",0.0)
 	view.settings=settings.duplicate(true)
+	view.reserved_offer=Reservation.describe(build,catalog,reserved_offer)
 	view.tag_synergy_status=Rules.tag_synergy_status(build,catalog)
 	if build.items.has("feedback_diode"):
 		view.mechanics.feedback_status = "READY THIS DASH" if effects.can_feedback(float(stats.get("dash_time",0.0)) > 0) else ("UNARMED THIS DASH" if float(stats.get("dash_time",0.0)) > 0 else "ARMS ON NEXT DASH")
@@ -782,11 +821,20 @@ func _view() -> Dictionary:
 	for i in range(shop_offers.size()):
 		var offer: Dictionary = shop_offers[i]
 		var entry := Rules.catalog_entry(catalog,offer.id).duplicate(true)
+		var held:bool=Reservation.matches(reserved_offer,offer.id)
+		# An invalid held identity can still be released, without crashing a read-only view.
+		if entry.is_empty() and held:
+			entry={"id":offer.id,"name":"Unavailable reserved offer","kind":"unavailable","price":0,"description":"Release this reservation or refresh to clear it."}
+		if held: entry.price=view.reserved_offer.price
 		entry.index = i
 		entry.sold = offer.sold
 		entry.weight_multiplier = offer.get("weight_multiplier",1.0)
-		entry.bias_reasons = offer.get("bias_reasons",[])
+		entry.bias_reasons = offer.get("bias_reasons",[]).duplicate(true)
 		entry.can_buy = not offer.sold and build.coins >= entry.price
+		entry.reserved=held
+		entry.reservation_token=view.reserved_offer.get("token",-1) if entry.reserved else -1
+		entry.can_reserve=reserved_offer.is_empty() and Reservation.eligibility_error(build,catalog,offer).is_empty()
+		if entry.reserved and not view.reserved_offer.valid: entry.can_buy=false
 		if entry.kind == "weapon":entry.weapon_readout=WeaponReadout.describe(entry,stats,false)
 		if entry.kind == "item":
 			entry.can_buy = entry.can_buy and build.items.get(entry.id,0) < entry.max_stack and (build.items.has(entry.id) or build.items.size() < catalog.item_slots)
@@ -850,6 +898,10 @@ func _on_intent(action: String, payload: Dictionary) -> void:
 		"sell_weapon": _sell_weapon(int(payload.get("slot",-1)),int(payload.get("generation",-1)))
 		"sell_item": _sell_item(str(payload.get("id","")),int(payload.get("generation",-1)))
 		"refresh": _refresh_shop(int(payload.get("generation",-1)))
+		"reserve_offer":
+			if payload.get("index") is int and payload.get("generation") is int: _reserve_offer(payload.index,payload.generation)
+		"release_offer":
+			if payload.get("token") is int and payload.get("generation") is int: _release_offer(payload.token,payload.generation)
 		"continue": _leave_shop(int(payload.get("generation",-1)))
 		"upgrade": _take_upgrade(int(payload.get("index",-1)),int(payload.get("generation",-1)))
 		"inventory":

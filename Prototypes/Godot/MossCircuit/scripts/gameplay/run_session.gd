@@ -19,5 +19,6 @@ var boss_rewards: Dictionary = {}
 var rewards: Array = []
 var choices: Array = []
 var shop_offers: Array = []
+var reserved_offer: Dictionary = {}
 var shop_message := ""
 var run_seed := 240102

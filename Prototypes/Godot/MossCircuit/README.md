@@ -1,3 +1,13 @@
+# v28 development checkpoint — one reserved shop offer (UNVERIFIED)
+
+This is an early recoverable development snapshot, **not an accepted release**. The accepted predecessor is v27 (`50d572acb8d6d77b28470ed63edb6d5785033804`).
+
+Reserve one unsold shop offer for free, keeping its original price and draw metadata through paid refreshes and later shops in the same run. It is not owned equipment: it occupies one stock slot, so the unchanged refresh price buys three fresh offers while the hold is valid. Explicit release leaves current stock untouched. Successful purchase consumes the hold; terminal results and new runs clear it.
+
+The exact [contract](docs/V28_RESERVED_OFFER_CONTRACT.md) and [implementation notes](docs/V28_RESERVED_OFFER.md) describe stable tokens, failed-transaction atomicity and limits. Catalog, combat, economy amounts and art are unchanged. Initial cold import and 520 focused author checks pass; independent mechanics, full regression, native UI and exported-pack acceptance are pending. No new runtime has been delivered from this checkpoint.
+
+---
+
 # MOSS CIRCUIT · v27 · Broodkeeper 空心脉冲
 
 现有 Moss Broodkeeper 现在先预警 1 秒，在固定中心的 **70–180 像素闭环带**尝试一次原有 **11 点伤害**，再与旧召唤交替。两条橙边均危险；可以向内进入空洞，或向外离开环带，但其他攻击仍会命中。没有新敌人/道具/场地或随机抽取；召唤机会改为隔次，明确属于遭遇内容变化。复用原有 16 帧撑起/收势素材，不称为新绘制动画。

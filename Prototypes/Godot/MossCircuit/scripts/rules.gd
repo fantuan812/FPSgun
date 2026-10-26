@@ -306,8 +306,9 @@ static func weighted_pool(build: Dictionary,catalog: Dictionary) -> Array:
 		result.append({"id":entry.id,"weight_multiplier":weight / settings.base,"weight":weight,"bias_reasons":reasons})
 	return result
 
-static func draw_shop(build: Dictionary,catalog: Dictionary,rng: RandomNumberGenerator,count: int = 4) -> Array:
+static func draw_shop(build: Dictionary,catalog: Dictionary,rng: RandomNumberGenerator,count: int = 4,excluded_ids:Array = []) -> Array:
 	var pool := weighted_pool(build,catalog)
+	if not excluded_ids.is_empty(): pool=pool.filter(func(entry):return not entry.id in excluded_ids)
 	var selected: Array = []
 	for _slot in range(mini(count,pool.size())):
 		var total := 0.0
