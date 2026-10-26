@@ -1,4 +1,5 @@
 extends Node2D
+const WeaponOrder = preload("res://scripts/gameplay/weapon_order.gd")
 const WeaponReadout=preload("res://scripts/weapon_readout.gd")
 const ModeStatus=preload("res://ui/mode_status.gd")
 var mode_status:CanvasLayer
@@ -761,6 +762,35 @@ func _refresh_shop(generation: int) -> bool:
 	_render_shop()
 	return true
 
+func _weapon_order_view() -> Dictionary:
+	var reason := ""
+	if state != "shop": reason = "Weapon order can only change in the shop."
+	elif not bullets.is_empty() or not pending_blasts.is_empty(): reason = "Weapon shots are still active; ordering is unavailable."
+	else: reason = WeaponOrder.loadout_error(build,catalog,weapon_clocks)
+	return {"available":reason.is_empty(),"reason":reason}
+
+func _move_weapon(slot: Variant, step: Variant, generation: Variant, id: Variant) -> bool:
+	# All guards precede even lazy presentation synchronization; rejected actions are atomic.
+	if not slot is int or not step is int or not generation is int or not id is String: return false
+	if state != "shop" or generation != shop_generation or step not in [-1,1]: return false
+	if not _weapon_order_view().available: return false
+	var target: int = slot + step
+	if slot < 0 or slot >= build.weapons.size() or target < 0 or target >= build.weapons.size(): return false
+	if build.weapons[slot] != id: return false
+	weapon_rig.sync_loadout(build.weapons)
+	var moved_id: String = build.weapons[slot]
+	var moved_clock = weapon_clocks[slot]
+	build.weapons[slot] = build.weapons[target]
+	build.weapons[target] = moved_id
+	weapon_clocks[slot] = weapon_clocks[target]
+	weapon_clocks[target] = moved_clock
+	weapon_rig.swap_copies(slot,target)
+	build.revision += 1
+	shop_generation += 1
+	shop_message = "%s moved to SLOT %d. Free; remaining cooldown follows its copy." % [Rules.catalog_entry(catalog,moved_id).name,target+1]
+	_render_shop()
+	return true
+
 func _sell_weapon(slot: int, generation: int) -> bool:
 	if state != "shop" or generation != shop_generation or slot < 0 or slot >= build.weapons.size(): return false
 	if build.weapons.size() <= 1:
@@ -806,6 +836,7 @@ func _view() -> Dictionary:
 	view.actor_state=actor_anim.state_of(0)
 	view.dash_cooldown=stats.get("dash_cooldown",0.0)
 	view.settings=settings.duplicate(true)
+	view.weapon_order=_weapon_order_view()
 	view.reserved_offer=Reservation.describe(build,catalog,reserved_offer)
 	view.tag_synergy_status=Rules.tag_synergy_status(build,catalog)
 	if build.items.has("feedback_diode"):
@@ -916,6 +947,7 @@ func _on_intent(action: String, payload: Dictionary) -> void:
 		"new_seed":
 			if state in ["won","dead"]: _start_run(run_seed + 1)
 		"buy": _buy(int(payload.get("index",-1)),int(payload.get("generation",-1)),int(payload.get("replace_slot",-1)))
+		"move_weapon": _move_weapon(payload.get("slot"),payload.get("step"),payload.get("generation"),payload.get("id"))
 		"sell_weapon": _sell_weapon(int(payload.get("slot",-1)),int(payload.get("generation",-1)))
 		"sell_item": _sell_item(str(payload.get("id","")),int(payload.get("generation",-1)))
 		"refresh": _refresh_shop(int(payload.get("generation",-1)))

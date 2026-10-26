@@ -1,0 +1,42 @@
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+WARNING: Could not set V-Sync mode, as changing V-Sync mode is not supported by the graphics driver.
+     at: set_use_vsync (platform/linuxbsd/x11/gl_manager_x11.cpp:364)
+OpenGL API 4.5 (Core Profile) Mesa 25.0.7-2+deb13u1 - Compatibility - Using Device: Mesa - llvmpipe (LLVM 19.1.7, 256 bits)
+ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
+ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
+ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
+ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+ALSA lib confmisc.c:1342:(snd_func_refer) error evaluating name
+ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+ALSA lib conf.c:5728:(snd_config_expand) Evaluate error: No such file or directory
+ALSA lib pcm.c:2722:(snd_pcm_open_noupdate) Unknown PCM default
+ERROR: Condition "status < 0" is true. Returning: ERR_CANT_OPEN
+   at: init_output_device (drivers/alsa/audio_driver_alsa.cpp:90)
+WARNING: All audio drivers failed, falling back to the dummy driver.
+     at: initialize (servers/audio/audio_server.cpp:247)
+
+{"clocks":[0.11,0.32],"coins":137,"fixture_case":1,"mode":"arena","pending_mortar":0,"shots":0,"state":"shop","weapons":["rivet_gun","rail_lance"]}
+{"action":"move_weapon","clocks":[0.32,0.11],"coins":137,"fixture":"controlled state, actual native UI input","generation":3,"held":{},"mode":"arena","payload":{"generation":2,"id":"rivet_gun","slot":0,"step":1},"revision":1,"state":"shop","weapons":["rail_lance","rivet_gun"]}
+{"action":"continue","clocks":[0.32,0.11],"coins":137,"fixture":"controlled state, actual native UI input","generation":4,"held":{},"mode":"arena","payload":{"generation":3},"revision":1,"state":"playing","weapons":["rail_lance","rivet_gun"]}
+{"case":1,"facing_left":true,"fixture_key":4194338,"mode":"arena","window_size":[960,540]}
+{"clocks":[0.11,0.32,0.6,0.9],"coins":137,"fixture_case":2,"mode":"arena","pending_mortar":0,"shots":0,"state":"shop","weapons":["cryo_sprayer","cryo_sprayer","orbit_saw","return_disc"]}
+{"case":2,"facing_left":false,"fixture_key":4194333,"mode":"arena","window_size":[960,540]}
+{"case":2,"facing_left":false,"fixture_key":4194342,"mode":"arena","window_size":[1280,720]}
+{"action":"move_weapon","clocks":[0.32,0.11,0.6,0.9],"coins":137,"fixture":"controlled state, actual native UI input","generation":7,"held":{},"mode":"arena","payload":{"generation":6,"id":"cryo_sprayer","slot":0,"step":1},"revision":1,"state":"shop","weapons":["cryo_sprayer","cryo_sprayer","orbit_saw","return_disc"]}
+{"clocks":[0.11,0.32],"coins":137,"fixture_case":3,"mode":"arena","pending_mortar":1,"shots":1,"state":"shop","weapons":["bankshot_driver","shock_mortar"]}
+{"case":3,"facing_left":false,"fixture_key":4194334,"mode":"arena","window_size":[1280,720]}
+{"clocks":[0.11,0.32],"coins":137,"fixture_case":4,"mode":"arena","pending_mortar":0,"shots":0,"state":"shop","weapons":["rivet_gun","rail_lance"]}
+{"case":4,"facing_left":false,"fixture_key":4194335,"mode":"arena","window_size":[1280,720]}
+{"action":"move_weapon","clocks":[0.32,0.11],"coins":137,"fixture":"controlled state, actual native UI input","generation":12,"held":{},"mode":"arena","payload":{"generation":11,"id":"rivet_gun","slot":0,"step":1},"revision":1,"state":"shop","weapons":["rail_lance","rivet_gun"]}
+{"clocks":[0.11,0.32],"coins":137,"fixture_case":4,"mode":"rooms","pending_mortar":0,"shots":0,"state":"shop","weapons":["rivet_gun","rail_lance"]}
+{"case":4,"facing_left":false,"fixture_key":4194343,"mode":"rooms","window_size":[1280,720]}
+{"clocks":[0.11,0.32],"coins":137,"fixture_case":1,"mode":"rooms","pending_mortar":0,"shots":0,"state":"shop","weapons":["rivet_gun","rail_lance"]}
+{"case":1,"facing_left":false,"fixture_key":4194332,"mode":"rooms","window_size":[1280,720]}
+{"action":"move_weapon","clocks":[0.32,0.11],"coins":137,"fixture":"controlled state, actual native UI input","generation":17,"held":{},"mode":"rooms","payload":{"generation":16,"id":"rivet_gun","slot":0,"step":1},"revision":1,"state":"shop","weapons":["rail_lance","rivet_gun"]}
+{"action":"continue","clocks":[0.32,0.11],"coins":137,"fixture":"controlled state, actual native UI input","generation":18,"held":{},"mode":"rooms","payload":{"generation":17},"revision":1,"state":"playing","weapons":["rail_lance","rivet_gun"]}
+{"case":1,"facing_left":true,"fixture_key":4194338,"mode":"rooms","window_size":[1280,720]}
+{"clocks":[0.11,0.32,0.6,0.9],"coins":137,"fixture_case":2,"mode":"rooms","pending_mortar":0,"shots":0,"state":"shop","weapons":["cryo_sprayer","cryo_sprayer","orbit_saw","return_disc"]}
+{"case":2,"facing_left":false,"fixture_key":4194333,"mode":"rooms","window_size":[1280,720]}
+{"case":2,"facing_left":false,"fixture_key":4194341,"mode":"rooms","window_size":[960,540]}
+{"action":"move_weapon","clocks":[0.11,0.6,0.32,0.9],"coins":137,"fixture":"controlled state, actual native UI input","generation":21,"held":{},"mode":"rooms","payload":{"generation":20,"id":"cryo_sprayer","slot":1,"step":1},"revision":1,"state":"shop","weapons":["cryo_sprayer","orbit_saw","cryo_sprayer","return_disc"]}
+{"action":"move_weapon","clocks":[0.6,0.11,0.32,0.9],"coins":137,"fixture":"controlled state, actual native UI input","generation":22,"held":{},"mode":"rooms","payload":{"generation":21,"id":"orbit_saw","slot":1,"step":-1},"revision":2,"state":"shop","weapons":["orbit_saw","cryo_sprayer","cryo_sprayer","return_disc"]}

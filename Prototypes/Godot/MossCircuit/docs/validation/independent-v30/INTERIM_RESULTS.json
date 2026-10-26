@@ -1,0 +1,170 @@
+{
+  "pass": true,
+  "scope": "interim controlled source acceptance, not final export/release",
+  "authority": {
+    "checks": 837,
+    "failures": [],
+    "scope": "Controlled contract-level raw transactions, exact declared authority/rig snapshots, all eight weapon IDs, both modes, strict malformed/stale guards and genuine generated shot states. Not ordinary acquisition/native/balance proof."
+  },
+  "views": {
+    "checks": 512,
+    "failures": [],
+    "scope": "Controlled actual UI hierarchy/rectangles, all8 weapon identities and repeated copies, 1\u20134 slots, both modes/960x540 and1280x720; real bound callbacks plus synthetic InputEventAction ui_accept. Native pixels/keyboard/mouse and ordinary acquisition are separate. No controller mapping/hardware claim."
+  },
+  "timing": {
+    "checks": 36,
+    "failures": [],
+    "records": [
+      {
+        "first": {
+          "clocks": [
+            0.65,
+            0.65
+          ],
+          "hp": 955.0,
+          "mark": false
+        },
+        "ids": [
+          "cryo_sprayer",
+          "orbit_saw"
+        ],
+        "mode": "arena",
+        "second": {
+          "clocks": [
+            0.65,
+            0.65
+          ],
+          "hp": 910.0,
+          "mark": false
+        }
+      },
+      {
+        "first": {
+          "clocks": [
+            0.65,
+            0.65
+          ],
+          "hp": 971.0,
+          "mark": true
+        },
+        "ids": [
+          "orbit_saw",
+          "cryo_sprayer"
+        ],
+        "mode": "arena",
+        "second": {
+          "clocks": [
+            0.65,
+            0.65
+          ],
+          "hp": 926.0,
+          "mark": true
+        }
+      },
+      {
+        "after_later_contact": {
+          "hp": 960.0,
+          "mark": false
+        },
+        "ids": [
+          "cryo_sprayer",
+          "rivet_gun"
+        ],
+        "mode": "arena"
+      },
+      {
+        "after_later_contact": {
+          "hp": 960.0,
+          "mark": false
+        },
+        "ids": [
+          "rivet_gun",
+          "cryo_sprayer"
+        ],
+        "mode": "arena"
+      },
+      {
+        "first": {
+          "clocks": [
+            0.65,
+            0.65
+          ],
+          "hp": 955.0,
+          "mark": false
+        },
+        "ids": [
+          "cryo_sprayer",
+          "orbit_saw"
+        ],
+        "mode": "rooms",
+        "second": {
+          "clocks": [
+            0.65,
+            0.65
+          ],
+          "hp": 910.0,
+          "mark": false
+        }
+      },
+      {
+        "first": {
+          "clocks": [
+            0.65,
+            0.65
+          ],
+          "hp": 971.0,
+          "mark": true
+        },
+        "ids": [
+          "orbit_saw",
+          "cryo_sprayer"
+        ],
+        "mode": "rooms",
+        "second": {
+          "clocks": [
+            0.65,
+            0.65
+          ],
+          "hp": 926.0,
+          "mark": true
+        }
+      },
+      {
+        "after_later_contact": {
+          "hp": 960.0,
+          "mark": false
+        },
+        "ids": [
+          "cryo_sprayer",
+          "rivet_gun"
+        ],
+        "mode": "rooms"
+      },
+      {
+        "after_later_contact": {
+          "hp": 960.0,
+          "mark": false
+        },
+        "ids": [
+          "rivet_gun",
+          "cryo_sprayer"
+        ],
+        "mode": "rooms"
+      }
+    ],
+    "scope": "Controlled actual existing combat semantics only; no reorder action or ordinary acquisition. Fresh stationary target90units away, base stats, Coil, both clocks0; second cycle .65later. Conditional timing example, not balance/DPS guarantee."
+  },
+  "no_action_trace_byte_equal": true,
+  "timing_byte_equal": true,
+  "input_count": 607,
+  "input_changes": [],
+  "scripts": {
+    "existing_order_timing.gd": "d721c8d512cf88d313ba3587f971029b3015410ff9cb0474f5075ea904b02852",
+    "independent_weapon_order.gd": "e1ce42b54e93b6e0fe745598abcea25b90d35d1d6fcaf3d029218ed192982d5d",
+    "no_reorder_trace.gd": "628ea8e860c627b9be1c700544c97c699c8ed3d80f68c6e46310bce55cfcb0ef",
+    "independent_weapon_order_views.gd": "d24e8a94c222817de003de012fe5d9ca7304c1243bd17b2337107786516a043e",
+    "native_weapon_order_fixture.gd": "881526f609c02fc25bcf8f27ab6912beb25743adc5449e57d30db94198583b4f"
+  },
+  "report_sha256": "f7264f7ff3ed298ff51869a07490141f5dbb3e1e2b050a30a89bc062e5b45a54",
+  "captures_index_sha256": "2bc6abe5a006b785e91de73763a830031077d1507832e5a1ac99dc1e0e1f5d19"
+}

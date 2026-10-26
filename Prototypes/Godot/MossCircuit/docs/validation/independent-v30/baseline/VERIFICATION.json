@@ -1,0 +1,19 @@
+{
+  "baseline": "accepted-v29-engineering-inputs",
+  "implementation_commit": "7164785cc18a70e9346be7089d2ffe0da5c00bb7",
+  "final_head": "3c9026e6f7ea6fc071f373a533871a55972d5444",
+  "contract_sha256": "ba1958ef08a8eed1d6b19ec9057f10a2cbb11d09a212dfb38a00e8cb85195366",
+  "input_count": 601,
+  "input_changes": [],
+  "trace_cases": 24,
+  "timing_cases": 8,
+  "timing_checks": 36,
+  "trace_bytes": 2207907,
+  "trace_sha256": "e7d93a1fcf01345c540bf9f868632310fd3e85572dbe431dbe12d43bf19212ec",
+  "timing_sha256": "5185cf511148bd65a6e2fd5afc2eed0b283411288afc4a90a74e9ae94f94d9d6",
+  "scripts": {
+    "existing_order_timing.gd": "d721c8d512cf88d313ba3587f971029b3015410ff9cb0474f5075ea904b02852",
+    "no_reorder_trace.gd": "628ea8e860c627b9be1c700544c97c699c8ed3d80f68c6e46310bce55cfcb0ef"
+  },
+  "scope": "Finite controlled shared-runtime/shop/upgrade projection. Reused already-imported baseline; no cold import, ordinary acquisition, balance or new reorder acceptance claim."
+}

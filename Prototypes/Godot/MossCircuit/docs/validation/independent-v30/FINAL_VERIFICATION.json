@@ -1,0 +1,129 @@
+{
+  "input_count": 611,
+  "changes": [],
+  "suite": {
+    "entries": 93,
+    "passed": 94,
+    "import_included_in_passed": true,
+    "input_changes": [],
+    "all_pass": true
+  },
+  "pack": {
+    "pass": true,
+    "exact_file_count": 59,
+    "images": 58,
+    "source_imported_fingerprint_equal_to_author": true,
+    "independently_regenerated": true,
+    "preset_packs_equal": true,
+    "artifacts": {
+      "MossCircuit.pck": {
+        "bytes": 41368536,
+        "sha256": "c7485c5a423312fac0c064e5a5a2815cc36284f6018a020c9c54e64b6dcec894"
+      },
+      "MossCircuit.x86_64": {
+        "bytes": 71075864,
+        "sha256": "2c78919325d7f29fa7607287c7c1eeac367ea4c94e7b8b6f5f4c6b20492f73d0"
+      }
+    },
+    "steps": [
+      {
+        "name": "python_safety",
+        "exit": 0,
+        "error": false,
+        "seconds": 0.654,
+        "pass": true
+      },
+      {
+        "name": "independent_source_imported",
+        "exit": 0,
+        "error": false,
+        "seconds": 8.307,
+        "pass": true
+      },
+      {
+        "name": "packed_resources",
+        "exit": 0,
+        "error": false,
+        "seconds": 9.032,
+        "pass": true
+      },
+      {
+        "name": "packed_independent_order",
+        "exit": 0,
+        "error": false,
+        "seconds": 20.26,
+        "pass": true
+      },
+      {
+        "name": "packed_independent_views",
+        "exit": 0,
+        "error": false,
+        "seconds": 6.957,
+        "pass": true
+      }
+    ],
+    "scope": "Editor packed-resource reader from empty cwd, not exported GUI or Windows execution."
+  },
+  "scope": "Final import reused cache after actual cold R1. Source suite, independent imported-source oracle, exact pack, bounded ordinary native route and manual delivery gates all terminal; remote publication is separate.",
+  "verdict": "PASS \u2014 bounded source/native/exact-pack/delivery; remote publication separate",
+  "ordinary": {
+    "pass": true,
+    "input_count": 611,
+    "changes": [],
+    "artifacts": {
+      "MossCircuit.x86_64": {
+        "bytes": 71075864,
+        "sha256": "2c78919325d7f29fa7607287c7c1eeac367ea4c94e7b8b6f5f4c6b20492f73d0"
+      },
+      "MossCircuit.pck": {
+        "bytes": 41368536,
+        "sha256": "c7485c5a423312fac0c064e5a5a2815cc36284f6018a020c9c54e64b6dcec894"
+      }
+    },
+    "closure": "External terminal Ctrl+C; fresh native window inventory confirmed game absent. Not an in-game graceful-quit test.",
+    "diagnostics": "Inherited unsupported V-Sync and ALSA ERR_CANT_OPEN/dummy driver; no additional runtime error observed. Audio not accepted.",
+    "ordinary_scope": "Automated CUA keyboard/mouse plus tactical pauses, no programmatic state control; natural Rooms seed128 first-shop purchase/reorder/deploy/inventory only.",
+    "observed": {
+      "seed": 128,
+      "mode": "Rooms",
+      "settled_scrap": 66,
+      "choices": [
+        "Overcharge",
+        "Repair Plating"
+      ],
+      "purchased": "Rail Lance",
+      "purchase_price": 42,
+      "remaining_scrap": 24,
+      "action": "Rivet MOVE LATER",
+      "resulting_order": [
+        "Rail Lance",
+        "Rivet Gun"
+      ],
+      "deployed_room": 2,
+      "read_only_inventory_confirmed": true
+    },
+    "limitations": [
+      "No full campaign",
+      "No Windows runtime",
+      "No physical controller",
+      "No audio certification",
+      "No ordinary Cryo/Orbit timing attribution"
+    ]
+  },
+  "delivery": {
+    "verdict": "PASS",
+    "receipt_sha256": "aa5794d39710f6fb02b5ac7c42bcc183deeee477018813823c6cd787a585f931",
+    "catalog_sha256": "cc11bb5f3de7bf0f890a5229dc059eef0666aa0f2ea69226f83188bea8f042aa",
+    "readme_sha256": "30cd614b5f8c4c6c16b0628125a842a9043268ecc1b2919d411dbec4b09fe6f9",
+    "general_readme_sha256": "ae81b352bbc0c51e072023b42c9ca3e7689528b195796947cc64f99537fbedfd"
+  },
+  "controlled_native": {
+    "capture_count": 23,
+    "capture_index_sha256": "2bc6abe5a006b785e91de73763a830031077d1507832e5a1ac99dc1e0e1f5d19",
+    "post_verification_sha256": "d79b974ad66e66a93fe8f18f08d585f0e634df8340e452060c28ac04258d254f",
+    "scope": "External controlled fixture; native automated CUA keyboard/mouse; deliberately injected starting build/coins/clocks and safe cases."
+  },
+  "ordinary_capture_count": 12,
+  "ordinary_capture_index_sha256": "eca4aa028e8ff1a55f2c6f1246d15c81b0071ca1e044eced8388a25eb2e2c334",
+  "public_evidence_policy": "Explicit file allowlist; no generated profile/config/cache, executable/PCK, reconstructed installation or private launch scripts."
+}

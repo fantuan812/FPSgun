@@ -394,9 +394,24 @@ func _shop_bias(parent: Node, bias: Dictionary, reservation:Dictionary={}) -> vo
 
 func _inventory(parent: Node, view: Dictionary, selling := false) -> void:
 	_label(parent, "WEAPONS  %d / %d" % [view.get("weapons", []).size(), int(view.get("weapon_slots", 4))], 16)
+	var order:Dictionary=view.get("weapon_order",{})
+	if selling:
+		_text(parent,"FREE ORDER / remaining cooldown follows each copy. SLOT 1 is the hand mount.",12)
+		var order_notes:=_disclosure(parent,"ORDER / HIT TIMING")
+		_text(order_notes,"Weapons ready this tick process by slot. Moving does not reset or synchronize their clocks. Projectile travel and delayed hits still matter; earlier slot is not guaranteed earlier impact or more damage.",12)
+		if not bool(order.get("available",false)) and not str(order.get("reason","")).is_empty(): _text(parent,str(order.reason),12)
 	for w in view.get("weapons", []):
 		var c := _card(parent, w, "  [SLOT %s]" % (int(w.get("slot", 0)) + 1))
-		if selling: _button(c, "SELL  +%d" % int(w.get("sell_price", 0)), "sell_weapon", {"slot": w.get("slot", 0), "generation": view.get("generation", 0)}, view.get("weapons", []).size() <= 1)
+		if selling:
+			var previous_focus:Control=first_focus
+			var moves:=HBoxContainer.new();c.add_child(moves)
+			var slot:int=int(w.get("slot",0))
+			for step in [-1,1]:
+				var move:=_button(moves,"MOVE EARLIER" if step<0 else "MOVE LATER","move_weapon",{"slot":slot,"step":step,"generation":view.get("generation",0),"id":w.get("id","")},not bool(order.get("available",false)) or slot+step<0 or slot+step>=view.get("weapons",[]).size())
+				move.size_flags_horizontal=Control.SIZE_EXPAND_FILL
+				move.tooltip_text="Swap with the adjacent owned copy for free. Remaining cooldowns are preserved."
+			first_focus=previous_focus # Reorder is explicit, never the initial/default action.
+			_button(c, "SELL  +%d" % int(w.get("sell_price", 0)), "sell_weapon", {"slot": w.get("slot", 0), "generation": view.get("generation", 0)}, view.get("weapons", []).size() <= 1)
 	_label(parent, "MODULES  %d / %d" % [view.get("items", []).size(), int(view.get("item_slots", 8))], 16)
 	if view.get("items", []).is_empty(): _text(parent, "No modules yet. Buy one to begin your build.")
 	for item in view.get("items", []):

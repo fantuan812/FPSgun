@@ -1,3 +1,11 @@
+# v30 GitHub-only resource-pack update
+
+The complete v30 PCK is 41,368,536 bytes, SHA-256 `c7485c5a423312fac0c064e5a5a2815cc36284f6018a020c9c54e64b6dcec894`. It reuses the unchanged accepted executable and is not a standalone program, a delta patch or another ZIP-part chain. Restore `--version v30` with the existing `Deliveries/MossCircuit/restore_deliveries.py`, then follow [the exact prerequisite/backup/rollback instructions](../../../../Deliveries/MossCircuit/v30/READ_ME_v30.txt). First installations still need the complete v19 platform package and licenses. Never install individual chunks or overwrite an existing backup.
+
+Existing v19–v29 artifacts and all prior catalog records remain unchanged. New v30 PCK/instructions are GitHub-only deliverables, not historical chat attachments. Source/runtime tests, native observations and platform/audio limits are documented in the v30 notes; actual reachable commit identities belong to the delivery version index. No automatic user-filesystem installation or Windows runtime acceptance is claimed.
+
+---
+
 # v29 source and direct resource-pack delivery
 
 The accepted implementation adds only the optional fixed-10-scrap upgrade resolution. See V29_UPGRADE_SALVAGE.md and the frozen contract for exact guards, queue/RNG behavior, experimental tuning and finite validation limits.

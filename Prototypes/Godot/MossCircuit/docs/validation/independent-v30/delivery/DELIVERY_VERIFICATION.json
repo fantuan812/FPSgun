@@ -1,0 +1,226 @@
+{
+  "verdict": "PASS",
+  "helper_sha256": "3228782b92e9ec6573b7ba9842d950b3cb6c4dbe928fb3bdcb9a2b4f930b55ad",
+  "catalog_sha256": "cc11bb5f3de7bf0f890a5229dc059eef0666aa0f2ea69226f83188bea8f042aa",
+  "readme_sha256": "30cd614b5f8c4c6c16b0628125a842a9043268ecc1b2919d411dbec4b09fe6f9",
+  "general_readme_sha256": "ae81b352bbc0c51e072023b42c9ca3e7689528b195796947cc64f99537fbedfd",
+  "old_catalog_records_preserved": 58,
+  "new_records": 2,
+  "chunks": 14,
+  "restored": {
+    "MossCircuit.pck": {
+      "bytes": 41368536,
+      "sha256": "c7485c5a423312fac0c064e5a5a2815cc36284f6018a020c9c54e64b6dcec894",
+      "git_blob_sha": "b0f2f7586bbaacbfb1432d812d5fc05e38c9f139"
+    },
+    "READ_ME_v30.txt": {
+      "bytes": 6281,
+      "sha256": "30cd614b5f8c4c6c16b0628125a842a9043268ecc1b2919d411dbec4b09fe6f9",
+      "git_blob_sha": "427bde59d684861a7a1c67cd69f2be0fc1cec538"
+    }
+  },
+  "literal_helper_runs": [
+    {
+      "action": "verify-only",
+      "exit": 0,
+      "stdout_sha256": "dd7675c6bd4a6c8102b7e4aeab41e3fe0aa70905aba1b675871c394f232eed5c",
+      "expected_failure": false
+    },
+    {
+      "action": "restore",
+      "exit": 0,
+      "stdout_sha256": "dd7675c6bd4a6c8102b7e4aeab41e3fe0aa70905aba1b675871c394f232eed5c",
+      "expected_failure": false
+    },
+    {
+      "action": "reject existing output",
+      "exit": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "expected_failure": true
+    }
+  ],
+  "negative_cases": [
+    {
+      "case": "reordered chunks",
+      "rejected": true,
+      "reason": "Non-contiguous or reordered chunks"
+    },
+    {
+      "case": "wrong chunk SHA256",
+      "rejected": true,
+      "reason": "Chunk identity mismatch: Deliveries/MossCircuit/v30/chunks/MossCircuit.pck/chunk-001.bin"
+    },
+    {
+      "case": "wrong whole SHA256",
+      "rejected": true,
+      "reason": "Original identity mismatch: MossCircuit.pck"
+    },
+    {
+      "case": "unsafe source path",
+      "rejected": true,
+      "reason": "Unsafe relative path"
+    }
+  ],
+  "manual_update": {
+    "scope": "Isolated file operation simulation; hardlinked unchanged ELF and old PCK, original v19 license/readme/checksum bytes. No executable launched and no canonical inode edited. Old package checksum manifest deliberately remains historical as instructions disclose.",
+    "before": {
+      "ARTIFACT_SHA256.json": {
+        "sha256": "d8de151134fc94def8e99a3884f824c8facaa735afdf767f47aaee7a5439cd67",
+        "bytes": 1253,
+        "mode": "0o644"
+      },
+      "GODOT_ENGINE_LICENSE.txt": {
+        "sha256": "a0acc151e87517ee3411acce58ce99e17f636921b37c158f38f0b5acafd10da2",
+        "bytes": 1150,
+        "mode": "0o644"
+      },
+      "GODOT_THIRD_PARTY_LICENSES.txt": {
+        "sha256": "955d07f9fea27370b11e2286bef8037dca5019258607cf2bd12bb4f97de79cf8",
+        "bytes": 77895,
+        "mode": "0o644"
+      },
+      "GODOT_THIRD_PARTY_NOTICES.json": {
+        "sha256": "aad0657f34443922f21e030197d688c4cec3a59f5710ebbfa9516d606c5f987f",
+        "bytes": 31442,
+        "mode": "0o644"
+      },
+      "MossCircuit.pck": {
+        "sha256": "77d6b41df3cea5036f99608a837983767f31c2e680c2622c1a83654adf2e6cfc",
+        "bytes": 41363792,
+        "mode": "0o644"
+      },
+      "MossCircuit.x86_64": {
+        "sha256": "2c78919325d7f29fa7607287c7c1eeac367ea4c94e7b8b6f5f4c6b20492f73d0",
+        "bytes": 71075864,
+        "mode": "0o755"
+      },
+      "PRODUCTION_FINGERPRINT.json": {
+        "sha256": "8fedc9b2595442402a86bac5de27f2eb5f164352d13d14787e5ae9c892afb784",
+        "bytes": 11489,
+        "mode": "0o644"
+      },
+      "README.txt": {
+        "sha256": "b092fc98833eebe71d180ff55800b59157b404fee13eff06d96321955ee2dfd8",
+        "bytes": 1050,
+        "mode": "0o644"
+      },
+      "VALIDATION.md": {
+        "sha256": "f876c41ff58d1b2789dc20e651a0236536137f9130ed823b914cea3b9e12cd3a",
+        "bytes": 1020,
+        "mode": "0o644"
+      }
+    },
+    "after": {
+      "ARTIFACT_SHA256.json": {
+        "sha256": "d8de151134fc94def8e99a3884f824c8facaa735afdf767f47aaee7a5439cd67",
+        "bytes": 1253,
+        "mode": "0o644"
+      },
+      "GODOT_ENGINE_LICENSE.txt": {
+        "sha256": "a0acc151e87517ee3411acce58ce99e17f636921b37c158f38f0b5acafd10da2",
+        "bytes": 1150,
+        "mode": "0o644"
+      },
+      "GODOT_THIRD_PARTY_LICENSES.txt": {
+        "sha256": "955d07f9fea27370b11e2286bef8037dca5019258607cf2bd12bb4f97de79cf8",
+        "bytes": 77895,
+        "mode": "0o644"
+      },
+      "GODOT_THIRD_PARTY_NOTICES.json": {
+        "sha256": "aad0657f34443922f21e030197d688c4cec3a59f5710ebbfa9516d606c5f987f",
+        "bytes": 31442,
+        "mode": "0o644"
+      },
+      "MossCircuit.pck": {
+        "sha256": "c7485c5a423312fac0c064e5a5a2815cc36284f6018a020c9c54e64b6dcec894",
+        "bytes": 41368536,
+        "mode": "0o600"
+      },
+      "MossCircuit.pck.before-v30": {
+        "sha256": "77d6b41df3cea5036f99608a837983767f31c2e680c2622c1a83654adf2e6cfc",
+        "bytes": 41363792,
+        "mode": "0o644"
+      },
+      "MossCircuit.x86_64": {
+        "sha256": "2c78919325d7f29fa7607287c7c1eeac367ea4c94e7b8b6f5f4c6b20492f73d0",
+        "bytes": 71075864,
+        "mode": "0o755"
+      },
+      "PRODUCTION_FINGERPRINT.json": {
+        "sha256": "8fedc9b2595442402a86bac5de27f2eb5f164352d13d14787e5ae9c892afb784",
+        "bytes": 11489,
+        "mode": "0o644"
+      },
+      "README.txt": {
+        "sha256": "b092fc98833eebe71d180ff55800b59157b404fee13eff06d96321955ee2dfd8",
+        "bytes": 1050,
+        "mode": "0o644"
+      },
+      "VALIDATION.md": {
+        "sha256": "f876c41ff58d1b2789dc20e651a0236536137f9130ed823b914cea3b9e12cd3a",
+        "bytes": 1020,
+        "mode": "0o644"
+      }
+    },
+    "rollback": {
+      "ARTIFACT_SHA256.json": {
+        "sha256": "d8de151134fc94def8e99a3884f824c8facaa735afdf767f47aaee7a5439cd67",
+        "bytes": 1253,
+        "mode": "0o644"
+      },
+      "GODOT_ENGINE_LICENSE.txt": {
+        "sha256": "a0acc151e87517ee3411acce58ce99e17f636921b37c158f38f0b5acafd10da2",
+        "bytes": 1150,
+        "mode": "0o644"
+      },
+      "GODOT_THIRD_PARTY_LICENSES.txt": {
+        "sha256": "955d07f9fea27370b11e2286bef8037dca5019258607cf2bd12bb4f97de79cf8",
+        "bytes": 77895,
+        "mode": "0o644"
+      },
+      "GODOT_THIRD_PARTY_NOTICES.json": {
+        "sha256": "aad0657f34443922f21e030197d688c4cec3a59f5710ebbfa9516d606c5f987f",
+        "bytes": 31442,
+        "mode": "0o644"
+      },
+      "MossCircuit.pck": {
+        "sha256": "77d6b41df3cea5036f99608a837983767f31c2e680c2622c1a83654adf2e6cfc",
+        "bytes": 41363792,
+        "mode": "0o644"
+      },
+      "MossCircuit.pck.accepted-v30": {
+        "sha256": "c7485c5a423312fac0c064e5a5a2815cc36284f6018a020c9c54e64b6dcec894",
+        "bytes": 41368536,
+        "mode": "0o600"
+      },
+      "MossCircuit.x86_64": {
+        "sha256": "2c78919325d7f29fa7607287c7c1eeac367ea4c94e7b8b6f5f4c6b20492f73d0",
+        "bytes": 71075864,
+        "mode": "0o755"
+      },
+      "PRODUCTION_FINGERPRINT.json": {
+        "sha256": "8fedc9b2595442402a86bac5de27f2eb5f164352d13d14787e5ae9c892afb784",
+        "bytes": 11489,
+        "mode": "0o644"
+      },
+      "README.txt": {
+        "sha256": "b092fc98833eebe71d180ff55800b59157b404fee13eff06d96321955ee2dfd8",
+        "bytes": 1050,
+        "mode": "0o644"
+      },
+      "VALIDATION.md": {
+        "sha256": "f876c41ff58d1b2789dc20e651a0236536137f9130ed823b914cea3b9e12cd3a",
+        "bytes": 1020,
+        "mode": "0o644"
+      }
+    },
+    "non_pck_files_unchanged": true,
+    "canonical_old_pck_unchanged": true
+  },
+  "limits": [
+    "Linux helper executed; Windows/NTFS not executed",
+    "per-original atomic restoration, not batch rollback",
+    "manual replacement/rollback only; no automatic installation or full platform extraction",
+    "native exact runtime already tested separately; no recampaign"
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "pass": true,
+  "input_count": 611,
+  "changes": [],
+  "artifacts": {
+    "MossCircuit.x86_64": {
+      "bytes": 71075864,
+      "sha256": "2c78919325d7f29fa7607287c7c1eeac367ea4c94e7b8b6f5f4c6b20492f73d0"
+    },
+    "MossCircuit.pck": {
+      "bytes": 41368536,
+      "sha256": "c7485c5a423312fac0c064e5a5a2815cc36284f6018a020c9c54e64b6dcec894"
+    }
+  },
+  "closure": "External terminal Ctrl+C; fresh native window inventory confirmed game absent. Not an in-game graceful-quit test.",
+  "diagnostics": "Inherited unsupported V-Sync and ALSA ERR_CANT_OPEN/dummy driver; no additional runtime error observed. Audio not accepted.",
+  "ordinary_scope": "Automated CUA keyboard/mouse plus tactical pauses, no programmatic state control; natural Rooms seed128 first-shop purchase/reorder/deploy/inventory only.",
+  "observed": {
+    "seed": 128,
+    "mode": "Rooms",
+    "settled_scrap": 66,
+    "choices": [
+      "Overcharge",
+      "Repair Plating"
+    ],
+    "purchased": "Rail Lance",
+    "purchase_price": 42,
+    "remaining_scrap": 24,
+    "action": "Rivet MOVE LATER",
+    "resulting_order": [
+      "Rail Lance",
+      "Rivet Gun"
+    ],
+    "deployed_room": 2,
+    "read_only_inventory_confirmed": true
+  },
+  "limitations": [
+    "No full campaign",
+    "No Windows runtime",
+    "No physical controller",
+    "No audio certification",
+    "No ordinary Cryo/Orbit timing attribution"
+  ]
+}

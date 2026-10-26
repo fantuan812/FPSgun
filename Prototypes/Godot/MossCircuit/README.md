@@ -1,3 +1,20 @@
+# MossCircuit v30 — choose your weapon order
+
+Owned shop cards now offer **MOVE EARLIER / MOVE LATER**: exchange adjacent copies for free without selling them. Their exact remaining cooldown, aim and recoil age follow each copy. SLOT 1 uses the existing hand mount; other slots use their existing offsets. Duplicate weapon types remain separate copies. Nothing is purchased, refunded, healed or recomputed, and outstanding player shots/mortars block the move rather than being discarded.
+
+This gives control over existing ready-weapon processing order, not a universal damage bonus or guaranteed impact order. Cryo/Orbit Saw with Fracture Coil demonstrates a conditional burst-versus-retained-mark timing choice; the next aligned cycle can equalize damage, and later projectile contacts follow their old timing. Clocks are not reset or synchronized. All 37 catalog entries, six permanent upgrades, encounters, art and RNG formulas remain unchanged.
+
+- Author and independent final suites: 93 standalone entries + import (94), with all 611 frozen inputs unchanged. Initial genuine cold import and final reused-cache revalidation are distinguished. Python safety 3 passes.
+- Independent authority 837 and UI 512 checks pass in source and the exact pack; packed resources 839 verify 59 exact files, 58 images and 25 actions / 281 frames. The complete 24-case no-action trace and 36 existing timing checks match v29 byte-for-byte.
+- Controlled native review covers both modes at actual 960×540 and 1280×720, mouse/keyboard moves, duplicate copies, unavailable flight state, default focus, replacement reachability, read-only inventory and hand mounts in both facings. Synthetic ui_accept is not physical-controller support; no binding was added.
+- One ordinary exact-Linux Rooms seed-128 route cleared Room 1, selected Overcharge then Repair Plating, and reached 66 scrap. Rail purchase cost 42 (24 left); Rivet MOVE LATER put Rail in SLOT 1 and Rivet in SLOT 2 without further spending. Room 2 deployment/combat and paused read-only inventory retained the order. The 37.5 Rail readout and 120 HP follow the chosen stats, not the move. Automated CUA/tactical pauses, no injected state or full-campaign claim.
+
+Restore the [complete PCK and manual backup instructions](../../../Deliveries/MossCircuit/v30/READ_ME_v30.txt) with the unchanged verified executable. Windows is existing executable + resource pack, not Windows runtime acceptance. Native ALSA/dummy-audio and unsupported-VSync limitations remain; external terminal Ctrl+C closure is not an in-game graceful quit. GitHub-only delivery, no chat attachments.
+
+See the [frozen contract](docs/V30_WEAPON_ORDER_CONTRACT.md), [finite implementation/acceptance notes](docs/V30_WEAPON_ORDER.md) and [independent evidence](docs/validation/independent-v30/QA_REPORT.md). Exact reachable source/runtime identities are recorded separately in the delivery version index; local acceptance alone is not publication.
+
+---
+
 # MossCircuit v29 — trade one stat choice for 10 scrap
 
 Each earned upgrade page still offers three of the same six permanent stats. A separate optional **SALVAGE THIS UPGRADE / +10 SCRAP** resolution forfeits that one stat choice, retaining earned level/XP. This trades lasting growth for equipment budget at a later normal shop, if reached; no extra shop, reroll, choice, discount or automatic purchase is created. Ten is experimental tuning, not a general balance guarantee.
