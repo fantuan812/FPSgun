@@ -1,0 +1,41 @@
+MossCircuit v24 武器数值读数 — 手动更新说明
+
+仅适用于程序和旧 PCK 与下述哈希匹配的 v23 安装。满足此前提才只需这三个分卷；更新不含程序，不是独立游戏。首次安装先使用校验一致的完整 v23 Linux 或 Windows ExportOnly 包，再应用更新；旧完整包加本更新构成恢复链。源码覆盖包是另一种文件，不能当作运行更新。
+
+请将三个原始分卷放在一个新的独立目录，按001、002、003的顺序拼回 ZIP。不要分别解压，不要改分卷名字，不要覆盖已有同名 ZIP。全部分卷缺一不可。
+
+Linux / macOS 终端：
+cat "MossCircuit-v23-to-v24-Update-2026-10-26.zip.part001" "MossCircuit-v23-to-v24-Update-2026-10-26.zip.part002" "MossCircuit-v23-to-v24-Update-2026-10-26.zip.part003" > "MossCircuit-v23-to-v24-Update-2026-10-26.zip"
+
+Windows CMD：
+copy /b "MossCircuit-v23-to-v24-Update-2026-10-26.zip.part001"+"MossCircuit-v23-to-v24-Update-2026-10-26.zip.part002"+"MossCircuit-v23-to-v24-Update-2026-10-26.zip.part003" "MossCircuit-v23-to-v24-Update-2026-10-26.zip"
+
+合成后先校验完整 ZIP 的 SHA-256，再解压并阅读其中 README_UPDATE.txt。Linux 可用 sha256sum；Windows 可用 certutil -hashfile 文件名 SHA256。Windows 命令只检查了语法/顺序，没有在 Windows 上执行验证。
+
+完整 ZIP：MossCircuit-v23-to-v24-Update-2026-10-26.zip
+大小：40215073 字节
+SHA-256：e560248d7b681065ea3be29e6ce3a9598c117a187e5878af1e7a0f79b3661a4f
+
+分卷校验：
+MossCircuit-v23-to-v24-Update-2026-10-26.zip.part001
+20000000 字节
+SHA-256：f089629ffb7c30ffaef226467a0cfdabeeaa391508c5b5609d1cc6ded6f0d71a
+
+MossCircuit-v23-to-v24-Update-2026-10-26.zip.part002
+20000000 字节
+SHA-256：3bdeb929901f59237e9b2708f8f7f731fb3ee4eebd1ebd4464f8b055ac3053fc
+
+MossCircuit-v23-to-v24-Update-2026-10-26.zip.part003
+215073 字节
+SHA-256：1a4b6f0b03c6da7634b234299a13ea5a980b02bb826330516fffff3ab7f59852
+
+必须匹配的旧核心文件：
+MossCircuit.pck：a8ef8b7720ac374f10e5d5378bd413b5d415e845a35495bb89399a4ee5f3864a
+Linux MossCircuit.x86_64：2c78919325d7f29fa7607287c7c1eeac367ea4c94e7b8b6f5f4c6b20492f73d0
+Windows MossCircuit.exe：91724f15024a3a545e28ccd83134403d31ce2323a38e51c95e4dfa282f732ab6
+
+新 PCK：c6538ac76c04bfe5698c983574fb1a235e07c5dfdbe9eff7cac2784755402596
+
+关闭游戏，验证旧文件，把旧 PCK 另存为未占用的备份名并验证备份；然后只手动替换 MossCircuit.pck，保留程序、许可证、其他文件及旧校验索引。旧索引是历史记录，新 PCK 使用更新内的新索引。回退时关闭游戏，核验备份后恢复。旧哈希不符就停止，不要覆盖猜测的安装。没有自动用户电脑操作。
+
+v24 修正 BASE/CURRENT 武器数值展示，不新增武器或改平衡。Linux 的同一已验收程序搭配新资源包完成有限实际界面验收；Windows 是原先检查过的同一 EXE 加新 PCK，没有重新构建程序或 Windows 运行验收。音频/VSync 环境限制未解决，显示设置仍只在当前会话有效。不是完整通关/真人平衡认证。

@@ -1,0 +1,41 @@
+MossCircuit v25 标签协同进度 — 手动更新说明
+
+仅适用于程序和旧 PCK 与下述哈希匹配的 v24 安装。满足此前提才只需这三个分卷；更新不含程序，不是独立游戏，不能直接用于旧 v23 PCK。首次安装先使用校验一致的完整 v23 Linux 或 Windows ExportOnly 包，再按其说明应用 v23→v24 更新；核对得到 v24 后才应用本包。源码覆盖包是另一种文件，不能当作运行更新。
+
+请将三个原始分卷放在一个新的独立目录，按001、002、003的顺序拼回 ZIP。不要分别解压，不要改分卷名字，不要覆盖已有同名 ZIP。全部分卷缺一不可。
+
+Linux / macOS 终端：
+cat "MossCircuit-v24-to-v25-Update-2026-10-26.zip.part001" "MossCircuit-v24-to-v25-Update-2026-10-26.zip.part002" "MossCircuit-v24-to-v25-Update-2026-10-26.zip.part003" > "MossCircuit-v24-to-v25-Update-2026-10-26.zip"
+
+Windows CMD：
+copy /b "MossCircuit-v24-to-v25-Update-2026-10-26.zip.part001"+"MossCircuit-v24-to-v25-Update-2026-10-26.zip.part002"+"MossCircuit-v24-to-v25-Update-2026-10-26.zip.part003" "MossCircuit-v24-to-v25-Update-2026-10-26.zip"
+
+合成后先校验完整 ZIP 的 SHA-256，再解压并阅读其中 README_UPDATE.txt。Linux 可用 sha256sum；Windows 可用 certutil -hashfile 文件名 SHA256。Windows 命令只检查了语法/顺序，没有在 Windows 上执行验证。
+
+完整 ZIP：MossCircuit-v24-to-v25-Update-2026-10-26.zip
+大小：40216341 字节
+SHA-256：2330a4d172825e91d19182d89af0b445e9890d19020794e78097ec468f375ea8
+
+分卷校验：
+MossCircuit-v24-to-v25-Update-2026-10-26.zip.part001
+20000000 字节
+SHA-256：a59916ba6bfffc2c3cbbd798c7dc335573dbf5d8bfb45d0cfd52b93ee9c73043
+
+MossCircuit-v24-to-v25-Update-2026-10-26.zip.part002
+20000000 字节
+SHA-256：f611adae20826d4922f066be30b4bdbae670d3c7ea01e2045616d37f5318c83e
+
+MossCircuit-v24-to-v25-Update-2026-10-26.zip.part003
+216341 字节
+SHA-256：8c5c10330a35acb3839bbddd5af03f6ee14c708e3f77f9992d54db28550aa75e
+
+必须匹配的旧核心文件：
+MossCircuit.pck：c6538ac76c04bfe5698c983574fb1a235e07c5dfdbe9eff7cac2784755402596
+Linux MossCircuit.x86_64：2c78919325d7f29fa7607287c7c1eeac367ea4c94e7b8b6f5f4c6b20492f73d0
+Windows MossCircuit.exe：91724f15024a3a545e28ccd83134403d31ce2323a38e51c95e4dfa282f732ab6
+
+新 PCK：a7a9064413fc7bfdc1713f516ffc7d99ad6a2af2aa796089b0ddf1372779d42a
+
+关闭游戏，验证旧文件，把旧 PCK 另存为未占用的备份名并验证备份；然后只手动替换 MossCircuit.pck，保留程序、许可证、其他文件及旧校验索引。旧索引是历史记录，新 PCK 使用更新内的新索引。回退时关闭游戏，核验备份后恢复。旧哈希不符就停止，不要覆盖猜测的安装。没有自动用户电脑操作。
+
+v25 只显示三个既有标签协同的副本数、门槛、状态与准确效果范围，不新增协同或改平衡。Linux 的同一已验收程序搭配新资源包完成有限实际界面验收；Windows 是原先检查过的同一 EXE 加新 PCK，没有重新构建程序或 Windows 运行验收。音频/VSync 环境限制未解决，显示设置仍只在当前会话有效。不是完整通关/真人平衡认证。

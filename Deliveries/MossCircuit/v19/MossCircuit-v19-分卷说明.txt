@@ -1,0 +1,24 @@
+MossCircuit v19 分卷下载说明
+
+完整 ZIP 已保存在 Library；这些分卷只是为了聊天附件大小限制，不改变游戏文件。
+只需下载所选平台的全部 4 个分卷，放进同一个新文件夹。不要分别解压分卷。
+Windows 包仅完成导出和文件检查，未在 Windows 实机运行验收。Linux 包完成了原生窗口流程验证；音频未验收。
+
+Windows：在分卷文件夹打开 CMD（命令提示符），执行所选平台对应的命令：
+copy /b "MossCircuit-v19-Linux-x86_64-2026-10-25.zip.part001"+"MossCircuit-v19-Linux-x86_64-2026-10-25.zip.part002"+"MossCircuit-v19-Linux-x86_64-2026-10-25.zip.part003"+"MossCircuit-v19-Linux-x86_64-2026-10-25.zip.part004" "MossCircuit-v19-Linux-x86_64-2026-10-25.zip"
+copy /b "MossCircuit-v19-Windows-ExportOnly-x86_64-2026-10-25.zip.part001"+"MossCircuit-v19-Windows-ExportOnly-x86_64-2026-10-25.zip.part002"+"MossCircuit-v19-Windows-ExportOnly-x86_64-2026-10-25.zip.part003"+"MossCircuit-v19-Windows-ExportOnly-x86_64-2026-10-25.zip.part004" "MossCircuit-v19-Windows-ExportOnly-x86_64-2026-10-25.zip"
+
+Linux / macOS 终端：在分卷文件夹执行所选平台对应命令：
+cat "MossCircuit-v19-Linux-x86_64-2026-10-25.zip.part001" "MossCircuit-v19-Linux-x86_64-2026-10-25.zip.part002" "MossCircuit-v19-Linux-x86_64-2026-10-25.zip.part003" "MossCircuit-v19-Linux-x86_64-2026-10-25.zip.part004" > "MossCircuit-v19-Linux-x86_64-2026-10-25.zip"
+cat "MossCircuit-v19-Windows-ExportOnly-x86_64-2026-10-25.zip.part001" "MossCircuit-v19-Windows-ExportOnly-x86_64-2026-10-25.zip.part002" "MossCircuit-v19-Windows-ExportOnly-x86_64-2026-10-25.zip.part003" "MossCircuit-v19-Windows-ExportOnly-x86_64-2026-10-25.zip.part004" > "MossCircuit-v19-Windows-ExportOnly-x86_64-2026-10-25.zip"
+
+校验合并后的 ZIP（推荐）：Windows CMD 用 certutil -hashfile "文件名.zip" SHA256；Linux 用 sha256sum "文件名.zip"。预期：
+MossCircuit-v19-Linux-x86_64-2026-10-25.zip
+edb66b67ef3b039cf8a5161d25b229345903ca931b5ea5c6873aeaf6222e607d
+MossCircuit-v19-Windows-ExportOnly-x86_64-2026-10-25.zip
+2222e699fde95f296033f61a69e8a1f579e1a90b14b8851552e82d87fb9c8200
+
+合并并校验后，正常解压完整 ZIP。可执行文件必须与 MossCircuit.pck 在同一目录。先阅读包内 README.txt / VALIDATION.md。
+Linux 解压器若未保留执行权限，可在目录执行 chmod +x MossCircuit.x86_64，再运行 ./MossCircuit.x86_64。
+Windows 运行 MossCircuit.exe；此包未签名，不是安装程序。显示选项只在本次会话有效。
+分卷与完整 ZIP 均保留，无需修改游戏或重新构建。

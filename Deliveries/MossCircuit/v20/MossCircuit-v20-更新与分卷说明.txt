@@ -1,0 +1,38 @@
+MossCircuit v20 更新包 — 20 MB 分卷说明
+
+仅适用于已持有下述校验一致的 v19 安装；首次安装请用完整 v20 包。满足此前提才只需这两个分卷 + 本说明；不要分别解压分卷。
+把两个分卷下载到同一新文件夹，再合并为完整 ZIP。
+
+Windows：在该文件夹打开 CMD（不是 PowerShell），执行：
+copy /b "MossCircuit-v19-to-v20-Update-2026-10-25.zip.part001"+"MossCircuit-v19-to-v20-Update-2026-10-25.zip.part002" "MossCircuit-v19-to-v20-Update-2026-10-25.zip"
+
+Linux / macOS 终端：
+cat "MossCircuit-v19-to-v20-Update-2026-10-25.zip.part001" "MossCircuit-v19-to-v20-Update-2026-10-25.zip.part002" > "MossCircuit-v19-to-v20-Update-2026-10-25.zip"
+
+合并后 ZIP 的 SHA256（Windows 用 certutil -hashfile "文件名.zip" SHA256；Linux 用 sha256sum "文件名.zip"）：
+434a4ea2b15ffc52cd2c84ea0d2340087da20a37c8f2c59581ad7a0d77aa8c28
+
+校验后，正常解压到独立的新文件夹；然后按下面步骤更新。
+
+MossCircuit v19 → v20 手动资源包更新（Linux / Windows）
+
+用途：只更新战斗 HUD 可读性。程序 ELF/EXE 不变；Windows 仍未实机运行验收。
+本包不是完整游戏，不包含程序。需要先有原始已验收 v19 安装。不要直接解压到游戏目录；先解压到一个独立的新文件夹。
+
+1. 关闭游戏。在原 v19 游戏目录核对原文件 SHA256（必须匹配）：
+MossCircuit.pck: d454fba8eb3b6ceff3686303b4ad7e4ac2c176659af8c4bf85de610d57af7298
+Linux 的 MossCircuit.x86_64: 2c78919325d7f29fa7607287c7c1eeac367ea4c94e7b8b6f5f4c6b20492f73d0
+Windows 的 MossCircuit.exe: 91724f15024a3a545e28ccd83134403d31ce2323a38e51c95e4dfa282f732ab6
+只核对你所用平台的程序。Windows CMD 示例：certutil -hashfile "MossCircuit.pck" SHA256；Linux：sha256sum "MossCircuit.pck"。
+若校验不符、文件来源不明或不是此 v19，请不要使用增量更新，改用完整 v20 包。
+
+2. 手动复制原 MossCircuit.pck 为一个不会覆盖现有文件的备份，例如 MossCircuit.v19-backup.pck；确认备份存在且 SHA256 仍等于上面的 v19 值。
+3. 从独立解压目录手动复制新的 MossCircuit.pck 到游戏目录，替换原同名文件。不要替换 ELF/EXE 或许可证；不要在游戏运行时替换。
+4. 再核对新 MossCircuit.pck 的 SHA256，必须是：
+e433dc5f3cb8a57c36e821e7dd3920783dcd8374c6e2dda8f1c849e04b110fc0
+5. 使用原程序启动。v20 战斗 HUD 背景更透明、Boss 行更紧凑；碰撞/伤害/AI/素材没有更改。
+
+回退：关闭游戏，把备份复制回 MossCircuit.pck，并核对 v19 的旧 SHA256，再启动。此说明不执行任何自动复制、替换或用户电脑操作。
+旧 ARTIFACT_SHA256.json 记录 v19 历史，更新后不再用于校验新 PCK；请保留它，并使用本包 UPDATE_MANIFEST.json 中的新 PCK 与不变程序校验值。
+显示设置只在当前会话有效，不保存到磁盘。Linux 原生窗口只做了有限流程/现场下沿 Warden 预警验证；不声称完整 v20 通关、音频、Windows运行或真人平衡验收。视口外裁切未改变。
+完整 v20 源码和 Linux/Windows 完整包另存于 Library，用于恢复和新安装。

@@ -1,0 +1,42 @@
+MossCircuit v21 → v23 边界弹道构筑更新：分卷说明
+
+仅适用于已持有下述校验一致的原始 v21 安装；首次安装请使用完整 v23 包。满足此前提才只需这 3 个分卷，不必重下程序。本更新不含程序，不是独立游戏。v22 只有源码文案修正、没有运行包；修正已包含在新 v23 中。
+完整源码、Linux 完整包和 Windows 导出完整包另存 Library 供恢复/首次安装。Windows 未运行，音频及真人平衡未验收。
+
+1. 将全部 3 个文件下载到同一独立新文件夹，保持完整名称，不要逐个解压，不要直接放进游戏目录：
+MossCircuit-v21-to-v23-Update-2026-10-25.zip.part001
+MossCircuit-v21-to-v23-Update-2026-10-25.zip.part002
+MossCircuit-v21-to-v23-Update-2026-10-25.zip.part003
+
+2. 合并（先进入该新文件夹）：
+Linux 终端：
+cat "MossCircuit-v21-to-v23-Update-2026-10-25.zip.part001" "MossCircuit-v21-to-v23-Update-2026-10-25.zip.part002" "MossCircuit-v21-to-v23-Update-2026-10-25.zip.part003" > "MossCircuit-v21-to-v23-Update-2026-10-25.zip"
+
+Windows CMD（不是 PowerShell）：
+copy /b "MossCircuit-v21-to-v23-Update-2026-10-25.zip.part001"+"MossCircuit-v21-to-v23-Update-2026-10-25.zip.part002"+"MossCircuit-v21-to-v23-Update-2026-10-25.zip.part003" "MossCircuit-v21-to-v23-Update-2026-10-25.zip"
+
+3. 核对合并 ZIP：
+SHA256 7d8eaf3186f14d266d4a3e8556d13501c0b53cf309eacdf9b04c224299f15523
+大小 40,221,897 字节。
+Linux：sha256sum "MossCircuit-v21-to-v23-Update-2026-10-25.zip"
+Windows CMD：certutil -hashfile "MossCircuit-v21-to-v23-Update-2026-10-25.zip" SHA256
+不一致时不要解压更新，检查所有分卷完整性、名称和顺序。
+
+4. 解压合并 ZIP 到另一个独立新目录，先读包内 README_UPDATE_zh.txt。关闭游戏，核对原 v21 程序/PCK，另存不会覆盖已有文件的旧 PCK 备份并核对，再手动替换同名 PCK；不换程序/许可证。本说明不会自动操作电脑。
+原 v21 PCK：1ffb95a339633cbfb59ab64ab32a77e9fedb21226f823c9814eddd8ff08742e2
+不变 Linux 程序：2c78919325d7f29fa7607287c7c1eeac367ea4c94e7b8b6f5f4c6b20492f73d0
+不变 Windows 程序：91724f15024a3a545e28ccd83134403d31ce2323a38e51c95e4dfa282f732ab6
+新 v23 PCK：a8ef8b7720ac374f10e5d5378bd413b5d415e845a35495bb89399a4ee5f3864a
+只核对所用平台程序。若不是该 v21 或任何校验不符，请改用完整 v23 包。保留旧 ARTIFACT_SHA256.json 作为历史，更新后用包内 UPDATE_MANIFEST.json。回退时关闭游戏，将核验过的旧备份复制回 MossCircuit.pck 并再次核对旧哈希。
+
+本批新增 Bankshot Driver（42 scrap）和 Bounce Guide（26）。矩形场地边界最多反射两次；900 是基础总路程，不会反射后重置。每段命中额度耗尽后弹丸变暗滑行，碰到边界才重新装填。靠近场地边缘更有用，不碰撞内部装饰。Guide 需要 Bankshot，只在首次反射时转向一次，不追踪，不增加伤害/射程。当前8武器/28模块，新增商品会改变跨版本同 seed 商店结果。
+已纳入 v22 说明澄清：武器伤害与固定模块伤害分开，攻速加成是加算，旧数值不变。显示设置仅当前会话有效。
+具体有限源码/精确 PCK/受控与普通 Linux 验收见包内 VALIDATION.md；不是 Windows、音频、全组合或真人平衡认证。
+
+分卷校验：
+MossCircuit-v21-to-v23-Update-2026-10-25.zip.part001
+20000000 字节 / SHA256 78af0fadb4e2e0eddcd538a49cedd30622273e1c9774dd59d0c0688717a6dedd
+MossCircuit-v21-to-v23-Update-2026-10-25.zip.part002
+20000000 字节 / SHA256 278f29928bdcf0f5cb450f534661e3bf67544c5df62540919bd21474e58592f6
+MossCircuit-v21-to-v23-Update-2026-10-25.zip.part003
+221897 字节 / SHA256 96067d23ebee112bd43ca927ff75272ed9502b2dbbd88d0acce86ddc7912c6cc
