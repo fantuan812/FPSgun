@@ -510,8 +510,14 @@ func _show_upgrades() -> void:
 	state = "upgrade"
 	choice_generation += 1
 	choices = Rules.choose_upgrades(config.upgrades, loot_rng)
-	ui.show_upgrade(choices,choice_generation)
+	ui.show_upgrade(choices,choice_generation,_upgrade_salvage_view())
 	if automation: call_deferred("_take_upgrade", 0, choice_generation)
+
+
+func _upgrade_salvage_view() -> Dictionary:
+	var resolution := Rules.upgrade_salvage_definition()
+	resolution.coins = int(build.coins)
+	return resolution
 
 
 func _take_upgrade(index: int, generation: int) -> void:
@@ -520,6 +526,21 @@ func _take_upgrade(index: int, generation: int) -> void:
 	build.levels[id] = build.levels.get(id, 0) + 1
 	_recompute()
 	if id == "health": stats.hp = minf(stats.max_hp, stats.hp + 30)
+	_resolve_upgrade_choice()
+
+
+func _salvage_upgrade(generation: Variant, resolution_id: Variant) -> bool:
+	# Unlike legacy stat intents, this new action never coerces external payloads.
+	if not generation is int or not resolution_id is String: return false
+	if resolution_id != Rules.UPGRADE_SALVAGE.id: return false
+	if generation != choice_generation or state != "upgrade" or upgrade_pending <= 0 or choices.is_empty(): return false
+	Rules.credit_upgrade_salvage(build)
+	_resolve_upgrade_choice()
+	return true
+
+
+func _resolve_upgrade_choice() -> void:
+	# Share only the old queue tail: salvage neither derives stats nor heals/syncs.
 	choices.clear()
 	upgrade_pending -= 1
 	if upgrade_pending > 0: _show_upgrades()
@@ -904,6 +925,7 @@ func _on_intent(action: String, payload: Dictionary) -> void:
 			if payload.get("token") is int and payload.get("generation") is int: _release_offer(payload.token,payload.generation)
 		"continue": _leave_shop(int(payload.get("generation",-1)))
 		"upgrade": _take_upgrade(int(payload.get("index",-1)),int(payload.get("generation",-1)))
+		"salvage_upgrade": _salvage_upgrade(payload.get("generation"),payload.get("id"))
 		"inventory":
 			if state in ["playing","paused","shop","room_clear"]:
 				inventory_return = state

@@ -460,13 +460,21 @@ func show_inventory(view: Dictionary) -> void:
 	_button(body, "BACK", "close_inventory")
 	_finish()
 
-func show_upgrade(options: Array, generation: int) -> void:
-	_begin("upgrade", "CIRCUIT UPGRADE", "Choose one permanent improvement for this run.")
+func show_upgrade(options: Array, generation: int, salvage: Dictionary = {}) -> void:
+	_begin("upgrade", "CIRCUIT UPGRADE", "Choose one permanent improvement, or forfeit this choice for scrap." if not salvage.is_empty() else "Choose one permanent improvement for this run.")
 	var list := _scroll(body)
 	for i in options.size():
 		var option: Dictionary = options[i]
 		var c := _card(list, option)
 		_button(c, "SELECT", "upgrade", {"index": int(option.get("index", i)), "generation": generation})
+	if not salvage.is_empty():
+		# Separate from the three random cards, always visible below their scroll.
+		# Authority supplies this detached view; displayed values are never a grant.
+		var panel := PanelContainer.new(); body.add_child(panel)
+		var alternative := VBoxContainer.new(); panel.add_child(alternative)
+		_text(alternative, str(salvage.get("description", "")), 13)
+		_text(alternative, "CURRENT SCRAP: %d  /  %s" % [int(salvage.get("coins", 0)), str(salvage.get("spending", ""))], 12)
+		_button(alternative, "%s  /  +%d SCRAP" % [str(salvage.get("name", "")), int(salvage.get("scrap", 0))], "salvage_upgrade", {"id": salvage.get("id", ""), "generation": generation}, options.is_empty())
 	_finish()
 
 func show_pause(_view: Dictionary = {}) -> void:

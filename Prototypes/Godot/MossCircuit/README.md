@@ -1,3 +1,11 @@
+# v29 development candidate — salvage one stat choice (UNVERIFIED)
+
+A separate optional resolution trades one queued permanent-stat choice for exactly **10 scrap**, while keeping earned level/XP. The existing three-of-six choices, ordinary selection, catalog, income formulas and reserved-offer rules remain unchanged. Scrap can be spent only through a later normal shop, if reached; no shop or extra choice is created.
+
+This is an **UNVERIFIED early development snapshot**, not an accepted release. True cold import, 147 focused author checks, the existing 520 reservation checks and UI structure/intent checks pass. Independent mechanics/parity, complete regression, native presentation and exact-pack acceptance are still pending. See the [frozen contract](docs/V29_UPGRADE_SALVAGE_CONTRACT.md) and [implementation/acceptance status](docs/V29_UPGRADE_SALVAGE.md). The accepted v28 release below remains unchanged.
+
+---
+
 # MossCircuit v28 — reserve one shop offer
 
 A build-planning decision, not another stat item: **RESERVE one unsold offer for free**, even when unaffordable or equipment slots are full. Its original price and draw metadata survive refreshes and later shops. The trade-off is one occupied stock slot: the unchanged 5-scrap refresh draws only three fresh offers. It is not owned equipment and grants no stats, tags or synergy. Explicit RELEASE leaves current stock untouched; successful purchase consumes the hold; terminal results and new runs clear it.
