@@ -14,6 +14,10 @@ Selection is title-only and draws no RNG. The selected loadout persists through 
 
 New title actions use current generation, exact known ID and actual integer seed; malformed/stale actions reject before resetting a run. Legacy one-argument start and the pure build factory remain the old Rivet path. See the frozen [contract](V31_STARTING_LOADOUT_CONTRACT.md).
 
-## Pending acceptance
+## Source-native checkpoint / remaining gates
 
-Author cold import/focused tests, independent default-path preservation, registry/lifecycle/title/native checks, exact packed-resource validation, two bounded ordinary alternative starts, helper restoration and GitHub publication are not yet complete. No Windows/audio/controller/full-campaign/balance certification is claimed. No new raster, executable, save, unlock or account system is introduced.
+Initial true cold import and173 author checks passed, with legacy mode42 / weapon-order837 / UI structure checks. Independent R3 source checks pass977 authority and544 UI/stale-callback assertions; the24-case default-path trace and36 existing timing checks are byte-identical to pinned accepted v30 outputs. Source-native both modes at960/1280 confirms the three initial choices, keyboard/mouse selection, seed/menu retention and truthful origin/retry behavior. This includes controlled setup; it is not ordinary exported acquisition.
+
+Two candidate UI issues were fixed before final freeze. Retained new title START and mode callbacks could dereference a freed seed editor; WeakRefs and new-context generation guards now reject expired or stale callbacks. The initial layout hid all cards below the fold; compact3-across choices precede long detail now, with unchanged fonts and fixed START. Six strength/limitation strings were shortened without altering any numeric/identity data. Legacy two-argument title and generation-free callers retain their existing paths. Original failing evidence is preserved. A separate author test parse annotation and QA card-label spacing oracle correction were harness-only, not gameplay fixes.
+
+Final full suite, exact packed-resource validation, two bounded ordinary alternative starts, helper restoration and GitHub publication remain pending. No Windows/audio/controller/full-campaign/balance certification is claimed. No new raster, executable, save, unlock or account system is introduced.

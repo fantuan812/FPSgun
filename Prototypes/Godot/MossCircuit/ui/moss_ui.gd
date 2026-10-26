@@ -302,52 +302,78 @@ func update_hud(view: Dictionary) -> void:
 func show_title(seed_value: int = 240102,mode_id:String="arena",loadout_context:Dictionary={}) -> void:
 	_begin("title", "MOSS CIRCUIT", "SURVIVE / SALVAGE / REBUILD")
 	var content := _scroll(body)
-	_text(content,"A small machine. Six hostile waves. Build your own salvage engine." if mode_id=="arena" else "Three finite room encounters. Clear every enemy, then rebuild. This is not a complete dungeon.",20)
-	_text(content, "Move: WASD / arrow keys   |   Dash: Space   |   Auto-fire: nearest target\nPause: Esc   |   Build: I   |   Menus: Tab / Shift+Tab, Enter or Space\nBuy weapons and modules between encounters. Matching tags unlock synergies.")
-	_label(content,"MODE: "+("ARENA SURVIVAL" if mode_id=="arena" else "3 ROOM ENCOUNTERS / PROTOTYPE"),14)
-	var mode_button:=Button.new();mode_button.text="SWITCH TO "+("ROOM ENCOUNTERS" if mode_id=="arena" else "ARENA SURVIVAL")
-	mode_button.custom_minimum_size.y=38;content.add_child(mode_button)
-	_label(content, "RUN SEED", 14)
-	var seed_edit := LineEdit.new(); seed_edit.text = str(seed_value); seed_edit.max_length = 10
-	seed_edit.custom_minimum_size.y = 38; content.add_child(seed_edit)
-	seed_edit.text_changed.connect(func(value:String):intent.emit("seed_changed",{"seed":value.to_int()}))
-	mode_button.pressed.connect(func():intent.emit("select_mode",{"id":"rooms" if mode_id=="arena" else "arena","seed":seed_edit.text.to_int()}))
+	var has_loadouts:bool=not loadout_context.is_empty()
+	var generation:int=int(loadout_context.get("generation",-1))
+	var introduction:String="A small machine. Six hostile waves. Build your own salvage engine." if mode_id=="arena" else "Three finite room encounters. Clear every enemy, then rebuild. This is not a complete dungeon."
+	var controls:String="Move: WASD / arrow keys   |   Dash: Space   |   Auto-fire: nearest target\nPause: Esc   |   Build: I   |   Menus: Tab / Shift+Tab, Enter or Space\nBuy weapons and modules between encounters. Matching tags unlock synergies."
+	var mode_name:String="ARENA SURVIVAL" if mode_id=="arena" else "ROOM ENCOUNTERS"
+	var mode_button:=Button.new();mode_button.custom_minimum_size.y=38
+	mode_button.text="SWITCH TO "+("ROOM ENCOUNTERS" if mode_id=="arena" else "ARENA SURVIVAL")
+	var seed_edit := LineEdit.new();seed_edit.text=str(seed_value);seed_edit.max_length=10;seed_edit.custom_minimum_size.y=38
+	if has_loadouts:
+		# Keep all three compact choices above long explanatory detail.
+		var setup:=HBoxContainer.new();content.add_child(setup)
+		mode_button.text+=" / "+mode_name;mode_button.size_flags_horizontal=Control.SIZE_EXPAND_FILL
+		setup.add_child(mode_button);_label(setup,"RUN SEED",14)
+		seed_edit.custom_minimum_size.x=150;setup.add_child(seed_edit)
+		var seed_ref:WeakRef=weakref(seed_edit)
+		seed_edit.text_changed.connect(func(value:String):intent.emit("seed_changed",{"seed":value.to_int(),"generation":generation}))
+		mode_button.pressed.connect(func():
+			var live_seed:LineEdit=seed_ref.get_ref()
+			if live_seed==null:return
+			intent.emit("select_mode",{"id":"rooms" if mode_id=="arena" else "arena","seed":live_seed.text.to_int(),"generation":generation}))
+	else:
+		_text(content,introduction,20);_text(content,controls)
+		_label(content,"MODE: "+("ARENA SURVIVAL" if mode_id=="arena" else "3 ROOM ENCOUNTERS / PROTOTYPE"),14)
+		content.add_child(mode_button);_label(content,"RUN SEED",14);content.add_child(seed_edit)
+		seed_edit.text_changed.connect(func(value:String):intent.emit("seed_changed",{"seed":value.to_int()}))
+		mode_button.pressed.connect(func():intent.emit("select_mode",{"id":"rooms" if mode_id=="arena" else "arena","seed":seed_edit.text.to_int()}))
 	var selected:Dictionary={}
-	if not loadout_context.is_empty():
-		_text(content,"STARTING LOADOUT / Same hero, base HP and movement. One weapon, no modules. Owned tags influence later shop affinity.",13)
+	if has_loadouts:
+		_label(content,"CHOOSE STARTING LOADOUT",14)
+		var choices:=HBoxContainer.new();content.add_child(choices)
 		for row in loadout_context.get("loadouts",[]):
 			var chosen:bool=row.id==loadout_context.get("selected_id","")
 			if chosen:selected=row
-			_starting_loadout_card(content,row,chosen,int(loadout_context.get("generation",-1)))
-	var start := Button.new(); start.text = "START RUN"; start.custom_minimum_size.y = 44
-	if loadout_context.is_empty():
-		start.pressed.connect(func(): intent.emit("start", {"seed": seed_edit.text.to_int()}))
+			_starting_loadout_card(choices,row,chosen,generation)
+		_text(content,"Same hero, base HP and movement. One weapon, no modules. Owned tags influence later shop affinity.",13)
+		_text(content,"Shotgun damage is per pellet contact. Not every pellet will hit. Spare scrap is the starting-budget tradeoff, not an extra combat modifier.",12)
+		var help:=_disclosure(content,"CONTROLS / OBJECTIVE")
+		_text(help,introduction,20);_text(help,controls)
+		for row in loadout_context.get("loadouts",[]):
+			var stats_panel:=_disclosure(content,"BASE WEAPON DETAILS / "+str(row.name).to_upper())
+			_weapon_readout(stats_panel,row.weapon_readout)
+	var start := Button.new();start.text="START RUN";start.custom_minimum_size.y=44
+	if not has_loadouts:
+		start.pressed.connect(func():intent.emit("start",{"seed":seed_edit.text.to_int()}))
 	else:
 		start.disabled=selected.is_empty()
 		if not selected.is_empty():start.text="START %s / %d SCRAP" % [str(selected.name).to_upper(),int(selected.starting_scrap)]
 		var chosen_id:String=str(loadout_context.get("selected_id",""))
-		var generation:int=int(loadout_context.get("generation",-1))
-		start.pressed.connect(func():intent.emit("start_loadout",{"seed":seed_edit.text.to_int(),"id":chosen_id,"generation":generation}))
-	body.add_child(start); first_focus = start
-	_button(body, "ENEMY FIELD GUIDE", "codex")
-	_button(body, "DISPLAY SETTINGS", "settings")
+		var seed_ref:WeakRef=weakref(seed_edit)
+		start.pressed.connect(func():
+			var live_seed:LineEdit=seed_ref.get_ref()
+			if live_seed==null:return
+			intent.emit("start_loadout",{"seed":live_seed.text.to_int(),"id":chosen_id,"generation":generation}))
+	body.add_child(start);first_focus=start
+	_button(body,"ENEMY FIELD GUIDE","codex")
+	_button(body,"DISPLAY SETTINGS","settings")
 	_finish()
 
 func _starting_loadout_card(parent:Node,data:Dictionary,selected:bool,generation:int)->void:
-	var panel:=PanelContainer.new()
-	panel.add_theme_stylebox_override("panel",_box(INK,AMBER if selected else MOSS,7))
-	parent.add_child(panel)
-	var row:=HBoxContainer.new();panel.add_child(row)
+	var panel:=PanelContainer.new();panel.size_flags_horizontal=Control.SIZE_EXPAND_FILL
+	panel.add_theme_stylebox_override("panel",_box(INK,AMBER if selected else MOSS,7));parent.add_child(panel)
+	var details:=VBoxContainer.new();panel.add_child(details)
+	var top:=HBoxContainer.new();details.add_child(top)
 	var image:=TextureRect.new();image.texture=icon(str(data.weapon))
-	image.custom_minimum_size=Vector2(48,48);image.expand_mode=TextureRect.EXPAND_IGNORE_SIZE
-	image.stretch_mode=TextureRect.STRETCH_KEEP_ASPECT_CENTERED;row.add_child(image)
-	var details:=VBoxContainer.new();details.size_flags_horizontal=Control.SIZE_EXPAND_FILL;row.add_child(details)
-	_text(details,str(data.name)+(" / SELECTED" if selected else ""),16).add_theme_color_override("font_color",AMBER)
-	_text(details,"%s / %d STARTING SCRAP" % [data.weapon_name,int(data.starting_scrap)],13)
+	image.custom_minimum_size=Vector2(40,40);image.expand_mode=TextureRect.EXPAND_IGNORE_SIZE
+	image.stretch_mode=TextureRect.STRETCH_KEEP_ASPECT_CENTERED;top.add_child(image)
+	var names:=VBoxContainer.new();names.size_flags_horizontal=Control.SIZE_EXPAND_FILL;top.add_child(names)
+	_text(names,str(data.name),16).add_theme_color_override("font_color",AMBER)
+	_text(names,str(data.weapon_name),13)
+	_text(details,"%d STARTING SCRAP" % int(data.starting_scrap),13)
 	_text(details,str(data.strength),12)
-	_text(details,"TRADEOFF: "+str(data.limitation),12)
-	var stats_panel:=_disclosure(details,"BASE WEAPON DETAILS")
-	_weapon_readout(stats_panel,data.weapon_readout)
+	_text(details,str(data.limitation),12)
 	_button(details,"SELECTED" if selected else "CHOOSE "+str(data.name).to_upper(),"select_starting_loadout",{"id":data.id,"generation":generation},selected)
 
 func show_shop(view: Dictionary) -> void:

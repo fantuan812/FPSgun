@@ -929,9 +929,11 @@ func _view() -> Dictionary:
 func _on_intent(action: String, payload: Dictionary) -> void:
 	match action:
 		"seed_changed":
+			if payload.has("generation") and (not payload.generation is int or payload.generation!=title_generation):return
 			if state=="title" and payload.get("seed") is int:
 				run_seed=payload.seed
 		"select_mode":
+			if payload.has("generation") and (not payload.generation is int or payload.generation!=title_generation):return
 			if state=="title" and payload.get("id","") in ["arena","rooms"]:
 				run_seed=int(payload.get("seed",run_seed))
 				_select_mode(str(payload.id))
