@@ -14,6 +14,7 @@ var mode:RefCounted=ArenaMode.new()
 var base_arena:Dictionary
 var room_profile:Dictionary
 const CharacterMotor=preload("res://scripts/gameplay/character_motor.gd")
+const TargetStatus=preload("res://scripts/gameplay/target_status.gd")
 const WeaponCombat=preload("res://scripts/gameplay/weapon_combat.gd")
 const WeaponPresentation=preload("res://scripts/gameplay/weapon_presentation.gd")
 var weapon_combat:WeaponCombat
@@ -188,6 +189,7 @@ func _ready() -> void:
 		push_error("Invalid catalog: " + str(catalog_errors))
 		set_process(false)
 		return
+	effects.configure(catalog)
 	var raw_encounters = JSON.parse_string(FileAccess.get_file_as_string("res://data/encounters.json"))
 	if not raw_encounters is Dictionary:
 		push_error("Encounters must be a JSON object")
@@ -566,8 +568,26 @@ func _draw() -> void:
 		draw_circle(hazard.pos,hazard.radius,Color(.95,.5,.12,.22) if hazard.kind in ["trail","scorch"] else Color(.9,.85,.3,.3))
 		if hazard.kind == "mine": draw_rect(Rect2(hazard.pos-Vector2(6,6),Vector2(12,12)),Color("f3d66d"))
 	for visual in effect_visuals:
-		if visual.kind == "chain": draw_line(visual.pos,visual.end,Color("79e8ff"),3)
+		if visual.kind=="cryo_cone":
+			var points:=PackedVector2Array([visual.pos])
+			var angle:float=visual.direction.angle()
+			for i in range(25):points.append(visual.pos+Vector2.from_angle(angle-visual.half_angle+2*visual.half_angle*i/24.0)*visual.radius)
+			points.append(visual.pos)
+			draw_colored_polygon(points,Color(.45,.88,.95,.035 if settings.reduced_flashes else .07))
+			draw_polyline(points,Color(.55,.92,.98,.3 if settings.reduced_flashes else .55),1.5)
+		elif visual.kind=="fracture":
+			for i in range(4):
+				var ray:=Vector2.from_angle(PI*.25+i*PI*.5)
+				draw_line(visual.pos+ray*7,visual.pos+ray*visual.radius,Color(.64,.94,1,.4 if settings.reduced_flashes else .7),2)
+		elif visual.kind == "chain": draw_line(visual.pos,visual.end,Color("79e8ff"),3)
 		else: draw_circle(visual.pos,visual.radius,Color("b0e7cf"),false,3)
+	if state not in ["title","dead","won"]:
+		for enemy in enemies:
+			if not TargetStatus.chilled(enemy,elapsed):continue
+			var height:float=actor_anim.actors.get(enemy.id,{}).get("height",32.0)
+			var center:Vector2=enemy.pos+Vector2(0,-height*.5-6)
+			var diamond:=PackedVector2Array([center+Vector2(0,-4),center+Vector2(4,0),center+Vector2(0,4),center+Vector2(-4,0),center+Vector2(0,-4)])
+			draw_polyline(diamond,Color(.57,.91,.98,.5 if settings.reduced_flashes else .85),1.5)
 	if effects.shield > 0 and not build.is_empty(): draw_circle(player_pos,25,Color("a7e5ff"),false,2)
 	for projectile in enemy_bullets:
 		draw_circle(projectile.pos,6,Color("f6827c"))
@@ -713,6 +733,11 @@ func _view() -> Dictionary:
 			var name: String = Rules.catalog_entry(catalog,id).name
 			required.append(name)
 			if not Rules.owned_ids(build).has(id): missing.append(name)
+		var excluded_weapon:String=str(pair_data.get("requires_other_weapon_than",""))
+		if not excluded_weapon.is_empty():
+			var requirement:String="a weapon type other than "+Rules.catalog_entry(catalog,excluded_weapon).name
+			required.append(requirement)
+			if not build.weapons.any(func(id):return id!=excluded_weapon):missing.append(requirement)
 		view.synergy_status.append({"name":pair_data.name,"active":missing.is_empty(),"requires":required,"missing":missing,"description":pair_data.description})
 	for id in effects.cooldowns: view.mechanics.cooldowns[id] = maxf(0,effects.cooldowns[id] - elapsed)
 	for i in range(build.weapons.size()):

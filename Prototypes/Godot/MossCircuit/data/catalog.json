@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "weapon_slots": 4,
   "item_slots": 8,
   "starting_coins": 35,
@@ -120,6 +120,28 @@
       ],
       "max_stack": 4,
       "description": "Marks a fixed position; blasts after .6s within 85px."
+    },
+    {
+      "id": "cryo_sprayer",
+      "name": "Cryo Sprayer",
+      "kind": "weapon",
+      "behavior": "cone_chill",
+      "damage": 9,
+      "interval": 0.65,
+      "projectiles": 1,
+      "spread": 0,
+      "pierce": 0,
+      "range": 190,
+      "cone_degrees": 60,
+      "chill_duration": 1.2,
+      "chill_speed": 0.65,
+      "price": 44,
+      "rarity": "uncommon",
+      "tags": [
+        "control"
+      ],
+      "max_stack": 4,
+      "description": "60-degree cone chills for 1.2s; normal enemies move at 65%. Bosses are marked, not slowed."
     }
   ],
   "items": [
@@ -578,6 +600,27 @@
       "synergy_targets": [
         "pulse_boots"
       ]
+    },
+    {
+      "id": "fracture_coil",
+      "name": "Fracture Coil",
+      "kind": "item",
+      "price": 28,
+      "max_stack": 1,
+      "rarity": "rare",
+      "tags": [
+        "control"
+      ],
+      "effects": {},
+      "fracture_damage": 16,
+      "description": "Requires Cryo Sprayer + a different weapon type. Its surviving primary hit spends chill for 16 single-target secondary damage.",
+      "trigger": "Non-Cryo primary hit on a living chilled target",
+      "cost": "1 module slot; consumes chill and its slow; secondary damage cannot recurse",
+      "cooldown": 0,
+      "stack_rule": "Unique: maximum 1; one shatter per applied chill mark",
+      "synergy_targets": [
+        "cryo_sprayer"
+      ]
     }
   ],
   "synergies": [
@@ -672,6 +715,16 @@
         "phase_capacitor"
       ],
       "description": "One dash pushes nearby enemies and stores one next-hit splash charge. No extra hidden multiplier."
+    },
+    {
+      "id": "cold_snap",
+      "name": "Cold Snap",
+      "requires": [
+        "cryo_sprayer",
+        "fracture_coil"
+      ],
+      "description": "Cryo sets chill; a different weapon type must hit to spend it for 16 secondary damage. Another Cryo cannot consume. Shatter removes the slow.",
+      "requires_other_weapon_than": "cryo_sprayer"
     }
   ],
   "affinity_links": [
@@ -706,6 +759,10 @@
     [
       "pulse_boots",
       "phase_capacitor"
+    ],
+    [
+      "cryo_sprayer",
+      "fracture_coil"
     ]
   ],
   "shop_weighting": {

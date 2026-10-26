@@ -1,5 +1,15 @@
 extends RefCounted
 ## Pure event-to-command engine. Never applies commands recursively.
+const Status=preload("res://scripts/gameplay/target_status.gd")
+var fracture_damage:=0.0
+var fracture_weapons:Array=[]
+func configure(catalog:Dictionary)->void:
+	fracture_damage=0.0
+	fracture_weapons.clear()
+	for weapon in catalog.get("weapons",[]):
+		if weapon.id!="cryo_sprayer":fracture_weapons.append(str(weapon.id))
+	for entry in catalog.get("items",[]):
+		if entry.id=="fracture_coil":fracture_damage=float(entry.get("fracture_damage",0.0))
 var epoch := 0
 var last_sequence := -1
 var active: Dictionary = {}
@@ -56,6 +66,11 @@ func process(event: Dictionary, context: Dictionary) -> Array:
 	match kind:
 		"hit":
 			if source != "primary" or event.get("depth",0) != 0: return result
+			if active.has("fracture_coil") and fracture_damage>0 and str(event.get("weapon","")) in fracture_weapons:
+				for enemy in context.enemies:
+					if enemy.id==event.target and Status.can_fracture(enemy,time,str(event.get("weapon",""))):
+						result.append({"kind":"fracture","target":enemy.id,"damage":fracture_damage,"weapon":str(event.weapon)})
+						break
 			if active.has("echo_chamber"):
 				echo_hits += 1
 				if echo_hits >= 5:

@@ -1,0 +1,33 @@
+{
+  "pass": true,
+  "scope": "Literal Linux reconstruction of the frozen two raw update parts; Windows CMD syntax only",
+  "parts": [
+    {
+      "name": "MossCircuit-v20-to-v21-Update-2026-10-25.zip.part001",
+      "bytes": 20000000,
+      "sha256": "2b793dbe3e268648f5e201bb12d91efd2def353ca3e3cfae640bb57703d211c7"
+    },
+    {
+      "name": "MossCircuit-v20-to-v21-Update-2026-10-25.zip.part002",
+      "bytes": 17589460,
+      "sha256": "3e38121f3220e54eb9c783f70142ed980670cb3e2b8cf036ae2fcf64fb7c2d5b"
+    }
+  ],
+  "readme": {
+    "name": "MossCircuit-v21-更新与分卷说明.txt",
+    "bytes": 3363,
+    "sha256": "b6f8491b8bebe683bd3b0af79f86c18f530e56fdfa6eed57cd34eb02033ef018"
+  },
+  "reconstructed_zip": {
+    "name": "MossCircuit-v20-to-v21-Update-2026-10-25.zip",
+    "bytes": 37589460,
+    "sha256": "ac0e3d2b6581343787005085a5f0e8c8291c342bde3dc5116e4d7f8d92571c31"
+  },
+  "literal_linux_command_executed": "cat \"MossCircuit-v20-to-v21-Update-2026-10-25.zip.part001\" \"MossCircuit-v20-to-v21-Update-2026-10-25.zip.part002\" > \"MossCircuit-v20-to-v21-Update-2026-10-25.zip\"",
+  "archive_identical_bytes": true,
+  "crc_pass": true,
+  "all_five_member_bytes_and_modes_exact": true,
+  "windows_cmd_order_and_quoting_reviewed": true,
+  "windows_cmd_executed": false,
+  "instructions": "Matching original v20 prerequisite, separate extraction, hash verification, non-overwriting backup, manual replace/rollback and scope limits are explicit and correct."
+}

@@ -1,0 +1,59 @@
+{
+  "passed": 33,
+  "checks": [
+    "unchanged PNG bytes cryo_sprayer",
+    "RGBA/dimensions cryo_sprayer",
+    "alpha/bounds cryo_sprayer",
+    "transparent padding cryo_sprayer",
+    "unchanged PNG bytes fracture_coil",
+    "RGBA/dimensions fracture_coil",
+    "alpha/bounds fracture_coil",
+    "transparent padding fracture_coil",
+    "unchanged PNG bytes cryo_sprayer_world",
+    "RGBA/dimensions cryo_sprayer_world",
+    "alpha/bounds cryo_sprayer_world",
+    "transparent padding cryo_sprayer_world",
+    "valid UI crop cryo_sprayer",
+    "UI source identity cryo_sprayer",
+    "valid UI crop fracture_coil",
+    "UI source identity fracture_coil",
+    "six baseline weapon records",
+    "unchanged baseline geometry rivet_gun",
+    "unchanged baseline geometry scrap_shotgun",
+    "unchanged baseline geometry rail_lance",
+    "unchanged baseline geometry orbit_saw",
+    "unchanged baseline geometry return_disc",
+    "unchanged baseline geometry shock_mortar",
+    "integrated Cryo geometry identity",
+    "finite normalized grip",
+    "finite normalized muzzle",
+    "finite normalized projectile_anchor",
+    "muzzle in front of grip",
+    "32 world-unit visible mount",
+    "finite right muzzle pose",
+    "finite left muzzle pose",
+    "both-facing mirror geometry",
+    "runtime nearest filter/mirror contract present"
+  ],
+  "candidate": "supplied v21 r2 source root",
+  "source_sha256": {
+    "assets/items/cryo_sprayer_icon.png": "3013bc9aab42dce9a6d44eb42fd89617da565dea7f893828372f273941dee7e3",
+    "assets/items/fracture_coil.png": "49262d6e14f9d311eafed4e83af62150ff8cdc3b4c7fca690e41805f6acd1351",
+    "assets/weapon_mounts/cryo_sprayer.png": "f9723cac96652639c4d6e0e6750ce9fca58fe87c187ca4bb6736c58ccf3996fd"
+  },
+  "manifest_sha256": {
+    "assets/items/cryo_icon_manifest.json": "9ba752d3dcbbd5140fb761ff1bef697d7f05a3eedad72e1b10516852952b31be",
+    "assets/weapon_mounts/world_weapon_manifest.json": "ef276a89098c2d6f70b8d2185caba8ced8c4e0f5cb0523cc0d3a513fd608a4f0"
+  },
+  "analytic_muzzle_offsets": [
+    [
+      26.91375623663578,
+      -2.577334283677834
+    ],
+    [
+      -26.91375623663578,
+      -2.577334283677831
+    ]
+  ],
+  "limit": "Analytic/static resource acceptance. Native stills separately inspected; no full-motion or balance certification."
+}

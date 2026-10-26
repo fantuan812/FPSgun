@@ -76,6 +76,16 @@ func run() -> void:
 		check(game.ui.current_screen == "shop", "packed shop builds " + mode)
 		game.ui.show_inventory(game._view())
 		check(game.ui.current_screen == "inventory", "packed inventory builds " + mode)
+		game._start_run(2121)
+		game.build.weapons=["cryo_sprayer","rivet_gun"]
+		game.build.items={"fracture_coil":1};game._recompute()
+		var target:Dictionary=game._spawn_kind("crawler",game.player_pos+Vector2(100,0))
+		target.hp=100;target.max_hp=100
+		game._fire_weapon("cryo_sprayer",0)
+		check(target.hp==91 and target.get("chill_until",0)>game.elapsed,"packed Cryo primary and separate mark "+mode)
+		game._hit_segment({"hit":[],"damage":1.0,"pierce":0,"life":1.0,"weapon":"rivet_gun"},target.pos,target.pos)
+		check(target.hp==74 and not target.has("chill_until") and target.last_source=="fracture","packed mixed-weapon consume and secondary damage "+mode)
+		check(game.weapon_rig.assets.has("cryo_sprayer"),"packed dedicated Cryo world mount "+mode)
 	for item in game.catalog.weapons + game.catalog.items:
 		check(game.ui.icon(item.id) != null, "packed catalog icon " + item.id)
 	game.queue_free(); await process_frame

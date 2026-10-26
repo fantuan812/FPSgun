@@ -4,6 +4,7 @@ const RunSession=preload("res://scripts/gameplay/run_session.gd")
 const WeaponPresentation=preload("res://scripts/gameplay/weapon_presentation.gd")
 const WeaponRig=preload("res://scripts/weapon_rig.gd")
 const Rules=preload("res://scripts/rules.gd")
+const Status=preload("res://scripts/gameplay/target_status.gd")
 ## No mode, UI, progression, or input polling. Collision/proc semantics are shared by every mode.
 var world:CombatState
 var session:RunSession
@@ -20,6 +21,9 @@ func fire(id: String, slot: int) -> void:
 	var damage: float = weapon.damage * (1.0 + world.stats.damage_bonus)
 	if "electric" in weapon.tags: damage *= 1.0 + world.stats.electric_bonus
 	if "melee" in weapon.tags: damage *= 1.0 + world.stats.melee_bonus
+	if weapon.behavior == "cone_chill":
+		fire_chill(weapon,slot,damage)
+		return
 	if weapon.behavior == "orbit":
 		presentation.fire(id,slot,world.player_pos+Vector2.RIGHT*100,true)
 		# A timed rotating radial sweep: damages each nearby target once per attack.
@@ -51,6 +55,28 @@ func fire(id: String, slot: int) -> void:
 		var travel:float=WeaponRig.range_distance(world.player_pos,pose.muzzle,vector,reach)
 		if travel<=.000001:continue
 		world.bullets.append({"pos":pose.muzzle,"launch_start":pose.mount,"launch_end":pose.muzzle, "velocity":vector * world.stats.bullet_speed, "life":2.5 if weapon.behavior == "return" else maxf(.000001,travel / world.stats.bullet_speed), "damage":damage, "pierce":int(weapon.pierce) + int(world.stats.pierce), "hit":[], "weapon":id, "slot":slot, "returning":false,"outbound_left":travel / world.stats.bullet_speed})
+
+func fire_chill(weapon:Dictionary,slot:int,damage:float)->void:
+	var reach:float=weapon.range*(1.0+world.stats.range_bonus)
+	var targets:Array=Status.ordered_living(world.enemies,world.player_pos,reach)
+	if targets.is_empty():return
+	var target:Vector2=targets[0].pos
+	var direction:Vector2=(target-world.player_pos).normalized()
+	if direction.length_squared()<.000001:
+		direction=Vector2.RIGHT
+		target=world.player_pos+direction*reach
+	presentation.fire(weapon.id,slot,target)
+	var half_angle:float=deg_to_rad(float(weapon.cone_degrees)*.5)
+	# Display samples the same origin, radius and angle as authority, never supplies hits.
+	var existing:Array=world.effect_visuals.filter(func(v):return v.kind=="cryo_cone")
+	if existing.size()>=4:world.effect_visuals.erase(existing[0])
+	world.effect_visuals.append({"kind":"cryo_cone","pos":world.player_pos,"direction":direction,"radius":reach,"half_angle":half_angle,"life":.16})
+	for enemy in targets:
+		if enemy.hp<=0 or not Status.in_cone(enemy.pos,world.player_pos,direction,reach,half_angle):continue
+		enemy.hp-=damage
+		enemy.last_source="primary"
+		if enemy.hp>0:Status.apply_chill(enemy,session.elapsed,weapon)
+		effect_event.call("hit",{"target":enemy.id,"pos":enemy.pos,"damage":damage,"weapon":weapon.id})
 
 func hit_segment(b:Dictionary,start:Vector2,end:Vector2)->void:
 	var candidates:Array=[]

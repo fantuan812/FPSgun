@@ -79,8 +79,18 @@ static func validate_catalog(catalog: Dictionary) -> Array:
 			if not valid: errors.append("Incomplete weapon"); continue
 			for key in ["damage","interval","projectiles","range","spread","pierce"]:
 				if not _positive_number(entry[key],key in ["spread","pierce"]): errors.append("Invalid weapon " + key)
-			if not entry.behavior in ["single", "spread", "pierce", "orbit", "return", "mortar"]: errors.append("Invalid behavior")
+			if not entry.behavior in ["single", "spread", "pierce", "orbit", "return", "mortar", "cone_chill"]: errors.append("Invalid behavior")
+			if entry.behavior=="cone_chill":
+				for key in ["cone_degrees","chill_duration","chill_speed"]:
+					if not _positive_number(entry.get(key)): errors.append("Invalid chill weapon " + key)
+				if _positive_number(entry.get("cone_degrees")) and entry.cone_degrees>180: errors.append("Cone exceeds half-plane")
+				if _positive_number(entry.get("chill_duration")) and entry.chill_duration>10: errors.append("Chill exceeds duration budget")
+				if _positive_number(entry.get("chill_speed")) and entry.chill_speed>1: errors.append("Chill cannot accelerate")
 		elif entry.kind == "item":
+			if entry.id=="fracture_coil":
+				if not _positive_number(entry.get("fracture_damage")): errors.append("Invalid fracture damage")
+				elif entry.fracture_damage>1000: errors.append("Fracture exceeds damage budget")
+				if entry.max_stack!=1: errors.append("Fracture must remain unique")
 			if not entry.get("effects", null) is Dictionary: errors.append("Invalid effects")
 			else:
 				for key in entry.effects:
@@ -100,6 +110,11 @@ static func validate_catalog(catalog: Dictionary) -> Array:
 		for link in links:
 			if not link is Array or link.size()!=2: errors.append("Invalid affinity pair")
 			elif not seen.has(link[0]) or not seen.has(link[1]) or link[0]==link[1]: errors.append("Unknown/self affinity pair")
+	for pair_data in catalog.get("mechanism_synergies",[]):
+		if pair_data is Dictionary and pair_data.has("requires_other_weapon_than"):
+			var excluded:Variant=pair_data.requires_other_weapon_than
+			if not excluded is String or not seen.has(excluded):errors.append("Invalid companion weapon prerequisite")
+			elif catalog_entry(catalog,excluded).kind!="weapon":errors.append("Companion prerequisite must name a weapon")
 	return errors
 
 static func new_build(catalog: Dictionary) -> Dictionary:

@@ -3,6 +3,7 @@ const Context=preload("res://scripts/gameplay/combat_context.gd")
 const RunFlow=preload("res://scripts/gameplay/run_flow.gd")
 const Rules=preload("res://scripts/rules.gd")
 const EnemyAI=preload("res://scripts/enemy_ai.gd")
+const Status=preload("res://scripts/gameplay/target_status.gd")
 ## Mode-independent combat step: weapons, AI, projectiles, deaths and pickups.
 ## No wave timer, spawn schedule, completion policy, UI or shop dependency.
 static func step(frame:Context,dt:float)->void:
@@ -25,7 +26,7 @@ static func step(frame:Context,dt:float)->void:
 	for e in frame.world.enemies:
 		if e.hp <= 0: continue
 		var normal_speed: float = e.speed
-		if e.get("slow_until",0.0) > frame.session.elapsed: e.speed *= .55
+		e.speed *= Status.movement_factor(e,frame.session.elapsed)
 		var previous_ai:String=e.ai_state
 		var events: Array = EnemyAI.tick(e,frame.world.player_pos,dt,frame.session.elapsed)
 		e.speed = normal_speed

@@ -1,4 +1,8 @@
-# MOSS CIRCUIT · 苔芯幸存者 v20 · 战斗HUD可读性
+# MOSS CIRCUIT · 苔芯幸存者 v21 · 冷凝与碎霜构筑
+
+本批仅新增 Cryo Sprayer 与 Fracture Coil：短锥形冷凝标记，由另一种武器的主命中消耗标记触发单体碎霜；不是第二个爆炸/连锁数值复刻。已通过本批独立源码、打包集成与有限 Linux 原生流程验收；GitHub 发布状态另行核验，不把本地验收写成远端已更新。精确语义、先后顺序、前置条件与验证边界见 [v21构筑合同](docs/V21_CRYO_BUILD.md)。旧版本素材/模式/既有装备定义保留。
+
+## v20记录（历史）
 
 本批只调整战斗HUD的透明度、文字描边和Boss状态行布局，针对下沿Boss面板遮挡玩家与预警的问题；不改碰撞、伤害、AI、技能几何、时间、RNG或素材。具体测试和实际窗口验收边界见 [v20说明](docs/V20_HUD_READABILITY.md)。
 
@@ -46,7 +50,7 @@ v10 冲锋者的蓄力/冲锋/恢复、受击、死亡九帧与已校准接地�
 v9 已完成的共享战斗/构筑与模式策略继续保留：原 Arena 和 3 房间有限遭遇原型使用同一套战斗，支持受控测试的非相邻推进/不开店结算；仍不是完整地牢。见 [架构与模式合同](docs/ARCHITECTURE_AND_MODES.md)。
 
 v8 的空手九帧身体、六种独立世界武器、主手与三个辅助挂位、独立枪口特效完整保留；[装配与共享发射几何](docs/MODULAR_WEAPONS.md) 不回退成烘焙手枪。
-保留 **6 武器、26 道具、4 武器槽、构筑加权刷新、五种普通敌人与两 Boss**，以及 [此前动作覆盖与本版修正](docs/ACTION_COVERAGE.md)、[六种像素 VFX](docs/PIXEL_VFX.md)、[装备刷新](docs/SHOP_AFFINITY.md)、[道具机制](docs/MECHANISMS.md)、[敌人/Boss](docs/ENEMIES_AND_BOSSES.md)、[经济](docs/BUILD_SYSTEM.md) 和 [UI](ui/README.md)。五种普通敌人和两Boss已有独立受击/死亡图；crawler/flanker接触攻击仍为程序化表现。v16新增Warden独立冲锋，v17新增Core独立summon并保留原ring；没有增加音频、存档或联网。
+当前包含 **7 武器、27 道具、4 武器槽、构筑加权刷新、五种普通敌人与两 Boss**（原 6 武器/26 道具定义不变），以及 [此前动作覆盖与本版修正](docs/ACTION_COVERAGE.md)、[六种像素 VFX](docs/PIXEL_VFX.md)、[装备刷新](docs/SHOP_AFFINITY.md)、[道具机制](docs/MECHANISMS.md)、[敌人/Boss](docs/ENEMIES_AND_BOSSES.md)、[经济](docs/BUILD_SYSTEM.md) 和 [UI](ui/README.md)。五种普通敌人和两Boss已有独立受击/死亡图；crawler/flanker接触攻击仍为程序化表现。v16新增Warden独立冲锋，v17新增Core独立summon并保留原ring；没有增加音频、存档或联网。
 
 所有分包请按 [合并解压说明](docs/DELIVERY.md) 放到同一父目录；完整单包直接解压。
 
@@ -105,6 +109,8 @@ v9 房间 HUD 候选图没有通过去环境光晕验收，隔离存入 `art_sou
 idle 暂复用 walk 第一帧；弹丸/经验/判定轮廓保留简单代码绘制，六主题事件特效已使用九帧PNG动画。**不是所有动作都已补齐，也不要求所有动作只有九帧**。原PNG未经重绘、缩放或抠图；Godot 中以纹理区域与透明边距处理帧不整齐问题。
 
 ## 验证
+
+**v21最终（2026-10-25）：**作者与独立冷导入 + 63 个脚本入口全部通过（各 64 项），233 个测试输入未变；Python 负测 3 项、美术资源 33 项、精确 PCK 790 项通过。独立普通 Linux 操作在 seed 433 的首店从 122 scrap 购买 Cryo 44 + Coil 28，保留 Rivet，显示 Cold Snap ACTIVE，部署后观察到锥形喷射与冷凝标记。受控双模式/两方向素材及碎霜表现另有证据，不把截图当成原生 16 伤害测量。新增商品有意改变同 seed 的商店序列；旧装备范围内的权威轨迹与过滤后的旧商品池回归一致。详见 [最终独立报告](docs/validation/independent-v21/QA_REPORT.md)；不是完整 v21 通关、Windows/音频或真人平衡认证。
 
 **v17最终（2026-10-25）：**作者与独立cold import及55入口全通过，运行输入hash零变化；实际Linux窗口核清场升级先于商店、首屏购买、键盘详情/交易/返回、完整Rooms结果，以及真实Boss尺度Core两方向召唤/受击返回/原ring。原生截图只证明受控逐阶段姿态，不冒充连续录像或真人手感。见 [v17工程报告](docs/validation/v17-flow/QA_REPORT.md)。
 

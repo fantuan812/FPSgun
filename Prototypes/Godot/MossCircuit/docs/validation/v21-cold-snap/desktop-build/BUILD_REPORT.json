@@ -1,0 +1,132 @@
+{
+  "version": "4.6.3.stable",
+  "template_archive_sha256": "3fbe2c0e2dec9d537ab9ec97bcf8da91dcf23357fc51f67092dd068d839290a8",
+  "cold_import": true,
+  "steps": [
+    {
+      "step": "engine-version",
+      "exit": 0,
+      "engine_error": false,
+      "pass": true
+    },
+    {
+      "step": "cold-import",
+      "exit": 0,
+      "engine_error": false,
+      "pass": true
+    },
+    {
+      "step": "linux-export",
+      "exit": 0,
+      "engine_error": false,
+      "pass": true
+    },
+    {
+      "step": "windows-export",
+      "exit": 0,
+      "engine_error": false,
+      "pass": true
+    },
+    {
+      "step": "source-fingerprint",
+      "exit": 0,
+      "engine_error": false,
+      "pass": true
+    },
+    {
+      "step": "packed-resources",
+      "exit": 0,
+      "engine_error": false,
+      "pass": true
+    },
+    {
+      "step": "native-linux-startup",
+      "exit": 0,
+      "engine_error": false,
+      "pass": true
+    },
+    {
+      "step": "licenses",
+      "exit": 0,
+      "engine_error": false,
+      "pass": true
+    }
+  ],
+  "files": [
+    {
+      "path": "linux/GODOT_ENGINE_LICENSE.txt",
+      "bytes": 1150,
+      "sha256": "a0acc151e87517ee3411acce58ce99e17f636921b37c158f38f0b5acafd10da2",
+      "mode": "0o644"
+    },
+    {
+      "path": "linux/GODOT_THIRD_PARTY_LICENSES.txt",
+      "bytes": 77895,
+      "sha256": "955d07f9fea27370b11e2286bef8037dca5019258607cf2bd12bb4f97de79cf8",
+      "mode": "0o644"
+    },
+    {
+      "path": "linux/GODOT_THIRD_PARTY_NOTICES.json",
+      "bytes": 31442,
+      "sha256": "aad0657f34443922f21e030197d688c4cec3a59f5710ebbfa9516d606c5f987f",
+      "mode": "0o644"
+    },
+    {
+      "path": "linux/MossCircuit.pck",
+      "bytes": 37988628,
+      "sha256": "1ffb95a339633cbfb59ab64ab32a77e9fedb21226f823c9814eddd8ff08742e2",
+      "mode": "0o644"
+    },
+    {
+      "path": "linux/MossCircuit.x86_64",
+      "bytes": 71075864,
+      "sha256": "2c78919325d7f29fa7607287c7c1eeac367ea4c94e7b8b6f5f4c6b20492f73d0",
+      "mode": "0o755"
+    },
+    {
+      "path": "linux/README.txt",
+      "bytes": 511,
+      "sha256": "e5b2e465b6d5db88f6cbcb3a0451e1420870ee309ea6c1befff603cd249ffe86",
+      "mode": "0o644"
+    },
+    {
+      "path": "windows/GODOT_ENGINE_LICENSE.txt",
+      "bytes": 1150,
+      "sha256": "a0acc151e87517ee3411acce58ce99e17f636921b37c158f38f0b5acafd10da2",
+      "mode": "0o644"
+    },
+    {
+      "path": "windows/GODOT_THIRD_PARTY_LICENSES.txt",
+      "bytes": 77895,
+      "sha256": "955d07f9fea27370b11e2286bef8037dca5019258607cf2bd12bb4f97de79cf8",
+      "mode": "0o644"
+    },
+    {
+      "path": "windows/GODOT_THIRD_PARTY_NOTICES.json",
+      "bytes": 31442,
+      "sha256": "aad0657f34443922f21e030197d688c4cec3a59f5710ebbfa9516d606c5f987f",
+      "mode": "0o644"
+    },
+    {
+      "path": "windows/MossCircuit.exe",
+      "bytes": 104659456,
+      "sha256": "91724f15024a3a545e28ccd83134403d31ce2323a38e51c95e4dfa282f732ab6",
+      "mode": "0o644"
+    },
+    {
+      "path": "windows/MossCircuit.pck",
+      "bytes": 37988628,
+      "sha256": "1ffb95a339633cbfb59ab64ab32a77e9fedb21226f823c9814eddd8ff08742e2",
+      "mode": "0o644"
+    },
+    {
+      "path": "windows/README.txt",
+      "bytes": 511,
+      "sha256": "e5b2e465b6d5db88f6cbcb3a0451e1420870ee309ea6c1befff603cd249ffe86",
+      "mode": "0o644"
+    }
+  ],
+  "windows_runtime_tested": false,
+  "native_gui_tested": false,
+  "scope": "Cold exports, exact dynamic-data/imported-pixel parity and native Linux headless startup; GUI and Windows runtime are separate acceptance gates."
+}

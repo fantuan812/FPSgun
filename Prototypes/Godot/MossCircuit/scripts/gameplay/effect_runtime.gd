@@ -1,6 +1,7 @@
 extends RefCounted
 const CombatState=preload("res://scripts/gameplay/combat_state.gd")
 const RunSession=preload("res://scripts/gameplay/run_session.gd")
+const Status=preload("res://scripts/gameplay/target_status.gd")
 var world:CombatState
 var session:RunSession
 var engine:RefCounted
@@ -27,6 +28,16 @@ func emit_event(kind: String, data: Dictionary) -> bool:
 	var blocked := false
 	for command in commands:
 		match command.kind:
+			"fracture":
+				for enemy in world.enemies:
+					if enemy.id==command.target and Status.can_fracture(enemy,session.elapsed,command.weapon):
+						Status.consume_chill(enemy)
+						enemy.hp-=command.damage
+						enemy.last_source="fracture"
+						mechanism_vfx.call("fracture_coil","hit_spark",enemy.pos,{"tint":Color("9be9ef")})
+						var existing:Array=world.effect_visuals.filter(func(v):return v.kind=="fracture")
+						if existing.size()>=8:world.effect_visuals.erase(existing[0])
+						world.effect_visuals.append({"kind":"fracture","pos":enemy.pos,"radius":18,"life":.2})
 			"block":
 				play_vfx.call("shield_impact",world.player_pos,{"source_item":"mirror_shell"})
 				blocked = true

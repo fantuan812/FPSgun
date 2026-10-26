@@ -1,0 +1,63 @@
+{
+  "pass": true,
+  "scope": "Exact platform member/mode/privacy review and isolated manual update/rollback simulation; no recampaign",
+  "archives": [
+    {
+      "kind": "linux",
+      "name": "MossCircuit-v21-Linux-x86_64-2026-10-25.zip",
+      "bytes": 64869328,
+      "sha256": "a683ea1f270544b5424f335388e3aac2a4ea3ff2e69afe19acf1b424333deba3",
+      "exact_members": 9,
+      "crc": true,
+      "members_bytes_modes_and_indices": true,
+      "production_inputs": 109,
+      "privacy_scan": true
+    },
+    {
+      "kind": "windows",
+      "name": "MossCircuit-v21-Windows-ExportOnly-x86_64-2026-10-25.zip",
+      "bytes": 73710789,
+      "sha256": "384f6944262243f04a017de1aa167649ca4f3fca2a7ed6ccfc940d5a012dc1a0",
+      "exact_members": 9,
+      "crc": true,
+      "members_bytes_modes_and_indices": true,
+      "production_inputs": 109,
+      "privacy_scan": true
+    },
+    {
+      "kind": "manual_update",
+      "name": "MossCircuit-v20-to-v21-Update-2026-10-25.zip",
+      "bytes": 37589460,
+      "sha256": "ac0e3d2b6581343787005085a5f0e8c8291c342bde3dc5116e4d7f8d92571c31",
+      "exact_members": 5,
+      "crc": true,
+      "members_bytes_modes_and_indices": true,
+      "production_inputs": 109,
+      "privacy_scan": true
+    }
+  ],
+  "manual_update_simulation": [
+    {
+      "platform_files": "linux",
+      "old_original_members": 9,
+      "expected_base_verified": true,
+      "backup_exclusive_create": true,
+      "new_pck_exact": true,
+      "executables_licenses_and_old_index_untouched": true,
+      "rollback_restores_all_original_member_hashes": true,
+      "runtime_started": false
+    },
+    {
+      "platform_files": "windows",
+      "old_original_members": 9,
+      "expected_base_verified": true,
+      "backup_exclusive_create": true,
+      "new_pck_exact": true,
+      "executables_licenses_and_old_index_untouched": true,
+      "rollback_restores_all_original_member_hashes": true,
+      "runtime_started": false
+    }
+  ],
+  "documentation_review": "Matching original v20 prerequisite, verify backup/new hashes, close game, independent extraction, session-only settings, old checksum index retained historically, Windows not executed and audio/balance limits are accurate.",
+  "windows_instruction_check": "Only syntax/readability review; no Windows execution."
+}
