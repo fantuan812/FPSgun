@@ -1,0 +1,6 @@
+{
+  "classification": "QA invocation error, not game defect",
+  "raw_sha256": "f9faba174fabd63e12bf2ed4a3abb4b3fa332f56d6adf9136945cd502fb7710b",
+  "outcome": "Before seed script ran, inherited unwritable XDG data directory caused engine startup failure; corrected invocation supplies all HOME/XDG roots in isolated writable profile. No game-state mutation from failed invocation.",
+  "corrected_log_sha256": "4804f21e57e47e0a2317f58f2ede7a8541487aab2959eeb972f90c884335b569"
+}

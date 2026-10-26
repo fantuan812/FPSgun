@@ -1,0 +1,55 @@
+{
+  "weapon": {
+    "id": "bankshot_driver",
+    "name": "Bankshot Driver",
+    "kind": "weapon",
+    "behavior": "field_bankshot",
+    "damage": 18,
+    "interval": 0.85,
+    "projectiles": 1,
+    "spread": 0,
+    "pierce": 0,
+    "range": 900,
+    "price": 42,
+    "rarity": "uncommon",
+    "tags": [
+      "ballistic",
+      "ricochet"
+    ],
+    "max_stack": 4,
+    "description": "900 total travel; up to 2 field-boundary bounces re-arm 1 + pierce hits per leg (max 6). Spent shots coast dim. Position near field edges; no interior-wall bounces."
+  },
+  "item": {
+    "id": "bounce_guide",
+    "name": "Bounce Guide",
+    "kind": "item",
+    "price": 26,
+    "max_stack": 1,
+    "rarity": "rare",
+    "tags": [
+      "ricochet"
+    ],
+    "effects": {},
+    "description": "Requires Bankshot Driver. First field-boundary bounce aims once at the nearest eligible living target within remaining travel; otherwise reflects normally. No extra damage or range.",
+    "trigger": "Bankshot first reflection only",
+    "cost": "1 module slot; direction only, not homing; opportunity is spent even without a target",
+    "cooldown": 0,
+    "stack_rule": "Unique: maximum 1; possession is snapshotted at launch",
+    "synergy_targets": [
+      "bankshot_driver"
+    ]
+  },
+  "pair": {
+    "id": "banked_vector",
+    "name": "BANKED VECTOR",
+    "requires": [
+      "bankshot_driver",
+      "bounce_guide"
+    ],
+    "description": "First Bankshot reflection redirects once toward an eligible target. Field-edge positioning matters; the 900 total path never resets."
+  },
+  "link": [
+    "bankshot_driver",
+    "bounce_guide"
+  ]
+}

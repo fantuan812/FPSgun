@@ -4,6 +4,7 @@ const RunSession=preload("res://scripts/gameplay/run_session.gd")
 const WeaponPresentation=preload("res://scripts/gameplay/weapon_presentation.gd")
 const WeaponRig=preload("res://scripts/weapon_rig.gd")
 const Rules=preload("res://scripts/rules.gd")
+const BoundaryShot=preload("res://scripts/gameplay/boundary_shot.gd")
 const Status=preload("res://scripts/gameplay/target_status.gd")
 ## No mode, UI, progression, or input polling. Collision/proc semantics are shared by every mode.
 var world:CombatState
@@ -15,12 +16,15 @@ var play_vfx:Callable
 func _init(w:CombatState,s:RunSession,c:Dictionary,p:WeaponPresentation,e:Callable,v:Callable)->void:
 	world=w;session=s;catalog=c;presentation=p;effect_event=e;play_vfx=v
 
-func fire(id: String, slot: int) -> void:
+func fire(id: String, slot: int, area:Dictionary={}) -> void:
 	if world.enemies.is_empty(): return
 	var weapon := Rules.catalog_entry(catalog, id)
 	var damage: float = weapon.damage * (1.0 + world.stats.damage_bonus)
 	if "electric" in weapon.tags: damage *= 1.0 + world.stats.electric_bonus
 	if "melee" in weapon.tags: damage *= 1.0 + world.stats.melee_bonus
+	if weapon.behavior == "field_bankshot":
+		fire_bankshot(weapon,slot,damage,area)
+		return
 	if weapon.behavior == "cone_chill":
 		fire_chill(weapon,slot,damage)
 		return
@@ -133,3 +137,28 @@ func advance_disc(b: Dictionary,dt: float) -> void:
 		b.velocity = (world.player_pos-b.pos).normalized() * world.stats.bullet_speed
 		advance_bullet(b,minf(remaining,distance/world.stats.bullet_speed))
 		if b.pos.distance_to(world.player_pos) < 14: b.life = -1
+
+func fire_bankshot(weapon:Dictionary,slot:int,damage:float,area:Dictionary)->void:
+	var reach:float=weapon.range*(1.0+world.stats.range_bonus)
+	var targets:Array=Status.ordered_living(world.enemies,world.player_pos,reach)
+	if targets.is_empty():return
+	var target:Vector2=targets[0].pos
+	var coincident:bool=target.distance_squared_to(world.player_pos)<=BoundaryShot.DIR_EPS*BoundaryShot.DIR_EPS
+	var pose:Dictionary=presentation.fire_fixed_direction(weapon.id,slot,Vector2.RIGHT) if coincident else presentation.fire(weapon.id,slot,target)
+	var shot:Dictionary=BoundaryShot.spawn(pose.muzzle,pose.direction,area,damage,world.stats.bullet_speed,reach,int(weapon.pierce)+int(world.stats.pierce),session.build.items.get("bounce_guide",0)>0,slot)
+	if shot.is_empty():return
+	world.bullets.append(shot)
+	play_vfx.call("muzzle_flash",pose.muzzle,{"angle":pose.direction.angle(),"weapon":weapon.id,"slot":slot})
+
+func advance_bankshot(b:Dictionary,dt:float)->void:
+	BoundaryShot.advance(b,dt,world.enemies,_bankshot_hit,_bankshot_contact)
+
+func _bankshot_hit(enemy:Dictionary,b:Dictionary)->void:
+	enemy.hp-=b.damage;enemy.last_source="primary"
+	effect_event.call("hit",{"target":enemy.id,"pos":enemy.pos,"damage":b.damage,"weapon":b.weapon,"returning":false})
+	world.flashes.append({"pos":enemy.pos,"life":.14})
+
+func _bankshot_contact(event:Dictionary)->void:
+	var old:Array=world.effect_visuals.filter(func(v):return v.kind=="bankshot_contact")
+	if old.size()>=12:world.effect_visuals.erase(old[0])
+	world.effect_visuals.append({"kind":"bankshot_contact","pos":event.pos,"direction":event.direction,"guided":event.guided,"reflected":event.reflected,"radius":9.0,"life":.18})

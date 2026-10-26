@@ -1,0 +1,837 @@
+{
+  "scope": "32 analytic static no-enemy fixtures; direction normalized by consumer; 470 snapshot speed; clamp handled separately; not executed against implementation yet",
+  "rows": [
+    {
+      "case": "arena/right",
+      "size": [
+        1440,
+        960
+      ],
+      "start": [
+        1340,
+        480.0
+      ],
+      "direction": [
+        1,
+        0
+      ],
+      "budget": 200,
+      "advance": 1.425531914893617,
+      "expected": {
+        "position": [
+          1340,
+          480.0
+        ],
+        "reflections": 1,
+        "terminal": "budget",
+        "traveled": 200
+      }
+    },
+    {
+      "case": "arena/right-budget-at-boundary",
+      "size": [
+        1440,
+        960
+      ],
+      "start": [
+        1340,
+        480.0
+      ],
+      "direction": [
+        1,
+        0
+      ],
+      "budget": 100,
+      "advance": 1.2127659574468086,
+      "expected": {
+        "position": [
+          1440,
+          480.0
+        ],
+        "reflections": 0,
+        "terminal": "budget",
+        "traveled": 100
+      }
+    },
+    {
+      "case": "arena/left",
+      "size": [
+        1440,
+        960
+      ],
+      "start": [
+        100,
+        480.0
+      ],
+      "direction": [
+        -1,
+        0
+      ],
+      "budget": 200,
+      "advance": 1.425531914893617,
+      "expected": {
+        "position": [
+          100,
+          480.0
+        ],
+        "reflections": 1,
+        "terminal": "budget",
+        "traveled": 200
+      }
+    },
+    {
+      "case": "arena/left-budget-at-boundary",
+      "size": [
+        1440,
+        960
+      ],
+      "start": [
+        100,
+        480.0
+      ],
+      "direction": [
+        -1,
+        0
+      ],
+      "budget": 100,
+      "advance": 1.2127659574468086,
+      "expected": {
+        "position": [
+          0,
+          480.0
+        ],
+        "reflections": 0,
+        "terminal": "budget",
+        "traveled": 100
+      }
+    },
+    {
+      "case": "arena/bottom",
+      "size": [
+        1440,
+        960
+      ],
+      "start": [
+        720.0,
+        860
+      ],
+      "direction": [
+        0,
+        1
+      ],
+      "budget": 200,
+      "advance": 1.425531914893617,
+      "expected": {
+        "position": [
+          720.0,
+          860
+        ],
+        "reflections": 1,
+        "terminal": "budget",
+        "traveled": 200
+      }
+    },
+    {
+      "case": "arena/bottom-budget-at-boundary",
+      "size": [
+        1440,
+        960
+      ],
+      "start": [
+        720.0,
+        860
+      ],
+      "direction": [
+        0,
+        1
+      ],
+      "budget": 100,
+      "advance": 1.2127659574468086,
+      "expected": {
+        "position": [
+          720.0,
+          960
+        ],
+        "reflections": 0,
+        "terminal": "budget",
+        "traveled": 100
+      }
+    },
+    {
+      "case": "arena/top",
+      "size": [
+        1440,
+        960
+      ],
+      "start": [
+        720.0,
+        100
+      ],
+      "direction": [
+        0,
+        -1
+      ],
+      "budget": 200,
+      "advance": 1.425531914893617,
+      "expected": {
+        "position": [
+          720.0,
+          100
+        ],
+        "reflections": 1,
+        "terminal": "budget",
+        "traveled": 200
+      }
+    },
+    {
+      "case": "arena/top-budget-at-boundary",
+      "size": [
+        1440,
+        960
+      ],
+      "start": [
+        720.0,
+        100
+      ],
+      "direction": [
+        0,
+        -1
+      ],
+      "budget": 100,
+      "advance": 1.2127659574468086,
+      "expected": {
+        "position": [
+          720.0,
+          0
+        ],
+        "reflections": 0,
+        "terminal": "budget",
+        "traveled": 100
+      }
+    },
+    {
+      "case": "arena/initial-outward",
+      "size": [
+        1440,
+        960
+      ],
+      "start": [
+        0,
+        480.0
+      ],
+      "direction": [
+        -1,
+        0
+      ],
+      "budget": 100,
+      "advance": 1.2127659574468086,
+      "expected": {
+        "position": [
+          100,
+          480.0
+        ],
+        "reflections": 1,
+        "terminal": "budget",
+        "traveled": 100
+      }
+    },
+    {
+      "case": "arena/initial-inward",
+      "size": [
+        1440,
+        960
+      ],
+      "start": [
+        0,
+        480.0
+      ],
+      "direction": [
+        1,
+        0
+      ],
+      "budget": 100,
+      "advance": 1.2127659574468086,
+      "expected": {
+        "position": [
+          100,
+          480.0
+        ],
+        "reflections": 0,
+        "terminal": "budget",
+        "traveled": 100
+      }
+    },
+    {
+      "case": "arena/initial-tangent",
+      "size": [
+        1440,
+        960
+      ],
+      "start": [
+        0,
+        480.0
+      ],
+      "direction": [
+        0,
+        1
+      ],
+      "budget": 100,
+      "advance": 1.2127659574468086,
+      "expected": {
+        "position": [
+          0,
+          580.0
+        ],
+        "reflections": 0,
+        "terminal": "budget",
+        "traveled": 100
+      }
+    },
+    {
+      "case": "arena/corner-both-axes",
+      "size": [
+        1440,
+        960
+      ],
+      "start": [
+        1340,
+        860
+      ],
+      "direction": [
+        1,
+        1
+      ],
+      "budget": 200,
+      "advance": 1.425531914893617,
+      "expected": {
+        "position": [
+          1398.5786437626905,
+          918.5786437626905
+        ],
+        "reflections": 1,
+        "terminal": "budget",
+        "traveled": 200
+      }
+    },
+    {
+      "case": "arena/initial-corner-outward",
+      "size": [
+        1440,
+        960
+      ],
+      "start": [
+        1440,
+        960
+      ],
+      "direction": [
+        1,
+        1
+      ],
+      "budget": 100,
+      "advance": 1.2127659574468086,
+      "expected": {
+        "position": [
+          1369.2893218813454,
+          889.2893218813452
+        ],
+        "reflections": 1,
+        "terminal": "budget",
+        "traveled": 100
+      }
+    },
+    {
+      "case": "arena/two-reflections",
+      "size": [
+        1440,
+        960
+      ],
+      "start": [
+        1340,
+        480.0
+      ],
+      "direction": [
+        1,
+        0
+      ],
+      "budget": 1640,
+      "advance": 4.48936170212766,
+      "expected": {
+        "position": [
+          100,
+          480.0
+        ],
+        "reflections": 2,
+        "terminal": "budget",
+        "traveled": 1640
+      }
+    },
+    {
+      "case": "arena/third-boundary-absorbs",
+      "size": [
+        1440,
+        960
+      ],
+      "start": [
+        1340,
+        480.0
+      ],
+      "direction": [
+        1,
+        0
+      ],
+      "budget": 4320,
+      "advance": 10.191489361702128,
+      "expected": {
+        "position": [
+          1440,
+          480.0
+        ],
+        "reflections": 2,
+        "terminal": "third_boundary",
+        "traveled": 2980
+      }
+    },
+    {
+      "case": "arena/center-base-budget",
+      "size": [
+        1440,
+        960
+      ],
+      "start": [
+        720.0,
+        480.0
+      ],
+      "direction": [
+        1,
+        0
+      ],
+      "budget": 900,
+      "advance": 2.914893617021277,
+      "expected": {
+        "position": [
+          1260.0,
+          480.0
+        ],
+        "reflections": 1,
+        "terminal": "budget",
+        "traveled": 900
+      }
+    },
+    {
+      "case": "rooms/right",
+      "size": [
+        960,
+        640
+      ],
+      "start": [
+        860,
+        320.0
+      ],
+      "direction": [
+        1,
+        0
+      ],
+      "budget": 200,
+      "advance": 1.425531914893617,
+      "expected": {
+        "position": [
+          860,
+          320.0
+        ],
+        "reflections": 1,
+        "terminal": "budget",
+        "traveled": 200
+      }
+    },
+    {
+      "case": "rooms/right-budget-at-boundary",
+      "size": [
+        960,
+        640
+      ],
+      "start": [
+        860,
+        320.0
+      ],
+      "direction": [
+        1,
+        0
+      ],
+      "budget": 100,
+      "advance": 1.2127659574468086,
+      "expected": {
+        "position": [
+          960,
+          320.0
+        ],
+        "reflections": 0,
+        "terminal": "budget",
+        "traveled": 100
+      }
+    },
+    {
+      "case": "rooms/left",
+      "size": [
+        960,
+        640
+      ],
+      "start": [
+        100,
+        320.0
+      ],
+      "direction": [
+        -1,
+        0
+      ],
+      "budget": 200,
+      "advance": 1.425531914893617,
+      "expected": {
+        "position": [
+          100,
+          320.0
+        ],
+        "reflections": 1,
+        "terminal": "budget",
+        "traveled": 200
+      }
+    },
+    {
+      "case": "rooms/left-budget-at-boundary",
+      "size": [
+        960,
+        640
+      ],
+      "start": [
+        100,
+        320.0
+      ],
+      "direction": [
+        -1,
+        0
+      ],
+      "budget": 100,
+      "advance": 1.2127659574468086,
+      "expected": {
+        "position": [
+          0,
+          320.0
+        ],
+        "reflections": 0,
+        "terminal": "budget",
+        "traveled": 100
+      }
+    },
+    {
+      "case": "rooms/bottom",
+      "size": [
+        960,
+        640
+      ],
+      "start": [
+        480.0,
+        540
+      ],
+      "direction": [
+        0,
+        1
+      ],
+      "budget": 200,
+      "advance": 1.425531914893617,
+      "expected": {
+        "position": [
+          480.0,
+          540
+        ],
+        "reflections": 1,
+        "terminal": "budget",
+        "traveled": 200
+      }
+    },
+    {
+      "case": "rooms/bottom-budget-at-boundary",
+      "size": [
+        960,
+        640
+      ],
+      "start": [
+        480.0,
+        540
+      ],
+      "direction": [
+        0,
+        1
+      ],
+      "budget": 100,
+      "advance": 1.2127659574468086,
+      "expected": {
+        "position": [
+          480.0,
+          640
+        ],
+        "reflections": 0,
+        "terminal": "budget",
+        "traveled": 100
+      }
+    },
+    {
+      "case": "rooms/top",
+      "size": [
+        960,
+        640
+      ],
+      "start": [
+        480.0,
+        100
+      ],
+      "direction": [
+        0,
+        -1
+      ],
+      "budget": 200,
+      "advance": 1.425531914893617,
+      "expected": {
+        "position": [
+          480.0,
+          100
+        ],
+        "reflections": 1,
+        "terminal": "budget",
+        "traveled": 200
+      }
+    },
+    {
+      "case": "rooms/top-budget-at-boundary",
+      "size": [
+        960,
+        640
+      ],
+      "start": [
+        480.0,
+        100
+      ],
+      "direction": [
+        0,
+        -1
+      ],
+      "budget": 100,
+      "advance": 1.2127659574468086,
+      "expected": {
+        "position": [
+          480.0,
+          0
+        ],
+        "reflections": 0,
+        "terminal": "budget",
+        "traveled": 100
+      }
+    },
+    {
+      "case": "rooms/initial-outward",
+      "size": [
+        960,
+        640
+      ],
+      "start": [
+        0,
+        320.0
+      ],
+      "direction": [
+        -1,
+        0
+      ],
+      "budget": 100,
+      "advance": 1.2127659574468086,
+      "expected": {
+        "position": [
+          100,
+          320.0
+        ],
+        "reflections": 1,
+        "terminal": "budget",
+        "traveled": 100
+      }
+    },
+    {
+      "case": "rooms/initial-inward",
+      "size": [
+        960,
+        640
+      ],
+      "start": [
+        0,
+        320.0
+      ],
+      "direction": [
+        1,
+        0
+      ],
+      "budget": 100,
+      "advance": 1.2127659574468086,
+      "expected": {
+        "position": [
+          100,
+          320.0
+        ],
+        "reflections": 0,
+        "terminal": "budget",
+        "traveled": 100
+      }
+    },
+    {
+      "case": "rooms/initial-tangent",
+      "size": [
+        960,
+        640
+      ],
+      "start": [
+        0,
+        320.0
+      ],
+      "direction": [
+        0,
+        1
+      ],
+      "budget": 100,
+      "advance": 1.2127659574468086,
+      "expected": {
+        "position": [
+          0,
+          420.0
+        ],
+        "reflections": 0,
+        "terminal": "budget",
+        "traveled": 100
+      }
+    },
+    {
+      "case": "rooms/corner-both-axes",
+      "size": [
+        960,
+        640
+      ],
+      "start": [
+        860,
+        540
+      ],
+      "direction": [
+        1,
+        1
+      ],
+      "budget": 200,
+      "advance": 1.425531914893617,
+      "expected": {
+        "position": [
+          918.5786437626905,
+          598.5786437626905
+        ],
+        "reflections": 1,
+        "terminal": "budget",
+        "traveled": 200
+      }
+    },
+    {
+      "case": "rooms/initial-corner-outward",
+      "size": [
+        960,
+        640
+      ],
+      "start": [
+        960,
+        640
+      ],
+      "direction": [
+        1,
+        1
+      ],
+      "budget": 100,
+      "advance": 1.2127659574468086,
+      "expected": {
+        "position": [
+          889.2893218813452,
+          569.2893218813452
+        ],
+        "reflections": 1,
+        "terminal": "budget",
+        "traveled": 100
+      }
+    },
+    {
+      "case": "rooms/two-reflections",
+      "size": [
+        960,
+        640
+      ],
+      "start": [
+        860,
+        320.0
+      ],
+      "direction": [
+        1,
+        0
+      ],
+      "budget": 1160,
+      "advance": 3.4680851063829787,
+      "expected": {
+        "position": [
+          100,
+          320.0
+        ],
+        "reflections": 2,
+        "terminal": "budget",
+        "traveled": 1160
+      }
+    },
+    {
+      "case": "rooms/third-boundary-absorbs",
+      "size": [
+        960,
+        640
+      ],
+      "start": [
+        860,
+        320.0
+      ],
+      "direction": [
+        1,
+        0
+      ],
+      "budget": 2880,
+      "advance": 7.127659574468085,
+      "expected": {
+        "position": [
+          960,
+          320.0
+        ],
+        "reflections": 2,
+        "terminal": "third_boundary",
+        "traveled": 2020
+      }
+    },
+    {
+      "case": "rooms/center-base-budget",
+      "size": [
+        960,
+        640
+      ],
+      "start": [
+        480.0,
+        320.0
+      ],
+      "direction": [
+        1,
+        0
+      ],
+      "budget": 900,
+      "advance": 2.914893617021277,
+      "expected": {
+        "position": [
+          540.0,
+          320.0
+        ],
+        "reflections": 1,
+        "terminal": "budget",
+        "traveled": 900
+      }
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "production": "All115 production inputs exactly match FINAL_SOURCE_VERIFICATION.json; no production revision after controlled captures.",
+  "main_fixture_v2": "826b5da2c152f05c5ae1bbfa98ccd3abaa7721b8161eb20a2bc7d77d17858f41",
+  "corner_fixture": "94e8429a1da872ae097b13ebccce4a92fd5620481d662a3803a1729364628ed6",
+  "supersession": "NATIVE_INPUT_FINGERPRINT fixture hash identifies original v1 harness. V2 only repeatedly measures HUD while gameplay processing is disabled and adds Q quit. V1 overlap is retained as harness-only rejection. Corner fixture adds explicit injected projectile geometry; it is not ordinary fire proof.",
+  "matrix": "Arena960-left and1280-right, Rooms1280-left and960-right;7 scenarios each plus actual Guide transaction clicks, reduced-flash tell sample, six0.04s actual guided steps. Four corner samples use injected geometry at Arena960 andRooms1280 both facings.",
+  "screenshots": 45,
+  "limitations": "Stepped native rendering with fixed injected actors/build. Not ordinary acquisition, continuous-motion or damage-causality proof from stills. Native logs retain ALSA failure/dummy fallback; no audio acceptance."
+}

@@ -83,7 +83,7 @@ func _ready() -> void:
 	if FileAccess.file_exists("res://assets/items/icon_manifest.json"):
 		var parsed = JSON.parse_string(FileAccess.get_file_as_string("res://assets/items/icon_manifest.json"))
 		if parsed is Dictionary: manifest = parsed
-	for extra_path in ["res://assets/items/mechanism_icon_manifest.json", "res://assets/items/build_expansion_icon_manifest.json", "res://assets/items/cryo_icon_manifest.json"]:
+	for extra_path in ["res://assets/items/mechanism_icon_manifest.json", "res://assets/items/build_expansion_icon_manifest.json", "res://assets/items/cryo_icon_manifest.json", "res://assets/items/bankshot_icon_manifest.json"]:
 		if FileAccess.file_exists(extra_path):
 			var extra = JSON.parse_string(FileAccess.get_file_as_string(extra_path))
 			if extra is Dictionary:

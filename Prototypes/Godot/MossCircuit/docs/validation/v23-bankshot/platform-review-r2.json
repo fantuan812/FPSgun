@@ -1,0 +1,77 @@
+{
+  "status": "PASS final r2 delivery packages",
+  "archives": [
+    {
+      "kind": "linux",
+      "name": "MossCircuit-v23-Linux-x86_64-2026-10-25.zip",
+      "bytes": 67501890,
+      "sha256": "cbd28d1eb48ef53eb0437fddb7ff8c2d48ab28ebdedd2268440f20dacdad1703",
+      "changed_members": [
+        "ARTIFACT_SHA256.json",
+        "VALIDATION.md"
+      ],
+      "member_count": 9,
+      "all_crc_hash_safe_path_and_modes_pass": true,
+      "runtime_unchanged": true
+    },
+    {
+      "kind": "windows",
+      "name": "MossCircuit-v23-Windows-ExportOnly-x86_64-2026-10-25.zip",
+      "bytes": 76343361,
+      "sha256": "33d30c7059e7628b1e9e0af89bdac0660c08f68e5687b6f07125e2d35fbcb959",
+      "changed_members": [
+        "ARTIFACT_SHA256.json",
+        "VALIDATION.md"
+      ],
+      "member_count": 9,
+      "all_crc_hash_safe_path_and_modes_pass": true,
+      "runtime_unchanged": true
+    },
+    {
+      "kind": "manual_update",
+      "name": "MossCircuit-v21-to-v23-Update-2026-10-25.zip",
+      "bytes": 40221897,
+      "sha256": "7d8eaf3186f14d266d4a3e8556d13501c0b53cf309eacdf9b04c224299f15523",
+      "changed_members": [
+        "UPDATE_MANIFEST.json",
+        "VALIDATION.md"
+      ],
+      "member_count": 5,
+      "all_crc_hash_safe_path_and_modes_pass": true,
+      "runtime_unchanged": true
+    }
+  ],
+  "parts": [
+    {
+      "name": "MossCircuit-v21-to-v23-Update-2026-10-25.zip.part001",
+      "bytes": 20000000,
+      "sha256": "78af0fadb4e2e0eddcd538a49cedd30622273e1c9774dd59d0c0688717a6dedd"
+    },
+    {
+      "name": "MossCircuit-v21-to-v23-Update-2026-10-25.zip.part002",
+      "bytes": 20000000,
+      "sha256": "278f29928bdcf0f5cb450f534661e3bf67544c5df62540919bd21474e58592f6"
+    },
+    {
+      "name": "MossCircuit-v21-to-v23-Update-2026-10-25.zip.part003",
+      "bytes": 221897,
+      "sha256": "96067d23ebee112bd43ca927ff75272ed9502b2dbbd88d0acce86ddc7912c6cc"
+    }
+  ],
+  "outer_readme": {
+    "name": "MossCircuit-v23-\u66f4\u65b0\u4e0e\u5206\u5377\u8bf4\u660e.txt",
+    "bytes": 3801,
+    "sha256": "c204cf9fff6ba37e7115c7f2943d64cc0e9b7b68c1b0a1d69884a67829db00e2"
+  },
+  "final_parts_streamed_concatenation": {
+    "bytes": 40221897,
+    "sha256": "7d8eaf3186f14d266d4a3e8556d13501c0b53cf309eacdf9b04c224299f15523",
+    "matches_final_update_zip": true
+  },
+  "literal_linux_command": "Already executed on r1; exact cat command/filenames/order unchanged in r2; r2 stream concatenation equals full final ZIP. No second on-disk reconstruction necessary.",
+  "windows_cmd": "Syntax/order inspected only; unchanged command, not Windows-executed.",
+  "manual_update_rollback": "r1 isolated exact-v21 simulation applies unchanged: PCK and executables identical in r2; no new runtime or manual-install test claimed.",
+  "shared_validation_delta": "Only exact reviewed sentence changed; makes automated CUA inputs/tactical pauses explicit and excludes state injection. All dependent indices correct.",
+  "original_archives_preserved": true,
+  "source_runtime_claims": "No source or runtime edits/rebuild; no new campaign."
+}

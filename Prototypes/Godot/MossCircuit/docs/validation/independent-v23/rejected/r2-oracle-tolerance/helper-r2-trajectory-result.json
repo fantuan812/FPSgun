@@ -1,0 +1,297 @@
+{
+	"checks": 233,
+	"failures": [
+		"tiny subdivision first outward reflection"
+	],
+	"rows": [
+		{
+			"boundary_events": 1,
+			"case": "arena/right",
+			"end_reason": "path_budget",
+			"reflections": 1,
+			"travelled": 200.0,
+			"x": 1340.0,
+			"y": 480.0
+		},
+		{
+			"boundary_events": 0,
+			"case": "arena/right-budget-at-boundary",
+			"end_reason": "path_budget",
+			"reflections": 0,
+			"travelled": 100.0,
+			"x": 1440.0,
+			"y": 480.0
+		},
+		{
+			"boundary_events": 1,
+			"case": "arena/left",
+			"end_reason": "path_budget",
+			"reflections": 1,
+			"travelled": 200.0,
+			"x": 100.0,
+			"y": 480.0
+		},
+		{
+			"boundary_events": 0,
+			"case": "arena/left-budget-at-boundary",
+			"end_reason": "path_budget",
+			"reflections": 0,
+			"travelled": 100.0,
+			"x": 0.0,
+			"y": 480.0
+		},
+		{
+			"boundary_events": 1,
+			"case": "arena/bottom",
+			"end_reason": "path_budget",
+			"reflections": 1,
+			"travelled": 200.0,
+			"x": 720.0,
+			"y": 860.0
+		},
+		{
+			"boundary_events": 0,
+			"case": "arena/bottom-budget-at-boundary",
+			"end_reason": "path_budget",
+			"reflections": 0,
+			"travelled": 100.0,
+			"x": 720.0,
+			"y": 960.0
+		},
+		{
+			"boundary_events": 1,
+			"case": "arena/top",
+			"end_reason": "path_budget",
+			"reflections": 1,
+			"travelled": 200.0,
+			"x": 720.0,
+			"y": 100.0
+		},
+		{
+			"boundary_events": 0,
+			"case": "arena/top-budget-at-boundary",
+			"end_reason": "path_budget",
+			"reflections": 0,
+			"travelled": 100.0,
+			"x": 720.0,
+			"y": 0.0
+		},
+		{
+			"boundary_events": 1,
+			"case": "arena/initial-outward",
+			"end_reason": "path_budget",
+			"reflections": 1,
+			"travelled": 100.0,
+			"x": 100.0,
+			"y": 480.0
+		},
+		{
+			"boundary_events": 0,
+			"case": "arena/initial-inward",
+			"end_reason": "path_budget",
+			"reflections": 0,
+			"travelled": 100.0,
+			"x": 100.0,
+			"y": 480.0
+		},
+		{
+			"boundary_events": 0,
+			"case": "arena/initial-tangent",
+			"end_reason": "path_budget",
+			"reflections": 0,
+			"travelled": 100.0,
+			"x": 0.0,
+			"y": 580.0
+		},
+		{
+			"boundary_events": 1,
+			"case": "arena/corner-both-axes",
+			"end_reason": "path_budget",
+			"reflections": 1,
+			"travelled": 200.0,
+			"x": 1398.57864376269,
+			"y": 918.57864376269
+		},
+		{
+			"boundary_events": 1,
+			"case": "arena/initial-corner-outward",
+			"end_reason": "path_budget",
+			"reflections": 1,
+			"travelled": 100.0,
+			"x": 1369.28932188135,
+			"y": 889.289321881345
+		},
+		{
+			"boundary_events": 2,
+			"case": "arena/two-reflections",
+			"end_reason": "path_budget",
+			"reflections": 2,
+			"travelled": 1640.0,
+			"x": 100.0,
+			"y": 480.0
+		},
+		{
+			"boundary_events": 3,
+			"case": "arena/third-boundary-absorbs",
+			"end_reason": "third_boundary",
+			"reflections": 2,
+			"travelled": 2980.0,
+			"x": 1440.0,
+			"y": 480.0
+		},
+		{
+			"boundary_events": 1,
+			"case": "arena/center-base-budget",
+			"end_reason": "path_budget",
+			"reflections": 1,
+			"travelled": 900.0,
+			"x": 1260.0,
+			"y": 480.0
+		},
+		{
+			"boundary_events": 1,
+			"case": "rooms/right",
+			"end_reason": "path_budget",
+			"reflections": 1,
+			"travelled": 200.0,
+			"x": 860.0,
+			"y": 320.0
+		},
+		{
+			"boundary_events": 0,
+			"case": "rooms/right-budget-at-boundary",
+			"end_reason": "path_budget",
+			"reflections": 0,
+			"travelled": 100.0,
+			"x": 960.0,
+			"y": 320.0
+		},
+		{
+			"boundary_events": 1,
+			"case": "rooms/left",
+			"end_reason": "path_budget",
+			"reflections": 1,
+			"travelled": 200.0,
+			"x": 100.0,
+			"y": 320.0
+		},
+		{
+			"boundary_events": 0,
+			"case": "rooms/left-budget-at-boundary",
+			"end_reason": "path_budget",
+			"reflections": 0,
+			"travelled": 100.0,
+			"x": 0.0,
+			"y": 320.0
+		},
+		{
+			"boundary_events": 1,
+			"case": "rooms/bottom",
+			"end_reason": "path_budget",
+			"reflections": 1,
+			"travelled": 200.0,
+			"x": 480.0,
+			"y": 540.0
+		},
+		{
+			"boundary_events": 0,
+			"case": "rooms/bottom-budget-at-boundary",
+			"end_reason": "path_budget",
+			"reflections": 0,
+			"travelled": 100.0,
+			"x": 480.0,
+			"y": 640.0
+		},
+		{
+			"boundary_events": 1,
+			"case": "rooms/top",
+			"end_reason": "path_budget",
+			"reflections": 1,
+			"travelled": 200.0,
+			"x": 480.0,
+			"y": 100.0
+		},
+		{
+			"boundary_events": 0,
+			"case": "rooms/top-budget-at-boundary",
+			"end_reason": "path_budget",
+			"reflections": 0,
+			"travelled": 100.0,
+			"x": 480.0,
+			"y": 0.0
+		},
+		{
+			"boundary_events": 1,
+			"case": "rooms/initial-outward",
+			"end_reason": "path_budget",
+			"reflections": 1,
+			"travelled": 100.0,
+			"x": 100.0,
+			"y": 320.0
+		},
+		{
+			"boundary_events": 0,
+			"case": "rooms/initial-inward",
+			"end_reason": "path_budget",
+			"reflections": 0,
+			"travelled": 100.0,
+			"x": 100.0,
+			"y": 320.0
+		},
+		{
+			"boundary_events": 0,
+			"case": "rooms/initial-tangent",
+			"end_reason": "path_budget",
+			"reflections": 0,
+			"travelled": 100.0,
+			"x": 0.0,
+			"y": 420.0
+		},
+		{
+			"boundary_events": 1,
+			"case": "rooms/corner-both-axes",
+			"end_reason": "path_budget",
+			"reflections": 1,
+			"travelled": 200.0,
+			"x": 918.57864376269,
+			"y": 598.57864376269
+		},
+		{
+			"boundary_events": 1,
+			"case": "rooms/initial-corner-outward",
+			"end_reason": "path_budget",
+			"reflections": 1,
+			"travelled": 100.0,
+			"x": 889.289321881345,
+			"y": 569.289321881345
+		},
+		{
+			"boundary_events": 2,
+			"case": "rooms/two-reflections",
+			"end_reason": "path_budget",
+			"reflections": 2,
+			"travelled": 1160.0,
+			"x": 100.0,
+			"y": 320.0
+		},
+		{
+			"boundary_events": 3,
+			"case": "rooms/third-boundary-absorbs",
+			"end_reason": "third_boundary",
+			"reflections": 2,
+			"travelled": 2020.0,
+			"x": 960.0,
+			"y": 320.0
+		},
+		{
+			"boundary_events": 1,
+			"case": "rooms/center-base-budget",
+			"end_reason": "path_budget",
+			"reflections": 1,
+			"travelled": 900.0,
+			"x": 540.0,
+			"y": 320.0
+		}
+	],
+	"scope": "independent pre-authored static analytic vectors and finite input guards; pure trajectory helper only, not integration or GUI"
+}

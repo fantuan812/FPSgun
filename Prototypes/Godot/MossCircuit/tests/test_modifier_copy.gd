@@ -25,6 +25,15 @@ func run()->void:
  check(changes.allowed_text_changes.size()==4,"exactly four reviewed copy fields")
  var masked_catalog:Dictionary=catalog.duplicate(true)
  var masked_balance:Dictionary=balance.duplicate(true)
+ # v23 adds exactly one reviewed weapon/module/pair/link; old definitions remain strict.
+ var additions:Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://docs/V23_CATALOG_ADDITIONS.json"))
+ check(entry(catalog,"bankshot_driver")==additions.weapon and entry(catalog,"bounce_guide")==additions.item,"exact v23 additions separately asserted")
+ check(catalog.version==4,"explicit new content version")
+ masked_catalog.version=baseline.catalog.version
+ masked_catalog.weapons=masked_catalog.weapons.filter(func(x):return x.id!="bankshot_driver")
+ masked_catalog.items=masked_catalog.items.filter(func(x):return x.id!="bounce_guide")
+ check(masked_catalog.mechanism_synergies[-1]==additions.pair and masked_catalog.affinity_links[-1]==additions.link,"only reviewed appended pair/link")
+ masked_catalog.mechanism_synergies.pop_back();masked_catalog.affinity_links.pop_back()
  var paths:Array=[]
  for change in changes.allowed_text_changes:
   check(change.field=="description","only description field")
@@ -45,7 +54,7 @@ func run()->void:
     if upgrade.id=="haste":upgrade.description=change.before
  paths.sort()
  check(paths==["data/balance.json:haste","data/catalog.json:cryo_sprayer","data/catalog.json:fracture_coil","data/catalog.json:power_coil"],"exact allowlist without duplicates")
- check(masked_catalog==baseline.catalog,"all catalog IDs/numbers/tags/weights/other text exact")
+ check(masked_catalog==baseline.catalog,"all pre-v23 catalog IDs/numbers/tags/weights/other text exact")
  check(masked_balance==baseline.balance,"all balance numbers/rules/other upgrade text exact")
  check(Rules.validate_catalog(catalog).is_empty(),"catalog still valid")
  check(entry(catalog,"power_coil").description=="Weapon damage +15%; fixed module damage unchanged.","damage scope explicit")
@@ -85,5 +94,5 @@ func run()->void:
    game.ui.show_inventory(view);await process_frame;await process_frame
    for id in ["power_coil","cryo_sprayer","fracture_coil"]:check(entry(catalog,id).description in labels(game.ui.modal),"shared inventory exact copy "+id)
  game.queue_free();await process_frame
- print(JSON.stringify({"modifier_copy_checks":checks,"failures":failures,"scope":"only four reviewed text fields differ; numeric/catalog preservation and actual card labels/action geometry, native appearance separate"}))
+ print(JSON.stringify({"modifier_copy_checks":checks,"failures":failures,"scope":"v22 four-field copy preservation within the old catalog; exact v23 additions separately asserted; native appearance separate"}))
  quit(0 if failures.is_empty() else 1)

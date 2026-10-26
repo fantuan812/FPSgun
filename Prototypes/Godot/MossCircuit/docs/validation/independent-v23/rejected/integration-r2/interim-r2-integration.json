@@ -1,0 +1,168 @@
+{
+	"checks": 96,
+	"failures": [
+		"arena coincident exact RIGHT slot0 initialLeftfalse",
+		"arena coincident mount and shot share exact direction slot0 initialLeftfalse",
+		"arena coincident exact RIGHT slot0 initialLefttrue",
+		"arena coincident mount and shot share exact direction slot0 initialLefttrue",
+		"arena coincident exact RIGHT slot1 initialLeftfalse",
+		"arena coincident mount and shot share exact direction slot1 initialLeftfalse",
+		"arena coincident exact RIGHT slot1 initialLefttrue",
+		"arena coincident mount and shot share exact direction slot1 initialLefttrue",
+		"arena coincident exact RIGHT slot2 initialLeftfalse",
+		"arena coincident mount and shot share exact direction slot2 initialLeftfalse",
+		"arena coincident exact RIGHT slot2 initialLefttrue",
+		"arena coincident mount and shot share exact direction slot2 initialLefttrue",
+		"arena coincident exact RIGHT slot3 initialLeftfalse",
+		"arena coincident mount and shot share exact direction slot3 initialLeftfalse",
+		"arena coincident exact RIGHT slot3 initialLefttrue",
+		"arena coincident mount and shot share exact direction slot3 initialLefttrue",
+		"rooms coincident exact RIGHT slot0 initialLeftfalse",
+		"rooms coincident mount and shot share exact direction slot0 initialLeftfalse",
+		"rooms coincident exact RIGHT slot0 initialLefttrue",
+		"rooms coincident mount and shot share exact direction slot0 initialLefttrue",
+		"rooms coincident exact RIGHT slot1 initialLeftfalse",
+		"rooms coincident mount and shot share exact direction slot1 initialLeftfalse",
+		"rooms coincident exact RIGHT slot1 initialLefttrue",
+		"rooms coincident mount and shot share exact direction slot1 initialLefttrue",
+		"rooms coincident exact RIGHT slot2 initialLeftfalse",
+		"rooms coincident mount and shot share exact direction slot2 initialLeftfalse",
+		"rooms coincident exact RIGHT slot2 initialLefttrue",
+		"rooms coincident mount and shot share exact direction slot2 initialLefttrue",
+		"rooms coincident exact RIGHT slot3 initialLeftfalse",
+		"rooms coincident mount and shot share exact direction slot3 initialLeftfalse",
+		"rooms coincident exact RIGHT slot3 initialLefttrue",
+		"rooms coincident mount and shot share exact direction slot3 initialLefttrue"
+	],
+	"observations": [
+		{
+			"dx": 0.9999940274148,
+			"dy": 0.00345617342276431,
+			"initial_left": false,
+			"mode": "arena",
+			"mount_direction": "(0.999994, 0.003456)",
+			"slot": 0
+		},
+		{
+			"dx": 0.9999940274148,
+			"dy": 0.00345617342276431,
+			"initial_left": true,
+			"mode": "arena",
+			"mount_direction": "(0.999994, 0.003456)",
+			"slot": 0
+		},
+		{
+			"dx": 0.999886855134828,
+			"dy": 0.0150425040662918,
+			"initial_left": false,
+			"mode": "arena",
+			"mount_direction": "(0.999887, 0.015043)",
+			"slot": 1
+		},
+		{
+			"dx": 0.999886855134828,
+			"dy": 0.0150425040662918,
+			"initial_left": true,
+			"mode": "arena",
+			"mount_direction": "(0.999887, 0.015043)",
+			"slot": 1
+		},
+		{
+			"dx": 0.999999021321951,
+			"dy": -0.00139905508834753,
+			"initial_left": false,
+			"mode": "arena",
+			"mount_direction": "(0.999999, -0.001399)",
+			"slot": 2
+		},
+		{
+			"dx": 0.999999021321951,
+			"dy": -0.00139905508834753,
+			"initial_left": true,
+			"mode": "arena",
+			"mount_direction": "(0.999999, -0.001399)",
+			"slot": 2
+		},
+		{
+			"dx": 0.999743973601893,
+			"dy": -0.0226271351853825,
+			"initial_left": false,
+			"mode": "arena",
+			"mount_direction": "(0.999744, -0.022627)",
+			"slot": 3
+		},
+		{
+			"dx": 0.999743973601893,
+			"dy": -0.0226271351853825,
+			"initial_left": true,
+			"mode": "arena",
+			"mount_direction": "(0.999744, -0.022627)",
+			"slot": 3
+		},
+		{
+			"dx": 0.999994027413995,
+			"dy": 0.00345617365559217,
+			"initial_left": false,
+			"mode": "rooms",
+			"mount_direction": "(0.999994, 0.003456)",
+			"slot": 0
+		},
+		{
+			"dx": 0.999994027413995,
+			"dy": 0.00345617365559217,
+			"initial_left": true,
+			"mode": "rooms",
+			"mount_direction": "(0.999994, 0.003456)",
+			"slot": 0
+		},
+		{
+			"dx": 0.999886855134828,
+			"dy": 0.0150425040662918,
+			"initial_left": false,
+			"mode": "rooms",
+			"mount_direction": "(0.999887, 0.015043)",
+			"slot": 1
+		},
+		{
+			"dx": 0.999886855134828,
+			"dy": 0.0150425040662918,
+			"initial_left": true,
+			"mode": "rooms",
+			"mount_direction": "(0.999887, 0.015043)",
+			"slot": 1
+		},
+		{
+			"dx": 0.999999021321951,
+			"dy": -0.00139905508834753,
+			"initial_left": false,
+			"mode": "rooms",
+			"mount_direction": "(0.999999, -0.001399)",
+			"slot": 2
+		},
+		{
+			"dx": 0.999999021321951,
+			"dy": -0.00139905508834753,
+			"initial_left": true,
+			"mode": "rooms",
+			"mount_direction": "(0.999999, -0.001399)",
+			"slot": 2
+		},
+		{
+			"dx": 0.999743973601893,
+			"dy": -0.0226271351853825,
+			"initial_left": false,
+			"mode": "rooms",
+			"mount_direction": "(0.999744, -0.022627)",
+			"slot": 3
+		},
+		{
+			"dx": 0.999743973601893,
+			"dy": -0.0226271351853825,
+			"initial_left": true,
+			"mode": "rooms",
+			"mount_direction": "(0.999744, -0.022627)",
+			"slot": 3
+		}
+	],
+	"scope": "controlled actual weapon firing, shared proc/clock/cleanup pipeline; no injected helper projectile or fabricated hit event; not ordinary play or GUI"
+}

@@ -17,7 +17,7 @@ static func step(frame:Context,dt:float)->void:
 	for slot in range(frame.session.build.weapons.size()):
 		frame.world.weapon_clocks[slot] -= dt
 		if frame.world.weapon_clocks[slot] <= 0 and not frame.world.enemies.is_empty():
-			frame.weapons.fire(frame.session.build.weapons[slot], slot)
+			frame.weapons.fire(frame.session.build.weapons[slot], slot, frame.area)
 			var weapon := Rules.catalog_entry(frame.catalog, frame.session.build.weapons[slot])
 			frame.world.weapon_clocks[slot] = maxf(.09, weapon.interval / (1.0 + frame.world.stats.haste))
 	frame.procs.advance_mortars(dt)
@@ -74,7 +74,9 @@ static func step(frame:Context,dt:float)->void:
 		if b.life <= 0:
 			frame.world.bullets.remove_at(i)
 			continue
-		if b.get("weapon","") == "return_disc":
+		if b.get("behavior","")=="field_bankshot":
+			frame.weapons.advance_bankshot(b,dt)
+		elif b.get("weapon","") == "return_disc":
 			frame.weapons.advance_disc(b,dt)
 		else:
 			frame.weapons.advance_bullet(b,dt)

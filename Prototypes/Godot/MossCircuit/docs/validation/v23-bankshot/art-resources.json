@@ -1,0 +1,39 @@
+{
+  "evidence_label": "v23-bankshot-art-source",
+  "passed": 27,
+  "checks": [
+    "bankshot_driver original bytes",
+    "bankshot_driver RGBA/size",
+    "bankshot_driver measured bounds",
+    "bankshot_driver transparent/opaque coverage",
+    "bankshot_driver visible padding",
+    "bounce_guide original bytes",
+    "bounce_guide RGBA/size",
+    "bounce_guide measured bounds",
+    "bounce_guide transparent/opaque coverage",
+    "bounce_guide visible padding",
+    "bankshot_driver_world original bytes",
+    "bankshot_driver_world RGBA/size",
+    "bankshot_driver_world measured bounds",
+    "bankshot_driver_world transparent/opaque coverage",
+    "bankshot_driver_world visible padding",
+    "exact two icon mappings",
+    "bankshot_driver crop containment",
+    "bankshot_driver icon hash",
+    "bounce_guide crop containment",
+    "bounce_guide icon hash",
+    "grip finite normalized",
+    "muzzle finite normalized",
+    "projectile_anchor finite normalized",
+    "shared projectile/muzzle anchor",
+    "forward muzzle",
+    "32-unit visible mount",
+    "world source hash"
+  ],
+  "source_sha256": {
+    "assets/items/bankshot_driver_icon.png": "eda1ffc99a76e604a789008e26525fad048b246f81820124e80c02a0bfaab0d3",
+    "assets/items/bounce_guide.png": "6e6ec0c165102d179599bdf66a75c6ecdc37ac9ea65b141bc84dba79980a0889",
+    "assets/weapon_mounts/bankshot_driver.png": "0e3e8b49a0d4bcca6b7e83a2c5f29e0effa9581ab33df8eb6817eb4f6e966c0c"
+  },
+  "limits": "Source resource checks only; native integration/visual acceptance separate."
+}

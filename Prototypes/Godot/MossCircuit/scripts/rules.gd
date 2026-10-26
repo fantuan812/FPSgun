@@ -79,7 +79,11 @@ static func validate_catalog(catalog: Dictionary) -> Array:
 			if not valid: errors.append("Incomplete weapon"); continue
 			for key in ["damage","interval","projectiles","range","spread","pierce"]:
 				if not _positive_number(entry[key],key in ["spread","pierce"]): errors.append("Invalid weapon " + key)
-			if not entry.behavior in ["single", "spread", "pierce", "orbit", "return", "mortar", "cone_chill"]: errors.append("Invalid behavior")
+			if not entry.behavior in ["single", "spread", "pierce", "orbit", "return", "mortar", "cone_chill", "field_bankshot"]: errors.append("Invalid behavior")
+			if entry.behavior=="field_bankshot":
+				if not _positive_number(entry.projectiles) or not _positive_number(entry.spread,true): errors.append("Invalid Bankshot launch fields")
+				elif entry.projectiles!=1 or entry.spread!=0: errors.append("Bankshot requires one straight launch")
+				if not _positive_number(entry.pierce,true) or floorf(float(entry.pierce))!=float(entry.pierce): errors.append("Invalid Bankshot quota")
 			if entry.behavior=="cone_chill":
 				for key in ["cone_degrees","chill_duration","chill_speed"]:
 					if not _positive_number(entry.get(key)): errors.append("Invalid chill weapon " + key)
@@ -87,6 +91,7 @@ static func validate_catalog(catalog: Dictionary) -> Array:
 				if _positive_number(entry.get("chill_duration")) and entry.chill_duration>10: errors.append("Chill exceeds duration budget")
 				if _positive_number(entry.get("chill_speed")) and entry.chill_speed>1: errors.append("Chill cannot accelerate")
 		elif entry.kind == "item":
+			if entry.id=="bounce_guide" and (not _positive_number(entry.max_stack) or entry.max_stack!=1): errors.append("Bounce Guide must remain unique")
 			if entry.id=="fracture_coil":
 				if not _positive_number(entry.get("fracture_damage")): errors.append("Invalid fracture damage")
 				elif entry.fracture_damage>1000: errors.append("Fracture exceeds damage budget")

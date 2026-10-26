@@ -86,6 +86,19 @@ func run() -> void:
 		game._hit_segment({"hit":[],"damage":1.0,"pierce":0,"life":1.0,"weapon":"rivet_gun"},target.pos,target.pos)
 		check(target.hp==74 and not target.has("chill_until") and target.last_source=="fracture","packed mixed-weapon consume and secondary damage "+mode)
 		check(game.weapon_rig.assets.has("cryo_sprayer"),"packed dedicated Cryo world mount "+mode)
+		game._start_run(2323)
+		game.build.weapons=["bankshot_driver"];game.build.items={"bounce_guide":1};game._recompute()
+		game.player_pos=Vector2(150,180)
+		var bank_target:Dictionary=game._spawn_kind("crawler",Vector2(70,180));bank_target.hp=100;bank_target.max_hp=100
+		game._fire_weapon("bankshot_driver",0)
+		check(game.bullets.size()==1,"packed Bankshot launch "+mode)
+		if game.bullets.size()==1:
+			var bank:Dictionary=game.bullets[0]
+			check(bank.guide and bank.field_width==game.config.arena.width and bank.launch_budget==900,"packed guide and shared field snapshot "+mode)
+			game.weapon_combat.advance_bankshot(bank,.5)
+			check(bank.reflections==1 and bank.guide_checked and bank_target.hp<=82,"packed primary contact and first reflection "+mode)
+			check(game.effect_visuals.any(func(v):return v.kind=="bankshot_contact"),"packed boundary feedback "+mode)
+		check(game.weapon_rig.assets.has("bankshot_driver"),"packed dedicated Bankshot mount "+mode)
 	for item in game.catalog.weapons + game.catalog.items:
 		check(game.ui.icon(item.id) != null, "packed catalog icon " + item.id)
 	game.queue_free(); await process_frame

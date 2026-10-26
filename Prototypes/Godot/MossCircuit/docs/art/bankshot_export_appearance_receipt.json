@@ -1,0 +1,28 @@
+{
+  "evidence_label": "v23-linux-export-ordinary-seed86-art",
+  "pck_sha256": "a8ef8b7720ac374f10e5d5378bd413b5d415e845a35495bb89399a4ee5f3864a",
+  "verdict": "PASS bounded appearance parity; no changes requested",
+  "reviewed_capture_sha256": {
+    "14-settlement-after-choices.jpg": "3dca36e478f91cce5ae8573424280bfd4eefcc2f9d221fd8b1d4483b441e8cf0",
+    "17-bankshot-bought.jpg": "cbae2298019fd65b8f82464a257eb5de5fbb5a9bfa1b360c1ebe9b4e81c22bf5",
+    "24-owned-build.jpg": "aaf89536d82cb321ee173b9554fbbe93f143c03913bcef3c4d50f48e386ceb21",
+    "26-active-banked-vector.jpg": "6e4ccbbb32eb53024b0f471846ee9ae11e5a8c3cbfa04bd06ca31312190b2402",
+    "22-edge-00.jpg": "22b011b662fd7fa93f0fce26a0ac0a696a79d1874a20c71a887e5a45504f0e74",
+    "22-edge-01.jpg": "407c8ecbb8c25a05ad433ba2ab6d1d497af7142b1b4c1c69d76b3ab753f53c99",
+    "22-edge-02.jpg": "f45b7b87dde8ad5e8d4f487b139898d209826a607ce155eaf54a873a606e3f44",
+    "22-edge-03.jpg": "7041f76083f889edd12274e26baff4f1cc0fafbab6c2c9616416cf63c071927f"
+  },
+  "findings": [
+    "Shop and owned weapon/module icons retain distinct forked/triangular silhouettes and transparent backgrounds.",
+    "Mounted weapon and small bright slug remain crisp at captured gameplay size, without apparent detached mount or alpha rectangle.",
+    "Amber top-boundary contact circle is visible at viewport edge in22-edge-00; subsequent stills place a bright slug progressively rightward/inward.",
+    "Thin field edge and small contact cue leave orange charger warning clearly readable in22-edge-03.",
+    "ACTIVE BANKED VECTOR copy visible in26-active-banked-vector."
+  ],
+  "limits": [
+    "Eight1180x812 letterboxed exported-window captures personally inspected.",
+    "Appearance review only; ordinary acquisition/run identity comes from independent QA capture record.",
+    "Amber cue is not proof of guided retargeting; no kill, damage attribution or continuous-motion certification.",
+    "No production edits, new assets or platform claims beyond this Linux capture set."
+  ]
+}

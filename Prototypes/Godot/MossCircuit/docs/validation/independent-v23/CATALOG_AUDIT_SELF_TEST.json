@@ -1,0 +1,78 @@
+{
+  "scope": "Synthetic positive/negative oracle self-tests only; does not validate new item tuning or candidate",
+  "cases": [
+    {
+      "case": "permitted-shape",
+      "expected_preservation": true,
+      "observed_exit": 0,
+      "result": []
+    },
+    {
+      "case": "old-weapon-number",
+      "expected_preservation": false,
+      "observed_exit": 1,
+      "result": [
+        "all inherited weapons fields and order unchanged"
+      ]
+    },
+    {
+      "case": "old-description",
+      "expected_preservation": false,
+      "observed_exit": 1,
+      "result": [
+        "all inherited items fields and order unchanged"
+      ]
+    },
+    {
+      "case": "missing-cryo",
+      "expected_preservation": false,
+      "observed_exit": 1,
+      "result": [
+        "candidate exact weapons ID set, no duplicate/missing entry",
+        "all inherited weapons fields and order unchanged"
+      ]
+    },
+    {
+      "case": "duplicate-old-id",
+      "expected_preservation": false,
+      "observed_exit": 1,
+      "result": [
+        "candidate exact items ID set, no duplicate/missing entry",
+        "all inherited items fields and order unchanged"
+      ]
+    },
+    {
+      "case": "old-weight",
+      "expected_preservation": false,
+      "observed_exit": 1,
+      "result": [
+        "unchanged catalog field shop_weighting"
+      ]
+    },
+    {
+      "case": "old-pair",
+      "expected_preservation": false,
+      "observed_exit": 1,
+      "result": [
+        "old mechanism definitions/order unchanged"
+      ]
+    },
+    {
+      "case": "old-affinity",
+      "expected_preservation": false,
+      "observed_exit": 1,
+      "result": [
+        "old affinity links/order unchanged"
+      ]
+    },
+    {
+      "case": "old-order",
+      "expected_preservation": false,
+      "observed_exit": 1,
+      "result": [
+        "all inherited weapons fields and order unchanged"
+      ]
+    }
+  ],
+  "pass": true
+}

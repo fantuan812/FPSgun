@@ -19,7 +19,7 @@ func run()->void:
 	g=load("res://scenes/main.tscn").instantiate();root.add_child(g);g.set_process(false)
 	var c:Dictionary=g.catalog
 	check(Rules.validate_catalog(c).is_empty(),"new catalog valid")
-	check(c.weapons.size()==7 and c.items.size()==27,"expected7+27 catalog count, not relaxed")
+	check(c.weapons.size()==8 and c.items.size()==28 and Rules.catalog_entry(c,"bankshot_driver").id=="bankshot_driver" and Rules.catalog_entry(c,"bounce_guide").id=="bounce_guide","explicit v23 8+28 including reviewed additions")
 	reset(["cryo_sprayer"])
 	var aff:Dictionary=Rules.shop_affinity(g.build,c)
 	check("fracture_coil" in aff.missing_ids,"Cryo missing partner bias")

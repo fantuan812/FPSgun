@@ -1,0 +1,37 @@
+{
+  "reason": "Clarify automated CUA controls vs forbidden game-state injection; no runtime change",
+  "before": "The run used normal pauses, no injected build/currency or in-game automation.",
+  "after": "The run used ordinary automated CUA keyboard/mouse inputs and tactical pauses, with no injected build/currency or programmatic game-state control.",
+  "archives": [
+    {
+      "kind": "linux",
+      "original_zip_sha256": "0e3caa43215df58d7cf5e1490d7c10c68d56264ce3ebe605bf803b0d7cef383b",
+      "corrected_zip_sha256": "cbd28d1eb48ef53eb0437fddb7ff8c2d48ab28ebdedd2268440f20dacdad1703",
+      "changed_members": [
+        "ARTIFACT_SHA256.json",
+        "VALIDATION.md"
+      ],
+      "runtime_unchanged": true
+    },
+    {
+      "kind": "windows",
+      "original_zip_sha256": "90c62d3231b3332d5b277dc3862b1ae316f8165edcc0e93077e2c5d572cc85c4",
+      "corrected_zip_sha256": "33d30c7059e7628b1e9e0af89bdac0660c08f68e5687b6f07125e2d35fbcb959",
+      "changed_members": [
+        "ARTIFACT_SHA256.json",
+        "VALIDATION.md"
+      ],
+      "runtime_unchanged": true
+    },
+    {
+      "kind": "manual_update",
+      "original_zip_sha256": "d59c4589b1867e75d3dccf9a50a603639c4615a7bf5f3cfaf6217cbacf23fee2",
+      "corrected_zip_sha256": "7d8eaf3186f14d266d4a3e8556d13501c0b53cf309eacdf9b04c224299f15523",
+      "changed_members": [
+        "UPDATE_MANIFEST.json",
+        "VALIDATION.md"
+      ],
+      "runtime_unchanged": true
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "scope": "Strict accepted-v22 definition preservation; allows only two IDs, one pair/link, optional single version increment. Not a runtime test.",
+  "baseline_catalog_sha256": "1cee35b66af8881fff08f043bfddfa0c9898b6e3f728653a8805b3232b0bb45b",
+  "candidate_catalog_sha256": "9c4ce7dc57fd5f46d09cac65ddc39b6c39cfdaeb8efb02c8cfebc9cc7488f2c3",
+  "checks": [
+    {
+      "label": "baseline exact ordered weapons ID set",
+      "pass": true
+    },
+    {
+      "label": "candidate exact weapons ID set, no duplicate/missing entry",
+      "pass": true
+    },
+    {
+      "label": "all inherited weapons fields and order unchanged",
+      "pass": true
+    },
+    {
+      "label": "baseline exact ordered items ID set",
+      "pass": true
+    },
+    {
+      "label": "candidate exact items ID set, no duplicate/missing entry",
+      "pass": true
+    },
+    {
+      "label": "all inherited items fields and order unchanged",
+      "pass": true
+    },
+    {
+      "label": "catalog top-level key set unchanged",
+      "pass": true
+    },
+    {
+      "label": "unchanged catalog field weapon_slots",
+      "pass": true
+    },
+    {
+      "label": "unchanged catalog field item_slots",
+      "pass": true
+    },
+    {
+      "label": "unchanged catalog field starting_coins",
+      "pass": true
+    },
+    {
+      "label": "unchanged catalog field refresh_price",
+      "pass": true
+    },
+    {
+      "label": "unchanged catalog field synergies",
+      "pass": true
+    },
+    {
+      "label": "unchanged catalog field shop_weighting",
+      "pass": true
+    },
+    {
+      "label": "version unchanged or one explicit content increment",
+      "pass": true
+    },
+    {
+      "label": "old mechanism definitions/order unchanged",
+      "pass": true
+    },
+    {
+      "label": "exact one pair with exact two prerequisites",
+      "pass": true
+    },
+    {
+      "label": "old affinity links/order unchanged",
+      "pass": true
+    },
+    {
+      "label": "exact one new affinity link",
+      "pass": true
+    },
+    {
+      "label": "unchanged data/balance.json",
+      "pass": true
+    },
+    {
+      "label": "unchanged data/room_encounters.json",
+      "pass": true
+    },
+    {
+      "label": "unchanged data/actor_actions.json",
+      "pass": true
+    }
+  ],
+  "failures": []
+}

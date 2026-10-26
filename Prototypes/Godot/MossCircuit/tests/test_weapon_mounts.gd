@@ -9,7 +9,7 @@ func _initialize()->void:call_deferred("run")
 func run()->void:
 	var game=load("res://scenes/main.tscn").instantiate();root.add_child(game);game.set_process(false);game._start_run(808)
 	var rig=game.weapon_rig
-	check(rig.assets.keys().size()==7 and rig.geometry.keys().size()==7 and rig.assets.has("cryo_sprayer"),"seven world assets, including Cryo, not inventory icons")
+	check(rig.assets.keys().size()==8 and rig.geometry.keys().size()==8 and rig.assets.has("cryo_sprayer") and rig.assets.has("bankshot_driver"),"eight world assets including Cryo and Bankshot, not inventory icons")
 	check(game.actor_anim.assets.hero_attack.frames.get_frame_texture("action",0).atlas.resource_path.contains("weapon_mounts"),"unarmed attack replaces baked gun")
 	for id in rig.geometry:
 		var g:Dictionary=rig.geometry[id]

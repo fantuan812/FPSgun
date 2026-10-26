@@ -27,3 +27,15 @@ func fire(id:String,slot:int,target:Vector2,melee:bool=false)->Dictionary:
 	var result:=pose(id,slot,target)
 	rig.fire(slot,result)
 	return result
+
+## Explicit direction fallback for a coincident target; normal target-solving paths are unchanged.
+func fire_fixed_direction(id:String,slot:int,direction:Vector2)->Dictionary:
+	var aim:Vector2=direction.normalized() if direction.is_finite() and direction.length_squared()>.000001 else Vector2.RIGHT
+	if slot==0:director.trigger(0,"attack")
+	if absf(aim.x)>.01:hero.flip_h=aim.x<0
+	var reference:Dictionary=pose(id,slot,world.player_pos+aim)
+	# A coincident mount/target invokes the existing solver's exact direction fallback,
+	# preserving measured grip/muzzle offset without aiming toward a fabricated distant target.
+	var result:Dictionary=WeaponRig.muzzle_pose(reference.mount,reference.mount,rig.geometry.get(id,{}),aim)
+	rig.fire(slot,result)
+	return result

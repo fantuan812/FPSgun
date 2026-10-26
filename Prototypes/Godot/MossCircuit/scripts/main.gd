@@ -472,7 +472,7 @@ func _shoot() -> void:
 	_fire_weapon("rivet_gun", 0)
 
 func _fire_weapon(id: String, slot: int) -> void:
-	weapon_combat.fire(id,slot)
+	weapon_combat.fire(id,slot,config.arena)
 
 func _complete_wave() -> void:
 	if state not in ["playing","room_clear"]:return
@@ -562,6 +562,9 @@ func _draw() -> void:
 			# Deliberate modular floor joints disguise non-identical generated edges.
 			draw_rect(rect, Color(0.03, 0.08, 0.09, 0.28), false, 1.0)
 	draw_rect(Rect2(0, 0, config.arena.width, config.arena.height), Color("a0b77c"), false, 4)
+	if (not build.is_empty() and "bankshot_driver" in build.weapons) or bullets.any(func(b):return b.get("behavior","")=="field_bankshot"):
+		# Additive inset cue; the pre-existing general field outline above is unchanged.
+		draw_rect(Rect2(3,3,config.arena.width-6,config.arena.height-6),Color(1,.78,.35,.32 if settings.reduced_flashes else .52),false,1.5)
 	for blast in pending_blasts:
 		draw_circle(blast.pos,blast.radius,Color(.65,.8,1,.8),false,2)
 	for hazard in hazards:
@@ -579,6 +582,10 @@ func _draw() -> void:
 			for i in range(4):
 				var ray:=Vector2.from_angle(PI*.25+i*PI*.5)
 				draw_line(visual.pos+ray*7,visual.pos+ray*visual.radius,Color(.64,.94,1,.4 if settings.reduced_flashes else .7),2)
+		elif visual.kind=="bankshot_contact":
+			var tint:=Color(.65,.94,.83,.45 if settings.reduced_flashes else .8) if visual.guided else Color(1,.78,.35,.4 if settings.reduced_flashes else .75)
+			draw_circle(visual.pos,visual.radius,tint,false,1.5)
+			if visual.reflected:draw_line(visual.pos,visual.pos+visual.direction*23,tint,2)
 		elif visual.kind == "chain": draw_line(visual.pos,visual.end,Color("79e8ff"),3)
 		else: draw_circle(visual.pos,visual.radius,Color("b0e7cf"),false,3)
 	if state not in ["title","dead","won"]:
@@ -600,6 +607,13 @@ func _draw() -> void:
 			draw_rect(Rect2(p.pos-Vector2(2,2),Vector2(4,4)),Color("f3d66d"))
 		else: draw_rect(Rect2(p.pos - Vector2(3, 3), Vector2(6, 6)), Color("86e6c1"))
 	for b in bullets:
+		if b.get("behavior","")=="field_bankshot":
+			var armed:bool=b.leg_hits.size()<int(b.leg_quota)
+			var tint:=Color(1,.86,.48,.9) if armed else Color(.68,.62,.47,.42)
+			var direction:Vector2=b.velocity.normalized()
+			draw_line(b.pos-direction*6,b.pos+direction*6,tint,3 if armed else 2)
+			if armed:draw_circle(b.pos,3,Color(1,.96,.8,.9))
+			continue
 		if b.get("weapon","") == "return_disc":
 			draw_circle(b.pos,8,Color("98eaf6"),false,2)
 			draw_line(b.pos-Vector2(7,0).rotated(elapsed*16),b.pos+Vector2(7,0).rotated(elapsed*16),Color("e0faff"),2)
@@ -613,7 +627,7 @@ func _draw() -> void:
 func _recompute() -> void:
 	if weapon_rig.slots.map(func(slot):return slot.id)!=build.weapons:
 		weapon_rig.sync_loadout(build.weapons)
-		bullets.clear()
+		bullets=bullets.filter(func(b):return b.get("behavior","")=="field_bankshot")
 		pending_blasts.clear()
 		vfx.clear()
 	var hp: float = stats.get("hp", config.player.hp)
@@ -658,7 +672,7 @@ func _buy(index: int, generation: int, replace_slot: int = -1) -> bool:
 		return false
 	if replace_slot>=0 and Rules.catalog_entry(catalog,shop_offers[index].id).kind=="weapon":
 		weapon_rig.clear()
-		bullets.clear()
+		bullets=bullets.filter(func(b):return b.get("behavior","")=="field_bankshot")
 		pending_blasts.clear()
 		vfx.clear()
 	shop_offers[index].sold = true

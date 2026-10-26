@@ -1,62 +1,68 @@
 {
-  "version": "v21",
-  "scope": "Separate Library full runtime archives and manual exact-v20-to-v21 PCK update; binaries are excluded from source.",
-  "files": [
+  "version": "v23",
+  "source_candidate_manifest_sha256": "90802097cb5d58d7a026a49c8d9552bcaa5fd10ff7b313242676ddb95586116d",
+  "source_production_inputs": 115,
+  "pck_sha256": "a8ef8b7720ac374f10e5d5378bd413b5d415e845a35495bb89399a4ee5f3864a",
+  "artifacts": [
     {
-      "kind": "linux",
-      "name": "MossCircuit-v21-Linux-x86_64-2026-10-25.zip",
-      "bytes": 64869328,
-      "sha256": "a683ea1f270544b5424f335388e3aac2a4ea3ff2e69afe19acf1b424333deba3",
+      "name": "MossCircuit-v23-Linux-x86_64-2026-10-25.zip",
+      "bytes": 67501890,
+      "sha256": "cbd28d1eb48ef53eb0437fddb7ff8c2d48ab28ebdedd2268440f20dacdad1703",
       "exact_native_qa_core_unchanged": true,
-      "windows_runtime_tested": false
+      "windows_runtime_tested": false,
+      "kind": "linux"
     },
     {
-      "kind": "windows",
-      "name": "MossCircuit-v21-Windows-ExportOnly-x86_64-2026-10-25.zip",
-      "bytes": 73710789,
-      "sha256": "384f6944262243f04a017de1aa167649ca4f3fca2a7ed6ccfc940d5a012dc1a0",
+      "name": "MossCircuit-v23-Windows-ExportOnly-x86_64-2026-10-25.zip",
+      "bytes": 76343361,
+      "sha256": "33d30c7059e7628b1e9e0af89bdac0660c08f68e5687b6f07125e2d35fbcb959",
       "exact_native_qa_core_unchanged": true,
-      "windows_runtime_tested": false
+      "windows_runtime_tested": false,
+      "kind": "windows"
     },
     {
-      "kind": "manual_update",
-      "name": "MossCircuit-v20-to-v21-Update-2026-10-25.zip",
-      "bytes": 37589460,
-      "sha256": "ac0e3d2b6581343787005085a5f0e8c8291c342bde3dc5116e4d7f8d92571c31",
+      "name": "MossCircuit-v21-to-v23-Update-2026-10-25.zip",
+      "bytes": 40221897,
+      "sha256": "7d8eaf3186f14d266d4a3e8556d13501c0b53cf309eacdf9b04c224299f15523",
       "exact_native_qa_core_unchanged": true,
-      "windows_runtime_tested": false
+      "windows_runtime_tested": false,
+      "kind": "manual_update"
     }
   ],
-  "update_parts": {
-    "version": "v21",
-    "base_required": "exact original v20",
-    "zip_name": "MossCircuit-v20-to-v21-Update-2026-10-25.zip",
-    "zip_bytes": 37589460,
-    "zip_sha256": "ac0e3d2b6581343787005085a5f0e8c8291c342bde3dc5116e4d7f8d92571c31",
+  "manual_update": {
+    "version": "v23",
+    "base_required": "exact original v21",
+    "zip_name": "MossCircuit-v21-to-v23-Update-2026-10-25.zip",
+    "zip_bytes": 40221897,
+    "zip_sha256": "7d8eaf3186f14d266d4a3e8556d13501c0b53cf309eacdf9b04c224299f15523",
     "part_size_limit": 20000000,
-    "parts": [
-      {
-        "name": "MossCircuit-v20-to-v21-Update-2026-10-25.zip.part001",
-        "bytes": 20000000,
-        "sha256": "2b793dbe3e268648f5e201bb12d91efd2def353ca3e3cfae640bb57703d211c7"
-      },
-      {
-        "name": "MossCircuit-v20-to-v21-Update-2026-10-25.zip.part002",
-        "bytes": 17589460,
-        "sha256": "3e38121f3220e54eb9c783f70142ed980670cb3e2b8cf036ae2fcf64fb7c2d5b"
-      }
-    ],
-    "readme": {
-      "name": "MossCircuit-v21-更新与分卷说明.txt",
-      "bytes": 3363,
-      "sha256": "b6f8491b8bebe683bd3b0af79f86c18f530e56fdfa6eed57cd34eb02033ef018"
-    },
     "windows_cmd_executed": false
   },
-  "new_pck_sha256": "1ffb95a339633cbfb59ab64ab32a77e9fedb21226f823c9814eddd8ff08742e2",
-  "expected_v20_base_pck_sha256": "e433dc5f3cb8a57c36e821e7dd3920783dcd8374c6e2dda8f1c849e04b110fc0",
+  "parts": [
+    {
+      "name": "MossCircuit-v21-to-v23-Update-2026-10-25.zip.part001",
+      "bytes": 20000000,
+      "sha256": "78af0fadb4e2e0eddcd538a49cedd30622273e1c9774dd59d0c0688717a6dedd"
+    },
+    {
+      "name": "MossCircuit-v21-to-v23-Update-2026-10-25.zip.part002",
+      "bytes": 20000000,
+      "sha256": "278f29928bdcf0f5cb450f534661e3bf67544c5df62540919bd21474e58592f6"
+    },
+    {
+      "name": "MossCircuit-v21-to-v23-Update-2026-10-25.zip.part003",
+      "bytes": 221897,
+      "sha256": "96067d23ebee112bd43ca927ff75272ed9502b2dbbd88d0acce86ddc7912c6cc"
+    }
+  ],
+  "outer_readme": {
+    "name": "MossCircuit-v23-更新与分卷说明.txt",
+    "bytes": 3801,
+    "sha256": "c204cf9fff6ba37e7115c7f2943d64cc0e9b7b68c1b0a1d69884a67829db00e2"
+  },
+  "native_scope": "bounded ordinary Linux acquisition and observed field-boundary contact; controlled source/native tests separately documented",
   "windows_runtime_tested": false,
-  "native_scope": "Bounded ordinary Linux seed433 acquisition and wave2 cone/mark; controlled source both-mode visuals separately.",
-  "full_campaign_tested": false,
-  "manual_user_update_only": true
+  "audio_tested": false,
+  "publication": "remote branch status is separate; not implied by local validation",
+  "documentation_revision": "r2 explicitly distinguishes automated CUA inputs from injected game-state control; runtime unchanged"
 }

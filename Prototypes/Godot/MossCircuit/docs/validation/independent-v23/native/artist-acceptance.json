@@ -1,0 +1,34 @@
+{
+  "evidence_label": "v23-native-controlled-r4-art",
+  "verdict": "PASS within bounded static appearance scope; no revisions requested",
+  "reviewed_capture_sha256": {
+    "arena-1280-armed-right.jpg": "ac636b96f383476085361a6150f4c3a392e19b5628c23eab7d1f8910abb76893",
+    "arena-1280-spent-right.jpg": "35312115de4b72298675a58f49d37c2739ebf94c484779528422d6ec811a8e02",
+    "arena-1280-tell-right.jpg": "0d998217d428a1027eb3ad3443470050cabb62e124d5c28e28b948e1400bb8f0",
+    "arena-1280-shop-right.jpg": "6ac040ec35886f089ac164918d10afd866349efeb0a7c85e97dfbd69fc6da389",
+    "arena-960-inventory-guide.jpg": "0bfc6a03534d9f6ec0ec02981280758f5be227c006cfe306e877e8d45a8ea873",
+    "rooms-1280-reflection-left.jpg": "a2ea079313caab7ae5c3a57fd537cf41f0921ed08c01484bf3b21ff863ac2d3d",
+    "rooms-1280-guided-left.jpg": "d32e246a0c845e03ab018b87b085873f247d43ed209995e95d20f823c453c4cf",
+    "rooms-960-tell-right.jpg": "9ef4f1938aa7692217d7d1185a41f98f9bfbf4454d2cbc381053a1d373b80aa4",
+    "rooms-960-reduced-tell-right.jpg": "bfa98b02fb0d92d9f4ebad30157a5c38b91c9d765ad2776bc0fbf54d7b9cced2",
+    "rooms-960-shop-right.jpg": "db8986e961bed22f36a41e5ba6e96e085e2d638a0ee0c5b0baf1825e063c639d",
+    "arena-960-armed-left.jpg": "7b883c0cad9c8a38fa942c37996003694e35049e252b075852f4489b476aa80f",
+    "arena-960-spent-left.jpg": "405ae44347084d5f0ed66bbdd9f079acc8ed4eae03e5ba49ccf3811257413137",
+    "arena-960-reflection-left.jpg": "8918f687abc478781d6710b0e14ce98fa3495753904168d575272fcfb2b97f90",
+    "arena-960-guided-left.jpg": "729b59cb0a27cacd76a5e56a0bfe862bf0cc6f65305231c543d907a586dd78e2"
+  },
+  "resource_checks": 27,
+  "baseline_geometry_records_preserved": 7,
+  "findings": [
+    "Distinct forked Bankshot and triangular Bounce Guide icons readable in native shop/inventory.",
+    "Mounted gun attached and crisp in both facings; no opaque background or visible halo regression.",
+    "Bright armed and dim spent slug differ visibly; spent remains subtle but identifiable.",
+    "Physical-edge contact/direction cue visible; expected clipping at field edge, not HUD obstruction.",
+    "Thin field edge does not dominate scene; orange boss tell remains clear in standard/reduced-flash stills."
+  ],
+  "limits": [
+    "Controlled injected layouts/stills, not ordinary acquisition or exported-run evidence.",
+    "No continuous-motion, causal hit ordering, damage, balance or all-combination certification.",
+    "Reviewed representative 14 captures, not a claim of personally inspecting every captured file."
+  ]
+}

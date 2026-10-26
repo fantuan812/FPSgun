@@ -1,0 +1,23 @@
+{
+  "scope": "No Bankshot or Guide equipped. Exact declared old-schema combat projection (1e-6 quantized floats), old bullet/RNG and status attribution; filtered shop removes only new IDs/pair/link. Not whole moving-world state identity or balance proof.",
+  "baseline_snapshot": "accepted v22 source",
+  "candidate_snapshot": "v23 frozen 90802097…",
+  "combat": {
+    "cases": 32,
+    "steps": 7680,
+    "chill_actor_snapshots": 11465,
+    "fracture_attribution_snapshots": 248,
+    "baseline_sha256": "5bc6ad591f67141d0752cc30097a192fc5b0b8e3331d50c61276ce095c2da696",
+    "candidate_sha256": "5bc6ad591f67141d0752cc30097a192fc5b0b8e3331d50c61276ce095c2da696",
+    "byte_equal": true
+  },
+  "filtered_shop": {
+    "profiles": 6,
+    "draws": 600,
+    "transactions": 612,
+    "baseline_sha256": "16d1b35def7e6882d4c973ac337a4d1154cf376d1744af356c8d955af9b29b00",
+    "candidate_sha256": "16d1b35def7e6882d4c973ac337a4d1154cf376d1744af356c8d955af9b29b00",
+    "byte_equal": true
+  },
+  "expanded_pool": "Normal v23 seed offers can legitimately change; this is not an unfiltered old-offer identity claim."
+}

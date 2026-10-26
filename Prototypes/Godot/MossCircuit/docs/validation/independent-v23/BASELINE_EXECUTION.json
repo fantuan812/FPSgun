@@ -1,0 +1,29 @@
+{
+  "status": "baseline execution only; candidate comparison pending",
+  "source": "accepted v22 baseline",
+  "counts": {
+    "cases": 32,
+    "steps": 7680,
+    "chill_actor_snapshots": 11465,
+    "fracture_attribution_snapshots": 248,
+    "shop_profiles": 6,
+    "shop_draws": 600,
+    "transactions": 612
+  },
+  "files": {
+    "old_content_combat_trace.gd": "a229415b572933b1b1d39c9de7f3bb7b023037ebd3ee70e3708f8cb96f49f8fd",
+    "old_content_shop_trace.gd": "c1ebbbb312fc47e98a0b66c817e9452b7592da761986d4f486e5a9d4f540050b",
+    "baseline-combat.json": "5bc6ad591f67141d0752cc30097a192fc5b0b8e3331d50c61276ce095c2da696",
+    "baseline-shop.json": "16d1b35def7e6882d4c973ac337a4d1154cf376d1744af356c8d955af9b29b00",
+    "baseline-import.log": "ce95fa8cea24c2e558ee8876e2fc0b24862b6802a6a4f19a9f968bd072494c72",
+    "baseline-combat.log": "5a9c15abef240fe6222619f3811ff0e69548a065da1da260f560c057fea389cd",
+    "baseline-shop.log": "dbdc0be0c0f7f6a5f19ad0a99e967036c1adad2711cb88045c000b2cca4ebb31"
+  },
+  "production_changes": [],
+  "errors": {
+    "baseline-import.log": [],
+    "baseline-combat.log": [],
+    "baseline-shop.log": []
+  },
+  "limits": "Controlled fixed inputs, 1e-6 quantized declared authority projection; not GUI, campaign or moving-world timestep invariance."
+}
