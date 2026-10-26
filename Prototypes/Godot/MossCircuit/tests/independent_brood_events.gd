@@ -16,7 +16,8 @@ func run()->void:
 		var e:Dictionary=g._spawn_kind("brood_keeper",g.player_pos+Vector2(-240,0))
 		var ad=g.actor_anim
 		var actor:Dictionary=ad.actors[e.id]
-		e.cooldown_left=0;g._simulate(.01)
+		# This legacy fixture exercises the unchanged summon half of the cycle.
+		e.attack_index=1;e.cooldown_left=0;g._simulate(.01)
 		check(e.ai_state=="warning" and children(g,e.id).is_empty(),mode+" real cooldown starts warning without premature child")
 		e.warning_left=.06;g._simulate(.05)
 		check(children(g,e.id).is_empty() and actor.phase_progress>.9,mode+" prethreshold warning has no child")

@@ -99,7 +99,7 @@
     {
       "id": "brood_keeper",
       "name": "Moss Broodkeeper",
-      "behavior": "summon",
+      "behavior": "brood_cycle",
       "hp": 75,
       "speed": 22,
       "damage": 11,
@@ -116,9 +116,12 @@
       "summon_limit": 3,
       "phase_threshold": 0.5,
       "phase_speed": 1.25,
-      "description": "Retreats from close range and summons at most 3 living children.",
-      "tell": "Orange ring before each spawn.",
-      "dodge": "Kill the keeper or thin its children; summons count toward the global cap."
+      "description": "Alternates a hollow ground pulse first, then its existing summon. At most 3 living children.",
+      "tell": "Pulse: two orange edges mark a fixed 70\u2013180 px band for 1.0 s. Summon: the old small ring for 0.65 s.",
+      "dodge": "Enter the inner pocket or leave the outer circle; both orange edges hurt. Other enemies still hit. Leave its body before recovery ends.",
+      "pulse_inner_radius": 70,
+      "pulse_outer_radius": 180,
+      "pulse_warning": 1.0
     },
     {
       "id": "boss_warden",

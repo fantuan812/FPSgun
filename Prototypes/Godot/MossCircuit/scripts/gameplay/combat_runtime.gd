@@ -4,6 +4,7 @@ const RunFlow=preload("res://scripts/gameplay/run_flow.gd")
 const Rules=preload("res://scripts/rules.gd")
 const EnemyAI=preload("res://scripts/enemy_ai.gd")
 const Status=preload("res://scripts/gameplay/target_status.gd")
+const Annulus=preload("res://scripts/gameplay/annulus_geometry.gd")
 ## Mode-independent combat step: weapons, AI, projectiles, deaths and pickups.
 ## No wave timer, spawn schedule, completion policy, UI or shop dependency.
 static func step(frame:Context,dt:float)->void:
@@ -31,6 +32,9 @@ static func step(frame:Context,dt:float)->void:
 		var events: Array = EnemyAI.tick(e,frame.world.player_pos,dt,frame.session.elapsed)
 		e.speed = normal_speed
 		e.pos = e.pos.clamp(Vector2(20,20),Vector2(frame.area.width - 20,frame.area.height - 20))
+		if e.ai_state == "warning" and previous_ai != "warning" and e.attack == "annulus":
+			# The warning footprint is fixed after the shared clamp, never dragged by later pushes.
+			e.pulse_center = e.pos
 		e.sprite.position = e.pos.round()
 		frame.actor.observe_enemy(e,previous_ai,frame.world.player_pos)
 		for event in events:
@@ -43,6 +47,10 @@ static func step(frame:Context,dt:float)->void:
 					frame.play_vfx.call("explosion",event.pos,{"radius":event.radius})
 					frame.world.flashes.append({"pos":event.pos,"radius":event.radius,"life":.2})
 					if frame.world.player_pos.distance_to(event.pos) <= event.radius: frame.hurt.call(event.damage)
+				"annulus":
+					# Presentation retains the hole; never route through filled blast flashes.
+					frame.world.effect_visuals.append({"kind":"annulus_impact","pos":event.pos,"inner_radius":event.inner_radius,"outer_radius":event.outer_radius,"life":.2})
+					if Annulus.contains(frame.world.player_pos,event.pos,event.inner_radius,event.outer_radius): frame.hurt.call(event.damage)
 				"summon":
 					var children := frame.world.enemies.filter(func(child): return child.get("parent_id",-1) == e.id and child.hp > 0).size()
 					for index in range(mini(event.count,maxi(0,int(e.summon_limit) - children))):

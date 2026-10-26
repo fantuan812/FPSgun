@@ -573,6 +573,7 @@ func _draw() -> void:
 		draw_circle(hazard.pos,hazard.radius,Color(.95,.5,.12,.22) if hazard.kind in ["trail","scorch"] else Color(.9,.85,.3,.3))
 		if hazard.kind == "mine": draw_rect(Rect2(hazard.pos-Vector2(6,6),Vector2(12,12)),Color("f3d66d"))
 	for visual in effect_visuals:
+		if visual.kind == "annulus_impact": continue # Drawn only by the hole-preserving telegraph layer.
 		if visual.kind=="cryo_cone":
 			var points:=PackedVector2Array([visual.pos])
 			var angle:float=visual.direction.angle()
@@ -922,9 +923,15 @@ func _sync_telegraphs() -> void:
 		var color := Color(1,.35,.18,.9)
 		if enemy.attack == "charge":
 			markers.append({"kind":"line","pos":enemy.pos,"end":enemy.pos+enemy.aim*enemy.charge_speed*enemy.charge_duration,"width":2*(16*enemy.scale+9),"color":color})
+		elif enemy.attack == "annulus":
+			# Result scenes retain actors for death presentation, not live pulse warnings.
+			if state in ["dead","won"]: continue
+			markers.append({"kind":"annulus","pos":enemy.pulse_center,"inner_radius":enemy.pulse_inner_radius,"outer_radius":enemy.pulse_outer_radius,"color":color,"fill_alpha":.04 if settings.reduced_flashes else .09})
 		else:
 			markers.append({"kind":"circle","pos":enemy.target if enemy.attack=="blast" else enemy.pos,"radius":105 if enemy.attack=="blast" else 34*enemy.scale,"color":color})
 	for visual in effect_visuals:
+		if visual.kind == "annulus_impact":
+			markers.append({"kind":"annulus","pos":visual.pos,"inner_radius":visual.inner_radius,"outer_radius":visual.outer_radius,"color":Color(1,.55,.18,.8),"fill_alpha":(.035 if settings.reduced_flashes else .08)*clampf(float(visual.life)/.2,0,1)})
 		if visual.kind in ["mine","mortar","phase"]:
 			markers.append({"kind":"circle","pos":visual.pos,"radius":visual.radius,"color":Color("b0e7cf")})
 	for flash in flashes:

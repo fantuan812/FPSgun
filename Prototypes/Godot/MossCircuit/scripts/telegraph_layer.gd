@@ -1,4 +1,5 @@
 extends Node2D
+const Annulus=preload("res://scripts/gameplay/annulus_geometry.gd")
 ## Exact gameplay geometry rendered above decorative VFX. Never applies damage.
 var markers: Array = []
 static func line_fill(color:Color)->Color:
@@ -21,6 +22,14 @@ func _draw() -> void:
 			if not outline.is_empty():
 				draw_polyline(outline,Color(0.06,.08,.1,.85),4)
 				draw_polyline(outline,marker.color,2)
+		elif marker.kind == "annulus":
+			var fill: Color = marker.color
+			fill.a = float(marker.get("fill_alpha",.08))
+			for quad in Annulus.band_quads(marker.pos,marker.inner_radius,marker.outer_radius):
+				draw_colored_polygon(quad,fill)
+			for radius in [marker.inner_radius,marker.outer_radius]:
+				draw_circle(marker.pos,radius,Color(0.06,.08,.1,.95),false,5)
+				draw_circle(marker.pos,radius,marker.color,false,2)
 		else:
 			draw_circle(marker.pos,marker.radius,Color(0.06,.08,.1,.95),false,5)
 			draw_circle(marker.pos,marker.radius,marker.color,false,2)

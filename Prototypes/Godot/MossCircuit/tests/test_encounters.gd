@@ -49,6 +49,7 @@ func run() -> void:
 	AI.tick(flank,p,.1,.5)
 	check(not is_equal_approx(flank.pos.y,y),"flanker lateral movement")
 	var keeper: Dictionary = game._spawn_kind("brood_keeper",p+Vector2(240,0))
+	keeper.attack_index = 1 # Select the unchanged summon half, not the new first pulse.
 	keeper.cooldown_left = 0
 	AI.tick(keeper,p,.01,0)
 	events = AI.tick(keeper,p,1,0)
