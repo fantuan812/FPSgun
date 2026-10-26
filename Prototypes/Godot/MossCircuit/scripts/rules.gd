@@ -157,6 +157,10 @@ static func validate_catalog(catalog: Dictionary) -> Array:
 				if _positive_number(entry.get("chill_duration")) and entry.chill_duration>10: errors.append("Chill exceeds duration budget")
 				if _positive_number(entry.get("chill_speed")) and entry.chill_speed>1: errors.append("Chill cannot accelerate")
 		elif entry.kind == "item":
+			if entry.id=="feedback_diode":
+				if not _positive_number(entry.get("feedback_damage")): errors.append("Invalid feedback damage")
+				elif entry.feedback_damage>1000: errors.append("Feedback exceeds damage budget")
+				if entry.max_stack!=1: errors.append("Feedback Diode must remain unique")
 			if entry.id=="bounce_guide" and (not _positive_number(entry.max_stack) or entry.max_stack!=1): errors.append("Bounce Guide must remain unique")
 			if entry.id=="fracture_coil":
 				if not _positive_number(entry.get("fracture_damage")): errors.append("Invalid fracture damage")

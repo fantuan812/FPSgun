@@ -1,3 +1,11 @@
+# MOSS CIRCUIT · v26 Feedback Diode — UNVERIFIED DEVELOPMENT CANDIDATE
+
+This branch contains one new skill-counterplay module under development. **It is not an accepted release.** Feedback Diode rewards actual hostile-projectile contact during an equipped dash with one fixed secondary hit on its living shooter. Dash immunity, collision geometry and old equipment values are unchanged by design. Exact contract: [v26 Feedback Diode](docs/V26_FEEDBACK_CONTRACT.md).
+
+Current checkpoint: initial import and author 105-check controlled pipeline test pass; original icon resource checker 11 checks pass. Independent mechanics/preservation, full regression, native rendering and exported-resource acceptance are still pending. Known first-probe issues and their correction are retained outside the production source until final evidence assembly. Expanded shop offers can differ for a seed; no old-version offer-identity claim.
+
+---
+
 # MOSS CIRCUIT · 苔芯幸存者 v25 · 标签协同进度
 
 本批只补齐三个既有标签协同的可发现性：背包显示当前装备副本数 / 门槛、启用状态、既有目录效果及准确适用范围。重复武器和实际模块副本计数；达到门槛只生效一次。电/近战是匹配武器的加算伤害加成，散射只增加散射攻击的弹丸；没有匹配武器时仍可启用，但会明确提示当前无武器受益。没有新增协同、道具、素材、平衡或 RNG 变化。共享纯规则计算与背包只读视图，具体语义见 [v25 说明](docs/V25_TAG_SYNERGY_PROGRESS.md)。本批已通过固定源码回归、独立权威等价、受控原生界面与精确 PCK 的有限实际操作验收；初次生产源码冷导入和最终复用缓存再验证分别记录。不是完整通关、Windows 或音频验收。

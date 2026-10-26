@@ -248,6 +248,7 @@ func _build_ui() -> void:
 
 func _title() -> void:
 	weapon_rig.clear()
+	effects.feedback_armed = false
 	enemies.clear()
 	bullets.clear()
 	enemy_bullets.clear()
@@ -587,6 +588,11 @@ func _draw() -> void:
 			var tint:=Color(.65,.94,.83,.45 if settings.reduced_flashes else .8) if visual.guided else Color(1,.78,.35,.4 if settings.reduced_flashes else .75)
 			draw_circle(visual.pos,visual.radius,tint,false,1.5)
 			if visual.reflected:draw_line(visual.pos,visual.pos+visual.direction*23,tint,2)
+		elif visual.kind=="feedback":
+			var tint:=Color(.77,.61,.95,.35 if settings.reduced_flashes else .65)
+			draw_line(visual.pos,visual.end,tint,1.5)
+			var impact:=PackedVector2Array([visual.end+Vector2(0,-7),visual.end+Vector2(7,0),visual.end+Vector2(0,7),visual.end+Vector2(-7,0),visual.end+Vector2(0,-7)])
+			draw_polyline(impact,tint,1.5)
 		elif visual.kind == "chain": draw_line(visual.pos,visual.end,Color("79e8ff"),3)
 		else: draw_circle(visual.pos,visual.radius,Color("b0e7cf"),false,3)
 	if state not in ["title","dead","won"]:
@@ -597,6 +603,9 @@ func _draw() -> void:
 			var diamond:=PackedVector2Array([center+Vector2(0,-4),center+Vector2(4,0),center+Vector2(0,4),center+Vector2(-4,0),center+Vector2(0,-4)])
 			draw_polyline(diamond,Color(.57,.91,.98,.5 if settings.reduced_flashes else .85),1.5)
 	if effects.shield > 0 and not build.is_empty(): draw_circle(player_pos,25,Color("a7e5ff"),false,2)
+	if effects.can_feedback(float(stats.get("dash_time",0.0)) > 0) and state not in ["title","dead","won"]:
+		var ready_mark:=PackedVector2Array([player_pos+Vector2(0,-19),player_pos+Vector2(19,0),player_pos+Vector2(0,19),player_pos+Vector2(-19,0),player_pos+Vector2(0,-19)])
+		draw_polyline(ready_mark,Color(.77,.61,.95,.4 if settings.reduced_flashes else .7),1.5)
 	for projectile in enemy_bullets:
 		draw_circle(projectile.pos,6,Color("f6827c"))
 	for p in pickups:
@@ -738,6 +747,8 @@ func _view() -> Dictionary:
 	view.dash_cooldown=stats.get("dash_cooldown",0.0)
 	view.settings=settings.duplicate(true)
 	view.tag_synergy_status=Rules.tag_synergy_status(build,catalog)
+	if build.items.has("feedback_diode"):
+		view.mechanics.feedback_status = "READY THIS DASH" if effects.can_feedback(float(stats.get("dash_time",0.0)) > 0) else ("UNARMED THIS DASH" if float(stats.get("dash_time",0.0)) > 0 else "ARMS ON NEXT DASH")
 	var affinity := Rules.shop_affinity(build,catalog)
 	var missing_names: Array = []
 	for id in affinity.missing_ids: missing_names.append(Rules.catalog_entry(catalog,id).name)
@@ -874,6 +885,7 @@ func _clear_transients() -> void:
 	effects.chain_charges = 0
 	effects.echo_hits = 0
 	effects.phase_charge = 0
+	effects.feedback_armed = false
 	effects.medic_damage = 0
 	pending_blasts.clear()
 	hazards.clear()

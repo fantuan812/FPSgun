@@ -2,14 +2,17 @@ extends RefCounted
 ## Pure event-to-command engine. Never applies commands recursively.
 const Status=preload("res://scripts/gameplay/target_status.gd")
 var fracture_damage:=0.0
+var feedback_damage:=0.0
 var fracture_weapons:Array=[]
 func configure(catalog:Dictionary)->void:
 	fracture_damage=0.0
+	feedback_damage=0.0
 	fracture_weapons.clear()
 	for weapon in catalog.get("weapons",[]):
 		if weapon.id!="cryo_sprayer":fracture_weapons.append(str(weapon.id))
 	for entry in catalog.get("items",[]):
 		if entry.id=="fracture_coil":fracture_damage=float(entry.get("fracture_damage",0.0))
+		if entry.id=="feedback_diode":feedback_damage=float(entry.get("feedback_damage",0.0))
 var epoch := 0
 var last_sequence := -1
 var active: Dictionary = {}
@@ -20,6 +23,7 @@ var echo_hits := 0
 var phase_charge := 0
 var medic_damage := 0.0
 var chain_charges := 0
+var feedback_armed := false
 
 func reset(items: Dictionary, recharge: bool = true) -> void:
 	epoch += 1
@@ -29,6 +33,7 @@ func reset(items: Dictionary, recharge: bool = true) -> void:
 	echo_hits = 0
 	phase_charge = 0
 	medic_damage = 0.0
+	feedback_armed = false
 	if recharge: shield_spent = false
 	sync(items)
 
@@ -42,6 +47,7 @@ func sync(items: Dictionary) -> void:
 	if not active.has("echo_chamber"): echo_hits = 0
 	if not active.has("phase_capacitor"): phase_charge = 0
 	if not active.has("medic_seed"): medic_damage = 0.0
+	if not active.has("feedback_diode"): feedback_armed = false
 	shield = 1 if active.has("mirror_shell") and not shield_spent else 0
 	if not pair("arc_relay","kill_cell"): chain_charges = 0
 	for id in cooldowns.keys():
@@ -49,6 +55,12 @@ func sync(items: Dictionary) -> void:
 
 func pair(a: String,b: String) -> bool:
 	return active.has(a) and active.has(b)
+
+func can_feedback(dash_active: bool) -> bool:
+	return dash_active and feedback_armed and active.has("feedback_diode") and feedback_damage > 0
+
+func update_dash_window(dash_active: bool) -> void:
+	if not dash_active: feedback_armed = false
 
 func ready(id: String, time: float, interval: float) -> bool:
 	if not active.has(id) or time < float(cooldowns.get(id,0)): return false
@@ -64,6 +76,13 @@ func process(event: Dictionary, context: Dictionary) -> Array:
 	var source: String = event.get("source","normal" if kind == "pickup" else "primary")
 	var time: float = context.time
 	match kind:
+		"projectile_contact":
+			if source != "hostile_projectile" or event.get("depth",0) != 0 or not can_feedback(bool(context.get("dash_active",false))): return result
+			for enemy in context.enemies:
+				if enemy.id == event.get("owner",-1) and enemy.hp > 0:
+					feedback_armed = false
+					result.append({"kind":"feedback","target":enemy.id,"damage":feedback_damage,"pos":context.pos})
+					break
 		"hit":
 			if source != "primary" or event.get("depth",0) != 0: return result
 			if active.has("fracture_coil") and fracture_damage>0 and str(event.get("weapon","")) in fracture_weapons:
@@ -108,6 +127,7 @@ func process(event: Dictionary, context: Dictionary) -> Array:
 		"mine_detonate":
 			if source == "mine" and active.has("gravity_anchor"): result.append({"kind":"pull","pos":event.pos})
 		"dash":
+			feedback_armed = active.has("feedback_diode") and bool(context.get("dash_active",false))
 			if active.has("phase_capacitor"): phase_charge = 1
 			if active.has("dash_resin"): result.append({"kind":"trail","pos":event.pos,"slow":pair("dash_resin","pulse_boots")})
 			if active.has("pulse_boots"): result.append({"kind":"push","pos":event.pos,"radius":150.0,"distance":90.0})

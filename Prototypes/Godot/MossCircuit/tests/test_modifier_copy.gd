@@ -28,7 +28,7 @@ func run()->void:
  # v23 adds exactly one reviewed weapon/module/pair/link; old definitions remain strict.
  var additions:Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://docs/V23_CATALOG_ADDITIONS.json"))
  check(entry(catalog,"bankshot_driver")==additions.weapon and entry(catalog,"bounce_guide")==additions.item,"exact v23 additions separately asserted")
- check(catalog.version==4,"explicit new content version")
+ check(catalog.version==5,"explicit new content version")
  masked_catalog.version=baseline.catalog.version
  masked_catalog.weapons=masked_catalog.weapons.filter(func(x):return x.id!="bankshot_driver")
  masked_catalog.items=masked_catalog.items.filter(func(x):return x.id!="bounce_guide")

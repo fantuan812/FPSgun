@@ -21,7 +21,7 @@ func run()->void:
  g=load("res://scenes/main.tscn").instantiate();root.add_child(g);g.set_process(false)
  check(Rules.validate_catalog(g.catalog).is_empty(),"catalog valid")
  var expected:Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://docs/V23_CATALOG_ADDITIONS.json"))
- check(g.catalog.version==4 and g.catalog.weapons.size()==8 and g.catalog.items.size()==28,"explicit content version/count")
+ check(g.catalog.version==5 and g.catalog.weapons.size()==8 and g.catalog.items.size()==29 and Rules.catalog_entry(g.catalog,"feedback_diode").id=="feedback_diode","explicit content version/count")
  check(Rules.catalog_entry(g.catalog,"bankshot_driver")==expected.weapon,"entire reviewed weapon definition")
  check(Rules.catalog_entry(g.catalog,"bounce_guide")==expected.item,"entire reviewed guide definition")
  check(g.catalog.mechanism_synergies[-1]==expected.pair and g.catalog.affinity_links[-1]==expected.link,"exact additive pair/link")
