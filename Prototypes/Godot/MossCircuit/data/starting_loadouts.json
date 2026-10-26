@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "default_id": "rivet",
+  "loadouts": [
+    {
+      "id": "rivet",
+      "name": "Rivet Starter",
+      "weapon": "rivet_gun",
+      "starting_scrap": 35,
+      "strength": "Accurate, frequent shots with the most spare scrap for later build decisions.",
+      "limitation": "One target per basic shot; no starting spread or piercing."
+    },
+    {
+      "id": "scatter",
+      "name": "Scatter Starter",
+      "weapon": "scrap_shotgun",
+      "starting_scrap": 23,
+      "strength": "Five short-range pellets reward close positioning; each contact deals its own damage.",
+      "limitation": "Less spare scrap, shorter reach and a longer attack interval. Not every pellet will hit."
+    },
+    {
+      "id": "rail",
+      "name": "Rail Starter",
+      "weapon": "rail_lance",
+      "starting_scrap": 17,
+      "strength": "Long-reaching piercing shots can hit enemies lined up along their path.",
+      "limitation": "Least spare scrap and the slowest attack interval of these starters."
+    }
+  ]
+}

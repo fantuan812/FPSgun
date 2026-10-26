@@ -299,7 +299,7 @@ func update_hud(view: Dictionary) -> void:
 		hud_detail.text = "HP %.0f/%.0f  |  XP %.0f/%.0f  |  %.0fs  |  KILLS %s  |  SHIELD %s  CHAIN %s  FIELDS %s" % [hp.value, hp.max_value, xp.value, xp.max_value, float(view.get("time", 0)), view.get("kills", 0), mechanics.get("shield", 0), mechanics.get("chain_charges", 0), mechanics.get("hazards", 0)]
 		hud_detail.tooltip_text = "WASD / arrows: move; Space: dash. Open BUILD for exact per-item cooldowns."
 
-func show_title(seed_value: int = 240102,mode_id:String="arena") -> void:
+func show_title(seed_value: int = 240102,mode_id:String="arena",loadout_context:Dictionary={}) -> void:
 	_begin("title", "MOSS CIRCUIT", "SURVIVE / SALVAGE / REBUILD")
 	var content := _scroll(body)
 	_text(content,"A small machine. Six hostile waves. Build your own salvage engine." if mode_id=="arena" else "Three finite room encounters. Clear every enemy, then rebuild. This is not a complete dungeon.",20)
@@ -312,12 +312,43 @@ func show_title(seed_value: int = 240102,mode_id:String="arena") -> void:
 	seed_edit.custom_minimum_size.y = 38; content.add_child(seed_edit)
 	seed_edit.text_changed.connect(func(value:String):intent.emit("seed_changed",{"seed":value.to_int()}))
 	mode_button.pressed.connect(func():intent.emit("select_mode",{"id":"rooms" if mode_id=="arena" else "arena","seed":seed_edit.text.to_int()}))
+	var selected:Dictionary={}
+	if not loadout_context.is_empty():
+		_text(content,"STARTING LOADOUT / Same hero, base HP and movement. One weapon, no modules. Owned tags influence later shop affinity.",13)
+		for row in loadout_context.get("loadouts",[]):
+			var chosen:bool=row.id==loadout_context.get("selected_id","")
+			if chosen:selected=row
+			_starting_loadout_card(content,row,chosen,int(loadout_context.get("generation",-1)))
 	var start := Button.new(); start.text = "START RUN"; start.custom_minimum_size.y = 44
-	start.pressed.connect(func(): intent.emit("start", {"seed": seed_edit.text.to_int()}))
+	if loadout_context.is_empty():
+		start.pressed.connect(func(): intent.emit("start", {"seed": seed_edit.text.to_int()}))
+	else:
+		start.disabled=selected.is_empty()
+		if not selected.is_empty():start.text="START %s / %d SCRAP" % [str(selected.name).to_upper(),int(selected.starting_scrap)]
+		var chosen_id:String=str(loadout_context.get("selected_id",""))
+		var generation:int=int(loadout_context.get("generation",-1))
+		start.pressed.connect(func():intent.emit("start_loadout",{"seed":seed_edit.text.to_int(),"id":chosen_id,"generation":generation}))
 	body.add_child(start); first_focus = start
 	_button(body, "ENEMY FIELD GUIDE", "codex")
 	_button(body, "DISPLAY SETTINGS", "settings")
 	_finish()
+
+func _starting_loadout_card(parent:Node,data:Dictionary,selected:bool,generation:int)->void:
+	var panel:=PanelContainer.new()
+	panel.add_theme_stylebox_override("panel",_box(INK,AMBER if selected else MOSS,7))
+	parent.add_child(panel)
+	var row:=HBoxContainer.new();panel.add_child(row)
+	var image:=TextureRect.new();image.texture=icon(str(data.weapon))
+	image.custom_minimum_size=Vector2(48,48);image.expand_mode=TextureRect.EXPAND_IGNORE_SIZE
+	image.stretch_mode=TextureRect.STRETCH_KEEP_ASPECT_CENTERED;row.add_child(image)
+	var details:=VBoxContainer.new();details.size_flags_horizontal=Control.SIZE_EXPAND_FILL;row.add_child(details)
+	_text(details,str(data.name)+(" / SELECTED" if selected else ""),16).add_theme_color_override("font_color",AMBER)
+	_text(details,"%s / %d STARTING SCRAP" % [data.weapon_name,int(data.starting_scrap)],13)
+	_text(details,str(data.strength),12)
+	_text(details,"TRADEOFF: "+str(data.limitation),12)
+	var stats_panel:=_disclosure(details,"BASE WEAPON DETAILS")
+	_weapon_readout(stats_panel,data.weapon_readout)
+	_button(details,"SELECTED" if selected else "CHOOSE "+str(data.name).to_upper(),"select_starting_loadout",{"id":data.id,"generation":generation},selected)
 
 func show_shop(view: Dictionary) -> void:
 	var generation: int = int(view.get("generation", 0))
@@ -393,6 +424,8 @@ func _shop_bias(parent: Node, bias: Dictionary, reservation:Dictionary={}) -> vo
 	_text(details, "Buying/selling updates the preference above immediately, for the NEXT refresh. Existing offers retain their draw-time weight and do not reroll. Next draws exclude max-stack items. Full weapon slots allow replacement. Unaffordable offers can appear; their purchase is disabled.", 12)
 
 func _inventory(parent: Node, view: Dictionary, selling := false) -> void:
+	var origin:Dictionary=view.get("starting_loadout",{})
+	if not selling and not origin.is_empty():_text(parent,"STARTED WITH: "+str(origin.name)+" / origin only, not current equipment",12)
 	_label(parent, "WEAPONS  %d / %d" % [view.get("weapons", []).size(), int(view.get("weapon_slots", 4))], 16)
 	var order:Dictionary=view.get("weapon_order",{})
 	if selling:

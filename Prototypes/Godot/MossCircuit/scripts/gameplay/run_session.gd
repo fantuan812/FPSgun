@@ -22,3 +22,6 @@ var shop_offers: Array = []
 var reserved_offer: Dictionary = {}
 var shop_message := ""
 var run_seed := 240102
+
+# Origin only: current equipment may be sold, replaced or reordered normally.
+var starting_loadout_id := "rivet"

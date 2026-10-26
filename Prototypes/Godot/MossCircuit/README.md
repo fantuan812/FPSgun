@@ -1,3 +1,7 @@
+# v31 development candidate — UNVERIFIED
+
+Adds data-driven Rivet35 / Scatter23 / Rail17 starting loadouts for the same hero. Validation and delivery are pending; accepted v30 remains the current release. See [scope and pending gates](docs/V31_STARTING_LOADOUTS.md).
+
 # MossCircuit v30 — choose your weapon order
 
 Owned shop cards now offer **MOVE EARLIER / MOVE LATER**: exchange adjacent copies for free without selling them. Their exact remaining cooldown, aim and recoil age follow each copy. SLOT 1 uses the existing hand mount; other slots use their existing offsets. Duplicate weapon types remain separate copies. Nothing is purchased, refunded, healed or recomputed, and outstanding player shots/mortars block the move rather than being discarded.

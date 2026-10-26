@@ -91,3 +91,7 @@ Headless UI tests cover settings entry from title/pause, initial keyboard focus,
 
 ## v30 shop-only ordering
 Owned weapon cards in the shop add adjacent MOVE EARLIER/LATER actions. The current generation and source slot identify a copy, including duplicate types. Cooldowns follow copies, SLOT 1 uses the existing hand mount, and only ready-weapon processing order changes; actual projectile/delayed hit timing is not promised. New controls never take the initial/default focus. Ordinary inventory has no reorder controls. Nonempty player bullets or pending mortar blasts disable moves instead of clearing anything. Exact behavior is in `../docs/V30_WEAPON_ORDER_CONTRACT.md`; verification scope is native keyboard/mouse and synthetic ui_accept, not physical-controller support.
+
+## Starting-loadout title context
+
+`show_title(seed, mode)` remains the legacy Rivet-only view. The optional third context supplies detached starting-loadout previews, selected ID and current title generation. New `select_starting_loadout` / `start_loadout` intents are strict controller-owned actions; the UI does not set weapons, currency or stats. Cards reuse existing icons and BASE readouts; START remains the initial focus and fixed summary. `STARTED WITH` in inventory/results records origin, not current ownership. No new input bindings or character art.
