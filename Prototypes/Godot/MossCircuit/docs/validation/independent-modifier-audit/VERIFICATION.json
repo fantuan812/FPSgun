@@ -1,0 +1,15 @@
+{
+  "scope": "read-only post-v21 advertised-compatibility investigation",
+  "v21_candidate_manifest_sha256": "bd1d7b76dbf7563d5e7efcad770bf143780a2be0bde10368a203a5455bcf07ba",
+  "expectations_sha256": "b5d5c901fffd0d81c8df53a2768abbbc913b806f8db9dfbb70c2a74e51fa3eb5",
+  "tested_inputs_unchanged": 233,
+  "matrix_checks": 84,
+  "matrix_pass": true,
+  "inherited_probe_checks_per_version": 6,
+  "v20_v21_probe_output_exact": true,
+  "v20_probe_sha256": "494dc00b7f3a54d273e3de111d5802d390a34c9321c80a01c6940a3a5cc9bace",
+  "v21_probe_sha256": "494dc00b7f3a54d273e3de111d5802d390a34c9321c80a01c6940a3a5cc9bace",
+  "no_production_mutation": true,
+  "crit_bounce_scope": "No catalog/upgrade IDs or supported stats advertise these features; no invented-property test.",
+  "pending": "Separate text-only candidate/native wording review if authorized; no timing/damage edit justified."
+}

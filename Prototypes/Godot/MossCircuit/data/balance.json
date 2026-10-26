@@ -1,18 +1,88 @@
 {
-  "player": {"hp": 100.0, "speed": 165.0, "damage": 15.0, "fire_interval": 0.40, "pickup_radius": 48.0, "bullet_speed": 470.0},
-  "arena": {"width": 1440, "height": 960, "tile_size": 80},
-  "waves": {"count": 6, "duration": 30.0, "spawn_interval": 1.00, "max_enemies": 90},
+  "player": {
+    "hp": 100.0,
+    "speed": 165.0,
+    "damage": 15.0,
+    "fire_interval": 0.4,
+    "pickup_radius": 48.0,
+    "bullet_speed": 470.0
+  },
+  "arena": {
+    "width": 1440,
+    "height": 960,
+    "tile_size": 80
+  },
+  "waves": {
+    "count": 6,
+    "duration": 30.0,
+    "spawn_interval": 1.0,
+    "max_enemies": 90
+  },
   "enemies": [
-    {"id":"crawler", "hp":22.0, "speed":53.0, "damage":9.0, "xp":4, "scale":1.0, "color":"ffffff"},
-    {"id":"runner", "hp":14.0, "speed":92.0, "damage":7.0, "xp":5, "scale":0.78, "color":"a1eac5"},
-    {"id":"bulwark", "hp":65.0, "speed":34.0, "damage":16.0, "xp":11, "scale":1.45, "color":"e9bd74"}
+    {
+      "id": "crawler",
+      "hp": 22.0,
+      "speed": 53.0,
+      "damage": 9.0,
+      "xp": 4,
+      "scale": 1.0,
+      "color": "ffffff"
+    },
+    {
+      "id": "runner",
+      "hp": 14.0,
+      "speed": 92.0,
+      "damage": 7.0,
+      "xp": 5,
+      "scale": 0.78,
+      "color": "a1eac5"
+    },
+    {
+      "id": "bulwark",
+      "hp": 65.0,
+      "speed": 34.0,
+      "damage": 16.0,
+      "xp": 11,
+      "scale": 1.45,
+      "color": "e9bd74"
+    }
   ],
   "upgrades": [
-    {"id":"damage", "name":"OVERCHARGE", "description":"Weapon damage +25%", "value":1.25},
-    {"id":"speed", "name":"LIGHT FEET", "description":"Movement speed +12%", "value":1.12},
-    {"id":"haste", "name":"RAPID CIRCUIT", "description":"Fire interval -15%", "value":0.85},
-    {"id":"health", "name":"REPAIR PLATING", "description":"Max health +20; restore 30", "value":20.0},
-    {"id":"magnet", "name":"SALVAGE MAGNET", "description":"Pickup range +35", "value":35.0},
-    {"id":"pierce", "name":"SPLIT CAPACITOR", "description":"Projectiles pierce one more target", "value":1.0}
+    {
+      "id": "damage",
+      "name": "OVERCHARGE",
+      "description": "Weapon damage +25%",
+      "value": 1.25
+    },
+    {
+      "id": "speed",
+      "name": "LIGHT FEET",
+      "description": "Movement speed +12%",
+      "value": 1.12
+    },
+    {
+      "id": "haste",
+      "name": "RAPID CIRCUIT",
+      "description": "Attack rate +15% (additive).",
+      "value": 0.85
+    },
+    {
+      "id": "health",
+      "name": "REPAIR PLATING",
+      "description": "Max health +20; restore 30",
+      "value": 20.0
+    },
+    {
+      "id": "magnet",
+      "name": "SALVAGE MAGNET",
+      "description": "Pickup range +35",
+      "value": 35.0
+    },
+    {
+      "id": "pierce",
+      "name": "SPLIT CAPACITOR",
+      "description": "Projectiles pierce one more target",
+      "value": 1.0
+    }
   ]
 }

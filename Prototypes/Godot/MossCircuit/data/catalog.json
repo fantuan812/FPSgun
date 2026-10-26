@@ -141,7 +141,7 @@
         "control"
       ],
       "max_stack": 4,
-      "description": "60-degree cone chills for 1.2s; normal enemies move at 65%. Bosses are marked, not slowed."
+      "description": "Instant 60-degree cone chills for 1.2s; normal enemies move at 65%. Bosses mark-only. Weapon damage/rate/reach apply; projectile bonuses do not."
     }
   ],
   "items": [
@@ -158,7 +158,7 @@
       "effects": {
         "damage_bonus": 0.15
       },
-      "description": "+15% all damage"
+      "description": "Weapon damage +15%; fixed module damage unchanged."
     },
     {
       "id": "cooling_fan",
@@ -613,7 +613,7 @@
       ],
       "effects": {},
       "fracture_damage": 16,
-      "description": "Requires Cryo Sprayer + a different weapon type. Its surviving primary hit spends chill for 16 single-target secondary damage.",
+      "description": "Requires Cryo Sprayer + a different weapon type. Its surviving primary hit spends chill for fixed 16 secondary damage; weapon bonuses do not scale it.",
       "trigger": "Non-Cryo primary hit on a living chilled target",
       "cost": "1 module slot; consumes chill and its slow; secondary damage cannot recurse",
       "cooldown": 0,

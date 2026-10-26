@@ -1,0 +1,37 @@
+{
+  "base_version": "v21",
+  "base_manifest_sha256": "6db84a927b27cebfe16770a70036fe6b8979b9e13fa11c039c60d678203fcf25",
+  "candidate_manifest_sha256": "3fd8b2ce0dbe908f8c377e2c093938b3571f02bb764272e1e2890dcfff9c1689",
+  "production_paths": 109,
+  "byte_identical_production_paths": 107,
+  "changed_data_files": [
+    "data/balance.json",
+    "data/catalog.json"
+  ],
+  "semantic_differences": [
+    {
+      "path": "data/balance.json/upgrades/2/description",
+      "before": "Fire interval -15%",
+      "after": "Attack rate +15% (additive)."
+    },
+    {
+      "path": "data/catalog.json/items/0/description",
+      "before": "+15% all damage",
+      "after": "Weapon damage +15%; fixed module damage unchanged."
+    },
+    {
+      "path": "data/catalog.json/items/26/description",
+      "before": "Requires Cryo Sprayer + a different weapon type. Its surviving primary hit spends chill for 16 single-target secondary damage.",
+      "after": "Requires Cryo Sprayer + a different weapon type. Its surviving primary hit spends chill for fixed 16 secondary damage; weapon bonuses do not scale it."
+    },
+    {
+      "path": "data/catalog.json/weapons/6/description",
+      "before": "60-degree cone chills for 1.2s; normal enemies move at 65%. Bosses are marked, not slowed.",
+      "after": "Instant 60-degree cone chills for 1.2s; normal enemies move at 65%. Bosses mark-only. Weapon damage/rate/reach apply; projectile bonuses do not."
+    }
+  ],
+  "allowlist_matched_exactly": true,
+  "numeric_ids_weights_tags_other_text_unchanged": true,
+  "scripts_ui_art_scene_preserved": true,
+  "whole_definition_byte_identity_claimed": false
+}

@@ -1,0 +1,34 @@
+{
+  "scope": "Exactly four reviewed text fields; no numerical/mechanical changes",
+  "base_manifest_sha256": "6db84a927b27cebfe16770a70036fe6b8979b9e13fa11c039c60d678203fcf25",
+  "allowed_text_changes": [
+    {
+      "file": "data/catalog.json",
+      "id": "cryo_sprayer",
+      "field": "description",
+      "before": "60-degree cone chills for 1.2s; normal enemies move at 65%. Bosses are marked, not slowed.",
+      "after": "Instant 60-degree cone chills for 1.2s; normal enemies move at 65%. Bosses mark-only. Weapon damage/rate/reach apply; projectile bonuses do not."
+    },
+    {
+      "file": "data/catalog.json",
+      "id": "power_coil",
+      "field": "description",
+      "before": "+15% all damage",
+      "after": "Weapon damage +15%; fixed module damage unchanged."
+    },
+    {
+      "file": "data/catalog.json",
+      "id": "fracture_coil",
+      "field": "description",
+      "before": "Requires Cryo Sprayer + a different weapon type. Its surviving primary hit spends chill for 16 single-target secondary damage.",
+      "after": "Requires Cryo Sprayer + a different weapon type. Its surviving primary hit spends chill for fixed 16 secondary damage; weapon bonuses do not scale it."
+    },
+    {
+      "file": "data/balance.json",
+      "id": "haste",
+      "field": "description",
+      "before": "Fire interval -15%",
+      "after": "Attack rate +15% (additive)."
+    }
+  ]
+}

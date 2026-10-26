@@ -1,0 +1,23 @@
+{
+  "checks": 6,
+  "failures": [],
+  "observed": [
+    {
+      "fixed_echo": 12.0,
+      "mode": "arena",
+      "powered_primary": 17.25,
+      "rapid_actual_clock": 0.347826086956522,
+      "rapid_advertised_clock": 0.34,
+      "rapid_description": "Fire interval -15%"
+    },
+    {
+      "fixed_echo": 12.0,
+      "mode": "rooms",
+      "powered_primary": 17.25,
+      "rapid_actual_clock": 0.347826086956522,
+      "rapid_advertised_clock": 0.34,
+      "rapid_description": "Fire interval -15%"
+    }
+  ],
+  "scope": "controlled actual runtime chooser/scheduledRivet and primaryfireEcho; historical wording attribution"
+}
