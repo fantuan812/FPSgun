@@ -1,0 +1,39 @@
+{
+  "incorrect_marker_results": [
+    "independent_brood_assets.gd",
+    "independent_brood_events.gd",
+    "independent_brood_parity.gd",
+    "independent_charger_assets.gd",
+    "independent_charger_gameplay_parity.gd",
+    "independent_charger_lifecycle.gd",
+    "independent_modes.gd",
+    "independent_policy_validation.gd",
+    "independent_resolution.gd",
+    "independent_room_boundaries.gd",
+    "independent_spitter_assets.gd",
+    "independent_spitter_events.gd",
+    "independent_spitter_parity.gd",
+    "test_contact_enemy_actions.gd",
+    "test_core_summon_assets.gd",
+    "test_crawler_hurt_registration.gd",
+    "test_warden_charge_assets.gd"
+  ],
+  "additional_executed_scripts": [
+    "docs/art/check_icons.gd",
+    "docs/art/check_mechanism_icons.gd",
+    "docs/art/check_build_expansion_icons.gd"
+  ],
+  "source_changes": [],
+  "not_product_failures": true,
+  "preserved_provisional_files": "rejected-runner/",
+  "final_result": {
+    "entrypoints": 73,
+    "completed": 75,
+    "passed": 75,
+    "failures": [],
+    "original_source_files_reverified": 540,
+    "input_changes": [],
+    "scope": "cold import +73 standalone scripts + Python3 safety checks; no GUI inference",
+    "runner_correction": "17 clean summaries initially rejected by overly narrow marker regex; three docs/art standalone entrypoints initially omitted, executed separately before acceptance. Original provisional report/runner preserved."
+  }
+}

@@ -1,68 +1,79 @@
 {
-  "version": "v23",
-  "source_candidate_manifest_sha256": "90802097cb5d58d7a026a49c8d9552bcaa5fd10ff7b313242676ddb95586116d",
-  "source_production_inputs": 115,
-  "pck_sha256": "a8ef8b7720ac374f10e5d5378bd413b5d415e845a35495bb89399a4ee5f3864a",
-  "artifacts": [
-    {
-      "name": "MossCircuit-v23-Linux-x86_64-2026-10-25.zip",
-      "bytes": 67501890,
-      "sha256": "cbd28d1eb48ef53eb0437fddb7ff8c2d48ab28ebdedd2268440f20dacdad1703",
-      "exact_native_qa_core_unchanged": true,
-      "windows_runtime_tested": false,
-      "kind": "linux"
+  "version": "v24 resource-only update",
+  "source_candidate_manifest_sha256": "be3729dbb7e96b0b3dbc69bd4a4e1a65448ceeec25b111b17e7f4c5e98342c4d",
+  "source_production_inputs": 116,
+  "pck": {
+    "bytes": 40679992,
+    "sha256": "c6538ac76c04bfe5698c983574fb1a235e07c5dfdbe9eff7cac2784755402596"
+  },
+  "update_archive": {
+    "name": "MossCircuit-v23-to-v24-Update-2026-10-26.zip",
+    "bytes": 40215073,
+    "sha256": "e560248d7b681065ea3be29e6ce3a9598c117a187e5878af1e7a0f79b3661a4f"
+  },
+  "base_required": {
+    "required": "core files matching accepted v23; not a standalone game",
+    "MossCircuit.pck": {
+      "bytes": 40675956,
+      "sha256": "a8ef8b7720ac374f10e5d5378bd413b5d415e845a35495bb89399a4ee5f3864a"
     },
-    {
-      "name": "MossCircuit-v23-Windows-ExportOnly-x86_64-2026-10-25.zip",
-      "bytes": 76343361,
-      "sha256": "33d30c7059e7628b1e9e0af89bdac0660c08f68e5687b6f07125e2d35fbcb959",
-      "exact_native_qa_core_unchanged": true,
-      "windows_runtime_tested": false,
-      "kind": "windows"
+    "Linux executable": {
+      "name": "MossCircuit.x86_64",
+      "bytes": 71075864,
+      "sha256": "2c78919325d7f29fa7607287c7c1eeac367ea4c94e7b8b6f5f4c6b20492f73d0"
     },
-    {
-      "name": "MossCircuit-v21-to-v23-Update-2026-10-25.zip",
-      "bytes": 40221897,
-      "sha256": "7d8eaf3186f14d266d4a3e8556d13501c0b53cf309eacdf9b04c224299f15523",
-      "exact_native_qa_core_unchanged": true,
-      "windows_runtime_tested": false,
-      "kind": "manual_update"
-    }
-  ],
-  "manual_update": {
-    "version": "v23",
-    "base_required": "exact original v21",
-    "zip_name": "MossCircuit-v21-to-v23-Update-2026-10-25.zip",
-    "zip_bytes": 40221897,
-    "zip_sha256": "7d8eaf3186f14d266d4a3e8556d13501c0b53cf309eacdf9b04c224299f15523",
-    "part_size_limit": 20000000,
-    "windows_cmd_executed": false
+    "Windows executable": {
+      "name": "MossCircuit.exe",
+      "bytes": 104659456,
+      "sha256": "91724f15024a3a545e28ccd83134403d31ce2323a38e51c95e4dfa282f732ab6"
+    },
+    "recovery_bundles": [
+      {
+        "name": "MossCircuit-v23-Linux-x86_64-2026-10-25.zip",
+        "bytes": 67501890,
+        "sha256": "cbd28d1eb48ef53eb0437fddb7ff8c2d48ab28ebdedd2268440f20dacdad1703"
+      },
+      {
+        "name": "MossCircuit-v23-Windows-ExportOnly-x86_64-2026-10-25.zip",
+        "bytes": 76343361,
+        "sha256": "33d30c7059e7628b1e9e0af89bdac0660c08f68e5687b6f07125e2d35fbcb959"
+      }
+    ]
+  },
+  "new_executable_build": false,
+  "windows_runtime_tested": false,
+  "source_overlay": "MossCircuit-v23-to-v24-Source-Overlay-2026-10-26.zip",
+  "source_base": {
+    "version": "v23 full source required",
+    "archive": "MossCircuit-v23-Bankshot-2026-10-25.zip",
+    "bytes": 103125754,
+    "sha256": "084033c40003fa8aa0cb8c1c08e58d5929f5c8c472c572411b878a4228720d61",
+    "source_manifest_sha256": "d71e54505c54911cb38a32e3e3d8aa2981c3b62b7c8fd8800dcf59dc2eff79ae",
+    "source_file_count": 3001,
+    "overlay_deletes_no_files": true,
+    "note": "Apply only to this exact complete source base; source overlay is not a runtime update."
   },
   "parts": [
     {
-      "name": "MossCircuit-v21-to-v23-Update-2026-10-25.zip.part001",
+      "name": "MossCircuit-v23-to-v24-Update-2026-10-26.zip.part001",
       "bytes": 20000000,
-      "sha256": "78af0fadb4e2e0eddcd538a49cedd30622273e1c9774dd59d0c0688717a6dedd"
+      "sha256": "f089629ffb7c30ffaef226467a0cfdabeeaa391508c5b5609d1cc6ded6f0d71a"
     },
     {
-      "name": "MossCircuit-v21-to-v23-Update-2026-10-25.zip.part002",
+      "name": "MossCircuit-v23-to-v24-Update-2026-10-26.zip.part002",
       "bytes": 20000000,
-      "sha256": "278f29928bdcf0f5cb450f534661e3bf67544c5df62540919bd21474e58592f6"
+      "sha256": "3bdeb929901f59237e9b2708f8f7f731fb3ee4eebd1ebd4464f8b055ac3053fc"
     },
     {
-      "name": "MossCircuit-v21-to-v23-Update-2026-10-25.zip.part003",
-      "bytes": 221897,
-      "sha256": "96067d23ebee112bd43ca927ff75272ed9502b2dbbd88d0acce86ddc7912c6cc"
+      "name": "MossCircuit-v23-to-v24-Update-2026-10-26.zip.part003",
+      "bytes": 215073,
+      "sha256": "1a4b6f0b03c6da7634b234299a13ea5a980b02bb826330516fffff3ab7f59852"
     }
   ],
-  "outer_readme": {
-    "name": "MossCircuit-v23-更新与分卷说明.txt",
-    "bytes": 3801,
-    "sha256": "c204cf9fff6ba37e7115c7f2943d64cc0e9b7b68c1b0a1d69884a67829db00e2"
+  "outer_instructions": {
+    "name": "MossCircuit-v24-更新与分卷说明.txt",
+    "bytes": 3106,
+    "sha256": "b54a96281ef41b29caa040b01913bd06d5729c9589a6c023e163aa0199d2844b"
   },
-  "native_scope": "bounded ordinary Linux acquisition and observed field-boundary contact; controlled source/native tests separately documented",
-  "windows_runtime_tested": false,
-  "audio_tested": false,
-  "publication": "remote branch status is separate; not implied by local validation",
-  "documentation_revision": "r2 explicitly distinguishes automated CUA inputs from injected game-state control; runtime unchanged"
+  "scope": "Existing v23 full bundles plus this update are the recovery pair. Same accepted ELF/EXE, no fresh Windows build/run. Source overlay is separate and not executable/PCK content."
 }

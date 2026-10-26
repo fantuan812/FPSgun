@@ -44,6 +44,22 @@ static func catalog_entry(catalog: Dictionary, id: String) -> Dictionary:
 		if entry.id == id: return entry
 	return {}
 
+# Shared authority/readout calculations. Keep operation order identical to combat.
+static func weapon_damage(weapon: Dictionary, stats: Dictionary) -> float:
+	var damage: float = weapon.damage * (1.0 + stats.damage_bonus)
+	if "electric" in weapon.tags: damage *= 1.0 + stats.electric_bonus
+	if "melee" in weapon.tags: damage *= 1.0 + stats.melee_bonus
+	return damage
+
+static func weapon_interval(weapon: Dictionary, stats: Dictionary) -> float:
+	return maxf(.09, weapon.interval / (1.0 + stats.haste))
+
+static func weapon_reach(weapon: Dictionary, stats: Dictionary) -> float:
+	return float(weapon.range) if weapon.behavior == "orbit" else weapon.range * (1.0 + stats.range_bonus)
+
+static func weapon_projectiles(weapon: Dictionary, stats: Dictionary) -> int:
+	return weapon.projectiles + (int(stats.extra_pellets) if weapon.behavior == "spread" else 0)
+
 static func _positive_number(value: Variant, allow_zero: bool = false) -> bool:
 	return (value is int or value is float) and is_finite(float(value)) and (float(value) >= 0 if allow_zero else float(value) > 0)
 

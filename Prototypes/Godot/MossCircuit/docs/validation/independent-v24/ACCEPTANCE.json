@@ -1,0 +1,50 @@
+{
+  "verdict": "PASS within bounded v24 weapon-readout scope",
+  "source_manifest_sha256": "be3729dbb7e96b0b3dbc69bd4a4e1a65448ceeec25b111b17e7f4c5e98342c4d",
+  "source_files": 540,
+  "production_paths": 116,
+  "production_changes_vs_v23": [
+    "scripts/gameplay/combat_runtime.gd",
+    "scripts/gameplay/weapon_combat.gd",
+    "scripts/main.gd",
+    "scripts/rules.gd",
+    "scripts/weapon_readout.gd",
+    "ui/moss_ui.gd"
+  ],
+  "all_source_files_unchanged_after_testing": true,
+  "headless_entrypoints": 73,
+  "import_pass": true,
+  "python_safety_tests": 3,
+  "packed_checks": 825,
+  "packed_exact_files": 55,
+  "packed_images": 57,
+  "native_exact_pack": "c6538ac76c04bfe5698c983574fb1a235e07c5dfdbe9eff7cac2784755402596",
+  "native_executable": "2c78919325d7f29fa7607287c7c1eeac367ea4c94e7b8b6f5f4c6b20492f73d0",
+  "native_seed": 128,
+  "ordinary_control": "automated CUA with tactical pauses; no programmatic game-state control",
+  "native_progression": "one Arena wave through first shop; brief next-wave inventory and Rooms starter smoke, not full campaign",
+  "scrap_transactions": [
+    122,
+    80,
+    62
+  ],
+  "rail_current_damage_before_after_coil": [
+    45.0,
+    49.5
+  ],
+  "rail_current_interval_seconds": 1.0,
+  "rail_base_damage_interval": [
+    30.0,
+    1.15
+  ],
+  "native_captures": 21,
+  "controlled_source_captures": 47,
+  "closure": "returned title then external Terminal Ctrl+C; native game window disappeared; not an in-app quit/exit0 claim",
+  "untested": [
+    "Windows runtime",
+    "audio",
+    "general balance/all combinations",
+    "new full campaign"
+  ],
+  "release_archive_review": "pending"
+}

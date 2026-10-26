@@ -1,4 +1,5 @@
 extends Node2D
+const WeaponReadout=preload("res://scripts/weapon_readout.gd")
 const ModeStatus=preload("res://ui/mode_status.gd")
 var mode_status:CanvasLayer
 const EffectRuntime=preload("res://scripts/gameplay/effect_runtime.gd")
@@ -758,6 +759,7 @@ func _view() -> Dictionary:
 		var entry := Rules.catalog_entry(catalog,build.weapons[i]).duplicate(true)
 		entry.slot = i
 		entry.sell_price = floori(entry.price * stats.resale)
+		entry.weapon_readout = WeaponReadout.describe(entry,stats,true)
 		view.weapons.append(entry)
 	for id in build.items:
 		var entry := Rules.catalog_entry(catalog,id).duplicate(true)
@@ -772,6 +774,7 @@ func _view() -> Dictionary:
 		entry.weight_multiplier = offer.get("weight_multiplier",1.0)
 		entry.bias_reasons = offer.get("bias_reasons",[])
 		entry.can_buy = not offer.sold and build.coins >= entry.price
+		if entry.kind == "weapon":entry.weapon_readout=WeaponReadout.describe(entry,stats,false)
 		if entry.kind == "item":
 			entry.can_buy = entry.can_buy and build.items.get(entry.id,0) < entry.max_stack and (build.items.has(entry.id) or build.items.size() < catalog.item_slots)
 		view.offers.append(entry)

@@ -19,9 +19,7 @@ func _init(w:CombatState,s:RunSession,c:Dictionary,p:WeaponPresentation,e:Callab
 func fire(id: String, slot: int, area:Dictionary={}) -> void:
 	if world.enemies.is_empty(): return
 	var weapon := Rules.catalog_entry(catalog, id)
-	var damage: float = weapon.damage * (1.0 + world.stats.damage_bonus)
-	if "electric" in weapon.tags: damage *= 1.0 + world.stats.electric_bonus
-	if "melee" in weapon.tags: damage *= 1.0 + world.stats.melee_bonus
+	var damage: float = Rules.weapon_damage(weapon,world.stats)
 	if weapon.behavior == "field_bankshot":
 		fire_bankshot(weapon,slot,damage,area)
 		return
@@ -32,18 +30,18 @@ func fire(id: String, slot: int, area:Dictionary={}) -> void:
 		presentation.fire(id,slot,world.player_pos+Vector2.RIGHT*100,true)
 		# A timed rotating radial sweep: damages each nearby target once per attack.
 		for enemy in world.enemies:
-			if enemy.hp > 0 and enemy.pos.distance_to(world.player_pos) <= weapon.range:
+			if enemy.hp > 0 and enemy.pos.distance_to(world.player_pos) <= Rules.weapon_reach(weapon,world.stats):
 				enemy.hp -= damage
 				enemy.last_source = "primary"
 				effect_event.call("hit",{"target":enemy.id,"pos":enemy.pos,"damage":damage,"weapon":id})
-		world.flashes.append({"pos":world.player_pos, "life":.25, "radius":weapon.range})
+		world.flashes.append({"pos":world.player_pos, "life":.25, "radius":Rules.weapon_reach(weapon,world.stats)})
 		return
 	var living: Array = world.enemies.filter(func(enemy): return enemy.hp > 0)
 	if living.is_empty(): return
 	var nearest: Dictionary = living[0]
 	for enemy in living:
 		if world.player_pos.distance_squared_to(enemy.pos) < world.player_pos.distance_squared_to(nearest.pos): nearest = enemy
-	var reach: float = weapon.range * (1.0 + world.stats.range_bonus)
+	var reach: float = Rules.weapon_reach(weapon,world.stats)
 	if world.player_pos.distance_to(nearest.pos) > reach: return
 	var pose:Dictionary=presentation.fire(id,slot,nearest.pos)
 	var aim:Vector2=pose.direction
@@ -52,7 +50,7 @@ func fire(id: String, slot: int, area:Dictionary={}) -> void:
 		world.pending_blasts.append({"pos":nearest.pos,"delay":.6,"damage":damage,"radius":85.0,"weapon":id,"visual_origin":pose.muzzle})
 		return
 	var direction: Vector2 = aim
-	var count: int = weapon.projectiles + (int(world.stats.extra_pellets) if weapon.behavior == "spread" else 0)
+	var count: int = Rules.weapon_projectiles(weapon,world.stats)
 	for i in range(count):
 		var angle: float = (float(i) / maxf(1, count - 1) - .5) * float(weapon.spread) if count > 1 else 0.0
 		var vector := direction.rotated(angle)
@@ -61,7 +59,7 @@ func fire(id: String, slot: int, area:Dictionary={}) -> void:
 		world.bullets.append({"pos":pose.muzzle,"launch_start":pose.mount,"launch_end":pose.muzzle, "velocity":vector * world.stats.bullet_speed, "life":2.5 if weapon.behavior == "return" else maxf(.000001,travel / world.stats.bullet_speed), "damage":damage, "pierce":int(weapon.pierce) + int(world.stats.pierce), "hit":[], "weapon":id, "slot":slot, "returning":false,"outbound_left":travel / world.stats.bullet_speed})
 
 func fire_chill(weapon:Dictionary,slot:int,damage:float)->void:
-	var reach:float=weapon.range*(1.0+world.stats.range_bonus)
+	var reach:float=Rules.weapon_reach(weapon,world.stats)
 	var targets:Array=Status.ordered_living(world.enemies,world.player_pos,reach)
 	if targets.is_empty():return
 	var target:Vector2=targets[0].pos
@@ -139,7 +137,7 @@ func advance_disc(b: Dictionary,dt: float) -> void:
 		if b.pos.distance_to(world.player_pos) < 14: b.life = -1
 
 func fire_bankshot(weapon:Dictionary,slot:int,damage:float,area:Dictionary)->void:
-	var reach:float=weapon.range*(1.0+world.stats.range_bonus)
+	var reach:float=Rules.weapon_reach(weapon,world.stats)
 	var targets:Array=Status.ordered_living(world.enemies,world.player_pos,reach)
 	if targets.is_empty():return
 	var target:Vector2=targets[0].pos

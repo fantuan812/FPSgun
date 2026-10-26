@@ -1,0 +1,759 @@
+{
+  "checks": 465,
+  "failures": [],
+  "records": [
+    {
+      "mode": "arena",
+      "modified": false,
+      "offer": {
+        "damage": 15.0,
+        "damage_unit": "per contact",
+        "interval": 0.4,
+        "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS.",
+        "reach": 500.0,
+        "reach_label": "Acquisition / range limit",
+        "scope": "BASE"
+      },
+      "owned": {
+        "damage": 15.0,
+        "damage_unit": "per contact",
+        "interval": 0.4,
+        "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS.",
+        "reach": 500.0,
+        "reach_label": "Acquisition / range limit",
+        "scope": "CURRENT"
+      },
+      "weapon": "rivet_gun"
+    },
+    {
+      "mode": "arena",
+      "modified": false,
+      "offer": {
+        "damage": 9.0,
+        "damage_unit": "per pellet contact",
+        "interval": 0.85,
+        "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS.",
+        "pellets": 5,
+        "reach": 300.0,
+        "reach_label": "Acquisition / range limit",
+        "scope": "BASE"
+      },
+      "owned": {
+        "damage": 9.0,
+        "damage_unit": "per pellet contact",
+        "interval": 0.85,
+        "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS.",
+        "pellets": 5,
+        "reach": 300.0,
+        "reach_label": "Acquisition / range limit",
+        "scope": "CURRENT"
+      },
+      "weapon": "scrap_shotgun"
+    },
+    {
+      "mode": "arena",
+      "modified": false,
+      "offer": {
+        "damage": 30.0,
+        "damage_unit": "per contact",
+        "interval": 1.15,
+        "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS.",
+        "reach": 650.0,
+        "reach_label": "Acquisition / range limit",
+        "scope": "BASE"
+      },
+      "owned": {
+        "damage": 30.0,
+        "damage_unit": "per contact",
+        "interval": 1.15,
+        "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS.",
+        "reach": 650.0,
+        "reach_label": "Acquisition / range limit",
+        "scope": "CURRENT"
+      },
+      "weapon": "rail_lance"
+    },
+    {
+      "mode": "arena",
+      "modified": false,
+      "offer": {
+        "damage": 20.0,
+        "damage_unit": "per target / sweep",
+        "interval": 0.65,
+        "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS. Focus Lens does not change this radius.",
+        "reach": 105.0,
+        "reach_label": "Sweep radius",
+        "scope": "BASE"
+      },
+      "owned": {
+        "damage": 20.0,
+        "damage_unit": "per target / sweep",
+        "interval": 0.65,
+        "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS. Focus Lens does not change this radius.",
+        "reach": 105.0,
+        "reach_label": "Sweep radius",
+        "scope": "CURRENT"
+      },
+      "weapon": "orbit_saw"
+    },
+    {
+      "mode": "arena",
+      "modified": false,
+      "offer": {
+        "damage": 18.0,
+        "damage_unit": "per contact",
+        "interval": 0.9,
+        "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS. Not total round-trip travel; each leg can hit each target once.",
+        "reach": 330.0,
+        "reach_label": "Acquisition / outbound reach",
+        "scope": "BASE"
+      },
+      "owned": {
+        "damage": 18.0,
+        "damage_unit": "per contact",
+        "interval": 0.9,
+        "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS. Not total round-trip travel; each leg can hit each target once.",
+        "reach": 330.0,
+        "reach_label": "Acquisition / outbound reach",
+        "scope": "CURRENT"
+      },
+      "weapon": "return_disc"
+    },
+    {
+      "mode": "arena",
+      "modified": false,
+      "offer": {
+        "damage": 36.0,
+        "damage_unit": "per target / blast",
+        "interval": 1.5,
+        "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS. Reach is not blast radius; blast size and delay follow base behavior.",
+        "reach": 500.0,
+        "reach_label": "Acquisition reach",
+        "scope": "BASE"
+      },
+      "owned": {
+        "damage": 36.0,
+        "damage_unit": "per target / blast",
+        "interval": 1.5,
+        "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS. Reach is not blast radius; blast size and delay follow base behavior.",
+        "reach": 500.0,
+        "reach_label": "Acquisition reach",
+        "scope": "CURRENT"
+      },
+      "weapon": "shock_mortar"
+    },
+    {
+      "mode": "arena",
+      "modified": false,
+      "offer": {
+        "damage": 9.0,
+        "damage_unit": "per target / cone",
+        "interval": 0.65,
+        "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS. Instant cone: projectile and pierce bonuses do not apply; fixed shatter damage is separate.",
+        "reach": 190.0,
+        "reach_label": "Cone reach",
+        "scope": "BASE"
+      },
+      "owned": {
+        "damage": 9.0,
+        "damage_unit": "per target / cone",
+        "interval": 0.65,
+        "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS. Instant cone: projectile and pierce bonuses do not apply; fixed shatter damage is separate.",
+        "reach": 190.0,
+        "reach_label": "Cone reach",
+        "scope": "CURRENT"
+      },
+      "weapon": "cryo_sprayer"
+    },
+    {
+      "mode": "arena",
+      "modified": false,
+      "offer": {
+        "damage": 18.0,
+        "damage_unit": "per contact",
+        "interval": 0.85,
+        "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS. One total path across all legs, not a fresh range per bounce. Guide changes direction only.",
+        "reach": 900.0,
+        "reach_label": "Acquisition reach",
+        "scope": "BASE",
+        "total_path": 900.0
+      },
+      "owned": {
+        "damage": 18.0,
+        "damage_unit": "per contact",
+        "interval": 0.85,
+        "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS. One total path across all legs, not a fresh range per bounce. Guide changes direction only.",
+        "reach": 900.0,
+        "reach_label": "Acquisition reach",
+        "scope": "CURRENT",
+        "total_path": 900.0
+      },
+      "weapon": "bankshot_driver"
+    },
+    {
+      "mode": "arena",
+      "modified": true,
+      "offer": {
+        "damage": 15.0,
+        "damage_unit": "per contact",
+        "interval": 0.4,
+        "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS.",
+        "reach": 500.0,
+        "reach_label": "Acquisition / range limit",
+        "scope": "BASE"
+      },
+      "owned": {
+        "damage": 19.5,
+        "damage_unit": "per contact",
+        "interval": 0.357142857142857,
+        "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS.",
+        "reach": 575.0,
+        "reach_label": "Acquisition / range limit",
+        "scope": "CURRENT"
+      },
+      "weapon": "rivet_gun"
+    },
+    {
+      "mode": "arena",
+      "modified": true,
+      "offer": {
+        "damage": 9.0,
+        "damage_unit": "per pellet contact",
+        "interval": 0.85,
+        "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS.",
+        "pellets": 5,
+        "reach": 300.0,
+        "reach_label": "Acquisition / range limit",
+        "scope": "BASE"
+      },
+      "owned": {
+        "damage": 11.7,
+        "damage_unit": "per pellet contact",
+        "interval": 0.758928571428571,
+        "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS.",
+        "pellets": 8,
+        "reach": 345.0,
+        "reach_label": "Acquisition / range limit",
+        "scope": "CURRENT"
+      },
+      "weapon": "scrap_shotgun"
+    },
+    {
+      "mode": "arena",
+      "modified": true,
+      "offer": {
+        "damage": 30.0,
+        "damage_unit": "per contact",
+        "interval": 1.15,
+        "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS.",
+        "reach": 650.0,
+        "reach_label": "Acquisition / range limit",
+        "scope": "BASE"
+      },
+      "owned": {
+        "damage": 66.3,
+        "damage_unit": "per contact",
+        "interval": 1.02678571428571,
+        "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS.",
+        "reach": 747.5,
+        "reach_label": "Acquisition / range limit",
+        "scope": "CURRENT"
+      },
+      "weapon": "rail_lance"
+    },
+    {
+      "mode": "arena",
+      "modified": true,
+      "offer": {
+        "damage": 20.0,
+        "damage_unit": "per target / sweep",
+        "interval": 0.65,
+        "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS. Focus Lens does not change this radius.",
+        "reach": 105.0,
+        "reach_label": "Sweep radius",
+        "scope": "BASE"
+      },
+      "owned": {
+        "damage": 44.2,
+        "damage_unit": "per target / sweep",
+        "interval": 0.580357142857143,
+        "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS. Focus Lens does not change this radius.",
+        "reach": 105.0,
+        "reach_label": "Sweep radius",
+        "scope": "CURRENT"
+      },
+      "weapon": "orbit_saw"
+    },
+    {
+      "mode": "arena",
+      "modified": true,
+      "offer": {
+        "damage": 18.0,
+        "damage_unit": "per contact",
+        "interval": 0.9,
+        "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS. Not total round-trip travel; each leg can hit each target once.",
+        "reach": 330.0,
+        "reach_label": "Acquisition / outbound reach",
+        "scope": "BASE"
+      },
+      "owned": {
+        "damage": 23.4,
+        "damage_unit": "per contact",
+        "interval": 0.803571428571428,
+        "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS. Not total round-trip travel; each leg can hit each target once.",
+        "reach": 379.5,
+        "reach_label": "Acquisition / outbound reach",
+        "scope": "CURRENT"
+      },
+      "weapon": "return_disc"
+    },
+    {
+      "mode": "arena",
+      "modified": true,
+      "offer": {
+        "damage": 36.0,
+        "damage_unit": "per target / blast",
+        "interval": 1.5,
+        "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS. Reach is not blast radius; blast size and delay follow base behavior.",
+        "reach": 500.0,
+        "reach_label": "Acquisition reach",
+        "scope": "BASE"
+      },
+      "owned": {
+        "damage": 46.8,
+        "damage_unit": "per target / blast",
+        "interval": 1.33928571428571,
+        "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS. Reach is not blast radius; blast size and delay follow base behavior.",
+        "reach": 575.0,
+        "reach_label": "Acquisition reach",
+        "scope": "CURRENT"
+      },
+      "weapon": "shock_mortar"
+    },
+    {
+      "mode": "arena",
+      "modified": true,
+      "offer": {
+        "damage": 9.0,
+        "damage_unit": "per target / cone",
+        "interval": 0.65,
+        "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS. Instant cone: projectile and pierce bonuses do not apply; fixed shatter damage is separate.",
+        "reach": 190.0,
+        "reach_label": "Cone reach",
+        "scope": "BASE"
+      },
+      "owned": {
+        "damage": 11.7,
+        "damage_unit": "per target / cone",
+        "interval": 0.580357142857143,
+        "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS. Instant cone: projectile and pierce bonuses do not apply; fixed shatter damage is separate.",
+        "reach": 218.5,
+        "reach_label": "Cone reach",
+        "scope": "CURRENT"
+      },
+      "weapon": "cryo_sprayer"
+    },
+    {
+      "mode": "arena",
+      "modified": true,
+      "offer": {
+        "damage": 18.0,
+        "damage_unit": "per contact",
+        "interval": 0.85,
+        "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS. One total path across all legs, not a fresh range per bounce. Guide changes direction only.",
+        "reach": 900.0,
+        "reach_label": "Acquisition reach",
+        "scope": "BASE",
+        "total_path": 900.0
+      },
+      "owned": {
+        "damage": 23.4,
+        "damage_unit": "per contact",
+        "interval": 0.758928571428571,
+        "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS. One total path across all legs, not a fresh range per bounce. Guide changes direction only.",
+        "reach": 1035.0,
+        "reach_label": "Acquisition reach",
+        "scope": "CURRENT",
+        "total_path": 1035.0
+      },
+      "weapon": "bankshot_driver"
+    },
+    {
+      "mode": "rooms",
+      "modified": false,
+      "offer": {
+        "damage": 15.0,
+        "damage_unit": "per contact",
+        "interval": 0.4,
+        "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS.",
+        "reach": 500.0,
+        "reach_label": "Acquisition / range limit",
+        "scope": "BASE"
+      },
+      "owned": {
+        "damage": 15.0,
+        "damage_unit": "per contact",
+        "interval": 0.4,
+        "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS.",
+        "reach": 500.0,
+        "reach_label": "Acquisition / range limit",
+        "scope": "CURRENT"
+      },
+      "weapon": "rivet_gun"
+    },
+    {
+      "mode": "rooms",
+      "modified": false,
+      "offer": {
+        "damage": 9.0,
+        "damage_unit": "per pellet contact",
+        "interval": 0.85,
+        "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS.",
+        "pellets": 5,
+        "reach": 300.0,
+        "reach_label": "Acquisition / range limit",
+        "scope": "BASE"
+      },
+      "owned": {
+        "damage": 9.0,
+        "damage_unit": "per pellet contact",
+        "interval": 0.85,
+        "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS.",
+        "pellets": 5,
+        "reach": 300.0,
+        "reach_label": "Acquisition / range limit",
+        "scope": "CURRENT"
+      },
+      "weapon": "scrap_shotgun"
+    },
+    {
+      "mode": "rooms",
+      "modified": false,
+      "offer": {
+        "damage": 30.0,
+        "damage_unit": "per contact",
+        "interval": 1.15,
+        "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS.",
+        "reach": 650.0,
+        "reach_label": "Acquisition / range limit",
+        "scope": "BASE"
+      },
+      "owned": {
+        "damage": 30.0,
+        "damage_unit": "per contact",
+        "interval": 1.15,
+        "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS.",
+        "reach": 650.0,
+        "reach_label": "Acquisition / range limit",
+        "scope": "CURRENT"
+      },
+      "weapon": "rail_lance"
+    },
+    {
+      "mode": "rooms",
+      "modified": false,
+      "offer": {
+        "damage": 20.0,
+        "damage_unit": "per target / sweep",
+        "interval": 0.65,
+        "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS. Focus Lens does not change this radius.",
+        "reach": 105.0,
+        "reach_label": "Sweep radius",
+        "scope": "BASE"
+      },
+      "owned": {
+        "damage": 20.0,
+        "damage_unit": "per target / sweep",
+        "interval": 0.65,
+        "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS. Focus Lens does not change this radius.",
+        "reach": 105.0,
+        "reach_label": "Sweep radius",
+        "scope": "CURRENT"
+      },
+      "weapon": "orbit_saw"
+    },
+    {
+      "mode": "rooms",
+      "modified": false,
+      "offer": {
+        "damage": 18.0,
+        "damage_unit": "per contact",
+        "interval": 0.9,
+        "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS. Not total round-trip travel; each leg can hit each target once.",
+        "reach": 330.0,
+        "reach_label": "Acquisition / outbound reach",
+        "scope": "BASE"
+      },
+      "owned": {
+        "damage": 18.0,
+        "damage_unit": "per contact",
+        "interval": 0.9,
+        "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS. Not total round-trip travel; each leg can hit each target once.",
+        "reach": 330.0,
+        "reach_label": "Acquisition / outbound reach",
+        "scope": "CURRENT"
+      },
+      "weapon": "return_disc"
+    },
+    {
+      "mode": "rooms",
+      "modified": false,
+      "offer": {
+        "damage": 36.0,
+        "damage_unit": "per target / blast",
+        "interval": 1.5,
+        "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS. Reach is not blast radius; blast size and delay follow base behavior.",
+        "reach": 500.0,
+        "reach_label": "Acquisition reach",
+        "scope": "BASE"
+      },
+      "owned": {
+        "damage": 36.0,
+        "damage_unit": "per target / blast",
+        "interval": 1.5,
+        "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS. Reach is not blast radius; blast size and delay follow base behavior.",
+        "reach": 500.0,
+        "reach_label": "Acquisition reach",
+        "scope": "CURRENT"
+      },
+      "weapon": "shock_mortar"
+    },
+    {
+      "mode": "rooms",
+      "modified": false,
+      "offer": {
+        "damage": 9.0,
+        "damage_unit": "per target / cone",
+        "interval": 0.65,
+        "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS. Instant cone: projectile and pierce bonuses do not apply; fixed shatter damage is separate.",
+        "reach": 190.0,
+        "reach_label": "Cone reach",
+        "scope": "BASE"
+      },
+      "owned": {
+        "damage": 9.0,
+        "damage_unit": "per target / cone",
+        "interval": 0.65,
+        "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS. Instant cone: projectile and pierce bonuses do not apply; fixed shatter damage is separate.",
+        "reach": 190.0,
+        "reach_label": "Cone reach",
+        "scope": "CURRENT"
+      },
+      "weapon": "cryo_sprayer"
+    },
+    {
+      "mode": "rooms",
+      "modified": false,
+      "offer": {
+        "damage": 18.0,
+        "damage_unit": "per contact",
+        "interval": 0.85,
+        "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS. One total path across all legs, not a fresh range per bounce. Guide changes direction only.",
+        "reach": 900.0,
+        "reach_label": "Acquisition reach",
+        "scope": "BASE",
+        "total_path": 900.0
+      },
+      "owned": {
+        "damage": 18.0,
+        "damage_unit": "per contact",
+        "interval": 0.85,
+        "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS. One total path across all legs, not a fresh range per bounce. Guide changes direction only.",
+        "reach": 900.0,
+        "reach_label": "Acquisition reach",
+        "scope": "CURRENT",
+        "total_path": 900.0
+      },
+      "weapon": "bankshot_driver"
+    },
+    {
+      "mode": "rooms",
+      "modified": true,
+      "offer": {
+        "damage": 15.0,
+        "damage_unit": "per contact",
+        "interval": 0.4,
+        "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS.",
+        "reach": 500.0,
+        "reach_label": "Acquisition / range limit",
+        "scope": "BASE"
+      },
+      "owned": {
+        "damage": 19.5,
+        "damage_unit": "per contact",
+        "interval": 0.357142857142857,
+        "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS.",
+        "reach": 575.0,
+        "reach_label": "Acquisition / range limit",
+        "scope": "CURRENT"
+      },
+      "weapon": "rivet_gun"
+    },
+    {
+      "mode": "rooms",
+      "modified": true,
+      "offer": {
+        "damage": 9.0,
+        "damage_unit": "per pellet contact",
+        "interval": 0.85,
+        "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS.",
+        "pellets": 5,
+        "reach": 300.0,
+        "reach_label": "Acquisition / range limit",
+        "scope": "BASE"
+      },
+      "owned": {
+        "damage": 11.7,
+        "damage_unit": "per pellet contact",
+        "interval": 0.758928571428571,
+        "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS.",
+        "pellets": 8,
+        "reach": 345.0,
+        "reach_label": "Acquisition / range limit",
+        "scope": "CURRENT"
+      },
+      "weapon": "scrap_shotgun"
+    },
+    {
+      "mode": "rooms",
+      "modified": true,
+      "offer": {
+        "damage": 30.0,
+        "damage_unit": "per contact",
+        "interval": 1.15,
+        "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS.",
+        "reach": 650.0,
+        "reach_label": "Acquisition / range limit",
+        "scope": "BASE"
+      },
+      "owned": {
+        "damage": 66.3,
+        "damage_unit": "per contact",
+        "interval": 1.02678571428571,
+        "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS.",
+        "reach": 747.5,
+        "reach_label": "Acquisition / range limit",
+        "scope": "CURRENT"
+      },
+      "weapon": "rail_lance"
+    },
+    {
+      "mode": "rooms",
+      "modified": true,
+      "offer": {
+        "damage": 20.0,
+        "damage_unit": "per target / sweep",
+        "interval": 0.65,
+        "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS. Focus Lens does not change this radius.",
+        "reach": 105.0,
+        "reach_label": "Sweep radius",
+        "scope": "BASE"
+      },
+      "owned": {
+        "damage": 44.2,
+        "damage_unit": "per target / sweep",
+        "interval": 0.580357142857143,
+        "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS. Focus Lens does not change this radius.",
+        "reach": 105.0,
+        "reach_label": "Sweep radius",
+        "scope": "CURRENT"
+      },
+      "weapon": "orbit_saw"
+    },
+    {
+      "mode": "rooms",
+      "modified": true,
+      "offer": {
+        "damage": 18.0,
+        "damage_unit": "per contact",
+        "interval": 0.9,
+        "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS. Not total round-trip travel; each leg can hit each target once.",
+        "reach": 330.0,
+        "reach_label": "Acquisition / outbound reach",
+        "scope": "BASE"
+      },
+      "owned": {
+        "damage": 23.4,
+        "damage_unit": "per contact",
+        "interval": 0.803571428571428,
+        "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS. Not total round-trip travel; each leg can hit each target once.",
+        "reach": 379.5,
+        "reach_label": "Acquisition / outbound reach",
+        "scope": "CURRENT"
+      },
+      "weapon": "return_disc"
+    },
+    {
+      "mode": "rooms",
+      "modified": true,
+      "offer": {
+        "damage": 36.0,
+        "damage_unit": "per target / blast",
+        "interval": 1.5,
+        "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS. Reach is not blast radius; blast size and delay follow base behavior.",
+        "reach": 500.0,
+        "reach_label": "Acquisition reach",
+        "scope": "BASE"
+      },
+      "owned": {
+        "damage": 46.8,
+        "damage_unit": "per target / blast",
+        "interval": 1.33928571428571,
+        "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS. Reach is not blast radius; blast size and delay follow base behavior.",
+        "reach": 575.0,
+        "reach_label": "Acquisition reach",
+        "scope": "CURRENT"
+      },
+      "weapon": "shock_mortar"
+    },
+    {
+      "mode": "rooms",
+      "modified": true,
+      "offer": {
+        "damage": 9.0,
+        "damage_unit": "per target / cone",
+        "interval": 0.65,
+        "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS. Instant cone: projectile and pierce bonuses do not apply; fixed shatter damage is separate.",
+        "reach": 190.0,
+        "reach_label": "Cone reach",
+        "scope": "BASE"
+      },
+      "owned": {
+        "damage": 11.7,
+        "damage_unit": "per target / cone",
+        "interval": 0.580357142857143,
+        "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS. Instant cone: projectile and pierce bonuses do not apply; fixed shatter damage is separate.",
+        "reach": 218.5,
+        "reach_label": "Cone reach",
+        "scope": "CURRENT"
+      },
+      "weapon": "cryo_sprayer"
+    },
+    {
+      "mode": "rooms",
+      "modified": true,
+      "offer": {
+        "damage": 18.0,
+        "damage_unit": "per contact",
+        "interval": 0.85,
+        "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS. One total path across all legs, not a fresh range per bounce. Guide changes direction only.",
+        "reach": 900.0,
+        "reach_label": "Acquisition reach",
+        "scope": "BASE",
+        "total_path": 900.0
+      },
+      "owned": {
+        "damage": 23.4,
+        "damage_unit": "per contact",
+        "interval": 0.758928571428571,
+        "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS. One total path across all legs, not a fresh range per bounce. Guide changes direction only.",
+        "reach": 1035.0,
+        "reach_label": "Acquisition reach",
+        "scope": "CURRENT",
+        "total_path": 1035.0
+      },
+      "weapon": "bankshot_driver"
+    }
+  ],
+  "scope": "Independent expected-unit/value/generated-card/read-only assertions; controlled headless, not native appearance"
+}

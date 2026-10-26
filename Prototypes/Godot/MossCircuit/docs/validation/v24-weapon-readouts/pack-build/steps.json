@@ -1,0 +1,44 @@
+[
+  {
+    "step": "engine-version",
+    "exit": 0,
+    "engine_error": false,
+    "pass": true
+  },
+  {
+    "step": "cold-import",
+    "exit": 0,
+    "engine_error": false,
+    "pass": true
+  },
+  {
+    "step": "linux-resource-pack",
+    "exit": 0,
+    "engine_error": false,
+    "pass": true
+  },
+  {
+    "step": "windows-resource-pack",
+    "exit": 0,
+    "engine_error": false,
+    "pass": true
+  },
+  {
+    "step": "source-fingerprint",
+    "exit": 0,
+    "engine_error": false,
+    "pass": true
+  },
+  {
+    "step": "packed-resources",
+    "exit": 0,
+    "engine_error": false,
+    "pass": true
+  },
+  {
+    "step": "accepted-linux-new-pack-headless",
+    "exit": 1,
+    "engine_error": true,
+    "pass": false
+  }
+]

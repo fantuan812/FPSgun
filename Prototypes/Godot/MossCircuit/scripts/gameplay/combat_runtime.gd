@@ -19,7 +19,7 @@ static func step(frame:Context,dt:float)->void:
 		if frame.world.weapon_clocks[slot] <= 0 and not frame.world.enemies.is_empty():
 			frame.weapons.fire(frame.session.build.weapons[slot], slot, frame.area)
 			var weapon := Rules.catalog_entry(frame.catalog, frame.session.build.weapons[slot])
-			frame.world.weapon_clocks[slot] = maxf(.09, weapon.interval / (1.0 + frame.world.stats.haste))
+			frame.world.weapon_clocks[slot] = Rules.weapon_interval(weapon,frame.world.stats)
 	frame.procs.advance_mortars(dt)
 	frame.procs.advance_hazards(dt)
 	var spawn_requests: Array = []

@@ -1,0 +1,261 @@
+{
+  "snapshot": "v24-interim-r1",
+  "input_count": 532,
+  "input_changes": [],
+  "captures": 47,
+  "equipment_matrix": 32,
+  "actual_sizes": [
+    [
+      960,
+      540
+    ],
+    [
+      1280,
+      720
+    ]
+  ],
+  "modes": [
+    "arena",
+    "rooms"
+  ],
+  "setup": "external controlled injected UI fixture, not ordinary acquisition/play",
+  "input": "automated CUA; actual buy/sell/replace/notes controls",
+  "transactions": [
+    {
+      "case": 3,
+      "coins": 958,
+      "full": false,
+      "items": {
+        "capacitor": 2,
+        "cooling_fan": 1,
+        "gear": 2,
+        "lens": 1,
+        "pellet_pouch": 2,
+        "power_coil": 2
+      },
+      "mode": "arena",
+      "modified": true,
+      "scope": "controlled injected UI setup; not ordinary play",
+      "shop": true,
+      "size": "(960, 540)",
+      "state": "shop",
+      "weapons": [
+        {
+          "id": "rail_lance",
+          "readout": {
+            "damage": 66.3,
+            "damage_unit": "per contact",
+            "interval": 1.02678571428571,
+            "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS.",
+            "reach": 747.5,
+            "reach_label": "Acquisition / range limit",
+            "scope": "CURRENT"
+          },
+          "slot": 0
+        },
+        {
+          "id": "rail_lance",
+          "readout": {
+            "damage": 66.3,
+            "damage_unit": "per contact",
+            "interval": 1.02678571428571,
+            "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS.",
+            "reach": 747.5,
+            "reach_label": "Acquisition / range limit",
+            "scope": "CURRENT"
+          },
+          "slot": 1
+        }
+      ]
+    },
+    {
+      "case": 3,
+      "coins": 979,
+      "full": false,
+      "items": {
+        "capacitor": 2,
+        "cooling_fan": 1,
+        "gear": 2,
+        "lens": 1,
+        "pellet_pouch": 2,
+        "power_coil": 2
+      },
+      "mode": "arena",
+      "modified": true,
+      "scope": "controlled injected UI setup; not ordinary play",
+      "shop": true,
+      "size": "(960, 540)",
+      "state": "shop",
+      "weapons": [
+        {
+          "id": "rail_lance",
+          "readout": {
+            "damage": 66.3,
+            "damage_unit": "per contact",
+            "interval": 1.02678571428571,
+            "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS.",
+            "reach": 747.5,
+            "reach_label": "Acquisition / range limit",
+            "scope": "CURRENT"
+          },
+          "slot": 0
+        }
+      ]
+    },
+    {
+      "case": 3,
+      "coins": 958,
+      "full": true,
+      "items": {
+        "capacitor": 2,
+        "cooling_fan": 1,
+        "gear": 2,
+        "lens": 1,
+        "pellet_pouch": 2,
+        "power_coil": 2
+      },
+      "mode": "arena",
+      "modified": true,
+      "scope": "controlled injected UI setup; not ordinary play",
+      "shop": true,
+      "size": "(960, 540)",
+      "state": "shop",
+      "weapons": [
+        {
+          "id": "rail_lance",
+          "readout": {
+            "damage": 66.3,
+            "damage_unit": "per contact",
+            "interval": 1.02678571428571,
+            "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS.",
+            "reach": 747.5,
+            "reach_label": "Acquisition / range limit",
+            "scope": "CURRENT"
+          },
+          "slot": 0
+        },
+        {
+          "id": "rail_lance",
+          "readout": {
+            "damage": 66.3,
+            "damage_unit": "per contact",
+            "interval": 1.02678571428571,
+            "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS.",
+            "reach": 747.5,
+            "reach_label": "Acquisition / range limit",
+            "scope": "CURRENT"
+          },
+          "slot": 1
+        },
+        {
+          "id": "rail_lance",
+          "readout": {
+            "damage": 66.3,
+            "damage_unit": "per contact",
+            "interval": 1.02678571428571,
+            "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS.",
+            "reach": 747.5,
+            "reach_label": "Acquisition / range limit",
+            "scope": "CURRENT"
+          },
+          "slot": 2
+        },
+        {
+          "id": "bankshot_driver",
+          "readout": {
+            "damage": 23.4,
+            "damage_unit": "per contact",
+            "interval": 0.758928571428571,
+            "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS. One total path across all legs, not a fresh range per bounce. Guide changes direction only.",
+            "reach": 1035.0,
+            "reach_label": "Acquisition reach",
+            "scope": "CURRENT",
+            "total_path": 1035.0
+          },
+          "slot": 3
+        }
+      ]
+    },
+    {
+      "case": 3,
+      "coins": 940,
+      "full": true,
+      "items": {
+        "capacitor": 2,
+        "cooling_fan": 1,
+        "gear": 2,
+        "lens": 1,
+        "pellet_pouch": 2,
+        "power_coil": 3
+      },
+      "mode": "arena",
+      "modified": true,
+      "scope": "controlled injected UI setup; not ordinary play",
+      "shop": true,
+      "size": "(960, 540)",
+      "state": "shop",
+      "weapons": [
+        {
+          "id": "rail_lance",
+          "readout": {
+            "damage": 73.95,
+            "damage_unit": "per contact",
+            "interval": 1.02678571428571,
+            "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS.",
+            "reach": 747.5,
+            "reach_label": "Acquisition / range limit",
+            "scope": "CURRENT"
+          },
+          "slot": 0
+        },
+        {
+          "id": "rail_lance",
+          "readout": {
+            "damage": 73.95,
+            "damage_unit": "per contact",
+            "interval": 1.02678571428571,
+            "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS.",
+            "reach": 747.5,
+            "reach_label": "Acquisition / range limit",
+            "scope": "CURRENT"
+          },
+          "slot": 1
+        },
+        {
+          "id": "rail_lance",
+          "readout": {
+            "damage": 73.95,
+            "damage_unit": "per contact",
+            "interval": 1.02678571428571,
+            "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS.",
+            "reach": 747.5,
+            "reach_label": "Acquisition / range limit",
+            "scope": "CURRENT"
+          },
+          "slot": 2
+        },
+        {
+          "id": "bankshot_driver",
+          "readout": {
+            "damage": 26.1,
+            "damage_unit": "per contact",
+            "interval": 0.758928571428571,
+            "note": "Primary damage only; module procs are separate. Interval is scheduled with valid targets, not guaranteed DPS. One total path across all legs, not a fresh range per bounce. Guide changes direction only.",
+            "reach": 1035.0,
+            "reach_label": "Acquisition reach",
+            "scope": "CURRENT",
+            "total_path": 1035.0
+          },
+          "slot": 3
+        }
+      ]
+    }
+  ],
+  "close": "fixture Q, native game window disappeared",
+  "known_environment_messages": [
+    "unsupported VSync",
+    "ALSA ERR_CANT_OPEN then dummy audio fallback"
+  ],
+  "script_errors": [],
+  "export_acceptance": "pending"
+}

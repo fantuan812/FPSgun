@@ -249,7 +249,9 @@ func _card(parent: Node, data: Dictionary, suffix := "", statuses: Array = [], c
 	image.tooltip_text = str(data.get("description", "")); row.add_child(image)
 	var v := VBoxContainer.new(); v.size_flags_horizontal = Control.SIZE_EXPAND_FILL; row.add_child(v)
 	_text(v, str(data.get("name", data.get("id", ""))) + suffix, 16).add_theme_color_override("font_color", AMBER)
+	if data.get("kind", "") == "weapon":_text(v,"BASE BEHAVIOR",11)
 	_text(v, str(data.get("description", "")), 13)
+	if data.has("weapon_readout"):_weapon_readout(v,data.weapon_readout)
 	if data.get("kind", "") == "item":
 		var facts:VBoxContainer=_disclosure(v,"ITEM DETAILS") if compact else v
 		var details := "TRIGGER: %s\nTRADE-OFF: %s\nICD: %.2fs  /  STACK CAP: %s\nSTACKING: %s" % [data.get("trigger", "Passive while equipped"), data.get("cost", "No additional combat cost"), float(data.get("cooldown", 0)), str(int(data.max_stack)) if data.has("max_stack") else "?", data.get("stack_rule", "Each owned copy adds the listed effect, up to the cap.")]
@@ -262,6 +264,19 @@ func _card(parent: Node, data: Dictionary, suffix := "", statuses: Array = [], c
 				_synergy_line(facts, status)
 		image.tooltip_text = str(data.get("description", "")) + "\n" + details
 	return v
+
+func _weapon_readout(parent:Node,readout:Dictionary)->void:
+	var current:bool=readout.get("scope","")=="CURRENT"
+	_text(parent,"CURRENT WEAPON STATS" if current else "BASE WEAPON STATS",12).add_theme_color_override("font_color",MOSS)
+	_text(parent,"%.2f damage %s  /  %.3f s attack interval" % [float(readout.damage),str(readout.damage_unit),float(readout.interval)],12)
+	var reach_line:String="%s: %.1f px" % [str(readout.reach_label),float(readout.reach)]
+	if readout.has("total_path"):reach_line+="  /  Total path: %.1f px" % float(readout.total_path)
+	if readout.has("pellets"):reach_line+="  /  %d pellets per attack" % int(readout.pellets)
+	_text(parent,reach_line,12)
+	if not current:_text(parent,"No build bonuses; not a post-purchase preview.",11)
+	var details:VBoxContainer=_disclosure(parent,"STAT NOTES")
+	_text(details,str(readout.get("note","")),12)
+	if current:_text(details,"Current equipped build, not a previously fired projectile's stored stats.",12)
 
 func update_hud(view: Dictionary) -> void:
 	var actor_state: String = str(view.get("actor_state", ""))
@@ -390,7 +405,13 @@ func _inventory(parent: Node, view: Dictionary, selling := false) -> void:
 	var synergies: Array = view.get("synergies", [])
 	_text(parent, "None yet. Match electric / melee / spread tags." if synergies.is_empty() else "\n".join(synergies), 13)
 	_label(parent, "DERIVED STATS", 16)
-	for key in view.get("stats", {}): _text(parent, "%s: %s" % [str(key).replace("_", " ").capitalize(), str(view.stats[key])], 13)
+	_text(parent,"See each weapon card for its primary damage and attack interval.",12)
+	var derived:Dictionary=view.get("stats",{})
+	if derived.has("damage_bonus"):_text(parent,"Global weapon-damage bonus: +%.0f%%" % (float(derived.damage_bonus)*100.0),13)
+	if derived.has("haste"):_text(parent,"Additive attack-rate bonus: +%.0f%%" % (float(derived.haste)*100.0),13)
+	for key in derived:
+		if key in ["damage","fire_interval","damage_bonus","haste"]:continue
+		_text(parent, "%s: %s" % [str(key).replace("_", " ").capitalize(), str(derived[key])], 13)
 
 func _synergy_line(parent: Node, status: Dictionary) -> void:
 	var active: bool = bool(status.get("active", false))
