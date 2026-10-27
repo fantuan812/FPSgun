@@ -1,0 +1,61 @@
+{
+  "utc": "2026-10-27T05:13:00.568257+00:00",
+  "source_map": "<WORKSPACE>/moss-v37-prep/POSTIMPORT_INPUTS.json",
+  "source_map_sha256": "36f2e1c331890b87adaee498ea56bb17ba2f8c3494079a46c058b812ed09a3f7",
+  "inputs": 723,
+  "scripts": {
+    "checks/independent_forecast_authority.gd": "cadd615a195eafa901491f695410b379e2b76f4572ae27c92f35a2eab628ce61",
+    "oracles/HAND_ORACLE.md": "c69031bf33e62dd70e07d2acf17ef3374dc5fbc5749ea376c089126909dbe623",
+    "checks/independent_forecast_controller.gd": "5e7c7ab0647fac5abd73dbd21dc2925c8fcc7c8e95f02f3d9fb6e11310d004b5",
+    "checks/independent_forecast_legacy.gd": "7d152d5c7b2846a53bab7b91878ac61e6de24b4b6fb6c066daad149992f6a63d",
+    "checks/independent_forecast_views.gd": "1c136a33d6703966f0de051756710b20224dec9069e7ee606c468afb1471dd4c"
+  },
+  "runner_sha256": "863ac7b3f8ab5d5425899d31b6ca703710e645c52a075aeaca15314772acf75c",
+  "cases": [
+    [
+      "cold-import",
+      [
+        "--editor",
+        "--import",
+        "--quit"
+      ],
+      false
+    ],
+    [
+      "authority",
+      [
+        "--script",
+        "<QA_ROOT>/checks/independent_forecast_authority.gd"
+      ],
+      false
+    ],
+    [
+      "legacy",
+      [
+        "--script",
+        "<QA_ROOT>/checks/independent_forecast_legacy.gd"
+      ],
+      false
+    ],
+    [
+      "controller",
+      [
+        "--script",
+        "<QA_ROOT>/checks/independent_forecast_controller.gd"
+      ],
+      true
+    ],
+    [
+      "views",
+      [
+        "--script",
+        "<QA_ROOT>/checks/independent_forecast_views.gd"
+      ],
+      true
+    ]
+  ],
+  "timeout_per_case_seconds": 180,
+  "stop_on_first_failure": true,
+  "independent_source_copy": "<QA_ROOT>/source-first",
+  "no_prior_result_reclassified": true
+}

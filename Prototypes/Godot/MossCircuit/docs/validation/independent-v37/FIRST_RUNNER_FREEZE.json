@@ -1,0 +1,11 @@
+{
+  "status": "PREPARED_NOT_RUN",
+  "runner_sha256": "863ac7b3f8ab5d5425899d31b6ca703710e645c52a075aeaca15314772acf75c",
+  "scope": "exactcopy author postimport map selected explicitly; true coldimport + 4 independent scripts; 180s each; first rejection stop; helper strict; sources/scripts before-after pins",
+  "awaiting": "author first6 terminal and exact postimport map",
+  "oracle_freezes": {
+    "ORACLE_FREEZE.json": "8af545214290579308fc29203bc7c3601fd588aba00a54addd9c660068ed9c64",
+    "SUPPLEMENTAL_FREEZE.json": "5ed4d86fbc3a9ba924608191ebb1976ec044ecfe51a5df0c22ec30f9dc2445cb",
+    "VIEWS_FREEZE.json": "64c828368891e40423c94c64c5d7206f737e203b244029151f75644912ac62a9"
+  }
+}

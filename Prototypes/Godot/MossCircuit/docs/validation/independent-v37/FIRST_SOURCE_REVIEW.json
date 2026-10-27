@@ -1,0 +1,94 @@
+{
+  "status": "PASS_INDEPENDENT_FIRST_SOURCE_ROUTES",
+  "utc": "2026-10-27T05:14:47.216306+00:00",
+  "original_native_exit": 0,
+  "source_map_sha256": "36f2e1c331890b87adaee498ea56bb17ba2f8c3494079a46c058b812ed09a3f7",
+  "inputs": 723,
+  "cases": [
+    {
+      "case": "cold-import",
+      "native_exit": 0,
+      "seconds": 21.195,
+      "clean": true,
+      "semantic": true,
+      "helper_ok": true,
+      "checks": null
+    },
+    {
+      "case": "authority",
+      "native_exit": 0,
+      "seconds": 0.397,
+      "clean": true,
+      "semantic": true,
+      "helper_ok": true,
+      "checks": 108
+    },
+    {
+      "case": "legacy",
+      "native_exit": 0,
+      "seconds": 0.702,
+      "clean": true,
+      "semantic": true,
+      "helper_ok": true,
+      "checks": 808
+    },
+    {
+      "case": "controller",
+      "native_exit": 0,
+      "seconds": 4.665,
+      "clean": true,
+      "semantic": true,
+      "helper_ok": true,
+      "checks": 306
+    },
+    {
+      "case": "views",
+      "native_exit": 0,
+      "seconds": 2.539,
+      "clean": true,
+      "semantic": true,
+      "helper_ok": true,
+      "checks": 42
+    }
+  ],
+  "helper_observations": [
+    {
+      "case": "controller",
+      "owners": 2,
+      "streams": 4,
+      "last": {
+        "discarded": 0,
+        "elapsed_us": 160381,
+        "game_owner_count": 2,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 2,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      }
+    },
+    {
+      "case": "views",
+      "owners": 1,
+      "streams": 2,
+      "last": {
+        "discarded": 0,
+        "elapsed_us": 153138,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      }
+    }
+  ],
+  "both_source_copies_and_scripts_unchanged": true,
+  "scope": "one true cold import plus four independent selected routes; not whole source aggregate or packed/native acceptance"
+}

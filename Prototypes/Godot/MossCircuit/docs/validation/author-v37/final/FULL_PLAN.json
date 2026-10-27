@@ -1,0 +1,18 @@
+{
+  "command": [
+    "python",
+    "evidence-workspace/moss-v37-final/tests/run_regression.py",
+    "--project",
+    "evidence-workspace/moss-v37-final",
+    "--output",
+    "evidence-workspace/moss-v37-final-prep/full-regression",
+    "--godot",
+    "godot"
+  ],
+  "inputs": 734,
+  "input_map_sha256": "4269a62e3582ebcb439ab33178b167e00f64c6dc5aca32b6680ed5d4304c5ca2",
+  "runner_sha256": "2b913410f2f121c6296d94a65086a921576aba8a0ec9fe3262bdd51a16bb08f1",
+  "expected_total_with_import": 130,
+  "per_case_seconds": 180,
+  "semantics": "Unchanged generic full discovery; preserve all failures, no retry or timeout extension."
+}

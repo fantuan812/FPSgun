@@ -1,0 +1,15 @@
+{"case": "source-cold-import", "native_exit": 0, "timeout": false, "seconds": 20.832, "clean": true, "semantic": true, "helper_clean": true, "parse_error": "", "pass": true}
+{"case": "source-resource-fingerprint", "native_exit": 0, "timeout": false, "seconds": 5.598, "clean": true, "semantic": true, "helper_clean": true, "parse_error": "", "pass": true}
+{"case": "packed-resources", "native_exit": 0, "timeout": false, "seconds": 6.495, "clean": true, "semantic": true, "helper_clean": true, "parse_error": "", "pass": true}
+{"case": "forecast-authority", "native_exit": 0, "timeout": false, "seconds": 1.838, "clean": true, "semantic": true, "helper_clean": true, "parse_error": "", "pass": true}
+{"case": "forecast-legacy", "native_exit": 0, "timeout": false, "seconds": 1.325, "clean": true, "semantic": true, "helper_clean": true, "parse_error": "", "pass": true}
+{"case": "forecast-controller", "native_exit": 0, "timeout": false, "seconds": 5.942, "clean": true, "semantic": true, "helper_clean": true, "parse_error": "", "pass": true}
+{"case": "forecast-views", "native_exit": 0, "timeout": false, "seconds": 3.06, "clean": true, "semantic": true, "helper_clean": true, "parse_error": "", "pass": true}
+{"case": "audio-mixer", "native_exit": 0, "timeout": false, "seconds": 12.434, "clean": true, "semantic": true, "helper_clean": true, "parse_error": "", "pass": true}
+{"case": "audio-views", "native_exit": 0, "timeout": false, "seconds": 4.396, "clean": true, "semantic": true, "helper_clean": true, "parse_error": "", "pass": true}
+{"case": "audio-arena", "native_exit": 0, "timeout": false, "seconds": 77.76, "clean": true, "semantic": true, "helper_clean": true, "parse_error": "", "pass": true}
+{"case": "audio-rooms", "native_exit": 0, "timeout": false, "seconds": 100.565, "clean": true, "semantic": true, "helper_clean": true, "parse_error": "", "pass": true}
+{"case": "packed-svg", "native_exit": 0, "timeout": false, "seconds": 0.807, "clean": true, "semantic": true, "helper_clean": true, "parse_error": "", "pass": true}
+{"case": "python-pcm", "native_exit": 0, "timeout": false, "seconds": 0.073, "clean": true, "semantic": true, "helper_clean": true, "parse_error": "", "pass": true}
+{"case": "python-export-safety", "native_exit": 0, "timeout": false, "seconds": 0.321, "clean": true, "semantic": true, "helper_clean": true, "parse_error": "", "pass": true}
+{"status": "PASS_INDEPENDENT_PACKED_FINITE_SCOPE", "pass": true, "exception": "", "changed_frozen_inputs": [], "completed": 14, "pck_sha256": "156466cddbf44497e5be9c2d2f1d6f221c4aa2ccf545b0c5bca4d06fbb8ba471", "source_map_sha256": "4269a62e3582ebcb439ab33178b167e00f64c6dc5aca32b6680ed5d4304c5ca2", "scope": "Independent exactfinal cold copy/resource fingerprints, 4forecasts, mixer/views, explicit Arena435/Rooms338 each180 total360 authority, SVG/PCM/export safety; no singlepacked180 authority pass claim. Native/ordinary pending."}

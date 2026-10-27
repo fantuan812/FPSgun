@@ -1,0 +1,20 @@
+{
+  "status": "PASS_FINAL_FREEZE_STATIC_AND_COLD_RAW",
+  "utc": "2026-10-27T05:18:51.843786+00:00",
+  "input_map_sha256": "4269a62e3582ebcb439ab33178b167e00f64c6dc5aca32b6680ed5d4304c5ca2",
+  "inputs": 734,
+  "production_exact": 133,
+  "added_uids": [
+    "tests/independent_forecast_authority.gd.uid",
+    "tests/independent_forecast_controller.gd.uid",
+    "tests/independent_forecast_legacy.gd.uid",
+    "tests/independent_forecast_views.gd.uid"
+  ],
+  "changed_after_import": [
+    "MANIFEST.json"
+  ],
+  "actual_discovery": 129,
+  "full_commands_with_import": 130,
+  "runner_sha256": "2b913410f2f121c6296d94a65086a921576aba8a0ec9fe3262bdd51a16bb08f1",
+  "scope": "cold import actual clean; next aggregate import uses cache; original percase180/errors unchanged; full130 not yet executed"
+}

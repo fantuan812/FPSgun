@@ -1,0 +1,51 @@
+{
+  "status": "PASS_AUTHOR_FIRST_RAW_REVIEW_NOT_INDEPENDENT_REEXECUTION",
+  "utc": "2026-10-27T05:12:50.872224+00:00",
+  "source_map_sha256": "36f2e1c331890b87adaee498ea56bb17ba2f8c3494079a46c058b812ed09a3f7",
+  "post_inputs": 723,
+  "original720_unchanged": true,
+  "added": [
+    "scripts/gameplay/build_forecast.gd.uid",
+    "tests/test_build_forecast.gd.uid",
+    "ui/forecast_glyph.gd.uid"
+  ],
+  "routes": [
+    {
+      "case": "cold-import",
+      "seconds": 21.146,
+      "helper_count": 0,
+      "tail": "\u001b[0m"
+    },
+    {
+      "case": "forecast-author",
+      "seconds": 2.786,
+      "helper_count": 1,
+      "tail": "{\"failures\":[],\"passed\":21,\"scope\":\"Author finite pure forecast and local selector smoke; not full regression\"}"
+    },
+    {
+      "case": "legacy-ui",
+      "seconds": 1.8,
+      "helper_count": 0,
+      "tail": "UI_STRUCTURE_AND_INTENTS_PASS"
+    },
+    {
+      "case": "legacy-game",
+      "seconds": 4.359,
+      "helper_count": 1,
+      "tail": "{\"failures\":[],\"passed\":193,\"scope\":\"Godot headless finite rules and scene transitions; not human playtest\"}"
+    },
+    {
+      "case": "legacy-tempering",
+      "seconds": 25.733,
+      "helper_count": 1,
+      "tail": "{\"failed\":0,\"failures\":[],\"passed\":413}"
+    },
+    {
+      "case": "legacy-reservation-views",
+      "seconds": 38.152,
+      "helper_count": 1,
+      "tail": "{\"checks\":3254,\"failures\":[],\"layouts\":[{\"entries\":38,\"mapped_event\":\"synthetic InputEventAction ui_accept through Viewport.push_input\",\"mode\":\"arena\",\"window\":[960,540]},{\"entries"
+    }
+  ],
+  "scope": "6 author commands read raw/errors/helper final conditions + exactsource pins; independent four routes not yet run"
+}

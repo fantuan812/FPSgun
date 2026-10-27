@@ -1,0 +1,11 @@
+--- <WORKSPACE>/moss-v37-final/tests/independent_forecast_controller.gd
++++ <QA_ROOT>/packed-harness/forecast-controller.gd
+@@ -91,7 +91,7 @@
+ 				ck(row.after==Readout.describe(entry,actual.stats,true,Temper.multiplier(actual.build,actual.catalog,row.slot,entry.id)),"projection vs actual equipped numeric adapter")
+ 			ck(same(before,snap(g)),"real transaction on other instance never touches preview instance")
+ 			ck(actual._offer_forecast(0,actual.shop_generation-1,spec[4])=={"available":false,"reason":"Shop view expired"},"committed generation invalidates stale preview")
+-	var teardown=preload("res://tests/support/audio_teardown.gd").new();teardown.prepare([g,actual]);g.queue_free();actual.queue_free();await process_frame;await teardown.finish(self)
++	var teardown=preload("<QA_ROOT>/packed-harness/audio_teardown.gd").new();teardown.prepare([g,actual]);g.queue_free();actual.queue_free();await process_frame;await teardown.finish(self)
+ 	print(JSON.stringify({"checks":checks,"failures":failures,"scope":"C3 independent controller guard/full-state purity + separate-instance real purchases; UI selector/focus and native separate"}))
+ 	quit(0 if failures.is_empty() else 1)
+ func _initialize()->void:call_deferred("run")

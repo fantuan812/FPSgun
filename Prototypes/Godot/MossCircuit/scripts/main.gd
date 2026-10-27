@@ -7,6 +7,7 @@ var title_generation:int=0
 const WeaponOrder = preload("res://scripts/gameplay/weapon_order.gd")
 const WeaponTempering = preload("res://scripts/gameplay/weapon_tempering.gd")
 const CombatFocus=preload("res://scripts/gameplay/combat_focus.gd")
+const BuildForecast=preload("res://scripts/gameplay/build_forecast.gd")
 const WeaponReadout=preload("res://scripts/weapon_readout.gd")
 const ModeStatus=preload("res://ui/mode_status.gd")
 var mode_status:CanvasLayer
@@ -994,6 +995,19 @@ func _leave_shop(generation: int) -> void:
 	state = "playing"
 	_hide_modal()
 
+func _offer_forecast(index:Variant,generation:Variant,replace_slot:Variant=-1)->Dictionary:
+	# Stricter preview grammar only; real buy intent retains its existing int coercion.
+	if state!="shop" or not generation is int or generation!=shop_generation:return {"available":false,"reason":"Shop view expired"}
+	if not index is int or index<0 or index>=shop_offers.size():return {"available":false,"reason":"Offer unavailable"}
+	var offer:Dictionary=shop_offers[index]
+	if offer.sold:return {"available":false,"reason":"Offer already sold"}
+	var entry:Dictionary=Rules.catalog_entry(catalog,offer.id)
+	if entry.get("kind","")=="weapon" and not WeaponTempering.metadata_error(build).is_empty():return {"available":false,"reason":WeaponTempering.metadata_error(build)}
+	if Reservation.matches(reserved_offer,offer.id):
+		var reason:String=Reservation.invalid_reason(build,catalog,reserved_offer)
+		if not reason.is_empty():return {"available":false,"reason":"Reserved offer unavailable: "+reason}
+	return BuildForecast.project(config.player,build,catalog,offer.id,replace_slot)
+
 func _view() -> Dictionary:
 	if build.is_empty(): return {"seed":run_seed,"settings":settings.duplicate(true),"feedback_audio":_feedback_audio_view(),"mode_id":mode.id,"mode_name":mode.name,"objective":""}
 	var view := {"coins":build.coins,"wave":wave,"level":level,"hp":stats.hp,"max_hp":stats.max_hp,"xp":xp,"xp_max":Rules.xp_threshold(level),"time":elapsed,"kills":kills,"seed":run_seed,"stats":stats,"weapons":[],"items":[],"synergies":stats.synergies,"generation":shop_generation,"refresh_price":catalog.refresh_price,"weapon_slots":catalog.weapon_slots,"item_slots":catalog.item_slots,"message":shop_message,"offers":[],"rewards":rewards,"synergy_status":[],"mechanics":{"shield":effects.shield,"chain_charges":effects.chain_charges,"hazards":hazards.size(),"echo_hits":effects.echo_hits,"phase_charge":effects.phase_charge,"medic_damage":effects.medic_damage,"cooldowns":{}}}
@@ -1018,20 +1032,7 @@ func _view() -> Dictionary:
 	var missing_names: Array = []
 	for id in affinity.missing_ids: missing_names.append(Rules.catalog_entry(catalog,id).name)
 	view.shop_bias = {"preferred_tags":affinity.tags.keys(),"missing_partners":missing_names,"sources":affinity.sources,"summary":"Preference, not a guarantee. Positive exploration remains; selling affects the next refresh."}
-	for pair_data in catalog.get("mechanism_synergies",[]):
-		var required: Array = []
-		var missing: Array = []
-		for id in pair_data.requires:
-			var name: String = Rules.catalog_entry(catalog,id).name
-			required.append(name)
-			if not Rules.owned_ids(build).has(id): missing.append(name)
-		var excluded_weapon:String=str(pair_data.get("requires_other_weapon_than",""))
-		if not excluded_weapon.is_empty():
-			var requirement:String="a weapon type other than "+Rules.catalog_entry(catalog,excluded_weapon).name
-			required.append(requirement)
-			if not build.weapons.any(func(id):return id!=excluded_weapon):missing.append(requirement)
-		var mechanism_description:String=ScavengerReel.describe(Rules.catalog_entry(catalog,"scavenger_reel")) if pair_data.get("id","")=="scavenger_return" else str(pair_data.description)
-		view.synergy_status.append({"name":pair_data.name,"active":missing.is_empty(),"requires":required,"missing":missing,"description":mechanism_description})
+	view.synergy_status=BuildForecast.mechanism_status(build,catalog)
 	for id in effects.cooldowns: view.mechanics.cooldowns[id] = maxf(0,effects.cooldowns[id] - elapsed)
 	for i in range(build.weapons.size()):
 		var entry := Rules.catalog_entry(catalog,build.weapons[i]).duplicate(true)
@@ -1076,6 +1077,10 @@ func _view() -> Dictionary:
 			if not WeaponTempering.metadata_error(build).is_empty(): entry.can_buy=false
 		if entry.kind == "item":
 			entry.can_buy = entry.can_buy and build.items.get(entry.id,0) < entry.max_stack and (build.items.has(entry.id) or build.items.size() < catalog.item_slots)
+		entry.forecast_options=[]
+		if entry.kind=="weapon" and build.weapons.size()>=int(catalog.weapon_slots):
+			for slot in range(build.weapons.size()):entry.forecast_options.append({"replace_slot":slot,"report":_offer_forecast(i,shop_generation,slot)})
+		else:entry.forecast_options.append({"replace_slot":-1,"report":_offer_forecast(i,shop_generation,-1)})
 		view.offers.append(entry)
 	return view
 

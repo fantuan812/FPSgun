@@ -1,0 +1,138 @@
+{
+  "status": "PASS_INDEPENDENT_PACKED_RAW_READBACK",
+  "utc": "2026-10-27T05:42:07.993652+00:00",
+  "commands": 14,
+  "native_all_zero": true,
+  "shared_cleanup_reports": [
+    {
+      "case": "forecast-controller",
+      "last": {
+        "discarded": 0,
+        "elapsed_us": 193914,
+        "game_owner_count": 2,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 2,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 12288,
+        "streams_released": true
+      }
+    },
+    {
+      "case": "forecast-views",
+      "last": {
+        "discarded": 0,
+        "elapsed_us": 173209,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      }
+    },
+    {
+      "case": "audio-views",
+      "last": {
+        "discarded": 0,
+        "elapsed_us": 154134,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      }
+    },
+    {
+      "case": "audio-arena",
+      "last": {
+        "discarded": 0,
+        "elapsed_us": 166012,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      }
+    },
+    {
+      "case": "audio-rooms",
+      "last": {
+        "discarded": 0,
+        "elapsed_us": 151311,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      }
+    }
+  ],
+  "partition_observations72_exact_sourcefull": true,
+  "partition_checks": 773,
+  "partition_budget": "firstplan each180,totalmax360; not singlepacked180 pass",
+  "mixer": {
+    "checks": 236,
+    "windows": 51,
+    "minimum_fresh_pushed": 4096,
+    "exact_finite_raw_files": 7,
+    "peak_rms_recomputed": true,
+    "allreadframes_fresh_not_claimed": true
+  },
+  "raw_sha256": {
+    "source-cold-import.stdout": "38c18cd283497e172cc93d51adf8775cb0e89bedd62e0b21baa90014e07feeac",
+    "source-cold-import.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "source-resource-fingerprint.stdout": "d0d2ab0502cf281cfd4d55893432101a1870835a97f6c53630c490de3457de40",
+    "source-resource-fingerprint.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "packed-resources.stdout": "00f5ae12209bf96bc1ae26c791e51f56db4fb0701ba7a238471dca6d0cd580b3",
+    "packed-resources.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "forecast-authority.stdout": "c194d6799f92399c7e9b5b8fecf71a529d6348e2ef35e0c30c11b5912f11b51b",
+    "forecast-authority.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "forecast-legacy.stdout": "b7edd243d0333b08432ff1aec13c85a70f03978f2cc47d19ff6dda32988c3e01",
+    "forecast-legacy.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "forecast-controller.stdout": "e3a1119aed19a8061c50b1ea9b0c03d3eb33a4815b243938bd60d864912f203a",
+    "forecast-controller.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "forecast-views.stdout": "ab788063d5a1e973aa4e9effb5fed4127fe5db02bb36606d4e7e7458259d5f11",
+    "forecast-views.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "audio-mixer.stdout": "a652bf2f503adee26140fd54509de56bfd47ce05911d498b4830395eb796fbd1",
+    "audio-mixer.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "audio-views.stdout": "6d29a149feb89907c961bc817ff182a077c88c97d5f6b2234dea9bc0f2e0b4dd",
+    "audio-views.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "audio-arena.stdout": "484944647dd66c1ec81bf59c62047f226f4168659aed176df6f1b6972d776a1b",
+    "audio-arena.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "audio-rooms.stdout": "d2234fb2acfe7e2f4ca3344effc03975ae127654c487bf54de73f69a7e3f3495",
+    "audio-rooms.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "packed-svg.stdout": "ec3d9e7a7ff498bc7b7cc029387e6a1ddf05da78810ffb7308b7406b57582c38",
+    "packed-svg.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "python-pcm.stdout": "7d18640c09feed5d89816c5169e86b1b881b303acf9d7042dbebedfc6e218a64",
+    "python-pcm.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "python-export-safety.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "python-export-safety.stderr": "fa6a66c0b41ab9c8599db31c4e39c3e7a661a7542cf6c0948bee5393742172e3",
+    "audio-mixer-raw/arena_shield_block.f32le": "32caf1c366127e224d0a288f1552d772900265545af6917ce1472c49f01b201b",
+    "audio-mixer-raw/arena_player_damage.f32le": "428112f3f21f9176976c0c98acec275b0c4363778b8ac0d2356d1098c0790a7d",
+    "audio-mixer-raw/rooms_player_damage.f32le": "5f0003e96fd33caa201299d0da3c976f1e7d7bf0f6a4ea294ad5ab8db9b9a88e",
+    "audio-mixer-raw/rooms_shield_block.f32le": "32caf1c366127e224d0a288f1552d772900265545af6917ce1472c49f01b201b",
+    "audio-mixer-raw/two_cue_overlap.f32le": "eb8140c553e2ca0700820d583928d749bcedfc68d5a38a66f68b78ac22a66201",
+    "audio-mixer-raw/lethal_tail.f32le": "8a0a194fb1a41584bbdaafb9782e2ff8bf3f8e601526a01ab17fbc9ce1dd6b34",
+    "audio-mixer-raw/same_cue_retrigger.f32le": "8a0a194fb1a41584bbdaafb9782e2ff8bf3f8e601526a01ab17fbc9ce1dd6b34"
+  },
+  "before_after_recorded_pins_exact": true,
+  "scope": "Independent readback, not rerun. Current live734/PCK full rehash deferred until learning lane idle; original runner before/after records agree. Native/ordinary not covered."
+}

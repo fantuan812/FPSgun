@@ -1,3 +1,17 @@
+# v37 complete resource pack — local verification, not publication
+
+Both preset PCKs are identical:41,462,412 bytes, SHA-256 `156466cddbf44497e5be9c2d2f1d6f221c4aa2ccf545b0c5bca4d06fbb8ba471`. Linux ELF remains `2c78919325d7f29fa7607287c7c1eeac367ea4c94e7b8b6f5f4c6b20492f73d0`,0755. Windows executable is historical and unexecuted here. This is a complete resource pack, not a standalone executable, ZIP or delta patch; original platform programs/licenses remain required.
+
+From a checkout containing all required chunks: `python Deliveries/MossCircuit/restore_deliveries.py --version v37 --output recovered-v37`. Read the [v37 identity and recovery instructions](../../../../Deliveries/MossCircuit/v37/READ_ME_v37.txt). Close the game; uniquely back up and hash your actual old pack; verify the restored complete new file; manually replace only adjacent MossCircuit.pck. Launch the original program normally, not with --main-pack. The unchanged helper refuses unsafe paths/overwrites, requires hardlinks, and publishes atomically per output file—not per version batch. It neither installs nor executes. Actual catalog/chunk preservation, restoration and file-only rollback results are recorded separately in the independent delivery evidence; this paragraph does not substitute for those results or prove Git download reachability.
+
+Author final source130/130 passed with734 inputs unchanged and exhaustive independent raw review. Exact-PCK feature/resources and finite native observations passed separately. Source audio authority164.293s passed the original180s single-process gate; packed Arena435/77.760s and Rooms338/100.565s passed a predeclared different each180/totalmax360 functional scope. No packed single180s acceptance or physical listening is claimed. Generic fingerprints cover58 PNG images; unchanged SVG/WAV identities have separate checks, and new code-native glyphs are not additional textures.
+
+Eight controlled native cases and one ordinary attempt are attributed separately. The ordinary first-shop Power Coil purchase matched104scrap and21 primary readout; it was not a full-bag replacement or natural combo-completion witness. Actual ordinary window1180×812 differs from requested960×540. Runtime processes closed0; retained llvmpipe/VSync warnings, Dummy/Windows/campaign/balance/performance limits remain. The rejected desktop prerequisite guard94 preceded any native game start and is not hidden as a successful first launcher invocation.
+
+Accepted remote status requires separate reachable readback; no v32–v37 publication is inferred from these local files. Read [independent evidence](validation/independent-v37/QA_REPORT.md), including retained historical failures and exact attribution.
+
+---
+
 # v36 complete resource pack — local functional verification, not publication
 
 Both preset PCKs are identical:41,450,052 bytes, SHA-256 `ea994144d3ae76926b29fad6467cb4bd36bfce73fcc96683694eb31c18caaba5`. Linux ELF stays `2c78919325d7f29fa7607287c7c1eeac367ea4c94e7b8b6f5f4c6b20492f73d0`,0755. Windows executable is historical and unexecuted here. This is a complete resource pack, not a standalone program, ZIP or delta patch; original platform executable and licenses are required.

@@ -1,0 +1,139 @@
+{
+  "status": "PASS_BOUNDED_CONTROLLED_NATIVE_RAW_AND_SELECTED_VISUAL_REVIEW",
+  "utc": "2026-10-27T05:57:58.921472+00:00",
+  "cases": [
+    {
+      "case": 1,
+      "kind": "last-return-loss-and-local-select",
+      "window": [
+        960,
+        540
+      ],
+      "actual_buy_count": 1,
+      "actual_result_equals_hand_expected": true
+    },
+    {
+      "case": 2,
+      "kind": "pair-completion",
+      "window": [
+        960,
+        540
+      ],
+      "actual_buy_count": 1,
+      "actual_result_equals_hand_expected": true
+    },
+    {
+      "case": 3,
+      "kind": "compound-still-needs",
+      "window": [
+        960,
+        540
+      ],
+      "actual_buy_count": 1,
+      "actual_result_equals_hand_expected": true
+    },
+    {
+      "case": 4,
+      "kind": "affordability-unavailable",
+      "window": [
+        960,
+        540
+      ],
+      "actual_buy_count": 0,
+      "actual_result_equals_hand_expected": true
+    },
+    {
+      "case": 5,
+      "kind": "last-return-loss-and-local-select",
+      "window": [
+        1280,
+        720
+      ],
+      "actual_buy_count": 1,
+      "actual_result_equals_hand_expected": true
+    },
+    {
+      "case": 6,
+      "kind": "pair-completion",
+      "window": [
+        1280,
+        720
+      ],
+      "actual_buy_count": 1,
+      "actual_result_equals_hand_expected": true
+    },
+    {
+      "case": 7,
+      "kind": "compound-still-needs",
+      "window": [
+        1280,
+        720
+      ],
+      "actual_buy_count": 1,
+      "actual_result_equals_hand_expected": true
+    },
+    {
+      "case": 8,
+      "kind": "affordability-unavailable",
+      "window": [
+        1280,
+        720
+      ],
+      "actual_buy_count": 0,
+      "actual_result_equals_hand_expected": true
+    }
+  ],
+  "actual_buy_intents": 6,
+  "disabled_cases_no_buy_intent": 2,
+  "log_sha256": "62cc44bf88bb6aaffe742d718cbc9a2a87cc8a2c32051379e14f428d63759424",
+  "all23_original_image_sha256": {
+    "01-case1-initial.jpg": "88495bd610f3e1b53487b3ab10fda13fb8d73337e8c733e30293ca37c8363580",
+    "02-case1-loss-collapsed.jpg": "378bef222bd5f980a49e8bb61b2459449e4dbd44b448af278222850d41d0acc4",
+    "03-case1-selected-slot2.jpg": "4fd9f3380e23908eae9d498fa8aa653b870a907771651d2fe50287fda10ea08a",
+    "04-case1-details-requirements.jpg": "1245f56a5acbc9244f41699377811f9ea2ef1a7022dc92a4085fe291a6712c0d",
+    "05-case1-projected-primary.jpg": "627b6dea0aecab4f34b3d439be7f3c9ebd6a72a1edf04f48da27fb270f06d935",
+    "06-case1-real-purchase.jpg": "492751a930d4f3ec1873f9e0fe9f47d713909b3c5012f825a37254efed57f5bd",
+    "07-case2-completion.jpg": "c19aa9056f5f58aebe0a0fdc7fece8b6ed903d74878506fdfa871e22b8df71cc",
+    "08-case2-real-purchase.jpg": "b9ab4fcd6d7e194849d0e8e115bdc468ff9c897a59e3216eddeba3a2ecb2ad40",
+    "09-case3-needs-collapsed.jpg": "0c47ca33d3cb995604c2bf4a7926eb0ef99d56968169dc4e30e9e72551f0b51f",
+    "10-case3-specific-needs.jpg": "8dcf09f237a7f6731c798ddc7087a349afa651561fbce11eae173b905f14e1ba",
+    "11-case3-real-purchase.jpg": "9a1d3d099e2ae2c8b4516df3f521535bfd6a5f0a00642a4f430869de54056491",
+    "12-case4-unavailable-disabled.jpg": "0c9aaa2e66e04d3fdc46dacb23d6473e257dc70fb7a86791bed9eb5978f3fb03",
+    "13-case5-large-initial.jpg": "05b4d54260d0c6f45410b2b98ee11cd2164a3ed103f56f22614cadc1113fdcdb",
+    "14-case5-large-loss.jpg": "d75bb7dbac8d0bc18653c7bc6b0ad56b8acb16d151d3ca20c6021dd9d08a7119",
+    "15-case5-large-selected-slot2.jpg": "c7c3a705761e0f758eb06f88391b51cd18f863f75c28ce49c73072fca30cc943",
+    "16-case5-large-details.jpg": "2f926f08194b9620dc9dc886eeb2754f05da03ea6b4d0ab192da12c35f7e38a8",
+    "17-case5-large-real-purchase.jpg": "aa88189010ab4aad49d8a381e4b414838e0280522b414b71345fbab35b6a7ec5",
+    "18-case6-large-completion.jpg": "cfc569b37f8b31d1a485cd8ae104fe59eb53042f93039069ea19a94b59fdddb7",
+    "19-case6-large-real-purchase.jpg": "b583ebe21f32ddbe745c083b146248fded11c9e206e47d6e91678a5edaabf54e",
+    "20-case7-large-needs.jpg": "28983bb8a8d37ead8f9e4ad484d683654eb0671aaee46820f73022ae5b1aeb6e",
+    "21-case7-large-specific-needs.jpg": "273f77361a65b8775b5feeb7adf6a43b163f9069117125f1659c094eedc64745",
+    "22-case7-large-real-purchase.jpg": "88549f18aeb8414202ba820544ad501ee53985e481d06d404466ef0af854fdc1",
+    "23-case8-large-unavailable-disabled.jpg": "10286fdbc7007e0bc3ad460a160a91f776e075c0fe9303f49873e7198a0d132f"
+  },
+  "directly_viewed_images": [
+    "02-case1-loss-collapsed.jpg",
+    "03-case1-selected-slot2.jpg",
+    "05-case1-projected-primary.jpg",
+    "10-case3-specific-needs.jpg",
+    "12-case4-unavailable-disabled.jpg",
+    "14-case5-large-loss.jpg",
+    "18-case6-large-completion.jpg",
+    "21-case7-large-specific-needs.jpg"
+  ],
+  "visual_findings": "Selected screenshots readable at960x540 and1280x720; explicit chosen slot, loss/completion/needs and unavailable state; expanded primary-only wording visible, scrolling retains footer/action access. Original viewport-edge clipping not treated as missing hidden content.",
+  "cleanup_last": {
+    "discarded": 0,
+    "elapsed_us": 151501,
+    "game_owner_count": 1,
+    "invalid": 0,
+    "new_pushed": 8192,
+    "owner_count": 1,
+    "owners_released": true,
+    "prepare_errors": 0,
+    "required_frames": 6615,
+    "silent_frames": 8192,
+    "streams_released": true
+  },
+  "limits": "Eight controlled supplied-stock/build cases, not ordinary acquisition. Only eight selected images directly inspected; all23 bytes pinned. Two disabled mouse attempts are QA CUA observations, not independently replayed; raw verifies no buy intent and unchanged10scrap/build. errors[] alone not acceptance. Ordinary route separate; no engine rerun by reviewer."
+}

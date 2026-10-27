@@ -1,0 +1,14 @@
+{
+  "status": "PASS_PRETARGET_INTERPRETER_ONLY_LAUNCHER_CORRECTION",
+  "utc": "2026-10-27T05:46:36.564556+00:00",
+  "changed_fields": [
+    "controlled_launcher_sha256",
+    "ordinary_launcher_sha256"
+  ],
+  "exact_only_diff": "python -> /usr/bin/python3 in two prerequisite guards",
+  "new_freeze_sha256": "da1de8243b82286e8dd84d0ba8809eb344c5036b7e8084ac44dfffbb8c652e6d",
+  "old_script_freeze_retained": true,
+  "no_native_target_logs_yet": true,
+  "provenance_limit": "Prior guard94 is QA direct-CUA transcription; reviewer only verifies preserved script diff/current absence of logs, not independent desktop replay.",
+  "no_engine_by_reviewer": true
+}

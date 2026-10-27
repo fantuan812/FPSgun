@@ -1,0 +1,70 @@
+{
+  "status": "FROZEN_5ROUTE_EXECUTION_PLAN_NOT_EXECUTED",
+  "utc": "2026-10-27T05:10:14.735287+00:00",
+  "routes": [
+    {
+      "name": "old-transactions",
+      "project": "evidence-workspace/moss-v37-work",
+      "fixture": "evidence-workspace/moss-v36-parity/transactions.gd",
+      "fixture_sha256": "0c49a90370acdca81564937d5842388f2815f4833403004d4747e2b0678ab030",
+      "retained_trace": "evidence-workspace/moss-v36-parity/results/candidate-transactions.json",
+      "retained_trace_sha256": "22e28521ba76fb7285a59b98593aecc7c4af9e24d497853119f73495324feaf8"
+    },
+    {
+      "name": "old-combat",
+      "project": "evidence-workspace/moss-v37-work",
+      "fixture": "evidence-workspace/moss-v36-parity/combat.gd",
+      "fixture_sha256": "b7a5c9ca1452ad42576dd12010c4977c4a1dabd1a3faf8bcbb1403396afd2baf",
+      "retained_trace": "evidence-workspace/moss-v36-parity/results/candidate-combat.json",
+      "retained_trace_sha256": "e7d93a1fcf01345c540bf9f868632310fd3e85572dbe431dbe12d43bf19212ec"
+    },
+    {
+      "name": "current-combat",
+      "project": "evidence-workspace/moss-v37-work",
+      "fixture": "evidence-workspace/moss-v36-qa/checks/new_catalog_old_combat.gd",
+      "fixture_sha256": "09f36f257e275e765963d8b120a2c1d4f7d7d0941eaeb9a1da8a6d9fddcbbb2d",
+      "retained_trace": "evidence-workspace/moss-v36-qa/new-catalog-combat-first/candidate.json",
+      "retained_trace_sha256": "7cd6062fe08d107b8b3eb6e41f2f8dce0ce90f0a1c4448768e8c0624c317c358"
+    },
+    {
+      "name": "current-transactions-baseline",
+      "project": "evidence-workspace/moss-v36-r2",
+      "fixture": "evidence-workspace/moss-v37-parity/current_transactions.gd",
+      "fixture_sha256": "5d4359c6e432d81e645952436f371c327c3cf7d670854f419efe8566a16c3932",
+      "retained_trace": null,
+      "retained_trace_sha256": null
+    },
+    {
+      "name": "current-transactions-candidate",
+      "project": "evidence-workspace/moss-v37-work",
+      "fixture": "evidence-workspace/moss-v37-parity/current_transactions.gd",
+      "fixture_sha256": "5d4359c6e432d81e645952436f371c327c3cf7d670854f419efe8566a16c3932",
+      "retained_trace": null,
+      "retained_trace_sha256": null
+    }
+  ],
+  "original_transactions_sha256": "0c49a90370acdca81564937d5842388f2815f4833403004d4747e2b0678ab030",
+  "current_transactions_inverse_exact": true,
+  "old_catalog_sha256": "317a2d343ba1a005cd44cc1c2ee91e894adf059d77e57c24f7a5ee9439ec56a0",
+  "current_catalog_sha256": "91bb4fbaa0cb01ace9148b79192e46d69258170bd343a2ad4702bd2f5f173f36",
+  "budget_per_case": 180,
+  "gates": [
+    "strict native/semantic/errors/resource + bounded clean helper",
+    "first3 whole trace bytes equal retained v36 executed artifacts",
+    "last2 actual new baseline/currentcandidate whole trace bytes equal; not prior golden",
+    "candidate and v36 maps before/after unchanged"
+  ],
+  "scope": "Five routes only. Historical6/24 + current24 without shop reuse actual retained v36 outputs; current6 includes real seeded shop refresh and requires fresh v36 baseline plus v37 comparison. No v35 rerun. No ordinary acquisition or all seeds claim.",
+  "source_maps": [
+    {
+      "project": "evidence-workspace/moss-v36-r2",
+      "map": "evidence-workspace/moss-v36-r2-prep/R2_INPUTS.json",
+      "sha256": "442c736ba387b9fc78c62d934034c5fe637a41c3b6e2cfc9ef83f5ecfda28de4"
+    },
+    {
+      "project": "evidence-workspace/moss-v37-work",
+      "map": "evidence-workspace/moss-v37-prep/POSTIMPORT_INPUTS.json",
+      "sha256": "36f2e1c331890b87adaee498ea56bb17ba2f8c3494079a46c058b812ed09a3f7"
+    }
+  ]
+}

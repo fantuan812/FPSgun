@@ -1,0 +1,12 @@
+{
+  "status": "PASS_ROUTE_STATIC_RUNNER_AND_SOURCE_MAP_STILL_PENDING",
+  "utc": "2026-10-27T05:11:09.551723+00:00",
+  "route_plan_sha256": "d14197d07446bc1aedb77c2a6d7119bfd6fd336c3949b408efec5e5db2791842",
+  "fixtures_and_retained_traces_hash_verified": true,
+  "current_transactions_inverse_byte_exact": true,
+  "inverse_operation": "Replace held old_catalog block with one preserved separator newline (patch confirms)",
+  "reviewer_initial_audit_error": "First local static inverse check assumed removal replaced block with empty string, but held block includes leading newline whereas patch retains separator blank. Assertion rejected; read-only difflib identified exact one blank-line difference. Correct inverse verified; not a target or author fixture execution.",
+  "only_removed": "oldcatalog injection plus its identity assertions, not six route step/assert/output/cleanup body",
+  "scope": "Five routes only. Historical6/24 + current24 without shop reuse actual retained v36 outputs; current6 includes real seeded shop refresh and requires fresh v36 baseline plus v37 comparison. No v35 rerun. No ordinary acquisition or all seeds claim.",
+  "next": "review final run.py pins and source map then run only after QA first4 terminal/lane return"
+}

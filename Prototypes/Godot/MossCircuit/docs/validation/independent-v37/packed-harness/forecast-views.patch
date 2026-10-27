@@ -1,0 +1,11 @@
+--- <WORKSPACE>/moss-v37-final/tests/independent_forecast_views.gd
++++ <QA_ROOT>/packed-harness/forecast-views.gd
+@@ -74,7 +74,7 @@
+ 			ck(g.build.coins==156 and g.shop_offers[0].sold,"actual click pays real price once")
+ 			ck(intents.size()==1 and intents[0][0]=="buy" and intents[0][1].replace_slot==1,"unchanged single real buy payload")
+ 		intents.clear()
+-	var teardown=preload("res://tests/support/audio_teardown.gd").new();teardown.prepare([g]);g.queue_free();await process_frame;await teardown.finish(self)
++	var teardown=preload("<QA_ROOT>/packed-harness/audio_teardown.gd").new();teardown.prepare([g]);g.queue_free();await process_frame;await teardown.finish(self)
+ 	print(JSON.stringify({"checks":checks,"failures":failures,"scope":"controlled 960/1280 UI local selector/focus/scroll/intent and real click; native aesthetic/clipping separately reviewed"}))
+ 	quit(0 if failures.is_empty() else 1)
+ func _initialize()->void:call_deferred("run")

@@ -1,0 +1,57 @@
+[
+  {
+    "name": "old-transactions",
+    "exit": 0,
+    "seconds": 8.239,
+    "pass": true,
+    "case_count": 6,
+    "reference_bytes_equal": true,
+    "trace_sha256": "22e28521ba76fb7285a59b98593aecc7c4af9e24d497853119f73495324feaf8",
+    "helper_clean": true,
+    "parse_error": ""
+  },
+  {
+    "name": "old-combat",
+    "exit": 0,
+    "seconds": 13.039,
+    "pass": true,
+    "case_count": 24,
+    "reference_bytes_equal": true,
+    "trace_sha256": "e7d93a1fcf01345c540bf9f868632310fd3e85572dbe431dbe12d43bf19212ec",
+    "helper_clean": true,
+    "parse_error": ""
+  },
+  {
+    "name": "current-combat",
+    "exit": 0,
+    "seconds": 3.121,
+    "pass": true,
+    "case_count": 24,
+    "reference_bytes_equal": true,
+    "trace_sha256": "7cd6062fe08d107b8b3eb6e41f2f8dce0ce90f0a1c4448768e8c0624c317c358",
+    "helper_clean": true,
+    "parse_error": ""
+  },
+  {
+    "name": "current-transactions-baseline",
+    "exit": 0,
+    "seconds": 6.948,
+    "pass": true,
+    "case_count": 6,
+    "reference_bytes_equal": null,
+    "trace_sha256": "48c6705e27d301857f8a52ad849a29b27f6a302f8bcab8f7a2ec5a1d69ee7e63",
+    "helper_clean": true,
+    "parse_error": ""
+  },
+  {
+    "name": "current-transactions-candidate",
+    "exit": 0,
+    "seconds": 8.092,
+    "pass": true,
+    "case_count": 6,
+    "reference_bytes_equal": true,
+    "trace_sha256": "48c6705e27d301857f8a52ad849a29b27f6a302f8bcab8f7a2ec5a1d69ee7e63",
+    "helper_clean": true,
+    "parse_error": ""
+  }
+]

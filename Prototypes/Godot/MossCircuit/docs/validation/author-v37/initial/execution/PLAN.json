@@ -1,0 +1,56 @@
+{
+  "source_map_sha256": "24789ec74eabf2b66cb5dfbeed9c044b956d0acea42b5481c6fecf7c2b6f00a1",
+  "commands": [
+    [
+      "cold-import",
+      [
+        "--editor",
+        "--import",
+        "--quit"
+      ],
+      false
+    ],
+    [
+      "forecast-author",
+      [
+        "--script",
+        "res://tests/test_build_forecast.gd"
+      ],
+      true
+    ],
+    [
+      "legacy-ui",
+      [
+        "--script",
+        "res://ui/test_ui.gd"
+      ],
+      true
+    ],
+    [
+      "legacy-game",
+      [
+        "--script",
+        "res://tests/test_game.gd"
+      ],
+      true
+    ],
+    [
+      "legacy-tempering",
+      [
+        "--script",
+        "res://tests/test_weapon_tempering.gd"
+      ],
+      true
+    ],
+    [
+      "legacy-reservation-views",
+      [
+        "--script",
+        "res://tests/independent_reservation_views.gd"
+      ],
+      true
+    ]
+  ],
+  "timeout_per_command": 180,
+  "stop_on_first_rejection": true
+}

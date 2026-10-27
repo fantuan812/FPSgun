@@ -1,3 +1,17 @@
+# MossCircuit v37 — Shop Build Forecast
+
+See what a purchase or selected weapon replacement will do **before buying**: remaining scrap and slots, mechanisms enabled/disabled, relevant missing prerequisites and expandable projected equipped-weapon stats. The existing selector updates only its own card; the original purchase remains the sole commit. No new multiplier, item, shop-pool change, audio or extra reward. [Exact feature and limits](docs/V37_BUILD_FORECAST.md).
+
+The mandatory author full source run passed **130/130** (129 scripts+import), with734 frozen inputs/133 production paths unchanged and every original raw result independently reviewed—not a second independent full-suite run. Independent feature checks108/808/306/42, historical/current catalog controls and exact-PCK resources862 passed. Source audio authority passed its original single180-second cap; the predeclared packed functional gate instead uses Arena435 and Rooms338, each180s/totalmax360. No single180-second packed pass is claimed. Mixer236, views168, SVG identity, PCM38 and export safety3 also passed.
+
+Eight controlled native cases across960×540/1280×720 produced23 original captures and six real UI purchases. Separately, one ordinary default Arena/Rivet/240102 attempt reached its first shop with122scrap: Power Coil's18-scrap offer forecast104scrap and primary18.75→21; one real purchase showed104scrap/SOLD/current21. Seven ordinary captures retain that limited observation. This does not prove ordinary full-bag replacement, combo completion or future damage. Dummy audio, Windows execution, campaign completion, all seeds, balance and performance remain unverified.
+
+Preparation history stays explicit: pre-execution contract/UI corrections, a local promotion-schema utility failure and a desktop missing-python prerequisite guard94 are retained; neither failed utility is mislabeled as a game test. The corrected guard used the available interpreter before the first native game launch. Older v36 full117/125 and packed-timeout failures remain historical, not rewritten by this version.
+
+[Local resource-pack restore prerequisites](docs/DELIVERY.md) and [independent evidence](docs/validation/independent-v37/QA_REPORT.md) define the bounded acceptance. Local verification/computed objects do not establish GitHub publication. Older sections below retain their exact accepted-local history.
+
+---
+
 # MossCircuit v36 — Scavenger Reel
 
 One rare unique28-scrap module turns Return Disc's actual return path into immediate collection of up to3 normal/energy pickups within18px per launched disc. Medicine is excluded; no added damage, reward multiplier, cargo or delayed arrival reward. Existing Scrap Mine and Arc Relay/Kill Cell source rules remain authoritative. The original reel icon, actual-prerequisite build text, quota pips and bounded Reduced-Flashes-aware pulse add no audio. See [exact simulation policy](docs/V36_SCAVENGER_REEL.md).

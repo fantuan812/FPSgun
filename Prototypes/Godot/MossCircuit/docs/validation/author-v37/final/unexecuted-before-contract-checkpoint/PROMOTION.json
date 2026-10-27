@@ -1,0 +1,59 @@
+{
+  "added": {
+    "docs/V37_ART_PROVENANCE.md": "dde767fc22f8edb0ef9609e340eb92ef8d1d9532a6915adf542b4439d3da01b9",
+    "docs/V37_BUILD_FORECAST.md": "1cdd0847258e0373261a31cf7bcd2e1864da5d3e46b72b0682f5e815a7849f06",
+    "docs/V37_BUILD_FORECAST_CONTRACT.md": "34cbe2d6acf95deb68fd4acf40c7e72989957d7c5276c9dee71bd26256e328d2",
+    "tests/independent_forecast_authority.gd": "cadd615a195eafa901491f695410b379e2b76f4572ae27c92f35a2eab628ce61",
+    "tests/independent_forecast_controller.gd": "5e7c7ab0647fac5abd73dbd21dc2925c8fcc7c8e95f02f3d9fb6e11310d004b5",
+    "tests/independent_forecast_legacy.gd": "7d152d5c7b2846a53bab7b91878ac61e6de24b4b6fb6c066daad149992f6a63d",
+    "tests/independent_forecast_views.gd": "1c136a33d6703966f0de051756710b20224dec9069e7ee606c468afb1471dd4c"
+  },
+  "changed": {
+    "README.md": {
+      "after": "3fb36dd427fa9c80739f26c4d570e9ea49a08f7b21d555d705f5356ea14904d1",
+      "before": "25da45232fbb4a067a58e96a2bf341428aa899303be81986b4401082857c1fd1"
+    },
+    "docs/DELIVERY.md": {
+      "after": "6e7be4ab9df987a65f6cce056315a24f0a8520998637eb13ad81a91c798e2fc5",
+      "before": "f52ae209afe0c4836043b67bff5df9fc7b528e8beeb0664986a840d010477320"
+    },
+    "docs/V36_SCAVENGER_REEL.md": {
+      "after": "6802f362685c744c19cb6b6933c09b1527c97b7c66498ec3d36a0bb248f9614a",
+      "before": "91ad36837fd94c76e6aab4ec6359167388e4ac1e0a779f1af8b3718bd8c58fe4"
+    }
+  },
+  "docs": {
+    "README.md": "3fb36dd427fa9c80739f26c4d570e9ea49a08f7b21d555d705f5356ea14904d1",
+    "docs/DELIVERY.md": "6e7be4ab9df987a65f6cce056315a24f0a8520998637eb13ad81a91c798e2fc5",
+    "docs/V36_SCAVENGER_REEL.md": "6802f362685c744c19cb6b6933c09b1527c97b7c66498ec3d36a0bb248f9614a",
+    "docs/V37_ART_PROVENANCE.md": "dde767fc22f8edb0ef9609e340eb92ef8d1d9532a6915adf542b4439d3da01b9",
+    "docs/V37_BUILD_FORECAST.md": "1cdd0847258e0373261a31cf7bcd2e1864da5d3e46b72b0682f5e815a7849f06",
+    "docs/V37_BUILD_FORECAST_CONTRACT.md": "34cbe2d6acf95deb68fd4acf40c7e72989957d7c5276c9dee71bd26256e328d2"
+  },
+  "historical_work_inputs": 723,
+  "production133_exact_focused_candidate": true,
+  "removed": [],
+  "runner_exact": true,
+  "tests": [
+    {
+      "destination": "tests/independent_forecast_authority.gd",
+      "sha256": "cadd615a195eafa901491f695410b379e2b76f4572ae27c92f35a2eab628ce61",
+      "source": "evidence-workspace/moss-v37-qa/checks/independent_forecast_authority.gd"
+    },
+    {
+      "destination": "tests/independent_forecast_controller.gd",
+      "sha256": "5e7c7ab0647fac5abd73dbd21dc2925c8fcc7c8e95f02f3d9fb6e11310d004b5",
+      "source": "evidence-workspace/moss-v37-qa/checks/independent_forecast_controller.gd"
+    },
+    {
+      "destination": "tests/independent_forecast_legacy.gd",
+      "sha256": "7d152d5c7b2846a53bab7b91878ac61e6de24b4b6fb6c066daad149992f6a63d",
+      "source": "evidence-workspace/moss-v37-qa/checks/independent_forecast_legacy.gd"
+    },
+    {
+      "destination": "tests/independent_forecast_views.gd",
+      "sha256": "1c136a33d6703966f0de051756710b20224dec9069e7ee606c468afb1471dd4c",
+      "source": "evidence-workspace/moss-v37-qa/checks/independent_forecast_views.gd"
+    }
+  ]
+}

@@ -1,4 +1,5 @@
 extends CanvasLayer
+const ForecastGlyph=preload("res://ui/forecast_glyph.gd")
 const ScavengerReel=preload("res://scripts/gameplay/scavenger_reel.gd")
 ## Presentation only. All run state and transactions belong to the main controller.
 signal intent(action: String, payload: Dictionary)
@@ -388,6 +389,7 @@ func show_shop(view: Dictionary) -> void:
 	var bag := _scroll(columns)
 	var reservation:Dictionary=view.get("reserved_offer",{})
 	_shop_bias(offers, view.get("shop_bias", {}),reservation)
+	_text(offers,"Equipped-build preview, not guaranteed damage.",12)
 	for offer in view.get("offers", []):
 		var held:bool=bool(offer.get("reserved",false))
 		var c := _card(offers, offer, "  [RESERVED]" if held else "", view.get("synergy_status", []),true)
@@ -405,6 +407,8 @@ func show_shop(view: Dictionary) -> void:
 		var payload := {"index": int(offer.get("index", 0)), "generation": generation, "replace_slot": -1}
 		var full: bool = offer.get("kind", "") == "weapon" and view.get("weapons", []).size() >= int(view.get("weapon_slots", 4))
 		var actions:=HBoxContainer.new(); c.add_child(actions)
+		var forecast:=VBoxContainer.new();forecast.name="BuildForecast";c.add_child(forecast)
+		var forecast_options:Array=offer.get("forecast_options",[]).duplicate(true)
 		if full and not sold:
 			var replacement_notice:=_text(c, "Slots full: replace destroys the old weapon (no refund).", 12)
 			var select := OptionButton.new(); select.size_flags_horizontal = Control.SIZE_EXPAND_FILL
@@ -416,12 +420,15 @@ func show_shop(view: Dictionary) -> void:
 			buy.pressed.connect(func():
 				var p: Dictionary = payload.duplicate(); p.replace_slot = select.get_selected_id(); intent.emit("buy", p))
 			buy.size_flags_horizontal=Control.SIZE_EXPAND_FILL; actions.add_child(buy)
-			c.move_child(replacement_notice,1);c.move_child(select,2);c.move_child(actions,3)
+			c.move_child(replacement_notice,1);c.move_child(select,2);c.move_child(actions,3);c.move_child(forecast,4)
+			_forecast_card(forecast,forecast_options,select.get_selected_id())
+			select.item_selected.connect(func(_selected:int):_forecast_card(forecast,forecast_options,select.get_selected_id()))
 			if first_focus == null and not buy.disabled: first_focus = select
 		else:
 			var purchase:=_button(actions, "SOLD" if sold else "BUY  /  %d SCRAP" % int(offer.get("price", 0)), "buy", payload, sold or not can_buy)
 			purchase.size_flags_horizontal=Control.SIZE_EXPAND_FILL
-			c.move_child(actions,1)
+			c.move_child(actions,1);c.move_child(forecast,2)
+			_forecast_card(forecast,forecast_options,-1,sold)
 		var reserve:Button
 		if held:
 			reserve=_button(actions,"RELEASE","release_offer",{"token":int(offer.get("reservation_token",-1)),"generation":generation})
@@ -434,6 +441,69 @@ func show_shop(view: Dictionary) -> void:
 	_button(footer, ("REFRESH 3  /  %d SCRAP" if reservation.get("valid",false) else "REFRESH  /  %d SCRAP") % int(view.get("refresh_price", 5)), "refresh", {"generation": generation}, int(view.get("coins", 0)) < int(view.get("refresh_price", 5)))
 	_button(footer, "DEPLOY NEXT ROOM" if view.get("mode_id","")=="rooms" else "DEPLOY NEXT WAVE", "continue", {"generation": generation})
 	_finish()
+
+func _forecast_report(options:Array,slot:int)->Dictionary:
+	for option in options:
+		if option.get("replace_slot")==slot:return option.get("report",{}).duplicate(true)
+	return {"available":false,"reason":"Offer unavailable"}
+
+func _forecast_card(parent:VBoxContainer,options:Array,slot:int,sold:bool=false)->void:
+	# Rebuild only this detached forecast subtree; never the selector/action/focused control.
+	for child in parent.get_children():
+		parent.remove_child(child)
+		child.queue_free()
+	parent.set_meta("forecast_slot",slot)
+	var report:Dictionary=_forecast_report(options,slot)
+	parent.set_meta("forecast_report",report.duplicate(true))
+	if sold:
+		_text(parent,"SOLD / no forecast",12)
+		return
+	if not report.get("available",false):
+		_text(parent,"UNAVAILABLE: "+str(report.get("reason","Offer unavailable")),12).add_theme_color_override("font_color",AMBER)
+		return
+	var selected:String=" / CURRENTLY SELECTED SLOT %d" % (slot+1) if slot>=0 else ""
+	_text(parent,"AFTER PURCHASE%s: %d scrap / W %d / M %d" % [selected,int(report.coins_after),int(report.weapon_count_after),int(report.item_count_after)],12)
+	var enabled:Array=[]
+	var disabled:Array=[]
+	var needs:Array=[]
+	for row in report.mechanisms:
+		match row.change:
+			"enables":enabled.append(row)
+			"disables":disabled.append(row)
+			"needs":needs.append(row)
+	var line:=HBoxContainer.new();parent.add_child(line)
+	var glyph:=ForecastGlyph.new();glyph.kind="disables" if not disabled.is_empty() else ("enables" if not enabled.is_empty() else "needs");line.add_child(glyph)
+	var first_name:String=str(disabled[0].after.name) if not disabled.is_empty() else (str(enabled[0].after.name) if not enabled.is_empty() else "")
+	_text(line,"ENABLES %d / DISABLES %d%s" % [enabled.size(),disabled.size()," / "+first_name if not first_name.is_empty() else ""],12)
+	_text(parent,"STILL NEEDS: %d relevant mechanism(s)" % needs.size() if not needs.is_empty() else ("No mechanism change" if enabled.is_empty() and disabled.is_empty() else "No remaining prerequisite for these transitions"),12)
+	var details:VBoxContainer=_disclosure(parent,"BUILD DETAILS")
+	if not report.removed.is_empty():
+		_text(details,"DESTROY: SLOT %d %s [%s] / no refund" % [int(report.removed.slot)+1,report.removed.name,"TEMPERED" if int(report.removed.tier)>0 else "STANDARD"],12)
+	_text(details,"ADD: %s%s" % [report.added.name," / STANDARD" if report.added.kind=="weapon" else ""],12)
+	var item_icon:=TextureRect.new();item_icon.texture=icon(str(report.added.id));item_icon.custom_minimum_size=Vector2(24,24);item_icon.expand_mode=TextureRect.EXPAND_IGNORE_SIZE;item_icon.stretch_mode=TextureRect.STRETCH_KEEP_ASPECT_CENTERED;details.add_child(item_icon)
+	for row in report.mechanisms:
+		_text(details,str(row.change).to_upper()+": "+str(row.after.name),12).add_theme_color_override("font_color",AMBER if row.change!="enables" else MOSS)
+		if not row.after.missing.is_empty():_text(details,"NEEDS: "+", ".join(row.after.missing),12)
+		_text(details,str(row.after.description),12)
+	for row in report.tags:
+		_text(details,"EXISTING TAG RULE: %s / %d -> %d of %d / %s -> %s" % [row.after.name,int(row.before.count),int(row.after.count),int(row.after.threshold),"ACTIVE" if row.before.active else "INACTIVE","ACTIVE" if row.after.active else "INACTIVE"],12)
+		_text(details,str(row.after.qualifier),12)
+		_text(details,"Equipped beneficiaries: "+(", ".join(row.after.matching_weapons) if not row.after.matching_weapons.is_empty() else "none"),12)
+	if not report.weapon_readouts_available:
+		_text(details,"WEAPON READOUT UNAVAILABLE: "+str(report.weapon_readout_warning)+" / item purchase remains available",12)
+	else:
+		for row in report.weapons:
+			if row.before==row.after and (report.removed.is_empty() or row.slot!=report.removed.slot):continue
+			_text(details,"PROJECTED EQUIPPED STATS / SLOT %d %s [%s]" % [int(row.slot)+1,row.name,"TEMPERED" if int(row.tier)>0 else "STANDARD"],12)
+			var prior:String="new" if row.before.is_empty() else "%.2f" % float(row.before.damage)
+			_text(details,"Primary damage %s -> %.2f %s" % [prior,float(row.after.damage),row.after.damage_unit],12)
+			prior="new" if row.before.is_empty() else "%.3f s" % float(row.before.interval)
+			_text(details,"Interval %s -> %.3f s" % [prior,float(row.after.interval)],12)
+			prior="new" if row.before.is_empty() else "%.1f" % float(row.before.reach)
+			_text(details,"%s: %s -> %.1f" % [row.after.reach_label,prior,float(row.after.reach)],12)
+			if row.after.has("pellets"):_text(details,"Pellets: %s -> %d" % [str(row.before.get("pellets","new")),int(row.after.pellets)],12)
+			_text(details,str(row.after.note),12)
+	_text(details,"Next equipped build only. No retrofitted launch snapshots, shield recharge, healing or guaranteed future damage.",12)
 
 func _shop_bias(parent: Node, bias: Dictionary, reservation:Dictionary={}) -> void:
 	if bias.is_empty(): return

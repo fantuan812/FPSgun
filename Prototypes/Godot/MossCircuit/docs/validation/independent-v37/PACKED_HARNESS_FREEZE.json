@@ -1,0 +1,131 @@
+{
+  "status": "PREPARED_NOT_EXECUTED",
+  "utc": "2026-10-27T05:18:37.986099+00:00",
+  "bindings": [
+    {
+      "case": "forecast-authority",
+      "origin": "<WORKSPACE>/moss-v37-final/tests/independent_forecast_authority.gd",
+      "origin_sha256": "cadd615a195eafa901491f695410b379e2b76f4572ae27c92f35a2eab628ce61",
+      "script": "<QA_ROOT>/packed-harness/forecast-authority.gd",
+      "sha256": "cadd615a195eafa901491f695410b379e2b76f4572ae27c92f35a2eab628ce61",
+      "expected_checks": 108,
+      "path_replacements": 0,
+      "inverse_exact": true,
+      "helper_required": false,
+      "budget_seconds": 180,
+      "cleanup_mode": "pure_no_game_owner"
+    },
+    {
+      "case": "forecast-legacy",
+      "origin": "<WORKSPACE>/moss-v37-final/tests/independent_forecast_legacy.gd",
+      "origin_sha256": "7d152d5c7b2846a53bab7b91878ac61e6de24b4b6fb6c066daad149992f6a63d",
+      "script": "<QA_ROOT>/packed-harness/forecast-legacy.gd",
+      "sha256": "7d152d5c7b2846a53bab7b91878ac61e6de24b4b6fb6c066daad149992f6a63d",
+      "expected_checks": 808,
+      "path_replacements": 0,
+      "inverse_exact": true,
+      "helper_required": false,
+      "budget_seconds": 180,
+      "cleanup_mode": "pure_no_game_owner"
+    },
+    {
+      "case": "forecast-controller",
+      "origin": "<WORKSPACE>/moss-v37-final/tests/independent_forecast_controller.gd",
+      "origin_sha256": "5e7c7ab0647fac5abd73dbd21dc2925c8fcc7c8e95f02f3d9fb6e11310d004b5",
+      "script": "<QA_ROOT>/packed-harness/forecast-controller.gd",
+      "sha256": "cb61a352d44d160940ec3f1dce68b373619f32b5266cd8e4864c3fc0d2ade6a5",
+      "expected_checks": 306,
+      "path_replacements": 1,
+      "inverse_exact": true,
+      "helper_required": true,
+      "budget_seconds": 180,
+      "cleanup_mode": "shared_bounded_helper"
+    },
+    {
+      "case": "forecast-views",
+      "origin": "<WORKSPACE>/moss-v37-final/tests/independent_forecast_views.gd",
+      "origin_sha256": "1c136a33d6703966f0de051756710b20224dec9069e7ee606c468afb1471dd4c",
+      "script": "<QA_ROOT>/packed-harness/forecast-views.gd",
+      "sha256": "485ccf724e17fc0dd479b4cc777ee805c151d9a718b1d849b0f84f0c2de16530",
+      "expected_checks": 42,
+      "path_replacements": 1,
+      "inverse_exact": true,
+      "helper_required": true,
+      "budget_seconds": 180,
+      "cleanup_mode": "shared_bounded_helper"
+    },
+    {
+      "case": "audio-mixer",
+      "origin": "<WORKSPACE>/moss-v37-final/tests/independent_feedback_mixer.gd",
+      "origin_sha256": "1589fcbc740481bbc7cca47901a4dd355d9f6564778a935be3a7d5535b43552e",
+      "script": "<QA_ROOT>/packed-harness/audio-mixer.gd",
+      "sha256": "1589fcbc740481bbc7cca47901a4dd355d9f6564778a935be3a7d5535b43552e",
+      "expected_checks": 236,
+      "path_replacements": 0,
+      "inverse_exact": true,
+      "helper_required": false,
+      "budget_seconds": 180,
+      "cleanup_mode": "dedicated_mixer_capture_weakref_bus_cleanup"
+    },
+    {
+      "case": "audio-views",
+      "origin": "<WORKSPACE>/moss-v37-final/tests/independent_feedback_views.gd",
+      "origin_sha256": "a7699495dbfb120e760d5a125f8f36fd79ef21c9536d126d17c5254e1e5dd668",
+      "script": "<QA_ROOT>/packed-harness/audio-views.gd",
+      "sha256": "cd0ab66e720e62dfb8fb92948df70d53ba87972a1871772275652aff20562f79",
+      "expected_checks": 168,
+      "path_replacements": 1,
+      "inverse_exact": true,
+      "helper_required": true,
+      "budget_seconds": 180,
+      "cleanup_mode": "shared_bounded_helper"
+    },
+    {
+      "case": "audio-arena",
+      "origin": "<WORKSPACE>/moss-v36-qa/authority-partition/arena.gd",
+      "origin_sha256": "55252f10814b4a80eb375f6d530307c24bc063aa5a0907e783749636d479889b",
+      "script": "<QA_ROOT>/packed-harness/audio-arena.gd",
+      "sha256": "edea29de793efbe9e3f8d27eae2dbd6fcf48aaf5c6f8be7f3a19c929fcb50a23",
+      "expected_checks": 435,
+      "path_replacements": 1,
+      "inverse_exact": true,
+      "helper_required": true,
+      "budget_seconds": 180,
+      "cleanup_mode": "shared_bounded_helper"
+    },
+    {
+      "case": "audio-rooms",
+      "origin": "<WORKSPACE>/moss-v36-qa/authority-partition/rooms.gd",
+      "origin_sha256": "99034bd37448ad2978982db5a38ddb5cfba30024c574875f294eb7e352f7e3c0",
+      "script": "<QA_ROOT>/packed-harness/audio-rooms.gd",
+      "sha256": "9bc96036f7509e22a5c6c6b508431012d973d516663cf7983ee45ea8146e311f",
+      "expected_checks": 338,
+      "path_replacements": 1,
+      "inverse_exact": true,
+      "helper_required": true,
+      "budget_seconds": 180,
+      "cleanup_mode": "shared_bounded_helper"
+    }
+  ],
+  "helper_sha256": "9e9676e34296cb55d4560b1169c5954a82508f70e9051fcc942d1bb6839c23bd",
+  "svg_script_sha256": "98a92a4c0a02b022ce3de27d2bd050487ad7ac640ec23749bf868257bdc71f3e",
+  "svg_oracle_sha256": "cc61e79859ec3b87ebefa558cd676bfb9350081d5f05b35ee2503edb2e63a475",
+  "pcm_script_sha256": "e952b55586056bfb9c772e19035a0b7f357c6d620f56ca30ffab2ede92211d47",
+  "asset_origin_pins": {
+    "assets/items/scavenger_reel.svg": "b426e007898fcd69c8654b6d0468bced2c2ff57cca3f3ddc40e80eebfa04c203",
+    "assets/items/scavenger_icon_manifest.json": "180b647078f6c90cb866422d7a14a44fc5b81f801475856f0bcb531315d34336",
+    "assets/audio/player_damage.wav": "34a9aa9fe8cab5273d2ea5199b127d303975df7ff088acce2441f14a922ec125",
+    "assets/audio/shield_block.wav": "c4e21aa5500c8d4f01dd29c561e325a3f97173f103b29c1a291df54a6c8766f1"
+  },
+  "svg_scope": "Reuse actual accepted v36 imported pixel oracle with exact unchanged SVG/manifest, not regenerate expected from current candidate",
+  "audio_partition_scope": "The verification plan approved v37 firstplan Arena435 +Rooms338 each180,total360, no singlepacked180s pass claim; v36 originalfail remains historical",
+  "generic_resources_expected": {
+    "checks": 862,
+    "exact_files": 70,
+    "images": 58,
+    "actions": 25,
+    "action_frames": 281
+  },
+  "generic_count_derivation": "v36 858 with68 exactfiles, unchanged verify_export_pack.gd checks2perfile; newBuildForecast +ForecastGlyph =+4checks, noasset changes",
+  "pack_and_final_source_pins": "Pending author full raw audit + actual export, must add separate immutable execution plan before launch"
+}

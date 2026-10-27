@@ -1,0 +1,334 @@
+--- v36/scripts/gameplay/build_forecast.gd
++++ v37/scripts/gameplay/build_forecast.gd
+@@ -0,0 +1,77 @@
++extends RefCounted
++## Detached equipped-build projection only. Never a live transaction or combat forecast.
++const Rules=preload("res://scripts/rules.gd")
++const WeaponTempering=preload("res://scripts/gameplay/weapon_tempering.gd")
++const WeaponReadout=preload("res://scripts/weapon_readout.gd")
++const ScavengerReel=preload("res://scripts/gameplay/scavenger_reel.gd")
++
++static func mechanism_status(build:Dictionary,catalog:Dictionary)->Array:
++	var result:Array=[]
++	for pair_data in catalog.get("mechanism_synergies",[]):
++		var required:Array=[]
++		var missing:Array=[]
++		for id in pair_data.requires:
++			var label:String=Rules.catalog_entry(catalog,id).name
++			required.append(label)
++			if not Rules.owned_ids(build).has(id):missing.append(label)
++		var excluded_weapon:String=str(pair_data.get("requires_other_weapon_than",""))
++		if not excluded_weapon.is_empty():
++			var requirement:String="a weapon type other than "+Rules.catalog_entry(catalog,excluded_weapon).name
++			required.append(requirement)
++			if not build.weapons.any(func(id):return id!=excluded_weapon):missing.append(requirement)
++		var description:String=ScavengerReel.describe(Rules.catalog_entry(catalog,"scavenger_reel")) if pair_data.get("id","")=="scavenger_return" else str(pair_data.description)
++		result.append({"name":pair_data.name,"active":missing.is_empty(),"requires":required,"missing":missing,"description":description})
++	return result.duplicate(true)
++
++static func _unavailable(reason:String)->Dictionary:
++	return {"available":false,"reason":reason}
++
++static func project(base:Dictionary,build:Dictionary,catalog:Dictionary,id:String,replace_slot:Variant=-1)->Dictionary:
++	var entry:Dictionary=Rules.catalog_entry(catalog,id)
++	if entry.is_empty():return _unavailable("Unknown item")
++	if not replace_slot is int or replace_slot < -1:return _unavailable("Invalid replacement slot")
++	if entry.kind=="item" and replace_slot!=-1:return _unavailable("Item purchases do not replace weapons")
++	if entry.kind=="weapon" and replace_slot>=build.weapons.size():return _unavailable("Invalid replacement slot")
++	var projected:Dictionary=build.duplicate(true)
++	var error:String=Rules.transaction(projected,catalog,id,replace_slot)
++	if not error.is_empty():return _unavailable(error)
++	var removed:Dictionary={}
++	var added:Dictionary={"kind":entry.kind,"id":id,"name":entry.name,"slot":-1,"tier":0}
++	if entry.kind=="weapon":
++		added.slot=replace_slot if replace_slot>=0 else projected.weapons.size()-1
++		if replace_slot>=0:
++			var old_id:String=build.weapons[replace_slot]
++			removed={"slot":replace_slot,"id":old_id,"name":Rules.catalog_entry(catalog,old_id).name,"tier":WeaponTempering.tier_at(build,replace_slot,old_id)}
++	var mechanisms:Array=[]
++	var before_status:Array=mechanism_status(build,catalog)
++	var after_status:Array=mechanism_status(projected,catalog)
++	for i in range(before_status.size()):
++		var before:Dictionary=before_status[i]
++		var after:Dictionary=after_status[i]
++		var change:String=""
++		if before.active!=after.active:change="enables" if after.active else "disables"
++		elif not after.active and id in catalog.mechanism_synergies[i].requires:change="needs"
++		if not change.is_empty():mechanisms.append({"index":i,"before":before,"after":after,"change":change})
++	var tags:Array=[]
++	var before_tags:Array=Rules.tag_synergy_status(build,catalog)
++	var after_tags:Array=Rules.tag_synergy_status(projected,catalog)
++	for i in range(before_tags.size()):
++		var before:Dictionary=before_tags[i]
++		var after:Dictionary=after_tags[i]
++		if before.count!=after.count or before.active!=after.active or before.matching_weapons!=after.matching_weapons:
++			tags.append({"index":i,"before":before,"after":after})
++	var weapons:Array=[]
++	var warning:String=WeaponTempering.metadata_error(build)
++	if warning.is_empty():
++		var before_stats:Dictionary=Rules.derive(base,build,catalog)
++		var after_stats:Dictionary=Rules.derive(base,projected,catalog)
++		for i in range(projected.weapons.size()):
++			var weapon_id:String=projected.weapons[i]
++			var weapon:Dictionary=Rules.catalog_entry(catalog,weapon_id)
++			var before:Dictionary={}
++			if i<build.weapons.size():
++				var old_id:String=build.weapons[i]
++				before=WeaponReadout.describe(Rules.catalog_entry(catalog,old_id),before_stats,true,WeaponTempering.multiplier(build,catalog,i,old_id))
++			var after:Dictionary=WeaponReadout.describe(weapon,after_stats,true,WeaponTempering.multiplier(projected,catalog,i,weapon_id))
++			weapons.append({"slot":i,"id":weapon_id,"name":weapon.name,"tier":WeaponTempering.tier_at(projected,i,weapon_id),"before":before,"after":after})
++	return {"available":true,"reason":"","id":id,"replace_slot":replace_slot,"coins_before":int(build.coins),"coins_after":int(projected.coins),"weapon_count_before":build.weapons.size(),"weapon_count_after":projected.weapons.size(),"item_count_before":build.items.size(),"item_count_after":projected.items.size(),"removed":removed,"added":added,"mechanisms":mechanisms,"tags":tags,"weapons":weapons,"weapon_readouts_available":warning.is_empty(),"weapon_readout_warning":warning}.duplicate(true)
+--- v36/scripts/main.gd
++++ v37/scripts/main.gd
+@@ -7,6 +7,7 @@
+ const WeaponOrder = preload("res://scripts/gameplay/weapon_order.gd")
+ const WeaponTempering = preload("res://scripts/gameplay/weapon_tempering.gd")
+ const CombatFocus=preload("res://scripts/gameplay/combat_focus.gd")
++const BuildForecast=preload("res://scripts/gameplay/build_forecast.gd")
+ const WeaponReadout=preload("res://scripts/weapon_readout.gd")
+ const ModeStatus=preload("res://ui/mode_status.gd")
+ var mode_status:CanvasLayer
+@@ -994,6 +995,19 @@
+ 	state = "playing"
+ 	_hide_modal()
+ 
++func _offer_forecast(index:Variant,generation:Variant,replace_slot:Variant=-1)->Dictionary:
++	# Stricter preview grammar only; real buy intent retains its existing int coercion.
++	if state!="shop" or not generation is int or generation!=shop_generation:return {"available":false,"reason":"Shop view expired"}
++	if not index is int or index<0 or index>=shop_offers.size():return {"available":false,"reason":"Offer unavailable"}
++	var offer:Dictionary=shop_offers[index]
++	if offer.sold:return {"available":false,"reason":"Offer already sold"}
++	var entry:Dictionary=Rules.catalog_entry(catalog,offer.id)
++	if entry.get("kind","")=="weapon" and not WeaponTempering.metadata_error(build).is_empty():return {"available":false,"reason":WeaponTempering.metadata_error(build)}
++	if Reservation.matches(reserved_offer,offer.id):
++		var reason:String=Reservation.invalid_reason(build,catalog,reserved_offer)
++		if not reason.is_empty():return {"available":false,"reason":"Reserved offer unavailable: "+reason}
++	return BuildForecast.project(config.player,build,catalog,offer.id,replace_slot)
++
+ func _view() -> Dictionary:
+ 	if build.is_empty(): return {"seed":run_seed,"settings":settings.duplicate(true),"feedback_audio":_feedback_audio_view(),"mode_id":mode.id,"mode_name":mode.name,"objective":""}
+ 	var view := {"coins":build.coins,"wave":wave,"level":level,"hp":stats.hp,"max_hp":stats.max_hp,"xp":xp,"xp_max":Rules.xp_threshold(level),"time":elapsed,"kills":kills,"seed":run_seed,"stats":stats,"weapons":[],"items":[],"synergies":stats.synergies,"generation":shop_generation,"refresh_price":catalog.refresh_price,"weapon_slots":catalog.weapon_slots,"item_slots":catalog.item_slots,"message":shop_message,"offers":[],"rewards":rewards,"synergy_status":[],"mechanics":{"shield":effects.shield,"chain_charges":effects.chain_charges,"hazards":hazards.size(),"echo_hits":effects.echo_hits,"phase_charge":effects.phase_charge,"medic_damage":effects.medic_damage,"cooldowns":{}}}
+@@ -1018,20 +1032,7 @@
+ 	var missing_names: Array = []
+ 	for id in affinity.missing_ids: missing_names.append(Rules.catalog_entry(catalog,id).name)
+ 	view.shop_bias = {"preferred_tags":affinity.tags.keys(),"missing_partners":missing_names,"sources":affinity.sources,"summary":"Preference, not a guarantee. Positive exploration remains; selling affects the next refresh."}
+-	for pair_data in catalog.get("mechanism_synergies",[]):
+-		var required: Array = []
+-		var missing: Array = []
+-		for id in pair_data.requires:
+-			var name: String = Rules.catalog_entry(catalog,id).name
+-			required.append(name)
+-			if not Rules.owned_ids(build).has(id): missing.append(name)
+-		var excluded_weapon:String=str(pair_data.get("requires_other_weapon_than",""))
+-		if not excluded_weapon.is_empty():
+-			var requirement:String="a weapon type other than "+Rules.catalog_entry(catalog,excluded_weapon).name
+-			required.append(requirement)
+-			if not build.weapons.any(func(id):return id!=excluded_weapon):missing.append(requirement)
+-		var mechanism_description:String=ScavengerReel.describe(Rules.catalog_entry(catalog,"scavenger_reel")) if pair_data.get("id","")=="scavenger_return" else str(pair_data.description)
+-		view.synergy_status.append({"name":pair_data.name,"active":missing.is_empty(),"requires":required,"missing":missing,"description":mechanism_description})
++	view.synergy_status=BuildForecast.mechanism_status(build,catalog)
+ 	for id in effects.cooldowns: view.mechanics.cooldowns[id] = maxf(0,effects.cooldowns[id] - elapsed)
+ 	for i in range(build.weapons.size()):
+ 		var entry := Rules.catalog_entry(catalog,build.weapons[i]).duplicate(true)
+@@ -1076,6 +1077,10 @@
+ 			if not WeaponTempering.metadata_error(build).is_empty(): entry.can_buy=false
+ 		if entry.kind == "item":
+ 			entry.can_buy = entry.can_buy and build.items.get(entry.id,0) < entry.max_stack and (build.items.has(entry.id) or build.items.size() < catalog.item_slots)
++		entry.forecast_options=[]
++		if entry.kind=="weapon" and build.weapons.size()>=int(catalog.weapon_slots):
++			for slot in range(build.weapons.size()):entry.forecast_options.append({"replace_slot":slot,"report":_offer_forecast(i,shop_generation,slot)})
++		else:entry.forecast_options.append({"replace_slot":-1,"report":_offer_forecast(i,shop_generation,-1)})
+ 		view.offers.append(entry)
+ 	return view
+ 
+--- v36/tests/test_build_forecast.gd
++++ v37/tests/test_build_forecast.gd
+@@ -0,0 +1,52 @@
++extends SceneTree
++const Forecast=preload("res://scripts/gameplay/build_forecast.gd")
++const AudioTeardown=preload("res://tests/support/audio_teardown.gd")
++var game
++var passed:int=0
++var failures:Array=[]
++func check(value:bool,label:String)->void:
++	if value:passed+=1
++	else:failures.append(label)
++func nodes(node:Node,type:String)->Array:
++	var found:Array=[]
++	if node.is_class(type):found.append(node)
++	for child in node.get_children():found.append_array(nodes(child,type))
++	return found
++func _initialize()->void:call_deferred("run")
++func run()->void:
++	game=load("res://scenes/main.tscn").instantiate();root.add_child(game);game.set_process(false)
++	game._start_run(37037);game.set_process(false)
++	game.build.coins=100;game.build.weapons=["return_disc","rivet_gun","rail_lance","cryo_sprayer"];game.build.items={"scavenger_reel":1};game._recompute()
++	game.state="shop";game.shop_offers=[{"id":"orbit_saw","sold":false},{"id":"fracture_coil","sold":false}];game.shop_generation+=1
++	var original:Dictionary=game.build.duplicate(true)
++	var generation:int=game.shop_generation
++	var rng_state:int=game.rng.state
++	var one:Dictionary=game._offer_forecast(0,generation,0)
++	check(one.available and one.coins_after==62,"replacement uses real price")
++	check(one.removed.id=="return_disc" and one.added.id=="orbit_saw" and one.added.tier==0,"replacement explicit destroyed and standard")
++	check(one.mechanisms.any(func(row):return row.change=="disables" and row.after.name=="SCAVENGER RETURN"),"last disc loss visible")
++	var two:Dictionary=game._offer_forecast(0,generation,1)
++	check(two.available and not two.mechanisms.any(func(row):return row.after.name=="SCAVENGER RETURN"),"keeping disc does not lose reel")
++	check(game._offer_forecast(1,generation).mechanisms.any(func(row):return row.change=="enables" and row.after.name=="Cold Snap"),"different type supplied to fracture")
++	for bad in [false,0.0,"0",-2,4]:check(not game._offer_forecast(0,generation,bad).available,"strict slot "+str(bad))
++	check(not game._offer_forecast(0,float(generation),0).available,"strict preview generation")
++	check(not game._offer_forecast("0",generation,0).available,"strict preview index")
++	game.ui.show_shop(game._view());await process_frame
++	var selectors:Array=nodes(game.ui.root,"OptionButton")
++	check(selectors.size()==1,"one existing full-bag selector")
++	var selector:OptionButton=selectors[0]
++	selector.grab_focus();selector.select(1);selector.item_selected.emit(1);await process_frame
++	check(selector.has_focus(),"forecast update retains selector focus")
++	var forecasts:Array=[]
++	for node in nodes(game.ui.root,"VBoxContainer"):
++		if node.name=="BuildForecast":forecasts.append(node)
++	check(forecasts.size()==2,"one forecast per offer")
++	check(forecasts[0].get_meta("forecast_slot")==1,"selector updates only local selected slot")
++	check(forecasts[0].get_meta("forecast_report")==two,"rendered selected projection exact")
++	check(game.build==original and game.shop_generation==generation and game.rng.state==rng_state,"view and selector no authority mutation")
++	one.mechanisms.clear();one.weapons.clear()
++	check(game.build==original,"consumer report detached")
++	check(game._buy(0,generation,1),"real original buy authority")
++	check(game.build.coins==two.coins_after and game.build.weapons[1]==two.added.id and game.build.weapons[0]=="return_disc","real selected-slot result agrees")
++	var teardown=AudioTeardown.new();teardown.prepare([game]);game.queue_free();await process_frame;await teardown.finish(self)
++	print(JSON.stringify({"passed":passed,"failures":failures,"scope":"Author finite pure forecast and local selector smoke; not full regression"}));quit(0 if failures.is_empty() else 1)
+--- v36/ui/forecast_glyph.gd
++++ v37/ui/forecast_glyph.gd
+@@ -0,0 +1,20 @@
++extends Control
++## Original code-native build connector glyphs; labels carry the meaning independently.
++var kind:String="needs"
++func _ready()->void:
++	custom_minimum_size=Vector2(16,16)
++	mouse_filter=Control.MOUSE_FILTER_IGNORE
++func _draw()->void:
++	var tint:Color=Color("a3c98b") if kind=="enables" else Color("e9b660")
++	if kind=="enables":
++		draw_circle(Vector2(8,8),6,tint,false,1.5,true)
++		draw_line(Vector2(4,8),Vector2(12,8),tint,1.5,true)
++		draw_line(Vector2(8,4),Vector2(8,12),tint,1.5,true)
++	elif kind=="disables":
++		draw_line(Vector2(2,8),Vector2(6,8),tint,2,true)
++		draw_line(Vector2(10,8),Vector2(14,8),tint,2,true)
++		draw_line(Vector2(9,3),Vector2(7,13),tint,1.5,true)
++	else:
++		draw_circle(Vector2(4,8),2.5,tint,false,1.5,true)
++		draw_circle(Vector2(12,8),2.5,tint,false,1.5,true)
++		draw_line(Vector2(6.5,8),Vector2(9.5,8),tint,1.5,true)
+--- v36/ui/moss_ui.gd
++++ v37/ui/moss_ui.gd
+@@ -1,4 +1,5 @@
+ extends CanvasLayer
++const ForecastGlyph=preload("res://ui/forecast_glyph.gd")
+ const ScavengerReel=preload("res://scripts/gameplay/scavenger_reel.gd")
+ ## Presentation only. All run state and transactions belong to the main controller.
+ signal intent(action: String, payload: Dictionary)
+@@ -388,6 +389,7 @@
+ 	var bag := _scroll(columns)
+ 	var reservation:Dictionary=view.get("reserved_offer",{})
+ 	_shop_bias(offers, view.get("shop_bias", {}),reservation)
++	_text(offers,"Equipped-build preview, not guaranteed damage.",12)
+ 	for offer in view.get("offers", []):
+ 		var held:bool=bool(offer.get("reserved",false))
+ 		var c := _card(offers, offer, "  [RESERVED]" if held else "", view.get("synergy_status", []),true)
+@@ -405,6 +407,8 @@
+ 		var payload := {"index": int(offer.get("index", 0)), "generation": generation, "replace_slot": -1}
+ 		var full: bool = offer.get("kind", "") == "weapon" and view.get("weapons", []).size() >= int(view.get("weapon_slots", 4))
+ 		var actions:=HBoxContainer.new(); c.add_child(actions)
++		var forecast:=VBoxContainer.new();forecast.name="BuildForecast";c.add_child(forecast)
++		var forecast_options:Array=offer.get("forecast_options",[]).duplicate(true)
+ 		if full and not sold:
+ 			var replacement_notice:=_text(c, "Slots full: replace destroys the old weapon (no refund).", 12)
+ 			var select := OptionButton.new(); select.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+@@ -416,12 +420,15 @@
+ 			buy.pressed.connect(func():
+ 				var p: Dictionary = payload.duplicate(); p.replace_slot = select.get_selected_id(); intent.emit("buy", p))
+ 			buy.size_flags_horizontal=Control.SIZE_EXPAND_FILL; actions.add_child(buy)
+-			c.move_child(replacement_notice,1);c.move_child(select,2);c.move_child(actions,3)
++			c.move_child(replacement_notice,1);c.move_child(select,2);c.move_child(actions,3);c.move_child(forecast,4)
++			_forecast_card(forecast,forecast_options,select.get_selected_id())
++			select.item_selected.connect(func(_selected:int):_forecast_card(forecast,forecast_options,select.get_selected_id()))
+ 			if first_focus == null and not buy.disabled: first_focus = select
+ 		else:
+ 			var purchase:=_button(actions, "SOLD" if sold else "BUY  /  %d SCRAP" % int(offer.get("price", 0)), "buy", payload, sold or not can_buy)
+ 			purchase.size_flags_horizontal=Control.SIZE_EXPAND_FILL
+-			c.move_child(actions,1)
++			c.move_child(actions,1);c.move_child(forecast,2)
++			_forecast_card(forecast,forecast_options,-1,sold)
+ 		var reserve:Button
+ 		if held:
+ 			reserve=_button(actions,"RELEASE","release_offer",{"token":int(offer.get("reservation_token",-1)),"generation":generation})
+@@ -434,6 +441,69 @@
+ 	_button(footer, ("REFRESH 3  /  %d SCRAP" if reservation.get("valid",false) else "REFRESH  /  %d SCRAP") % int(view.get("refresh_price", 5)), "refresh", {"generation": generation}, int(view.get("coins", 0)) < int(view.get("refresh_price", 5)))
+ 	_button(footer, "DEPLOY NEXT ROOM" if view.get("mode_id","")=="rooms" else "DEPLOY NEXT WAVE", "continue", {"generation": generation})
+ 	_finish()
++
++func _forecast_report(options:Array,slot:int)->Dictionary:
++	for option in options:
++		if option.get("replace_slot")==slot:return option.get("report",{}).duplicate(true)
++	return {"available":false,"reason":"Offer unavailable"}
++
++func _forecast_card(parent:VBoxContainer,options:Array,slot:int,sold:bool=false)->void:
++	# Rebuild only this detached forecast subtree; never the selector/action/focused control.
++	for child in parent.get_children():
++		parent.remove_child(child)
++		child.queue_free()
++	parent.set_meta("forecast_slot",slot)
++	var report:Dictionary=_forecast_report(options,slot)
++	parent.set_meta("forecast_report",report.duplicate(true))
++	if sold:
++		_text(parent,"SOLD / no forecast",12)
++		return
++	if not report.get("available",false):
++		_text(parent,"UNAVAILABLE: "+str(report.get("reason","Offer unavailable")),12).add_theme_color_override("font_color",AMBER)
++		return
++	var selected:String=" / CURRENTLY SELECTED SLOT %d" % (slot+1) if slot>=0 else ""
++	_text(parent,"AFTER PURCHASE%s: %d scrap / W %d / M %d" % [selected,int(report.coins_after),int(report.weapon_count_after),int(report.item_count_after)],12)
++	var enabled:Array=[]
++	var disabled:Array=[]
++	var needs:Array=[]
++	for row in report.mechanisms:
++		match row.change:
++			"enables":enabled.append(row)
++			"disables":disabled.append(row)
++			"needs":needs.append(row)
++	var line:=HBoxContainer.new();parent.add_child(line)
++	var glyph:=ForecastGlyph.new();glyph.kind="disables" if not disabled.is_empty() else ("enables" if not enabled.is_empty() else "needs");line.add_child(glyph)
++	var first_name:String=str(disabled[0].after.name) if not disabled.is_empty() else (str(enabled[0].after.name) if not enabled.is_empty() else "")
++	_text(line,"ENABLES %d / DISABLES %d%s" % [enabled.size(),disabled.size()," / "+first_name if not first_name.is_empty() else ""],12)
++	_text(parent,"STILL NEEDS: %d relevant mechanism(s)" % needs.size() if not needs.is_empty() else ("No mechanism change" if enabled.is_empty() and disabled.is_empty() else "No remaining prerequisite for these transitions"),12)
++	var details:VBoxContainer=_disclosure(parent,"BUILD DETAILS")
++	if not report.removed.is_empty():
++		_text(details,"DESTROY: SLOT %d %s [%s] / no refund" % [int(report.removed.slot)+1,report.removed.name,"TEMPERED" if int(report.removed.tier)>0 else "STANDARD"],12)
++	_text(details,"ADD: %s%s" % [report.added.name," / STANDARD" if report.added.kind=="weapon" else ""],12)
++	var item_icon:=TextureRect.new();item_icon.texture=icon(str(report.added.id));item_icon.custom_minimum_size=Vector2(24,24);item_icon.expand_mode=TextureRect.EXPAND_IGNORE_SIZE;item_icon.stretch_mode=TextureRect.STRETCH_KEEP_ASPECT_CENTERED;details.add_child(item_icon)
++	for row in report.mechanisms:
++		_text(details,str(row.change).to_upper()+": "+str(row.after.name),12).add_theme_color_override("font_color",AMBER if row.change!="enables" else MOSS)
++		if not row.after.missing.is_empty():_text(details,"NEEDS: "+", ".join(row.after.missing),12)
++		_text(details,str(row.after.description),12)
++	for row in report.tags:
++		_text(details,"EXISTING TAG RULE: %s / %d -> %d of %d / %s -> %s" % [row.after.name,int(row.before.count),int(row.after.count),int(row.after.threshold),"ACTIVE" if row.before.active else "INACTIVE","ACTIVE" if row.after.active else "INACTIVE"],12)
++		_text(details,str(row.after.qualifier),12)
++		_text(details,"Equipped beneficiaries: "+(", ".join(row.after.matching_weapons) if not row.after.matching_weapons.is_empty() else "none"),12)
++	if not report.weapon_readouts_available:
++		_text(details,"WEAPON READOUT UNAVAILABLE: "+str(report.weapon_readout_warning)+" / item purchase remains available",12)
++	else:
++		for row in report.weapons:
++			if row.before==row.after and (report.removed.is_empty() or row.slot!=report.removed.slot):continue
++			_text(details,"PROJECTED EQUIPPED STATS / SLOT %d %s [%s]" % [int(row.slot)+1,row.name,"TEMPERED" if int(row.tier)>0 else "STANDARD"],12)
++			var prior:String="new" if row.before.is_empty() else "%.2f" % float(row.before.damage)
++			_text(details,"Primary damage %s -> %.2f %s" % [prior,float(row.after.damage),row.after.damage_unit],12)
++			prior="new" if row.before.is_empty() else "%.3f s" % float(row.before.interval)
++			_text(details,"Interval %s -> %.3f s" % [prior,float(row.after.interval)],12)
++			prior="new" if row.before.is_empty() else "%.1f" % float(row.before.reach)
++			_text(details,"%s: %s -> %.1f" % [row.after.reach_label,prior,float(row.after.reach)],12)
++			if row.after.has("pellets"):_text(details,"Pellets: %s -> %d" % [str(row.before.get("pellets","new")),int(row.after.pellets)],12)
++			_text(details,str(row.after.note),12)
++	_text(details,"Next equipped build only. No retrofitted launch snapshots, shield recharge, healing or guaranteed future damage.",12)
+ 
+ func _shop_bias(parent: Node, bias: Dictionary, reservation:Dictionary={}) -> void:
+ 	if bias.is_empty(): return

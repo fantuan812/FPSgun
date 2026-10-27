@@ -1,0 +1,51 @@
+{
+  "status": "PASS_SCRIPT_BINDING_REVIEW_EXECUTION_PLAN_PENDING",
+  "utc": "2026-10-27T05:19:49.837748+00:00",
+  "bindings": [
+    {
+      "case": "forecast-authority",
+      "inverse_exact": true,
+      "sha256": "cadd615a195eafa901491f695410b379e2b76f4572ae27c92f35a2eab628ce61"
+    },
+    {
+      "case": "forecast-legacy",
+      "inverse_exact": true,
+      "sha256": "7d152d5c7b2846a53bab7b91878ac61e6de24b4b6fb6c066daad149992f6a63d"
+    },
+    {
+      "case": "forecast-controller",
+      "inverse_exact": true,
+      "sha256": "cb61a352d44d160940ec3f1dce68b373619f32b5266cd8e4864c3fc0d2ade6a5"
+    },
+    {
+      "case": "forecast-views",
+      "inverse_exact": true,
+      "sha256": "485ccf724e17fc0dd479b4cc777ee805c151d9a718b1d849b0f84f0c2de16530"
+    },
+    {
+      "case": "audio-mixer",
+      "inverse_exact": true,
+      "sha256": "1589fcbc740481bbc7cca47901a4dd355d9f6564778a935be3a7d5535b43552e"
+    },
+    {
+      "case": "audio-views",
+      "inverse_exact": true,
+      "sha256": "cd0ab66e720e62dfb8fb92948df70d53ba87972a1871772275652aff20562f79"
+    },
+    {
+      "case": "audio-arena",
+      "inverse_exact": true,
+      "sha256": "edea29de793efbe9e3f8d27eae2dbd6fcf48aaf5c6f8be7f3a19c929fcb50a23"
+    },
+    {
+      "case": "audio-rooms",
+      "inverse_exact": true,
+      "sha256": "9bc96036f7509e22a5c6c6b508431012d973d516663cf7983ee45ea8146e311f"
+    }
+  ],
+  "helper_and_old_svg_wav_oracle_pins_exact": true,
+  "full_authority_source_exact_v36": true,
+  "partition_policy": "v37 first-plan functional435+338 each180,totalmax360, not original singlepacked180 pass",
+  "pending": "actualPCK pins and execution runner not yet frozen; audio-mixer uses dedicated cleanup, helper_required metadata needs distinction",
+  "no_target_execution_by_reviewer": true
+}

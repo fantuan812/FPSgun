@@ -1,0 +1,31 @@
+{
+  "status": "PASS_PREIMPORT_STATIC_ONLY",
+  "utc": "2026-10-27T05:07:38.099001+00:00",
+  "input_map_sha256": "24789ec74eabf2b66cb5dfbeed9c044b956d0acea42b5481c6fecf7c2b6f00a1",
+  "files": 720,
+  "base_unchanged": 715,
+  "changes": [
+    "scripts/main.gd",
+    "ui/moss_ui.gd"
+  ],
+  "new": [
+    "scripts/gameplay/build_forecast.gd",
+    "tests/test_build_forecast.gd",
+    "ui/forecast_glyph.gd"
+  ],
+  "findings": [
+    "pure detached transaction / no Rules preload cycle",
+    "legacy mechanism shape/order/optional id preserved",
+    "preview guard order and strict type-only policy distinct from unchanged real intent",
+    "numeric readouts follow resulting tier and omit when item metadata invalid",
+    "UI local subtree only, reports deep detached; invalid/sold no successful numeric claims",
+    "preexecution wording/glyph corrections now exact, original unexecuted candidate retained",
+    "real Rules/_buy authority body, catalog/balance/audio/RunFlow/runner unchanged"
+  ],
+  "not_claimed": [
+    "target parser/runtime PASS",
+    "native 960 wrap/scroll/visual acceptance",
+    "performance or physical audio"
+  ],
+  "next": "Wait Trie original actualhead terminal, then author first coldimport+5focused under unchanged180s strict gates; no parallel engine"
+}

@@ -1,0 +1,105 @@
+{
+  "status": "PASS_AUTHOR_PARITY_RAW_INDEPENDENT_REVIEW",
+  "utc": "2026-10-27T05:16:07.520714+00:00",
+  "cases": [
+    {
+      "case": "old-transactions",
+      "count": 6,
+      "trace_sha256": "22e28521ba76fb7285a59b98593aecc7c4af9e24d497853119f73495324feaf8",
+      "seconds": 8.239,
+      "helper": {
+        "discarded": 0,
+        "elapsed_us": 151570,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      }
+    },
+    {
+      "case": "old-combat",
+      "count": 24,
+      "trace_sha256": "e7d93a1fcf01345c540bf9f868632310fd3e85572dbe431dbe12d43bf19212ec",
+      "seconds": 13.039,
+      "helper": {
+        "discarded": 0,
+        "elapsed_us": 164585,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      }
+    },
+    {
+      "case": "current-combat",
+      "count": 24,
+      "trace_sha256": "7cd6062fe08d107b8b3eb6e41f2f8dce0ce90f0a1c4448768e8c0624c317c358",
+      "seconds": 3.121,
+      "helper": {
+        "discarded": 0,
+        "elapsed_us": 157689,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      }
+    },
+    {
+      "case": "current-transactions-baseline",
+      "count": 6,
+      "trace_sha256": "48c6705e27d301857f8a52ad849a29b27f6a302f8bcab8f7a2ec5a1d69ee7e63",
+      "seconds": 6.948,
+      "helper": {
+        "discarded": 0,
+        "elapsed_us": 151057,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      }
+    },
+    {
+      "case": "current-transactions-candidate",
+      "count": 6,
+      "trace_sha256": "48c6705e27d301857f8a52ad849a29b27f6a302f8bcab8f7a2ec5a1d69ee7e63",
+      "seconds": 8.092,
+      "helper": {
+        "discarded": 0,
+        "elapsed_us": 151480,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      }
+    }
+  ],
+  "frozen_inputs": 1453,
+  "all_actual_before_after_pins_current_exact": true,
+  "scope": "Five routes only. Historical6/24 + current24 without shop reuse actual retained v36 outputs; current6 includes real seeded shop refresh and requires fresh v36 baseline plus v37 comparison. No v35 rerun. No ordinary acquisition or all seeds claim.",
+  "ownership": "Author executed5routes; QA independently read exact raw/output/helper/source hashes, not an independent rerun"
+}

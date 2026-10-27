@@ -1,0 +1,20 @@
+{
+  "status": "PASS_DELIVERY_ENGINEERING_STATIC_PENDING_THREE_PROSE_CORRECTIONS",
+  "utc": "2026-10-27T06:03:46.880553+00:00",
+  "stage_sha256": "0592b5225e3066f9df61b138059b68d4e828587616b40233b51ac7c8df230293",
+  "check_sha256": "9a3fc73555e5e6bc03eac6c422dfbab5fada53661fc3ddb1b99200b864bf1b26",
+  "readme_sha256": "32ed8e2862affe5930bdb01dbda75823ddc019e34f3713f04c2e37359a046fd3",
+  "scope": [
+    "72 exact existing catalog rows +2 current records; no historical chunk/history recopy",
+    "14 exact current PCK chunks and17planned payloads",
+    "unchanged3228782b restoration helper",
+    "10 total cases: verify/restore/overwrite refusal,6malformedcatalog refusals,symlink refusal",
+    "actual local file-only v36->v37->v36 with backup/ELFmode/hash preservation; no runtime or Git download claim"
+  ],
+  "prose_corrections": [
+    "scope list omitv35 ->v32\u2013v37",
+    "8cases total =4situations\u00d72sizes, not8\u00d72",
+    "UI affected weapon readouts, not all unchanged rows"
+  ],
+  "no_execution_by_reviewer": true
+}

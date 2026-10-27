@@ -1,0 +1,3248 @@
+[
+  {
+    "case": "source-cold-import",
+    "native_exit": 0,
+    "timeout": false,
+    "seconds": 20.832,
+    "clean": true,
+    "semantic": true,
+    "helper_clean": true,
+    "parse_error": "",
+    "reports": [],
+    "helpers": [],
+    "pass": true
+  },
+  {
+    "case": "source-resource-fingerprint",
+    "native_exit": 0,
+    "timeout": false,
+    "seconds": 5.598,
+    "clean": true,
+    "semantic": true,
+    "helper_clean": true,
+    "parse_error": "",
+    "reports": [],
+    "helpers": [],
+    "pass": true
+  },
+  {
+    "case": "packed-resources",
+    "native_exit": 0,
+    "timeout": false,
+    "seconds": 6.495,
+    "clean": true,
+    "semantic": true,
+    "helper_clean": true,
+    "parse_error": "",
+    "reports": [
+      {
+        "action_frames": 281,
+        "actions": 25,
+        "checks": 862,
+        "exact_files": 70,
+        "failures": [],
+        "images": 58,
+        "scope": "editor reader of exported PCK, no source fallback; dynamic resources and controlled integration, not native GUI or Windows runtime acceptance"
+      },
+      {
+        "action_frames": 281,
+        "actions": 25,
+        "checks": 862,
+        "exact_files": 70,
+        "failures": [],
+        "images": 58,
+        "scope": "editor reader of exported PCK, no source fallback; dynamic resources and controlled integration, not native GUI or Windows runtime acceptance"
+      }
+    ],
+    "helpers": [],
+    "pass": true
+  },
+  {
+    "case": "forecast-authority",
+    "native_exit": 0,
+    "timeout": false,
+    "seconds": 1.838,
+    "clean": true,
+    "semantic": true,
+    "helper_clean": true,
+    "parse_error": "",
+    "reports": [
+      {
+        "checks": 108,
+        "failures": [],
+        "scope": "C3 preimplementation hand oracle; no target-derived goldens; pure projection only"
+      }
+    ],
+    "helpers": [],
+    "pass": true
+  },
+  {
+    "case": "forecast-legacy",
+    "native_exit": 0,
+    "timeout": false,
+    "seconds": 1.325,
+    "clean": true,
+    "semantic": true,
+    "helper_clean": true,
+    "parse_error": "",
+    "reports": [
+      {
+        "checks": 808,
+        "failures": [],
+        "scope": "finite legacy status matrix: 2 catalogs x12pairs x4ownership masks x2otherweapon states; old authority reference, not numeric golden generator"
+      }
+    ],
+    "helpers": [],
+    "pass": true
+  },
+  {
+    "case": "forecast-controller",
+    "native_exit": 0,
+    "timeout": false,
+    "seconds": 5.942,
+    "clean": true,
+    "semantic": true,
+    "helper_clean": true,
+    "parse_error": "",
+    "reports": [
+      {
+        "checks": 306,
+        "failures": [],
+        "scope": "C3 independent controller guard/full-state purity + separate-instance real purchases; UI selector/focus and native separate"
+      }
+    ],
+    "helpers": [
+      {
+        "capture_removed": true,
+        "complete": true,
+        "driver": "Dummy",
+        "game_owner_count": 2,
+        "mix_rate": 44100.0,
+        "observations": [
+          {
+            "discarded": 0,
+            "elapsed_us": 4434,
+            "game_owner_count": 2,
+            "invalid": 0,
+            "new_pushed": 0,
+            "owner_count": 2,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 4096,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 6129,
+            "game_owner_count": 2,
+            "invalid": 0,
+            "new_pushed": 0,
+            "owner_count": 2,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 4096,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 21305,
+            "game_owner_count": 2,
+            "invalid": 0,
+            "new_pushed": 0,
+            "owner_count": 2,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 4096,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 33211,
+            "game_owner_count": 2,
+            "invalid": 0,
+            "new_pushed": 0,
+            "owner_count": 2,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 4096,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 40422,
+            "game_owner_count": 2,
+            "invalid": 0,
+            "new_pushed": 0,
+            "owner_count": 2,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 4096,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 53487,
+            "game_owner_count": 2,
+            "invalid": 0,
+            "new_pushed": 0,
+            "owner_count": 2,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 4096,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 68034,
+            "game_owner_count": 2,
+            "invalid": 0,
+            "new_pushed": 0,
+            "owner_count": 2,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 4096,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 81153,
+            "game_owner_count": 2,
+            "invalid": 0,
+            "new_pushed": 0,
+            "owner_count": 2,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 4096,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 95665,
+            "game_owner_count": 2,
+            "invalid": 0,
+            "new_pushed": 4096,
+            "owner_count": 2,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 8192,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 108692,
+            "game_owner_count": 2,
+            "invalid": 0,
+            "new_pushed": 4096,
+            "owner_count": 2,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 8192,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 122632,
+            "game_owner_count": 2,
+            "invalid": 0,
+            "new_pushed": 4096,
+            "owner_count": 2,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 8192,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 136420,
+            "game_owner_count": 2,
+            "invalid": 0,
+            "new_pushed": 4096,
+            "owner_count": 2,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 8192,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 150054,
+            "game_owner_count": 2,
+            "invalid": 0,
+            "new_pushed": 4096,
+            "owner_count": 2,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 8192,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 163787,
+            "game_owner_count": 2,
+            "invalid": 0,
+            "new_pushed": 4096,
+            "owner_count": 2,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 8192,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 177617,
+            "game_owner_count": 2,
+            "invalid": 0,
+            "new_pushed": 4096,
+            "owner_count": 2,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 8192,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 193914,
+            "game_owner_count": 2,
+            "invalid": 0,
+            "new_pushed": 8192,
+            "owner_count": 2,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 12288,
+            "streams_released": true
+          }
+        ],
+        "pre_window_drained": 16384,
+        "prepare_errors": [],
+        "requested_owner_count": 2,
+        "scope": "Test-only bounded final-owner resource release and fresh internal silence; not physical output or a universal timing guarantee.",
+        "tracked_owner_count": 2,
+        "tracked_stream_count": 4
+      }
+    ],
+    "pass": true
+  },
+  {
+    "case": "forecast-views",
+    "native_exit": 0,
+    "timeout": false,
+    "seconds": 3.06,
+    "clean": true,
+    "semantic": true,
+    "helper_clean": true,
+    "parse_error": "",
+    "reports": [
+      {
+        "checks": 42,
+        "failures": [],
+        "scope": "controlled 960/1280 UI local selector/focus/scroll/intent and real click; native aesthetic/clipping separately reviewed"
+      }
+    ],
+    "helpers": [
+      {
+        "capture_removed": true,
+        "complete": true,
+        "driver": "Dummy",
+        "game_owner_count": 1,
+        "mix_rate": 44100.0,
+        "observations": [
+          {
+            "discarded": 0,
+            "elapsed_us": 90,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 0,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 0,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 8963,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 0,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 0,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 21228,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 0,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 0,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 34452,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 0,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 0,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 48277,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 0,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 0,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 62017,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 0,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 0,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 76768,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 4096,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 4096,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 89954,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 4096,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 4096,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 103464,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 4096,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 4096,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 117224,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 4096,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 4096,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 130995,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 4096,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 4096,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 144880,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 4096,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 4096,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 158651,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 4096,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 4096,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 173209,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 8192,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 8192,
+            "streams_released": true
+          }
+        ],
+        "pre_window_drained": 0,
+        "prepare_errors": [],
+        "requested_owner_count": 1,
+        "scope": "Test-only bounded final-owner resource release and fresh internal silence; not physical output or a universal timing guarantee.",
+        "tracked_owner_count": 1,
+        "tracked_stream_count": 2
+      }
+    ],
+    "pass": true
+  },
+  {
+    "case": "audio-mixer",
+    "native_exit": 0,
+    "timeout": false,
+    "seconds": 12.434,
+    "clean": true,
+    "semantic": true,
+    "helper_clean": true,
+    "parse_error": "",
+    "reports": [
+      {
+        "checks": 236,
+        "failures": [],
+        "seconds": 11.52452
+      },
+      {
+        "buffer_frames": 65536,
+        "checks": 236,
+        "driver": "Dummy",
+        "engine": {
+          "build": "official",
+          "hash": "7d41c59c457bd5a245092b4e7eb2d833e3b3f8c3",
+          "hex": 263683,
+          "major": 4,
+          "minor": 6,
+          "patch": 3,
+          "status": "stable",
+          "string": "4.6.3-stable (official)",
+          "timestamp": 0
+        },
+        "failures": [],
+        "master_gain_db": 0.0,
+        "mix_rate": 44100.0,
+        "node_gains": {
+          "player_damage": 0.5,
+          "shield_block": 0.5
+        },
+        "scope": "External exact-resource real internal Dummy mix driven by actual resolved damage/block. No physical listening, output device, subjective sound quality or Windows claim.",
+        "seconds_since_ready": 11.52452,
+        "shapes": [
+          {
+            "compared_frames": 7056,
+            "cue": "player_damage",
+            "first_expected": 6,
+            "first_observed": 72,
+            "lag_frames": 66,
+            "normalized_correlation": 0.999999885543465,
+            "source_pcm_fitted_gain": 0.500015099784701
+          },
+          {
+            "compared_frames": 5292,
+            "cue": "shield_block",
+            "first_expected": 5,
+            "first_observed": 4167,
+            "lag_frames": 4162,
+            "normalized_correlation": 0.999999732402677,
+            "source_pcm_fitted_gain": 0.500014859362485
+          },
+          {
+            "compared_frames": 7056,
+            "cue": "player_damage",
+            "first_expected": 6,
+            "first_observed": 72,
+            "lag_frames": 66,
+            "normalized_correlation": 0.999999885543465,
+            "source_pcm_fitted_gain": 0.500015099784701
+          },
+          {
+            "compared_frames": 5292,
+            "cue": "shield_block",
+            "first_expected": 5,
+            "first_observed": 4167,
+            "lag_frames": 4162,
+            "normalized_correlation": 0.999999732402677,
+            "source_pcm_fitted_gain": 0.500014859362485
+          },
+          {
+            "compared_frames": 7056,
+            "cue": "player_damage",
+            "first_expected": 6,
+            "first_observed": 4168,
+            "lag_frames": 4162,
+            "normalized_correlation": 0.999999885543465,
+            "source_pcm_fitted_gain": 0.500015099784701
+          }
+        ],
+        "status": "PASS",
+        "windows": [
+          {
+            "actual_seconds": 0.217897,
+            "discarded_after": 0,
+            "discarded_before": 0,
+            "frames": 12288,
+            "fresh_pushed_frames": 12288,
+            "label": "startup_drain",
+            "mean": 0.0,
+            "nonfinite": 0,
+            "nonzero_scalars": 0,
+            "pcm_f32le_stereo_sha256": "3a3ed164e42500a1c5b2d0093f0a813d27dc50d038f330cc100a7e70ece2e6e4",
+            "peak": 0.0,
+            "pushed_after": 12288,
+            "pushed_before": 0,
+            "queued_frames_at_start": 0,
+            "requested_seconds": 0.2,
+            "rms": 0.0,
+            "stereo_delta": 0.0
+          },
+          {
+            "actual_seconds": 0.129612,
+            "discarded_after": 0,
+            "discarded_before": 0,
+            "frames": 4096,
+            "fresh_pushed_frames": 4096,
+            "label": "initial_silence",
+            "mean": 0.0,
+            "nonfinite": 0,
+            "nonzero_scalars": 0,
+            "pcm_f32le_stereo_sha256": "c35020473aed1b4642cd726cad727b63fff2824ad68cedd7ffb73c7cbd890479",
+            "peak": 0.0,
+            "pushed_after": 16384,
+            "pushed_before": 12288,
+            "queued_frames_at_start": 0,
+            "requested_seconds": 0.12,
+            "rms": 0.0,
+            "stereo_delta": 0.0
+          },
+          {
+            "actual_seconds": 0.307759,
+            "discarded_after": 0,
+            "discarded_before": 0,
+            "frames": 16384,
+            "fresh_pushed_frames": 16384,
+            "label": "arena_player_damage",
+            "mean": 1.38932696153692e-06,
+            "nonfinite": 0,
+            "nonzero_scalars": 14082,
+            "pcm_f32le_stereo_sha256": "428112f3f21f9176976c0c98acec275b0c4363778b8ac0d2356d1098c0790a7d",
+            "peak": 0.125003814697266,
+            "pushed_after": 32768,
+            "pushed_before": 16384,
+            "queued_frames_at_start": 0,
+            "raw_file": "arena_player_damage.f32le",
+            "requested_seconds": 0.28,
+            "rms": 0.052131443654349,
+            "stereo_delta": 0.0
+          },
+          {
+            "actual_seconds": 0.134576,
+            "discarded_after": 0,
+            "discarded_before": 0,
+            "frames": 12288,
+            "fresh_pushed_frames": 8192,
+            "label": "arena_player_damage_drain",
+            "mean": 0.0,
+            "nonfinite": 0,
+            "nonzero_scalars": 0,
+            "pcm_f32le_stereo_sha256": "3a3ed164e42500a1c5b2d0093f0a813d27dc50d038f330cc100a7e70ece2e6e4",
+            "peak": 0.0,
+            "pushed_after": 45056,
+            "pushed_before": 36864,
+            "queued_frames_at_start": 4096,
+            "requested_seconds": 0.12,
+            "rms": 0.0,
+            "stereo_delta": 0.0
+          },
+          {
+            "actual_seconds": 0.130901,
+            "discarded_after": 0,
+            "discarded_before": 0,
+            "frames": 4096,
+            "fresh_pushed_frames": 4096,
+            "label": "arena_player_damage_silence",
+            "mean": 0.0,
+            "nonfinite": 0,
+            "nonzero_scalars": 0,
+            "pcm_f32le_stereo_sha256": "c35020473aed1b4642cd726cad727b63fff2824ad68cedd7ffb73c7cbd890479",
+            "peak": 0.0,
+            "pushed_after": 49152,
+            "pushed_before": 45056,
+            "queued_frames_at_start": 0,
+            "requested_seconds": 0.12,
+            "rms": 0.0,
+            "stereo_delta": 0.0
+          },
+          {
+            "actual_seconds": 0.294196,
+            "discarded_after": 0,
+            "discarded_before": 0,
+            "frames": 16384,
+            "fresh_pushed_frames": 12288,
+            "label": "arena_shield_block",
+            "mean": 3.64796763385397e-07,
+            "nonfinite": 0,
+            "nonzero_scalars": 10556,
+            "pcm_f32le_stereo_sha256": "32caf1c366127e224d0a288f1552d772900265545af6917ce1472c49f01b201b",
+            "peak": 0.125003814697266,
+            "pushed_after": 65536,
+            "pushed_before": 53248,
+            "queued_frames_at_start": 4096,
+            "raw_file": "arena_shield_block.f32le",
+            "requested_seconds": 0.28,
+            "rms": 0.0461784625249166,
+            "stereo_delta": 0.0
+          },
+          {
+            "actual_seconds": 0.137529,
+            "discarded_after": 0,
+            "discarded_before": 0,
+            "frames": 8192,
+            "fresh_pushed_frames": 4096,
+            "label": "arena_shield_block_drain",
+            "mean": 0.0,
+            "nonfinite": 0,
+            "nonzero_scalars": 0,
+            "pcm_f32le_stereo_sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31",
+            "peak": 0.0,
+            "pushed_after": 73728,
+            "pushed_before": 69632,
+            "queued_frames_at_start": 4096,
+            "requested_seconds": 0.12,
+            "rms": 0.0,
+            "stereo_delta": 0.0
+          },
+          {
+            "actual_seconds": 0.137919,
+            "discarded_after": 0,
+            "discarded_before": 0,
+            "frames": 8192,
+            "fresh_pushed_frames": 8192,
+            "label": "arena_shield_block_silence",
+            "mean": 0.0,
+            "nonfinite": 0,
+            "nonzero_scalars": 0,
+            "pcm_f32le_stereo_sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31",
+            "peak": 0.0,
+            "pushed_after": 81920,
+            "pushed_before": 73728,
+            "queued_frames_at_start": 0,
+            "requested_seconds": 0.12,
+            "rms": 0.0,
+            "stereo_delta": 0.0
+          },
+          {
+            "actual_seconds": 0.303918,
+            "discarded_after": 0,
+            "discarded_before": 0,
+            "frames": 12288,
+            "fresh_pushed_frames": 12288,
+            "label": "rooms_player_damage",
+            "mean": 1.85243594871589e-06,
+            "nonfinite": 0,
+            "nonzero_scalars": 14082,
+            "pcm_f32le_stereo_sha256": "5f0003e96fd33caa201299d0da3c976f1e7d7bf0f6a4ea294ad5ab8db9b9a88e",
+            "peak": 0.125003814697266,
+            "pushed_after": 94208,
+            "pushed_before": 81920,
+            "queued_frames_at_start": 0,
+            "raw_file": "rooms_player_damage.f32le",
+            "requested_seconds": 0.28,
+            "rms": 0.0601962060541644,
+            "stereo_delta": 0.0
+          },
+          {
+            "actual_seconds": 0.133915,
+            "discarded_after": 0,
+            "discarded_before": 0,
+            "frames": 12288,
+            "fresh_pushed_frames": 4096,
+            "label": "rooms_player_damage_drain",
+            "mean": 0.0,
+            "nonfinite": 0,
+            "nonzero_scalars": 0,
+            "pcm_f32le_stereo_sha256": "3a3ed164e42500a1c5b2d0093f0a813d27dc50d038f330cc100a7e70ece2e6e4",
+            "peak": 0.0,
+            "pushed_after": 106496,
+            "pushed_before": 102400,
+            "queued_frames_at_start": 8192,
+            "requested_seconds": 0.12,
+            "rms": 0.0,
+            "stereo_delta": 0.0
+          },
+          {
+            "actual_seconds": 0.131313,
+            "discarded_after": 0,
+            "discarded_before": 0,
+            "frames": 4096,
+            "fresh_pushed_frames": 4096,
+            "label": "rooms_player_damage_silence",
+            "mean": 0.0,
+            "nonfinite": 0,
+            "nonzero_scalars": 0,
+            "pcm_f32le_stereo_sha256": "c35020473aed1b4642cd726cad727b63fff2824ad68cedd7ffb73c7cbd890479",
+            "peak": 0.0,
+            "pushed_after": 110592,
+            "pushed_before": 106496,
+            "queued_frames_at_start": 0,
+            "requested_seconds": 0.12,
+            "rms": 0.0,
+            "stereo_delta": 0.0
+          },
+          {
+            "actual_seconds": 0.291528,
+            "discarded_after": 0,
+            "discarded_before": 0,
+            "frames": 16384,
+            "fresh_pushed_frames": 12288,
+            "label": "rooms_shield_block",
+            "mean": 3.64796763385397e-07,
+            "nonfinite": 0,
+            "nonzero_scalars": 10556,
+            "pcm_f32le_stereo_sha256": "32caf1c366127e224d0a288f1552d772900265545af6917ce1472c49f01b201b",
+            "peak": 0.125003814697266,
+            "pushed_after": 126976,
+            "pushed_before": 114688,
+            "queued_frames_at_start": 4096,
+            "raw_file": "rooms_shield_block.f32le",
+            "requested_seconds": 0.28,
+            "rms": 0.0461784625249166,
+            "stereo_delta": 0.0
+          },
+          {
+            "actual_seconds": 0.137931,
+            "discarded_after": 0,
+            "discarded_before": 0,
+            "frames": 8192,
+            "fresh_pushed_frames": 4096,
+            "label": "rooms_shield_block_drain",
+            "mean": 0.0,
+            "nonfinite": 0,
+            "nonzero_scalars": 0,
+            "pcm_f32le_stereo_sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31",
+            "peak": 0.0,
+            "pushed_after": 135168,
+            "pushed_before": 131072,
+            "queued_frames_at_start": 4096,
+            "requested_seconds": 0.12,
+            "rms": 0.0,
+            "stereo_delta": 0.0
+          },
+          {
+            "actual_seconds": 0.138723,
+            "discarded_after": 0,
+            "discarded_before": 0,
+            "frames": 8192,
+            "fresh_pushed_frames": 8192,
+            "label": "rooms_shield_block_silence",
+            "mean": 0.0,
+            "nonfinite": 0,
+            "nonzero_scalars": 0,
+            "pcm_f32le_stereo_sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31",
+            "peak": 0.0,
+            "pushed_after": 143360,
+            "pushed_before": 135168,
+            "queued_frames_at_start": 0,
+            "requested_seconds": 0.12,
+            "rms": 0.0,
+            "stereo_delta": 0.0
+          },
+          {
+            "actual_seconds": 0.219178,
+            "discarded_after": 0,
+            "discarded_before": 0,
+            "frames": 8192,
+            "fresh_pushed_frames": 8192,
+            "label": "silent_muted",
+            "mean": 0.0,
+            "nonfinite": 0,
+            "nonzero_scalars": 0,
+            "pcm_f32le_stereo_sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31",
+            "peak": 0.0,
+            "pushed_after": 151552,
+            "pushed_before": 143360,
+            "queued_frames_at_start": 0,
+            "requested_seconds": 0.2,
+            "rms": 0.0,
+            "stereo_delta": 0.0
+          },
+          {
+            "actual_seconds": 0.142776,
+            "discarded_after": 0,
+            "discarded_before": 0,
+            "frames": 8192,
+            "fresh_pushed_frames": 8192,
+            "label": "no_replay_muted",
+            "mean": 0.0,
+            "nonfinite": 0,
+            "nonzero_scalars": 0,
+            "pcm_f32le_stereo_sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31",
+            "peak": 0.0,
+            "pushed_after": 159744,
+            "pushed_before": 151552,
+            "queued_frames_at_start": 0,
+            "requested_seconds": 0.12,
+            "rms": 0.0,
+            "stereo_delta": 0.0
+          },
+          {
+            "actual_seconds": 0.215042,
+            "discarded_after": 0,
+            "discarded_before": 0,
+            "frames": 12288,
+            "fresh_pushed_frames": 12288,
+            "label": "silent_missing",
+            "mean": 0.0,
+            "nonfinite": 0,
+            "nonzero_scalars": 0,
+            "pcm_f32le_stereo_sha256": "3a3ed164e42500a1c5b2d0093f0a813d27dc50d038f330cc100a7e70ece2e6e4",
+            "peak": 0.0,
+            "pushed_after": 172032,
+            "pushed_before": 159744,
+            "queued_frames_at_start": 0,
+            "requested_seconds": 0.2,
+            "rms": 0.0,
+            "stereo_delta": 0.0
+          },
+          {
+            "actual_seconds": 0.132656,
+            "discarded_after": 0,
+            "discarded_before": 0,
+            "frames": 4096,
+            "fresh_pushed_frames": 4096,
+            "label": "no_replay_missing",
+            "mean": 0.0,
+            "nonfinite": 0,
+            "nonzero_scalars": 0,
+            "pcm_f32le_stereo_sha256": "c35020473aed1b4642cd726cad727b63fff2824ad68cedd7ffb73c7cbd890479",
+            "peak": 0.0,
+            "pushed_after": 176128,
+            "pushed_before": 172032,
+            "queued_frames_at_start": 0,
+            "requested_seconds": 0.12,
+            "rms": 0.0,
+            "stereo_delta": 0.0
+          },
+          {
+            "actual_seconds": 0.213962,
+            "discarded_after": 0,
+            "discarded_before": 0,
+            "frames": 12288,
+            "fresh_pushed_frames": 12288,
+            "label": "silent_wrong_state",
+            "mean": 0.0,
+            "nonfinite": 0,
+            "nonzero_scalars": 0,
+            "pcm_f32le_stereo_sha256": "3a3ed164e42500a1c5b2d0093f0a813d27dc50d038f330cc100a7e70ece2e6e4",
+            "peak": 0.0,
+            "pushed_after": 188416,
+            "pushed_before": 176128,
+            "queued_frames_at_start": 0,
+            "requested_seconds": 0.2,
+            "rms": 0.0,
+            "stereo_delta": 0.0
+          },
+          {
+            "actual_seconds": 0.130804,
+            "discarded_after": 0,
+            "discarded_before": 0,
+            "frames": 4096,
+            "fresh_pushed_frames": 4096,
+            "label": "no_replay_wrong_state",
+            "mean": 0.0,
+            "nonfinite": 0,
+            "nonzero_scalars": 0,
+            "pcm_f32le_stereo_sha256": "c35020473aed1b4642cd726cad727b63fff2824ad68cedd7ffb73c7cbd890479",
+            "peak": 0.0,
+            "pushed_after": 192512,
+            "pushed_before": 188416,
+            "queued_frames_at_start": 0,
+            "requested_seconds": 0.12,
+            "rms": 0.0,
+            "stereo_delta": 0.0
+          },
+          {
+            "actual_seconds": 0.221541,
+            "discarded_after": 0,
+            "discarded_before": 0,
+            "frames": 12288,
+            "fresh_pushed_frames": 8192,
+            "label": "silent_dash",
+            "mean": 0.0,
+            "nonfinite": 0,
+            "nonzero_scalars": 0,
+            "pcm_f32le_stereo_sha256": "3a3ed164e42500a1c5b2d0093f0a813d27dc50d038f330cc100a7e70ece2e6e4",
+            "peak": 0.0,
+            "pushed_after": 204800,
+            "pushed_before": 196608,
+            "queued_frames_at_start": 4096,
+            "requested_seconds": 0.2,
+            "rms": 0.0,
+            "stereo_delta": 0.0
+          },
+          {
+            "actual_seconds": 0.127883,
+            "discarded_after": 0,
+            "discarded_before": 0,
+            "frames": 4096,
+            "fresh_pushed_frames": 4096,
+            "label": "no_replay_dash",
+            "mean": 0.0,
+            "nonfinite": 0,
+            "nonzero_scalars": 0,
+            "pcm_f32le_stereo_sha256": "c35020473aed1b4642cd726cad727b63fff2824ad68cedd7ffb73c7cbd890479",
+            "peak": 0.0,
+            "pushed_after": 208896,
+            "pushed_before": 204800,
+            "queued_frames_at_start": 0,
+            "requested_seconds": 0.12,
+            "rms": 0.0,
+            "stereo_delta": 0.0
+          },
+          {
+            "actual_seconds": 0.222192,
+            "discarded_after": 0,
+            "discarded_before": 0,
+            "frames": 12288,
+            "fresh_pushed_frames": 8192,
+            "label": "silent_hurt_clock",
+            "mean": 0.0,
+            "nonfinite": 0,
+            "nonzero_scalars": 0,
+            "pcm_f32le_stereo_sha256": "3a3ed164e42500a1c5b2d0093f0a813d27dc50d038f330cc100a7e70ece2e6e4",
+            "peak": 0.0,
+            "pushed_after": 221184,
+            "pushed_before": 212992,
+            "queued_frames_at_start": 4096,
+            "requested_seconds": 0.2,
+            "rms": 0.0,
+            "stereo_delta": 0.0
+          },
+          {
+            "actual_seconds": 0.12946,
+            "discarded_after": 0,
+            "discarded_before": 0,
+            "frames": 4096,
+            "fresh_pushed_frames": 8192,
+            "label": "no_replay_hurt_clock",
+            "mean": 0.0,
+            "nonfinite": 0,
+            "nonzero_scalars": 0,
+            "pcm_f32le_stereo_sha256": "c35020473aed1b4642cd726cad727b63fff2824ad68cedd7ffb73c7cbd890479",
+            "peak": 0.0,
+            "pushed_after": 229376,
+            "pushed_before": 221184,
+            "queued_frames_at_start": 0,
+            "requested_seconds": 0.12,
+            "rms": 0.0,
+            "stereo_delta": 0.0
+          },
+          {
+            "actual_seconds": 0.305269,
+            "discarded_after": 0,
+            "discarded_before": 0,
+            "frames": 16384,
+            "fresh_pushed_frames": 12288,
+            "label": "same_cue_retrigger",
+            "mean": 1.38932696153692e-06,
+            "nonfinite": 0,
+            "nonzero_scalars": 14082,
+            "pcm_f32le_stereo_sha256": "8a0a194fb1a41584bbdaafb9782e2ff8bf3f8e601526a01ab17fbc9ce1dd6b34",
+            "peak": 0.125003814697266,
+            "pushed_after": 241664,
+            "pushed_before": 229376,
+            "queued_frames_at_start": 4096,
+            "raw_file": "same_cue_retrigger.f32le",
+            "requested_seconds": 0.28,
+            "rms": 0.052131443654349,
+            "stereo_delta": 0.0
+          },
+          {
+            "actual_seconds": 0.137444,
+            "discarded_after": 0,
+            "discarded_before": 0,
+            "frames": 8192,
+            "fresh_pushed_frames": 8192,
+            "label": "retrigger_drain",
+            "mean": 0.0,
+            "nonfinite": 0,
+            "nonzero_scalars": 0,
+            "pcm_f32le_stereo_sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31",
+            "peak": 0.0,
+            "pushed_after": 249856,
+            "pushed_before": 241664,
+            "queued_frames_at_start": 0,
+            "requested_seconds": 0.12,
+            "rms": 0.0,
+            "stereo_delta": 0.0
+          },
+          {
+            "actual_seconds": 0.133828,
+            "discarded_after": 0,
+            "discarded_before": 0,
+            "frames": 4096,
+            "fresh_pushed_frames": 4096,
+            "label": "retrigger_silence",
+            "mean": 0.0,
+            "nonfinite": 0,
+            "nonzero_scalars": 0,
+            "pcm_f32le_stereo_sha256": "c35020473aed1b4642cd726cad727b63fff2824ad68cedd7ffb73c7cbd890479",
+            "peak": 0.0,
+            "pushed_after": 253952,
+            "pushed_before": 249856,
+            "queued_frames_at_start": 0,
+            "requested_seconds": 0.12,
+            "rms": 0.0,
+            "stereo_delta": 0.0
+          },
+          {
+            "actual_seconds": 0.295592,
+            "discarded_after": 0,
+            "discarded_before": 0,
+            "frames": 16384,
+            "fresh_pushed_frames": 12288,
+            "label": "two_cue_overlap",
+            "mean": 1.75413043074744e-06,
+            "nonfinite": 0,
+            "nonzero_scalars": 14086,
+            "pcm_f32le_stereo_sha256": "eb8140c553e2ca0700820d583928d749bcedfc68d5a38a66f68b78ac22a66201",
+            "peak": 0.249885559082031,
+            "pushed_after": 270336,
+            "pushed_before": 258048,
+            "queued_frames_at_start": 4096,
+            "raw_file": "two_cue_overlap.f32le",
+            "requested_seconds": 0.28,
+            "rms": 0.0695533421523776,
+            "stereo_delta": 0.0
+          },
+          {
+            "actual_seconds": 0.128446,
+            "discarded_after": 0,
+            "discarded_before": 0,
+            "frames": 4096,
+            "fresh_pushed_frames": 4096,
+            "label": "overlap_drain",
+            "mean": 0.0,
+            "nonfinite": 0,
+            "nonzero_scalars": 0,
+            "pcm_f32le_stereo_sha256": "c35020473aed1b4642cd726cad727b63fff2824ad68cedd7ffb73c7cbd890479",
+            "peak": 0.0,
+            "pushed_after": 274432,
+            "pushed_before": 270336,
+            "queued_frames_at_start": 0,
+            "requested_seconds": 0.12,
+            "rms": 0.0,
+            "stereo_delta": 0.0
+          },
+          {
+            "actual_seconds": 0.295422,
+            "discarded_after": 0,
+            "discarded_before": 0,
+            "frames": 16384,
+            "fresh_pushed_frames": 12288,
+            "label": "lethal_tail",
+            "mean": 1.38932696153692e-06,
+            "nonfinite": 0,
+            "nonzero_scalars": 14082,
+            "pcm_f32le_stereo_sha256": "8a0a194fb1a41584bbdaafb9782e2ff8bf3f8e601526a01ab17fbc9ce1dd6b34",
+            "peak": 0.125003814697266,
+            "pushed_after": 290816,
+            "pushed_before": 278528,
+            "queued_frames_at_start": 4096,
+            "raw_file": "lethal_tail.f32le",
+            "requested_seconds": 0.28,
+            "rms": 0.052131443654349,
+            "stereo_delta": 0.0
+          },
+          {
+            "actual_seconds": 0.138491,
+            "discarded_after": 0,
+            "discarded_before": 0,
+            "frames": 8192,
+            "fresh_pushed_frames": 4096,
+            "label": "lethal_drain",
+            "mean": 0.0,
+            "nonfinite": 0,
+            "nonzero_scalars": 0,
+            "pcm_f32le_stereo_sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31",
+            "peak": 0.0,
+            "pushed_after": 299008,
+            "pushed_before": 294912,
+            "queued_frames_at_start": 4096,
+            "requested_seconds": 0.12,
+            "rms": 0.0,
+            "stereo_delta": 0.0
+          },
+          {
+            "actual_seconds": 0.136976,
+            "discarded_after": 0,
+            "discarded_before": 0,
+            "frames": 8192,
+            "fresh_pushed_frames": 8192,
+            "label": "lethal_silence",
+            "mean": 0.0,
+            "nonfinite": 0,
+            "nonzero_scalars": 0,
+            "pcm_f32le_stereo_sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31",
+            "peak": 0.0,
+            "pushed_after": 307200,
+            "pushed_before": 299008,
+            "queued_frames_at_start": 0,
+            "requested_seconds": 0.12,
+            "rms": 0.0,
+            "stereo_delta": 0.0
+          },
+          {
+            "actual_seconds": 0.053362,
+            "discarded_after": 0,
+            "discarded_before": 0,
+            "frames": 4096,
+            "fresh_pushed_frames": 4096,
+            "label": "pre_stop_pause",
+            "mean": 0.00077254818666006,
+            "nonfinite": 0,
+            "nonzero_scalars": 8052,
+            "pcm_f32le_stereo_sha256": "ee466f48fa0193a7d0ea3d4407e449f49379e98856793f61cbba5b3b091fc586",
+            "peak": 0.125003814697266,
+            "pushed_after": 311296,
+            "pushed_before": 307200,
+            "queued_frames_at_start": 0,
+            "requested_seconds": 0.04,
+            "rms": 0.0805570373485757,
+            "stereo_delta": 0.0
+          },
+          {
+            "actual_seconds": 0.212733,
+            "discarded_after": 0,
+            "discarded_before": 0,
+            "frames": 8192,
+            "fresh_pushed_frames": 8192,
+            "label": "buffer_drain_after_pause",
+            "mean": -0.000388588584653071,
+            "nonfinite": 0,
+            "nonzero_scalars": 1024,
+            "pcm_f32le_stereo_sha256": "c7a683955d19f815d835fd0684931bdebddfcb9473a9dcd1b03869551f03edab",
+            "peak": 0.111979089677334,
+            "pushed_after": 319488,
+            "pushed_before": 311296,
+            "queued_frames_at_start": 0,
+            "requested_seconds": 0.2,
+            "rms": 0.0121678914629171,
+            "stereo_delta": 0.0
+          },
+          {
+            "actual_seconds": 0.134268,
+            "discarded_after": 0,
+            "discarded_before": 0,
+            "frames": 4096,
+            "fresh_pushed_frames": 8192,
+            "label": "fresh_silence_after_pause",
+            "mean": 0.0,
+            "nonfinite": 0,
+            "nonzero_scalars": 0,
+            "pcm_f32le_stereo_sha256": "c35020473aed1b4642cd726cad727b63fff2824ad68cedd7ffb73c7cbd890479",
+            "peak": 0.0,
+            "pushed_after": 327680,
+            "pushed_before": 319488,
+            "queued_frames_at_start": 0,
+            "requested_seconds": 0.12,
+            "rms": 0.0,
+            "stereo_delta": 0.0
+          },
+          {
+            "actual_seconds": 0.13836,
+            "discarded_after": 0,
+            "discarded_before": 0,
+            "frames": 8192,
+            "fresh_pushed_frames": 4096,
+            "label": "no_replay_after_pause",
+            "mean": 0.0,
+            "nonfinite": 0,
+            "nonzero_scalars": 0,
+            "pcm_f32le_stereo_sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31",
+            "peak": 0.0,
+            "pushed_after": 331776,
+            "pushed_before": 327680,
+            "queued_frames_at_start": 4096,
+            "requested_seconds": 0.12,
+            "rms": 0.0,
+            "stereo_delta": 0.0
+          },
+          {
+            "actual_seconds": 0.049449,
+            "discarded_after": 0,
+            "discarded_before": 0,
+            "frames": 4096,
+            "fresh_pushed_frames": 4096,
+            "label": "pre_stop_mute",
+            "mean": 0.00077254818666006,
+            "nonfinite": 0,
+            "nonzero_scalars": 8052,
+            "pcm_f32le_stereo_sha256": "ee466f48fa0193a7d0ea3d4407e449f49379e98856793f61cbba5b3b091fc586",
+            "peak": 0.125003814697266,
+            "pushed_after": 335872,
+            "pushed_before": 331776,
+            "queued_frames_at_start": 0,
+            "requested_seconds": 0.04,
+            "rms": 0.0805570373485757,
+            "stereo_delta": 0.0
+          },
+          {
+            "actual_seconds": 0.209986,
+            "discarded_after": 0,
+            "discarded_before": 0,
+            "frames": 8192,
+            "fresh_pushed_frames": 8192,
+            "label": "buffer_drain_after_mute",
+            "mean": -0.000388588584653071,
+            "nonfinite": 0,
+            "nonzero_scalars": 1024,
+            "pcm_f32le_stereo_sha256": "c7a683955d19f815d835fd0684931bdebddfcb9473a9dcd1b03869551f03edab",
+            "peak": 0.111979089677334,
+            "pushed_after": 344064,
+            "pushed_before": 335872,
+            "queued_frames_at_start": 0,
+            "requested_seconds": 0.2,
+            "rms": 0.0121678914629171,
+            "stereo_delta": 0.0
+          },
+          {
+            "actual_seconds": 0.147188,
+            "discarded_after": 0,
+            "discarded_before": 0,
+            "frames": 8192,
+            "fresh_pushed_frames": 8192,
+            "label": "fresh_silence_after_mute",
+            "mean": 0.0,
+            "nonfinite": 0,
+            "nonzero_scalars": 0,
+            "pcm_f32le_stereo_sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31",
+            "peak": 0.0,
+            "pushed_after": 352256,
+            "pushed_before": 344064,
+            "queued_frames_at_start": 0,
+            "requested_seconds": 0.12,
+            "rms": 0.0,
+            "stereo_delta": 0.0
+          },
+          {
+            "actual_seconds": 0.12497,
+            "discarded_after": 0,
+            "discarded_before": 0,
+            "frames": 4096,
+            "fresh_pushed_frames": 4096,
+            "label": "no_replay_after_mute",
+            "mean": 0.0,
+            "nonfinite": 0,
+            "nonzero_scalars": 0,
+            "pcm_f32le_stereo_sha256": "c35020473aed1b4642cd726cad727b63fff2824ad68cedd7ffb73c7cbd890479",
+            "peak": 0.0,
+            "pushed_after": 356352,
+            "pushed_before": 352256,
+            "queued_frames_at_start": 0,
+            "requested_seconds": 0.12,
+            "rms": 0.0,
+            "stereo_delta": 0.0
+          },
+          {
+            "actual_seconds": 0.055086,
+            "discarded_after": 0,
+            "discarded_before": 0,
+            "frames": 8192,
+            "fresh_pushed_frames": 4096,
+            "label": "pre_stop_focus_out",
+            "mean": 0.00038627409333003,
+            "nonfinite": 0,
+            "nonzero_scalars": 8052,
+            "pcm_f32le_stereo_sha256": "1444a58f6470982427e888c6665a55552b0b7380073d0bc9baf0e5cd85c24f2e",
+            "peak": 0.125003814697266,
+            "pushed_after": 364544,
+            "pushed_before": 360448,
+            "queued_frames_at_start": 4096,
+            "requested_seconds": 0.04,
+            "rms": 0.0569624273814759,
+            "stereo_delta": 0.0
+          },
+          {
+            "actual_seconds": 0.207976,
+            "discarded_after": 0,
+            "discarded_before": 0,
+            "frames": 8192,
+            "fresh_pushed_frames": 8192,
+            "label": "buffer_drain_after_focus_out",
+            "mean": -0.000388588584653071,
+            "nonfinite": 0,
+            "nonzero_scalars": 1024,
+            "pcm_f32le_stereo_sha256": "c7a683955d19f815d835fd0684931bdebddfcb9473a9dcd1b03869551f03edab",
+            "peak": 0.111979089677334,
+            "pushed_after": 372736,
+            "pushed_before": 364544,
+            "queued_frames_at_start": 0,
+            "requested_seconds": 0.2,
+            "rms": 0.0121678914629171,
+            "stereo_delta": 0.0
+          },
+          {
+            "actual_seconds": 0.134696,
+            "discarded_after": 0,
+            "discarded_before": 0,
+            "frames": 4096,
+            "fresh_pushed_frames": 4096,
+            "label": "fresh_silence_after_focus_out",
+            "mean": 0.0,
+            "nonfinite": 0,
+            "nonzero_scalars": 0,
+            "pcm_f32le_stereo_sha256": "c35020473aed1b4642cd726cad727b63fff2824ad68cedd7ffb73c7cbd890479",
+            "peak": 0.0,
+            "pushed_after": 376832,
+            "pushed_before": 372736,
+            "queued_frames_at_start": 0,
+            "requested_seconds": 0.12,
+            "rms": 0.0,
+            "stereo_delta": 0.0
+          },
+          {
+            "actual_seconds": 0.127109,
+            "discarded_after": 0,
+            "discarded_before": 0,
+            "frames": 8192,
+            "fresh_pushed_frames": 8192,
+            "label": "no_replay_after_focus_out",
+            "mean": 0.0,
+            "nonfinite": 0,
+            "nonzero_scalars": 0,
+            "pcm_f32le_stereo_sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31",
+            "peak": 0.0,
+            "pushed_after": 385024,
+            "pushed_before": 376832,
+            "queued_frames_at_start": 0,
+            "requested_seconds": 0.12,
+            "rms": 0.0,
+            "stereo_delta": 0.0
+          },
+          {
+            "actual_seconds": 0.047769,
+            "discarded_after": 0,
+            "discarded_before": 0,
+            "frames": 4096,
+            "fresh_pushed_frames": 4096,
+            "label": "pre_stop_title",
+            "mean": 0.00077254818666006,
+            "nonfinite": 0,
+            "nonzero_scalars": 8052,
+            "pcm_f32le_stereo_sha256": "ee466f48fa0193a7d0ea3d4407e449f49379e98856793f61cbba5b3b091fc586",
+            "peak": 0.125003814697266,
+            "pushed_after": 389120,
+            "pushed_before": 385024,
+            "queued_frames_at_start": 0,
+            "requested_seconds": 0.04,
+            "rms": 0.0805570373485757,
+            "stereo_delta": 0.0
+          },
+          {
+            "actual_seconds": 0.211284,
+            "discarded_after": 0,
+            "discarded_before": 0,
+            "frames": 8192,
+            "fresh_pushed_frames": 8192,
+            "label": "buffer_drain_after_title",
+            "mean": -0.000388588584653071,
+            "nonfinite": 0,
+            "nonzero_scalars": 1024,
+            "pcm_f32le_stereo_sha256": "c7a683955d19f815d835fd0684931bdebddfcb9473a9dcd1b03869551f03edab",
+            "peak": 0.111979089677334,
+            "pushed_after": 397312,
+            "pushed_before": 389120,
+            "queued_frames_at_start": 0,
+            "requested_seconds": 0.2,
+            "rms": 0.0121678914629171,
+            "stereo_delta": 0.0
+          },
+          {
+            "actual_seconds": 0.135648,
+            "discarded_after": 0,
+            "discarded_before": 0,
+            "frames": 4096,
+            "fresh_pushed_frames": 8192,
+            "label": "fresh_silence_after_title",
+            "mean": 0.0,
+            "nonfinite": 0,
+            "nonzero_scalars": 0,
+            "pcm_f32le_stereo_sha256": "c35020473aed1b4642cd726cad727b63fff2824ad68cedd7ffb73c7cbd890479",
+            "peak": 0.0,
+            "pushed_after": 405504,
+            "pushed_before": 397312,
+            "queued_frames_at_start": 0,
+            "requested_seconds": 0.12,
+            "rms": 0.0,
+            "stereo_delta": 0.0
+          },
+          {
+            "actual_seconds": 0.142038,
+            "discarded_after": 0,
+            "discarded_before": 0,
+            "frames": 8192,
+            "fresh_pushed_frames": 4096,
+            "label": "no_replay_after_title",
+            "mean": 0.0,
+            "nonfinite": 0,
+            "nonzero_scalars": 0,
+            "pcm_f32le_stereo_sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31",
+            "peak": 0.0,
+            "pushed_after": 409600,
+            "pushed_before": 405504,
+            "queued_frames_at_start": 4096,
+            "requested_seconds": 0.12,
+            "rms": 0.0,
+            "stereo_delta": 0.0
+          },
+          {
+            "actual_seconds": 0.043487,
+            "discarded_after": 0,
+            "discarded_before": 0,
+            "frames": 4096,
+            "fresh_pushed_frames": 4096,
+            "label": "pre_stop_teardown",
+            "mean": 0.00077254818666006,
+            "nonfinite": 0,
+            "nonzero_scalars": 8052,
+            "pcm_f32le_stereo_sha256": "ee466f48fa0193a7d0ea3d4407e449f49379e98856793f61cbba5b3b091fc586",
+            "peak": 0.125003814697266,
+            "pushed_after": 413696,
+            "pushed_before": 409600,
+            "queued_frames_at_start": 0,
+            "requested_seconds": 0.04,
+            "rms": 0.0805570373485757,
+            "stereo_delta": 0.0
+          },
+          {
+            "actual_seconds": 0.212431,
+            "discarded_after": 0,
+            "discarded_before": 0,
+            "frames": 8192,
+            "fresh_pushed_frames": 8192,
+            "label": "buffer_drain_after_teardown",
+            "mean": -0.000388588584653071,
+            "nonfinite": 0,
+            "nonzero_scalars": 1024,
+            "pcm_f32le_stereo_sha256": "c7a683955d19f815d835fd0684931bdebddfcb9473a9dcd1b03869551f03edab",
+            "peak": 0.111979089677334,
+            "pushed_after": 421888,
+            "pushed_before": 413696,
+            "queued_frames_at_start": 0,
+            "requested_seconds": 0.2,
+            "rms": 0.0121678914629171,
+            "stereo_delta": 0.0
+          },
+          {
+            "actual_seconds": 0.13779,
+            "discarded_after": 0,
+            "discarded_before": 0,
+            "frames": 8192,
+            "fresh_pushed_frames": 8192,
+            "label": "fresh_silence_after_teardown",
+            "mean": 0.0,
+            "nonfinite": 0,
+            "nonzero_scalars": 0,
+            "pcm_f32le_stereo_sha256": "de2f256064a0af797747c2b97505dc0b9f3df0de4f489eac731c23ae9ca9cc31",
+            "peak": 0.0,
+            "pushed_after": 430080,
+            "pushed_before": 421888,
+            "queued_frames_at_start": 0,
+            "requested_seconds": 0.12,
+            "rms": 0.0,
+            "stereo_delta": 0.0
+          }
+        ]
+      }
+    ],
+    "helpers": [],
+    "pass": true
+  },
+  {
+    "case": "audio-views",
+    "native_exit": 0,
+    "timeout": false,
+    "seconds": 4.396,
+    "clean": true,
+    "semantic": true,
+    "helper_clean": true,
+    "parse_error": "",
+    "reports": [
+      {
+        "checks": 168,
+        "failures": []
+      },
+      {
+        "checks": 168,
+        "failures": [],
+        "samples": [
+          {
+            "back_rect": "[P: (34.0, 472.0), S: (892.0, 36.0)]",
+            "backend": {
+              "driver": "Dummy",
+              "dummy": true,
+              "muted": false,
+              "unavailable": []
+            },
+            "mode": "arena",
+            "mute_rect": "[P: (34.0, 237.0), S: (892.0, 44.0)]",
+            "size": [
+              960,
+              540
+            ],
+            "source": "title"
+          },
+          {
+            "back_rect": "[P: (34.0, 472.0), S: (892.0, 36.0)]",
+            "backend": {
+              "driver": "Dummy",
+              "dummy": true,
+              "muted": false,
+              "unavailable": []
+            },
+            "mode": "arena",
+            "mute_rect": "[P: (34.0, 237.0), S: (892.0, 44.0)]",
+            "size": [
+              960,
+              540
+            ],
+            "source": "paused"
+          },
+          {
+            "back_rect": "[P: (34.0, 472.0), S: (892.0, 36.0)]",
+            "backend": {
+              "driver": "Dummy",
+              "dummy": true,
+              "muted": false,
+              "unavailable": []
+            },
+            "mode": "arena",
+            "mute_rect": "[P: (34.0, 237.0), S: (892.0, 44.0)]",
+            "size": [
+              1280,
+              720
+            ],
+            "source": "title"
+          },
+          {
+            "back_rect": "[P: (34.0, 472.0), S: (892.0, 36.0)]",
+            "backend": {
+              "driver": "Dummy",
+              "dummy": true,
+              "muted": false,
+              "unavailable": []
+            },
+            "mode": "arena",
+            "mute_rect": "[P: (34.0, 237.0), S: (892.0, 44.0)]",
+            "size": [
+              1280,
+              720
+            ],
+            "source": "paused"
+          },
+          {
+            "back_rect": "[P: (34.0, 472.0), S: (892.0, 36.0)]",
+            "backend": {
+              "driver": "Dummy",
+              "dummy": true,
+              "muted": false,
+              "unavailable": []
+            },
+            "mode": "rooms",
+            "mute_rect": "[P: (34.0, 237.0), S: (892.0, 44.0)]",
+            "size": [
+              960,
+              540
+            ],
+            "source": "title"
+          },
+          {
+            "back_rect": "[P: (34.0, 472.0), S: (892.0, 36.0)]",
+            "backend": {
+              "driver": "Dummy",
+              "dummy": true,
+              "muted": false,
+              "unavailable": []
+            },
+            "mode": "rooms",
+            "mute_rect": "[P: (34.0, 237.0), S: (892.0, 44.0)]",
+            "size": [
+              960,
+              540
+            ],
+            "source": "paused"
+          },
+          {
+            "back_rect": "[P: (34.0, 472.0), S: (892.0, 36.0)]",
+            "backend": {
+              "driver": "Dummy",
+              "dummy": true,
+              "muted": false,
+              "unavailable": []
+            },
+            "mode": "rooms",
+            "mute_rect": "[P: (34.0, 237.0), S: (892.0, 44.0)]",
+            "size": [
+              1280,
+              720
+            ],
+            "source": "title"
+          },
+          {
+            "back_rect": "[P: (34.0, 472.0), S: (892.0, 36.0)]",
+            "backend": {
+              "driver": "Dummy",
+              "dummy": true,
+              "muted": false,
+              "unavailable": []
+            },
+            "mode": "rooms",
+            "mute_rect": "[P: (34.0, 237.0), S: (892.0, 44.0)]",
+            "size": [
+              1280,
+              720
+            ],
+            "source": "paused"
+          }
+        ],
+        "scope": "Actual GUI controls with synthetic mouse/ui_accept, title and paused routes, both modes at 960/1280. Not native hardware mouse, controller, WM focus, physical listening or audio mix proof."
+      }
+    ],
+    "helpers": [
+      {
+        "capture_removed": true,
+        "complete": true,
+        "driver": "Dummy",
+        "game_owner_count": 1,
+        "mix_rate": 44100.0,
+        "observations": [
+          {
+            "discarded": 0,
+            "elapsed_us": 948,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 0,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 0,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 13560,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 0,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 0,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 27296,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 0,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 0,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 41429,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 0,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 0,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 56337,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 4096,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 4096,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 68725,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 4096,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 4096,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 82448,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 4096,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 4096,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 96342,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 4096,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 4096,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 110253,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 4096,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 4096,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 124700,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 4096,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 4096,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 137685,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 4096,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 4096,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 154134,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 8192,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 8192,
+            "streams_released": true
+          }
+        ],
+        "pre_window_drained": 0,
+        "prepare_errors": [],
+        "requested_owner_count": 1,
+        "scope": "Test-only bounded final-owner resource release and fresh internal silence; not physical output or a universal timing guarantee.",
+        "tracked_owner_count": 1,
+        "tracked_stream_count": 2
+      }
+    ],
+    "pass": true
+  },
+  {
+    "case": "audio-arena",
+    "native_exit": 0,
+    "timeout": false,
+    "seconds": 77.76,
+    "clean": true,
+    "semantic": true,
+    "helper_clean": true,
+    "parse_error": "",
+    "reports": [
+      {
+        "checks": 435,
+        "failures": []
+      },
+      {
+        "checks": 435,
+        "failures": [],
+        "observations": [
+          {
+            "audio": "enabled",
+            "case": "loss",
+            "hp": 89.0,
+            "mode": "arena",
+            "requests": [
+              {
+                "accepted": true,
+                "cue": "player_damage"
+              }
+            ],
+            "state": "playing"
+          },
+          {
+            "audio": "muted",
+            "case": "loss",
+            "hp": 89.0,
+            "mode": "arena",
+            "requests": [
+              {
+                "accepted": false,
+                "cue": "player_damage"
+              }
+            ],
+            "state": "playing"
+          },
+          {
+            "audio": "missing",
+            "case": "loss",
+            "hp": 89.0,
+            "mode": "arena",
+            "requests": [
+              {
+                "accepted": false,
+                "cue": "player_damage"
+              }
+            ],
+            "state": "playing"
+          },
+          {
+            "audio": "enabled",
+            "case": "overkill",
+            "hp": 0.0,
+            "mode": "arena",
+            "requests": [
+              {
+                "accepted": true,
+                "cue": "player_damage"
+              }
+            ],
+            "state": "dead"
+          },
+          {
+            "audio": "muted",
+            "case": "overkill",
+            "hp": 0.0,
+            "mode": "arena",
+            "requests": [
+              {
+                "accepted": false,
+                "cue": "player_damage"
+              }
+            ],
+            "state": "dead"
+          },
+          {
+            "audio": "missing",
+            "case": "overkill",
+            "hp": 0.0,
+            "mode": "arena",
+            "requests": [
+              {
+                "accepted": false,
+                "cue": "player_damage"
+              }
+            ],
+            "state": "dead"
+          },
+          {
+            "audio": "enabled",
+            "case": "zero",
+            "hp": 100.0,
+            "mode": "arena",
+            "requests": [],
+            "state": "playing"
+          },
+          {
+            "audio": "muted",
+            "case": "zero",
+            "hp": 100.0,
+            "mode": "arena",
+            "requests": [],
+            "state": "playing"
+          },
+          {
+            "audio": "missing",
+            "case": "zero",
+            "hp": 100.0,
+            "mode": "arena",
+            "requests": [],
+            "state": "playing"
+          },
+          {
+            "audio": "enabled",
+            "case": "negative",
+            "hp": 103.0,
+            "mode": "arena",
+            "requests": [],
+            "state": "playing"
+          },
+          {
+            "audio": "muted",
+            "case": "negative",
+            "hp": 103.0,
+            "mode": "arena",
+            "requests": [],
+            "state": "playing"
+          },
+          {
+            "audio": "missing",
+            "case": "negative",
+            "hp": 103.0,
+            "mode": "arena",
+            "requests": [],
+            "state": "playing"
+          },
+          {
+            "audio": "enabled",
+            "case": "infinite incoming finite capped loss",
+            "hp": 0.0,
+            "mode": "arena",
+            "requests": [
+              {
+                "accepted": true,
+                "cue": "player_damage"
+              }
+            ],
+            "state": "dead"
+          },
+          {
+            "audio": "muted",
+            "case": "infinite incoming finite capped loss",
+            "hp": 0.0,
+            "mode": "arena",
+            "requests": [
+              {
+                "accepted": false,
+                "cue": "player_damage"
+              }
+            ],
+            "state": "dead"
+          },
+          {
+            "audio": "missing",
+            "case": "infinite incoming finite capped loss",
+            "hp": 0.0,
+            "mode": "arena",
+            "requests": [
+              {
+                "accepted": false,
+                "cue": "player_damage"
+              }
+            ],
+            "state": "dead"
+          },
+          {
+            "audio": "enabled",
+            "case": "nonfinite returned loss",
+            "hp": "nan",
+            "mode": "arena",
+            "requests": [],
+            "state": "playing"
+          },
+          {
+            "audio": "muted",
+            "case": "nonfinite returned loss",
+            "hp": "nan",
+            "mode": "arena",
+            "requests": [],
+            "state": "playing"
+          },
+          {
+            "audio": "missing",
+            "case": "nonfinite returned loss",
+            "hp": "nan",
+            "mode": "arena",
+            "requests": [],
+            "state": "playing"
+          },
+          {
+            "audio": "enabled",
+            "case": "NaN returned loss",
+            "hp": "nan",
+            "mode": "arena",
+            "requests": [],
+            "state": "playing"
+          },
+          {
+            "audio": "muted",
+            "case": "NaN returned loss",
+            "hp": "nan",
+            "mode": "arena",
+            "requests": [],
+            "state": "playing"
+          },
+          {
+            "audio": "missing",
+            "case": "NaN returned loss",
+            "hp": "nan",
+            "mode": "arena",
+            "requests": [],
+            "state": "playing"
+          },
+          {
+            "audio": "enabled",
+            "case": "mirror",
+            "hp": 100.0,
+            "mode": "arena",
+            "requests": [
+              {
+                "accepted": true,
+                "cue": "shield_block"
+              }
+            ],
+            "state": "playing"
+          },
+          {
+            "audio": "muted",
+            "case": "mirror",
+            "hp": 100.0,
+            "mode": "arena",
+            "requests": [
+              {
+                "accepted": false,
+                "cue": "shield_block"
+              }
+            ],
+            "state": "playing"
+          },
+          {
+            "audio": "missing",
+            "case": "mirror",
+            "hp": 100.0,
+            "mode": "arena",
+            "requests": [
+              {
+                "accepted": false,
+                "cue": "shield_block"
+              }
+            ],
+            "state": "playing"
+          },
+          {
+            "audio": "enabled",
+            "case": "mirror zero",
+            "hp": 100.0,
+            "mode": "arena",
+            "requests": [
+              {
+                "accepted": true,
+                "cue": "shield_block"
+              }
+            ],
+            "state": "playing"
+          },
+          {
+            "audio": "muted",
+            "case": "mirror zero",
+            "hp": 100.0,
+            "mode": "arena",
+            "requests": [
+              {
+                "accepted": false,
+                "cue": "shield_block"
+              }
+            ],
+            "state": "playing"
+          },
+          {
+            "audio": "missing",
+            "case": "mirror zero",
+            "hp": 100.0,
+            "mode": "arena",
+            "requests": [
+              {
+                "accepted": false,
+                "cue": "shield_block"
+              }
+            ],
+            "state": "playing"
+          },
+          {
+            "audio": "enabled",
+            "case": "mirror negative",
+            "hp": 100.0,
+            "mode": "arena",
+            "requests": [
+              {
+                "accepted": true,
+                "cue": "shield_block"
+              }
+            ],
+            "state": "playing"
+          },
+          {
+            "audio": "muted",
+            "case": "mirror negative",
+            "hp": 100.0,
+            "mode": "arena",
+            "requests": [
+              {
+                "accepted": false,
+                "cue": "shield_block"
+              }
+            ],
+            "state": "playing"
+          },
+          {
+            "audio": "missing",
+            "case": "mirror negative",
+            "hp": 100.0,
+            "mode": "arena",
+            "requests": [
+              {
+                "accepted": false,
+                "cue": "shield_block"
+              }
+            ],
+            "state": "playing"
+          },
+          {
+            "audio": "enabled",
+            "case": "mirror thorns",
+            "hp": 100.0,
+            "mode": "arena",
+            "requests": [
+              {
+                "accepted": true,
+                "cue": "shield_block"
+              }
+            ],
+            "state": "playing"
+          },
+          {
+            "audio": "muted",
+            "case": "mirror thorns",
+            "hp": 100.0,
+            "mode": "arena",
+            "requests": [
+              {
+                "accepted": false,
+                "cue": "shield_block"
+              }
+            ],
+            "state": "playing"
+          },
+          {
+            "audio": "missing",
+            "case": "mirror thorns",
+            "hp": 100.0,
+            "mode": "arena",
+            "requests": [
+              {
+                "accepted": false,
+                "cue": "shield_block"
+              }
+            ],
+            "state": "playing"
+          },
+          {
+            "audio": "enabled",
+            "case": "medic thorns",
+            "hp": 69.0,
+            "mode": "arena",
+            "requests": [
+              {
+                "accepted": true,
+                "cue": "player_damage"
+              }
+            ],
+            "state": "playing"
+          },
+          {
+            "audio": "muted",
+            "case": "medic thorns",
+            "hp": 69.0,
+            "mode": "arena",
+            "requests": [
+              {
+                "accepted": false,
+                "cue": "player_damage"
+              }
+            ],
+            "state": "playing"
+          },
+          {
+            "audio": "missing",
+            "case": "medic thorns",
+            "hp": 69.0,
+            "mode": "arena",
+            "requests": [
+              {
+                "accepted": false,
+                "cue": "player_damage"
+              }
+            ],
+            "state": "playing"
+          }
+        ],
+        "scope": "Controlled imported PCM identity, resolved authority, actual four hostile routes, disabled-audio gameplay equality, strict setting and explicit lifecycle. No fresh mixer capture/native/hardware claim."
+      }
+    ],
+    "helpers": [
+      {
+        "capture_removed": true,
+        "complete": true,
+        "driver": "Dummy",
+        "game_owner_count": 1,
+        "mix_rate": 44100.0,
+        "observations": [
+          {
+            "discarded": 0,
+            "elapsed_us": 334,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 0,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 0,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 20554,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 0,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 0,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 42602,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 0,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 0,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 54456,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 0,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 0,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 72347,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 4096,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 4096,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 82350,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 4096,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 4096,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 96128,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 4096,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 4096,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 109522,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 4096,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 4096,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 123345,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 4096,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 4096,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 137183,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 4096,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 4096,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 150992,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 4096,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 4096,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 166012,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 8192,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 8192,
+            "streams_released": true
+          }
+        ],
+        "pre_window_drained": 0,
+        "prepare_errors": [],
+        "requested_owner_count": 1,
+        "scope": "Test-only bounded final-owner resource release and fresh internal silence; not physical output or a universal timing guarantee.",
+        "tracked_owner_count": 1,
+        "tracked_stream_count": 2
+      }
+    ],
+    "pass": true
+  },
+  {
+    "case": "audio-rooms",
+    "native_exit": 0,
+    "timeout": false,
+    "seconds": 100.565,
+    "clean": true,
+    "semantic": true,
+    "helper_clean": true,
+    "parse_error": "",
+    "reports": [
+      {
+        "checks": 338,
+        "failures": []
+      },
+      {
+        "checks": 338,
+        "failures": [],
+        "observations": [
+          {
+            "audio": "enabled",
+            "case": "loss",
+            "hp": 89.0,
+            "mode": "rooms",
+            "requests": [
+              {
+                "accepted": true,
+                "cue": "player_damage"
+              }
+            ],
+            "state": "playing"
+          },
+          {
+            "audio": "muted",
+            "case": "loss",
+            "hp": 89.0,
+            "mode": "rooms",
+            "requests": [
+              {
+                "accepted": false,
+                "cue": "player_damage"
+              }
+            ],
+            "state": "playing"
+          },
+          {
+            "audio": "missing",
+            "case": "loss",
+            "hp": 89.0,
+            "mode": "rooms",
+            "requests": [
+              {
+                "accepted": false,
+                "cue": "player_damage"
+              }
+            ],
+            "state": "playing"
+          },
+          {
+            "audio": "enabled",
+            "case": "overkill",
+            "hp": 0.0,
+            "mode": "rooms",
+            "requests": [
+              {
+                "accepted": true,
+                "cue": "player_damage"
+              }
+            ],
+            "state": "dead"
+          },
+          {
+            "audio": "muted",
+            "case": "overkill",
+            "hp": 0.0,
+            "mode": "rooms",
+            "requests": [
+              {
+                "accepted": false,
+                "cue": "player_damage"
+              }
+            ],
+            "state": "dead"
+          },
+          {
+            "audio": "missing",
+            "case": "overkill",
+            "hp": 0.0,
+            "mode": "rooms",
+            "requests": [
+              {
+                "accepted": false,
+                "cue": "player_damage"
+              }
+            ],
+            "state": "dead"
+          },
+          {
+            "audio": "enabled",
+            "case": "zero",
+            "hp": 100.0,
+            "mode": "rooms",
+            "requests": [],
+            "state": "playing"
+          },
+          {
+            "audio": "muted",
+            "case": "zero",
+            "hp": 100.0,
+            "mode": "rooms",
+            "requests": [],
+            "state": "playing"
+          },
+          {
+            "audio": "missing",
+            "case": "zero",
+            "hp": 100.0,
+            "mode": "rooms",
+            "requests": [],
+            "state": "playing"
+          },
+          {
+            "audio": "enabled",
+            "case": "negative",
+            "hp": 103.0,
+            "mode": "rooms",
+            "requests": [],
+            "state": "playing"
+          },
+          {
+            "audio": "muted",
+            "case": "negative",
+            "hp": 103.0,
+            "mode": "rooms",
+            "requests": [],
+            "state": "playing"
+          },
+          {
+            "audio": "missing",
+            "case": "negative",
+            "hp": 103.0,
+            "mode": "rooms",
+            "requests": [],
+            "state": "playing"
+          },
+          {
+            "audio": "enabled",
+            "case": "infinite incoming finite capped loss",
+            "hp": 0.0,
+            "mode": "rooms",
+            "requests": [
+              {
+                "accepted": true,
+                "cue": "player_damage"
+              }
+            ],
+            "state": "dead"
+          },
+          {
+            "audio": "muted",
+            "case": "infinite incoming finite capped loss",
+            "hp": 0.0,
+            "mode": "rooms",
+            "requests": [
+              {
+                "accepted": false,
+                "cue": "player_damage"
+              }
+            ],
+            "state": "dead"
+          },
+          {
+            "audio": "missing",
+            "case": "infinite incoming finite capped loss",
+            "hp": 0.0,
+            "mode": "rooms",
+            "requests": [
+              {
+                "accepted": false,
+                "cue": "player_damage"
+              }
+            ],
+            "state": "dead"
+          },
+          {
+            "audio": "enabled",
+            "case": "nonfinite returned loss",
+            "hp": "nan",
+            "mode": "rooms",
+            "requests": [],
+            "state": "playing"
+          },
+          {
+            "audio": "muted",
+            "case": "nonfinite returned loss",
+            "hp": "nan",
+            "mode": "rooms",
+            "requests": [],
+            "state": "playing"
+          },
+          {
+            "audio": "missing",
+            "case": "nonfinite returned loss",
+            "hp": "nan",
+            "mode": "rooms",
+            "requests": [],
+            "state": "playing"
+          },
+          {
+            "audio": "enabled",
+            "case": "NaN returned loss",
+            "hp": "nan",
+            "mode": "rooms",
+            "requests": [],
+            "state": "playing"
+          },
+          {
+            "audio": "muted",
+            "case": "NaN returned loss",
+            "hp": "nan",
+            "mode": "rooms",
+            "requests": [],
+            "state": "playing"
+          },
+          {
+            "audio": "missing",
+            "case": "NaN returned loss",
+            "hp": "nan",
+            "mode": "rooms",
+            "requests": [],
+            "state": "playing"
+          },
+          {
+            "audio": "enabled",
+            "case": "mirror",
+            "hp": 100.0,
+            "mode": "rooms",
+            "requests": [
+              {
+                "accepted": true,
+                "cue": "shield_block"
+              }
+            ],
+            "state": "playing"
+          },
+          {
+            "audio": "muted",
+            "case": "mirror",
+            "hp": 100.0,
+            "mode": "rooms",
+            "requests": [
+              {
+                "accepted": false,
+                "cue": "shield_block"
+              }
+            ],
+            "state": "playing"
+          },
+          {
+            "audio": "missing",
+            "case": "mirror",
+            "hp": 100.0,
+            "mode": "rooms",
+            "requests": [
+              {
+                "accepted": false,
+                "cue": "shield_block"
+              }
+            ],
+            "state": "playing"
+          },
+          {
+            "audio": "enabled",
+            "case": "mirror zero",
+            "hp": 100.0,
+            "mode": "rooms",
+            "requests": [
+              {
+                "accepted": true,
+                "cue": "shield_block"
+              }
+            ],
+            "state": "playing"
+          },
+          {
+            "audio": "muted",
+            "case": "mirror zero",
+            "hp": 100.0,
+            "mode": "rooms",
+            "requests": [
+              {
+                "accepted": false,
+                "cue": "shield_block"
+              }
+            ],
+            "state": "playing"
+          },
+          {
+            "audio": "missing",
+            "case": "mirror zero",
+            "hp": 100.0,
+            "mode": "rooms",
+            "requests": [
+              {
+                "accepted": false,
+                "cue": "shield_block"
+              }
+            ],
+            "state": "playing"
+          },
+          {
+            "audio": "enabled",
+            "case": "mirror negative",
+            "hp": 100.0,
+            "mode": "rooms",
+            "requests": [
+              {
+                "accepted": true,
+                "cue": "shield_block"
+              }
+            ],
+            "state": "playing"
+          },
+          {
+            "audio": "muted",
+            "case": "mirror negative",
+            "hp": 100.0,
+            "mode": "rooms",
+            "requests": [
+              {
+                "accepted": false,
+                "cue": "shield_block"
+              }
+            ],
+            "state": "playing"
+          },
+          {
+            "audio": "missing",
+            "case": "mirror negative",
+            "hp": 100.0,
+            "mode": "rooms",
+            "requests": [
+              {
+                "accepted": false,
+                "cue": "shield_block"
+              }
+            ],
+            "state": "playing"
+          },
+          {
+            "audio": "enabled",
+            "case": "mirror thorns",
+            "hp": 100.0,
+            "mode": "rooms",
+            "requests": [
+              {
+                "accepted": true,
+                "cue": "shield_block"
+              }
+            ],
+            "state": "playing"
+          },
+          {
+            "audio": "muted",
+            "case": "mirror thorns",
+            "hp": 100.0,
+            "mode": "rooms",
+            "requests": [
+              {
+                "accepted": false,
+                "cue": "shield_block"
+              }
+            ],
+            "state": "playing"
+          },
+          {
+            "audio": "missing",
+            "case": "mirror thorns",
+            "hp": 100.0,
+            "mode": "rooms",
+            "requests": [
+              {
+                "accepted": false,
+                "cue": "shield_block"
+              }
+            ],
+            "state": "playing"
+          },
+          {
+            "audio": "enabled",
+            "case": "medic thorns",
+            "hp": 69.0,
+            "mode": "rooms",
+            "requests": [
+              {
+                "accepted": true,
+                "cue": "player_damage"
+              }
+            ],
+            "state": "playing"
+          },
+          {
+            "audio": "muted",
+            "case": "medic thorns",
+            "hp": 69.0,
+            "mode": "rooms",
+            "requests": [
+              {
+                "accepted": false,
+                "cue": "player_damage"
+              }
+            ],
+            "state": "playing"
+          },
+          {
+            "audio": "missing",
+            "case": "medic thorns",
+            "hp": 69.0,
+            "mode": "rooms",
+            "requests": [
+              {
+                "accepted": false,
+                "cue": "player_damage"
+              }
+            ],
+            "state": "playing"
+          }
+        ],
+        "scope": "Controlled imported PCM identity, resolved authority, actual four hostile routes, disabled-audio gameplay equality, strict setting and explicit lifecycle. No fresh mixer capture/native/hardware claim."
+      }
+    ],
+    "helpers": [
+      {
+        "capture_removed": true,
+        "complete": true,
+        "driver": "Dummy",
+        "game_owner_count": 1,
+        "mix_rate": 44100.0,
+        "observations": [
+          {
+            "discarded": 0,
+            "elapsed_us": 162,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 0,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 0,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 13316,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 0,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 0,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 28781,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 4096,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 4096,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 41275,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 4096,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 4096,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 55206,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 4096,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 4096,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 68574,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 4096,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 4096,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 82316,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 4096,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 4096,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 96041,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 4096,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 4096,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 109859,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 4096,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 4096,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 124535,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 8192,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 8192,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 137477,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 8192,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 8192,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 151311,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 8192,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 8192,
+            "streams_released": true
+          }
+        ],
+        "pre_window_drained": 0,
+        "prepare_errors": [],
+        "requested_owner_count": 1,
+        "scope": "Test-only bounded final-owner resource release and fresh internal silence; not physical output or a universal timing guarantee.",
+        "tracked_owner_count": 1,
+        "tracked_stream_count": 2
+      }
+    ],
+    "pass": true
+  },
+  {
+    "case": "packed-svg",
+    "native_exit": 0,
+    "timeout": false,
+    "seconds": 0.807,
+    "clean": true,
+    "semantic": true,
+    "helper_clean": true,
+    "parse_error": "",
+    "reports": [
+      {
+        "failures": [],
+        "identity": {
+          "format": 5,
+          "height": 64,
+          "manifest_sha256": "4c4e640a0795b23a10ba150fd3a7b438a45bf923154ad418cef969dc3567f518",
+          "original_svg_source_sha256": "b426e007898fcd69c8654b6d0468bced2c2ff57cca3f3ddc40e80eebfa04c203",
+          "pixel_bytes": 16384,
+          "pixel_sha256": "547937bbe0a48266ff3f8c7def990b52fe8c09ef7b29a11e001f4aa6ee110007",
+          "width": 64
+        },
+        "scope": "Actual loaded SVG texture pixels/format and manifest identity; not generic PNG coverage or visual aesthetic certification; no source SVG byte-presence claim in PCK.",
+        "status": "PASS"
+      }
+    ],
+    "helpers": [],
+    "pass": true
+  },
+  {
+    "case": "python-pcm",
+    "native_exit": 0,
+    "timeout": false,
+    "seconds": 0.073,
+    "clean": true,
+    "semantic": true,
+    "helper_clean": true,
+    "parse_error": "",
+    "reports": [
+      {
+        "checks": 38,
+        "cues": {
+          "player_damage": {
+            "bytes": 14156,
+            "first": 0,
+            "frames": 7056,
+            "last": 0,
+            "mean": 3.460042871315193e-08,
+            "pcm_sha256": "a738bbedcd3b01986f6cd4206303886002500b7589e5b27ee33c66deacd30118",
+            "peak": 0.25,
+            "rms": 0.15887196461146635,
+            "wav_sha256": "34a9aa9fe8cab5273d2ea5199b127d303975df7ff088acce2441f14a922ec125"
+          },
+          "shield_block": {
+            "bytes": 10628,
+            "first": 0,
+            "frames": 5292,
+            "last": 0,
+            "mean": 4.036716683201058e-08,
+            "pcm_sha256": "7933a54e3ca54b14fc8286c3d8bfae3a8023e6a1351e2c4e9a20c3c57e3611cc",
+            "peak": 0.25,
+            "rms": 0.1625011707337911,
+            "wav_sha256": "c4e21aa5500c8d4f01dd29c561e325a3f97173f103b29c1a291df54a6c8766f1"
+          }
+        },
+        "failures": [],
+        "scope": "Independent source bytes/formula/quantized numeric bounds only. No imported engine/mixer/human listening/physical output claim.",
+        "total_bytes": 24784
+      }
+    ],
+    "helpers": [],
+    "pass": true
+  },
+  {
+    "case": "python-export-safety",
+    "native_exit": 0,
+    "timeout": false,
+    "seconds": 0.321,
+    "clean": true,
+    "semantic": true,
+    "helper_clean": true,
+    "parse_error": "",
+    "reports": [],
+    "helpers": [],
+    "pass": true
+  }
+]

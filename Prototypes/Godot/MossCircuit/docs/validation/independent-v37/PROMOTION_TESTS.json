@@ -1,0 +1,21 @@
+{
+  "status": "ACCEPTED_EXACT_PORTABLE_TESTS",
+  "files": {
+    "independent_forecast_authority.gd": "cadd615a195eafa901491f695410b379e2b76f4572ae27c92f35a2eab628ce61",
+    "independent_forecast_controller.gd": "5e7c7ab0647fac5abd73dbd21dc2925c8fcc7c8e95f02f3d9fb6e11310d004b5",
+    "independent_forecast_legacy.gd": "7d152d5c7b2846a53bab7b91878ac61e6de24b4b6fb6c066daad149992f6a63d",
+    "independent_forecast_views.gd": "1c136a33d6703966f0de051756710b20224dec9069e7ee606c468afb1471dd4c"
+  },
+  "source_root": "<QA_ROOT>/checks",
+  "destination_directory": "tests",
+  "extra_data_files": [],
+  "output_arguments_required": false,
+  "dependencies": [
+    "existing res://tests/support/audio_teardown.gd",
+    "existing res://data/catalog.json",
+    "existing res://data/balance.json",
+    "new BuildForecast and unchanged authority scripts"
+  ],
+  "runtime_case_timeout_seconds": 180,
+  "scope": "exact accepted four route scripts; hand/reference notes stay external evidence"
+}
