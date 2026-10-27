@@ -1,0 +1,31 @@
+--- evidence-workspace/moss-v33-qa/checks/no_temper_transactions.gd
++++ evidence-workspace/moss-v36-parity/transactions.gd
+@@ -30,6 +30,17 @@
+ func _initialize()->void:call_deferred("run")
+ func run()->void:
+  g=load("res://scenes/main.tscn").instantiate();root.add_child(g);g.set_process(false)
++
++ # Exact old catalog in the SAME shared Dictionary, before any tested run/offer.
++ var old_catalog:Variant=JSON.parse_string(FileAccess.get_file_as_string("evidence-workspace/moss-v35-r4/data/catalog.json"))
++ if not old_catalog is Dictionary or not Rules.validate_catalog(old_catalog).is_empty():
++  push_error("Invalid pinned old catalog");quit(1);return
++ g.catalog.clear();g.catalog.merge(old_catalog,true);g.effects.configure(g.catalog)
++ g.catalog["__parity_identity_probe"]=36036
++ if g.weapon_combat.catalog.get("__parity_identity_probe")!=36036 or g.combat_frame.catalog.get("__parity_identity_probe")!=36036:
++  failures.append("old catalog is not shared by actual combat authorities")
++ g.catalog.erase("__parity_identity_probe")
++ if g.catalog!=old_catalog:failures.append("old catalog authority differs")
+  for mode in ["arena","rooms"]:
+   for kit in ["rivet","scatter","rail"]:
+    g._title();g._select_mode(mode);g._start_run(128,kit)
+@@ -51,7 +62,10 @@
+    g._start_run(128,g.run.starting_loadout_id);steps.append({"label":"same-origin-reset","state":snap()})
+    cases.append({"mode":mode,"kit":kit,"steps":steps})
+    await process_frame
++ var audio_teardown=preload("res://tests/support/audio_teardown.gd").new()
++ audio_teardown.prepare([g])
+  g.queue_free();await process_frame
++ await audio_teardown.finish(self)
+  var result:Dictionary={"scope":"Controlled no-temper old authority projection; six kit/mode routes, actual reserve/release/buy/replace/sell/order/item/refresh/deploy/reset. Offers are deliberately supplied from catalog; not ordinary acquisitions. Presentation object IDs and UI metadata excluded; live build dictionary is complete and must have no weapon_temper key.","cases":cases,"failures":failures}
+  var args:=OS.get_cmdline_user_args()
+  if not args.is_empty():FileAccess.open(args[0],FileAccess.WRITE).store_string(JSON.stringify(result,"  ")+"\n")

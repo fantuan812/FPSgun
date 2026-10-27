@@ -1,0 +1,51 @@
+{
+  "utc": "2026-10-27T03:15:21.536574+00:00",
+  "source": "<WORKSPACE>/moss-v36-work",
+  "input_map_sha256": "34f59766fe540af7e3c742a410784249a89f66cdb71d83147356e4610fb5140a",
+  "inputs": 703,
+  "true_cold_copy": true,
+  "per_case_timeout": 180,
+  "stop_on_first_failure": true,
+  "commands": [
+    [
+      "cold-import",
+      [
+        "--editor",
+        "--import",
+        "--quit"
+      ]
+    ],
+    [
+      "authority",
+      [
+        "--script",
+        "<QA_ROOT>/results/first/independent_scavenger_authority.gd",
+        "--",
+        "<QA_ROOT>/results/first/authority.json"
+      ]
+    ],
+    [
+      "events",
+      [
+        "--script",
+        "<QA_ROOT>/results/first/independent_scavenger_events.gd",
+        "--",
+        "<QA_ROOT>/results/first/events.json"
+      ]
+    ],
+    [
+      "views",
+      [
+        "--script",
+        "<QA_ROOT>/results/first/independent_scavenger_views.gd",
+        "--",
+        "<QA_ROOT>/results/first/views.json"
+      ]
+    ]
+  ],
+  "script_sha256": {
+    "independent_scavenger_events.gd": "4c53b0253dbb326144efb3691c72c096f76fa2d62605420b42b0734d9917fe86",
+    "independent_scavenger_authority.gd": "c1e522c003eb81fe3efe0d293d264805b4ca233f7aceeca388ac0cedf59e42d6",
+    "independent_scavenger_views.gd": "52995e143ca9e4ea163aff618948ff14b30bf37eea84bef6fd72594aaca3cc0f"
+  }
+}

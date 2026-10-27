@@ -1,0 +1,20 @@
+{
+  "status": "PASS_PREEXECUTION_OLD_CATALOG_PARITY_SCOPE",
+  "plan_sha256": "ba36d2427e283c766212b2a39d419a4ca213d2b8c1947727953c5f9de8c04e33",
+  "runner_sha256": "b7f66d96dfd0c3f53222173d7600c750e41e0af563aba08e4fad4e20c9312d98",
+  "fixtures": [
+    {
+      "name": "transactions",
+      "fixture_sha256": "0c49a90370acdca81564937d5842388f2815f4833403004d4747e2b0678ab030",
+      "exact_original_restores": true
+    },
+    {
+      "name": "combat",
+      "fixture_sha256": "b7a5c9ca1452ad42576dd12010c4977c4a1dabd1a3faf8bcbb1403396afd2baf",
+      "exact_original_restores": true
+    }
+  ],
+  "review": "Existing shared catalog dictionary mutated before any tested run; sentinel validates actual weapon/frame reference then removed; effects configured to same dictionary. Original snapshots/assertions/ordering restore exactly outside catalog setup (including its blank separator) and final bounded cleanup. Runner strict180s/native/error/resource/semantic/history-byte gates and pre/post696+703 maps.",
+  "audit_correction": "First QA reverse-restoration assertion failed because audit removal omitted one inserted blank separator. No target executed and no fixture changed; corrected audit removes the complete documented insertion and restores exact original bytes.",
+  "limits": "Author executes4routes; independent review is not independent rerun. New-catalog shop equality expressly excluded. Actual outcomes pending."
+}

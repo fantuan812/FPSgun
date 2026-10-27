@@ -1,0 +1,17 @@
+--- CONTRACT_C1.md
++++ CONTRACT.md
+@@ -1,4 +1,4 @@
+-# v36 Scavenger Reel — frozen design contract C1
++# v36 Scavenger Reel — frozen design contract C2
+ 
+ Design only. No implementation, target execution, balance result or release claim is made. The v35 source and runtime remain immutable while their acceptance proceeds.
+ 
+@@ -10,7 +10,7 @@
+ 
+ The item has no damage, damage-resistance, range, attack-rate, projectile-count, XP or scrap multiplier. Existing damage/return-hit healing and existing item effects remain authoritative. New unique item, icon, one Return Disc affinity link, one `SCAVENGER RETURN` mechanism description, shop/build details and projectile quota presentation are the entire content scope. No new weapon, character, starter, game mode, audio, persistence or external downloaded asset is included.
+ 
+-Catalog validation accepts radius only as a finite number in `(0, 64]`, and quota only as an actual integer in `[1, 8]` (booleans/floats are not integer quotas). Max_stack must be exactly one. Sources must be exactly the two distinct strings `normal` and `energy`; duplicates, medical, unknown strings, nonstrings and missing fields are refused. The new row is optional for historical catalogs: absence must preserve the old disabled path rather than invent defaults or reject the old catalog.
++Catalog validation accepts radius only as a finite number in `(0, 64]`, and quota only as a finite integer-valued number in `[1, 8]`: an actual int or an integral float from the existing JSON loader is accepted; booleans, fractional values, NaN, infinity and nonnumeric types are refused. Validation precedes conversion, and the launch snapshot `maximum` and `remaining` are actual ints. Do not change the generic JSON loader or historical numeric rules. Max_stack must be exactly one. Sources must be exactly the two distinct strings `normal` and `energy`; duplicates, medical, unknown strings, nonstrings and missing fields are refused. The new row is optional for historical catalogs: absence must preserve the old disabled path rather than invent defaults or reject the old catalog.
+ 
+ ## 2. Launch snapshot and ownership
+ 

@@ -1,4 +1,5 @@
 extends SceneTree
+const CatalogHistory=preload("res://tests/support/v36_catalog_projection.gd")
 const Rules=preload("res://scripts/rules.gd")
 var checks:=0
 var failures:Array=[]
@@ -23,7 +24,9 @@ func run()->void:
  var changes:Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://docs/V22_MODIFIER_COPY.json"))
  check(baseline.baseline_manifest_sha256=="6db84a927b27cebfe16770a70036fe6b8979b9e13fa11c039c60d678203fcf25","pinned immutable v21 baseline")
  check(changes.allowed_text_changes.size()==4,"exactly four reviewed copy fields")
- var masked_catalog:Dictionary=catalog.duplicate(true)
+ var history:Dictionary=CatalogHistory.project(catalog,FileAccess.get_file_as_string("res://data/catalog.json"))
+ check(history.get("pass",false),"exact v36 append-only declaration and original v35 byte identity")
+ var masked_catalog:Dictionary=history.catalog.duplicate(true)
  check(catalog.get("weapon_tempering")==JSON.parse_string('{"max_tier":1,"primary_damage_multiplier":1.6}'),"exact v33 top-level profile separately asserted")
  masked_catalog.erase("weapon_tempering") # Only the separately asserted addition leaves the old projection.
  var masked_balance:Dictionary=balance.duplicate(true)
@@ -104,5 +107,5 @@ func run()->void:
  audio_teardown.prepare([game])
  game.queue_free();await process_frame
  await audio_teardown.finish(self)
- print(JSON.stringify({"modifier_copy_checks":checks,"failures":failures,"scope":"v22 four-field copy preservation within the old catalog; exact v23/v26/v33 additions separately asserted; native appearance separate"}))
+ print(JSON.stringify({"modifier_copy_checks":checks,"failures":failures,"scope":"v22 four-field copy preservation within the old catalog; exact v23/v26/v33 additions preserved after strictly verified v36 item/pair/link historical projection; native appearance separate"}))
  quit(0 if failures.is_empty() else 1)

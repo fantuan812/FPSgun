@@ -1,0 +1,11 @@
+--- rejected714/tests/test_upgrade_salvage.gd
++++ r2/tests/test_upgrade_salvage.gd
+@@ -44,7 +44,7 @@
+ func run() -> void:
+ 	game = load("res://scenes/main.tscn").instantiate(); root.add_child(game); game.set_process(false)
+ 	check(game.config.upgrades.size() == 6, "still six permanent upgrades")
+-	check(game.catalog.weapons.size() + game.catalog.items.size() == 37, "still 37 catalog entries")
++	check(game.catalog.weapons.size() + game.catalog.items.size() == 38 and game.catalog.items[-1].id=="scavenger_reel", "exact 38 entries including appended Scavenger Reel")
+ 	var definition := Rules.upgrade_salvage_definition()
+ 	check(definition.id == "salvage_upgrade" and definition.scrap is int and definition.scrap == 10, "fixed shared definition")
+ 	definition.scrap = 999; definition.id = "health"

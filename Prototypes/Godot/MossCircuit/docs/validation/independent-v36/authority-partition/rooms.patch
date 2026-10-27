@@ -1,0 +1,12 @@
+--- original_external
++++ rooms
+@@ -90,8 +90,7 @@
+  ck(audio.status().unavailable.is_empty() and not audio.status().muted and snap(g)==before,"status detached/read-only")
+ func _initialize()->void:call_deferred("run")
+ func run()->void:
+- var initial=make_game("arena");resource_checks(initial);initial.queue_free();await process_frame
+- for mode in ["arena","rooms"]:
++ for mode in ["rooms"]:
+   for spec in [
+    {"name":"loss","hp":100.0,"damage":11.0,"items":{}},
+    {"name":"overkill","hp":7.0,"damage":11.0,"items":{}},

@@ -1,0 +1,40 @@
+{
+  "utc": "2026-10-27T03:17:16.530120+00:00",
+  "status": "FROZEN_EXTERNAL_FIXTURE_NOT_EXECUTED",
+  "old_catalog": "evidence-workspace/moss-v35-r4/data/catalog.json",
+  "old_catalog_sha256": "317a2d343ba1a005cd44cc1c2ee91e894adf059d77e57c24f7a5ee9439ec56a0",
+  "fixtures": [
+    {
+      "name": "transactions",
+      "original_source": "evidence-workspace/moss-v33-qa/checks/no_temper_transactions.gd",
+      "original_sha256": "ddb2c19cbb7e0d51974a24303ba46bb4b08173cfea8562625c0c767e8fd931b2",
+      "external_fixture": "evidence-workspace/moss-v36-parity/transactions.gd",
+      "external_sha256": "0c49a90370acdca81564937d5842388f2815f4833403004d4747e2b0678ab030",
+      "historical_trace": "evidence-workspace/moss-v35-r3-prep/old-transactions.json",
+      "historical_trace_sha256": "22e28521ba76fb7285a59b98593aecc7c4af9e24d497853119f73495324feaf8"
+    },
+    {
+      "name": "combat",
+      "original_source": "evidence-workspace/moss-v33-qa/baseline/no_reorder_trace.gd",
+      "original_sha256": "628ea8e860c627b9be1c700544c97c699c8ed3d80f68c6e46310bce55cfcb0ef",
+      "external_fixture": "evidence-workspace/moss-v36-parity/combat.gd",
+      "external_sha256": "b7a5c9ca1452ad42576dd12010c4977c4a1dabd1a3faf8bcbb1403396afd2baf",
+      "historical_trace": "evidence-workspace/moss-v35-r3-prep/old-combat.json",
+      "historical_trace_sha256": "e7d93a1fcf01345c540bf9f868632310fd3e85572dbe431dbe12d43bf19212ec"
+    }
+  ],
+  "projects": [
+    "moss-v35-r4",
+    "moss-v36-work"
+  ],
+  "candidate_source_map_sha256": "34f59766fe540af7e3c742a410784249a89f66cdb71d83147356e4610fb5140a",
+  "budget_per_case": 180,
+  "order": "baseline transactions, baseline combat, candidate transactions, candidate combat",
+  "gates": [
+    "strict exit/error/resource warning/semantic marker",
+    "baseline and candidate output byte equality",
+    "both output bytes also equal retained historical outputs",
+    "project source maps unchanged"
+  ],
+  "scope": "Actual old catalog actual shared combat/transaction authority; not new enlarged-catalog shop offer parity. Only catalog setup and final-owner test cleanup differ from historical oracles."
+}

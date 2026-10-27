@@ -1,0 +1,30 @@
+{
+  "status": "PASS_FIRST_INDEPENDENT_SELECTED_SOURCE",
+  "checks": {
+    "authority": 178,
+    "events": 46,
+    "views": 132
+  },
+  "helpers": {
+    "authority": {
+      "elapsed_us": 153895,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    "events": {
+      "elapsed_us": 188329,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    "views": {
+      "elapsed_us": 157593,
+      "fresh": 8192,
+      "silent": 8192
+    }
+  },
+  "true_cold_import": true,
+  "input_count": 703,
+  "input_map_sha256": "34f59766fe540af7e3c742a410784249a89f66cdb71d83147356e4610fb5140a",
+  "source_and_copy_unchanged": true,
+  "scope": "Three selected controlled source tests plus genuine cold import; not full aggregate, packed, native or ordinary acceptance"
+}

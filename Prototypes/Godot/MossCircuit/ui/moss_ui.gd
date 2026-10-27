@@ -1,4 +1,5 @@
 extends CanvasLayer
+const ScavengerReel=preload("res://scripts/gameplay/scavenger_reel.gd")
 ## Presentation only. All run state and transactions belong to the main controller.
 signal intent(action: String, payload: Dictionary)
 
@@ -83,7 +84,7 @@ func _ready() -> void:
 	if FileAccess.file_exists("res://assets/items/icon_manifest.json"):
 		var parsed = JSON.parse_string(FileAccess.get_file_as_string("res://assets/items/icon_manifest.json"))
 		if parsed is Dictionary: manifest = parsed
-	for extra_path in ["res://assets/items/mechanism_icon_manifest.json", "res://assets/items/build_expansion_icon_manifest.json", "res://assets/items/cryo_icon_manifest.json", "res://assets/items/bankshot_icon_manifest.json", "res://assets/items/feedback_icon_manifest.json"]:
+	for extra_path in ["res://assets/items/mechanism_icon_manifest.json", "res://assets/items/build_expansion_icon_manifest.json", "res://assets/items/cryo_icon_manifest.json", "res://assets/items/bankshot_icon_manifest.json", "res://assets/items/feedback_icon_manifest.json", "res://assets/items/scavenger_icon_manifest.json"]:
 		if FileAccess.file_exists(extra_path):
 			var extra = JSON.parse_string(FileAccess.get_file_as_string(extra_path))
 			if extra is Dictionary:
@@ -240,6 +241,9 @@ func icon(id: String) -> Texture2D:
 	icon_cache[id] = tex; return tex
 
 func _card(parent: Node, data: Dictionary, suffix := "", statuses: Array = [], compact:=false) -> VBoxContainer:
+	if data.get("id")=="scavenger_reel":
+		data=data.duplicate(true)
+		data.description=ScavengerReel.describe(data)
 	var p := PanelContainer.new(); parent.add_child(p)
 	var row := HBoxContainer.new(); p.add_child(row)
 	var image := TextureRect.new(); image.texture = icon(str(data.get("id", "")))

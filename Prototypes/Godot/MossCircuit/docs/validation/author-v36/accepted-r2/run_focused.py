@@ -1,0 +1,17 @@
+from pathlib import Path
+import json,hashlib,subprocess,os,time,re
+r=Path('workspace/shared');src=r/'moss-v36-r2';out=r/'moss-v36-r2-prep';plan=json.loads((r/'moss-v36-catalog-plan/PLAN.json').read_text());before=json.loads((r/'moss-v36-catalog-plan/PREIMPORT_INPUTS.json').read_text());h=lambda p:hashlib.sha256(p.read_bytes()).hexdigest();assert all(h(src/n)==s for n,s in before.items());assert not (src/'.godot').exists();logs=out/'focused';assert not logs.exists();logs.mkdir();env=os.environ.copy()
+for k,v in [('HOME','home'),('XDG_CONFIG_HOME','config'),('XDG_DATA_HOME','data'),('XDG_CACHE_HOME','cache')]: (out/v).mkdir();env[k]=str(out/v)
+rows=[]
+def run(label,args,marker=True):
+ t=time.monotonic()
+ try:
+  p=subprocess.run(['godot','--headless','--audio-driver','Dummy','--path',str(src),*args],env=env,capture_output=True,text=True,timeout=180);stdout=p.stdout;stderr=p.stderr;code=p.returncode
+ except subprocess.TimeoutExpired as e:
+  stdout=e.stdout or b'';stderr=e.stderr or b'';stdout=stdout.decode(errors='replace') if isinstance(stdout,bytes) else stdout;stderr=stderr.decode(errors='replace') if isinstance(stderr,bytes) else stderr;stderr+='\nTIMEOUT180s';code=124
+ (logs/(label+'.stdout')).write_text(stdout);(logs/(label+'.stderr')).write_text(stderr);log=stdout+stderr;success=not marker or bool(re.search(r'"failures"\s*:\s*\[\s*\]|failures=\[\]|\b0 failed\b|\b0 failures\b|^PASS:|UI_STRUCTURE_AND_INTENTS_PASS',log,re.M));row={'case':label,'exit':code,'seconds':round(time.monotonic()-t,3),'error':'ERROR:' in log,'resource_warning':'instances leaked' in log or 'resources still in use' in log,'success_marker':success};row['pass']=code==0 and success and not row['error'] and not row['resource_warning'];rows.append(row);(out/'FOCUSED_STEPS.json').write_text(json.dumps(rows,indent=2)+'\n');print(row,flush=True);assert row['pass'],label+' rejected; preserved, no retry'
+run('cold-import',['--editor','--import','--quit'],False);assert all(h(src/n)==s for n,s in before.items())
+prod=json.loads((r/'moss-v36-final-prep/PRODUCTION_FINAL.json').read_text());assert all(h(src/n)==s for n,s in prod.items());(out/'PRODUCTION_FINAL.json').write_text(json.dumps(prod,indent=2,sort_keys=True)+'\n')
+m={str(p.relative_to(src)):h(p) for p in sorted(src.rglob('*')) if p.is_file() and '.godot' not in p.parts and '__pycache__' not in p.parts and p.name!='MANIFEST.json'};(src/'MANIFEST.json').write_text(json.dumps(m,indent=2,sort_keys=True)+'\n');m['MANIFEST.json']=h(src/'MANIFEST.json');(out/'R2_INPUTS.json').write_text(json.dumps(m,indent=2,sort_keys=True)+'\n');(out/'R2_FREEZE.json').write_text(json.dumps({'inputs':len(m),'production131_exact':True,'input_map_sha256':h(out/'R2_INPUTS.json'),'manifest_sha256':h(src/'MANIFEST.json'),'new_import_files':sorted(set(m)-set(before)),'runner_sha256':h(src/'tests/run_regression.py'),'scope':'Test-onlycatalogfixturecorrection; sameproduction as failed125; focusedpending'},indent=2)+'\n')
+for name in plan['focused_cases']:run(name,['--script','res://tests/'+name])
+changes=[n for n,s in m.items() if h(src/n)!=s];assert not changes;report={'pass':True,'steps':rows,'frozen_inputs':len(m),'changes':changes,'production131_exact':True,'original_full':'REJECTED117/125 preserved','next':'One new complete125 aggregate on this exact frozen source; focused not full acceptance'};(out/'FOCUSED_GATE.json').write_text(json.dumps(report,indent=2)+'\n');print(json.dumps(report))

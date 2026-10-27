@@ -1,0 +1,77 @@
+{
+  "added": {
+    "docs/V36_ART_PROVENANCE.json": "ab130ba3dd2d0e6c13c975927ad3f30f551c47000bc9628f4496cf47592729f6",
+    "docs/V36_SCAVENGER_REEL.md": "91ad36837fd94c76e6aab4ec6359167388e4ac1e0a779f1af8b3718bd8c58fe4",
+    "docs/V36_SCAVENGER_REEL_CONTRACT.md": "261f7619cd467601301df95f23e58aadc77f1a0482b2065aa1ffa3e7f15dec46",
+    "tests/independent_scavenger_authority.gd": "c1e522c003eb81fe3efe0d293d264805b4ca233f7aceeca388ac0cedf59e42d6",
+    "tests/independent_scavenger_events.gd": "4c53b0253dbb326144efb3691c72c096f76fa2d62605420b42b0734d9917fe86",
+    "tests/independent_scavenger_settlement.gd": "977a758021b2ac15b8aadbee12919ff869953a54d1e9513452f9fdb2a733b192",
+    "tests/independent_scavenger_views.gd": "52995e143ca9e4ea163aff618948ff14b30bf37eea84bef6fd72594aaca3cc0f"
+  },
+  "changed": {
+    "README.md": {
+      "after": "25da45232fbb4a067a58e96a2bf341428aa899303be81986b4401082857c1fd1",
+      "before": "8d790dac9ef0ff346e83d07dd3acd4d4af568aabdd5bcbd18f38480e9aedaa08"
+    },
+    "docs/DELIVERY.md": {
+      "after": "f52ae209afe0c4836043b67bff5df9fc7b528e8beeb0664986a840d010477320",
+      "before": "6da94851f256ec2d73736f9aa27bedd57fea3e948b8e96c7d4e1ef9024bd70d2"
+    },
+    "docs/REACTION_COVERAGE.md": {
+      "after": "315db3407d5c5ea783955d6d4c44abd72d93e5e3d72f9db2fd823c3d5a83db90",
+      "before": "48ae58b18f55011763b0fb1be96c8ac6d8911a5b1812752b38338ecd9ee4e168"
+    },
+    "docs/V35_PLAYER_FEEDBACK.md": {
+      "after": "3bf10f99c791c492165721fe67f8873147f05968722f269e088829639efc8307",
+      "before": "6de0583e16cb8e0e66ee95485ae8dcb38feb2d1ab56cc92317415665dbbd2a79"
+    },
+    "docs/V35_PLAYER_FEEDBACK_CONTRACT.md": {
+      "after": "d076c09568d06f907c5c21116ef4d2bc6ff5b82cc5f201af61c407acbabe30f7",
+      "before": "23bdca56bcce0c19ed1934a4f9803f28b1a3def635e42759578f1d1b3f0f01f6"
+    }
+  },
+  "docs": {
+    "README.md": "25da45232fbb4a067a58e96a2bf341428aa899303be81986b4401082857c1fd1",
+    "docs/DELIVERY.md": "f52ae209afe0c4836043b67bff5df9fc7b528e8beeb0664986a840d010477320",
+    "docs/REACTION_COVERAGE.md": "315db3407d5c5ea783955d6d4c44abd72d93e5e3d72f9db2fd823c3d5a83db90",
+    "docs/V35_PLAYER_FEEDBACK.md": "3bf10f99c791c492165721fe67f8873147f05968722f269e088829639efc8307",
+    "docs/V35_PLAYER_FEEDBACK_CONTRACT.md": "d076c09568d06f907c5c21116ef4d2bc6ff5b82cc5f201af61c407acbabe30f7",
+    "docs/V36_ART_PROVENANCE.json": "ab130ba3dd2d0e6c13c975927ad3f30f551c47000bc9628f4496cf47592729f6",
+    "docs/V36_SCAVENGER_REEL.md": "91ad36837fd94c76e6aab4ec6359167388e4ac1e0a779f1af8b3718bd8c58fe4",
+    "docs/V36_SCAVENGER_REEL_CONTRACT.md": "261f7619cd467601301df95f23e58aadc77f1a0482b2065aa1ffa3e7f15dec46"
+  },
+  "historical_work_inputs": 703,
+  "production131_exact_focused_candidate": true,
+  "removed": [],
+  "runner_exact": true,
+  "tests": [
+    {
+      "destination": "tests/independent_scavenger_authority.gd",
+      "optional_output_arg": "One JSON path after --; omission uses stdout only",
+      "sha256": "c1e522c003eb81fe3efe0d293d264805b4ca233f7aceeca388ac0cedf59e42d6",
+      "source": "evidence-workspace/moss-v36-qa/checks/independent_scavenger_authority.gd",
+      "source_executed_checks": 178
+    },
+    {
+      "destination": "tests/independent_scavenger_events.gd",
+      "optional_output_arg": "One JSON path after --; omission uses stdout only",
+      "sha256": "4c53b0253dbb326144efb3691c72c096f76fa2d62605420b42b0734d9917fe86",
+      "source": "evidence-workspace/moss-v36-qa/checks/independent_scavenger_events.gd",
+      "source_executed_checks": 46
+    },
+    {
+      "destination": "tests/independent_scavenger_views.gd",
+      "optional_output_arg": "One JSON path after --; omission uses stdout only",
+      "sha256": "52995e143ca9e4ea163aff618948ff14b30bf37eea84bef6fd72594aaca3cc0f",
+      "source": "evidence-workspace/moss-v36-qa/checks/independent_scavenger_views.gd",
+      "source_executed_checks": 132
+    },
+    {
+      "destination": "tests/independent_scavenger_settlement.gd",
+      "optional_output_arg": "One JSON path after --; omission uses stdout only",
+      "sha256": "977a758021b2ac15b8aadbee12919ff869953a54d1e9513452f9fdb2a733b192",
+      "source": "evidence-workspace/moss-v36-qa/checks/independent_scavenger_settlement.gd",
+      "source_executed_checks": 30
+    }
+  ]
+}

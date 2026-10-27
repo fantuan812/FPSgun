@@ -1,0 +1,12 @@
+{
+  "status": "C1_STATIC_REVIEW_ADDENDUM_BLOCKED_NUMERIC_LAYER",
+  "prior_static_review_retained": true,
+  "issue": "Catalog quota actual-int-only cannot accept Godot JSON numeric decoding on existing main loader; prior review missed this layer distinction.",
+  "source_evidence": [
+    "scripts/main.gd:188 JSON.parse_string",
+    "tests/independent_tempering_authority.gd explicitly accepts integral JSON float max tier"
+  ],
+  "proposal": "Catalog accepts finite integer-valued numbers 1..8, rejects bool/fraction/strings. Snapshot remaining and maximum are actual runtime integers. No global JSON loader change.",
+  "execution": "No new engine or target run; no production edit.",
+  "action": "Contract C2 clarification before independent oracle freeze and implementation"
+}

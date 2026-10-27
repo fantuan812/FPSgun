@@ -1,0 +1,116 @@
+{
+  "status": "PASS_REOPENED_RAW_ORIGINAL_FRESHNESS_PREDICATES",
+  "windows": 51,
+  "each_window_at_least2048_fresh_and_read": true,
+  "all_no_discard_nonfinite": true,
+  "raw_float_files": [
+    {
+      "file": "arena_player_damage.f32le",
+      "bytes": 131072,
+      "sha256": "428112f3f21f9176976c0c98acec275b0c4363778b8ac0d2356d1098c0790a7d",
+      "frames": 16384,
+      "all_finite": true,
+      "reported_peak_rms_exact_tolerance": true
+    },
+    {
+      "file": "arena_shield_block.f32le",
+      "bytes": 98304,
+      "sha256": "547d0972a56f4a2a5531629436c65e09803d08df88936372dcb37e1dbb9e77ca",
+      "frames": 12288,
+      "all_finite": true,
+      "reported_peak_rms_exact_tolerance": true
+    },
+    {
+      "file": "lethal_tail.f32le",
+      "bytes": 98304,
+      "sha256": "5f0003e96fd33caa201299d0da3c976f1e7d7bf0f6a4ea294ad5ab8db9b9a88e",
+      "frames": 12288,
+      "all_finite": true,
+      "reported_peak_rms_exact_tolerance": true
+    },
+    {
+      "file": "rooms_player_damage.f32le",
+      "bytes": 131072,
+      "sha256": "8a0a194fb1a41584bbdaafb9782e2ff8bf3f8e601526a01ab17fbc9ce1dd6b34",
+      "frames": 16384,
+      "all_finite": true,
+      "reported_peak_rms_exact_tolerance": true
+    },
+    {
+      "file": "rooms_shield_block.f32le",
+      "bytes": 131072,
+      "sha256": "628c7845e7d1e0d4cecf4a8542cd8c2206d7dccc83f90a0957a98a199ed5953c",
+      "frames": 16384,
+      "all_finite": true,
+      "reported_peak_rms_exact_tolerance": true
+    },
+    {
+      "file": "same_cue_retrigger.f32le",
+      "bytes": 98304,
+      "sha256": "5f0003e96fd33caa201299d0da3c976f1e7d7bf0f6a4ea294ad5ab8db9b9a88e",
+      "frames": 12288,
+      "all_finite": true,
+      "reported_peak_rms_exact_tolerance": true
+    },
+    {
+      "file": "two_cue_overlap.f32le",
+      "bytes": 131072,
+      "sha256": "65a49ed6e4fae95726a1f0786941b6d0f2487defc7a00088617fceaae7602006",
+      "frames": 16384,
+      "all_finite": true,
+      "reported_peak_rms_exact_tolerance": true
+    }
+  ],
+  "queued_at_start_records": [
+    {
+      "label": "arena_player_damage_drain",
+      "queued": 4096,
+      "fresh": 4096,
+      "total_read": 8192
+    },
+    {
+      "label": "arena_shield_block_drain",
+      "queued": 4096,
+      "fresh": 8192,
+      "total_read": 12288
+    },
+    {
+      "label": "rooms_player_damage",
+      "queued": 4096,
+      "fresh": 12288,
+      "total_read": 16384
+    },
+    {
+      "label": "rooms_player_damage_drain",
+      "queued": 4096,
+      "fresh": 4096,
+      "total_read": 8192
+    },
+    {
+      "label": "rooms_shield_block_drain",
+      "queued": 4096,
+      "fresh": 4096,
+      "total_read": 8192
+    },
+    {
+      "label": "silent_muted",
+      "queued": 4096,
+      "fresh": 8192,
+      "total_read": 12288
+    },
+    {
+      "label": "silent_missing",
+      "queued": 4096,
+      "fresh": 8192,
+      "total_read": 12288
+    },
+    {
+      "label": "lethal_drain",
+      "queued": 8192,
+      "fresh": 4096,
+      "total_read": 12288
+    }
+  ],
+  "review_correction": "Initial readback-only assertion incorrectly required zero queued frames/all read frames newly pushed, stronger than frozen fixture; failed on8 legitimate documented queued-start windows. Corrected review to actual >=2048 fresh/read plus all-zero discards/nonfinite, preserving queue sizes. No fixture/target rerun or predicate change.",
+  "scope": "Seven diagnostic nonzero captures reopened bytewise/moments;51window metadata checked. Dummy internal only, no physical listening."
+}

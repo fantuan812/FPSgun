@@ -1,0 +1,867 @@
+{
+  "version": 5,
+  "weapon_tempering": {
+    "max_tier": 1,
+    "primary_damage_multiplier": 1.6
+  },
+  "weapon_slots": 4,
+  "item_slots": 8,
+  "starting_coins": 35,
+  "refresh_price": 5,
+  "weapons": [
+    {
+      "id": "rivet_gun",
+      "name": "Rivet Gun",
+      "kind": "weapon",
+      "behavior": "single",
+      "damage": 15,
+      "interval": 0.4,
+      "projectiles": 1,
+      "spread": 0,
+      "pierce": 0,
+      "range": 500,
+      "price": 24,
+      "rarity": "common",
+      "tags": [
+        "ballistic"
+      ],
+      "max_stack": 4,
+      "description": "Accurate auto-fire."
+    },
+    {
+      "id": "scrap_shotgun",
+      "name": "Scrap Shotgun",
+      "kind": "weapon",
+      "behavior": "spread",
+      "damage": 9,
+      "interval": 0.85,
+      "projectiles": 5,
+      "spread": 0.65,
+      "pierce": 0,
+      "range": 300,
+      "price": 36,
+      "rarity": "uncommon",
+      "tags": [
+        "ballistic",
+        "spread"
+      ],
+      "max_stack": 4,
+      "description": "Five short-range pellets."
+    },
+    {
+      "id": "rail_lance",
+      "name": "Rail Lance",
+      "kind": "weapon",
+      "behavior": "pierce",
+      "damage": 30,
+      "interval": 1.15,
+      "projectiles": 1,
+      "spread": 0,
+      "pierce": 3,
+      "range": 650,
+      "price": 42,
+      "rarity": "uncommon",
+      "tags": [
+        "electric"
+      ],
+      "max_stack": 4,
+      "description": "Long beam; pierces 3 targets."
+    },
+    {
+      "id": "orbit_saw",
+      "name": "Orbit Saw",
+      "kind": "weapon",
+      "behavior": "orbit",
+      "damage": 20,
+      "interval": 0.65,
+      "projectiles": 1,
+      "spread": 0,
+      "pierce": 99,
+      "range": 105,
+      "price": 38,
+      "rarity": "uncommon",
+      "tags": [
+        "melee"
+      ],
+      "max_stack": 4,
+      "description": "Sweeps enemies within 105 px."
+    },
+    {
+      "id": "return_disc",
+      "name": "Return Disc",
+      "kind": "weapon",
+      "behavior": "return",
+      "damage": 18,
+      "interval": 0.9,
+      "projectiles": 1,
+      "spread": 0,
+      "pierce": 99,
+      "range": 330,
+      "price": 40,
+      "rarity": "rare",
+      "tags": [
+        "returning",
+        "ballistic"
+      ],
+      "max_stack": 4,
+      "description": "Outbound disc returns; each leg can hit each target once."
+    },
+    {
+      "id": "shock_mortar",
+      "name": "Shock Mortar",
+      "kind": "weapon",
+      "behavior": "mortar",
+      "damage": 36,
+      "interval": 1.5,
+      "projectiles": 1,
+      "spread": 0,
+      "pierce": 99,
+      "range": 500,
+      "price": 46,
+      "rarity": "rare",
+      "tags": [
+        "explosive"
+      ],
+      "max_stack": 4,
+      "description": "Marks a fixed position; blasts after .6s within 85px."
+    },
+    {
+      "id": "cryo_sprayer",
+      "name": "Cryo Sprayer",
+      "kind": "weapon",
+      "behavior": "cone_chill",
+      "damage": 9,
+      "interval": 0.65,
+      "projectiles": 1,
+      "spread": 0,
+      "pierce": 0,
+      "range": 190,
+      "cone_degrees": 60,
+      "chill_duration": 1.2,
+      "chill_speed": 0.65,
+      "price": 44,
+      "rarity": "uncommon",
+      "tags": [
+        "control"
+      ],
+      "max_stack": 4,
+      "description": "Instant 60-degree cone chills for 1.2s; normal enemies move at 65%. Bosses mark-only. Weapon damage/rate/reach apply; projectile bonuses do not."
+    },
+    {
+      "id": "bankshot_driver",
+      "name": "Bankshot Driver",
+      "kind": "weapon",
+      "behavior": "field_bankshot",
+      "damage": 18,
+      "interval": 0.85,
+      "projectiles": 1,
+      "spread": 0,
+      "pierce": 0,
+      "range": 900,
+      "price": 42,
+      "rarity": "uncommon",
+      "tags": [
+        "ballistic",
+        "ricochet"
+      ],
+      "max_stack": 4,
+      "description": "900 total travel; up to 2 field-boundary bounces re-arm 1 + pierce hits per leg (max 6). Spent shots coast dim. Position near field edges; no interior-wall bounces."
+    }
+  ],
+  "items": [
+    {
+      "id": "power_coil",
+      "name": "Power Coil",
+      "kind": "item",
+      "price": 18,
+      "max_stack": 5,
+      "rarity": "common",
+      "tags": [
+        "power"
+      ],
+      "effects": {
+        "damage_bonus": 0.15
+      },
+      "description": "Weapon damage +15%; fixed module damage unchanged."
+    },
+    {
+      "id": "cooling_fan",
+      "name": "Cooling Fan",
+      "kind": "item",
+      "price": 20,
+      "max_stack": 5,
+      "rarity": "common",
+      "tags": [
+        "power"
+      ],
+      "effects": {
+        "haste": 0.12
+      },
+      "description": "+12% attack rate"
+    },
+    {
+      "id": "iron_plate",
+      "name": "Iron Plate",
+      "kind": "item",
+      "price": 16,
+      "max_stack": 5,
+      "rarity": "common",
+      "tags": [
+        "guard"
+      ],
+      "effects": {
+        "max_hp": 20
+      },
+      "description": "+20 max HP (no free heal)"
+    },
+    {
+      "id": "moss_patch",
+      "name": "Moss Patch",
+      "kind": "item",
+      "price": 14,
+      "max_stack": 4,
+      "rarity": "common",
+      "tags": [
+        "guard"
+      ],
+      "effects": {
+        "wave_heal": 8
+      },
+      "description": "+8 HP restored per cleared wave"
+    },
+    {
+      "id": "running_boots",
+      "name": "Running Boots",
+      "kind": "item",
+      "price": 16,
+      "max_stack": 4,
+      "rarity": "common",
+      "tags": [
+        "mobility"
+      ],
+      "effects": {
+        "speed_bonus": 0.1
+      },
+      "description": "+10% move speed"
+    },
+    {
+      "id": "salvage_magnet",
+      "name": "Salvage Magnet",
+      "kind": "item",
+      "price": 12,
+      "max_stack": 4,
+      "rarity": "common",
+      "tags": [
+        "salvage"
+      ],
+      "effects": {
+        "pickup_radius": 30
+      },
+      "description": "+30 pickup radius"
+    },
+    {
+      "id": "lucky_chip",
+      "name": "Lucky Chip",
+      "kind": "item",
+      "price": 22,
+      "max_stack": 3,
+      "rarity": "rare",
+      "tags": [
+        "salvage"
+      ],
+      "effects": {
+        "coin_bonus": 0.25
+      },
+      "description": "+25% collected scrap, fractional bank"
+    },
+    {
+      "id": "lens",
+      "name": "Focus Lens",
+      "kind": "item",
+      "price": 16,
+      "max_stack": 3,
+      "rarity": "common",
+      "tags": [
+        "ballistic"
+      ],
+      "effects": {
+        "range_bonus": 0.15
+      },
+      "description": "+15% ranged weapon reach"
+    },
+    {
+      "id": "capacitor",
+      "name": "Capacitor",
+      "kind": "item",
+      "price": 20,
+      "max_stack": 4,
+      "rarity": "common",
+      "tags": [
+        "electric"
+      ],
+      "effects": {
+        "electric_bonus": 0.25
+      },
+      "description": "+25% electric damage"
+    },
+    {
+      "id": "gear",
+      "name": "Saw Gear",
+      "kind": "item",
+      "price": 20,
+      "max_stack": 4,
+      "rarity": "common",
+      "tags": [
+        "melee"
+      ],
+      "effects": {
+        "melee_bonus": 0.25
+      },
+      "description": "+25% orbit damage"
+    },
+    {
+      "id": "pellet_pouch",
+      "name": "Pellet Pouch",
+      "kind": "item",
+      "price": 26,
+      "max_stack": 2,
+      "rarity": "rare",
+      "tags": [
+        "spread"
+      ],
+      "effects": {
+        "extra_pellets": 1
+      },
+      "description": "+1 shotgun pellet"
+    },
+    {
+      "id": "recycler",
+      "name": "Recycler",
+      "kind": "item",
+      "price": 18,
+      "max_stack": 2,
+      "rarity": "common",
+      "tags": [
+        "salvage"
+      ],
+      "effects": {
+        "sell_bonus": 0.15
+      },
+      "description": "+15% resale rate (base 50%, cap 80%)"
+    },
+    {
+      "id": "arc_relay",
+      "name": "Arc Relay",
+      "kind": "item",
+      "price": 32,
+      "max_stack": 1,
+      "rarity": "rare",
+      "tags": [
+        "mechanism"
+      ],
+      "effects": {},
+      "description": "Chain 40% weapon damage to 2 other targets",
+      "trigger": "Primary weapon hit",
+      "cost": "Occupies 1 module slot; triggers cannot recursively proc",
+      "cooldown": 0.6,
+      "stack_rule": "Unique: maximum 1",
+      "synergy_targets": [
+        "kill_cell"
+      ]
+    },
+    {
+      "id": "kill_cell",
+      "name": "Kill Cell",
+      "kind": "item",
+      "price": 26,
+      "max_stack": 1,
+      "rarity": "rare",
+      "tags": [
+        "mechanism"
+      ],
+      "effects": {},
+      "description": "Drops an energy orb worth 2 XP and 1 scrap",
+      "trigger": "Primary weapon kill",
+      "cost": "Occupies 1 module slot; triggers cannot recursively proc",
+      "cooldown": 0,
+      "stack_rule": "Unique: maximum 1",
+      "synergy_targets": [
+        "arc_relay"
+      ]
+    },
+    {
+      "id": "dash_resin",
+      "name": "Dash Resin",
+      "kind": "item",
+      "price": 28,
+      "max_stack": 1,
+      "rarity": "rare",
+      "tags": [
+        "mechanism"
+      ],
+      "effects": {},
+      "description": "Leaves a 2.4s damage zone (max 3)",
+      "trigger": "Dash starts",
+      "cost": "Occupies 1 module slot; triggers cannot recursively proc",
+      "cooldown": 0,
+      "stack_rule": "Unique: maximum 1",
+      "synergy_targets": [
+        "pulse_boots"
+      ]
+    },
+    {
+      "id": "mirror_shell",
+      "name": "Mirror Shell",
+      "kind": "item",
+      "price": 34,
+      "max_stack": 1,
+      "rarity": "rare",
+      "tags": [
+        "mechanism"
+      ],
+      "effects": {},
+      "description": "Blocks one hit each wave; cannot recharge by buying/selling",
+      "trigger": "Incoming damage",
+      "cost": "Occupies 1 module slot; triggers cannot recursively proc",
+      "cooldown": 0,
+      "stack_rule": "Unique: maximum 1",
+      "synergy_targets": [
+        "thorn_crown"
+      ]
+    },
+    {
+      "id": "thorn_crown",
+      "name": "Thorn Crown",
+      "kind": "item",
+      "price": 26,
+      "max_stack": 1,
+      "rarity": "rare",
+      "tags": [
+        "mechanism"
+      ],
+      "effects": {},
+      "description": "Retaliates for 18 damage within 130px",
+      "trigger": "HP damage taken",
+      "cost": "Occupies 1 module slot; triggers cannot recursively proc",
+      "cooldown": 1,
+      "stack_rule": "Unique: maximum 1",
+      "synergy_targets": [
+        "mirror_shell"
+      ]
+    },
+    {
+      "id": "blood_valve",
+      "name": "Blood Valve",
+      "kind": "item",
+      "price": 30,
+      "max_stack": 1,
+      "rarity": "rare",
+      "tags": [
+        "mechanism"
+      ],
+      "effects": {},
+      "description": "Restores 3 HP; no proc lifesteal",
+      "trigger": "Primary hit below 40% HP",
+      "cost": "Occupies 1 module slot; triggers cannot recursively proc",
+      "cooldown": 1,
+      "stack_rule": "Unique: maximum 1",
+      "synergy_targets": [
+        "scrap_mine"
+      ]
+    },
+    {
+      "id": "scrap_mine",
+      "name": "Scrap Mine",
+      "kind": "item",
+      "price": 28,
+      "max_stack": 1,
+      "rarity": "rare",
+      "tags": [
+        "mechanism"
+      ],
+      "effects": {},
+      "description": "Places a mine; arms in .3s, max 4, lasts 5s",
+      "trigger": "Normal XP/scrap pickup",
+      "cost": "Occupies 1 module slot; triggers cannot recursively proc",
+      "cooldown": 1,
+      "stack_rule": "Unique: maximum 1",
+      "synergy_targets": [
+        "blood_valve"
+      ]
+    },
+    {
+      "id": "pulse_boots",
+      "name": "Pulse Boots",
+      "kind": "item",
+      "price": 28,
+      "max_stack": 1,
+      "rarity": "rare",
+      "tags": [
+        "mechanism"
+      ],
+      "effects": {},
+      "description": "Pushes nearby enemies 90px away",
+      "trigger": "Dash starts",
+      "cost": "Occupies 1 module slot; triggers cannot recursively proc",
+      "cooldown": 0,
+      "stack_rule": "Unique: maximum 1",
+      "synergy_targets": [
+        "dash_resin"
+      ]
+    },
+    {
+      "id": "return_spool",
+      "name": "Return Spool",
+      "kind": "item",
+      "price": 26,
+      "max_stack": 1,
+      "rarity": "rare",
+      "tags": [
+        "returning"
+      ],
+      "effects": {},
+      "description": "Heals 1 HP on returning-leg primary hits",
+      "trigger": "Returning disc hit",
+      "cost": "1 module slot; secondary damage cannot recurse",
+      "cooldown": 0.6,
+      "stack_rule": "Unique: maximum 1",
+      "synergy_targets": [
+        "return_disc"
+      ]
+    },
+    {
+      "id": "blast_fuse",
+      "name": "Blast Fuse",
+      "kind": "item",
+      "price": 30,
+      "max_stack": 1,
+      "rarity": "rare",
+      "tags": [
+        "explosive"
+      ],
+      "effects": {},
+      "description": "Leaves a 1.4s scorch zone, 6 damage every .35s (max 3)",
+      "trigger": "Mortar detonation",
+      "cost": "1 module slot; secondary damage cannot recurse",
+      "cooldown": 0,
+      "stack_rule": "Unique: maximum 1",
+      "synergy_targets": [
+        "shock_mortar"
+      ]
+    },
+    {
+      "id": "echo_chamber",
+      "name": "Echo Chamber",
+      "kind": "item",
+      "price": 30,
+      "max_stack": 1,
+      "rarity": "rare",
+      "tags": [
+        "ballistic"
+      ],
+      "effects": {},
+      "description": "Deals 12 extra damage to that target; procs do not count",
+      "trigger": "Every 5 primary hits",
+      "cost": "1 module slot; secondary damage cannot recurse",
+      "cooldown": 0,
+      "stack_rule": "Unique: maximum 1",
+      "synergy_targets": []
+    },
+    {
+      "id": "gravity_anchor",
+      "name": "Gravity Anchor",
+      "kind": "item",
+      "price": 28,
+      "max_stack": 1,
+      "rarity": "rare",
+      "tags": [
+        "explosive"
+      ],
+      "effects": {},
+      "description": "Pulls living enemies within 150px by 60px",
+      "trigger": "Mine detonation",
+      "cost": "1 module slot; secondary damage cannot recurse",
+      "cooldown": 0,
+      "stack_rule": "Unique: maximum 1",
+      "synergy_targets": [
+        "scrap_mine"
+      ]
+    },
+    {
+      "id": "medic_seed",
+      "name": "Medic Seed",
+      "kind": "item",
+      "price": 28,
+      "max_stack": 1,
+      "rarity": "rare",
+      "tags": [
+        "guard"
+      ],
+      "effects": {},
+      "description": "Drops a medical orb restoring 8 HP; overheal is capped",
+      "trigger": "30 actual HP damage accumulated",
+      "cost": "1 module slot; secondary damage cannot recurse",
+      "cooldown": 0,
+      "stack_rule": "Unique: maximum 1",
+      "synergy_targets": []
+    },
+    {
+      "id": "phase_capacitor",
+      "name": "Phase Capacitor",
+      "kind": "item",
+      "price": 30,
+      "max_stack": 1,
+      "rarity": "rare",
+      "tags": [
+        "mobility"
+      ],
+      "effects": {},
+      "description": "Stores 1 charge; next hit deals 12 splash damage within 95px",
+      "trigger": "Dash then primary hit",
+      "cost": "1 module slot; secondary damage cannot recurse",
+      "cooldown": 0,
+      "stack_rule": "Unique: maximum 1",
+      "synergy_targets": [
+        "pulse_boots"
+      ]
+    },
+    {
+      "id": "fracture_coil",
+      "name": "Fracture Coil",
+      "kind": "item",
+      "price": 28,
+      "max_stack": 1,
+      "rarity": "rare",
+      "tags": [
+        "control"
+      ],
+      "effects": {},
+      "fracture_damage": 16,
+      "description": "Requires Cryo Sprayer + a different weapon type. Its surviving primary hit spends chill for fixed 16 secondary damage; weapon bonuses do not scale it.",
+      "trigger": "Non-Cryo primary hit on a living chilled target",
+      "cost": "1 module slot; consumes chill and its slow; secondary damage cannot recurse",
+      "cooldown": 0,
+      "stack_rule": "Unique: maximum 1; one shatter per applied chill mark",
+      "synergy_targets": [
+        "cryo_sprayer"
+      ]
+    },
+    {
+      "id": "bounce_guide",
+      "name": "Bounce Guide",
+      "kind": "item",
+      "price": 26,
+      "max_stack": 1,
+      "rarity": "rare",
+      "tags": [
+        "ricochet"
+      ],
+      "effects": {},
+      "description": "Requires Bankshot Driver. First field-boundary bounce aims once at the nearest eligible living target within remaining travel; otherwise reflects normally. No extra damage or range.",
+      "trigger": "Bankshot first reflection only",
+      "cost": "1 module slot; direction only, not homing; opportunity is spent even without a target",
+      "cooldown": 0,
+      "stack_rule": "Unique: maximum 1; possession is snapshotted at launch",
+      "synergy_targets": [
+        "bankshot_driver"
+      ]
+    },
+    {
+      "id": "feedback_diode",
+      "name": "Feedback Diode",
+      "kind": "item",
+      "price": 28,
+      "max_stack": 1,
+      "rarity": "rare",
+      "tags": [
+        "mobility"
+      ],
+      "effects": {},
+      "feedback_damage": 24,
+      "description": "First hostile shot touching you during an equipped dash deals fixed 24 secondary damage to its living shooter. Once per dash; no extra immunity.",
+      "trigger": "Actual hostile-shot contact during a dash that began while equipped",
+      "cost": "1 module slot; no contact/blast counter; weapon bonuses do not scale feedback",
+      "cooldown": 0,
+      "stack_rule": "Unique: maximum 1; buying or syncing never arms an ongoing dash",
+      "synergy_targets": [
+        "pulse_boots"
+      ]
+    }
+  ],
+  "synergies": [
+    {
+      "id": "arc_grid",
+      "tag": "electric",
+      "threshold": 3,
+      "description": "3 electric tags: +20% electric damage"
+    },
+    {
+      "id": "saw_rig",
+      "tag": "melee",
+      "threshold": 3,
+      "description": "3 melee tags: +20% melee damage"
+    },
+    {
+      "id": "scatter_rig",
+      "tag": "spread",
+      "threshold": 3,
+      "description": "3 spread tags: +1 pellet"
+    }
+  ],
+  "mechanism_synergies": [
+    {
+      "id": "charged_network",
+      "name": "CHARGED NETWORK",
+      "requires": [
+        "arc_relay",
+        "kill_cell"
+      ],
+      "description": "Energy orb charges next chain: 4 other targets instead of 2."
+    },
+    {
+      "id": "sticky_jet",
+      "name": "STICKY JET",
+      "requires": [
+        "dash_resin",
+        "pulse_boots"
+      ],
+      "description": "Dash zones slow normal movement to 55% for .6s; committed charges are unaffected."
+    },
+    {
+      "id": "mirror_thorns",
+      "name": "MIRROR THORNS",
+      "requires": [
+        "mirror_shell",
+        "thorn_crown"
+      ],
+      "description": "Blocked hits also trigger thorn retaliation (same 1s cooldown)."
+    },
+    {
+      "id": "blood_mines",
+      "name": "BLOOD MINES",
+      "requires": [
+        "blood_valve",
+        "scrap_mine"
+      ],
+      "description": "Mine kills restore 5 HP (not limited to low HP)."
+    },
+    {
+      "id": "return_sustain",
+      "name": "Return Sustain",
+      "requires": [
+        "return_disc",
+        "return_spool"
+      ],
+      "description": "Only returning-disc primary hits heal 1 HP; 0.6s global spool cooldown."
+    },
+    {
+      "id": "ember_barrage",
+      "name": "Ember Barrage",
+      "requires": [
+        "shock_mortar",
+        "blast_fuse"
+      ],
+      "description": "Each mortar detonation leaves a short independent scorch zone."
+    },
+    {
+      "id": "gravity_mines",
+      "name": "Gravity Mines",
+      "requires": [
+        "scrap_mine",
+        "gravity_anchor"
+      ],
+      "description": "Mine blasts pull surviving targets toward the blast, setting up later attacks."
+    },
+    {
+      "id": "phase_stride",
+      "name": "Phase Stride",
+      "requires": [
+        "pulse_boots",
+        "phase_capacitor"
+      ],
+      "description": "One dash pushes nearby enemies and stores one next-hit splash charge. No extra hidden multiplier."
+    },
+    {
+      "id": "cold_snap",
+      "name": "Cold Snap",
+      "requires": [
+        "cryo_sprayer",
+        "fracture_coil"
+      ],
+      "description": "Cryo sets chill; a different weapon type must hit to spend it for 16 secondary damage. Another Cryo cannot consume. Shatter removes the slow.",
+      "requires_other_weapon_than": "cryo_sprayer"
+    },
+    {
+      "id": "banked_vector",
+      "name": "BANKED VECTOR",
+      "requires": [
+        "bankshot_driver",
+        "bounce_guide"
+      ],
+      "description": "First Bankshot reflection redirects once toward an eligible target. Field-edge positioning matters; the 900 total path never resets."
+    },
+    {
+      "id": "crosscurrent",
+      "name": "CROSSCURRENT",
+      "requires": [
+        "feedback_diode",
+        "pulse_boots"
+      ],
+      "description": "Dash pushes nearby enemies and can counter one hostile shot to its living shooter. Complementary effects; no extra multiplier."
+    }
+  ],
+  "affinity_links": [
+    [
+      "arc_relay",
+      "kill_cell"
+    ],
+    [
+      "dash_resin",
+      "pulse_boots"
+    ],
+    [
+      "mirror_shell",
+      "thorn_crown"
+    ],
+    [
+      "blood_valve",
+      "scrap_mine"
+    ],
+    [
+      "return_disc",
+      "return_spool"
+    ],
+    [
+      "shock_mortar",
+      "blast_fuse"
+    ],
+    [
+      "scrap_mine",
+      "gravity_anchor"
+    ],
+    [
+      "pulse_boots",
+      "phase_capacitor"
+    ],
+    [
+      "cryo_sprayer",
+      "fracture_coil"
+    ],
+    [
+      "bankshot_driver",
+      "bounce_guide"
+    ],
+    [
+      "feedback_diode",
+      "pulse_boots"
+    ]
+  ],
+  "shop_weighting": {
+    "base": 1.0,
+    "shared_tag_step": 0.35,
+    "tag_bonus_cap": 2.0,
+    "missing_partner_bonus": 2.5,
+    "duplicate_weapon_bonus": 0.5,
+    "total_cap": 6.0
+  }
+}

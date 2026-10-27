@@ -1,3 +1,5 @@
+> v36 content: Scavenger Reel adds a bounded pickup interception pulse and remaining-quota pips; no enemy, boss or weapon reaction animation and no new sound. These visual hints do not settle rewards. Earlier v35 and v15–v17 statements below remain artifact-specific history.
+
 > v35 locally verified: actual positive player HP loss and genuine Mirror Shell block have two original procedural cues. Source/imported/exported PCM and internal Dummy mixer checks passed; physical listening remains unverified. No boss/weapon/music cues are claimed. Historical v15–v17 coverage below remains artifact-specific. See [v35 notes](V35_PLAYER_FEEDBACK.md).
 
 > v17更新：Core实际summon已使用独立16帧，ring保留旧9帧。反应层不变；当前验收与v16像素估算纠正见 [v17说明](V17_FLOW_AND_SUMMON.md)。

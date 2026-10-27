@@ -1,4 +1,5 @@
 extends RefCounted
+const ScavengerReel=preload("res://scripts/gameplay/scavenger_reel.gd")
 const Context=preload("res://scripts/gameplay/combat_context.gd")
 const RunFlow=preload("res://scripts/gameplay/run_flow.gd")
 const Rules=preload("res://scripts/rules.gd")
@@ -82,6 +83,7 @@ static func step(frame:Context,dt:float)->void:
 			projectile.life = -1
 		if projectile.life <= 0: frame.world.enemy_bullets.remove_at(i)
 		if frame.session.state != "playing": return
+	var return_sweeps:Array=[]
 	for i in range(frame.world.bullets.size() - 1, -1, -1):
 		var b: Dictionary = frame.world.bullets[i]
 		if b.life <= 0:
@@ -90,7 +92,7 @@ static func step(frame:Context,dt:float)->void:
 		if b.get("behavior","")=="field_bankshot":
 			frame.weapons.advance_bankshot(b,dt)
 		elif b.get("weapon","") == "return_disc":
-			frame.weapons.advance_disc(b,dt)
+			return_sweeps.append_array(frame.weapons.advance_disc(b,dt))
 		else:
 			frame.weapons.advance_bullet(b,dt)
 		if b.life <= 0: frame.world.bullets.remove_at(i)
@@ -113,7 +115,17 @@ static func step(frame:Context,dt:float)->void:
 		var p: Dictionary = frame.world.pickups[i]
 		var distance: float = p.pos.distance_to(frame.world.player_pos)
 		if distance < frame.world.stats.pickup_radius: p.pos = p.pos.move_toward(frame.world.player_pos, dt * 260)
-		if distance < 14:
+		var collect:bool=distance<14
+		if not collect and frame.session.state=="playing":
+			for sweep in return_sweeps:
+				if not ScavengerReel.eligible(sweep,p):continue
+				sweep.disc.scavenger.remaining-=1
+				collect=true
+				var old:Array=frame.world.effect_visuals.filter(func(v):return v.kind=="scavenger_pickup")
+				if old.size()>=8:frame.world.effect_visuals.erase(old[0])
+				frame.world.effect_visuals.append({"kind":"scavenger_pickup","pos":p.pos,"radius":9.0,"life":.16})
+				break
+		if collect:
 			RunFlow.collect_pickup(frame.world,frame.session,p)
 			frame.procs.emit_event("pickup",{"pos":p.pos,"source":p.get("source","normal")})
 			frame.world.pickups.remove_at(i)

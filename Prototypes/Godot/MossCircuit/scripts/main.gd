@@ -1,4 +1,5 @@
 extends Node2D
+const ScavengerReel=preload("res://scripts/gameplay/scavenger_reel.gd")
 const StartingLoadouts = preload("res://scripts/gameplay/starting_loadouts.gd")
 var starting_loadouts:Dictionary={}
 var selected_loadout_id:String=StartingLoadouts.DEFAULT_ID
@@ -705,6 +706,9 @@ func _draw() -> void:
 			for i in range(4):
 				var ray:=Vector2.from_angle(PI*.25+i*PI*.5)
 				draw_line(visual.pos+ray*7,visual.pos+ray*visual.radius,Color(.64,.94,1,.4 if settings.reduced_flashes else .7),2)
+		elif visual.kind=="scavenger_pickup":
+			if state not in ["title","dead","won"]:
+				draw_circle(visual.pos,visual.radius,Color(.55,.94,.76,.25 if settings.reduced_flashes else .5),false,1.5)
 		elif visual.kind=="bankshot_contact":
 			var tint:=Color(.65,.94,.83,.45 if settings.reduced_flashes else .8) if visual.guided else Color(1,.78,.35,.4 if settings.reduced_flashes else .75)
 			draw_circle(visual.pos,visual.radius,tint,false,1.5)
@@ -758,6 +762,10 @@ func _draw() -> void:
 			if armed:draw_circle(b.pos,3,Color(1,.96,.8,.9))
 			continue
 		if b.get("weapon","") == "return_disc":
+			if state not in ["title","dead","won"] and b.get("returning",false) and ScavengerReel.valid_snapshot(b.get("scavenger")):
+				for pip in range(b.scavenger.maximum):
+					var offset:Vector2=Vector2((pip-(b.scavenger.maximum-1)*.5)*5,-14)
+					draw_rect(Rect2(b.pos+offset-Vector2(1.5,1.5),Vector2(3,3)),Color(.55,.94,.76,.55 if settings.reduced_flashes else .85) if pip<b.scavenger.remaining else Color(.4,.48,.44,.4),pip<b.scavenger.remaining,1.0)
 			draw_circle(b.pos,8,Color("98eaf6"),false,2)
 			draw_line(b.pos-Vector2(7,0).rotated(elapsed*16),b.pos+Vector2(7,0).rotated(elapsed*16),Color("e0faff"),2)
 			continue
@@ -1022,7 +1030,8 @@ func _view() -> Dictionary:
 			var requirement:String="a weapon type other than "+Rules.catalog_entry(catalog,excluded_weapon).name
 			required.append(requirement)
 			if not build.weapons.any(func(id):return id!=excluded_weapon):missing.append(requirement)
-		view.synergy_status.append({"name":pair_data.name,"active":missing.is_empty(),"requires":required,"missing":missing,"description":pair_data.description})
+		var mechanism_description:String=ScavengerReel.describe(Rules.catalog_entry(catalog,"scavenger_reel")) if pair_data.get("id","")=="scavenger_return" else str(pair_data.description)
+		view.synergy_status.append({"name":pair_data.name,"active":missing.is_empty(),"requires":required,"missing":missing,"description":mechanism_description})
 	for id in effects.cooldowns: view.mechanics.cooldowns[id] = maxf(0,effects.cooldowns[id] - elapsed)
 	for i in range(build.weapons.size()):
 		var entry := Rules.catalog_entry(catalog,build.weapons[i]).duplicate(true)

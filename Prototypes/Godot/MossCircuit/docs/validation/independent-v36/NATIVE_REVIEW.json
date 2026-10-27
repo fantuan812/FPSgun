@@ -1,0 +1,216 @@
+{
+  "status": "PASS_BOUNDED_NATIVE_AND_ORDINARY_SCOPE",
+  "utc": "2026-10-27T04:39:41.236221+00:00",
+  "controlled": {
+    "process_exit": 0,
+    "cases": 4,
+    "modes": [
+      "arena",
+      "rooms"
+    ],
+    "requested_and_observed_sizes": [
+      [
+        960,
+        540
+      ],
+      [
+        1280,
+        720
+      ]
+    ],
+    "screenshots": 18,
+    "actual_ui_purchase_cost": 28,
+    "steps": [
+      {
+        "case": 1,
+        "coins": 73,
+        "controlled_runtime_step": 1,
+        "dt": 0.25,
+        "floor_sources": [
+          "energy",
+          "normal",
+          "medical"
+        ],
+        "remaining": 2,
+        "xp": 1
+      },
+      {
+        "case": 1,
+        "coins": 74,
+        "controlled_runtime_step": 2,
+        "dt": 0.25,
+        "floor_sources": [
+          "normal",
+          "medical"
+        ],
+        "remaining": 1,
+        "xp": 2
+      },
+      {
+        "case": 1,
+        "coins": 75,
+        "controlled_runtime_step": 3,
+        "dt": 0.25,
+        "floor_sources": [
+          "medical"
+        ],
+        "remaining": 0,
+        "xp": 3
+      },
+      {
+        "case": 2,
+        "coins": 73,
+        "controlled_runtime_step": 1,
+        "dt": 0.25,
+        "floor_sources": [
+          "energy",
+          "normal",
+          "medical"
+        ],
+        "remaining": 2,
+        "xp": 1
+      },
+      {
+        "case": 2,
+        "coins": 74,
+        "controlled_runtime_step": 2,
+        "dt": 0.25,
+        "floor_sources": [
+          "normal",
+          "medical"
+        ],
+        "remaining": 1,
+        "xp": 2
+      },
+      {
+        "case": 2,
+        "coins": 75,
+        "controlled_runtime_step": 3,
+        "dt": 0.25,
+        "floor_sources": [
+          "medical"
+        ],
+        "remaining": 0,
+        "xp": 3
+      },
+      {
+        "case": 3,
+        "coins": 73,
+        "controlled_runtime_step": 1,
+        "dt": 0.25,
+        "floor_sources": [
+          "energy",
+          "normal",
+          "medical"
+        ],
+        "remaining": 2,
+        "xp": 1
+      },
+      {
+        "case": 3,
+        "coins": 74,
+        "controlled_runtime_step": 2,
+        "dt": 0.25,
+        "floor_sources": [
+          "normal",
+          "medical"
+        ],
+        "remaining": 1,
+        "xp": 2
+      },
+      {
+        "case": 3,
+        "coins": 75,
+        "controlled_runtime_step": 3,
+        "dt": 0.25,
+        "floor_sources": [
+          "medical"
+        ],
+        "remaining": 0,
+        "xp": 3
+      },
+      {
+        "case": 4,
+        "coins": 73,
+        "controlled_runtime_step": 1,
+        "dt": 0.25,
+        "floor_sources": [
+          "energy",
+          "normal",
+          "medical"
+        ],
+        "remaining": 2,
+        "xp": 1
+      },
+      {
+        "case": 4,
+        "coins": 74,
+        "controlled_runtime_step": 2,
+        "dt": 0.25,
+        "floor_sources": [
+          "normal",
+          "medical"
+        ],
+        "remaining": 1,
+        "xp": 2
+      },
+      {
+        "case": 4,
+        "coins": 75,
+        "controlled_runtime_step": 3,
+        "dt": 0.25,
+        "floor_sources": [
+          "medical"
+        ],
+        "remaining": 0,
+        "xp": 3
+      }
+    ],
+    "helper_last": {
+      "discarded": 0,
+      "elapsed_us": 157329,
+      "game_owner_count": 1,
+      "invalid": 0,
+      "new_pushed": 8192,
+      "owner_count": 1,
+      "owners_released": true,
+      "prepare_errors": 0,
+      "required_frames": 6615,
+      "silent_frames": 8192,
+      "streams_released": true
+    },
+    "scope": "External controlled ReturnDisc ownership/100scrap/suppliedReeloffer; realnativeUI buy/deploy; synthetic visible return disc/pickup positions and realRuntime steps. Not ordinary launch/acquisition."
+  },
+  "ordinary": {
+    "process_exit": 0,
+    "attempts": 1,
+    "seed": 240102,
+    "loadout": "Rivet Starter",
+    "mode": "arena",
+    "actual_window": [
+      1180,
+      812
+    ],
+    "requested_resolution": [
+      960,
+      540
+    ],
+    "screenshots": 8,
+    "endpoint": "First naturally earned shop at124scrap after regular kills and queued upgrades; did not purchase/reroll or deploy further",
+    "natural_upgrades": [
+      "Split Capacitor",
+      "Rapid Circuit",
+      "Light Feet",
+      "Salvage Magnet",
+      "Overcharge"
+    ],
+    "reel_acquired": false,
+    "no_injection_reset_or_reroll": true,
+    "scope": "Unchanged releaseELF normal adjacentPCK; no --main-pack; native mouse/key gameplay. Does not establish ordinary Reel acquisition/flight, ordinary HP loss/Mirror, campaign or balance."
+  },
+  "window_absence_confirmed": true,
+  "warning": "llvmpipe driver reported unsupported VSync mode; preserved, not suppressed. Dummyaudio, no physicalhearing/Windows/performance claims.",
+  "ui_observation_boundaries": "Scoped observed shop descriptions/icons/buttons and quota/medical stills only; scroll viewports retain intentional clipping, not full aesthetic review. Two initial terminal input methods rejected without sending a command; a supported method launched once. An initial close request did not establish exit; actual native exit0 and absent window were subsequently confirmed.",
+  "additional_visual_review": "Only shop01/quota3-image03/quota0-medical06: text/icon readable, no new visibleblock,stillHP100/coins72\u219275/XP0\u21923/medical remains. Not causal runtime or ordinary proof.",
+  "source717_pack_unchanged": true
+}

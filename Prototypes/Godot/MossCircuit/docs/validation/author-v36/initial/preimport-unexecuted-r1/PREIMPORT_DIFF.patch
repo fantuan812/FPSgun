@@ -1,0 +1,411 @@
+--- v35/assets/items/scavenger_icon_manifest.json
++++ v36/assets/items/scavenger_icon_manifest.json
+@@ -0,0 +1,17 @@
++{
++  "version": 1,
++  "icons": {
++    "scavenger_reel": {
++      "atlas": "res://assets/items/scavenger_reel.svg",
++      "rect": [
++        0,
++        0,
++        64,
++        64
++      ],
++      "name": "Scavenger Reel",
++      "category": "item",
++      "source_sha256": "b426e007898fcd69c8654b6d0468bced2c2ff57cca3f3ddc40e80eebfa04c203"
++    }
++  }
++}
+--- v35/assets/items/scavenger_reel.svg
++++ v36/assets/items/scavenger_reel.svg
+@@ -0,0 +1 @@
++<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64"><rect x="3" y="3" width="58" height="58" rx="12" fill="#142e30" stroke="#436a60" stroke-width="2"/><path d="M43 17h9v21l-10 11H24" fill="none" stroke="#87d9b8" stroke-width="5" stroke-linejoin="round"/><path d="m27 43-7 6 7 6" fill="none" stroke="#87d9b8" stroke-width="4" stroke-linejoin="round"/><circle cx="27" cy="27" r="17" fill="#d6a650" stroke="#f8d681" stroke-width="3"/><circle cx="27" cy="27" r="10" fill="#254f48" stroke="#8ee6bd" stroke-width="2"/><circle cx="27" cy="27" r="4" fill="#eed58a"/><path d="M27 11v6m16 10h-6M27 43v-6M11 27h6" stroke="#714c2e" stroke-width="3"/><path d="m49 43 5 5-5 5-5-5Z" fill="#8ee6bd"/></svg>
+--- v35/data/catalog.json
++++ v36/data/catalog.json
+@@ -686,6 +686,33 @@
+       "synergy_targets": [
+         "pulse_boots"
+       ]
++    },
++    {
++      "id": "scavenger_reel",
++      "name": "Scavenger Reel",
++      "kind": "item",
++      "price": 28,
++      "max_stack": 1,
++      "rarity": "rare",
++      "tags": [
++        "returning",
++        "salvage"
++      ],
++      "effects": {},
++      "description": "Return Disc gathers normal/energy pickups on its return leg; medicine excluded.",
++      "trigger": "Actual returning path touches a normal/energy pickup",
++      "cost": "1 module slot; Return Disc required; finite quota per launched disc",
++      "cooldown": 0,
++      "stack_rule": "Unique: maximum 1. Per-disc quota never refills.",
++      "synergy_targets": [
++        "return_disc"
++      ],
++      "return_pickup_radius": 18.0,
++      "return_pickup_limit": 3,
++      "pickup_sources": [
++        "normal",
++        "energy"
++      ]
+     }
+   ],
+   "synergies": [
+@@ -808,6 +835,15 @@
+         "pulse_boots"
+       ],
+       "description": "Dash pushes nearby enemies and can counter one hostile shot to its living shooter. Complementary effects; no extra multiplier."
++    },
++    {
++      "id": "scavenger_return",
++      "name": "SCAVENGER RETURN",
++      "requires": [
++        "return_disc",
++        "scavenger_reel"
++      ],
++      "description": "Return Disc immediately gathers normal/energy pickups on its return leg. Medicine excluded; no reward multiplier."
+     }
+   ],
+   "affinity_links": [
+@@ -854,6 +890,10 @@
+     [
+       "feedback_diode",
+       "pulse_boots"
++    ],
++    [
++      "return_disc",
++      "scavenger_reel"
+     ]
+   ],
+   "shop_weighting": {
+--- v35/scripts/gameplay/combat_runtime.gd
++++ v36/scripts/gameplay/combat_runtime.gd
+@@ -1,4 +1,5 @@
+ extends RefCounted
++const ScavengerReel=preload("res://scripts/gameplay/scavenger_reel.gd")
+ const Context=preload("res://scripts/gameplay/combat_context.gd")
+ const RunFlow=preload("res://scripts/gameplay/run_flow.gd")
+ const Rules=preload("res://scripts/rules.gd")
+@@ -82,6 +83,7 @@
+ 			projectile.life = -1
+ 		if projectile.life <= 0: frame.world.enemy_bullets.remove_at(i)
+ 		if frame.session.state != "playing": return
++	var return_sweeps:Array=[]
+ 	for i in range(frame.world.bullets.size() - 1, -1, -1):
+ 		var b: Dictionary = frame.world.bullets[i]
+ 		if b.life <= 0:
+@@ -90,7 +92,7 @@
+ 		if b.get("behavior","")=="field_bankshot":
+ 			frame.weapons.advance_bankshot(b,dt)
+ 		elif b.get("weapon","") == "return_disc":
+-			frame.weapons.advance_disc(b,dt)
++			return_sweeps.append_array(frame.weapons.advance_disc(b,dt))
+ 		else:
+ 			frame.weapons.advance_bullet(b,dt)
+ 		if b.life <= 0: frame.world.bullets.remove_at(i)
+@@ -113,7 +115,17 @@
+ 		var p: Dictionary = frame.world.pickups[i]
+ 		var distance: float = p.pos.distance_to(frame.world.player_pos)
+ 		if distance < frame.world.stats.pickup_radius: p.pos = p.pos.move_toward(frame.world.player_pos, dt * 260)
+-		if distance < 14:
++		var collect:bool=distance<14
++		if not collect and frame.session.state=="playing":
++			for sweep in return_sweeps:
++				if not ScavengerReel.eligible(sweep,p):continue
++				sweep.disc.scavenger.remaining-=1
++				collect=true
++				var old:Array=frame.world.effect_visuals.filter(func(v):return v.kind=="scavenger_pickup")
++				if old.size()>=8:frame.world.effect_visuals.erase(old[0])
++				frame.world.effect_visuals.append({"kind":"scavenger_pickup","pos":p.pos,"radius":9.0,"life":.16})
++				break
++		if collect:
+ 			RunFlow.collect_pickup(frame.world,frame.session,p)
+ 			frame.procs.emit_event("pickup",{"pos":p.pos,"source":p.get("source","normal")})
+ 			frame.world.pickups.remove_at(i)
+--- v35/scripts/gameplay/scavenger_reel.gd
++++ v36/scripts/gameplay/scavenger_reel.gd
+@@ -0,0 +1,65 @@
++extends RefCounted
++## Pure optional catalog profile and return-sweep eligibility. Never awards rewards.
++static func _number(value:Variant)->bool:
++	return (value is int or value is float) and is_finite(float(value))
++
++static func definition(entry:Dictionary)->Dictionary:
++	if entry.get("id")!="scavenger_reel" or entry.get("kind")!="item":return {}
++	var radius:Variant=entry.get("return_pickup_radius")
++	var limit:Variant=entry.get("return_pickup_limit")
++	var maximum:Variant=entry.get("max_stack")
++	if not _number(radius) or float(radius)<=0 or float(radius)>64:return {}
++	if not _number(limit) or float(limit)<1 or float(limit)>8 or floorf(float(limit))!=float(limit):return {}
++	if not _number(maximum) or float(maximum)!=1:return {}
++	var sources:Variant=entry.get("pickup_sources")
++	if not sources is Array or sources.size()!=2:return {}
++	if not sources.all(func(s):return s is String and s in ["normal","energy"]):return {}
++	if sources[0]==sources[1]:return {}
++	if not entry.get("effects") is Dictionary or not entry.effects.is_empty():return {}
++	return {"radius":float(radius),"maximum":int(limit),"sources":sources.duplicate()}
++
++static func profile(build:Dictionary,catalog:Dictionary)->Dictionary:
++	var items:Variant=build.get("items")
++	if not items is Dictionary:return {}
++	var owned:Variant=items.get("scavenger_reel",0)
++	if not _number(owned) or float(owned)<=0:return {}
++	var entries:Variant=catalog.get("items",[])
++	if not entries is Array:return {}
++	for entry in entries:
++		if entry is Dictionary and entry.get("id")=="scavenger_reel":return definition(entry)
++	return {}
++
++static func snapshot(build:Dictionary,catalog:Dictionary)->Dictionary:
++	var result:=profile(build,catalog)
++	if not result.is_empty():result.remaining=result.maximum
++	return result
++
++static func valid_snapshot(value:Variant)->bool:
++	if not value is Dictionary:return false
++	var maximum:Variant=value.get("maximum")
++	var remaining:Variant=value.get("remaining")
++	var radius:Variant=value.get("radius")
++	if not maximum is int or maximum<1 or maximum>8:return false
++	if not remaining is int or remaining<0 or remaining>maximum:return false
++	if not _number(radius) or float(radius)<=0 or float(radius)>64:return false
++	var sources:Variant=value.get("sources")
++	return sources is Array and sources.size()==2 and sources.all(func(s):return s is String and s in ["normal","energy"]) and sources[0]!=sources[1]
++
++static func eligible(sweep:Dictionary,pickup:Dictionary)->bool:
++	var disc:Variant=sweep.get("disc")
++	if not disc is Dictionary or not valid_snapshot(disc.get("scavenger")):return false
++	var quota:Dictionary=disc.scavenger
++	if quota.remaining<=0:return false
++	var start:Variant=sweep.get("start")
++	var end:Variant=sweep.get("end")
++	var pos:Variant=pickup.get("pos")
++	if not start is Vector2 or not end is Vector2 or not pos is Vector2:return false
++	if not start.is_finite() or not end.is_finite() or not pos.is_finite() or start==end:return false
++	var source:Variant=pickup.get("source","normal")
++	if not source is String or not source in quota.sources:return false
++	return Geometry2D.get_closest_point_to_segment(pos,start,end).distance_to(pos)<quota.radius
++
++static func describe(entry:Dictionary)->String:
++	var data:=definition(entry)
++	if data.is_empty():return "Scavenger Reel unavailable: invalid collection profile."
++	return "Return Disc required. RETURN LEG ONLY: immediately collects up to %d normal/energy pickups per launched disc within %.1f px of its path. Medicine excluded. No damage or reward multiplier." % [data.maximum,data.radius]
+--- v35/scripts/gameplay/weapon_combat.gd
++++ v36/scripts/gameplay/weapon_combat.gd
+@@ -1,4 +1,5 @@
+ extends RefCounted
++const ScavengerReel=preload("res://scripts/gameplay/scavenger_reel.gd")
+ const CombatState=preload("res://scripts/gameplay/combat_state.gd")
+ const RunSession=preload("res://scripts/gameplay/run_session.gd")
+ const WeaponPresentation=preload("res://scripts/gameplay/weapon_presentation.gd")
+@@ -62,7 +63,11 @@
+ 		var vector := direction.rotated(angle)
+ 		var travel:float=WeaponRig.range_distance(world.player_pos,pose.muzzle,vector,reach)
+ 		if travel<=.000001:continue
+-		world.bullets.append({"pos":pose.muzzle,"launch_start":pose.mount,"launch_end":pose.muzzle, "velocity":vector * world.stats.bullet_speed, "life":2.5 if weapon.behavior == "return" else maxf(.000001,travel / world.stats.bullet_speed), "damage":damage, "pierce":int(weapon.pierce) + int(world.stats.pierce), "hit":[], "weapon":id, "slot":slot, "returning":false,"outbound_left":travel / world.stats.bullet_speed})
++		var bullet:Dictionary={"pos":pose.muzzle,"launch_start":pose.mount,"launch_end":pose.muzzle, "velocity":vector * world.stats.bullet_speed, "life":2.5 if weapon.behavior == "return" else maxf(.000001,travel / world.stats.bullet_speed), "damage":damage, "pierce":int(weapon.pierce) + int(world.stats.pierce), "hit":[], "weapon":id, "slot":slot, "returning":false,"outbound_left":travel / world.stats.bullet_speed}
++		if id=="return_disc":
++			var reel:=ScavengerReel.snapshot(session.build,catalog)
++			if not reel.is_empty():bullet.scavenger=reel
++		world.bullets.append(bullet)
+ 
+ func fire_chill(weapon:Dictionary,slot:int,damage:float)->void:
+ 	var reach:float=Rules.weapon_reach(weapon,world.stats)
+@@ -124,11 +129,12 @@
+ 	b.life -= step
+ 	hit_segment(b,previous,b.pos)
+ 
+-func advance_disc(b: Dictionary,dt: float) -> void:
++func advance_disc(b: Dictionary,dt: float) -> Array:
++	var sweeps:Array=[]
+ 	var remaining := minf(dt,maxf(0,b.life))
+ 	if not b.returning:
+ 		if b.has("launch_start"):advance_bullet(b,0)
+-		if b.life<=0:return
++		if b.life<=0:return sweeps
+ 		var outbound := minf(remaining,maxf(0,b.outbound_left))
+ 		if outbound > 0: advance_bullet(b,outbound)
+ 		b.outbound_left -= outbound
+@@ -140,10 +146,14 @@
+ 		var distance: float = b.pos.distance_to(world.player_pos)
+ 		if distance < 14:
+ 			b.life = -1
+-			return
++			return sweeps
+ 		b.velocity = (world.player_pos-b.pos).normalized() * world.stats.bullet_speed
++		var return_start:Vector2=b.pos
+ 		advance_bullet(b,minf(remaining,distance/world.stats.bullet_speed))
++		if ScavengerReel.valid_snapshot(b.get("scavenger")) and return_start.is_finite() and b.pos.is_finite() and return_start!=b.pos:
++			sweeps.append({"disc":b,"start":return_start,"end":b.pos})
+ 		if b.pos.distance_to(world.player_pos) < 14: b.life = -1
++	return sweeps
+ 
+ func fire_bankshot(weapon:Dictionary,slot:int,damage:float,area:Dictionary)->void:
+ 	var reach:float=Rules.weapon_reach(weapon,world.stats)
+--- v35/scripts/main.gd
++++ v36/scripts/main.gd
+@@ -1,4 +1,5 @@
+ extends Node2D
++const ScavengerReel=preload("res://scripts/gameplay/scavenger_reel.gd")
+ const StartingLoadouts = preload("res://scripts/gameplay/starting_loadouts.gd")
+ var starting_loadouts:Dictionary={}
+ var selected_loadout_id:String=StartingLoadouts.DEFAULT_ID
+@@ -705,6 +706,9 @@
+ 			for i in range(4):
+ 				var ray:=Vector2.from_angle(PI*.25+i*PI*.5)
+ 				draw_line(visual.pos+ray*7,visual.pos+ray*visual.radius,Color(.64,.94,1,.4 if settings.reduced_flashes else .7),2)
++		elif visual.kind=="scavenger_pickup":
++			if state not in ["title","dead","won"]:
++				draw_circle(visual.pos,visual.radius,Color(.55,.94,.76,.25 if settings.reduced_flashes else .5),false,1.5)
+ 		elif visual.kind=="bankshot_contact":
+ 			var tint:=Color(.65,.94,.83,.45 if settings.reduced_flashes else .8) if visual.guided else Color(1,.78,.35,.4 if settings.reduced_flashes else .75)
+ 			draw_circle(visual.pos,visual.radius,tint,false,1.5)
+@@ -758,6 +762,10 @@
+ 			if armed:draw_circle(b.pos,3,Color(1,.96,.8,.9))
+ 			continue
+ 		if b.get("weapon","") == "return_disc":
++			if state not in ["title","dead","won"] and b.get("returning",false) and ScavengerReel.valid_snapshot(b.get("scavenger")):
++				for pip in range(b.scavenger.maximum):
++					var offset:Vector2=Vector2((pip-(b.scavenger.maximum-1)*.5)*5,-14)
++					draw_rect(Rect2(b.pos+offset-Vector2(1.5,1.5),Vector2(3,3)),Color(.55,.94,.76,.55 if settings.reduced_flashes else .85) if pip<b.scavenger.remaining else Color(.4,.48,.44,.4),pip<b.scavenger.remaining,1.0)
+ 			draw_circle(b.pos,8,Color("98eaf6"),false,2)
+ 			draw_line(b.pos-Vector2(7,0).rotated(elapsed*16),b.pos+Vector2(7,0).rotated(elapsed*16),Color("e0faff"),2)
+ 			continue
+@@ -1022,7 +1030,8 @@
+ 			var requirement:String="a weapon type other than "+Rules.catalog_entry(catalog,excluded_weapon).name
+ 			required.append(requirement)
+ 			if not build.weapons.any(func(id):return id!=excluded_weapon):missing.append(requirement)
+-		view.synergy_status.append({"name":pair_data.name,"active":missing.is_empty(),"requires":required,"missing":missing,"description":pair_data.description})
++		var mechanism_description:String=ScavengerReel.describe(Rules.catalog_entry(catalog,"scavenger_reel")) if pair_data.id=="scavenger_return" else str(pair_data.description)
++		view.synergy_status.append({"name":pair_data.name,"active":missing.is_empty(),"requires":required,"missing":missing,"description":mechanism_description})
+ 	for id in effects.cooldowns: view.mechanics.cooldowns[id] = maxf(0,effects.cooldowns[id] - elapsed)
+ 	for i in range(build.weapons.size()):
+ 		var entry := Rules.catalog_entry(catalog,build.weapons[i]).duplicate(true)
+--- v35/scripts/rules.gd
++++ v36/scripts/rules.gd
+@@ -1,4 +1,5 @@
+ extends RefCounted
++const ScavengerReel=preload("res://scripts/gameplay/scavenger_reel.gd")
+ const WeaponTempering = preload("res://scripts/gameplay/weapon_tempering.gd")
+ ## Pure run rules; configuration owns balance, presentation owns no damage logic.
+ # These are the three existing rules, not an open-ended catalog effect engine.
+@@ -174,6 +175,7 @@
+ 				if _positive_number(entry.get("chill_duration")) and entry.chill_duration>10: errors.append("Chill exceeds duration budget")
+ 				if _positive_number(entry.get("chill_speed")) and entry.chill_speed>1: errors.append("Chill cannot accelerate")
+ 		elif entry.kind == "item":
++			if entry.id=="scavenger_reel" and ScavengerReel.definition(entry).is_empty():errors.append("Invalid Scavenger Reel profile")
+ 			if entry.id=="feedback_diode":
+ 				if not _positive_number(entry.get("feedback_damage")): errors.append("Invalid feedback damage")
+ 				elif entry.feedback_damage>1000: errors.append("Feedback exceeds damage budget")
+--- v35/tests/test_scavenger_reel.gd
++++ v36/tests/test_scavenger_reel.gd
+@@ -0,0 +1,75 @@
++extends SceneTree
++const Reel=preload("res://scripts/gameplay/scavenger_reel.gd")
++const Rules=preload("res://scripts/rules.gd")
++const Runtime=preload("res://scripts/gameplay/combat_runtime.gd")
++const AudioTeardown=preload("res://tests/support/audio_teardown.gd")
++var game
++var passed:=0
++var failures:Array=[]
++func check(value:bool,label:String)->void:
++	if value:passed+=1
++	else:failures.append(label)
++func _initialize()->void:call_deferred("run")
++func reset(mode_id:String)->void:
++	game._title();game._select_mode(mode_id);game._start_run(36036);game.set_process(false)
++	game.build.weapons=["return_disc"];game.build.items={"scavenger_reel":1};game._recompute();game.weapon_clocks=[999.0]
++	game.player_pos=Vector2(300,300);game.hero.position=game.player_pos;game.stats.bullet_speed=100.0;game.stats.pickup_radius=0.0
++	game.build.coins=0;game.build.coin_fraction=0.0;game.stats.coin_bonus=0.0;game.xp=0
++	game.combat_frame.area=game.config.arena
++func disc(remaining:int=3)->Dictionary:
++	var result:Dictionary={"pos":Vector2(400,300),"velocity":Vector2.LEFT*100,"life":2.0,"damage":1.0,"pierce":99,"hit":[],"weapon":"return_disc","slot":0,"returning":true,"outbound_left":0.0,"scavenger":Reel.snapshot(game.build,game.catalog)}
++	result.scavenger.remaining=remaining
++	return result
++func pickup(pos:Vector2,source:String="normal")->Dictionary:return {"pos":pos,"source":source,"xp":2,"coins":3}
++func run()->void:
++	game=load("res://main.tscn").instantiate();root.add_child(game);await process_frame;game.set_process(false)
++	check(Rules.validate_catalog(game.catalog).is_empty(),"expanded catalog valid")
++	var row:Dictionary=Rules.catalog_entry(game.catalog,"scavenger_reel")
++	check(row.price==28 and row.rarity=="rare" and row.effects.is_empty(),"unique bounded content")
++	check(Reel.describe(row).contains("3 normal/energy") and Reel.describe(row).contains("18.0 px"),"data-derived description")
++	var changed:Dictionary=row.duplicate(true);changed.return_pickup_limit=5.0;changed.return_pickup_radius=22.0
++	check(Reel.describe(changed).contains("5 normal/energy") and Reel.describe(changed).contains("22.0 px"),"custom valid numbers reflected")
++	for bad in [null,true,"3",2.5,0,9,NAN,INF]:
++		changed=row.duplicate(true);changed.return_pickup_limit=bad;check(Reel.definition(changed).is_empty(),"invalid quota rejected "+str(bad))
++	for value in [1,1.0,8,8.0]:
++		changed=row.duplicate(true);changed.return_pickup_limit=value;var p:=Reel.definition(changed);check(p.maximum is int and p.maximum==int(value),"integral catalog normalized "+str(value))
++	for mode_id in ["arena","rooms"]:
++		reset(mode_id)
++		var one:=Reel.snapshot(game.build,game.catalog);var two:=Reel.snapshot(game.build,game.catalog);one.remaining=0;one.sources.clear()
++		check(two.remaining==3 and two.sources.size()==2,"independent launch quota/sources "+mode_id)
++		var shot:=disc();var sw:Dictionary={"disc":shot,"start":Vector2(400,300),"end":Vector2(300,300)}
++		check(Reel.eligible(sw,pickup(Vector2(350,317))),"inside strict radius")
++		check(not Reel.eligible(sw,pickup(Vector2(350,318))),"exact tangent excluded")
++		check(not Reel.eligible(sw,pickup(Vector2(350,300),"medical")),"medical remote excluded")
++		check(not Reel.eligible({"disc":shot,"start":Vector2(350,300),"end":Vector2(350,300)},pickup(Vector2(350,300))),"zero segment excluded")
++		game.bullets=[shot];game.pickups=[pickup(Vector2(325,300)),pickup(Vector2(340,300)),pickup(Vector2(355,300)),pickup(Vector2(370,300))]
++		Runtime.step(game.combat_frame,.8)
++		check(game.pickups.size()==1 and game.pickups[0].pos==Vector2(325,300),"reverse pickup index consumes last three")
++		check(shot.scavenger.remaining==0 and game.xp==6 and game.build.coins==9,"three rewards once")
++		check(game.effect_visuals.filter(func(v):return v.kind=="scavenger_pickup").size()==3,"one visual per real intercept")
++		reset(mode_id);shot=disc();shot.pos=Vector2(314,300);game.bullets=[shot];game.pickups=[pickup(Vector2(313,300))]
++		Runtime.step(game.combat_frame,.01)
++		check(game.pickups.is_empty() and shot.scavenger.remaining==3,"physical contact precedence spends no quota")
++		reset(mode_id);game.stats.pickup_radius=30.0;shot=disc();shot.pos=Vector2(320,300);shot.scavenger.radius=1.0;game.stats.bullet_speed=260.0;game.bullets=[shot];game.pickups=[pickup(Vector2(320,300))]
++		Runtime.step(game.combat_frame,.05)
++		check(game.pickups.is_empty() and shot.scavenger.remaining==2,"postmagnet endpoint collection uses pre-move physical condition")
++		reset(mode_id);shot=disc();shot.life=.2;game.bullets=[shot];game.pickups=[pickup(Vector2(385,300))]
++		Runtime.step(game.combat_frame,.7)
++		check(game.bullets.is_empty() and game.pickups.is_empty() and shot.scavenger.remaining==2,"life clipped final segment still settles")
++		reset(mode_id);shot=disc();shot.returning=false;shot.outbound_left=.2;shot.velocity=Vector2.RIGHT*100;game.bullets=[shot];game.pickups=[pickup(Vector2(380,300))]
++		Runtime.step(game.combat_frame,.2)
++		check(game.pickups.size()==1 and shot.scavenger.remaining==3,"outbound-only no remote sweep")
++		reset(mode_id);shot=disc();game.bullets=[shot];game.pickups=[pickup(Vector2(350,300),"medical")]
++		Runtime.step(game.combat_frame,.8)
++		check(game.pickups.size()==1 and shot.scavenger.remaining==3,"medical remains on ground")
++		reset(mode_id);shot=disc();var second:=disc();game.bullets=[shot,second];game.pickups=[pickup(Vector2(350,300))]
++		Runtime.step(game.combat_frame,.8)
++		check(second.scavenger.remaining==2 and shot.scavenger.remaining==3,"descending bullet index wins")
++		reset(mode_id);shot=disc();game.bullets=[shot];game.pickups=[pickup(Vector2(350,300))];game.state="won"
++		Runtime.step(game.combat_frame,.8)
++		check(game.pickups.size()==1 and shot.scavenger.remaining==3,"terminal directstep no remote reward")
++		game._title();check(game.bullets.is_empty() and game.pickups.is_empty(),"title clears prior run state")
++	var audio_teardown=AudioTeardown.new();audio_teardown.prepare([game]);game.queue_free();await process_frame
++	await audio_teardown.finish(self)
++	print(JSON.stringify({"passed":passed,"failures":failures,"scope":"Scavenger Reel author focused validation"}))
++	quit(0 if failures.is_empty() else 1)
+--- v35/ui/moss_ui.gd
++++ v36/ui/moss_ui.gd
+@@ -1,4 +1,5 @@
+ extends CanvasLayer
++const ScavengerReel=preload("res://scripts/gameplay/scavenger_reel.gd")
+ ## Presentation only. All run state and transactions belong to the main controller.
+ signal intent(action: String, payload: Dictionary)
+ 
+@@ -83,7 +84,7 @@
+ 	if FileAccess.file_exists("res://assets/items/icon_manifest.json"):
+ 		var parsed = JSON.parse_string(FileAccess.get_file_as_string("res://assets/items/icon_manifest.json"))
+ 		if parsed is Dictionary: manifest = parsed
+-	for extra_path in ["res://assets/items/mechanism_icon_manifest.json", "res://assets/items/build_expansion_icon_manifest.json", "res://assets/items/cryo_icon_manifest.json", "res://assets/items/bankshot_icon_manifest.json", "res://assets/items/feedback_icon_manifest.json"]:
++	for extra_path in ["res://assets/items/mechanism_icon_manifest.json", "res://assets/items/build_expansion_icon_manifest.json", "res://assets/items/cryo_icon_manifest.json", "res://assets/items/bankshot_icon_manifest.json", "res://assets/items/feedback_icon_manifest.json", "res://assets/items/scavenger_icon_manifest.json"]:
+ 		if FileAccess.file_exists(extra_path):
+ 			var extra = JSON.parse_string(FileAccess.get_file_as_string(extra_path))
+ 			if extra is Dictionary:
+@@ -240,6 +241,9 @@
+ 	icon_cache[id] = tex; return tex
+ 
+ func _card(parent: Node, data: Dictionary, suffix := "", statuses: Array = [], compact:=false) -> VBoxContainer:
++	if data.get("id")=="scavenger_reel":
++		data=data.duplicate(true)
++		data.description=ScavengerReel.describe(data)
+ 	var p := PanelContainer.new(); parent.add_child(p)
+ 	var row := HBoxContainer.new(); p.add_child(row)
+ 	var image := TextureRect.new(); image.texture = icon(str(data.get("id", "")))

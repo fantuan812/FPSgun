@@ -43,7 +43,7 @@ func buttons(node:Node)->Array:
 	return found
 func run()->void:
 	game=load("res://scenes/main.tscn").instantiate();root.add_child(game);game.set_process(false)
-	check(game.catalog.weapons.size()==8 and game.catalog.items.size()==29,"catalog count unchanged")
+	check(game.catalog.weapons.size()==8 and game.catalog.items.size()==30 and game.catalog.items[-1].id=="scavenger_reel","exact expanded catalog count/last module")
 	for mode_id in ["arena","rooms"]:
 		for count in [2,3,4]:
 			var ids:Array=["cryo_sprayer","orbit_saw","rivet_gun","return_disc"].slice(0,count)

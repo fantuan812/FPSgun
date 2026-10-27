@@ -1,0 +1,19 @@
+--- rejected714/tests/test_modifier_copy.gd
++++ r2/tests/test_modifier_copy.gd
+@@ -1,4 +1,5 @@
+ extends SceneTree
++const CatalogHistory=preload("res://tests/support/v36_catalog_projection.gd")
+ const Rules=preload("res://scripts/rules.gd")
+ var checks:=0
+ var failures:Array=[]
+@@ -23,7 +24,9 @@
+  var changes:Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://docs/V22_MODIFIER_COPY.json"))
+  check(baseline.baseline_manifest_sha256=="6db84a927b27cebfe16770a70036fe6b8979b9e13fa11c039c60d678203fcf25","pinned immutable v21 baseline")
+  check(changes.allowed_text_changes.size()==4,"exactly four reviewed copy fields")
+- var masked_catalog:Dictionary=catalog.duplicate(true)
++ var history:Dictionary=CatalogHistory.project(catalog,FileAccess.get_file_as_string("res://data/catalog.json"))
++ check(history.pass,"exact v36 append-only declaration and original v35 byte identity")
++ var masked_catalog:Dictionary=history.catalog.duplicate(true)
+  check(catalog.get("weapon_tempering")==JSON.parse_string('{"max_tier":1,"primary_damage_multiplier":1.6}'),"exact v33 top-level profile separately asserted")
+  masked_catalog.erase("weapon_tempering") # Only the separately asserted addition leaves the old projection.
+  var masked_balance:Dictionary=balance.duplicate(true)

@@ -1,3 +1,17 @@
+# MossCircuit v36 — Scavenger Reel
+
+One rare unique28-scrap module turns Return Disc's actual return path into immediate collection of up to3 normal/energy pickups within18px per launched disc. Medicine is excluded; no added damage, reward multiplier, cargo or delayed arrival reward. Existing Scrap Mine and Arc Relay/Kill Cell source rules remain authoritative. The original reel icon, actual-prerequisite build text, quota pips and bounded Reduced-Flashes-aware pulse add no audio. See [exact simulation policy](docs/V36_SCAVENGER_REEL.md).
+
+Local verification is separately attributed: author revised717-input full suite124 scripts+import=125/125, independently raw-reviewed (104 cleanup fixtures/111 observations), not independently rerun wholesale. Exact PCK resources858, new-feature178/46/132/30, mixer236/views168, dedicatedSVG identity and PythonPCM38/safety3 passed. Old-catalog6/24 replay and expanded-catalog24 no-module combat controls are separate; expanded shop sequences are intentionally not fixed-seed-identical.
+
+Historical failures remain: the first714-input full suite117/125 failed eight old-catalog fixtures; strict test-only history projections preserved old hashes and assertions. The first independent packed audio-authority **single180-second gate timed out and remainsFAIL**. An instrumented178.371-second run is diagnostic only. A formally new two-process gate passed Arena435/79.960s and Rooms338/77.627s, covering773 assertions; each partition has180s, a **new total maximum360s**, not the original budget. The initial SVG numeric-layer fixture failure also remains recorded. Read the [full independent chronology](docs/validation/independent-v36/QA_REPORT.md).
+
+Four controlled native mode/size cases have18 original captures; supplied offers/discs are not ordinary acquisition. One unchanged-ELF defaultseed240102/Rivet/Arena attempt reached its first natural shop at124scrap and stopped,8 original captures, no reset/reroll/injection. **Reel was not acquired ordinarily.** Dummy has no physical output; Windows, listening, device latency, full campaign, all seeds, balance and performance remain unverified. Driver VSync warning is preserved.
+
+The exact resource pack and [manual restore/backup prerequisites](docs/DELIVERY.md) are locally verified, not claimed published to GitHub. Older sections below retain their exact accepted local history and refer to their own artifacts.
+
+---
+
 # MossCircuit v35 — two resolved player-feedback sounds
 
 Actual positive player HP loss triggers one short falling sound; a genuinely consumed Mirror Shell charge triggers one rising sound. These are original procedural, non-voice clips, not generic hit/VFX sounds. Other actions, music and speech remain silent. Two fixed one-voice players use gain 0.5; repeated same-cue requests replace, never queue. No gameplay RNG, damage, reward, timing or progression depends on audio.

@@ -1,0 +1,56 @@
+{
+  "status": "READ_ONLY_STATIC_SCAN_WHILE_ORIGINAL_AGGREGATE_CONTINUES",
+  "utc": "2026-10-27T03:39:09.775677+00:00",
+  "source_map_sha256": "a3bd6625e0d06e25251b10887a940a78267ea09023ad63be3879cc92b0fd5471",
+  "findings": [
+    {
+      "file": "tests/independent_cryo_shop.gd",
+      "sha256": "56efc315caf08f27ad47ff998f7040f0d9e33a2be82a1040aa6eaa329a92d4da",
+      "finding": "line22 current catalog items29; executed first aggregate FAIL confirmed separately"
+    },
+    {
+      "file": "tests/independent_feedback_shop.gd",
+      "sha256": "2c3a3c1c69741d12ef4683f1e865096a8e7e8e18d64a0817282587e99c18aecf",
+      "finding": "line24 exact ordered29 ITEM_IDS"
+    },
+    {
+      "file": "tests/independent_reservation_views.gd",
+      "sha256": "8a6be4c3389d3e89ad3feff54ee22eb9662a6ba88f5115ac1cec6268a1d2b879",
+      "finding": "line49 items29; per-entry UI coverage itself remains valid"
+    },
+    {
+      "file": "tests/test_bankshot_build.gd",
+      "sha256": "5ff51f370b6c5f35fd217fe356fda05cf36edbc72c075e840a1d351c244171ea",
+      "finding": "line24 items29 AND line27 historical v23 pair/link fixed[-2] now shifted"
+    },
+    {
+      "file": "tests/test_weapon_order.gd",
+      "sha256": "c6018c2cd64ae224648271fdb827e55ce3f60a82ec4f29d478bc7a9adacda001",
+      "finding": "line46 items29"
+    },
+    {
+      "file": "tests/test_upgrade_salvage.gd",
+      "sha256": "b626955de1d121b13cc38bde12075978f27442912266fd3395ac494c680ed620",
+      "finding": "line47 total37"
+    },
+    {
+      "file": "tests/independent_reservation_records.gd",
+      "sha256": "bd5337129e51336dd38d18916624630b74420a0edb4ac0e6f9afeb4d90a97dac",
+      "finding": "lines15-17 whole catalog317a / strippedtemper8800 / ordered29 IDs historical projection"
+    },
+    {
+      "file": "tests/test_modifier_copy.gd",
+      "sha256": "fd2b20f89a06b09dc9a428a287c3fec10b99802df49900111da0d439cd7e6039",
+      "finding": "lines36-43 assumes latesttail v26 thenv23 before v21 projection; must assert/remove onlyv36 first"
+    }
+  ],
+  "proposed_scope_only": "Six current size/orderedID constraints may explicitly append only Scavenger Reel while preserving old order. Historicalrawhashes317a/8800 andv21 projection must remain as strict prior-version controls via exactvalidatedinverse of only3 new append blocks; do not replace hashes or broad-mask future additions. Bankshot historicaltail offset likewise use verified old projection, not unexplained guessedoffset.",
+  "not_to_change": [
+    "Three existing tagstat thresholds",
+    "Local atlas manifest counts16/8/8",
+    "Medic damage29 or targetHP37 unrelated numbers",
+    "Old historical trace files/expectedoutputs",
+    "Production or frozen714 during current execution"
+  ],
+  "execution_status": "Only firstcryo_shop FAIL confirmed at this checkpoint; other findings are predicted mismatches pending real complete aggregate terminal. No edited source or reruns."
+}

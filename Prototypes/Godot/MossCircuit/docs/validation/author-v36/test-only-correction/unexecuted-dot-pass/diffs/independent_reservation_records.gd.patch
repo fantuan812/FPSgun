@@ -1,0 +1,47 @@
+--- rejected714/tests/independent_reservation_records.gd
++++ r2/tests/independent_reservation_records.gd
+@@ -1,4 +1,5 @@
+ extends SceneTree
++const CatalogHistory=preload("res://tests/support/v36_catalog_projection.gd")
+ const Rules=preload("res://scripts/rules.gd")
+ const Held=preload("res://scripts/gameplay/shop_reservation.gd")
+ const ITEM_IDS=["power_coil","cooling_fan","iron_plate","moss_patch","running_boots","salvage_magnet","lucky_chip","lens","capacitor","gear","pellet_pouch","recycler","arc_relay","kill_cell","dash_resin","mirror_shell","thorn_crown","blood_valve","scrap_mine","pulse_boots","return_spool","blast_fuse","echo_chamber","gravity_anchor","medic_seed","phase_capacitor","fracture_coil","bounce_guide","feedback_diode"]
+@@ -7,14 +8,36 @@
+ func ck(ok:bool,label:String)->void:
+  checks+=1
+  if not ok:failures.append(label)
++func projection_negatives(c:Dictionary,raw:String)->void:
++ var original:Dictionary=c.duplicate(true)
++ for which in range(9):
++  var bad:Dictionary=c.duplicate(true)
++  match which:
++   0:bad.items[-1].price=29
++   1:bad.items[0].price+=1
++   2:bad.items[-1].return_pickup_limit=4
++   3:bad.items.append(bad.items[-1].duplicate(true))
++   4:bad.mechanism_synergies[-1].description="unreviewed extra reward"
++   5:bad.affinity_links[-1]=["rail_lance","scavenger_reel"]
++   6:bad.items.reverse()
++   7:bad.mechanism_synergies.append(bad.mechanism_synergies[-1].duplicate(true))
++   8:bad.affinity_links.append(bad.affinity_links[-1].duplicate())
++  ck(not CatalogHistory.project(bad,raw).pass,"history projector rejects unrelated/undeclared mutation "+str(which))
++ ck(not CatalogHistory.project(c,raw+" ").pass,"history projector rejects altered original raw bytes")
++ ck(not CatalogHistory.project(c,raw.replace('"return_pickup_limit": 3','"return_pickup_limit": 4')).pass,"history projector rejects nonmatching new raw insertion")
++ ck(c==original,"history projection is input read-only")
+ func _initialize()->void:call_deferred("run")
+ func run()->void:
+  var c:Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://data/catalog.json"))
+- var catalog_bytes:String=FileAccess.get_file_as_string("res://data/catalog.json")
++ var expanded_bytes:String=FileAccess.get_file_as_string("res://data/catalog.json")
++ var history:Dictionary=CatalogHistory.project(c,expanded_bytes)
++ ck(history.pass,"exact v36 append-only declaration and original v35 byte identity")
++ var catalog_bytes:String=history.bytes
++ projection_negatives(c,expanded_bytes)
+  var declared_profile:String='  "weapon_tempering": {\n    "max_tier": 1,\n    "primary_damage_multiplier": 1.6\n  },\n'
+  ck(catalog_bytes.sha256_text()=="317a2d343ba1a005cd44cc1c2ee91e894adf059d77e57c24f7a5ee9439ec56a0","exact reviewed v33 catalog bytes, including only the authored tempering profile")
+  ck(catalog_bytes.count(declared_profile)==1 and catalog_bytes.replace(declared_profile,"").sha256_text()=="88002883c5f1141e8d9adf2f95418c81b52b397a44feee46946876bbf8a984d7","exact v27 bytes after removing ONLY the declared v33 profile: all IDs/order/prices/weights/links")
+- ck(c.items.map(func(e):return e.id)==ITEM_IDS,"exact ordered 29 module IDs")
++ ck(c.items.map(func(e):return e.id)==ITEM_IDS+["scavenger_reel"],"exact ordered 30 module IDs with old order preserved")
+  ck(c.weapons.map(func(e):return e.id)==["rivet_gun","scrap_shotgun","rail_lance","orbit_saw","return_disc","shock_mortar","cryo_sprayer","bankshot_driver"],"exact ordered eight weapon IDs")
+  ck(FileAccess.get_sha256("res://data/balance.json")=="180c521a222f737a93498768acccdb98e6bb93f606de7e6719f88261eb41815c","six existing upgrades and economy unchanged")
+  ck(FileAccess.get_sha256("res://data/encounters.json")=="853bb3699bb05c2ed1eb7d1c8dc3e51844428c233ffa3127ac035a2762a3f356","exact v32 encounter bytes; reviewed Amber Ram brace/copy only")

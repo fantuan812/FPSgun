@@ -1,0 +1,2501 @@
+{
+  "fixtures": [
+    {
+      "path": "tests/independent_actions.gd",
+      "raw_sha256": "6422edbd83b420e31c711517f9b37cd9aff684575d9e15d67b29954d10093228",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/independent_annulus_data.gd",
+      "raw_sha256": "dba57cf2d62c0666ca3bc98e882ca99eb398bcd34c8dccdb51b294bec9bd4a10",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/independent_annulus_runtime.gd",
+      "raw_sha256": "b8dc9dce2ac5ec066d0267f99c765976ffd444de6c4f9bba66c7d9b17da2c51b",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [
+        {
+          "line": 15,
+          "text": "g.build.items=items.duplicate(true);g._recompute();g.elapsed=10;g.hurt_clock=0"
+        }
+      ],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/independent_bankshot_contacts.gd",
+      "raw_sha256": "d2d2d440db753d371c008905b7125d7f82f2ee8aa4a83ab4980b777c21539d34",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/independent_bankshot_integration.gd",
+      "raw_sha256": "1a980850d7a2e2188194b7b8bf323cade52cc42362f48047bb7c9bd57fb27219",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [
+        {
+          "line": 14,
+          "text": "g.build.weapons=weapons.duplicate();g.build.items=items.duplicate();g.build.coins=1000;g.build.revision+=1;g._recompute()"
+        },
+        {
+          "line": 77,
+          "text": "g.build.weapons=[\"rivet_gun\"];g.build.items={};g._recompute()"
+        },
+        {
+          "line": 81,
+          "text": "fresh(mode,[\"bankshot_driver\"]);foe(Vector2(-90,0));b=fire();g.build.items={\"bounce_guide\":1};g._recompute();var next:Dictionary=fire()"
+        },
+        {
+          "line": 83,
+          "text": "g.build.items={};g._recompute();var after:Dictionary=fire();check(next.guide and not after.guide,mode+\" selling Guide does not rewrite existing launch\")"
+        }
+      ],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/independent_bankshot_trajectory.gd",
+      "raw_sha256": "809281e7d874e0b33b0cdaaeca1b58173903aba0067bfca9d94d4919582f178a",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/independent_brace_geometry.gd",
+      "raw_sha256": "f92114f5f8dbdce35aee34b1aa4d7835be9fa8739d2973d6dd8c4666e958d282",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/independent_brace_runtime.gd",
+      "raw_sha256": "7450a379b78e28fc736f8381c8f58a2efbdc6e62481fc6e21d6187cd6a75540f",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [
+        {
+          "line": 22,
+          "text": "g.build.weapons=[weapon];g.build.items=items.duplicate(true);g._recompute()"
+        }
+      ],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/independent_brood_assets.gd",
+      "raw_sha256": "ea216a7b4b3f67b0e74885a76c2798601220827729b783fd2b1847b64aa08ee1",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/independent_brood_events.gd",
+      "raw_sha256": "fc34783899079fd2de61700472589d0a956c12405b907b252cb0b0c55f14a5f6",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/independent_brood_parity.gd",
+      "raw_sha256": "58d23568dada92b42fc315fb45e26952b3991a4fea83c229b920d1ec1c93f9e6",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/independent_charger_assets.gd",
+      "raw_sha256": "b96f3bc8adf61ad6c82b4a6e7ab7db30810ff73b2388ef884e20ac094fa48f27",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/independent_charger_gameplay_parity.gd",
+      "raw_sha256": "5967a785e1e6f9b40bd8da1c78d75457357254454c497423b4a0393d87ad5fc3",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/independent_charger_lifecycle.gd",
+      "raw_sha256": "298f1f105b85d6066ec9ddeb0f4e4635fee404c113fb8e3c23b425d20969e37a",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/independent_core_reactions.gd",
+      "raw_sha256": "590b87dc748dab346f1aab690bccd6067a67b72b680dbf9a799a424f4fa060d8",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/independent_crawler_flanker.gd",
+      "raw_sha256": "03191a83ef69efbf6308011477e760da41eeedcb5a7e49078245f506348e8b7a",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/independent_crawler_hit_pipeline.gd",
+      "raw_sha256": "4cb6e67c8f0a92ce0a32ad51bdf09d3e410ae0f2110a05eef40da2a03770b5ad",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/independent_cryo_contract.gd",
+      "raw_sha256": "309b4584685c7653769c19c99a9bbf6603ba8ecb30daf86a91a0bc46ce14bf20",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [
+        {
+          "line": 14,
+          "text": "g.build.weapons=weapons.duplicate();g.build.items=items.duplicate();g.build.revision+=1;g._recompute()"
+        },
+        {
+          "line": 74,
+          "text": "g.build.items={};g._recompute();hit(e);check(near(e.hp,before-1.0) and marked(e),mode_id+\" module removal disables consume but keeps mark\")"
+        }
+      ],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/independent_cryo_shop.gd",
+      "raw_sha256": "56efc315caf08f27ad47ff998f7040f0d9e33a2be82a1040aa6eaa329a92d4da",
+      "initial_aggregate_pass": false,
+      "catalog_related_lines": [
+        {
+          "line": 15,
+          "text": "g._title();g._start_run(874205);g.build.weapons=weapons.duplicate();g.build.items=items.duplicate();g.build.coins=1000;g._recompute()"
+        },
+        {
+          "line": 20,
+          "text": "var c:Dictionary=g.catalog"
+        },
+        {
+          "line": 21,
+          "text": "check(Rules.validate_catalog(c).is_empty(),\"new catalog valid\")"
+        },
+        {
+          "line": 22,
+          "text": "check(c.weapons.size()==8 and c.items.size()==29 and Rules.catalog_entry(c,\"feedback_diode\").id==\"feedback_diode\" and Rules.catalog_entry(c,\"bankshot_driver\").id==\"bankshot_driver\" and Rules.catalog_entry(c,\"bounce_guide\").id==\"bounce_guide\",\"explicit v26 8+29 including reviewed additions\")"
+        },
+        {
+          "line": 26,
+          "text": "var pool:Array=Rules.weighted_pool(g.build,c);var coil:Dictionary=pool.filter(func(e):return e.id==\"fracture_coil\")[0]"
+        },
+        {
+          "line": 29,
+          "text": "g.build.items={\"fracture_coil\":1};g._recompute();var status:Dictionary=cold(g._view())"
+        },
+        {
+          "line": 33,
+          "text": "check(not Rules.weighted_pool(g.build,c).any(func(e):return e.id==\"fracture_coil\"),\"unique owned Coil filtered\")"
+        },
+        {
+          "line": 36,
+          "text": "for e in Rules.weighted_pool(g.build,c):check(e.weight>0 and e.weight<=6,\"positive capped exploration \"+e.id)"
+        },
+        {
+          "line": 39,
+          "text": "var stock:Array=Rules.draw_shop(g.build,c,rng1);check(stock==Rules.draw_shop(g.build,c,rng2),\"expanded seeded replay \"+str(i))"
+        },
+        {
+          "line": 65,
+          "text": "check(not Rules.validate_catalog(bad).is_empty(),\"reject invalid Cryo \"+field+\"=\"+str(bad_value))"
+        },
+        {
+          "line": 69,
+          "text": "check(not Rules.validate_catalog(bad).is_empty(),\"reject negative shatter damage\")"
+        },
+        {
+          "line": 71,
+          "text": "for pair in bad.mechanism_synergies:"
+        },
+        {
+          "line": 73,
+          "text": "check(not Rules.validate_catalog(bad).is_empty(),\"reject unknown alternate-weapon prerequisite\")"
+        },
+        {
+          "line": 78,
+          "text": "var report:Dictionary={\"checks\":checks,\"failures\":failures,\"scope\":\"independent controlled catalog/affinity/UI-view/transaction test; not native button interaction\"}"
+        }
+      ],
+      "planned_change": "Exact authorized module count/ID and/or strict3append historical projection; no runtime changes"
+    },
+    {
+      "path": "tests/independent_enemy_ui.gd",
+      "raw_sha256": "11c8eacfdfdffb7fe4634a4b1eeb066d694f51332d54bc25500d0696b4aa9444",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/independent_feedback_authority.gd",
+      "raw_sha256": "e733fc08d6ca4d3c16c6f3e8ae5a7abc415b5b96b4c20823da1b5ac5a96ba690",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [
+        {
+          "line": 46,
+          "text": "g.build.items=items.duplicate(true);g._recompute();g.effects.reset(g.build.items);g.hurt_clock=0;g.stats.hp=100;g.stats.dash_time=0"
+        }
+      ],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/independent_feedback_mixer.gd",
+      "raw_sha256": "1589fcbc740481bbc7cca47901a4dd355d9f6564778a935be3a7d5535b43552e",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [
+        {
+          "line": 72,
+          "text": "g.build.items={\"mirror_shell\":1} if mirror else {};g._recompute();g.effects.reset(g.build.items);requests.clear()"
+        }
+      ],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/independent_feedback_runtime.gd",
+      "raw_sha256": "dc802931a4774fe2cf1b466b15c1d5681a82a7dc56f7c3de28f0336dfb67dcae",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [
+        {
+          "line": 17,
+          "text": "g.build.items=items.duplicate(true);g._recompute();g.player_pos=Vector2(400,300);g.elapsed=10"
+        },
+        {
+          "line": 147,
+          "text": "var engine=Effects.new();engine.configure(g.catalog);engine.reset({\"feedback_diode\":1})"
+        }
+      ],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/independent_feedback_shop.gd",
+      "raw_sha256": "2c3a3c1c69741d12ef4683f1e865096a8e7e8e18d64a0817282587e99c18aecf",
+      "initial_aggregate_pass": false,
+      "catalog_related_lines": [
+        {
+          "line": 7,
+          "text": "const ITEMS=[\"power_coil\",\"cooling_fan\",\"iron_plate\",\"moss_patch\",\"running_boots\",\"salvage_magnet\",\"lucky_chip\",\"lens\",\"capacitor\",\"gear\",\"pellet_pouch\",\"recycler\",\"arc_relay\",\"kill_cell\",\"dash_resin\",\"mirror_shell\",\"thorn_crown\",\"blood_valve\",\"scrap_mine\",\"pulse_boots\",\"return_spool\",\"blast_fuse\",\"echo_chamber\",\"gravity_anchor\",\"medic_seed\",\"phase_capacitor\",\"fracture_coil\",\"bounce_guide\",\"feedback_diode\"]"
+        },
+        {
+          "line": 13,
+          "text": "g._title();g._select_mode(mode);g._start_run(826);g.build.items=items.duplicate();g._recompute();g.build.coins=200"
+        },
+        {
+          "line": 24,
+          "text": "ck(g.catalog.items.map(func(e):return e.id)==ITEMS,\"exact 29 module IDs and order\")"
+        },
+        {
+          "line": 25,
+          "text": "ck(g.catalog.weapons.map(func(e):return e.id)==[\"rivet_gun\",\"scrap_shotgun\",\"rail_lance\",\"orbit_saw\",\"return_disc\",\"shock_mortar\",\"cryo_sprayer\",\"bankshot_driver\"],\"exact 8 weapon IDs\")"
+        },
+        {
+          "line": 39,
+          "text": "ck(\"pulse_boots\" in Rules.shop_affinity(g.build,g.catalog).missing_ids,mode+\" diode biases partner\")"
+        },
+        {
+          "line": 45,
+          "text": "var compare:Dictionary=Rules.derive(g.config.player,only,g.catalog)"
+        },
+        {
+          "line": 52,
+          "text": "ck(\"feedback_diode\" in Rules.shop_affinity(g.build,g.catalog).missing_ids,mode+\" boots biases diode after sale\")"
+        }
+      ],
+      "planned_change": "Exact authorized module count/ID and/or strict3append historical projection; no runtime changes"
+    },
+    {
+      "path": "tests/independent_feedback_validation.gd",
+      "raw_sha256": "700ffcd8358c73398d9532d5fe807740df32f031efbc3d9cd0f8553c6d30bb9c",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [
+        {
+          "line": 9,
+          "text": "var c:Dictionary=JSON.parse_string(FileAccess.get_file_as_string(\"res://data/catalog.json\"))"
+        },
+        {
+          "line": 10,
+          "text": "ck(Rules.validate_catalog(c).is_empty(),\"valid current catalog\")"
+        },
+        {
+          "line": 11,
+          "text": "var expected:Dictionary=Rules.catalog_entry(c,\"feedback_diode\")"
+        },
+        {
+          "line": 14,
+          "text": "var bad:Dictionary=c.duplicate(true);Rules.catalog_entry(bad,\"feedback_diode\").max_stack=value"
+        },
+        {
+          "line": 15,
+          "text": "ck(not Rules.validate_catalog(bad).is_empty(),\"reject max_stack type=\"+str(typeof(value))+\" value=\"+str(value))"
+        },
+        {
+          "line": 17,
+          "text": "var bad:Dictionary=c.duplicate(true);Rules.catalog_entry(bad,\"feedback_diode\").feedback_damage=value"
+        },
+        {
+          "line": 18,
+          "text": "ck(not Rules.validate_catalog(bad).is_empty(),\"reject damage type=\"+str(typeof(value))+\" value=\"+str(value))"
+        },
+        {
+          "line": 20,
+          "text": "var bad:Dictionary=c.duplicate(true);Rules.catalog_entry(bad,\"feedback_diode\").erase(field)"
+        },
+        {
+          "line": 21,
+          "text": "ck(not Rules.validate_catalog(bad).is_empty(),\"reject missing \"+field)"
+        },
+        {
+          "line": 23,
+          "text": "var good:Dictionary=c.duplicate(true);Rules.catalog_entry(good,\"feedback_diode\").max_stack=numeric_one"
+        },
+        {
+          "line": 24,
+          "text": "ck(Rules.validate_catalog(good).is_empty(),\"accept numeric integral one\")"
+        }
+      ],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/independent_feedback_views.gd",
+      "raw_sha256": "a7699495dbfb120e760d5a125f8f36fd79ef21c9536d126d17c5254e1e5dd668",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/independent_focus_authority.gd",
+      "raw_sha256": "b2f012740b4125dbd5d378fd1c0ee51de5a1c75018a16217e483f9029d891fa7",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/independent_focus_combat.gd",
+      "raw_sha256": "37936f605d2a49d46296a715c4a80c07ae32021bcc1b565988c93a7345ed1d2e",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [
+        {
+          "line": 36,
+          "text": "g.build.weapons=ids.duplicate();g.build.items=items.duplicate(true);g._recompute()"
+        },
+        {
+          "line": 99,
+          "text": "ck(g.catalog.weapons.map(func(w):return w.id)==IDS,\"exact eight weapons retained in catalog order\")"
+        }
+      ],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/independent_focus_views.gd",
+      "raw_sha256": "cf080437986d7f5e14289be7729c8f325f780bb01e2ff15627b525e85694eca2",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/independent_modes.gd",
+      "raw_sha256": "b25030c24e4244c09379e7c4b761f5bc32dcf8dcfc06a4e3d0d7daddfb64bed8",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [
+        {
+          "line": 75,
+          "text": "check(g.build.items.is_empty() and g.build.levels.is_empty() and g.build.coin_fraction == 0.0 and g.build.coins == int(g.catalog.starting_coins),\"new run resets build and money \" + id)"
+        }
+      ],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/independent_modifier_compatibility.gd",
+      "raw_sha256": "a2b8f6a5fae755a511249b77903bc64b3a329e06c4f50e06f2ee8da1d49b1702",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [
+        {
+          "line": 16,
+          "text": "g.build.items=items.duplicate();g.build.weapons=weapons.duplicate();g.build.revision+=1;g._recompute()"
+        }
+      ],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/independent_policy_validation.gd",
+      "raw_sha256": "762fa4602e6c495aa8478f97826164a4329210fe2d1bc55a0e2da712bbf2500d",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/independent_qa.gd",
+      "raw_sha256": "f6c36695b197b31e1ee5489106a983c75d359d8f9dc384692e9c91d3494fecf1",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/independent_reservation_records.gd",
+      "raw_sha256": "bd5337129e51336dd38d18916624630b74420a0edb4ac0e6f9afeb4d90a97dac",
+      "initial_aggregate_pass": false,
+      "catalog_related_lines": [
+        {
+          "line": 4,
+          "text": "const ITEM_IDS=[\"power_coil\",\"cooling_fan\",\"iron_plate\",\"moss_patch\",\"running_boots\",\"salvage_magnet\",\"lucky_chip\",\"lens\",\"capacitor\",\"gear\",\"pellet_pouch\",\"recycler\",\"arc_relay\",\"kill_cell\",\"dash_resin\",\"mirror_shell\",\"thorn_crown\",\"blood_valve\",\"scrap_mine\",\"pulse_boots\",\"return_spool\",\"blast_fuse\",\"echo_chamber\",\"gravity_anchor\",\"medic_seed\",\"phase_capacitor\",\"fracture_coil\",\"bounce_guide\",\"feedback_diode\"]"
+        },
+        {
+          "line": 12,
+          "text": "var c:Dictionary=JSON.parse_string(FileAccess.get_file_as_string(\"res://data/catalog.json\"))"
+        },
+        {
+          "line": 13,
+          "text": "var catalog_bytes:String=FileAccess.get_file_as_string(\"res://data/catalog.json\")"
+        },
+        {
+          "line": 15,
+          "text": "ck(catalog_bytes.sha256_text()==\"317a2d343ba1a005cd44cc1c2ee91e894adf059d77e57c24f7a5ee9439ec56a0\",\"exact reviewed v33 catalog bytes, including only the authored tempering profile\")"
+        },
+        {
+          "line": 16,
+          "text": "ck(catalog_bytes.count(declared_profile)==1 and catalog_bytes.replace(declared_profile,\"\").sha256_text()==\"88002883c5f1141e8d9adf2f95418c81b52b397a44feee46946876bbf8a984d7\",\"exact v27 bytes after removing ONLY the declared v33 profile: all IDs/order/prices/weights/links\")"
+        },
+        {
+          "line": 17,
+          "text": "ck(c.items.map(func(e):return e.id)==ITEM_IDS,\"exact ordered 29 module IDs\")"
+        },
+        {
+          "line": 37,
+          "text": "var broken:Dictionary=c.duplicate(true);Rules.catalog_entry(broken,\"rail_lance\")[key]=value"
+        },
+        {
+          "line": 38,
+          "text": "ck(Held.create(b,broken,offer,0,1).is_empty(),\"invalid catalog \"+key+\" rejected before comparison \"+str(value))"
+        },
+        {
+          "line": 58,
+          "text": "# Catalog deletion is the other unknown-ID form; current visible held metadata is safe."
+        },
+        {
+          "line": 60,
+          "text": "g.catalog=g.catalog.duplicate(true);g.catalog.weapons=g.catalog.weapons.filter(func(e):return e.id!=\"rail_lance\")"
+        },
+        {
+          "line": 62,
+          "text": "ck(not g._buy(0,gen) and g.build.coins==coins and g.shop_generation==gen,\"removed catalog ID never charges\")"
+        },
+        {
+          "line": 63,
+          "text": "ck(g._view().offers[0].reserved and not g._view().offers[0].can_buy,\"removed catalog entry has safe reserved fallback card\")"
+        },
+        {
+          "line": 68,
+          "text": "var result:Dictionary={\"checks\":checks,\"failures\":failures,\"scope\":\"Strict v27 catalog-byte preservation after only reviewed v33 profile removal, and reviewed v32 encounter preservation plus malformed reservation/catalog type guards and actual held-card association. Corruption is controlled diagnostic input, not an observed ordinary-run occurrence.\"}"
+        }
+      ],
+      "planned_change": "Exact authorized module count/ID and/or strict3append historical projection; no runtime changes"
+    },
+    {
+      "path": "tests/independent_reservation_runtime.gd",
+      "raw_sha256": "a7c53f1902f824682c8d6516c04c52abc4843e06359a774505cf99f44e9bfaa0",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [
+        {
+          "line": 11,
+          "text": "var original_catalog:Dictionary"
+        },
+        {
+          "line": 24,
+          "text": "g._title();g.catalog=original_catalog.duplicate(true);g._select_mode(mode);g._start_run(28001)"
+        },
+        {
+          "line": 28,
+          "text": "var pool:Array=Rules.weighted_pool(g.build,g.catalog)"
+        },
+        {
+          "line": 36,
+          "text": "var pool:Array=Rules.weighted_pool(g.build,g.catalog).filter(func(e):return e.id!=exclude)"
+        },
+        {
+          "line": 53,
+          "text": "original_catalog=g.catalog.duplicate(true)"
+        },
+        {
+          "line": 62,
+          "text": "ck(g.reserved_offer.id==id and g.reserved_offer.price==Rules.catalog_entry(g.catalog,id).price and g.reserved_offer.slot==slot,\"held identity/price/slot\")"
+        },
+        {
+          "line": 91,
+          "text": "g.build.items={\"power_coil\":2,\"cooling_fan\":1};g.build.weapons=[\"rivet_gun\",\"return_disc\"]"
+        },
+        {
+          "line": 118,
+          "text": "ck(g.build.coins==coins-42 and g.build.revision==rev+1 and safe_state().rng==rngs,\"catalog replacement price/no refund/no draw\")"
+        },
+        {
+          "line": 120,
+          "text": "g.build.items={\"power_coil\":1,\"cooling_fan\":1,\"iron_plate\":1,\"running_boots\":1,\"moss_patch\":1,\"lens\":1,\"capacitor\":1,\"gear\":1};g._recompute();hold(1)"
+        },
+        {
+          "line": 125,
+          "text": "ck(g.build.items.feedback_diode==1 and g.build.coins==coins-28 and g.reserved_offer.is_empty() and g.shop_offers[1].sold,\"module charges exact catalog price once\")"
+        },
+        {
+          "line": 152,
+          "text": "if invalidation==\"unknown\":g.reserved_offer.id=\"not_a_catalog_id\""
+        },
+        {
+          "line": 168,
+          "text": "Rules.catalog_entry(g.catalog,\"feedback_diode\").price=29"
+        },
+        {
+          "line": 169,
+          "text": "snap=snapshot();ck(not g._buy(0,g.shop_generation) and snapshot()==snap,\"changed catalog price cannot silently charge differently\")"
+        },
+        {
+          "line": 210,
+          "text": "g.build.weapons=[];g.build.items={}"
+        },
+        {
+          "line": 212,
+          "text": "for entry in g.catalog.weapons+g.catalog.items:"
+        }
+      ],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/independent_reservation_views.gd",
+      "raw_sha256": "8a6be4c3389d3e89ad3feff54ee22eb9662a6ba88f5115ac1cec6268a1d2b879",
+      "initial_aggregate_pass": false,
+      "catalog_related_lines": [
+        {
+          "line": 39,
+          "text": "var offer:Dictionary=Rules.weighted_pool(g.build,g.catalog).filter(func(e):return e.id==id)[0].duplicate(true)"
+        },
+        {
+          "line": 48,
+          "text": "ck(g.catalog.weapons.map(func(e):return e.id)==expected_ids,\"exact eight weapon IDs and order\")"
+        },
+        {
+          "line": 49,
+          "text": "ck(g.catalog.items.size()==29,\"exact 29-module catalog count\")"
+        },
+        {
+          "line": 53,
+          "text": "for entry in g.catalog.weapons+g.catalog.items:"
+        },
+        {
+          "line": 100,
+          "text": "samples.append({\"mode\":mode,\"window\":[size.x,size.y],\"entries\":g.catalog.weapons.size()+g.catalog.items.size(),\"mapped_event\":\"synthetic InputEventAction ui_accept through Viewport.push_input\"})"
+        }
+      ],
+      "planned_change": "Exact authorized module count/ID and/or strict3append historical projection; no runtime changes"
+    },
+    {
+      "path": "tests/independent_resolution.gd",
+      "raw_sha256": "7b2bac7b1622f4d17f47c1440c572d71a34f52f6896a0fdf8855131d88424aa0",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [
+        {
+          "line": 12,
+          "text": "g.build.items={\"power_coil\":2};g._recompute();g.stats.hp=50"
+        }
+      ],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/independent_room_boundaries.gd",
+      "raw_sha256": "667510d2bb97d93d503f3b07756332071c20f4eddbdfc1bca3376088011d47d0",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [
+        {
+          "line": 25,
+          "text": "g.build.items={\"power_coil\":2}"
+        },
+        {
+          "line": 69,
+          "text": "check(g.wave==2 and g.build.coins==credited and g.build.items==build_items and g.build.items.get(\"power_coil\",0)==2 and g.build.levels.get(\"speed\",0)==1,\"post-settlement callbacks cannot duplicate payout or reset build\")"
+        },
+        {
+          "line": 91,
+          "text": "check(g.state==\"playing\" and g.wave==1 and g.mode.clear_elapsed==0 and g.build.coins==int(g.catalog.starting_coins),\"title restart cancels stale clear timer and reward\")"
+        }
+      ],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/independent_salvage_runtime.gd",
+      "raw_sha256": "34c8cf3030ece6e52134730d94c846e37dd0abcd836d1d9af9e8d8ae826905dd",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [
+        {
+          "line": 104,
+          "text": "g.build.items={\"pulse_boots\":1,\"feedback_diode\":1,\"mirror_shell\":1};g._recompute()"
+        },
+        {
+          "line": 116,
+          "text": "var held_entry:Dictionary=Rules.weighted_pool(g.build,g.catalog).filter(func(e):return e.id==\"rail_lance\")[0].duplicate(true)"
+        }
+      ],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/independent_salvage_views.gd",
+      "raw_sha256": "e5551d3349d79a2f7f7e4b67d32800ab0663e73ed28c188e8b52fdfc3bec8fe3",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/independent_scavenger_authority.gd",
+      "raw_sha256": "c1e522c003eb81fe3efe0d293d264805b4ca233f7aceeca388ac0cedf59e42d6",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [
+        {
+          "line": 16,
+          "text": "g.build.weapons=[\"return_disc\"];g.build.items=items.duplicate(true);g._recompute();g.weapon_clocks=[999.0]"
+        },
+        {
+          "line": 29,
+          "text": "var profile:Dictionary=Reel.profile(owned,g.catalog)"
+        },
+        {
+          "line": 31,
+          "text": "ck(Reel.profile({\"items\":{}},g.catalog).is_empty(),\"unowned disabled\")"
+        },
+        {
+          "line": 32,
+          "text": "var old:Dictionary=g.catalog.duplicate(true);old.items=old.items.filter(func(v):return v.id!=\"scavenger_reel\")"
+        },
+        {
+          "line": 33,
+          "text": "ck(Reel.profile(owned,old).is_empty(),\"historical catalog absent disabled\")"
+        },
+        {
+          "line": 35,
+          "text": "var c:Dictionary=g.catalog.duplicate(true)"
+        },
+        {
+          "line": 42,
+          "text": "var c:Dictionary=g.catalog.duplicate(true)"
+        },
+        {
+          "line": 45,
+          "text": "ck(Reel.profile(owned,c).is_empty(),\"reject catalog \"+field+str(bad))"
+        },
+        {
+          "line": 46,
+          "text": "ck(not Rules.validate_catalog(c).is_empty(),\"catalog validator agrees \"+field+str(bad))"
+        },
+        {
+          "line": 47,
+          "text": "var a:Dictionary=Reel.snapshot(owned,g.catalog);var b:Dictionary=Reel.snapshot(owned,g.catalog)"
+        }
+      ],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/independent_scavenger_events.gd",
+      "raw_sha256": "4c53b0253dbb326144efb3691c72c096f76fa2d62605420b42b0734d9917fe86",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [
+        {
+          "line": 22,
+          "text": "g._title();g._select_mode(mode);g._start_run(3602);g.build.weapons=[\"return_disc\"];g.build.items=items.duplicate(true);g._recompute();g.weapon_clocks=[999.]"
+        }
+      ],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/independent_scavenger_settlement.gd",
+      "raw_sha256": "977a758021b2ac15b8aadbee12919ff869953a54d1e9513452f9fdb2a733b192",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [
+        {
+          "line": 16,
+          "text": "g._title();g._select_mode(mode);g._start_run(3604);g.build.weapons=[\"return_disc\"];g.build.items={\"scavenger_reel\":1};g._recompute();g.weapon_clocks=[999.];g.player_pos=Vector2(300,300);g.hero.position=g.player_pos;g.stats.pickup_radius=0.;g.stats.bullet_speed=100.;g.stats.coin_bonus=0.;g.build.coins=0;g.build.coin_fraction=0.;g.xp=0;g.spawn_clock=999.;g.combat_frame.area=g.config.arena"
+        }
+      ],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/independent_scavenger_views.gd",
+      "raw_sha256": "52995e143ca9e4ea163aff618948ff14b30bf37eea84bef6fd72594aaca3cc0f",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [
+        {
+          "line": 12,
+          "text": "g._title();g._select_mode(mode);g._start_run(3603);g.build.weapons=ids.duplicate();g.build.items=items.duplicate(true);g._recompute();g.weapon_clocks=[]"
+        },
+        {
+          "line": 35,
+          "text": "var original_catalog:Dictionary=g.catalog"
+        },
+        {
+          "line": 42,
+          "text": "var compatibility:Dictionary=g.catalog.duplicate(true);compatibility.mechanism_synergies[0].erase(\"id\");g.catalog=compatibility"
+        },
+        {
+          "line": 43,
+          "text": "ck(Rules.validate_catalog(g.catalog).is_empty(),\"old mechanism optional id remains valid\")"
+        },
+        {
+          "line": 44,
+          "text": "var legacy:Dictionary=g._view();ck(legacy.synergy_status[0].description==compatibility.mechanism_synergies[0].description,\"optional id legacy view unchanged\")"
+        },
+        {
+          "line": 45,
+          "text": "g.catalog=original_catalog"
+        },
+        {
+          "line": 48,
+          "text": "var e:Dictionary=Rules.catalog_entry(g.catalog,\"scavenger_reel\").duplicate(true);e.sold=false;g.shop_offers=[e];var before:=authority();g._render_shop();await process_frame;await process_frame"
+        },
+        {
+          "line": 64,
+          "text": "g.catalog=original_catalog"
+        }
+      ],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/independent_settlement_types.gd",
+      "raw_sha256": "a65145d1613995ba83703071b685371b123546daaebcc1c0bbaa5bd46c54fc13",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/independent_shop.gd",
+      "raw_sha256": "b480c22f4e37170f02894373e924a6f2f153f025f57940174c7419f002d23953",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [
+        {
+          "line": 14,
+          "text": "var c: Dictionary = JSON.parse_string(FileAccess.get_file_as_string(\"res://data/catalog.json\"))"
+        },
+        {
+          "line": 19,
+          "text": "var pool: Array = Rules.weighted_pool(build,c)"
+        },
+        {
+          "line": 23,
+          "text": "pool = Rules.weighted_pool(build,c)"
+        },
+        {
+          "line": 29,
+          "text": "pool = Rules.weighted_pool(build,c)"
+        },
+        {
+          "line": 32,
+          "text": "check(is_equal_approx(row(Rules.weighted_pool(build,c),\"return_spool\").weight,1),\"sell rebuild restores neutral\")"
+        },
+        {
+          "line": 35,
+          "text": "pool = Rules.weighted_pool(build,c)"
+        },
+        {
+          "line": 45,
+          "text": "if Rules.draw_shop(neutral,c,r,1)[0].id == \"return_spool\":hits_neutral += 1"
+        },
+        {
+          "line": 47,
+          "text": "if Rules.draw_shop(boosted,c,r,1)[0].id == \"return_spool\":hits_boosted += 1"
+        },
+        {
+          "line": 50,
+          "text": "var offers: Array = Rules.draw_shop(boosted,c,r,4)"
+        },
+        {
+          "line": 55,
+          "text": "check(offers == Rules.draw_shop(boosted,c,r,4),\"same seed same offers \" + str(seed_value))"
+        }
+      ],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/independent_spitter_assets.gd",
+      "raw_sha256": "1ac409023d808cab53b1f5a9d3062ff55ed369260725698cec0d720cf023e40f",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/independent_spitter_events.gd",
+      "raw_sha256": "881f473245fc9adc6428a49e68242e82d76a820d3dcdfe6f6676983b47e2c380",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/independent_spitter_parity.gd",
+      "raw_sha256": "128c828eb30f2b1e2fa7b1a413f5a8474af7e34d1b27c99fb7ea6019fc01b66c",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/independent_starting_loadout_views.gd",
+      "raw_sha256": "7a8057895df4009a37544924df3a7f8055e6f8e1f3d9da8ed42b3678d66405fa",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/independent_starting_loadouts.gd",
+      "raw_sha256": "ffd7770e2d931f0f2336e68b159cc7f9e7b26cab9a92ed63d88f48a01e1c6749",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [
+        {
+          "line": 44,
+          "text": "ck(g.build.items=={} and g.build.levels=={} and g.build.revision==0 and same(g.build.coin_fraction,0.0),label+\" no hidden modifiers/fraction/revision\")"
+        },
+        {
+          "line": 61,
+          "text": "var original:Dictionary=g.starting_loadouts.duplicate(true);var catalog:Dictionary=g.catalog.duplicate(true)"
+        },
+        {
+          "line": 63,
+          "text": "ck(Kits.validate(original,catalog).is_empty(),\"shipped parsed registry valid\")"
+        },
+        {
+          "line": 65,
+          "text": "var row:Dictionary=Kits.entry(original,catalog,id);var e:Dictionary=EXPECT[id]"
+        },
+        {
+          "line": 67,
+          "text": "var b:Dictionary=Kits.make_build(original,catalog,id);var expect:Dictionary=Rules.new_build(catalog);expect.weapons=[e.weapon];expect.coins=e.coins"
+        },
+        {
+          "line": 70,
+          "text": "ck(g.starting_loadouts==original and g.catalog==catalog and Kits.entry(original,catalog,id).weapon==e.weapon,\"detached row/build \"+id)"
+        },
+        {
+          "line": 71,
+          "text": "ck(same(Kits.make_build(original,catalog,\"rivet\"),Rules.new_build(catalog)),\"default factory exact bytes\")"
+        },
+        {
+          "line": 72,
+          "text": "for bad in [null,true,false,0,0.5,\"bad\",[],Vector2.ONE]:ck(not Kits.validate(bad,catalog).is_empty(),\"wrong registry root\")"
+        },
+        {
+          "line": 74,
+          "text": "var d:Dictionary=original.duplicate(true);d.erase(key);ck(not Kits.validate(d,catalog).is_empty(),\"missing \"+key)"
+        },
+        {
+          "line": 76,
+          "text": "var d:Dictionary=original.duplicate(true);d.version=bad;ck(not Kits.validate(d,catalog).is_empty(),\"bad registry version\")"
+        },
+        {
+          "line": 78,
+          "text": "var d:Dictionary=original.duplicate(true);d.default_id=bad;ck(not Kits.validate(d,catalog).is_empty(),\"bad default\")"
+        },
+        {
+          "line": 80,
+          "text": "var d:Dictionary=original.duplicate(true);d.loadouts=rows;ck(not Kits.validate(d,catalog).is_empty(),\"bad rows\")"
+        },
+        {
+          "line": 84,
+          "text": "ck(not Kits.validate(too_many,catalog).is_empty(),\"more than eight rows rejected\")"
+        },
+        {
+          "line": 85,
+          "text": "var missing:Dictionary=original.duplicate(true);missing.loadouts.remove_at(0);ck(not Kits.validate(missing,catalog).is_empty(),\"missing default row\")"
+        },
+        {
+          "line": 87,
+          "text": "var d:Dictionary=original.duplicate(true);d.loadouts[1].erase(key);ck(not Kits.validate(d,catalog).is_empty(),\"missing row \"+key)"
+        },
+        {
+          "line": 90,
+          "text": "var d:Dictionary=original.duplicate(true);d.loadouts[1][key]=bad;ck(not Kits.validate(d,catalog).is_empty(),\"invalid row text \"+key)"
+        },
+        {
+          "line": 92,
+          "text": "var d:Dictionary=original.duplicate(true);d.loadouts[1].weapon=bad;ck(not Kits.validate(d,catalog).is_empty(),\"invalid weapon reference\")"
+        },
+        {
+          "line": 94,
+          "text": "var d:Dictionary=original.duplicate(true);d.loadouts[1].starting_scrap=bad;ck(not Kits.validate(d,catalog).is_empty(),\"invalid scrap\")"
+        },
+        {
+          "line": 96,
+          "text": "var d:Dictionary=original.duplicate(true);d.loadouts[1].starting_scrap=valid;ck(Kits.validate(d,catalog).is_empty() and Kits.make_build(d,catalog,\"scatter\").coins==int(valid),\"finite integral scrap accepted\")"
+        },
+        {
+          "line": 99,
+          "text": "ck(not Kits.validate(d,catalog).is_empty(),\"legacy default mismatch \"+field)"
+        },
+        {
+          "line": 100,
+          "text": "var duplicate:Dictionary=original.duplicate(true);duplicate.loadouts[1].id=\"rivet\";ck(not Kits.validate(duplicate,catalog).is_empty(),\"duplicate IDs\")"
+        },
+        {
+          "line": 102,
+          "text": "ck(Kits.entry(original,catalog,bad).is_empty() and Kits.make_build(original,catalog,bad).is_empty(),\"unknown/wrong lookup no fallback\")"
+        },
+        {
+          "line": 103,
+          "text": "var previews:Array=Kits.previews(original,catalog);ck(previews.size()==3,\"three preview rows\")"
+        },
+        {
+          "line": 105,
+          "text": "ck(row.weapon_readout==Readout.describe(Rules.catalog_entry(catalog,row.weapon),{},false),\"preview shared base readout\")"
+        },
+        {
+          "line": 107,
+          "text": "ck(original==g.starting_loadouts and catalog==g.catalog and Kits.previews(original,catalog)[0].weapon_readout.damage==15,\"previews detached/no catalog mutation\")"
+        },
+        {
+          "line": 135,
+          "text": "var offer:Dictionary=Rules.weighted_pool(g.build,g.catalog).filter(func(w):return w.id==other)[0].duplicate(true);offer.sold=false;g.shop_offers=[offer]"
+        },
+        {
+          "line": 140,
+          "text": "g.build.levels={\"damage\":2,\"health\":1};g.build.items={\"feedback_diode\":1};g._recompute();g.build.coin_fraction=.3"
+        }
+      ],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/independent_tag_authority.gd",
+      "raw_sha256": "ccc7a969ac9e375a5429ad6afe75ff53021201e76dd6a51de33d15e65ee973b9",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [
+        {
+          "line": 16,
+          "text": "g.build.weapons=weapons.duplicate();g.build.items=items.duplicate();g.build.coins=1000;g.build.revision+=1;g._recompute();g.elapsed=10;g.spawn_clock=999"
+        },
+        {
+          "line": 39,
+          "text": "var affinity:Dictionary=Rules.shop_affinity(g.build,g.catalog)"
+        },
+        {
+          "line": 41,
+          "text": "var before=state_projection();var catalog_before:Dictionary=g.catalog.duplicate(true)"
+        },
+        {
+          "line": 43,
+          "text": "check(state_projection()==before and g.catalog==catalog_before,label+\" repeated view no authority mutation\")"
+        },
+        {
+          "line": 44,
+          "text": "var rng:=RandomNumberGenerator.new();rng.seed=25025^92137;var stock=Rules.draw_shop(g.build,g.catalog,rng,4)"
+        },
+        {
+          "line": 45,
+          "text": "records.append({\"label\":label,\"counts\":c,\"state\":state_projection(),\"affinity\":affinity,\"weighted_pool\":Rules.weighted_pool(g.build,g.catalog),\"stock\":stock,\"stock_rng_after\":rng.state})"
+        },
+        {
+          "line": 48,
+          "text": "check(g.catalog.synergies.size()==EXPECTED_RULES.size(),\"exact three catalog definitions\")"
+        },
+        {
+          "line": 50,
+          "text": "var actual:Dictionary=g.catalog.synergies[i];var expected:Dictionary=EXPECTED_RULES[i]"
+        },
+        {
+          "line": 51,
+          "text": "check(actual.size()==expected.size() and actual.id==expected.id and actual.tag==expected.tag and actual.description==expected.description and (actual.threshold is float or actual.threshold is int) and float(actual.threshold)==3.0,\"exact unchanged catalog fields and order \"+str(i))"
+        },
+        {
+          "line": 53,
+          "text": "for e in g.catalog.weapons+g.catalog.items:"
+        }
+      ],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/independent_tag_views.gd",
+      "raw_sha256": "883ee051900cafc16f22d6b33a3841d61bddcdee61e21a3a4048841f742589a7",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [
+        {
+          "line": 18,
+          "text": "func snapshot()->String:return JSON.stringify([g.build,g.stats,g.rng.state,g.shop_rng.state,g.loot_rng.state,g.weapon_clocks,g.effects.cooldowns,g.shop_offers,g.catalog])"
+        },
+        {
+          "line": 28,
+          "text": "g.build.weapons=c[0].duplicate();g.build.items=c[1].duplicate();g.build.coins=1000;g._recompute()"
+        },
+        {
+          "line": 34,
+          "text": "if id==WEAPONS[i]:expected_count+=1;matching.append(Rules.catalog_entry(g.catalog,id).name)"
+        },
+        {
+          "line": 39,
+          "text": "check(r.description==g.catalog.synergies[i].description,\"unchanged catalog wording\")"
+        },
+        {
+          "line": 59,
+          "text": "g.build.items={};g._recompute();g._open_shop();g.shop_offers=[{\"id\":\"rail_lance\",\"sold\":false}];g._render_shop();await process_frame;await process_frame"
+        }
+      ],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/independent_tempering_authority.gd",
+      "raw_sha256": "360e07a6da179cfbd013a9a5196d7f4ace279baebb592593e53355a8aefedce0",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [
+        {
+          "line": 33,
+          "text": "g.build.weapons=ids.duplicate();g.build.items={\"power_coil\":1,\"arc_relay\":1,\"kill_cell\":1,\"mirror_shell\":1,\"echo_chamber\":1,\"phase_capacitor\":1,\"feedback_diode\":1,\"dash_resin\":1,\"pulse_boots\":1}"
+        },
+        {
+          "line": 88,
+          "text": "b.weapon_temper=[1,0];ck(Temper.tier_at(b,0,id)==1 and Temper.tier_at(b,1,id)==0,\"copy not type \"+id);eq(Temper.multiplier(b,g.catalog,0,id),1.6,\"factor \"+id);eq(Temper.multiplier(b,g.catalog,1,id),1,\"standard \"+id)"
+        },
+        {
+          "line": 89,
+          "text": "var alternate:Dictionary=g.catalog.duplicate(true);alternate.weapon_tempering.primary_damage_multiplier=1.25;eq(Temper.multiplier(b,alternate,0,id),1.25,\"factor comes from validated profile\")"
+        },
+        {
+          "line": 90,
+          "text": "for slot in [-1,2,999]:eq(Temper.multiplier(b,g.catalog,slot,id),1,\"invalid slot fallback\")"
+        },
+        {
+          "line": 91,
+          "text": "eq(Temper.multiplier(b,g.catalog,0,\"unknown\"),1,\"mismatched ID fallback\")"
+        },
+        {
+          "line": 93,
+          "text": "b.weapon_temper=invalid;var stable:Dictionary=b.duplicate(true);ck(not Temper.metadata_error(b).is_empty(),\"malformed present \"+str(invalid));eq(Temper.multiplier(b,g.catalog,0,id),1,\"malformed no boost\");ck(same(b,stable),\"malformed not repaired\")"
+        },
+        {
+          "line": 121,
+          "text": "setup(mode,[kind,kind,kind]);g.build.items={};g._recompute();g.stats.hp=41.0;g.stats.dash_time=.04;g.stats.dash_cooldown=1.7"
+        }
+      ],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/independent_tempering_combat.gd",
+      "raw_sha256": "6998b34796b8d83e12862fc03251f79100ccb6416fdb63c2c16d647969651b5e",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [
+        {
+          "line": 18,
+          "text": "g._title();g._select_mode(mode);g._start_run(3302);g.build.weapons=[id,id];g.build.items=items.duplicate(true)"
+        },
+        {
+          "line": 59,
+          "text": "# Catalog intervals separately pinned by data preservation; direct literal assertion below."
+        }
+      ],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/independent_tempering_hint.gd",
+      "raw_sha256": "94310c8a3b5fa4b9f2daae92e0ec0335ef1da6c006596a58ac6b93ffa9bc13e1",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/independent_tempering_views.gd",
+      "raw_sha256": "7e90250f7f4c6bd283baef08f2cb0bbec4fc7f5a719fbe80d3ecd07268591af8",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [
+        {
+          "line": 22,
+          "text": "var e:Dictionary=Rules.catalog_entry(g.catalog,id).duplicate(true);e.sold=false;g.shop_offers=[e]"
+        },
+        {
+          "line": 50,
+          "text": "var coins:int=g.build.coins;var price:int=int(Rules.catalog_entry(g.catalog,id).price)"
+        },
+        {
+          "line": 52,
+          "text": "g.build.items={\"recycler\":2};g._recompute();coins=g.build.coins"
+        },
+        {
+          "line": 84,
+          "text": "ck(authority()==before and g.catalog.weapon_tempering.primary_damage_multiplier==1.6,\"detached projection no mutation\")"
+        }
+      ],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/independent_ui.gd",
+      "raw_sha256": "4e16c2ac308fd5e8f8e3c778b1fe64a5a024f3e9a413c3fa2942ab35fec5c933",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [
+        {
+          "line": 17,
+          "text": "for entry in game.catalog.weapons + game.catalog.items:"
+        }
+      ],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/independent_v2.gd",
+      "raw_sha256": "f2761662c8e62b15f129350d2fea4e05aa13cfba3acc51e345dcd13ea98528f3",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [
+        {
+          "line": 60,
+          "text": "for e in game.catalog.items.slice(0,8): game.build.items[e.id] = 1"
+        },
+        {
+          "line": 90,
+          "text": "for weapon in game.catalog.weapons:"
+        },
+        {
+          "line": 94,
+          "text": "for weapon in game.catalog.weapons:"
+        }
+      ],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/independent_v3.gd",
+      "raw_sha256": "45095ff03fae412a297dac1279c42d97be6033158db36ba1caee38090720ca1f",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/independent_v4.gd",
+      "raw_sha256": "2c75200ff0921c1ac4ee85ff757b643e6325abfa23342fbd531cc59f1d7bf342",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [
+        {
+          "line": 139,
+          "text": "for weapon in g.catalog.weapons:"
+        }
+      ],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/independent_v5.gd",
+      "raw_sha256": "d7a02eeeaa4f430a2e4b7142cbddf7cd7eefc40e71e0fd3cb23366671e267023",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/independent_vfx.gd",
+      "raw_sha256": "218936663fe0d620b6a4d801ae41daaa92213f1cb8754d08335adff3722c403c",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/independent_warden_reactions.gd",
+      "raw_sha256": "de3b0d24ee6c547745179475b27ce605b997ec07133e464ed1f2ded6dcce396e",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/independent_weapon_authority.gd",
+      "raw_sha256": "c884cea0779ca4a012c08577b943eb0ed4481c29bd1b4c18ca054bdfe67f9e3b",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [
+        {
+          "line": 17,
+          "text": "var ids:Array=g.catalog.weapons.map(func(w):return w.id);ids.sort();var expected_ids:Array=EXPECTED.keys();expected_ids.sort();check(ids==expected_ids,\"exact eight weapon IDs\")"
+        },
+        {
+          "line": 29,
+          "text": "g.build.weapons=[id];g.build.items=c.items.duplicate();g.build.levels=c.levels.duplicate();g.build.boss_protocol=c.boss;g.build.revision+=1;g._recompute()"
+        }
+      ],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/independent_weapon_order.gd",
+      "raw_sha256": "f581e743345b0440948f49ec186dce54cacf4655b4febdb3ca607eda23ca8d4c",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [
+        {
+          "line": 32,
+          "text": "g.build.weapons=ids.duplicate();g.build.items={\"power_coil\":1,\"fracture_coil\":1,\"pulse_boots\":1,\"feedback_diode\":1,\"mirror_shell\":1};g._recompute()"
+        },
+        {
+          "line": 68,
+          "text": "var actual_ids:Array=g.catalog.weapons.map(func(w):return w.id);actual_ids.sort();var pinned:Array=IDS.duplicate();pinned.sort();ck(actual_ids==pinned,\"exact eight current weapon IDs\")"
+        },
+        {
+          "line": 104,
+          "text": "setup(mode);g.catalog.weapon_slots=1;rejected(0,1,g.shop_generation,\"rivet_gun\",\"configured lower cap\");g.catalog.weapon_slots=4"
+        },
+        {
+          "line": 114,
+          "text": "setup(mode,[\"cryo_sprayer\",\"orbit_saw\"],[.11,.6]);g.build.items={\"fracture_coil\":1};g._recompute()"
+        },
+        {
+          "line": 135,
+          "text": "var held:Dictionary=g.reserved_offer.duplicate(true);var old_build:Dictionary=g.build.duplicate(true);var old_pool:Array=Rules.weighted_pool(g.build,g.catalog)"
+        },
+        {
+          "line": 139,
+          "text": "ck(g.reserved_offer==held and Rules.weighted_pool(g.build,g.catalog)==old_pool,\"held identity and weighted pool preserved\")"
+        },
+        {
+          "line": 140,
+          "text": "ck(Rules.draw_shop(old_build,g.catalog,expected_rng)==Rules.draw_shop(g.build,g.catalog,actual_rng) and expected_rng.state==actual_rng.state,\"same future shop draw/RNG after permutation\")"
+        },
+        {
+          "line": 152,
+          "text": "var rail:Dictionary=Rules.weighted_pool(g.build,g.catalog).filter(func(e):return e.id==\"rail_lance\")[0].duplicate(true);rail.sold=false;g.shop_offers=[rail]"
+        }
+      ],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/independent_weapon_order_views.gd",
+      "raw_sha256": "0ec081841b4b6017d0bb7aac44114a4b4055d00a6ef1f4952c379bb59c362b4f",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/independent_weapon_readouts.gd",
+      "raw_sha256": "d5b5ca82be01459b6f937e3525194f7a0b8708e0fdad419e91dff9bc6e979069",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [
+        {
+          "line": 16,
+          "text": "func snapshot()->Dictionary:return {\"build\":g.build.duplicate(true),\"stats\":g.stats.duplicate(true),\"rng\":[g.rng.state,g.loot_rng.state,g.shop_rng.state],\"clocks\":g.weapon_clocks.duplicate(),\"catalog\":g.catalog.duplicate(true)}"
+        },
+        {
+          "line": 20,
+          "text": "var ids:Array=g.catalog.weapons.map(func(w):return w.id);ids.sort();var expected_ids:Array=EXPECTED.keys();expected_ids.sort();check(ids==expected_ids,\"exact eight weapon IDs\")"
+        },
+        {
+          "line": 25,
+          "text": "g.build.weapons=[id];g.build.items={\"power_coil\":2,\"cooling_fan\":1,\"lens\":1,\"capacitor\":2,\"gear\":2,\"pellet_pouch\":2,\"fracture_coil\":1,\"echo_chamber\":1} if modified else {};g.build.revision+=1;g._recompute()"
+        },
+        {
+          "line": 55,
+          "text": "check(snapshot()==before,label+\" repeated view/UI no catalog/build/stats/RNG/clock mutation\")"
+        }
+      ],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/independent_weapon_rig.gd",
+      "raw_sha256": "2af84fd3bd5bc466dcc044c7ea0d7d2bc61c293a298443151b790aeb5741b57d",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [
+        {
+          "line": 76,
+          "text": "var reach:float=load(\"res://scripts/rules.gd\").catalog_entry(g.catalog,\"rivet_gun\").range*(1+g.stats.range_bonus)"
+        }
+      ],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/test_actor_actions.gd",
+      "raw_sha256": "3b790dabd7f4f80590fdaa4926916c40fb7736ccff2d146c50a48df4927da1f9",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/test_audio_teardown_predicate.gd",
+      "raw_sha256": "b751ca96db1cac008b46b6267c09e2b6356db7c40df4c28eb3bc532b8f9bd867",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/test_bankshot_build.gd",
+      "raw_sha256": "5ff51f370b6c5f35fd217fe356fda05cf36edbc72c075e840a1d351c244171ea",
+      "initial_aggregate_pass": false,
+      "catalog_related_lines": [
+        {
+          "line": 13,
+          "text": "g.build.weapons=[\"bankshot_driver\"];g.build.items=items.duplicate(true);g._recompute()"
+        },
+        {
+          "line": 22,
+          "text": "check(Rules.validate_catalog(g.catalog).is_empty(),\"catalog valid\")"
+        },
+        {
+          "line": 23,
+          "text": "var expected:Dictionary=JSON.parse_string(FileAccess.get_file_as_string(\"res://docs/V23_CATALOG_ADDITIONS.json\"))"
+        },
+        {
+          "line": 24,
+          "text": "check(g.catalog.version==5 and g.catalog.weapons.size()==8 and g.catalog.items.size()==29 and Rules.catalog_entry(g.catalog,\"feedback_diode\").id==\"feedback_diode\",\"explicit content version/count\")"
+        },
+        {
+          "line": 25,
+          "text": "check(Rules.catalog_entry(g.catalog,\"bankshot_driver\")==expected.weapon,\"entire reviewed weapon definition\")"
+        },
+        {
+          "line": 26,
+          "text": "check(Rules.catalog_entry(g.catalog,\"bounce_guide\")==expected.item,\"entire reviewed guide definition\")"
+        },
+        {
+          "line": 27,
+          "text": "check(g.catalog.mechanism_synergies[-2]==expected.pair and g.catalog.affinity_links[-2]==expected.link,\"exact additive pair/link\")"
+        },
+        {
+          "line": 29,
+          "text": "var bad:Dictionary=g.catalog.duplicate(true);Rules.catalog_entry(bad,\"bankshot_driver\").pierce=bad_value"
+        },
+        {
+          "line": 30,
+          "text": "check(not Rules.validate_catalog(bad).is_empty(),\"malformed Bankshot quota safely rejected \"+str(bad_value))"
+        },
+        {
+          "line": 33,
+          "text": "var bad:Dictionary=g.catalog.duplicate(true);Rules.catalog_entry(bad,\"bankshot_driver\")[field]=bad_value"
+        },
+        {
+          "line": 34,
+          "text": "check(not Rules.validate_catalog(bad).is_empty(),\"malformed Bankshot launch field safely rejected \"+field+str(bad_value))"
+        },
+        {
+          "line": 36,
+          "text": "var bad:Dictionary=g.catalog.duplicate(true);Rules.catalog_entry(bad,\"bounce_guide\").max_stack=bad_value"
+        },
+        {
+          "line": 37,
+          "text": "check(not Rules.validate_catalog(bad).is_empty(),\"malformed Guide uniqueness safely rejected \"+str(bad_value))"
+        },
+        {
+          "line": 70,
+          "text": "Status.apply_chill(e,g.elapsed,Rules.catalog_entry(g.catalog,\"cryo_sprayer\"));g.effects.echo_hits=0"
+        },
+        {
+          "line": 86,
+          "text": "check(not Rules.weighted_pool(g.build,g.catalog).any(func(x):return x.id==\"bounce_guide\"),\"unique owned guide excluded\")"
+        }
+      ],
+      "planned_change": "Exact authorized module count/ID and/or strict3append historical projection; no runtime changes"
+    },
+    {
+      "path": "tests/test_boundary_shot.gd",
+      "raw_sha256": "4178d20648df3dc647327c90c289ddcf90c64112a778b5f964408458544ed6f1",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/test_brood_actions.gd",
+      "raw_sha256": "6dc4a8a65ac1833af1920e7dad21d76de9e50e807d2489988e0912d106e238ff",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/test_brood_pulse.gd",
+      "raw_sha256": "e9575076e6ddbc92c23473b9d2708ce8eb26e40780ad40b69c6f707be081f577",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [
+        {
+          "line": 15,
+          "text": "g.build.items=items.duplicate(true);g._recompute()"
+        }
+      ],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/test_builds.gd",
+      "raw_sha256": "e55080b46f2ed0bf63aaf1ce9d097754149df0ca9d6cd69230979d98599dc474",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [
+        {
+          "line": 10,
+          "text": "var c: Dictionary = JSON.parse_string(FileAccess.get_file_as_string(\"res://data/catalog.json\"))"
+        },
+        {
+          "line": 12,
+          "text": "check(Rules.validate_catalog(c).is_empty(), \"catalog valid\")"
+        },
+        {
+          "line": 13,
+          "text": "check(not Rules.validate_catalog({}).is_empty(), \"empty catalog rejected\")"
+        },
+        {
+          "line": 16,
+          "text": "check(not Rules.validate_catalog(bad).is_empty(), \"zero interval rejected\")"
+        },
+        {
+          "line": 19,
+          "text": "check(not Rules.validate_catalog(bad).is_empty(), \"duplicate ID rejected\")"
+        },
+        {
+          "line": 22,
+          "text": "check(not Rules.validate_catalog(bad).is_empty(), \"text price rejected without crash\")"
+        },
+        {
+          "line": 25,
+          "text": "check(not Rules.validate_catalog(bad).is_empty(), \"unknown effect rejected\")"
+        }
+      ],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/test_charger_actions.gd",
+      "raw_sha256": "ca5399a86ff07eba4e181cc450e40b900738aa26b100450a7fba810766e7951e",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/test_combat_focus.gd",
+      "raw_sha256": "113b703b2ef7e6e4fced49977d0a3981a2be5045526edb67e1b1ab4cc856e175",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [
+        {
+          "line": 15,
+          "text": "g.build.weapons=ids.duplicate();g.build.items={\"echo_chamber\":1,\"mirror_shell\":1,\"phase_capacitor\":1};g._recompute()"
+        }
+      ],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/test_combat_hud_readability.gd",
+      "raw_sha256": "d0afdb08946fc8b7deb18209979f5a4a28f66fb80ce14d333c724513cb273c87",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/test_contact_enemy_actions.gd",
+      "raw_sha256": "ad19c93a5591ae78e70a138095ad62f487d11abe5467fdc9dcb5d4dcaf67a655",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/test_core_reactions.gd",
+      "raw_sha256": "2e7dd66fc21bac3491c964c3910a18fd14d2d5e9525b6c40a0808a1af801d88a",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/test_core_summon.gd",
+      "raw_sha256": "061996e5039c0c9d2068f20c8c6427bfe07e011246f30c689d4d33aba248757e",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/test_core_summon_assets.gd",
+      "raw_sha256": "aab4958a0a36eb78a12aef1dfac0e084b0f44a1058e40aef94a95cd9f6151638",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/test_crawler_hurt_registration.gd",
+      "raw_sha256": "9a5778ebf3258fcd20318f469df6e7245fbe42676f88e6816f0e76a4675efec4",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/test_cryo_build.gd",
+      "raw_sha256": "7692f11f02446ac1038a93a46111cf156a04f559cd6101e5f08c1bd3335f586d",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [
+        {
+          "line": 14,
+          "text": "g.build.weapons=[\"cryo_sprayer\"];g.build.items=items.duplicate(true);g._recompute()"
+        },
+        {
+          "line": 27,
+          "text": "var catalog:Dictionary=g.catalog"
+        },
+        {
+          "line": 28,
+          "text": "check(Rules.validate_catalog(catalog).is_empty(),\"new catalog valid\")"
+        },
+        {
+          "line": 29,
+          "text": "var cryo:Dictionary=Rules.catalog_entry(catalog,\"cryo_sprayer\")"
+        },
+        {
+          "line": 30,
+          "text": "var coil:Dictionary=Rules.catalog_entry(catalog,\"fracture_coil\")"
+        },
+        {
+          "line": 35,
+          "text": "var bad:Dictionary=catalog.duplicate(true);Rules.catalog_entry(bad,\"cryo_sprayer\")[key]=bad_value"
+        },
+        {
+          "line": 36,
+          "text": "check(not Rules.validate_catalog(bad).is_empty(),\"invalid cone field \"+key+str(bad_value))"
+        },
+        {
+          "line": 38,
+          "text": "var bad:Dictionary=catalog.duplicate(true);Rules.catalog_entry(bad,\"cryo_sprayer\")[values[0]]=values[1]"
+        },
+        {
+          "line": 39,
+          "text": "check(not Rules.validate_catalog(bad).is_empty(),\"bounded cone field \"+values[0])"
+        },
+        {
+          "line": 41,
+          "text": "var bad:Dictionary=catalog.duplicate(true);Rules.catalog_entry(bad,\"fracture_coil\").fracture_damage=bad_value"
+        },
+        {
+          "line": 42,
+          "text": "check(not Rules.validate_catalog(bad).is_empty(),\"invalid fracture damage \"+str(bad_value))"
+        },
+        {
+          "line": 121,
+          "text": "var fx=FX.new();fx.configure(catalog);fx.reset({\"fracture_coil\":1,\"echo_chamber\":1,\"phase_capacitor\":1});fx.echo_hits=4;fx.phase_charge=1"
+        },
+        {
+          "line": 132,
+          "text": "var build:Dictionary=Rules.new_build(catalog);build.coins=100;build.weapons=[\"cryo_sprayer\"]"
+        },
+        {
+          "line": 133,
+          "text": "var pool:Array=Rules.weighted_pool(build,catalog);var offer:Dictionary=pool.filter(func(e):return e.id==\"fracture_coil\")[0]"
+        },
+        {
+          "line": 135,
+          "text": "check(Rules.transaction(build,catalog,\"fracture_coil\")==\"\" and build.coins==72,\"module purchase price\")"
+        },
+        {
+          "line": 136,
+          "text": "check(not Rules.transaction(build,catalog,\"fracture_coil\").is_empty() and build.coins==72,\"unique duplicate rejected\")"
+        },
+        {
+          "line": 137,
+          "text": "check(not Rules.weighted_pool(build,catalog).any(func(e):return e.id==\"fracture_coil\"),\"owned unique removed from pool\")"
+        },
+        {
+          "line": 139,
+          "text": "check(Rules.transaction(build,catalog,\"cryo_sprayer\",2)==\"\" and build.coins==56 and build.weapons[2]==\"cryo_sprayer\",\"full-slot replacement exactly44\")"
+        }
+      ],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/test_discrete_ui_numbers.gd",
+      "raw_sha256": "f5c4c79e2d880d4d9453ba76b417de25a7a609c542395b194f0dd14ee7e095d4",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [
+        {
+          "line": 23,
+          "text": "var catalog: Dictionary = JSON.parse_string(FileAccess.get_file_as_string(\"res://data/catalog.json\"))"
+        },
+        {
+          "line": 24,
+          "text": "var offer: Dictionary = catalog.weapons[0].duplicate(true)"
+        },
+        {
+          "line": 26,
+          "text": "var module: Dictionary = catalog.items[0].duplicate(true)"
+        },
+        {
+          "line": 32,
+          "text": "var weapon: Dictionary = catalog.weapons[i].duplicate(true)"
+        }
+      ],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/test_effects.gd",
+      "raw_sha256": "7acaec2b284a285785221bb3d8cea0d93f040c0e65a571b9fa7529a940db517a",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [
+        {
+          "line": 72,
+          "text": "game.build.items={\"dash_resin\":1,\"pulse_boots\":1,\"scrap_mine\":1,\"blood_valve\":1}"
+        },
+        {
+          "line": 90,
+          "text": "game.build.items={\"mirror_shell\":1,\"thorn_crown\":1};game.effects.reset(game.build.items);game._recompute()"
+        },
+        {
+          "line": 96,
+          "text": "game.build.items={\"dash_resin\":1,\"arc_relay\":1,\"kill_cell\":1}"
+        }
+      ],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/test_encounters.gd",
+      "raw_sha256": "af874983aa3f25465cf90e9850bce989fcd17c50fa14cadc726eec115db30e28",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/test_expansion.gd",
+      "raw_sha256": "1e2c834e814ebfe239a2edeb8e28c30932b8b64dbf6c7ec0bb84dcebc9868ee0",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [
+        {
+          "line": 17,
+          "text": "var catalog: Dictionary = JSON.parse_string(FileAccess.get_file_as_string(\"res://data/catalog.json\"))"
+        },
+        {
+          "line": 18,
+          "text": "var build := Rules.new_build(catalog)"
+        },
+        {
+          "line": 20,
+          "text": "var pool := Rules.weighted_pool(build,catalog)"
+        },
+        {
+          "line": 28,
+          "text": "var a:=Rules.draw_shop(build,catalog,r1)"
+        },
+        {
+          "line": 29,
+          "text": "check(a==Rules.draw_shop(build,catalog,r2),\"seed operation replay\")"
+        },
+        {
+          "line": 35,
+          "text": "check(Rules.weighted_pool(build,catalog)==pool,\"zero money does not filter\")"
+        },
+        {
+          "line": 37,
+          "text": "check(not Rules.weighted_pool(build,catalog).any(func(e): return e.id==\"return_spool\"),\"max-stack filtered\")"
+        },
+        {
+          "line": 39,
+          "text": "check(Rules.weighted_pool(build,catalog).any(func(e): return e.id==\"shock_mortar\"),\"full slots allow replacing\")"
+        },
+        {
+          "line": 40,
+          "text": "for bad_key in catalog.shop_weighting:"
+        },
+        {
+          "line": 41,
+          "text": "var bad:=catalog.duplicate(true)"
+        },
+        {
+          "line": 43,
+          "text": "check(not Rules.validate_catalog(bad).is_empty(),\"bad weighting rejected \" + bad_key)"
+        },
+        {
+          "line": 72,
+          "text": "game.build.items={\"blast_fuse\":1}"
+        },
+        {
+          "line": 83,
+          "text": "game.build.items={}"
+        }
+      ],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/test_export_contract.gd",
+      "raw_sha256": "771ccf70e847d4ba3d2b0d569bb5056cd18b8dbdef6cc31269b101b7b1928c6b",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/test_feedback_diode.gd",
+      "raw_sha256": "af6d0909f6b462274ed1baa1ceee83ef4baa49e59f39223a2bc64f898b3c9aa6",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [
+        {
+          "line": 37,
+          "text": "check(Rules.validate_catalog(game.catalog).is_empty(),\"new catalog validates\")"
+        },
+        {
+          "line": 38,
+          "text": "var entry: Dictionary = Rules.catalog_entry(game.catalog,\"feedback_diode\")"
+        },
+        {
+          "line": 41,
+          "text": "var catalog: Dictionary = game.catalog.duplicate(true)"
+        },
+        {
+          "line": 42,
+          "text": "Rules.catalog_entry(catalog,\"feedback_diode\").feedback_damage=invalid"
+        },
+        {
+          "line": 43,
+          "text": "check(not Rules.validate_catalog(catalog).is_empty(),\"reject malformed damage \"+str(invalid))"
+        },
+        {
+          "line": 45,
+          "text": "var catalog: Dictionary = game.catalog.duplicate(true)"
+        },
+        {
+          "line": 46,
+          "text": "Rules.catalog_entry(catalog,\"feedback_diode\").max_stack=invalid"
+        },
+        {
+          "line": 47,
+          "text": "check(not Rules.validate_catalog(catalog).is_empty(),\"reject malformed uniqueness \"+str(invalid))"
+        },
+        {
+          "line": 85,
+          "text": "game.build.items={};game._recompute();game.build.items={\"feedback_diode\":1};game._recompute()"
+        }
+      ],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/test_feedback_mixer.gd",
+      "raw_sha256": "8a813ba3938a6cad4ff7dc9ae8b688cb7ed52c54de10d6b480b847abf9db1eb7",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [
+        {
+          "line": 34,
+          "text": "g.build.items={\"mirror_shell\":1} if mirror else {};g._recompute();g.effects.reset(g.build.items);g.hurt_clock=0;g.stats.dash_time=0"
+        }
+      ],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/test_feedback_teardown.gd",
+      "raw_sha256": "4be462488ef1cc162df5a4bec76c220f9724d7034188cbbb117869fbc36fa573",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/test_focus_fire.gd",
+      "raw_sha256": "c32be38c22d4ed467e1519b3befa69e2579fde9e58a488f2323b97f4ffcb42d5",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [
+        {
+          "line": 50,
+          "text": "setup(mode,id);var near:Dictionary=enemy(Vector2(0,50));var weapon:Dictionary=Rules.catalog_entry(g.catalog,id)"
+        },
+        {
+          "line": 64,
+          "text": "setup(mode,id);var w:Dictionary=Rules.catalog_entry(g.catalog,id);var r:float=Rules.weapon_reach(w,g.stats)"
+        }
+      ],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/test_game.gd",
+      "raw_sha256": "0be2b33d1de16a757ca5c8bcbc9d5d24954c8895ba309be8bd138e1bcbdaffe1",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/test_hud_layout.gd",
+      "raw_sha256": "b33c51105dd70601baeb0e86e53f0e070b6312c754450ca558cf21460b32fddf",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/test_input_lifecycle.gd",
+      "raw_sha256": "a010c0524276f0cce6a6d5d877a825be15f3fb76adac81f3bdf69a6226e087a5",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/test_modes.gd",
+      "raw_sha256": "cc68c456fc966170d874880402679dcd6e978d27f405548e51ea13765095d194",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [
+        {
+          "line": 41,
+          "text": "g.build.items={\"arc_relay\":1,\"return_spool\":1};g._recompute()"
+        },
+        {
+          "line": 65,
+          "text": "check(g.build.weapons==build_reference.weapons and g.build.items==build_reference.items,\"build preserved between stages\")"
+        }
+      ],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/test_modifier_copy.gd",
+      "raw_sha256": "fd2b20f89a06b09dc9a428a287c3fec10b99802df49900111da0d439cd7e6039",
+      "initial_aggregate_pass": false,
+      "catalog_related_lines": [
+        {
+          "line": 17,
+          "text": "func entry(c:Dictionary,id:String)->Dictionary:return Rules.catalog_entry(c,id)"
+        },
+        {
+          "line": 21,
+          "text": "var catalog:Dictionary=JSON.parse_string(FileAccess.get_file_as_string(\"res://data/catalog.json\"))"
+        },
+        {
+          "line": 26,
+          "text": "var masked_catalog:Dictionary=catalog.duplicate(true)"
+        },
+        {
+          "line": 27,
+          "text": "check(catalog.get(\"weapon_tempering\")==JSON.parse_string('{\"max_tier\":1,\"primary_damage_multiplier\":1.6}'),\"exact v33 top-level profile separately asserted\")"
+        },
+        {
+          "line": 28,
+          "text": "masked_catalog.erase(\"weapon_tempering\") # Only the separately asserted addition leaves the old projection."
+        },
+        {
+          "line": 31,
+          "text": "var additions:Dictionary=JSON.parse_string(FileAccess.get_file_as_string(\"res://docs/V23_CATALOG_ADDITIONS.json\"))"
+        },
+        {
+          "line": 32,
+          "text": "check(entry(catalog,\"bankshot_driver\")==additions.weapon and entry(catalog,\"bounce_guide\")==additions.item,\"exact v23 additions separately asserted\")"
+        },
+        {
+          "line": 33,
+          "text": "check(catalog.version==5,\"explicit new content version\")"
+        },
+        {
+          "line": 34,
+          "text": "var v26:Dictionary=JSON.parse_string(FileAccess.get_file_as_string(\"res://docs/V26_CATALOG_ADDITIONS.json\"))"
+        },
+        {
+          "line": 35,
+          "text": "check(entry(catalog,\"feedback_diode\")==v26.item,\"exact v26 module separately asserted\")"
+        },
+        {
+          "line": 36,
+          "text": "check(masked_catalog.mechanism_synergies[-1]==v26.pair and masked_catalog.affinity_links[-1]==v26.link,\"only reviewed v26 appended pair/link\")"
+        },
+        {
+          "line": 37,
+          "text": "masked_catalog.items=masked_catalog.items.filter(func(x):return x.id!=\"feedback_diode\")"
+        },
+        {
+          "line": 38,
+          "text": "masked_catalog.mechanism_synergies.pop_back();masked_catalog.affinity_links.pop_back()"
+        },
+        {
+          "line": 39,
+          "text": "masked_catalog.version=baseline.catalog.version"
+        },
+        {
+          "line": 40,
+          "text": "masked_catalog.weapons=masked_catalog.weapons.filter(func(x):return x.id!=\"bankshot_driver\")"
+        },
+        {
+          "line": 41,
+          "text": "masked_catalog.items=masked_catalog.items.filter(func(x):return x.id!=\"bounce_guide\")"
+        },
+        {
+          "line": 42,
+          "text": "check(masked_catalog.mechanism_synergies[-1]==additions.pair and masked_catalog.affinity_links[-1]==additions.link,\"only reviewed appended pair/link\")"
+        },
+        {
+          "line": 43,
+          "text": "masked_catalog.mechanism_synergies.pop_back();masked_catalog.affinity_links.pop_back()"
+        },
+        {
+          "line": 48,
+          "text": "if change.file==\"data/catalog.json\":"
+        },
+        {
+          "line": 49,
+          "text": "check(change.id in [\"power_coil\",\"cryo_sprayer\",\"fracture_coil\"],\"reviewed catalog entry\")"
+        },
+        {
+          "line": 50,
+          "text": "check(entry(baseline.catalog,change.id).description==change.before,\"baseline copy \"+change.id)"
+        },
+        {
+          "line": 51,
+          "text": "check(entry(catalog,change.id).description==change.after,\"new copy \"+change.id)"
+        },
+        {
+          "line": 53,
+          "text": "entry(masked_catalog,change.id).description=change.before"
+        },
+        {
+          "line": 63,
+          "text": "check(paths==[\"data/balance.json:haste\",\"data/catalog.json:cryo_sprayer\",\"data/catalog.json:fracture_coil\",\"data/catalog.json:power_coil\"],\"exact allowlist without duplicates\")"
+        },
+        {
+          "line": 64,
+          "text": "check(masked_catalog==baseline.catalog,\"all pre-v23 catalog IDs/numbers/tags/weights/other text exact\")"
+        },
+        {
+          "line": 66,
+          "text": "check(Rules.validate_catalog(catalog).is_empty(),\"catalog still valid\")"
+        },
+        {
+          "line": 67,
+          "text": "check(entry(catalog,\"power_coil\").description==\"Weapon damage +15%; fixed module damage unchanged.\",\"damage scope explicit\")"
+        },
+        {
+          "line": 68,
+          "text": "check(entry(catalog,\"cryo_sprayer\").description.contains(\"Instant\") and entry(catalog,\"cryo_sprayer\").description.contains(\"projectile bonuses do not\"),\"cone no-projectile scope explicit\")"
+        },
+        {
+          "line": 69,
+          "text": "check(entry(catalog,\"fracture_coil\").description.contains(\"fixed 16\") and entry(catalog,\"fracture_coil\").description.contains(\"weapon bonuses do not scale\"),\"fixed module scope explicit\")"
+        },
+        {
+          "line": 76,
+          "text": "var view:Dictionary=game._view();var offer:Dictionary=entry(catalog,id).duplicate(true)"
+        },
+        {
+          "line": 98,
+          "text": "var view:Dictionary=game._view();view.weapons=[entry(catalog,\"cryo_sprayer\").duplicate(true)];view.weapons[0].slot=0"
+        },
+        {
+          "line": 99,
+          "text": "view.items=[entry(catalog,\"power_coil\").duplicate(true),entry(catalog,\"fracture_coil\").duplicate(true)]"
+        },
+        {
+          "line": 102,
+          "text": "for id in [\"power_coil\",\"cryo_sprayer\",\"fracture_coil\"]:check(entry(catalog,id).description in labels(game.ui.modal),\"shared inventory exact copy \"+id)"
+        },
+        {
+          "line": 107,
+          "text": "print(JSON.stringify({\"modifier_copy_checks\":checks,\"failures\":failures,\"scope\":\"v22 four-field copy preservation within the old catalog; exact v23/v26/v33 additions separately asserted; native appearance separate\"}))"
+        }
+      ],
+      "planned_change": "Exact authorized module count/ID and/or strict3append historical projection; no runtime changes"
+    },
+    {
+      "path": "tests/test_player_feedback.gd",
+      "raw_sha256": "369035cc4da12d1446a0aaf24d993b479b248b8b103b91ee8828ab04b09f96c1",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [
+        {
+          "line": 14,
+          "text": "g.build.items={\"mirror_shell\":1,\"thorn_crown\":1,\"medic_seed\":1} if mirror else {\"thorn_crown\":1,\"medic_seed\":1}"
+        }
+      ],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/test_primary_brace.gd",
+      "raw_sha256": "3700bd135d33ae0ca59d8977c23197408b4d89a4f6765aa60b822b70e97654c8",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [
+        {
+          "line": 15,
+          "text": "g.build.weapons=[weapon];g.build.items={};g._recompute()"
+        }
+      ],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/test_resolution_validation.gd",
+      "raw_sha256": "d47fbc0d56b62fecab0dc87a6c1e46688dcba8a1d675a866321fe18d6d45e8d6",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [
+        {
+          "line": 25,
+          "text": "g.build.items={\"mirror_shell\":1,\"echo_chamber\":1,\"medic_seed\":1};g._recompute();g.effects.reset(g.build.items)"
+        }
+      ],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/test_scavenger_reel.gd",
+      "raw_sha256": "f69f614fad596ef8638f3939a85a05c69218996b0b1fd96f7a7dcf591ec7c198",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [
+        {
+          "line": 15,
+          "text": "game.build.weapons=[\"return_disc\"];game.build.items={\"scavenger_reel\":1};game._recompute();game.weapon_clocks=[999.0]"
+        },
+        {
+          "line": 20,
+          "text": "var result:Dictionary={\"pos\":Vector2(400,300),\"velocity\":Vector2.LEFT*100,\"life\":2.0,\"damage\":1.0,\"pierce\":99,\"hit\":[],\"weapon\":\"return_disc\",\"slot\":0,\"returning\":true,\"outbound_left\":0.0,\"scavenger\":Reel.snapshot(game.build,game.catalog)}"
+        },
+        {
+          "line": 26,
+          "text": "check(Rules.validate_catalog(game.catalog).is_empty(),\"expanded catalog valid\")"
+        },
+        {
+          "line": 27,
+          "text": "var row:Dictionary=Rules.catalog_entry(game.catalog,\"scavenger_reel\")"
+        },
+        {
+          "line": 35,
+          "text": "changed=row.duplicate(true);changed.return_pickup_limit=value;var p:=Reel.definition(changed);check(p.maximum is int and p.maximum==int(value),\"integral catalog normalized \"+str(value))"
+        },
+        {
+          "line": 38,
+          "text": "var one:=Reel.snapshot(game.build,game.catalog);var two:=Reel.snapshot(game.build,game.catalog);one.remaining=0;one.sources.clear()"
+        }
+      ],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/test_settlement_levels.gd",
+      "raw_sha256": "8acf3ae8914dc1166d21874921c492173fef9ec5d896dd8fb6c46cd1dedeb129",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/test_shop_offer_visibility.gd",
+      "raw_sha256": "3f4cea9d3a9aed708f16f5cd29c9305c862c9c25a4894fcfa39e4b73027bc5e5",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [
+        {
+          "line": 18,
+          "text": "for entry in game.catalog.weapons+game.catalog.items:"
+        },
+        {
+          "line": 54,
+          "text": "print(JSON.stringify({\"shop_offer_visibility_passed\":passed,\"failures\":failures,\"scope\":\"all32 catalog first-offer purchase rectangles and disclosure lifecycle at960x540; GUI separate\"}))"
+        }
+      ],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/test_shop_reservation.gd",
+      "raw_sha256": "8d8aa999c999dfda24a964d8a5848db81ff9e487ec9156edf0e0d4f3e5485c6f",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [
+        {
+          "line": 31,
+          "text": "var catalog:Dictionary=game.catalog"
+        },
+        {
+          "line": 32,
+          "text": "var build:Dictionary=Rules.new_build(catalog)"
+        },
+        {
+          "line": 36,
+          "text": "check(Hold.draw(build,catalog,rng,{}).offers==Rules.draw_shop(build,catalog,control,4) and rng.state==control.state,\"unheld exact draw/RNG \"+str(seed_value))"
+        },
+        {
+          "line": 39,
+          "text": "var record:=Hold.create(build,catalog,original,slot,10)"
+        },
+        {
+          "line": 45,
+          "text": "var expected:=Rules.draw_shop(build,catalog,control,3,[\"rail_lance\"])"
+        },
+        {
+          "line": 47,
+          "text": "var drawn:=Hold.draw(build,catalog,rng,record)"
+        },
+        {
+          "line": 52,
+          "text": "var short_catalog:=catalog.duplicate(true)"
+        },
+        {
+          "line": 53,
+          "text": "short_catalog.weapons=short_catalog.weapons.filter(func(w):return w.id==\"rail_lance\")"
+        },
+        {
+          "line": 54,
+          "text": "short_catalog.items=[]"
+        },
+        {
+          "line": 56,
+          "text": "var short_draw:=Hold.draw(short_build,short_catalog,rng,record)"
+        },
+        {
+          "line": 58,
+          "text": "var record:=Hold.create(build,catalog,offer(\"rail_lance\"),0,12)"
+        },
+        {
+          "line": 62,
+          "text": "check(not Hold.invalid_reason(build,catalog,broken).is_empty(),\"reject malformed \"+field+\":\"+str(bad))"
+        },
+        {
+          "line": 63,
+          "text": "check(not Hold.describe(build,catalog,broken).valid,\"safe invalid summary \"+field+\":\"+str(bad))"
+        },
+        {
+          "line": 118,
+          "text": "var rail:Dictionary=Rules.catalog_entry(game.catalog,\"rail_lance\");var price:Variant=rail.price;rail.price=43"
+        },
+        {
+          "line": 119,
+          "text": "held_state=snapshot();check(not game._buy(0,game.shop_generation) and snapshot()==held_state,\"no changed catalog price charge \"+mode)"
+        }
+      ],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/test_spitter_actions.gd",
+      "raw_sha256": "d1951f3a16018705630e66d17ca48dbf120265ec3616d3ed98f2d0ab5c0e42a3",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/test_starting_loadouts.gd",
+      "raw_sha256": "b08c9f02d1ffbb9900222efdda162de92c55b980978579647f14cc8ab9567011",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [
+        {
+          "line": 14,
+          "text": "var catalog:Dictionary=JSON.parse_string(FileAccess.get_file_as_string(\"res://data/catalog.json\"))"
+        },
+        {
+          "line": 16,
+          "text": "check(Loadouts.validate(data,catalog).is_empty(),\"shipped registry valid\")"
+        },
+        {
+          "line": 18,
+          "text": "check(Loadouts.make_build(data,catalog,\"rivet\")==Rules.new_build(catalog),\"default factory exact\")"
+        },
+        {
+          "line": 21,
+          "text": "var e:=Loadouts.entry(data,catalog,id);check(e.starting_scrap is int,\"normalized integer \"+id)"
+        },
+        {
+          "line": 23,
+          "text": "var rows:=Loadouts.previews(data,catalog);rows[0].weapon_readout.damage=-1"
+        },
+        {
+          "line": 27,
+          "text": "check(not Loadouts.validate(d,catalog).is_empty(),\"bad scrap \"+str(bad))"
+        },
+        {
+          "line": 30,
+          "text": "check(not Loadouts.validate(d,catalog).is_empty(),\"bad default \"+str(bad))"
+        },
+        {
+          "line": 33,
+          "text": "check(not Loadouts.validate(d,catalog).is_empty(),\"bad weapon \"+str(bad))"
+        },
+        {
+          "line": 37,
+          "text": "check(not Loadouts.validate(d,catalog).is_empty(),\"bad text \"+key)"
+        },
+        {
+          "line": 39,
+          "text": "check(not Loadouts.validate(duplicate,catalog).is_empty(),\"duplicate rejects\")"
+        },
+        {
+          "line": 41,
+          "text": "check(not Loadouts.validate(empty,catalog).is_empty(),\"empty rejects\")"
+        },
+        {
+          "line": 43,
+          "text": "check(Loadouts.validate(floating,catalog).is_empty() and Loadouts.make_build(floating,catalog,\"scatter\").coins is int,\"integral JSON float accepted\")"
+        },
+        {
+          "line": 51,
+          "text": "var row:=Loadouts.entry(data,catalog,id)"
+        },
+        {
+          "line": 58,
+          "text": "g.build.weapons=[\"cryo_sprayer\",\"rivet_gun\"];g.build.items={\"fracture_coil\":1};g.build.coins=999;g.state=\"dead\""
+        },
+        {
+          "line": 70,
+          "text": "check(g.build==Rules.new_build(catalog) and g.run.starting_loadout_id==\"rivet\",\"one argument always old Rivet regardless draft\")"
+        },
+        {
+          "line": 87,
+          "text": "var final_row:=Loadouts.entry(data,catalog,other)"
+        }
+      ],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/test_tag_synergy_progress.gd",
+      "raw_sha256": "7dcf6bab70578dfa42c81d834941afdb08d24ff1c613ca80225f3f977835edab",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [
+        {
+          "line": 14,
+          "text": "var c:Dictionary=JSON.parse_string(FileAccess.get_file_as_string(\"res://data/catalog.json\"))"
+        },
+        {
+          "line": 16,
+          "text": "var before_catalog:String=JSON.stringify(c)"
+        },
+        {
+          "line": 17,
+          "text": "check(Rules.validate_catalog(c).is_empty(),\"current fixed catalog valid\")"
+        },
+        {
+          "line": 20,
+          "text": "check(not Rules.validate_catalog(bad).is_empty(),\"invalid rule list rejected\")"
+        },
+        {
+          "line": 24,
+          "text": "check(not Rules.validate_catalog(bad).is_empty(),\"missing fixed field rejected \"+key)"
+        },
+        {
+          "line": 27,
+          "text": "check(not Rules.validate_catalog(bad).is_empty(),\"bad threshold rejected\")"
+        },
+        {
+          "line": 30,
+          "text": "check(not Rules.validate_catalog(bad).is_empty(),\"unknown fixed rule rejected\")"
+        },
+        {
+          "line": 32,
+          "text": "check(not Rules.validate_catalog(reordered).is_empty(),\"fixed authority order validated\")"
+        },
+        {
+          "line": 53,
+          "text": "var b:Dictionary=Rules.new_build(c);b.weapons=profile[0].duplicate();b.items=profile[1].duplicate()"
+        },
+        {
+          "line": 61,
+          "text": "check(row.id==c.synergies[i].id and row.tag==c.synergies[i].tag and row.threshold==3,\"fixed catalog identity\")"
+        },
+        {
+          "line": 63,
+          "text": "check(row.description==c.synergies[i].description,\"catalog effect description reused\")"
+        },
+        {
+          "line": 67,
+          "text": "if row.tag in Rules.catalog_entry(c,id).tags:matches+=1"
+        },
+        {
+          "line": 80,
+          "text": "game.build.weapons=profile[0].duplicate();game.build.items=profile[1].duplicate();game._recompute()"
+        },
+        {
+          "line": 96,
+          "text": "check(JSON.stringify(c)==before_catalog,\"catalog bytes/data unchanged\")"
+        }
+      ],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/test_telegraph_readability.gd",
+      "raw_sha256": "cab957dc1fb001f8cfc54e0a16ea6ae4fcc8f7afc3589ba2e8a0828d7228e1ce",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/test_tempered_combat.gd",
+      "raw_sha256": "2b694c42ab3d21fd7056f92212b8e8a85a157956e21df5124f9fb9588764ae56",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [
+        {
+          "line": 30,
+          "text": "var weapon:Dictionary=Rules.catalog_entry(game.catalog,id)"
+        },
+        {
+          "line": 46,
+          "text": "var weapon:Dictionary=Rules.catalog_entry(game.catalog,id)"
+        },
+        {
+          "line": 78,
+          "text": "setup(mode,\"rivet_gun\");game.build.items={\"arc_relay\":1,\"fracture_coil\":1,\"echo_chamber\":1};game._recompute()"
+        },
+        {
+          "line": 80,
+          "text": "Status.apply_chill(first,game.elapsed,Rules.catalog_entry(game.catalog,\"cryo_sprayer\"));game.effects.echo_hits=4"
+        }
+      ],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/test_upgrade_salvage.gd",
+      "raw_sha256": "b626955de1d121b13cc38bde12075978f27442912266fd3395ac494c680ed620",
+      "initial_aggregate_pass": false,
+      "catalog_related_lines": [
+        {
+          "line": 47,
+          "text": "check(game.catalog.weapons.size() + game.catalog.items.size() == 37, \"still 37 catalog entries\")"
+        },
+        {
+          "line": 53,
+          "text": "var build := Rules.new_build(game.catalog); build.coin_fraction = fraction"
+        }
+      ],
+      "planned_change": "Exact authorized module count/ID and/or strict3append historical projection; no runtime changes"
+    },
+    {
+      "path": "tests/test_vfx.gd",
+      "raw_sha256": "cfbc160a8e0cc3ff93595b3fd198cb3f0bd66a11093a7d3619658b5eedb9dbd6",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [
+        {
+          "line": 73,
+          "text": "game.build.items={\"mirror_shell\":1}"
+        }
+      ],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/test_warden_charge.gd",
+      "raw_sha256": "9736f57df82941ae0ea6ec9569c992589da27fafcf61dbc5a3b761a395632820",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/test_warden_charge_assets.gd",
+      "raw_sha256": "3ad0bda217c1705884d9c021ea7339b4f888d6af24d65f081be20993c171dac4",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/test_warden_reactions.gd",
+      "raw_sha256": "8c2ba67e9924490bdd0735cbb5f45b6405464185d9e78e0367a9e3d28fd79f19",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/test_weapon_mounts.gd",
+      "raw_sha256": "3872f819fa4dbd81bbd09e41b818fc9f4a403b5e2f2388ffebb3c555b035810f",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/test_weapon_order.gd",
+      "raw_sha256": "c6018c2cd64ae224648271fdb827e55ce3f60a82ec4f29d478bc7a9adacda001",
+      "initial_aggregate_pass": false,
+      "catalog_related_lines": [
+        {
+          "line": 12,
+          "text": "game.build.weapons=ids.duplicate();game.build.items={\"fracture_coil\":1};game._recompute()"
+        },
+        {
+          "line": 46,
+          "text": "check(game.catalog.weapons.size()==8 and game.catalog.items.size()==29,\"catalog count unchanged\")"
+        }
+      ],
+      "planned_change": "Exact authorized module count/ID and/or strict3append historical projection; no runtime changes"
+    },
+    {
+      "path": "tests/test_weapon_readout.gd",
+      "raw_sha256": "be3588ee9f035fcee33855c96604b10d06b466d39777c3dfc652c70abb831e18",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [
+        {
+          "line": 15,
+          "text": "var catalog:Dictionary=JSON.parse_string(FileAccess.get_file_as_string(\"res://data/catalog.json\"))"
+        },
+        {
+          "line": 17,
+          "text": "var original_catalog:String=JSON.stringify(catalog)"
+        },
+        {
+          "line": 19,
+          "text": "var build:Dictionary=Rules.new_build(catalog)"
+        },
+        {
+          "line": 20,
+          "text": "var stats:Dictionary=Rules.derive(balance.player,build,catalog)"
+        },
+        {
+          "line": 22,
+          "text": "var w:Dictionary=Rules.catalog_entry(catalog,row[0])"
+        },
+        {
+          "line": 27,
+          "text": "for w in catalog.weapons:"
+        },
+        {
+          "line": 47,
+          "text": "check(JSON.stringify(catalog)==original_catalog,\"catalog untouched\")"
+        },
+        {
+          "line": 54,
+          "text": "game.build.items={\"power_coil\":1,\"cooling_fan\":1,\"capacitor\":2,\"pellet_pouch\":2,\"lens\":1}"
+        },
+        {
+          "line": 56,
+          "text": "for w in catalog.weapons:"
+        }
+      ],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "tests/test_weapon_tempering.gd",
+      "raw_sha256": "36e7113fe2c34d3a70d9a35fb6ce9f292b4378d6a8e0c775ad6573d31211c76e",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [
+        {
+          "line": 14,
+          "text": "game.build.weapons=ids.duplicate();game.build.items={\"mirror_shell\":1,\"echo_chamber\":1,\"phase_capacitor\":1,\"medic_seed\":1,\"arc_relay\":1,\"kill_cell\":1,\"dash_resin\":1,\"pulse_boots\":1}"
+        },
+        {
+          "line": 45,
+          "text": "check(Rules.validate_catalog(game.catalog).is_empty(),\"catalog valid\")"
+        },
+        {
+          "line": 46,
+          "text": "check(game.catalog.weapon_tempering.max_tier==1 and game.catalog.weapon_tempering.primary_damage_multiplier==1.6,\"authored profile\")"
+        },
+        {
+          "line": 48,
+          "text": "var profile:Dictionary=game.catalog.weapon_tempering.duplicate();profile.primary_damage_multiplier=value"
+        },
+        {
+          "line": 51,
+          "text": "var profile:Dictionary=game.catalog.weapon_tempering.duplicate();profile.max_tier=value"
+        },
+        {
+          "line": 85,
+          "text": "check(Temper.multiplier(game.build,game.catalog,0,\"rivet_gun\")==1.0,\"invalid tiers no damage boost\")"
+        },
+        {
+          "line": 125,
+          "text": "setup(mode_id,[id,id,id]);game.build.items={};game._recompute();game.build.levels={\"damage\":1};game._recompute()"
+        },
+        {
+          "line": 127,
+          "text": "var base_damage:float=Rules.catalog_entry(game.catalog,id).damage"
+        }
+      ],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "ui/test_ui.gd",
+      "raw_sha256": "b3988076803f256ca3ec20fc888383318c15644aef0a1745f9269debead2ff16",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [
+        {
+          "line": 22,
+          "text": "var catalog: Dictionary = JSON.parse_string(FileAccess.get_file_as_string(\"res://data/catalog.json\"))"
+        },
+        {
+          "line": 25,
+          "text": "var offer: Dictionary = catalog.weapons[i].duplicate(true)"
+        },
+        {
+          "line": 30,
+          "text": "for item in catalog.items:"
+        },
+        {
+          "line": 33,
+          "text": "for entry in catalog.weapons + catalog.items:"
+        }
+      ],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "docs/art/check_build_expansion_icons.gd",
+      "raw_sha256": "3d33b59270b3a2e076783056acb67e0fa162b023c71f8d71f4322660751c8730",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "docs/art/check_icons.gd",
+      "raw_sha256": "b8f3f6d40e4f72a5154cae0d5cd39096f053cd7377c6653fc588c21f476130c2",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    },
+    {
+      "path": "docs/art/check_mechanism_icons.gd",
+      "raw_sha256": "41a72fe268ba4e31fce202965f028ebed86667af2070b18d1eaf1e4c46909c12",
+      "initial_aggregate_pass": true,
+      "catalog_related_lines": [],
+      "planned_change": "UNCHANGED: no observed failure in original full execution. Matched catalog/weight/offer comparisons retain current-context controls, exact eight weapon IDs, fixed subset icon maps, threshold3 rules or unrelated state; no broad golden replacement. Absence of lexical hits is not proof of no indirect dependency."
+    }
+  ],
+  "scope": "All124standalone discovery inventory plus initial import pass; read-only lexical aids combined with all125executed outcomes, not a static proof of absence of indirectdependencies.",
+  "changed_fixture_count": 8,
+  "production_changes": 0,
+  "historical_controls": "Actual oldcatalog4routes remain exact22e28521/e7d93a1f; newcatalog no-module24combat separate7cd6062f. Neither output golden is revised.",
+  "untouched_examples": [
+    "eight weapon IDs/order",
+    "three tag thresholds",
+    "icon manifest local subsets16/8/8",
+    "same-current-catalog draw/RNG controls",
+    "prices and existing fixed arithmetic",
+    "v21/v23/v26 baseline data/hash assertions after exactv36 projection"
+  ]
+}

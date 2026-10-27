@@ -1,0 +1,48 @@
+{
+  "source_map_sha256": "08f0a768321da71fd7590f9d9a4c5e08ca50e1979a62ea23bc2780fca96b44af",
+  "commands": [
+    [
+      "cold-import",
+      [
+        "--editor",
+        "--import",
+        "--quit"
+      ],
+      false
+    ],
+    [
+      "scavenger-author",
+      [
+        "--script",
+        "res://tests/test_scavenger_reel.gd"
+      ],
+      true
+    ],
+    [
+      "legacy-ui",
+      [
+        "--script",
+        "res://ui/test_ui.gd"
+      ],
+      true
+    ],
+    [
+      "legacy-game",
+      [
+        "--script",
+        "res://tests/test_game.gd"
+      ],
+      true
+    ],
+    [
+      "legacy-effects",
+      [
+        "--script",
+        "res://tests/test_effects.gd"
+      ],
+      true
+    ]
+  ],
+  "timeout_per_command": 180,
+  "stop_on_first_rejection": true
+}

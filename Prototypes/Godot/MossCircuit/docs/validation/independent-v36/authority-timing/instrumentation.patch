@@ -1,0 +1,110 @@
+--- original_external
++++ timing_only
+@@ -8,6 +8,13 @@
+   return {"terminal":false,"next_stage":session.wave+1,"shop":false,"upgrades":0,"coins":0,"heal":0}
+ class InvalidMode extends BaseArena:
+  func resolution(_session:RefCounted,_world:RefCounted,_config:Dictionary)->Dictionary:return {"terminal":false,"next_stage":2,"shop":false,"upgrades":0,"coins":-1,"heal":0}
++var diagnostic_started:int=Time.get_ticks_usec()
++var diagnostic_make_us:int=0
++var diagnostic_make_count:int=0
++var diagnostic_snap_us:int=0
++var diagnostic_snap_count:int=0
++func diagnostic_checkpoint(stage:String)->void:
++ print("AUTHORITY_TIMING "+JSON.stringify({"stage":stage,"elapsed_us":Time.get_ticks_usec()-diagnostic_started,"make_us":diagnostic_make_us,"make_count":diagnostic_make_count,"snap_us":diagnostic_snap_us,"snap_count":diagnostic_snap_count,"checks_so_far":checks,"failure_count_so_far":failures.size()}))
+ var checks:=0
+ var failures:Array=[]
+ var observations:Array=[]
+@@ -39,11 +46,16 @@
+   if int(p.usage)&PROPERTY_USAGE_SCRIPT_VARIABLE:d[p.name]=o.get(p.name)
+  return clean(d)
+ func snap(g)->Dictionary:
+- return {"world":props(g.combat),"run":props(g.run),"effects":props(g.effects),"sequence":g.effect_sequence,"rng":[g.rng.state,g.loot_rng.state,g.shop_rng.state],"choices":g.choices.duplicate(true),"generations":[g.choice_generation,g.shop_generation],"rig":clean({"slots":g.weapon_rig.slots,"clock":g.weapon_rig.visible_clock,"generation":g.weapon_rig.generation,"last":g.weapon_rig.last_shot}),"actor":props(g.actor_anim),"vfx":props(g.vfx)}
++ var diagnostic_t:int=Time.get_ticks_usec()
++ var diagnostic_result:Dictionary={"world":props(g.combat),"run":props(g.run),"effects":props(g.effects),"sequence":g.effect_sequence,"rng":[g.rng.state,g.loot_rng.state,g.shop_rng.state],"choices":g.choices.duplicate(true),"generations":[g.choice_generation,g.shop_generation],"rig":clean({"slots":g.weapon_rig.slots,"clock":g.weapon_rig.visible_clock,"generation":g.weapon_rig.generation,"last":g.weapon_rig.last_shot}),"actor":props(g.actor_anim),"vfx":props(g.vfx)}
++ diagnostic_snap_us+=Time.get_ticks_usec()-diagnostic_t;diagnostic_snap_count+=1
++ return diagnostic_result
+ func make_game(mode:String,items:Dictionary={}):
++ var diagnostic_t:int=Time.get_ticks_usec()
+  var g=load("res://scenes/main.tscn").instantiate();root.add_child(g);g.set_process(false)
+  g._select_mode(mode);g._start_run(3501);g.spawn_clock=999;g.elapsed=10;g.weapon_clocks=[999.0];g.player_pos=Vector2(500,500);g.hero.position=g.player_pos;g.camera.position=g.player_pos;g.camera.force_update_scroll();g.combat_frame.area=g.config.arena
+  g.build.items=items.duplicate(true);g._recompute();g.effects.reset(g.build.items);g.hurt_clock=0;g.stats.hp=100;g.stats.dash_time=0
++ diagnostic_make_us+=Time.get_ticks_usec()-diagnostic_t;diagnostic_make_count+=1
+  return g
+ func record(g,events:Array)->void:
+  g.feedback_audio.cue_requested.connect(func(cue:String,accepted:bool):events.append({"cue":cue,"accepted":accepted}))
+@@ -90,8 +102,10 @@
+  ck(audio.status().unavailable.is_empty() and not audio.status().muted and snap(g)==before,"status detached/read-only")
+ func _initialize()->void:call_deferred("run")
+ func run()->void:
++ diagnostic_checkpoint("start_resource_checks")
+  var initial=make_game("arena");resource_checks(initial);initial.queue_free();await process_frame
+  for mode in ["arena","rooms"]:
++  diagnostic_checkpoint(mode+"_resolved_damage")
+   for spec in [
+    {"name":"loss","hp":100.0,"damage":11.0,"items":{}},
+    {"name":"overkill","hp":7.0,"damage":11.0,"items":{}},
+@@ -126,6 +140,7 @@
+     else:ck(after==reference,"complete gameplay snapshot equals enabled "+mode+spec.name+audio_mode)
+     observations.append({"mode":mode,"case":spec.name,"audio":audio_mode,"requests":events,"hp":clean(g.stats.hp),"state":g.state})
+     g.queue_free();await process_frame
++  diagnostic_checkpoint(mode+"_guards")
+   var g=make_game(mode,{"mirror_shell":1});var events:Array=[];record(g,events)
+   g._hurt(11);g.hurt_clock=0;g._hurt(11)
+   ck(events==[{"cue":"shield_block","accepted":true},{"cue":"player_damage","accepted":true}] and g.stats.hp==89,"spent Mirror becomes true loss "+mode)
+@@ -139,6 +154,7 @@
+   g._vfx("hit_spark",g.player_pos);g._vfx("shield_impact",g.player_pos);g._mechanism_vfx("gravity_anchor","shield_impact",g.player_pos,{});g._effect_event("mine_detonate",{"source":"mine","pos":g.player_pos,"depth":1})
+   ck(events.is_empty(),"reused presentation and unrelated effect events never audio")
+   g.queue_free();await process_frame
++  diagnostic_checkpoint(mode+"_hostile_routes")
+   for route in ["contact","hostile swept projectile","boss blast","brood annulus"]:
+    for mirror in [false,true]:
+     g=make_game(mode,{"mirror_shell":1} if mirror else {});events=[];record(g,events)
+@@ -153,6 +169,7 @@
+     ck(events==[{"cue":"shield_block" if mirror else "player_damage","accepted":true}],"actual shared runtime route "+mode+route+str(mirror))
+     ck(g.stats.hp==(100 if mirror else 89),"actual HP/block route "+route)
+     g.queue_free();await process_frame
++  diagnostic_checkpoint(mode+"_feedback_and_medical")
+   # Real Feedback Diode resolves owner damage during dash, while the old dash guard rejects HP loss.
+   g=make_game(mode,{"feedback_diode":1});events=[];record(g,events)
+   var owner:Dictionary=g._spawn_kind("spitter",g.player_pos+Vector2(200,0));owner.hp=1000.;owner.max_hp=1000.;owner.anim_hp=1000.;owner.speed=0;owner.cooldown_left=999
+@@ -165,6 +182,7 @@
+   g=make_game(mode);events=[];record(g,events);g.stats.hp=70;g.pickups.append({"pos":g.player_pos,"xp":0,"coins":0,"heal":8.,"source":"medical"})
+   Runtime.step(g.combat_frame,0.);ck(g.stats.hp==78 and events.is_empty(),"actual medical pickup heals without loss/block cue")
+   g.queue_free();await process_frame
++  diagnostic_checkpoint(mode+"_lifecycle")
+   for transition in ["pause","inventory","upgrade","shop","room_clear","title","start","finish_dead","finish_won","focus_out","no_shop_settlement","normal_settlement"]:
+    g=make_game(mode);events=[];record(g,events);start_both(g);events.clear()
+    match transition:
+@@ -185,6 +203,7 @@
+    ck(none_playing(g) and events.is_empty(),"stops both without request "+mode+transition)
+    if transition=="pause":g._on_intent("resume",{});ck(none_playing(g) and events.is_empty(),"resume no replay")
+    g.queue_free();await process_frame
++  diagnostic_checkpoint(mode+"_invalid_boundaries")
+   for invalid in ["invalid_start","invalid_settlement","ignored_settlement","ignored_room_clear"]:
+    g=make_game(mode);start_both(g)
+    match invalid:
+@@ -194,6 +213,7 @@
+     "ignored_room_clear":g.state="inventory";g._begin_room_clear()
+    ck(g.feedback_audio.players.player_damage.playing and g.feedback_audio.players.shield_block.playing,"invalid boundary does not acquire stop side effect "+invalid)
+    g.queue_free();await process_frame
++  diagnostic_checkpoint(mode+"_lethal_tails")
+   for tail_stop in ["focus_out","title","retry","mute"]:
+    g=make_game(mode);events=[];record(g,events);g.stats.hp=7.;g._hurt(11)
+    ck(g.state=="dead" and g.feedback_audio.players.player_damage.playing,"lethal cue starts AFTER finish "+tail_stop)
+@@ -205,6 +225,7 @@
+     "mute":g.feedback_audio.set_muted(true)
+    ck(none_playing(g),"lethal tail explicitly cut "+tail_stop)
+    g.queue_free();await process_frame
++  diagnostic_checkpoint(mode+"_settings")
+   g=make_game(mode);events=[];record(g,events);ck(not g.settings.mute_feedback_sounds,"fresh session defaults unmuted")
+   for key in [null,42,true,"unknown"]:
+    g.state="settings";var before:Dictionary=snap(g);var values:Dictionary=g.settings.duplicate(true);g._on_intent("set_setting",{"key":key,"value":true});ck(g.settings==values and snap(g)==before,"strict setting key")
+@@ -223,6 +244,8 @@
+   audio_teardown.prepare([g])
+   g.queue_free();await process_frame
+   await audio_teardown.finish(self)
++  diagnostic_checkpoint(mode+"_complete")
++ diagnostic_checkpoint("all_assertions_complete")
+  var result:Dictionary={"checks":checks,"failures":failures,"observations":observations,"scope":"Controlled imported PCM identity, resolved authority, actual four hostile routes, disabled-audio gameplay equality, strict setting and explicit lifecycle. No fresh mixer capture/native/hardware claim."}
+  var args:=OS.get_cmdline_user_args()
+  if not args.is_empty():FileAccess.open(args[0],FileAccess.WRITE).store_string(JSON.stringify(result,"  ")+"\n")

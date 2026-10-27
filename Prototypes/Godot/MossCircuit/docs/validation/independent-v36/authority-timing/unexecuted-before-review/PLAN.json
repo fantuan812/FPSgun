@@ -1,0 +1,12 @@
+{
+  "utc": "2026-10-27T04:18:47.471761+00:00",
+  "status": "FROZEN_NOT_EXECUTED",
+  "original_external_sha256": "bcb4837f9f2b1ec190cbf922de0fd0804a23cd9552977faa11d5ec361e329e86",
+  "instrumented_sha256": "ded2b6a2d4078004a510d1e424cc339dcd2278a0b358296f8a1204de6667a0d4",
+  "source_fixture_sha256": "e733fc08d6ca4d3c16c6f3e8ae5a7abc415b5b96b4c20823da1b5ac5a96ba690",
+  "helper_sha256": "9e9676e34296cb55d4560b1169c5954a82508f70e9051fcc942d1bb6839c23bd",
+  "pck_sha256": "ea994144d3ae76926b29fad6467cb4bd36bfce73fcc96683694eb31c18caaba5",
+  "inverse_exact": true,
+  "instrumentation": "Monotonic cumulative make_game and snap CPU-wall timings; low-volume section checkpoints, check/failure counters observed only. No assertion/loop/await/fixture/production/PCK/180s-budget changes.",
+  "stopping": "Single180s maximum diagnostic. Whatever outcome, not a retry-to-PASS and original timeout persists."
+}

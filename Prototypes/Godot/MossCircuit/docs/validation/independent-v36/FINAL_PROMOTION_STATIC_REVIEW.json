@@ -1,0 +1,28 @@
+{
+  "status": "PASS_FINAL_PROMOTION_PREIMPORT_STATIC",
+  "utc": "2026-10-27T03:26:39.313590+00:00",
+  "inputs_before_import": 710,
+  "production_paths": 131,
+  "production_exact_focused703": true,
+  "four_independent_tests_exact": true,
+  "runner_exact180s_and_error_predicates": true,
+  "v35_readme_delivery_exact_historical_suffix": true,
+  "v35_feature_and_contract_exact_public_bytes": true,
+  "changed_existing_inputs": [
+    "README.md",
+    "docs/DELIVERY.md",
+    "docs/REACTION_COVERAGE.md",
+    "docs/V35_PLAYER_FEEDBACK.md",
+    "docs/V35_PLAYER_FEEDBACK_CONTRACT.md"
+  ],
+  "added_inputs": [
+    "docs/V36_ART_PROVENANCE.json",
+    "docs/V36_SCAVENGER_REEL.md",
+    "docs/V36_SCAVENGER_REEL_CONTRACT.md",
+    "tests/independent_scavenger_authority.gd",
+    "tests/independent_scavenger_events.gd",
+    "tests/independent_scavenger_settlement.gd",
+    "tests/independent_scavenger_views.gd"
+  ],
+  "scope": "No engine/import or final-suite claim. Expect four generated test UIDs then distinct final source freeze. Learning owns current CPU window."
+}

@@ -1,0 +1,30 @@
+{
+  "pass": true,
+  "steps": [
+    {
+      "case": "baseline",
+      "native_exit": 0,
+      "timeout": false,
+      "elapsed": 5.468,
+      "cases": 24,
+      "failures": [],
+      "input_changes": [],
+      "error": false,
+      "pass": true
+    },
+    {
+      "case": "candidate",
+      "native_exit": 0,
+      "timeout": false,
+      "elapsed": 3.824,
+      "cases": 24,
+      "failures": [],
+      "input_changes": [],
+      "error": false,
+      "pass": true
+    }
+  ],
+  "output_bytes_equal": true,
+  "trace_sha256": "7cd6062fe08d107b8b3eb6e41f2f8dce0ce90f0a1c4448768e8c0624c317c358",
+  "scope": "Actual v35 old catalog versus actual v36 enlarged current catalog, fixed old combat without new item;24cases each. No shopping or offer-ID parity claim."
+}

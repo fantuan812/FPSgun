@@ -1,0 +1,75 @@
+{
+  "status": "REJECTED_FIRST_PACKED_BATCH_TIMEOUT_RETAINED",
+  "steps": [
+    {
+      "step": "source-resource-fingerprint",
+      "native_exit": 0,
+      "timeout": false,
+      "elapsed": 5.575,
+      "error_or_resource_warning": false,
+      "pass": true
+    },
+    {
+      "step": "packed-resources",
+      "native_exit": 0,
+      "timeout": false,
+      "elapsed": 5.81,
+      "error_or_resource_warning": false,
+      "pass": true
+    },
+    {
+      "step": "packed-authority",
+      "native_exit": 0,
+      "timeout": false,
+      "elapsed": 2.953,
+      "error_or_resource_warning": false,
+      "pass": true
+    },
+    {
+      "step": "packed-events",
+      "native_exit": 0,
+      "timeout": false,
+      "elapsed": 3.959,
+      "error_or_resource_warning": false,
+      "pass": true
+    },
+    {
+      "step": "packed-views",
+      "native_exit": 0,
+      "timeout": false,
+      "elapsed": 3.23,
+      "error_or_resource_warning": false,
+      "pass": true
+    },
+    {
+      "step": "packed-settlement",
+      "native_exit": 0,
+      "timeout": false,
+      "elapsed": 2.799,
+      "error_or_resource_warning": false,
+      "pass": true
+    },
+    {
+      "step": "packed-audio-authority",
+      "native_exit": null,
+      "timeout": true,
+      "elapsed": 180.064,
+      "error_or_resource_warning": false,
+      "pass": false
+    }
+  ],
+  "source717_unchanged": true,
+  "partial_audio_authority_stdout_sha256": "3ece2a414735c3c014a91b4126c1607a3cfdb11fa59fe93896266780139dd075",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "wrapper_exit": 1,
+  "last_proven_phase": "One full completed teardown at end of Arena iteration. No final773 semantic result; Rooms exact stop unknown. Reaching Arena end does not prove zero accumulated assertions.",
+  "wait_analysis": "No fixedsleep/timer; per-game disposal process_frame, many real make_game and snap calls, two bounded final silences. First silence151550us finished.",
+  "process": "subprocess.run timeout kills and waits direct Godot child before returning; wrapper originalsession32091terminal1; subsequent ps snapshot no Godot/runner, not relied on alone.",
+  "historical_seconds": {
+    "v35_packed": 140.343,
+    "v35_full": 174.374,
+    "v36_initial_full": 167.716,
+    "v36_R2_full": 140.999
+  },
+  "remaining": "Separate originally unexecuted5 routes all native0; does not change thisFAIL; timing-only diagnostic approved not executed at receipt."
+}

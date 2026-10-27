@@ -1,0 +1,13 @@
+from pathlib import Path
+import json,hashlib,os,subprocess,time,re,shutil
+r=Path('<WORKSPACE>');q=Path(__file__).parent;out=q/'new-catalog-combat-first';assert not out.exists();out.mkdir();script=q/'checks/new_catalog_old_combat.gd';shutil.copy2(script,out/script.name);h=lambda p:hashlib.sha256(p.read_bytes()).hexdigest();env=os.environ.copy();env['GODOT_SILENCE_ROOT_WARNING']='1'
+for key,n in [('HOME','home'),('XDG_CONFIG_HOME','config'),('XDG_CACHE_HOME','cache'),('XDG_DATA_HOME','data')]:p=out/'private-profile'/n;p.mkdir(parents=True);env[key]=str(p)
+projects=[('baseline',r/'moss-v35-r4',r/'moss-v35-r4-prep/R4_INPUTS.json'),('candidate',q/'results/first/project',q/'results/first/INPUTS.json')];rows=[];maps={};assert h(script)==json.loads((q/'NEW_CATALOG_COMBAT_FREEZE.json').read_text())['sha256']
+for label,project,inputfile in projects:
+ pins=json.loads(inputfile.read_text());maps[label]=pins;assert all(h(project/p)==s for p,s in pins.items());start=time.monotonic();code=None;timeout=False
+ try:
+  p=subprocess.run(['/usr/local/bin/godot','--headless','--audio-driver','Dummy','--path',str(project),'--script',str(script),'--',str(out/(label+'.json'))],env=env,capture_output=True,timeout=180);code=p.returncode;stdout=p.stdout;stderr=p.stderr
+ except subprocess.TimeoutExpired as e:stdout=e.stdout or b'';stderr=e.stderr or b'';timeout=True
+ (out/(label+'.stdout')).write_bytes(stdout);(out/(label+'.stderr')).write_bytes(stderr);text=(stdout+stderr).decode(errors='replace');data=json.loads((out/(label+'.json')).read_text()) if (out/(label+'.json')).exists() else {};changed=[p for p,s in pins.items() if h(project/p)!=s];row={'case':label,'native_exit':code,'timeout':timeout,'elapsed':round(time.monotonic()-start,3),'cases':len(data.get('cases',[])),'failures':data.get('failures'),'input_changes':changed,'error':any(x in text for x in ['ERROR:','SCRIPT ERROR:','instances leaked','resources still in use'])};row['pass']=code==0 and not timeout and row['cases']==24 and row['failures']==[] and not changed and not row['error'];rows.append(row);(out/'STEPS.json').write_text(json.dumps(rows,indent=2)+'\n');print(json.dumps(row),flush=True)
+ if not row['pass']:raise SystemExit(1)
+equal=(out/'baseline.json').read_bytes()==(out/'candidate.json').read_bytes();result={'pass':equal,'steps':rows,'output_bytes_equal':equal,'trace_sha256':h(out/'candidate.json'),'scope':'Actual v35 old catalog versus actual v36 enlarged current catalog, fixed old combat without new item;24cases each. No shopping or offer-ID parity claim.'};(out/'RESULT.json').write_text(json.dumps(result,indent=2)+'\n');print(json.dumps(result));raise SystemExit(0 if equal else 1)

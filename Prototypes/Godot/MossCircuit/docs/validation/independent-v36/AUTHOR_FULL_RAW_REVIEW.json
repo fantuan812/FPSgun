@@ -1,0 +1,2358 @@
+{
+  "status": "PASS_INDEPENDENT_RAW_REVIEW_AUTHOR_FULL",
+  "utc": "2026-10-27T04:11:30.296796+00:00",
+  "source_map_sha256": "442c736ba387b9fc78c62d934034c5fe637a41c3b6e2cfc9ef83f5ecfda28de4",
+  "source_inputs": 717,
+  "production_inputs": 131,
+  "author_commands": 125,
+  "author_standalone": 124,
+  "standalone_order_exact": true,
+  "all_native0_raw_clean_semantic_pass": true,
+  "shared_cleanup_fixtures": 104,
+  "helper_observation_count": 111,
+  "helper_records": [
+    {
+      "case": "independent_actions.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 151328,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "independent_annulus_runtime.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 159540,
+          "fresh": 8192,
+          "silent": 7680
+        }
+      ]
+    },
+    {
+      "case": "independent_bankshot_integration.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 151191,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "independent_brace_runtime.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 158953,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "independent_brood_assets.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 167242,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "independent_brood_events.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 153761,
+          "fresh": 8192,
+          "silent": 8192
+        },
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 151487,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "independent_brood_parity.gd",
+      "observations": [
+        {
+          "owners": 2,
+          "streams": 4,
+          "driver": "Dummy",
+          "elapsed_us": 159888,
+          "fresh": 8192,
+          "silent": 7680
+        },
+        {
+          "owners": 2,
+          "streams": 4,
+          "driver": "Dummy",
+          "elapsed_us": 166456,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "independent_charger_assets.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 154627,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "independent_charger_gameplay_parity.gd",
+      "observations": [
+        {
+          "owners": 2,
+          "streams": 4,
+          "driver": "Dummy",
+          "elapsed_us": 152504,
+          "fresh": 8192,
+          "silent": 8192
+        },
+        {
+          "owners": 2,
+          "streams": 4,
+          "driver": "Dummy",
+          "elapsed_us": 672352,
+          "fresh": 12288,
+          "silent": 12288
+        }
+      ]
+    },
+    {
+      "case": "independent_charger_lifecycle.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 293806,
+          "fresh": 9728,
+          "silent": 9728
+        }
+      ]
+    },
+    {
+      "case": "independent_core_reactions.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 167713,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "independent_crawler_flanker.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 154607,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "independent_crawler_hit_pipeline.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 167824,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "independent_cryo_contract.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 186900,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "independent_cryo_shop.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 172066,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "independent_enemy_ui.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 163061,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "independent_feedback_authority.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 158146,
+          "fresh": 8192,
+          "silent": 8192
+        },
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 151326,
+          "fresh": 8192,
+          "silent": 7680
+        }
+      ]
+    },
+    {
+      "case": "independent_feedback_runtime.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 195438,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "independent_feedback_shop.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 186013,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "independent_feedback_views.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 161575,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "independent_focus_authority.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 151490,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "independent_focus_combat.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 172526,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "independent_focus_views.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 158238,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "independent_modes.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 167108,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "independent_modifier_compatibility.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 159256,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "independent_qa.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 152693,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "independent_reservation_records.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 152041,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "independent_reservation_runtime.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 158428,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "independent_reservation_views.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 163769,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "independent_resolution.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 150880,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "independent_room_boundaries.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 159395,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "independent_salvage_runtime.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 151648,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "independent_salvage_views.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 154914,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "independent_scavenger_authority.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 152727,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "independent_scavenger_events.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 153162,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "independent_scavenger_settlement.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 159325,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "independent_scavenger_views.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 159233,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "independent_settlement_types.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 186063,
+          "fresh": 8192,
+          "silent": 8192
+        },
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 151625,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "independent_shop.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 152706,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "independent_spitter_assets.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 153274,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "independent_spitter_events.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 153319,
+          "fresh": 8192,
+          "silent": 8192
+        },
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 173036,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "independent_spitter_parity.gd",
+      "observations": [
+        {
+          "owners": 2,
+          "streams": 4,
+          "driver": "Dummy",
+          "elapsed_us": 187897,
+          "fresh": 8192,
+          "silent": 8192
+        },
+        {
+          "owners": 2,
+          "streams": 4,
+          "driver": "Dummy",
+          "elapsed_us": 165799,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "independent_starting_loadout_views.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 158466,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "independent_starting_loadouts.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 166407,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "independent_tag_authority.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 156811,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "independent_tag_views.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 171657,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "independent_tempering_authority.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 192966,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "independent_tempering_combat.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 158618,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "independent_tempering_hint.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 152244,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "independent_tempering_views.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 192356,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "independent_ui.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 167050,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "independent_v2.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 152640,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "independent_v3.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 158238,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "independent_v4.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 167988,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "independent_v5.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 160252,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "independent_vfx.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 162094,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "independent_warden_reactions.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 159433,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "independent_weapon_authority.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 151372,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "independent_weapon_order.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 164034,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "independent_weapon_order_views.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 151477,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "independent_weapon_readouts.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 172457,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "independent_weapon_rig.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 189294,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "test_actor_actions.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 163062,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "test_bankshot_build.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 152537,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "test_brood_actions.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 152691,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "test_brood_pulse.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 152398,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "test_builds.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 180860,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "test_charger_actions.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 152529,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "test_combat_focus.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 159277,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "test_combat_hud_readability.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 184433,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "test_contact_enemy_actions.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 160392,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "test_core_reactions.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 159319,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "test_core_summon.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 159444,
+          "fresh": 8192,
+          "silent": 7680
+        }
+      ]
+    },
+    {
+      "case": "test_cryo_build.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 266772,
+          "fresh": 12288,
+          "silent": 12288
+        }
+      ]
+    },
+    {
+      "case": "test_effects.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 155024,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "test_encounters.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 152577,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "test_expansion.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 152598,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "test_feedback_diode.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 194078,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "test_focus_fire.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 193838,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "test_game.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 153543,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "test_hud_layout.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 151985,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "test_input_lifecycle.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 174204,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "test_modes.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 151092,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "test_modifier_copy.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 160657,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "test_player_feedback.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 159547,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "test_primary_brace.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 186936,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "test_resolution_validation.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 159621,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "test_scavenger_reel.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 157149,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "test_settlement_levels.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 233079,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "test_shop_offer_visibility.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 158347,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "test_shop_reservation.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 174216,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "test_spitter_actions.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 167308,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "test_starting_loadouts.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 181086,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "test_tag_synergy_progress.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 172752,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "test_telegraph_readability.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 159531,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "test_tempered_combat.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 171504,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "test_upgrade_salvage.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 155352,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "test_vfx.gd",
+      "observations": [
+        {
+          "owners": 2,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 159399,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "test_warden_charge.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 152584,
+          "fresh": 8192,
+          "silent": 7680
+        }
+      ]
+    },
+    {
+      "case": "test_warden_reactions.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 159738,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "test_weapon_mounts.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 153019,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "test_weapon_order.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 151071,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "test_weapon_readout.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 154627,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    },
+    {
+      "case": "test_weapon_tempering.gd",
+      "observations": [
+        {
+          "owners": 1,
+          "streams": 2,
+          "driver": "Dummy",
+          "elapsed_us": 171589,
+          "fresh": 8192,
+          "silent": 8192
+        }
+      ]
+    }
+  ],
+  "raw_log_records": [
+    {
+      "case": "import",
+      "log_sha256": "9572934ad4d57fbab2c09b2c82f3821584fba7ba71d7e1dec5055bc7fa531f3f",
+      "native_exit": 0,
+      "seconds": 8.488,
+      "helper_reports": 0
+    },
+    {
+      "case": "independent_actions.gd",
+      "log_sha256": "743cfff7375876dec957f7dd97f1397634ad94a19080619b13075eb71edb3d1f",
+      "native_exit": 0,
+      "seconds": 2.168,
+      "helper_reports": 1
+    },
+    {
+      "case": "independent_annulus_data.gd",
+      "log_sha256": "ae5f52356e10e74b2b020d6fede224c0063f02f8d50157939568bc1ee3614e80",
+      "native_exit": 0,
+      "seconds": 0.33,
+      "helper_reports": 0
+    },
+    {
+      "case": "independent_annulus_runtime.gd",
+      "log_sha256": "ea7f21f24a673bf07361f7927e73c71f29989ffac0ccf53986f9687407364378",
+      "native_exit": 0,
+      "seconds": 9.006,
+      "helper_reports": 1
+    },
+    {
+      "case": "independent_bankshot_contacts.gd",
+      "log_sha256": "64c132669e806db32d6b1786cdb7c91c3b43e19e44696d79a8d409c2f90e3037",
+      "native_exit": 0,
+      "seconds": 0.308,
+      "helper_reports": 0
+    },
+    {
+      "case": "independent_bankshot_integration.gd",
+      "log_sha256": "d29adb07fee456ac0372e6ed1e216686158f273dc47b7e35ab32684de90c4873",
+      "native_exit": 0,
+      "seconds": 3.022,
+      "helper_reports": 1
+    },
+    {
+      "case": "independent_bankshot_trajectory.gd",
+      "log_sha256": "c0044e51347e1011736e467002ac616b3eca2df4e52a308c1d564eaf2bda7e40",
+      "native_exit": 0,
+      "seconds": 0.282,
+      "helper_reports": 0
+    },
+    {
+      "case": "independent_brace_geometry.gd",
+      "log_sha256": "cdedc5dc4f10124bcc94883febbb3d366ef55ab7646ff9840bfed04b1300d76b",
+      "native_exit": 0,
+      "seconds": 0.292,
+      "helper_reports": 0
+    },
+    {
+      "case": "independent_brace_runtime.gd",
+      "log_sha256": "aaed6eff24232d5075b3e78967c92068a54362a77209d2cbc5d042722fe9aa90",
+      "native_exit": 0,
+      "seconds": 5.805,
+      "helper_reports": 1
+    },
+    {
+      "case": "independent_brood_assets.gd",
+      "log_sha256": "f4c8e76f0b3ef301045c5f059651159d042cb00cc2e5dcab2d855d0889930a50",
+      "native_exit": 0,
+      "seconds": 2.159,
+      "helper_reports": 1
+    },
+    {
+      "case": "independent_brood_events.gd",
+      "log_sha256": "1c43685284b970c997a78899292144cd1dc5870cee494b4b9d807c9a59d43f91",
+      "native_exit": 0,
+      "seconds": 2.635,
+      "helper_reports": 2
+    },
+    {
+      "case": "independent_brood_parity.gd",
+      "log_sha256": "99e0f8fb828ece84045fe5bb524ddef00bfcaa6f796797aadd45b2c59904d5f7",
+      "native_exit": 0,
+      "seconds": 4.498,
+      "helper_reports": 2
+    },
+    {
+      "case": "independent_charger_assets.gd",
+      "log_sha256": "2aebd73e57683eb71c22d1c1392d1b20a57ce259d1b33114b8dc933f51fcfe02",
+      "native_exit": 0,
+      "seconds": 2.329,
+      "helper_reports": 1
+    },
+    {
+      "case": "independent_charger_gameplay_parity.gd",
+      "log_sha256": "723f9ec95fc82fa72b919c5fab518cdde5e83f6d6a2b238273e4736a74e98f3f",
+      "native_exit": 0,
+      "seconds": 8.462,
+      "helper_reports": 2
+    },
+    {
+      "case": "independent_charger_lifecycle.gd",
+      "log_sha256": "49eeb02954a660cc1280aea76051792f94b5587aef940d5482d416b2d9d973dd",
+      "native_exit": 0,
+      "seconds": 5.215,
+      "helper_reports": 1
+    },
+    {
+      "case": "independent_core_reactions.gd",
+      "log_sha256": "f15fa3d73e56971cf3f6d14174a5d907693cac09a9c711b41c000323344b1c5c",
+      "native_exit": 0,
+      "seconds": 5.842,
+      "helper_reports": 1
+    },
+    {
+      "case": "independent_crawler_flanker.gd",
+      "log_sha256": "e3a1e1ec1fef6ad061aa824de1d194315f905108dff15c70b5c35dc647843d6a",
+      "native_exit": 0,
+      "seconds": 2.165,
+      "helper_reports": 1
+    },
+    {
+      "case": "independent_crawler_hit_pipeline.gd",
+      "log_sha256": "5a810c640fb3250c0830127f7b0e23e496fac0710f308382f4a41b1792b4196b",
+      "native_exit": 0,
+      "seconds": 2.18,
+      "helper_reports": 1
+    },
+    {
+      "case": "independent_cryo_contract.gd",
+      "log_sha256": "923c7844e2d27e241a31c376e3779e8511ec375a1d71fdd19d47ede4fb603733",
+      "native_exit": 0,
+      "seconds": 4.518,
+      "helper_reports": 1
+    },
+    {
+      "case": "independent_cryo_shop.gd",
+      "log_sha256": "894fa692b5726c683c44d0fca5b18605ccc96b17329313bed4267b0af2f793b3",
+      "native_exit": 0,
+      "seconds": 3.383,
+      "helper_reports": 1
+    },
+    {
+      "case": "independent_enemy_ui.gd",
+      "log_sha256": "93ea24f0c5de5805fecc3bbf985af2958fb5fd68357b5e4100ba95e804d2d80f",
+      "native_exit": 0,
+      "seconds": 2.165,
+      "helper_reports": 1
+    },
+    {
+      "case": "independent_feedback_authority.gd",
+      "log_sha256": "2ea19ec381f325a290b59f7b8cc0b1529e92be983020c24ed7c6bb186e36d287",
+      "native_exit": 0,
+      "seconds": 140.999,
+      "helper_reports": 2
+    },
+    {
+      "case": "independent_feedback_mixer.gd",
+      "log_sha256": "9a3e57624bc19d9a86ea2cf26fbbbbd62f75baac4c46616686f825464f865959",
+      "native_exit": 0,
+      "seconds": 12.33,
+      "helper_reports": 0
+    },
+    {
+      "case": "independent_feedback_runtime.gd",
+      "log_sha256": "3009839c966c75bdcec65c09b153748901e2e7578bef733e1c59c6e156057ac5",
+      "native_exit": 0,
+      "seconds": 7.266,
+      "helper_reports": 1
+    },
+    {
+      "case": "independent_feedback_shop.gd",
+      "log_sha256": "2fccdc87f16702145f43ac6fbb40ac545320872a29b17834edc1c5c455767a49",
+      "native_exit": 0,
+      "seconds": 7.252,
+      "helper_reports": 1
+    },
+    {
+      "case": "independent_feedback_validation.gd",
+      "log_sha256": "b14f01acbd0b42f756564679a3d4382110012cfc85d46bcd27f0bb2574229603",
+      "native_exit": 0,
+      "seconds": 0.291,
+      "helper_reports": 0
+    },
+    {
+      "case": "independent_feedback_views.gd",
+      "log_sha256": "2c33a5ad1d778d1ebe6280e82e60001e0c0b8841a9e88c4fb48ea7ec21702b56",
+      "native_exit": 0,
+      "seconds": 3.575,
+      "helper_reports": 1
+    },
+    {
+      "case": "independent_focus_authority.gd",
+      "log_sha256": "083d28f217a8ae33ca486bd5022b3fa6cb14ca29320525f7cd2c77657c0ae7b1",
+      "native_exit": 0,
+      "seconds": 4.379,
+      "helper_reports": 1
+    },
+    {
+      "case": "independent_focus_combat.gd",
+      "log_sha256": "b48b4a92848ae6254ec604052419fd2d2381c237de344804d1967420d565b956",
+      "native_exit": 0,
+      "seconds": 10.139,
+      "helper_reports": 1
+    },
+    {
+      "case": "independent_focus_views.gd",
+      "log_sha256": "69ec3c271e7df37ba892270784186d5b325fb96b95b8b4b4c622c95f508cb3ac",
+      "native_exit": 0,
+      "seconds": 3.852,
+      "helper_reports": 1
+    },
+    {
+      "case": "independent_modes.gd",
+      "log_sha256": "cc67ea2914b51e3e46508abb93a21b81d9b94fcc35bbe52d52a5bc90526a0df0",
+      "native_exit": 0,
+      "seconds": 2.931,
+      "helper_reports": 1
+    },
+    {
+      "case": "independent_modifier_compatibility.gd",
+      "log_sha256": "765fda9b8bce60c7d6404614ba6937173b8e205def82e1c456245243cc04ab6a",
+      "native_exit": 0,
+      "seconds": 3.676,
+      "helper_reports": 1
+    },
+    {
+      "case": "independent_policy_validation.gd",
+      "log_sha256": "483caced6c929fd1a021e0db88f20e7e77f4e5377cc3a98cdbb3993a1f1e1bf7",
+      "native_exit": 0,
+      "seconds": 0.319,
+      "helper_reports": 0
+    },
+    {
+      "case": "independent_qa.gd",
+      "log_sha256": "96e6f8fa263dda083064b79ad49c6b5e54e5b18d16424353d1803e46907364fa",
+      "native_exit": 0,
+      "seconds": 2.169,
+      "helper_reports": 1
+    },
+    {
+      "case": "independent_reservation_records.gd",
+      "log_sha256": "2e3b364fb5fb85859f70a810d125a474459ae6c6510a5aa8c5effa635c9992d1",
+      "native_exit": 0,
+      "seconds": 8.229,
+      "helper_reports": 1
+    },
+    {
+      "case": "independent_reservation_runtime.gd",
+      "log_sha256": "56b85719ec111198c3506e20aba471aed122816c2a4f1795634e725da8b3cd12",
+      "native_exit": 0,
+      "seconds": 26.441,
+      "helper_reports": 1
+    },
+    {
+      "case": "independent_reservation_views.gd",
+      "log_sha256": "9f3630e9edd49df8887da3af9a27b78d3574934613a60eac09ecfdb18451b1db",
+      "native_exit": 0,
+      "seconds": 32.25,
+      "helper_reports": 1
+    },
+    {
+      "case": "independent_resolution.gd",
+      "log_sha256": "6ec0e3e79de5e20fd295dfccbe79d895c2ec1a1f4cb1b7b648c2dd7e25a2591f",
+      "native_exit": 0,
+      "seconds": 2.264,
+      "helper_reports": 1
+    },
+    {
+      "case": "independent_room_boundaries.gd",
+      "log_sha256": "ba4b877bae4a4341542e510e058d72b37fca6b3398091e2104138bd7eca580c9",
+      "native_exit": 0,
+      "seconds": 2.574,
+      "helper_reports": 1
+    },
+    {
+      "case": "independent_salvage_runtime.gd",
+      "log_sha256": "e21792e8e0443ef83404ba647d08604a7ab6cb079ef03ff09c9851ff6cc5193a",
+      "native_exit": 0,
+      "seconds": 4.076,
+      "helper_reports": 1
+    },
+    {
+      "case": "independent_salvage_views.gd",
+      "log_sha256": "605b6b5bdacdfbe43692b74c01bfb291769ba84f8e25c42aa37896e1f5c0f61f",
+      "native_exit": 0,
+      "seconds": 6.577,
+      "helper_reports": 1
+    },
+    {
+      "case": "independent_scavenger_authority.gd",
+      "log_sha256": "38cbe0f0881b88265523b9ad4b735448ffa19ddb68f24d209fc849eba6f1c52e",
+      "native_exit": 0,
+      "seconds": 3.111,
+      "helper_reports": 1
+    },
+    {
+      "case": "independent_scavenger_events.gd",
+      "log_sha256": "cd4222c652d59864705c6729bcd5dc8ed374c899eb0858b9044eb5f9d8feea81",
+      "native_exit": 0,
+      "seconds": 3.023,
+      "helper_reports": 1
+    },
+    {
+      "case": "independent_scavenger_settlement.gd",
+      "log_sha256": "79d42989ef0e5fb099239008d914dd3fa640462d4134cdf5f7e0283a9d8a2cf0",
+      "native_exit": 0,
+      "seconds": 2.745,
+      "helper_reports": 1
+    },
+    {
+      "case": "independent_scavenger_views.gd",
+      "log_sha256": "d1422fcccc85cf1e1af15eab9915eda8857ea40d0074ec96a86da9add09d9681",
+      "native_exit": 0,
+      "seconds": 3.121,
+      "helper_reports": 1
+    },
+    {
+      "case": "independent_settlement_types.gd",
+      "log_sha256": "167f37168fbed78d3aee74a73937ca9727acba5cf7bee1c2254a7bbbc02d9cfb",
+      "native_exit": 0,
+      "seconds": 9.062,
+      "helper_reports": 2
+    },
+    {
+      "case": "independent_shop.gd",
+      "log_sha256": "85ada4ff4b8bfbbf054f430aa38277dca3dfd01dca5f5a069750798f85121867",
+      "native_exit": 0,
+      "seconds": 3.508,
+      "helper_reports": 1
+    },
+    {
+      "case": "independent_spitter_assets.gd",
+      "log_sha256": "1ee5d2f1250bfc30d640ece7d09ac9eafa72f834f3bcfe8b98c3b32307ba1b62",
+      "native_exit": 0,
+      "seconds": 1.977,
+      "helper_reports": 1
+    },
+    {
+      "case": "independent_spitter_events.gd",
+      "log_sha256": "86a83990e86f741ed53f9f6125493114bc6def4fa9e1ddebaef791a3263f5614",
+      "native_exit": 0,
+      "seconds": 2.913,
+      "helper_reports": 2
+    },
+    {
+      "case": "independent_spitter_parity.gd",
+      "log_sha256": "d1f284ebfbfa771cb1dace63d01cf318797d5481bc15eba6762825c4388de44f",
+      "native_exit": 0,
+      "seconds": 4.876,
+      "helper_reports": 2
+    },
+    {
+      "case": "independent_starting_loadout_views.gd",
+      "log_sha256": "ffe7b228b34f05d6bad9f255db37f975437180911d8cd0f2bda4815440d46ce2",
+      "native_exit": 0,
+      "seconds": 6.007,
+      "helper_reports": 1
+    },
+    {
+      "case": "independent_starting_loadouts.gd",
+      "log_sha256": "eeaa49f900391350ca28cd21b231b6156ea5a2436d1913b12bad3a146de607c1",
+      "native_exit": 0,
+      "seconds": 7.651,
+      "helper_reports": 1
+    },
+    {
+      "case": "independent_tag_authority.gd",
+      "log_sha256": "c668b27d74fa3bbb59648222bffea8f100e4a1896701b2f07a4dbb20fcd3bc80",
+      "native_exit": 0,
+      "seconds": 13.842,
+      "helper_reports": 1
+    },
+    {
+      "case": "independent_tag_views.gd",
+      "log_sha256": "fdb6be4faf31b1777fcb9275a4a95cc272e7235872de594a013ca8ae7d89073f",
+      "native_exit": 0,
+      "seconds": 5.904,
+      "helper_reports": 1
+    },
+    {
+      "case": "independent_tempering_authority.gd",
+      "log_sha256": "16a043bb028ccc7a45a79dfd854f1099f383d07fa2d577ba765172a6fbaae3d0",
+      "native_exit": 0,
+      "seconds": 7.786,
+      "helper_reports": 1
+    },
+    {
+      "case": "independent_tempering_combat.gd",
+      "log_sha256": "34a68e1423d37f6328afc558d2bbaa19242996dc4532873cf98ca288e50fae12",
+      "native_exit": 0,
+      "seconds": 6.345,
+      "helper_reports": 1
+    },
+    {
+      "case": "independent_tempering_hint.gd",
+      "log_sha256": "c1aee8a45169576b253584edad5668a5cdaede571e76795d6171b0d6276e77f0",
+      "native_exit": 0,
+      "seconds": 6.785,
+      "helper_reports": 1
+    },
+    {
+      "case": "independent_tempering_views.gd",
+      "log_sha256": "b7be240f9624301592cef6b5b991bbfd3c615f4a4d1f8f8b7c9accba3c5e703e",
+      "native_exit": 0,
+      "seconds": 21.877,
+      "helper_reports": 1
+    },
+    {
+      "case": "independent_ui.gd",
+      "log_sha256": "cb4c34104578c31529e524e687eb0a1b7533d8902b6d77f6302ab792adf9f3be",
+      "native_exit": 0,
+      "seconds": 2.467,
+      "helper_reports": 1
+    },
+    {
+      "case": "independent_v2.gd",
+      "log_sha256": "cc022e16dddfbfd3589bde526de896319cc96c1289bac513d818898d2d2287bd",
+      "native_exit": 0,
+      "seconds": 2.936,
+      "helper_reports": 1
+    },
+    {
+      "case": "independent_v3.gd",
+      "log_sha256": "30379c13112f765d7279059d87a868c7bec58575b2c9b9f7eb5c31381fd34c33",
+      "native_exit": 0,
+      "seconds": 3.483,
+      "helper_reports": 1
+    },
+    {
+      "case": "independent_v4.gd",
+      "log_sha256": "1b613e621f5c15180dad7a8ec9d6a8f8c8c6a1a8ac1e8960c086e3749b65b950",
+      "native_exit": 0,
+      "seconds": 2.741,
+      "helper_reports": 1
+    },
+    {
+      "case": "independent_v5.gd",
+      "log_sha256": "0cdb44bd82419d5c7935333b4562e0de6b9e4ed19117689e66308b13c03e3c57",
+      "native_exit": 0,
+      "seconds": 3.296,
+      "helper_reports": 1
+    },
+    {
+      "case": "independent_vfx.gd",
+      "log_sha256": "65f50b07fc6137551d20a679c4d1e34ca1589bd038b4f730b546a90c7397bb27",
+      "native_exit": 0,
+      "seconds": 2.17,
+      "helper_reports": 1
+    },
+    {
+      "case": "independent_warden_reactions.gd",
+      "log_sha256": "835655a4b641b086c53af803c209d936522bd400ee4e818ce4f014b7b2ba46ec",
+      "native_exit": 0,
+      "seconds": 4.052,
+      "helper_reports": 1
+    },
+    {
+      "case": "independent_weapon_authority.gd",
+      "log_sha256": "b129aaefdd31e77e55235d393fa99cb83267ca6660ac71a85fcc26defbb38b9b",
+      "native_exit": 0,
+      "seconds": 4.69,
+      "helper_reports": 1
+    },
+    {
+      "case": "independent_weapon_order.gd",
+      "log_sha256": "fdcf8024f71f7b3addd659d3cc842bd35381582b8352bc16dcf52ad8e6615aa5",
+      "native_exit": 0,
+      "seconds": 22.029,
+      "helper_reports": 1
+    },
+    {
+      "case": "independent_weapon_order_views.gd",
+      "log_sha256": "c9202e1726b7d7924b4336385ba899f0b93a426efc321590918b41cfbbe97a1f",
+      "native_exit": 0,
+      "seconds": 7.645,
+      "helper_reports": 1
+    },
+    {
+      "case": "independent_weapon_readouts.gd",
+      "log_sha256": "40f67462959e3a880fe18ef479b714296adff5bf36ef7171c55f2643f2b64e9b",
+      "native_exit": 0,
+      "seconds": 9.69,
+      "helper_reports": 1
+    },
+    {
+      "case": "independent_weapon_rig.gd",
+      "log_sha256": "f480dfc8484295f5c1bc6ab36a34eb53fb12a31be6db05b62a8f53f8d09a79e0",
+      "native_exit": 0,
+      "seconds": 3.5,
+      "helper_reports": 1
+    },
+    {
+      "case": "test_actor_actions.gd",
+      "log_sha256": "5889db23391958779323f7ed53d29b350078e83c4625986c2fea85534eb56478",
+      "native_exit": 0,
+      "seconds": 2.801,
+      "helper_reports": 1
+    },
+    {
+      "case": "test_audio_teardown_predicate.gd",
+      "log_sha256": "fe105e767702ba930014233031db522ca5a1ff882a8bce5541ac5db6f46286ed",
+      "native_exit": 0,
+      "seconds": 0.31,
+      "helper_reports": 0
+    },
+    {
+      "case": "test_bankshot_build.gd",
+      "log_sha256": "e8ee08d9b1c97ce2a28c62cbbc4d65c36fd2d114bde1123cee83615f6e87905a",
+      "native_exit": 0,
+      "seconds": 3.58,
+      "helper_reports": 1
+    },
+    {
+      "case": "test_boundary_shot.gd",
+      "log_sha256": "3ca047f7566515f10af88540ad5913d19e8d705d039fa57a0250560b09a435bd",
+      "native_exit": 0,
+      "seconds": 0.299,
+      "helper_reports": 0
+    },
+    {
+      "case": "test_brood_actions.gd",
+      "log_sha256": "72adf647baa41dcf9f9cd1a3e78f49bae6e6d9de4844ebe299aceee80f6a2563",
+      "native_exit": 0,
+      "seconds": 2.085,
+      "helper_reports": 1
+    },
+    {
+      "case": "test_brood_pulse.gd",
+      "log_sha256": "bc4a57a26b0d8cc4c108b0543ea1e917931720fab236f8f4e103bc336ea37393",
+      "native_exit": 0,
+      "seconds": 3.391,
+      "helper_reports": 1
+    },
+    {
+      "case": "test_builds.gd",
+      "log_sha256": "055b1f3ba3aeaa92b9f9ee5e7e912a236dcf11d856ddea6e5c983a951bf14634",
+      "native_exit": 0,
+      "seconds": 2.549,
+      "helper_reports": 1
+    },
+    {
+      "case": "test_charger_actions.gd",
+      "log_sha256": "bf9b91c21ed292c64b8d195043c88e7d338ec92b856d466b37808dd7d8076b76",
+      "native_exit": 0,
+      "seconds": 2.081,
+      "helper_reports": 1
+    },
+    {
+      "case": "test_combat_focus.gd",
+      "log_sha256": "6f9fa308c992a95e26eb113d8c0ce453ccde2e03503c53bd094e24eb55660ffc",
+      "native_exit": 0,
+      "seconds": 2.665,
+      "helper_reports": 1
+    },
+    {
+      "case": "test_combat_hud_readability.gd",
+      "log_sha256": "6dbc2a42d1b7b16c044412f3e0c0c0afbec7d93d418c5035f025b8d917b170fe",
+      "native_exit": 0,
+      "seconds": 2.551,
+      "helper_reports": 1
+    },
+    {
+      "case": "test_contact_enemy_actions.gd",
+      "log_sha256": "871162b32708137dc0a1d1ad74ddd18e71f60f26c244138568f2b0d7af819848",
+      "native_exit": 0,
+      "seconds": 2.07,
+      "helper_reports": 1
+    },
+    {
+      "case": "test_core_reactions.gd",
+      "log_sha256": "9e383ace56005941c46b4b4fe498cb36266c4ccd6b9d708c9e857d153114fa15",
+      "native_exit": 0,
+      "seconds": 1.971,
+      "helper_reports": 1
+    },
+    {
+      "case": "test_core_summon.gd",
+      "log_sha256": "6b798c3fd0ee446c03d43ecf3f0872b6b00655119ea5f80eb919296ea5a7e745",
+      "native_exit": 0,
+      "seconds": 3.885,
+      "helper_reports": 1
+    },
+    {
+      "case": "test_core_summon_assets.gd",
+      "log_sha256": "f910e27789afbe5a10f3f7dea6ce8cb61d7369c35a62d05d6f1c88e2393a4368",
+      "native_exit": 0,
+      "seconds": 0.395,
+      "helper_reports": 0
+    },
+    {
+      "case": "test_crawler_hurt_registration.gd",
+      "log_sha256": "e8d1222ec4ab2d4880ef8088eee3613a20be1fe831d000dd57da9924e7b3212c",
+      "native_exit": 0,
+      "seconds": 10.152,
+      "helper_reports": 0
+    },
+    {
+      "case": "test_cryo_build.gd",
+      "log_sha256": "21ff63d6d6ba3f7820d07d6d0836b0a80943a140ec8e1da5d14fb3c12e500af1",
+      "native_exit": 0,
+      "seconds": 7.853,
+      "helper_reports": 1
+    },
+    {
+      "case": "test_discrete_ui_numbers.gd",
+      "log_sha256": "962629822513f2eb534b2799baec24f49d7e1978a2d5beb1b5ac1f8ae5774023",
+      "native_exit": 0,
+      "seconds": 0.49,
+      "helper_reports": 0
+    },
+    {
+      "case": "test_effects.gd",
+      "log_sha256": "791bd61517565bacbf750c5b0ce9ee1f9464ae27299dda67e52e086a5d1dbdf4",
+      "native_exit": 0,
+      "seconds": 2.168,
+      "helper_reports": 1
+    },
+    {
+      "case": "test_encounters.gd",
+      "log_sha256": "4166c4a43d3685726504d6b05b14f2fa0fe52245e602631725ed4e1b4af40676",
+      "native_exit": 0,
+      "seconds": 2.158,
+      "helper_reports": 1
+    },
+    {
+      "case": "test_expansion.gd",
+      "log_sha256": "f1c16571a85c88bcb42f6310b2457dfb3330bedd605904b50953b776f7eb254c",
+      "native_exit": 0,
+      "seconds": 2.083,
+      "helper_reports": 1
+    },
+    {
+      "case": "test_export_contract.gd",
+      "log_sha256": "48e0b8c6f5d4c2e7cb8ea202390ffbd92f81c67575661774a65d31a6dc4f2ee8",
+      "native_exit": 0,
+      "seconds": 0.288,
+      "helper_reports": 0
+    },
+    {
+      "case": "test_feedback_diode.gd",
+      "log_sha256": "907242bbf6996ea213fd4f5400828c24e7f25e8f3ab30c640c25eeca4ef33e13",
+      "native_exit": 0,
+      "seconds": 3.5,
+      "helper_reports": 1
+    },
+    {
+      "case": "test_feedback_mixer.gd",
+      "log_sha256": "67f9ae45c1285355b322d01e196fb95456746dcdc0699602645cc7ef09bcf92e",
+      "native_exit": 0,
+      "seconds": 6.436,
+      "helper_reports": 0
+    },
+    {
+      "case": "test_feedback_teardown.gd",
+      "log_sha256": "c82dfe31687b4c3e9de4b61c007fcce9420c3d29b83138945d74ec6fada80f97",
+      "native_exit": 0,
+      "seconds": 0.88,
+      "helper_reports": 0
+    },
+    {
+      "case": "test_focus_fire.gd",
+      "log_sha256": "4b765aad1c7a093704ad5909c69103c67c9d8c1788896f023ee01758c91125b9",
+      "native_exit": 0,
+      "seconds": 4.682,
+      "helper_reports": 1
+    },
+    {
+      "case": "test_game.gd",
+      "log_sha256": "28e33c76c4eae8613275ef4cadbecd955bc1644794195d4da421e2027f0f93c9",
+      "native_exit": 0,
+      "seconds": 2.61,
+      "helper_reports": 1
+    },
+    {
+      "case": "test_hud_layout.gd",
+      "log_sha256": "29b8bc37d3cc93e61db5fc69b3b87189da87ca424437d41dffab6fa629836192",
+      "native_exit": 0,
+      "seconds": 2.157,
+      "helper_reports": 1
+    },
+    {
+      "case": "test_input_lifecycle.gd",
+      "log_sha256": "0da85e2fcbc7e914e291956afcedba708390f6256dbf823815c148349246a68e",
+      "native_exit": 0,
+      "seconds": 2.364,
+      "helper_reports": 1
+    },
+    {
+      "case": "test_modes.gd",
+      "log_sha256": "922fda4de2d6363596151fe2411be12bcf6f79597391e86cbcc632a12ea87372",
+      "native_exit": 0,
+      "seconds": 2.941,
+      "helper_reports": 1
+    },
+    {
+      "case": "test_modifier_copy.gd",
+      "log_sha256": "a851a3fe5fb7d8ac6fbf0d403d47262910395906282126dd53d0b971c9fc72e7",
+      "native_exit": 0,
+      "seconds": 3.213,
+      "helper_reports": 1
+    },
+    {
+      "case": "test_player_feedback.gd",
+      "log_sha256": "a61650c99842bbd3742aead705af23f2943de818f76da736955dc38cbc4aea23",
+      "native_exit": 0,
+      "seconds": 4.062,
+      "helper_reports": 1
+    },
+    {
+      "case": "test_primary_brace.gd",
+      "log_sha256": "b6f8daa7df6f604c3d4a5cc0288ad4ff4ff3e7b064187a1ecfd9732de103adac",
+      "native_exit": 0,
+      "seconds": 3.039,
+      "helper_reports": 1
+    },
+    {
+      "case": "test_resolution_validation.gd",
+      "log_sha256": "e774596ce416d895a180cdf93b4d1b6cf3dc7ceb896d6b6749b35f8d2e8659db",
+      "native_exit": 0,
+      "seconds": 3.972,
+      "helper_reports": 1
+    },
+    {
+      "case": "test_scavenger_reel.gd",
+      "log_sha256": "9e933ea5627acdb4b76cac64b4d105c294234ef0c18758333b8bc3773ab5c584",
+      "native_exit": 0,
+      "seconds": 2.589,
+      "helper_reports": 1
+    },
+    {
+      "case": "test_settlement_levels.gd",
+      "log_sha256": "301e6ee0889bbbc536661326b0d155601d3d4d47c8ade3480c312329146ff3fb",
+      "native_exit": 0,
+      "seconds": 3.553,
+      "helper_reports": 1
+    },
+    {
+      "case": "test_shop_offer_visibility.gd",
+      "log_sha256": "6d089d82635c5dc4eb98fac43f11135514f90ff1495f19787af7dc56fa941fc1",
+      "native_exit": 0,
+      "seconds": 6.691,
+      "helper_reports": 1
+    },
+    {
+      "case": "test_shop_reservation.gd",
+      "log_sha256": "3eaca9a428023faf81998b811f35f922628e0edf3664574828bd9c9b2527c96a",
+      "native_exit": 0,
+      "seconds": 6.693,
+      "helper_reports": 1
+    },
+    {
+      "case": "test_spitter_actions.gd",
+      "log_sha256": "73289dfc7899b5429f794281c89ef68e0185e9502138066ee7a8c0ca3064311a",
+      "native_exit": 0,
+      "seconds": 2.075,
+      "helper_reports": 1
+    },
+    {
+      "case": "test_starting_loadouts.gd",
+      "log_sha256": "dd5bac6254dba77121f18f909100bf9c85a43c90262fc595470eca896351a794",
+      "native_exit": 0,
+      "seconds": 2.744,
+      "helper_reports": 1
+    },
+    {
+      "case": "test_tag_synergy_progress.gd",
+      "log_sha256": "0b1db371dcfc44c082ffb674f3a67ab5f649a7f7e04fdb57de305a1bd579a85f",
+      "native_exit": 0,
+      "seconds": 2.81,
+      "helper_reports": 1
+    },
+    {
+      "case": "test_telegraph_readability.gd",
+      "log_sha256": "4b08cd4199eea565d35856e3be1e7ab7ea421a6e5e1cf3d3d62d0e9a8eebc698",
+      "native_exit": 0,
+      "seconds": 2.073,
+      "helper_reports": 1
+    },
+    {
+      "case": "test_tempered_combat.gd",
+      "log_sha256": "edbf45efce0cd6e1d9ed2295e7bf5bc1d9cad4d188f28425db6429888e565327",
+      "native_exit": 0,
+      "seconds": 6.84,
+      "helper_reports": 1
+    },
+    {
+      "case": "test_upgrade_salvage.gd",
+      "log_sha256": "d4176529569e10e4577b50a9ae4453fdfed94a5cae9ba6a336bbb1d7f541bdf4",
+      "native_exit": 0,
+      "seconds": 3.11,
+      "helper_reports": 1
+    },
+    {
+      "case": "test_vfx.gd",
+      "log_sha256": "05a0b755f5a419747c3c92ead85cb2fef3b0977d43149eeebf867c4e85fc6dc3",
+      "native_exit": 0,
+      "seconds": 1.975,
+      "helper_reports": 1
+    },
+    {
+      "case": "test_warden_charge.gd",
+      "log_sha256": "10e364d438516f61becc83df63b9e8df1b8408022f7b92edb5de90766a5fcc5a",
+      "native_exit": 0,
+      "seconds": 2.936,
+      "helper_reports": 1
+    },
+    {
+      "case": "test_warden_charge_assets.gd",
+      "log_sha256": "02c4257c18aa57ee30fc0c2725e0cf70158092abfd65b89308a91edfeb3a9f9b",
+      "native_exit": 0,
+      "seconds": 0.298,
+      "helper_reports": 0
+    },
+    {
+      "case": "test_warden_reactions.gd",
+      "log_sha256": "6f6c209ef7cf548c8d2576ac307deb324f1a08bf1bc8892e7a440497b83e6a45",
+      "native_exit": 0,
+      "seconds": 2.083,
+      "helper_reports": 1
+    },
+    {
+      "case": "test_weapon_mounts.gd",
+      "log_sha256": "32160414436f2c3f394a1784d36102eed19b35af1e11175690009bf826b2b804",
+      "native_exit": 0,
+      "seconds": 1.984,
+      "helper_reports": 1
+    },
+    {
+      "case": "test_weapon_order.gd",
+      "log_sha256": "9ee355cb9f1be21bc8d922e2081d30d5eadfb1d4500624ba9c2967fa8e4927d6",
+      "native_exit": 0,
+      "seconds": 10.669,
+      "helper_reports": 1
+    },
+    {
+      "case": "test_weapon_readout.gd",
+      "log_sha256": "3b3497b1c68eaafe6e92833fe7fab24439c3bd70dc09be59d180717685dbe401",
+      "native_exit": 0,
+      "seconds": 5.345,
+      "helper_reports": 1
+    },
+    {
+      "case": "test_weapon_tempering.gd",
+      "log_sha256": "5a401a73ed030cb647dcd88e5251bed9f73f3510f94ebfd511d925c038340708",
+      "native_exit": 0,
+      "seconds": 15.332,
+      "helper_reports": 1
+    },
+    {
+      "case": "test_ui.gd",
+      "log_sha256": "17fa24b5af573f32c02ece54ec801f04ccbdef625c165bfdc4ad86a93cc52989",
+      "native_exit": 0,
+      "seconds": 1.7,
+      "helper_reports": 0
+    },
+    {
+      "case": "check_build_expansion_icons.gd",
+      "log_sha256": "6c16f380bea9c98776e7b0a6403e2587fff7af409bfd01df85b5761ed9b44915",
+      "native_exit": 0,
+      "seconds": 0.482,
+      "helper_reports": 0
+    },
+    {
+      "case": "check_icons.gd",
+      "log_sha256": "31571934063d0d8a8f9e9b4e4d59280b1b20a8f997347f54d9a2198fadd33939",
+      "native_exit": 0,
+      "seconds": 0.476,
+      "helper_reports": 0
+    },
+    {
+      "case": "check_mechanism_icons.gd",
+      "log_sha256": "6c16f380bea9c98776e7b0a6403e2587fff7af409bfd01df85b5761ed9b44915",
+      "native_exit": 0,
+      "seconds": 0.479,
+      "helper_reports": 0
+    }
+  ],
+  "source_maps_unchanged": true,
+  "scope": "Independent exhaustive review of original author full aggregate raw logs/semantics/cleanup/hashes; not independent execution of125. Independent selected source checks are separate.",
+  "focused_semantic_counts_retained": [
+    {
+      "case": "independent_cryo_shop.gd",
+      "checks": 320
+    },
+    {
+      "case": "independent_feedback_shop.gd",
+      "checks": 102
+    },
+    {
+      "case": "independent_reservation_records.gd",
+      "checks": 299
+    },
+    {
+      "case": "independent_reservation_views.gd",
+      "checks": 3254
+    },
+    {
+      "case": "test_bankshot_build.gd",
+      "checks": 114
+    },
+    {
+      "case": "test_modifier_copy.gd",
+      "checks": 112
+    },
+    {
+      "case": "test_upgrade_salvage.gd",
+      "checks": 147
+    },
+    {
+      "case": "test_weapon_order.gd",
+      "checks": 321
+    },
+    {
+      "case": "test_scavenger_reel.gd",
+      "checks": 48
+    },
+    {
+      "case": "independent_scavenger_authority.gd",
+      "checks": 178
+    },
+    {
+      "case": "independent_scavenger_events.gd",
+      "checks": 46
+    },
+    {
+      "case": "independent_scavenger_views.gd",
+      "checks": 132
+    },
+    {
+      "case": "independent_scavenger_settlement.gd",
+      "checks": 30
+    }
+  ],
+  "rejected_first_full_retained": "Original714 first aggregate117/125 with8failedfixtures13messages remainsFAIL",
+  "original_wrapper_exit0_confirmed": true
+}

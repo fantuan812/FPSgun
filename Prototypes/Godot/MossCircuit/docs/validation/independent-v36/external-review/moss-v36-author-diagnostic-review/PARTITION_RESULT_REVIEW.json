@@ -1,0 +1,68 @@
+{
+  "status": "PASS_INDEPENDENT_READBACK_NEW_PARTITION_GATE",
+  "utc": "2026-10-27T04:33:34.405993+00:00",
+  "checks": 773,
+  "observations72_exact_source_full_values_and_order": true,
+  "steps": [
+    {
+      "mode": "arena",
+      "native_exit": 0,
+      "timeout": false,
+      "seconds": 79.96009305599728,
+      "engine_error": false,
+      "expected_checks": 435,
+      "actual_checks": 435,
+      "helper_clean": true,
+      "pass": true
+    },
+    {
+      "mode": "rooms",
+      "native_exit": 0,
+      "timeout": false,
+      "seconds": 77.62727585800167,
+      "engine_error": false,
+      "expected_checks": 338,
+      "actual_checks": 338,
+      "helper_clean": true,
+      "pass": true
+    }
+  ],
+  "cleanup_last": [
+    {
+      "discarded": 0,
+      "elapsed_us": 151562,
+      "game_owner_count": 1,
+      "invalid": 0,
+      "new_pushed": 8192,
+      "owner_count": 1,
+      "owners_released": true,
+      "prepare_errors": 0,
+      "required_frames": 6615,
+      "silent_frames": 8192,
+      "streams_released": true
+    },
+    {
+      "discarded": 0,
+      "elapsed_us": 157956,
+      "game_owner_count": 1,
+      "invalid": 0,
+      "new_pushed": 8192,
+      "owner_count": 1,
+      "owners_released": true,
+      "prepare_errors": 0,
+      "required_frames": 6615,
+      "silent_frames": 8192,
+      "streams_released": true
+    }
+  ],
+  "source717_both_copies_pack_helper_plan_scripts_runner_pins_exact": true,
+  "raw_sha256": {
+    "arena/semantic.json": "36439bf0ea2bb8a4df9fc81c717ed0dc26b259df7bfc08c946218cc3e4504b1d",
+    "arena/stdout.log": "d158ca74ff55453237a624a645e961ee2c1688499da2c7b6f307d2a55827de10",
+    "arena/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "rooms/semantic.json": "298b00e82f93c96250a81d624ab584e4516487df2023d0172c7c3f78fafc0647",
+    "rooms/stdout.log": "079463e7d3dce15f3057874f855cceb907346556b8f14ef77951997c006cce5b",
+    "rooms/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "scope": "New formal two-process gate each180s,totalmax360s. Original single180s packed timeout remains FAIL. Timing instrumentation run remains diagnostic only. No rerun by reviewer."
+}

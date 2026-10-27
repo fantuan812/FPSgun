@@ -1,0 +1,21 @@
+{
+  "status": "PASS_PREEXECUTION_STATIC_PARTITION_REVIEW",
+  "utc": "2026-10-27T04:29:48.333666+00:00",
+  "changes_exactly_mode_selection_and_rooms_one_time_resource_block_omission": true,
+  "inverse_restores_original_bytes": true,
+  "all_per_mode_cases_assertions_order_cleanup_bytes_unchanged": true,
+  "coverage": "97 original one-time resource checks + Arena338 + Rooms338 =773; independent processes instead of shared process",
+  "budget": "New gate: each180s, summed target maximum360s. Different from original single180s gate.",
+  "runner_review": "Strict native/timeout/semantic counts/error/one bounded valid cleanup per mode; fail stops; isolated fresh profiles; pins before/after",
+  "no_execution_by_reviewer": true,
+  "history": "Original timeout FAIL retained; timing result diagnostic only",
+  "pins": {
+    "PLAN.json": "1dff8201e22354bb8582fd4a458467007856bfb555b8ca9460a7e2a12c1e7bf5",
+    "arena.gd": "55252f10814b4a80eb375f6d530307c24bc063aa5a0907e783749636d479889b",
+    "rooms.gd": "99034bd37448ad2978982db5a38ddb5cfba30024c574875f294eb7e352f7e3c0",
+    "arena.patch": "c216879d51021491d6c5199976064377b53d4e3493107b7e286574f40c851db6",
+    "rooms.patch": "4e9993463d015f1084f28287e43445e45dedea323e82183d08decf2dfc5233f6",
+    "run.py": "79be56d3c2710a1afb8654990ede7c3a9f6721cb45d1fc7e5c895fda66f48169",
+    "original_external.gd": "bcb4837f9f2b1ec190cbf922de0fd0804a23cd9552977faa11d5ec361e329e86"
+  }
+}

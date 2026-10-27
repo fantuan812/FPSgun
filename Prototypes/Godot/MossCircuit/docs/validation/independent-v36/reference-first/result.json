@@ -1,0 +1,286 @@
+{
+  "status": "PASS_REFERENCE_MODEL_ONLY",
+  "checks": 70,
+  "records": [
+    {
+      "label": "canonical profile",
+      "pass": true
+    },
+    {
+      "label": "integral JSON-compatible 1",
+      "pass": true
+    },
+    {
+      "label": "integral JSON-compatible 1.0",
+      "pass": true
+    },
+    {
+      "label": "integral JSON-compatible 3.0",
+      "pass": true
+    },
+    {
+      "label": "integral JSON-compatible 8",
+      "pass": true
+    },
+    {
+      "label": "integral JSON-compatible 8.0",
+      "pass": true
+    },
+    {
+      "label": "profile rejection return_pickup_limitTrue",
+      "pass": true
+    },
+    {
+      "label": "profile rejection return_pickup_limitFalse",
+      "pass": true
+    },
+    {
+      "label": "profile rejection return_pickup_limitNone",
+      "pass": true
+    },
+    {
+      "label": "profile rejection return_pickup_limit'3'",
+      "pass": true
+    },
+    {
+      "label": "profile rejection return_pickup_limit0",
+      "pass": true
+    },
+    {
+      "label": "profile rejection return_pickup_limit9",
+      "pass": true
+    },
+    {
+      "label": "profile rejection return_pickup_limit2.5",
+      "pass": true
+    },
+    {
+      "label": "profile rejection return_pickup_limitnan",
+      "pass": true
+    },
+    {
+      "label": "profile rejection return_pickup_limitinf",
+      "pass": true
+    },
+    {
+      "label": "profile rejection return_pickup_radiusTrue",
+      "pass": true
+    },
+    {
+      "label": "profile rejection return_pickup_radiusNone",
+      "pass": true
+    },
+    {
+      "label": "profile rejection return_pickup_radius'18'",
+      "pass": true
+    },
+    {
+      "label": "profile rejection return_pickup_radius0",
+      "pass": true
+    },
+    {
+      "label": "profile rejection return_pickup_radius-1",
+      "pass": true
+    },
+    {
+      "label": "profile rejection return_pickup_radius64.1",
+      "pass": true
+    },
+    {
+      "label": "profile rejection return_pickup_radiusnan",
+      "pass": true
+    },
+    {
+      "label": "profile rejection return_pickup_radiusinf",
+      "pass": true
+    },
+    {
+      "label": "profile rejection pickup_sources['normal', 'normal']",
+      "pass": true
+    },
+    {
+      "label": "profile rejection pickup_sources['energy', 'energy']",
+      "pass": true
+    },
+    {
+      "label": "profile rejection pickup_sources['normal', 'medical']",
+      "pass": true
+    },
+    {
+      "label": "profile rejection pickup_sources['normal']",
+      "pass": true
+    },
+    {
+      "label": "profile rejection pickup_sources['normal', 1]",
+      "pass": true
+    },
+    {
+      "label": "profile rejection pickup_sourcesNone",
+      "pass": true
+    },
+    {
+      "label": "profile rejection max_stackTrue",
+      "pass": true
+    },
+    {
+      "label": "profile rejection max_stack0",
+      "pass": true
+    },
+    {
+      "label": "profile rejection max_stack2",
+      "pass": true
+    },
+    {
+      "label": "profile rejection max_stackNone",
+      "pass": true
+    },
+    {
+      "label": "A closed strict (50, 17)",
+      "pass": true
+    },
+    {
+      "label": "A closed strict (50, 18)",
+      "pass": true
+    },
+    {
+      "label": "A closed strict (120, 0)",
+      "pass": true
+    },
+    {
+      "label": "A closed strict (0, 17)",
+      "pass": true
+    },
+    {
+      "label": "A closed strict (0, 18)",
+      "pass": true
+    },
+    {
+      "label": "A closed strict (100, 17)",
+      "pass": true
+    },
+    {
+      "label": "A closed strict (50, -17)",
+      "pass": true
+    },
+    {
+      "label": "zero segment excluded",
+      "pass": true
+    },
+    {
+      "label": "nonfinite endpoint nan",
+      "pass": true
+    },
+    {
+      "label": "nonfinite endpoint inf",
+      "pass": true
+    },
+    {
+      "label": "nonfinite endpoint -inf",
+      "pass": true
+    },
+    {
+      "label": "diagonal interior margin",
+      "pass": true
+    },
+    {
+      "label": "diagonal exterior margin",
+      "pass": true
+    },
+    {
+      "label": "D split",
+      "pass": true
+    },
+    {
+      "label": "D life-clipped",
+      "pass": true
+    },
+    {
+      "label": "D outbound expiry",
+      "pass": true
+    },
+    {
+      "label": "life exhausted",
+      "pass": true
+    },
+    {
+      "label": "dt zero",
+      "pass": true
+    },
+    {
+      "label": "arrival entry no sweep",
+      "pass": true
+    },
+    {
+      "label": "C reverse pickup quota",
+      "pass": true
+    },
+    {
+      "label": "C reverse disc tie",
+      "pass": true
+    },
+    {
+      "label": "B postmagnet not physical recheck",
+      "pass": true
+    },
+    {
+      "label": "B no sweep retains moved pickup",
+      "pass": true
+    },
+    {
+      "label": "B original local wins no quota",
+      "pass": true
+    },
+    {
+      "label": "E event-appended waits original range",
+      "pass": true
+    },
+    {
+      "label": "F source preservation and medical exclusion",
+      "pass": true
+    },
+    {
+      "label": "runtime actual integer remaining True",
+      "pass": true
+    },
+    {
+      "label": "runtime actual integer remaining 3.0",
+      "pass": true
+    },
+    {
+      "label": "runtime actual integer remaining -1",
+      "pass": true
+    },
+    {
+      "label": "runtime actual integer remaining 4",
+      "pass": true
+    },
+    {
+      "label": "runtime actual integer remaining None",
+      "pass": true
+    },
+    {
+      "label": "runtime actual integer maximum True",
+      "pass": true
+    },
+    {
+      "label": "runtime actual integer maximum 3.0",
+      "pass": true
+    },
+    {
+      "label": "runtime actual integer maximum 0",
+      "pass": true
+    },
+    {
+      "label": "runtime actual integer maximum 9",
+      "pass": true
+    },
+    {
+      "label": "runtime actual integer maximum None",
+      "pass": true
+    },
+    {
+      "label": "snapshot ownership no alias",
+      "pass": true
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "status": "PASS_PREEXECUTION_OPTIONAL_MECHANISM_ID_COMPATIBILITY",
+  "main_sha256": "2ffbba179f651ee8e47036eccb666eba7ca857a8f3a5c9696a38430d6a1fe394",
+  "map_sha256": "08f0a768321da71fd7590f9d9a4c5e08ca50e1979a62ea23bc2780fca96b44af",
+  "scope": "Safe get of optional historical mechanism id; no other production or numeric policy change. Author self-review finding before any engine execution.",
+  "independent_regression": "checks/independent_scavenger_views.gd explicitly removes old row id and requires valid catalog and unchanged old description",
+  "execution": "Pending first import/focused; no target pass claimed"
+}

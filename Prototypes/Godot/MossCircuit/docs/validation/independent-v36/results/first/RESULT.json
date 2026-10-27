@@ -1,0 +1,45 @@
+{
+  "pass": true,
+  "steps": [
+    {
+      "case": "cold-import",
+      "native_exit": 0,
+      "timeout": false,
+      "elapsed": 21.799,
+      "error_or_resource_warning": false,
+      "semantic_pass": true,
+      "pass": true
+    },
+    {
+      "case": "authority",
+      "native_exit": 0,
+      "timeout": false,
+      "elapsed": 4.48,
+      "error_or_resource_warning": false,
+      "semantic_pass": true,
+      "pass": true
+    },
+    {
+      "case": "events",
+      "native_exit": 0,
+      "timeout": false,
+      "elapsed": 5.047,
+      "error_or_resource_warning": false,
+      "semantic_pass": true,
+      "pass": true
+    },
+    {
+      "case": "views",
+      "native_exit": 0,
+      "timeout": false,
+      "elapsed": 3.962,
+      "error_or_resource_warning": false,
+      "semantic_pass": true,
+      "pass": true
+    }
+  ],
+  "copied_input_changes": [],
+  "origin_input_changes": [],
+  "new_source_sidecars": [],
+  "scope": "Independent exact-copy cold import and three selected controlled target scripts, not full aggregate/packed/native/ordinary acceptance"
+}

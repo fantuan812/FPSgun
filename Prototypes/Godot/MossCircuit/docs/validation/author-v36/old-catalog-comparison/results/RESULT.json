@@ -1,0 +1,58 @@
+{
+  "pass": true,
+  "steps": [
+    {
+      "name": "baseline-transactions",
+      "exit": 0,
+      "seconds": 7.593,
+      "error": false,
+      "resource_warning": false,
+      "success_marker": true,
+      "historical_bytes_equal": true,
+      "trace_sha256": "22e28521ba76fb7285a59b98593aecc7c4af9e24d497853119f73495324feaf8",
+      "pass": true
+    },
+    {
+      "name": "baseline-combat",
+      "exit": 0,
+      "seconds": 10.569,
+      "error": false,
+      "resource_warning": false,
+      "success_marker": true,
+      "historical_bytes_equal": true,
+      "trace_sha256": "e7d93a1fcf01345c540bf9f868632310fd3e85572dbe431dbe12d43bf19212ec",
+      "pass": true
+    },
+    {
+      "name": "candidate-transactions",
+      "exit": 0,
+      "seconds": 7.313,
+      "error": false,
+      "resource_warning": false,
+      "success_marker": true,
+      "historical_bytes_equal": true,
+      "trace_sha256": "22e28521ba76fb7285a59b98593aecc7c4af9e24d497853119f73495324feaf8",
+      "pass": true
+    },
+    {
+      "name": "candidate-combat",
+      "exit": 0,
+      "seconds": 11.584,
+      "error": false,
+      "resource_warning": false,
+      "success_marker": true,
+      "historical_bytes_equal": true,
+      "trace_sha256": "e7d93a1fcf01345c540bf9f868632310fd3e85572dbe431dbe12d43bf19212ec",
+      "pass": true
+    }
+  ],
+  "unchanged_input_counts": [
+    696,
+    703
+  ],
+  "source_changes": {
+    "evidence-workspace/moss-v35-r4": [],
+    "evidence-workspace/moss-v36-work": []
+  },
+  "scope": "Actual old catalog actual shared combat/transaction authority; not new enlarged-catalog shop offer parity. Only catalog setup and final-owner test cleanup differ from historical oracles."
+}

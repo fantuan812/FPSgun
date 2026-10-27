@@ -1,3 +1,15 @@
+# v36 complete resource pack — local functional verification, not publication
+
+Both preset PCKs are identical:41,450,052 bytes, SHA-256 `ea994144d3ae76926b29fad6467cb4bd36bfce73fcc96683694eb31c18caaba5`. Linux ELF stays `2c78919325d7f29fa7607287c7c1eeac367ea4c94e7b8b6f5f4c6b20492f73d0`,0755. Windows executable is historical and unexecuted here. This is a complete resource pack, not a standalone program, ZIP or delta patch; original platform executable and licenses are required.
+
+From a checkout containing all chunks: `python Deliveries/MossCircuit/restore_deliveries.py --version v36 --output recovered-v36`. Read [identity and recovery instructions](../../../../Deliveries/MossCircuit/v36/READ_ME_v36.txt). Close the game; uniquely back up and hash your actual old pack; verify the new complete file; manually replace only adjacent MossCircuit.pck. Start the original program normally, not with --main-pack. The unchanged helper refuses unsafe paths and overwrites and publishes atomically per file, not per version batch. It neither installs nor executes.
+
+All70 prior local catalog records remain exact;2 v36 records append14 chunks plus instructions. Independent actual local restoration passed10 cases, and file-only v35→v36→v35 backup/replacement/rollback restored old PCK and unchanged ELF/mode exactly. These operations are not old-version gameplay, Windows execution or Git-download proof. Accepted remote remainsv31 until separate reachable remote readback; v32–v36 are not claimed published.
+
+Author final125 passed and all raw records were independently reviewed. ExactPCK/newfeature/resources and limited native/ordinary evidence are recorded separately. Crucially, original single-process packed audioauthority180s timed out and remainsFAIL; a new Arena/Rooms functional gate passed435+338 with each180s and a different total maximum360s. The instrumented178.371s run is diagnostic only. Old117/125 and firstSVGfixture failures remain. Ordinary firstshop124scrap did not establish Reel acquisition; Dummy/Windows/listening/campaign/balance/performance limitations remain. See [independent evidence](validation/independent-v36/QA_REPORT.md).
+
+---
+
 # v35 complete resource pack — locally verified, not published
 
 The complete PCK is 41,438,836 bytes, SHA-256 `99b5232f7d5866ab3152f78990ed6ad37ed55957cf85f1712418c056daa3638d`. Both presets match and reuse unchanged Linux ELF `2c78919325d7f29fa7607287c7c1eeac367ea4c94e7b8b6f5f4c6b20492f73d0`; Windows executable retains its historical identity and was not rebuilt or executed. This is not a standalone program, ZIP or delta patch; existing platform files and original licenses are required.

@@ -1,4 +1,5 @@
 extends RefCounted
+const ScavengerReel=preload("res://scripts/gameplay/scavenger_reel.gd")
 const WeaponTempering = preload("res://scripts/gameplay/weapon_tempering.gd")
 ## Pure run rules; configuration owns balance, presentation owns no damage logic.
 # These are the three existing rules, not an open-ended catalog effect engine.
@@ -174,6 +175,7 @@ static func validate_catalog(catalog: Dictionary) -> Array:
 				if _positive_number(entry.get("chill_duration")) and entry.chill_duration>10: errors.append("Chill exceeds duration budget")
 				if _positive_number(entry.get("chill_speed")) and entry.chill_speed>1: errors.append("Chill cannot accelerate")
 		elif entry.kind == "item":
+			if entry.id=="scavenger_reel" and ScavengerReel.definition(entry).is_empty():errors.append("Invalid Scavenger Reel profile")
 			if entry.id=="feedback_diode":
 				if not _positive_number(entry.get("feedback_damage")): errors.append("Invalid feedback damage")
 				elif entry.feedback_damage>1000: errors.append("Feedback exceeds damage budget")

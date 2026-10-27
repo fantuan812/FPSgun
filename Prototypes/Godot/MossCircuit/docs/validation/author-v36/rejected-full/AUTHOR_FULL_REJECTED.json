@@ -1,0 +1,105 @@
+{
+  "status": "REJECTED_FINAL_R1_117_OF_125",
+  "all_125_commands_executed": true,
+  "native_exit": 1,
+  "input_count": 714,
+  "input_map_sha256": "a3bd6625e0d06e25251b10887a940a78267ea09023ad63be3879cc92b0fd5471",
+  "inputs_unchanged": true,
+  "production131_unchanged": true,
+  "failures": [
+    {
+      "test": "independent_cryo_shop.gd",
+      "native_exit": 1,
+      "engine_error": false,
+      "messages": [
+        "explicit v26 8+29 including reviewed additions"
+      ],
+      "source_sha256": "56efc315caf08f27ad47ff998f7040f0d9e33a2be82a1040aa6eaa329a92d4da",
+      "log_sha256": "0175798c526561b5c71dea03a84952aed7d1d9995ccfa9180538bab3faa08859",
+      "reason": "Authorized one-module catalog expansion invalidated historical current-count/ID/raw/tail assumptions; no production or error-gate change proposed."
+    },
+    {
+      "test": "independent_feedback_shop.gd",
+      "native_exit": 1,
+      "engine_error": false,
+      "messages": [
+        "exact 29 module IDs and order"
+      ],
+      "source_sha256": "2c3a3c1c69741d12ef4683f1e865096a8e7e8e18d64a0817282587e99c18aecf",
+      "log_sha256": "de1a5fce62a01ab43498743db524b4f5d9557e59b4648e0e0045af458526c6e5",
+      "reason": "Authorized one-module catalog expansion invalidated historical current-count/ID/raw/tail assumptions; no production or error-gate change proposed."
+    },
+    {
+      "test": "independent_reservation_records.gd",
+      "native_exit": 1,
+      "engine_error": false,
+      "messages": [
+        "exact reviewed v33 catalog bytes, including only the authored tempering profile",
+        "exact v27 bytes after removing ONLY the declared v33 profile: all IDs/order/prices/weights/links",
+        "exact ordered 29 module IDs"
+      ],
+      "source_sha256": "bd5337129e51336dd38d18916624630b74420a0edb4ac0e6f9afeb4d90a97dac",
+      "log_sha256": "2761e00f3e80bc236735feff935d2000d4a92a6259198bed3842452d9886691b",
+      "reason": "Authorized one-module catalog expansion invalidated historical current-count/ID/raw/tail assumptions; no production or error-gate change proposed."
+    },
+    {
+      "test": "independent_reservation_views.gd",
+      "native_exit": 1,
+      "engine_error": false,
+      "messages": [
+        "exact 29-module catalog count"
+      ],
+      "source_sha256": "8a6be4c3389d3e89ad3feff54ee22eb9662a6ba88f5115ac1cec6268a1d2b879",
+      "log_sha256": "f209b3b0d67177797e428e41afa8edeb3f3d710fddb445d846dc4aac4aebec38",
+      "reason": "Authorized one-module catalog expansion invalidated historical current-count/ID/raw/tail assumptions; no production or error-gate change proposed."
+    },
+    {
+      "test": "test_bankshot_build.gd",
+      "native_exit": 1,
+      "engine_error": false,
+      "messages": [
+        "explicit content version/count",
+        "exact additive pair/link"
+      ],
+      "source_sha256": "5ff51f370b6c5f35fd217fe356fda05cf36edbc72c075e840a1d351c244171ea",
+      "log_sha256": "2a428a6500beef3dd68fc75938e0495de6f0ed55cfeb775c9ba0fcf938a4faab",
+      "reason": "Authorized one-module catalog expansion invalidated historical current-count/ID/raw/tail assumptions; no production or error-gate change proposed."
+    },
+    {
+      "test": "test_modifier_copy.gd",
+      "native_exit": 1,
+      "engine_error": false,
+      "messages": [
+        "only reviewed v26 appended pair/link",
+        "only reviewed appended pair/link",
+        "all pre-v23 catalog IDs/numbers/tags/weights/other text exact"
+      ],
+      "source_sha256": "fd2b20f89a06b09dc9a428a287c3fec10b99802df49900111da0d439cd7e6039",
+      "log_sha256": "c318e34e3d6107cf12ffe66fb925d3ccf7bc907acd65b6053c02cf7c88dc2b8b",
+      "reason": "Authorized one-module catalog expansion invalidated historical current-count/ID/raw/tail assumptions; no production or error-gate change proposed."
+    },
+    {
+      "test": "test_upgrade_salvage.gd",
+      "native_exit": 1,
+      "engine_error": false,
+      "messages": [
+        "still 37 catalog entries"
+      ],
+      "source_sha256": "b626955de1d121b13cc38bde12075978f27442912266fd3395ac494c680ed620",
+      "log_sha256": "e5557de388c6b602760171a933c1d50074641feb659200caa75233d63419711e",
+      "reason": "Authorized one-module catalog expansion invalidated historical current-count/ID/raw/tail assumptions; no production or error-gate change proposed."
+    },
+    {
+      "test": "test_weapon_order.gd",
+      "native_exit": 1,
+      "engine_error": false,
+      "messages": [
+        "catalog count unchanged"
+      ],
+      "source_sha256": "c6018c2cd64ae224648271fdb827e55ce3f60a82ec4f29d478bc7a9adacda001",
+      "log_sha256": "d4768bfb4e945a4bf00459141820fa4d4b92fa45daecfc4f7b62143fbd9b0751",
+      "reason": "Authorized one-module catalog expansion invalidated historical current-count/ID/raw/tail assumptions; no production or error-gate change proposed."
+    }
+  ],
+  "retention": "Original source, full summary, stdout/logs, helper observations and original exit retained unchanged. Later results cannot relabel this run."
+}

@@ -1,0 +1,58 @@
+[
+  {
+    "step": "source-resource-fingerprint",
+    "native_exit": 0,
+    "timeout": false,
+    "elapsed": 5.575,
+    "error_or_resource_warning": false,
+    "pass": true
+  },
+  {
+    "step": "packed-resources",
+    "native_exit": 0,
+    "timeout": false,
+    "elapsed": 5.81,
+    "error_or_resource_warning": false,
+    "pass": true
+  },
+  {
+    "step": "packed-authority",
+    "native_exit": 0,
+    "timeout": false,
+    "elapsed": 2.953,
+    "error_or_resource_warning": false,
+    "pass": true
+  },
+  {
+    "step": "packed-events",
+    "native_exit": 0,
+    "timeout": false,
+    "elapsed": 3.959,
+    "error_or_resource_warning": false,
+    "pass": true
+  },
+  {
+    "step": "packed-views",
+    "native_exit": 0,
+    "timeout": false,
+    "elapsed": 3.23,
+    "error_or_resource_warning": false,
+    "pass": true
+  },
+  {
+    "step": "packed-settlement",
+    "native_exit": 0,
+    "timeout": false,
+    "elapsed": 2.799,
+    "error_or_resource_warning": false,
+    "pass": true
+  },
+  {
+    "step": "packed-audio-authority",
+    "native_exit": null,
+    "timeout": true,
+    "elapsed": 180.064,
+    "error_or_resource_warning": false,
+    "pass": false
+  }
+]

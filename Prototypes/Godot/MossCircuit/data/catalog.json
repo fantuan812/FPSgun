@@ -686,6 +686,33 @@
       "synergy_targets": [
         "pulse_boots"
       ]
+    },
+    {
+      "id": "scavenger_reel",
+      "name": "Scavenger Reel",
+      "kind": "item",
+      "price": 28,
+      "max_stack": 1,
+      "rarity": "rare",
+      "tags": [
+        "returning",
+        "salvage"
+      ],
+      "effects": {},
+      "description": "Return Disc gathers normal/energy pickups on its return leg; medicine excluded.",
+      "trigger": "Actual returning path touches a normal/energy pickup",
+      "cost": "1 module slot; Return Disc required; finite quota per launched disc",
+      "cooldown": 0,
+      "stack_rule": "Unique: maximum 1. Per-disc quota never refills.",
+      "synergy_targets": [
+        "return_disc"
+      ],
+      "return_pickup_radius": 18.0,
+      "return_pickup_limit": 3,
+      "pickup_sources": [
+        "normal",
+        "energy"
+      ]
     }
   ],
   "synergies": [
@@ -808,6 +835,15 @@
         "pulse_boots"
       ],
       "description": "Dash pushes nearby enemies and can counter one hostile shot to its living shooter. Complementary effects; no extra multiplier."
+    },
+    {
+      "id": "scavenger_return",
+      "name": "SCAVENGER RETURN",
+      "requires": [
+        "return_disc",
+        "scavenger_reel"
+      ],
+      "description": "Return Disc immediately gathers normal/energy pickups on its return leg. Medicine excluded; no reward multiplier."
     }
   ],
   "affinity_links": [
@@ -854,6 +890,10 @@
     [
       "feedback_diode",
       "pulse_boots"
+    ],
+    [
+      "return_disc",
+      "scavenger_reel"
     ]
   ],
   "shop_weighting": {

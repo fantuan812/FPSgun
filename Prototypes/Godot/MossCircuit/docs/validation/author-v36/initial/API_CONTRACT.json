@@ -1,0 +1,11 @@
+{
+  "contract_sha256": "1189f9778046550b7964c000c5af7fa1df582af81297d06885b39e495af2eb79",
+  "helper": "scripts/gameplay/scavenger_reel.gd",
+  "profile": {"signature": "static func profile(build:Dictionary,catalog:Dictionary)->Dictionary", "valid": {"radius": "float", "maximum": "actual int1..8", "sources": "independent Array containing normal and energy"}, "invalid_or_unowned": {}},
+  "snapshot": {"signature": "static func snapshot(build:Dictionary,catalog:Dictionary)->Dictionary", "valid": {"radius": "float", "maximum": "actual int1..8", "remaining": "actual int initially maximum", "sources": "independent Array containing normal and energy"}, "invalid_or_unowned": {}},
+  "bullet_key": "scavenger",
+  "advance_disc": {"signature": "func advance_disc(b:Dictionary,dt:float)->Array", "rows": "0 or1 transient rows in actual return-piece order", "row": {"disc": "same actual bullet dictionary reference", "start": "Vector2 actual return-part start", "end": "Vector2 actual return-part end"}, "side_effects": "Original movement/hit semantics only; no collection or quota debit"},
+  "eligible": {"signature": "static func eligible(sweep:Dictionary,pickup:Dictionary)->bool", "pure": true, "checks": "Valid snapshot radius and actualint1..8 maximum, actualint remaining1..maximum; finite Vector2 endpoints and pickup position, nonzero segment, valid source normal/energy (default normal only when absent), strict closedsegment distance < radius; no mutation or debit"},
+  "quota_debit": "Only actual Runtime.step final pickup remote branch decrements chosen disc.scavenger.remaining once before unchanged reward/event/removal sequence. Local collection consumes no quota.",
+  "legacy": "No metadata on bullets without valid owned launch snapshot; callers may ignore returned sweep array. No new persistent sweep state."
+}

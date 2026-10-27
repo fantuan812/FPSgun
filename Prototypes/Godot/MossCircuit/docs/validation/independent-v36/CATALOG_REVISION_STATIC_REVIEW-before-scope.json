@@ -1,0 +1,64 @@
+{
+  "status": "STATIC_PASS_NO_ENGINE_EXECUTION",
+  "plan_sha256": "71350cbb3c1177483e9be248e3649522d8523078503233e73d57b946d5b74d06",
+  "map_sha256": "0e8125bc6bf3254e690f76b5365ba9b5142f24a3a8719e227a7ff4b9f6628035",
+  "inputs": 716,
+  "production_unchanged": 131,
+  "changed_fixtures": [
+    {
+      "path": "tests/independent_cryo_shop.gd",
+      "before": "56efc315caf08f27ad47ff998f7040f0d9e33a2be82a1040aa6eaa329a92d4da",
+      "after": "58f7a53ccdf195caa3c04388bf0826155f59319555785c94b96056a21c638cd8",
+      "hunks_exact": true
+    },
+    {
+      "path": "tests/independent_feedback_shop.gd",
+      "before": "2c3a3c1c69741d12ef4683f1e865096a8e7e8e18d64a0817282587e99c18aecf",
+      "after": "4eb95b9e3190b2232b90c72e63c38f7a888ff3aeb1189dbd69342e72677d54f0",
+      "hunks_exact": true
+    },
+    {
+      "path": "tests/independent_reservation_records.gd",
+      "before": "bd5337129e51336dd38d18916624630b74420a0edb4ac0e6f9afeb4d90a97dac",
+      "after": "7f6b65505b2a04c738bd83aeccdb2fed6eebe02a448ddb0a64fbdecbd4e02e4f",
+      "hunks_exact": true
+    },
+    {
+      "path": "tests/independent_reservation_views.gd",
+      "before": "8a6be4c3389d3e89ad3feff54ee22eb9662a6ba88f5115ac1cec6268a1d2b879",
+      "after": "e1a31f714f4e1a6f8e15f2553e87f2684284ca0ae2ad7819a692b05f34617e10",
+      "hunks_exact": true
+    },
+    {
+      "path": "tests/test_bankshot_build.gd",
+      "before": "5ff51f370b6c5f35fd217fe356fda05cf36edbc72c075e840a1d351c244171ea",
+      "after": "c875eafba085eca620ff96613b03ebdafdef17f5d4a22ebf32ac477524822ec7",
+      "hunks_exact": true
+    },
+    {
+      "path": "tests/test_modifier_copy.gd",
+      "before": "fd2b20f89a06b09dc9a428a287c3fec10b99802df49900111da0d439cd7e6039",
+      "after": "f2da3e847eabb35da290e98561b0771db568579de891611e1be2d5781a1867b3",
+      "hunks_exact": true
+    },
+    {
+      "path": "tests/test_upgrade_salvage.gd",
+      "before": "b626955de1d121b13cc38bde12075978f27442912266fd3395ac494c680ed620",
+      "after": "ae41b93e735b326ce84e5378e8916c51cb8a4ab4adb62e82ca3ef021c61e4c13",
+      "hunks_exact": true
+    },
+    {
+      "path": "tests/test_weapon_order.gd",
+      "before": "c6018c2cd64ae224648271fdb827e55ce3f60a82ec4f29d478bc7a9adacda001",
+      "after": "7c842c47fa70fb0a4462ad3ed0a9f06e23c9e3e232bd4ca12ed01ce4c49eceb3",
+      "hunks_exact": true
+    }
+  ],
+  "new_files": {
+    "tests/fixtures/v36_catalog_additions.json": "b26ca154835eecd3ad85f7f1925aaa9f3089aac3f18d36d66b2425be99852622",
+    "tests/support/v36_catalog_projection.gd": "d8d313ded1ad2e831da9724b8b2978461410d9adb8918b48441fd621f282eb01"
+  },
+  "declaration_review": "Explicit authored expected values agree C2; raw insertions independently regenerated from declaration, not inferred from candidate bytes. Exactly three append blocks removed; held v35 full bytes and old 317a/8800 assertions retained.",
+  "semantics": "Current catalog used for existing behavioral tests; only historical copy/pair/raw projections use duplicated validated history. Original failed aggregate remains FAIL.",
+  "limitations": "Static only; actual Godot parser and 11 mutation rejection probes pending focused execution."
+}

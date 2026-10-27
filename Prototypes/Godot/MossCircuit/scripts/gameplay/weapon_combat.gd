@@ -1,4 +1,5 @@
 extends RefCounted
+const ScavengerReel=preload("res://scripts/gameplay/scavenger_reel.gd")
 const CombatState=preload("res://scripts/gameplay/combat_state.gd")
 const RunSession=preload("res://scripts/gameplay/run_session.gd")
 const WeaponPresentation=preload("res://scripts/gameplay/weapon_presentation.gd")
@@ -62,7 +63,11 @@ func fire(id: String, slot: int, area:Dictionary={}) -> void:
 		var vector := direction.rotated(angle)
 		var travel:float=WeaponRig.range_distance(world.player_pos,pose.muzzle,vector,reach)
 		if travel<=.000001:continue
-		world.bullets.append({"pos":pose.muzzle,"launch_start":pose.mount,"launch_end":pose.muzzle, "velocity":vector * world.stats.bullet_speed, "life":2.5 if weapon.behavior == "return" else maxf(.000001,travel / world.stats.bullet_speed), "damage":damage, "pierce":int(weapon.pierce) + int(world.stats.pierce), "hit":[], "weapon":id, "slot":slot, "returning":false,"outbound_left":travel / world.stats.bullet_speed})
+		var bullet:Dictionary={"pos":pose.muzzle,"launch_start":pose.mount,"launch_end":pose.muzzle, "velocity":vector * world.stats.bullet_speed, "life":2.5 if weapon.behavior == "return" else maxf(.000001,travel / world.stats.bullet_speed), "damage":damage, "pierce":int(weapon.pierce) + int(world.stats.pierce), "hit":[], "weapon":id, "slot":slot, "returning":false,"outbound_left":travel / world.stats.bullet_speed}
+		if id=="return_disc":
+			var reel:=ScavengerReel.snapshot(session.build,catalog)
+			if not reel.is_empty():bullet.scavenger=reel
+		world.bullets.append(bullet)
 
 func fire_chill(weapon:Dictionary,slot:int,damage:float)->void:
 	var reach:float=Rules.weapon_reach(weapon,world.stats)
@@ -124,11 +129,12 @@ func advance_bullet(b: Dictionary,dt: float) -> void:
 	b.life -= step
 	hit_segment(b,previous,b.pos)
 
-func advance_disc(b: Dictionary,dt: float) -> void:
+func advance_disc(b: Dictionary,dt: float) -> Array:
+	var sweeps:Array=[]
 	var remaining := minf(dt,maxf(0,b.life))
 	if not b.returning:
 		if b.has("launch_start"):advance_bullet(b,0)
-		if b.life<=0:return
+		if b.life<=0:return sweeps
 		var outbound := minf(remaining,maxf(0,b.outbound_left))
 		if outbound > 0: advance_bullet(b,outbound)
 		b.outbound_left -= outbound
@@ -140,10 +146,14 @@ func advance_disc(b: Dictionary,dt: float) -> void:
 		var distance: float = b.pos.distance_to(world.player_pos)
 		if distance < 14:
 			b.life = -1
-			return
+			return sweeps
 		b.velocity = (world.player_pos-b.pos).normalized() * world.stats.bullet_speed
+		var return_start:Vector2=b.pos
 		advance_bullet(b,minf(remaining,distance/world.stats.bullet_speed))
+		if ScavengerReel.valid_snapshot(b.get("scavenger")) and return_start.is_finite() and b.pos.is_finite() and return_start!=b.pos:
+			sweeps.append({"disc":b,"start":return_start,"end":b.pos})
 		if b.pos.distance_to(world.player_pos) < 14: b.life = -1
+	return sweeps
 
 func fire_bankshot(weapon:Dictionary,slot:int,damage:float,area:Dictionary)->void:
 	var reach:float=Rules.weapon_reach(weapon,world.stats)

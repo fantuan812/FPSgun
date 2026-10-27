@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "<WORKSPACE>/moss-v36-delivery-prep/staging/Deliveries/MossCircuit/restore_deliveries.py", line 137, in <module>
+    main()
+  File "<WORKSPACE>/moss-v36-delivery-prep/staging/Deliveries/MossCircuit/restore_deliveries.py", line 131, in main
+    restore(root, record, args.output)
+  File "<WORKSPACE>/moss-v36-delivery-prep/staging/Deliveries/MossCircuit/restore_deliveries.py", line 93, in restore
+    stream_verified(root, record, out)
+  File "<WORKSPACE>/moss-v36-delivery-prep/staging/Deliveries/MossCircuit/restore_deliveries.py", line 61, in stream_verified
+    for part in checked_parts(record):
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "<WORKSPACE>/moss-v36-delivery-prep/staging/Deliveries/MossCircuit/restore_deliveries.py", line 52, in checked_parts
+    raise ValueError("Non-contiguous or reordered chunks")
+ValueError: Non-contiguous or reordered chunks

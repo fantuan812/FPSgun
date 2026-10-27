@@ -1,0 +1,11 @@
+--- rejected714/tests/independent_feedback_shop.gd
++++ r2/tests/independent_feedback_shop.gd
+@@ -21,7 +21,7 @@
+  if Motor.step(g.combat,g.config.arena,Vector2.RIGHT,true,0):g._effect_event("dash",{"pos":g.player_pos,"angle":0.0})
+ func run()->void:
+  g=load("res://scenes/main.tscn").instantiate();root.add_child(g);g.set_process(false)
+- ck(g.catalog.items.map(func(e):return e.id)==ITEMS,"exact 29 module IDs and order")
++ ck(g.catalog.items.map(func(e):return e.id)==ITEMS+["scavenger_reel"],"exact 30 module IDs: old order plus Scavenger Reel")
+  ck(g.catalog.weapons.map(func(e):return e.id)==["rivet_gun","scrap_shotgun","rail_lance","orbit_saw","return_disc","shock_mortar","cryo_sprayer","bankshot_driver"],"exact 8 weapon IDs")
+  ck(g.ui.icon("feedback_diode")!=null,"actual integrated icon resource")
+  var icon=g.ui.icon("feedback_diode");ck(icon.get_width()>0 and icon.get_height()>0,"nonempty actual icon")

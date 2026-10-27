@@ -1,0 +1,83 @@
+{
+  "status": "PASS_INDEPENDENT_RAW_REVIEW_AUTHOR_4_ACTUAL_PARITY_ROUTES",
+  "records": [
+    {
+      "case": "baseline-transactions",
+      "cases": 6,
+      "trace_sha256": "22e28521ba76fb7285a59b98593aecc7c4af9e24d497853119f73495324feaf8",
+      "helper_final": {
+        "discarded": 0,
+        "elapsed_us": 151370,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      }
+    },
+    {
+      "case": "baseline-combat",
+      "cases": 24,
+      "trace_sha256": "e7d93a1fcf01345c540bf9f868632310fd3e85572dbe431dbe12d43bf19212ec",
+      "helper_final": {
+        "discarded": 0,
+        "elapsed_us": 151888,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      }
+    },
+    {
+      "case": "candidate-transactions",
+      "cases": 6,
+      "trace_sha256": "22e28521ba76fb7285a59b98593aecc7c4af9e24d497853119f73495324feaf8",
+      "helper_final": {
+        "discarded": 0,
+        "elapsed_us": 158437,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      }
+    },
+    {
+      "case": "candidate-combat",
+      "cases": 24,
+      "trace_sha256": "e7d93a1fcf01345c540bf9f868632310fd3e85572dbe431dbe12d43bf19212ec",
+      "helper_final": {
+        "discarded": 0,
+        "elapsed_us": 186177,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      }
+    }
+  ],
+  "source_maps_unchanged": [
+    696,
+    703
+  ],
+  "scope": "Independent byte/raw/semantic/cleanup audit of separately executed author baseline+candidate tests. No independent execution attribution; old-catalog test only.",
+  "result_sha256": "89c5550384cf0d144fd67d024441105f33708b730e27851c70f51b45b8c5c1b6"
+}

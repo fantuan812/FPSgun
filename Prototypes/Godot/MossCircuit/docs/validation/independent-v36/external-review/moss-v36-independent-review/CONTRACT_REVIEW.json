@@ -1,0 +1,29 @@
+{
+  "status": "PASS_STATIC_CONTRACT_ONLY_NOT_IMPLEMENTATION_AUTHORIZATION",
+  "contract_sha256": "1431398b6c7fc638f4b559ae2b2d283f09092c69f56d85dafdc34b3708032b09",
+  "source_pins_exact": 9,
+  "checked_existing_seams": [
+    "weapon_combat.gd:115-146 actual life clipping, launch segment, outbound split, arrival and post-move hit retirement",
+    "combat_runtime.gd:85-119 descending bullet order, removal, death drops, descending pickup order, saved pre-magnet player distance and current event position",
+    "run_flow.gd sole collect_pickup and settlement"
+  ],
+  "accepted_paper_oracles": [
+    "Only executed nonzero returning suffix, including valid retiring last segment; no outbound/exhausted/zero/arrival-entry sweep",
+    "Saved local distance has priority before remote post-magnet coordinates; no doubled magnet/local recheck",
+    "Reverse pickup and reverse original disc index; identical-valued objects never coalesce",
+    "Death-pass drops eligible same discrete tick; event-appended pickups wait for next snapshotted loop",
+    "Launch snapshot independent per disc, not refilled by buying/selling; no cargo/delayed reward",
+    "RunFlow sole credit/event/remove; medical excluded remote, normal/energy distinct; quota debit once",
+    "A through F numerical examples agree with current finite semantics"
+  ],
+  "implementation_review_watchpoints": [
+    "Direct terminal step must not enable remote reward, without rewriting legacy step semantics; preserve existing early return behavior",
+    "Capture exact pre/post returning advance endpoints after launch/outbound handling; never reconstruct from whole-frame positions",
+    "Retiring disc dictionary may remain referenced only in local sweep list until pickup stage; no persistent pickup refs",
+    "Quota invalid/malformed/missing snapshots reject without changing legacy bullets or RNG",
+    "New catalog enlarged pool intentionally breaks old fixed-seed offer IDs; maintain separate old-catalog controls and new-catalog no-module combat parity"
+  ],
+  "no_engine_execution": true,
+  "no_source_edits": true,
+  "no_balance_or_runtime_pass_claim": true
+}

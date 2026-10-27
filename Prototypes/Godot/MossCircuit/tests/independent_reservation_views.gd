@@ -46,7 +46,7 @@ func run()->void:
  g=load("res://scenes/main.tscn").instantiate();root.add_child(g);g.set_process(false)
  var expected_ids:Array=["rivet_gun","scrap_shotgun","rail_lance","orbit_saw","return_disc","shock_mortar","cryo_sprayer","bankshot_driver"]
  ck(g.catalog.weapons.map(func(e):return e.id)==expected_ids,"exact eight weapon IDs and order")
- ck(g.catalog.items.size()==29,"exact 29-module catalog count")
+ ck(g.catalog.items.size()==30 and g.catalog.items[-1].id=="scavenger_reel","exact 30-module catalog with appended Scavenger Reel")
  for mode in ["arena","rooms"]:
   for size in [Vector2i(960,540),Vector2i(1280,720)]:
    root.size=size

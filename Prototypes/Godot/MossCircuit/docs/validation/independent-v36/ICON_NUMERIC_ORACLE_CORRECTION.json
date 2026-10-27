@@ -1,0 +1,11 @@
+{
+  "utc": "2026-10-27T03:24:00.346416+00:00",
+  "status": "SOURCE_ICON_FIRST_RUN_REJECTED_FIXTURE_NUMERIC_LAYER",
+  "old_script_sha256": "1bd7e118c6d43befeaadd2a8f492e70d03cacad929bd915859528441161bb97a",
+  "new_script_sha256": "98a92a4c0a02b022ce3de27d2bd050487ad7ac640ec23749bf868257bdc71f3e",
+  "retained_run": "supplement-first/source-icon.stdout and independent_scavenger_icon.gd",
+  "actual_result": "Texture loaded64x64/format5/16384 bytes, manifest valid; rect comparison against integer Array rejected JSON numeric float Array. Native1, not production failure.",
+  "correction": "Expected JSON rect uses exact float values; later verification normalizes generated identity through the same JSON layer before dictionary comparison. No shape/value/hash tolerance or production change.",
+  "hash_convention": "pixel_sha256 and manifest_sha256 are SHA256 of hexadecimal-encoded raw bytes as explicitly stated by original oracle; original_svg_source_sha256 is conventional source SHA256.",
+  "next": "Only corrected source-icon run; settlement30 alreadyPASS not rerun"
+}

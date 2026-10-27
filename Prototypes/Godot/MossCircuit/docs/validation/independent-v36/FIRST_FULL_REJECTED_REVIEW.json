@@ -1,0 +1,1041 @@
+{
+  "status": "REJECTED_FULL_117_OF_125_INDEPENDENTLY_AUDITED",
+  "utc": "2026-10-27T03:47:10.501491+00:00",
+  "native_exit": 1,
+  "commands": 125,
+  "clean_passed": 117,
+  "failed_scripts": 8,
+  "all_failed_native1_no_engine_or_resource_errors": true,
+  "actual_failures": [
+    {
+      "case": "independent_cryo_shop.gd",
+      "source_sha256": "56efc315caf08f27ad47ff998f7040f0d9e33a2be82a1040aa6eaa329a92d4da",
+      "log_sha256": "0175798c526561b5c71dea03a84952aed7d1d9995ccfa9180538bab3faa08859",
+      "report": {
+        "checks": 320,
+        "failures": [
+          "explicit v26 8+29 including reviewed additions"
+        ],
+        "scope": "independent controlled catalog/affinity/UI-view/transaction test; not native button interaction"
+      },
+      "classification": "Legacy current-catalog count/ID or historical last-position/raw projection expectation, conflicts with explicitly authored additive v36 catalog. No other observed failed assertion in this case."
+    },
+    {
+      "case": "independent_feedback_shop.gd",
+      "source_sha256": "2c3a3c1c69741d12ef4683f1e865096a8e7e8e18d64a0817282587e99c18aecf",
+      "log_sha256": "de1a5fce62a01ab43498743db524b4f5d9557e59b4648e0e0045af458526c6e5",
+      "report": {
+        "checks": 102,
+        "failures": [
+          "exact 29 module IDs and order"
+        ],
+        "scope": "controlled actual transactions/view/resource; no ordinary acquisition claim"
+      },
+      "classification": "Legacy current-catalog count/ID or historical last-position/raw projection expectation, conflicts with explicitly authored additive v36 catalog. No other observed failed assertion in this case."
+    },
+    {
+      "case": "independent_reservation_records.gd",
+      "source_sha256": "bd5337129e51336dd38d18916624630b74420a0edb4ac0e6f9afeb4d90a97dac",
+      "log_sha256": "2761e00f3e80bc236735feff935d2000d4a92a6259198bed3842452d9886691b",
+      "report": {
+        "checks": 286,
+        "failures": [
+          "exact reviewed v33 catalog bytes, including only the authored tempering profile",
+          "exact v27 bytes after removing ONLY the declared v33 profile: all IDs/order/prices/weights/links",
+          "exact ordered 29 module IDs"
+        ],
+        "scope": "Strict v27 catalog-byte preservation after only reviewed v33 profile removal, and reviewed v32 encounter preservation plus malformed reservation/catalog type guards and actual held-card association. Corruption is controlled diagnostic input, not an observed ordinary-run occurrence."
+      },
+      "classification": "Legacy current-catalog count/ID or historical last-position/raw projection expectation, conflicts with explicitly authored additive v36 catalog. No other observed failed assertion in this case."
+    },
+    {
+      "case": "independent_reservation_views.gd",
+      "source_sha256": "8a6be4c3389d3e89ad3feff54ee22eb9662a6ba88f5115ac1cec6268a1d2b879",
+      "log_sha256": "f209b3b0d67177797e428e41afa8edeb3f3d710fddb445d846dc4aac4aebec38",
+      "report": {
+        "checks": 3254,
+        "failures": [
+          "exact 29-module catalog count"
+        ],
+        "layouts": [
+          {
+            "entries": 38,
+            "mapped_event": "synthetic InputEventAction ui_accept through Viewport.push_input",
+            "mode": "arena",
+            "window": [
+              960,
+              540
+            ]
+          },
+          {
+            "entries": 38,
+            "mapped_event": "synthetic InputEventAction ui_accept through Viewport.push_input",
+            "mode": "arena",
+            "window": [
+              1280,
+              720
+            ]
+          },
+          {
+            "entries": 38,
+            "mapped_event": "synthetic InputEventAction ui_accept through Viewport.push_input",
+            "mode": "rooms",
+            "window": [
+              960,
+              540
+            ]
+          },
+          {
+            "entries": 38,
+            "mapped_event": "synthetic InputEventAction ui_accept through Viewport.push_input",
+            "mode": "rooms",
+            "window": [
+              1280,
+              720
+            ]
+          }
+        ],
+        "scope": "Actual UI hierarchy geometry, button callbacks and synthetic existing ui_accept action dispatch in both modes/two sizes. This is not native pixel review, physical controller gameplay or ordinary acquisition."
+      },
+      "classification": "Legacy current-catalog count/ID or historical last-position/raw projection expectation, conflicts with explicitly authored additive v36 catalog. No other observed failed assertion in this case."
+    },
+    {
+      "case": "test_bankshot_build.gd",
+      "source_sha256": "5ff51f370b6c5f35fd217fe356fda05cf36edbc72c075e840a1d351c244171ea",
+      "log_sha256": "2a428a6500beef3dd68fc75938e0495de6f0ed55cfeb775c9ba0fcf938a4faab",
+      "report": {
+        "bankshot_build_checks": 113,
+        "failures": [
+          "explicit content version/count",
+          "exact additive pair/link"
+        ],
+        "scope": "controlled integration; native appearance and ordinary acquisition separate"
+      },
+      "classification": "Legacy current-catalog count/ID or historical last-position/raw projection expectation, conflicts with explicitly authored additive v36 catalog. No other observed failed assertion in this case."
+    },
+    {
+      "case": "test_modifier_copy.gd",
+      "source_sha256": "fd2b20f89a06b09dc9a428a287c3fec10b99802df49900111da0d439cd7e6039",
+      "log_sha256": "c318e34e3d6107cf12ffe66fb925d3ccf7bc907acd65b6053c02cf7c88dc2b8b",
+      "report": {
+        "failures": [
+          "only reviewed v26 appended pair/link",
+          "only reviewed appended pair/link",
+          "all pre-v23 catalog IDs/numbers/tags/weights/other text exact"
+        ],
+        "modifier_copy_checks": 111,
+        "scope": "v22 four-field copy preservation within the old catalog; exact v23/v26/v33 additions separately asserted; native appearance separate"
+      },
+      "classification": "Legacy current-catalog count/ID or historical last-position/raw projection expectation, conflicts with explicitly authored additive v36 catalog. No other observed failed assertion in this case."
+    },
+    {
+      "case": "test_upgrade_salvage.gd",
+      "source_sha256": "b626955de1d121b13cc38bde12075978f27442912266fd3395ac494c680ed620",
+      "log_sha256": "e5557de388c6b602760171a933c1d50074641feb659200caa75233d63419711e",
+      "report": {
+        "failed": 1,
+        "failures": [
+          "still 37 catalog entries"
+        ],
+        "passed": 146
+      },
+      "classification": "Legacy current-catalog count/ID or historical last-position/raw projection expectation, conflicts with explicitly authored additive v36 catalog. No other observed failed assertion in this case."
+    },
+    {
+      "case": "test_weapon_order.gd",
+      "source_sha256": "c6018c2cd64ae224648271fdb827e55ce3f60a82ec4f29d478bc7a9adacda001",
+      "log_sha256": "d4768bfb4e945a4bf00459141820fa4d4b92fa45daecfc4f7b62143fbd9b0751",
+      "report": {
+        "failed": 1,
+        "failures": [
+          "catalog count unchanged"
+        ],
+        "passed": 320
+      },
+      "classification": "Legacy current-catalog count/ID or historical last-position/raw projection expectation, conflicts with explicitly authored additive v36 catalog. No other observed failed assertion in this case."
+    }
+  ],
+  "all_raw_records": [
+    {
+      "case": "import",
+      "log_sha256": "9572934ad4d57fbab2c09b2c82f3821584fba7ba71d7e1dec5055bc7fa531f3f",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 11.4
+    },
+    {
+      "case": "independent_actions.gd",
+      "log_sha256": "ce964c7bd1d5787c29622e5d5eb53d0752187e846c100fdf818dfec6ab0aee7f",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 1.982
+    },
+    {
+      "case": "independent_annulus_data.gd",
+      "log_sha256": "ae5f52356e10e74b2b020d6fede224c0063f02f8d50157939568bc1ee3614e80",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 0.291
+    },
+    {
+      "case": "independent_annulus_runtime.gd",
+      "log_sha256": "6bfa3263d5b45dec1568c8f0df86dbbc1fb4bc105c49acd81fddf5ae64e60728",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 11.299
+    },
+    {
+      "case": "independent_bankshot_contacts.gd",
+      "log_sha256": "64c132669e806db32d6b1786cdb7c91c3b43e19e44696d79a8d409c2f90e3037",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 0.287
+    },
+    {
+      "case": "independent_bankshot_integration.gd",
+      "log_sha256": "0bfbe6c54437ab2fda44b1ce695d02fd92b103a8a01129fba3591460ecc2a538",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 4.34
+    },
+    {
+      "case": "independent_bankshot_trajectory.gd",
+      "log_sha256": "c0044e51347e1011736e467002ac616b3eca2df4e52a308c1d564eaf2bda7e40",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 0.565
+    },
+    {
+      "case": "independent_brace_geometry.gd",
+      "log_sha256": "cdedc5dc4f10124bcc94883febbb3d366ef55ab7646ff9840bfed04b1300d76b",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 0.317
+    },
+    {
+      "case": "independent_brace_runtime.gd",
+      "log_sha256": "750d59d519349d22cc989d73b420e8c0e7ee2fdcaea9e58691d7146901c456a6",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 6.854
+    },
+    {
+      "case": "independent_brood_assets.gd",
+      "log_sha256": "05e4115b1d9bca08f9e772d4d7baa32d541248339b79df68a3f91e2a286d13f5",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 2.268
+    },
+    {
+      "case": "independent_brood_events.gd",
+      "log_sha256": "d2b7e3f0121c6050c9f1c8cb522d13a3280a6c084b079ecfce130da6235d363c",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 3.11
+    },
+    {
+      "case": "independent_brood_parity.gd",
+      "log_sha256": "0e19f6c3bb4a55ec9b98b340a5ff4e33d7b3582fd424a886747d5d95cf8b761f",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 4.295
+    },
+    {
+      "case": "independent_charger_assets.gd",
+      "log_sha256": "9d04c4c6a65b0ba44eb6de56cc43fdc73c01e87d5116d0a201bf61feeda1e069",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 2.127
+    },
+    {
+      "case": "independent_charger_gameplay_parity.gd",
+      "log_sha256": "d920688d7649207afc4bbc02e04ca3aed4456fda0ce87c670bdd0466f234854a",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 3.661
+    },
+    {
+      "case": "independent_charger_lifecycle.gd",
+      "log_sha256": "77cf7c22e595b34eab75d222b8669960aa2341ecb96123e7ce8a3ec5742d5a43",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 1.983
+    },
+    {
+      "case": "independent_core_reactions.gd",
+      "log_sha256": "e50bc740d3988c62bd1e9011c01d92dee8f1c47c54b98ce2b488c4fe000fb804",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 3.62
+    },
+    {
+      "case": "independent_crawler_flanker.gd",
+      "log_sha256": "520c3e4de5fa95ac663200aa2daa084d76e78479b85818db33ae82adf932becb",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 1.966
+    },
+    {
+      "case": "independent_crawler_hit_pipeline.gd",
+      "log_sha256": "02ecc02e4fd15799845a96695a674f3ee7289629c5181202546aebfb127794f7",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 2.178
+    },
+    {
+      "case": "independent_cryo_contract.gd",
+      "log_sha256": "dff83a7fddd8711e257fb3bb5fefc6c241ee6299160ed5890352d7730bd17a7d",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 4.512
+    },
+    {
+      "case": "independent_cryo_shop.gd",
+      "log_sha256": "0175798c526561b5c71dea03a84952aed7d1d9995ccfa9180538bab3faa08859",
+      "native_exit": 1,
+      "passed": false,
+      "seconds": 3.315
+    },
+    {
+      "case": "independent_enemy_ui.gd",
+      "log_sha256": "cec2999a18f2abf5f659505fadddc9ed8af591b84464c8ff1de62579246fd525",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 4.478
+    },
+    {
+      "case": "independent_feedback_authority.gd",
+      "log_sha256": "979b9853b3d38d63d1a97dcdd72e624e8f1c153ebfe79cc674af9d330f1d72c4",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 167.716
+    },
+    {
+      "case": "independent_feedback_mixer.gd",
+      "log_sha256": "78325586ac160ff212d3ad34a88b6d6eacda707171464cefe9d282d15ebb9378",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 11.787
+    },
+    {
+      "case": "independent_feedback_runtime.gd",
+      "log_sha256": "3bbf5a38d2eaa00b7faf2edd37c3e7753305a51305ecadcb5a3022605921e09f",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 4.915
+    },
+    {
+      "case": "independent_feedback_shop.gd",
+      "log_sha256": "de1a5fce62a01ab43498743db524b4f5d9557e59b4648e0e0045af458526c6e5",
+      "native_exit": 1,
+      "passed": false,
+      "seconds": 4.526
+    },
+    {
+      "case": "independent_feedback_validation.gd",
+      "log_sha256": "b14f01acbd0b42f756564679a3d4382110012cfc85d46bcd27f0bb2574229603",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 0.331
+    },
+    {
+      "case": "independent_feedback_views.gd",
+      "log_sha256": "0496a13718a175e3f807c4b428f53a833db7fa89c2d3cef4f416c65c6eaf8c29",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 3.567
+    },
+    {
+      "case": "independent_focus_authority.gd",
+      "log_sha256": "36f002313f1bfba3c0f4b4c36800be91c8ecb4383ac938025bbbffaca5a85a4f",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 4.819
+    },
+    {
+      "case": "independent_focus_combat.gd",
+      "log_sha256": "09cd14cb1b88b8af2b2fb7927dd968076517e10dc980a7948ad48bc20e77334e",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 10.985
+    },
+    {
+      "case": "independent_focus_views.gd",
+      "log_sha256": "c89abeb18aa52e4fa5939c64ea78b4136439125cee59c3510b481d5c3b34bdee",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 3.966
+    },
+    {
+      "case": "independent_modes.gd",
+      "log_sha256": "d89f1a046ba7246ae3e80e828ad593af9d8e3d6157a119702ed2d6ff0a5596de",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 3.187
+    },
+    {
+      "case": "independent_modifier_compatibility.gd",
+      "log_sha256": "787de949959a4ae0d1878bee4e13854fad5a59223d0b7f47e0e8652197d76e0c",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 4.419
+    },
+    {
+      "case": "independent_policy_validation.gd",
+      "log_sha256": "483caced6c929fd1a021e0db88f20e7e77f4e5377cc3a98cdbb3993a1f1e1bf7",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 0.292
+    },
+    {
+      "case": "independent_qa.gd",
+      "log_sha256": "9d12ae1d99e76f95df3407092f163394cc211f2ccc9e37bd03c70d067de25105",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 2.478
+    },
+    {
+      "case": "independent_reservation_records.gd",
+      "log_sha256": "2761e00f3e80bc236735feff935d2000d4a92a6259198bed3842452d9886691b",
+      "native_exit": 1,
+      "passed": false,
+      "seconds": 8.238
+    },
+    {
+      "case": "independent_reservation_runtime.gd",
+      "log_sha256": "ad8032d34caab022cb837354edb8d69aeec533058083b78568c3497e944f601f",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 24.499
+    },
+    {
+      "case": "independent_reservation_views.gd",
+      "log_sha256": "f209b3b0d67177797e428e41afa8edeb3f3d710fddb445d846dc4aac4aebec38",
+      "native_exit": 1,
+      "passed": false,
+      "seconds": 39.185
+    },
+    {
+      "case": "independent_resolution.gd",
+      "log_sha256": "89d7a4465ec62678967125a7f644d5357a59cdc71d7ab41de7067c7b3079a03e",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 2.353
+    },
+    {
+      "case": "independent_room_boundaries.gd",
+      "log_sha256": "df626260a6de9341e3e53ec9e649f17d7661de4ad1986168935be594b0d92b3e",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 2.969
+    },
+    {
+      "case": "independent_salvage_runtime.gd",
+      "log_sha256": "d5809d527723e063f4d0ede0d4b228a41f623339714b76bb7d9ecd7824a4d44a",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 4.26
+    },
+    {
+      "case": "independent_salvage_views.gd",
+      "log_sha256": "82c7c1eb65c5e14570932701e3d7fdd2c39a9436b5aebda1faeb8b7a97d5d3fe",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 8.154
+    },
+    {
+      "case": "independent_scavenger_authority.gd",
+      "log_sha256": "875fc1890293dd6cce45e3a28eb5aa819fe32558fc6825c22e5f445ae5868c55",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 2.953
+    },
+    {
+      "case": "independent_scavenger_events.gd",
+      "log_sha256": "40575e318df9d72024d549a9f5e3e558092eb63cf9d64651e7f56dc3cf2f6f7d",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 18.139
+    },
+    {
+      "case": "independent_scavenger_settlement.gd",
+      "log_sha256": "c3a5fe80c468c6e81adb9003fd37e5444a22dc77efbef54955c5a412d0e607e4",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 5.887
+    },
+    {
+      "case": "independent_scavenger_views.gd",
+      "log_sha256": "91900ca420b173520999a6080f9a79fb7a654314e5145251b1d85320e62196bf",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 3.016
+    },
+    {
+      "case": "independent_settlement_types.gd",
+      "log_sha256": "e20aea2f5c03bbe5aa663e2df142517d0227f36f9305a0372c0ac02f01ca467e",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 9.24
+    },
+    {
+      "case": "independent_shop.gd",
+      "log_sha256": "e911b2784d8edc88175a1cd1fdfac00fceb6e1e21b6a617b1a3aed0a0e4f0550",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 4.102
+    },
+    {
+      "case": "independent_spitter_assets.gd",
+      "log_sha256": "c44d4a9f160954e479c877d89a2499bcfad95d3dcebdb7cbcdef5e872be96bc3",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 2.064
+    },
+    {
+      "case": "independent_spitter_events.gd",
+      "log_sha256": "2fb17fef81ff9849396a6bfc7f49e4e2291c23c41e6e86acb491ead7241f69b3",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 2.812
+    },
+    {
+      "case": "independent_spitter_parity.gd",
+      "log_sha256": "9d69d1b9ff3327aebb8e68fae8ea91ef1ef81f0a208574de2471a766dc05a9c4",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 4.603
+    },
+    {
+      "case": "independent_starting_loadout_views.gd",
+      "log_sha256": "eaf080d46e044e40f132ae537645224e08a206a0efee61aa44421b3ac6e4f286",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 15.974
+    },
+    {
+      "case": "independent_starting_loadouts.gd",
+      "log_sha256": "8616b9399e6ec5e45bcb67663bf0723a537b123172949d264acd6cbf2e375023",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 8.901
+    },
+    {
+      "case": "independent_tag_authority.gd",
+      "log_sha256": "b1466b9d2f754830bb24e2853fd2dc7ef70fb9c3a090441876b12b93bf4d62b0",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 18.274
+    },
+    {
+      "case": "independent_tag_views.gd",
+      "log_sha256": "47f10a1047a081c06d5ec0a01cb3205bd050e3503e1a9056c2eefa4511c4d366",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 6.008
+    },
+    {
+      "case": "independent_tempering_authority.gd",
+      "log_sha256": "c9e93e1d7b31a8aaadf59a3933a55853ab1b92250b15083f925596b59a7d1406",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 5.724
+    },
+    {
+      "case": "independent_tempering_combat.gd",
+      "log_sha256": "ebdf3a0bf1b13396abcdbda5527c7011c2fc088bd09a4cd30ad60e535bf938af",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 6.392
+    },
+    {
+      "case": "independent_tempering_hint.gd",
+      "log_sha256": "90ee9637577b9b207b9b47a118074a4974152e735bff49bb34634fb6907a1a8d",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 5.998
+    },
+    {
+      "case": "independent_tempering_views.gd",
+      "log_sha256": "00ae1d7031f779f45ded2e8b6d8cb925fa3526c92391e059a368a799dd8e07c2",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 19.366
+    },
+    {
+      "case": "independent_ui.gd",
+      "log_sha256": "d2a30ef412aa7c4f1003d4ed92552faa63f02e47eed911b665de2ad6207afc28",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 2.585
+    },
+    {
+      "case": "independent_v2.gd",
+      "log_sha256": "2848a0d868bb5b7081f4f6358518c9ff6196deb07ef4c1d954d33b20540cd9e5",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 3.378
+    },
+    {
+      "case": "independent_v3.gd",
+      "log_sha256": "dab24e59a72454895a0bb06895fb1b7f16cf7096d29e9b5fce784d5ef651abef",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 2.758
+    },
+    {
+      "case": "independent_v4.gd",
+      "log_sha256": "7460148c7b3e4c7d29543402d22b5dc89014043a20941c9ca57082259477fd15",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 2.263
+    },
+    {
+      "case": "independent_v5.gd",
+      "log_sha256": "42a2bbbe56dda134e9f42e745eb6cb7e993a739eab30b66461b1771b08360f5b",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 2.081
+    },
+    {
+      "case": "independent_vfx.gd",
+      "log_sha256": "68af9e1ec558e87d40e0fe730ca4408a756d3cf292e38b9871b2a9795674b4fa",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 2.216
+    },
+    {
+      "case": "independent_warden_reactions.gd",
+      "log_sha256": "e41e3b8e190f19ddfbe39f069d91621265dc872faee739641f4bb08367ff3c9e",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 4.247
+    },
+    {
+      "case": "independent_weapon_authority.gd",
+      "log_sha256": "35c4fca7cd6c8fd9aa6c43cec8b68c9775803053687506e5899cdad2d55df7a7",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 6.263
+    },
+    {
+      "case": "independent_weapon_order.gd",
+      "log_sha256": "b7eb14934f8886d00d3a0db0eed8099eea40ffc1ac8b831a97a36090584f1848",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 20.893
+    },
+    {
+      "case": "independent_weapon_order_views.gd",
+      "log_sha256": "93674266271a41cc0cfbf23e1bbe7a57c383e470d1ee6ed8b99ac6b23d0faa9a",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 9.118
+    },
+    {
+      "case": "independent_weapon_readouts.gd",
+      "log_sha256": "b27b7f2b509b537d84fdc5a5d09b0ec627d06acf5866f6c4b1938a98ed3d00dc",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 10.52
+    },
+    {
+      "case": "independent_weapon_rig.gd",
+      "log_sha256": "b89700770ec8a6a54df45cad4bf978a4e88fa077b87aeaf1472a2d2ce0f70ea3",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 3.01
+    },
+    {
+      "case": "test_actor_actions.gd",
+      "log_sha256": "3fc9294f97299f0c5d1331379727b1b6606c1f13145725c49b4103c3473d145e",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 2.219
+    },
+    {
+      "case": "test_audio_teardown_predicate.gd",
+      "log_sha256": "fe105e767702ba930014233031db522ca5a1ff882a8bce5541ac5db6f46286ed",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 0.289
+    },
+    {
+      "case": "test_bankshot_build.gd",
+      "log_sha256": "2a428a6500beef3dd68fc75938e0495de6f0ed55cfeb775c9ba0fcf938a4faab",
+      "native_exit": 1,
+      "passed": false,
+      "seconds": 3.322
+    },
+    {
+      "case": "test_boundary_shot.gd",
+      "log_sha256": "3ca047f7566515f10af88540ad5913d19e8d705d039fa57a0250560b09a435bd",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 0.411
+    },
+    {
+      "case": "test_brood_actions.gd",
+      "log_sha256": "6b27721675f8c40a58ac4b1e289e28b8687265ec826ddaa368f8864594820a97",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 2.256
+    },
+    {
+      "case": "test_brood_pulse.gd",
+      "log_sha256": "38051468a302359828ed3f4bada1350b29c100037f7665ba78825ec99a053051",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 4.15
+    },
+    {
+      "case": "test_builds.gd",
+      "log_sha256": "133943eb7992b1521265ce5c74f840b81297fa3b37c0d507fb7209c61ed6cb9e",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 2.742
+    },
+    {
+      "case": "test_charger_actions.gd",
+      "log_sha256": "c8c3859ae797fcaef7c38f292c638affc4754abaa545df374ce926cc23137466",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 2.059
+    },
+    {
+      "case": "test_combat_focus.gd",
+      "log_sha256": "aacfeeec42901b8fbef49ac489a398e3bde73c76f3a27edcf45817d79d27e3bd",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 3.132
+    },
+    {
+      "case": "test_combat_hud_readability.gd",
+      "log_sha256": "c617037bdbbb602c397836cf6f2b7230e6318478645d9d550ccd2327b1053e80",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 2.542
+    },
+    {
+      "case": "test_contact_enemy_actions.gd",
+      "log_sha256": "71c99bde2ca2ee1170be1f37896c5022e168086a9be23712d55ad6623e6743e1",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 2.18
+    },
+    {
+      "case": "test_core_reactions.gd",
+      "log_sha256": "1268391de489d067005af8e349e1d62a7fee5cb9e93ba6451906efc881c43ca1",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 2.205
+    },
+    {
+      "case": "test_core_summon.gd",
+      "log_sha256": "996cbd04e42dfb555b49925bd3ef4f6c9d63c8a07165785d61cb4852db2354d7",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 4.696
+    },
+    {
+      "case": "test_core_summon_assets.gd",
+      "log_sha256": "f910e27789afbe5a10f3f7dea6ce8cb61d7369c35a62d05d6f1c88e2393a4368",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 0.327
+    },
+    {
+      "case": "test_crawler_hurt_registration.gd",
+      "log_sha256": "e8d1222ec4ab2d4880ef8088eee3613a20be1fe831d000dd57da9924e7b3212c",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 0.938
+    },
+    {
+      "case": "test_cryo_build.gd",
+      "log_sha256": "d034c8e19c6abdf1b27fc17da9794bb2acbad61ab6a10358f92183842db8c6ce",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 3.295
+    },
+    {
+      "case": "test_discrete_ui_numbers.gd",
+      "log_sha256": "962629822513f2eb534b2799baec24f49d7e1978a2d5beb1b5ac1f8ae5774023",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 0.584
+    },
+    {
+      "case": "test_effects.gd",
+      "log_sha256": "9f5ed00c8417e58545e62d4800ac1ffea30db90d85f01aea795f06dbac35e18a",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 2.352
+    },
+    {
+      "case": "test_encounters.gd",
+      "log_sha256": "2f7f8bb38807ba859ab297cd75d756a81e7b406ec8e06a7d5e5c5d28dcd7a388",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 3.052
+    },
+    {
+      "case": "test_expansion.gd",
+      "log_sha256": "5082e951a981a7c7ef6d162b9928ec53ec1dc59bfc775ef8d758c5e389487b06",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 2.936
+    },
+    {
+      "case": "test_export_contract.gd",
+      "log_sha256": "48e0b8c6f5d4c2e7cb8ea202390ffbd92f81c67575661774a65d31a6dc4f2ee8",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 0.35
+    },
+    {
+      "case": "test_feedback_diode.gd",
+      "log_sha256": "8d581e91f63dd2730ed5fd8868a27fa65baa78d3e24ab9de09795f864c6f0c80",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 4.607
+    },
+    {
+      "case": "test_feedback_mixer.gd",
+      "log_sha256": "e4bfce9cc93cc27ee7278e74ae8f57741863b7cc67e94bd7e4d0fec06a975c91",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 6.664
+    },
+    {
+      "case": "test_feedback_teardown.gd",
+      "log_sha256": "c82dfe31687b4c3e9de4b61c007fcce9420c3d29b83138945d74ec6fada80f97",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 0.916
+    },
+    {
+      "case": "test_focus_fire.gd",
+      "log_sha256": "0ae5512ca2bcc1a6137bf61e5e4ce38fa54e1e016ac775fa219fc632e2e9a3e6",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 4.585
+    },
+    {
+      "case": "test_game.gd",
+      "log_sha256": "69525eb231c639193e110d4d0a9f940c68143e5b37a224d47794f37c6cfb00e6",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 2.568
+    },
+    {
+      "case": "test_hud_layout.gd",
+      "log_sha256": "41b90052d50b8c04c065da835c28b9edf3c066cfc9d495b8c39a036222d4d268",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 3.392
+    },
+    {
+      "case": "test_input_lifecycle.gd",
+      "log_sha256": "35b760c7ec045eb3aa142bba96eef5c403392979e16d773b76992e05a886fb52",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 2.657
+    },
+    {
+      "case": "test_modes.gd",
+      "log_sha256": "cd2e168030c33c695d5a946f0c1bea50fba35d11f65a66790e0e2395c5ce215a",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 2.826
+    },
+    {
+      "case": "test_modifier_copy.gd",
+      "log_sha256": "c318e34e3d6107cf12ffe66fb925d3ccf7bc907acd65b6053c02cf7c88dc2b8b",
+      "native_exit": 1,
+      "passed": false,
+      "seconds": 4.063
+    },
+    {
+      "case": "test_player_feedback.gd",
+      "log_sha256": "2dca3d09b51119fd61a2813ccafa03c8c9e9670e7701f90852df2d2039ac0260",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 4.102
+    },
+    {
+      "case": "test_primary_brace.gd",
+      "log_sha256": "76c46cda07231345bc8daa570714dc7255bcf0568011b353961a62df7ade0596",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 2.816
+    },
+    {
+      "case": "test_resolution_validation.gd",
+      "log_sha256": "07dd69277a6f8871b705a4ccf28ee16cc63acbebf5e9fd6ea0fe2380b70d2b24",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 4.137
+    },
+    {
+      "case": "test_scavenger_reel.gd",
+      "log_sha256": "1fb9c9563d01059d8cdf7f10204c3797d830029eeb869a366e2e78a1c54339e0",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 2.459
+    },
+    {
+      "case": "test_settlement_levels.gd",
+      "log_sha256": "bcf7bf1e1d21839b80241893aa19c28abf9aef95b5a228d427cebbdae7cee442",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 2.167
+    },
+    {
+      "case": "test_shop_offer_visibility.gd",
+      "log_sha256": "dd368d2f7a686ea9972e6c12d27d35740f14562e7ba939fe24aea449403886aa",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 4.774
+    },
+    {
+      "case": "test_shop_reservation.gd",
+      "log_sha256": "127c67eefb029bdd0aeec292aa1ae088896fffe5fbfa4dc4f9a6031f7f5ded45",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 6.58
+    },
+    {
+      "case": "test_spitter_actions.gd",
+      "log_sha256": "81c6b3c156cf666f730edf4f02d3988af94e23b25cb73716eaebc8cdd9014d59",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 2.256
+    },
+    {
+      "case": "test_starting_loadouts.gd",
+      "log_sha256": "bea86a8c8c78216cddd00cca345863de404dcb5473b61051baa29f51bdd01304",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 2.926
+    },
+    {
+      "case": "test_tag_synergy_progress.gd",
+      "log_sha256": "725e6933763eb422d97511d196debec327521c679f1a64d026700b51fdb4c04c",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 2.827
+    },
+    {
+      "case": "test_telegraph_readability.gd",
+      "log_sha256": "1e49c221d3d5fec34225fa41293f20f9f803a2e5ff93ebc9a4803374c1c1ad07",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 2.549
+    },
+    {
+      "case": "test_tempered_combat.gd",
+      "log_sha256": "6639122e93a93a330ac5a9c4cc13face1d163047a45b29cd33527f11aaed618c",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 7.153
+    },
+    {
+      "case": "test_upgrade_salvage.gd",
+      "log_sha256": "e5557de388c6b602760171a933c1d50074641feb659200caa75233d63419711e",
+      "native_exit": 1,
+      "passed": false,
+      "seconds": 3.107
+    },
+    {
+      "case": "test_vfx.gd",
+      "log_sha256": "50bc8f7b5f4a6311c48a13342d22b84a1c01cecefe78c84e7b32efea4329690b",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 2.22
+    },
+    {
+      "case": "test_warden_charge.gd",
+      "log_sha256": "a193c029556bcca00eabd086516d16d81b1a3c41ddd0ba925e66214a3bd53cc5",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 4.131
+    },
+    {
+      "case": "test_warden_charge_assets.gd",
+      "log_sha256": "02c4257c18aa57ee30fc0c2725e0cf70158092abfd65b89308a91edfeb3a9f9b",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 0.423
+    },
+    {
+      "case": "test_warden_reactions.gd",
+      "log_sha256": "7a4b5ba96a473b365906d74c858da0b81b8ed7c48be2022744d3feef82bbd55c",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 2.311
+    },
+    {
+      "case": "test_weapon_mounts.gd",
+      "log_sha256": "7fc53bcae04cd54897ce3c4b3d066f62e491886f8562bf0b1b0c5d5bfb3126e7",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 6.8
+    },
+    {
+      "case": "test_weapon_order.gd",
+      "log_sha256": "d4768bfb4e945a4bf00459141820fa4d4b92fa45daecfc4f7b62143fbd9b0751",
+      "native_exit": 1,
+      "passed": false,
+      "seconds": 16.112
+    },
+    {
+      "case": "test_weapon_readout.gd",
+      "log_sha256": "ba9b4cdf9146f9b9b13274677fb5d29910c1120f434309c699beccb975687323",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 7.414
+    },
+    {
+      "case": "test_weapon_tempering.gd",
+      "log_sha256": "ca9f0438ce949d6879a3bb16569a2963ba41e357e968929ad980fde1070dffb8",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 20.601
+    },
+    {
+      "case": "test_ui.gd",
+      "log_sha256": "17fa24b5af573f32c02ece54ec801f04ccbdef625c165bfdc4ad86a93cc52989",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 1.906
+    },
+    {
+      "case": "check_build_expansion_icons.gd",
+      "log_sha256": "6c16f380bea9c98776e7b0a6403e2587fff7af409bfd01df85b5761ed9b44915",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 0.517
+    },
+    {
+      "case": "check_icons.gd",
+      "log_sha256": "31571934063d0d8a8f9e9b4e4d59280b1b20a8f997347f54d9a2198fadd33939",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 0.482
+    },
+    {
+      "case": "check_mechanism_icons.gd",
+      "log_sha256": "6c16f380bea9c98776e7b0a6403e2587fff7af409bfd01df85b5761ed9b44915",
+      "native_exit": 0,
+      "passed": true,
+      "seconds": 0.614
+    }
+  ],
+  "shared_cleanup_observations": 111,
+  "shared_cleanup_fixtures": 104,
+  "all_cleanup_complete": true,
+  "source_map_sha256": "a3bd6625e0d06e25251b10887a940a78267ea09023ad63be3879cc92b0fd5471",
+  "714_inputs_131_production_unchanged": true,
+  "scope": "Original full aggregate remains FAIL. This is exhaustive independent raw audit, not independent execution. No production edits or retries made. Narrow future test-only additive projection requires separate reviewed diff and new complete aggregate."
+}

@@ -1,0 +1,38 @@
+{
+  "status": "ACCEPTED_SELECTED_SOURCE_TESTS_PORTABLE",
+  "files": [
+    {
+      "source": "<QA_ROOT>/checks/independent_scavenger_authority.gd",
+      "destination": "tests/independent_scavenger_authority.gd",
+      "sha256": "c1e522c003eb81fe3efe0d293d264805b4ca233f7aceeca388ac0cedf59e42d6",
+      "optional_output_arg": "One JSON path after --; omission uses stdout only",
+      "source_executed_checks": 178
+    },
+    {
+      "source": "<QA_ROOT>/checks/independent_scavenger_events.gd",
+      "destination": "tests/independent_scavenger_events.gd",
+      "sha256": "4c53b0253dbb326144efb3691c72c096f76fa2d62605420b42b0734d9917fe86",
+      "optional_output_arg": "One JSON path after --; omission uses stdout only",
+      "source_executed_checks": 46
+    },
+    {
+      "source": "<QA_ROOT>/checks/independent_scavenger_views.gd",
+      "destination": "tests/independent_scavenger_views.gd",
+      "sha256": "52995e143ca9e4ea163aff618948ff14b30bf37eea84bef6fd72594aaca3cc0f",
+      "optional_output_arg": "One JSON path after --; omission uses stdout only",
+      "source_executed_checks": 132
+    },
+    {
+      "source": "<QA_ROOT>/checks/independent_scavenger_settlement.gd",
+      "destination": "tests/independent_scavenger_settlement.gd",
+      "sha256": "977a758021b2ac15b8aadbee12919ff869953a54d1e9513452f9fdb2a733b192",
+      "optional_output_arg": "One JSON path after --; omission uses stdout only",
+      "source_executed_checks": 30
+    }
+  ],
+  "excluded": "External old/new-catalog comparisons and source-icon-oracle generator; not normal aggregate scripts",
+  "source_inputs": 703,
+  "source_unchanged": true,
+  "contract": "C2",
+  "no_production_wait_or_error_relaxation": true
+}
