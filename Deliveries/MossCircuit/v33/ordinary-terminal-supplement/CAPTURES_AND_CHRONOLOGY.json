@@ -1,0 +1,698 @@
+{
+  "scope": "Ordinary automated CUA and tactical pauses; selected observations, not continuous video or state injection. Actions described are inputs; ambiguous early transitions remain explicit.",
+  "captures": [
+    {
+      "capture": "captures/01-title.jpg",
+      "bytes": 161991,
+      "sha256": "605b6a08c42d66d1f8c9a6709b3501ddbfb02b36e2d9e7c95788854a4fb991ff",
+      "source_capture_sha256": "e0c734ea41e2493e803a3263728f58d79cc80526aa21afe5efbc3392c42babc1",
+      "dimensions": [
+        1180,
+        812
+      ],
+      "observation": "Fresh process: default Rivet starter, Arena, default seed before editing."
+    },
+    {
+      "capture": "captures/02-seed433.jpg",
+      "bytes": 161066,
+      "sha256": "9348a462781608fdabd3c95d44514c7490eca9e2a0eba1f104fbf54669a7a85a",
+      "source_capture_sha256": "ef0006ba9c6e698f8c6f078d0af69e7a2a1297a552ea4df1801ee9386a798b5d",
+      "dimensions": [
+        1180,
+        812
+      ],
+      "observation": "Seed 433 entered through the title controls; Arena and Rivet retained."
+    },
+    {
+      "capture": "captures/03-first-pause.jpg",
+      "bytes": 95485,
+      "sha256": "50066f3c9bf0713d1af025147d2dc501382f3bdfd65e2c2858459a32383d85f7",
+      "source_capture_sha256": "24617df5eb7e7c6806f850a2cd401c4ef727170beb78d93d9f97d730de416c96",
+      "dimensions": [
+        1180,
+        812
+      ],
+      "observation": "After START and ordinary D/S/A movement, tactical pause observed."
+    },
+    {
+      "capture": "captures/04-wave1-live.jpg",
+      "bytes": 255205,
+      "sha256": "7b454cd53520454adc0536efcca7a561a3b2186d28da166ff2e303b94d47f2c7",
+      "source_capture_sha256": "164671eb69ae19cc7f924f66de6723c27f573c8a1153369189b88e613e87e8a8",
+      "dimensions": [
+        1180,
+        812
+      ],
+      "observation": "Wave1 LV1,35scrap,100/100HP,12s,11kills; later Escape pauses."
+    },
+    {
+      "capture": "captures/05-wave1-pause.jpg",
+      "bytes": 95102,
+      "sha256": "8533ddf1c97411f17e54c65fea086428ad9eae022a6e78d6bc83f24464164153",
+      "source_capture_sha256": "45071364f6afdcb151136078ead18e3b799fb3fc09ac9fa20ea4014d2b0d8ce1",
+      "dimensions": [
+        1180,
+        812
+      ],
+      "observation": "Further ordinary movement; pause observed."
+    },
+    {
+      "capture": "captures/06-first-upgrade.jpg",
+      "bytes": 136479,
+      "sha256": "677cee11f57fff7b001da98845a4e9a09a4f801c6db978cba5144cf0319db165",
+      "source_capture_sha256": "fa27b876422bd6598955011ea33f6a7fbd6fa21234e88fab429341883c5767ca",
+      "dimensions": [
+        1180,
+        812
+      ],
+      "observation": "Natural upgrade page:41scrap; Rapid/Repair/Split offered."
+    },
+    {
+      "capture": "captures/07-rapid-selected-live.jpg",
+      "bytes": 259251,
+      "sha256": "cddebe36feb91ea8eabedcb8c8571be8df479863f192ab2268c668a0fd2dc963",
+      "source_capture_sha256": "16bb18cffaf4e0fa4a06cc210b17fbbaab1dba35e85cd70acbd76d474c210277",
+      "dimensions": [
+        1180,
+        812
+      ],
+      "observation": "After Rapid SELECT:Wave1 LV2,41scrap,91/100HP,24s,24kills."
+    },
+    {
+      "capture": "captures/08-settlement-queue122.jpg",
+      "bytes": 136552,
+      "sha256": "ba6f55ad53bc57768ccde13915fb5810f09dec5c3dcb33dff988640a5b9a340d",
+      "source_capture_sha256": "51dda9449b96c136e28c8b5d6ef0a6024e43a0411c47689cb0ea14cc8970422b",
+      "dimensions": [
+        1180,
+        812
+      ],
+      "observation": "Natural earned queue,122scrap; Magnet/Split/Repair offered."
+    },
+    {
+      "capture": "captures/09-split-then-next.jpg",
+      "bytes": 136702,
+      "sha256": "bc297e59f5f240c1082ef7232f1140ee424d6414a8c3203bef029752640733a2",
+      "source_capture_sha256": "2b6469e4d37e2dc20cfefb801979e46be2683d6f4389816752ff6042757040cf",
+      "dimensions": [
+        1180,
+        812
+      ],
+      "observation": "After Split SELECT:next page Split/Rapid/Light Feet."
+    },
+    {
+      "capture": "captures/10-rapid-then-next.jpg",
+      "bytes": 134791,
+      "sha256": "6fd60ac53e6a9e8dc0548695a65c373be925e9e3dad4f54367585715d54ba6f7",
+      "source_capture_sha256": "f9c6cdc88bc90a54c458a67518548ac3c2248f6a2f14f1fb6be188e66690f1fa",
+      "dimensions": [
+        1180,
+        812
+      ],
+      "observation": "After Rapid SELECT:next page Repair/Light Feet/Rapid."
+    },
+    {
+      "capture": "captures/11-uncertain-repair-frame.jpg",
+      "bytes": 134791,
+      "sha256": "6fd60ac53e6a9e8dc0548695a65c373be925e9e3dad4f54367585715d54ba6f7",
+      "source_capture_sha256": "f9c6cdc88bc90a54c458a67518548ac3c2248f6a2f14f1fb6be188e66690f1fa",
+      "dimensions": [
+        1180,
+        812
+      ],
+      "observation": "Repair click attempted; captured page still repeats prior page. Not proof the click failed or remained pending."
+    },
+    {
+      "capture": "captures/12-uncertain-light-feet-frame.jpg",
+      "bytes": 134791,
+      "sha256": "6fd60ac53e6a9e8dc0548695a65c373be925e9e3dad4f54367585715d54ba6f7",
+      "source_capture_sha256": "f9c6cdc88bc90a54c458a67518548ac3c2248f6a2f14f1fb6be188e66690f1fa",
+      "dimensions": [
+        1180,
+        812
+      ],
+      "observation": "Light Feet click attempted against repeated page; same page captured again. Intervening transition not fully observed."
+    },
+    {
+      "capture": "captures/13-unplanned-bankshot-purchase.jpg",
+      "bytes": 172319,
+      "sha256": "94aecfd30fde936c587d449886c548c9a979ea9927c6be96a137ab0baaf483fe",
+      "source_capture_sha256": "3c6158c0fafa40dbbf9dbe775327ad51dc20f96ee534953cd9d4d89e60bcbb3a",
+      "dimensions": [
+        1180,
+        812
+      ],
+      "observation": "After Return on apparently focused upgrade:actual shop80scrap,Purchased,2weapons. Bankshot42 purchase is real but unplanned; preceding122 implies122\u219280. Do not infer a gameplay defect from uncertain frames."
+    },
+    {
+      "capture": "captures/14-duplicate-rivet-offer.jpg",
+      "bytes": 169250,
+      "sha256": "d1d654cbf6e392c9525791128ce4079d557ccfc28add2b7a668011d9f9773c01",
+      "source_capture_sha256": "b43e6f179c32fb18fee765eb02fd6b5bb9ee9ce373075c61672894fe9ccf1264",
+      "dimensions": [
+        1180,
+        812
+      ],
+      "observation": "Settled scrolled shop:80scrap,Rivet BUY24 available."
+    },
+    {
+      "capture": "captures/15-duplicate-purchased.jpg",
+      "bytes": 157690,
+      "sha256": "83f2fbc957b3f7d689f912ed1feb2318c00a40730408086069e0a20945b60100",
+      "source_capture_sha256": "3852ed67ee98999d80a2106ae0a820143096ec1c8321f5f27a90c692acdf6b2a",
+      "dimensions": [
+        1180,
+        812
+      ],
+      "observation": "Actual Rivet purchase:56scrap,3weapons,SOLD."
+    },
+    {
+      "capture": "captures/16-temper-preview.jpg",
+      "bytes": 161599,
+      "sha256": "ac5edcab39df8fbb8d6e4087f7909e77f10bc7a8d60ab21913fbe87b9c73e0a6",
+      "source_capture_sha256": "938bf371dd9df1bce5fe1ee33f7f63cfaf68167e105211cd22f6d43aced5bf62",
+      "dimensions": [
+        1180,
+        812
+      ],
+      "observation": "Retain RivetSLOT1,consume matchingSTANDARD SLOT3; preview15\u219224,irreversible/no-refund/tag/timer-loss disclosures."
+    },
+    {
+      "capture": "captures/17-temper-success.jpg",
+      "bytes": 167705,
+      "sha256": "5e0d4ed5be2a874a9aefb47cde51b30b39e2315cbaab8e77bdf427265c89e6c4",
+      "source_capture_sha256": "1a9e4120f637bca7e442d55d04001f1c21b40d112d256d3884ec9e491a1ec002",
+      "dimensions": [
+        1180,
+        812
+      ],
+      "observation": "Actual temper success:56scrap unchanged,3\u21922weapons; retainedSLOT1,consumedSLOT3,TEMPERED24/.308s."
+    },
+    {
+      "capture": "captures/18-wave2-deployed.jpg",
+      "bytes": 263457,
+      "sha256": "f930a2b0b3dfe434877348cb6010100dc8f2b123727f378f81c6a80819e3c9bd",
+      "source_capture_sha256": "11447a56b6333a65fea90a8be9e03ce3e8ddc296bf08305f13c1f610831c4864",
+      "dimensions": [
+        1180,
+        812
+      ],
+      "observation": "Wave2 LV5,56scrap,120/120HP,35s,38kills after ordinary deployment."
+    },
+    {
+      "capture": "captures/19-wave2-combat.jpg",
+      "bytes": 261589,
+      "sha256": "5fa39bbdc913ad22fd9d835edf44cf00d13cb0c6264dc5e012014ef770a81956",
+      "source_capture_sha256": "8e37f49a1d8e6319914fabbaf4f8efa3fa0dba598b4e5863108bcbf7a1115429",
+      "dimensions": [
+        1180,
+        812
+      ],
+      "observation": "Wave2 LV5,59scrap,120/120HP,43s,49kills."
+    },
+    {
+      "capture": "captures/20-wave2-brace.jpg",
+      "bytes": 269749,
+      "sha256": "c9de3fb63229acd4bd0970a3f3242cfe3fc32a2c092ae196ae8ef11548d9f6aa",
+      "source_capture_sha256": "56b7eb1eba187990073b5d6981c8932254485ec274f11fcf7c671ec1ce4c1c5b",
+      "dimensions": [
+        1180,
+        812
+      ],
+      "observation": "Wave2,112/120HP,51s,58kills; pale Ram brace arc and orange lane visible lower-right. No per-hit damage attribution."
+    },
+    {
+      "capture": "captures/21-light-feet-choice.jpg",
+      "bytes": 136463,
+      "sha256": "8f0f9748050836fc7c97124672a56b2cf98956c42d810c7242aae7d2fe6ba9b5",
+      "source_capture_sha256": "98bbb331f67c2ad932b05e5747f7d65e0b754eb84707f4f9afb461a75a6574e7",
+      "dimensions": [
+        1180,
+        812
+      ],
+      "observation": "Natural mid-wave upgrade:65scrap,Split/Light Feet/Magnet."
+    },
+    {
+      "capture": "captures/22-wave2-after-light-feet.jpg",
+      "bytes": 271584,
+      "sha256": "589d9e8111d50fed88e8bf80ac0e4f66dc4d3698fdae47e8fcd05d47c061f70d",
+      "source_capture_sha256": "269d008afe7ea433380a88620e0d5c64dc691c6b07cf77615960c26be4f0e74a",
+      "dimensions": [
+        1180,
+        812
+      ],
+      "observation": "After Light Feet selection:Wave2 LV6,65scrap,112/120HP,56s,64kills; Ram brace/lane visible."
+    },
+    {
+      "capture": "captures/23-second-settlement-rapid.jpg",
+      "bytes": 135433,
+      "sha256": "a27d5c91f434f907b828b2b7ed7bd10efdf3fb170bb762f28e8095ab41a61a98",
+      "source_capture_sha256": "1d7762bd8cbc46569e652fe896ef86408b828cedbb93794dd799e8a558d8f7fc",
+      "dimensions": [
+        1180,
+        812
+      ],
+      "observation": "Earned settlement queue182scrap,Rapid/Magnet/Repair."
+    },
+    {
+      "capture": "captures/24-second-settlement-overcharge.jpg",
+      "bytes": 134623,
+      "sha256": "afeb79658efc967f4f28f8f969e18bb15e8c9d92d49e0a85951bd1de0013962b",
+      "source_capture_sha256": "79e8aec49c2c601d6fac3116e84a179d1eb9a8c6c17327c6ec3a10d84cb17b8b",
+      "dimensions": [
+        1180,
+        812
+      ],
+      "observation": "After Rapid selection,next Light Feet/Overcharge/Split page."
+    },
+    {
+      "capture": "captures/25-second-settlement-split.jpg",
+      "bytes": 136739,
+      "sha256": "0fe94ac240fe71f8456ee9eda5c88a5f6b4092b9fd35b653f3eed4fed9ea2a6a",
+      "source_capture_sha256": "f419aea26242f915ca2b6c8778affb78cbc058415bd95a387946e0cafaacb417",
+      "dimensions": [
+        1180,
+        812
+      ],
+      "observation": "After Overcharge selection,next Magnet/Split/Rapid page."
+    },
+    {
+      "capture": "captures/26-second-settlement-repair.jpg",
+      "bytes": 136345,
+      "sha256": "bb0347eaef8a8281e2cc3121f7b53351ee6fb2e9d880e7440ab2c7d07b4d85a0",
+      "source_capture_sha256": "6b6ca68e2de5a66b1de464140b78ad74e3f8f43d74d88d309cb40818a4076e8f",
+      "dimensions": [
+        1180,
+        812
+      ],
+      "observation": "After Split selection,next Magnet/Repair/Split page."
+    },
+    {
+      "capture": "captures/27-second-shop182.jpg",
+      "bytes": 175618,
+      "sha256": "affd1785390f937f11dfc788a302e8b63dd3faf62450f9bc1baeabee37471f75",
+      "source_capture_sha256": "68445915428ffc341965feda30f90dfb64767967fac2f3ed95ee9f6d7353ba00",
+      "dimensions": [
+        1180,
+        812
+      ],
+      "observation": "After Repair selection,second shop182scrap; tempered Rivet30/.276s;Echo offered30."
+    },
+    {
+      "capture": "captures/28-echo-purchased.jpg",
+      "bytes": 162792,
+      "sha256": "45d55a41fdc8790ea910bbd252c5aa44bd50076be1687b79fb1c19c3fa9d7a6f",
+      "source_capture_sha256": "dc955f9af3580b117d0d8e1e98267449702710fe98d1f19c18c91ae9461a0dd9",
+      "dimensions": [
+        1180,
+        812
+      ],
+      "observation": "Echo Chamber purchased182\u2192152,SOLD;still2weapons."
+    },
+    {
+      "capture": "captures/29-warden-phase1.jpg",
+      "bytes": 268764,
+      "sha256": "54f5d5c432e9e0fb100d5a1ab2931f7f0ee11de208bdfb78df33755c4d0fd18e",
+      "source_capture_sha256": "ac04bc92603d58e19d4dec24d4cf72f03425260359d4d217f6aa566bf616bad5",
+      "dimensions": [
+        1180,
+        812
+      ],
+      "observation": "Wave3 LV9,122/140HP,62s,70kills;Wardenphase1 648/950HP,charge recovery."
+    },
+    {
+      "capture": "captures/30-warden-warning.jpg",
+      "bytes": 275255,
+      "sha256": "4b865bd7f3e8b2a30a66d7d7a13ee5ef2b5e5c734209188351d72f66ec58aede",
+      "source_capture_sha256": "cb30d4dcb9ceef71906e0972ec36b6cd4154458017e6aa343953ac25f236b3e7",
+      "dimensions": [
+        1180,
+        812
+      ],
+      "observation": "Wardenphase1 524/950HP,locked blast warning;player122/140HP,64s."
+    },
+    {
+      "capture": "captures/31-warden-phase2.jpg",
+      "bytes": 275777,
+      "sha256": "6f0569f4fc09be4fbd9c9b1eea7f462cf408318e00d27615964b620ce655b9e8",
+      "source_capture_sha256": "b4047b86e06c527258a1693b9b1df6df52164c8e938fffa84f749fd2e473260d",
+      "dimensions": [
+        1180,
+        812
+      ],
+      "observation": "After ordinary movement/dash,Wardenphase2 472/950HP,65s,71kills."
+    },
+    {
+      "capture": "captures/32-warden-charge-warning.jpg",
+      "bytes": 279592,
+      "sha256": "4fb59cff2feb8fc71a44b37819099a838af2bab194763e3582c644574c975858",
+      "source_capture_sha256": "cb975980708cecdebc23c3a1e75ccaf6ada0d380a2dfc53dc98baf6ec12cf218",
+      "dimensions": [
+        1180,
+        812
+      ],
+      "observation": "Wardenphase2 472/950HP,charge warning,67s,72kills."
+    },
+    {
+      "capture": "captures/33-warden-charging.jpg",
+      "bytes": 278140,
+      "sha256": "c960b3d77ed091ac34431d267a39bc9ff46fe5b2bb9e1246f7ed49c24c1d4338",
+      "source_capture_sha256": "df33f6ac76dd35a6d434376a9ccbf82d526de41b68f6d42ae9cacad6b4d63fd9",
+      "dimensions": [
+        1180,
+        812
+      ],
+      "observation": "Wardenphase2 472/950HP,charging,68s,75kills."
+    },
+    {
+      "capture": "captures/34-warden264.jpg",
+      "bytes": 285453,
+      "sha256": "15a8159903f651b12ea506a376a329118e8a05c6e03f7693e8a4e79a75656078",
+      "source_capture_sha256": "56141f17a6b68ba6a812443e23df1b35bb1905a95c9baa7ceb21e951412fa950",
+      "dimensions": [
+        1180,
+        812
+      ],
+      "observation": "Wardenphase2 264/950HP,blast warning,70s,78kills."
+    },
+    {
+      "capture": "captures/35-warden130.jpg",
+      "bytes": 280750,
+      "sha256": "f0f885feb6a3f62ee088ec5f4d599c1b4df0caa389287377f8c119daa430b277",
+      "source_capture_sha256": "d1d50fb8f1822d65b2cd46fe5cf05221848031b8a3b1b436b6eec4debe576619",
+      "dimensions": [
+        1180,
+        812
+      ],
+      "observation": "After ordinary titlebar focus and movement:Wardenphase2 130/950HP,77s,93kills. Timing improvement is an observation,not a proven cause."
+    },
+    {
+      "capture": "captures/36-warden24.jpg",
+      "bytes": 284146,
+      "sha256": "22e36e11156ac9b1d732b2198d027d085104db8d6ee581e9c401ba58d6f5f3a4",
+      "source_capture_sha256": "a1470f31aa48d655f2d4598946f54025fa728a46c9a60246b7325280a44230b5",
+      "dimensions": [
+        1180,
+        812
+      ],
+      "observation": "Wardenphase2 24/950HP,player104/140HP,85s,105kills."
+    },
+    {
+      "capture": "captures/37-post-warden-queue.jpg",
+      "bytes": 136920,
+      "sha256": "1ef1199c0611e33c3a3ff3501bd48941d433403cbf760779c14f760ef860febf",
+      "source_capture_sha256": "a2f7554a6d8095caa04710702ab2d014aec4b943acf8f613bd4dc653ec260168",
+      "dimensions": [
+        1180,
+        812
+      ],
+      "observation": "After continued combat,earned366scrap upgrade queue;Overcharge selected next. No exact killing-hit attribution."
+    },
+    {
+      "capture": "captures/38-post-warden-repair1.jpg",
+      "bytes": 135738,
+      "sha256": "a28db848b9248c2da5ad3cd8e1596f9ce6fda1fc93e6c0a4c2d4b1d9c22a9b49",
+      "source_capture_sha256": "3d9408e7953f80a6d768d96327764effa7ebac1e3b8d6fc46602fb5832847f7e",
+      "dimensions": [
+        1180,
+        812
+      ],
+      "observation": "Next earned page after Overcharge,Repair offered."
+    },
+    {
+      "capture": "captures/39-post-warden-repair2.jpg",
+      "bytes": 135248,
+      "sha256": "2b115a2de18cff02a068194d8febf1a43795613e046d7c3330e64da13a579823",
+      "source_capture_sha256": "67457fc459769b51b18af9985a88f1688f4b6eccab04050099a0c7e472863cb4",
+      "dimensions": [
+        1180,
+        812
+      ],
+      "observation": "Next earned page after Repair,another Repair offered."
+    },
+    {
+      "capture": "captures/40-third-shop366.jpg",
+      "bytes": 172188,
+      "sha256": "5b4ce6bee8f475147d53179f0b9ad33a2387314bcb6ad1cb1ae73f9cf7c8be3f",
+      "source_capture_sha256": "cbd7263d5d63261b48d1b578aeac44a7fa28aebdbd3bdf5783705ff3e03a608c",
+      "dimensions": [
+        1180,
+        812
+      ],
+      "observation": "After second Repair,third shop366scrap,2weapons;tempered Rivet38.40/.276s. No purchase here."
+    },
+    {
+      "capture": "captures/41-wave4-upgrade.jpg",
+      "bytes": 135433,
+      "sha256": "db56d4a8908fc84d5176d48e87ea2b82b89970c0fe6bc0d55d1d24e5e2d4b5d4",
+      "source_capture_sha256": "8f568c7616d6f504acd8787913eb9a68ada87706557b986f86f204c3f266795e",
+      "dimensions": [
+        1180,
+        812
+      ],
+      "observation": "After ordinary deployment/movement,natural369scrap upgrade;Rapid offered."
+    },
+    {
+      "capture": "captures/42-wave4-live.jpg",
+      "bytes": 275305,
+      "sha256": "40e3f2f9accbef6a74c3d8ab337edb7f20a13c6eaf222b169b17310b7dfd7cdc",
+      "source_capture_sha256": "630e8134bcb969a6cf25c38ac8fec59eb3dc84255918fb5eb307ec0a21eb3897",
+      "dimensions": [
+        1180,
+        812
+      ],
+      "observation": "After Rapid selection,Wave4 LV12,170/205HP,107s,132kills."
+    },
+    {
+      "capture": "captures/43-wave4-late.jpg",
+      "bytes": 265525,
+      "sha256": "0d1cd9ffdacee1abd2f51319dee39eca2b8fedfcbfb2c1161ddb421cff0fd018",
+      "source_capture_sha256": "a032fa7dd5a80cc2ba64b2f83e9d07e0195a25d33f725a7a8848144690d082b6",
+      "dimensions": [
+        1180,
+        812
+      ],
+      "observation": "Wave4 LV12,378scrap,154/205HP,117s,155kills."
+    },
+    {
+      "capture": "captures/44-fourth-settlement-repair.jpg",
+      "bytes": 138635,
+      "sha256": "af85d0b3c457f8498886e0128e10b88a7d2e6f9624e865a3cc0187748b8e5f05",
+      "source_capture_sha256": "cbc452efbd60b5c85d8741a89d11f98ecd74c8100ae7f93785ef36b0c140a397",
+      "dimensions": [
+        1180,
+        812
+      ],
+      "observation": "Natural earned540scrap queue;Repair/Overcharge/Split."
+    },
+    {
+      "capture": "captures/45-fourth-settlement-rapid.jpg",
+      "bytes": 139577,
+      "sha256": "a5b87059b1fc1f2489b37be0cef7de422cce3989b754eaa1455cb37a8176eaf3",
+      "source_capture_sha256": "b11d7fb40664c29c25209bb4d709c7fe245ba399bc4cbe9ca073867dfe328515",
+      "dimensions": [
+        1180,
+        812
+      ],
+      "observation": "After Repair,next Repair/Rapid/Split page."
+    },
+    {
+      "capture": "captures/46-fourth-settlement-repair2.jpg",
+      "bytes": 137829,
+      "sha256": "4e2fc6a36d6d542d78c94be9a0fb925fb6ea9d3d4fe1d541aa5ab7ce622cd9cd",
+      "source_capture_sha256": "9af3e0ee5d404a4fc8adb0c4eb3d559ce78b7d307d046706039d0624b15e2eaa",
+      "dimensions": [
+        1180,
+        812
+      ],
+      "observation": "After Rapid,next Repair/Light Feet/Magnet page."
+    },
+    {
+      "capture": "captures/47-fourth-shop540.jpg",
+      "bytes": 185717,
+      "sha256": "fb01ec34d6627f5e655869032ea7409034b3239304c4cf4b21c05399d2744607",
+      "source_capture_sha256": "25f44c7e4043d610342ee28b3482de90879c19fa9b5e97c62c22e689b03698a1",
+      "dimensions": [
+        1180,
+        812
+      ],
+      "observation": "After Repair,fourth shop540scrap;tempered Rivet38.40/.229s. No purchase here."
+    },
+    {
+      "capture": "captures/48-wave5-broodkeepers.jpg",
+      "bytes": 265472,
+      "sha256": "9cc135631a9386285ea227528d753c33970d965e6ce184ecad910519a1b8ba2a",
+      "source_capture_sha256": "7a82394495cfe21e56af531a5e40eb3bf08dd37deb8975407b60e3f0f9e673ee",
+      "dimensions": [
+        1180,
+        812
+      ],
+      "observation": "Wave5 LV14,555scrap,229/245HP,132s,175kills;Broodkeepers and clipped orange tells visible."
+    },
+    {
+      "capture": "captures/49-wave5-annulus.jpg",
+      "bytes": 263333,
+      "sha256": "8e0470701af2360c17d969d509904c58869fcdc3b0a92d0d8697ce8a3e976631",
+      "source_capture_sha256": "cf4462d7d873ee2c865b29227950b63f65301e9baff7778c2c21804cdb4ec59a",
+      "dimensions": [
+        1180,
+        812
+      ],
+      "observation": "Wave5,561scrap,229/245HP,141s,190kills;partially clipped annulus visible lower-right."
+    },
+    {
+      "capture": "captures/50-wave5-overcharge.jpg",
+      "bytes": 136317,
+      "sha256": "091e2d2787e5250a9edb2e2da378c84f3b697ae4f85e493500d005fe31cedd27",
+      "source_capture_sha256": "163196b6162aa290cab401be89806b6ed371bdb72363e1f0e4bfbff31bab8dbe",
+      "dimensions": [
+        1180,
+        812
+      ],
+      "observation": "Natural573scrap upgrade page;Overcharge/Rapid/Split."
+    },
+    {
+      "capture": "captures/51-fifth-settlement771.jpg",
+      "bytes": 135999,
+      "sha256": "b4b64a1bbee8a3bdb5adaefad78151404e0008b1d83e90c0a3ee901ef0c5a880",
+      "source_capture_sha256": "b30d57f93b2d4ed2f07a30c76125208aabcb2b790c36bd19897956b9b9345fdb",
+      "dimensions": [
+        1180,
+        812
+      ],
+      "observation": "After Overcharge,settled771scrap queue;Magnet/Repair/Split. Intervening live frames not all captured."
+    },
+    {
+      "capture": "captures/52-fifth-settlement-light-feet.jpg",
+      "bytes": 134417,
+      "sha256": "30ba2972c975f5d7a9591dcc7540554195c921229a63a648e220778280c52e94",
+      "source_capture_sha256": "9a20f614a12080e68f567acc44232ccf763f777174086fd27315f7b46217fc08",
+      "dimensions": [
+        1180,
+        812
+      ],
+      "observation": "After Repair,next Light Feet/Repair/Overcharge."
+    },
+    {
+      "capture": "captures/53-fifth-settlement-rapid.jpg",
+      "bytes": 136337,
+      "sha256": "ab207742282a10f2a55ff26a782474f9d198f7827ea6e50c06e391668394359b",
+      "source_capture_sha256": "21b46c64be4f1a2dfdacaf615b96dfd824cc9a4762747334ee1f9d6b3ed1f323",
+      "dimensions": [
+        1180,
+        812
+      ],
+      "observation": "After Light Feet,next Rapid/Repair/Split."
+    },
+    {
+      "capture": "captures/54-fifth-shop771.jpg",
+      "bytes": 175244,
+      "sha256": "f119975d8ddc17890a001c476823eedb9692aaf83bab3e0ceb14e73d6376dc63",
+      "source_capture_sha256": "eb2cf90be028b6a46d0448a28a790f51f9ae1b2db33dbb0de05dd27b4ea7e6db",
+      "dimensions": [
+        1180,
+        812
+      ],
+      "observation": "After Rapid,fifth shop771scrap;tempered Rivet44.40/.211s;Mirror Shell34 offered."
+    },
+    {
+      "capture": "captures/55-mirror-purchased.jpg",
+      "bytes": 162300,
+      "sha256": "768a546456bca4f4544dbc61444e930acafd9e35601f11e2dc463a6350de0bb9",
+      "source_capture_sha256": "1219e3463cb5b0add02b6dd96eacb6ee5681a3597db9521f3ce7a8ae2acb71d6",
+      "dimensions": [
+        1180,
+        812
+      ],
+      "observation": "Mirror Shell purchased771\u2192737,SOLD;still2weapons."
+    },
+    {
+      "capture": "captures/56-reactor-phase2.jpg",
+      "bytes": 295931,
+      "sha256": "b6fd1f3fc9f4479a08a00efc5c73d0009ce713bdd216b93366be289942af3ba0",
+      "source_capture_sha256": "268d174944e3f9603a792d7b5ff6e643daf1e874b6633642a746f3dcfc361432",
+      "dimensions": [
+        1180,
+        812
+      ],
+      "observation": "Ordinary final-stage deployment:Wave6 LV17,737scrap,213/265HP,158s,218kills;Reactorphase2 787/1600HP ring warning."
+    },
+    {
+      "capture": "captures/57-reactor-ring.jpg",
+      "bytes": 277044,
+      "sha256": "591474c226875919d49099ec1ad6753ef104a4332552ecb6e1ab0e837a58b4fe",
+      "source_capture_sha256": "9a26ab7494b56099bb3b38ce366a811a0a1bdae4cfdd41067872c1a257995954",
+      "dimensions": [
+        1180,
+        812
+      ],
+      "observation": "Wave6,746scrap,213/265HP,164s,231kills;Reactor visible at right,phase2 787/1600HP ring warning."
+    },
+    {
+      "capture": "captures/58-reactor119.jpg",
+      "bytes": 269418,
+      "sha256": "1ca0bc6087660ac3015dc5333728cbe17af2d61c9282b004931ee074948a5237",
+      "source_capture_sha256": "185a04f9bcbe3dc20c569668bfd7cb7265a1c4b44c08f7d8322fca90a4fc32e7",
+      "dimensions": [
+        1180,
+        812
+      ],
+      "observation": "After ordinary approach/circling:Reactorphase2 119/1600HP,recover summon;198/265HP,170s,246kills."
+    },
+    {
+      "capture": "captures/59-late-wave-earned-repair.jpg",
+      "bytes": 138311,
+      "sha256": "c6cee2a929f2c682273f184b59648f7cc183ea928972c00a8737590f070ff073",
+      "source_capture_sha256": "534298a1a7af60ae1896635da1fce3c8a4897bfbd05e58d0c612dd2e8043db1a",
+      "dimensions": [
+        1180,
+        812
+      ],
+      "observation": "Natural930scrap upgrade page after further combat;Repair offered. No exact killing-hit attribution."
+    },
+    {
+      "capture": "captures/60-last-live-frame.jpg",
+      "bytes": 311972,
+      "sha256": "47c1a72e4ce692392a3c54fb72a3e24541986032be4328ad3d7f988c077e984f",
+      "source_capture_sha256": "d2327ac76329b7e2c7d7675839f0cb4a090ced16809287afa3c609e28c719ab4",
+      "dimensions": [
+        1180,
+        812
+      ],
+      "observation": "After Repair:Wave6 LV18,930scrap,188/285HP,184s,283kills,SURVIVE0s,no boss bar. Escape followed; next settled observation is terminal result,not a later reset."
+    },
+    {
+      "capture": "captures/61-terminal-victory.jpg",
+      "bytes": 115274,
+      "sha256": "6d477916c9a2f3a898a2b6ea86c6a7a387c2ca8c7df08621c1c0f9891e59483f",
+      "source_capture_sha256": "26d58798343efd1832eb7407e4de6f58b122fae3908be0746495c71128177f79",
+      "dimensions": [
+        1180,
+        812
+      ],
+      "observation": "Direct CIRCUIT COMPLETE:ARENA6/6,LV20,283kills,seed433;Rivet origin,TEMPERED Rivet44.40/.211s and BankshotSLOT2 visible."
+    },
+    {
+      "capture": "captures/62-terminal-bankshot.jpg",
+      "bytes": 128579,
+      "sha256": "401f7e88ddd87731f6eb4416b3aca01db069c18499e9ab96f6153788c37aec62",
+      "source_capture_sha256": "65fb86066eb45a0021e5ec452f812c3960dc265bfce7eed67e13e395b46975de",
+      "dimensions": [
+        1180,
+        812
+      ],
+      "observation": "Read-only result scroll:STANDARD Bankshot33.30/.447s,900acquisition/path;2modules."
+    },
+    {
+      "capture": "captures/63-terminal-modules.jpg",
+      "bytes": 128444,
+      "sha256": "915a796c4130dffbea94d8b554568c100f5e078d73d9f8d92f19e521987a193c",
+      "source_capture_sha256": "d0173a2786771ee86da49314404d6e3d6f1c5ee4f3e59ab199e06aecf68e0a31",
+      "dimensions": [
+        1180,
+        812
+      ],
+      "observation": "Read-only result scroll:Echo Chamberx1/1 and Mirror Shellx1/1;same terminal header. No retry/newseed/title action."
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "observed_utc": "2026-10-26T22:16:18.438308+00:00",
+  "artifacts": {
+    "MossCircuit.x86_64": {
+      "bytes": 71075864,
+      "sha256": "2c78919325d7f29fa7607287c7c1eeac367ea4c94e7b8b6f5f4c6b20492f73d0",
+      "mode": "0o755"
+    },
+    "MossCircuit.pck": {
+      "bytes": 41396596,
+      "sha256": "8ec850cc2fd8b5490ee1f945d56cdb674fa38460191c3eb75be0fdb419ee9aba",
+      "mode": "0o644"
+    }
+  },
+  "before_after_equal": true,
+  "source_frozen_inputs_checked": 649,
+  "source_input_map_sha256": "2419d171dd9699e8b111697db327725102a1be9022ccc9565cf75fab4365e7cf",
+  "source_changes": [],
+  "close": {
+    "method": "ordinary window manager Alt+F4 after observed victory, no retry/title/reset",
+    "wrapper_exit_code": 0,
+    "fresh_window_inventory_game_absent": true
+  },
+  "diagnostics": "ALSA device unavailable, dummy audio fallback, unsupported VSync; no additional gameplay script errors in captured log",
+  "run_count": 1,
+  "mode": "Arena",
+  "seed": 433,
+  "outcome": "CIRCUIT COMPLETE",
+  "wave": "6/6",
+  "level": 20,
+  "kills": 283
+}
