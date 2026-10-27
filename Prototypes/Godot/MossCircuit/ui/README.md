@@ -38,8 +38,8 @@ The UI reads `res://assets/items/icon_manifest.json`: `{atlas:"res://...png",ico
 Run (with writable HOME/XDG directories):
 
 ```bash
-HOME=/tmp/moss-ui-home XDG_CONFIG_HOME=/tmp/moss-ui-config \
-XDG_DATA_HOME=/tmp/moss-ui-data XDG_CACHE_HOME=/tmp/moss-ui-cache \
+HOME=historical-temp/moss-ui-home XDG_CONFIG_HOME=historical-temp/moss-ui-config \
+XDG_DATA_HOME=historical-temp/moss-ui-data XDG_CACHE_HOME=historical-temp/moss-ui-cache \
 godot --headless --path . --script res://ui/test_ui.gd
 ```
 

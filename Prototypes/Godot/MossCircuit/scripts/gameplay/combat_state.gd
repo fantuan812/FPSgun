@@ -14,3 +14,15 @@ var hazards: Array = []
 var effect_visuals: Array = []
 var next_enemy_id := 0
 var focus_enemy_id := 0 # Transient current ID only; 0 preserves automatic nearest acquisition.
+
+# New A attacks are bounded and owned only within this epoch; old arrays remain unchanged.
+var pulse_beams:Array=[]
+var seismic_waves:Array=[]
+var new_weapon_epoch:int=0
+var new_wave_sequence:int=0
+var combat_tick_serial:int=0
+var new_weapon_last_tick:int=-1
+var new_weapon_motion:Dictionary={}
+func clear_new_attacks()->void:
+	pulse_beams.clear();seismic_waves.clear();new_weapon_motion.clear()
+	new_weapon_epoch+=1

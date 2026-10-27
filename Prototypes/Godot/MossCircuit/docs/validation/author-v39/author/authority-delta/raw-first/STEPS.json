@@ -1,0 +1,531 @@
+[
+  {
+    "route": "move",
+    "exit": 0,
+    "seconds": 3.5868034199957037,
+    "timeout": false,
+    "parse_errors": [],
+    "observations_ok": true,
+    "helpers": [
+      {
+        "capture_removed": true,
+        "complete": true,
+        "driver": "Dummy",
+        "game_owner_count": 1,
+        "mix_rate": 44100.0,
+        "observations": [
+          {
+            "discarded": 0,
+            "elapsed_us": 108,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 0,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 0,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 1911,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 0,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 0,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 17902,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 4096,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 4096,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 28699,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 4096,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 4096,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 42120,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 4096,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 4096,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 55923,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 4096,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 4096,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 69933,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 4096,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 4096,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 83508,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 4096,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 4096,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 97476,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 4096,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 4096,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 112021,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 8192,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 8192,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 126357,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 8192,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 8192,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 138723,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 8192,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 8192,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 152532,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 8192,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 8192,
+            "streams_released": true
+          }
+        ],
+        "pre_window_drained": 4096,
+        "prepare_errors": [],
+        "requested_owner_count": 1,
+        "scope": "Test-only bounded final-owner resource release and fresh internal silence; not physical output or a universal timing guarantee.",
+        "tracked_owner_count": 1,
+        "tracked_stream_count": 2
+      }
+    ],
+    "reports": [
+      {
+        "observations": [
+          {
+            "accepted": true,
+            "action": "move",
+            "epoch_after": 6,
+            "epoch_before": 5,
+            "mode": "arena",
+            "motion_after": {},
+            "motion_before": {},
+            "pulse_after": [],
+            "pulse_before": [],
+            "waves_after": [],
+            "waves_before": [],
+            "world_field_deltas": {
+              "new_weapon_epoch": {
+                "after_sha256": "52e30238f3f076eaee985aa3066bca930599b1df446d74078cea1495d47eb3c0",
+                "after_type": 2,
+                "before_sha256": "a01fd7895ceb904c3b612ebf136c2ec8a3fc5672e319ebc9bbb0f446209a7406",
+                "before_type": 2
+              },
+              "weapon_clocks": {
+                "after_sha256": "48143ea647082f26ca5a460f4c881220683871343de599a7c67eec96f3676882",
+                "after_type": 28,
+                "before_sha256": "c1e6d0280fa6d76680b11c187d1c1edf11671b3c12e68ab0c7065a406ba8a208",
+                "before_type": 28
+              }
+            }
+          },
+          {
+            "accepted": true,
+            "action": "move",
+            "epoch_after": 11,
+            "epoch_before": 10,
+            "mode": "rooms",
+            "motion_after": {},
+            "motion_before": {},
+            "pulse_after": [],
+            "pulse_before": [],
+            "waves_after": [],
+            "waves_before": [],
+            "world_field_deltas": {
+              "new_weapon_epoch": {
+                "after_sha256": "ed9355b4c282e304132b2d00970ed2b20359e38ffdee4079f1370e90ae887775",
+                "after_type": 2,
+                "before_sha256": "09f6f412bf565aa36974a2f7383bff57cd6a9826bad56c37c37302d94f4fc241",
+                "before_type": 2
+              },
+              "weapon_clocks": {
+                "after_sha256": "48143ea647082f26ca5a460f4c881220683871343de599a7c67eec96f3676882",
+                "after_type": 28,
+                "before_sha256": "c1e6d0280fa6d76680b11c187d1c1edf11671b3c12e68ab0c7065a406ba8a208",
+                "before_type": 28
+              }
+            }
+          }
+        ],
+        "scope": "diagnostic only; inherited original fixture setup/snap; no old expected changed, no PASS attribution"
+      }
+    ],
+    "clean": true,
+    "helper_ok": true,
+    "diagnostic_completed": true
+  },
+  {
+    "route": "temper",
+    "exit": 0,
+    "seconds": 3.8104616710043047,
+    "timeout": false,
+    "parse_errors": [],
+    "observations_ok": true,
+    "helpers": [
+      {
+        "capture_removed": true,
+        "complete": true,
+        "driver": "Dummy",
+        "game_owner_count": 1,
+        "mix_rate": 44100.0,
+        "observations": [
+          {
+            "discarded": 0,
+            "elapsed_us": 91,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 0,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 0,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 1148,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 0,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 0,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 7838,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 0,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 0,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 21460,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 0,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 0,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 35193,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 0,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 0,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 50216,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 4096,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 4096,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 62843,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 4096,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 4096,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 76590,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 4096,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 4096,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 90678,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 4096,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 4096,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 104350,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 4096,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 4096,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 118020,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 4096,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 4096,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 132494,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 4096,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 4096,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 146577,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 8192,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 8192,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 159335,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 8192,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 8192,
+            "streams_released": true
+          }
+        ],
+        "pre_window_drained": 4096,
+        "prepare_errors": [],
+        "requested_owner_count": 1,
+        "scope": "Test-only bounded final-owner resource release and fresh internal silence; not physical output or a universal timing guarantee.",
+        "tracked_owner_count": 1,
+        "tracked_stream_count": 2
+      }
+    ],
+    "reports": [
+      {
+        "observations": [
+          {
+            "accepted": true,
+            "action": "temper",
+            "epoch_after": 6,
+            "epoch_before": 5,
+            "mode": "arena",
+            "motion_after": {},
+            "motion_before": {},
+            "pulse_after": [],
+            "pulse_before": [],
+            "waves_after": [],
+            "waves_before": [],
+            "world_field_deltas": {
+              "new_weapon_epoch": {
+                "after_sha256": "52e30238f3f076eaee985aa3066bca930599b1df446d74078cea1495d47eb3c0",
+                "after_type": 2,
+                "before_sha256": "a01fd7895ceb904c3b612ebf136c2ec8a3fc5672e319ebc9bbb0f446209a7406",
+                "before_type": 2
+              },
+              "weapon_clocks": {
+                "after_sha256": "b2ce4f685323b0775f014af2b8d7901816eb89c511ba9024c94c2bf398b99733",
+                "after_type": 28,
+                "before_sha256": "0e4f133f4b885da5bc9f23e883ca37b0aa3f9dfa880bb28826bf078729ad4d84",
+                "before_type": 28
+              }
+            }
+          },
+          {
+            "accepted": true,
+            "action": "temper",
+            "epoch_after": 11,
+            "epoch_before": 10,
+            "mode": "rooms",
+            "motion_after": {},
+            "motion_before": {},
+            "pulse_after": [],
+            "pulse_before": [],
+            "waves_after": [],
+            "waves_before": [],
+            "world_field_deltas": {
+              "new_weapon_epoch": {
+                "after_sha256": "ed9355b4c282e304132b2d00970ed2b20359e38ffdee4079f1370e90ae887775",
+                "after_type": 2,
+                "before_sha256": "09f6f412bf565aa36974a2f7383bff57cd6a9826bad56c37c37302d94f4fc241",
+                "before_type": 2
+              },
+              "weapon_clocks": {
+                "after_sha256": "b2ce4f685323b0775f014af2b8d7901816eb89c511ba9024c94c2bf398b99733",
+                "after_type": 28,
+                "before_sha256": "0e4f133f4b885da5bc9f23e883ca37b0aa3f9dfa880bb28826bf078729ad4d84",
+                "before_type": 28
+              }
+            }
+          }
+        ],
+        "scope": "diagnostic only; inherited original fixture setup/snap; no old expected changed, no PASS attribution"
+      }
+    ],
+    "clean": true,
+    "helper_ok": true,
+    "diagnostic_completed": true
+  }
+]

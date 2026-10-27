@@ -1,16 +1,25 @@
 extends RefCounted
 ## Pure event-to-command engine. Never applies commands recursively.
+const RecoilPlate=preload("res://scripts/gameplay/recoil_plate.gd")
+var recoil_definition:Dictionary={}
+# Kept across encounter reset/sync; only new-run initialization clears it.
+var recoil_cooldown:Dictionary={}
+func clear_recoil_run()->void:
+	recoil_cooldown.clear()
+
 const Status=preload("res://scripts/gameplay/target_status.gd")
 var fracture_damage:=0.0
 var feedback_damage:=0.0
 var fracture_weapons:Array=[]
 func configure(catalog:Dictionary)->void:
+	recoil_definition={}
 	fracture_damage=0.0
 	feedback_damage=0.0
 	fracture_weapons.clear()
 	for weapon in catalog.get("weapons",[]):
 		if weapon.id!="cryo_sprayer":fracture_weapons.append(str(weapon.id))
 	for entry in catalog.get("items",[]):
+		if entry.id=="recoil_plate":recoil_definition=RecoilPlate.definition(entry)
 		if entry.id=="fracture_coil":fracture_damage=float(entry.get("fracture_damage",0.0))
 		if entry.id=="feedback_diode":feedback_damage=float(entry.get("feedback_damage",0.0))
 var epoch := 0
@@ -144,4 +153,11 @@ func process(event: Dictionary, context: Dictionary) -> Array:
 					medic_damage -= 30
 					result.append({"kind":"medical","pos":context.pos + Vector2(35,0)})
 			if ready("thorn_crown",time,1): result.append({"kind":"thorns","pos":context.pos,"damage":18.0})
+			if active.has("recoil_plate") and not recoil_definition.is_empty() and RecoilPlate.eligible(event,context):
+				var ready_at:float=float(recoil_cooldown.get("ready_at",0.0))
+				if time>=ready_at:
+					var next_ready:float=time+float(recoil_definition.cooldown)
+					if is_finite(next_ready):
+						recoil_cooldown["ready_at"]=next_ready
+						result.append({"kind":"recoil_push","pos":context.pos,"radius":recoil_definition.radius,"distance":recoil_definition.distance,"source_item":"recoil_plate"})
 	return result

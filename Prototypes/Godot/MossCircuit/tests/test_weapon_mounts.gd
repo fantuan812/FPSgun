@@ -9,10 +9,12 @@ func _initialize()->void:call_deferred("run")
 func run()->void:
 	var game=load("res://scenes/main.tscn").instantiate();root.add_child(game);game.set_process(false);game._start_run(808)
 	var rig=game.weapon_rig
-	check(rig.assets.keys().size()==8 and rig.geometry.keys().size()==8 and rig.assets.has("cryo_sprayer") and rig.assets.has("bankshot_driver"),"eight world assets including Cryo and Bankshot, not inventory icons")
+	var history_assets:Dictionary=rig.assets.duplicate();var history_geometry:Dictionary=rig.geometry.duplicate()
+	for new_id in ["tether_emitter","seismic_drum"]:history_assets.erase(new_id);history_geometry.erase(new_id)
+	check(rig.assets.size()==10 and rig.geometry.size()==10 and rig.assets.has("tether_emitter") and rig.assets.has("seismic_drum") and rig.geometry.has("tether_emitter") and rig.geometry.has("seismic_drum") and history_assets.size()==8 and history_geometry.size()==8 and history_assets.has("cryo_sprayer") and history_assets.has("bankshot_driver"),"exact new2 plus historical eight world assets including Cryo and Bankshot")
 	check(game.actor_anim.assets.hero_attack.frames.get_frame_texture("action",0).atlas.resource_path.contains("weapon_mounts"),"unarmed attack replaces baked gun")
-	for id in rig.geometry:
-		var g:Dictionary=rig.geometry[id]
+	for id in history_geometry:
+		var g:Dictionary=history_geometry[id]
 		var size:=Vector2(g.region[2],g.region[3]);var muzzle:Array=g.muzzle;var grip:Array=g.grip
 		for target in [Vector2(200,0),Vector2(-200,0),Vector2(200,100),Vector2(-100,-200),Vector2.ZERO]:
 			var pose:Dictionary=Rig.muzzle_pose(Vector2.ZERO,target,g)

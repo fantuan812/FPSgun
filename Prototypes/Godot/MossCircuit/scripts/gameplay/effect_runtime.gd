@@ -1,4 +1,7 @@
 extends RefCounted
+const RecoilPlate=preload("res://scripts/gameplay/recoil_plate.gd")
+# Injected by main and refreshed from the actual combat frame; empty fails closed.
+var recoil_area:Dictionary={}
 const CombatState=preload("res://scripts/gameplay/combat_state.gd")
 const RunSession=preload("res://scripts/gameplay/run_session.gd")
 const Status=preload("res://scripts/gameplay/target_status.gd")
@@ -27,7 +30,7 @@ func emit_event(kind: String, data: Dictionary) -> bool:
 	event.kind = kind
 	event.epoch = engine.epoch
 	event.sequence = sequence
-	var context := {"time":session.elapsed,"enemies":world.enemies,"damage":event.get("damage",world.stats.damage),"hp":world.stats.hp,"max_hp":world.stats.max_hp,"pos":world.player_pos,"dash_active":float(world.stats.get("dash_time",0.0)) > 0}
+	var context := {"playing":session.state=="playing","time":session.elapsed,"enemies":world.enemies,"damage":event.get("damage",world.stats.damage),"hp":world.stats.hp,"max_hp":world.stats.max_hp,"pos":world.player_pos,"dash_active":float(world.stats.get("dash_time",0.0)) > 0}
 	var commands: Array = engine.process(event,context)
 	var blocked := false
 	for command in commands:
@@ -108,6 +111,14 @@ func emit_event(kind: String, data: Dictionary) -> bool:
 						enemy.hp -= command.damage
 						enemy.last_source = "thorns"
 				world.effect_visuals.append({"kind":"thorns","pos":command.pos,"radius":130,"life":.25})
+			"recoil_push":
+				if session.state!="playing" or not RecoilPlate.number(world.stats.get("hp"),true):continue
+				RecoilPlate.apply(command,world.enemies,recoil_area)
+				if RecoilPlate.valid_area(recoil_area):
+					mechanism_vfx.call("recoil_plate","shield_impact",command.pos,{"radius":command.radius,"tint":Color("a9d9ba")})
+					var existing:Array=world.effect_visuals.filter(func(v):return v.kind=="recoil_push")
+					if existing.size()>=1:world.effect_visuals.erase(existing[0])
+					world.effect_visuals.append({"kind":"recoil_push","pos":command.pos,"radius":command.radius,"life":.25})
 			"push":
 				mechanism_vfx.call("pulse_boots","dash_trail",command.pos,{"tint":Color("7fe9cb")})
 				for enemy in world.enemies:

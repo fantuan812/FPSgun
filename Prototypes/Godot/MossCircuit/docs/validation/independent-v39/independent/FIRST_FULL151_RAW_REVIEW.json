@@ -1,0 +1,371 @@
+{
+  "audit_pass": true,
+  "target_pass": false,
+  "separate_reviewer": true,
+  "scope": "Independent complete original full151 raw/semantic/helper and source identity audit; no target rerun. Audit pass is not target acceptance if any route failed.",
+  "checks": 736,
+  "source_map_sha256": "875a79a57da3fbe49f6b3c4e2cdeb0e1efa27ea8a186a597a466450b97229059",
+  "plan_sha256": "ac1fdaac1fd3073a9661161706238bd92bfc4e9e290860dc2c693f8332d4b938",
+  "routes": 151,
+  "passed": 149,
+  "failed": 2,
+  "semantic_reports": 125,
+  "shared_helper_records": 124,
+  "warning_lines": [
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    }
+  ],
+  "failures": [
+    {
+      "test": "independent_tempering_authority.gd",
+      "native_exit": 1,
+      "seconds": 6.877,
+      "strict_tags": [],
+      "semantic_failures": [
+        [
+          "arena retain-first all other combat authority exact",
+          "arena retain-later all other combat authority exact",
+          "arena first pair all other combat authority exact",
+          "arena second pair all other combat authority exact",
+          "arena threshold rail_lance all other combat authority exact",
+          "arena threshold orbit_saw all other combat authority exact",
+          "arena threshold scrap_shotgun all other combat authority exact",
+          "rooms retain-first all other combat authority exact",
+          "rooms retain-later all other combat authority exact",
+          "rooms first pair all other combat authority exact",
+          "rooms second pair all other combat authority exact",
+          "rooms threshold rail_lance all other combat authority exact",
+          "rooms threshold orbit_saw all other combat authority exact",
+          "rooms threshold scrap_shotgun all other combat authority exact"
+        ]
+      ],
+      "raw_sha256": "99a2ef04adacf1bc0413619aa57f04468f079c2826a75dc6d2c9c8a9cee09db7",
+      "reports": [
+        {
+          "checks": 903,
+          "failures": [
+            "arena retain-first all other combat authority exact",
+            "arena retain-later all other combat authority exact",
+            "arena first pair all other combat authority exact",
+            "arena second pair all other combat authority exact",
+            "arena threshold rail_lance all other combat authority exact",
+            "arena threshold orbit_saw all other combat authority exact",
+            "arena threshold scrap_shotgun all other combat authority exact",
+            "rooms retain-first all other combat authority exact",
+            "rooms retain-later all other combat authority exact",
+            "rooms first pair all other combat authority exact",
+            "rooms second pair all other combat authority exact",
+            "rooms threshold rail_lance all other combat authority exact",
+            "rooms threshold orbit_saw all other combat authority exact",
+            "rooms threshold scrap_shotgun all other combat authority exact"
+          ],
+          "scope": "Independent controlled pure config/metadata plus actual guarded shop authority, copy-clock/rig identity, threshold and lifetime checks; no ordinary/Windows/balance claim."
+        }
+      ]
+    },
+    {
+      "test": "independent_weapon_order.gd",
+      "native_exit": 1,
+      "seconds": 34.283,
+      "strict_tags": [],
+      "semantic_failures": [
+        [
+          "arena pair0 only declared authority/presentation mutations",
+          "arena ready pair0 only declared authority/presentation mutations",
+          "arena pair1 only declared authority/presentation mutations",
+          "arena ready pair1 only declared authority/presentation mutations",
+          "arena pair2 only declared authority/presentation mutations",
+          "arena ready pair2 only declared authority/presentation mutations",
+          "arena pair3 only declared authority/presentation mutations",
+          "arena ready pair3 only declared authority/presentation mutations",
+          "arena pair4 only declared authority/presentation mutations",
+          "arena ready pair4 only declared authority/presentation mutations",
+          "arena pair5 only declared authority/presentation mutations",
+          "arena ready pair5 only declared authority/presentation mutations",
+          "arena pair6 only declared authority/presentation mutations",
+          "arena ready pair6 only declared authority/presentation mutations",
+          "arena pair7 only declared authority/presentation mutations",
+          "arena ready pair7 only declared authority/presentation mutations",
+          "arena length2 source0 only declared authority/presentation mutations",
+          "arena length3 source0 only declared authority/presentation mutations",
+          "arena length3 source1 only declared authority/presentation mutations",
+          "arena length4 source0 only declared authority/presentation mutations",
+          "arena length4 source1 only declared authority/presentation mutations",
+          "arena length4 source2 only declared authority/presentation mutations",
+          "arena identical IDs and clocks valid only declared authority/presentation mutations",
+          "rooms pair0 only declared authority/presentation mutations",
+          "rooms ready pair0 only declared authority/presentation mutations",
+          "rooms pair1 only declared authority/presentation mutations",
+          "rooms ready pair1 only declared authority/presentation mutations",
+          "rooms pair2 only declared authority/presentation mutations",
+          "rooms ready pair2 only declared authority/presentation mutations",
+          "rooms pair3 only declared authority/presentation mutations",
+          "rooms ready pair3 only declared authority/presentation mutations",
+          "rooms pair4 only declared authority/presentation mutations",
+          "rooms ready pair4 only declared authority/presentation mutations",
+          "rooms pair5 only declared authority/presentation mutations",
+          "rooms ready pair5 only declared authority/presentation mutations",
+          "rooms pair6 only declared authority/presentation mutations",
+          "rooms ready pair6 only declared authority/presentation mutations",
+          "rooms pair7 only declared authority/presentation mutations",
+          "rooms ready pair7 only declared authority/presentation mutations",
+          "rooms length2 source0 only declared authority/presentation mutations",
+          "rooms length3 source0 only declared authority/presentation mutations",
+          "rooms length3 source1 only declared authority/presentation mutations",
+          "rooms length4 source0 only declared authority/presentation mutations",
+          "rooms length4 source1 only declared authority/presentation mutations",
+          "rooms length4 source2 only declared authority/presentation mutations",
+          "rooms identical IDs and clocks valid only declared authority/presentation mutations"
+        ]
+      ],
+      "raw_sha256": "d8a224d9fa2fe7be4d65aa68aed67cbd66974ea064258ecc53e30f4ea06701b6",
+      "reports": [
+        {
+          "checks": 837,
+          "failures": [
+            "arena pair0 only declared authority/presentation mutations",
+            "arena ready pair0 only declared authority/presentation mutations",
+            "arena pair1 only declared authority/presentation mutations",
+            "arena ready pair1 only declared authority/presentation mutations",
+            "arena pair2 only declared authority/presentation mutations",
+            "arena ready pair2 only declared authority/presentation mutations",
+            "arena pair3 only declared authority/presentation mutations",
+            "arena ready pair3 only declared authority/presentation mutations",
+            "arena pair4 only declared authority/presentation mutations",
+            "arena ready pair4 only declared authority/presentation mutations",
+            "arena pair5 only declared authority/presentation mutations",
+            "arena ready pair5 only declared authority/presentation mutations",
+            "arena pair6 only declared authority/presentation mutations",
+            "arena ready pair6 only declared authority/presentation mutations",
+            "arena pair7 only declared authority/presentation mutations",
+            "arena ready pair7 only declared authority/presentation mutations",
+            "arena length2 source0 only declared authority/presentation mutations",
+            "arena length3 source0 only declared authority/presentation mutations",
+            "arena length3 source1 only declared authority/presentation mutations",
+            "arena length4 source0 only declared authority/presentation mutations",
+            "arena length4 source1 only declared authority/presentation mutations",
+            "arena length4 source2 only declared authority/presentation mutations",
+            "arena identical IDs and clocks valid only declared authority/presentation mutations",
+            "rooms pair0 only declared authority/presentation mutations",
+            "rooms ready pair0 only declared authority/presentation mutations",
+            "rooms pair1 only declared authority/presentation mutations",
+            "rooms ready pair1 only declared authority/presentation mutations",
+            "rooms pair2 only declared authority/presentation mutations",
+            "rooms ready pair2 only declared authority/presentation mutations",
+            "rooms pair3 only declared authority/presentation mutations",
+            "rooms ready pair3 only declared authority/presentation mutations",
+            "rooms pair4 only declared authority/presentation mutations",
+            "rooms ready pair4 only declared authority/presentation mutations",
+            "rooms pair5 only declared authority/presentation mutations",
+            "rooms ready pair5 only declared authority/presentation mutations",
+            "rooms pair6 only declared authority/presentation mutations",
+            "rooms ready pair6 only declared authority/presentation mutations",
+            "rooms pair7 only declared authority/presentation mutations",
+            "rooms ready pair7 only declared authority/presentation mutations",
+            "rooms length2 source0 only declared authority/presentation mutations",
+            "rooms length3 source0 only declared authority/presentation mutations",
+            "rooms length3 source1 only declared authority/presentation mutations",
+            "rooms length4 source0 only declared authority/presentation mutations",
+            "rooms length4 source1 only declared authority/presentation mutations",
+            "rooms length4 source2 only declared authority/presentation mutations",
+            "rooms identical IDs and clocks valid only declared authority/presentation mutations"
+          ],
+          "scope": "Controlled contract-level raw transactions, exact declared authority/rig snapshots, all eight weapon IDs, both modes, strict malformed/stale guards and genuine generated shot states. Not ordinary acquisition/native/balance proof."
+        }
+      ]
+    }
+  ],
+  "native_exit": 1,
+  "wrapper_exit": 1,
+  "time_utc": "2026-10-27T11:54:36.570952+00:00"
+}

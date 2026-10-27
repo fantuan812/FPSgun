@@ -1,0 +1,20 @@
+--- <WORKSPACE>/moss-v39-ui/tests/test_expansion_actual_ui_r2.gd
++++ <WORKSPACE>/moss-v39-ui/native-PCK-gate/actual_ui_fixture.gd
+@@ -101,6 +101,6 @@
+ 		ck(entry.max_stack==1 and entry.effects.is_empty(),"unique mechanism is not hidden stat multiplier "+id)
+ 	ck(authority()==before,"module presentation leaves authority unchanged")
+ 	ck(JSON.stringify(g.catalog)==catalog_before,"entire actual catalog unchanged")
+-	var teardown=preload("res://tests/support/audio_teardown.gd").new();teardown.prepare([g]);g.queue_free();await process_frame;await teardown.finish(self)
++	var teardown=preload("<WORKSPACE>/moss-v39-ui/pck-ui-buttons/support/audio_teardown.gd").new();teardown.prepare([g]);g.queue_free();await process_frame;await teardown.finish(self)
+ 	print(JSON.stringify({"checks":checks,"failures":failures,"scope":"author controlled actual A catalog + viewport wheel/click; not ordinary gameplay or hardware input"}))
+ 	quit(0 if failures.is_empty() else 1)
+--- <WORKSPACE>/moss-v39-ui/tests/test_expansion_hud_width.gd
++++ <WORKSPACE>/moss-v39-ui/native-PCK-gate/hud_width_fixture.gd
+@@ -58,6 +58,6 @@
+ 				records.append({"case":label,"status":view.new_weapon_status,"action":g.ui.hud_action.text,"action_rect":str(g.ui.hud_action.get_global_rect()),"hp_width":g.ui.hp.size.x,"xp_width":g.ui.xp.size.x,"module_status":view.mechanics.get("feedback_status","")})
+ 				var dir:String=OS.get_environment("MOSS_A_HUD_IMAGES")
+ 				if not dir.is_empty():root.get_texture().get_image().save_png(dir.path_join(mode+"_"+str(size.x)+"_"+row.name+".png"))
+-	var teardown=preload("res://tests/support/audio_teardown.gd").new();teardown.prepare([g]);g.queue_free();await process_frame;await teardown.finish(self)
++	var teardown=preload("<WORKSPACE>/moss-v39-ui/pck-ui-buttons/support/audio_teardown.gd").new();teardown.prepare([g]);g.queue_free();await process_frame;await teardown.finish(self)
+ 	print(JSON.stringify({"checks":checks,"failures":failures,"records":records,"scope":"controlled native actual view/arrays HUD width, not natural launch or acquisition"}))
+ 	quit(0 if failures.is_empty() else 1)

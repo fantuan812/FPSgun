@@ -1,0 +1,10 @@
+--- source/independent_new_weapon_geometry.gd
++++ external/geometry.gd
+@@ -1,6 +1,6 @@
+ extends SceneTree
+ const Geometry=preload("res://scripts/gameplay/pulse_wave_geometry.gd")
+-const CASES_PATH="res://tests/fixtures/v39_geometry_api_cases.json"
++const CASES_PATH="<WORKSPACE>/moss-v39-qa/packed-harness/geometry-api-cases.json"
+ var checks:=0
+ var failures:Array=[]
+ var observations:Array=[]

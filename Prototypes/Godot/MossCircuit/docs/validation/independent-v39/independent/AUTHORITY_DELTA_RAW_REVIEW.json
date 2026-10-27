@@ -1,0 +1,125 @@
+{
+  "diagnostic_review_pass": true,
+  "not_original_test_pass": true,
+  "scope": "Four representative accepted move/temper observations only; original903/14FAIL and837/46FAIL remain",
+  "plan_sha256": "25d97299d667f8113f2d811a208adba8cef332d438d0e0298e9840caa7dd7f47",
+  "observations": [
+    {
+      "accepted": true,
+      "action": "move",
+      "epoch_after": 6,
+      "epoch_before": 5,
+      "mode": "arena",
+      "motion_after": {},
+      "motion_before": {},
+      "pulse_after": [],
+      "pulse_before": [],
+      "waves_after": [],
+      "waves_before": [],
+      "world_field_deltas": {
+        "new_weapon_epoch": {
+          "after_sha256": "52e30238f3f076eaee985aa3066bca930599b1df446d74078cea1495d47eb3c0",
+          "after_type": 2,
+          "before_sha256": "a01fd7895ceb904c3b612ebf136c2ec8a3fc5672e319ebc9bbb0f446209a7406",
+          "before_type": 2
+        },
+        "weapon_clocks": {
+          "after_sha256": "48143ea647082f26ca5a460f4c881220683871343de599a7c67eec96f3676882",
+          "after_type": 28,
+          "before_sha256": "c1e6d0280fa6d76680b11c187d1c1edf11671b3c12e68ab0c7065a406ba8a208",
+          "before_type": 28
+        }
+      }
+    },
+    {
+      "accepted": true,
+      "action": "move",
+      "epoch_after": 11,
+      "epoch_before": 10,
+      "mode": "rooms",
+      "motion_after": {},
+      "motion_before": {},
+      "pulse_after": [],
+      "pulse_before": [],
+      "waves_after": [],
+      "waves_before": [],
+      "world_field_deltas": {
+        "new_weapon_epoch": {
+          "after_sha256": "ed9355b4c282e304132b2d00970ed2b20359e38ffdee4079f1370e90ae887775",
+          "after_type": 2,
+          "before_sha256": "09f6f412bf565aa36974a2f7383bff57cd6a9826bad56c37c37302d94f4fc241",
+          "before_type": 2
+        },
+        "weapon_clocks": {
+          "after_sha256": "48143ea647082f26ca5a460f4c881220683871343de599a7c67eec96f3676882",
+          "after_type": 28,
+          "before_sha256": "c1e6d0280fa6d76680b11c187d1c1edf11671b3c12e68ab0c7065a406ba8a208",
+          "before_type": 28
+        }
+      }
+    },
+    {
+      "accepted": true,
+      "action": "temper",
+      "epoch_after": 6,
+      "epoch_before": 5,
+      "mode": "arena",
+      "motion_after": {},
+      "motion_before": {},
+      "pulse_after": [],
+      "pulse_before": [],
+      "waves_after": [],
+      "waves_before": [],
+      "world_field_deltas": {
+        "new_weapon_epoch": {
+          "after_sha256": "52e30238f3f076eaee985aa3066bca930599b1df446d74078cea1495d47eb3c0",
+          "after_type": 2,
+          "before_sha256": "a01fd7895ceb904c3b612ebf136c2ec8a3fc5672e319ebc9bbb0f446209a7406",
+          "before_type": 2
+        },
+        "weapon_clocks": {
+          "after_sha256": "b2ce4f685323b0775f014af2b8d7901816eb89c511ba9024c94c2bf398b99733",
+          "after_type": 28,
+          "before_sha256": "0e4f133f4b885da5bc9f23e883ca37b0aa3f9dfa880bb28826bf078729ad4d84",
+          "before_type": 28
+        }
+      }
+    },
+    {
+      "accepted": true,
+      "action": "temper",
+      "epoch_after": 11,
+      "epoch_before": 10,
+      "mode": "rooms",
+      "motion_after": {},
+      "motion_before": {},
+      "pulse_after": [],
+      "pulse_before": [],
+      "waves_after": [],
+      "waves_before": [],
+      "world_field_deltas": {
+        "new_weapon_epoch": {
+          "after_sha256": "ed9355b4c282e304132b2d00970ed2b20359e38ffdee4079f1370e90ae887775",
+          "after_type": 2,
+          "before_sha256": "09f6f412bf565aa36974a2f7383bff57cd6a9826bad56c37c37302d94f4fc241",
+          "before_type": 2
+        },
+        "weapon_clocks": {
+          "after_sha256": "b2ce4f685323b0775f014af2b8d7901816eb89c511ba9024c94c2bf398b99733",
+          "after_type": 28,
+          "before_sha256": "0e4f133f4b885da5bc9f23e883ca37b0aa3f9dfa880bb28826bf078729ad4d84",
+          "before_type": 28
+        }
+      }
+    }
+  ],
+  "only_delta_keys": [
+    "new_weapon_epoch",
+    "weapon_clocks"
+  ],
+  "epoch_exact_plus_one": true,
+  "new_containers_empty_before_after": true,
+  "all_sources_pins_unchanged": true,
+  "two_strict_helpers": true,
+  "time_utc": "2026-10-27T11:58:15.131578+00:00"
+}

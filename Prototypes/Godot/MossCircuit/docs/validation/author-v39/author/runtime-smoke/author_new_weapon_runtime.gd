@@ -1,0 +1,90 @@
+extends SceneTree
+const Combat=preload("res://scripts/gameplay/combat_runtime.gd")
+var checks:int=0
+var failures:Array=[]
+var g
+func ck(ok:bool,label:String)->void:
+	checks+=1
+	if not ok:failures.append(label)
+func start(id:String,items:Dictionary={})->void:
+	g._start_run(39001,id)
+	g.set_process(false)
+	g.build.items=items.duplicate(true)
+	g._recompute()
+	g.combat_frame.area=g.config.arena
+func enemy(distance:float,hp:float=1000.0)->Dictionary:
+	var e:Dictionary=g._spawn_kind("crawler",g.player_pos+Vector2(distance,0))
+	e.hp=hp;e.max_hp=hp;e.anim_hp=hp;e.speed=0.0;e.damage=0.0
+	return e
+func step(dt:float)->void:
+	g.elapsed+=dt
+	Combat.step(g.combat_frame,dt)
+func _initialize()->void:call_deferred("run")
+func run()->void:
+	g=load("res://scenes/main.tscn").instantiate();root.add_child(g);g.set_process(false)
+	ck(g.catalog.weapons.size()==10 and g.catalog.items.size()==33,"actual expanded10/33")
+	ck(g.catalog.mechanism_synergies.size()==14 and g.catalog.affinity_links.size()==14,"actual14/14")
+	ck(g.starting_loadouts.loadouts.size()==5,"actual five starters")
+	start("tether");var e:=enemy(100)
+	ck(g.build.coins==21 and g.build.weapons==["tether_emitter"],"actual free Tether start")
+	step(.01);ck(e.hp==1000 and g.combat.pulse_beams.size()==1,"launch no instant hit")
+	var first:Dictionary=g.combat.pulse_beams[0]
+	for i in range(4):
+		step(.3);ck(is_equal_approx(e.hp,1000.0-10.0*(i+1)),"real primary pulse "+str(i))
+	ck(first.pulse_index==4 and g.combat.pulse_beams.size()==1 and g.combat.pulse_beams[0].active_age==0,"fourth before next launch agezero")
+	start("tether");e=enemy(100,25)
+	step(.01);first=g.combat.pulse_beams[0];step(1.2)
+	ck(first.pulse_index==3 and e.hp<=0,"lethal third stops fourth")
+	ck(g.combat.pulse_beams.is_empty() and not g.enemies.has(e),"lethal actor removed and beamgone")
+	start("tether");e=enemy(100);step(.01);e.pos=g.player_pos+Vector2(400,0);step(.1)
+	ck(g.combat.pulse_beams.is_empty() and e.hp==1000,"ordinary range loss no hit")
+	start("tether",{"lock_memory":1});e=enemy(100);step(.01);step(.3)
+	first=g.combat.pulse_beams[0];e.pos=g.player_pos+Vector2(400,0);step(.2)
+	ck(g.combat.pulse_beams.size()==1 and is_zero_approx(first.grace_left) and first.pulse_index==1,"exact gracezero retained no outsidehit")
+	e.pos=g.player_pos+Vector2(100,0);step(.1);ck(first.pulse_index==1 and not first.was_outside,"recovery endpoint resumesclock")
+	step(.3);step(.3);ck(first.pulse_index==3 and g.combat.pulse_beams.size()==1,"pausedclock threepulses atwall1.2")
+	step(.2);ck(first.pulse_index==4 and g.combat.pulse_beams.is_empty(),"hardlife inclusivefourth remove no catchuplaunch")
+	start("tether",{"lock_memory":1});e=enemy(100);step(.01);first=g.combat.pulse_beams[0];e.pos=g.player_pos+Vector2(400,0);step(.3)
+	ck(g.combat.pulse_beams.is_empty() and first.pulse_index==0,"firstinvalid.30 expires")
+	start("tether",{"lock_memory":1});e=enemy(100);step(.01);e.pos=g.player_pos+Vector2(400,0);step(.05);e.pos=g.player_pos+Vector2(100,0);step(.05);e.pos=g.player_pos+Vector2(400,0);step(.01)
+	ck(g.combat.pulse_beams.is_empty(),"second separation cancels")
+	start("tether",{"echo_chamber":1,"arc_relay":1});e=enemy(100);var other:=enemy(180)
+	step(.01);step(1.2)
+	ck(g.effects.echo_hits==4,"four overdue realcontacts countEcho")
+	ck(g.effect_visuals.filter(func(v):return v.kind=="chain").size()==1,"overdue sharedactualtime permitsoneArc")
+	ck(other.hp<1000,"existingArc actualdamage eligible")
+	start("seismic");e=enemy(100);step(.01)
+	ck(g.build.coins==21 and g.combat.seismic_waves.size()==1 and e.hp==1000,"actualDrumstarter noinstantdamage")
+	var wave:Dictionary=g.combat.seismic_waves[0];step(.2)
+	ck(e.hp==978 and wave.hit_out.has(e.id),"outwardcontact real22")
+	step(.4);ck(e.hp==978 and g.combat.seismic_waves.is_empty(),"outwardonce thenremove")
+	start("seismic",{"return_collar":1,"return_spool":1});e=enemy(100);g.stats.hp=80;step(.01);wave=g.combat.seismic_waves[0];step(.6)
+	ck(e.hp==978 and wave.outward_done and wave.hit_in.is_empty(),"turnpointfixedradius targetnotinwardyet")
+	step(.15);ck(e.hp==967 and wave.hit_in.has(e.id),"inwardhalf11 once")
+	step(.3);ck(e.hp==967 and g.combat.seismic_waves.is_empty(),"inwarddone no thirdhit")
+	ck(g.stats.hp==80,"Drum inward neverReturnSpool")
+	start("seismic");e=enemy(0);step(.01);step(.001)
+	ck(e.hp==978,"bodyoverlap initialband includescenter")
+	start("seismic",{"return_collar":1});e=enemy(180);step(.01);step(.6)
+	ck(e.hp==967,"turnclosedoutandin eachonce")
+	var newcomer:=enemy(180);step(.001)
+	ck(newcomer.hp==989,"nextstepnewenemy inwardonly outwardcompleted")
+	start("tether");e=enemy(100);step(.01);first=g.combat.pulse_beams[0]
+	var snapshot:String=var_to_str(first);g.new_weapon_runtime.step(g.combat_frame,.3,g.combat.combat_tick_serial)
+	ck(var_to_str(first)==snapshot,"same tickduplicate no mutations")
+	g.new_weapon_runtime.step(g.combat_frame,NAN,g.combat.combat_tick_serial+1)
+	ck(var_to_str(first)==snapshot,"NaNdt no mutation")
+	g.state="paused";g.new_weapon_runtime.step(g.combat_frame,.3,g.combat.combat_tick_serial+1)
+	ck(var_to_str(first)==snapshot,"pausednewruntime freezes")
+	g.state="playing";var epoch:int=g.combat.new_weapon_epoch;g._recompute()
+	ck(g.combat.pulse_beams.is_empty() and g.combat.new_weapon_epoch>epoch,"unchangedrecomputeclearnewentities")
+	start("tether",{"recoil_plate":1});e=enemy(80);var before:Vector2=e.pos;g.hurt_clock=0;g._hurt(1)
+	ck(e.pos.distance_to(before+Vector2(55,0))<.0001,"realmain HP loss Recoil wiring")
+	ck(g.effects.recoil_cooldown.has("ready_at"),"realmain positive spends tombstone")
+	start("tether",{"recoil_plate":1});e=enemy(80);before=e.pos;g.stats.hp=1;g.hurt_clock=0;g._hurt(1)
+	ck(e.pos==before and g.effects.recoil_cooldown.is_empty(),"realmain lethal noRecoil")
+	ck(g.combat.pulse_beams.is_empty() and g.combat.seismic_waves.is_empty(),"terminalclearnewarrays")
+	g._title()
+	var helper=load("res://tests/support/audio_teardown.gd").new();helper.prepare([g]);g.queue_free();await process_frame;await helper.finish(self)
+	print(JSON.stringify({"author_new_runtime_checks":checks,"failures":failures,"scope":"Controlled actual main/CombatRuntime authority smoke, not ordinaryplay/fullsuite"}))
+	quit(0 if failures.is_empty() else 1)

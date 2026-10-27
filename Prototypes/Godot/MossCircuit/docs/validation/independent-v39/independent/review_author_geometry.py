@@ -1,0 +1,13 @@
+import json,pathlib,hashlib,datetime
+p=pathlib.Path('<WORKSPACE>/moss-v39-prep/first-cold-geometry');o=p/'raw-first';r=pathlib.Path('<WORKSPACE>/moss-v39-work');h=lambda p:hashlib.sha256(p.read_bytes()).hexdigest();plan=json.loads((p/'PLAN.json').read_text());m=json.loads((p/'INPUTS.json').read_text());post=json.loads((o/'POST_INPUTS.json').read_text());j=json.loads((o/'RESULT.json').read_text());assert j['pass_gate'];assert len(m)==815 and len(post)==836
+for n,s in plan['pins'].items():assert h(pathlib.Path(n))==s,n
+for n,s in post.items():assert h(r/n)==s,n
+assert all(post[n]==s for n,s in m.items());assert sorted(set(post)-set(m))==plan['exact_import_additions']
+steps=json.loads((o/'STEPS.json').read_text());assert len(steps)==2
+for x in steps:
+ name=x['case'];t=(o/(name+'.stdout')).read_text()+(o/(name+'.stderr')).read_text();assert x['exit']==0 and x['pass'] and x['seconds']<180 and not x['timeout'];assert not any(z in t for z in ['SCRIPT ERROR','ERROR:','instances leaked','resources still in use'])
+g=steps[1]['reports'][0];assert g['checks']==850 and len(g['observations'])==205 and g['pass'] and not g['failures']
+expected=json.loads(pathlib.Path('<WORKSPACE>/moss-v39-qa/pretarget/GEOMETRY_API_CASES.json').read_text())['cases']
+for a,b in zip(g['observations'],expected):
+ assert a['name']==b['input']['name'] and a['hit']==b['reference']['hit'];assert abs(a['time']-(float(b['reference']['time']) if b['reference']['hit'] else 0.0))<=1e-7
+receipt={'pass':True,'scope':'Independent readback of author-executed unique cold import and pretarget independent geometry oracle. Not runtime/playability/full-suite acceptance.','base_inputs':815,'postimport_inputs':836,'exact_additions':plan['exact_import_additions'],'checks':850,'observations':205,'source_map_sha256':h(o/'POST_INPUTS.json'),'raw':{x.name:h(x) for x in o.iterdir() if x.is_file()},'review_utility_correction':'Initial inline raw-review attempt failed at float minus Decimal-string comparison (TypeError); then explicit conversion exposed miss time null, corrected to contractual canonical zero for miss. These are reviewer utility schema mistakes only. No target rerun or oracle changes.','reviewed_utc':datetime.datetime.now(datetime.timezone.utc).isoformat()};path=pathlib.Path('<WORKSPACE>/moss-v39-qa/AUTHOR_COLD_GEOMETRY_RAW_REVIEW.json');path.write_text(json.dumps(receipt,indent=2)+'\n');print(path,h(path))

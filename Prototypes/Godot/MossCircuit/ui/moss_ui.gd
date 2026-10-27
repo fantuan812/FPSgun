@@ -19,6 +19,7 @@ var shade: ColorRect
 var modal: PanelContainer
 var body: VBoxContainer
 var first_focus: Control
+var modal_suspended_focus: Dictionary = {}
 var manifest: Dictionary = {}
 var icon_cache: Dictionary = {}
 var current_screen := ""
@@ -85,7 +86,7 @@ func _ready() -> void:
 	if FileAccess.file_exists("res://assets/items/icon_manifest.json"):
 		var parsed = JSON.parse_string(FileAccess.get_file_as_string("res://assets/items/icon_manifest.json"))
 		if parsed is Dictionary: manifest = parsed
-	for extra_path in ["res://assets/items/mechanism_icon_manifest.json", "res://assets/items/build_expansion_icon_manifest.json", "res://assets/items/cryo_icon_manifest.json", "res://assets/items/bankshot_icon_manifest.json", "res://assets/items/feedback_icon_manifest.json", "res://assets/items/scavenger_icon_manifest.json"]:
+	for extra_path in ["res://assets/items/mechanism_icon_manifest.json", "res://assets/items/build_expansion_icon_manifest.json", "res://assets/items/cryo_icon_manifest.json", "res://assets/items/bankshot_icon_manifest.json", "res://assets/items/feedback_icon_manifest.json", "res://assets/items/scavenger_icon_manifest.json", "res://assets/items/expansion_A_icon_manifest.json"]:
 		if FileAccess.file_exists(extra_path):
 			var extra = JSON.parse_string(FileAccess.get_file_as_string(extra_path))
 			if extra is Dictionary:
@@ -195,7 +196,22 @@ func _begin(screen: String, title: String, subtitle := "") -> void:
 	body = VBoxContainer.new(); modal.add_child(body)
 	_label(body, title, 26).add_theme_color_override("font_color", AMBER)
 	if not subtitle.is_empty(): _text(body, subtitle, 14)
+	_suspend_hud_focus(hud)
 	shade.show()
+
+# Mouse blocking does not constrain Tab traversal. Keep obscured HUD controls
+# out of modal keyboard navigation without changing their disabled/action state.
+func _suspend_hud_focus(node:Node) -> void:
+	if node is Control and node.focus_mode != Control.FOCUS_NONE:
+		if not modal_suspended_focus.has(node):modal_suspended_focus[node]=node.focus_mode
+		if node.has_focus():node.release_focus()
+		node.focus_mode=Control.FOCUS_NONE
+	for child in node.get_children():_suspend_hud_focus(child)
+
+func _restore_hud_focus() -> void:
+	for control in modal_suspended_focus:
+		if is_instance_valid(control):control.focus_mode=modal_suspended_focus[control]
+	modal_suspended_focus.clear()
 
 func _finish() -> void:
 	call_deferred("_focus_current")
@@ -278,6 +294,7 @@ func _weapon_readout(parent:Node,readout:Dictionary)->void:
 	if readout.has("total_path"):reach_line+="  /  Total path: %.1f px" % float(readout.total_path)
 	if readout.has("pellets"):reach_line+="  /  %d pellets per attack" % int(readout.pellets)
 	_text(parent,reach_line,12)
+	if readout.has("behavior_summary"):_text(parent,str(readout.behavior_summary),12)
 	if not current:_text(parent,"No build bonuses; not a post-purchase preview.",11)
 	var details:VBoxContainer=_disclosure(parent,"STAT NOTES")
 	_text(details,str(readout.get("note","")),12)
@@ -292,6 +309,8 @@ func update_hud(view: Dictionary) -> void:
 		var dash_status: String = "LOCKED" if actor_state == "death" else ("READY" if dash_remaining <= 0 else "%.1fs" % dash_remaining)
 		hud_action.text = "%s  /  DASH %s" % [actor_state.to_upper(), dash_status]
 		hud_action.tooltip_text = "Controller action state; dash cooldown in simulation seconds. Paused menus do not advance it."
+	var new_status:String=str(view.get("new_weapon_status",""))
+	if not new_status.is_empty():hud_action.text+=(" / " if not hud_action.text.is_empty() else "")+new_status
 	hud_title.text = "MOSS CIRCUIT   /   WAVE %s   /   LV %s   /   SCRAP %s" % [view.get("wave", 1), view.get("level", 1), view.get("coins", 0)]
 	if view.get("mode_id","")=="rooms":hud_title.text="ROOM %s / %s   ·   LV %s   ·   SCRAP %s"%[view.get("wave",1),view.get("stage_count",3),view.get("level",1),view.get("coins",0)]
 	hp.max_value = maxf(1, float(view.get("max_hp", 100))); hp.value = float(view.get("hp", 0))
@@ -316,7 +335,7 @@ func show_title(seed_value: int = 240102,mode_id:String="arena",loadout_context:
 	mode_button.text="SWITCH TO "+("ROOM ENCOUNTERS" if mode_id=="arena" else "ARENA SURVIVAL")
 	var seed_edit := LineEdit.new();seed_edit.text=str(seed_value);seed_edit.max_length=10;seed_edit.custom_minimum_size.y=38
 	if has_loadouts:
-		# Keep all three compact choices above long explanatory detail.
+		# Keep compact choices above long explanatory detail.
 		var setup:=HBoxContainer.new();content.add_child(setup)
 		mode_button.text+=" / "+mode_name;mode_button.size_flags_horizontal=Control.SIZE_EXPAND_FILL
 		setup.add_child(mode_button);_label(setup,"RUN SEED",14)
@@ -335,8 +354,20 @@ func show_title(seed_value: int = 240102,mode_id:String="arena",loadout_context:
 		mode_button.pressed.connect(func():intent.emit("select_mode",{"id":"rooms" if mode_id=="arena" else "arena","seed":seed_edit.text.to_int()}))
 	var selected:Dictionary={}
 	if has_loadouts:
-		_label(content,"CHOOSE STARTING LOADOUT",14)
-		var choices:=HBoxContainer.new();content.add_child(choices)
+		var loadout_count:int=loadout_context.get("loadouts",[]).size()
+		_label(content,"CHOOSE STARTING LOADOUT"+(" / %d LOADOUTS · SCROLL FOR MORE" % loadout_count if loadout_count>3 else ""),14)
+		# Preserve the original three-choice layout; extra choices wrap, not squeeze.
+		var choices:Container
+		if loadout_context.get("loadouts",[]).size()>3:
+			var grid:=GridContainer.new();grid.columns=3
+			grid.add_theme_constant_override("h_separation",10)
+			grid.add_theme_constant_override("v_separation",8)
+			choices=grid
+		else:
+			choices=HBoxContainer.new()
+		choices.name="StartingLoadoutChoices"
+		choices.size_flags_horizontal=Control.SIZE_EXPAND_FILL
+		content.add_child(choices)
 		for row in loadout_context.get("loadouts",[]):
 			var chosen:bool=row.id==loadout_context.get("selected_id","")
 			if chosen:selected=row
@@ -348,7 +379,7 @@ func show_title(seed_value: int = 240102,mode_id:String="arena",loadout_context:
 		for row in loadout_context.get("loadouts",[]):
 			var stats_panel:=_disclosure(content,"BASE WEAPON DETAILS / "+str(row.name).to_upper())
 			_weapon_readout(stats_panel,row.weapon_readout)
-	var start := Button.new();start.text="START RUN";start.custom_minimum_size.y=44
+	var start := Button.new();start.name="StartRun";start.text="START RUN";start.custom_minimum_size.y=44
 	if not has_loadouts:
 		start.pressed.connect(func():intent.emit("start",{"seed":seed_edit.text.to_int()}))
 	else:
@@ -502,6 +533,7 @@ func _forecast_card(parent:VBoxContainer,options:Array,slot:int,sold:bool=false)
 			prior="new" if row.before.is_empty() else "%.1f" % float(row.before.reach)
 			_text(details,"%s: %s -> %.1f" % [row.after.reach_label,prior,float(row.after.reach)],12)
 			if row.after.has("pellets"):_text(details,"Pellets: %s -> %d" % [str(row.before.get("pellets","new")),int(row.after.pellets)],12)
+			if row.after.has("behavior_summary"):_text(details,str(row.after.behavior_summary),12)
 			_text(details,str(row.after.note),12)
 	_text(details,"Next equipped build only. No retrofitted launch snapshots, shield recharge, healing or guaranteed future damage.",12)
 
@@ -663,6 +695,7 @@ func show_result(view: Dictionary) -> void:
 
 func hide_modal() -> void:
 	shade.hide(); current_screen = ""
+	_restore_hud_focus()
 	var focused := root.get_viewport().gui_get_focus_owner()
 	if focused != null: focused.release_focus()
 

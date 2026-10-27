@@ -1,0 +1,24 @@
+{
+  "cmd": [
+    "godot",
+    "--path",
+    "<WORKSPACE>/moss-v39-qa/r3-independent/project",
+    "--audio-driver",
+    "Dummy",
+    "--resolution",
+    "960x540",
+    "--position",
+    "0,60",
+    "--script",
+    "<WORKSPACE>/moss-v39-ui/native-A-gate-r2/actual_ui_observed.gd"
+  ],
+  "timeout_seconds": 180,
+  "env": {
+    "HOME": "<WORKSPACE>/moss-v39-ui/native-A-gate-r2/home",
+    "XDG_CONFIG_HOME": "<WORKSPACE>/moss-v39-ui/native-A-gate-r2/config",
+    "XDG_DATA_HOME": "<WORKSPACE>/moss-v39-ui/native-A-gate-r2/data",
+    "XDG_CACHE_HOME": "<WORKSPACE>/moss-v39-ui/native-A-gate-r2/cache",
+    "DISPLAY": ":0",
+    "WAYLAND_DISPLAY": null
+  }
+}

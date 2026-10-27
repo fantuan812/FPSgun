@@ -18,4 +18,4 @@ SHA256：`0ca0aa10d67ce1fd7b2d6097cc75c4b653fdc6ae659a7c282f1807609f6149a6`
 - 使用 Nearest、不启用 mipmap；这是像素风高分辨率生成素材，不宣称原生低分辨率逐像素绘制。保留极淡 alpha 边缘，不进行代码抠图。
 - 此处资源检查不等于 UI 实机、Windows 或完整构筑玩法测试。
 
-单独 PNG 已保存 Library 作为素材预览，而非游戏运行截图：`libfile_7f339a6b1d888191ad4bdb38642bebe0`。
+单独 PNG 已保存 Library 作为素材预览，而非游戏运行截图：`historical-library-reference-02`。

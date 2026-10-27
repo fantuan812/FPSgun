@@ -20,6 +20,10 @@ func changes(r:Dictionary)->Array:
 	return out
 func run()->void:
 	c=JSON.parse_string(FileAccess.get_file_as_string("res://data/catalog.json"))
+	# Exact historical data for the unchanged original case/count matrix.
+	var a_history:Dictionary=preload("res://tests/support/v39_catalog_projection.gd").project(c,FileAccess.get_file_as_string("res://data/catalog.json"))
+	if not a_history.pass:push_error(str(a_history.errors));quit(1);return
+	c=a_history.catalog
 	base=JSON.parse_string(FileAccess.get_file_as_string("res://data/balance.json")).player
 	var original_c:Dictionary=c.duplicate(true)
 	var original_base:Dictionary=base.duplicate(true)

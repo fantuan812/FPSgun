@@ -29,7 +29,7 @@ Death is already usable in original row-major pose order: silhouette height decr
 - All 25 pose hashes are unique within each action; no repetition used to pad frame counts.
 - Every region is meaningful alpha≥8 bbox plus four source pixels; transparent/very-low-alpha haze outside remains untouched in the source and simply is not sampled.
 - Integer region/margin produces exactly 512×400 logical frames, all source bounds valid. Full per-pose boxes, translations and source row registration coordinates are in `fresh-art-qa.json`.
-- `python build_metadata.py --project /path/to/MossCircuit --output /tmp/core-art-qa` reads installed PNGs and writes JSON only outside the project. Without `--project`, reads PNGs next to the script. It never writes PNGs or project assets.
+- `python build_metadata.py --project /path/to/MossCircuit --output historical-temp/core-art-qa` reads installed PNGs and writes JSON only outside the project. Without `--project`, reads PNGs next to the script. It never writes PNGs or project assets.
 
 ## Installation and remaining gate
 Install two PNGs and `action_manifest.json` to `assets/actions/boss_core/`. Runtime duration must be configured in ActorDirector config; manifest duration fields are descriptive. Program/review agents must verify real hurt/phase restoration, terminal death, lifetime, scale continuity, pause/reset and reduced-flash behavior. Static art checks are not substituted for gameplay QA.

@@ -1,4 +1,6 @@
 extends RefCounted
+const RecoilPlate=preload("res://scripts/gameplay/recoil_plate.gd")
+const NewProfiles=preload("res://scripts/gameplay/new_weapon_profiles.gd")
 const ScavengerReel=preload("res://scripts/gameplay/scavenger_reel.gd")
 const WeaponTempering = preload("res://scripts/gameplay/weapon_tempering.gd")
 ## Pure run rules; configuration owns balance, presentation owns no damage logic.
@@ -163,7 +165,8 @@ static func validate_catalog(catalog: Dictionary) -> Array:
 			if not valid: errors.append("Incomplete weapon"); continue
 			for key in ["damage","interval","projectiles","range","spread","pierce"]:
 				if not _positive_number(entry[key],key in ["spread","pierce"]): errors.append("Invalid weapon " + key)
-			if not entry.behavior in ["single", "spread", "pierce", "orbit", "return", "mortar", "cone_chill", "field_bankshot"]: errors.append("Invalid behavior")
+			if not entry.behavior in ["single", "spread", "pierce", "orbit", "return", "mortar", "cone_chill", "field_bankshot", "tether_pulse", "expanding_ring"]: errors.append("Invalid behavior")
+			if entry.behavior in ["tether_pulse","expanding_ring"] and NewProfiles.weapon(entry).is_empty():errors.append("Invalid new weapon profile")
 			if entry.behavior=="field_bankshot":
 				if not _positive_number(entry.projectiles) or not _positive_number(entry.spread,true): errors.append("Invalid Bankshot launch fields")
 				elif entry.projectiles!=1 or entry.spread!=0: errors.append("Bankshot requires one straight launch")
@@ -175,6 +178,8 @@ static func validate_catalog(catalog: Dictionary) -> Array:
 				if _positive_number(entry.get("chill_duration")) and entry.chill_duration>10: errors.append("Chill exceeds duration budget")
 				if _positive_number(entry.get("chill_speed")) and entry.chill_speed>1: errors.append("Chill cannot accelerate")
 		elif entry.kind == "item":
+			if entry.id=="recoil_plate" and RecoilPlate.definition(entry).is_empty():errors.append("Invalid Recoil Plate profile")
+			if entry.id in ["lock_memory","return_collar"] and NewProfiles.module(entry).is_empty():errors.append("Invalid dedicated module profile")
 			if entry.id=="scavenger_reel" and ScavengerReel.definition(entry).is_empty():errors.append("Invalid Scavenger Reel profile")
 			if entry.id=="feedback_diode":
 				if not _positive_number(entry.get("feedback_damage")): errors.append("Invalid feedback damage")

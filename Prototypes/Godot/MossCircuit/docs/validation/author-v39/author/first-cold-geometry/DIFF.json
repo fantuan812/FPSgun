@@ -1,0 +1,199 @@
+{
+  "changed": [
+    {
+      "path": "MANIFEST.json",
+      "old": "3570bd43d2ca967e81d11233fae95334eb10b44d708474e3aa370ed62b15e93a",
+      "new": "923f950a9314abb05e104d30931817ae55ddb53f42fab7dbd75083a7f7501e38"
+    },
+    {
+      "path": "assets/weapon_mounts/world_weapon_manifest.json",
+      "old": "328423ebcd72b386ac4f1e5ca5b5ad7a718d3686c10d72b1b59a4eaf99ad2db5",
+      "new": "102fe6704036b1c857435a7f3760ca6f15ca4e04532c45a97222327db07a2761"
+    },
+    {
+      "path": "data/catalog.json",
+      "old": "91bb4fbaa0cb01ace9148b79192e46d69258170bd343a2ad4702bd2f5f173f36",
+      "new": "67eb30bf64c36191f5e7609126da42b0195cb53840e00e60afa15ed55e13cccc"
+    },
+    {
+      "path": "data/starting_loadouts.json",
+      "old": "369d63a7c12b8c26c0c1784977a0442e47ab8cd1e316de857c351a4dd5e65fca",
+      "new": "745385ecbf290b24ca459c0847ff83390af3aa2c802045e224c8593023b7fb80"
+    },
+    {
+      "path": "scripts/effects.gd",
+      "old": "c3bc9688e82ae1be7a011e2c7339ab8d2f190ebe5f80b141969186cb2251646c",
+      "new": "6c6788e74803255ec489ab9a307619dfb4cbf8b511261483572b6c7db1582085"
+    },
+    {
+      "path": "scripts/gameplay/combat_context.gd",
+      "old": "933948349b79674824763d7eb1e4558bd2faff0f3f6aa0e4617c053eb64165d5",
+      "new": "fbbe6c3b18c1c4db4e8323134e91e2c1df51bec2fec9f1d200b37d1ead4a28da"
+    },
+    {
+      "path": "scripts/gameplay/combat_focus.gd",
+      "old": "f0152da0fca3d7aa69c29ea23b1d3ed474d2389bedb886ace62309fb80253f93",
+      "new": "933e987506a3a2d968b38ac13b50e1920d4802a25aee7ae91626b001379abdc2"
+    },
+    {
+      "path": "scripts/gameplay/combat_runtime.gd",
+      "old": "52ed9228baf8cf5b010cc31e85796f3d9a6b9b06ec0ca914df110d8154622678",
+      "new": "3f146024894fb170a04956306b699416c5f522f5485485721e600a2245801284"
+    },
+    {
+      "path": "scripts/gameplay/combat_state.gd",
+      "old": "6beb5e1bb2efc37af1de1128a7674c2807662f493b620ef9326aedb4f2165626",
+      "new": "bb2020485737ac11137aa6fad9c5e9125cf46f4dc621372c0cd7a32031ead20a"
+    },
+    {
+      "path": "scripts/gameplay/effect_runtime.gd",
+      "old": "945ec77590458d2bc3c610cb81abfa89f6bbb9da8c558e6a9314a4923698cf24",
+      "new": "a3985e2f522f9f65ce5ef5c1c8e64ff4eb5364e627cdf28f669fb937f569b666"
+    },
+    {
+      "path": "scripts/gameplay/run_flow.gd",
+      "old": "2af880ced71f9139f4fec82e1f9de1abebb642bdb69431d28d19fa25532db124",
+      "new": "46e508bd4e26492b74fa02c5bd0e4e4dc9c42e2bafca05b9283e299c2351c8cc"
+    },
+    {
+      "path": "scripts/main.gd",
+      "old": "ff44c00dfc5fb3e1a348b4a17f463935b267415d1034cff92246ca1a575fd912",
+      "new": "63ef7ced573dd732195224aafdac02f2871a395b09969099bdc8edac3625b24b"
+    },
+    {
+      "path": "scripts/rules.gd",
+      "old": "ebeb97b27005b462f41f0fbde1aad047fb5b268ee87f25cdd49cad0e3dab0a85",
+      "new": "e92cadd04a324088c6b07c8deb378feabc78d63cbfaef1227a575e4dfb3ecb55"
+    },
+    {
+      "path": "scripts/weapon_readout.gd",
+      "old": "f3569067ce576f89c295472a7d40c4658cd152e1e2f2660aafc8c012afa0e7f2",
+      "new": "664499759aacd9271e3290d39c59c34188ad2730297f88028ecfec4af3a16747"
+    },
+    {
+      "path": "tests/support/v36_catalog_projection.gd",
+      "old": "d8d313ded1ad2e831da9724b8b2978461410d9adb8918b48441fd621f282eb01",
+      "new": "83dd4be083500734bf17691cab5da4424e68dd4f25cc7e700766c51046401db1"
+    },
+    {
+      "path": "ui/moss_ui.gd",
+      "old": "0a93d1ed6298836faff5b6e38366815a58bb9446e0b55d24013947d115d03fef",
+      "new": "33afd0d6868ee13ef0b2e0c5f4111e6f083fad9bc99025dd52307199ad660c67"
+    }
+  ],
+  "added": [
+    {
+      "path": "art_source/build_expansion_A/README.md",
+      "sha256": "ecd12d4386ca84bc15645875ab632764c4bf3b587e7a36dd3094e624c80efc65"
+    },
+    {
+      "path": "art_source/build_expansion_A/build_svg.py",
+      "sha256": "6ec82ed6f6a0cd35852d1a6db31ab8350e11295dd7de2ee037c062fed57fc042"
+    },
+    {
+      "path": "art_source/build_expansion_A/export_assets.py",
+      "sha256": "a8080a09e105c728542bff1470b0a54f0c38651f548caaf18513c2291587c337"
+    },
+    {
+      "path": "art_source/build_expansion_A/manifest.draft.json",
+      "sha256": "167091554198abe0fd1d13aad0ebda180bc8efac67a2206038f169afdcacf8c0"
+    },
+    {
+      "path": "art_source/build_expansion_A/svg/lock_memory.svg",
+      "sha256": "5d845947ae9543910f24963cce2748b19190178b0c5ef7326d32e5f6106e9495"
+    },
+    {
+      "path": "art_source/build_expansion_A/svg/recoil_plate.svg",
+      "sha256": "4cc7d083f591154163548ec7b8e24e6ae960a736121abef0848bc2099eaeb21d"
+    },
+    {
+      "path": "art_source/build_expansion_A/svg/return_collar.svg",
+      "sha256": "0b69b853d3fba3410f20185eb97d8ed5ff272dce794c5b7676b894ce62fba873"
+    },
+    {
+      "path": "art_source/build_expansion_A/svg/seismic_drum_held.svg",
+      "sha256": "47cbfb875d19998b3de3ff416007f306f8500b3df8ee44bb01e6eae12f197b9e"
+    },
+    {
+      "path": "art_source/build_expansion_A/svg/seismic_drum_icon.svg",
+      "sha256": "645842f6b4b4a7db26176cf3376e7c8e8f851de7a0b76db9834ed953739cffb7"
+    },
+    {
+      "path": "art_source/build_expansion_A/svg/tether_emitter_held.svg",
+      "sha256": "1188f573c7a9c7c367f4961de9414184986bb553f87ea88ddcc2f5a70f54e148"
+    },
+    {
+      "path": "art_source/build_expansion_A/svg/tether_emitter_icon.svg",
+      "sha256": "df8a5182cafcefe9bd679372634d4891a00cc17ea08f71d50149d31b8e58547a"
+    },
+    {
+      "path": "assets/items/expansion_A_icon_manifest.json",
+      "sha256": "72148bb9d47ffb888ec238a23136e44ff29e84bf54b83743cd89afe67fce55cf"
+    },
+    {
+      "path": "assets/items/lock_memory.png",
+      "sha256": "c2c0dc6bbfac54565b4a95c76fc8e14ac38e6e3d49aa258a3364b141018e917f"
+    },
+    {
+      "path": "assets/items/recoil_plate.png",
+      "sha256": "859edc09d17ed4c78e02ee84164245894903396f74f595640841686fd3f119b8"
+    },
+    {
+      "path": "assets/items/return_collar.png",
+      "sha256": "e392610b32f9d96b3d8426ea165cf356d87f6c1673cf72b14c2b529482fb9aae"
+    },
+    {
+      "path": "assets/items/seismic_drum_icon.png",
+      "sha256": "08689267d6062e7d1a90dc63ab2995218f0e82d744cf896dc49abfd4604bb21d"
+    },
+    {
+      "path": "assets/items/tether_emitter_icon.png",
+      "sha256": "220d0ab1597c5d346ff4b37ab08a12d500f60a4d84df85902c15c0af703ad078"
+    },
+    {
+      "path": "assets/weapon_mounts/seismic_drum_held.png",
+      "sha256": "48b817692c62d7a8edb0a58e718176286cd329e78b54b002d41078beabc9eb75"
+    },
+    {
+      "path": "assets/weapon_mounts/tether_emitter_held.png",
+      "sha256": "86225968d40b3ac6bc6699039120c5fd55657d3645767abf21b8bf33c8f89f86"
+    },
+    {
+      "path": "scripts/gameplay/new_weapon_profiles.gd",
+      "sha256": "4bad9c9d0964d2a5a0d151998185bd34f175b85b2bb736f8db1d97289140e87f"
+    },
+    {
+      "path": "scripts/gameplay/new_weapon_runtime.gd",
+      "sha256": "8599049a5ac9cf747c3fad8b5363be13331ce3a644e8f8ea60493a235c3dc8a0"
+    },
+    {
+      "path": "scripts/gameplay/new_weapon_visuals.gd",
+      "sha256": "43aeabd7728aae9265c22a490abab49426ee0c0d6d20ee772fffce7421485d9b"
+    },
+    {
+      "path": "scripts/gameplay/pulse_wave_geometry.gd",
+      "sha256": "64835bc4bd6b61d73455e0ca544ea6f5215c255cc9dd42d23181ac2baceb84b0"
+    },
+    {
+      "path": "scripts/gameplay/recoil_plate.gd",
+      "sha256": "5b309498c3c6880ff88e2103cf3533c11c848203d1219b99751b38ada3d80289"
+    },
+    {
+      "path": "tests/fixtures/v39_catalog_additions.json",
+      "sha256": "d065fb56f5fa678e60a1d8ebdc7decdcbc580eb7f50ee8594c4a5227126af736"
+    },
+    {
+      "path": "tests/fixtures/v39_loadout_additions.json",
+      "sha256": "201fdfa7de14d2fadd94af590dc2e2eb6c35798d3b30e2145bf50fa97b5c7bfa"
+    },
+    {
+      "path": "tests/support/v39_catalog_projection.gd",
+      "sha256": "cf233fcb426046531873d7adffce6f05c1d3752f93804b69afb8ef406947ff88"
+    },
+    {
+      "path": "tests/test_recoil_plate.gd",
+      "sha256": "68205e1add112fc30e53b3b92588ecbf15babe144d08863a06f6186bc246961d"
+    }
+  ],
+  "removed": []
+}

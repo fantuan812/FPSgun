@@ -83,7 +83,7 @@ published without continuously changing the candidate.
 ## Reproduce
 
 ```bash
-python3 tests/run_regression.py --project . --output /tmp/moss-v16-checks
+python3 tests/run_regression.py --project . --output historical-temp/moss-v16-checks
 ```
 
 Use a fresh source extraction for cold import. Source packages exclude `.godot`,

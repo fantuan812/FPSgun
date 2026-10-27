@@ -1,0 +1,27 @@
+{
+  "diagnostic_confirmed": true,
+  "functional_gate_pass": false,
+  "original_caps14_failure_retained": true,
+  "dt_float64_hex": "cdccccccccccdc3f",
+  "caller_t_end_float64_hex": "ceccccccccccdc3f",
+  "ULP_difference": 1,
+  "strict_t_end_gt_dt": true,
+  "actual_inward_hp_before_after": [
+    64.8,
+    64.8
+  ],
+  "actual_event_damage": [
+    35.2
+  ],
+  "cause_scope": "This valid .6 then .45 wave integration subtracts absolute age yielding caller local t_end one ULP above dt; strict pure geometry rejects the query. No general tolerance change is implied.",
+  "native_exit": 1,
+  "plan_sha256": "3b721abfe352d25a3012e76b853096ea427943f56f1f1c92e09507d81d201585",
+  "raw": {
+    "STEPS.json": "1915293c935e19739ca09f35d07e21156347fff9ab78c1977c546ce0610de05a",
+    "diagnostic.stdout": "5e0de0d391abce78fc5c0e208d1093d5bac813f57ec84da9c78f5762269bf524",
+    "diagnostic.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "POST_INPUTS.json": "1c2002a33dff76f350158db488c7e5737038fc9eb522282866bc1f670d707d58",
+    "diagnostic.exit": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+    "RESULT.json": "01d69d1de37c53e8a9a471b4165d49608110d1697f7e02dd2ffdb22b7a6c6734"
+  }
+}

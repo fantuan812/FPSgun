@@ -14,3 +14,4 @@ var hurt:Callable
 var spawn_kind:Callable
 var boss_killed:Callable
 var play_vfx:Callable
+var new_weapons:RefCounted

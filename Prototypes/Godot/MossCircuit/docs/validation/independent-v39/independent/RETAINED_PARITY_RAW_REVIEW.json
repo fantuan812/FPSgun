@@ -1,0 +1,69 @@
+{
+  "pass": true,
+  "reviewer": "independent QA",
+  "checks": 35,
+  "scope": "Strict original6transaction/24combat held traces under exact legacy8/30/3 catalog and v37 encounter controls using r2 production code. NOT currentv38 encounter/defaultA catalog seed parity. No new golden generation.",
+  "method": "Original raw and full trace byte readback, no engine rerun; bounded Dummy silence is not physical listening.",
+  "results": [
+    {
+      "name": "transactions",
+      "seconds": 8.902656609003316,
+      "trace_sha256": "48c6705e27d301857f8a52ad849a29b27f6a302f8bcab8f7a2ec5a1d69ee7e63"
+    },
+    {
+      "name": "combat",
+      "seconds": 4.727280232007615,
+      "trace_sha256": "7cd6062fe08d107b8b3eb6e41f2f8dce0ce90f0a1c4448768e8c0624c317c358"
+    }
+  ],
+  "evidence": {
+    "<WORKSPACE>/moss-v39-prep/retained-parity/raw-first/transactions.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "<WORKSPACE>/moss-v39-prep/retained-parity/raw-first/transactions.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "<WORKSPACE>/moss-v39-prep/retained-parity/raw-first/STEPS.json": "d516bf3abd7a1afbf79d253dccebe48de3a07cc30e19bc43297f10263659a018",
+    "<WORKSPACE>/moss-v39-prep/retained-parity/raw-first/transactions.stdout": "e196d8fb67438ed84238594ea6b1e809602065b45bd03a60abd1d71143d26262",
+    "<WORKSPACE>/moss-v39-prep/retained-parity/raw-first/combat.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "<WORKSPACE>/moss-v39-prep/retained-parity/raw-first/POST_INPUTS.json": "1c2002a33dff76f350158db488c7e5737038fc9eb522282866bc1f670d707d58",
+    "<WORKSPACE>/moss-v39-prep/retained-parity/raw-first/combat.json": "7cd6062fe08d107b8b3eb6e41f2f8dce0ce90f0a1c4448768e8c0624c317c358",
+    "<WORKSPACE>/moss-v39-prep/retained-parity/raw-first/transactions.json": "48c6705e27d301857f8a52ad849a29b27f6a302f8bcab8f7a2ec5a1d69ee7e63",
+    "<WORKSPACE>/moss-v39-prep/retained-parity/raw-first/combat.stdout": "012f4c32f00356807d8ae171ca44132d3e9d2072d7e960dc6ceb7b894c7c11fc",
+    "<WORKSPACE>/moss-v39-prep/retained-parity/raw-first/combat.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "<WORKSPACE>/moss-v39-prep/retained-parity/raw-first/RESULT.json": "5325f5ac1e0d186fc7c827e4d87525f08ab74ce6de71db14356412ff7d088d49"
+  },
+  "checks_detail": [
+    "frozen plan",
+    "pin <WORKSPACE>/moss-v39-prep/r2-focused/raw-first/POST_INPUTS.json",
+    "pin <WORKSPACE>/moss-v39-prep/retained-parity/run.py",
+    "pin <WORKSPACE>/moss-v39-prep/retained-parity/ROUTES.json",
+    "pin <WORKSPACE>/moss-v39-prep/retained-parity/SCOPE.md",
+    "pin <WORKSPACE>/moss-v38-parity/encounters.json",
+    "pin <WORKSPACE>/moss-v38-parity/room_encounters.json",
+    "pin <WORKSPACE>/moss-v38-qa/PARITY_RAW_REVIEW.json",
+    "pin <WORKSPACE>/moss-v39-prep/retained-parity/transactions.gd",
+    "pin <WORKSPACE>/moss-v38-parity/transactions.gd",
+    "pin <WORKSPACE>/moss-v38-parity/results/transactions.json",
+    "pin <WORKSPACE>/moss-v39-prep/retained-parity/transactions.patch",
+    "pin <WORKSPACE>/moss-v39-prep/retained-parity/combat.gd",
+    "pin <WORKSPACE>/moss-v38-parity/combat.gd",
+    "pin <WORKSPACE>/moss-v38-parity/results/combat.json",
+    "pin <WORKSPACE>/moss-v39-prep/retained-parity/combat.patch",
+    "native transactions",
+    "stderr transactions",
+    "strict transactions",
+    "raw semantic transactions",
+    "raw helper transactions",
+    "owner resources transactions",
+    "fresh bounded cleanup transactions",
+    "whole held trace transactions",
+    "recorded duration transactions",
+    "native combat",
+    "stderr combat",
+    "strict combat",
+    "raw semantic combat",
+    "raw helper combat",
+    "owner resources combat",
+    "fresh bounded cleanup combat",
+    "whole held trace combat",
+    "recorded duration combat",
+    "actual853 full-set source"
+  ]
+}

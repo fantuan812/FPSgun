@@ -1,4 +1,7 @@
 extends Node2D
+const NewWeaponRuntime=preload("res://scripts/gameplay/new_weapon_runtime.gd")
+const NewWeaponVisuals=preload("res://scripts/gameplay/new_weapon_visuals.gd")
+var new_weapon_runtime=NewWeaponRuntime.new()
 const ScavengerReel=preload("res://scripts/gameplay/scavenger_reel.gd")
 const StartingLoadouts = preload("res://scripts/gameplay/starting_loadouts.gd")
 var starting_loadouts:Dictionary={}
@@ -250,6 +253,9 @@ func _ready() -> void:
 	weapon_presentation=WeaponPresentation.new(combat,run,actor_anim,weapon_rig,hero)
 	weapon_combat=WeaponCombat.new(combat,run,catalog,weapon_presentation,_effect_event,_vfx)
 	effect_runtime=EffectRuntime.new(combat,run,effects,actor_anim,_vfx,_mechanism_vfx)
+	effect_runtime.recoil_area=config.arena
+	new_weapon_runtime.configure(catalog)
+	combat_frame.new_weapons=new_weapon_runtime
 	combat_frame.world=combat;combat_frame.session=run;combat_frame.catalog=catalog
 	combat_frame.weapons=weapon_combat;combat_frame.procs=effect_runtime;combat_frame.actor=actor_anim
 	combat_frame.hurt=_hurt;combat_frame.spawn_kind=_spawn_kind;combat_frame.boss_killed=_boss_killed;combat_frame.play_vfx=_vfx
@@ -274,6 +280,7 @@ func _build_ui() -> void:
 
 
 func _title() -> void:
+	new_weapon_runtime.clear(combat)
 	_stop_feedback_audio()
 	combat.focus_enemy_id=0
 	weapon_rig.clear()
@@ -316,6 +323,7 @@ func _start_selected_loadout(id:Variant,generation:Variant,seed_value:Variant)->
 func _start_run(seed_value: int,loadout_id:Variant=StartingLoadouts.DEFAULT_ID) -> bool:
 	var fresh_build:=StartingLoadouts.make_build(starting_loadouts,catalog,loadout_id)
 	if fresh_build.is_empty():return false
+	new_weapon_runtime.clear(combat)
 	_stop_feedback_audio()
 	combat.focus_enemy_id=0
 	weapon_rig.clear()
@@ -337,6 +345,7 @@ func _start_run(seed_value: int,loadout_id:Variant=StartingLoadouts.DEFAULT_ID) 
 	shop_rng.seed = run_seed ^ 92137
 	build = fresh_build
 	run.starting_loadout_id=loadout_id
+	effects.clear_recoil_run()
 	effects.reset(build.items)
 	effect_sequence = 0
 	pending_blasts.clear()
@@ -559,7 +568,8 @@ func _hurt(damage: float) -> void:
 	actor_anim.trigger(0,"hurt")
 	_vfx("hit_spark",player_pos)
 	var actual_loss := CharacterMotor.apply_damage(combat,damage)
-	_effect_event("hurt",{"amount":actual_loss})
+	effect_runtime.recoil_area=config.arena
+	_effect_event("hurt",{"amount":actual_loss,"source":"player_hp_loss","depth":0})
 	hurt_clock = .75
 	if stats.hp <= 0: _finish(false)
 	# Same resolved cue may finish after lethal cleanup; no later dead-state request.
@@ -648,6 +658,7 @@ func _resolve_upgrade_choice() -> void:
 		_hide_modal()
 
 func _finish(won: bool) -> void:
+	new_weapon_runtime.clear(combat)
 	_stop_feedback_audio()
 	combat.focus_enemy_id=0
 	weapon_rig.clear()
@@ -697,13 +708,14 @@ func _draw() -> void:
 	if (not build.is_empty() and "bankshot_driver" in build.weapons) or bullets.any(func(b):return b.get("behavior","")=="field_bankshot"):
 		# Additive inset cue; the pre-existing general field outline above is unchanged.
 		draw_rect(Rect2(3,3,config.arena.width-6,config.arena.height-6),Color(1,.78,.35,.32 if settings.reduced_flashes else .52),false,1.5)
+	if state not in ["title","dead","won"]:NewWeaponVisuals.draw(self,combat,settings.reduced_flashes)
 	for blast in pending_blasts:
 		draw_circle(blast.pos,blast.radius,Color(.65,.8,1,.8),false,2)
 	for hazard in hazards:
 		draw_circle(hazard.pos,hazard.radius,Color(.95,.5,.12,.22) if hazard.kind in ["trail","scorch"] else Color(.9,.85,.3,.3))
 		if hazard.kind == "mine": draw_rect(Rect2(hazard.pos-Vector2(6,6),Vector2(12,12)),Color("f3d66d"))
 	for visual in effect_visuals:
-		if visual.kind in ["annulus_impact","support_complete","support_cancel"]: continue # Drawn only by the hole-preserving telegraph layer.
+		if visual.kind in ["annulus_impact","support_complete","support_cancel","tether_break"]: continue # Drawn only by the hole-preserving telegraph layer.
 		if visual.kind=="cryo_cone":
 			var points:=PackedVector2Array([visual.pos])
 			var angle:float=visual.direction.angle()
@@ -785,6 +797,7 @@ func _draw() -> void:
 		draw_circle(player_pos, 24, Color("b6f2df"), false, 2)
 
 func _recompute() -> void:
+	new_weapon_runtime.clear(combat)
 	if weapon_rig.slots.map(func(slot):return slot.id)!=build.weapons:
 		weapon_rig.sync_loadout(build.weapons)
 		bullets=bullets.filter(func(b):return b.get("behavior","")=="field_bankshot")
@@ -887,7 +900,7 @@ func _refresh_shop(generation: int) -> bool:
 func _weapon_order_view() -> Dictionary:
 	var reason := ""
 	if state != "shop": reason = "Weapon order can only change in the shop."
-	elif not bullets.is_empty() or not pending_blasts.is_empty(): reason = "Weapon shots are still active; ordering is unavailable."
+	elif not bullets.is_empty() or not pending_blasts.is_empty() or not combat.pulse_beams.is_empty() or not combat.seismic_waves.is_empty(): reason = "Weapon shots are still active; ordering is unavailable."
 	elif not WeaponTempering.metadata_error(build).is_empty(): reason = WeaponTempering.metadata_error(build)
 	else: reason = WeaponOrder.loadout_error(build,catalog,weapon_clocks)
 	return {"available":reason.is_empty(),"reason":reason}
@@ -900,6 +913,7 @@ func _move_weapon(slot: Variant, step: Variant, generation: Variant, id: Variant
 	var target: int = slot + step
 	if slot < 0 or slot >= build.weapons.size() or target < 0 or target >= build.weapons.size(): return false
 	if build.weapons[slot] != id: return false
+	new_weapon_runtime.clear(combat)
 	weapon_rig.sync_loadout(build.weapons)
 	var moved_id: String = build.weapons[slot]
 	var moved_clock = weapon_clocks[slot]
@@ -921,7 +935,7 @@ func _move_weapon(slot: Variant, step: Variant, generation: Variant, id: Variant
 func _weapon_temper_view(slot: int) -> Dictionary:
 	var reason: String = ""
 	if state != "shop": reason = "Tempering is only available in the shop."
-	elif not bullets.is_empty() or not pending_blasts.is_empty(): reason = "Weapon shots are still active; tempering is unavailable."
+	elif not bullets.is_empty() or not pending_blasts.is_empty() or not combat.pulse_beams.is_empty() or not combat.seismic_waves.is_empty(): reason = "Weapon shots are still active; tempering is unavailable."
 	elif not WeaponTempering.metadata_error(build).is_empty(): reason = WeaponTempering.metadata_error(build)
 	elif build.get("weapons") is Array and build.weapons.size() == 1:
 		# One retained tempered copy is already final; another purchase cannot re-temper it.
@@ -947,6 +961,7 @@ func _temper_weapon(slot: Variant, donor: Variant, generation: Variant, id: Vari
 	if build.weapons[slot] != id or build.weapons[donor] != donor_id or id != donor_id: return false
 	var projected: Dictionary = WeaponTempering.projected_build(build,slot,donor)
 	if projected.is_empty(): return false
+	new_weapon_runtime.clear(combat)
 	weapon_rig.sync_loadout(build.weapons)
 	build.weapons.remove_at(donor)
 	build.weapon_temper = projected.weapon_temper
@@ -1036,12 +1051,14 @@ func _view() -> Dictionary:
 	view.tag_synergy_status=Rules.tag_synergy_status(build,catalog)
 	if build.items.has("feedback_diode"):
 		view.mechanics.feedback_status = "READY THIS DASH" if effects.can_feedback(float(stats.get("dash_time",0.0)) > 0) else ("UNARMED THIS DASH" if float(stats.get("dash_time",0.0)) > 0 else "ARMS ON NEXT DASH")
+	view.new_weapon_status=NewWeaponVisuals.hud_status(combat,build.weapons)
 	var affinity := Rules.shop_affinity(build,catalog)
 	var missing_names: Array = []
 	for id in affinity.missing_ids: missing_names.append(Rules.catalog_entry(catalog,id).name)
 	view.shop_bias = {"preferred_tags":affinity.tags.keys(),"missing_partners":missing_names,"sources":affinity.sources,"summary":"Preference, not a guarantee. Positive exploration remains; selling affects the next refresh."}
 	view.synergy_status=BuildForecast.mechanism_status(build,catalog)
 	for id in effects.cooldowns: view.mechanics.cooldowns[id] = maxf(0,effects.cooldowns[id] - elapsed)
+	if build.items.has("recoil_plate") and effects.recoil_cooldown.has("ready_at"):view.mechanics.cooldowns.recoil_plate=maxf(0.0,float(effects.recoil_cooldown.ready_at)-elapsed)
 	for i in range(build.weapons.size()):
 		var entry := Rules.catalog_entry(catalog,build.weapons[i]).duplicate(true)
 		entry.slot = i
@@ -1304,7 +1321,16 @@ func _sync_weapon_rig()->void:
 		for e in living:
 			if e.pos.distance_squared_to(player_pos)<nearest.pos.distance_squared_to(player_pos):nearest=e
 		target=nearest.pos
-	if combat.focus_enemy_id==0 or CombatFocus.find(enemies,combat.focus_enemy_id).is_empty():
+	if not combat.pulse_beams.is_empty():
+		var locked_targets:Dictionary={}
+		for slot in range(build.weapons.size()):
+			var preferred:Dictionary=CombatFocus.eligible(enemies,combat.focus_enemy_id,player_pos,Rules.catalog_entry(catalog,build.weapons[slot]),stats)
+			if not preferred.is_empty():locked_targets[slot]=preferred.pos
+		for beam in combat.pulse_beams:
+			var locked:Dictionary=CombatFocus.find(enemies,int(beam.target_id))
+			if not locked.is_empty():locked_targets[beam.slot_id]=locked.pos
+		weapon_rig.update_poses(actor_anim.socket_world(0,"grip"),actor_anim.socket_world(0,"body"),target,hero.flip_h,bullets,pending_blasts,true,locked_targets)
+	elif combat.focus_enemy_id==0 or CombatFocus.find(enemies,combat.focus_enemy_id).is_empty():
 		weapon_rig.update_poses(actor_anim.socket_world(0,"grip"),actor_anim.socket_world(0,"body"),target,hero.flip_h,bullets,pending_blasts,true)
 	else:
 		var priority_targets:Dictionary={}
@@ -1331,6 +1357,7 @@ func _enter_field(seed_value:int)->void:
 	camera.position=FieldLayout.camera_position(player_pos,config.arena)
 func _begin_room_clear()->void:
 	if state!="playing":return
+	new_weapon_runtime.clear(combat)
 	_stop_feedback_audio()
 	combat.focus_enemy_id=0
 	state="room_clear"

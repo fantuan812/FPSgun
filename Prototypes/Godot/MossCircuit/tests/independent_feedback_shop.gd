@@ -21,6 +21,9 @@ func dash()->void:
  if Motor.step(g.combat,g.config.arena,Vector2.RIGHT,true,0):g._effect_event("dash",{"pos":g.player_pos,"angle":0.0})
 func run()->void:
  g=load("res://scenes/main.tscn").instantiate();root.add_child(g);g.set_process(false)
+ # Explicit original8/30/3 fixture; actual A catalog is separately validated.
+ var legacy_input:Dictionary=preload("res://tests/support/v39_legacy_inputs.gd").install(g)
+ if not legacy_input.pass:push_error(str(legacy_input.errors));quit(1);return
  ck(g.catalog.items.map(func(e):return e.id)==ITEMS+["scavenger_reel"],"exact 30 module IDs: old order plus Scavenger Reel")
  ck(g.catalog.weapons.map(func(e):return e.id)==["rivet_gun","scrap_shotgun","rail_lance","orbit_saw","return_disc","shock_mortar","cryo_sprayer","bankshot_driver"],"exact 8 weapon IDs")
  ck(g.ui.icon("feedback_diode")!=null,"actual integrated icon resource")

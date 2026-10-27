@@ -13,6 +13,9 @@ func _initialize()->void:call_deferred("run")
 func run()->void:
 	var catalog:Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://data/catalog.json"))
 	var data:Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://data/starting_loadouts.json"))
+	var kit_history:Dictionary=preload("res://tests/support/v39_loadout_projection.gd").project(data,FileAccess.get_file_as_string("res://data/starting_loadouts.json"))
+	if not kit_history.pass:push_error(str(kit_history.errors));quit(1);return
+	data=kit_history.data
 	check(Loadouts.validate(data,catalog).is_empty(),"shipped registry valid")
 	check(data.loadouts.map(func(r):return r.id)==["rivet","scatter","rail"],"three ordered starters")
 	check(Loadouts.make_build(data,catalog,"rivet")==Rules.new_build(catalog),"default factory exact")

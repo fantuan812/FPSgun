@@ -1,0 +1,11 @@
+--- launch-r1.sh
++++ launch-r2.sh
+@@ -1,6 +1,6 @@
+ #!/bin/bash
+ cd <WORKSPACE>/moss-v39-prep/native-mechanics || exit 125
+-python run.py > wrapper.stdout 2> wrapper.stderr
++/usr/bin/python3 run.py > wrapper-r2.stdout 2> wrapper-r2.stderr
+ rc=$?
+-printf '%s\n' "$rc" > wrapper.exit
++printf '%s\n' "$rc" > wrapper-r2.exit
+ exit "$rc"

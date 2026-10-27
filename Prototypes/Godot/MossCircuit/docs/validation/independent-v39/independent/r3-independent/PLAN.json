@@ -1,0 +1,71 @@
+{
+  "scope": "Independent exact r3 coldcopy; only caller derived-time interval clamp plus manifest relative to failed853 r2. Original caps14,geometry850,policy59,runtime46,motion14,lifecycle124 unchanged; old failures preserved; no full/native/ordinary claim.",
+  "source": "<WORKSPACE>/moss-v39-r3",
+  "input_map": "<WORKSPACE>/moss-v39-prep/r3-caller-fix/INPUTS.json",
+  "input_count": 853,
+  "routes": [
+    {
+      "name": "cold",
+      "helpers": 0
+    },
+    {
+      "name": "caps",
+      "script": "<WORKSPACE>/moss-v39-qa/checks/independent_new_weapon_caps.gd",
+      "checks": 14,
+      "observations": 0,
+      "helpers": 0
+    },
+    {
+      "name": "geometry",
+      "script": "<WORKSPACE>/moss-v39-qa/checks/independent_new_weapon_geometry.gd",
+      "checks": 850,
+      "observations": 205,
+      "helpers": 0
+    },
+    {
+      "name": "policy",
+      "script": "<WORKSPACE>/moss-v39-qa/checks/independent_new_weapon_policy.gd",
+      "checks": 59,
+      "observations": 5,
+      "helpers": 0
+    },
+    {
+      "name": "runtime",
+      "script": "<WORKSPACE>/moss-v39-qa/checks/independent_new_weapon_runtime.gd",
+      "checks": 46,
+      "observations": 2,
+      "helpers": 1
+    },
+    {
+      "name": "motion",
+      "script": "<WORKSPACE>/moss-v39-qa/checks/independent_new_weapon_motion.gd",
+      "checks": 14,
+      "observations": 4,
+      "helpers": 1
+    },
+    {
+      "name": "lifecycle",
+      "script": "<WORKSPACE>/moss-v39-qa/checks/independent_new_weapon_lifecycle.gd",
+      "checks": 124,
+      "observations": 26,
+      "helpers": 1
+    }
+  ],
+  "per_case_seconds": 180,
+  "pins": {
+    "<WORKSPACE>/moss-v39-prep/r3-caller-fix/INPUTS.json": "f09f11fe80730cf2a22d73c56e73a6ea7ce7c43d30dc0f289fbb8d3f1b728512",
+    "<WORKSPACE>/moss-v39-qa/r3-independent/run.py": "2ce5b27c4c9cd2a6e754b34e51db38be5dbd03733a10b92317f0dd4d53188029",
+    "<WORKSPACE>/moss-v39-qa/pretarget/FREEZE.json": "dfa9883b0d726a6e2509d5c4cf976cde1248eabe90e346aea5f36ec333e771d7",
+    "<WORKSPACE>/moss-v39-qa/pretarget/POLICY_HAND_CASES.json": "0befaca39e5534702ff7988f1f38bdd24205fa17a61121d278f3015f8883a50d",
+    "<WORKSPACE>/moss-v39-qa/pretarget/GEOMETRY_API_CASES.json": "9ae13f97bf2eb6f201972bb28135e97b20b8491b9c69d273ef7d67c011bad8d6",
+    "<WORKSPACE>/moss-v39-r3/tests/support/audio_teardown.gd": "9e9676e34296cb55d4560b1169c5954a82508f70e9051fcc942d1bb6839c23bd",
+    "<WORKSPACE>/moss-v39-prep/r3-caller-fix/CALLER.patch": "e6682fab28cb8536cc85ff9f128026578a5e2fd0ce09582087ed1f2d4ae39728",
+    "<WORKSPACE>/moss-v39-prep/r3-caller-fix/DIFF.json": "3caba5ae9fa606185dce6ef5deac20d63c6f6a3dcbaed9344699f684fffea136",
+    "<WORKSPACE>/moss-v39-qa/checks/independent_new_weapon_caps.gd": "946cfc0ddb1e5c1145aa46c824218d7ae11067ac4e400574bd1f9ccb58ea137f",
+    "<WORKSPACE>/moss-v39-qa/checks/independent_new_weapon_geometry.gd": "d4063643488a5d5018bd9241048c4be20c9179fb46d074fe4c367f35e6883f2f",
+    "<WORKSPACE>/moss-v39-qa/checks/independent_new_weapon_policy.gd": "dee53e121d30a7cb0c514ccac7c2c87e4779ba4e1bf32dd1b846577f1d5a2a17",
+    "<WORKSPACE>/moss-v39-qa/checks/independent_new_weapon_runtime.gd": "85c0c699a588ddde52447c08b857a942975ec1c7f0d911d429bfea4e88bfa853",
+    "<WORKSPACE>/moss-v39-qa/checks/independent_new_weapon_motion.gd": "d4029b9e12fb06cb76590ea47ea84a36a33cb2ec73a3f613fc2e0f071ad0e0cd",
+    "<WORKSPACE>/moss-v39-qa/checks/independent_new_weapon_lifecycle.gd": "23d90bb487e7fd02d0e189e00b67c0a4726dc29d952463eb81b948a9c7377649"
+  }
+}

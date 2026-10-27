@@ -1,0 +1,15 @@
+{
+  "map_path": "<WORKSPACE>/moss-v39-prep/first-cold-geometry/raw-first/POST_INPUTS.json",
+  "map_sha256": "2c025ed2d370a8940381ed3dfd27c310d2d161d67ba568cd08a6ac412fe53858",
+  "inputs": 836,
+  "pins": {
+    "<WORKSPACE>/moss-v39-qa/run_policy.py": "9675bd562c6a4eee562744d8e3bf14c054a2db8cf4ea8de6fa135a42e414c6ea",
+    "<WORKSPACE>/moss-v39-qa/checks/independent_new_weapon_policy.gd": "dee53e121d30a7cb0c514ccac7c2c87e4779ba4e1bf32dd1b846577f1d5a2a17",
+    "<WORKSPACE>/moss-v39-qa/pretarget/POLICY_HAND_CASES.json": "0befaca39e5534702ff7988f1f38bdd24205fa17a61121d278f3015f8883a50d",
+    "<WORKSPACE>/moss-v39-qa/pretarget/FREEZE.json": "dfa9883b0d726a6e2509d5c4cf976cde1248eabe90e346aea5f36ec333e771d7"
+  },
+  "scope": "Unique independent exact-copy cold import then literal policy oracle. Recording sinks, no claim of actual proc/full Runtime/native integration.",
+  "per_command_seconds": 180,
+  "stop_first_fail": true,
+  "preexecution_correction": "Original unexecuted r.clear(Frame) corrected to frozen API r.clear(world), expected values unchanged."
+}

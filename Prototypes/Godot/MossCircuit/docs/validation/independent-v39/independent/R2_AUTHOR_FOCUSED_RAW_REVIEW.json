@@ -1,0 +1,60 @@
+{
+  "pass": true,
+  "scope": "Independent original six-route author raw/native/source/helper audit, no rerun; not full/native/lifecycle acceptance",
+  "routes": [
+    {
+      "route": "cold",
+      "checks": 0,
+      "native_exit": 0,
+      "seconds": 22.077291438006796,
+      "raw_stdout_sha256": "7f244ad2f008df9852a636f02b1d8aa4a06ae43e4bf376f9807a6d54033283c9",
+      "raw_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "route": "negatives",
+      "checks": 165,
+      "native_exit": 0,
+      "seconds": 0.4067951909964904,
+      "raw_stdout_sha256": "2112419a2cd3b280a562cf63ac10f74ef284ab0ea6570bd4f0355cd6871126c3",
+      "raw_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "route": "legacy-inputs",
+      "checks": 18,
+      "native_exit": 0,
+      "seconds": 2.3670693089952692,
+      "raw_stdout_sha256": "1a8fc5478e82f1dfd0ca480db8b1142251a52ef9ba07dca486047d984fd06327",
+      "raw_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "route": "actual-links",
+      "checks": 17,
+      "native_exit": 0,
+      "seconds": 0.4019444570003543,
+      "raw_stdout_sha256": "5b335da17c41bd282034c8d8ec441630645204ac85612be1ba0ed1f2b783beaa",
+      "raw_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "route": "new-readout",
+      "checks": 8,
+      "native_exit": 0,
+      "seconds": 0.2984659559879219,
+      "raw_stdout_sha256": "5bb143418772aaf5117f44ddfe79985706ec386bc52243bbebbe98a3a9aeb730",
+      "raw_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "route": "item-transactions",
+      "checks": 208,
+      "native_exit": 0,
+      "seconds": 5.280539983010385,
+      "raw_stdout_sha256": "549d5ff0ca419e4bd136140a68337ebead9a4c9fc49ac9f7b09e58683b2cb50c",
+      "raw_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "post_inputs": 853,
+  "exact8UID": true,
+  "old836_unchanged": true,
+  "original165_native0_but_60_script_errors_strictFAIL_retained": true,
+  "plan_sha256": "cf706c20bcfb9c97fbb90d2a28e2548ab3558e58bc35b1b950281a9cdc96b7e0",
+  "post_map_sha256": "993c4661532ed4d85ee2a0665ce4935af33209f30f3bfa9d13944c9a8039f451"
+}

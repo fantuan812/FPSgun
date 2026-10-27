@@ -44,6 +44,9 @@ func accept_event(pressed:bool)->void:
  root.push_input(event)
 func run()->void:
  g=load("res://scenes/main.tscn").instantiate();root.add_child(g);g.set_process(false)
+ # Explicit original8/30/3 fixture; actual A catalog is separately validated.
+ var legacy_input:Dictionary=preload("res://tests/support/v39_legacy_inputs.gd").install(g)
+ if not legacy_input.pass:push_error(str(legacy_input.errors));quit(1);return
  var expected_ids:Array=["rivet_gun","scrap_shotgun","rail_lance","orbit_saw","return_disc","shock_mortar","cryo_sprayer","bankshot_driver"]
  ck(g.catalog.weapons.map(func(e):return e.id)==expected_ids,"exact eight weapon IDs and order")
  ck(g.catalog.items.size()==30 and g.catalog.items[-1].id=="scavenger_reel","exact 30-module catalog with appended Scavenger Reel")

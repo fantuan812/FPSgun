@@ -1,0 +1,118 @@
+[
+  {
+    "name": "diagnostic",
+    "native_exit": 1,
+    "seconds": 1.4227110010106117,
+    "timeout": false,
+    "clean": true,
+    "semantic": false,
+    "helper_ok": true,
+    "reports": [
+      {
+        "checks": 14,
+        "failures": [
+          "tempered inward exactly17.6, not double temper",
+          "actual resolved event damages"
+        ],
+        "observations": [
+          {
+            "a": 0.6,
+            "b": 1.05,
+            "before_inward": {
+              "age": 0.6,
+              "center": "(0.0, 0.0)",
+              "damage": 35.2,
+              "epoch": 0,
+              "half_width": 12.0,
+              "hit_in": {},
+              "hit_out": {
+                "1": true
+              },
+              "initial_radius": 24.0,
+              "inward_damage_scale": 0.5,
+              "inward_seconds": 0.45,
+              "outward_done": true,
+              "outward_seconds": 0.6,
+              "range": 180.0,
+              "return_enabled": true,
+              "sequence": 1,
+              "slot_id": 0,
+              "weapon_id": "seismic_drum"
+            },
+            "dt_17": "0.45000000000000001",
+            "dt_variant_bytes": "03000100cdccccccccccdc3f",
+            "end_age": 1.05,
+            "events": [
+              {
+                "elapsed": 10.0,
+                "event": {
+                  "damage": 35.2,
+                  "depth": 0,
+                  "pos": "(100.0, 0.0)",
+                  "slot_id": 0,
+                  "source": "primary",
+                  "target": 1,
+                  "weapon": "seismic_drum",
+                  "weapon_id": "seismic_drum"
+                },
+                "kind": "hit"
+              }
+            ],
+            "frame_dt": 0.45,
+            "hp": 64.8,
+            "local_end": 0.45,
+            "local_end_17": "0.45000000000000007",
+            "local_end_exceeds_dt": true,
+            "local_end_variant_bytes": "03000100ceccccccccccdc3f",
+            "start_age": 0.6
+          },
+          {
+            "after_inward": {
+              "age": 1.05,
+              "center": "(0.0, 0.0)",
+              "damage": 35.2,
+              "epoch": 0,
+              "half_width": 12.0,
+              "hit_in": {},
+              "hit_out": {
+                "1": true
+              },
+              "initial_radius": 24.0,
+              "inward_damage_scale": 0.5,
+              "inward_seconds": 0.45,
+              "outward_done": true,
+              "outward_seconds": 0.6,
+              "range": 180.0,
+              "return_enabled": true,
+              "sequence": 1,
+              "slot_id": 0,
+              "weapon_id": "seismic_drum"
+            },
+            "events": [
+              {
+                "elapsed": 10.0,
+                "event": {
+                  "damage": 35.2,
+                  "depth": 0,
+                  "pos": "(100.0, 0.0)",
+                  "slot_id": 0,
+                  "source": "primary",
+                  "target": 1,
+                  "weapon": "seismic_drum",
+                  "weapon_id": "seismic_drum"
+                },
+                "kind": "hit"
+              }
+            ],
+            "hp": 64.8
+          }
+        ],
+        "pass": false,
+        "scope": "Independent remaining pretarget cap/tempered/cadence cases through actual NewRuntime and primary defense; recorder emission only, no scene/native claim"
+      }
+    ],
+    "helpers": [],
+    "parse_errors": [],
+    "pass": false
+  }
+]

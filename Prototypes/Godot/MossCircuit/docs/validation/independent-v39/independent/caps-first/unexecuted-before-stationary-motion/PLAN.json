@@ -1,0 +1,23 @@
+{
+  "scope": "Independent remaining pretarget cap, expiry-before-launch, per-copy ownership, tempered35.2/17.6 and cadence cases through actual NewRuntime/PrimaryDefense; mocked emission, no full scene/native claim. Warm prior exact853 QA copy; no source edits.",
+  "source": "<WORKSPACE>/moss-v39-r2",
+  "input_map": "<WORKSPACE>/moss-v39-prep/r2-focused/raw-first/POST_INPUTS.json",
+  "input_count": 853,
+  "routes": [
+    {
+      "name": "caps",
+      "script": "<WORKSPACE>/moss-v39-qa/checks/independent_new_weapon_caps.gd",
+      "checks": 14,
+      "observations": 0,
+      "helpers": 0
+    }
+  ],
+  "per_case_seconds": 180,
+  "pins": {
+    "<WORKSPACE>/moss-v39-prep/r2-focused/raw-first/POST_INPUTS.json": "993c4661532ed4d85ee2a0665ce4935af33209f30f3bfa9d13944c9a8039f451",
+    "<WORKSPACE>/moss-v39-qa/caps-first/run.py": "c4045245ebf755d23029542f2ee522ec77bda74410d90a278519d921a16b002c",
+    "<WORKSPACE>/moss-v39-qa/pretarget/FREEZE.json": "dfa9883b0d726a6e2509d5c4cf976cde1248eabe90e346aea5f36ec333e771d7",
+    "<WORKSPACE>/moss-v39-qa/pretarget/POLICY_HAND_CASES.json": "0befaca39e5534702ff7988f1f38bdd24205fa17a61121d278f3015f8883a50d",
+    "<WORKSPACE>/moss-v39-qa/checks/independent_new_weapon_caps.gd": "9e9d4e6649231dc9478f3aa0b0934b301289159f2ad3d8f41dd1786cadfda8c2"
+  }
+}

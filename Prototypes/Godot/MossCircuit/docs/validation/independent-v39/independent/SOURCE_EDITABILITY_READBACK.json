@@ -1,0 +1,14 @@
+{
+  "pass": true,
+  "scope": "Independent static raw/XML/RGBA readback of one offline editable SVG copy; no browser interaction verified",
+  "checks_reported": 74,
+  "exact_changed_pixels": 126,
+  "only_fill_attributes": 3,
+  "original_package_unchanged": true,
+  "warnings_retained": {
+    "baseline.log": "\n** (inkscape:6): WARNING **: 03:43:03.601: Failed to wrap object of type 'PangoFT2FontMap'. Hint: this error is commonly caused by failing to call a library init() function.\n\n** (inkscape:6): WARNING **: 03:43:04.362: Failed to wrap object of type 'GtkRecentManager'. Hint: this error is commonly caused by failing to call a library init() function.\n",
+    "edited.log": "\n** (inkscape:13): WARNING **: 03:43:04.537: Failed to wrap object of type 'PangoFT2FontMap'. Hint: this error is commonly caused by failing to call a library init() function.\n\n** (inkscape:13): WARNING **: 03:43:04.684: Failed to wrap object of type 'GtkRecentManager'. Hint: this error is commonly caused by failing to call a library init() function.\n"
+  },
+  "freeze_sha256": "07c23786ee28842a47ea728672527b591107180767d413c8db964447c321ee26",
+  "result_sha256": "005dc4be01156e40aebd6e1a399b30277cc76d5694a748dde3b2e6bb62a0f902"
+}

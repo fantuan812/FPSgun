@@ -31,6 +31,8 @@ func _initialize()->void:call_deferred("run")
 func run()->void:
  var c:Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://data/catalog.json"))
  var expanded_bytes:String=FileAccess.get_file_as_string("res://data/catalog.json")
+ var a_history:Dictionary=preload("res://tests/support/v39_catalog_projection.gd").project(c,expanded_bytes)
+ if not a_history.pass:push_error(str(a_history.errors));quit(1);return
  var history:Dictionary=CatalogHistory.project(c,expanded_bytes)
  ck(history.get("pass",false),"exact v36 append-only declaration and original v35 byte identity")
  var catalog_bytes:String=history.bytes
@@ -38,8 +40,8 @@ func run()->void:
  var declared_profile:String='  "weapon_tempering": {\n    "max_tier": 1,\n    "primary_damage_multiplier": 1.6\n  },\n'
  ck(catalog_bytes.sha256_text()=="317a2d343ba1a005cd44cc1c2ee91e894adf059d77e57c24f7a5ee9439ec56a0","exact reviewed v33 catalog bytes, including only the authored tempering profile")
  ck(catalog_bytes.count(declared_profile)==1 and catalog_bytes.replace(declared_profile,"").sha256_text()=="88002883c5f1141e8d9adf2f95418c81b52b397a44feee46946876bbf8a984d7","exact v27 bytes after removing ONLY the declared v33 profile: all IDs/order/prices/weights/links")
- ck(c.items.map(func(e):return e.id)==ITEM_IDS+["scavenger_reel"],"exact ordered 30 module IDs with old order preserved")
- ck(c.weapons.map(func(e):return e.id)==["rivet_gun","scrap_shotgun","rail_lance","orbit_saw","return_disc","shock_mortar","cryo_sprayer","bankshot_driver"],"exact ordered eight weapon IDs")
+ ck(a_history.catalog.items.map(func(e):return e.id)==ITEM_IDS+["scavenger_reel"],"exact ordered 30 module IDs with old order preserved")
+ ck(a_history.catalog.weapons.map(func(e):return e.id)==["rivet_gun","scrap_shotgun","rail_lance","orbit_saw","return_disc","shock_mortar","cryo_sprayer","bankshot_driver"],"exact ordered eight weapon IDs")
  ck(FileAccess.get_sha256("res://data/balance.json")=="180c521a222f737a93498768acccdb98e6bb93f606de7e6719f88261eb41815c","six existing upgrades and economy unchanged")
  var encounter_history:Dictionary=EncounterHistory.project(FileAccess.get_file_as_string("res://data/encounters.json"),FileAccess.get_file_as_string("res://data/room_encounters.json"))
  ck(encounter_history.get("pass",false),"strict declared v38 row/wave/Rooms append and original raw identity")

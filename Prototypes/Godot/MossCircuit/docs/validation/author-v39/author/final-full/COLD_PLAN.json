@@ -1,0 +1,41 @@
+{
+  "source": "evidence-workspace/moss-v39-final-candidate",
+  "r3_source": "evidence-workspace/moss-v39-r3",
+  "r3_map": "evidence-workspace/moss-v39-prep/r3-caller-fix/INPUTS.json",
+  "scope": "No gameplay/art changes from frozen r3; docs/test promotion only; cold and full require distinct QA windows.",
+  "status": "FROZEN_FOR_QA_WINDOW",
+  "input_map": "evidence-workspace/moss-v39-prep/final-promotion/INPUTS.json",
+  "pins": {
+    "evidence-workspace/moss-v39-prep/final-promotion/INPUTS.json": "8ca5a51e9731aeadc7de996d04c61b83ab613b412266731f1934df809fe74467",
+    "evidence-workspace/moss-v39-prep/final-promotion/DIFF.json": "cf7c4c94696ba5f160b0e6f009f1264220a6ef432ea1004a3d928b59049085f4",
+    "evidence-workspace/moss-v39-prep/final-promotion/BINDINGS.json": "4f44849a269b609b7010b060ca1f01c1b53fe4e474e68aaea7d29695acca86da",
+    "evidence-workspace/moss-v39-prep/final-promotion/DISCOVERY.json": "f216bcc0a953934b10db935a27b0bb7f62755b4da9fe7156fbcf701ba19cce9d",
+    "evidence-workspace/moss-v39-prep/final-promotion/EXPECTED_COLD_UIDS.json": "b480992b3b55601a978e93d6dff254f10a0da21f38fedc937fad697bc6d29bd7",
+    "evidence-workspace/moss-v39-prep/r3-caller-fix/INPUTS.json": "f09f11fe80730cf2a22d73c56e73a6ea7ce7c43d30dc0f289fbb8d3f1b728512",
+    "evidence-workspace/moss-v39-prep/final-full/run_cold.py": "1f603027705f8be78a60b0b097754e46b2fede0fd04e50c3e49f26ad5baa9506",
+    "evidence-workspace/moss-v39-prep/final-full/run_full.py": "81e04a6e03eda164b231271ee39e65ed905b8c5445c23c5df2ad9a42af30fb11",
+    "evidence-workspace/moss-v39-final-candidate/tests/run_regression.py": "4f5c41e186f0ecb8bd8660c209a8256e8549e65298c001adfeea57a9d0f22821"
+  },
+  "command": [
+    "godot",
+    "--headless",
+    "--audio-driver",
+    "Dummy",
+    "--path",
+    "evidence-workspace/moss-v39-final-candidate",
+    "--editor",
+    "--import"
+  ],
+  "per_case_seconds": 180,
+  "exact_uid_additions": [
+    "tests/independent_new_weapon_caps.gd.uid",
+    "tests/independent_new_weapon_lifecycle.gd.uid",
+    "tests/independent_new_weapon_geometry.gd.uid",
+    "tests/independent_new_weapon_runtime.gd.uid",
+    "tests/independent_new_weapon_policy.gd.uid",
+    "tests/independent_new_weapon_motion.gd.uid",
+    "tests/native/test_expansion_hud_width.gd.uid"
+  ],
+  "expected_before": 862,
+  "expected_after": 869
+}

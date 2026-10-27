@@ -1,0 +1,20 @@
+{
+  "status": "FAIL",
+  "command": [
+    "/usr/local/bin/godot",
+    "--headless",
+    "--path",
+    "evidence-workspace/moss-v39-items/harness",
+    "--script",
+    "res://tests/test_recoil_plate.gd"
+  ],
+  "timeout_seconds": 180,
+  "timed_out": false,
+  "exit": -6,
+  "elapsed": 0.5301169529993786,
+  "input_identical": true,
+  "strict_error_tags": [
+    "ERROR:"
+  ],
+  "records": []
+}

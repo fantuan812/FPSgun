@@ -256,6 +256,74 @@
       "sha256": "0e3e8b49a0d4bcca6b7e83a2c5f29e0effa9581ab33df8eb6817eb4f6e966c0c",
       "asset_kind": "dedicated_world_sprite_not_inventory_icon",
       "source_review": "Right-facing compact fork launcher, center-gap muzzle. Original low-alpha edge residue retained."
+    },
+    "seismic_drum": {
+      "path": "res://assets/weapon_mounts/seismic_drum_held.png",
+      "region": [
+        0,
+        0,
+        128,
+        64
+      ],
+      "alpha_bbox": [
+        15,
+        7,
+        102,
+        50
+      ],
+      "grip": [
+        0.234375,
+        0.71875
+      ],
+      "muzzle": [
+        0.9140625,
+        0.5
+      ],
+      "projectile_anchor": [
+        0.9140625,
+        0.5
+      ],
+      "visible_length": 32,
+      "reference_width": 102,
+      "sha256": "48b817692c62d7a8edb0a58e718176286cd329e78b54b002d41078beabc9eb75",
+      "asset_kind": "dedicated_world_sprite_not_inventory_icon",
+      "source_review": "Grip within olive handle. Muzzle at rightmost front rim edge, discharge axis through amber membrane center.",
+      "editable_source": "art_source/build_expansion_A/svg/seismic_drum_held.svg",
+      "editable_sha256": "47cbfb875d19998b3de3ff416007f306f8500b3df8ee44bb01e6eae12f197b9e"
+    },
+    "tether_emitter": {
+      "path": "res://assets/weapon_mounts/tether_emitter_held.png",
+      "region": [
+        0,
+        0,
+        128,
+        64
+      ],
+      "alpha_bbox": [
+        12,
+        14,
+        107,
+        43
+      ],
+      "grip": [
+        0.21875,
+        0.71875
+      ],
+      "muzzle": [
+        0.921875,
+        0.5
+      ],
+      "projectile_anchor": [
+        0.921875,
+        0.5
+      ],
+      "visible_length": 32,
+      "reference_width": 107,
+      "sha256": "86225968d40b3ac6bc6699039120c5fd55657d3645767abf21b8bf33c8f89f86",
+      "asset_kind": "dedicated_world_sprite_not_inventory_icon",
+      "source_review": "Grip within lower-left olive handle. Muzzle is virtual firing axis between twin right prongs; intentionally transparent.",
+      "editable_source": "art_source/build_expansion_A/svg/tether_emitter_held.svg",
+      "editable_sha256": "1188f573c7a9c7c367f4961de9414184986bb553f87ea88ddcc2f5a70f54e148"
     }
   }
 }

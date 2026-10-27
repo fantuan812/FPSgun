@@ -13,6 +13,10 @@ func nodes(node:Node)->Array:
 func _initialize()->void:call_deferred("run")
 func run()->void:
 	var catalog:Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://data/catalog.json"))
+	# Exact historical data for the unchanged original case/count matrix.
+	var a_history:Dictionary=preload("res://tests/support/v39_catalog_projection.gd").project(catalog,FileAccess.get_file_as_string("res://data/catalog.json"))
+	if not a_history.pass:push_error(str(a_history.errors));quit(1);return
+	catalog=a_history.catalog
 	var balance:Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://data/balance.json"))
 	var original_catalog:String=JSON.stringify(catalog)
 	var expected:Array=[["rivet_gun",15.0,.4,500.0],["scrap_shotgun",9.0,.85,300.0],["rail_lance",30.0,1.15,650.0],["orbit_saw",20.0,.65,105.0],["return_disc",18.0,.9,330.0],["shock_mortar",36.0,1.5,500.0],["cryo_sprayer",9.0,.65,190.0],["bankshot_driver",18.0,.85,900.0]]

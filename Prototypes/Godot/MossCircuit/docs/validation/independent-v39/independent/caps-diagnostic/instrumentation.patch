@@ -1,0 +1,20 @@
+--- <WORKSPACE>/moss-v39-qa/checks/independent_new_weapon_caps.gd
++++ diagnostic.gd
+@@ -76,11 +76,15 @@
+  var held:Dictionary=f.world.seismic_waves[0]
+  ck(near(held.damage,35.2) and held.return_enabled and near(held.inward_damage_scale,.5),"pretarget tempered snapshot35.2 outward, half inward")
+  r.step(f,.6,2);ck(near(f.world.enemies[0].hp,64.8),"tempered outward primary once35.2")
+- r.step(f,.45,3);ck(near(f.world.enemies[0].hp,47.2) and f.world.seismic_waves.is_empty(),"tempered inward exactly17.6, not double temper")
++ var local_end:float=minf(held.outward_seconds+held.inward_seconds,held.age+.45)-held.age
++ observations.append({"before_inward":held.duplicate(true),"hp":f.world.enemies[0].hp,"events":f.procs.events.duplicate(true),"start_age":held.age,"end_age":minf(held.outward_seconds+held.inward_seconds,held.age+.45),"a":maxf(held.age,held.outward_seconds),"b":minf(held.outward_seconds+held.inward_seconds,held.age+.45),"local_end":local_end,"frame_dt":.45,"local_end_exceeds_dt":local_end>.45,"local_end_17":"%.17f" % local_end,"dt_17":"%.17f" % .45,"local_end_variant_bytes":var_to_bytes(local_end).hex_encode(),"dt_variant_bytes":var_to_bytes(.45).hex_encode()})
++ r.step(f,.45,3)
++ observations.append({"after_inward":held.duplicate(true),"hp":f.world.enemies[0].hp,"events":f.procs.events.duplicate(true)})
++ ck(near(f.world.enemies[0].hp,47.2) and f.world.seismic_waves.is_empty(),"tempered inward exactly17.6, not double temper")
+  ck(f.procs.events.size()==2 and near(f.procs.events[0].event.damage,35.2) and near(f.procs.events[1].event.damage,17.6),"actual resolved event damages")
+  f=frame("seismic_drum");r=runtime(f);f.world.weapon_clocks[0]=-10.0;r.step(f,4.0,1)
+  ck(f.world.seismic_waves.size()==1 and f.world.seismic_waves[0].age==0.0 and f.procs.events.is_empty(),"large dt at most one endpoint launch, no catchup damage")
+  f=frame("seismic_drum");r=runtime(f);f.world.enemies.clear();f.world.weapon_clocks[0]=0.0;r.step(f,.1,1)
+  ck(f.world.seismic_waves.is_empty() and near(f.world.weapon_clocks[0],1.4),"empty acquisition still consumes cadence")
+- print(JSON.stringify({"pass":failures.is_empty(),"checks":checks,"failures":failures,"scope":"Independent remaining pretarget cap/tempered/cadence cases through actual NewRuntime and primary defense; recorder emission only, no scene/native claim"}))
++ print(JSON.stringify({"pass":failures.is_empty(),"checks":checks,"failures":failures,"observations":observations,"scope":"Independent remaining pretarget cap/tempered/cadence cases through actual NewRuntime and primary defense; recorder emission only, no scene/native claim"}))
+  quit(0 if failures.is_empty() else 1)

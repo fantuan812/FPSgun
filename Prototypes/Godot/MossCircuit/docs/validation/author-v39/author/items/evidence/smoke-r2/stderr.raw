@@ -1,0 +1,22 @@
+SCRIPT ERROR: Trying to assign value of type 'Nil' to a variable of type 'String'.
+          at: process (res://scripts/effects.gd:85)
+          GDScript backtrace (most recent call first):
+              [0] process (res://scripts/effects.gd:85)
+              [1] send (res://tests/test_recoil_plate.gd:23)
+              [2] run (res://tests/test_recoil_plate.gd:56)
+SCRIPT ERROR: Invalid call. Nonexistent 'int' constructor.
+          at: process (res://scripts/effects.gd:83)
+          GDScript backtrace (most recent call first):
+              [0] process (res://scripts/effects.gd:83)
+              [1] send (res://tests/test_recoil_plate.gd:23)
+              [2] run (res://tests/test_recoil_plate.gd:56)
+SCRIPT ERROR: Invalid operands 'int' and 'bool' in operator '!='.
+          at: eligible (res://scripts/gameplay/recoil_plate.gd:17)
+          GDScript backtrace (most recent call first):
+              [0] eligible (res://scripts/gameplay/recoil_plate.gd:17)
+              [1] run (res://tests/test_recoil_plate.gd:67)
+SCRIPT ERROR: Invalid operands 'String' and 'bool' in operator '!='.
+          at: eligible (res://scripts/gameplay/recoil_plate.gd:17)
+          GDScript backtrace (most recent call first):
+              [0] eligible (res://scripts/gameplay/recoil_plate.gd:17)
+              [1] run (res://tests/test_recoil_plate.gd:67)

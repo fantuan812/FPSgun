@@ -1,0 +1,905 @@
+{
+  "status": "NEW_DOCUMENT_ONLY_PRIVACY_DERIVATION",
+  "files": [
+    {
+      "path": "docs/V16_PLAYABILITY.md",
+      "tested_sha256": "7e4761ef3a0741f6730cbf4610d562aa6b4bcb0171bc03957028abfa8b4677b4",
+      "historical_published_git_blob_sha": "c7d7d5a384d677e7d79e47e9068c73c001b7cdb0",
+      "public_sha256": "f94491d34db20a1aa9ffccc1ef1f625382fb8b430433c24cdb52c412d8416b09",
+      "raw_bytes": 5048,
+      "public_bytes": 5059,
+      "changes": [
+        {
+          "kind": "historical_path_prefix",
+          "count": 1,
+          "replacement": "historical-temp/"
+        }
+      ],
+      "field_or_line_differences": [
+        {
+          "line": 86,
+          "old_line_sha256": "a18fe2a82bf073d64ee8b649acf76473ffacb5e43a6d64d049ea9c049754949d",
+          "new_line": "python3 tests/run_regression.py --project . --output historical-temp/moss-v16-checks"
+        }
+      ],
+      "scope": "New minimal historical-document-only presentation derivation. Original prior publication retained; no tested source/PCK modification."
+    },
+    {
+      "path": "docs/art/actions/prompts.json",
+      "tested_sha256": "6bbd4dd0cf403db66405a1070e69b309fdf08f77e3b49d761958512e22d346b3",
+      "historical_published_git_blob_sha": "2b8ec3b0fcfbe9326e500811dd1c9dadfaa73785",
+      "public_sha256": "a380d885395bc3ffb5e9de17a8ddff4f8a7f96d7c575361632bacaa31542a6f8",
+      "raw_bytes": 18965,
+      "public_bytes": 19085,
+      "changes": [
+        {
+          "kind": "historical_path_prefix",
+          "count": 12,
+          "replacement": "historical-workspace/"
+        }
+      ],
+      "field_or_line_differences": [
+        {
+          "field": "$.hero_attack.final_source",
+          "old_string_sha256": "7b6384fdfb32f61452c44313c1c901ab163c5a8ad0c78eb97a10f43943c468d3",
+          "new_string": "Generated images are saved to historical-workspace/scratch/234c8048d85d/generated_images as historical-workspace/scratch/234c8048d85d/generated_images/exec-92e3e87e-02fa-4a4a-a0ec-8fb7af059408.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+        },
+        {
+          "field": "$.hero_death.final_source",
+          "old_string_sha256": "89e449d55babda219db9d3a2351d64672ca893faa515f9b3502b34377cf3a43f",
+          "new_string": "Generated images are saved to historical-workspace/scratch/234c8048d85d/generated_images as historical-workspace/scratch/234c8048d85d/generated_images/exec-b39cf362-0a72-447a-851e-085946867850.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+        },
+        {
+          "field": "$.boss_warden_attack.final_source",
+          "old_string_sha256": "0136547b2dbba12bdfc72ef89e4276224d93db32603f420a88215fe1d79147a1",
+          "new_string": "Generated images are saved to historical-workspace/scratch/234c8048d85d/generated_images as historical-workspace/scratch/234c8048d85d/generated_images/exec-e428b81c-57ae-42de-bb0f-7d2f97d392a9.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+        },
+        {
+          "field": "$.hero_hurt.final_source",
+          "old_string_sha256": "28d07319fd8f1c537842719ad41ccf908f8adad2933e9ac29a159c74fd46bdc6",
+          "new_string": "Generated images are saved to historical-workspace/scratch/234c8048d85d/generated_images as historical-workspace/scratch/234c8048d85d/generated_images/exec-6009d173-004f-4d50-b53b-fbdf21237835.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+        },
+        {
+          "field": "$.hero_dash.final_source",
+          "old_string_sha256": "e617bfdf59cdfc6d283e840f92bc551456f4fc7962568e1ef60b62621a09f363",
+          "new_string": "Generated images are saved to historical-workspace/scratch/234c8048d85d/generated_images as historical-workspace/scratch/234c8048d85d/generated_images/exec-2b40566b-e630-4d9a-8ee8-69b730ff1563.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+        },
+        {
+          "field": "$.boss_core_attack.final_source",
+          "old_string_sha256": "2d01f914145f3ee964f3ab8ea776734109b4556b2f40d56d3a5a38cf799292fa",
+          "new_string": "Generated images are saved to historical-workspace/scratch/234c8048d85d/generated_images as historical-workspace/scratch/234c8048d85d/generated_images/exec-9dc89a7f-6b31-4d44-aebe-d9cad4d975c9.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+        }
+      ],
+      "scope": "New minimal historical-document-only presentation derivation. Original prior publication retained; no tested source/PCK modification."
+    },
+    {
+      "path": "docs/art/brood_keeper/prompts.json",
+      "tested_sha256": "815e6d2ce4360b76043affd7a547241715cc4e07887dafd5b9c06ebfa9110049",
+      "historical_published_git_blob_sha": "69913d0715efcc4116fa46c0cdcf150eb296be23",
+      "public_sha256": "2d345f4a229cf6659d0a0a621187d56a06d44df5fe4c5b8c8095ed3ae8bb52d0",
+      "raw_bytes": 8850,
+      "public_bytes": 8890,
+      "changes": [
+        {
+          "kind": "historical_path_prefix",
+          "count": 4,
+          "replacement": "historical-workspace/"
+        }
+      ],
+      "field_or_line_differences": [
+        {
+          "field": "$.source_paths.brood_keeper_summon",
+          "old_string_sha256": "1fe870786a15a113f0e9cd218a4923b4f4b8250a63bd2a99e746ad3a93a7808a",
+          "new_string": "historical-workspace/scratch/234c8048d85d/generated_images/exec-358fce73-b3f1-40b6-875f-678bbdbb0f26.png"
+        },
+        {
+          "field": "$.source_paths.brood_keeper_death_initial",
+          "old_string_sha256": "2333eaf6152433edb5dd6404678e47a33203e71dfce976b0445fe6b9538302fe",
+          "new_string": "historical-workspace/scratch/234c8048d85d/generated_images/exec-73279be9-34dc-479d-8877-2fe64bbe7085.png"
+        },
+        {
+          "field": "$.source_paths.brood_keeper_death_final",
+          "old_string_sha256": "32ac980405b4294f132f73dc4f5f45ca1dd7370a9a5bdab605eb46173bf47dcb",
+          "new_string": "historical-workspace/scratch/234c8048d85d/generated_images/exec-470a9ccb-d8d4-4d9c-b9ea-8ba543870ba4.png"
+        },
+        {
+          "field": "$.source_paths.brood_keeper_hurt",
+          "old_string_sha256": "345bc6e0f2687c03f43eae17ce6e96ed3153778afb93301d2cfcb4ef843dcf95",
+          "new_string": "historical-workspace/scratch/234c8048d85d/generated_images/exec-2ef4aba6-0847-4306-a45b-f47edd363998.png"
+        }
+      ],
+      "scope": "New minimal historical-document-only presentation derivation. Original prior publication retained; no tested source/PCK modification."
+    },
+    {
+      "path": "docs/art/build_expansion_icons.md",
+      "tested_sha256": "855e70123d267fe5ee911e1f5da1b918542d3a2bd9a6fcb1a9adcf020c04cbbb",
+      "historical_published_git_blob_sha": "0985f9115a7152a5d40e9cb0603d702543c5260f",
+      "public_sha256": "f473459ef1b5df3debb9fef4c2f4b80efd05529ad3da6063caa74f2b36f41e29",
+      "raw_bytes": 2360,
+      "public_bytes": 2351,
+      "changes": [
+        {
+          "kind": "non_permission_reference_label",
+          "count": 1,
+          "replacement": "historical-library-reference-01"
+        }
+      ],
+      "field_or_line_differences": [
+        {
+          "line": 30,
+          "old_line_sha256": "a202c92ab428a30c5d7d1d4007be06c8ffc2038f8b99a3c4af820d6865181128",
+          "new_line": "\u5355 PNG \u7d20\u6750\u9884\u89c8\u5df2 Library \u4fdd\u5b58\u5e76\u56de\u8bfb\u786e\u8ba4\u5c3a\u5bf8 1774\u00d7887\u30011541039 \u5b57\u8282\uff0c\u65e0\u8bfb\u53d6\u8b66\u544a\uff1a`historical-library-reference-01`\u3002\u6b64\u4e3a\u7d20\u6750\u56fe\u96c6\uff0c\u4e0d\u662f\u6e38\u620f\u8fd0\u884c\u622a\u56fe\u3002"
+        }
+      ],
+      "scope": "New minimal historical-document-only presentation derivation. Original prior publication retained; no tested source/PCK modification."
+    },
+    {
+      "path": "docs/art/charger/prompts.json",
+      "tested_sha256": "5ca6e9fe18be4821ce1198594eba01e68fffb3fbf18fc19481a5128757d2a37f",
+      "historical_published_git_blob_sha": "c1f7583b28b32841d151d1e7d4bab2f9e7ed5bc0",
+      "public_sha256": "001162a0ff2793049f6ce2a2eeb4a74203993f2c91613d7a6589367b95755ede",
+      "raw_bytes": 5102,
+      "public_bytes": 5135,
+      "changes": [
+        {
+          "kind": "historical_path_prefix",
+          "count": 1,
+          "replacement": "historical-workspace/"
+        },
+        {
+          "kind": "historical_path_prefix",
+          "count": 3,
+          "replacement": "historical-workspace/"
+        }
+      ],
+      "field_or_line_differences": [
+        {
+          "field": "$.reference",
+          "old_string_sha256": "c75d7de938f9275beb62326963fa3239c522ced3d3d831913a4404fc09ea0fd9",
+          "new_string": "historical-workspace/godot-moss-circuit-v9/assets/enemies/charger.png"
+        },
+        {
+          "field": "$.actions.charger_charge.source",
+          "old_string_sha256": "70ba3758743d7cb8d75c013e7a59b67face7b6dcab6c33a98d2ead6e5cf0b93b",
+          "new_string": "historical-workspace/scratch/234c8048d85d/generated_images/exec-8d8798bd-99fc-4af9-862d-a536e9ddc2fe.png"
+        },
+        {
+          "field": "$.actions.charger_hurt.source",
+          "old_string_sha256": "777b59b07803f6f10a97dc3ec8993c86e832cf73ce0c1b68ba0dcecfc518005c",
+          "new_string": "historical-workspace/scratch/234c8048d85d/generated_images/exec-8019f082-6cbd-4cd2-9060-7f81445af4bb.png"
+        },
+        {
+          "field": "$.actions.charger_death.source",
+          "old_string_sha256": "f0817a82b01ef3acc0666133cd75bf0abe428b2e29d6dfa1425d20546b1694e1",
+          "new_string": "historical-workspace/scratch/234c8048d85d/generated_images/exec-3e2ab2ca-0df3-45dc-9250-e8232e6e0a35.png"
+        }
+      ],
+      "scope": "New minimal historical-document-only presentation derivation. Original prior publication retained; no tested source/PCK modification."
+    },
+    {
+      "path": "docs/art/contact_enemies/ART-RECOVERY-QA.md",
+      "tested_sha256": "889345b5377d938ab80c7f86e354627450fa37a4424a6c574bcff95adf4648f8",
+      "historical_published_git_blob_sha": "5beb773fa582c119a63cbaab2fd177f103e8dec0",
+      "public_sha256": "2638e357434ddff5c15ef93b425b475bcbfba348304b32d3035f075822de94a3",
+      "raw_bytes": 4834,
+      "public_bytes": 4856,
+      "changes": [
+        {
+          "kind": "historical_path_prefix",
+          "count": 2,
+          "replacement": "historical-temp/"
+        }
+      ],
+      "field_or_line_differences": [
+        {
+          "line": 26,
+          "old_line_sha256": "a761ffcbc42c8eac72a062a32e962809da029e87b663a380effa5418e8f428ed",
+          "new_line": "`build_metadata.py --output historical-temp/moss-art-qa` reproduces metadata next to the original source PNGs, or `python build_metadata.py --project /path/to/MossCircuit --output historical-temp/moss-art-qa` reads the installed PNGs and writes metadata outside that project. It never writes raster data or project assets. Source cell centers, row baselines and actual foot trajectories are recorded in `fresh-art-qa.json`. The initial draft used per-frame bbox centering/grounding; this was rejected during review and replaced before final delivery with fixed column/row registration. Full image preview and static checks are complete; Godot playback, state-machine timing, hit interruption, real-world scale transitions and reduced-flash runtime QA remain with the programming/review agents. The duration metadata is descriptive; ActorDirector's config must set the runtime durations."
+        }
+      ],
+      "scope": "New minimal historical-document-only presentation derivation. Original prior publication retained; no tested source/PCK modification."
+    },
+    {
+      "path": "docs/art/core/ART-QA.md",
+      "tested_sha256": "7a3cd35614b4d9c8c31eb8de4a64049a6dc54e8533ad4ffe30e44bb411389dcc",
+      "historical_published_git_blob_sha": "10f8d79c4a840c63e2d72d4f75a30e80f9c4d839",
+      "public_sha256": "4bd4dbc5ad432ba39992e42fbd726ad2b5b4492d8eba7953954af1081eb6d475",
+      "raw_bytes": 6535,
+      "public_bytes": 6546,
+      "changes": [
+        {
+          "kind": "historical_path_prefix",
+          "count": 1,
+          "replacement": "historical-temp/"
+        }
+      ],
+      "field_or_line_differences": [
+        {
+          "line": 32,
+          "old_line_sha256": "3610c8d3f66c2d51ea291b3d7f2324b4bd0215809bc4328f64c998e0959e9053",
+          "new_line": "- `python build_metadata.py --project /path/to/MossCircuit --output historical-temp/core-art-qa` reads installed PNGs and writes JSON only outside the project. Without `--project`, reads PNGs next to the script. It never writes PNGs or project assets."
+        }
+      ],
+      "scope": "New minimal historical-document-only presentation derivation. Original prior publication retained; no tested source/PCK modification."
+    },
+    {
+      "path": "docs/art/enemies/provenance.json",
+      "tested_sha256": "5645f683514711b02af370cccd8c021858302cc5b62ccde778ebcfc97ce4ec31",
+      "historical_published_git_blob_sha": "4a42a7543115fa035cef3d7c633a4f0ad03b5024",
+      "public_sha256": "bd90e1480fb6a124f6cb63f2b6cbaefc266cd8f75645cd7409b06d593cb650b6",
+      "raw_bytes": 10229,
+      "public_bytes": 10289,
+      "changes": [
+        {
+          "kind": "historical_path_prefix",
+          "count": 6,
+          "replacement": "historical-workspace/"
+        }
+      ],
+      "field_or_line_differences": [
+        {
+          "field": "$.charger.source",
+          "old_string_sha256": "07d6619fda81fe797b93c8a4b7719f68922e158fca94d1d29b2b26c738efd641",
+          "new_string": "historical-workspace/scratch/234c8048d85d/generated_images/exec-1b4eef79-5ba6-42df-86a9-6888463451f4.png"
+        },
+        {
+          "field": "$.spitter.source",
+          "old_string_sha256": "61089b60565be6376112f05347ee20bb5dec41b39ed4d761a3a3376c2a28972a",
+          "new_string": "historical-workspace/scratch/234c8048d85d/generated_images/exec-103e5877-bcad-41f8-aa50-61c9870cede6.png"
+        },
+        {
+          "field": "$.flanker.source",
+          "old_string_sha256": "1b1491071cb0139387f191743417096c75a8dd5f17b63f85cbce0d0743ac8390",
+          "new_string": "historical-workspace/scratch/234c8048d85d/generated_images/exec-bd37b25a-4169-433a-89b3-7d2483c90e40.png"
+        },
+        {
+          "field": "$.brood_keeper.source",
+          "old_string_sha256": "e401a31a5a68246789dc1653b88dfa1b2e223361023af65c0e39095716b4e3d2",
+          "new_string": "historical-workspace/scratch/234c8048d85d/generated_images/exec-d18fba80-61cd-4bba-b055-deecd9c8fa72.png"
+        },
+        {
+          "field": "$.boss_warden.source",
+          "old_string_sha256": "267c2aed44a38bf641cd4fce29890c54229ea1cd14e5a067940c973408f1ec26",
+          "new_string": "historical-workspace/scratch/234c8048d85d/generated_images/exec-b2688d58-3e12-454d-b91f-d14268095272.png"
+        },
+        {
+          "field": "$.boss_core.source",
+          "old_string_sha256": "a78246dc69ea63eca93db14a91c0478f1c1b61d666f8086a0ad988c566383de6",
+          "new_string": "historical-workspace/scratch/234c8048d85d/generated_images/exec-5b6bd542-13b0-4530-ab36-91bed715c637.png"
+        }
+      ],
+      "scope": "New minimal historical-document-only presentation derivation. Original prior publication retained; no tested source/PCK modification."
+    },
+    {
+      "path": "docs/art/mechanism_icons.md",
+      "tested_sha256": "2fb0ed4732e296ebcae70663878737c50c7e4a9d2f835528be46fb8872ae1337",
+      "historical_published_git_blob_sha": "05b062094dce655ea6caf8b2514f1e32f5809372",
+      "public_sha256": "bb6eaf38ec11d23f1067392e0ff09be9db774d9700987926d4c4635149ce4d3a",
+      "raw_bytes": 1926,
+      "public_bytes": 1917,
+      "changes": [
+        {
+          "kind": "non_permission_reference_label",
+          "count": 1,
+          "replacement": "historical-library-reference-02"
+        }
+      ],
+      "field_or_line_differences": [
+        {
+          "line": 21,
+          "old_line_sha256": "3da5dd4c41f710c8547808089fb780783e7869969c43a9177db2de52759227d7",
+          "new_line": "\u5355\u72ec PNG \u5df2\u4fdd\u5b58 Library \u4f5c\u4e3a\u7d20\u6750\u9884\u89c8\uff0c\u800c\u975e\u6e38\u620f\u8fd0\u884c\u622a\u56fe\uff1a`historical-library-reference-02`\u3002"
+        }
+      ],
+      "scope": "New minimal historical-document-only presentation derivation. Original prior publication retained; no tested source/PCK modification."
+    },
+    {
+      "path": "docs/art/spitter/README.md",
+      "tested_sha256": "d1397a4ae5f8c9ab7b3a6d298416fa0a49b6320fbb4fd0c4b2fd7ef74e6a68ac",
+      "historical_published_git_blob_sha": "f6e88d4f8300d8bb190225933e1852abbae43876",
+      "public_sha256": "634936c67a0d8e871a1cd1522571bc386fbe8fcbca476d0eeea2f8f7638a7fb2",
+      "raw_bytes": 2819,
+      "public_bytes": 2822,
+      "changes": [
+        {
+          "kind": "historical_path_prefix",
+          "count": 1,
+          "replacement": "historical-workspace/"
+        }
+      ],
+      "field_or_line_differences": [
+        {
+          "line": 23,
+          "old_line_sha256": "78c92b6fdabb6a6311a85d17cd37409c0071ab17e3f5eb214ab5c3ee71bc6d43",
+          "new_line": "v10\u51bb\u7ed3\u672a\u52a8\uff1b\u72ec\u7acb\u4ea4\u4ed8\u6839 `historical-workspace/moss-art-v11`\u3002\u539f\u521b\u884d\u751f\u65e2\u6709\u539f\u521b\u89d2\u8272\uff0c\u4e0d\u542b\u5916\u90e8\u53d7\u9650\u7d20\u6750\u3002"
+        }
+      ],
+      "scope": "New minimal historical-document-only presentation derivation. Original prior publication retained; no tested source/PCK modification."
+    },
+    {
+      "path": "docs/art/spitter/prompts.json",
+      "tested_sha256": "c6eb74af883bcab837fc7979effd1761f4f6f7230e92152d504797e6dbb51db0",
+      "historical_published_git_blob_sha": "22f7b6a3d21599d6c0cd9aed875c4d5f7b0f4a8e",
+      "public_sha256": "2a6219aae6b0a0806e5efbd9bc558397e904dd2ef3a4a4a20833da40a84329a3",
+      "raw_bytes": 6081,
+      "public_bytes": 6111,
+      "changes": [
+        {
+          "kind": "historical_path_prefix",
+          "count": 3,
+          "replacement": "historical-workspace/"
+        }
+      ],
+      "field_or_line_differences": [
+        {
+          "field": "$.source_paths.spitter_shoot",
+          "old_string_sha256": "7910716a71bc20049b5557d00432e6e8d5ec8058e66d1a36d0b87bdbd4208e77",
+          "new_string": "historical-workspace/scratch/234c8048d85d/generated_images/exec-3fec57f8-9771-4c7c-8f9a-bf5f6fd655dd.png"
+        },
+        {
+          "field": "$.source_paths.spitter_hurt",
+          "old_string_sha256": "cc188d25099336ecad4579a29af868bf19e27428dd2e58f73165bf93d7ab1810",
+          "new_string": "historical-workspace/scratch/234c8048d85d/generated_images/exec-e35a546a-8d0e-4b7d-bb8f-7132b0d44600.png"
+        },
+        {
+          "field": "$.source_paths.spitter_death",
+          "old_string_sha256": "665f3278bd4d6140c486d934e019116972e44bccadaae9a0133b74252df2c133",
+          "new_string": "historical-workspace/scratch/234c8048d85d/generated_images/exec-7db1cc30-bd74-4da2-ae39-75d6987af1c8.png"
+        }
+      ],
+      "scope": "New minimal historical-document-only presentation derivation. Original prior publication retained; no tested source/PCK modification."
+    },
+    {
+      "path": "docs/art/vfx/prompts.json",
+      "tested_sha256": "a685840c1fd852bd8d038404cdb58b5d0c2057908d4c2fbf28f8d413aade5e22",
+      "historical_published_git_blob_sha": "a7fd099957eac2de61c992d3da541a270d567d58",
+      "public_sha256": "b45f08ad76f86963080cc61fac3d0ba8376c0d3cf5bde6c2f8cf561949d63ef0",
+      "raw_bytes": 21205,
+      "public_bytes": 21445,
+      "changes": [
+        {
+          "kind": "historical_path_prefix",
+          "count": 24,
+          "replacement": "historical-workspace/"
+        }
+      ],
+      "field_or_line_differences": [
+        {
+          "field": "$.muzzle_flash.original_source",
+          "old_string_sha256": "e9f02ace07118873de3ce6da84e99488bb887701e13730878f8db553d0c53dfb",
+          "new_string": "Generated images are saved to historical-workspace/scratch/234c8048d85d/generated_images as historical-workspace/scratch/234c8048d85d/generated_images/exec-596ff698-defb-4b58-9371-b287ad20779a.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+        },
+        {
+          "field": "$.muzzle_flash.final_source",
+          "old_string_sha256": "e9f02ace07118873de3ce6da84e99488bb887701e13730878f8db553d0c53dfb",
+          "new_string": "Generated images are saved to historical-workspace/scratch/234c8048d85d/generated_images as historical-workspace/scratch/234c8048d85d/generated_images/exec-596ff698-defb-4b58-9371-b287ad20779a.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+        },
+        {
+          "field": "$.hit_spark.original_source",
+          "old_string_sha256": "0819d9f3ed8affe424721bbc4baf210f14407a193b7461d91cd6f5fb6989747f",
+          "new_string": "Generated images are saved to historical-workspace/scratch/234c8048d85d/generated_images as historical-workspace/scratch/234c8048d85d/generated_images/exec-3684d3a0-62b9-4aa5-b765-2075ff48f16e.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+        },
+        {
+          "field": "$.hit_spark.final_source",
+          "old_string_sha256": "0819d9f3ed8affe424721bbc4baf210f14407a193b7461d91cd6f5fb6989747f",
+          "new_string": "Generated images are saved to historical-workspace/scratch/234c8048d85d/generated_images as historical-workspace/scratch/234c8048d85d/generated_images/exec-3684d3a0-62b9-4aa5-b765-2075ff48f16e.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+        },
+        {
+          "field": "$.explosion.original_source",
+          "old_string_sha256": "2a1a91db4f3d864fedc7ca2ec23923dde2878061b63d50c5ac616ebb35d4ba70",
+          "new_string": "Generated images are saved to historical-workspace/scratch/234c8048d85d/generated_images as historical-workspace/scratch/234c8048d85d/generated_images/exec-9e1d99f1-b969-4288-aa02-6a8657c49efa.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+        },
+        {
+          "field": "$.explosion.final_source",
+          "old_string_sha256": "2d15c1962b2e08fe29dc4685277ea12b0702ee842525409b23db9075075fda55",
+          "new_string": "Generated images are saved to historical-workspace/scratch/234c8048d85d/generated_images as historical-workspace/scratch/234c8048d85d/generated_images/exec-aad75786-7c4d-47e0-96b0-a11377bfdbc9.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+        },
+        {
+          "field": "$.chain_arc.original_source",
+          "old_string_sha256": "4eb48115da8b224f60390f31f53e54e4146e53ea88da05721f63d0a34ab27687",
+          "new_string": "Generated images are saved to historical-workspace/scratch/234c8048d85d/generated_images as historical-workspace/scratch/234c8048d85d/generated_images/exec-7ff8888a-562d-48ea-a43c-6f276a8770e4.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+        },
+        {
+          "field": "$.chain_arc.final_source",
+          "old_string_sha256": "4eb48115da8b224f60390f31f53e54e4146e53ea88da05721f63d0a34ab27687",
+          "new_string": "Generated images are saved to historical-workspace/scratch/234c8048d85d/generated_images as historical-workspace/scratch/234c8048d85d/generated_images/exec-7ff8888a-562d-48ea-a43c-6f276a8770e4.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+        },
+        {
+          "field": "$.shield_impact.original_source",
+          "old_string_sha256": "880ce929b90f6a2a50e423e249d229def12c4eadf20d9a1d999b19f18460b01a",
+          "new_string": "Generated images are saved to historical-workspace/scratch/234c8048d85d/generated_images as historical-workspace/scratch/234c8048d85d/generated_images/exec-23ab12c3-5eb0-493f-9851-359ca93fc360.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+        },
+        {
+          "field": "$.shield_impact.final_source",
+          "old_string_sha256": "880ce929b90f6a2a50e423e249d229def12c4eadf20d9a1d999b19f18460b01a",
+          "new_string": "Generated images are saved to historical-workspace/scratch/234c8048d85d/generated_images as historical-workspace/scratch/234c8048d85d/generated_images/exec-23ab12c3-5eb0-493f-9851-359ca93fc360.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+        },
+        {
+          "field": "$.dash_trail.original_source",
+          "old_string_sha256": "f7a336cd455fe4f6c939dd813e23b1054ed5f4a1900b25ed69bbb8f4720dddd2",
+          "new_string": "Generated images are saved to historical-workspace/scratch/234c8048d85d/generated_images as historical-workspace/scratch/234c8048d85d/generated_images/exec-e5c03974-e1ba-456a-9a52-a6663fc4316c.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+        },
+        {
+          "field": "$.dash_trail.final_source",
+          "old_string_sha256": "4b0ddb713134fdc6353d7881b00a7264867f84fe1f1f67232305c8446d4149ed",
+          "new_string": "Generated images are saved to historical-workspace/scratch/234c8048d85d/generated_images as historical-workspace/scratch/234c8048d85d/generated_images/exec-85a4dbd4-84fc-4042-aa4e-eb3bc853997f.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+        }
+      ],
+      "scope": "New minimal historical-document-only presentation derivation. Original prior publication retained; no tested source/PCK modification."
+    },
+    {
+      "path": "docs/art/warden/ART-QA.md",
+      "tested_sha256": "d814e662da3f2c8c266ab66e196e025eb08d5e1c750e622e7b0c62c3916a1222",
+      "historical_published_git_blob_sha": "f8096a04970f3b1ea033e9facbc16c58e4033729",
+      "public_sha256": "9191348c6b8a6d08f709c6c4a9f25aa0dccc4e14d22bcdfcb9b44d179ac81659",
+      "raw_bytes": 4343,
+      "public_bytes": 4354,
+      "changes": [
+        {
+          "kind": "historical_path_prefix",
+          "count": 1,
+          "replacement": "historical-temp/"
+        }
+      ],
+      "field_or_line_differences": [
+        {
+          "line": 23,
+          "old_line_sha256": "1c32cd3e48d6f76fc2c90c1d1f88d51e3d7cfc158e651a6308a8dec274917e9a",
+          "new_line": "To reproduce metadata only: `python build_metadata.py --project /path/to/MossCircuit --output historical-temp/warden-art-qa`. Without `--project`, it reads PNGs beside the script. Output must be outside the supplied project. The script writes JSON only and never alters raster/project assets."
+        }
+      ],
+      "scope": "New minimal historical-document-only presentation derivation. Original prior publication retained; no tested source/PCK modification."
+    },
+    {
+      "path": "docs/art/weapon_mounts/cutout_review.json",
+      "tested_sha256": "326e39fceaf80127fbfc5afe134c55fa49355c1cdccc065f8014ae1b33ea861e",
+      "historical_published_git_blob_sha": "957800436999c5f8ea03cbf133a1d2fb04d1ad7f",
+      "public_sha256": "0d7418188c10200756d1ea11470a7ba11fdf69dda57a68de8db42b5ab8429abd",
+      "raw_bytes": 4054,
+      "public_bytes": 4114,
+      "changes": [
+        {
+          "kind": "historical_path_prefix",
+          "count": 6,
+          "replacement": "historical-workspace/"
+        }
+      ],
+      "field_or_line_differences": [
+        {
+          "field": "$.attempts[0].source",
+          "old_string_sha256": "5d732269317be966d695da2d7dd7f27223c55830ea1aec6616ee66e530c1d105",
+          "new_string": "Generated images are saved to historical-workspace/scratch/234c8048d85d/generated_images as historical-workspace/scratch/234c8048d85d/generated_images/exec-c7a03e4f-95ea-48cc-90be-292585dae314.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+        },
+        {
+          "field": "$.attempts[1].source",
+          "old_string_sha256": "47c2ef329d475208389d38dda0c2e8043722fc51bac38f1d1a1dd2b0ab0bb904",
+          "new_string": "Generated images are saved to historical-workspace/scratch/234c8048d85d/generated_images as historical-workspace/scratch/234c8048d85d/generated_images/exec-8608da8f-bb21-413b-b614-e6f3ccddb65c.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+        },
+        {
+          "field": "$.attempts[2].source",
+          "old_string_sha256": "97af8fb442c5a3fec092fabc6e25b59508a4d590e2bd20b3d8c0f6d45cc5b282",
+          "new_string": "Generated images are saved to historical-workspace/scratch/234c8048d85d/generated_images as historical-workspace/scratch/234c8048d85d/generated_images/exec-8bd29b6a-36c9-499f-9520-4a555baa09ca.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+        }
+      ],
+      "scope": "New minimal historical-document-only presentation derivation. Original prior publication retained; no tested source/PCK modification."
+    },
+    {
+      "path": "docs/art/weapon_mounts/individual_weapon_prompts.json",
+      "tested_sha256": "b777bf9e5ae11f93f3f4adc53c6902e9277d1e6ed11b09da912a8e4cc8e57c13",
+      "historical_published_git_blob_sha": "7f98d48ce991c917598a261ca058488776b0f0c4",
+      "public_sha256": "7a07839d7ce91109acc36a21e57bcca8de943112c17fb3dbb8b3334df978f45f",
+      "raw_bytes": 8152,
+      "public_bytes": 8272,
+      "changes": [
+        {
+          "kind": "historical_path_prefix",
+          "count": 12,
+          "replacement": "historical-workspace/"
+        }
+      ],
+      "field_or_line_differences": [
+        {
+          "field": "$.weapons.rivet_gun.source",
+          "old_string_sha256": "e36b7291d560545cb423f0ffeb0c900fcc65a085451147fb560f75ad2b9ba00f",
+          "new_string": "Generated images are saved to historical-workspace/scratch/234c8048d85d/generated_images as historical-workspace/scratch/234c8048d85d/generated_images/exec-ffd24867-a0d3-41d4-8040-e8bc9caeba45.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+        },
+        {
+          "field": "$.weapons.scrap_shotgun.source",
+          "old_string_sha256": "52c6c826772ef412ee0d93b558774a8247f41112290463e82a581642788ab020",
+          "new_string": "Generated images are saved to historical-workspace/scratch/234c8048d85d/generated_images as historical-workspace/scratch/234c8048d85d/generated_images/exec-e3d4b9f4-42cf-4111-b668-8aa074fd1c3b.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+        },
+        {
+          "field": "$.weapons.rail_lance.source",
+          "old_string_sha256": "e9eda0a081a9fbbb402f5d875ef8893a12341e9579fe5151abb4d293b132b279",
+          "new_string": "Generated images are saved to historical-workspace/scratch/234c8048d85d/generated_images as historical-workspace/scratch/234c8048d85d/generated_images/exec-12a27f4d-c7df-4c19-bc7f-f62e532b9a93.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+        },
+        {
+          "field": "$.weapons.return_disc.source",
+          "old_string_sha256": "2d14c4b8ee8dd79e16e44d177c0f88920371d62e08ccac08f18053c9380a2283",
+          "new_string": "Generated images are saved to historical-workspace/scratch/234c8048d85d/generated_images as historical-workspace/scratch/234c8048d85d/generated_images/exec-7eb00989-f31d-407c-9201-defe2aa710cf.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+        },
+        {
+          "field": "$.weapons.shock_mortar.source",
+          "old_string_sha256": "73271f601fd4623f004364e5c70c6140a81fde97363f206da567396f852312c9",
+          "new_string": "Generated images are saved to historical-workspace/scratch/234c8048d85d/generated_images as historical-workspace/scratch/234c8048d85d/generated_images/exec-4d1755fe-240b-4aa2-9bac-4c0ac034d076.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+        },
+        {
+          "field": "$.weapons.orbit_saw.source",
+          "old_string_sha256": "97af8fb442c5a3fec092fabc6e25b59508a4d590e2bd20b3d8c0f6d45cc5b282",
+          "new_string": "Generated images are saved to historical-workspace/scratch/234c8048d85d/generated_images as historical-workspace/scratch/234c8048d85d/generated_images/exec-8bd29b6a-36c9-499f-9520-4a555baa09ca.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+        }
+      ],
+      "scope": "New minimal historical-document-only presentation derivation. Original prior publication retained; no tested source/PCK modification."
+    },
+    {
+      "path": "docs/art/weapon_mounts/prompts.json",
+      "tested_sha256": "b2ec36697d9dde726681a830ece9d3cb85783ba0b59e3ee1510d714ce7507544",
+      "historical_published_git_blob_sha": "5e50f5ef899ebfdca228b925facecb2ac6f2531f",
+      "public_sha256": "8c799d8bbfdb149b28e581e296d270518aaef4510173732c47a63e8cc67a6a86",
+      "raw_bytes": 4119,
+      "public_bytes": 4159,
+      "changes": [
+        {
+          "kind": "historical_path_prefix",
+          "count": 4,
+          "replacement": "historical-workspace/"
+        }
+      ],
+      "field_or_line_differences": [
+        {
+          "field": "$.clean_hero_attack.source",
+          "old_string_sha256": "ff5e152f13bf79a2c1ffcf9abb6be069d7b1a385062b3b348008dc19a8bf4a72",
+          "new_string": "Generated images are saved to historical-workspace/scratch/234c8048d85d/generated_images as historical-workspace/scratch/234c8048d85d/generated_images/exec-66854dfa-2893-4be7-a184-d8de3020d35d.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+        },
+        {
+          "field": "$.world_weapons_atlas.source",
+          "old_string_sha256": "ea533068db659bc61377b9b7be26b1da01277a4f8ecc88137cfd5ba9b564ad61",
+          "new_string": "Generated images are saved to historical-workspace/scratch/234c8048d85d/generated_images as historical-workspace/scratch/234c8048d85d/generated_images/exec-57ee5ecc-1fd0-4dfe-b28a-9d750b88a2b8.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+        }
+      ],
+      "scope": "New minimal historical-document-only presentation derivation. Original prior publication retained; no tested source/PCK modification."
+    },
+    {
+      "path": "docs/design/INTEGRATION.md",
+      "tested_sha256": "6ae04423ea6620b06f5826aae6bc0bde2fa844ca4eddf76103ee1ea3b6ac0c4a",
+      "historical_published_git_blob_sha": "6d8e2979a25d994efc01b808cdb5741b9ba32fd9",
+      "public_sha256": "acae60e50278b817be94df7a7ba41a43965edb306297125410950d499d614ed5",
+      "raw_bytes": 480,
+      "public_bytes": 490,
+      "changes": [
+        {
+          "kind": "historical_path_prefix",
+          "count": 1,
+          "replacement": "historical-workspace/"
+        }
+      ],
+      "field_or_line_differences": [
+        {
+          "line": 3,
+          "old_line_sha256": "86b25483f19a08e2eb3fd5cc029225c1e4f8310c7bfe53fd33eb248d0e824957",
+          "new_line": "\u672c\u76ee\u5f55\u4e24\u4efd\u5408\u540c/\u8ba1\u5212\u6309\u751f\u4ea7\u8005\u539f\u5b57\u8282\u4fdd\u7559\uff1b\u6700\u7ec8\u72ec\u7acb\u62a5\u544a\u5728 [QA_REPORT](../validation/independent-v9/QA_REPORT.md)\uff0c\u5176 `logs/` \u76f8\u5bf9\u8def\u5f84\u53ef\u76f4\u63a5\u627e\u5230\u4ea4\u4ed8\u65e5\u5fd7\u3002`producer-hashes.json` \u8bb0\u5f55\u4e09\u6587\u6863 SHA\u3002\u62a5\u544a\u4e2d\u7684\u7edd\u5bf9 `historical-workspace/...` \u662f\u9a8c\u6536\u73af\u5883\u4f4d\u7f6e\uff0c\u4e0d\u8981\u6c42\u7528\u6237\u7535\u8111\u5b58\u5728\u8be5\u8def\u5f84\u3002\u56db\u4e2a\u72ec\u7acb\u5165\u53e3\u53ca\u4e24\u4e2a fixture \u539f\u5b57\u8282\u590d\u5236\u5230 `tests/`\uff1b\u4ee5\u811a\u672c\u76f8\u5bf9\u76ee\u5f55\u52a0\u8f7d fixture\uff0c\u7528\u6237\u53ef\u76f4\u63a5\u590d\u8dd1\u3002"
+        }
+      ],
+      "scope": "New minimal historical-document-only presentation derivation. Original prior publication retained; no tested source/PCK modification."
+    },
+    {
+      "path": "docs/design/producer-v12-hashes.json",
+      "tested_sha256": "cd640111321d91bcebb0c408327d140ad5fc607f1cb0ce25a9087b21cbc9ff1f",
+      "historical_published_git_blob_sha": "5a6ccc215821cd44588207fff6feecdd362caa8d",
+      "public_sha256": "678d62b3a623b96d97de22bf93dcd9ac835184faf06971e1905ae923f865711d",
+      "raw_bytes": 13625,
+      "public_bytes": 13787,
+      "changes": [
+        {
+          "kind": "historical_path_prefix",
+          "count": 54,
+          "replacement": "historical-workspace/"
+        }
+      ],
+      "field_or_line_differences": [
+        {
+          "field": "$.tests/independent_brood_events.gd.source",
+          "old_string_sha256": "8b70d7511bed5c42e86c86ce5832b39375983259ade9ad3dd13e9f0e11d6a570",
+          "new_string": "historical-workspace/moss-game-design-v12/independent_brood_events.gd"
+        },
+        {
+          "field": "$.tests/independent_brood_parity.gd.source",
+          "old_string_sha256": "b7c5e32bbf129cdd4ecedd695bc9b0f1bfa31e1b3925be47bdd6cf384f130d13",
+          "new_string": "historical-workspace/moss-game-design-v12/independent_brood_parity.gd"
+        },
+        {
+          "field": "$.tests/independent_brood_assets.gd.source",
+          "old_string_sha256": "c98f0a9265c786765a051eca403c968b80ddd5d57987e4cdfbfbef840352eba2",
+          "new_string": "historical-workspace/moss-game-design-v12/independent_brood_assets.gd"
+        },
+        {
+          "field": "$.docs/design/BROOD_ACTION_CONTRACT.md.source",
+          "old_string_sha256": "73e0b1ed429d4d4051da3cd48d872d85898cf6c3de33e6020d14470d830499d0",
+          "new_string": "historical-workspace/moss-game-design-v12/BROOD_ACTION_CONTRACT.md"
+        },
+        {
+          "field": "$.docs/validation/independent-v12/QA_REPORT.md.source",
+          "old_string_sha256": "b632658c2181ceb8c03b5f39fd23db838aec304a8191a40eff087d1dcc6e6466",
+          "new_string": "historical-workspace/moss-game-design-v12/QA_REPORT.md"
+        },
+        {
+          "field": "$.docs/validation/independent-v12/logs/final_test_expansion.gd.log.source",
+          "old_string_sha256": "9bbccab82f1ab0accebab5668e2b53a5e3d2e5bba057ea80ef702fb08ce11f84",
+          "new_string": "historical-workspace/moss-game-design-v12/logs/final_test_expansion.gd.log"
+        },
+        {
+          "field": "$.docs/validation/independent-v12/logs/final_independent_qa.gd.log.source",
+          "old_string_sha256": "4e77762a82dfee1a02d20426f425db4bcf9839a65f381e3466773e0d291a55bb",
+          "new_string": "historical-workspace/moss-game-design-v12/logs/final_independent_qa.gd.log"
+        },
+        {
+          "field": "$.docs/validation/independent-v12/logs/final_independent_v5.gd.log.source",
+          "old_string_sha256": "be41a05aafed654fc7922dac26d314e553663e451b727ecb6d4fe2fa9b286351",
+          "new_string": "historical-workspace/moss-game-design-v12/logs/final_independent_v5.gd.log"
+        },
+        {
+          "field": "$.docs/validation/independent-v12/logs/final_independent_script_hashes.json.source",
+          "old_string_sha256": "8d575cf56740068b7c5c2f75ccd920c6a2b6376ec9546d710c98a6008e258d5c",
+          "new_string": "historical-workspace/moss-game-design-v12/logs/final_independent_script_hashes.json"
+        },
+        {
+          "field": "$.docs/validation/independent-v12/logs/final_independent_charger_lifecycle.gd.log.source",
+          "old_string_sha256": "1b786ced6d5e5c0fbd14aaa2235c5ebad461789b232dfcc75afe59b41044e3d5",
+          "new_string": "historical-workspace/moss-game-design-v12/logs/final_independent_charger_lifecycle.gd.log"
+        },
+        {
+          "field": "$.docs/validation/independent-v12/logs/final_independent_shop.gd.log.source",
+          "old_string_sha256": "8f32e59f8b3c1ffb446afc1dee47d4e85fb8f6c10f31499903dadb4e570aca74",
+          "new_string": "historical-workspace/moss-game-design-v12/logs/final_independent_shop.gd.log"
+        },
+        {
+          "field": "$.docs/validation/independent-v12/logs/final_independent_enemy_ui.gd.log.source",
+          "old_string_sha256": "98b6217c63b9e9d31c1f11daf68dfdfca75cf1f93c77ae46095e2d7ac5a8630e",
+          "new_string": "historical-workspace/moss-game-design-v12/logs/final_independent_enemy_ui.gd.log"
+        },
+        {
+          "field": "$.docs/validation/independent-v12/logs/final_independent_v2.gd.log.source",
+          "old_string_sha256": "e9d0077dcfb2c6c574b3a3e64abbfa26ff81a08d5b7404b782f7e95c9b7fffc3",
+          "new_string": "historical-workspace/moss-game-design-v12/logs/final_independent_v2.gd.log"
+        },
+        {
+          "field": "$.docs/validation/independent-v12/logs/final_test_game.gd.log.source",
+          "old_string_sha256": "9a7a07aaa592a1428061a4e90d511bd3de84c39ca5721dbb30ebe50dbb271b0d",
+          "new_string": "historical-workspace/moss-game-design-v12/logs/final_test_game.gd.log"
+        },
+        {
+          "field": "$.docs/validation/independent-v12/logs/final_independent_resolution.gd.log.source",
+          "old_string_sha256": "dc33eb8205bf4394bc56fa6444441bec3756be9da0c3b7ae3b777bcfb3d82b9e",
+          "new_string": "historical-workspace/moss-game-design-v12/logs/final_independent_resolution.gd.log"
+        },
+        {
+          "field": "$.docs/validation/independent-v12/logs/final_test_vfx.gd.log.source",
+          "old_string_sha256": "9f4898ae5fd8438b77c3293874f249975a7a690df15f6dad3a9eafe84b20600d",
+          "new_string": "historical-workspace/moss-game-design-v12/logs/final_test_vfx.gd.log"
+        },
+        {
+          "field": "$.docs/validation/independent-v12/logs/final_driver.log.source",
+          "old_string_sha256": "18d4acecc967e0980a10e6ec4c3a246c6bbcd085c37e4e38dc25c4e40a538944",
+          "new_string": "historical-workspace/moss-game-design-v12/logs/final_driver.log"
+        },
+        {
+          "field": "$.docs/validation/independent-v12/logs/final_independent_brood_parity.gd.log.source",
+          "old_string_sha256": "b3d3883d9757a880d052b42196474460c6802766b5e6ecc2e03ed16281c7e0d1",
+          "new_string": "historical-workspace/moss-game-design-v12/logs/final_independent_brood_parity.gd.log"
+        },
+        {
+          "field": "$.docs/validation/independent-v12/logs/final_independent_ui.gd.log.source",
+          "old_string_sha256": "124a1eead02c16ba800280e96f1b58342b5cf1adb958e738ed74ea46621ab3ae",
+          "new_string": "historical-workspace/moss-game-design-v12/logs/final_independent_ui.gd.log"
+        },
+        {
+          "field": "$.docs/validation/independent-v12/logs/final_independent_vfx.gd.log.source",
+          "old_string_sha256": "2ccb4d6541c61263d21f3c8f574cbf50c33faf65845a434bbf6cca35c302df31",
+          "new_string": "historical-workspace/moss-game-design-v12/logs/final_independent_vfx.gd.log"
+        },
+        {
+          "field": "$.docs/validation/independent-v12/logs/final_independent_brood_assets.gd.log.source",
+          "old_string_sha256": "7b8c6b4bba4842c3b3e7c40954a2d5d1137ebf2825b0a352f664d052e0cf0874",
+          "new_string": "historical-workspace/moss-game-design-v12/logs/final_independent_brood_assets.gd.log"
+        },
+        {
+          "field": "$.docs/validation/independent-v12/logs/final_test_charger_actions.gd.log.source",
+          "old_string_sha256": "33a1d1b67838a6512f339b6b88d228ca17ac15e5f9232ac95c1c8ffa10059106",
+          "new_string": "historical-workspace/moss-game-design-v12/logs/final_test_charger_actions.gd.log"
+        },
+        {
+          "field": "$.docs/validation/independent-v12/logs/final_independent_spitter_assets.gd.log.source",
+          "old_string_sha256": "79b81dec6bf8b8413dc3cda52fa6205d5898971105803dfb2ba10975994ef487",
+          "new_string": "historical-workspace/moss-game-design-v12/logs/final_independent_spitter_assets.gd.log"
+        },
+        {
+          "field": "$.docs/validation/independent-v12/logs/final_independent_v3.gd.log.source",
+          "old_string_sha256": "fbfcca9685d533e6880416381ff565e4cf9df29d8295e4e7c515f793d9a79662",
+          "new_string": "historical-workspace/moss-game-design-v12/logs/final_independent_v3.gd.log"
+        },
+        {
+          "field": "$.docs/validation/independent-v12/logs/final_independent_policy_validation.gd.log.source",
+          "old_string_sha256": "6aafd69321de2ecc6b58a572a3078d1376415812f0b1e7feb60e1b96eecb2450",
+          "new_string": "historical-workspace/moss-game-design-v12/logs/final_independent_policy_validation.gd.log"
+        },
+        {
+          "field": "$.docs/validation/independent-v12/logs/final_test_weapon_mounts.gd.log.source",
+          "old_string_sha256": "00243e992c8bcd95d9e6ad16da6b41372c6c318d944ca722a43ca82a39203b95",
+          "new_string": "historical-workspace/moss-game-design-v12/logs/final_test_weapon_mounts.gd.log"
+        },
+        {
+          "field": "$.docs/validation/independent-v12/logs/final_hash_verification.json.source",
+          "old_string_sha256": "323bfc11625706619fe2e906d82112fd912032857de7756992bc6ae2e91406ae",
+          "new_string": "historical-workspace/moss-game-design-v12/logs/final_hash_verification.json"
+        },
+        {
+          "field": "$.docs/validation/independent-v12/logs/final_independent_actions.gd.log.source",
+          "old_string_sha256": "5a8635042488a093e6a8a012c64298179559c76c7f31fc5ad382bb5fc7f0243f",
+          "new_string": "historical-workspace/moss-game-design-v12/logs/final_independent_actions.gd.log"
+        },
+        {
+          "field": "$.docs/validation/independent-v12/logs/final_independent_charger_assets.gd.log.source",
+          "old_string_sha256": "6af0a153d1d1b6ea4c8c4038d28d1281263a60bd0bd3503de7ddcb95905defdd",
+          "new_string": "historical-workspace/moss-game-design-v12/logs/final_independent_charger_assets.gd.log"
+        },
+        {
+          "field": "$.docs/validation/independent-v12/logs/final_independent_v4.gd.log.source",
+          "old_string_sha256": "124d1cd77e3e120022cada09695acef639046ac17c15b4024f950997148cff67",
+          "new_string": "historical-workspace/moss-game-design-v12/logs/final_independent_v4.gd.log"
+        },
+        {
+          "field": "$.docs/validation/independent-v12/logs/final_test_effects.gd.log.source",
+          "old_string_sha256": "a11b4a9657ccb72d803037793782b96cbce2af2818069bd436b5023aff8217ed",
+          "new_string": "historical-workspace/moss-game-design-v12/logs/final_test_effects.gd.log"
+        },
+        {
+          "field": "$.docs/validation/independent-v12/logs/final_test_actor_actions.gd.log.source",
+          "old_string_sha256": "61c86f22ae55c55644cc68ec25925b93adb87ac274fe486f66e26ee04da50ab2",
+          "new_string": "historical-workspace/moss-game-design-v12/logs/final_test_actor_actions.gd.log"
+        },
+        {
+          "field": "$.docs/validation/independent-v12/logs/independent_source_alpha.json.source",
+          "old_string_sha256": "473ae559f5ae9ddbe71892c26e8dc69cae65db811c871c2009e166cd4da87a24",
+          "new_string": "historical-workspace/moss-game-design-v12/logs/independent_source_alpha.json"
+        },
+        {
+          "field": "$.docs/validation/independent-v12/logs/final_runtime_hashes_before.json.source",
+          "old_string_sha256": "c368b5b9e62385c7600bb8daa0c9d826116ad253e6ce090f461dd28730f6f246",
+          "new_string": "historical-workspace/moss-game-design-v12/logs/final_runtime_hashes_before.json"
+        },
+        {
+          "field": "$.docs/validation/independent-v12/logs/final_independent_weapon_rig.gd.log.source",
+          "old_string_sha256": "e91256d9263ea9e41cc4bba11d05858ad9e1bd6b20f5b6a326420f3f5c4c5710",
+          "new_string": "historical-workspace/moss-game-design-v12/logs/final_independent_weapon_rig.gd.log"
+        },
+        {
+          "field": "$.docs/validation/independent-v12/logs/final_test_builds.gd.log.source",
+          "old_string_sha256": "db273296518b5568de8d9fd978a6b4d5cc4175f7adb3bd20cf379b609891a3bc",
+          "new_string": "historical-workspace/moss-game-design-v12/logs/final_test_builds.gd.log"
+        },
+        {
+          "field": "$.docs/validation/independent-v12/logs/final_test_modes.gd.log.source",
+          "old_string_sha256": "c58f00d6a655f39a41d6a4f0dc2e31ab0f605941b7944d4e6cecac8d5e546e13",
+          "new_string": "historical-workspace/moss-game-design-v12/logs/final_test_modes.gd.log"
+        },
+        {
+          "field": "$.docs/validation/independent-v12/logs/final_independent_brood_events.gd.log.source",
+          "old_string_sha256": "9b0055bbab4c515bacbada15cfd7db9ff4dd683a22d42898f99a76c1e71d4c85",
+          "new_string": "historical-workspace/moss-game-design-v12/logs/final_independent_brood_events.gd.log"
+        },
+        {
+          "field": "$.docs/validation/independent-v12/logs/final_clean_import.log.source",
+          "old_string_sha256": "bf8da8d2ffd98fee41344d1a2ec182d7554be5fd05b5eca9787f6f3bb6fef106",
+          "new_string": "historical-workspace/moss-game-design-v12/logs/final_clean_import.log"
+        },
+        {
+          "field": "$.docs/validation/independent-v12/logs/final_independent_room_boundaries.gd.log.source",
+          "old_string_sha256": "ca7b5c87a2a4cbbf0c725237a95a9d694cd4191e081957cf6d494ff667aa588a",
+          "new_string": "historical-workspace/moss-game-design-v12/logs/final_independent_room_boundaries.gd.log"
+        },
+        {
+          "field": "$.docs/validation/independent-v12/logs/final_runtime_set_verification.json.source",
+          "old_string_sha256": "5a42d352f9e131e4f711338afcf987df5b8910d755d241fa3d49ebb29d169b69",
+          "new_string": "historical-workspace/moss-game-design-v12/logs/final_runtime_set_verification.json"
+        },
+        {
+          "field": "$.docs/validation/independent-v12/logs/final_test_spitter_actions.gd.log.source",
+          "old_string_sha256": "e6d4bc9a92b38e407cc16461bd68fd301b98e2bc97b9e37c9c229603b9b34208",
+          "new_string": "historical-workspace/moss-game-design-v12/logs/final_test_spitter_actions.gd.log"
+        },
+        {
+          "field": "$.docs/validation/independent-v12/logs/final_independent_charger_gameplay_parity.gd.log.source",
+          "old_string_sha256": "a518162a33876cdd2fa529f75498cf4bc84fa90c5b6feba88aa5a62ecfd37b67",
+          "new_string": "historical-workspace/moss-game-design-v12/logs/final_independent_charger_gameplay_parity.gd.log"
+        },
+        {
+          "field": "$.docs/validation/independent-v12/logs/unchanged_authority_assets.json.source",
+          "old_string_sha256": "d37fb12c980060ebba12f2ff805ac352009494e38a18cefc482e4e0bd12a9e02",
+          "new_string": "historical-workspace/moss-game-design-v12/logs/unchanged_authority_assets.json"
+        },
+        {
+          "field": "$.docs/validation/independent-v12/logs/final_independent_modes.gd.log.source",
+          "old_string_sha256": "7cb7d5e78fe0631016f1b5c6ec717997bdacd3693a9268145737ef335558cdf6",
+          "new_string": "historical-workspace/moss-game-design-v12/logs/final_independent_modes.gd.log"
+        },
+        {
+          "field": "$.docs/validation/independent-v12/logs/final_test_encounters.gd.log.source",
+          "old_string_sha256": "61d3c54f906cfd5570377c5301726b295acaab76d289a722c46c15cbd4aae423",
+          "new_string": "historical-workspace/moss-game-design-v12/logs/final_test_encounters.gd.log"
+        },
+        {
+          "field": "$.docs/validation/independent-v12/logs/final_regression_summary.json.source",
+          "old_string_sha256": "da24c90e54f628b1ba1ae9d003519c71ebd362dbc6b3c6ce31006a49837ec8b3",
+          "new_string": "historical-workspace/moss-game-design-v12/logs/final_regression_summary.json"
+        },
+        {
+          "field": "$.docs/validation/independent-v12/logs/final_test_ui.gd.log.source",
+          "old_string_sha256": "58b6f63b16650b48ff8da79edda3f21cb18429b6e5e1ff8470954b9b7863c4d7",
+          "new_string": "historical-workspace/moss-game-design-v12/logs/final_test_ui.gd.log"
+        },
+        {
+          "field": "$.docs/validation/independent-v12/logs/final_independent_spitter_parity.gd.log.source",
+          "old_string_sha256": "716157e87e9de1b98aabadae4144f2fcc414194469f0cae4c045aac1a1ea4538",
+          "new_string": "historical-workspace/moss-game-design-v12/logs/final_independent_spitter_parity.gd.log"
+        },
+        {
+          "field": "$.docs/validation/independent-v12/logs/final_test_brood_actions.gd.log.source",
+          "old_string_sha256": "5ddb07b8b74578da7c005eaf44ba37e396940ec0533553e6040a37944102f4a2",
+          "new_string": "historical-workspace/moss-game-design-v12/logs/final_test_brood_actions.gd.log"
+        },
+        {
+          "field": "$.docs/validation/independent-v12/logs/final_independent_spitter_events.gd.log.source",
+          "old_string_sha256": "84301de41874272351c2d23ec5ff08547200bd72e0abff045123a9741c365545",
+          "new_string": "historical-workspace/moss-game-design-v12/logs/final_independent_spitter_events.gd.log"
+        },
+        {
+          "field": "$.docs/validation/independent-v12/history-pre-death-reorder/png_hashes.json.source",
+          "old_string_sha256": "b7cb09858f2efcf9273ed897d3b21adabc7435ccac9260b07a4d7cf63d3f77b4",
+          "new_string": "historical-workspace/moss-game-design-v12/history-pre-death-reorder/png_hashes.json"
+        },
+        {
+          "field": "$.docs/validation/independent-v12/history-pre-death-reorder/independent_source_alpha.json.source",
+          "old_string_sha256": "e548c612ce607d2487cf9fedcf26394bfca00dc35cb1c57e1905688284913d78",
+          "new_string": "historical-workspace/moss-game-design-v12/history-pre-death-reorder/independent_source_alpha.json"
+        },
+        {
+          "field": "$.docs/validation/independent-v12/history-pre-death-reorder/action_manifest.json.source",
+          "old_string_sha256": "e3cf5bcba13ce2019e4bc2d3b091e1769396cec62a3e6a8d34f4ee35bb14097b",
+          "new_string": "historical-workspace/moss-game-design-v12/history-pre-death-reorder/action_manifest.json"
+        }
+      ],
+      "scope": "New minimal historical-document-only presentation derivation. Original prior publication retained; no tested source/PCK modification."
+    },
+    {
+      "path": "ui/README.md",
+      "tested_sha256": "f420bf7df7bfeb8a96608634d6dc45fd3257205ec9d395cc464563a22df9485a",
+      "historical_published_git_blob_sha": "ffe77c832d3a958e7cd39b45ef38cebe9ca8c5dd",
+      "public_sha256": "38840b8b8c957e4561cf60c8bc1db1c0668fa219e98c2d79d6b8a43e9a12e13f",
+      "raw_bytes": 12676,
+      "public_bytes": 12720,
+      "changes": [
+        {
+          "kind": "historical_path_prefix",
+          "count": 4,
+          "replacement": "historical-temp/"
+        }
+      ],
+      "field_or_line_differences": [
+        {
+          "line": 41,
+          "old_line_sha256": "2ed442795e7aa67d28bf91d3576f91ea4da22045d1e7357d51d41a45ec9434b8",
+          "new_line": "HOME=historical-temp/moss-ui-home XDG_CONFIG_HOME=historical-temp/moss-ui-config \\"
+        },
+        {
+          "line": 42,
+          "old_line_sha256": "62c739f48b2b5ddd52c0670b71397cf93713859aacf373658c2662368af3a0ef",
+          "new_line": "XDG_DATA_HOME=historical-temp/moss-ui-data XDG_CACHE_HOME=historical-temp/moss-ui-cache \\"
+        }
+      ],
+      "scope": "New minimal historical-document-only presentation derivation. Original prior publication retained; no tested source/PCK modification."
+    }
+  ],
+  "original_historical_publication_not_rewritten": true,
+  "tested869_and_runtime_pack_unchanged": true,
+  "correction": "Previous privacy scans certified changed overlays and actual PCK bytes, not every unchanged inherited historical document. These19 already-published historical documents retained local paths/private-library reference labels. This explicit presentation update addresses them without claiming prior whole-tree privacy certification."
+}

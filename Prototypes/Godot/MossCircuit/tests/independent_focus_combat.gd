@@ -96,6 +96,9 @@ func guide_trace(mode:String,marked_far:bool)->Dictionary:
 func _initialize()->void:call_deferred("run")
 func run()->void:
  g=load("res://scenes/main.tscn").instantiate();root.add_child(g);g.set_process(false)
+ # Explicit original8/30/3 fixture; actual A catalog is separately validated.
+ var legacy_input:Dictionary=preload("res://tests/support/v39_legacy_inputs.gd").install(g)
+ if not legacy_input.pass:push_error(str(legacy_input.errors));quit(1);return
  ck(g.catalog.weapons.map(func(w):return w.id)==IDS,"exact eight weapons retained in catalog order")
  for mode in ["arena","rooms"]:
   for id in IDS:

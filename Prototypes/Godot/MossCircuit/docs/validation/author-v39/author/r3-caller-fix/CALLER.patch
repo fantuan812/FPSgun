@@ -1,0 +1,15 @@
+--- scripts/gameplay/new_weapon_runtime.gd
++++ scripts/gameplay/new_weapon_runtime.gd
+@@ -142,7 +142,11 @@
+ 			var motion:Dictionary=frame.world.new_weapon_motion.get(enemy.id,{"p0":enemy.pos,"p1":enemy.pos,"final_pos":enemy.pos,"has_segment":false})
+ 			var contact:Dictionary={"hit":false,"time":0.0}
+ 			if motion.has_segment:
+-				contact=Geometry.first_contact(wave.center,motion.p0,motion.p1,dt,a-start_age,b-start_age,radius_at(wave,a,leg),radius_at(wave,b,leg),wave.half_width,16.0*scale_value)
++				# Subtracting absolute ages can round a legal clipped end slightly above dt.
++				# Keep the pure geometry domain strict; normalize only this derived frame interval.
++				var query_start:float=clampf(a-start_age,0.0,dt)
++				var query_end:float=clampf(b-start_age,0.0,dt)
++				contact=Geometry.first_contact(wave.center,motion.p0,motion.p1,dt,query_start,query_end,radius_at(wave,a,leg),radius_at(wave,b,leg),wave.half_width,16.0*scale_value)
+ 			# Control displacement and newborns are endpoint-only, never a fictional chord.
+ 			var actual_end:float=start_age+dt
+ 			if not contact.hit and actual_end>=leg_start and actual_end<=leg_end:

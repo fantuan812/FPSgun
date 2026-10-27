@@ -1,0 +1,469 @@
+--- a/art_source/build_expansion_A/README.md
++++ b/art_source/build_expansion_A/README.md
+@@ -1,31 +1,20 @@
+-# MossCircuit A editable art staging
++# A weapons/modules — editable formal artwork
+ 
+-Seven original layered pixel-art SVG sources, authored as geometry after the user's explicit HTML/CSS/SVG redraw requirement. **SVG is the editable source of truth; AI images are reference only.** This directory is staging, not a published release or runtime acceptance.
++The seven `svg/*.svg` files are the formal, editable sources: two separate 128×64 held weapons and five 64×64 inventory/module icons. Named groups and `data-palette` attributes expose their geometry and colors; no raster image is embedded. Runtime PNGs are deterministic exports, not generated-image reference files.
+ 
+-## Files and editing
+-- `svg/*.svg`: seven independent sources with semantic `g id` layers and `data-palette` tags. No embedded raster, external fonts, external resources, scripts, or traced image data.
+-- `preview.html`: offline HTML/CSS workshop. Color controls change named palette groups. Scale controls inspect pixels. Save edited SVG downloads the active source. Edit shapes directly in SVG or authoring functions in `build_svg.py`.
+-- `build_svg.py`: explicit original polygon/rectangle authoring recipe. Running it **replaces** SVG files with the baseline geometry; do not run it after manual SVG changes unless intended.
+-- `build_preview.py`: rebuilds the HTML workshop from current SVG sources without overwriting them.
+-- `export_assets.py`: exports current SVG files via Inkscape, with PNG antialias disabled, then measures alpha, writes manifest, creates the inspection sheet. Pillow is used only for measurement/inspection sheet, not for runtime asset drawing or imagegen editing.
+-- `assets/weapon_mounts/*.png`: 2 dedicated held sprites, native 128×64.
+-- `assets/items/*.png`: 2 inventory weapon icons + 3 modules, native 64×64. Inventory weapon views are separately authored, not copied held sprites.
+-- `manifest.draft.json`: measured source/runtime hashes, alpha bounds, full-canvas region, normalized physical grip and discharge anchors. Muzzle between Tether prongs is an intentional transparent emission axis. These anchor proposals require in-game review.
+-- `svg-review.png`: enlarged sprites plus alpha-cropped 32px weapon / 40px icon previews. Review artifact, not game asset.
+-- `references/`: two original imagegen outputs kept without pixel modifications; not valid runtime sources. Prompt text accompanies provenance.
++## Edit and reproduce
+ 
+-## Reproduction
+-Tested with Python 3, Pillow 12.3.0, Inkscape 1.4 (e7c3feb100).
++From the project root:
+ 
+ ```sh
+-python build_preview.py
++cd art_source/build_expansion_A
+ python export_assets.py
+ ```
+ 
+-Export uses `--export-png-antialias=0`, transparent canvas, intrinsic SVG dimensions. Two consecutive exports produced identical PNG hashes and manifest bytes in this environment. Re-export in a different renderer/version may change raster bytes; compare pixels/metadata and do not assume a hash match.
++The exporter resolves all paths relative to its own file. Tested renderer: Inkscape 1.4 (e7c3feb100), `--export-png-antialias=0`; measurement/review uses Python 3 and Pillow 12.3.0. It creates local `assets/items/`, `assets/weapon_mounts/`, `manifest.draft.json`, and `svg-review.png` beneath this source directory. It does **not** silently overwrite the project's runtime assets. Compare the fresh exported PNG SHA256/alpha bounds with the manifest, then deliberately copy the matching seven PNGs to the same paths under the project root's `assets/` directory. Keep world grip/muzzle/full-canvas geometry and inventory crop metadata consistent with the actual export; re-run affected validation after any edit.
+ 
+-## Palette / shape parameters
+-Shared palette is `PAL` in build_svg.py; each element also stores a named `data-palette` key. Named layers separate grip/trigger, power core, four-beat indicators, forked emitter, drum casing/diaphragm, contacts, split collar/fins, armor/spring piston. Coordinates use an integer 128×64 or 64×64 grid; viewBox edits alter authored shape parameters without regenerating imagery. The HTML workshop exposes palette and inspection-scale controls; it is not a full vector path editor.
++`build_svg.py` is the original semantic geometry/palette authoring recipe. Running it replaces the SVG files with its baseline shapes; do not run it after manual SVG edits unless this replacement is intended. `export_assets.py` renders the current SVG files without regenerating their geometry. Different renderer versions are not claimed to reproduce identical bytes.
+ 
+-## Status / limits
+-Root inspected the first contact sheet and found no blocking silhouette/style issues. Formal independent art QA, game import/anchor inspection, combat presentation, and publication remain pending. No game code, frozen v38 source, repository, or GitHub state was changed by this art task. PNGs are intentionally compact and chunky, not full-resolution renderings of the reference images.
++The source manifest uses relative editable-source paths and `res://assets/…` runtime mapping. The held muzzle between Tether's front prongs is a deliberate virtual emission axis. Formal game geometry lives in the world-weapon manifest, not in a preview image.
++
++This integrated directory intentionally contains no AI reference PNGs, internal tool IDs, HTML preview, or preview-builder script. Separate author staging previews/references are not required to reproduce the runtime PNGs. The SVGs themselves remain directly editable. New A artwork is only one part of the game's gradual legacy-art migration; do not infer that unrelated legacy images are SVG-backed or that asset export alone proves gameplay/native acceptance.
+--- a/art_source/stitch_drone/export_and_measure.py
++++ b/art_source/stitch_drone/export_and_measure.py
+@@ -41,7 +41,7 @@
+  record=dict(path=path,source_sha256=sha(out.read_bytes()),editable_source='art_source/stitch_drone/source/'+src.name,editable_sha256=sha(src.read_bytes()),frames=frames)
+  if kind=='hover':record.update(name='补缀蜂 / Stitch Drone',size=[1254,1254],grid=[3,3],action='hover / move');hover[name]=record
+  else:record.update(anchor=[.5,398/418],reference_height=336,release_frame=6 if kind=='channel' else 1,facing='left',logical_canvas=[418,418],source_grid=[3,3],alignment='SVG-derived alpha8 crop, centered integer padding, bottom20');actions[name]=record
+- records[kind]=dict(png_sha256=sha(out.read_bytes()),svg_sha256=sha(src.read_bytes()),rgba_sha256=sha(im.tobytes()),alpha_sha256=sha(im.getchannel('A').tobytes()),frames=raw,repeat_export_byte_identical=True,export_command=cmd)
++ records[kind]=dict(png_sha256=sha(out.read_bytes()),svg_sha256=sha(src.read_bytes()),rgba_sha256=sha(im.tobytes()),alpha_sha256=sha(im.getchannel('A').tobytes()),frames=raw,repeat_export_byte_identical=True,export_command=['inkscape','source/'+src.name,'--export-type=png','--export-filename=exports/'+out.name])
+ contact=Image.new('RGBA',(756,400),(24,36,44,255))
+ for i,row in enumerate(all_rows):contact.alpha_composite(row,(0,i*100))
+ contact.save(R/'previews'/'all_runtime_nearest.png')
+--- a/art_source/stitch_drone/metadata/measured_assets.json
++++ b/art_source/stitch_drone/metadata/measured_assets.json
+@@ -155,9 +155,9 @@
+       "repeat_export_byte_identical": true,
+       "export_command": [
+         "inkscape",
+-        "evidence-workspace/moss-v38-svg-redraw/source/stitch_drone_hover.svg",
++        "source/stitch_drone_hover.svg",
+         "--export-type=png",
+-        "--export-filename=evidence-workspace/moss-v38-svg-redraw/exports/stitch_drone_hover.png"
++        "--export-filename=exports/stitch_drone_hover.png"
+       ]
+     },
+     "channel": {
+@@ -314,9 +314,9 @@
+       "repeat_export_byte_identical": true,
+       "export_command": [
+         "inkscape",
+-        "evidence-workspace/moss-v38-svg-redraw/source/stitch_drone_channel.svg",
++        "source/stitch_drone_channel.svg",
+         "--export-type=png",
+-        "--export-filename=evidence-workspace/moss-v38-svg-redraw/exports/stitch_drone_channel.png"
++        "--export-filename=exports/stitch_drone_channel.png"
+       ]
+     },
+     "hurt": {
+@@ -473,9 +473,9 @@
+       "repeat_export_byte_identical": true,
+       "export_command": [
+         "inkscape",
+-        "evidence-workspace/moss-v38-svg-redraw/source/stitch_drone_hurt.svg",
++        "source/stitch_drone_hurt.svg",
+         "--export-type=png",
+-        "--export-filename=evidence-workspace/moss-v38-svg-redraw/exports/stitch_drone_hurt.png"
++        "--export-filename=exports/stitch_drone_hurt.png"
+       ]
+     },
+     "death": {
+@@ -632,9 +632,9 @@
+       "repeat_export_byte_identical": true,
+       "export_command": [
+         "inkscape",
+-        "evidence-workspace/moss-v38-svg-redraw/source/stitch_drone_death.svg",
++        "source/stitch_drone_death.svg",
+         "--export-type=png",
+-        "--export-filename=evidence-workspace/moss-v38-svg-redraw/exports/stitch_drone_death.png"
++        "--export-filename=exports/stitch_drone_death.png"
+       ]
+     }
+   },
+--- a/art_source/v9-room-candidates/docs/art/modes/prompts.json
++++ b/art_source/v9-room-candidates/docs/art/modes/prompts.json
+@@ -2,17 +2,17 @@
+   "attempts": [
+     {
+       "prompt": "Production 2D game pixel-art animation sheet for Moss Circuit. True transparent RGBA PNG. EXACT 3x3 equal cells, nine chronological frames row-major. One small mechanical ROOM CLEAR SIGNAL emblem centered identically in every cell; fixed width and scale, occupies middle 55% of each cell, huge transparent gutters. NOT an actual doorway, no floor, no character, no UI card, no words/numbers/borders. Flat chunky hard square pixel clusters, limited olive metal dark charcoal outline, amber locked light and pale mint unlocked light. NO soft glow, NO haze, NO shadows, NO backdrop or gradients outside silhouette. Nine distinct evolving frames: frame1 compact square mechanical bracket closed by an unmistakable thick horizontal AMBER safety bar; frame2 bar separates at center; frame3 halves slide apart sideways; frame4 brackets pivot outward; frame5 pale mint right-pointing arrow begins forming between opened brackets with two tiny square energy chips; frame6 arrow fully extends to right and bracket halves open farther; frame7 little pixel chips move outward and fade; frame8 all chips gone, open bracket settles; frame9 clearly open square bracket with bold solid PALE MINT RIGHT ARROW and no blocking horizontal bar. Same base emblem location and size all frames, actual geometric opening not just color swapping. Clear locked vs cleared silhouettes readable at 48px in a dark teal moss arena. Do not draw a portal or collision door. No outer glow anywhere. Sprite cutouts only.",
+-      "source": "workspace/scratch/234c8048d85d/generated_images/exec-5585c3db-c290-4e53-98a7-9d6080d6d784.png",
++      "source": "sources/attempt_1.png",
+       "status": "chosen_animation_source_visible_halo_not_clean_cutout"
+     },
+     {
+       "prompt": "Edit this animation sheet, preserve the nine sequential mechanical locked-to-clear glyph designs and colors. Remove ALL environmental haze, halos, fog, shadow, glow around or behind glyphs. Entire background is pure transparent, including inside open brackets. ONLY solid hard-edged pixel-art glyph cutouts. No translucent surround whatsoever. Arrange exactly 3 columns and 3 rows of equal cells with each glyph geometric center exactly at its cell center. The cells have large safe transparent gutters. Preserve chronological poses: solid amber closed bar, splitting bar, separated bar, open bracket, mint arrow forming, arrow extending, tiny square chips departing, settled arrow, final settled arrow. No lettering. Crisp flat square pixels. Do not add any glow despite lit amber/mint colors. Keep all nine sprites the same reference scale and center, not perspective.",
+-      "source": "workspace/scratch/234c8048d85d/generated_images/exec-969885f5-d3bb-4ce1-a331-aaad8df1d9ac.png",
++      "source": "sources/attempt_2.png",
+       "status": "rejected_halo_persists"
+     },
+     {
+       "prompt": "A sprite sheet, 3 rows 3 columns. NINE tiny flat pixel UI glyphs on completely transparent background. No background, no shadows, no glow, no gradients, no lighting, no effects. Strict solid hard rectangular pixels, flat 4-color palette: charcoal, olive green, orange, pale mint. Simple compact game room-status emblem. The EXACT center of each of the 9 equal cells contains the same fixed-size square olive bracket. Read left to right: 1 orange solid horizontal bar closing bracket; 2 orange bar split in middle; 3 two orange short bars slide outward; 4 orange pieces retract into brackets; 5 small mint right arrow forms; 6 mint right arrow extends; 7 two tiny mint square chips depart; 8 mint arrow settles, no chips; 9 same settled mint arrow. Brackets have open gaps in later frames. Each cell is only ONE flat pixel glyph. Geometry evolution, not nine unrelated icons. Uniform grid, 3x3, equal spacing and dimensions, all glyph centers aligned. Ample transparent margin. This is a bitmap UI sprite asset, not a game scene or illustration. Cutout pixel glyphs. Absolutely no surrounding illumination.",
+-      "source": "workspace/scratch/234c8048d85d/generated_images/exec-f33677d6-2d65-4e3b-b12b-8d1beb4933b1.png",
++      "source": "sources/attempt_3.png",
+       "status": "rejected_halo_and_grid_layout"
+     }
+   ]
+--- a/scripts/gameplay/new_weapon_profiles.gd
++++ b/scripts/gameplay/new_weapon_profiles.gd
+@@ -7,17 +7,22 @@
+ 	if behavior not in ["tether_pulse","expanding_ring"]:return {}
+ 	for key in ["damage","interval","range"]:
+ 		if not number(entry.get(key)):return {}
+-	if entry.get("projectiles")!=1 or entry.get("spread")!=0 or entry.get("pierce")!=0:return {}
++	for key in ["projectiles","spread","pierce"]:
++		if not number(entry.get(key),true):return {}
++	if float(entry.projectiles)!=1.0 or float(entry.spread)!=0.0 or float(entry.pierce)!=0.0:return {}
+ 	if behavior=="tether_pulse":
+-		if entry.get("id")!="tether_emitter" or entry.get("pulse_count")!=4:return {}
++		if not entry.get("id") is String or entry.id!="tether_emitter":return {}
++		if not number(entry.get("pulse_count")) or float(entry.pulse_count)!=4.0:return {}
+ 	else:
+-		if entry.get("id")!="seismic_drum" or entry.get("max_live_per_slot")!=3:return {}
++		if not entry.get("id") is String or entry.id!="seismic_drum":return {}
++		if not number(entry.get("max_live_per_slot")) or float(entry.max_live_per_slot)!=3.0:return {}
+ 		for key in ["inner_start_radius","band_half_width","outward_seconds"]:
+ 			if not number(entry.get(key)):return {}
+ 		if entry.range<=entry.inner_start_radius:return {}
+ 	return entry.duplicate(true)
+ static func module(entry:Dictionary)->Dictionary:
+-	if entry.get("kind")!="item" or entry.get("max_stack")!=1:return {}
++	if not entry.get("kind") is String or entry.kind!="item":return {}
++	if not number(entry.get("max_stack")) or float(entry.max_stack)!=1.0:return {}
+ 	match str(entry.get("id","")):
+ 		"lock_memory":
+ 			if not number(entry.get("grace_seconds")) or entry.grace_seconds>0.2:return {}
+--- a/tests/independent_cryo_shop.gd
++++ b/tests/independent_cryo_shop.gd
+@@ -17,6 +17,9 @@
+ 	g._open_shop();g.shop_offers=[{"id":id,"sold":false,"weight_multiplier":1.0,"bias_reasons":[]}];g._render_shop()
+ func run()->void:
+ 	g=load("res://scenes/main.tscn").instantiate();root.add_child(g);g.set_process(false)
++	# Explicit original8/30/3 fixture; actual A catalog is separately validated.
++	var legacy_input:Dictionary=preload("res://tests/support/v39_legacy_inputs.gd").install(g)
++	if not legacy_input.pass:push_error(str(legacy_input.errors));quit(1);return
+ 	var c:Dictionary=g.catalog
+ 	check(Rules.validate_catalog(c).is_empty(),"new catalog valid")
+ 	check(c.weapons.size()==8 and c.items.size()==30 and c.items[-1].id=="scavenger_reel" and Rules.catalog_entry(c,"feedback_diode").id=="feedback_diode" and Rules.catalog_entry(c,"bankshot_driver").id=="bankshot_driver" and Rules.catalog_entry(c,"bounce_guide").id=="bounce_guide","explicit v36 8+30 including the unique appended Scavenger Reel")
+--- a/tests/independent_feedback_shop.gd
++++ b/tests/independent_feedback_shop.gd
+@@ -21,6 +21,9 @@
+  if Motor.step(g.combat,g.config.arena,Vector2.RIGHT,true,0):g._effect_event("dash",{"pos":g.player_pos,"angle":0.0})
+ func run()->void:
+  g=load("res://scenes/main.tscn").instantiate();root.add_child(g);g.set_process(false)
++ # Explicit original8/30/3 fixture; actual A catalog is separately validated.
++ var legacy_input:Dictionary=preload("res://tests/support/v39_legacy_inputs.gd").install(g)
++ if not legacy_input.pass:push_error(str(legacy_input.errors));quit(1);return
+  ck(g.catalog.items.map(func(e):return e.id)==ITEMS+["scavenger_reel"],"exact 30 module IDs: old order plus Scavenger Reel")
+  ck(g.catalog.weapons.map(func(e):return e.id)==["rivet_gun","scrap_shotgun","rail_lance","orbit_saw","return_disc","shock_mortar","cryo_sprayer","bankshot_driver"],"exact 8 weapon IDs")
+  ck(g.ui.icon("feedback_diode")!=null,"actual integrated icon resource")
+--- a/tests/independent_focus_combat.gd
++++ b/tests/independent_focus_combat.gd
+@@ -96,6 +96,9 @@
+ func _initialize()->void:call_deferred("run")
+ func run()->void:
+  g=load("res://scenes/main.tscn").instantiate();root.add_child(g);g.set_process(false)
++ # Explicit original8/30/3 fixture; actual A catalog is separately validated.
++ var legacy_input:Dictionary=preload("res://tests/support/v39_legacy_inputs.gd").install(g)
++ if not legacy_input.pass:push_error(str(legacy_input.errors));quit(1);return
+  ck(g.catalog.weapons.map(func(w):return w.id)==IDS,"exact eight weapons retained in catalog order")
+  for mode in ["arena","rooms"]:
+   for id in IDS:
+--- a/tests/independent_forecast_authority.gd
++++ b/tests/independent_forecast_authority.gd
+@@ -20,6 +20,10 @@
+ 	return out
+ func run()->void:
+ 	c=JSON.parse_string(FileAccess.get_file_as_string("res://data/catalog.json"))
++	# Exact historical data for the unchanged original case/count matrix.
++	var a_history:Dictionary=preload("res://tests/support/v39_catalog_projection.gd").project(c,FileAccess.get_file_as_string("res://data/catalog.json"))
++	if not a_history.pass:push_error(str(a_history.errors));quit(1);return
++	c=a_history.catalog
+ 	base=JSON.parse_string(FileAccess.get_file_as_string("res://data/balance.json")).player
+ 	var original_c:Dictionary=c.duplicate(true)
+ 	var original_base:Dictionary=base.duplicate(true)
+--- a/tests/independent_forecast_legacy.gd
++++ b/tests/independent_forecast_legacy.gd
+@@ -31,6 +31,10 @@
+ 	return rows
+ func run()->void:
+ 	var c:Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://data/catalog.json"))
++	# Exact historical data for the unchanged original case/count matrix.
++	var a_history:Dictionary=preload("res://tests/support/v39_catalog_projection.gd").project(c,FileAccess.get_file_as_string("res://data/catalog.json"))
++	if not a_history.pass:push_error(str(a_history.errors));quit(1);return
++	c=a_history.catalog
+ 	var base:Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://data/balance.json")).player
+ 	for legacy in [false,true]:
+ 		var cat:Dictionary=c.duplicate(true)
+--- a/tests/independent_reservation_records.gd
++++ b/tests/independent_reservation_records.gd
+@@ -31,6 +31,8 @@
+ func run()->void:
+  var c:Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://data/catalog.json"))
+  var expanded_bytes:String=FileAccess.get_file_as_string("res://data/catalog.json")
++ var a_history:Dictionary=preload("res://tests/support/v39_catalog_projection.gd").project(c,expanded_bytes)
++ if not a_history.pass:push_error(str(a_history.errors));quit(1);return
+  var history:Dictionary=CatalogHistory.project(c,expanded_bytes)
+  ck(history.get("pass",false),"exact v36 append-only declaration and original v35 byte identity")
+  var catalog_bytes:String=history.bytes
+@@ -38,8 +40,8 @@
+  var declared_profile:String='  "weapon_tempering": {\n    "max_tier": 1,\n    "primary_damage_multiplier": 1.6\n  },\n'
+  ck(catalog_bytes.sha256_text()=="317a2d343ba1a005cd44cc1c2ee91e894adf059d77e57c24f7a5ee9439ec56a0","exact reviewed v33 catalog bytes, including only the authored tempering profile")
+  ck(catalog_bytes.count(declared_profile)==1 and catalog_bytes.replace(declared_profile,"").sha256_text()=="88002883c5f1141e8d9adf2f95418c81b52b397a44feee46946876bbf8a984d7","exact v27 bytes after removing ONLY the declared v33 profile: all IDs/order/prices/weights/links")
+- ck(c.items.map(func(e):return e.id)==ITEM_IDS+["scavenger_reel"],"exact ordered 30 module IDs with old order preserved")
+- ck(c.weapons.map(func(e):return e.id)==["rivet_gun","scrap_shotgun","rail_lance","orbit_saw","return_disc","shock_mortar","cryo_sprayer","bankshot_driver"],"exact ordered eight weapon IDs")
++ ck(a_history.catalog.items.map(func(e):return e.id)==ITEM_IDS+["scavenger_reel"],"exact ordered 30 module IDs with old order preserved")
++ ck(a_history.catalog.weapons.map(func(e):return e.id)==["rivet_gun","scrap_shotgun","rail_lance","orbit_saw","return_disc","shock_mortar","cryo_sprayer","bankshot_driver"],"exact ordered eight weapon IDs")
+  ck(FileAccess.get_sha256("res://data/balance.json")=="180c521a222f737a93498768acccdb98e6bb93f606de7e6719f88261eb41815c","six existing upgrades and economy unchanged")
+  var encounter_history:Dictionary=EncounterHistory.project(FileAccess.get_file_as_string("res://data/encounters.json"),FileAccess.get_file_as_string("res://data/room_encounters.json"))
+  ck(encounter_history.get("pass",false),"strict declared v38 row/wave/Rooms append and original raw identity")
+--- a/tests/independent_reservation_views.gd
++++ b/tests/independent_reservation_views.gd
+@@ -44,6 +44,9 @@
+  root.push_input(event)
+ func run()->void:
+  g=load("res://scenes/main.tscn").instantiate();root.add_child(g);g.set_process(false)
++ # Explicit original8/30/3 fixture; actual A catalog is separately validated.
++ var legacy_input:Dictionary=preload("res://tests/support/v39_legacy_inputs.gd").install(g)
++ if not legacy_input.pass:push_error(str(legacy_input.errors));quit(1);return
+  var expected_ids:Array=["rivet_gun","scrap_shotgun","rail_lance","orbit_saw","return_disc","shock_mortar","cryo_sprayer","bankshot_driver"]
+  ck(g.catalog.weapons.map(func(e):return e.id)==expected_ids,"exact eight weapon IDs and order")
+  ck(g.catalog.items.size()==30 and g.catalog.items[-1].id=="scavenger_reel","exact 30-module catalog with appended Scavenger Reel")
+--- a/tests/independent_starting_loadout_views.gd
++++ b/tests/independent_starting_loadout_views.gd
+@@ -31,6 +31,9 @@
+ func _initialize()->void:call_deferred("run")
+ func run()->void:
+  g=load("res://scenes/main.tscn").instantiate();root.add_child(g);g.set_process(false)
++ # Explicit original8/30/3 fixture; actual A catalog is separately validated.
++ var legacy_input:Dictionary=preload("res://tests/support/v39_legacy_inputs.gd").install(g)
++ if not legacy_input.pass:push_error(str(legacy_input.errors));quit(1);return
+  for mode in ["arena","rooms"]:
+   for size in [Vector2i(960,540),Vector2i(1280,720)]:
+    root.size=size;g._title();g._select_mode(mode)
+--- a/tests/independent_starting_loadouts.gd
++++ b/tests/independent_starting_loadouts.gd
+@@ -120,6 +120,9 @@
+ func _initialize()->void:call_deferred("run")
+ func run()->void:
+  g=load("res://scenes/main.tscn").instantiate();root.add_child(g);g.set_process(false)
++ # Explicit original8/30/3 fixture; actual A catalog is separately validated.
++ var legacy_input:Dictionary=preload("res://tests/support/v39_legacy_inputs.gd").install(g)
++ if not legacy_input.pass:push_error(str(legacy_input.errors));quit(1);return
+  schema()
+  for mode in ["arena","rooms"]:
+   for id in EXPECT:
+--- a/tests/independent_tag_authority.gd
++++ b/tests/independent_tag_authority.gd
+@@ -45,6 +45,9 @@
+  records.append({"label":label,"counts":c,"state":state_projection(),"affinity":affinity,"weighted_pool":Rules.weighted_pool(g.build,g.catalog),"stock":stock,"stock_rng_after":rng.state})
+ func run()->void:
+  g=load("res://scenes/main.tscn").instantiate();root.add_child(g);g.set_process(false)
++ # Explicit original8/30/3 fixture; actual A catalog is separately validated.
++ var legacy_input:Dictionary=preload("res://tests/support/v39_legacy_inputs.gd").install(g)
++ if not legacy_input.pass:push_error(str(legacy_input.errors));quit(1);return
+  check(g.catalog.synergies.size()==EXPECTED_RULES.size(),"exact three catalog definitions")
+  for i in EXPECTED_RULES.size():
+   var actual:Dictionary=g.catalog.synergies[i];var expected:Dictionary=EXPECTED_RULES[i]
+--- a/tests/independent_ui.gd
++++ b/tests/independent_ui.gd
+@@ -9,6 +9,9 @@
+ 	root.size = Vector2i(960,540)
+ 	var game = load("res://scenes/main.tscn").instantiate()
+ 	root.add_child(game)
++	# Historical38-card suite; actual43-icon/new5 UI is separate.
++	var legacy_input:Dictionary=preload("res://tests/support/v39_legacy_inputs.gd").install(game)
++	if not legacy_input.pass:push_error(str(legacy_input.errors));quit(1);return
+ 	game.set_process(false)
+ 	await process_frame
+ 	await process_frame
+--- a/tests/independent_weapon_authority.gd
++++ b/tests/independent_weapon_authority.gd
+@@ -14,6 +14,9 @@
+ func _initialize()->void:call_deferred("run")
+ func run()->void:
+  g=load("res://scenes/main.tscn").instantiate();root.add_child(g);g.set_process(false)
++ # Explicit original8/30/3 fixture; actual A catalog is separately validated.
++ var legacy_input:Dictionary=preload("res://tests/support/v39_legacy_inputs.gd").install(g)
++ if not legacy_input.pass:push_error(str(legacy_input.errors));quit(1);return
+  var ids:Array=g.catalog.weapons.map(func(w):return w.id);ids.sort();var expected_ids:Array=EXPECTED.keys();expected_ids.sort();check(ids==expected_ids,"exact eight weapon IDs")
+  var cases:Array=[
+   {"name":"base","items":{},"levels":{},"boss":false},
+--- a/tests/independent_weapon_order.gd
++++ b/tests/independent_weapon_order.gd
+@@ -65,6 +65,9 @@
+ func _initialize()->void:call_deferred("run")
+ func run()->void:
+  g=load("res://scenes/main.tscn").instantiate();root.add_child(g);g.set_process(false)
++ # Explicit original8/30/3 fixture; actual A catalog is separately validated.
++ var legacy_input:Dictionary=preload("res://tests/support/v39_legacy_inputs.gd").install(g)
++ if not legacy_input.pass:push_error(str(legacy_input.errors));quit(1);return
+  var actual_ids:Array=g.catalog.weapons.map(func(w):return w.id);actual_ids.sort();var pinned:Array=IDS.duplicate();pinned.sort();ck(actual_ids==pinned,"exact eight current weapon IDs")
+  for mode in ["arena","rooms"]:
+   for i in range(IDS.size()):
+--- a/tests/independent_weapon_readouts.gd
++++ b/tests/independent_weapon_readouts.gd
+@@ -17,6 +17,9 @@
+ func _initialize()->void:call_deferred("run")
+ func run()->void:
+  g=load("res://scenes/main.tscn").instantiate();root.add_child(g);g.set_process(false)
++ # Explicit original8/30/3 fixture; actual A catalog is separately validated.
++ var legacy_input:Dictionary=preload("res://tests/support/v39_legacy_inputs.gd").install(g)
++ if not legacy_input.pass:push_error(str(legacy_input.errors));quit(1);return
+  var ids:Array=g.catalog.weapons.map(func(w):return w.id);ids.sort();var expected_ids:Array=EXPECTED.keys();expected_ids.sort();check(ids==expected_ids,"exact eight weapon IDs")
+  for mode in ["arena","rooms"]:
+   for modified in [false,true]:
+--- a/tests/test_bankshot_build.gd
++++ b/tests/test_bankshot_build.gd
+@@ -22,7 +22,8 @@
+  g=load("res://scenes/main.tscn").instantiate();root.add_child(g);g.set_process(false)
+  check(Rules.validate_catalog(g.catalog).is_empty(),"catalog valid")
+  var expected:Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://docs/V23_CATALOG_ADDITIONS.json"))
+- check(g.catalog.version==5 and g.catalog.weapons.size()==8 and g.catalog.items.size()==30 and g.catalog.items[-1].id=="scavenger_reel" and Rules.catalog_entry(g.catalog,"feedback_diode").id=="feedback_diode","explicit content version/count")
++ var a_history:Dictionary=preload("res://tests/support/v39_catalog_projection.gd").project(g.catalog,FileAccess.get_file_as_string("res://data/catalog.json"))
++ check(a_history.pass and a_history.catalog.version==5 and a_history.catalog.weapons.size()==8 and a_history.catalog.items.size()==30 and a_history.catalog.items[-1].id=="scavenger_reel" and Rules.catalog_entry(a_history.catalog,"feedback_diode").id=="feedback_diode","explicit historical content version/count after strict A inverse")
+  check(Rules.catalog_entry(g.catalog,"bankshot_driver")==expected.weapon,"entire reviewed weapon definition")
+  check(Rules.catalog_entry(g.catalog,"bounce_guide")==expected.item,"entire reviewed guide definition")
+  var history:Dictionary=CatalogHistory.project(g.catalog,FileAccess.get_file_as_string("res://data/catalog.json"))
+--- a/tests/test_builds.gd
++++ b/tests/test_builds.gd
+@@ -8,6 +8,10 @@
+ func _initialize() -> void: call_deferred("run")
+ func run() -> void:
+ 	var c: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://data/catalog.json"))
++	# Exact historical data for the unchanged original case/count matrix.
++	var a_history:Dictionary=preload("res://tests/support/v39_catalog_projection.gd").project(c,FileAccess.get_file_as_string("res://data/catalog.json"))
++	if not a_history.pass:push_error(str(a_history.errors));quit(1);return
++	c=a_history.catalog
+ 	var balance: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://data/balance.json"))
+ 	check(Rules.validate_catalog(c).is_empty(), "catalog valid")
+ 	check(not Rules.validate_catalog({}).is_empty(), "empty catalog rejected")
+--- a/tests/test_expansion.gd
++++ b/tests/test_expansion.gd
+@@ -15,6 +15,10 @@
+ func _initialize() -> void: call_deferred("run")
+ func run() -> void:
+ 	var catalog: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://data/catalog.json"))
++	# Exact historical data for the unchanged original case/count matrix.
++	var a_history:Dictionary=preload("res://tests/support/v39_catalog_projection.gd").project(catalog,FileAccess.get_file_as_string("res://data/catalog.json"))
++	if not a_history.pass:push_error(str(a_history.errors));quit(1);return
++	catalog=a_history.catalog
+ 	var build := Rules.new_build(catalog)
+ 	build.weapons=["return_disc"]
+ 	var pool := Rules.weighted_pool(build,catalog)
+--- a/tests/test_shop_offer_visibility.gd
++++ b/tests/test_shop_offer_visibility.gd
+@@ -13,7 +13,11 @@
+ func run()->void:
+ 	root.size=Vector2i(960,540)
+ 	var game=load("res://scenes/main.tscn").instantiate()
+-	root.add_child(game);game.set_process(false);game._start_run(1717)
++	root.add_child(game);game.set_process(false)
++	# Historical38-card suite; actual43-icon/new5 UI is separate.
++	var legacy_input:Dictionary=preload("res://tests/support/v39_legacy_inputs.gd").install(game)
++	if not legacy_input.pass:push_error(str(legacy_input.errors));quit(1);return
++	game._start_run(1717)
+ 	game.build.coins=999;game._open_shop()
+ 	for entry in game.catalog.weapons+game.catalog.items:
+ 		var view:Dictionary=game._view()
+--- a/tests/test_starting_loadouts.gd
++++ b/tests/test_starting_loadouts.gd
+@@ -13,6 +13,9 @@
+ func run()->void:
+ 	var catalog:Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://data/catalog.json"))
+ 	var data:Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://data/starting_loadouts.json"))
++	var kit_history:Dictionary=preload("res://tests/support/v39_loadout_projection.gd").project(data,FileAccess.get_file_as_string("res://data/starting_loadouts.json"))
++	if not kit_history.pass:push_error(str(kit_history.errors));quit(1);return
++	data=kit_history.data
+ 	check(Loadouts.validate(data,catalog).is_empty(),"shipped registry valid")
+ 	check(data.loadouts.map(func(r):return r.id)==["rivet","scatter","rail"],"three ordered starters")
+ 	check(Loadouts.make_build(data,catalog,"rivet")==Rules.new_build(catalog),"default factory exact")
+--- a/tests/test_upgrade_salvage.gd
++++ b/tests/test_upgrade_salvage.gd
+@@ -43,6 +43,9 @@
+ 
+ func run() -> void:
+ 	game = load("res://scenes/main.tscn").instantiate(); root.add_child(game); game.set_process(false)
++	# Explicit original8/30/3 fixture; actual A catalog is separately validated.
++	var legacy_input:Dictionary=preload("res://tests/support/v39_legacy_inputs.gd").install(game)
++	if not legacy_input.pass:push_error(str(legacy_input.errors));quit(1);return
+ 	check(game.config.upgrades.size() == 6, "still six permanent upgrades")
+ 	check(game.catalog.weapons.size() + game.catalog.items.size() == 38 and game.catalog.items[-1].id=="scavenger_reel", "exact 38 entries including appended Scavenger Reel")
+ 	var definition := Rules.upgrade_salvage_definition()
+--- a/tests/test_weapon_mounts.gd
++++ b/tests/test_weapon_mounts.gd
+@@ -9,10 +9,12 @@
+ func run()->void:
+ 	var game=load("res://scenes/main.tscn").instantiate();root.add_child(game);game.set_process(false);game._start_run(808)
+ 	var rig=game.weapon_rig
+-	check(rig.assets.keys().size()==8 and rig.geometry.keys().size()==8 and rig.assets.has("cryo_sprayer") and rig.assets.has("bankshot_driver"),"eight world assets including Cryo and Bankshot, not inventory icons")
++	var history_assets:Dictionary=rig.assets.duplicate();var history_geometry:Dictionary=rig.geometry.duplicate()
++	for new_id in ["tether_emitter","seismic_drum"]:history_assets.erase(new_id);history_geometry.erase(new_id)
++	check(rig.assets.size()==10 and rig.geometry.size()==10 and rig.assets.has("tether_emitter") and rig.assets.has("seismic_drum") and rig.geometry.has("tether_emitter") and rig.geometry.has("seismic_drum") and history_assets.size()==8 and history_geometry.size()==8 and history_assets.has("cryo_sprayer") and history_assets.has("bankshot_driver"),"exact new2 plus historical eight world assets including Cryo and Bankshot")
+ 	check(game.actor_anim.assets.hero_attack.frames.get_frame_texture("action",0).atlas.resource_path.contains("weapon_mounts"),"unarmed attack replaces baked gun")
+-	for id in rig.geometry:
+-		var g:Dictionary=rig.geometry[id]
++	for id in history_geometry:
++		var g:Dictionary=history_geometry[id]
+ 		var size:=Vector2(g.region[2],g.region[3]);var muzzle:Array=g.muzzle;var grip:Array=g.grip
+ 		for target in [Vector2(200,0),Vector2(-200,0),Vector2(200,100),Vector2(-100,-200),Vector2.ZERO]:
+ 			var pose:Dictionary=Rig.muzzle_pose(Vector2.ZERO,target,g)
+--- a/tests/test_weapon_order.gd
++++ b/tests/test_weapon_order.gd
+@@ -43,6 +43,9 @@
+ 	return found
+ func run()->void:
+ 	game=load("res://scenes/main.tscn").instantiate();root.add_child(game);game.set_process(false)
++	# Explicit original8/30/3 fixture; actual A catalog is separately validated.
++	var legacy_input:Dictionary=preload("res://tests/support/v39_legacy_inputs.gd").install(game)
++	if not legacy_input.pass:push_error(str(legacy_input.errors));quit(1);return
+ 	check(game.catalog.weapons.size()==8 and game.catalog.items.size()==30 and game.catalog.items[-1].id=="scavenger_reel","exact expanded catalog count/last module")
+ 	for mode_id in ["arena","rooms"]:
+ 		for count in [2,3,4]:
+--- a/tests/test_weapon_readout.gd
++++ b/tests/test_weapon_readout.gd
+@@ -13,6 +13,10 @@
+ func _initialize()->void:call_deferred("run")
+ func run()->void:
+ 	var catalog:Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://data/catalog.json"))
++	# Exact historical data for the unchanged original case/count matrix.
++	var a_history:Dictionary=preload("res://tests/support/v39_catalog_projection.gd").project(catalog,FileAccess.get_file_as_string("res://data/catalog.json"))
++	if not a_history.pass:push_error(str(a_history.errors));quit(1);return
++	catalog=a_history.catalog
+ 	var balance:Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://data/balance.json"))
+ 	var original_catalog:String=JSON.stringify(catalog)
+ 	var expected:Array=[["rivet_gun",15.0,.4,500.0],["scrap_shotgun",9.0,.85,300.0],["rail_lance",30.0,1.15,650.0],["orbit_saw",20.0,.65,105.0],["return_disc",18.0,.9,330.0],["shock_mortar",36.0,1.5,500.0],["cryo_sprayer",9.0,.65,190.0],["bankshot_driver",18.0,.85,900.0]]
+--- a/ui/moss_ui.gd
++++ b/ui/moss_ui.gd
+@@ -354,7 +354,8 @@
+ 		mode_button.pressed.connect(func():intent.emit("select_mode",{"id":"rooms" if mode_id=="arena" else "arena","seed":seed_edit.text.to_int()}))
+ 	var selected:Dictionary={}
+ 	if has_loadouts:
+-		_label(content,"CHOOSE STARTING LOADOUT",14)
++		var loadout_count:int=loadout_context.get("loadouts",[]).size()
++		_label(content,"CHOOSE STARTING LOADOUT"+(" / %d LOADOUTS · SCROLL FOR MORE" % loadout_count if loadout_count>3 else ""),14)
+ 		# Preserve the original three-choice layout; extra choices wrap, not squeeze.
+ 		var choices:Container
+ 		if loadout_context.get("loadouts",[]).size()>3:

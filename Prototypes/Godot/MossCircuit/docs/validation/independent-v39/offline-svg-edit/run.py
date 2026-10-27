@@ -1,0 +1,46 @@
+from pathlib import Path
+import hashlib,json,os,subprocess,xml.etree.ElementTree as ET
+from PIL import Image
+P=Path('<WORKSPACE>/moss-v39-art');Q=Path('<WORKSPACE>/moss-v39-ui/source-editability');O=Q/'output'
+assert not O.exists(),'preserve original test; no automatic rerun'
+freeze_bytes=(Q/'FREEZE.json').read_bytes();freeze_sha=hashlib.sha256(freeze_bytes).hexdigest();frozen=json.loads(freeze_bytes)
+for name,sha in frozen['pins'].items():assert hashlib.sha256(Path(name).read_bytes()).hexdigest()==sha,name
+def package_map():return {str(p.relative_to(P)):hashlib.sha256(p.read_bytes()).hexdigest() for p in P.rglob('*') if p.is_file()}
+before=package_map();(Q/'PACKAGE_BEFORE.json').write_text(json.dumps(before,indent=2)+'\n');O.mkdir()
+checks={};commands=[]
+def require(name,value):
+ checks[name]=bool(value)
+ assert value,name
+try:
+ src=P/'svg/lock_memory.svg';base=O/'baseline.svg';edit=O/'edited.svg';base.write_bytes(src.read_bytes())
+ ET.register_namespace('','http://www.w3.org/2000/svg');original=ET.fromstring(base.read_bytes());root=ET.fromstring(base.read_bytes());targets=[x for x in root.iter() if x.get('data-palette')=='cyan']
+ require('three_semantic_palette_targets',len(targets)==3)
+ for node in targets:
+  require('target_original_color_'+str(len(checks)),node.get('fill')=='#78e3e6');node.set('fill','#f04a8a')
+ edit.write_bytes(ET.tostring(root,encoding='utf-8',xml_declaration=True))
+ reread=ET.fromstring(edit.read_bytes());left=list(original.iter());right=list(reread.iter());require('same_element_count',len(left)==len(right));diff=[]
+ for i,(a,b) in enumerate(zip(left,right)):
+  require('structure_'+str(i),a.tag==b.tag and a.text==b.text and a.tail==b.tail and len(a)==len(b))
+  expected=dict(a.attrib)
+  if a.get('data-palette')=='cyan':expected['fill']='#f04a8a';diff.append({'index':i,'tag':a.tag,'old':'#78e3e6','new':'#f04a8a'})
+  require('only_target_fill_attribute_'+str(i),b.attrib==expected)
+ (Q/'XML_CHANGES.json').write_text(json.dumps(diff,indent=2)+'\n')
+ env=os.environ.copy()
+ for key,folder in [('HOME','home'),('XDG_CONFIG_HOME','config'),('XDG_DATA_HOME','data'),('XDG_CACHE_HOME','cache')]:
+  p=Q/folder;p.mkdir(exist_ok=True);env[key]=str(p)
+ for name in ['baseline','edited']:
+  cmd=['inkscape',str(O/(name+'.svg')),'--export-type=png','--export-png-antialias=0','--export-filename='+str(O/(name+'.png'))]
+  with (Q/(name+'.log')).open('wb') as log:r=subprocess.run(cmd,env=env,stdout=log,stderr=subprocess.STDOUT,timeout=30)
+  commands.append({'command':cmd,'exit':r.returncode});require('export_'+name,r.returncode==0)
+ require('baseline_png_exact_staging',(O/'baseline.png').read_bytes()==(P/'assets/items/lock_memory.png').read_bytes())
+ a=Image.open(O/'baseline.png').convert('RGBA');b=Image.open(O/'edited.png').convert('RGBA');require('same_64x64_dimensions',a.size==b.size==(64,64));old=list(a.getdata());new=list(b.getdata());target=(120,227,230,255);replacement=(240,74,138,255);count=sum(x==target for x in old);require('hand_expected_126_target_pixels',count==126);require('pixel_exact_target_only_recolor',new==[replacement if x==target else x for x in old]);require('alpha_exact',a.getchannel('A').tobytes()==b.getchannel('A').tobytes());require('bbox_exact',a.getbbox()==b.getbbox())
+ preview=Image.new('RGBA',(128,64),(0,0,0,0));preview.paste(a,(0,0));preview.paste(b,(64,0));preview.resize((768,384),Image.Resampling.NEAREST).save(O/'comparison.png')
+except Exception as e:
+ checks['exception']=str(e)
+finally:
+ checks['same_freeze_file_at_end']=hashlib.sha256((Q/'FREEZE.json').read_bytes()).hexdigest()==freeze_sha
+ checks['all_frozen_pins_match_at_end']=all(Path(name).is_file() and hashlib.sha256(Path(name).read_bytes()).hexdigest()==sha for name,sha in frozen['pins'].items())
+ after=package_map();(Q/'PACKAGE_AFTER.json').write_text(json.dumps(after,indent=2)+'\n');checks['frozen_package_unchanged']=before==after
+ result={'scope':'offline copy semantic source edit/reexport only; browser remains unverified','pass':all(v is True for v in checks.values()),'checks':checks,'commands':commands,'browser_interaction_verified':False}
+ (Q/'RESULT.json').write_text(json.dumps(result,indent=2)+'\n');print(json.dumps(result))
+raise SystemExit(0 if result['pass'] else 1)

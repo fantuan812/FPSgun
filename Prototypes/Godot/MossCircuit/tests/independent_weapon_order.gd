@@ -27,6 +27,8 @@ func props(obj:Object)->Dictionary:
 func snap()->Dictionary:
  return {"run":props(g.run),"combat":props(g.combat),"effects":props(g.effects),"effect_sequence":g.effect_runtime.sequence,"rng":[g.rng.state,g.loot_rng.state,g.shop_rng.state],"rig":{"slots":clean(g.weapon_rig.slots),"generation":g.weapon_rig.generation,"visible_clock":g.weapon_rig.visible_clock,"last_shot":g.weapon_rig.last_shot.duplicate(true),"disc_sprites":clean(g.weapon_rig.disc_sprites),"mortar_marks":g.weapon_rig.mortar_marks.duplicate(true)}}
 func same(a:Variant,b:Variant)->bool:return var_to_bytes(a)==var_to_bytes(b)
+func new_entities_empty(world:Dictionary)->bool:
+ return world.get("pulse_beams") is Array and world.pulse_beams.is_empty() and world.get("seismic_waves") is Array and world.seismic_waves.is_empty() and world.get("new_weapon_motion") is Dictionary and world.new_weapon_motion.is_empty()
 func setup(mode:String,ids:Array=["rivet_gun","rail_lance"],clocks:Array=[.13,.71])->void:
  g._title();g._select_mode(mode);g._start_run(30001)
  g.build.weapons=ids.duplicate();g.build.items={"power_coil":1,"fracture_coil":1,"pulse_boots":1,"feedback_diode":1,"mirror_shell":1};g._recompute()
@@ -57,14 +59,19 @@ func assert_move(slot:int,step:int,label:String)->void:
  after.run.build.weapons=before.run.build.weapons;after.run.build.revision=before.run.build.revision
  after.run.shop_generation=before.run.shop_generation;after.run.shop_message=before.run.shop_message
  after.combat.weapon_clocks=before.combat.weapon_clocks;after.rig=before.rig
- ck(same(after,before),label+" only declared authority/presentation mutations")
+ var epoch_advanced:bool=before.combat.get("new_weapon_epoch") is int and after.combat.get("new_weapon_epoch") is int and after.combat.new_weapon_epoch==before.combat.new_weapon_epoch+1
+ after.combat.new_weapon_epoch=before.combat.new_weapon_epoch
+ ck(epoch_advanced and new_entities_empty(before.combat) and new_entities_empty(after.combat) and same(after,before),label+" A epoch exactly +1; only declared authority/presentation mutations")
  var stable:=snap();ck(not g._move_weapon(slot,step,before.run.shop_generation,moved_id) and same(snap(),stable),label+" stale repeat atomic")
  ck(g._move_weapon(target,-step,g.shop_generation,moved_id),label+" reverse accepted")
  ck(g.build.weapons==before.run.build.weapons and same(g.weapon_clocks,before.combat.weapon_clocks),label+" inverse restores IDs/clocks")
- ck(g.build.revision==before.run.build.revision+2 and g.shop_generation==before.run.shop_generation+2,label+" inverse is not counter rollback")
+ ck(g.build.revision==before.run.build.revision+2 and g.shop_generation==before.run.shop_generation+2 and g.combat.new_weapon_epoch is int and g.combat.new_weapon_epoch==before.combat.new_weapon_epoch+2 and new_entities_empty(props(g.combat)),label+" inverse is not counter rollback; A epoch exactly +2")
 func _initialize()->void:call_deferred("run")
 func run()->void:
  g=load("res://scenes/main.tscn").instantiate();root.add_child(g);g.set_process(false)
+ # Explicit original8/30/3 fixture; actual A catalog is separately validated.
+ var legacy_input:Dictionary=preload("res://tests/support/v39_legacy_inputs.gd").install(g)
+ if not legacy_input.pass:push_error(str(legacy_input.errors));quit(1);return
  var actual_ids:Array=g.catalog.weapons.map(func(w):return w.id);actual_ids.sort();var pinned:Array=IDS.duplicate();pinned.sort();ck(actual_ids==pinned,"exact eight current weapon IDs")
  for mode in ["arena","rooms"]:
   for i in range(IDS.size()):

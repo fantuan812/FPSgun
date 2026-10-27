@@ -1,0 +1,289 @@
+[
+  {
+    "case": "cold",
+    "native_exit": 0,
+    "timeout": false,
+    "seconds": 20.379587736999383,
+    "clean": true,
+    "semantic": true,
+    "reports": [],
+    "parse_errors": [],
+    "pass": true
+  },
+  {
+    "case": "policy",
+    "native_exit": 0,
+    "timeout": false,
+    "seconds": 0.380456034996314,
+    "clean": true,
+    "semantic": true,
+    "reports": [
+      {
+        "checks": 59,
+        "failures": [],
+        "observations": [
+          {
+            "case": "pulse",
+            "events": [
+              {
+                "elapsed": 10.0,
+                "event": {
+                  "damage": 10.0,
+                  "depth": 0,
+                  "pos": "(100.0, 0.0)",
+                  "slot_id": 0,
+                  "source": "primary",
+                  "target": 1,
+                  "weapon": "tether_emitter",
+                  "weapon_id": "tether_emitter"
+                },
+                "kind": "hit"
+              }
+            ],
+            "held": {
+              "active_age": 0.3,
+              "damage": 10.0,
+              "epoch": 0,
+              "grace_left": 0.0,
+              "grace_spent": false,
+              "interval": 1.2,
+              "memory_grace": 0.0,
+              "pulse_count": 4,
+              "pulse_index": 1,
+              "range": 280.0,
+              "slot_id": 0,
+              "target_id": 1,
+              "tier": 0,
+              "wall_age": 0.3,
+              "was_outside": false,
+              "weapon_id": "tether_emitter"
+            },
+            "hp": 90.0,
+            "input": [
+              1.2,
+              0.3,
+              1
+            ]
+          },
+          {
+            "case": "pulse",
+            "events": [],
+            "held": {
+              "active_age": 0.299,
+              "damage": 10.0,
+              "epoch": 0,
+              "grace_left": 0.0,
+              "grace_spent": false,
+              "interval": 1.2,
+              "memory_grace": 0.0,
+              "pulse_count": 4,
+              "pulse_index": 0,
+              "range": 280.0,
+              "slot_id": 0,
+              "target_id": 1,
+              "tier": 0,
+              "wall_age": 0.299,
+              "was_outside": false,
+              "weapon_id": "tether_emitter"
+            },
+            "hp": 100.0,
+            "input": [
+              1.2,
+              0.299,
+              0
+            ]
+          },
+          {
+            "case": "pulse",
+            "events": [
+              {
+                "elapsed": 10.0,
+                "event": {
+                  "damage": 10.0,
+                  "depth": 0,
+                  "pos": "(100.0, 0.0)",
+                  "slot_id": 0,
+                  "source": "primary",
+                  "target": 1,
+                  "weapon": "tether_emitter",
+                  "weapon_id": "tether_emitter"
+                },
+                "kind": "hit"
+              },
+              {
+                "elapsed": 10.0,
+                "event": {
+                  "damage": 10.0,
+                  "depth": 0,
+                  "pos": "(100.0, 0.0)",
+                  "slot_id": 0,
+                  "source": "primary",
+                  "target": 1,
+                  "weapon": "tether_emitter",
+                  "weapon_id": "tether_emitter"
+                },
+                "kind": "hit"
+              }
+            ],
+            "held": {
+              "active_age": 0.3,
+              "damage": 10.0,
+              "epoch": 0,
+              "grace_left": 0.0,
+              "grace_spent": false,
+              "interval": 0.6,
+              "memory_grace": 0.0,
+              "pulse_count": 4,
+              "pulse_index": 2,
+              "range": 280.0,
+              "slot_id": 0,
+              "target_id": 1,
+              "tier": 0,
+              "wall_age": 0.3,
+              "was_outside": false,
+              "weapon_id": "tether_emitter"
+            },
+            "hp": 80.0,
+            "input": [
+              0.6,
+              0.3,
+              2
+            ]
+          },
+          {
+            "case": "pulse",
+            "events": [
+              {
+                "elapsed": 10.0,
+                "event": {
+                  "damage": 10.0,
+                  "depth": 0,
+                  "pos": "(100.0, 0.0)",
+                  "slot_id": 0,
+                  "source": "primary",
+                  "target": 1,
+                  "weapon": "tether_emitter",
+                  "weapon_id": "tether_emitter"
+                },
+                "kind": "hit"
+              }
+            ],
+            "held": {
+              "active_age": 0.6,
+              "damage": 10.0,
+              "epoch": 0,
+              "grace_left": 0.0,
+              "grace_spent": false,
+              "interval": 2.4,
+              "memory_grace": 0.0,
+              "pulse_count": 4,
+              "pulse_index": 1,
+              "range": 280.0,
+              "slot_id": 0,
+              "target_id": 1,
+              "tier": 0,
+              "wall_age": 0.6,
+              "was_outside": false,
+              "weapon_id": "tether_emitter"
+            },
+            "hp": 90.0,
+            "input": [
+              2.4,
+              0.6,
+              1
+            ]
+          },
+          {
+            "case": "pulse",
+            "events": [
+              {
+                "elapsed": 10.0,
+                "event": {
+                  "damage": 10.0,
+                  "depth": 0,
+                  "pos": "(100.0, 0.0)",
+                  "slot_id": 0,
+                  "source": "primary",
+                  "target": 1,
+                  "weapon": "tether_emitter",
+                  "weapon_id": "tether_emitter"
+                },
+                "kind": "hit"
+              },
+              {
+                "elapsed": 10.0,
+                "event": {
+                  "damage": 10.0,
+                  "depth": 0,
+                  "pos": "(100.0, 0.0)",
+                  "slot_id": 0,
+                  "source": "primary",
+                  "target": 1,
+                  "weapon": "tether_emitter",
+                  "weapon_id": "tether_emitter"
+                },
+                "kind": "hit"
+              },
+              {
+                "elapsed": 10.0,
+                "event": {
+                  "damage": 10.0,
+                  "depth": 0,
+                  "pos": "(100.0, 0.0)",
+                  "slot_id": 0,
+                  "source": "primary",
+                  "target": 1,
+                  "weapon": "tether_emitter",
+                  "weapon_id": "tether_emitter"
+                },
+                "kind": "hit"
+              },
+              {
+                "elapsed": 10.0,
+                "event": {
+                  "damage": 10.0,
+                  "depth": 0,
+                  "pos": "(100.0, 0.0)",
+                  "slot_id": 0,
+                  "source": "primary",
+                  "target": 1,
+                  "weapon": "tether_emitter",
+                  "weapon_id": "tether_emitter"
+                },
+                "kind": "hit"
+              }
+            ],
+            "held": {
+              "active_age": 1.2,
+              "damage": 10.0,
+              "epoch": 0,
+              "grace_left": 0.0,
+              "grace_spent": false,
+              "interval": 1.2,
+              "memory_grace": 0.0,
+              "pulse_count": 4,
+              "pulse_index": 4,
+              "range": 280.0,
+              "slot_id": 0,
+              "target_id": 1,
+              "tier": 0,
+              "wall_age": 1.2,
+              "was_outside": false,
+              "weapon_id": "tether_emitter"
+            },
+            "hp": 60.0,
+            "input": [
+              1.2,
+              10.0,
+              4
+            ]
+          }
+        ],
+        "pass": true,
+        "scope": "Independent pretarget literal beam/wave policy with recording sinks; not actual proc/full Runtime integration"
+      }
+    ],
+    "parse_errors": [],
+    "pass": true
+  }
+]

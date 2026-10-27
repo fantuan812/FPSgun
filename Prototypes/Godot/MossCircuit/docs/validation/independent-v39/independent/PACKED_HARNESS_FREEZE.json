@@ -1,0 +1,113 @@
+{
+  "bindings": [
+    {
+      "case": "geometry",
+      "script": "<WORKSPACE>/moss-v39-qa/packed-harness/geometry.gd",
+      "expected_checks": 850,
+      "observations": 205,
+      "helper_required": false,
+      "source": "<WORKSPACE>/moss-v39-final-r2/tests/independent_new_weapon_geometry.gd",
+      "source_sha256": "bc991e397966c6bdf259637f200d66a53ff1b961ac9e97345e97801348e4caa0",
+      "script_sha256": "c9ef25b097da27b190a0e7b8f91f3a279f3cedbc7e87888dfc9dcde94c909b06"
+    },
+    {
+      "case": "policy",
+      "script": "<WORKSPACE>/moss-v39-qa/packed-harness/policy.gd",
+      "expected_checks": 59,
+      "observations": 5,
+      "helper_required": false,
+      "source": "<WORKSPACE>/moss-v39-final-r2/tests/independent_new_weapon_policy.gd",
+      "source_sha256": "dee53e121d30a7cb0c514ccac7c2c87e4779ba4e1bf32dd1b846577f1d5a2a17",
+      "script_sha256": "dee53e121d30a7cb0c514ccac7c2c87e4779ba4e1bf32dd1b846577f1d5a2a17"
+    },
+    {
+      "case": "runtime",
+      "script": "<WORKSPACE>/moss-v39-qa/packed-harness/runtime.gd",
+      "expected_checks": 46,
+      "observations": 2,
+      "helper_required": true,
+      "source": "<WORKSPACE>/moss-v39-final-r2/tests/independent_new_weapon_runtime.gd",
+      "source_sha256": "85c0c699a588ddde52447c08b857a942975ec1c7f0d911d429bfea4e88bfa853",
+      "script_sha256": "90b51737cc23ff44e0a547f43b0fa33e8ae590bfa89ed2fb6ef608167464cb74"
+    },
+    {
+      "case": "lifecycle",
+      "script": "<WORKSPACE>/moss-v39-qa/packed-harness/lifecycle.gd",
+      "expected_checks": 124,
+      "observations": 26,
+      "helper_required": true,
+      "source": "<WORKSPACE>/moss-v39-final-r2/tests/independent_new_weapon_lifecycle.gd",
+      "source_sha256": "23d90bb487e7fd02d0e189e00b67c0a4726dc29d952463eb81b948a9c7377649",
+      "script_sha256": "06fb0f4a6f30b4bb39d234af46b6cc6a859a30d7888a63bccc9edba8f4a761c0"
+    },
+    {
+      "case": "caps",
+      "script": "<WORKSPACE>/moss-v39-qa/packed-harness/caps.gd",
+      "expected_checks": 14,
+      "observations": 0,
+      "helper_required": false,
+      "source": "<WORKSPACE>/moss-v39-final-r2/tests/independent_new_weapon_caps.gd",
+      "source_sha256": "946cfc0ddb1e5c1145aa46c824218d7ae11067ac4e400574bd1f9ccb58ea137f",
+      "script_sha256": "946cfc0ddb1e5c1145aa46c824218d7ae11067ac4e400574bd1f9ccb58ea137f"
+    },
+    {
+      "case": "motion",
+      "script": "<WORKSPACE>/moss-v39-qa/packed-harness/motion.gd",
+      "expected_checks": 14,
+      "observations": 4,
+      "helper_required": true,
+      "source": "<WORKSPACE>/moss-v39-final-r2/tests/independent_new_weapon_motion.gd",
+      "source_sha256": "d4029b9e12fb06cb76590ea47ea84a36a33cb2ec73a3f613fc2e0f071ad0e0cd",
+      "script_sha256": "0ed8a9c1e52026f29e5b7f200dfeb11725be916e0c50b04367e3fa0e0cabb82c"
+    },
+    {
+      "case": "audio-mixer",
+      "script": "<WORKSPACE>/moss-v39-qa/packed-harness/audio-mixer.gd",
+      "expected_checks": 236,
+      "observations": null,
+      "helper_required": false,
+      "source": "<WORKSPACE>/moss-v39-final-r2/tests/independent_feedback_mixer.gd",
+      "source_sha256": "1589fcbc740481bbc7cca47901a4dd355d9f6564778a935be3a7d5535b43552e",
+      "script_sha256": "1589fcbc740481bbc7cca47901a4dd355d9f6564778a935be3a7d5535b43552e"
+    },
+    {
+      "case": "audio-views",
+      "script": "<WORKSPACE>/moss-v39-qa/packed-harness/audio-views.gd",
+      "expected_checks": 168,
+      "observations": null,
+      "helper_required": true,
+      "source": "<WORKSPACE>/moss-v39-final-r2/tests/independent_feedback_views.gd",
+      "source_sha256": "a7699495dbfb120e760d5a125f8f36fd79ef21c9536d126d17c5254e1e5dd668",
+      "script_sha256": "1b255fea48e04b9ddcf82f6e6c5353b80f01dd5df7694d4e691276087381558d"
+    },
+    {
+      "case": "audio-arena",
+      "script": "<WORKSPACE>/moss-v39-qa/packed-harness/audio-arena.gd",
+      "expected_checks": 435,
+      "observations": null,
+      "helper_required": true,
+      "source": "<WORKSPACE>/moss-v39-final-r2/tests/independent_feedback_authority.gd",
+      "source_sha256": "27d1fa0885b3c18bc57d78b4e2e1a8dac137910ea1fb57270ebbdbe22d13b1c6",
+      "script_sha256": "a70b6041e49008c17f50435dc239f23641d8770aa9170e9ae28c8baef0b7a604"
+    },
+    {
+      "case": "audio-rooms",
+      "script": "<WORKSPACE>/moss-v39-qa/packed-harness/audio-rooms.gd",
+      "expected_checks": 338,
+      "observations": null,
+      "helper_required": true,
+      "source": "<WORKSPACE>/moss-v39-final-r2/tests/independent_feedback_authority_rooms.gd",
+      "source_sha256": "86af190868b41f873261828cf24cea30f3b0126683503a037e2e57550ea02b87",
+      "script_sha256": "d32aba9fff63735ca70c3831a012c6633bc0099821b471b58576d869a9e15a2e"
+    },
+    {
+      "case": "A7-assets",
+      "script": "<WORKSPACE>/moss-v39-qa/packed-harness/A7-assets.gd",
+      "expected_checks": 63,
+      "observations": null,
+      "helper_required": true,
+      "script_sha256": "788492b032f1d9ec843263fb8b94daee49c4c0ad8c29f8efbf542041a6480d4e"
+    }
+  ],
+  "scope": "External binding only; original assertions unchanged. A7 raw independent source oracle and actual imported baseline distinct. Source gate is explicit combined proof, not new151/151."
+}

@@ -27,4 +27,4 @@ SHA256：`e729eae41caa9ee73cf9382468f5efba65aa60dd125f14175ed3946241571d1a`
 - Godot 4.6.3 独立最小工程实际导入后，8 张 AtlasTexture 非空、可见像素、唯一性检查通过；日志 `build_expansion_test.log`，脚本 `check_build_expansion_icons.gd`。主工程导入后可运行同脚本复核。
 - 源图是高分辨率像素风生成素材，不宣称原生 64×64 逐像素网格。Nearest、无 mipmap；生成留白不完全达到提示词比例，但可见内容未越格。素材检查不等同于最终 UI 或 Windows 实机检查。
 
-单 PNG 素材预览已 Library 保存并回读确认尺寸 1774×887、1541039 字节，无读取警告：`libfile_033f0a8c0f50819188112339d017c97f`。此为素材图集，不是游戏运行截图。
+单 PNG 素材预览已 Library 保存并回读确认尺寸 1774×887、1541039 字节，无读取警告：`historical-library-reference-01`。此为素材图集，不是游戏运行截图。

@@ -1,3 +1,23 @@
+# MossCircuit v39 A — Locked Pulses and Traveling Rings
+
+Two new attack forms, three mechanic items and two free starters expand the game to **10 weapons / 33 items / 5 starters**. Tether Emitter locks four timed pulses to one target; Seismic Drum launches a narrow traveling ring. Lock Memory, Return Collar and Recoil Plate alter timing, return hits and defensive spacing rather than merely adding a generic multiplier. The four-weapon/eight-distinct-item limits remain. [Mechanics, retained failures and precise evidence](docs/V39_BUILD_EXPANSION_A.md).
+
+All seven new images have editable semantic SVG sources and reproducible runtime PNG exports. The four Stitch Drone sheets are already SVG-backed; **56 prior active raster-authoritative image files remain**. Separate legacy migration candidates and wave B are not silently included in A.
+
+**Verification is a transparent combination, not a fictional full-suite rerun.** The original aggregate remains **149/151 FAIL**, native exit1. A new candidate changes only two tests plus MANIFEST; cold import and complete corrected903/837 plus unchanged lifecycle124 passed independently reviewed. The unchanged149 results retain their original attribution. Actual packed17, UI/HUD/button178/140/200 and eight controlled mechanics cases128 passed as separate gates. Actual native UI uses a960×540 logical canvas even at different physical window settings.
+
+Two once-only ordinary default-seed attempts closed0: Arena/Tether died in wave1 with21kills before any shop; Rooms/Seismic reached the first shop with52scrap. Neither naturally acquired an exclusive A item. Rooms combat happened between observations, so its ordinary images do not directly show a ring hit. Controlled supplied builds are not natural-combo or campaign-clear proof. Original failures, launcher prerequisite127 and graphics VSync warnings remain; Dummy audio, Windows execution, campaign completion, exhaustive seeds, balance and performance are not certified.
+
+The exact PCK is43,017,204bytes, SHA256 `2d9969dedc30f460e0da61eef49fd224ddd5d54bbc6973e1a76ffa6656a12f56`. [Delivery and restoration boundaries](docs/DELIVERY.md). Local acceptance and remote publication are separate; the actual source/index readback is recorded only when it occurs.
+
+The v38-and-earlier text below is preserved byte-for-byte as historical accepted documentation, including its then-current publication wording.
+
+The unchanged delivery helper passed10 total cases (2 successful operations and8 rejections). All76 historical catalog rows remain exact;2 records append15 chunks/18 payload paths. Actual local v38→v39→v38 file-only backup/replacement/rollback restored the old PCK and unchanged ELF/modes. This is not gameplay rollback or remote-download proof.
+
+Historical documentation privacy correction:19 inherited, already-published documents contained local working paths or private-library reference labels. Earlier privacy scans covered changed overlays and actual PCK bytes, not every unchanged historical document. This release applies an explicit19-document presentation-only derivation with neutral relative/reference labels and per-field/raw-public hash mapping. Original history is not rewritten; tested869 source and the runtime PCK remain unchanged. This is not a retrospective claim that every prior source tree was privacy-clean.
+
+---
+
 # MossCircuit v38 — Stitch Drone / editable SVG source
 
 An interruptible support enemy changes target priority: one wounded ordinary ally,1.2-second warning and up to10HP repair. Damage the source to interrupt; repair never resurrects. Arena wave4 and two Rooms stages receive bounded additions. Four semantic editable SVG sheets generate the formal runtime PNGs; AI predecessors are reference-only, not embedded raster masquerading as SVG. [Feature, all retained failures and verification limits](docs/V38_STITCH_DRONE.md).

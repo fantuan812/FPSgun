@@ -1,0 +1,12 @@
+--- evidence-workspace/moss-v38-parity/combat.gd
++++ evidence-workspace/moss-v39-prep/retained-parity/combat.gd
+@@ -25,6 +25,9 @@
+ func _initialize()->void:call_deferred("run")
+ func run()->void:
+  g=load("res://scenes/main.tscn").instantiate();root.add_child(g);g.set_process(false)
++ # A strict historical catalog/starting data inverse, before original encounter control.
++ var legacy_input:Dictionary=preload("res://tests/support/v39_legacy_inputs.gd").install(g)
++ if not legacy_input.pass:failures.append("A historical input inverse failed");push_error(str(legacy_input.errors));quit(1);return
+  # Exact held v37 encounter/Rooms injection, before any mode construction/run.
+  var old_encounters:String=FileAccess.get_file_as_string("evidence-workspace/moss-v38-parity/encounters.json")
+  var old_rooms:String=FileAccess.get_file_as_string("evidence-workspace/moss-v38-parity/room_encounters.json")

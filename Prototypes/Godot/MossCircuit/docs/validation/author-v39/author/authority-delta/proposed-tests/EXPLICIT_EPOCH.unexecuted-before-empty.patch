@@ -1,0 +1,31 @@
+--- a/tests/independent_tempering_authority.gd
++++ b/tests/independent_tempering_authority.gd
+@@ -65,7 +65,9 @@
+  ck(same(run_before,run_after),label+" all other run authority exact")
+  var world_before:Dictionary=before.world.duplicate(true);var world_after:Dictionary=after.world.duplicate(true)
+  for key in ["stats","weapon_clocks"]:world_before.erase(key);world_after.erase(key)
+- ck(same(world_before,world_after),label+" all other combat authority exact")
++ var epoch_advanced:bool=world_before.get("new_weapon_epoch") is int and world_after.get("new_weapon_epoch") is int and world_after.new_weapon_epoch==world_before.new_weapon_epoch+1
++ world_after.new_weapon_epoch=world_before.new_weapon_epoch
++ ck(epoch_advanced and same(world_before,world_after),label+" A epoch exactly +1; all other combat authority exact")
+  var old_stats:Dictionary=before.world.stats.duplicate(true);var new_stats:Dictionary=after.world.stats.duplicate(true)
+  for key in ["electric_bonus","melee_bonus","extra_pellets","synergies"]:old_stats.erase(key);new_stats.erase(key)
+  ck(same(old_stats,new_stats),label+" no unrelated derived-stat change")
+--- a/tests/independent_weapon_order.gd
++++ b/tests/independent_weapon_order.gd
+@@ -57,11 +57,13 @@
+  after.run.build.weapons=before.run.build.weapons;after.run.build.revision=before.run.build.revision
+  after.run.shop_generation=before.run.shop_generation;after.run.shop_message=before.run.shop_message
+  after.combat.weapon_clocks=before.combat.weapon_clocks;after.rig=before.rig
+- ck(same(after,before),label+" only declared authority/presentation mutations")
++ var epoch_advanced:bool=before.combat.get("new_weapon_epoch") is int and after.combat.get("new_weapon_epoch") is int and after.combat.new_weapon_epoch==before.combat.new_weapon_epoch+1
++ after.combat.new_weapon_epoch=before.combat.new_weapon_epoch
++ ck(epoch_advanced and same(after,before),label+" A epoch exactly +1; only declared authority/presentation mutations")
+  var stable:=snap();ck(not g._move_weapon(slot,step,before.run.shop_generation,moved_id) and same(snap(),stable),label+" stale repeat atomic")
+  ck(g._move_weapon(target,-step,g.shop_generation,moved_id),label+" reverse accepted")
+  ck(g.build.weapons==before.run.build.weapons and same(g.weapon_clocks,before.combat.weapon_clocks),label+" inverse restores IDs/clocks")
+- ck(g.build.revision==before.run.build.revision+2 and g.shop_generation==before.run.shop_generation+2,label+" inverse is not counter rollback")
++ ck(g.build.revision==before.run.build.revision+2 and g.shop_generation==before.run.shop_generation+2 and g.combat.new_weapon_epoch is int and g.combat.new_weapon_epoch==before.combat.new_weapon_epoch+2,label+" inverse is not counter rollback; A epoch exactly +2")
+ func _initialize()->void:call_deferred("run")
+ func run()->void:
+  g=load("res://scenes/main.tscn").instantiate();root.add_child(g);g.set_process(false)

@@ -1,0 +1,22 @@
+from pathlib import Path
+import json
+r=Path('evidence-workspace/moss-v39-r2');records=[]
+def save(name,s,kind):
+ p=r/'tests'/name;p.write_text(s);records.append({'path':'tests/'+name,'scope':kind})
+def install(name,var):
+ p=r/'tests'/name;s=p.read_text();lines=s.splitlines(True);matches=[i for i,x in enumerate(lines) if 'instantiate()' in x and 'main.tscn' in x];assert len(matches)==1,name;i=matches[0];line=lines[i];assert 'set_process(false)' in line and '_start_run(' not in line,name
+ indent=line[:len(line)-len(line.lstrip())];hook=f'{indent}# Explicit original8/30/3 fixture; actual A catalog is separately validated.\n{indent}var legacy_input:Dictionary=preload("res://tests/support/v39_legacy_inputs.gd").install({var})\n{indent}if not legacy_input.pass:push_error(str(legacy_input.errors));quit(1);return\n';lines.insert(i+1,hook);save(name,''.join(lines),'strict complete historical main fixture before run; all original assertions unchanged')
+for n in ['test_weapon_order','independent_reservation_views','independent_cryo_shop','test_upgrade_salvage','independent_feedback_shop','independent_weapon_order','independent_weapon_authority','independent_weapon_readouts','independent_focus_combat','independent_tag_authority','independent_starting_loadouts','independent_starting_loadout_views']:
+ install(n+'.gd','game' if n in ['test_weapon_order','test_upgrade_salvage'] else 'g')
+# Cases retaining actual main/current raw for chained historical identity checks.
+p=r/'tests/test_bankshot_build.gd';s=p.read_text();needle=' check(g.catalog.version==5 and g.catalog.weapons.size()==8 and g.catalog.items.size()==30 and g.catalog.items[-1].id=="scavenger_reel" and Rules.catalog_entry(g.catalog,"feedback_diode").id=="feedback_diode","explicit content version/count")';assert needle in s;s=s.replace(needle,' var a_history:Dictionary=preload("res://tests/support/v39_catalog_projection.gd").project(g.catalog,FileAccess.get_file_as_string("res://data/catalog.json"))\n check(a_history.pass and a_history.catalog.version==5 and a_history.catalog.weapons.size()==8 and a_history.catalog.items.size()==30 and a_history.catalog.items[-1].id=="scavenger_reel" and Rules.catalog_entry(a_history.catalog,"feedback_diode").id=="feedback_diode","explicit historical content version/count after strict A inverse")');save(p.name,s,'local old-count assertion only; all actual game/current rawhistory paths retained')
+p=r/'tests/independent_reservation_records.gd';s=p.read_text();needle=' var expanded_bytes:String=FileAccess.get_file_as_string("res://data/catalog.json"))';# actual line is one closing bracket
+needle=' var expanded_bytes:String=FileAccess.get_file_as_string("res://data/catalog.json")';assert needle in s;s=s.replace(needle,needle+'\n var a_history:Dictionary=preload("res://tests/support/v39_catalog_projection.gd").project(c,expanded_bytes)\n if not a_history.pass:push_error(str(a_history.errors));quit(1);return')
+s=s.replace('ck(c.items.map(func(e):return e.id)==ITEM_IDS+', 'ck(a_history.catalog.items.map(func(e):return e.id)==ITEM_IDS+').replace('ck(c.weapons.map(func(e):return e.id)==[','ck(a_history.catalog.weapons.map(func(e):return e.id)==[');save(p.name,s,'local old-ID assertions only; current c/raw and all projection negatives retained')
+# Pure old3 registry schema fixture keeps currentcatalog valid but strictly inverses only starter inputs.
+p=r/'tests/test_starting_loadouts.gd';s=p.read_text();needle='\tvar data:Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://data/starting_loadouts.json"))';assert needle in s;s=s.replace(needle,needle+'\n\tvar kit_history:Dictionary=preload("res://tests/support/v39_loadout_projection.gd").project(data,FileAccess.get_file_as_string("res://data/starting_loadouts.json"))\n\tif not kit_history.pass:push_error(str(kit_history.errors));quit(1);return\n\tdata=kit_history.data');save(p.name,s,'pure historical registry schema; actual main currentcatalog retained')
+# Optional mechanism-id backwards compatibility case specifically describes original12 definitions.
+p=r/'tests/independent_forecast_authority.gd';s=p.read_text();needle='\tck(Forecast.mechanism_status(b,legacy).size()==12,"optional IDs remain accepted")';assert needle in s
+# Avoid altering all previous actual-data forecast cases: project only the optional-ID fixture before its IDs are erased.
+print([x for x in s.splitlines() if 'legacy' in x][-5:])
+(r.parent/'moss-v39-prep/next-candidate/HISTORICAL_ADAPTERS.json').write_text(json.dumps(records,indent=2)+'\n')

@@ -43,6 +43,9 @@ func buttons(node:Node)->Array:
 	return found
 func run()->void:
 	game=load("res://scenes/main.tscn").instantiate();root.add_child(game);game.set_process(false)
+	# Explicit original8/30/3 fixture; actual A catalog is separately validated.
+	var legacy_input:Dictionary=preload("res://tests/support/v39_legacy_inputs.gd").install(game)
+	if not legacy_input.pass:push_error(str(legacy_input.errors));quit(1);return
 	check(game.catalog.weapons.size()==8 and game.catalog.items.size()==30 and game.catalog.items[-1].id=="scavenger_reel","exact expanded catalog count/last module")
 	for mode_id in ["arena","rooms"]:
 		for count in [2,3,4]:

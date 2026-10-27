@@ -13,7 +13,11 @@ func buttons(node:Node)->Array:
 func run()->void:
 	root.size=Vector2i(960,540)
 	var game=load("res://scenes/main.tscn").instantiate()
-	root.add_child(game);game.set_process(false);game._start_run(1717)
+	root.add_child(game);game.set_process(false)
+	# Historical38-card suite; actual43-icon/new5 UI is separate.
+	var legacy_input:Dictionary=preload("res://tests/support/v39_legacy_inputs.gd").install(game)
+	if not legacy_input.pass:push_error(str(legacy_input.errors));quit(1);return
+	game._start_run(1717)
 	game.build.coins=999;game._open_shop()
 	for entry in game.catalog.weapons+game.catalog.items:
 		var view:Dictionary=game._view()

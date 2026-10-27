@@ -1,0 +1,11 @@
+--- source/independent_feedback_authority.gd
++++ external/audio-arena.gd
+@@ -219,7 +219,7 @@
+   g._finish(false);g._on_intent("retry",{});ck(g.feedback_audio.muted,"retry retains mute")
+   g.state="settings";g._on_intent("set_setting",{"key":"mute_feedback_sounds","value":false});ck(not g.feedback_audio.muted and none_playing(g) and events.is_empty(),"unmute never replays")
+   var before_view:Dictionary=snap(g);g._feedback_audio_view();g._view();g.ui.show_settings(g._view());ck(snap(g)==before_view and events.is_empty(),"views/settings presentation read-only")
+-  var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
++  var audio_teardown = preload("<WORKSPACE>/moss-v39-qa/packed-harness/audio_teardown.gd").new()
+   audio_teardown.prepare([g])
+   g.queue_free();await process_frame
+   await audio_teardown.finish(self)

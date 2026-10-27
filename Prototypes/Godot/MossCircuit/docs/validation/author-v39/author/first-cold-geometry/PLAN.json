@@ -1,0 +1,38 @@
+{
+  "scope": "First author cold import then independent frozen850 geometry checks, no full/runtime/native claim",
+  "input_count": 815,
+  "input_map": "evidence-workspace/moss-v39-prep/first-cold-geometry/INPUTS.json",
+  "per_case_seconds": 180,
+  "exact_import_additions": [
+    "art_source/build_expansion_A/svg/lock_memory.svg.import",
+    "art_source/build_expansion_A/svg/recoil_plate.svg.import",
+    "art_source/build_expansion_A/svg/return_collar.svg.import",
+    "art_source/build_expansion_A/svg/seismic_drum_held.svg.import",
+    "art_source/build_expansion_A/svg/seismic_drum_icon.svg.import",
+    "art_source/build_expansion_A/svg/tether_emitter_held.svg.import",
+    "art_source/build_expansion_A/svg/tether_emitter_icon.svg.import",
+    "assets/items/lock_memory.png.import",
+    "assets/items/recoil_plate.png.import",
+    "assets/items/return_collar.png.import",
+    "assets/items/seismic_drum_icon.png.import",
+    "assets/items/tether_emitter_icon.png.import",
+    "assets/weapon_mounts/seismic_drum_held.png.import",
+    "assets/weapon_mounts/tether_emitter_held.png.import",
+    "scripts/gameplay/new_weapon_profiles.gd.uid",
+    "scripts/gameplay/new_weapon_runtime.gd.uid",
+    "scripts/gameplay/new_weapon_visuals.gd.uid",
+    "scripts/gameplay/pulse_wave_geometry.gd.uid",
+    "scripts/gameplay/recoil_plate.gd.uid",
+    "tests/support/v39_catalog_projection.gd.uid",
+    "tests/test_recoil_plate.gd.uid"
+  ],
+  "geometry_script": "evidence-workspace/moss-v39-qa/checks/independent_new_weapon_geometry.gd",
+  "pins": {
+    "evidence-workspace/moss-v39-prep/first-cold-geometry/INPUTS.json": "94e1d9506dfeaf5841c87a7038ac28706033c86342ed04c0106d37f6473022e6",
+    "evidence-workspace/moss-v39-prep/first-cold-geometry/DIFF.json": "bd777d82696ae810e8dc3c2adf4971f5c9b91635771f29c9f41d14848be2ba51",
+    "evidence-workspace/moss-v39-prep/first-cold-geometry/run.py": "7a4b5e67964fb51f87edfc4f171ab62be9f0abf91404afc56395616ad1717e3a",
+    "evidence-workspace/moss-v39-qa/checks/independent_new_weapon_geometry.gd": "d4063643488a5d5018bd9241048c4be20c9179fb46d074fe4c367f35e6883f2f",
+    "evidence-workspace/moss-v39-qa/pretarget/GEOMETRY_API_CASES.json": "9ae13f97bf2eb6f201972bb28135e97b20b8491b9c69d273ef7d67c011bad8d6",
+    "evidence-workspace/moss-v39-qa/pretarget/FREEZE.json": "dfa9883b0d726a6e2509d5c4cf976cde1248eabe90e346aea5f36ec333e771d7"
+  }
+}

@@ -15,6 +15,10 @@ func event(fx,kind: String,data: Dictionary={}) -> Array:
 func _initialize() -> void: call_deferred("run")
 func run() -> void:
 	var catalog: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://data/catalog.json"))
+	# Exact historical data for the unchanged original case/count matrix.
+	var a_history:Dictionary=preload("res://tests/support/v39_catalog_projection.gd").project(catalog,FileAccess.get_file_as_string("res://data/catalog.json"))
+	if not a_history.pass:push_error(str(a_history.errors));quit(1);return
+	catalog=a_history.catalog
 	var build := Rules.new_build(catalog)
 	build.weapons=["return_disc"]
 	var pool := Rules.weighted_pool(build,catalog)

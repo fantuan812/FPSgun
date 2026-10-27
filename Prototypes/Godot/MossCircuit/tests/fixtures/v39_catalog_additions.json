@@ -1,0 +1,150 @@
+{
+  "version": 39,
+  "baseline_sha256": "91bb4fbaa0cb01ace9148b79192e46d69258170bd343a2ad4702bd2f5f173f36",
+  "raw_insertions": [
+    ",\n    {\n      \"id\": \"tether_emitter\",\n      \"name\": \"Tether Emitter\",\n      \"kind\": \"weapon\",\n      \"behavior\": \"tether_pulse\",\n      \"damage\": 10,\n      \"interval\": 1.2,\n      \"projectiles\": 1,\n      \"spread\": 0,\n      \"pierce\": 0,\n      \"range\": 280,\n      \"price\": 38,\n      \"rarity\": \"uncommon\",\n      \"tags\": [\n        \"electric\"\n      ],\n      \"max_stack\": 4,\n      \"pulse_count\": 4,\n      \"description\": \"Four timed pulses lock one target per cycle. Moving out of range breaks the beam; no pull or slow. No instant launch damage.\"\n    },\n    {\n      \"id\": \"seismic_drum\",\n      \"name\": \"Seismic Drum\",\n      \"kind\": \"weapon\",\n      \"behavior\": \"expanding_ring\",\n      \"damage\": 22,\n      \"interval\": 1.4,\n      \"projectiles\": 1,\n      \"spread\": 0,\n      \"pierce\": 0,\n      \"range\": 180,\n      \"price\": 38,\n      \"rarity\": \"uncommon\",\n      \"tags\": [\n        \"melee\"\n      ],\n      \"max_stack\": 4,\n      \"inner_start_radius\": 24,\n      \"band_half_width\": 12,\n      \"outward_seconds\": 0.6,\n      \"max_live_per_slot\": 3,\n      \"description\": \"A fixed-center narrow ring expands from radius24 to reach in0.6s. Each target once per outward leg; real inner hole. Max3 waves per slot.\"\n    }",
+    ",\n    {\n      \"id\": \"lock_memory\",\n      \"name\": \"Lock Memory\",\n      \"kind\": \"item\",\n      \"price\": 26,\n      \"max_stack\": 1,\n      \"rarity\": \"uncommon\",\n      \"tags\": [\n        \"mechanism\"\n      ],\n      \"effects\": {},\n      \"description\": \"Tether only: retain the same out-of-range target once for up to 0.20s; no out-of-range damage.\",\n      \"trigger\": \"First range loss per launched Tether\",\n      \"cost\": \"1 module slot; grace occupies the slot and may skip the next scheduled shot\",\n      \"cooldown\": 0,\n      \"stack_rule\": \"Unique: maximum 1\",\n      \"synergy_targets\": [\n        \"tether_emitter\"\n      ],\n      \"grace_seconds\": 0.2\n    },\n    {\n      \"id\": \"return_collar\",\n      \"name\": \"Return Collar\",\n      \"kind\": \"item\",\n      \"price\": 28,\n      \"max_stack\": 1,\n      \"rarity\": \"uncommon\",\n      \"tags\": [\n        \"mechanism\"\n      ],\n      \"effects\": {},\n      \"description\": \"Seismic Drum only: return to radius 24 over 0.45s, hitting each target once at 50% launch damage. Not Return Disc.\",\n      \"trigger\": \"Outgoing ring reaches maximum radius\",\n      \"cost\": \"1 module slot; longer wave life can fill the three-wave slot cap\",\n      \"cooldown\": 0,\n      \"stack_rule\": \"Unique: maximum 1\",\n      \"synergy_targets\": [\n        \"seismic_drum\"\n      ],\n      \"inward_seconds\": 0.45,\n      \"inward_damage_scale\": 0.5\n    },\n    {\n      \"id\": \"recoil_plate\",\n      \"name\": \"Recoil Plate\",\n      \"kind\": \"item\",\n      \"price\": 24,\n      \"max_stack\": 1,\n      \"rarity\": \"uncommon\",\n      \"tags\": [\n        \"guard\"\n      ],\n      \"effects\": {},\n      \"description\": \"After surviving actual HP loss, push living non-boss enemies within 100px outward 55px; arena-clamped. No damage or stun.\",\n      \"trigger\": \"Positive player HP loss while still alive\",\n      \"cost\": \"1 module slot; does not cancel committed charges; no immunity or damage reduction\",\n      \"cooldown\": 2.0,\n      \"stack_rule\": \"Unique: maximum 1\",\n      \"synergy_targets\": [],\n      \"radius\": 100.0,\n      \"distance\": 55.0\n    }",
+    ",\n    {\n      \"id\": \"remembered_lock\",\n      \"name\": \"REMEMBERED LOCK\",\n      \"requires\": [\n        \"tether_emitter\",\n        \"lock_memory\"\n      ],\n      \"description\": \"One observed range-loss grace per beam, up to0.20s. No damage outside range; next shot may be skipped.\"\n    },\n    {\n      \"id\": \"returning_resonance\",\n      \"name\": \"RETURNING RESONANCE\",\n      \"requires\": [\n        \"seismic_drum\",\n        \"return_collar\"\n      ],\n      \"description\": \"A second inward leg over0.45s at half launch damage, once per target. Not Return Disc; longer waves can fill the cap.\"\n    }",
+    ",\n    [\n      \"tether_emitter\",\n      \"lock_memory\"\n    ],\n    [\n      \"seismic_drum\",\n      \"return_collar\"\n    ]"
+  ],
+  "weapons": [
+    {
+      "id": "tether_emitter",
+      "name": "Tether Emitter",
+      "kind": "weapon",
+      "behavior": "tether_pulse",
+      "damage": 10,
+      "interval": 1.2,
+      "projectiles": 1,
+      "spread": 0,
+      "pierce": 0,
+      "range": 280,
+      "price": 38,
+      "rarity": "uncommon",
+      "tags": [
+        "electric"
+      ],
+      "max_stack": 4,
+      "pulse_count": 4,
+      "description": "Four timed pulses lock one target per cycle. Moving out of range breaks the beam; no pull or slow. No instant launch damage."
+    },
+    {
+      "id": "seismic_drum",
+      "name": "Seismic Drum",
+      "kind": "weapon",
+      "behavior": "expanding_ring",
+      "damage": 22,
+      "interval": 1.4,
+      "projectiles": 1,
+      "spread": 0,
+      "pierce": 0,
+      "range": 180,
+      "price": 38,
+      "rarity": "uncommon",
+      "tags": [
+        "melee"
+      ],
+      "max_stack": 4,
+      "inner_start_radius": 24,
+      "band_half_width": 12,
+      "outward_seconds": 0.6,
+      "max_live_per_slot": 3,
+      "description": "A fixed-center narrow ring expands from radius24 to reach in0.6s. Each target once per outward leg; real inner hole. Max3 waves per slot."
+    }
+  ],
+  "items": [
+    {
+      "id": "lock_memory",
+      "name": "Lock Memory",
+      "kind": "item",
+      "price": 26,
+      "max_stack": 1,
+      "rarity": "uncommon",
+      "tags": [
+        "mechanism"
+      ],
+      "effects": {},
+      "description": "Tether only: retain the same out-of-range target once for up to 0.20s; no out-of-range damage.",
+      "trigger": "First range loss per launched Tether",
+      "cost": "1 module slot; grace occupies the slot and may skip the next scheduled shot",
+      "cooldown": 0,
+      "stack_rule": "Unique: maximum 1",
+      "synergy_targets": [
+        "tether_emitter"
+      ],
+      "grace_seconds": 0.2
+    },
+    {
+      "id": "return_collar",
+      "name": "Return Collar",
+      "kind": "item",
+      "price": 28,
+      "max_stack": 1,
+      "rarity": "uncommon",
+      "tags": [
+        "mechanism"
+      ],
+      "effects": {},
+      "description": "Seismic Drum only: return to radius 24 over 0.45s, hitting each target once at 50% launch damage. Not Return Disc.",
+      "trigger": "Outgoing ring reaches maximum radius",
+      "cost": "1 module slot; longer wave life can fill the three-wave slot cap",
+      "cooldown": 0,
+      "stack_rule": "Unique: maximum 1",
+      "synergy_targets": [
+        "seismic_drum"
+      ],
+      "inward_seconds": 0.45,
+      "inward_damage_scale": 0.5
+    },
+    {
+      "id": "recoil_plate",
+      "name": "Recoil Plate",
+      "kind": "item",
+      "price": 24,
+      "max_stack": 1,
+      "rarity": "uncommon",
+      "tags": [
+        "guard"
+      ],
+      "effects": {},
+      "description": "After surviving actual HP loss, push living non-boss enemies within 100px outward 55px; arena-clamped. No damage or stun.",
+      "trigger": "Positive player HP loss while still alive",
+      "cost": "1 module slot; does not cancel committed charges; no immunity or damage reduction",
+      "cooldown": 2.0,
+      "stack_rule": "Unique: maximum 1",
+      "synergy_targets": [],
+      "radius": 100.0,
+      "distance": 55.0
+    }
+  ],
+  "mechanism_synergies": [
+    {
+      "id": "remembered_lock",
+      "name": "REMEMBERED LOCK",
+      "requires": [
+        "tether_emitter",
+        "lock_memory"
+      ],
+      "description": "One observed range-loss grace per beam, up to0.20s. No damage outside range; next shot may be skipped."
+    },
+    {
+      "id": "returning_resonance",
+      "name": "RETURNING RESONANCE",
+      "requires": [
+        "seismic_drum",
+        "return_collar"
+      ],
+      "description": "A second inward leg over0.45s at half launch damage, once per target. Not Return Disc; longer waves can fill the cap."
+    }
+  ],
+  "affinity_links": [
+    [
+      "tether_emitter",
+      "lock_memory"
+    ],
+    [
+      "seismic_drum",
+      "return_collar"
+    ]
+  ]
+}

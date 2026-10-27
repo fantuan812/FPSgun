@@ -16,6 +16,9 @@ static func step(frame:Context,dt:float)->void:
 		if frame.session.state in ["title","dead","won"]:EnemySupport.settle(frame.world.enemies,[],false)
 		return
 	_prune_focus(frame.world)
+	frame.procs.recoil_area=frame.area
+	frame.world.combat_tick_serial+=1
+	frame.world.new_weapon_motion.clear()
 	for prep_slot in range(frame.session.build.weapons.size()):
 		var soon:float=frame.world.weapon_clocks[prep_slot]
 		var prep_weapon:Dictionary=Rules.catalog_entry(frame.catalog,frame.session.build.weapons[prep_slot])
@@ -24,6 +27,8 @@ static func step(frame:Context,dt:float)->void:
 			frame.actor.set_phase(0,"warning",1-soon/.12)
 			break
 	for slot in range(frame.session.build.weapons.size()):
+		var scheduled:Dictionary=Rules.catalog_entry(frame.catalog,frame.session.build.weapons[slot])
+		if scheduled.get("behavior","") in ["tether_pulse","expanding_ring"]:continue
 		frame.world.weapon_clocks[slot] -= dt
 		if frame.world.weapon_clocks[slot] <= 0 and not frame.world.enemies.is_empty():
 			frame.weapons.fire(frame.session.build.weapons[slot], slot, frame.area)
@@ -37,9 +42,11 @@ static func step(frame:Context,dt:float)->void:
 		var normal_speed: float = e.speed
 		e.speed *= Status.movement_factor(e,frame.session.elapsed)
 		var previous_ai:String=e.ai_state
+		var motion_start:Vector2=e.pos
 		var events: Array = EnemyAI.tick(e,frame.world.player_pos,dt,frame.session.elapsed)
 		e.speed = normal_speed
 		e.pos = e.pos.clamp(Vector2(20,20),Vector2(frame.area.width - 20,frame.area.height - 20))
+		frame.world.new_weapon_motion[e.id]={"p0":motion_start,"p1":e.pos,"final_pos":e.pos,"has_segment":true}
 		if e.ai_state == "warning" and previous_ai != "warning" and e.attack == "annulus":
 			# The warning footprint is fixed after the shared clamp, never dragged by later pushes.
 			e.pulse_center = e.pos
@@ -73,6 +80,10 @@ static func step(frame:Context,dt:float)->void:
 	# A: every actor now has its normal clamped position; no mixed-order selection.
 	var support_due:Array=EnemySupport.advance(frame.world.enemies,dt,true)
 	_sync_support(frame)
+	for enemy in frame.world.enemies:
+		if frame.world.new_weapon_motion.has(enemy.id):frame.world.new_weapon_motion[enemy.id].final_pos=enemy.pos
+		else:frame.world.new_weapon_motion[enemy.id]={"p0":enemy.pos,"p1":enemy.pos,"final_pos":enemy.pos,"has_segment":false}
+	if frame.new_weapons!=null:frame.new_weapons.step(frame,dt,frame.world.combat_tick_serial)
 	var living_owners: Array = frame.world.enemies.filter(func(enemy): return enemy.hp > 0).map(func(enemy): return enemy.id)
 	frame.world.enemy_bullets = frame.world.enemy_bullets.filter(func(projectile): return projectile.owner in living_owners)
 	for i in range(frame.world.enemy_bullets.size() - 1,-1,-1):

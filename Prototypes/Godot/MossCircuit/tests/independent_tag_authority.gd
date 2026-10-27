@@ -45,6 +45,9 @@ func verify(label:String,expected:Dictionary)->void:
  records.append({"label":label,"counts":c,"state":state_projection(),"affinity":affinity,"weighted_pool":Rules.weighted_pool(g.build,g.catalog),"stock":stock,"stock_rng_after":rng.state})
 func run()->void:
  g=load("res://scenes/main.tscn").instantiate();root.add_child(g);g.set_process(false)
+ # Explicit original8/30/3 fixture; actual A catalog is separately validated.
+ var legacy_input:Dictionary=preload("res://tests/support/v39_legacy_inputs.gd").install(g)
+ if not legacy_input.pass:push_error(str(legacy_input.errors));quit(1);return
  check(g.catalog.synergies.size()==EXPECTED_RULES.size(),"exact three catalog definitions")
  for i in EXPECTED_RULES.size():
   var actual:Dictionary=g.catalog.synergies[i];var expected:Dictionary=EXPECTED_RULES[i]

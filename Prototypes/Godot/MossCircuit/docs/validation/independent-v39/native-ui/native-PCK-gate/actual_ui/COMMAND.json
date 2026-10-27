@@ -1,0 +1,26 @@
+{
+  "cmd": [
+    "godot",
+    "--path",
+    "<WORKSPACE>/moss-v39-ui/native-PCK-gate/empty-runtime",
+    "--main-pack",
+    "<WORKSPACE>/moss-v39-pack/linux/MossCircuit.pck",
+    "--audio-driver",
+    "Dummy",
+    "--resolution",
+    "960x540",
+    "--position",
+    "0,60",
+    "--script",
+    "<WORKSPACE>/moss-v39-ui/native-PCK-gate/actual_ui_observed.gd"
+  ],
+  "timeout_seconds": 180,
+  "env": {
+    "HOME": "<WORKSPACE>/moss-v39-ui/native-PCK-gate/home",
+    "XDG_CONFIG_HOME": "<WORKSPACE>/moss-v39-ui/native-PCK-gate/config",
+    "XDG_DATA_HOME": "<WORKSPACE>/moss-v39-ui/native-PCK-gate/data",
+    "XDG_CACHE_HOME": "<WORKSPACE>/moss-v39-ui/native-PCK-gate/cache",
+    "DISPLAY": ":0",
+    "WAYLAND_DISPLAY": null
+  }
+}

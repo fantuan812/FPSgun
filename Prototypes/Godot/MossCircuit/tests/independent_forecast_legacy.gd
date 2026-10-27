@@ -31,6 +31,10 @@ func old_status(build:Dictionary,catalog:Dictionary)->Array:
 	return rows
 func run()->void:
 	var c:Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://data/catalog.json"))
+	# Exact historical data for the unchanged original case/count matrix.
+	var a_history:Dictionary=preload("res://tests/support/v39_catalog_projection.gd").project(c,FileAccess.get_file_as_string("res://data/catalog.json"))
+	if not a_history.pass:push_error(str(a_history.errors));quit(1);return
+	c=a_history.catalog
 	var base:Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://data/balance.json")).player
 	for legacy in [false,true]:
 		var cat:Dictionary=c.duplicate(true)

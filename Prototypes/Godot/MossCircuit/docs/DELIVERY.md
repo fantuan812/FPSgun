@@ -1,3 +1,23 @@
+# v39 A complete resource pack — bounded local evidence
+
+Both platform preset packs are43,017,204bytes with SHA256 `2d9969dedc30f460e0da61eef49fd224ddd5d54bbc6973e1a76ffa6656a12f56`. The original Linux ELF remains `2c78919325d7f29fa7607287c7c1eeac367ea4c94e7b8b6f5f4c6b20492f73d0`,0755. This is a complete external resource pack, not an executable, ZIP or delta patch. The Windows preset export is not a Windows runtime test.
+
+From a checkout containing every required chunk, run `python Deliveries/MossCircuit/restore_deliveries.py --version v39 --verify-only`, then restore into a new output directory. Read [v39 recovery instructions](../../../../Deliveries/MossCircuit/v39/READ_ME_v39.txt). Close the game, uniquely back up and hash the actual old pack, verify the restored whole new file, and replace only the adjacent `MossCircuit.pck`. Start the original program normally, not through `--main-pack`. The unchanged helper rejects unsafe paths/symlinks/overwrites, requires hardlinks, and publishes atomically per file, not per version. It does not install or execute. Actual delivery-case and file-rollback evidence is recorded separately; these instructions do not themselves establish Git download or arbitrary-installation safety.
+
+Source acceptance combines the original149 passing routes from a failed151 aggregate with an independently verified two-test/MANIFEST-only correction and new cold903/837/124. There was no second151/151 execution. Original failures remain. Seven resource-only export commands passed; the exporter reused the existing import cache. Independent actual packed17 includes a separate true cold source copy and actual PCK comparison. Generic968 covers78 exact files/69 PNG images/28 actions308frames; SVG, WAV/PCM and new A art have specialist identity gates. Source/imported pixels are distinct. Audio authority435+338 uses two180s mode gates/totalmax360, not a single180s claim.
+
+Every actual PCK directory record (254) and payload MD5 was checked, with whole-byte private-path scan and explicit development/reference exclusions. Six historical AI-original payload identities are absent. The v38 scene-ID exception is not generalized to this release. Seven new A images plus four Stitch Drone sheets have editable SVG sources;56 prior active raster-authoritative images remain.
+
+Exact-PCK native UI/HUD/button178/140/200 and controlled mechanics128 are separate from ordinary play. Two once-only default240102 normal ELF/adjacent-pack attempts ended with Arena/Tether death21kills/no shop and Rooms/Seismic first shop52scrap. Neither acquired an exclusive A item; no reroll/refresh/purchase was used. Rooms short combat was between observations, so no ordinary still directly proves a ring hit. Actual ordinary windows were1180×812 despite960×540 request; logical canvas960×540. Processes exited0; original VSync warnings and failed pre-target launcher127 remain. No physical-audio, Windows, full-campaign, all-seed, balance or performance guarantee.
+
+Actual publication requires a reachable source commit and separate index-only readback. Historical v38-and-earlier delivery prose follows unchanged and describes its original checkpoint.
+
+The unchanged delivery helper passed10 total cases (2 successful operations and8 rejections). All76 historical catalog rows remain exact;2 records append15 chunks/18 payload paths. Actual local v38→v39→v38 file-only backup/replacement/rollback restored the old PCK and unchanged ELF/modes. This is not gameplay rollback or remote-download proof.
+
+Historical documentation privacy correction:19 inherited, already-published documents contained local working paths or private-library reference labels. Earlier privacy scans covered changed overlays and actual PCK bytes, not every unchanged historical document. This release applies an explicit19-document presentation-only derivation with neutral relative/reference labels and per-field/raw-public hash mapping. Original history is not rewritten; tested869 source and the runtime PCK remain unchanged. This is not a retrospective claim that every prior source tree was privacy-clean.
+
+---
+
 # v38 complete resource pack — final portable SVG package
 
 Both preset PCKs are **42,955,188 bytes**, SHA-256 `b8f648cc2f9378dfffc162375e105dd2e5ccd21044cb6496e4ebe39027a38740`. Linux ELF remains `2c78919325d7f29fa7607287c7c1eeac367ea4c94e7b8b6f5f4c6b20492f73d0`,0755. This is a complete resource pack, not a standalone executable, ZIP or delta patch. Original platform programs/licenses remain required; Windows was not executed.

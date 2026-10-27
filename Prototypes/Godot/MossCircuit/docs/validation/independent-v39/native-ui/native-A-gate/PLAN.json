@@ -1,0 +1,83 @@
+{
+  "status": "FROZEN_QA_APPROVED",
+  "source_path": "<WORKSPACE>/moss-v39-qa/r3-independent/project",
+  "source_input_map_path": "<WORKSPACE>/moss-v39-prep/r3-caller-fix/INPUTS.json",
+  "phases": [
+    {
+      "name": "actual_ui",
+      "expected_checks": 178,
+      "script": "<WORKSPACE>/moss-v39-ui/native-A-gate/actual_ui_observed.gd",
+      "expected_images": [
+        "choice_arena_960_tether.png",
+        "started_arena_960_tether.png",
+        "choice_arena_960_seismic.png",
+        "started_arena_960_seismic.png",
+        "choice_rooms_960_tether.png",
+        "started_rooms_960_tether.png",
+        "choice_rooms_960_seismic.png",
+        "started_rooms_960_seismic.png",
+        "choice_arena_1280_tether.png",
+        "started_arena_1280_tether.png",
+        "choice_arena_1280_seismic.png",
+        "started_arena_1280_seismic.png",
+        "choice_rooms_1280_tether.png",
+        "started_rooms_1280_tether.png",
+        "choice_rooms_1280_seismic.png",
+        "started_rooms_1280_seismic.png"
+      ]
+    },
+    {
+      "name": "hud_width",
+      "expected_checks": 140,
+      "script": "<WORKSPACE>/moss-v39-ui/native-A-gate/hud_width_observed.gd",
+      "expected_images": [
+        "arena_960_two_lock_six_out.png",
+        "arena_960_two_lock_mixed.png",
+        "arena_960_three_lock_three_in.png",
+        "arena_960_one_lock_nine_out.png",
+        "arena_960_twelve_out.png",
+        "arena_960_twelve_in.png",
+        "arena_960_old_four_control.png",
+        "rooms_960_two_lock_six_out.png",
+        "rooms_960_two_lock_mixed.png",
+        "rooms_960_three_lock_three_in.png",
+        "rooms_960_one_lock_nine_out.png",
+        "rooms_960_twelve_out.png",
+        "rooms_960_twelve_in.png",
+        "rooms_960_old_four_control.png",
+        "arena_1280_two_lock_six_out.png",
+        "arena_1280_two_lock_mixed.png",
+        "arena_1280_three_lock_three_in.png",
+        "arena_1280_one_lock_nine_out.png",
+        "arena_1280_twelve_out.png",
+        "arena_1280_twelve_in.png",
+        "arena_1280_old_four_control.png",
+        "rooms_1280_two_lock_six_out.png",
+        "rooms_1280_two_lock_mixed.png",
+        "rooms_1280_three_lock_three_in.png",
+        "rooms_1280_one_lock_nine_out.png",
+        "rooms_1280_twelve_out.png",
+        "rooms_1280_twelve_in.png",
+        "rooms_1280_old_four_control.png"
+      ],
+      "expected_records": 28
+    }
+  ],
+  "pins": {
+    "<WORKSPACE>/moss-v39-ui/native-A-gate/run.py": "39e6c0a141b192adff5f24a35c12bd0e172e8c06af53ae255221f1cc444f775f",
+    "<WORKSPACE>/moss-v39-ui/native-A-gate/actual_ui_observed.gd": "8ce6d1856055f81d89dff05de2d47573e93cb58a2ebac9d75c11763b4fe6aeba",
+    "<WORKSPACE>/moss-v39-ui/native-A-gate/hud_width_observed.gd": "b6b6bedad333e7c08fa30235bd81aae79d5e36060aabdd5bb54f97265bae81e6",
+    "<WORKSPACE>/moss-v39-ui/tests/test_expansion_actual_ui.gd": "fe13225d1b9514bb509d074e70c4c5ff5304a5e78ad0fb4cffe1ee99414c7a2b",
+    "<WORKSPACE>/moss-v39-ui/tests/test_expansion_hud_width.gd": "76e46cb07196a3fff96e4cd8805feef2e1319914f85d7493ff8fc7d96652f395",
+    "<WORKSPACE>/moss-v39-ui/prep/NATIVE_A_EXPECTED_IMAGES.json": "f4b3b02ef4a3d2843dd3c5cbc613a2d678bc01b3fbd3c7f90266d57cc37fa95a",
+    "<WORKSPACE>/moss-v39-ui/native-A-gate/launch.sh": "e19efade30f9c7ea8a717801fc3ce5e110a53c2c4404857cb4658cfe150fab66",
+    "<WORKSPACE>/moss-v39-ui/native-A-gate/INHERITANCE_STATIC_REVIEW.md": "20a660dd735bef1faeb176ecdcf5f9cb0135a9d6317d6906d2e42707e15615f0",
+    "<WORKSPACE>/moss-v39-prep/r3-caller-fix/INPUTS.json": "f09f11fe80730cf2a22d73c56e73a6ea7ce7c43d30dc0f289fbb8d3f1b728512",
+    "<WORKSPACE>/moss-v39-qa/r3-independent/project/tests/support/audio_teardown.gd": "9e9676e34296cb55d4560b1169c5954a82508f70e9051fcc942d1bb6839c23bd"
+  },
+  "scope": "source-only developer native controlled; no final PCK claim",
+  "requires_cua_native_terminal": true,
+  "no_execute_until_qa_final_freeze": true,
+  "original_source_path": "<WORKSPACE>/moss-v39-r3",
+  "pending_execution_authorization": false
+}

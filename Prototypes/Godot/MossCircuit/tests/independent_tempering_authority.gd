@@ -28,6 +28,8 @@ func props(obj:Object)->Dictionary:
 func snap()->Dictionary:
  return {"run":props(g.run),"world":props(g.combat),"effects":props(g.effects),"sequence":g.effect_runtime.sequence,"rng":[g.rng.state,g.loot_rng.state,g.shop_rng.state],"rig":{"slots":clean(g.weapon_rig.slots),"generation":g.weapon_rig.generation,"clock":g.weapon_rig.visible_clock,"last":g.weapon_rig.last_shot.duplicate(true),"discs":clean(g.weapon_rig.disc_sprites),"mortars":g.weapon_rig.mortar_marks.duplicate(true)}}
 func same(a:Variant,b:Variant)->bool:return var_to_bytes(a)==var_to_bytes(b)
+func new_entities_empty(world:Dictionary)->bool:
+ return world.get("pulse_beams") is Array and world.pulse_beams.is_empty() and world.get("seismic_waves") is Array and world.seismic_waves.is_empty() and world.get("new_weapon_motion") is Dictionary and world.new_weapon_motion.is_empty()
 func setup(mode:String,ids:Array=["rivet_gun","rivet_gun"],tiers:Variant=null)->void:
  g._title();g._select_mode(mode);g._start_run(3301)
  g.build.weapons=ids.duplicate();g.build.items={"power_coil":1,"arc_relay":1,"kill_cell":1,"mirror_shell":1,"echo_chamber":1,"phase_capacitor":1,"feedback_diode":1,"dash_resin":1,"pulse_boots":1}
@@ -65,7 +67,9 @@ func apply(slot:int,donor:int,label:String)->void:
  ck(same(run_before,run_after),label+" all other run authority exact")
  var world_before:Dictionary=before.world.duplicate(true);var world_after:Dictionary=after.world.duplicate(true)
  for key in ["stats","weapon_clocks"]:world_before.erase(key);world_after.erase(key)
- ck(same(world_before,world_after),label+" all other combat authority exact")
+ var epoch_advanced:bool=world_before.get("new_weapon_epoch") is int and world_after.get("new_weapon_epoch") is int and world_after.new_weapon_epoch==world_before.new_weapon_epoch+1
+ world_after.new_weapon_epoch=world_before.new_weapon_epoch
+ ck(epoch_advanced and new_entities_empty(world_before) and new_entities_empty(world_after) and same(world_before,world_after),label+" A epoch exactly +1; all other combat authority exact")
  var old_stats:Dictionary=before.world.stats.duplicate(true);var new_stats:Dictionary=after.world.stats.duplicate(true)
  for key in ["electric_bonus","melee_bonus","extra_pellets","synergies"]:old_stats.erase(key);new_stats.erase(key)
  ck(same(old_stats,new_stats),label+" no unrelated derived-stat change")

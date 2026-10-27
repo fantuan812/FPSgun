@@ -1,0 +1,72 @@
+{
+  "scope": "New r2 strict malformed165 correction plus historical-input integrity18 and actualA links17/readout8/transactions208; no full/native lifecycle acceptance",
+  "input_count": 845,
+  "input_map": "evidence-workspace/moss-v39-prep/r2-focused/INPUTS.json",
+  "original_836_map": "evidence-workspace/moss-v39-prep/first-cold-geometry/raw-first/POST_INPUTS.json",
+  "per_case_seconds": 180,
+  "exact_import_additions": [
+    "tests/support/v39_legacy_inputs.gd.uid",
+    "tests/support/v39_loadout_projection.gd.uid",
+    "tests/test_A_catalog_links.gd.uid",
+    "tests/test_A_item_transactions.gd.uid",
+    "tests/test_A_profile_negatives.gd.uid",
+    "tests/test_expansion_actual_ui.gd.uid",
+    "tests/test_expansion_weapon_readout.gd.uid",
+    "tests/test_v39_legacy_inputs.gd.uid"
+  ],
+  "routes": [
+    {
+      "name": "cold",
+      "helpers": 0
+    },
+    {
+      "name": "negatives",
+      "script": "evidence-workspace/moss-v39-prep/profile-negative/author_malformed_new_profiles.gd",
+      "key": "checks",
+      "checks": 165,
+      "helpers": 0
+    },
+    {
+      "name": "legacy-inputs",
+      "script": "res://tests/test_v39_legacy_inputs.gd",
+      "key": "checks",
+      "checks": 18,
+      "helpers": 1,
+      "owners": 2
+    },
+    {
+      "name": "actual-links",
+      "script": "res://tests/test_A_catalog_links.gd",
+      "key": "checks",
+      "checks": 17,
+      "helpers": 0
+    },
+    {
+      "name": "new-readout",
+      "script": "res://tests/test_expansion_weapon_readout.gd",
+      "key": "checks",
+      "checks": 8,
+      "helpers": 0
+    },
+    {
+      "name": "item-transactions",
+      "script": "res://tests/test_A_item_transactions.gd",
+      "key": "A_item_transaction_checks",
+      "checks": 208,
+      "helpers": 1,
+      "owners": 1
+    }
+  ],
+  "pins": {
+    "evidence-workspace/moss-v39-prep/r2-focused/INPUTS.json": "4531ea4bf4e9771cc2e3203672df3f636dc7366478eae56039c85a6529addec3",
+    "evidence-workspace/moss-v39-prep/r2-focused/DIFF.json": "c263b6e21fa021df140a67a94c9e3ece6ded6ccd12f1e4d626693e6c4ea83f7c",
+    "evidence-workspace/moss-v39-prep/r2-focused/CHANGES.patch": "130307bfae3c173896341bb7663831bdba78383af3b93330dd0deafbcd4713a3",
+    "evidence-workspace/moss-v39-prep/r2-focused/EXPECTED_UID_ADDITIONS.json": "bb9f701d10f672afec65202c0db21df7d8f7b185957d5847506b44cb31bb69d2",
+    "evidence-workspace/moss-v39-prep/r2-focused/run.py": "6c952c9bc1e55e459b5c7f452f48a1295b7f2127db7f2687278a9979f8083f16",
+    "evidence-workspace/moss-v39-prep/profile-negative/author_malformed_new_profiles.gd": "591c2fbafca68f936b81bc46a453c70200d0f95ca83bd578255b0b676bda1c7a",
+    "evidence-workspace/moss-v39-prep/first-cold-geometry/raw-first/POST_INPUTS.json": "2c025ed2d370a8940381ed3dfd27c310d2d161d67ba568cd08a6ac412fe53858",
+    "evidence-workspace/moss-v39-prep/profile-negative/PLAN.json": "410ebc0d512eb2b6eb26ab69b608f44d463d180cb85f0c17b56b0e206c918976",
+    "evidence-workspace/moss-v39-prep/next-candidate/HISTORICAL_ADAPTERS.json": "9d0af377646feca75bc41010a0198ca620d44c9a7f464d6e274625331afdc19a",
+    "evidence-workspace/moss-v39-prep/r2-focused/HISTORICAL_SOURCE_SCOPE.md": "893abde4204ab5c72f3dcbb71ba73c6c01653f796d7cfce0219a425bdf89a394"
+  }
+}

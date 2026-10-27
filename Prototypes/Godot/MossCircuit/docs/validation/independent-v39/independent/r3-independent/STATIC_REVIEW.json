@@ -1,0 +1,21 @@
+{
+  "pass": true,
+  "scope": "Static exact r3 source only two-path difference, valid age-derived local interval normalization; no relaxation of pure geometry/EPS or original assertions.",
+  "changed_paths": [
+    {
+      "path": "MANIFEST.json",
+      "old_sha256": "cf212a4e56b4451aeb9ea451663508b64267dae9c6ce05fde31d27444dc47ad6",
+      "new_sha256": "efc365a2a34ccf6dc04412808f01c4e8f14514e869537dd093b233f55c197236"
+    },
+    {
+      "path": "scripts/gameplay/new_weapon_runtime.gd",
+      "old_sha256": "8599049a5ac9cf747c3fad8b5363be13331ce3a644e8f8ea60493a235c3dc8a0",
+      "new_sha256": "f96a0dcd5881142ee557e162975adf5ce20303e6928f29c4ace65c98bf2987fb"
+    }
+  ],
+  "input_map_sha256": "f09f11fe80730cf2a22d73c56e73a6ea7ce7c43d30dc0f289fbb8d3f1b728512",
+  "plan_sha256": "f805f25eb4d6cefb32bcb0a24d7e94393d7825b18a37af7445e9a0ab98485f12",
+  "original_caps_failure": "8fd80db51158717465c765523463304de590094fddc2a846f218a163be58f972",
+  "diagnostic_finding": "36e94a1869e72e974e3d21f6a72e1eed94663d66b80616e5eba9216254ae76e1",
+  "authorization": "The verification plan approved once diagnostic confirmed, next candidate only caller t0/t1 clamp to [0,dt]; original functional failure retained."
+}

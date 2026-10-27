@@ -1,0 +1,10 @@
+--- source/independent_new_weapon_lifecycle.gd
++++ external/lifecycle.gd
+@@ -73,6 +73,6 @@
+   before=snap();g._complete_wave();cleared(before,mode+" room_boundary")
+   ck(g.wave==2 and g.elapsed==before.elapsed,mode+" actual stage2 settlement preserves run clock")
+  g._title()
+- var helper=load("res://tests/support/audio_teardown.gd").new();helper.prepare([g]);g.queue_free();await process_frame;await helper.finish(self)
++ var helper=load("<WORKSPACE>/moss-v39-qa/packed-harness/audio_teardown.gd").new();helper.prepare([g]);g.queue_free();await process_frame;await helper.finish(self)
+  print(JSON.stringify({"pass":failures.is_empty(),"checks":checks,"failures":failures,"observations":observations,"scope":"Independent pretarget lifecycle expectations through actual main transaction/intent/settlement seams; controlled loadouts and completion eligibility, not ordinary play or natural acquisition"}))
+  quit(0 if failures.is_empty() else 1)

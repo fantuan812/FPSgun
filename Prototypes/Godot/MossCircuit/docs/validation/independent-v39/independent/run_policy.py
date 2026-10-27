@@ -1,0 +1,27 @@
+from pathlib import Path
+import json,hashlib,subprocess,os,time,shutil
+q=Path(__file__).parent;src=Path('<WORKSPACE>/moss-v39-work');plan=json.loads((q/'POLICY_EXECUTION_FREEZE.json').read_text());h=lambda p:hashlib.sha256(p.read_bytes()).hexdigest();mp=Path(plan['map_path']);pins=json.loads(mp.read_text());assert h(mp)==plan['map_sha256'];assert len(pins)==836
+planhash=h(q/'POLICY_EXECUTION_FREEZE.json');frozen=plan['pins'];assert all(h(Path(n))==v for n,v in frozen.items());assert all(h(src/n)==v for n,v in pins.items())
+project=q/'policy-source';out=q/'policy-first';assert not project.exists() and not out.exists();project.mkdir();out.mkdir()
+for n in pins:
+ p=project/n;p.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(src/n,p)
+assert all(h(project/n)==v for n,v in pins.items())
+env=os.environ.copy()
+for k,n in [('HOME','home'),('XDG_CONFIG_HOME','config'),('XDG_DATA_HOME','data'),('XDG_CACHE_HOME','cache')]:
+ (out/n).mkdir();env[k]=str(out/n)
+rows=[]
+for name,args in [('cold',['--editor','--import']),('policy',['--script',str(q/'checks/independent_new_weapon_policy.gd')])]:
+ t=time.monotonic();timed=False
+ try:z=subprocess.run(['godot','--headless','--audio-driver','Dummy','--path',str(project),*args],capture_output=True,env=env,timeout=180);a,b,rc=z.stdout,z.stderr,z.returncode
+ except subprocess.TimeoutExpired as e:a,b,rc=e.stdout or b'',e.stderr or b'',124;timed=True
+ (out/(name+'.stdout')).write_bytes(a);(out/(name+'.stderr')).write_bytes(b);(out/(name+'.exit')).write_text(str(rc)+'\n');reports=[];errors=[]
+ for line in a.decode(errors='replace').splitlines():
+  if line.startswith('{'):
+   try:reports.append(json.loads(line))
+   except ValueError as e:errors.append(str(e))
+ text=(a+b).decode(errors='replace');clean=not errors and not any(x in text for x in ['SCRIPT ERROR','ERROR:','instances leaked','resources still in use'])
+ semantic=not reports if name=='cold' else len(reports)==1 and reports[0].get('pass') is True and reports[0].get('failures')==[] and reports[0].get('checks')==59 and len(reports[0].get('observations',[]))==5
+ row={'case':name,'native_exit':rc,'timeout':timed,'seconds':time.monotonic()-t,'clean':clean,'semantic':semantic,'reports':reports,'parse_errors':errors,'pass':rc==0 and not timed and clean and semantic};rows.append(row);(out/'STEPS.json').write_text(json.dumps(rows,indent=2)+'\n');print(json.dumps({k:v for k,v in row.items() if k!='reports'}),flush=True)
+ if not row['pass']:break
+changes={str(root):[n for n,v in pins.items() if not(root/n).exists() or h(root/n)!=v] for root in [src,project]};added=sorted(str(p.relative_to(project)) for p in project.rglob('*') if p.is_file() and '.godot' not in p.relative_to(project).parts and str(p.relative_to(project)) not in pins);pinchanges=[n for n,v in frozen.items() if h(Path(n))!=v]
+result={'pass':len(rows)==2 and all(x['pass'] for x in rows) and not any(changes.values()) and not added and not pinchanges and h(mp)==plan['map_sha256'] and h(q/'POLICY_EXECUTION_FREEZE.json')==planhash,'source_changes':changes,'added':added,'pin_changes':pinchanges,'scope':plan['scope']};(out/'RESULT.json').write_text(json.dumps(result,indent=2)+'\n');print(json.dumps(result));raise SystemExit(0 if result['pass'] else 1)

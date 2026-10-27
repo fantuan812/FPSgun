@@ -17,6 +17,9 @@ func offer(id:String)->void:
 	g._open_shop();g.shop_offers=[{"id":id,"sold":false,"weight_multiplier":1.0,"bias_reasons":[]}];g._render_shop()
 func run()->void:
 	g=load("res://scenes/main.tscn").instantiate();root.add_child(g);g.set_process(false)
+	# Explicit original8/30/3 fixture; actual A catalog is separately validated.
+	var legacy_input:Dictionary=preload("res://tests/support/v39_legacy_inputs.gd").install(g)
+	if not legacy_input.pass:push_error(str(legacy_input.errors));quit(1);return
 	var c:Dictionary=g.catalog
 	check(Rules.validate_catalog(c).is_empty(),"new catalog valid")
 	check(c.weapons.size()==8 and c.items.size()==30 and c.items[-1].id=="scavenger_reel" and Rules.catalog_entry(c,"feedback_diode").id=="feedback_diode" and Rules.catalog_entry(c,"bankshot_driver").id=="bankshot_driver" and Rules.catalog_entry(c,"bounce_guide").id=="bounce_guide","explicit v36 8+30 including the unique appended Scavenger Reel")

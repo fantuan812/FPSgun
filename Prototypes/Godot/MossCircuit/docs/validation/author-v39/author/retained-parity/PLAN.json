@@ -1,0 +1,45 @@
+{
+  "scope": "Strict original6transaction/24combat held traces under exact legacy8/30/3 catalog and v37 encounter controls using r2 production code. NOT currentv38 encounter/defaultA catalog seed parity. No new golden generation.",
+  "input_map": "evidence-workspace/moss-v39-prep/r2-focused/raw-first/POST_INPUTS.json",
+  "input_count": 853,
+  "per_case_seconds": 180,
+  "routes": [
+    {
+      "name": "transactions",
+      "case_count": 6,
+      "fixture": "evidence-workspace/moss-v39-prep/retained-parity/transactions.gd",
+      "fixture_sha256": "c0d0a99b2018b6ffb672986dfa25252a8f40b5b406678ac1575ba5066422b57f",
+      "source_fixture": "evidence-workspace/moss-v38-parity/transactions.gd",
+      "source_fixture_sha256": "da608adb0ad811e8e41f2ec1178eaedf3a6bec911fde18d5895ec6fc4ca085ee",
+      "retained_trace": "evidence-workspace/moss-v38-parity/results/transactions.json",
+      "retained_sha256": "48c6705e27d301857f8a52ad849a29b27f6a302f8bcab8f7a2ec5a1d69ee7e63"
+    },
+    {
+      "name": "combat",
+      "case_count": 24,
+      "fixture": "evidence-workspace/moss-v39-prep/retained-parity/combat.gd",
+      "fixture_sha256": "251dddaf4030be4d43683c442e69d9360c4eeb0e15074c60f0b9ffbdf7bb36e8",
+      "source_fixture": "evidence-workspace/moss-v38-parity/combat.gd",
+      "source_fixture_sha256": "7221e17d382dbdd061bab09f0c5c54ce0f2753e0805ad47fe40310bf4a7d14d6",
+      "retained_trace": "evidence-workspace/moss-v38-parity/results/combat.json",
+      "retained_sha256": "7cd6062fe08d107b8b3eb6e41f2f8dce0ce90f0a1c4448768e8c0624c317c358"
+    }
+  ],
+  "pins": {
+    "evidence-workspace/moss-v39-prep/r2-focused/raw-first/POST_INPUTS.json": "993c4661532ed4d85ee2a0665ce4935af33209f30f3bfa9d13944c9a8039f451",
+    "evidence-workspace/moss-v39-prep/retained-parity/run.py": "dbe09fca612aa7f04ee83bd7a7e0e0109975e80c9c2133bbd758c5c985a2487c",
+    "evidence-workspace/moss-v39-prep/retained-parity/ROUTES.json": "c2a9d385aa47abfaed1b7dde92a16f7a825c78d15077add9b0f5bf3a14c5099e",
+    "evidence-workspace/moss-v39-prep/retained-parity/SCOPE.md": "6b6ba28ec05dee96d760d118160153ccfa5f562c528356889c179617d9dfae68",
+    "evidence-workspace/moss-v38-parity/encounters.json": "853bb3699bb05c2ed1eb7d1c8dc3e51844428c233ffa3127ac035a2762a3f356",
+    "evidence-workspace/moss-v38-parity/room_encounters.json": "4a0067faa08241d91042505d72b3a027956ef27571710d74d8559462ac2c5131",
+    "evidence-workspace/moss-v38-qa/PARITY_RAW_REVIEW.json": "15d1412834eed6556acd1992124bb89d96b9636ecfc14d98788407dd12ebda94",
+    "evidence-workspace/moss-v39-prep/retained-parity/transactions.gd": "c0d0a99b2018b6ffb672986dfa25252a8f40b5b406678ac1575ba5066422b57f",
+    "evidence-workspace/moss-v38-parity/transactions.gd": "da608adb0ad811e8e41f2ec1178eaedf3a6bec911fde18d5895ec6fc4ca085ee",
+    "evidence-workspace/moss-v38-parity/results/transactions.json": "48c6705e27d301857f8a52ad849a29b27f6a302f8bcab8f7a2ec5a1d69ee7e63",
+    "evidence-workspace/moss-v39-prep/retained-parity/transactions.patch": "235d0ce5e4131c920b0f1d83dff8eaa22c6d2ded0eea50249ba585e585aa9a5b",
+    "evidence-workspace/moss-v39-prep/retained-parity/combat.gd": "251dddaf4030be4d43683c442e69d9360c4eeb0e15074c60f0b9ffbdf7bb36e8",
+    "evidence-workspace/moss-v38-parity/combat.gd": "7221e17d382dbdd061bab09f0c5c54ce0f2753e0805ad47fe40310bf4a7d14d6",
+    "evidence-workspace/moss-v38-parity/results/combat.json": "7cd6062fe08d107b8b3eb6e41f2f8dce0ce90f0a1c4448768e8c0624c317c358",
+    "evidence-workspace/moss-v39-prep/retained-parity/combat.patch": "9cfa0734358bd0fc33b1c96396ff95651d9e8ebe218410693e8c791f1b289f33"
+  }
+}

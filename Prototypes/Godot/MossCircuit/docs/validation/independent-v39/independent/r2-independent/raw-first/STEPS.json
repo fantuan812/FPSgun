@@ -1,0 +1,2115 @@
+[
+  {
+    "name": "cold",
+    "native_exit": 0,
+    "seconds": 23.705913924000924,
+    "timeout": false,
+    "clean": true,
+    "semantic": true,
+    "helper_ok": true,
+    "reports": [],
+    "helpers": [],
+    "parse_errors": [],
+    "pass": true
+  },
+  {
+    "name": "geometry",
+    "native_exit": 0,
+    "seconds": 0.3067781349964207,
+    "timeout": false,
+    "clean": true,
+    "semantic": true,
+    "helper_ok": true,
+    "reports": [
+      {
+        "checks": 850,
+        "failures": [],
+        "observations": [
+          {
+            "hit": true,
+            "name": "stationary100_out",
+            "time": 0.184615384615385
+          },
+          {
+            "hit": true,
+            "name": "center_initial_band",
+            "time": 0.0
+          },
+          {
+            "hit": false,
+            "name": "stationary_center_hole",
+            "time": 0.0
+          },
+          {
+            "hit": true,
+            "name": "inner_exit_earliest",
+            "time": 0.16
+          },
+          {
+            "hit": true,
+            "name": "fast_two_crossings",
+            "time": 0.28
+          },
+          {
+            "hit": true,
+            "name": "outer_tangent",
+            "time": 0.5
+          },
+          {
+            "hit": false,
+            "name": "outside_tangent",
+            "time": 0.0
+          },
+          {
+            "hit": true,
+            "name": "inner_boundary",
+            "time": 0.0
+          },
+          {
+            "hit": false,
+            "name": "inside_hole",
+            "time": 0.0
+          },
+          {
+            "hit": true,
+            "name": "zero_scale_boundary",
+            "time": 0.0
+          },
+          {
+            "hit": true,
+            "name": "zero_duration_outer",
+            "time": 0.0
+          },
+          {
+            "hit": false,
+            "name": "zero_duration_hole",
+            "time": 0.0
+          },
+          {
+            "hit": false,
+            "name": "wave_dies_before_segment_contact",
+            "time": 0.0
+          },
+          {
+            "hit": true,
+            "name": "wave_alive_contact_clipped",
+            "time": 0.28
+          },
+          {
+            "hit": true,
+            "name": "inward_stationary100",
+            "time": 0.15
+          },
+          {
+            "hit": true,
+            "name": "translated_represented",
+            "time": 0.292307692307692
+          },
+          {
+            "hit": true,
+            "name": "matrix_16",
+            "time": 0.0
+          },
+          {
+            "hit": true,
+            "name": "matrix_17",
+            "time": 0.0
+          },
+          {
+            "hit": true,
+            "name": "matrix_18",
+            "time": 0.0
+          },
+          {
+            "hit": true,
+            "name": "matrix_19",
+            "time": 0.3
+          },
+          {
+            "hit": true,
+            "name": "matrix_20",
+            "time": 0.239679386832837
+          },
+          {
+            "hit": true,
+            "name": "matrix_21",
+            "time": 0.113612215756531
+          },
+          {
+            "hit": true,
+            "name": "matrix_22",
+            "time": 0.269646702122783
+          },
+          {
+            "hit": true,
+            "name": "matrix_23",
+            "time": 0.256144133951371
+          },
+          {
+            "hit": true,
+            "name": "matrix_24",
+            "time": 0.229109396362393
+          },
+          {
+            "hit": true,
+            "name": "matrix_25",
+            "time": 0.0
+          },
+          {
+            "hit": true,
+            "name": "matrix_26",
+            "time": 0.0
+          },
+          {
+            "hit": true,
+            "name": "matrix_27",
+            "time": 0.0
+          },
+          {
+            "hit": false,
+            "name": "matrix_28",
+            "time": 0.0
+          },
+          {
+            "hit": false,
+            "name": "matrix_29",
+            "time": 0.0
+          },
+          {
+            "hit": false,
+            "name": "matrix_30",
+            "time": 0.0
+          },
+          {
+            "hit": true,
+            "name": "matrix_31",
+            "time": 0.570329670329671
+          },
+          {
+            "hit": true,
+            "name": "matrix_32",
+            "time": 0.543956043956044
+          },
+          {
+            "hit": true,
+            "name": "matrix_33",
+            "time": 0.491208791208791
+          },
+          {
+            "hit": true,
+            "name": "matrix_34",
+            "time": 0.0
+          },
+          {
+            "hit": true,
+            "name": "matrix_35",
+            "time": 0.0
+          },
+          {
+            "hit": true,
+            "name": "matrix_36",
+            "time": 0.0
+          },
+          {
+            "hit": true,
+            "name": "matrix_37",
+            "time": 0.3
+          },
+          {
+            "hit": true,
+            "name": "matrix_38",
+            "time": 0.239679386832837
+          },
+          {
+            "hit": true,
+            "name": "matrix_39",
+            "time": 0.113612215756531
+          },
+          {
+            "hit": true,
+            "name": "matrix_40",
+            "time": 0.269646702122783
+          },
+          {
+            "hit": true,
+            "name": "matrix_41",
+            "time": 0.256144133951371
+          },
+          {
+            "hit": true,
+            "name": "matrix_42",
+            "time": 0.229109396362393
+          },
+          {
+            "hit": true,
+            "name": "matrix_43",
+            "time": 0.0
+          },
+          {
+            "hit": true,
+            "name": "matrix_44",
+            "time": 0.0
+          },
+          {
+            "hit": true,
+            "name": "matrix_45",
+            "time": 0.0
+          },
+          {
+            "hit": true,
+            "name": "matrix_46",
+            "time": 0.478347730012737
+          },
+          {
+            "hit": true,
+            "name": "matrix_47",
+            "time": 0.419136681110037
+          },
+          {
+            "hit": true,
+            "name": "matrix_48",
+            "time": 0.0
+          },
+          {
+            "hit": true,
+            "name": "matrix_49",
+            "time": 0.310110321639996
+          },
+          {
+            "hit": true,
+            "name": "matrix_50",
+            "time": 0.29662897332634
+          },
+          {
+            "hit": true,
+            "name": "matrix_51",
+            "time": 0.269640785411283
+          },
+          {
+            "hit": true,
+            "name": "matrix_52",
+            "time": 0.0
+          },
+          {
+            "hit": true,
+            "name": "matrix_53",
+            "time": 0.0
+          },
+          {
+            "hit": true,
+            "name": "matrix_54",
+            "time": 0.0
+          },
+          {
+            "hit": false,
+            "name": "matrix_55",
+            "time": 0.0
+          },
+          {
+            "hit": false,
+            "name": "matrix_56",
+            "time": 0.0
+          },
+          {
+            "hit": true,
+            "name": "matrix_57",
+            "time": 0.0
+          },
+          {
+            "hit": true,
+            "name": "matrix_58",
+            "time": 0.516287861174191
+          },
+          {
+            "hit": true,
+            "name": "matrix_59",
+            "time": 0.48717859748769
+          },
+          {
+            "hit": true,
+            "name": "matrix_60",
+            "time": 0.428323940729471
+          },
+          {
+            "hit": true,
+            "name": "matrix_61",
+            "time": 0.0
+          },
+          {
+            "hit": true,
+            "name": "matrix_62",
+            "time": 0.0
+          },
+          {
+            "hit": true,
+            "name": "matrix_63",
+            "time": 0.0
+          },
+          {
+            "hit": true,
+            "name": "matrix_64",
+            "time": 0.11622466093675
+          },
+          {
+            "hit": true,
+            "name": "matrix_65",
+            "time": 0.0492337199537848
+          },
+          {
+            "hit": true,
+            "name": "matrix_66",
+            "time": 0.0
+          },
+          {
+            "hit": true,
+            "name": "matrix_67",
+            "time": 0.229134333933506
+          },
+          {
+            "hit": true,
+            "name": "matrix_68",
+            "time": 0.215612841021646
+          },
+          {
+            "hit": true,
+            "name": "matrix_69",
+            "time": 0.188537848756402
+          },
+          {
+            "hit": true,
+            "name": "matrix_70",
+            "time": 0.0
+          },
+          {
+            "hit": true,
+            "name": "matrix_71",
+            "time": 0.0
+          },
+          {
+            "hit": true,
+            "name": "matrix_72",
+            "time": 0.0
+          },
+          {
+            "hit": true,
+            "name": "matrix_73",
+            "time": 0.537307542600279
+          },
+          {
+            "hit": true,
+            "name": "matrix_74",
+            "time": 0.0
+          },
+          {
+            "hit": true,
+            "name": "matrix_75",
+            "time": 0.0
+          },
+          {
+            "hit": true,
+            "name": "matrix_76",
+            "time": 0.323583904312345
+          },
+          {
+            "hit": true,
+            "name": "matrix_77",
+            "time": 0.310110093311074
+          },
+          {
+            "hit": true,
+            "name": "matrix_78",
+            "time": 0.283138855810806
+          },
+          {
+            "hit": true,
+            "name": "matrix_79",
+            "time": 0.0
+          },
+          {
+            "hit": true,
+            "name": "matrix_80",
+            "time": 0.0
+          },
+          {
+            "hit": true,
+            "name": "matrix_81",
+            "time": 0.0
+          },
+          {
+            "hit": false,
+            "name": "matrix_82",
+            "time": 0.0
+          },
+          {
+            "hit": true,
+            "name": "matrix_83",
+            "time": 0.0
+          },
+          {
+            "hit": true,
+            "name": "matrix_84",
+            "time": 0.0
+          },
+          {
+            "hit": true,
+            "name": "matrix_85",
+            "time": 0.488366739106783
+          },
+          {
+            "hit": true,
+            "name": "matrix_86",
+            "time": 0.458727444432774
+          },
+          {
+            "hit": true,
+            "name": "matrix_87",
+            "time": 0.398901098901099
+          },
+          {
+            "hit": true,
+            "name": "matrix_88",
+            "time": 0.0
+          },
+          {
+            "hit": true,
+            "name": "matrix_89",
+            "time": 0.0
+          },
+          {
+            "hit": true,
+            "name": "matrix_90",
+            "time": 0.0
+          },
+          {
+            "hit": true,
+            "name": "matrix_91",
+            "time": 0.0512241963535096
+          },
+          {
+            "hit": true,
+            "name": "matrix_92",
+            "time": 0.0
+          },
+          {
+            "hit": true,
+            "name": "matrix_93",
+            "time": 0.0
+          },
+          {
+            "hit": true,
+            "name": "matrix_94",
+            "time": 0.215621911031753
+          },
+          {
+            "hit": true,
+            "name": "matrix_95",
+            "time": 0.202094610881156
+          },
+          {
+            "hit": true,
+            "name": "matrix_96",
+            "time": 0.175007476713839
+          },
+          {
+            "hit": true,
+            "name": "matrix_97",
+            "time": 0.0292441001008659
+          },
+          {
+            "hit": true,
+            "name": "matrix_98",
+            "time": 0.0157894736842105
+          },
+          {
+            "hit": true,
+            "name": "matrix_99",
+            "time": 0.0
+          },
+          {
+            "hit": true,
+            "name": "matrix_100",
+            "time": 0.0
+          },
+          {
+            "hit": true,
+            "name": "matrix_101",
+            "time": 0.0
+          },
+          {
+            "hit": true,
+            "name": "matrix_102",
+            "time": 0.0
+          },
+          {
+            "hit": true,
+            "name": "matrix_103",
+            "time": 0.370662267174968
+          },
+          {
+            "hit": true,
+            "name": "matrix_104",
+            "time": 0.357215716327905
+          },
+          {
+            "hit": true,
+            "name": "matrix_105",
+            "time": 0.330308072077464
+          },
+          {
+            "hit": true,
+            "name": "matrix_106",
+            "time": 0.0648429721798535
+          },
+          {
+            "hit": true,
+            "name": "matrix_107",
+            "time": 0.0349590088540985
+          },
+          {
+            "hit": true,
+            "name": "matrix_108",
+            "time": 0.0
+          },
+          {
+            "hit": true,
+            "name": "matrix_109",
+            "time": 0.0
+          },
+          {
+            "hit": true,
+            "name": "matrix_110",
+            "time": 0.0
+          },
+          {
+            "hit": true,
+            "name": "matrix_111",
+            "time": 0.0
+          },
+          {
+            "hit": true,
+            "name": "matrix_112",
+            "time": 0.384189196354616
+          },
+          {
+            "hit": true,
+            "name": "matrix_113",
+            "time": 0.353672839032947
+          },
+          {
+            "hit": true,
+            "name": "matrix_114",
+            "time": 0.292304127780408
+          },
+          {
+            "hit": false,
+            "name": "matrix_115",
+            "time": 0.0
+          },
+          {
+            "hit": false,
+            "name": "matrix_116",
+            "time": 0.0
+          },
+          {
+            "hit": true,
+            "name": "matrix_117",
+            "time": 0.0
+          },
+          {
+            "hit": true,
+            "name": "matrix_118",
+            "time": 0.0
+          },
+          {
+            "hit": true,
+            "name": "matrix_119",
+            "time": 0.0
+          },
+          {
+            "hit": true,
+            "name": "matrix_120",
+            "time": 0.0
+          },
+          {
+            "hit": true,
+            "name": "matrix_121",
+            "time": 0.168303077617578
+          },
+          {
+            "hit": true,
+            "name": "matrix_122",
+            "time": 0.154757262823016
+          },
+          {
+            "hit": true,
+            "name": "matrix_123",
+            "time": 0.127632016291075
+          },
+          {
+            "hit": true,
+            "name": "matrix_124",
+            "time": 0.0754194356435435
+          },
+          {
+            "hit": true,
+            "name": "matrix_125",
+            "time": 0.0619976383564778
+          },
+          {
+            "hit": true,
+            "name": "matrix_126",
+            "time": 0.0351547772501614
+          },
+          {
+            "hit": true,
+            "name": "matrix_127",
+            "time": 0.0167045571459071
+          },
+          {
+            "hit": true,
+            "name": "matrix_128",
+            "time": 0.00178151081549365
+          },
+          {
+            "hit": true,
+            "name": "matrix_129",
+            "time": 0.0
+          },
+          {
+            "hit": true,
+            "name": "matrix_130",
+            "time": 0.417551373650318
+          },
+          {
+            "hit": true,
+            "name": "matrix_131",
+            "time": 0.404127913473362
+          },
+          {
+            "hit": true,
+            "name": "matrix_132",
+            "time": 0.377278312136985
+          },
+          {
+            "hit": true,
+            "name": "matrix_133",
+            "time": 0.169924363247781
+          },
+          {
+            "hit": true,
+            "name": "matrix_134",
+            "time": 0.139516753838678
+          },
+          {
+            "hit": true,
+            "name": "matrix_135",
+            "time": 0.0789227781649315
+          },
+          {
+            "hit": true,
+            "name": "matrix_136",
+            "time": 0.0434959724937541
+          },
+          {
+            "hit": true,
+            "name": "matrix_137",
+            "time": 0.0046297358500594
+          },
+          {
+            "hit": true,
+            "name": "matrix_138",
+            "time": 0.0
+          },
+          {
+            "hit": true,
+            "name": "matrix_139",
+            "time": 0.27690118299891
+          },
+          {
+            "hit": true,
+            "name": "matrix_140",
+            "time": 0.246034360384265
+          },
+          {
+            "hit": true,
+            "name": "matrix_141",
+            "time": 0.184064273306255
+          },
+          {
+            "hit": false,
+            "name": "matrix_142",
+            "time": 0.0
+          },
+          {
+            "hit": false,
+            "name": "matrix_143",
+            "time": 0.0
+          },
+          {
+            "hit": false,
+            "name": "matrix_144",
+            "time": 0.0
+          },
+          {
+            "hit": false,
+            "name": "matrix_145",
+            "time": 0.0
+          },
+          {
+            "hit": false,
+            "name": "matrix_146",
+            "time": 0.0
+          },
+          {
+            "hit": true,
+            "name": "matrix_147",
+            "time": 0.0
+          },
+          {
+            "hit": true,
+            "name": "matrix_148",
+            "time": 0.120953344125917
+          },
+          {
+            "hit": true,
+            "name": "matrix_149",
+            "time": 0.107391512695754
+          },
+          {
+            "hit": true,
+            "name": "matrix_150",
+            "time": 0.0802339736305772
+          },
+          {
+            "hit": true,
+            "name": "matrix_151",
+            "time": 0.095349467311775
+          },
+          {
+            "hit": true,
+            "name": "matrix_152",
+            "time": 0.0819297602502521
+          },
+          {
+            "hit": true,
+            "name": "matrix_153",
+            "time": 0.0550903461272062
+          },
+          {
+            "hit": true,
+            "name": "matrix_154",
+            "time": 0.0388732975246427
+          },
+          {
+            "hit": true,
+            "name": "matrix_155",
+            "time": 0.023951771668908
+          },
+          {
+            "hit": true,
+            "name": "matrix_156",
+            "time": 0.0
+          },
+          {
+            "hit": true,
+            "name": "matrix_157",
+            "time": 0.43755199738061
+          },
+          {
+            "hit": true,
+            "name": "matrix_158",
+            "time": 0.424132290319087
+          },
+          {
+            "hit": true,
+            "name": "matrix_159",
+            "time": 0.397292876196041
+          },
+          {
+            "hit": true,
+            "name": "matrix_160",
+            "time": 0.21564150907771
+          },
+          {
+            "hit": true,
+            "name": "matrix_161",
+            "time": 0.18509189593603
+          },
+          {
+            "hit": true,
+            "name": "matrix_162",
+            "time": 0.124191453756145
+          },
+          {
+            "hit": true,
+            "name": "matrix_163",
+            "time": 0.101840000001739
+          },
+          {
+            "hit": true,
+            "name": "matrix_164",
+            "time": 0.0626379267305434
+          },
+          {
+            "hit": true,
+            "name": "matrix_165",
+            "time": 0.0
+          },
+          {
+            "hit": true,
+            "name": "matrix_166",
+            "time": 0.230595322530109
+          },
+          {
+            "hit": true,
+            "name": "matrix_167",
+            "time": 0.199636430171444
+          },
+          {
+            "hit": true,
+            "name": "matrix_168",
+            "time": 0.137509267056946
+          },
+          {
+            "hit": false,
+            "name": "matrix_169",
+            "time": 0.0
+          },
+          {
+            "hit": false,
+            "name": "matrix_170",
+            "time": 0.0
+          },
+          {
+            "hit": false,
+            "name": "matrix_171",
+            "time": 0.0
+          },
+          {
+            "hit": false,
+            "name": "matrix_172",
+            "time": 0.0
+          },
+          {
+            "hit": false,
+            "name": "matrix_173",
+            "time": 0.0
+          },
+          {
+            "hit": true,
+            "name": "matrix_174",
+            "time": 0.0
+          },
+          {
+            "hit": true,
+            "name": "matrix_175",
+            "time": 0.100653232763329
+          },
+          {
+            "hit": true,
+            "name": "matrix_176",
+            "time": 0.0870852004808345
+          },
+          {
+            "hit": true,
+            "name": "matrix_177",
+            "time": 0.0599153157308311
+          },
+          {
+            "hit": true,
+            "name": "matrix_178",
+            "time": 0.27641209313641
+          },
+          {
+            "hit": true,
+            "name": "matrix_179",
+            "time": 0.262939405998048
+          },
+          {
+            "hit": true,
+            "name": "matrix_180",
+            "time": 0.23600515768713
+          },
+          {
+            "hit": true,
+            "name": "matrix_181",
+            "time": 0.240049431443804
+          },
+          {
+            "hit": true,
+            "name": "matrix_182",
+            "time": 0.225074309017802
+          },
+          {
+            "hit": true,
+            "name": "matrix_183",
+            "time": 0.195135383205906
+          },
+          {
+            "hit": true,
+            "name": "matrix_184",
+            "time": 0.111746658017016
+          },
+          {
+            "hit": true,
+            "name": "matrix_185",
+            "time": 0.00538405913557691
+          },
+          {
+            "hit": true,
+            "name": "matrix_186",
+            "time": 0.0
+          },
+          {
+            "hit": false,
+            "name": "matrix_187",
+            "time": 0.0
+          },
+          {
+            "hit": false,
+            "name": "matrix_188",
+            "time": 0.0
+          },
+          {
+            "hit": true,
+            "name": "matrix_189",
+            "time": 0.53945639496272
+          },
+          {
+            "hit": false,
+            "name": "matrix_190",
+            "time": 0.0
+          },
+          {
+            "hit": false,
+            "name": "matrix_191",
+            "time": 0.0
+          },
+          {
+            "hit": true,
+            "name": "matrix_192",
+            "time": 0.521102754877442
+          },
+          {
+            "hit": false,
+            "name": "matrix_193",
+            "time": 0.0
+          },
+          {
+            "hit": false,
+            "name": "matrix_194",
+            "time": 0.0
+          },
+          {
+            "hit": true,
+            "name": "matrix_195",
+            "time": 0.0
+          },
+          {
+            "hit": false,
+            "name": "matrix_196",
+            "time": 0.0
+          },
+          {
+            "hit": false,
+            "name": "matrix_197",
+            "time": 0.0
+          },
+          {
+            "hit": false,
+            "name": "matrix_198",
+            "time": 0.0
+          },
+          {
+            "hit": false,
+            "name": "matrix_199",
+            "time": 0.0
+          },
+          {
+            "hit": false,
+            "name": "matrix_200",
+            "time": 0.0
+          },
+          {
+            "hit": false,
+            "name": "matrix_201",
+            "time": 0.0
+          },
+          {
+            "hit": false,
+            "name": "matrix_202",
+            "time": 0.0
+          },
+          {
+            "hit": false,
+            "name": "matrix_203",
+            "time": 0.0
+          },
+          {
+            "hit": true,
+            "name": "matrix_204",
+            "time": 0.0
+          }
+        ],
+        "pass": true,
+        "scope": "Independent pretarget Decimal90 reference205 cases + invalid boundary controls. Actual represented Vector2 domain; 1e-7seconds comparison, not physicalCCD or fullruntime acceptance."
+      }
+    ],
+    "helpers": [],
+    "parse_errors": [],
+    "pass": true
+  },
+  {
+    "name": "policy",
+    "native_exit": 0,
+    "seconds": 0.3934452829998918,
+    "timeout": false,
+    "clean": true,
+    "semantic": true,
+    "helper_ok": true,
+    "reports": [
+      {
+        "checks": 59,
+        "failures": [],
+        "observations": [
+          {
+            "case": "pulse",
+            "events": [
+              {
+                "elapsed": 10.0,
+                "event": {
+                  "damage": 10.0,
+                  "depth": 0,
+                  "pos": "(100.0, 0.0)",
+                  "slot_id": 0,
+                  "source": "primary",
+                  "target": 1,
+                  "weapon": "tether_emitter",
+                  "weapon_id": "tether_emitter"
+                },
+                "kind": "hit"
+              }
+            ],
+            "held": {
+              "active_age": 0.3,
+              "damage": 10.0,
+              "epoch": 0,
+              "grace_left": 0.0,
+              "grace_spent": false,
+              "interval": 1.2,
+              "memory_grace": 0.0,
+              "pulse_count": 4,
+              "pulse_index": 1,
+              "range": 280.0,
+              "slot_id": 0,
+              "target_id": 1,
+              "tier": 0,
+              "wall_age": 0.3,
+              "was_outside": false,
+              "weapon_id": "tether_emitter"
+            },
+            "hp": 90.0,
+            "input": [
+              1.2,
+              0.3,
+              1
+            ]
+          },
+          {
+            "case": "pulse",
+            "events": [],
+            "held": {
+              "active_age": 0.299,
+              "damage": 10.0,
+              "epoch": 0,
+              "grace_left": 0.0,
+              "grace_spent": false,
+              "interval": 1.2,
+              "memory_grace": 0.0,
+              "pulse_count": 4,
+              "pulse_index": 0,
+              "range": 280.0,
+              "slot_id": 0,
+              "target_id": 1,
+              "tier": 0,
+              "wall_age": 0.299,
+              "was_outside": false,
+              "weapon_id": "tether_emitter"
+            },
+            "hp": 100.0,
+            "input": [
+              1.2,
+              0.299,
+              0
+            ]
+          },
+          {
+            "case": "pulse",
+            "events": [
+              {
+                "elapsed": 10.0,
+                "event": {
+                  "damage": 10.0,
+                  "depth": 0,
+                  "pos": "(100.0, 0.0)",
+                  "slot_id": 0,
+                  "source": "primary",
+                  "target": 1,
+                  "weapon": "tether_emitter",
+                  "weapon_id": "tether_emitter"
+                },
+                "kind": "hit"
+              },
+              {
+                "elapsed": 10.0,
+                "event": {
+                  "damage": 10.0,
+                  "depth": 0,
+                  "pos": "(100.0, 0.0)",
+                  "slot_id": 0,
+                  "source": "primary",
+                  "target": 1,
+                  "weapon": "tether_emitter",
+                  "weapon_id": "tether_emitter"
+                },
+                "kind": "hit"
+              }
+            ],
+            "held": {
+              "active_age": 0.3,
+              "damage": 10.0,
+              "epoch": 0,
+              "grace_left": 0.0,
+              "grace_spent": false,
+              "interval": 0.6,
+              "memory_grace": 0.0,
+              "pulse_count": 4,
+              "pulse_index": 2,
+              "range": 280.0,
+              "slot_id": 0,
+              "target_id": 1,
+              "tier": 0,
+              "wall_age": 0.3,
+              "was_outside": false,
+              "weapon_id": "tether_emitter"
+            },
+            "hp": 80.0,
+            "input": [
+              0.6,
+              0.3,
+              2
+            ]
+          },
+          {
+            "case": "pulse",
+            "events": [
+              {
+                "elapsed": 10.0,
+                "event": {
+                  "damage": 10.0,
+                  "depth": 0,
+                  "pos": "(100.0, 0.0)",
+                  "slot_id": 0,
+                  "source": "primary",
+                  "target": 1,
+                  "weapon": "tether_emitter",
+                  "weapon_id": "tether_emitter"
+                },
+                "kind": "hit"
+              }
+            ],
+            "held": {
+              "active_age": 0.6,
+              "damage": 10.0,
+              "epoch": 0,
+              "grace_left": 0.0,
+              "grace_spent": false,
+              "interval": 2.4,
+              "memory_grace": 0.0,
+              "pulse_count": 4,
+              "pulse_index": 1,
+              "range": 280.0,
+              "slot_id": 0,
+              "target_id": 1,
+              "tier": 0,
+              "wall_age": 0.6,
+              "was_outside": false,
+              "weapon_id": "tether_emitter"
+            },
+            "hp": 90.0,
+            "input": [
+              2.4,
+              0.6,
+              1
+            ]
+          },
+          {
+            "case": "pulse",
+            "events": [
+              {
+                "elapsed": 10.0,
+                "event": {
+                  "damage": 10.0,
+                  "depth": 0,
+                  "pos": "(100.0, 0.0)",
+                  "slot_id": 0,
+                  "source": "primary",
+                  "target": 1,
+                  "weapon": "tether_emitter",
+                  "weapon_id": "tether_emitter"
+                },
+                "kind": "hit"
+              },
+              {
+                "elapsed": 10.0,
+                "event": {
+                  "damage": 10.0,
+                  "depth": 0,
+                  "pos": "(100.0, 0.0)",
+                  "slot_id": 0,
+                  "source": "primary",
+                  "target": 1,
+                  "weapon": "tether_emitter",
+                  "weapon_id": "tether_emitter"
+                },
+                "kind": "hit"
+              },
+              {
+                "elapsed": 10.0,
+                "event": {
+                  "damage": 10.0,
+                  "depth": 0,
+                  "pos": "(100.0, 0.0)",
+                  "slot_id": 0,
+                  "source": "primary",
+                  "target": 1,
+                  "weapon": "tether_emitter",
+                  "weapon_id": "tether_emitter"
+                },
+                "kind": "hit"
+              },
+              {
+                "elapsed": 10.0,
+                "event": {
+                  "damage": 10.0,
+                  "depth": 0,
+                  "pos": "(100.0, 0.0)",
+                  "slot_id": 0,
+                  "source": "primary",
+                  "target": 1,
+                  "weapon": "tether_emitter",
+                  "weapon_id": "tether_emitter"
+                },
+                "kind": "hit"
+              }
+            ],
+            "held": {
+              "active_age": 1.2,
+              "damage": 10.0,
+              "epoch": 0,
+              "grace_left": 0.0,
+              "grace_spent": false,
+              "interval": 1.2,
+              "memory_grace": 0.0,
+              "pulse_count": 4,
+              "pulse_index": 4,
+              "range": 280.0,
+              "slot_id": 0,
+              "target_id": 1,
+              "tier": 0,
+              "wall_age": 1.2,
+              "was_outside": false,
+              "weapon_id": "tether_emitter"
+            },
+            "hp": 60.0,
+            "input": [
+              1.2,
+              10.0,
+              4
+            ]
+          }
+        ],
+        "pass": true,
+        "scope": "Independent pretarget literal beam/wave policy with recording sinks; not actual proc/full Runtime integration"
+      }
+    ],
+    "helpers": [],
+    "parse_errors": [],
+    "pass": true
+  },
+  {
+    "name": "runtime",
+    "native_exit": 0,
+    "seconds": 3.22171302800416,
+    "timeout": false,
+    "clean": true,
+    "semantic": true,
+    "helper_ok": true,
+    "reports": [
+      {
+        "checks": 46,
+        "failures": [],
+        "observations": [
+          {
+            "case": "real_arc_echo",
+            "mode": "arena",
+            "other_hp": 996.0,
+            "target_hp": 938.0,
+            "trace": [
+              {
+                "commands": [
+                  {
+                    "damage": 4.0,
+                    "depth": 1,
+                    "kind": "chain",
+                    "pos": "(500.0, 300.0)",
+                    "source": "chain",
+                    "targets": [
+                      2
+                    ]
+                  }
+                ],
+                "event": {
+                  "damage": 10.0,
+                  "depth": 0,
+                  "epoch": 1,
+                  "kind": "hit",
+                  "pos": "(500.0, 300.0)",
+                  "sequence": 1,
+                  "slot_id": 0,
+                  "source": "primary",
+                  "target": 1,
+                  "weapon": "tether_emitter",
+                  "weapon_id": "tether_emitter"
+                },
+                "time": 11.2
+              },
+              {
+                "commands": [],
+                "event": {
+                  "damage": 10.0,
+                  "depth": 0,
+                  "epoch": 1,
+                  "kind": "hit",
+                  "pos": "(500.0, 300.0)",
+                  "sequence": 2,
+                  "slot_id": 0,
+                  "source": "primary",
+                  "target": 1,
+                  "weapon": "tether_emitter",
+                  "weapon_id": "tether_emitter"
+                },
+                "time": 11.2
+              },
+              {
+                "commands": [],
+                "event": {
+                  "damage": 10.0,
+                  "depth": 0,
+                  "epoch": 1,
+                  "kind": "hit",
+                  "pos": "(500.0, 300.0)",
+                  "sequence": 3,
+                  "slot_id": 0,
+                  "source": "primary",
+                  "target": 1,
+                  "weapon": "tether_emitter",
+                  "weapon_id": "tether_emitter"
+                },
+                "time": 11.2
+              },
+              {
+                "commands": [],
+                "event": {
+                  "damage": 10.0,
+                  "depth": 0,
+                  "epoch": 1,
+                  "kind": "hit",
+                  "pos": "(500.0, 300.0)",
+                  "sequence": 4,
+                  "slot_id": 0,
+                  "source": "primary",
+                  "target": 1,
+                  "weapon": "tether_emitter",
+                  "weapon_id": "tether_emitter"
+                },
+                "time": 11.2
+              },
+              {
+                "commands": [
+                  {
+                    "kind": "echo",
+                    "target": 1
+                  }
+                ],
+                "event": {
+                  "damage": 10.0,
+                  "depth": 0,
+                  "epoch": 1,
+                  "kind": "hit",
+                  "pos": "(500.0, 300.0)",
+                  "sequence": 5,
+                  "slot_id": 0,
+                  "source": "primary",
+                  "target": 1,
+                  "weapon": "tether_emitter",
+                  "weapon_id": "tether_emitter"
+                },
+                "time": 11.5
+              }
+            ]
+          },
+          {
+            "case": "real_arc_echo",
+            "mode": "rooms",
+            "other_hp": 996.0,
+            "target_hp": 938.0,
+            "trace": [
+              {
+                "commands": [
+                  {
+                    "damage": 4.0,
+                    "depth": 1,
+                    "kind": "chain",
+                    "pos": "(500.0, 300.0)",
+                    "source": "chain",
+                    "targets": [
+                      2
+                    ]
+                  }
+                ],
+                "event": {
+                  "damage": 10.0,
+                  "depth": 0,
+                  "epoch": 1,
+                  "kind": "hit",
+                  "pos": "(500.0, 300.0)",
+                  "sequence": 1,
+                  "slot_id": 0,
+                  "source": "primary",
+                  "target": 1,
+                  "weapon": "tether_emitter",
+                  "weapon_id": "tether_emitter"
+                },
+                "time": 11.2
+              },
+              {
+                "commands": [],
+                "event": {
+                  "damage": 10.0,
+                  "depth": 0,
+                  "epoch": 1,
+                  "kind": "hit",
+                  "pos": "(500.0, 300.0)",
+                  "sequence": 2,
+                  "slot_id": 0,
+                  "source": "primary",
+                  "target": 1,
+                  "weapon": "tether_emitter",
+                  "weapon_id": "tether_emitter"
+                },
+                "time": 11.2
+              },
+              {
+                "commands": [],
+                "event": {
+                  "damage": 10.0,
+                  "depth": 0,
+                  "epoch": 1,
+                  "kind": "hit",
+                  "pos": "(500.0, 300.0)",
+                  "sequence": 3,
+                  "slot_id": 0,
+                  "source": "primary",
+                  "target": 1,
+                  "weapon": "tether_emitter",
+                  "weapon_id": "tether_emitter"
+                },
+                "time": 11.2
+              },
+              {
+                "commands": [],
+                "event": {
+                  "damage": 10.0,
+                  "depth": 0,
+                  "epoch": 1,
+                  "kind": "hit",
+                  "pos": "(500.0, 300.0)",
+                  "sequence": 4,
+                  "slot_id": 0,
+                  "source": "primary",
+                  "target": 1,
+                  "weapon": "tether_emitter",
+                  "weapon_id": "tether_emitter"
+                },
+                "time": 11.2
+              },
+              {
+                "commands": [
+                  {
+                    "kind": "echo",
+                    "target": 1
+                  }
+                ],
+                "event": {
+                  "damage": 10.0,
+                  "depth": 0,
+                  "epoch": 1,
+                  "kind": "hit",
+                  "pos": "(500.0, 300.0)",
+                  "sequence": 5,
+                  "slot_id": 0,
+                  "source": "primary",
+                  "target": 1,
+                  "weapon": "tether_emitter",
+                  "weapon_id": "tether_emitter"
+                },
+                "time": 11.5
+              }
+            ]
+          }
+        ],
+        "pass": true,
+        "scope": "Independent real main/CombatRuntime/Effects/RunFlow integration; controlled actor fixtures, no ordinary play claim"
+      }
+    ],
+    "helpers": [
+      {
+        "capture_removed": true,
+        "complete": true,
+        "driver": "Dummy",
+        "game_owner_count": 1,
+        "mix_rate": 44100.0,
+        "observations": [
+          {
+            "discarded": 0,
+            "elapsed_us": 82,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 0,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 0,
+            "streams_released": false
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 973,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 0,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 0,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 7568,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 0,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 0,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 28715,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 0,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 0,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 44748,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 4096,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 4096,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 55917,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 4096,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 4096,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 70254,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 4096,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 4096,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 83752,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 4096,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 4096,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 97268,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 4096,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 4096,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 111757,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 4096,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 4096,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 124906,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 4096,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 4096,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 139866,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 8192,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 8192,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 152477,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 8192,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 8192,
+            "streams_released": true
+          }
+        ],
+        "pre_window_drained": 8192,
+        "prepare_errors": [],
+        "requested_owner_count": 1,
+        "scope": "Test-only bounded final-owner resource release and fresh internal silence; not physical output or a universal timing guarantee.",
+        "tracked_owner_count": 1,
+        "tracked_stream_count": 2
+      }
+    ],
+    "parse_errors": [],
+    "pass": true
+  },
+  {
+    "name": "lifecycle",
+    "native_exit": 0,
+    "seconds": 4.238109062003787,
+    "timeout": false,
+    "clean": true,
+    "semantic": true,
+    "helper_ok": true,
+    "reports": [
+      {
+        "checks": 124,
+        "failures": [],
+        "observations": [
+          {
+            "case": "arena item_buy",
+            "epoch_after": 6,
+            "epoch_before": 5
+          },
+          {
+            "case": "arena item_sell",
+            "epoch_after": 11,
+            "epoch_before": 10
+          },
+          {
+            "case": "arena same_id_replace",
+            "epoch_after": 16,
+            "epoch_before": 15
+          },
+          {
+            "case": "arena successful_empty_move",
+            "epoch_after": 21,
+            "epoch_before": 20
+          },
+          {
+            "case": "arena successful_empty_temper",
+            "epoch_after": 26,
+            "epoch_before": 25
+          },
+          {
+            "case": "arena recompute_same_arrays",
+            "epoch_after": 31,
+            "epoch_before": 30
+          },
+          {
+            "case": "arena upgrade",
+            "epoch_after": 36,
+            "epoch_before": 35
+          },
+          {
+            "case": "arena boss_stat_award",
+            "epoch_after": 41,
+            "epoch_before": 40
+          },
+          {
+            "case": "arena title",
+            "epoch_after": 54,
+            "epoch_before": 53
+          },
+          {
+            "case": "arena finish",
+            "epoch_after": 59,
+            "epoch_before": 58
+          },
+          {
+            "case": "arena retry",
+            "epoch_after": 60,
+            "epoch_before": 59
+          },
+          {
+            "case": "arena new_run",
+            "epoch_after": 65,
+            "epoch_before": 64
+          },
+          {
+            "case": "arena room_boundary",
+            "epoch_after": 70,
+            "epoch_before": 69
+          },
+          {
+            "case": "rooms item_buy",
+            "epoch_after": 75,
+            "epoch_before": 74
+          },
+          {
+            "case": "rooms item_sell",
+            "epoch_after": 80,
+            "epoch_before": 79
+          },
+          {
+            "case": "rooms same_id_replace",
+            "epoch_after": 85,
+            "epoch_before": 84
+          },
+          {
+            "case": "rooms successful_empty_move",
+            "epoch_after": 90,
+            "epoch_before": 89
+          },
+          {
+            "case": "rooms successful_empty_temper",
+            "epoch_after": 95,
+            "epoch_before": 94
+          },
+          {
+            "case": "rooms recompute_same_arrays",
+            "epoch_after": 100,
+            "epoch_before": 99
+          },
+          {
+            "case": "rooms upgrade",
+            "epoch_after": 105,
+            "epoch_before": 104
+          },
+          {
+            "case": "rooms boss_stat_award",
+            "epoch_after": 110,
+            "epoch_before": 109
+          },
+          {
+            "case": "rooms title",
+            "epoch_after": 123,
+            "epoch_before": 122
+          },
+          {
+            "case": "rooms finish",
+            "epoch_after": 128,
+            "epoch_before": 127
+          },
+          {
+            "case": "rooms retry",
+            "epoch_after": 129,
+            "epoch_before": 128
+          },
+          {
+            "case": "rooms new_run",
+            "epoch_after": 134,
+            "epoch_before": 133
+          },
+          {
+            "case": "rooms room_boundary",
+            "epoch_after": 139,
+            "epoch_before": 138
+          }
+        ],
+        "pass": true,
+        "scope": "Independent pretarget lifecycle expectations through actual main transaction/intent/settlement seams; controlled loadouts and completion eligibility, not ordinary play or natural acquisition"
+      }
+    ],
+    "helpers": [
+      {
+        "capture_removed": true,
+        "complete": true,
+        "driver": "Dummy",
+        "game_owner_count": 1,
+        "mix_rate": 44100.0,
+        "observations": [
+          {
+            "discarded": 0,
+            "elapsed_us": 87,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 0,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 0,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 867,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 0,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 0,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 14498,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 0,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 0,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 28388,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 0,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 0,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 36384,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 4096,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 4096,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 52301,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 4096,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 4096,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 62935,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 4096,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 4096,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 76629,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 4096,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 4096,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 90468,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 4096,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 4096,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 104169,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 4096,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 4096,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 118081,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 4096,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 4096,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 132679,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 8192,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 8192,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 145700,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 8192,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 8192,
+            "streams_released": true
+          },
+          {
+            "discarded": 0,
+            "elapsed_us": 159367,
+            "game_owner_count": 1,
+            "invalid": 0,
+            "new_pushed": 8192,
+            "owner_count": 1,
+            "owners_released": true,
+            "prepare_errors": 0,
+            "required_frames": 6615,
+            "silent_frames": 8192,
+            "streams_released": true
+          }
+        ],
+        "pre_window_drained": 12288,
+        "prepare_errors": [],
+        "requested_owner_count": 1,
+        "scope": "Test-only bounded final-owner resource release and fresh internal silence; not physical output or a universal timing guarantee.",
+        "tracked_owner_count": 1,
+        "tracked_stream_count": 2
+      }
+    ],
+    "parse_errors": [],
+    "pass": true
+  }
+]

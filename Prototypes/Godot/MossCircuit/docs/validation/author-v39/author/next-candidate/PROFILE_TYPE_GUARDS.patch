@@ -1,0 +1,29 @@
+--- scripts/gameplay/new_weapon_profiles.gd
++++ scripts/gameplay/new_weapon_profiles.gd
+@@ -7,17 +7,22 @@
+ 	if behavior not in ["tether_pulse","expanding_ring"]:return {}
+ 	for key in ["damage","interval","range"]:
+ 		if not number(entry.get(key)):return {}
+-	if entry.get("projectiles")!=1 or entry.get("spread")!=0 or entry.get("pierce")!=0:return {}
++	for key in ["projectiles","spread","pierce"]:
++		if not number(entry.get(key),true):return {}
++	if float(entry.projectiles)!=1.0 or float(entry.spread)!=0.0 or float(entry.pierce)!=0.0:return {}
+ 	if behavior=="tether_pulse":
+-		if entry.get("id")!="tether_emitter" or entry.get("pulse_count")!=4:return {}
++		if not entry.get("id") is String or entry.id!="tether_emitter":return {}
++		if not number(entry.get("pulse_count")) or float(entry.pulse_count)!=4.0:return {}
+ 	else:
+-		if entry.get("id")!="seismic_drum" or entry.get("max_live_per_slot")!=3:return {}
++		if not entry.get("id") is String or entry.id!="seismic_drum":return {}
++		if not number(entry.get("max_live_per_slot")) or float(entry.max_live_per_slot)!=3.0:return {}
+ 		for key in ["inner_start_radius","band_half_width","outward_seconds"]:
+ 			if not number(entry.get(key)):return {}
+ 		if entry.range<=entry.inner_start_radius:return {}
+ 	return entry.duplicate(true)
+ static func module(entry:Dictionary)->Dictionary:
+-	if entry.get("kind")!="item" or entry.get("max_stack")!=1:return {}
++	if not entry.get("kind") is String or entry.kind!="item":return {}
++	if not number(entry.get("max_stack")) or float(entry.max_stack)!=1.0:return {}
+ 	match str(entry.get("id","")):
+ 		"lock_memory":
+ 			if not number(entry.get("grace_seconds")) or entry.grace_seconds>0.2:return {}

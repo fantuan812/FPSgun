@@ -1,0 +1,640 @@
+{
+  "tether_wave": [
+    {
+      "name": "launch_is_endpoint",
+      "clock": -2,
+      "dt": 4,
+      "expected_launches": 1,
+      "expected_age": 0,
+      "expected_hits": 0,
+      "expected_clock": 1.2
+    },
+    {
+      "name": "first_quarter",
+      "interval": 1.2,
+      "active_before": 0,
+      "dt": 0.3,
+      "expected_pulses": [
+        1
+      ],
+      "expected_active": 0.3
+    },
+    {
+      "name": "just_before_quarter",
+      "interval": 1.2,
+      "active_before": 0,
+      "dt": 0.299,
+      "expected_pulses": []
+    },
+    {
+      "name": "haste_half_interval",
+      "interval": 0.6,
+      "active_before": 0,
+      "dt": 0.3,
+      "expected_pulses": [
+        1,
+        2
+      ]
+    },
+    {
+      "name": "slow_double_interval",
+      "interval": 2.4,
+      "active_before": 0,
+      "dt": 0.6,
+      "expected_pulses": [
+        1
+      ]
+    },
+    {
+      "name": "overdue_four_once",
+      "interval": 1.2,
+      "active_before": 0,
+      "dt": 10,
+      "expected_pulses": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "removed": true,
+      "proc_time": "same actual session.elapsed for allcontacts"
+    },
+    {
+      "name": "hp25_stops_after3",
+      "hp": 25,
+      "damage": 10,
+      "active_before": 0,
+      "dt": 1.2,
+      "expected_pulses": [
+        1,
+        2,
+        3
+      ],
+      "expected_hp": -5,
+      "removed": true
+    },
+    {
+      "name": "last_pulse_before_new_launch",
+      "active_before": 0.9,
+      "wall_before": 0.9,
+      "clock": 0.3,
+      "dt": 0.3,
+      "expected_order": [
+        "oldpulse4",
+        "oldremove",
+        "newlaunch"
+      ],
+      "new_age": 0
+    },
+    {
+      "name": "memory_firstinvalid_large",
+      "grace": 0.2,
+      "dt": 0.3,
+      "valid": false,
+      "expected_hits": 0,
+      "removed": true
+    },
+    {
+      "name": "memory_exact_invalid",
+      "grace": 0.2,
+      "dt": 0.2,
+      "valid": false,
+      "expected_grace_left": 0,
+      "expected_active_delta": 0,
+      "removed": false
+    },
+    {
+      "name": "memory_recover_zero",
+      "grace_left": 0,
+      "spent": true,
+      "was_outside": true,
+      "dt": 0.1,
+      "valid": true,
+      "expected_active_delta": 0.1,
+      "removed": false
+    },
+    {
+      "name": "memory_no_recover_negative",
+      "grace_left": -0.001,
+      "spent": true,
+      "was_outside": true,
+      "dt": 0.1,
+      "valid": true,
+      "removed": true
+    },
+    {
+      "name": "memory_second_separation",
+      "spent": true,
+      "was_outside": false,
+      "valid": false,
+      "dt": 0.01,
+      "removed": true
+    },
+    {
+      "name": "memory_hardclip_fourth",
+      "interval": 1.2,
+      "wall": 1.1,
+      "active": 0.9,
+      "dt": 0.4,
+      "valid": true,
+      "expected_wall": 1.4,
+      "expected_active": 1.2,
+      "expected_pulses": [
+        4
+      ],
+      "removed": true
+    },
+    {
+      "name": "memory_hardclip_no_fourth",
+      "interval": 1.2,
+      "wall": 1.1,
+      "active": 0.89,
+      "dt": 0.4,
+      "valid": true,
+      "expected_wall": 1.4,
+      "expected_active": 1.19,
+      "expected_pulses": [],
+      "removed": true
+    },
+    {
+      "name": "invalid_target_no_grace",
+      "target_status": [
+        "dead",
+        "missing",
+        "invalid_id"
+      ],
+      "memory": true,
+      "removed": true
+    },
+    {
+      "name": "range_closed_live_player",
+      "range": 280,
+      "player": [
+        20,
+        20
+      ],
+      "target": [
+        300,
+        20
+      ],
+      "expected_valid": true
+    },
+    {
+      "name": "range_outside_live_player",
+      "range": 280,
+      "player": [
+        20,
+        20
+      ],
+      "target": [
+        301,
+        20
+      ],
+      "expected_valid": false
+    },
+    {
+      "name": "focus_acquisition_priority",
+      "candidates": [
+        {
+          "id": 8,
+          "distance": 100,
+          "focus": false
+        },
+        {
+          "id": 9,
+          "distance": 200,
+          "focus": true
+        }
+      ],
+      "expected_target": 9
+    },
+    {
+      "name": "nearest_id_tie",
+      "candidates": [
+        {
+          "id": 8,
+          "distance": 100
+        },
+        {
+          "id": 3,
+          "distance": 100
+        }
+      ],
+      "expected_target": 3
+    },
+    {
+      "name": "no_midbeam_retarget",
+      "target_id": 9,
+      "new_focus": 3,
+      "expected_target_id": 9
+    },
+    {
+      "name": "arc_overdue_clock",
+      "due_contacts": 4,
+      "actual_elapsed": 10,
+      "expected_arc_max": 1,
+      "no_synthetic_backdating": true
+    },
+    {
+      "name": "echo_contact_count",
+      "prior_primary_hits": 4,
+      "beam_contacts": 1,
+      "expected_echo_due": true
+    },
+    {
+      "name": "drum_tempered_inward_once",
+      "base": 22,
+      "tier_factor": 1.6,
+      "other_damage_multiplier": 1,
+      "expected_outward": 35.2,
+      "expected_inward": 17.6
+    },
+    {
+      "name": "drum_cap_per_slot",
+      "existing": 3,
+      "clock": 0,
+      "dt": 0.01,
+      "expected_new": 0,
+      "expected_clock": 1.4
+    },
+    {
+      "name": "drum_expiry_frees_cap_before_attempt",
+      "existing": 3,
+      "one_expires": true,
+      "clock": 0,
+      "expected_new": 1,
+      "expected_live": 3
+    },
+    {
+      "name": "turning_same_id_twolegs",
+      "hp": 100,
+      "expected_outward_hits": 1,
+      "expected_inward_hits": 1,
+      "expected_hp": 67,
+      "no_rehit_nextstep": true
+    },
+    {
+      "name": "same_tick_duplicate",
+      "tick": 7,
+      "calls": 2,
+      "expected_advance_calls": 1
+    },
+    {
+      "name": "next_fullstep_same_dt",
+      "ticks": [
+        7,
+        8
+      ],
+      "dt": 0.1,
+      "expected_advance_calls": 2
+    },
+    {
+      "name": "clear_then_same_tick",
+      "tick": 7,
+      "clear_between_calls": true,
+      "expected_advance_calls": 1
+    }
+  ],
+  "lifecycle": [
+    {
+      "event": "item_buy",
+      "expected_new_entities": 0,
+      "epoch_must_advance": true,
+      "no_new_shot": true,
+      "no_old_clock_change_beyond_existing_semantics": true
+    },
+    {
+      "event": "item_sell",
+      "expected_new_entities": 0,
+      "epoch_must_advance": true,
+      "no_new_shot": true,
+      "no_old_clock_change_beyond_existing_semantics": true
+    },
+    {
+      "event": "upgrade",
+      "expected_new_entities": 0,
+      "epoch_must_advance": true,
+      "no_new_shot": true,
+      "no_old_clock_change_beyond_existing_semantics": true
+    },
+    {
+      "event": "boss_stat_award",
+      "expected_new_entities": 0,
+      "epoch_must_advance": true,
+      "no_new_shot": true,
+      "no_old_clock_change_beyond_existing_semantics": true
+    },
+    {
+      "event": "recompute_same_arrays",
+      "expected_new_entities": 0,
+      "epoch_must_advance": true,
+      "no_new_shot": true,
+      "no_old_clock_change_beyond_existing_semantics": true
+    },
+    {
+      "event": "same_id_replace",
+      "expected_new_entities": 0,
+      "epoch_must_advance": true,
+      "no_new_shot": true,
+      "no_old_clock_change_beyond_existing_semantics": true
+    },
+    {
+      "event": "successful_empty_move",
+      "expected_new_entities": 0,
+      "epoch_must_advance": true,
+      "no_new_shot": true,
+      "no_old_clock_change_beyond_existing_semantics": true
+    },
+    {
+      "event": "successful_empty_temper",
+      "expected_new_entities": 0,
+      "epoch_must_advance": true,
+      "no_new_shot": true,
+      "no_old_clock_change_beyond_existing_semantics": true
+    },
+    {
+      "event": "title",
+      "expected_new_entities": 0,
+      "epoch_must_advance": true,
+      "no_new_shot": true,
+      "no_old_clock_change_beyond_existing_semantics": true
+    },
+    {
+      "event": "retry",
+      "expected_new_entities": 0,
+      "epoch_must_advance": true,
+      "no_new_shot": true,
+      "no_old_clock_change_beyond_existing_semantics": true
+    },
+    {
+      "event": "new_run",
+      "expected_new_entities": 0,
+      "epoch_must_advance": true,
+      "no_new_shot": true,
+      "no_old_clock_change_beyond_existing_semantics": true
+    },
+    {
+      "event": "finish",
+      "expected_new_entities": 0,
+      "epoch_must_advance": true,
+      "no_new_shot": true,
+      "no_old_clock_change_beyond_existing_semantics": true
+    },
+    {
+      "event": "settle",
+      "expected_new_entities": 0,
+      "epoch_must_advance": true,
+      "no_new_shot": true,
+      "no_old_clock_change_beyond_existing_semantics": true
+    },
+    {
+      "event": "room_boundary",
+      "expected_new_entities": 0,
+      "epoch_must_advance": true,
+      "no_new_shot": true,
+      "no_old_clock_change_beyond_existing_semantics": true
+    },
+    {
+      "event": "rejected_transaction",
+      "expected_epoch_change": 0,
+      "expected_entity_mutation": false,
+      "expected_time_advance": 0
+    },
+    {
+      "event": "rejected_inflight_move",
+      "expected_epoch_change": 0,
+      "expected_entity_mutation": false,
+      "expected_time_advance": 0
+    },
+    {
+      "event": "rejected_inflight_temper",
+      "expected_epoch_change": 0,
+      "expected_entity_mutation": false,
+      "expected_time_advance": 0
+    },
+    {
+      "event": "pause",
+      "expected_epoch_change": 0,
+      "expected_entity_mutation": false,
+      "expected_time_advance": 0
+    },
+    {
+      "event": "build_overlay",
+      "expected_epoch_change": 0,
+      "expected_entity_mutation": false,
+      "expected_time_advance": 0
+    }
+  ],
+  "recoil": [
+    {
+      "name": "closed_radius",
+      "player": [
+        100,
+        100
+      ],
+      "enemy": [
+        200,
+        100
+      ],
+      "expected": [
+        255,
+        100
+      ],
+      "hp_unchanged": true
+    },
+    {
+      "name": "outside_radius",
+      "player": [
+        100,
+        100
+      ],
+      "enemy": [
+        201,
+        100
+      ],
+      "expected": [
+        201,
+        100
+      ]
+    },
+    {
+      "name": "same_position_right",
+      "player": [
+        100,
+        100
+      ],
+      "enemy": [
+        100,
+        100
+      ],
+      "expected": [
+        155,
+        100
+      ]
+    },
+    {
+      "name": "boundary_clamp",
+      "player": [
+        900,
+        100
+      ],
+      "enemy": [
+        960,
+        100
+      ],
+      "area": [
+        980,
+        600
+      ],
+      "expected": [
+        960,
+        100
+      ]
+    },
+    {
+      "name": "boss_excluded",
+      "boss": true,
+      "expected_push": false
+    },
+    {
+      "name": "dead_excluded",
+      "hp": 0,
+      "expected_push": false
+    },
+    {
+      "name": "summon_support_allowed",
+      "kinds": [
+        "summoned_crawler",
+        "stitch_drone"
+      ],
+      "expected_push": true,
+      "damage": 0
+    },
+    {
+      "name": "lethal_player_no_trigger",
+      "player_hp": 0,
+      "amount": 10,
+      "expected_command": 0
+    },
+    {
+      "name": "block_zero_no_trigger",
+      "amount": 0,
+      "expected_command": 0
+    },
+    {
+      "name": "nested_no_trigger",
+      "depth": 1,
+      "amount": 10,
+      "expected_command": 0
+    },
+    {
+      "name": "wrong_source_no_trigger",
+      "source": "secondary",
+      "expected_command": 0
+    },
+    {
+      "name": "bool_nan_inf_reject",
+      "values": [
+        "bool_true",
+        "nan",
+        "inf",
+        "string"
+      ],
+      "expected_command": 0
+    },
+    {
+      "name": "tombstone_sell_rebuy",
+      "elapsed": [
+        10,
+        11,
+        12
+      ],
+      "events": [
+        "trigger",
+        "sell_rebuy_hurt",
+        "hurt"
+      ],
+      "expected_commands": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "name": "tombstone_room_reset",
+      "elapsed": [
+        10,
+        11
+      ],
+      "events": [
+        "trigger",
+        "encounter_reset_then_hurt"
+      ],
+      "expected_commands": [
+        1,
+        0
+      ]
+    },
+    {
+      "name": "newrun_clears_tombstone",
+      "events": [
+        "trigger_at10",
+        "newrun",
+        "hurt_at0"
+      ],
+      "expected_commands": [
+        1,
+        1
+      ]
+    },
+    {
+      "name": "ordinary_neverowns_empty",
+      "expected_recoil_dict": {}
+    },
+    {
+      "name": "invalid_area_consumes",
+      "area": {},
+      "elapsed": [
+        10,
+        10.1
+      ],
+      "expected_movement": 0,
+      "expected_ready_at": 12
+    },
+    {
+      "name": "push_only_support_inrange",
+      "expected_hp_loss": 0,
+      "expected_repair_cancel": false
+    },
+    {
+      "name": "push_support_outofrange",
+      "expected_hp_loss": 0,
+      "expected_repair_cancel": true
+    },
+    {
+      "name": "committed_charge_preserved",
+      "fields_unchanged": [
+        "ai_state",
+        "velocity",
+        "warning_left",
+        "attack_left",
+        "recover_left"
+      ]
+    }
+  ],
+  "negative_geometry": [
+    "nonfinitecenter",
+    "nonfinitep0",
+    "nonfinitep1",
+    "negative_dt",
+    "negative_start",
+    "end_after_dt",
+    "reversed_interval",
+    "negative_radius",
+    "negative_width",
+    "negative_enemy_radius",
+    "zero_interval_unequal_radius",
+    "overflow_intermediate"
+  ],
+  "numeric_policy": "Accept C2 stated tolerances as bounded comparisonpolicy, not physicalCCD guarantee. Highprecision core cases avoid policy boundary ambiguity; separate tangent/degenerate/near-end controls must assert policy explicitly."
+}

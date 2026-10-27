@@ -1,0 +1,35 @@
+{
+  "pass": true,
+  "separate_reviewer": true,
+  "scope": "Read-only original author40 actual main/CombatRuntime smoke and strict cleanup; not an independent runtime rerun or full lifecycle/native acceptance",
+  "author_checks": 40,
+  "raw_reports_equal": true,
+  "source_count": 836,
+  "source_and_pins_current_exact": true,
+  "final_cleanup_observation": {
+    "discarded": 0,
+    "elapsed_us": 169348,
+    "game_owner_count": 1,
+    "invalid": 0,
+    "new_pushed": 8192,
+    "owner_count": 1,
+    "owners_released": true,
+    "prepare_errors": 0,
+    "required_frames": 6615,
+    "silent_frames": 8192,
+    "streams_released": true
+  },
+  "reviewed_script_sha256": "f4df842fa35ec6cb5d6fb1965ecd5cd4461686326485ebbb880e4361d915840d",
+  "raw_files": {
+    "runtime.stdout": "0266998c1c4381943f0c927c876b3e91c2479d1c8d3427fc9e38be339649de4a",
+    "runtime.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runtime.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "RESULT.json": "66cae8bcf06b5dd5f41ee7c06183dfd115441f881e2dca2d84fdd05561b3a721",
+    "POST_INPUTS.json": "2c025ed2d370a8940381ed3dfd27c310d2d161d67ba568cd08a6ac412fe53858"
+  },
+  "coverage_limits": [
+    "Controlled actual runtime only",
+    "shop transactions and full flight lifecycle require separate routes",
+    "Dummy is not physical audible verification"
+  ]
+}

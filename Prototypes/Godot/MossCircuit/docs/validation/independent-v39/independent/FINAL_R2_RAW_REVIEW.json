@@ -1,0 +1,17 @@
+{
+  "pass": true,
+  "separate_reviewer": true,
+  "checks": 44,
+  "routes": [
+    "cold",
+    "temper903",
+    "move837",
+    "lifecycle124"
+  ],
+  "plan_sha256": "48ee4a823e0f6b58c870314039b80825c7be971eb91405d878331cbd8525011f",
+  "source_map_sha256": "178883e2dc584a4c68e85eb59df84801e4ab635c226ab56ef3499ee0c7339ea1",
+  "original_full_result": "149/151 FAIL retained, not rerun or relabeled",
+  "combined_evidence": "Original full149 passing routes with byte-identical production and unrelated tests, plus exact two-test/MANIFEST revision and this complete corrected903/837 + unchanged124 + cold pass. No new151/151 process exists.",
+  "helper_records": 3,
+  "source_files": 869
+}

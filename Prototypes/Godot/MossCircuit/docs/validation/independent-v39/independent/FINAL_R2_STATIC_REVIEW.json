@@ -1,0 +1,14 @@
+{
+  "pass": true,
+  "plan_sha256": "48ee4a823e0f6b58c870314039b80825c7be971eb91405d878331cbd8525011f",
+  "files": 869,
+  "changed_paths": [
+    "MANIFEST.json",
+    "tests/independent_tempering_authority.gd",
+    "tests/independent_weapon_order.gd"
+  ],
+  "other_source_test_reference_matches": [],
+  "original_sources_exact": true,
+  "review_utility_correction": "Initial read-only assertion incorrectly named MANIFEST.txt; actual established manifest is MANIFEST.json. No source modification or target execution; corrected exact allowlist only. Initial AssertionError retained in tool transcript.",
+  "scope": "Static exact three-path test-only revision; preserves original full149/151 FAIL; author cold+903/837+124 pending."
+}

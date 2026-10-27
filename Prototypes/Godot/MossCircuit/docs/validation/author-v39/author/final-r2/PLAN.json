@@ -1,0 +1,44 @@
+{
+  "source": "evidence-workspace/moss-v39-final-r2",
+  "input_map": "evidence-workspace/moss-v39-prep/final-r2/INPUTS.json",
+  "pins": {
+    "evidence-workspace/moss-v39-prep/final-r2/run.py": "f83015dbeb0885b8053b29cd2a338f243a490d48bcc44bc08818687250bdeaf6",
+    "evidence-workspace/moss-v39-prep/final-r2/INPUTS.json": "178883e2dc584a4c68e85eb59df84801e4ab635c226ab56ef3499ee0c7339ea1",
+    "evidence-workspace/moss-v39-prep/final-r2/DIFF.json": "2b4bf7109dc5203aa08e57281edbb35c0699b5d8cd27cac40c5e3434ed590604",
+    "evidence-workspace/moss-v39-prep/authority-delta/proposed-tests/EXPLICIT_EPOCH.patch": "89e1cbf7ac16fb5fdb366f094f0d602246eb9277f92b775fcbe7c97e2089928f",
+    "evidence-workspace/moss-v39-prep/final-full/FINAL_INPUTS.json": "875a79a57da3fbe49f6b3c4e2cdeb0e1efa27ea8a186a597a466450b97229059",
+    "evidence-workspace/moss-v39-prep/r3-caller-fix/INPUTS.json": "f09f11fe80730cf2a22d73c56e73a6ea7ce7c43d30dc0f289fbb8d3f1b728512"
+  },
+  "original_maps": {
+    "evidence-workspace/moss-v39-final-candidate": "evidence-workspace/moss-v39-prep/final-full/FINAL_INPUTS.json",
+    "evidence-workspace/moss-v39-r3": "evidence-workspace/moss-v39-prep/r3-caller-fix/INPUTS.json"
+  },
+  "per_case_seconds": 180,
+  "exact_added_paths": [],
+  "routes": [
+    {
+      "name": "cold",
+      "helpers": 0
+    },
+    {
+      "name": "temper",
+      "script": "tests/independent_tempering_authority.gd",
+      "checks": 903,
+      "helpers": 1
+    },
+    {
+      "name": "move",
+      "script": "tests/independent_weapon_order.gd",
+      "checks": 837,
+      "helpers": 1
+    },
+    {
+      "name": "lifecycle",
+      "script": "tests/independent_new_weapon_lifecycle.gd",
+      "checks": 124,
+      "observations": 26,
+      "helpers": 1
+    }
+  ],
+  "scope": "Approved2test+MANIFEST only; original full149/151 failures remain; combined proof, not rerun151. Requires QA sole lane; firstFAIL stops no auto retry."
+}

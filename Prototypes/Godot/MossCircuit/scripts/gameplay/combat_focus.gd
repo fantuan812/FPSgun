@@ -3,7 +3,7 @@ extends RefCounted
 const Rules=preload("res://scripts/rules.gd")
 const Status=preload("res://scripts/gameplay/target_status.gd")
 const PICK_PADDING:=8.0
-const AIMED_BEHAVIORS=["single","spread","pierce","return","mortar","cone_chill","field_bankshot"]
+const AIMED_BEHAVIORS=["single","spread","pierce","return","mortar","cone_chill","field_bankshot","tether_pulse"]
 
 static func number(value:Variant)->bool:
 	return (value is int or value is float) and is_finite(float(value))

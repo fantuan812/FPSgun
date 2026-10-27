@@ -43,6 +43,9 @@ func buttons(node: Node) -> Array:
 
 func run() -> void:
 	game = load("res://scenes/main.tscn").instantiate(); root.add_child(game); game.set_process(false)
+	# Explicit original8/30/3 fixture; actual A catalog is separately validated.
+	var legacy_input:Dictionary=preload("res://tests/support/v39_legacy_inputs.gd").install(game)
+	if not legacy_input.pass:push_error(str(legacy_input.errors));quit(1);return
 	check(game.config.upgrades.size() == 6, "still six permanent upgrades")
 	check(game.catalog.weapons.size() + game.catalog.items.size() == 38 and game.catalog.items[-1].id=="scavenger_reel", "exact 38 entries including appended Scavenger Reel")
 	var definition := Rules.upgrade_salvage_definition()

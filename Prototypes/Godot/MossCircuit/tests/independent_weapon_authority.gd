@@ -14,6 +14,9 @@ func near(a:float,b:float)->bool:return absf(a-b)<.0001
 func _initialize()->void:call_deferred("run")
 func run()->void:
  g=load("res://scenes/main.tscn").instantiate();root.add_child(g);g.set_process(false)
+ # Explicit original8/30/3 fixture; actual A catalog is separately validated.
+ var legacy_input:Dictionary=preload("res://tests/support/v39_legacy_inputs.gd").install(g)
+ if not legacy_input.pass:push_error(str(legacy_input.errors));quit(1);return
  var ids:Array=g.catalog.weapons.map(func(w):return w.id);ids.sort();var expected_ids:Array=EXPECTED.keys();expected_ids.sort();check(ids==expected_ids,"exact eight weapon IDs")
  var cases:Array=[
   {"name":"base","items":{},"levels":{},"boss":false},

@@ -1,0 +1,93 @@
+{
+  "status": "PASS",
+  "helper_sha256": "3228782b92e9ec6573b7ba9842d950b3cb6c4dbe928fb3bdcb9a2b4f930b55ad",
+  "catalog_sha256": "4b856203fc723ac84f65fd345e48f15921e603884f388da2194dc198764fcdc0",
+  "old_catalog_rows_exact": 76,
+  "new_total_rows": 78,
+  "planned_payloads_verified": 18,
+  "steps": [
+    {
+      "name": "literal-verify",
+      "exit": 0,
+      "expected_success": true,
+      "pass": true
+    },
+    {
+      "name": "literal-restore",
+      "exit": 0,
+      "expected_success": true,
+      "pass": true
+    },
+    {
+      "name": "no-overwrite",
+      "exit": 1,
+      "expected_success": false,
+      "pass": true
+    },
+    {
+      "name": "wrong-chunk-sha",
+      "exit": 1,
+      "expected_success": false,
+      "pass": true
+    },
+    {
+      "name": "wrong-whole-sha",
+      "exit": 1,
+      "expected_success": false,
+      "pass": true
+    },
+    {
+      "name": "wrong-git-object",
+      "exit": 1,
+      "expected_success": false,
+      "pass": true
+    },
+    {
+      "name": "noncontiguous-offset",
+      "exit": 1,
+      "expected_success": false,
+      "pass": true
+    },
+    {
+      "name": "unsafe-name",
+      "exit": 1,
+      "expected_success": false,
+      "pass": true
+    },
+    {
+      "name": "unsafe-source",
+      "exit": 1,
+      "expected_success": false,
+      "pass": true
+    },
+    {
+      "name": "symlink-output",
+      "exit": 1,
+      "expected_success": false,
+      "pass": true
+    }
+  ],
+  "restored_files": {
+    "READ_ME_v39.txt": "27e2bc609d8f564cec110f1be6f7ee9328bae3c1db5d501b1457d7aaf7f3b3c9",
+    "MossCircuit.pck": "2d9969dedc30f460e0da61eef49fd224ddd5d54bbc6973e1a76ffa6656a12f56"
+  },
+  "manual_rollback": {
+    "scope": "Actual local v38->v39->v38 core-file backup/replacement/rollback only; no runtime execution, Windows test or Git download claim",
+    "baseline_pack_sha256": "b8f648cc2f9378dfffc162375e105dd2e5ccd21044cb6496e4ebe39027a38740",
+    "new_pack_sha256": "2d9969dedc30f460e0da61eef49fd224ddd5d54bbc6973e1a76ffa6656a12f56",
+    "unchanged_elf_sha256": "2c78919325d7f29fa7607287c7c1eeac367ea4c94e7b8b6f5f4c6b20492f73d0",
+    "baseline_and_elf_rehashed_after": true,
+    "unique_backup_exact": true,
+    "restored_initial_map": {
+      "MossCircuit.x86_64": {
+        "sha256": "2c78919325d7f29fa7607287c7c1eeac367ea4c94e7b8b6f5f4c6b20492f73d0",
+        "mode": "0o755"
+      },
+      "MossCircuit.pck": {
+        "sha256": "b8f648cc2f9378dfffc162375e105dd2e5ccd21044cb6496e4ebe39027a38740",
+        "mode": "0o644"
+      }
+    }
+  },
+  "scope": "Unchanged public restoration helper on local staged repository; per-file atomicity/no automatic install/extract/execute. Catalog/helper and all18 payload bytes verified; no remote publication claim."
+}

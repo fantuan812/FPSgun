@@ -1,0 +1,37 @@
+{
+  "source": "evidence-workspace/moss-v39-final-r2",
+  "input_map": "evidence-workspace/moss-v39-prep/final-r2/INPUTS.json",
+  "output": "evidence-workspace/moss-v39-pack",
+  "command": [
+    "python",
+    "evidence-workspace/moss-v33-prep/build_pack.py",
+    "--source",
+    "evidence-workspace/moss-v39-final-r2",
+    "--inputs",
+    "evidence-workspace/moss-v39-prep/final-r2/INPUTS.json",
+    "--output",
+    "evidence-workspace/moss-v39-pack"
+  ],
+  "pins": {
+    "evidence-workspace/moss-v39-prep/final-export/run.py": "2eea9a96916fec2229ec8e1811dda71c26109d7eeb6f04cd102dea94e29ec599",
+    "evidence-workspace/moss-v39-prep/final-r2/INPUTS.json": "178883e2dc584a4c68e85eb59df84801e4ab635c226ab56ef3499ee0c7339ea1",
+    "evidence-workspace/moss-v33-prep/build_pack.py": "572315af3ccca471f71e903704e8c9b2736867d10a9b3fa1a47336c5eaee3654",
+    "evidence-workspace/moss-v32-pack/linux/MossCircuit.x86_64": "2c78919325d7f29fa7607287c7c1eeac367ea4c94e7b8b6f5f4c6b20492f73d0",
+    "evidence-workspace/moss-v39-final-r2/tests/run_regression.py": "4f5c41e186f0ecb8bd8660c209a8256e8549e65298c001adfeea57a9d0f22821",
+    "evidence-workspace/moss-v39-final-r2/tools/export_source_fingerprint.gd": "21fdb0e0756e403a4c6fd7500fec009045158ed52ef13edb0ae0c61c1d1fe797",
+    "evidence-workspace/moss-v39-final-r2/tools/verify_export_pack.gd": "ebb52ffa4e7b53dbcf384848505cc6181b5922f170a7692995d69d100db38590"
+  },
+  "elf_sha256": "2c78919325d7f29fa7607287c7c1eeac367ea4c94e7b8b6f5f4c6b20492f73d0",
+  "builder_existing_step_cap_seconds": 240,
+  "specialist_gate_cap_seconds": 180,
+  "expected_steps": [
+    "engine-version",
+    "python-safety",
+    "linux-pack",
+    "windows-pack",
+    "source-fingerprint",
+    "packed-resources",
+    "native-headless"
+  ],
+  "scope": "QA requested original resource-only builder; no --check, no repeatedfull151. Combined source149/151+newtest-only903/837/124 accepted separately. Await unique engine window."
+}

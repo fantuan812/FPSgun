@@ -1,0 +1,107 @@
+{
+  "status": "static external bindings; no execution or final PCK pins",
+  "bindings": {
+    "geometry": {
+      "source": "<WORKSPACE>/moss-v39-final-candidate/tests/independent_new_weapon_geometry.gd",
+      "source_sha256": "bc991e397966c6bdf259637f200d66a53ff1b961ac9e97345e97801348e4caa0",
+      "external": "<WORKSPACE>/moss-v39-qa/packed-harness/geometry.gd",
+      "external_sha256": "c9ef25b097da27b190a0e7b8f91f3a279f3cedbc7e87888dfc9dcde94c909b06",
+      "checks": 850,
+      "observations": 205,
+      "shared_helper": false,
+      "inverse_binding_exact": true
+    },
+    "policy": {
+      "source": "<WORKSPACE>/moss-v39-final-candidate/tests/independent_new_weapon_policy.gd",
+      "source_sha256": "dee53e121d30a7cb0c514ccac7c2c87e4779ba4e1bf32dd1b846577f1d5a2a17",
+      "external": "<WORKSPACE>/moss-v39-qa/packed-harness/policy.gd",
+      "external_sha256": "dee53e121d30a7cb0c514ccac7c2c87e4779ba4e1bf32dd1b846577f1d5a2a17",
+      "checks": 59,
+      "observations": 5,
+      "shared_helper": false,
+      "inverse_binding_exact": true
+    },
+    "runtime": {
+      "source": "<WORKSPACE>/moss-v39-final-candidate/tests/independent_new_weapon_runtime.gd",
+      "source_sha256": "85c0c699a588ddde52447c08b857a942975ec1c7f0d911d429bfea4e88bfa853",
+      "external": "<WORKSPACE>/moss-v39-qa/packed-harness/runtime.gd",
+      "external_sha256": "90b51737cc23ff44e0a547f43b0fa33e8ae590bfa89ed2fb6ef608167464cb74",
+      "checks": 46,
+      "observations": 2,
+      "shared_helper": true,
+      "inverse_binding_exact": true
+    },
+    "lifecycle": {
+      "source": "<WORKSPACE>/moss-v39-final-candidate/tests/independent_new_weapon_lifecycle.gd",
+      "source_sha256": "23d90bb487e7fd02d0e189e00b67c0a4726dc29d952463eb81b948a9c7377649",
+      "external": "<WORKSPACE>/moss-v39-qa/packed-harness/lifecycle.gd",
+      "external_sha256": "06fb0f4a6f30b4bb39d234af46b6cc6a859a30d7888a63bccc9edba8f4a761c0",
+      "checks": 124,
+      "observations": 26,
+      "shared_helper": true,
+      "inverse_binding_exact": true
+    },
+    "caps": {
+      "source": "<WORKSPACE>/moss-v39-final-candidate/tests/independent_new_weapon_caps.gd",
+      "source_sha256": "946cfc0ddb1e5c1145aa46c824218d7ae11067ac4e400574bd1f9ccb58ea137f",
+      "external": "<WORKSPACE>/moss-v39-qa/packed-harness/caps.gd",
+      "external_sha256": "946cfc0ddb1e5c1145aa46c824218d7ae11067ac4e400574bd1f9ccb58ea137f",
+      "checks": 14,
+      "observations": 0,
+      "shared_helper": false,
+      "inverse_binding_exact": true
+    },
+    "motion": {
+      "source": "<WORKSPACE>/moss-v39-final-candidate/tests/independent_new_weapon_motion.gd",
+      "source_sha256": "d4029b9e12fb06cb76590ea47ea84a36a33cb2ec73a3f613fc2e0f071ad0e0cd",
+      "external": "<WORKSPACE>/moss-v39-qa/packed-harness/motion.gd",
+      "external_sha256": "0ed8a9c1e52026f29e5b7f200dfeb11725be916e0c50b04367e3fa0e0cabb82c",
+      "checks": 14,
+      "observations": 4,
+      "shared_helper": true,
+      "inverse_binding_exact": true
+    },
+    "audio-arena": {
+      "source": "<WORKSPACE>/moss-v39-final-candidate/tests/independent_feedback_authority.gd",
+      "source_sha256": "27d1fa0885b3c18bc57d78b4e2e1a8dac137910ea1fb57270ebbdbe22d13b1c6",
+      "external": "<WORKSPACE>/moss-v39-qa/packed-harness/audio-arena.gd",
+      "external_sha256": "a70b6041e49008c17f50435dc239f23641d8770aa9170e9ae28c8baef0b7a604",
+      "checks": 435,
+      "observations": null,
+      "shared_helper": true,
+      "inverse_binding_exact": true
+    },
+    "audio-rooms": {
+      "source": "<WORKSPACE>/moss-v39-final-candidate/tests/independent_feedback_authority_rooms.gd",
+      "source_sha256": "86af190868b41f873261828cf24cea30f3b0126683503a037e2e57550ea02b87",
+      "external": "<WORKSPACE>/moss-v39-qa/packed-harness/audio-rooms.gd",
+      "external_sha256": "d32aba9fff63735ca70c3831a012c6633bc0099821b471b58576d869a9e15a2e",
+      "checks": 338,
+      "observations": null,
+      "shared_helper": true,
+      "inverse_binding_exact": true
+    },
+    "audio-mixer": {
+      "source": "<WORKSPACE>/moss-v39-final-candidate/tests/independent_feedback_mixer.gd",
+      "source_sha256": "1589fcbc740481bbc7cca47901a4dd355d9f6564778a935be3a7d5535b43552e",
+      "external": "<WORKSPACE>/moss-v39-qa/packed-harness/audio-mixer.gd",
+      "external_sha256": "1589fcbc740481bbc7cca47901a4dd355d9f6564778a935be3a7d5535b43552e",
+      "checks": 236,
+      "observations": null,
+      "shared_helper": false,
+      "inverse_binding_exact": true
+    },
+    "audio-views": {
+      "source": "<WORKSPACE>/moss-v39-final-candidate/tests/independent_feedback_views.gd",
+      "source_sha256": "a7699495dbfb120e760d5a125f8f36fd79ef21c9536d126d17c5254e1e5dd668",
+      "external": "<WORKSPACE>/moss-v39-qa/packed-harness/audio-views.gd",
+      "external_sha256": "1b255fea48e04b9ddcf82f6e6c5353b80f01dd5df7694d4e691276087381558d",
+      "checks": 168,
+      "observations": null,
+      "shared_helper": true,
+      "inverse_binding_exact": true
+    }
+  },
+  "helper_sha256": "9e9676e34296cb55d4560b1169c5954a82508f70e9051fcc942d1bb6839c23bd",
+  "geometry_json_sha256": "9ae13f97bf2eb6f201972bb28135e97b20b8491b9c69d273ef7d67c011bad8d6"
+}

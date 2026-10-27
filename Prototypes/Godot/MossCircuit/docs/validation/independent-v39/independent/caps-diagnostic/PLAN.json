@@ -1,0 +1,25 @@
+{
+  "scope": "Diagnostic only: original failed14 assertions retained, add wall-age/local query time/HP/events telemetry. No target changes, no first gate relabel, no repeated cold import.",
+  "source": "<WORKSPACE>/moss-v39-r2",
+  "input_map": "<WORKSPACE>/moss-v39-prep/r2-focused/raw-first/POST_INPUTS.json",
+  "input_count": 853,
+  "routes": [
+    {
+      "name": "diagnostic",
+      "script": "<WORKSPACE>/moss-v39-qa/caps-diagnostic/diagnostic.gd",
+      "checks": 14,
+      "observations": 2,
+      "helpers": 0
+    }
+  ],
+  "per_case_seconds": 180,
+  "pins": {
+    "<WORKSPACE>/moss-v39-prep/r2-focused/raw-first/POST_INPUTS.json": "993c4661532ed4d85ee2a0665ce4935af33209f30f3bfa9d13944c9a8039f451",
+    "<WORKSPACE>/moss-v39-qa/pretarget/FREEZE.json": "dfa9883b0d726a6e2509d5c4cf976cde1248eabe90e346aea5f36ec333e771d7",
+    "<WORKSPACE>/moss-v39-qa/pretarget/POLICY_HAND_CASES.json": "0befaca39e5534702ff7988f1f38bdd24205fa17a61121d278f3015f8883a50d",
+    "<WORKSPACE>/moss-v39-qa/checks/independent_new_weapon_caps.gd": "946cfc0ddb1e5c1145aa46c824218d7ae11067ac4e400574bd1f9ccb58ea137f",
+    "<WORKSPACE>/moss-v39-qa/caps-diagnostic/run.py": "c4045245ebf755d23029542f2ee522ec77bda74410d90a278519d921a16b002c",
+    "<WORKSPACE>/moss-v39-qa/caps-diagnostic/diagnostic.gd": "2e004ce524fa3747e6cf7dac078231741e4502a94cb1e16b060eb4e1ed7aac51",
+    "<WORKSPACE>/moss-v39-qa/caps-diagnostic/instrumentation.patch": "0111fec47595e2429b481f5a7fa0d63faefe488b598aaae58b617826bbca79ce"
+  }
+}

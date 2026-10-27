@@ -1,0 +1,53 @@
+{
+  "scope": "Independent exact r2 source coldcopy plus original pretarget850/59, actual runtime46 and first full lifecycle124; controlled setups not ordinary/native/full aggregate. Original836 negative165 strictFAIL retained.",
+  "source": "<WORKSPACE>/moss-v39-r2",
+  "input_map": "<WORKSPACE>/moss-v39-prep/r2-focused/raw-first/POST_INPUTS.json",
+  "input_count": 853,
+  "routes": [
+    {
+      "name": "cold",
+      "helpers": 0
+    },
+    {
+      "name": "geometry",
+      "script": "<WORKSPACE>/moss-v39-qa/checks/independent_new_weapon_geometry.gd",
+      "checks": 850,
+      "observations": 205,
+      "helpers": 0
+    },
+    {
+      "name": "policy",
+      "script": "<WORKSPACE>/moss-v39-qa/checks/independent_new_weapon_policy.gd",
+      "checks": 59,
+      "observations": 5,
+      "helpers": 0
+    },
+    {
+      "name": "runtime",
+      "script": "<WORKSPACE>/moss-v39-qa/checks/independent_new_weapon_runtime.gd",
+      "checks": 46,
+      "observations": 2,
+      "helpers": 1
+    },
+    {
+      "name": "lifecycle",
+      "script": "<WORKSPACE>/moss-v39-qa/checks/independent_new_weapon_lifecycle.gd",
+      "checks": 124,
+      "observations": 26,
+      "helpers": 1
+    }
+  ],
+  "per_case_seconds": 180,
+  "pins": {
+    "<WORKSPACE>/moss-v39-prep/r2-focused/raw-first/POST_INPUTS.json": "993c4661532ed4d85ee2a0665ce4935af33209f30f3bfa9d13944c9a8039f451",
+    "<WORKSPACE>/moss-v39-qa/r2-independent/run.py": "eb8749f5ece7877913c6d6fbe5520bc36b7277e77fcddf120e8142ebf620c18c",
+    "<WORKSPACE>/moss-v39-qa/pretarget/FREEZE.json": "dfa9883b0d726a6e2509d5c4cf976cde1248eabe90e346aea5f36ec333e771d7",
+    "<WORKSPACE>/moss-v39-qa/pretarget/POLICY_HAND_CASES.json": "0befaca39e5534702ff7988f1f38bdd24205fa17a61121d278f3015f8883a50d",
+    "<WORKSPACE>/moss-v39-qa/pretarget/GEOMETRY_API_CASES.json": "9ae13f97bf2eb6f201972bb28135e97b20b8491b9c69d273ef7d67c011bad8d6",
+    "<WORKSPACE>/moss-v39-r2/tests/support/audio_teardown.gd": "9e9676e34296cb55d4560b1169c5954a82508f70e9051fcc942d1bb6839c23bd",
+    "<WORKSPACE>/moss-v39-qa/checks/independent_new_weapon_geometry.gd": "d4063643488a5d5018bd9241048c4be20c9179fb46d074fe4c367f35e6883f2f",
+    "<WORKSPACE>/moss-v39-qa/checks/independent_new_weapon_policy.gd": "dee53e121d30a7cb0c514ccac7c2c87e4779ba4e1bf32dd1b846577f1d5a2a17",
+    "<WORKSPACE>/moss-v39-qa/checks/independent_new_weapon_runtime.gd": "85c0c699a588ddde52447c08b857a942975ec1c7f0d911d429bfea4e88bfa853",
+    "<WORKSPACE>/moss-v39-qa/checks/independent_new_weapon_lifecycle.gd": "23d90bb487e7fd02d0e189e00b67c0a4726dc29d952463eb81b948a9c7377649"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "pass": true,
+  "original_launcher_exit": 127,
+  "target_started": false,
+  "original_stderr": "<WORKSPACE>/moss-v39-prep/native-mechanics/launch.sh: 3: python: not found\n",
+  "new_plan_sha256": "a67d36f6df177e97117cafd4741ef9b748323b09fc74da1b321552cc07d904a9",
+  "only_changes": "Explicit /usr/bin/python3 plus separate wrapper-r2 output paths; plan launcher hash and accurate attempt metadata; runner/observer unchanged",
+  "review_utility_note": "Initial readonly compare omitted new explanatory launcher_attempt field and rejected; corrected explicit metadata allowance, no target/source changes.",
+  "launcher_attempt_note": "r2 explicit /usr/bin/python3; new wrapper-r2.* logs preserve original127 wrapper.*; no Python/Godot started on r1",
+  "scope": "Launch infrastructure correction; no original target failure or success inferred"
+}

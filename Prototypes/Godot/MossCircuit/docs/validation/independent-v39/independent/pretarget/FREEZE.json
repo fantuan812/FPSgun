@@ -1,0 +1,26 @@
+{
+  "status": "INDEPENDENT_PRETARGET_CORE_FROZEN",
+  "utc": "2026-10-27T09:41:04.479134+00:00",
+  "contract_sha256": "e4c4563933ef077cdad36c2b0e156944738e5ca6b70fe46d0b4e486a2c16aafe",
+  "baseline_map_sha256": "ea4a577c51c98c3d9f6aad4c66a421dd0c00ef2eb705b20ea47cabea9f731401",
+  "geometry_cases": 205,
+  "geometry_hand_cases": 16,
+  "discontinuity_cases": 5,
+  "tether_wave_hand_cases": 30,
+  "lifecycle_hand_cases": 19,
+  "recoil_hand_cases": 20,
+  "target_imports": 0,
+  "target_work_absent": true,
+  "files": {
+    "GEOMETRY_CASES.json": "b7402b59026bef29a961563529c7a09a3ec398132590ad9cf6b6edb0c5c843cb",
+    "POLICY_HAND_CASES.json": "0befaca39e5534702ff7988f1f38bdd24205fa17a61121d278f3015f8883a50d",
+    "reference-first.stdout": "2c6d21b256012a9287661922c3c262d031295df865c45694c9bc514fa876831f",
+    "reference.py": "746b1a895fd899e09f3a2500e34720e5ae4e8b24dbb5d6aa3c534751004c7e75",
+    "reference-first.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "freeze_core.py": "af168d33a9b513668cd21fb732146106570db2de12032b0d72f88d1673e67dfe",
+    "GEOMETRY_API_CASES.json": "9ae13f97bf2eb6f201972bb28135e97b20b8491b9c69d273ef7d67c011bad8d6",
+    "reference.unexecuted-syntax-r1.py.txt": "d7b725bf5f4b1ed14855ec1fcb4bbd61526901a397313d1db8413486e253839d",
+    "reference-first.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "scope": "Core independent expected inputs/outputs frozen before production. Portable actualtarget fixtures will use this oracle without derivingexpected from target. UI/B not a blocker for A; no full runtime/native pass claimed."
+}

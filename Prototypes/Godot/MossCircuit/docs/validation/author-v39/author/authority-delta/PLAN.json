@@ -1,0 +1,23 @@
+{
+  "source": "evidence-workspace/moss-v39-final-candidate",
+  "r3_source": "evidence-workspace/moss-v39-r3",
+  "input_map": "evidence-workspace/moss-v39-prep/final-full/FINAL_INPUTS.json",
+  "r3_map": "evidence-workspace/moss-v39-prep/r3-caller-fix/INPUTS.json",
+  "pins": {
+    "evidence-workspace/moss-v39-prep/authority-delta/run.py": "85b3825a209d1834ee025d0198c8d73630893f37e9a061dc935a0fafd082c8db",
+    "evidence-workspace/moss-v39-prep/authority-delta/move.gd": "370b34ff476d240771e8af9199d3189688fab75245fc2639144621b9ae9a281f",
+    "evidence-workspace/moss-v39-prep/authority-delta/temper.gd": "88d8c36abea7642c0df3eb462e96b542a689bf2bc947f6524fefde409505954b",
+    "evidence-workspace/moss-v39-final-candidate/tests/independent_weapon_order.gd": "e9ede1ee1eb6d5ab54ca3fc6c49eabbedcb23b25ecc33333a12106937d14c2f1",
+    "evidence-workspace/moss-v39-final-candidate/tests/independent_tempering_authority.gd": "360e07a6da179cfbd013a9a5196d7f4ace279baebb592593e53355a8aefedce0",
+    "evidence-workspace/moss-v39-final-candidate/tests/support/audio_teardown.gd": "9e9676e34296cb55d4560b1169c5954a82508f70e9051fcc942d1bb6839c23bd",
+    "evidence-workspace/moss-v39-prep/final-full/FINAL_INPUTS.json": "875a79a57da3fbe49f6b3c4e2cdeb0e1efa27ea8a186a597a466450b97229059",
+    "evidence-workspace/moss-v39-prep/r3-caller-fix/INPUTS.json": "f09f11fe80730cf2a22d73c56e73a6ea7ce7c43d30dc0f289fbb8d3f1b728512"
+  },
+  "per_route_seconds": 180,
+  "routes": [
+    "move",
+    "temper"
+  ],
+  "expected_observations": 4,
+  "scope": "Inherited frozen original setup/snap. No expected changed. Four representative actual authority field deltas; original failed full remains failed. Wait root and QA window."
+}

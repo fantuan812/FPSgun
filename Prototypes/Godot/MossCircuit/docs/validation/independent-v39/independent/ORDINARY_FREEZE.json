@@ -1,0 +1,26 @@
+{
+  "source": "<WORKSPACE>/moss-v39-final-r2",
+  "source_map": "<WORKSPACE>/moss-v39-prep/final-r2/INPUTS.json",
+  "elf": "<WORKSPACE>/moss-v39-pack/linux/MossCircuit.x86_64",
+  "native_mechanics_result": "<WORKSPACE>/moss-v39-prep/native-mechanics/raw-first/RESULT.json",
+  "native_ui_review": "<WORKSPACE>/moss-v39-qa/PCK_NATIVE_UI_RAW_REVIEW.json",
+  "native_mechanics_review": "<WORKSPACE>/moss-v39-qa/NATIVE_MECHANICS_RAW_REVIEW.json",
+  "pins": {
+    "<WORKSPACE>/moss-v39-qa/run_ordinary.py": "57d04a5616314a3154fb4ff832babb3ece443c558c5be86c08cb08107d2caa7d",
+    "<WORKSPACE>/moss-v39-qa/ORDINARY_PLAN.md": "8e8febf1951b38cc0a08375ded0effcfd272c9e411d024b24613d3e37e606052",
+    "<WORKSPACE>/moss-v39-qa/PCK_NATIVE_UI_RAW_REVIEW.json": "e8e787bfa25bf8386bb14a2331d8ada4bde988042768e5426207a950a8f041c1",
+    "<WORKSPACE>/moss-v39-qa/NATIVE_MECHANICS_RAW_REVIEW.json": "31e7424c7e10eb3bd8ba99287b9b40a5b38c160d96cf307c3b20593891d75a40",
+    "<WORKSPACE>/moss-v39-qa/packed-first/SUMMARY.json": "eeff5d0198f059c7f5f44365b2c24503436c79a361b27dd421e32af3ff29d8a7",
+    "<WORKSPACE>/moss-v39-prep/native-mechanics/raw-first/RESULT.json": "23da5d5c45eb3637b30f430f9db519169d10627a94d4f8bf914ddb3ade7028f4",
+    "<WORKSPACE>/moss-v39-prep/final-r2/INPUTS.json": "178883e2dc584a4c68e85eb59df84801e4ab635c226ab56ef3499ee0c7339ea1",
+    "<WORKSPACE>/moss-v39-pack/linux/MossCircuit.x86_64": "2c78919325d7f29fa7607287c7c1eeac367ea4c94e7b8b6f5f4c6b20492f73d0",
+    "<WORKSPACE>/moss-v39-pack/linux/MossCircuit.pck": "2d9969dedc30f460e0da61eef49fd224ddd5d54bbc6973e1a76ffa6656a12f56",
+    "<WORKSPACE>/moss-v39-qa/ordinary-arena/launch.sh": "6d973d3c934ee601c60dcdf22ce64fcfb3bf0ea282c89697bb951ad14075dcc1",
+    "<WORKSPACE>/moss-v39-qa/ordinary-rooms/launch.sh": "46316b4545ba8adb499ea5de609f59615720bb45ea53128e4575be22c7dc086b"
+  },
+  "runs": {
+    "arena": "Exactly once defaultseed240102 Arena/freeTether, firstshop or death; noexclusive module/injection/refresh/restart",
+    "rooms": "Exactly once defaultseed240102 Rooms/freeSeismic, ENTRYclear/firstshop or death; noexclusive module/injection/refresh/restart"
+  },
+  "scope": "Real release ELF adjacentPCK, CUA controls only. Actual images/actiontrace reviewed separately, no automatic gameplay script."
+}

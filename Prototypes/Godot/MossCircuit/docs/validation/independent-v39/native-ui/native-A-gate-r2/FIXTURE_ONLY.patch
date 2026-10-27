@@ -1,0 +1,11 @@
+--- <WORKSPACE>/moss-v39-ui/tests/test_expansion_actual_ui.gd
++++ <WORKSPACE>/moss-v39-ui/tests/test_expansion_actual_ui_r2.gd
+@@ -23,7 +23,7 @@
+ 	return parent as ScrollContainer
+ func pointer(at:Vector2,index:int,pressed:bool)->void:
+ 	var e:=InputEventMouseButton.new();e.position=at;e.global_position=at;e.button_index=index;e.pressed=pressed
+-	root.push_input(e)
++	root.push_input(e,true)
+ func click(at:Vector2)->void:
+ 	pointer(at,MOUSE_BUTTON_LEFT,true);pointer(at,MOUSE_BUTTON_LEFT,false)
+ func authority()->Dictionary:
