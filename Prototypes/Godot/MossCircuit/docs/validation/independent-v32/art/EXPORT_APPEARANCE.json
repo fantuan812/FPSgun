@@ -1,0 +1,54 @@
+{
+  "evidence_label": "v32-exact-export-ordinary-appearance",
+  "verdict": "PASS",
+  "pck_sha256": "16137dd982d7f0f4a151a3b7a6d6d40fc8d56f97c6e5694f003b457133555353",
+  "pck_size_bytes": 41385288,
+  "artifact_identity_basis": "Supplied by independent QA; reviewer inspected and hashed the four capture files.",
+  "prior_controlled_receipt_sha256": "debc3e64da5257951f9ad63b1f8f96c82c41511db984ad1cd97f5de9bc1f65d1",
+  "captures": [
+    {
+      "path": "ordinary/captures/01-title.jpg",
+      "sha256": "605b6a08c42d66d1f8c9a6709b3501ddbfb02b36e2d9e7c95788854a4fb991ff",
+      "dimensions": [
+        1180,
+        812
+      ]
+    },
+    {
+      "path": "ordinary/captures/04-initial-rivet.jpg",
+      "sha256": "1b068914e71cf655401d3934d1d6fab9e789eaf9d0f6a8e153fb62e469170b01",
+      "dimensions": [
+        1180,
+        812
+      ]
+    },
+    {
+      "path": "ordinary/captures/09-room2-warning.jpg",
+      "sha256": "8237460d05aa29930932e5f21b5156acf8807a15bacc54c4818770f11ca2adf9",
+      "dimensions": [
+        1180,
+        812
+      ]
+    },
+    {
+      "path": "ordinary/captures/10-charge-followthrough.jpg",
+      "sha256": "dcd68d269ac95799a716678c3928c43457f640a9dc517e1cd2b63658e0e5d7f4",
+      "dimensions": [
+        1180,
+        812
+      ]
+    }
+  ],
+  "findings": [
+    "Personally inspected all four supplied game-window captures including letterbox.",
+    "Existing title cards and initial Rivet inventory/icon/origin text remain readable.",
+    "09 shows a distinct empty pale frontal arc and end tick aligned with the diagonal orange charge route; orange danger remains dominant and the original Amber Ram pose remains legible.",
+    "10 shows the actor in a different position with pale arc and orange lane absent. No visible new raster, alpha or filtering regression in these samples."
+  ],
+  "limits": [
+    "QA identifies these as ordinary Rivet/Rooms seed128 controls with tactical pause and no injected state; reviewer performed still inspection only.",
+    "No causal half-damage, exact AI phase/timing, balance, victory, continuous-motion or input-correctness claim.",
+    "Directional arc is not an interception/collision surface; no global safe-side claim.",
+    "No new run, asset generation, source or QA evidence edits."
+  ]
+}

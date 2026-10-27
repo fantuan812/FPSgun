@@ -1,0 +1,84 @@
+{
+  "pass": true,
+  "mode": "rooms",
+  "seed": 128,
+  "starting_loadout": "rivet",
+  "window": [
+    1180,
+    812
+  ],
+  "inputs": "Ordinary mouse/keyboard through automated CUA, with tactical pauses; no programmatic game-state control, injected build, spawn or outcome. Command line sets only window geometry.",
+  "chronology": [
+    {
+      "capture": "01-title.jpg",
+      "observed": "Fresh default Rivet title."
+    },
+    {
+      "capture": "02-rooms-seed128.jpg",
+      "observed": "Rooms selected; seed128 entered; Rivet remains selected."
+    },
+    {
+      "capture": "03-paused.jpg",
+      "observed": "Start then Escape opens pause."
+    },
+    {
+      "capture": "04-initial-rivet.jpg",
+      "observed": "One Rivet slot1,15damage/.400s/500range, zero modules; origin Rivet."
+    },
+    {
+      "capture": "05-room1-clear.jpg",
+      "observed": "After rightward movement/auto-fire: Room1 clear,35scrap,100/100HP,3kills,3s."
+    },
+    {
+      "capture": "06-first-upgrade.jpg",
+      "observed": "Settlement shows66scrap; Light Feet selected."
+    },
+    {
+      "capture": "07-second-upgrade.jpg",
+      "observed": "Next actual choice page offers Repair; Repair selected. Immediate post-click image still showed prior page; later shop screenshot confirms transition without repeated click."
+    },
+    {
+      "capture": "08-first-shop.jpg",
+      "observed": "66scrap,one Rivet/no purchase; deployed next room."
+    },
+    {
+      "capture": "09-room2-warning.jpg",
+      "observed": "Room2,66scrap,120/120HP; actual surviving Amber Ram at lower right with pale frontal arc and orange diagonal lane, player moved downward."
+    },
+    {
+      "capture": "10-charge-followthrough.jpg",
+      "observed": "After further downward movement: Ram is displaced left; pale arc and orange lane absent; player still120/120HP. This still is not a numerical damage/precise AI-state oracle."
+    },
+    {
+      "capture": "11-return-title.jpg",
+      "observed": "Paused then returned to title; Rooms/128/Rivet retained."
+    }
+  ],
+  "closure": {
+    "bound_app_alt_f4": "Attempt had no visible effect; not called successful.",
+    "window_manager_alt_f4": "Global Alt+F4 closed native game normally, process exit0.",
+    "post_close": "Fresh native window inventory contains no Moss Circuit window.",
+    "tool_diagnostic": "First immediate window enumeration raced closed X11 window and returned BadWindow; fresh enumeration succeeded."
+  },
+  "diagnostics": [
+    "Unsupported VSync setting warning.",
+    "ALSA device unavailable/ERR_CANT_OPEN; engine explicitly falls back to dummy audio. No audio acceptance."
+  ],
+  "limits": [
+    "One finite seeded encounter attempt, not a victory/full campaign or balance/all-seeds certification.",
+    "No Windows execution, controller testing or new executable export.",
+    "Exact half-damage and phase/proc order are controlled/packed test evidence, not inferred from ordinary stills."
+  ],
+  "source_input_changes": [],
+  "files": {
+    "MossCircuit.x86_64": {
+      "bytes": 71075864,
+      "sha256": "2c78919325d7f29fa7607287c7c1eeac367ea4c94e7b8b6f5f4c6b20492f73d0"
+    },
+    "MossCircuit.pck": {
+      "bytes": 41385288,
+      "sha256": "16137dd982d7f0f4a151a3b7a6d6d40fc8d56f97c6e5694f003b457133555353"
+    }
+  },
+  "capture_index_sha256": "6c0cd669f00d855790533d58e9b29812903331666877e72733b02433c054637a"
+}

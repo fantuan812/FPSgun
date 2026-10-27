@@ -1,3 +1,15 @@
+# v32 GitHub-only complete resource pack
+
+The full resource PCK is41,385,288bytes, SHA-256 `16137dd982d7f0f4a151a3b7a6d6d40fc8d56f97c6e5694f003b457133555353`. Both preset exports match. Unchanged Linux ELF SHA `2c78919325d7f29fa7607287c7c1eeac367ea4c94e7b8b6f5f4c6b20492f73d0`; Windows EXE identity remains published, not rebuilt or run. This is not a standalone game, ZIP or delta patch.
+
+From a full repository checkout: `python Deliveries/MossCircuit/restore_deliveries.py --version v32 --output recovered-v32`. Read [exact prerequisites and manual backup/rollback](../../../../Deliveries/MossCircuit/v32/READ_ME_v32.txt), close the game, uniquely back up and verify your old PCK, then replace only the adjacent MossCircuit.pck. Do not use release --main-pack. First installation still needs full historical v19 platform package/licenses. The unchanged helper verifies chunks/whole files, refuses existing output and unsafe paths, performs no network/install/execute operation and is atomic per original file, not per version batch; hardlink support is required.
+
+All62 earlier catalog records and delivery files remain unchanged. The two new v32 entries are GitHub-only, not historical attachments. Recommended latest installation is v31, but the actual isolated rollback gate used recovered v19 PCK `d454fba8eb3b6ceff3686303b4ad7e4ac2c176659af8c4bf85de610d57af7298`→v32→v19. No v31 rollback or old runtime rerun is claimed. Old ELF recovery from the exact retained original was matched to22 published Git-object identities; text-only connector binary-download limitations are retained, not relabeled as fresh HTTP binary proof.
+
+Source history is inherited exactly through the immutable v31 base. Source contains no PCK/executable/templates/generated profiles/cache. Final source633inputs and122 engineering inputs are unchanged except current release documentation/manifest; final QA239files copied exactly. Author initial focused gates and QA-owned final suite/build are distinctly labeled. Source/runtime reachable identities and any metadata-only version append belong to a separately verified Git publication, not this local document.
+
+---
+
 # v31 GitHub-only complete resource pack
 
 The complete v31 PCK is 41,379,260 bytes, SHA-256 `ceba66d0091b2dfdcea3cb80c659fa252758b1c06e6bbb3b5f7d9edb3c99d37c`. Both platform presets produce identical bytes and reuse the unchanged verified executable. This is not a standalone program, executable rebuild, delta patch or ZIP-part chain.

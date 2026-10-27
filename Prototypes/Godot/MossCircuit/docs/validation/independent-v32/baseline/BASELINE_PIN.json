@@ -1,0 +1,77 @@
+{
+  "pass": true,
+  "accepted_commit": "041b18785f18f745469ff157e0d1c686bc35ad40",
+  "accepted_source_commit": "4cc3c74a2c622c1b778cb64f180941cc74c8684a",
+  "source_manifest_sha256": "16fd1199dc199e9ae6b0308df8bf728b8c929d24772f7751a11fb413c6ccb8ae",
+  "restored_slim_files_verified": 622,
+  "engineering_paths_exact_to_tested_v31": 121,
+  "post_candidate_doc_changes_only": [
+    "MANIFEST.json",
+    "README.md",
+    "docs/DELIVERY.md",
+    "docs/V31_STARTING_LOADOUTS.md"
+  ],
+  "trace_cases": 24,
+  "trace_bytes": 2207907,
+  "trace_sha256": "e7d93a1fcf01345c540bf9f868632310fd3e85572dbe431dbe12d43bf19212ec",
+  "script_sha256": "628ea8e860c627b9be1c700544c97c699c8ed3d80f68c6e46310bce55cfcb0ef",
+  "fresh_connector_evidence_proofs": [
+    {
+      "path": "EVIDENCE_INDEX.json",
+      "local": "accepted-v31-index.json",
+      "transport": "supported GitHub connector fetch/fetch_file; exact published tree GitSHA/size + evidence SHA256 checked locally",
+      "sha256": "9e41a29e148c6e96683274fb6571994c5b774ff951b9c43efc3bb2f392baf84b",
+      "git_blob_sha": "80e1c25436307b842774773caf9060185eb48ea4",
+      "bytes": 35425
+    },
+    {
+      "path": "checks/no_reorder_trace.gd",
+      "local": "no_reorder_trace.gd",
+      "transport": "supported GitHub connector fetch/fetch_file; exact published tree GitSHA/size + evidence SHA256 checked locally",
+      "sha256": "628ea8e860c627b9be1c700544c97c699c8ed3d80f68c6e46310bce55cfcb0ef",
+      "git_blob_sha": "b9ba134add8e594bf34399cc0ea280974dac6079",
+      "bytes": 4960
+    },
+    {
+      "path": "baseline/default-v30-and-v31.json.gz",
+      "local": "accepted-default-trace.json.gz",
+      "transport": "supported GitHub connector fetch/fetch_file; exact published tree GitSHA/size + evidence SHA256 checked locally",
+      "sha256": "5c1acaeb2f51f4b2f9a8bf17b2eef5e6425f8c37b8ca84cf3f4465177355bb2d",
+      "git_blob_sha": "e15295ef7dfb4b1be1a691d863362ca8175f4700",
+      "bytes": 56420
+    },
+    {
+      "path": "results/DEFAULT_PARITY.json",
+      "local": "accepted-parity.json",
+      "transport": "supported GitHub connector fetch/fetch_file; exact published tree GitSHA/size + evidence SHA256 checked locally",
+      "sha256": "037f4addfb5a3422ff2948c7bd7469fb5fbd96949f52b571c6cdc83dd97ed011",
+      "git_blob_sha": "15f7a2e68f2a54b9d6f86b24711548b73c35beaa",
+      "bytes": 1476
+    },
+    {
+      "path": "FINAL_CANDIDATE_INPUTS.json",
+      "local": "accepted-candidate-inputs.json",
+      "transport": "supported GitHub connector fetch/fetch_file; exact published tree GitSHA/size + evidence SHA256 checked locally",
+      "sha256": "85e479264d68c1eab04a8e5c3011a01bf7a8126e2610df8b7177a7fb36a3953a",
+      "git_blob_sha": "e0c121b1b7163afe67281aecf65ce042ce5cb32b",
+      "bytes": 67910
+    },
+    {
+      "path": "PRODUCTION_FINAL.json",
+      "local": "accepted-production.json",
+      "transport": "supported GitHub connector fetch/fetch_file; exact published tree GitSHA/size + evidence SHA256 checked locally",
+      "sha256": "67bd85b0d7ed91d4817813be7c1696609baadad3b800fe7d1a784b782de9ad18",
+      "git_blob_sha": "15a19a7eb176d8a8ee775319f857333ec4fe036b",
+      "bytes": 12964
+    },
+    {
+      "path": "final-suite/result.json",
+      "local": "accepted-final-suite.json",
+      "transport": "supported GitHub connector fetch/fetch_file; exact published tree GitSHA/size + evidence SHA256 checked locally",
+      "sha256": "1da9075d9afc4215013c9cb0789625fb62f8a64059266eb65c62adbe375cacd7",
+      "git_blob_sha": "a2ddfeb331246cfc66641c2198d97ad33109deab",
+      "bytes": 116
+    }
+  ],
+  "scope": "Published accepted v31 baseline outputs reused with exact script/source/output proofs; no new baseline engine execution. Script spawns crawler+spitter only and uses all8 weapons. Actual candidate replay mandatory; intended charger defense needs separate new tests. Old-schema trace excludes title/origin/UI metadata and does not invoke reorder."
+}

@@ -40,13 +40,15 @@
       "projectile_speed": 145,
       "charge_speed": 310,
       "charge_duration": 0.6,
+      "brace_degrees": 120.0,
+      "brace_multiplier": 0.5,
       "desired_distance": 230,
       "summon_limit": 3,
       "phase_threshold": 0.5,
       "phase_speed": 1.25,
-      "description": "Locks direction, warns, then charges in a straight line.",
-      "tell": "Orange line marks the locked dash route for 0.65 s.",
-      "dodge": "Step sideways; warning and recovery are contact-safe."
+      "description": "Locks a route and braces its front while warning, then charges.",
+      "tell": "Pale front arc halves incoming primary damage during the 0.65 s warning; orange marks the charge route.",
+      "dodge": "Flank or wait: side/rear, charge and recovery take full damage. Warning and recovery remain contact-safe."
     },
     {
       "id": "spitter",

@@ -1,3 +1,17 @@
+# MossCircuit v32 — flank the Amber Ram's warning brace
+
+The existing Amber Ram now halves frontal primary weapon damage inside its closed120-degree locked front **only while warning**. Flank it or wait until the charge starts; its side/rear and charge/recovery remain unguarded. An empty pale arc/end ticks communicates2Dfront without replacing the orange charge danger lane. The visual arc is not an extra collider; close range does not grant contact safety. Original warning/charge/cooldown/recovery timings, movement, roster, drops and art are unchanged.
+
+All eight primary paths use their actual source/current flight segment, preserving old phase order. Strictly interior origins bypass; exact collision boundary remains directional. Fixed secondary effects bypass. Arc derives its existing40% from the resolved initiating hit and is not reduced again at the secondary target. See [the exact frozen contract](docs/V32_FRONTAL_BRACE_CONTRACT.md) and [implementation/acceptance notes](docs/V32_FRONTAL_BRACE.md).
+
+- Final99 standalone+import100, no source changes; initial cold and final reused-cache imports distinguished. Independent geometry669/runtime370, packed resources845+packed669/370, Python3 and unchanged adjacent ELF headless startup pass. Both preset PCKs are identical; no new executable or Windows execution.
+- Exact old no-charger24-case v31 baseline reused with pinned proof; actual candidate replay byte-identical. This is not a fresh baseline execution or universal changed-fight RNG parity.
+- Controlled48 native captures at960×540/1280×720 in both modes pass; artist personally reviewed21. One ordinary automated-CUA/tactical-pause Rivet/Rooms seed128 attempt reached a naturally surviving Room2Ram: pale arc/orange lane visible, then actor displaced and cues absent after downward movement,120HP. Light Feet/Repair and no shop purchase are recorded. Returned to title and normal window-manager close exit0. No injected game state, exact ordinary half-damage, full campaign, all-seeds or balance claim.
+
+[GitHub-only complete PCK/manual backup instructions](../../../Deliveries/MossCircuit/v32/READ_ME_v32.txt) use the unchanged verified executable. Recommended latest installed base is v31; actual file-only rollback test was v19→v32→v19, not v31. First install needs original full platform package/licenses. ALSA/dummy audio and unsupported VSync remain limitations; no sound certification. Independent evidence is [here](docs/validation/independent-v32/QA_REPORT.md). Accepted remote commit identities are recorded separately after reachable verification; local gates alone are not publication.
+
+---
+
 # MossCircuit v31 — choose your starting loadout
 
 The title now offers three starting builds for the same hero: **Rivet Gun +35 scrap**, **Scrap Shotgun +23**, or **Rail Lance +17**. All begin with ordinary 100 HP/base movement, one existing weapon and no modules or permanent upgrades. Choose accurate frequent fire and spare cash, close-range spread, or slow long-range piercing shots. Current weapon price plus starting scrap totals 59 for each: an authored tuning rationale, not equal-strength certification.

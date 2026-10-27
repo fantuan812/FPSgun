@@ -1,0 +1,30 @@
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+WARNING: Could not set V-Sync mode, as changing V-Sync mode is not supported by the graphics driver.
+     at: set_use_vsync (platform/linuxbsd/x11/gl_manager_x11.cpp:364)
+OpenGL API 4.5 (Core Profile) Mesa 25.0.7-2+deb13u1 - Compatibility - Using Device: Mesa - llvmpipe (LLVM 19.1.7, 256 bits)
+ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
+ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
+ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
+ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+ALSA lib confmisc.c:1342:(snd_func_refer) error evaluating name
+ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+ALSA lib conf.c:5728:(snd_config_expand) Evaluate error: No such file or directory
+ALSA lib pcm.c:2722:(snd_pcm_open_noupdate) Unknown PCM default
+ERROR: Condition "status < 0" is true. Returning: ERR_CANT_OPEN
+   at: init_output_device (drivers/alsa/audio_driver_alsa.cpp:90)
+WARNING: All audio drivers failed, falling back to the dummy driver.
+     at: initialize (servers/audio/audio_server.cpp:247)
+
+{"actor":1,"case":1,"fixture":"controlled brace native","mode":"rooms","name":"RIGHT / FRONT","reduced":false}
+{"actual_window_size":[960,540],"viewport":[960.0,540.0]}
+{"actor":1,"case":2,"fixture":"controlled brace native","mode":"rooms","name":"LEFT / FRONT","reduced":false}
+{"actor":1,"case":3,"fixture":"controlled brace native","mode":"rooms","name":"UP / 2D AIM","reduced":false}
+{"actor":1,"case":4,"fixture":"controlled brace native","mode":"rooms","name":"DOWN / 2D AIM","reduced":false}
+{"actor":1,"case":5,"fixture":"controlled brace native","mode":"rooms","name":"NEAR VERTICAL / HORN NOT AUTHORITY","reduced":false}
+{"actor":1,"case":6,"fixture":"controlled brace native","mode":"rooms","name":"DIAGONAL","reduced":false}
+{"actor":1,"case":7,"fixture":"controlled brace native","mode":"rooms","name":"HURT DURING WARNING","reduced":false}
+{"actor":1,"case":8,"fixture":"controlled brace native","mode":"rooms","name":"HURT RETURN TO WARNING","reduced":false}
+{"actor":1,"case":9,"fixture":"controlled brace native","mode":"rooms","name":"ORANGE OVERLAP","reduced":false}
+{"actor":1,"case":10,"fixture":"controlled brace native","mode":"rooms","name":"REDUCED FLASHES","reduced":true}
+{"actor":1,"case":11,"fixture":"controlled brace native","mode":"rooms","name":"CHARGING / BRACE OPEN","reduced":false}
+{"actor":1,"case":12,"fixture":"controlled brace native","mode":"rooms","name":"ENEMY GUIDE","reduced":false}

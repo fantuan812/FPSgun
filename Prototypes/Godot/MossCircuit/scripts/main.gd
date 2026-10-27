@@ -21,6 +21,7 @@ var base_arena:Dictionary
 var room_profile:Dictionary
 const CharacterMotor=preload("res://scripts/gameplay/character_motor.gd")
 const TargetStatus=preload("res://scripts/gameplay/target_status.gd")
+const PrimaryDefense=preload("res://scripts/gameplay/primary_defense.gd")
 const WeaponCombat=preload("res://scripts/gameplay/weapon_combat.gd")
 const WeaponPresentation=preload("res://scripts/gameplay/weapon_presentation.gd")
 var weapon_combat:WeaponCombat
@@ -1064,6 +1065,9 @@ func _sync_telegraphs() -> void:
 	for enemy in enemies:
 		if enemy.hp <= 0 or enemy.ai_state != "warning": continue
 		var color := Color(1,.35,.18,.9)
+		var brace:Dictionary=PrimaryDefense.brace(enemy) if state not in ["title","dead","won"] else {}
+		if not brace.is_empty():
+			markers.append({"kind":"brace","pos":enemy.pos,"direction":brace.direction,"half_angle":brace.half_angle,"radius":brace.visual_radius,"color":Color("c9c4ef")})
 		if enemy.attack == "charge":
 			markers.append({"kind":"line","pos":enemy.pos,"end":enemy.pos+enemy.aim*enemy.charge_speed*enemy.charge_duration,"width":2*(16*enemy.scale+9),"color":color})
 		elif enemy.attack == "annulus":

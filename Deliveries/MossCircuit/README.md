@@ -2,7 +2,13 @@
 
 这里保留曾经发送的 50 个原始文件，并继续接收新版本的 GitHub-only 交付。历史文件不改写；当前可编辑源码位于 [`Prototypes/Godot/MossCircuit`](../../Prototypes/Godot/MossCircuit)。
 
-## 最新 v31：从不同起始装备出发
+## 最新 v32：冲锋蓄力时的正面防御
+
+Amber Ram 仅在锁定方向的警告阶段对正面120度主武器命中减半；从侧后方攻击或等待冲锋开始形成不同选择。淡色空心弧表明正面，不是碰撞体，橙色危险路线仍保留。全部八种主武器按实际命中来源/当前飞行段处理，固定次级效果不重复减半；原有敌人计时、移动、装备、奖励和素材保持不变。见 [v32 精确前提、恢复、备份及有限验证](v32/READ_ME_v32.txt)。
+
+这是完整 PCK，使用已核验旧可执行文件；先关闭游戏并独立备份旧 PCK，再手动替换。推荐保留最新 v31 安装；本次实际文件回退验证是 v19→v32→v19，不宣称测试了 v31 回退。首次安装仍先恢复完整 v19 平台包及许可证。Linux 一次普通 Rooms/seed128 遭遇已见警告弧；无Windows运行、全战役或平衡认证。
+
+## 历史 v31：从不同起始装备出发
 
 同一角色可在标题页选择 Rivet Gun +35 scrap、Scrap Shotgun +23 或 Rail Lance +17。只有一个普通起始武器，基础生命/移动相同，没有新模块、职业被动或解锁。玩家在准确频繁射击/余钱、近距散射、长距慢速穿透之间选择；当前价格加废料同为59只是调值依据，不代表等强度。起始标签沿用原有商店倾向，同种子不同构筑不保证同报价。重试保留本局起始身份，不会把后买的装备当作新起点；会话内记住标题选择，程序重开默认 Rivet。见 [v31 前提、哈希、备份和有限验证](v31/READ_ME_v31.txt)。
 
@@ -27,13 +33,13 @@ v29 直接恢复完整 PCK，无需合并 ZIP，也不重复未改变的 EXE/ELF
 在包含此目录及其分块的 FPSgun 本地检出目录内，使用 Python 3.8 或更新版本：
 
 ```sh
-python Deliveries/MossCircuit/restore_deliveries.py --version v31 --output recovered-v31
+python Deliveries/MossCircuit/restore_deliveries.py --version v32 --output recovered-v32
 ```
 
 Windows 也可用 `py -3` 替代 `python`。输出目录中的同名文件会被拒绝覆盖。只核验、不写出原件：
 
 ```sh
-python Deliveries/MossCircuit/restore_deliveries.py --version v31 --verify-only
+python Deliveries/MossCircuit/restore_deliveries.py --version v32 --verify-only
 ```
 
 恢复操作按单个文件原子发布，不是整批回滚事务；若后续文件失败，先前已成功恢复的文件会保留。
@@ -52,4 +58,4 @@ python Deliveries/MossCircuit/restore_deliveries.py --version v31 --verify-only
 
 `SOURCE_VERSIONS.json` 将已验收的源码快照对应到不可变 Git 提交。源目录中的验证记录保留各自范围、失败过的候选及修正说明，不能把受控夹具、普通输入、静态检查和真实运行混为一谈。
 
-旧 50 个实际发送文件的目录记录保持不变；新 v26–v31 PCK/说明明确标为 GitHub-only 交付，不伪称旧聊天附件。内部恢复备份、私人路径和内部 Library 标识不在此发布。
+旧 50 个实际发送文件的目录记录保持不变；新 v26–v32 PCK/说明明确标为 GitHub-only 交付，不伪称旧聊天附件。内部恢复备份、私人路径和内部 Library 标识不在此发布。

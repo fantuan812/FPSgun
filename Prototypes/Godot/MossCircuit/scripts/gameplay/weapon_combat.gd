@@ -6,6 +6,7 @@ const WeaponRig=preload("res://scripts/weapon_rig.gd")
 const Rules=preload("res://scripts/rules.gd")
 const BoundaryShot=preload("res://scripts/gameplay/boundary_shot.gd")
 const Status=preload("res://scripts/gameplay/target_status.gd")
+const PrimaryDefense=preload("res://scripts/gameplay/primary_defense.gd")
 ## No mode, UI, progression, or input polling. Collision/proc semantics are shared by every mode.
 var world:CombatState
 var session:RunSession
@@ -31,9 +32,10 @@ func fire(id: String, slot: int, area:Dictionary={}) -> void:
 		# A timed rotating radial sweep: damages each nearby target once per attack.
 		for enemy in world.enemies:
 			if enemy.hp > 0 and enemy.pos.distance_to(world.player_pos) <= Rules.weapon_reach(weapon,world.stats):
-				enemy.hp -= damage
+				var resolved:float=PrimaryDefense.resolve(enemy,damage,world.player_pos,world.player_pos-enemy.pos)
+				enemy.hp -= resolved
 				enemy.last_source = "primary"
-				effect_event.call("hit",{"target":enemy.id,"pos":enemy.pos,"damage":damage,"weapon":id})
+				effect_event.call("hit",{"target":enemy.id,"pos":enemy.pos,"damage":resolved,"weapon":id})
 		world.flashes.append({"pos":world.player_pos, "life":.25, "radius":Rules.weapon_reach(weapon,world.stats)})
 		return
 	var living: Array = world.enemies.filter(func(enemy): return enemy.hp > 0)
@@ -75,10 +77,11 @@ func fire_chill(weapon:Dictionary,slot:int,damage:float)->void:
 	world.effect_visuals.append({"kind":"cryo_cone","pos":world.player_pos,"direction":direction,"radius":reach,"half_angle":half_angle,"life":.16})
 	for enemy in targets:
 		if enemy.hp<=0 or not Status.in_cone(enemy.pos,world.player_pos,direction,reach,half_angle):continue
-		enemy.hp-=damage
+		var resolved:float=PrimaryDefense.resolve(enemy,damage,world.player_pos,world.player_pos-enemy.pos)
+		enemy.hp-=resolved
 		enemy.last_source="primary"
 		if enemy.hp>0:Status.apply_chill(enemy,session.elapsed,weapon)
-		effect_event.call("hit",{"target":enemy.id,"pos":enemy.pos,"damage":damage,"weapon":weapon.id})
+		effect_event.call("hit",{"target":enemy.id,"pos":enemy.pos,"damage":resolved,"weapon":weapon.id})
 
 func hit_segment(b:Dictionary,start:Vector2,end:Vector2)->void:
 	var candidates:Array=[]
@@ -97,8 +100,9 @@ func hit_segment(b:Dictionary,start:Vector2,end:Vector2)->void:
 	for candidate in candidates:
 		var enemy:Dictionary=candidate.enemy
 		if enemy.hp<=0 or b.hit.has(enemy.id):continue
-		enemy.hp-=b.damage;enemy.last_source="primary"
-		effect_event.call("hit",{"target":enemy.id,"pos":enemy.pos,"damage":b.damage,"weapon":b.get("weapon",""),"returning":b.get("returning",false)})
+		var resolved:float=PrimaryDefense.resolve(enemy,b.damage,start,start-end)
+		enemy.hp-=resolved;enemy.last_source="primary"
+		effect_event.call("hit",{"target":enemy.id,"pos":enemy.pos,"damage":resolved,"weapon":b.get("weapon",""),"returning":b.get("returning",false)})
 		b.hit.append(enemy.id)
 		world.flashes.append({"pos":enemy.pos,"life":.14})
 		if b.hit.size()>b.get("pierce",world.stats.pierce):b.life=-1;break
@@ -152,8 +156,9 @@ func advance_bankshot(b:Dictionary,dt:float)->void:
 	BoundaryShot.advance(b,dt,world.enemies,_bankshot_hit,_bankshot_contact)
 
 func _bankshot_hit(enemy:Dictionary,b:Dictionary)->void:
-	enemy.hp-=b.damage;enemy.last_source="primary"
-	effect_event.call("hit",{"target":enemy.id,"pos":enemy.pos,"damage":b.damage,"weapon":b.weapon,"returning":false})
+	var resolved:float=PrimaryDefense.resolve(enemy,b.damage,b.pos,-Vector2(b.dx,b.dy))
+	enemy.hp-=resolved;enemy.last_source="primary"
+	effect_event.call("hit",{"target":enemy.id,"pos":enemy.pos,"damage":resolved,"weapon":b.weapon,"returning":false})
 	world.flashes.append({"pos":enemy.pos,"life":.14})
 
 func _bankshot_contact(event:Dictionary)->void:

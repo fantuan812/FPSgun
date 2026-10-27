@@ -2,6 +2,7 @@ extends RefCounted
 const CombatState=preload("res://scripts/gameplay/combat_state.gd")
 const RunSession=preload("res://scripts/gameplay/run_session.gd")
 const Status=preload("res://scripts/gameplay/target_status.gd")
+const PrimaryDefense=preload("res://scripts/gameplay/primary_defense.gd")
 var world:CombatState
 var session:RunSession
 var engine:RefCounted
@@ -160,9 +161,10 @@ func advance_mortars(dt: float) -> void:
 		if blast.delay > 0: continue
 		for enemy in world.enemies:
 			if enemy.hp > 0 and enemy.pos.distance_to(blast.pos) <= blast.radius:
-				enemy.hp -= blast.damage
+				var resolved:float=PrimaryDefense.resolve(enemy,blast.damage,blast.pos,blast.pos-enemy.pos)
+				enemy.hp -= resolved
 				enemy.last_source = "primary"
-				emit_event("hit",{"target":enemy.id,"pos":enemy.pos,"damage":blast.damage,"weapon":blast.weapon})
+				emit_event("hit",{"target":enemy.id,"pos":enemy.pos,"damage":resolved,"weapon":blast.weapon})
 		play_vfx.call("explosion",blast.pos,{"radius":blast.radius})
 		emit_event("mortar",{"pos":blast.pos})
 		world.effect_visuals.append({"kind":"mortar","pos":blast.pos,"radius":blast.radius,"life":.25})

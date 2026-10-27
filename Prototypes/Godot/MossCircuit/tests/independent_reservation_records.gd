@@ -14,7 +14,7 @@ func run()->void:
  ck(c.items.map(func(e):return e.id)==ITEM_IDS,"exact ordered 29 module IDs")
  ck(c.weapons.map(func(e):return e.id)==["rivet_gun","scrap_shotgun","rail_lance","orbit_saw","return_disc","shock_mortar","cryo_sprayer","bankshot_driver"],"exact ordered eight weapon IDs")
  ck(FileAccess.get_sha256("res://data/balance.json")=="180c521a222f737a93498768acccdb98e6bb93f606de7e6719f88261eb41815c","six existing upgrades and economy unchanged")
- ck(FileAccess.get_sha256("res://data/encounters.json")=="a8a3159cb6462a9b113cc8ab588c77635c3aa4763e114ba943c38039655f8805","v27 enemy/wave definitions unchanged")
+ ck(FileAccess.get_sha256("res://data/encounters.json")=="853bb3699bb05c2ed1eb7d1c8dc3e51844428c233ffa3127ac035a2762a3f356","exact v32 encounter bytes; reviewed Amber Ram brace/copy only")
  ck(FileAccess.get_sha256("res://data/room_encounters.json")=="4a0067faa08241d91042505d72b3a027956ef27571710d74d8559462ac2c5131","Rooms stages/rewards unchanged")
  var b:Dictionary=Rules.new_build(c)
  var offer:Dictionary={"id":"rail_lance","sold":false,"weight":1.0,"weight_multiplier":1.0,"bias_reasons":["original"]}
@@ -59,7 +59,7 @@ func run()->void:
  ck(not g._buy(0,gen) and g.build.coins==coins and g.shop_generation==gen,"removed catalog ID never charges")
  ck(g._view().offers[0].reserved and not g._view().offers[0].can_buy,"removed catalog entry has safe reserved fallback card")
  g.queue_free();await process_frame
- var result:Dictionary={"checks":checks,"failures":failures,"scope":"Strict v27 catalog/encounter preservation plus malformed reservation/catalog type guards and actual held-card association. Corruption is controlled diagnostic input, not an observed ordinary-run occurrence."}
+ var result:Dictionary={"checks":checks,"failures":failures,"scope":"Strict unchanged v27 catalog and reviewed v32 encounter preservation plus malformed reservation/catalog type guards and actual held-card association. Corruption is controlled diagnostic input, not an observed ordinary-run occurrence."}
  var args:=OS.get_cmdline_user_args()
  if not args.is_empty():FileAccess.open(args[0],FileAccess.WRITE).store_string(JSON.stringify(result,"  ")+"\n")
  print(JSON.stringify(result));quit(0 if failures.is_empty() else 1)

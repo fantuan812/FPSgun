@@ -1,0 +1,76 @@
+{
+  "pass": true,
+  "steps": [
+    {
+      "name": "literal-verify",
+      "exit": 0,
+      "expected_success": true,
+      "pass": true
+    },
+    {
+      "name": "literal-restore",
+      "exit": 0,
+      "expected_success": true,
+      "pass": true
+    },
+    {
+      "name": "no-overwrite",
+      "exit": 1,
+      "expected_success": false,
+      "pass": true
+    },
+    {
+      "name": "wrong-chunk-sha",
+      "exit": 1,
+      "expected_success": false,
+      "pass": true
+    },
+    {
+      "name": "unsafe-name",
+      "exit": 1,
+      "expected_success": false,
+      "pass": true
+    },
+    {
+      "name": "unsafe-source",
+      "exit": 1,
+      "expected_success": false,
+      "pass": true
+    },
+    {
+      "name": "symlink-output",
+      "exit": 1,
+      "expected_success": false,
+      "pass": true
+    }
+  ],
+  "old_catalog_rows_exact": 62,
+  "new_total_rows": 64,
+  "helper_sha256": "3228782b92e9ec6573b7ba9842d950b3cb6c4dbe928fb3bdcb9a2b4f930b55ad",
+  "restored_files": {
+    "READ_ME_v32.txt": "9ee2a28ca5c7bea02beea830e4efe038c9e06fdc8fa272fd61633b1b0ab1805a",
+    "MossCircuit.pck": "16137dd982d7f0f4a151a3b7a6d6d40fc8d56f97c6e5694f003b457133555353"
+  },
+  "manual_rollback": {
+    "pass": true,
+    "scope": "Isolated manual file-only v19 PCK -> full v32 PCK -> exact v19 backup restoration; no runtime launched in this simulation. Not a v31 rollback test.",
+    "tested_old_pack": {
+      "version": "v19",
+      "bytes": 35510564,
+      "sha256": "d454fba8eb3b6ceff3686303b4ad7e4ac2c176659af8c4bf85de610d57af7298"
+    },
+    "new_pack": {
+      "bytes": 41385288,
+      "sha256": "16137dd982d7f0f4a151a3b7a6d6d40fc8d56f97c6e5694f003b457133555353"
+    },
+    "backup_sha256": "d454fba8eb3b6ceff3686303b4ad7e4ac2c176659af8c4bf85de610d57af7298",
+    "restored_sha256": "d454fba8eb3b6ceff3686303b4ad7e4ac2c176659af8c4bf85de610d57af7298",
+    "unchanged_executable": {
+      "bytes": 71075864,
+      "sha256": "2c78919325d7f29fa7607287c7c1eeac367ea4c94e7b8b6f5f4c6b20492f73d0"
+    },
+    "canonical_inputs_changed": false,
+    "unchanged_helper_end_to_end": "Pending final staged catalog/chunk/instruction set; not claimed here."
+  },
+  "scope": "Actual unchanged helper on local staged repository and exactv32 chunks. Manual v19->v32->v19 file restoration separately completed. No remote publication, automatic install, Windows execution or v31 rollback claim."
+}

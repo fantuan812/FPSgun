@@ -1,4 +1,5 @@
 extends RefCounted
+const PrimaryDefense=preload("res://scripts/gameplay/primary_defense.gd")
 ## Data-driven timer/state transitions. Events consumed by the combat controller.
 static func tick(enemy: Dictionary, player: Vector2, dt: float, time: float) -> Array:
 	var events: Array = []
@@ -80,6 +81,7 @@ static func validate(config: Dictionary) -> Array:
 			if not entry.has(key): valid = false
 		if not valid: errors.append("Missing enemy field"); continue
 		if not entry.id is String or not entry.name is String or not entry.boss is bool: errors.append("Invalid enemy identity"); continue
+		errors.append_array(PrimaryDefense.validate_entry(entry))
 		if kinds.has(entry.id): errors.append("Duplicate enemy ID")
 		kinds[entry.id] = entry.boss
 		if not entry.behavior in ["chase","charge","ranged","flank","summon","brood_cycle","warden","core"]: errors.append("Unknown behavior")
