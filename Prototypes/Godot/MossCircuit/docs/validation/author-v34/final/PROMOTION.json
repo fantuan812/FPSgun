@@ -1,0 +1,33 @@
+{
+  "status": "PROMOTED_NOT_YET_IMPORTED_OR_FROZEN",
+  "held_source_count": 657,
+  "held_map_sha256": "2f0774a9ab2af211a51a2991d9ead4d9f86a9609d430ea0f219a8e06b80df6ac",
+  "independent_acceptance_sha256": "091105c48bf9a9aafaa13f7cb64f80a22d174259769cee3d76bccd941285c068",
+  "promoted": [
+    {
+      "path": "checks/independent_focus_authority.gd",
+      "sha256": "08f24ab915c40816ac10d4028c657d7265a0c832af41789697bc7c35f9f812bb",
+      "size": 12249,
+      "optional_output": true,
+      "external_baseline_dependency": false
+    },
+    {
+      "path": "checks/independent_focus_combat.gd",
+      "sha256": "1611243f4cbe56a37a6362b75194969b747b658cc3ab0b53ec39463bdad15af4",
+      "size": 13106,
+      "optional_output": true,
+      "external_baseline_dependency": false
+    },
+    {
+      "path": "checks/independent_focus_views.gd",
+      "sha256": "ea87d4716ced4c1b36e4d5a16c8340d15876785cf66419cd56eb02340fa34b53",
+      "size": 8622,
+      "optional_output": true,
+      "external_baseline_dependency": false
+    }
+  ],
+  "addendum_sha256": "7337ec9ed638e19a762c40be6f36c87736f1356728baf28ff775a17f0e235d98",
+  "production_changes": [],
+  "expected_final_count_after_three_uids": 664,
+  "external_actions": []
+}

@@ -1,0 +1,292 @@
+--- v33R2/scripts/gameplay/combat_runtime.gd
++++ v34R1/scripts/gameplay/combat_runtime.gd
+@@ -5,9 +5,11 @@
+ const EnemyAI=preload("res://scripts/enemy_ai.gd")
+ const Status=preload("res://scripts/gameplay/target_status.gd")
+ const Annulus=preload("res://scripts/gameplay/annulus_geometry.gd")
++const Focus=preload("res://scripts/gameplay/combat_focus.gd")
+ ## Mode-independent combat step: weapons, AI, projectiles, deaths and pickups.
+ ## No wave timer, spawn schedule, completion policy, UI or shop dependency.
+ static func step(frame:Context,dt:float)->void:
++	_prune_focus(frame.world)
+ 	for prep_slot in range(frame.session.build.weapons.size()):
+ 		var soon:float=frame.world.weapon_clocks[prep_slot]
+ 		var prep_weapon:Dictionary=Rules.catalog_entry(frame.catalog,frame.session.build.weapons[prep_slot])
+@@ -118,3 +120,7 @@
+ 	for i in range(frame.world.flashes.size() - 1, -1, -1):
+ 		frame.world.flashes[i].life -= dt
+ 		if frame.world.flashes[i].life <= 0: frame.world.flashes.remove_at(i)
++	_prune_focus(frame.world)
++
++static func _prune_focus(world:RefCounted)->void:
++	if world.focus_enemy_id!=0 and Focus.find(world.enemies,world.focus_enemy_id).is_empty():world.focus_enemy_id=0
+--- v33R2/scripts/gameplay/combat_state.gd
++++ v34R1/scripts/gameplay/combat_state.gd
+@@ -13,3 +13,4 @@
+ var hazards: Array = []
+ var effect_visuals: Array = []
+ var next_enemy_id := 0
++var focus_enemy_id := 0 # Transient current ID only; 0 preserves automatic nearest acquisition.
+--- v33R2/scripts/gameplay/run_flow.gd
++++ v34R1/scripts/gameplay/run_flow.gd
+@@ -8,6 +8,7 @@
+ 	var decision=mode.resolution(session,world,config)
+ 	if not decision is Dictionary or not validate_resolution(decision).is_empty():return "invalid"
+ 	session.state="transition" # Reentrant/repeated requests cannot credit twice.
++	world.focus_enemy_id=0
+ 	for pickup in world.pickups:
+ 		collect_pickup(world,session,pickup)
+ 	world.pickups.clear()
+--- v33R2/scripts/gameplay/weapon_combat.gd
++++ v34R1/scripts/gameplay/weapon_combat.gd
+@@ -8,6 +8,7 @@
+ const Status=preload("res://scripts/gameplay/target_status.gd")
+ const PrimaryDefense=preload("res://scripts/gameplay/primary_defense.gd")
+ const WeaponTempering=preload("res://scripts/gameplay/weapon_tempering.gd")
++const Focus=preload("res://scripts/gameplay/combat_focus.gd")
+ ## No mode, UI, progression, or input polling. Collision/proc semantics are shared by every mode.
+ var world:CombatState
+ var session:RunSession
+@@ -44,6 +45,8 @@
+ 	var nearest: Dictionary = living[0]
+ 	for enemy in living:
+ 		if world.player_pos.distance_squared_to(enemy.pos) < world.player_pos.distance_squared_to(nearest.pos): nearest = enemy
++	var preferred:Dictionary=Focus.eligible(world.enemies,world.focus_enemy_id,world.player_pos,weapon,world.stats)
++	if not preferred.is_empty():nearest=preferred
+ 	var reach: float = Rules.weapon_reach(weapon,world.stats)
+ 	if world.player_pos.distance_to(nearest.pos) > reach: return
+ 	var pose:Dictionary=presentation.fire(id,slot,nearest.pos)
+@@ -65,7 +68,8 @@
+ 	var reach:float=Rules.weapon_reach(weapon,world.stats)
+ 	var targets:Array=Status.ordered_living(world.enemies,world.player_pos,reach)
+ 	if targets.is_empty():return
+-	var target:Vector2=targets[0].pos
++	var preferred:Dictionary=Focus.find(targets,world.focus_enemy_id)
++	var target:Vector2=targets[0].pos if preferred.is_empty() else preferred.pos
+ 	var direction:Vector2=(target-world.player_pos).normalized()
+ 	if direction.length_squared()<.000001:
+ 		direction=Vector2.RIGHT
+@@ -145,7 +149,8 @@
+ 	var reach:float=Rules.weapon_reach(weapon,world.stats)
+ 	var targets:Array=Status.ordered_living(world.enemies,world.player_pos,reach)
+ 	if targets.is_empty():return
+-	var target:Vector2=targets[0].pos
++	var preferred:Dictionary=Focus.find(targets,world.focus_enemy_id)
++	var target:Vector2=targets[0].pos if preferred.is_empty() else preferred.pos
+ 	var coincident:bool=target.distance_squared_to(world.player_pos)<=BoundaryShot.DIR_EPS*BoundaryShot.DIR_EPS
+ 	var pose:Dictionary=presentation.fire_fixed_direction(weapon.id,slot,Vector2.RIGHT) if coincident else presentation.fire(weapon.id,slot,target)
+ 	var shot:Dictionary=BoundaryShot.spawn(pose.muzzle,pose.direction,area,damage,world.stats.bullet_speed,reach,int(weapon.pierce)+int(world.stats.pierce),session.build.items.get("bounce_guide",0)>0,slot)
+--- v33R2/scripts/main.gd
++++ v34R1/scripts/main.gd
+@@ -5,6 +5,7 @@
+ var title_generation:int=0
+ const WeaponOrder = preload("res://scripts/gameplay/weapon_order.gd")
+ const WeaponTempering = preload("res://scripts/gameplay/weapon_tempering.gd")
++const CombatFocus=preload("res://scripts/gameplay/combat_focus.gd")
+ const WeaponReadout=preload("res://scripts/weapon_readout.gd")
+ const ModeStatus=preload("res://ui/mode_status.gd")
+ var mode_status:CanvasLayer
+@@ -265,6 +266,7 @@
+ 
+ 
+ func _title() -> void:
++	combat.focus_enemy_id=0
+ 	weapon_rig.clear()
+ 	reserved_offer.clear()
+ 	effects.feedback_armed = false
+@@ -305,6 +307,7 @@
+ func _start_run(seed_value: int,loadout_id:Variant=StartingLoadouts.DEFAULT_ID) -> bool:
+ 	var fresh_build:=StartingLoadouts.make_build(starting_loadouts,catalog,loadout_id)
+ 	if fresh_build.is_empty():return false
++	combat.focus_enemy_id=0
+ 	weapon_rig.clear()
+ 	reserved_offer.clear()
+ 	visual_cooldowns.clear()
+@@ -382,6 +385,45 @@
+ 		if state == "upgrade" and event.keycode in [KEY_1, KEY_2, KEY_3]:
+ 			_take_upgrade(int(event.keycode - KEY_1), choice_generation)
+ 
++func _unhandled_input(event:InputEvent)->void:
++	if event is InputEventMouseButton and event.button_index==MOUSE_BUTTON_LEFT and event.pressed:
++		if _focus_click(event.position):get_viewport().set_input_as_handled()
++
++## Input position is already in viewport coordinates. Never apply window stretch twice.
++func _focus_click(viewport_point:Variant)->bool:
++	if state!="playing" or not viewport_point is Vector2 or not viewport_point.is_finite():return false
++	if not get_viewport().get_visible_rect().has_point(viewport_point):return false
++	if not is_instance_valid(ui) or ui.blocks_focus_at(viewport_point):return false
++	if is_instance_valid(mode_status) and mode_status.blocks_focus_at(viewport_point):return false
++	var canvas_transform:Transform2D=get_global_transform_with_canvas()
++	var determinant:float=canvas_transform.determinant()
++	if not canvas_transform.x.is_finite() or not canvas_transform.y.is_finite() or not canvas_transform.origin.is_finite() or not is_finite(determinant) or determinant==0:return false
++	var point:Vector2=make_canvas_position_local(viewport_point)
++	if not point.is_finite() or not Rect2(Vector2.ZERO,Vector2(config.arena.width,config.arena.height)).has_point(point):return false
++	var selected:int=CombatFocus.pick(enemies,point)
++	if selected<0 or selected==combat.focus_enemy_id:return false
++	combat.focus_enemy_id=selected
++	return true
++
++## Read-only, including stale/dead IDs; shared combat/lifecycle boundaries own clearing.
++func _focus_view()->Dictionary:
++	var target:Dictionary=CombatFocus.find(enemies,combat.focus_enemy_id)
++	if target.is_empty():return {"active":false,"id":0,"name":"","eligible":0,"directional":0}
++	var total:int=0
++	var eligible:int=0
++	for id in build.get("weapons",[]):
++		var weapon:Dictionary=Rules.catalog_entry(catalog,id)
++		if not CombatFocus.directional(weapon):continue
++		total+=1
++		if not CombatFocus.eligible(enemies,combat.focus_enemy_id,player_pos,weapon,stats).is_empty():eligible+=1
++	return {"active":true,"id":target.id,"name":str(target.get("name","Enemy %d"%target.id)),"eligible":eligible,"directional":total}
++
++func _focus_status_text()->String:
++	var view:Dictionary=_focus_view()
++	if not view.active:return ""
++	if view.directional==0:return "PRIORITY %s | radial aim unchanged | click ground: AUTO"%view.name
++	return "PRIORITY %s | %d/%d aim weapons in range | click ground: AUTO"%[view.name,view.eligible,view.directional]
++
+ 
+ func _notification(what:int) -> void:
+ 	# Losing application focus must never spend combat or room-clear time.
+@@ -586,6 +628,7 @@
+ 		_hide_modal()
+ 
+ func _finish(won: bool) -> void:
++	combat.focus_enemy_id=0
+ 	weapon_rig.clear()
+ 	reserved_offer.clear()
+ 	_clear_transients()
+@@ -606,7 +649,7 @@
+ 
+ 
+ func _update_hud() -> void:
+-	if is_instance_valid(mode_status):mode_status.present(mode.id,state,mode.objective(run,combat,config),mode.progress())
++	if is_instance_valid(mode_status):mode_status.present(mode.id,state,mode.objective(run,combat,config),mode.progress(),_focus_status_text())
+ 	if not stats.is_empty(): ui.update_hud(_view())
+ 	if is_instance_valid(mode_status):mode_status.place_below(ui.hud.get_global_rect())
+ 	if ui.has_method("update_bosses"):
+@@ -666,6 +709,18 @@
+ 			var center:Vector2=enemy.pos+Vector2(0,-height*.5-6)
+ 			var diamond:=PackedVector2Array([center+Vector2(0,-4),center+Vector2(4,0),center+Vector2(0,4),center+Vector2(-4,0),center+Vector2(0,-4)])
+ 			draw_polyline(diamond,Color(.57,.91,.98,.5 if settings.reduced_flashes else .85),1.5)
++	if state=="playing":
++		var focused:Dictionary=CombatFocus.find(enemies,combat.focus_enemy_id)
++		if not focused.is_empty():
++			# Corner brackets, never a danger circle or damage footprint.
++			var height:float=actor_anim.actors.get(focused.id,{}).get("height",57.0*float(focused.scale))
++			var extent:float=maxf(26.0,height*.55+4.0)
++			var tint:=Color(.91,.97,.87,.6 if settings.reduced_flashes else .9)
++			for sx in [-1,1]:
++				for sy in [-1,1]:
++					var corner:Vector2=focused.pos+Vector2(sx,sy)*extent
++					draw_line(corner,corner-Vector2(sx*8,0),tint,1.5)
++					draw_line(corner,corner-Vector2(0,sy*8),tint,1.5)
+ 	if effects.shield > 0 and not build.is_empty(): draw_circle(player_pos,25,Color("a7e5ff"),false,2)
+ 	if effects.can_feedback(float(stats.get("dash_time",0.0)) > 0) and state not in ["title","dead","won"]:
+ 		var ready_mark:=PackedVector2Array([player_pos+Vector2(0,-19),player_pos+Vector2(19,0),player_pos+Vector2(0,19),player_pos+Vector2(-19,0),player_pos+Vector2(0,-19)])
+@@ -919,6 +974,7 @@
+ func _view() -> Dictionary:
+ 	if build.is_empty(): return {"seed":run_seed,"settings":settings.duplicate(true),"mode_id":mode.id,"mode_name":mode.name,"objective":""}
+ 	var view := {"coins":build.coins,"wave":wave,"level":level,"hp":stats.hp,"max_hp":stats.max_hp,"xp":xp,"xp_max":Rules.xp_threshold(level),"time":elapsed,"kills":kills,"seed":run_seed,"stats":stats,"weapons":[],"items":[],"synergies":stats.synergies,"generation":shop_generation,"refresh_price":catalog.refresh_price,"weapon_slots":catalog.weapon_slots,"item_slots":catalog.item_slots,"message":shop_message,"offers":[],"rewards":rewards,"synergy_status":[],"mechanics":{"shield":effects.shield,"chain_charges":effects.chain_charges,"hazards":hazards.size(),"echo_hits":effects.echo_hits,"phase_charge":effects.phase_charge,"medic_damage":effects.medic_damage,"cooldowns":{}}}
++	view.focus=_focus_view()
+ 	view.starting_loadout=StartingLoadouts.entry(starting_loadouts,catalog,run.starting_loadout_id)
+ 	view.mode_id=mode.id
+ 	view.mode_name=mode.name
+@@ -1181,7 +1237,15 @@
+ 		for e in living:
+ 			if e.pos.distance_squared_to(player_pos)<nearest.pos.distance_squared_to(player_pos):nearest=e
+ 		target=nearest.pos
+-	weapon_rig.update_poses(actor_anim.socket_world(0,"grip"),actor_anim.socket_world(0,"body"),target,hero.flip_h,bullets,pending_blasts,true)
++	if combat.focus_enemy_id==0 or CombatFocus.find(enemies,combat.focus_enemy_id).is_empty():
++		weapon_rig.update_poses(actor_anim.socket_world(0,"grip"),actor_anim.socket_world(0,"body"),target,hero.flip_h,bullets,pending_blasts,true)
++	else:
++		var priority_targets:Dictionary={}
++		for slot in range(build.weapons.size()):
++			var weapon:Dictionary=Rules.catalog_entry(catalog,build.weapons[slot])
++			var preferred:Dictionary=CombatFocus.eligible(enemies,combat.focus_enemy_id,player_pos,weapon,stats)
++			if not preferred.is_empty():priority_targets[slot]=preferred.pos
++		weapon_rig.update_poses(actor_anim.socket_world(0,"grip"),actor_anim.socket_world(0,"body"),target,hero.flip_h,bullets,pending_blasts,true,priority_targets)
+ 
+ func _select_mode(id:String)->bool:
+ 	if state!="title" or id not in ["arena","rooms"]:return false
+@@ -1200,6 +1264,7 @@
+ 	camera.position=FieldLayout.camera_position(player_pos,config.arena)
+ func _begin_room_clear()->void:
+ 	if state!="playing":return
++	combat.focus_enemy_id=0
+ 	state="room_clear"
+ 	bullets.clear();enemy_bullets.clear();pending_blasts.clear();hazards.clear();flashes.clear()
+ 	_clear_transients()
+--- v33R2/scripts/weapon_rig.gd
++++ v34R1/scripts/weapon_rig.gd
+@@ -95,10 +95,11 @@
+ 	var slot:Dictionary=slots[index];slot.age=0;slot.pose=pose;slot.aim=pose.direction
+ 	last_shot={"slot":index,"id":slot.id,"pose":pose.duplicate(true),"generation":generation}
+ 	_apply(slot)
+-func update_poses(hand:Vector2,body:Vector2,target:Vector2,facing_left:bool,bullets:Array,blasts:Array,alive:bool)->void:
++func update_poses(hand:Vector2,body:Vector2,target:Vector2,facing_left:bool,bullets:Array,blasts:Array,alive:bool,priority_targets:Dictionary={})->void:
+ 	for i in range(slots.size()):
+ 		var slot:Dictionary=slots[i]
+-		if slot.age>0 or slot.pose.is_empty():slot.pose=pose_for(i,hand,body,target,facing_left)
++		var idle_target:Vector2=priority_targets.get(i,target)
++		if slot.age>0 or slot.pose.is_empty():slot.pose=pose_for(i,hand,body,idle_target,facing_left)
+ 		slot.aim=slot.pose.direction
+ 		slot.hidden=not alive or (slot.id=="return_disc" and bullets.any(func(b):return b.get("slot",-1)==i and b.get("weapon","")=="return_disc" and b.life>0))
+ 		_apply(slot)
+--- v33R2/ui/mode_status.gd
++++ v34R1/ui/mode_status.gd
+@@ -22,14 +22,19 @@
+ 	var text_offset:float=66 if visible_rooms else 10
+ 	objective.position=Vector2(hud_rect.position.x+text_offset,hud_rect.end.y+8)
+ 	objective.size=Vector2(maxf(1,hud_rect.size.x-text_offset-10),42)
+-func present(mode_id:String,state:String,text:String,progress:float)->void:
++func present(mode_id:String,state:String,text:String,progress:float,focus_text:String="")->void:
+ 	visible_rooms=mode_id=="rooms"
+ 	visible=state in ["playing","room_clear"]
+ 	clear_progress=maxf(0,progress)
+ 	phase=clampi(int(floor(clear_progress*8+.000001)),0,8)
+-	objective.text=text
++	objective.text=text if focus_text.is_empty() else text+"\n"+focus_text
+ 	badge.visible=visible_rooms
+ 	badge.queue_redraw()
++
++func blocks_focus_at(viewport_point:Vector2)->bool:
++	if not visible:return false
++	if objective.is_visible_in_tree() and Rect2(Vector2.ZERO,objective.size).has_point(objective.make_canvas_position_local(viewport_point)):return true
++	return badge.is_visible_in_tree() and Rect2(0,0,48,40).has_point(badge.make_canvas_position_local(viewport_point))
+ func _draw_badge()->void:
+ 	var ink:=Color("142c32")
+ 	var color:=Color("e7b969") if phase==0 else Color("91e8bc")
+--- v33R2/ui/moss_ui.gd
++++ v34R1/ui/moss_ui.gd
+@@ -305,7 +305,7 @@
+ 	var has_loadouts:bool=not loadout_context.is_empty()
+ 	var generation:int=int(loadout_context.get("generation",-1))
+ 	var introduction:String="A small machine. Six hostile waves. Build your own salvage engine." if mode_id=="arena" else "Three finite room encounters. Clear every enemy, then rebuild. This is not a complete dungeon."
+-	var controls:String="Move: WASD / arrow keys   |   Dash: Space   |   Auto-fire: nearest target\nPause: Esc   |   Build: I   |   Menus: Tab / Shift+Tab, Enter or Space\nBuy weapons and modules between encounters. Matching tags unlock synergies."
++	var controls:String="Move: WASD / arrow keys   |   Dash: Space   |   Auto-fire: nearest target\nClick enemy CENTER: priority; click empty ground: AUTO. In-range aim only; Orbit stays radial.\nPause: Esc   |   Build: I   |   Menus: Tab / Shift+Tab, Enter or Space\nBuy weapons and modules between encounters. Matching tags unlock synergies."
+ 	var mode_name:String="ARENA SURVIVAL" if mode_id=="arena" else "ROOM ENCOUNTERS"
+ 	var mode_button:=Button.new();mode_button.custom_minimum_size.y=38
+ 	mode_button.text="SWITCH TO "+("ROOM ENCOUNTERS" if mode_id=="arena" else "ARENA SURVIVAL")
+@@ -569,6 +569,7 @@
+ 
+ func show_pause(_view: Dictionary = {}) -> void:
+ 	_begin("pause", "SYSTEM SUSPENDED", "The simulation is paused.")
++	_text(body,"During play: click enemy CENTER for priority; click empty ground for AUTO.\nOnly in-range aimed weapons prefer the mark; Orbit remains radial.",14)
+ 	_button(body, "RESUME", "resume")
+ 	_button(body, "INSPECT BUILD", "inventory")
+ 	_button(body, "ENEMY FIELD GUIDE", "codex")
+@@ -593,6 +594,13 @@
+ 
+ func modal_visible() -> bool:
+ 	return shade.visible
++
++## Some HUD children ignore mouse input; their visible rectangles still exclude priority picking.
++func blocks_focus_at(viewport_point:Vector2)->bool:
++	if modal_visible():return true
++	for control in [hud,boss_panel]:
++		if control.is_visible_in_tree() and Rect2(Vector2.ZERO,control.size).has_point(control.make_canvas_position_local(viewport_point)):return true
++	return false
+ 
+ ## The controller supplies only live bosses. Empty input clears prior encounter text.
+ func update_bosses(bosses: Array) -> void:

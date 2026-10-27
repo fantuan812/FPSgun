@@ -1,0 +1,37 @@
+{
+  "pass": false,
+  "steps": [
+    {
+      "name": "authority",
+      "exit": 0,
+      "seconds": 4.298,
+      "engine_error": false,
+      "pass": true,
+      "script_sha256": "08f24ab915c40816ac10d4028c657d7265a0c832af41789697bc7c35f9f812bb",
+      "checks": 356,
+      "failures": []
+    },
+    {
+      "name": "combat",
+      "exit": 1,
+      "seconds": 9.265,
+      "engine_error": false,
+      "pass": false,
+      "script_sha256": "5b5f719ae7415ef152e09bbad6373b9e6c9d59055a0c7cb438657cff0284bc9d",
+      "checks": 933,
+      "failures": [
+        "arena rail_lance dead actual launched pose aims at target",
+        "arena rail_lance removed actual launched pose aims at target",
+        "arena rail_lance out-of-range actual launched pose aims at target",
+        "near distractor not new Arc focus recipient got=995.2 expected=1000.0",
+        "rooms rail_lance dead actual launched pose aims at target",
+        "rooms rail_lance removed actual launched pose aims at target",
+        "rooms rail_lance out-of-range actual launched pose aims at target",
+        "near distractor not new Arc focus recipient got=995.2 expected=1000.0"
+      ]
+    }
+  ],
+  "input_changes": [],
+  "source_inputs": 657,
+  "source_map_sha256": "2f0774a9ab2af211a51a2991d9ead4d9f86a9609d430ea0f219a8e06b80df6ac"
+}

@@ -1,0 +1,39 @@
+{
+  "status": "AUTHOR_FINAL_SOURCE_AND_PACK_PASS_QA_HANDOFF",
+  "source_inputs": 664,
+  "source_map_sha256": "f67b60927557a1a08d4186aa41d78697a14e30cfed01605f894a0e646e717de0",
+  "production_map_sha256": "7b661413f4d19b790f7b29fee301338102660096e409c95d0e36eebdf530fd87",
+  "author_final_gate_sha256": "5d4b1ea1a7ab3400a95098e65933abcbfcfa9595cd767d7b1ea3daaf155fc97e",
+  "build_report_sha256": "7b04294ecf5ef4d63eeef1110fab7b8ac32a9be72f4f3455a72571b33b604b71",
+  "files": {
+    "linux/MossCircuit.pck": {
+      "bytes": 41405276,
+      "sha256": "250ea5966ff7ca35b42a13cd813ba5ff156288cfc97110a411dd73664ccbbe02",
+      "mode": "0o644"
+    },
+    "windows/MossCircuit.pck": {
+      "bytes": 41405276,
+      "sha256": "250ea5966ff7ca35b42a13cd813ba5ff156288cfc97110a411dd73664ccbbe02",
+      "mode": "0o644"
+    },
+    "linux/MossCircuit.x86_64": {
+      "bytes": 71075864,
+      "sha256": "2c78919325d7f29fa7607287c7c1eeac367ea4c94e7b8b6f5f4c6b20492f73d0",
+      "mode": "0o755"
+    },
+    "source-imported-fingerprints.json": {
+      "bytes": 31122,
+      "sha256": "74af27ad3a27af47201c1d1c91243462c94cfdfe2eb396e903ec6e98a22e7169",
+      "mode": "0o644"
+    }
+  },
+  "packed_checks": {
+    "authority": 356,
+    "combat": 945,
+    "views": 366
+  },
+  "resource_checks": 849,
+  "windows_execution": false,
+  "final_pack_native_and_ordinary_pending": true,
+  "external_actions": []
+}

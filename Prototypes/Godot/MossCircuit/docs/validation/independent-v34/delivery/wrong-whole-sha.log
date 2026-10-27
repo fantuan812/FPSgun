@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "<STAGED_REPOSITORY>/Deliveries/MossCircuit/restore_deliveries.py", line 137, in <module>
+    main()
+  File "<STAGED_REPOSITORY>/Deliveries/MossCircuit/restore_deliveries.py", line 131, in main
+    restore(root, record, args.output)
+  File "<STAGED_REPOSITORY>/Deliveries/MossCircuit/restore_deliveries.py", line 93, in restore
+    stream_verified(root, record, out)
+  File "<STAGED_REPOSITORY>/Deliveries/MossCircuit/restore_deliveries.py", line 79, in stream_verified
+    raise ValueError("Original identity mismatch: " + record["name"])
+ValueError: Original identity mismatch: MossCircuit.pck

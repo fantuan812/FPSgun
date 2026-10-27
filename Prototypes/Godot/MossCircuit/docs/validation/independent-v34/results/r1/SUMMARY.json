@@ -1,0 +1,25 @@
+{
+  "pass": false,
+  "steps": [
+    {
+      "name": "cold-import",
+      "exit": 0,
+      "seconds": 19.529,
+      "engine_error": false,
+      "pass": true
+    },
+    {
+      "name": "authority",
+      "exit": 0,
+      "seconds": 4.4,
+      "engine_error": true,
+      "pass": false,
+      "script_sha256": "d9503063928b63e0917599b7ac07c069215b8205ed626f1856fef910d59dce4f",
+      "checks": 356,
+      "failures": []
+    }
+  ],
+  "input_changes": [],
+  "source_inputs": 657,
+  "source_map_sha256": "2f0774a9ab2af211a51a2991d9ead4d9f86a9609d430ea0f219a8e06b80df6ac"
+}

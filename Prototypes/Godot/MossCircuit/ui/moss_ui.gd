@@ -305,7 +305,7 @@ func show_title(seed_value: int = 240102,mode_id:String="arena",loadout_context:
 	var has_loadouts:bool=not loadout_context.is_empty()
 	var generation:int=int(loadout_context.get("generation",-1))
 	var introduction:String="A small machine. Six hostile waves. Build your own salvage engine." if mode_id=="arena" else "Three finite room encounters. Clear every enemy, then rebuild. This is not a complete dungeon."
-	var controls:String="Move: WASD / arrow keys   |   Dash: Space   |   Auto-fire: nearest target\nPause: Esc   |   Build: I   |   Menus: Tab / Shift+Tab, Enter or Space\nBuy weapons and modules between encounters. Matching tags unlock synergies."
+	var controls:String="Move: WASD / arrow keys   |   Dash: Space   |   Auto-fire: nearest target\nClick enemy CENTER: priority; click empty ground: AUTO. In-range aim only; Orbit stays radial.\nPause: Esc   |   Build: I   |   Menus: Tab / Shift+Tab, Enter or Space\nBuy weapons and modules between encounters. Matching tags unlock synergies."
 	var mode_name:String="ARENA SURVIVAL" if mode_id=="arena" else "ROOM ENCOUNTERS"
 	var mode_button:=Button.new();mode_button.custom_minimum_size.y=38
 	mode_button.text="SWITCH TO "+("ROOM ENCOUNTERS" if mode_id=="arena" else "ARENA SURVIVAL")
@@ -569,6 +569,7 @@ func show_upgrade(options: Array, generation: int, salvage: Dictionary = {}) -> 
 
 func show_pause(_view: Dictionary = {}) -> void:
 	_begin("pause", "SYSTEM SUSPENDED", "The simulation is paused.")
+	_text(body,"During play: click enemy CENTER for priority; click empty ground for AUTO.\nOnly in-range aimed weapons prefer the mark; Orbit remains radial.",14)
 	_button(body, "RESUME", "resume")
 	_button(body, "INSPECT BUILD", "inventory")
 	_button(body, "ENEMY FIELD GUIDE", "codex")
@@ -593,6 +594,13 @@ func hide_modal() -> void:
 
 func modal_visible() -> bool:
 	return shade.visible
+
+## Some HUD children ignore mouse input; their visible rectangles still exclude priority picking.
+func blocks_focus_at(viewport_point:Vector2)->bool:
+	if modal_visible():return true
+	for control in [hud,boss_panel]:
+		if control.is_visible_in_tree() and Rect2(Vector2.ZERO,control.size).has_point(control.make_canvas_position_local(viewport_point)):return true
+	return false
 
 ## The controller supplies only live bosses. Empty input clears prior encounter text.
 func update_bosses(bosses: Array) -> void:

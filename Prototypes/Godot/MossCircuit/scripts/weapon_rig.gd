@@ -95,10 +95,11 @@ func fire(index:int,pose:Dictionary)->void:
 	var slot:Dictionary=slots[index];slot.age=0;slot.pose=pose;slot.aim=pose.direction
 	last_shot={"slot":index,"id":slot.id,"pose":pose.duplicate(true),"generation":generation}
 	_apply(slot)
-func update_poses(hand:Vector2,body:Vector2,target:Vector2,facing_left:bool,bullets:Array,blasts:Array,alive:bool)->void:
+func update_poses(hand:Vector2,body:Vector2,target:Vector2,facing_left:bool,bullets:Array,blasts:Array,alive:bool,priority_targets:Dictionary={})->void:
 	for i in range(slots.size()):
 		var slot:Dictionary=slots[i]
-		if slot.age>0 or slot.pose.is_empty():slot.pose=pose_for(i,hand,body,target,facing_left)
+		var idle_target:Vector2=priority_targets.get(i,target)
+		if slot.age>0 or slot.pose.is_empty():slot.pose=pose_for(i,hand,body,idle_target,facing_left)
 		slot.aim=slot.pose.direction
 		slot.hidden=not alive or (slot.id=="return_disc" and bullets.any(func(b):return b.get("slot",-1)==i and b.get("weapon","")=="return_disc" and b.life>0))
 		_apply(slot)

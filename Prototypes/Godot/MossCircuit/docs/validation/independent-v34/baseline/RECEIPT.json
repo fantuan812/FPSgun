@@ -1,0 +1,32 @@
+{
+  "pass": true,
+  "actual_baseline_execution": true,
+  "import": "Existing imported QA root; no import executed",
+  "source_count": 649,
+  "source_map_sha256": "2419d171dd9699e8b111697db327725102a1be9022ccc9565cf75fab4365e7cf",
+  "input_changes": [],
+  "steps": [
+    {
+      "name": "transactions",
+      "exit": 0,
+      "seconds": 7.667,
+      "engine_error": false,
+      "cases": 6,
+      "failures": [],
+      "sha256": "22e28521ba76fb7285a59b98593aecc7c4af9e24d497853119f73495324feaf8",
+      "historical_output_equal": true,
+      "pass": true
+    },
+    {
+      "name": "combat",
+      "exit": 0,
+      "seconds": 11.04,
+      "engine_error": false,
+      "cases": 24,
+      "failures": [],
+      "sha256": "e7d93a1fcf01345c540bf9f868632310fd3e85572dbe431dbe12d43bf19212ec",
+      "historical_output_equal": true,
+      "pass": true
+    }
+  ]
+}

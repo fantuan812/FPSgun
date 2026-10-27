@@ -1,3 +1,19 @@
+# v34 GitHub-only complete resource pack — locally verified, not published
+
+The complete PCK is41,405,276 bytes, SHA256 `250ea5966ff7ca35b42a13cd813ba5ff156288cfc97110a411dd73664ccbbe02`. Both presets match and reuse unchanged Linux ELF `2c78919325d7f29fa7607287c7c1eeac367ea4c94e7b8b6f5f4c6b20492f73d0`; Windows EXE retains its historical identity and was not rebuilt or run. This is not a standalone program, ZIP or delta patch. First installation still needs the existing full platform package and licenses.
+
+From a checkout containing the chunks: `python Deliveries/MossCircuit/restore_deliveries.py --version v34 --output recovered-v34`. Read [exact prerequisites and backup/rollback instructions](../../../../Deliveries/MossCircuit/v34/READ_ME_v34.txt). Close the game, uniquely back up/hash your actual old PCK, verify the new artifact and replace only the adjacent MossCircuit.pck. Do not substitute a historical hash for your own backup, and do not use release --main-pack. The unchanged helper performs no network/install/execute operation, refuses overwrite/unsafe paths, validates chunks/whole SHA256/Git IDs and requires hardlink support; atomicity is per file, not a batch.
+
+All66 prior LOCAL catalog records remain exact; two v34 entries use14 chunks plus instructions. v32/v33/v34 are not claimed published; accepted remote remains v31 until designated-writer reconciliation/reachable readback. Local maps, computed blob IDs and private recovery are not publication. No new full platform ZIP or user attachment.
+
+Author and independent final source110+import111 pass, all664 inputs exact; same124 production as held acceptance. Independently regenerated source fingerprints match, packed resources849 and356/945/366/Python3 pass. Six source-native controlled cases14 captures and two exact-PCK controlled cases4 captures are separately labeled. The latter use an external injected editor-engine fixture, not the release ELF; fixture F9 exit0 is not a shipped quit control.
+
+The single exact-ELF ordinary Arena/Rivet433 attempt directly observes Spitter priority2/2 and menu navigation, with an actual retained unplanned Bankshot purchase. Manual target-change/empty-clear causality and pause retention were not established ordinarily; stronger action proofs remain controlled only. Ambiguous frames and failed capture-save are preserved. Root accepted this limitation without another attempt. External Ctrl+C after returned title/window disappearance has no exit0 receipt. No v34 full campaign, balance, performance, audio, physical-controller or Windows execution guarantee.
+
+Exact helper negative/restore and actual file-only v33R2→v34→v33R2 backup/rollback results are separately recorded in [independent QA](validation/independent-v34/QA_REPORT.md); no old runtime execution is inferred. Source history inherits accepted local v33 without deleting older paths; release changes only four declared current-doc/manifest paths beyond tested664, with production124 exact. See [implementation chronology](V34_COMBAT_PRIORITY.md), [original contract](V34_COMBAT_PRIORITY_CONTRACT.md) and [measured-label clarification](V34_OBJECTIVE_HEIGHT_ADDENDUM.md). Final Git promotion remains a separate designated-writer action.
+
+---
+
 # v33 GitHub-only complete resource pack — local verified preparation
 
 Final R2 is the complete41,396,596byte resource PCK, SHA-256 `8ec850cc2fd8b5490ee1f945d56cdb674fa38460191c3eb75be0fdb419ee9aba`. Both preset exports match. Unchanged Linux ELF SHA `2c78919325d7f29fa7607287c7c1eeac367ea4c94e7b8b6f5f4c6b20492f73d0`; Windows EXE retains its previously recorded identity, not rebuilt or run. This PCK is not a standalone game, ZIP or delta patch. First installation needs the existing full platform package and licenses.

@@ -1,0 +1,26 @@
+{
+  "scope": "Editor engine loads exact PCK via --main-pack from empty reader; external controlled script injects build/actors and disables normal process. NOT ordinary accepted-release-ELF gameplay.",
+  "pck_sha256": "250ea5966ff7ca35b42a13cd813ba5ff156288cfc97110a411dd73664ccbbe02",
+  "cases": [
+    "Arena960 clipped actor and offscreen relocation",
+    "Rooms1180x812 letterbox/edge camera clipped actor and offscreen relocation"
+  ],
+  "observed": [
+    "Actual CUA clipped on-screen actor selection.",
+    "Externally relocated offscreen living marks persist; per-weapon eligibility2/3 then0/3.",
+    "Actual objective bottom7px and black letterbox reject click leakage.",
+    "Actual empty field clear in controlled fixture."
+  ],
+  "window_focus_loss": "Terminal-directed click did not establish actual WM focus loss; no native focus-loss claim. Direct notification/lifecycle tested headlessly.",
+  "closure": {
+    "external_fixture_f9_quit": true,
+    "exit_code": 0,
+    "window_absence_confirmed": true,
+    "shipped_quit_control": false
+  },
+  "capture_count": 4,
+  "capture_index_sha256": "34dbbc51e0d6ba68bea678674008c80c434d3bf15d21598d9a23833378c9193f",
+  "diagnostics": [
+    "ALSA device unavailable/dummy fallback and VSync warning; no GDScript runtime error."
+  ]
+}

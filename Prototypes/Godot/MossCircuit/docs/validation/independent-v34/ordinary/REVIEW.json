@@ -1,0 +1,33 @@
+{
+  "scope": "One exact release-ELF ordinary Arena/Rivet seed433 attempt; automated CUA and tactical pauses, no state injection/reset/undo/retry. Finite early encounter, not full campaign.",
+  "pck_sha256": "250ea5966ff7ca35b42a13cd813ba5ff156288cfc97110a411dd73664ccbbe02",
+  "observed": [
+    "Actual initial35scrap/100HP/Rivet start.",
+    "Natural wave1 settlement and queued upgrades; later wave2 LV5,120maxHP,100scrap.",
+    "One real Spitter priority with2/2 in-range aimed weapons directly visible in capture14.",
+    "Actual pause/build inspection/back/resume and returned-title navigation.",
+    "Unplanned real Bankshot purchase kept alongside Rivet; not a Rivet-only encounter."
+  ],
+  "not_established": [
+    "Ordinary manual target-change attribution.",
+    "Ordinary causal empty-ground clear: next recorded frame was already AUTO.",
+    "Ordinary pause retention: marked target disappeared between observations while kills increased.",
+    "Exact intervening upgrade/purchase input chronology under ambiguous/stale-looking menu frames.",
+    "Successful final two live mark/clear observations: capture-save request exceeded argument-size limit after CUA actions; no outcome inferred."
+  ],
+  "closure": {
+    "returned_to_title": true,
+    "external_terminal_ctrl_c": true,
+    "window_absence_confirmed": true,
+    "exit_code": null,
+    "exit_receipt_present": false,
+    "graceful_or_exit_zero_claim": false
+  },
+  "diagnostics": [
+    "ALSA ERR_CANT_OPEN and dummy-driver fallback; unsupported VSync warning.",
+    "No GDScript runtime error observed."
+  ],
+  "capture_count": 19,
+  "capture_index_sha256": "26eb3d08bfdddf780f36e6207f033505ea34732b433b045ade320ed731149dc4",
+  "limits": "No full campaign, victory, balance, Windows execution, audio output or physical-controller claim; stronger controlled action/transform proofs remain separately labeled."
+}

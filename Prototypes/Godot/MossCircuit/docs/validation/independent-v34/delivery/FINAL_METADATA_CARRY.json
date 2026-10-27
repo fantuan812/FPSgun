@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "prior_helper_receipt_sha256": "2797d8013eb2022cb4cf4f4e3d0b22ec5d7126dbc3db9c09ffc60e932d864f0d",
+  "old_instruction_sha256": "36ec6f74bb9de874f294bffe5132a1e45b030d9db45bd55046901e5a238dee66",
+  "final_instruction_sha256": "1ef09bfdd82928e43de3b9138c9455baa03f842de1d0ef99a41cb28123bafa77",
+  "old_catalog_sha256": "0c784f12de3d7d929f6a378b0f53f680214a4d43a2b359673a818f20e8019b52",
+  "final_catalog_sha256": "07c3d24b45df5f15a4cd607f3eac516836b0e15209b5689edd33ebc1bbd0b1ca",
+  "only_changed_payloads": [
+    "Deliveries/MossCircuit/v34/READ_ME_v34.txt",
+    "Deliveries/MossCircuit/CATALOG.json"
+  ],
+  "all17_final_payloads_verified": true,
+  "old66_catalog_rows_exact": true,
+  "helper_and_all14_runtime_chunks_unchanged": true,
+  "exact_copy_replacements": [
+    [
+      "外部迁移到屏外后的活标记保持、射程计数从2/3到0/3；",
+      "外部迁移到屏外后的活标记保持；Arena例显示2/3，Rooms例显示0/3，两例构筑/距离设置不同，不是同一例的时间变化；"
+    ],
+    [
+      "最后两组标记/清除输入后的截图保存超过参数长度限制",
+      "最后一次标记/空地输入批次中的两张现场截图保存超过参数长度限制"
+    ]
+  ],
+  "scope": "Carry forward actual helper10 and v33R2-v34-v33R2 file-only proof across two reviewed instruction-only phrase replacements and dependent catalog metadata; no helper rerun or new gameplay claim."
+}

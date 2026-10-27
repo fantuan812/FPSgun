@@ -5,9 +5,11 @@ const Rules=preload("res://scripts/rules.gd")
 const EnemyAI=preload("res://scripts/enemy_ai.gd")
 const Status=preload("res://scripts/gameplay/target_status.gd")
 const Annulus=preload("res://scripts/gameplay/annulus_geometry.gd")
+const Focus=preload("res://scripts/gameplay/combat_focus.gd")
 ## Mode-independent combat step: weapons, AI, projectiles, deaths and pickups.
 ## No wave timer, spawn schedule, completion policy, UI or shop dependency.
 static func step(frame:Context,dt:float)->void:
+	_prune_focus(frame.world)
 	for prep_slot in range(frame.session.build.weapons.size()):
 		var soon:float=frame.world.weapon_clocks[prep_slot]
 		var prep_weapon:Dictionary=Rules.catalog_entry(frame.catalog,frame.session.build.weapons[prep_slot])
@@ -118,3 +120,7 @@ static func step(frame:Context,dt:float)->void:
 	for i in range(frame.world.flashes.size() - 1, -1, -1):
 		frame.world.flashes[i].life -= dt
 		if frame.world.flashes[i].life <= 0: frame.world.flashes.remove_at(i)
+	_prune_focus(frame.world)
+
+static func _prune_focus(world:RefCounted)->void:
+	if world.focus_enemy_id!=0 and Focus.find(world.enemies,world.focus_enemy_id).is_empty():world.focus_enemy_id=0

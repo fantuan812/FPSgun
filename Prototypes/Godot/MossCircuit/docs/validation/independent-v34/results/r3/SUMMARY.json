@@ -1,0 +1,41 @@
+{
+  "pass": false,
+  "steps": [
+    {
+      "name": "combat",
+      "exit": 0,
+      "seconds": 9.958,
+      "engine_error": false,
+      "pass": true,
+      "script_sha256": "1611243f4cbe56a37a6362b75194969b747b658cc3ab0b53ec39463bdad15af4",
+      "checks": 945,
+      "failures": []
+    },
+    {
+      "name": "views",
+      "exit": 1,
+      "seconds": 4.918,
+      "engine_error": false,
+      "pass": false,
+      "script_sha256": "d854def4651e369eb61e3a7e46c390d9670802c2599bfccd6099a8f8a017f407",
+      "checks": 342,
+      "failures": [
+        "existing objective region height preserved",
+        "existing objective region height preserved",
+        "existing objective region height preserved",
+        "existing objective region height preserved",
+        "existing objective region height preserved",
+        "existing objective region height preserved",
+        "existing objective region height preserved",
+        "existing objective region height preserved",
+        "existing objective region height preserved",
+        "existing objective region height preserved",
+        "existing objective region height preserved",
+        "existing objective region height preserved"
+      ]
+    }
+  ],
+  "input_changes": [],
+  "source_inputs": 657,
+  "source_map_sha256": "2f0774a9ab2af211a51a2991d9ead4d9f86a9609d430ea0f219a8e06b80df6ac"
+}

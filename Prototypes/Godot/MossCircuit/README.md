@@ -1,3 +1,21 @@
+# MossCircuit v34 — choose an enemy priority
+
+Automatic fire remains the default. During play, **left-click near an enemy CENTER** to mark that current enemy; click empty playfield to return to AUTO. Each aimed weapon prefers the mark only inside its own existing range, otherwise it uses its original nearest target. Orbit stays radial. This helps choose a Spitter/Broodkeeper/boss instead of always spending aim on the closest crawler, but can leave nearby threats alive. It is not homing, extra range, free piercing or a guaranteed hit.
+
+A pale corner bracket and compact priority/range caption identify the mark. GUI, modal and letterbox clicks do not select or clear. Changing priority grants no shot, cooldown reset, damage bonus or resources. Existing projectiles, pending Mortars, Return steering, first-wall Bounce Guide and secondary effects remain unchanged. Pause and build inspection retain the mark; death/removal, encounter ending and new runs clear it.
+
+All eight weapons,29 modules, data/art, encounter rules and economy remain unchanged. Existing no-focus target ties are deliberately preserved: first-in-array for normal aimed weapons, distance then ID for Cryo/Bankshot. No new input binding is claimed for a physical controller.
+
+Author held-source107 standalone+import108 passed; focused344 selection/lifecycle and228 actual8-path checks passed. Independent exact cold-copy checks passed356 authority,945 actual-combat and366 GUI/camera assertions; both executions preserve old six-route transactions and24-case traces byte-for-byte against freshly executed exact-v33R2 baseline. Six controlled native mouse/stretch cases in both modes at960×540,1280×720 and1180×812 produced14 captures. No production revision was needed. The measured49px two-line transparent objective label is explicitly accepted in the [presentation addendum](docs/V34_OBJECTIVE_HEIGHT_ADDENDUM.md), not silently forced into a guessed42px font minimum. Rejected author/QA fixture expectations are retained and explained in the notes.
+
+Final664-input source passed author and independent full110+import111. The identical Linux/Windows preset PCK is41,405,276 bytes, SHA256250ea5966ff7ca35b42a13cd813ba5ff156288cfc97110a411dd73664ccbbe02, using the unchanged verified executable. Independently regenerated source fingerprints match; resources849 and packed356/945/366 plus Python3 pass. Two additional exact-PCK controlled cases (four captures) cover clipped selection, off-screen persistence and actual lower-label/letterbox exclusion; their external injected fixture is not ordinary gameplay.
+
+One exact release-ELF ordinary Arena/Rivet433 attempt directly observed a Violet Spitter priority (2/2) and pause/build/resume/title navigation. Natural progression and a retained unplanned Bankshot purchase produced Rivet+Bankshot; it was not a Rivet-only run. Manual target-change/empty-clear causality and pause retention were not established ordinarily; ambiguous frames and a later capture-save failure are preserved. Root explicitly accepted that bounded one-attempt limitation, with no retry to manufacture a cleaner narrative. Those stronger actions remain controlled proofs only. Closure used external Ctrl+C after return to title/window disappearance, with no exit0 receipt. No campaign, balance/performance, Windows/audio or physical-controller guarantee. See the [independent finite report](docs/validation/independent-v34/QA_REPORT.md) and [runtime prerequisites/rollback](docs/DELIVERY.md).
+
+See the [frozen scope](docs/V34_COMBAT_PRIORITY_CONTRACT.md) and [implementation/verification notes](docs/V34_COMBAT_PRIORITY.md). Accepted local v33 source/runtime/recovery and its separate full-Arena supplement are unchanged. This local development is not GitHub publication; the designated pending writer remains separate.
+
+---
+
 # MossCircuit v33 — temper duplicates, reclaim a slot
 
 A normal shop can now turn **two identical STANDARD copies into one TEMPERED copy**. Choose the survivor; the button explicitly names the consumed slot. The survivor gets ×1.6 nominal primary damage, but keeps only its own attack timer and one tag contribution. You free one slot and permanently lose the other copy, its cadence and resale value. No scrap is charged or refunded.

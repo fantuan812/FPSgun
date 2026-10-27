@@ -1,0 +1,69 @@
+{
+  "status": "PASS",
+  "steps": [
+    {
+      "step": "full-reused-cache-suite",
+      "exit": 0,
+      "seconds": 446.922,
+      "engine_error": false,
+      "pass": true
+    },
+    {
+      "step": "independent-source-oracle",
+      "exit": 0,
+      "seconds": 4.854,
+      "engine_error": false,
+      "pass": true
+    },
+    {
+      "step": "packed-resources",
+      "exit": 0,
+      "seconds": 5.815,
+      "engine_error": false,
+      "pass": true
+    },
+    {
+      "step": "packed-authority",
+      "exit": 0,
+      "seconds": 4.174,
+      "engine_error": false,
+      "pass": true
+    },
+    {
+      "step": "packed-combat",
+      "exit": 0,
+      "seconds": 8.679,
+      "engine_error": false,
+      "pass": true
+    },
+    {
+      "step": "packed-views",
+      "exit": 0,
+      "seconds": 3.887,
+      "engine_error": false,
+      "pass": true
+    },
+    {
+      "step": "python-safety",
+      "exit": 0,
+      "seconds": 0.328,
+      "engine_error": false,
+      "pass": true
+    }
+  ],
+  "source_inputs": 664,
+  "input_changes": [],
+  "final_import": "Reused-cache revalidation; R1 had independently executed true cold import.",
+  "source_oracle_exact": true,
+  "both_preset_packs_equal": true,
+  "pck": {
+    "bytes": 41405276,
+    "sha256": "250ea5966ff7ca35b42a13cd813ba5ff156288cfc97110a411dd73664ccbbe02"
+  },
+  "elf": {
+    "bytes": 71075864,
+    "sha256": "2c78919325d7f29fa7607287c7c1eeac367ea4c94e7b8b6f5f4c6b20492f73d0"
+  },
+  "ordinary_gui_pending": true,
+  "windows_executed": false
+}

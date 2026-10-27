@@ -5,6 +5,7 @@ var selected_loadout_id:String=StartingLoadouts.DEFAULT_ID
 var title_generation:int=0
 const WeaponOrder = preload("res://scripts/gameplay/weapon_order.gd")
 const WeaponTempering = preload("res://scripts/gameplay/weapon_tempering.gd")
+const CombatFocus=preload("res://scripts/gameplay/combat_focus.gd")
 const WeaponReadout=preload("res://scripts/weapon_readout.gd")
 const ModeStatus=preload("res://ui/mode_status.gd")
 var mode_status:CanvasLayer
@@ -265,6 +266,7 @@ func _build_ui() -> void:
 
 
 func _title() -> void:
+	combat.focus_enemy_id=0
 	weapon_rig.clear()
 	reserved_offer.clear()
 	effects.feedback_armed = false
@@ -305,6 +307,7 @@ func _start_selected_loadout(id:Variant,generation:Variant,seed_value:Variant)->
 func _start_run(seed_value: int,loadout_id:Variant=StartingLoadouts.DEFAULT_ID) -> bool:
 	var fresh_build:=StartingLoadouts.make_build(starting_loadouts,catalog,loadout_id)
 	if fresh_build.is_empty():return false
+	combat.focus_enemy_id=0
 	weapon_rig.clear()
 	reserved_offer.clear()
 	visual_cooldowns.clear()
@@ -381,6 +384,45 @@ func _input(event: InputEvent) -> void:
 			_on_intent("close_inventory" if state == "inventory" else "inventory",{})
 		if state == "upgrade" and event.keycode in [KEY_1, KEY_2, KEY_3]:
 			_take_upgrade(int(event.keycode - KEY_1), choice_generation)
+
+func _unhandled_input(event:InputEvent)->void:
+	if event is InputEventMouseButton and event.button_index==MOUSE_BUTTON_LEFT and event.pressed:
+		if _focus_click(event.position):get_viewport().set_input_as_handled()
+
+## Input position is already in viewport coordinates. Never apply window stretch twice.
+func _focus_click(viewport_point:Variant)->bool:
+	if state!="playing" or not viewport_point is Vector2 or not viewport_point.is_finite():return false
+	if not get_viewport().get_visible_rect().has_point(viewport_point):return false
+	if not is_instance_valid(ui) or ui.blocks_focus_at(viewport_point):return false
+	if is_instance_valid(mode_status) and mode_status.blocks_focus_at(viewport_point):return false
+	var canvas_transform:Transform2D=get_global_transform_with_canvas()
+	var determinant:float=canvas_transform.determinant()
+	if not canvas_transform.x.is_finite() or not canvas_transform.y.is_finite() or not canvas_transform.origin.is_finite() or not is_finite(determinant) or determinant==0:return false
+	var point:Vector2=make_canvas_position_local(viewport_point)
+	if not point.is_finite() or not Rect2(Vector2.ZERO,Vector2(config.arena.width,config.arena.height)).has_point(point):return false
+	var selected:int=CombatFocus.pick(enemies,point)
+	if selected<0 or selected==combat.focus_enemy_id:return false
+	combat.focus_enemy_id=selected
+	return true
+
+## Read-only, including stale/dead IDs; shared combat/lifecycle boundaries own clearing.
+func _focus_view()->Dictionary:
+	var target:Dictionary=CombatFocus.find(enemies,combat.focus_enemy_id)
+	if target.is_empty():return {"active":false,"id":0,"name":"","eligible":0,"directional":0}
+	var total:int=0
+	var eligible:int=0
+	for id in build.get("weapons",[]):
+		var weapon:Dictionary=Rules.catalog_entry(catalog,id)
+		if not CombatFocus.directional(weapon):continue
+		total+=1
+		if not CombatFocus.eligible(enemies,combat.focus_enemy_id,player_pos,weapon,stats).is_empty():eligible+=1
+	return {"active":true,"id":target.id,"name":str(target.get("name","Enemy %d"%target.id)),"eligible":eligible,"directional":total}
+
+func _focus_status_text()->String:
+	var view:Dictionary=_focus_view()
+	if not view.active:return ""
+	if view.directional==0:return "PRIORITY %s | radial aim unchanged | click ground: AUTO"%view.name
+	return "PRIORITY %s | %d/%d aim weapons in range | click ground: AUTO"%[view.name,view.eligible,view.directional]
 
 
 func _notification(what:int) -> void:
@@ -586,6 +628,7 @@ func _resolve_upgrade_choice() -> void:
 		_hide_modal()
 
 func _finish(won: bool) -> void:
+	combat.focus_enemy_id=0
 	weapon_rig.clear()
 	reserved_offer.clear()
 	_clear_transients()
@@ -606,7 +649,7 @@ func _show_result(won:bool) -> void:
 
 
 func _update_hud() -> void:
-	if is_instance_valid(mode_status):mode_status.present(mode.id,state,mode.objective(run,combat,config),mode.progress())
+	if is_instance_valid(mode_status):mode_status.present(mode.id,state,mode.objective(run,combat,config),mode.progress(),_focus_status_text())
 	if not stats.is_empty(): ui.update_hud(_view())
 	if is_instance_valid(mode_status):mode_status.place_below(ui.hud.get_global_rect())
 	if ui.has_method("update_bosses"):
@@ -666,6 +709,18 @@ func _draw() -> void:
 			var center:Vector2=enemy.pos+Vector2(0,-height*.5-6)
 			var diamond:=PackedVector2Array([center+Vector2(0,-4),center+Vector2(4,0),center+Vector2(0,4),center+Vector2(-4,0),center+Vector2(0,-4)])
 			draw_polyline(diamond,Color(.57,.91,.98,.5 if settings.reduced_flashes else .85),1.5)
+	if state=="playing":
+		var focused:Dictionary=CombatFocus.find(enemies,combat.focus_enemy_id)
+		if not focused.is_empty():
+			# Corner brackets, never a danger circle or damage footprint.
+			var height:float=actor_anim.actors.get(focused.id,{}).get("height",57.0*float(focused.scale))
+			var extent:float=maxf(26.0,height*.55+4.0)
+			var tint:=Color(.91,.97,.87,.6 if settings.reduced_flashes else .9)
+			for sx in [-1,1]:
+				for sy in [-1,1]:
+					var corner:Vector2=focused.pos+Vector2(sx,sy)*extent
+					draw_line(corner,corner-Vector2(sx*8,0),tint,1.5)
+					draw_line(corner,corner-Vector2(0,sy*8),tint,1.5)
 	if effects.shield > 0 and not build.is_empty(): draw_circle(player_pos,25,Color("a7e5ff"),false,2)
 	if effects.can_feedback(float(stats.get("dash_time",0.0)) > 0) and state not in ["title","dead","won"]:
 		var ready_mark:=PackedVector2Array([player_pos+Vector2(0,-19),player_pos+Vector2(19,0),player_pos+Vector2(0,19),player_pos+Vector2(-19,0),player_pos+Vector2(0,-19)])
@@ -919,6 +974,7 @@ func _leave_shop(generation: int) -> void:
 func _view() -> Dictionary:
 	if build.is_empty(): return {"seed":run_seed,"settings":settings.duplicate(true),"mode_id":mode.id,"mode_name":mode.name,"objective":""}
 	var view := {"coins":build.coins,"wave":wave,"level":level,"hp":stats.hp,"max_hp":stats.max_hp,"xp":xp,"xp_max":Rules.xp_threshold(level),"time":elapsed,"kills":kills,"seed":run_seed,"stats":stats,"weapons":[],"items":[],"synergies":stats.synergies,"generation":shop_generation,"refresh_price":catalog.refresh_price,"weapon_slots":catalog.weapon_slots,"item_slots":catalog.item_slots,"message":shop_message,"offers":[],"rewards":rewards,"synergy_status":[],"mechanics":{"shield":effects.shield,"chain_charges":effects.chain_charges,"hazards":hazards.size(),"echo_hits":effects.echo_hits,"phase_charge":effects.phase_charge,"medic_damage":effects.medic_damage,"cooldowns":{}}}
+	view.focus=_focus_view()
 	view.starting_loadout=StartingLoadouts.entry(starting_loadouts,catalog,run.starting_loadout_id)
 	view.mode_id=mode.id
 	view.mode_name=mode.name
@@ -1181,7 +1237,15 @@ func _sync_weapon_rig()->void:
 		for e in living:
 			if e.pos.distance_squared_to(player_pos)<nearest.pos.distance_squared_to(player_pos):nearest=e
 		target=nearest.pos
-	weapon_rig.update_poses(actor_anim.socket_world(0,"grip"),actor_anim.socket_world(0,"body"),target,hero.flip_h,bullets,pending_blasts,true)
+	if combat.focus_enemy_id==0 or CombatFocus.find(enemies,combat.focus_enemy_id).is_empty():
+		weapon_rig.update_poses(actor_anim.socket_world(0,"grip"),actor_anim.socket_world(0,"body"),target,hero.flip_h,bullets,pending_blasts,true)
+	else:
+		var priority_targets:Dictionary={}
+		for slot in range(build.weapons.size()):
+			var weapon:Dictionary=Rules.catalog_entry(catalog,build.weapons[slot])
+			var preferred:Dictionary=CombatFocus.eligible(enemies,combat.focus_enemy_id,player_pos,weapon,stats)
+			if not preferred.is_empty():priority_targets[slot]=preferred.pos
+		weapon_rig.update_poses(actor_anim.socket_world(0,"grip"),actor_anim.socket_world(0,"body"),target,hero.flip_h,bullets,pending_blasts,true,priority_targets)
 
 func _select_mode(id:String)->bool:
 	if state!="title" or id not in ["arena","rooms"]:return false
@@ -1200,6 +1264,7 @@ func _enter_field(seed_value:int)->void:
 	camera.position=FieldLayout.camera_position(player_pos,config.arena)
 func _begin_room_clear()->void:
 	if state!="playing":return
+	combat.focus_enemy_id=0
 	state="room_clear"
 	bullets.clear();enemy_bullets.clear();pending_blasts.clear();hazards.clear();flashes.clear()
 	_clear_transients()

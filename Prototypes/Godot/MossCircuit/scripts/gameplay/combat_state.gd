@@ -13,3 +13,4 @@ var pending_blasts: Array = []
 var hazards: Array = []
 var effect_visuals: Array = []
 var next_enemy_id := 0
+var focus_enemy_id := 0 # Transient current ID only; 0 preserves automatic nearest acquisition.

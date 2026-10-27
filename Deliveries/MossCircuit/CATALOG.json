@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "scope": "Preserves 64 existing LOCAL catalog records exactly and appends 2 locally staged v33 files. v32/v33 publication is not claimed; accepted remote remains v31 until designated-writer readback.",
+  "scope": "Preserves 66 existing LOCAL catalog records exactly; appends 2 local v34 files. v32/v33/v34 publication is not claimed; accepted remote remains v31 pending designated-writer readback.",
   "files": [
     {
       "version": "v1",
@@ -2691,6 +2691,132 @@
         "git_blob_sha": "5adb17983448ac83d717f95fd7dc0302476716ef"
       },
       "delivery_identity_basis": "Local exact R2 instructions; distinct R1 ordinary and R2 controlled proof, with helper/rollback results recorded separately; not publication."
+    },
+    {
+      "version": "v34",
+      "name": "MossCircuit.pck",
+      "size": 41405276,
+      "sha256": "250ea5966ff7ca35b42a13cd813ba5ff156288cfc97110a411dd73664ccbbe02",
+      "original_git_blob_sha": "78c314910dde45018c000756753c0064836fca19",
+      "delivery_kind": "github_native_runtime_resource_pack",
+      "storage": {
+        "kind": "chunks",
+        "chunks": [
+          {
+            "path": "Deliveries/MossCircuit/v34/chunks/MossCircuit.pck/chunk-001.bin",
+            "offset": 0,
+            "size": 3000000,
+            "sha256": "42fa39e5c65f636d13ac190f16ecb254efcfc36e096bb1331bcc06a24ccde770",
+            "git_blob_sha": "d097fc2b2d5bba95d1ed0df220a75b21795974c4"
+          },
+          {
+            "path": "Deliveries/MossCircuit/v34/chunks/MossCircuit.pck/chunk-002.bin",
+            "offset": 3000000,
+            "size": 3000000,
+            "sha256": "296b7f169b7bfc31939d45ec26c71546f7166eabed1866404f272485dfbe7004",
+            "git_blob_sha": "447e6855463da82d4061d18dc44c0ce46b93308c"
+          },
+          {
+            "path": "Deliveries/MossCircuit/v34/chunks/MossCircuit.pck/chunk-003.bin",
+            "offset": 6000000,
+            "size": 3000000,
+            "sha256": "4a5dfa75863ac4dc82df7a6889f07387da528014161ebca561f539e6c49676df",
+            "git_blob_sha": "4daf1bc6b234c6ddd31a4bf584b404deaf3a2d5f"
+          },
+          {
+            "path": "Deliveries/MossCircuit/v34/chunks/MossCircuit.pck/chunk-004.bin",
+            "offset": 9000000,
+            "size": 3000000,
+            "sha256": "5791a05feaad0918e3cabb6b775cea760e79d66cea1342524a864186039c75a8",
+            "git_blob_sha": "f5f4aa541ef401ddb351ef26b8bb26a009d86272"
+          },
+          {
+            "path": "Deliveries/MossCircuit/v34/chunks/MossCircuit.pck/chunk-005.bin",
+            "offset": 12000000,
+            "size": 3000000,
+            "sha256": "28e714f35b815099092d7a04a6cec15d8e7da13b67fc75dce3751c692b9f84e9",
+            "git_blob_sha": "b9d5a4f1fd1b82da1d7f2016ab22e2adc2dc37df"
+          },
+          {
+            "path": "Deliveries/MossCircuit/v34/chunks/MossCircuit.pck/chunk-006.bin",
+            "offset": 15000000,
+            "size": 3000000,
+            "sha256": "637604a528d8b23860c2496e309c9ef33b549a2675b17580329f116a1ee241a6",
+            "git_blob_sha": "854a506d282815aacfdbb6ac1ba5f2c7b2ce1d79"
+          },
+          {
+            "path": "Deliveries/MossCircuit/v34/chunks/MossCircuit.pck/chunk-007.bin",
+            "offset": 18000000,
+            "size": 3000000,
+            "sha256": "106bed0bcda3781a16bf82eded4fd3f9ab708dac6edd3893f41b72f66e8bc0fc",
+            "git_blob_sha": "76a73119b023600d5f728258db78dd869db2eaed"
+          },
+          {
+            "path": "Deliveries/MossCircuit/v34/chunks/MossCircuit.pck/chunk-008.bin",
+            "offset": 21000000,
+            "size": 3000000,
+            "sha256": "3f8bcbe675eef418796a93a30836f4f4740fbd4e2a69e9533ce4dd5fccc78331",
+            "git_blob_sha": "8f42ec67c68bfc68f7571a7548ee391fd72cd9f9"
+          },
+          {
+            "path": "Deliveries/MossCircuit/v34/chunks/MossCircuit.pck/chunk-009.bin",
+            "offset": 24000000,
+            "size": 3000000,
+            "sha256": "3f84f8b2cdce1b34e633ff72cd286b5e45fc2ec8b3c90c087ac6e2be629eda21",
+            "git_blob_sha": "6cfdba4e5f9ed97ea972c4ec72bd4211a4c09342"
+          },
+          {
+            "path": "Deliveries/MossCircuit/v34/chunks/MossCircuit.pck/chunk-010.bin",
+            "offset": 27000000,
+            "size": 3000000,
+            "sha256": "cac53382572edf2b2e0f05aa881e738bdf62cc397bd4207a57629ce6e19aaa39",
+            "git_blob_sha": "9c939dc4e204d9e484aa14f74f65b342b93e1b88"
+          },
+          {
+            "path": "Deliveries/MossCircuit/v34/chunks/MossCircuit.pck/chunk-011.bin",
+            "offset": 30000000,
+            "size": 3000000,
+            "sha256": "76938fd599da319fb8d8c531751b64b514dee50af043f0132a53a0a7bb3cf433",
+            "git_blob_sha": "95f52c534ac4e2dc6c9a35172a69401f44ed1edc"
+          },
+          {
+            "path": "Deliveries/MossCircuit/v34/chunks/MossCircuit.pck/chunk-012.bin",
+            "offset": 33000000,
+            "size": 3000000,
+            "sha256": "881fcb76f2009c0dc043937a9f4c09de7c811ff8bf4253fcc70ba701e269de59",
+            "git_blob_sha": "02a677a6f81196852aa1b2429573b76ed5f154cc"
+          },
+          {
+            "path": "Deliveries/MossCircuit/v34/chunks/MossCircuit.pck/chunk-013.bin",
+            "offset": 36000000,
+            "size": 3000000,
+            "sha256": "a034d84600bc2773342aa0d78ee4cfbc251a73363f4aeadf89e4fc5285e65606",
+            "git_blob_sha": "ddb774c549a82200c23f1b7dff5809e162d0ac71"
+          },
+          {
+            "path": "Deliveries/MossCircuit/v34/chunks/MossCircuit.pck/chunk-014.bin",
+            "offset": 39000000,
+            "size": 2405276,
+            "sha256": "5f7ee99533ff0fa71baa1c9e2926021f130e1ae33b4bb355d95f95fdd67400f0",
+            "git_blob_sha": "d446e5fe2d062e7559acb00e2a7df07782afc15c"
+          }
+        ]
+      },
+      "delivery_identity_basis": "Locally verified complete v34 PCK; ordinary scope explicitly limited; helper/manual evidence separate; not published, attached or a new executable."
+    },
+    {
+      "version": "v34",
+      "name": "READ_ME_v34.txt",
+      "size": 9103,
+      "sha256": "1ef09bfdd82928e43de3b9138c9455baa03f842de1d0ef99a41cb28123bafa77",
+      "original_git_blob_sha": "c535b2b99213a3eb923be1478eeb315cb0a6f6ac",
+      "delivery_kind": "github_native_runtime_instructions",
+      "storage": {
+        "kind": "direct",
+        "path": "Deliveries/MossCircuit/v34/READ_ME_v34.txt",
+        "git_blob_sha": "c535b2b99213a3eb923be1478eeb315cb0a6f6ac"
+      },
+      "delivery_identity_basis": "Local exact instructions distinguish controlled proofs from accepted one-attempt ordinary limits; helper/manual evidence separate; not publication."
     }
   ],
   "reassembled_archives": [
@@ -2780,14 +2906,15 @@
     }
   ],
   "storage_counts": {
-    "direct": 21,
+    "direct": 22,
     "existing": 9,
-    "chunks": 36
+    "chunks": 37
   },
-  "original_bytes": 724911994,
-  "reassembly_note": "Historical ZIPs remain reconstructable from their original delivered parts. v26-v33 PCK files restore directly from their storage chunks; they are not ZIPs and require no second merge.",
+  "original_bytes": 766326373,
+  "reassembly_note": "Historical ZIPs remain reconstructable from their original delivered parts. v26-v34 PCK files restore directly from their storage chunks; they are not ZIPs and require no second merge.",
   "publication_status": {
     "v32": "locally accepted, not claimed published",
-    "v33": "locally verified R2 source/pack; R1 ordinary and R2 controlled proof distinct; delivery helper evidence separate; not published"
+    "v33": "locally verified R2 source/pack; R1 ordinary and R2 controlled proof distinct; delivery helper evidence separate; not published",
+    "v34": "locally source/pack verified; one ordinary attempt accepted with explicit limits; helper/manual evidence separate; not published"
   }
 }

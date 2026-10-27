@@ -1,0 +1,44 @@
+{
+  "files": [
+    {
+      "path": "captures/01-arena-clipped.jpg",
+      "bytes": 144270,
+      "sha256": "7a73a202f541906a9090f396e0a0673568f0b99994f472934ea1d016dc8dddea",
+      "dimensions": [
+        960,
+        540
+      ],
+      "observation": "Actual CUA selects clipped on-screen Spitter in external exact-PCK controlled fixture."
+    },
+    {
+      "path": "captures/02-arena-offscreen.jpg",
+      "bytes": 143529,
+      "sha256": "92cc508ff9d62b5e93dbd004a98b8ef94ae15dede8e963d03c384fe24e5cf564",
+      "dimensions": [
+        960,
+        540
+      ],
+      "observation": "Fixture F8 relocates marked actor offscreen; priority persists2/3. This is injected fixture relocation, not ordinary movement."
+    },
+    {
+      "path": "captures/03-rooms-clipped.jpg",
+      "bytes": 218164,
+      "sha256": "7d7d46702c2ce28381116afff8a82912b54cc8bc83d0d38fa388a8e08a25d2ce",
+      "dimensions": [
+        1180,
+        812
+      ],
+      "observation": "Actual CUA selects clipped actor in Rooms edge-camera letterbox fixture."
+    },
+    {
+      "path": "captures/04-rooms-offscreen.jpg",
+      "bytes": 217027,
+      "sha256": "c79af1eb07563c995eb85cffc9526395797cf3b6751857fdd510af0e133455df",
+      "dimensions": [
+        1180,
+        812
+      ],
+      "observation": "Fixture F8 relocates actor above viewport; priority persists0/3; letterbox/lower-objective clicks blocked."
+    }
+  ]
+}

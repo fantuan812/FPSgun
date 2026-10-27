@@ -1,0 +1,13 @@
+{
+  "rejected_script_sha256": "f83d385a3bfd767b70e3c38dac59acb07fe67754a8bd890c2629d34924476771",
+  "failure": "Initial narrow metadata checker incorrectly required catalog.original_bytes unchanged even though the final instruction text grew98 bytes.",
+  "actual_difference": {
+    "old_original_bytes": 766326275,
+    "new_original_bytes": 766326373,
+    "delta": 98
+  },
+  "correction": "Require original_bytes delta exactly equal the reviewed instruction-byte delta; every other non-files outer field remains exact. No production/delivery data fix.",
+  "rejected_exit": 1,
+  "bundle_first_attempt": "Stopped before copying any payload because carry receipt absent; empty destination only.",
+  "accepted_replay": "See delivery/FINAL_METADATA_CARRY.json"
+}

@@ -1,0 +1,114 @@
+{
+  "scope": "External controlled source fixture; setup and static actor poses injected, process disabled. Actual automated CUA mouse/keyboard through unmodified production input and GUI; not ordinary combat, motion or damage proof.",
+  "pass": true,
+  "case_count": 6,
+  "cases": [
+    {
+      "mode": "arena",
+      "window": [
+        960,
+        540
+      ],
+      "viewport": [
+        960.0,
+        540.0
+      ],
+      "camera_edge": false,
+      "reduced": false
+    },
+    {
+      "mode": "rooms",
+      "window": [
+        960,
+        540
+      ],
+      "viewport": [
+        960.0,
+        540.0
+      ],
+      "camera_edge": true,
+      "reduced": false
+    },
+    {
+      "mode": "arena",
+      "window": [
+        1280,
+        720
+      ],
+      "viewport": [
+        960.0,
+        540.0
+      ],
+      "camera_edge": false,
+      "reduced": false
+    },
+    {
+      "mode": "rooms",
+      "window": [
+        1280,
+        720
+      ],
+      "viewport": [
+        960.0,
+        540.0
+      ],
+      "camera_edge": true,
+      "reduced": false
+    },
+    {
+      "mode": "arena",
+      "window": [
+        1180,
+        812
+      ],
+      "viewport": [
+        960.0,
+        540.0
+      ],
+      "camera_edge": false,
+      "reduced": true
+    },
+    {
+      "mode": "rooms",
+      "window": [
+        1180,
+        812
+      ],
+      "viewport": [
+        960.0,
+        540.0
+      ],
+      "camera_edge": true,
+      "reduced": true
+    }
+  ],
+  "observed": [
+    "LMB selects nearer/farther targets and boss; valid empty field resets AUTO.",
+    "Right-click/release/held drag do not retarget; initial drag press does select its actor.",
+    "HUD/objective/badge/boss bar clicks cannot select/reset behind visible UI.",
+    "Pause and build buttons open real panels without leakage; resume/back retain mark.",
+    "Actual y176 objective lower strip blocked in all six mode/size cases including host scaling and letterbox offsets.",
+    "Black letterbox clicks delivered outside visible viewport are rejected without losing mark.",
+    "Pale static brackets and two-line label remain readable with orange charge lane, brace, large boss sprite and reduced flashes."
+  ],
+  "capture_index_sha256": "a2e32bb818d514faefb1079c32429cf582c0261f10cc821975f4783ed9f15425",
+  "capture_count": 14,
+  "raw_log_sha256": "8c34ed57ecf2edff3375f6024053cdcd8e1893d69fa611188e1931d937881e85",
+  "closure": {
+    "method": "External terminal Ctrl+C after two Alt+F4 variants left window open",
+    "window_absent_confirmed": true,
+    "direct_exit_code": null,
+    "exit_receipt_absent": true,
+    "claim": "No graceful-close/exit-zero claim for this controlled fixture."
+  },
+  "diagnostics": [
+    "Unsupported VSync warning.",
+    "ALSA cannot open device; ERR_CANT_OPEN followed by dummy driver fallback.",
+    "No GDScript runtime error observed."
+  ],
+  "limits": [
+    "No new pack/ordinary acceptance.",
+    "Root personally viewed capture01 only at this gate; other captures reviewed by QA.",
+    "Initial y187 click was outside label and correctly reset AUTO; corrected y176 checks separately logged."
+  ]
+}

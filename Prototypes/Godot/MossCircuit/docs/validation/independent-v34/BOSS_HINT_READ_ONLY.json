@@ -1,0 +1,12 @@
+{
+  "v33R2": {
+    "main_hint_expression": "if enemy.boss and enemy.hp > 0 and not state in [\"title\",\"codex\",\"won\",\"dead\"]: bars.append({\"name\":enemy.name,\"hp\":enemy.hp,\"max_hp\":enemy.max_hp,\"phase\":enemy.phase,\"hint\":enemy.ai_state + \": \" + enemy.attack})",
+    "boss_ui_function_sha256": "c8dbf83b9511c511da2edadf8be8840ebc0d3589c4d711eec6d68257fb30e4bb"
+  },
+  "v34R1": {
+    "main_hint_expression": "if enemy.boss and enemy.hp > 0 and not state in [\"title\",\"codex\",\"won\",\"dead\"]: bars.append({\"name\":enemy.name,\"hp\":enemy.hp,\"max_hp\":enemy.max_hp,\"phase\":enemy.phase,\"hint\":enemy.ai_state + \": \" + enemy.attack})",
+    "boss_ui_function_sha256": "c8dbf83b9511c511da2edadf8be8840ebc0d3589c4d711eec6d68257fb30e4bb"
+  },
+  "finding": "Bottom-right text is the current boss ai_state + colon + attack, not player controls. Controlled fixture freezes freshly spawned Warden in ai_state=move with empty attack; intended complete string is move: with trailing space. No truncation defect established.",
+  "scope": "Read-only exact producer/function comparison; no new engine execution."
+}

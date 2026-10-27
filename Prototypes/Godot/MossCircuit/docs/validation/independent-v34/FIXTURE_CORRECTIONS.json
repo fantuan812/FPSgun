@@ -1,0 +1,44 @@
+[
+  {
+    "type": "independent harness correction",
+    "reason": "Broader snapshot traverses actor dictionaries keyed by integer IDs; comparing int key directly with String sprite raises GDScript runtime error. Compare str(key) only for exclusion while retaining original key in result. The original authority356/no-fail summary is REJECTED because runtime errors invalidate purity assertions. Combat uses same serializer, corrected before its first execution.",
+    "production_changes": [],
+    "raw_evidence": "results/r1",
+    "scripts": [
+      {
+        "script": "independent_focus_authority.gd",
+        "before_sha256": "d9503063928b63e0917599b7ac07c069215b8205ed626f1856fef910d59dce4f",
+        "after_sha256": "08f24ab915c40816ac10d4028c657d7265a0c832af41789697bc7c35f9f812bb"
+      },
+      {
+        "script": "independent_focus_combat.gd",
+        "before_sha256": "3476c98d0f602f77f39e93a95d5eeeab9d634cc595be3277f7162dd8185b0564",
+        "after_sha256": "5b5f719ae7415ef152e09bbad6373b9e6c9d59055a0c7cb438657cff0284bc9d"
+      }
+    ]
+  },
+  {
+    "type": "independent expectation correction",
+    "raw_evidence": "results/r2",
+    "script": "checks/independent_focus_combat.gd",
+    "before_sha256": "5b5f719ae7415ef152e09bbad6373b9e6c9d59055a0c7cb438657cff0284bc9d",
+    "after_sha256": "1611243f4cbe56a37a6362b75194969b747b658cc3ab0b53ec39463bdad15af4",
+    "facts": [
+      "Exact accepted v33R2 and v34 55px Rail probes produce identical pose/muzzle, ray_dot=-1 because authored muzzle extends1.73px past target. Acquisition oracle now compares target-specific output of unchanged baseline muzzle solver; stored launch direction remains checked.",
+      "Existing immutable Arc rules choose two nearby recipients. Corrected both4.8 expectations and added actual intercepted-primary case with marked third recipient left untouched."
+    ],
+    "production_changes": []
+  },
+  {
+    "type": "explicit presentation contract/oracle clarification",
+    "old_script_sha256": "d854def4651e369eb61e3a7e46c390d9670802c2599bfccd6099a8f8a017f407",
+    "new_script_sha256": "ea87d4716ced4c1b36e4d5a16c8340d15876785cf66419cd56eb02340fa34b53",
+    "raw_evidence": "results/r3",
+    "addendum": "OBJECTIVE_HEIGHT_ADDENDUM.md",
+    "facts": [
+      "42 px was authored request; unchanged font computes 49 px minimum for two lines. Root explicitly approved measured 49 px rather than font shrink after actual native viewing.",
+      "Rejected original 12 failures preserved; amended 366 checks explicitly include actual expanded bottom-seven-pixel exclusion for every mode/size/camera."
+    ],
+    "production_changes": []
+  }
+]

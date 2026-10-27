@@ -1,0 +1,58 @@
+{
+  "pass": true,
+  "steps": [
+    {
+      "name": "test_combat_focus-final",
+      "exit": 0,
+      "engine_error": false,
+      "seconds": 3.698,
+      "pass": true
+    },
+    {
+      "name": "test_focus_fire-final",
+      "exit": 0,
+      "engine_error": false,
+      "seconds": 5.068,
+      "pass": true
+    },
+    {
+      "name": "test_tempered_combat-final",
+      "exit": 0,
+      "engine_error": false,
+      "seconds": 8.165,
+      "pass": true
+    },
+    {
+      "name": "test_weapon_tempering-final",
+      "exit": 0,
+      "engine_error": false,
+      "seconds": 23.012,
+      "pass": true
+    },
+    {
+      "name": "test_weapon_mounts-final",
+      "exit": 0,
+      "engine_error": false,
+      "seconds": 2.101,
+      "pass": true
+    },
+    {
+      "name": "old-six-transactions",
+      "exit": 0,
+      "engine_error": false,
+      "seconds": 10.012,
+      "pass": true
+    },
+    {
+      "name": "old-24-combat",
+      "exit": 0,
+      "engine_error": false,
+      "seconds": 14.562,
+      "pass": true
+    }
+  ],
+  "transactions_sha256": "22e28521ba76fb7285a59b98593aecc7c4af9e24d497853119f73495324feaf8",
+  "combat_sha256": "e7d93a1fcf01345c540bf9f868632310fd3e85572dbe431dbe12d43bf19212ec",
+  "baseline": "Fresh exact v33R2 QA pre-code replay; byte-equal outputs",
+  "engine_scope": "Headless controlled only; independent/native still pending"
+}

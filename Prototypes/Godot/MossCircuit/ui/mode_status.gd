@@ -22,14 +22,19 @@ func place_below(hud_rect:Rect2)->void:
 	var text_offset:float=66 if visible_rooms else 10
 	objective.position=Vector2(hud_rect.position.x+text_offset,hud_rect.end.y+8)
 	objective.size=Vector2(maxf(1,hud_rect.size.x-text_offset-10),42)
-func present(mode_id:String,state:String,text:String,progress:float)->void:
+func present(mode_id:String,state:String,text:String,progress:float,focus_text:String="")->void:
 	visible_rooms=mode_id=="rooms"
 	visible=state in ["playing","room_clear"]
 	clear_progress=maxf(0,progress)
 	phase=clampi(int(floor(clear_progress*8+.000001)),0,8)
-	objective.text=text
+	objective.text=text if focus_text.is_empty() else text+"\n"+focus_text
 	badge.visible=visible_rooms
 	badge.queue_redraw()
+
+func blocks_focus_at(viewport_point:Vector2)->bool:
+	if not visible:return false
+	if objective.is_visible_in_tree() and Rect2(Vector2.ZERO,objective.size).has_point(objective.make_canvas_position_local(viewport_point)):return true
+	return badge.is_visible_in_tree() and Rect2(0,0,48,40).has_point(badge.make_canvas_position_local(viewport_point))
 func _draw_badge()->void:
 	var ink:=Color("142c32")
 	var color:=Color("e7b969") if phase==0 else Color("91e8bc")

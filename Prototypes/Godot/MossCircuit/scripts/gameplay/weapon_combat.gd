@@ -8,6 +8,7 @@ const BoundaryShot=preload("res://scripts/gameplay/boundary_shot.gd")
 const Status=preload("res://scripts/gameplay/target_status.gd")
 const PrimaryDefense=preload("res://scripts/gameplay/primary_defense.gd")
 const WeaponTempering=preload("res://scripts/gameplay/weapon_tempering.gd")
+const Focus=preload("res://scripts/gameplay/combat_focus.gd")
 ## No mode, UI, progression, or input polling. Collision/proc semantics are shared by every mode.
 var world:CombatState
 var session:RunSession
@@ -44,6 +45,8 @@ func fire(id: String, slot: int, area:Dictionary={}) -> void:
 	var nearest: Dictionary = living[0]
 	for enemy in living:
 		if world.player_pos.distance_squared_to(enemy.pos) < world.player_pos.distance_squared_to(nearest.pos): nearest = enemy
+	var preferred:Dictionary=Focus.eligible(world.enemies,world.focus_enemy_id,world.player_pos,weapon,world.stats)
+	if not preferred.is_empty():nearest=preferred
 	var reach: float = Rules.weapon_reach(weapon,world.stats)
 	if world.player_pos.distance_to(nearest.pos) > reach: return
 	var pose:Dictionary=presentation.fire(id,slot,nearest.pos)
@@ -65,7 +68,8 @@ func fire_chill(weapon:Dictionary,slot:int,damage:float)->void:
 	var reach:float=Rules.weapon_reach(weapon,world.stats)
 	var targets:Array=Status.ordered_living(world.enemies,world.player_pos,reach)
 	if targets.is_empty():return
-	var target:Vector2=targets[0].pos
+	var preferred:Dictionary=Focus.find(targets,world.focus_enemy_id)
+	var target:Vector2=targets[0].pos if preferred.is_empty() else preferred.pos
 	var direction:Vector2=(target-world.player_pos).normalized()
 	if direction.length_squared()<.000001:
 		direction=Vector2.RIGHT
@@ -145,7 +149,8 @@ func fire_bankshot(weapon:Dictionary,slot:int,damage:float,area:Dictionary)->voi
 	var reach:float=Rules.weapon_reach(weapon,world.stats)
 	var targets:Array=Status.ordered_living(world.enemies,world.player_pos,reach)
 	if targets.is_empty():return
-	var target:Vector2=targets[0].pos
+	var preferred:Dictionary=Focus.find(targets,world.focus_enemy_id)
+	var target:Vector2=targets[0].pos if preferred.is_empty() else preferred.pos
 	var coincident:bool=target.distance_squared_to(world.player_pos)<=BoundaryShot.DIR_EPS*BoundaryShot.DIR_EPS
 	var pose:Dictionary=presentation.fire_fixed_direction(weapon.id,slot,Vector2.RIGHT) if coincident else presentation.fire(weapon.id,slot,target)
 	var shot:Dictionary=BoundaryShot.spawn(pose.muzzle,pose.direction,area,damage,world.stats.bullet_speed,reach,int(weapon.pierce)+int(world.stats.pierce),session.build.items.get("bounce_guide",0)>0,slot)

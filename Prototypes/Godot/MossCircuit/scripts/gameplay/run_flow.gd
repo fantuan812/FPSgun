@@ -8,6 +8,7 @@ static func settle(world:CombatState,session:RunSession,mode:RefCounted,config:D
 	var decision=mode.resolution(session,world,config)
 	if not decision is Dictionary or not validate_resolution(decision).is_empty():return "invalid"
 	session.state="transition" # Reentrant/repeated requests cannot credit twice.
+	world.focus_enemy_id=0
 	for pickup in world.pickups:
 		collect_pickup(world,session,pickup)
 	world.pickups.clear()

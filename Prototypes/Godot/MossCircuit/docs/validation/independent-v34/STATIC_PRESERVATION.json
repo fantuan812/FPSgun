@@ -1,0 +1,22 @@
+{
+  "pass": true,
+  "old_paths": 123,
+  "new_paths": 124,
+  "unchanged": 115,
+  "changed_exact_allowlist": [
+    "scripts/gameplay/combat_runtime.gd",
+    "scripts/gameplay/combat_state.gd",
+    "scripts/gameplay/run_flow.gd",
+    "scripts/gameplay/weapon_combat.gd",
+    "scripts/main.gd",
+    "scripts/weapon_rig.gd",
+    "ui/mode_status.gd",
+    "ui/moss_ui.gd"
+  ],
+  "added_exact_allowlist": [
+    "scripts/gameplay/combat_focus.gd"
+  ],
+  "removed": [],
+  "diff_sha256": "2e9b8dd29f254c27af19d1d551f528d098eed086df89dfa5188ada5280e5a055",
+  "scope": "Static exact-file preservation plus inspected focus-only patches. Dynamic input/behavior gates separate. Rules, catalog/numerics, encounters, modes, motor, primary defense, procs, trajectory helper, all art/project/export inputs unchanged."
+}

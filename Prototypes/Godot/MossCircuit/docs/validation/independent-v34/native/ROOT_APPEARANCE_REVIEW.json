@@ -1,0 +1,41 @@
+{
+  "status": "PASS; bounded parent direct-view confirmation",
+  "reviewer": "parent/root",
+  "scope": "Three selected controlled stills only, not all14 captures, input correctness, causal damage, motion, ordinary or packed acceptance.",
+  "captures": [
+    {
+      "path": "captures/01-arena-960-focused.jpg",
+      "size": 145364,
+      "sha256": "95a9b4e5b668fc89dbf9206a87dba0d971ad1bf4c474af1fe2f3ec4c44616b83",
+      "dimensions": [
+        960,
+        540
+      ]
+    },
+    {
+      "path": "captures/11-rooms-1280-boss.jpg",
+      "size": 237626,
+      "sha256": "ef4dc11af1995269a1afafa01f3ea1d1e10897b05f463cba4fec5db1839e9d4c",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "captures/13-rooms-letterbox-brace.jpg",
+      "size": 218525,
+      "sha256": "fad48deb622488347c6876274507eb9c1f4535c55fc9760f6af7263940acda4d",
+      "dimensions": [
+        1180,
+        812
+      ]
+    }
+  ],
+  "observations": [
+    "Two objective lines and name/range feedback readable.",
+    "Pale corner brackets distinct from orange warning geometry and brace arc.",
+    "Original objective/HUD/boss bar unobstructed."
+  ],
+  "clarification": "Measured49px two-line minimum accepted rather than shrinking font to authored42px request; original contract unchanged and independent exact42 oracle retained rejected.",
+  "withdrawn_hypothesis": "Bottom-right move: is complete existing boss-state text, not truncated movement controls; exact baseline producer/UI preserved."
+}
