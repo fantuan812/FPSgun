@@ -1,0 +1,67 @@
+{
+  "added": {
+    "docs/V38_ART_PROVENANCE.md": "82305d1a4a53a2c1ec365a22a54351264f64f8a6976d837e91bb97df554f64ac",
+    "docs/V38_STITCH_DRONE.md": "31dcaece2997bbb0284ba7d2b676fd7540e8565630d738f1a1fa4d195d8d4417",
+    "docs/V38_STITCH_DRONE_CONTRACT.md": "2420898756dcc6dde4091e1d38e759fa2d922406690b5c8873d8cfeeb34d3c66",
+    "tests/independent_support_assets.gd": "c828f6b83c33d6c149f9a6733215d034a171aed950233ca30aa066d652be8166",
+    "tests/independent_support_authority.gd": "143ff2027718bb558c0d697d51e57944ab0e7dc989b0ec875c16c314d07bbb8e",
+    "tests/independent_support_death_disposal.gd": "2dbc52c5f568f6f42b48fb39cffb56861dbc7fdafefc46fdd22038742286a703",
+    "tests/independent_support_encounters.gd": "9aa6722b30b7e17bb9b1eaf9b6c47b4818cf4bde7cacd5ab2c6abf2752749863",
+    "tests/independent_support_projectiles.gd": "7eb7c8be9ce3a4542d39849c096bfd6ca2df1bf50f0f2dbfb84a9f998ef1a1d1",
+    "tests/independent_support_runtime.gd": "6a8556490f3b7039b35edd981061ef086dd6d4aa2b9e447a11adb96d8aa07f8a"
+  },
+  "base_inputs": 753,
+  "changed": {
+    "README.md": {
+      "after": "6e507b3b176087ac1cb8da50d3e7eef7b8a23b5252f33f7bcf922c3f4871b3ca",
+      "before": "3fb36dd427fa9c80739f26c4d570e9ea49a08f7b21d555d705f5356ea14904d1"
+    },
+    "docs/DELIVERY.md": {
+      "after": "2378a6c24f01d96102acb85a8c71591485306b1bd190932a97ab6c77b2e33635",
+      "before": "6e7be4ab9df987a65f6cce056315a24f0a8520998637eb13ad81a91c798e2fc5"
+    },
+    "docs/V37_BUILD_FORECAST.md": {
+      "after": "eb64ffe110836841fd14091d7d86e83266c72aa58e79d5e0dec84ef59bf110f4",
+      "before": "1cdd0847258e0373261a31cf7bcd2e1864da5d3e46b72b0682f5e815a7849f06"
+    }
+  },
+  "inputs": 762,
+  "production139_exact_r2": true,
+  "removed": [],
+  "root_coordinated_aggregate_not_independent_author_run": true,
+  "runner_exact": true,
+  "scope": "Promote six exact QA scripts including retained formerly failed death8; docs preserve acceptedv37history. All full/pack/native gates still pending.",
+  "tests": [
+    {
+      "destination": "tests/independent_support_authority.gd",
+      "sha256": "143ff2027718bb558c0d697d51e57944ab0e7dc989b0ec875c16c314d07bbb8e",
+      "source": "evidence-workspace/moss-v38-qa/checks/independent_support_authority.gd"
+    },
+    {
+      "destination": "tests/independent_support_runtime.gd",
+      "sha256": "6a8556490f3b7039b35edd981061ef086dd6d4aa2b9e447a11adb96d8aa07f8a",
+      "source": "evidence-workspace/moss-v38-qa/checks/independent_support_runtime.gd"
+    },
+    {
+      "destination": "tests/independent_support_encounters.gd",
+      "sha256": "9aa6722b30b7e17bb9b1eaf9b6c47b4818cf4bde7cacd5ab2c6abf2752749863",
+      "source": "evidence-workspace/moss-v38-qa/checks/independent_support_encounters.gd"
+    },
+    {
+      "destination": "tests/independent_support_projectiles.gd",
+      "sha256": "7eb7c8be9ce3a4542d39849c096bfd6ca2df1bf50f0f2dbfb84a9f998ef1a1d1",
+      "source": "evidence-workspace/moss-v38-qa/checks/independent_support_projectiles.gd"
+    },
+    {
+      "destination": "tests/independent_support_assets.gd",
+      "sha256": "c828f6b83c33d6c149f9a6733215d034a171aed950233ca30aa066d652be8166",
+      "source": "evidence-workspace/moss-v38-qa/checks/independent_support_assets.gd"
+    },
+    {
+      "destination": "tests/independent_support_death_disposal.gd",
+      "sha256": "2dbc52c5f568f6f42b48fb39cffb56861dbc7fdafefc46fdd22038742286a703",
+      "source": "evidence-workspace/moss-v38-qa/checks/independent_support_death_disposal.gd"
+    }
+  ],
+  "utc": "2026-10-27T07:17:38.070491+00:00"
+}

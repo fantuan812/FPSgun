@@ -1,0 +1,21 @@
+{
+  "status": "PREPARED_NOT_EXECUTED_WAITING_SEPARATE_RAW_REVIEW",
+  "utc": "2026-10-27T08:22:29.701355+00:00",
+  "command": [
+    "python",
+    "<WORKSPACE>/moss-v33-prep/build_pack.py",
+    "--source",
+    "<WORKSPACE>/moss-v38-final-r2",
+    "--inputs",
+    "<WORKSPACE>/moss-v38-final-r2-prep/FINAL_INPUTS.json",
+    "--output",
+    "<WORKSPACE>/moss-v38-pack"
+  ],
+  "builder_sha256": "572315af3ccca471f71e903704e8c9b2736867d10a9b3fa1a47336c5eaee3654",
+  "source_map_sha256": "bcf2b8555bd6acd17ca4ce62a209fe1701ec886937ec991223a59f560a6784cc",
+  "builder_step_cap_seconds": 240,
+  "step_cap_scope": "Unchanged existing resource export utility cap240, not a regression test gate extension. Independent PCK routes separately each180; audio2 modes total360.",
+  "checks_argument": [],
+  "resource_scope": "No external test helpers packaged. Generic PNG/imported-resource proof separate from support alpha/layout and SVG/WAV specialist verification.",
+  "approval": "Root permits resource export after independent139 rawreview PASS; serial execution window returned by Utility reference."
+}

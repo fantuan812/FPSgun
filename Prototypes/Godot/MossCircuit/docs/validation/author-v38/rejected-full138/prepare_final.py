@@ -1,0 +1,26 @@
+from pathlib import Path
+import json,hashlib,shutil,difflib,datetime
+r=Path('workspace/shared');q=r/'moss-v38-qa';s=r/'moss-v38-r2';dst=r/'moss-v38-final';p=r/'moss-v38-final-prep';docs=p/'prepared-docs';h=lambda p:hashlib.sha256(p.read_bytes()).hexdigest();m=r/'moss-v38-root-death-fix/CANDIDATE_INPUTS.json';assert h(m)=='cfe9908e3d28b68c266712510c3d5f93ee91cda410d51f6bfec9a96a83f2c393';base=json.loads(m.read_text());assert len(base)==753 and all(h(s/n)==v for n,v in base.items());assert not dst.exists();dst.mkdir()
+for n in base:
+ d=dst/n;d.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(s/n,d)
+oldrelease=r/'moss-v37-release'
+header='# MossCircuit v38 — Stitch Drone (local candidate)\n\nA finite, interruptible enemy repair channel adds a new target-priority interaction: one wounded ordinary recipient,1.2s warning, up to10HP, source-damage cancellation and visible cyan tether. Arena wave4 and Rooms CROSSFIRE/BROOD receive bounded additions. See [feature, failures and current verification limits](docs/V38_STITCH_DRONE.md).\n\nFocused regressions and original image checks have passed, with the first smoke-fixture failure and later real death-disposal contract failure retained separately. Complete aggregate, exact PCK, native/ordinary and delivery gates remain pending; this is not a publication or release-acceptance claim. Earlier accepted-local history follows unchanged.\n\n---\n\n'
+(docs/'README.md').write_text(header+(oldrelease/'README.md').read_text())
+header='# v38 resource delivery — pending final gates\n\nThis source candidate has no accepted v38 delivery PCK yet. Export identity, platform preset equality, exact packed feature/resource checks, controlled native and one ordinary original-ELF Rooms attempt, complete chunk restoration and actual file-only rollback will be recorded only after execution. Do not replace a working pack from this pending checkpoint.\n\nThe unchanged helper and original platform programs/licenses remain required. Computed local objects do not establish GitHub reachability. Prior v37 accepted-local delivery history follows unchanged.\n\n---\n\n'
+(docs/'docs/DELIVERY.md').write_text(header+(oldrelease/'docs/DELIVERY.md').read_text())
+shutil.copyfile(oldrelease/'docs/V37_BUILD_FORECAST.md',docs/'docs/V37_BUILD_FORECAST.md')
+c=r/'moss-v38-selection/CONTRACT_C3.md';(docs/'docs/V38_STITCH_DRONE_CONTRACT.md').write_text('# Historical pre-implementation contract checkpoint\n\nThe original C3 text below is preserved verbatim (SHA-256 `'+h(c)+'`). Its proposed/unexecuted statements describe that historical design checkpoint, not current results; see V38_STITCH_DRONE.md for current evidence and limits.\n\n---\n\n'+c.read_text())
+tests=[]
+for name in ['authority','runtime','encounters','projectiles','assets','death_disposal']:
+ origin=q/('checks/independent_support_'+name+'.gd');target='tests/'+origin.name;assert target not in base;shutil.copyfile(origin,dst/target);tests.append({'source':str(origin),'destination':target,'sha256':h(origin)})
+for f in docs.rglob('*'):
+ if f.is_file():z=dst/f.relative_to(docs);z.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(f,z)
+assert (dst/'README.md').read_bytes().endswith((oldrelease/'README.md').read_bytes());assert (dst/'docs/DELIVERY.md').read_bytes().endswith((oldrelease/'docs/DELIVERY.md').read_bytes())
+prodkeys=list(json.loads((r/'moss-v37-final-prep/PRODUCTION_FINAL.json').read_text()))+['scripts/gameplay/enemy_support.gd','assets/enemies/stitch_drone.png','assets/actions/stitch_drone/action_manifest.json']+['assets/actions/stitch_drone/stitch_drone_'+n+'.png' for n in ['channel','hurt','death']]
+prod={n:h(s/n) for n in sorted(prodkeys)};assert len(prod)==139 and all(h(dst/n)==v for n,v in prod.items());assert (dst/'tests/run_regression.py').read_bytes()==(s/'tests/run_regression.py').read_bytes()
+current={str(f.relative_to(dst)):h(f) for f in sorted(dst.rglob('*')) if f.is_file()};changes={n:{'before':base[n],'after':v} for n,v in current.items() if n in base and base[n]!=v};added={n:v for n,v in current.items() if n not in base};assert len(current)==762;assert set(changes)=={'README.md','docs/DELIVERY.md','docs/V37_BUILD_FORECAST.md'}
+for name,data in [('PREIMPORT_INPUTS.json',current),('PRODUCTION_FINAL.json',prod),('PROMOTION.json',{'utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'base_inputs':753,'inputs':len(current),'changed':changes,'added':added,'removed':[],'tests':tests,'production139_exact_r2':True,'runner_exact':True,'root_coordinated_aggregate_not_independent_author_run':True,'scope':'Promote six exact QA scripts including retained formerly failed death8; docs preserve acceptedv37history. All full/pack/native gates still pending.'})]:(p/name).write_text(json.dumps(data,indent=2,sort_keys=True)+'\n')
+diff=[]
+for n in list(changes)+list(added):
+ if n.endswith(('.gd','.md','.json')):diff.extend(difflib.unified_diff((s/n).read_text().splitlines(True) if n in base else [],(dst/n).read_text().splitlines(True),fromfile='r2/'+n,tofile='final/'+n))
+(p/'PROMOTION_DIFF.patch').write_text(''.join(diff));print(json.dumps({'inputs':len(current),'prod':len(prod),'added':len(added),'changed':len(changes),'map_sha256':h(p/'PREIMPORT_INPUTS.json')}))

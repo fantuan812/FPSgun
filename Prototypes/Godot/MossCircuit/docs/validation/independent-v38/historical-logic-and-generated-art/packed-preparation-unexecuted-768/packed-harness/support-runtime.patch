@@ -1,0 +1,10 @@
+--- <WORKSPACE>/moss-v38-final/tests/independent_support_runtime.gd
++++ <WORKSPACE>/moss-v38-qa/packed-harness/support-runtime.gd
+@@ -113,6 +113,6 @@
+   g.state="dead";Runtime.step(g.combat_frame,0.)
+   ck(t.hp==50 and s.support_channel_token==null,"directterminal clears support withoutheal")
+   g._title();ck(g.enemies.is_empty(),"title removes allactor channel identities")
+- var teardown=preload("res://tests/support/audio_teardown.gd").new();teardown.prepare([g]);g.queue_free();await process_frame;await teardown.finish(self)
++ var teardown=preload("<WORKSPACE>/moss-v38-qa/packed-harness/audio_teardown.gd").new();teardown.prepare([g]);g.queue_free();await process_frame;await teardown.finish(self)
+  print(JSON.stringify({"pass":failures.is_empty(),"checks":checks,"failures":failures,"observations":observations,"scope":"Two modes; actual existing14 HP-source paths plus separately labelled test-engine late-event fault injections. No physical audio/native acquisition claim."}))
+  quit(0 if failures.is_empty() else 1)

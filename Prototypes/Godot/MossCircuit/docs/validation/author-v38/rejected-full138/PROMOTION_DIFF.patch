@@ -1,0 +1,932 @@
+--- r2/README.md
++++ final/README.md
+@@ -1,8 +1,22 @@
++# MossCircuit v38 — Stitch Drone (local candidate)
++
++A finite, interruptible enemy repair channel adds a new target-priority interaction: one wounded ordinary recipient,1.2s warning, up to10HP, source-damage cancellation and visible cyan tether. Arena wave4 and Rooms CROSSFIRE/BROOD receive bounded additions. See [feature, failures and current verification limits](docs/V38_STITCH_DRONE.md).
++
++Focused regressions and original image checks have passed, with the first smoke-fixture failure and later real death-disposal contract failure retained separately. Complete aggregate, exact PCK, native/ordinary and delivery gates remain pending; this is not a publication or release-acceptance claim. Earlier accepted-local history follows unchanged.
++
++---
++
+ # MossCircuit v37 — Shop Build Forecast
+ 
+-A read-only AFTER PURCHASE card previews the selected weapon replacement or module purchase: remaining scrap/slots, mechanisms enabled or disabled, relevant missing prerequisites, and expandable projected equipped-weapon readouts. Selecting another slot changes only that card, not the build. Existing transaction authority and shop pool are unchanged.
+-
+-This source checkpoint has passed a genuine cold import and five author focused routes (new smoke21 plus existing UI/game/tempering/reservation). A separate exact-copy cold import and independent authority108/legacy808/controller306/views42 also passed. Complete regression, exact pack/native and final local delivery remain separate pending gates at this checkpoint; no claim of publication. See [the implementation policy](docs/V37_BUILD_FORECAST.md). Older sections retain their accepted local history.
++See what a purchase or selected weapon replacement will do **before buying**: remaining scrap and slots, mechanisms enabled/disabled, relevant missing prerequisites and expandable projected equipped-weapon stats. The existing selector updates only its own card; the original purchase remains the sole commit. No new multiplier, item, shop-pool change, audio or extra reward. [Exact feature and limits](docs/V37_BUILD_FORECAST.md).
++
++The mandatory author full source run passed **130/130** (129 scripts+import), with734 frozen inputs/133 production paths unchanged and every original raw result independently reviewed—not a second independent full-suite run. Independent feature checks108/808/306/42, historical/current catalog controls and exact-PCK resources862 passed. Source audio authority passed its original single180-second cap; the predeclared packed functional gate instead uses Arena435 and Rooms338, each180s/totalmax360. No single180-second packed pass is claimed. Mixer236, views168, SVG identity, PCM38 and export safety3 also passed.
++
++Eight controlled native cases across960×540/1280×720 produced23 original captures and six real UI purchases. Separately, one ordinary default Arena/Rivet/240102 attempt reached its first shop with122scrap: Power Coil's18-scrap offer forecast104scrap and primary18.75→21; one real purchase showed104scrap/SOLD/current21. Seven ordinary captures retain that limited observation. This does not prove ordinary full-bag replacement, combo completion or future damage. Dummy audio, Windows execution, campaign completion, all seeds, balance and performance remain unverified.
++
++Preparation history stays explicit: pre-execution contract/UI corrections, a local promotion-schema utility failure and a desktop missing-python prerequisite guard94 are retained; neither failed utility is mislabeled as a game test. The corrected guard used the available interpreter before the first native game launch. Older v36 full117/125 and packed-timeout failures remain historical, not rewritten by this version.
++
++[Local resource-pack restore prerequisites](docs/DELIVERY.md) and [independent evidence](docs/validation/independent-v37/QA_REPORT.md) define the bounded acceptance. Local verification/computed objects do not establish GitHub publication. Older sections below retain their exact accepted-local history.
+ 
+ ---
+ 
+--- r2/docs/DELIVERY.md
++++ final/docs/DELIVERY.md
+@@ -1,6 +1,22 @@
+-# v37 source checkpoint — runtime delivery pending
++# v38 resource delivery — pending final gates
+ 
+-Shop Build Forecast does not change prices, catalog rows, transaction authority, combat, audio or existing delivery prerequisites. This source checkpoint is not a newly accepted or published runtime package. New PCK/native/full-regression identities must be established separately before release. Historical v36 local restoration instructions below refer only to the v36 bytes they name.
++This source candidate has no accepted v38 delivery PCK yet. Export identity, platform preset equality, exact packed feature/resource checks, controlled native and one ordinary original-ELF Rooms attempt, complete chunk restoration and actual file-only rollback will be recorded only after execution. Do not replace a working pack from this pending checkpoint.
++
++The unchanged helper and original platform programs/licenses remain required. Computed local objects do not establish GitHub reachability. Prior v37 accepted-local delivery history follows unchanged.
++
++---
++
++# v37 complete resource pack — local verification, not publication
++
++Both preset PCKs are identical:41,462,412 bytes, SHA-256 `156466cddbf44497e5be9c2d2f1d6f221c4aa2ccf545b0c5bca4d06fbb8ba471`. Linux ELF remains `2c78919325d7f29fa7607287c7c1eeac367ea4c94e7b8b6f5f4c6b20492f73d0`,0755. Windows executable is historical and unexecuted here. This is a complete resource pack, not a standalone executable, ZIP or delta patch; original platform programs/licenses remain required.
++
++From a checkout containing all required chunks: `python Deliveries/MossCircuit/restore_deliveries.py --version v37 --output recovered-v37`. Read the [v37 identity and recovery instructions](../../../../Deliveries/MossCircuit/v37/READ_ME_v37.txt). Close the game; uniquely back up and hash your actual old pack; verify the restored complete new file; manually replace only adjacent MossCircuit.pck. Launch the original program normally, not with --main-pack. The unchanged helper refuses unsafe paths/overwrites, requires hardlinks, and publishes atomically per output file—not per version batch. It neither installs nor executes. Actual catalog/chunk preservation, restoration and file-only rollback results are recorded separately in the independent delivery evidence; this paragraph does not substitute for those results or prove Git download reachability.
++
++Author final source130/130 passed with734 inputs unchanged and exhaustive independent raw review. Exact-PCK feature/resources and finite native observations passed separately. Source audio authority164.293s passed the original180s single-process gate; packed Arena435/77.760s and Rooms338/100.565s passed a predeclared different each180/totalmax360 functional scope. No packed single180s acceptance or physical listening is claimed. Generic fingerprints cover58 PNG images; unchanged SVG/WAV identities have separate checks, and new code-native glyphs are not additional textures.
++
++Eight controlled native cases and one ordinary attempt are attributed separately. The ordinary first-shop Power Coil purchase matched104scrap and21 primary readout; it was not a full-bag replacement or natural combo-completion witness. Actual ordinary window1180×812 differs from requested960×540. Runtime processes closed0; retained llvmpipe/VSync warnings, Dummy/Windows/campaign/balance/performance limits remain. The rejected desktop prerequisite guard94 preceded any native game start and is not hidden as a successful first launcher invocation.
++
++Accepted remote status requires separate reachable readback; no v32–v37 publication is inferred from these local files. Read [independent evidence](validation/independent-v37/QA_REPORT.md), including retained historical failures and exact attribution.
+ 
+ ---
+ 
+--- r2/docs/V37_BUILD_FORECAST.md
++++ final/docs/V37_BUILD_FORECAST.md
+@@ -11,7 +11,7 @@
+ ## Presentation
+ Three compact summary rows plus a collapsed detail section limit extra shop text. Original code-drawn plus, broken-link and linked-node glyphs accompany textual labels; meaning does not depend on color. Existing item icons are reused. Selection updates only its detached forecast subtree and preserves the existing selector/action controls.
+ 
+-## Checkpoint evidence
++## Historical pre-full checkpoint evidence
+ The initial 720-input source passed true cold import and five focused routes. Import added exactly three UID sidecars for723 inputs; original720 unchanged. The new author smoke has21 assertions, including real selector focus and actual selected-slot purchase comparison. A separate exact-copy true cold import and independent authority108/legacy808/controller306/views42 passed with both723-input copies unchanged. The core is hand-derived; the legacy matrix uses the preserved old authority calculation and is not mislabeled as independent numerical expectations. Controller routes compare actual separate-instance buys; views42 uses real selector events/focus and collapsed details. This is not final full-suite/PCK/native/ordinary acceptance. Independent hand-authored oracle froze before implementation. C1/C2/C3 preimplementation wording corrections remain preserved; no target result was used to replace expected outcomes.
+ 
+ Initial unexecuted UI revision changed SELECTED SLOT to the exact CURRENTLY SELECTED SLOT contract text and the initial checkmark to an explicit plus glyph. It was preserved before first import. No engine error or failed target run is implied by that static correction.
+@@ -21,3 +21,19 @@
+ ## Finite transaction/combat preservation
+ 
+ Five external routes passed under the unchanged180-second per-case cap. Candidate old-catalog6 transaction and24 combat traces equal retained executed v36/historical bytes22e28521/e7d93a1f. Candidate current-catalog24 fixed combat without shopping equals retained7cd6062f. A separate freshly executed current-catalog6 transaction baseline on accepted v36 and candidate v37 both produce48c6705e, including the real seeded shop stages. The last pair is a new actual comparison, not a pre-existing golden; no v35 engine rerun was made. All frozen source/fixture/trace inputs remained unchanged, with five complete bounded cleanup reports. These controlled finite projections do not prove all seeds or ordinary acquisition.
++
++## Final local verification
++
++The final directory was genuinely cold-imported to734 frozen inputs;133 production paths remained identical to the focused candidate, four independent tests were promoted byte-for-byte, and the standard runner stayed unchanged. The mandatory129 standalone scripts+import completed130/130 under original per-case180s/error gates. Exhaustive independent readback checked every native/semantic/raw result,734 source hashes,133 production hashes and114 bounded cleanup observations across107 fixtures. It was not a second independent full-suite execution. The aggregate reused the prior cold-import cache; the independently copied final PCK-check project separately performed a genuine cold import.
++
++Both preset resource packs are41,462,412 bytes, SHA-256156466cddbf44497e5be9c2d2f1d6f221c4aa2ccf545b0c5bca4d06fbb8ba471; original Linux ELF/mode0755 is unchanged. Independent first-plan14 commands passed: resource862, feature108/808/306/42, audio mixer236/views168, dedicated unchangedSVG pixels, PCM38 and export safety3. Generic images remain58 PNG; code-native glyphs introduce no image-count claim. Mixer51 windows met newly pushed/read minima with zero invalid/dropped samples; seven original float captures were re-read for finite values, hash, peak and RMS. Not every frame read is claimed newly pushed, and Dummy internal capture is not physical output.
++
++Source audio authority passed as one original180-second case in164.293s. Packed acceptance was predeclared separately as Arena435 and Rooms338, each180seconds with totalmax360, run once at77.760s/100.565s; their combined72 observations exactly equal source773. It is not a single180-second packed pass. Older v36 timeout/diagnostic/new-partition chronology and rejected117/125 run remain historical and unchanged.
++
++Controlled native verification supplied stock/build/funds in eight cases (four situations×960×540/1280×720), then used real selectors, disclosures and purchase controls. Six real buy intents matched exact projected cost/copy/tier outcomes; two unaffordable cases retained10scrap and emitted no buy. Last-Return loss was previewed, choosing slot2 preserved Return, and Fracture with Cryo alone still needed another weapon type. Twenty-three unedited original captures are retained. The process closed0 with final owner/resource release and fresh internal silence. This was controlled provision, not ordinary acquisition, and an empty fixture errors array alone was never the acceptance proof.
++
++One ordinary unchanged-ELF adjacent-PCK session used untouched defaultseed240102, Arena and Rivet Starter. It reached its first natural shop at122scrap. Power Coil cost18; the compact forecast showed104scrap, and expanded primary readout18.75→21. One real purchase showed104scrap, SOLD/no forecast and currentRivet21. Seven originals retain this one observation. No restart, reroll, injected offer/build or extra deployment was used to seek a better result. Actual observed window1180×812 had letterboxing despite requested960×540. This does not establish ordinary full-bag replacement, natural pair completion, delivered combat DPS or campaign/balance results.
++
++A desktop launcher prerequisite initially failed94 because python was absent from its PATH. No game process, runtime log or profile was created; original scripts/freeze and direct-terminal observation are retained. Only the guard interpreter changed to available /usr/bin/python3; source/PCK/fixture were unchanged before the first actual native launch. The earlier local promotion utility likewise failed on a manifest-schema assumption before any engine run; its traceback/procedure and partial source are retained, then schema handling was corrected without touching production. Neither preparation failure is relabeled as an engine test or silently omitted.
++
++Both native game processes exited0 and windows disappeared. llvmpipe unsupported-VSync warnings are retained. Physical audio, Windows execution, all seeds, full campaign, comprehensive balance, performance and device latency remain unverified. Final local restoration/rollback and GitHub reachability are separately established outcomes, not implied by this source or by computed artifact IDs. See [independent evidence](validation/independent-v37/QA_REPORT.md).
+--- r2/docs/V38_ART_PROVENANCE.md
++++ final/docs/V38_ART_PROVENANCE.md
+@@ -0,0 +1,14 @@
++# v38 Stitch Drone artwork and identity boundaries
++
++Four original generated transparent PNG sheets, each1254×1254 in a3×3 grid, depict a cyan thread spool/needle hover drone and distinct channel, hurt and death actions. Original bytes are retained; atlas crops/margins are metadata, not raster edits. Prompts and original-file identity are in `art/stitch_drone/prompts.json` and `art/stitch_drone/provenance.json`.
++
++| Sheet | SHA-256 |
++|---|---|
++| `assets/enemies/stitch_drone.png` | `39a2625999a6ac02b1cc3a96e1a0ed0f399997538620e3cc1ccc76b13ca099d8` |
++| `assets/actions/stitch_drone/stitch_drone_channel.png` | `4af2efab9604bd461095d60b60d6df46ce09db6a25eeabeed09fb8813efee180` |
++| `assets/actions/stitch_drone/stitch_drone_hurt.png` | `f2e8505ad992177f5b2d86e8a5b1e0cdc0c96d8f933751b87c6a165302297efe` |
++| `assets/actions/stitch_drone/stitch_drone_death.png` | `3d5ab456066a67baaf357a4a7c1c2cfe389626ed44b819a148718973a4002e5b` |
++
++The hover atlas retains whole418×418 cells. Action atlas rectangles use alpha>8 bounds, integer-centered horizontal padding and20px bottom padding on418×418 logical canvases. This threshold intentionally excludes low-alpha fringe; it is not a claim that every nonzero-alpha pixel lies inside the crop. Three original action sheets register nine frames each without replacing historical action manifests. Channel phases use warning0–5, attack6, recovery7–8 and locked warning/recovery aim.
++
++All four source sheets were directly viewed. Independent PIL alpha/crop geometry and actual source imported AtlasTexture checks passed; those establish image identity/layout, not in-game aesthetic acceptance. Existing fix_alpha_border can alter transparent RGB, so packed RGBA identity must compare against the separately recorded actual source-imported image, not original PNG bytes. Actual PCK/native validation remains pending at this checkpoint. No asset ownership exclusivity or legal clearance beyond recorded generation provenance is asserted.
+--- r2/docs/V38_STITCH_DRONE.md
++++ final/docs/V38_STITCH_DRONE.md
+@@ -0,0 +1,17 @@
++# v38 Stitch Drone — bounded local candidate
++
++Stitch Drone is a visible, interruptible enemy support interaction, not a new player multiplier. Base HP34, move speed30, contact damage6, XP7; normal encounter HP scaling still applies. It chooses one living wounded ordinary enemy within150px by HP fraction, then distance, then stable ID. It cannot repair itself, another support enemy, a boss or summoned child. A1.2s channel repairs up to10HP; any actual source HP loss interrupts. Target nonlethal injury alone does not. Recovery is.7s, cooldown5s, no-target retry1s. The cyan dashed tether/four-notch progress and success-plus/broken-tether markers are authority-derived, with Reduced Flashes support.
++
++Selection happens after all normal enemy movement/clamping/child spawning. Final eligibility and repair happen after the old projectile/death/pickup phases; dead enemies are not revived and the old death loop is not repeated. Fresh per-channel identity tickets reject fabricated/stale/duplicate completions. Heal updates the next hurt baseline without restarting the target animation. Death/terminal disposal clears ephemeral source fields without a visual burst; pause freezes channels instead.
++
++Only Arena wave4 adds this enemy to its existing three-kind pool, with at most one normally spawned living drone. Position draws remain old order; there is one kind draw on the filtered pool, no retry. Rooms CROSSFIRE and BROOD each append one at normalized[.5,.18], retaining all four original entries. These introduced encounters intentionally alter seeded trajectories. Exact old-encounter controls are a separate claim, not whole-run new-encounter seed parity.
++
++## Evidence at this pre-aggregate checkpoint
++
++- Original author cold import passed; its first smoke failed because the test omitted combat_frame.area initialization (six script errors,8/18 assertions failed). Original logs/source are retained. A test-only initialization correction passed eight focused routes; no failed result was relabeled.
++- Independent policy126, actual Runtime104, encounter369 and concrete projectile38 checks passed on the first corrected753-input candidate. The runtime proof separates28 real configured damage-path observations from eight explicit late kill/pickup fault-injection controls. Current production kill/pickup effects do not naturally perform that injected immediate enemy damage; no new production proc was added.
++- A later independent8-check death-disposal probe found two real C3 cleanup failures: normal late projectile death removed the source before final support settlement, leaving channel fields in a retained dictionary. The target was not healed and no resurrection or memory leak was established. A new candidate adds only a support disposal call before the original death branch callbacks/removal. Original failed753 remains immutable. A distinct true-cold plus five-script regression passed8/126/104/369/38 with the original assertions and strict180-second limits.
++- Two old-encounter controls on the earlier candidate preserved the actual held v37 six-transaction and24-combat traces byte-for-byte. They do not substitute for the new candidate's required complete aggregate.
++- Independent source asset120 checks passed: original PNG alpha identity,36 tile alpha/crop geometry, real action SpriteFrames/AtlasTexture layout and explicit normalized profile. Imported RGBA is separately recorded for later source-to-PCK identity because transparent RGB can be changed by the existing import setting; it is not falsely compared with unprocessed PNG RGBA.
++
++The coordinated final aggregate is **pending**. This candidate's assembler/runner is not an independent author of that aggregate; a separate reviewer must inspect its original raw results. The complete standard suite retains the original180s per-case/error rules and discovery determines its count. Actual exported PCK, independent packed checks, controlled native observation, one ordinary Rooms attempt, delivery restoration and release review are still required. No Windows, physical listening, performance, campaign-wide, all-seed or balance acceptance is claimed.
+--- r2/docs/V38_STITCH_DRONE_CONTRACT.md
++++ final/docs/V38_STITCH_DRONE_CONTRACT.md
+@@ -0,0 +1,100 @@
++# Historical pre-implementation contract checkpoint
++
++The original C3 text below is preserved verbatim (SHA-256 `1427535395d58eea8f4ab4e2ecf5d5a34bed0513338f820d746418e10124b9e9`). Its proposed/unexecuted statements describe that historical design checkpoint, not current results; see V38_STITCH_DRONE.md for current evidence and limits.
++
++---
++
++# v38 Stitch Drone — C3 pre-implementation contract
++
++Status: proposed for independent static review and implementation scope approval. No target implementation/run. C2 integrates the reviewed due-ticket identity and negative-remaining-timer clarification; C1 revisions are retained. Supersedes imprecise timing/uncapped wave-pool text in initial PROPOSAL.md; original retained. Base v37 frozen734 remains immutable.
++
++## 1. Scope/data
++Append enemy kind stitch_drone, behavior support_repair, nonboss. HP34, speed30, damage6, XP7, scale1, desired_distance210. Normal spawn wave HP scaling applies (34 is base, not promised every-wave HP). Existing required generic fields remain valid; unused attack constants do not confer shot/summon behavior. New fields support_radius150, support_channel1.2, support_cooldown5.0, support_retry1.0, support_heal10.0, support_max_alive1. Ordinary initial cooldown_left .8 unchanged. New finite numeric fields reject bool/NaN/inf; radius [1,1000], channel/cooldown/retry [.05,60], heal (0,1000], max_alive finite integer-valued number [1,4] accepted from JSON then converted to int. Behavior support_repair must boss==false. Absent new fields on old behaviors preserve old validation semantics; forbid partial support configuration on a support row. Exact supported candidate data uses the stated values.
++
++One repaired target, no reduction/immunity or damage reflection. No catalog/shop/weapons/RunFlow changes. No friendly-fire damage/heal player, no regeneration of source.
++
++## 2. Eligibility and deterministic identity
++Eligible recipient: present Dictionary with finite hp/max_hp, max_hp>0, 0<hp<max_hp, boss==false, parent_id==-1, kind!=stitch_drone, id!=source.id. Source must be present living stitch_drone. Center distance <=radius inclusive. At acquisition sort by hp/max_hp ascending (ordinary exact floating comparison), squared distance ascending, then integer id ascending; no approximate tie grouping or RNG. Store target ID, not mutable target reference. No retarget until next cycle. Bosses, summoned children, self and all support sources never receive this repair. Independently spawned ordinary same-kind enemies remain eligible.
++
++## 3. Unified phase ordering (not enemy-array order)
++Existing primary firing, mortar/hazards, each ordinary AI/movement/clamp, spawn_requests, hostile and friendly projectile updates, deaths/kill events and pickup events retain their mutual order.
++
++Support movement occurs in the normal enemy loop: in move state seek desired player distance using ranged +/-30 deadband; warning and recover stationary. Clamp/sprite/actor observation continue as normal. It never produces an offensive AI event. Existing contact convention remains: move contact hurts, warning/recover contact-safe. Only support-specific branch differs.
++
++Phase A occurs once AFTER all existing enemy AI/movement/clamp and queued child spawning, BEFORE hostile projectiles. All sources/targets use these current post-clamp positions. Traverse living support sources in ascending ID. All support sources snapshot membership at Phase A; later additions cannot acquire this step. Main mode spawn occurs before CombatRuntime.step and is included; existing queued summons are parented and ineligible. No new extra spawn requests.
++
++For an existing warning, first validate recipient/source/range and source HP witness; cancel if invalid. Otherwise decrement warning_left by dt once, and mark due if <=0. For a nonwarning source, decrement cooldown once; if <=0 attempt acquisition. If acquired set warning_left=1.2 and snapshot source HP, and DO NOT subtract this step's dt from newly started warning. If none eligible set cooldown=retry1s, remain move. No looping/catch-up, at most one completion per source per step.
++
++Existing damage before acquisition (primary firing, mortars, hazards, hostile contact proc during older AI) is already reflected in start HP and does not retroactively interrupt. Existing warning source HP is compared to its original snapshot, so those same early paths DO interrupt an ongoing channel. Late projectile/proc loss after acquisition interrupts even in acquisition's own step. This discrete phase boundary is intentional, not a continuous time/subframe claim.
++
++Phase B occurs once AFTER all existing pickup/proc handling and flash aging, BEFORE final focus prune. If session.state!='playing', do not heal, cancel any support channel and hide its tether. Re-find source and target by ID; membership alone is insufficient: both must hp>0 even if a late kill/proc left a dead Dictionary not yet removed. Recheck eligibility, current endpoint distance, and source HP witness for EVERY active warning, including not-yet-due channels. Invalid cancels immediately. A target reaching full HP invalidates/cancels rather than reserving repair. Valid due intents resolve in ascending source ID; each rechecks after previous repair. Apply min(max_hp,hp+10), no other mutations of target attack/status/reward/maxHP. If earlier source fills target, later one cancels, no stored charge.
++
++Do NOT repeat or flush the old death loop after repair: existing reward/drop timing remains. Dead-at-end actors never resurrect. Pickup/kill procs that kill source/target in this step beat repair. Terminal early returns in older runtime paths likewise prevent Phase B healing. Direct invocation on a nonplaying frame may not execute new support phases/heals, without asserting changes to unrelated legacy direct-step behavior.
++
++## 4. Cancellation/cooldown/large dt
++Damage interruption is source.hp < channel_start_hp, not hit/VFX count. The source cannot receive any new healing; baseline inventory finds no other enemy HP increase. No signal hooks or damage rewrites necessary. Target nonlethal loss alone does not interrupt. Zero resolved damage, chill/slow alone and pure pull/push do not damage-interrupt; displacement may independently fail range at Phase A or B. No continuous path-crossing test between those observations.
++
++Success or cancellation at Phase A/B enters recover for .7s and sets cooldown5s at that exact phase. No subtraction from newly set cooldown/recovery until next tick. Recovery countdown and cooldown advance once on later Phase A ticks; once recovery expires movement resumes on the next normal movement pass. Cooldown is measured from actual success/cancel, not acquisition. Cancel at A cannot reacquire that tick. Large dt can expire a pre-existing warning once but cannot begin a second channel or catch up cooldown during the same tick. Valid dt is existing simulation nonnegative finite input; focused tests include0, exact1.2 expiration and large dt, without relaxing generic runtime contracts.
++
++## 5. Finite encounter introduction and old parity
++Append exactly one new enemy row; seven old row bytes/projection unchanged. Arena only wave4 pool appends stitch_drone; wave1/2/3/5/6 lists and bosses unchanged. Normal Arena regular_request filters a support row only when living same-kind count >= its configured max_alive; dead entries do not count. Thus at most1 normal-spawned live drone at a time, not a total-spawn cap. No retries/rerolls; preserve existing position RNG calls and exactly one existing kind RNG call on the eligible pool. With all support filtered the three old wave4 choices remain; old encounters lacking support rows/fields retain exactly old pool/RNG behavior. Do not filter manual `_spawn_kind` calls: independent two-source control remains possible.
++
++Rooms CROSSFIRE and BROOD each append one drone at normalized [0.5,0.18], old4 entries exact and in order; ENTRY unchanged. Room generic acknowledge/planned_count remains sole quota authority. No boss-room replacement. Wave4 pool changes seeded kind selection and downstream RNG trajectory: no entire-run seed parity claim. Mandatory controls: same frozen old encounters/room profiles restore original fixed6/24 trace inputs/outputs; new composition tests separately assert appended rows, one-live Arena guard and real Room5-enemy completion gating.
++
++## 6. Presentation/lifecycle
++Distinct authored drone silhouette and explicit idle/move/channel/hurt/death assets in existing manifests; missing authored resource must fail export/QA rather than be accepted via crawler fallback. No generic renderer rewrite. Thin cyan dashed source→target tether, progressing four-notch repair mark; short '+' only on actual successful nonzero repair; broken tether on cancellation (one per transition). Shape distinguishes from orange damaging areas and legacy pickup/aura effects. Reduced-flash mode keeps readable static shape/progress with lower transient opacity. Existing scene pause freezes presentation progress; terminal/title/cleared actors expose no live tether. Maximum8 transient repair/cancel visuals globally, oldest removed first; tether count naturally equals active sources and no independent accumulating array.
++
++Codex entry explains ordinary allies only, any actual damage to drone interrupts, kill target or move out of tether range; no claimed protection bonus. Native960x540 and1280x720 must show source/recipient/tell/cancel/death clearly without new persistent HUD prose. Room clear/reset/restart/title discard per-actor IDs/snapshots/warnings and transient visuals. No state crosses run or enemy identity reuse.
++
++## 7. Acceptance and constraints
++DAMAGE_PATH_INVENTORY.md is required runtime-oracle coverage source: four weapon damage writes + nine EffectRuntime writes (scorch/trail share one), with concrete primary weapon variants and real engine proc paths. Freeze independent hand expected values and lifecycle/integration fixtures before target. Include no-target, exact ties, range edges, boss/parent/support exclusion, fully healed midchannel, same-step early-vs-late loss, source/target lethal, kill/pickup proc late death, two sources stable order,0/large dt, pause/direct terminal/reset, numeric validation negative cases, original encounters exact projection and new encounters actual authority.
++
++Existing mandatory full suite original180s/case, actual PCK, source-map/production pin, dedicated asset proof and native visual gates. No Windows or physical-audio claims. Pure-helper tests alone do not establish actual channel cancellation. Keep original failed artifacts. Implementation only in a new directory after static review, independent oracle freeze and scope approval; v37 not modified.
++
++## 8. Explicit implementation interface/invariants and pre-freeze clarifications
++The earlier sections describe normative gameplay. These clarifications close initial independent proposal review gaps without changing any production file.
++
++World invariant: actual `_spawn_kind` increments next_enemy_id and yields unique positive integer IDs. New support policy rejects invalid/duplicate identity sets fail-closed (empty selection/no repair), rather than using array order to arbitrate a malformed world. It must not mutate valid old actors or general runtime identity rules.
++
++Proposed `EnemySupport` RefCounted static API (freeze before independent scripts bind it):
++- `validate_entry(entry:Dictionary)->Array`: new support-only schema diagnostics.
++- `select_target(source:Dictionary,enemies:Array)->int`: eligible best target ID, or -1; pure/no mutation/no RNG.
++- `can_repair(source:Dictionary,target:Dictionary)->bool`: pure eligibility/range/source snapshot witness; target must correspond to stored ID when channel active. No state change/heal.
++- `advance(enemies:Array,dt:float,playing:bool)->Array`: Phase A, mutate only support timer/channel fields; returns due tickets in ascending source-ID order. No HP writes, callbacks or presentation effects. Existing nonplaying input returns [] with support channels canceled, no timer advancement.
++- `settle(enemies:Array,due_tickets:Array,playing:bool)->Array`: Phase B, revalidates ALL active warnings and due tickets, applies actual HP increases only for valid due sources; returns detached bounded transition records `{source_id,target_id,kind,amount,source_pos,target_pos}` where kind is `complete` or `cancel`. No VFX/actor calls; runtime consumes transitions. A cancel generated by advance must be carried to settle without duplicates in an explicit transient per-source flag. Actual state fields all per-actor: `support_target_id`, `support_start_hp`, `support_due`, `support_cancel_pending`; new channel/recover use existing ai_state/warning_left/recover_left/cooldown_left.
++
++Support EnemyAI branch only moves an existing move state and returns []; it does NOT decrement cooldown/recovery/warning there. All three timers for this behavior are owned by Phase A so no double dt. Other seven kinds remain on their existing exact tick path. Transition after Phase A must be reflected in actor presentation without advancing another timer; a just-acquired source already moved once earlier in that step.
++
++A real repair sets target.anim_hp = target.hp AFTER the HP increase, and does not call actor.trigger/reset animation. This restores the next-step hurt baseline but preserves any hurt/death state already triggered by existing logic. No repair occurs on hp<=0. Exact native/fixture checks distinguish repairing HP from faking a hurt animation.
++
++Normal Arena support pool filter is activated only for a validated pool containing support entries. If filtering leaves no eligible candidates, return {} without consuming a kind draw, after the original position draws/position eligibility have already occurred. No fallback kind fabricated, no reroll. Current shipped wave4 always retains its three old choices. Malformed empty/unknown pools remain rejected by existing config validation before run; new filter also fails closed if directly supplied malformed input (no kind draw, no spawn), without claiming legacy malformed configuration was supported. No-support valid pool code path remains exact old random selection, no extra RNG call.
++
++Terminal cancellation erases target/snapshot/pending channel state and hides tether without a completion or cancellation burst (no result-screen transient). Source death does likewise; dead source cannot enter recover or create a new cancel effect. Living cancellation produces at most one transition per source per channel. Pause differs: retain frozen state/timers, no new transition until playing resumes. Acquired/source HP witness uses actual floating comparison <, no epsilon that could ignore small positive loss.
++
++## 9. Interface tightening after first C1 static review (integrated C2 definitions)
++- Pause/shop/upgrade: the caller does not invoke support advance/settle at all, so channels and timers remain frozen. `playing=false` at the support API specifically denotes terminal/reset disposal, NOT pause. Direct nonplaying runtime invocation must distinguish paused state (no support call) from terminal (cancel without visual). No generic `state!='playing' => false-call` that would erase pause state.
++- Runtime positions must be finite Vector2; required hp/max_hp/source start HP and active timers must be finite int/float, never bool, with positive max_hp and positive configured channel/cooldown/retry spans. Remaining warning_left/cooldown_left/recover_left are finite numbers that MAY be negative after a large dt subtraction; <=0 is expiration, not malformed input. Runtime must not discard a valid due channel merely because its remaining timer is negative. Input dt must be finite and >=0; invalid dt yields no progression or repair, without changing unrelated legacy simulation rules. Source kind AND behavior must be stitch_drone AND support_repair. Exclude recipient with EITHER kind stitch_drone OR behavior support_repair, so malformed identity cannot create source regeneration. Malformed inputs return no selection/repair and clear invalid active channel without an effect rather than silently casting. IDs must be unique positive actual int (bool excluded). Data validators reject invalid config before runtime; runtime safeguards do not expand supported config.
++- Phase A sees unified clamped positions. Phase B uses actual current positions, including any later pull/push, without an additional clamp; do not move actors to make repair eligible. Both endpoints must still be finite Vector2.
++- `support_cancel_pending` is a detached Dictionary, empty when absent; when A cancels a living source it stores exactly the final public transition fields `{source_id:int,target_id:int,kind:"cancel",amount:0.0,source_pos:Vector2,target_pos:Vector2}` before clearing target/witness/due/token. Endpoint is the actual target position if a finite present target can be resolved, otherwise the last valid Vector2 stored as `support_target_pos`; source position must be finite or no visual record. At channel entry and each valid A/B observation refresh support_target_pos. B drains at most one pending record once, clears it regardless of whether it is emitted, and emits only if source is still living and playing. Death/terminal clears pending without a burst. A cancellation and B cancellation of the same channel cannot both emit.
++- The frozen output of advance is `Array of due tickets`: each `{source_id:int,channel_token:RefCounted}`. Every successful acquisition creates a fresh empty RefCounted token stored as support_channel_token; this is a private ephemeral identity, not an enemy reference, RNG value, public save field or presentation record. Reset/death/cancel/success clears it. Different channels and runs cannot reuse object identity. No strong reference to an enemy or stream is kept by that empty token.
++- `settle(enemies:Array,due_tickets:Array,playing:bool)` requires source currently warning, support_due actual bool true, warning_left <=0, and a valid supplied ticket whose source_id matches and channel_token is the IDENTICAL current object. Unknown/malformed/duplicate tickets cannot add a heal; duplicate valid ticket is processed once. A fabricated fresh token, earlier channel token, or already-used token is rejected. Clear due/token on success before another call can heal. A valid due warning with no matching ticket is left pending and does not heal; policy tests exercise this explicitly. Real runtime passes only this step's advance output and discards after settle. Sort accepted current source identities ascending. This avoids claiming stale numeric IDs alone can identify a channel.
++- Transition records returned from settle contain only value fields (IDs, kind, amount, Vector2); no internal token or actor reference escapes into VFX. Both API purity tests and stale-ticket negative controls are required before runtime integration evidence. `select_target` and `can_repair` remain pure; advance/settle explicitly mutate only authorized support state and heal/anim_hp fields.
++
++## 10. Testable runtime dictionary schema
++Policy path is exactly `res://scripts/gameplay/enemy_support.gd`.
++
++All actors supplied to policy have `id:int>0`, `kind:String`, `behavior:String`, `boss:bool`, `parent_id:int`, `pos:Vector2` finite, `hp:number` finite, `max_hp:number>0` finite. An ordinary target needs only these fields plus `anim_hp:number` finite for successful heal; no Sprite/Node or actor-director reference is required in the pure-policy fixture. hp<=0 is a valid dead actor, not malformed numeric data. parent_id -1 means ordinary; other values are ineligible recipients. Source identity is exactly stitch_drone/support_repair/nonboss/parent_id -1.
++
++A support source additionally has the six configured support fields from section1, plus `ai_state:String` in move/warning/recover, `cooldown_left:number`, `warning_left:number`, `recover_left:number` (all finite remaining timers, negatives allowed), `support_target_id:int`, `support_start_hp:number`, `support_due:bool`, `support_cancel_pending:Dictionary`, `support_target_pos:Vector2` finite, and `support_channel_token` null or RefCounted. New source initialization is target_id=-1/start_hp=0/due=false/pending={}/target_pos=its spawn pos/token=null, move/cooldown=.8/warning=0/recover=0. No unmentioned sprite/aim/attack/phase field is required by the policy; real spawn retains those existing fields for its renderer/AI integration.
++
++Warning requires positive target ID, positive finite start_hp and a nonnull RefCounted token; nonwarning state carries sentinel cleared target/witness/due/token (pending cancel record may remain until B drains). `can_repair` specifically requires this active warning schema and the stored target ID, not merely an arbitrary source/target pair; `select_target` handles acquisition with nonwarning source. A manually supplied source must use the listed fields, rather than relying on production initializer to fill missing data. Numeric diagnostics/fail-closed behavior cannot convert bool to1 or a fractional ID to an int.
++
++A successful heal may update only target hp and anim_hp, source lifecycle fields, and return value records; actor dictionaries unrelated to selected support/recipient remain equal. The token object is never a source/target dictionary. No extra userdata dictionaries, RNG, timers or generic action callbacks are required by these policy APIs.
++
++
++## 11. Existing versus injected late-event damage scope correction
++C3 retains all gameplay parameters/API/ordering from reviewed C2 but corrects an evidence premise: current effects.gd kill only emits energy orb or PLAYER healing; pickup grants charge or creates a mine. There is no existing kill-chain or pickup-immediate-enemy-damage module. A pickup-created mine damages only at a later advance_hazards call after its maturity, not immediately during that pickup. Earlier references to late kill/pickup lethal cases mean defensive event-seam controls, not a claim those production modules currently exist.
++
++Mandatory runtime proof has two explicitly separate classes: (A) actual existing weapons and actual configured effects paths from DAMAGE_PATH_INVENTORY, including hit-chain/phase/feedback and mature mine; (B) fault-injected late-event controls using a clearly named test-only engine subclass that preserves super.process and injects an existing chain/thorns damage command ONLY when real Runtime emits kill or pickup. Class B still exercises real EffectRuntime HP subtraction and final support settlement, but is NOT an ordinary current build interaction, new production proc, or evidence that today's pickups instantly damage enemies. No production effects.gd behavior is added. Keep event/raw reports and public claims separate.
++
++Presence plus hp>0 checks, no second death flush and after-pickup settlement remain prudent exact contract requirements. Source/target lethal controls using actual primary and existing effects are natural-game controls; late event fault injection extends adversarial ordering coverage without implying a naturally reachable current module combination.
+--- r2/tests/independent_support_assets.gd
++++ final/tests/independent_support_assets.gd
+@@ -0,0 +1,56 @@
++extends SceneTree
++# Original PNG identity and independently alpha-derived atlas geometry; source/PCK reusable.
++const Director=preload("res://scripts/actor_director.gd")
++const EXPECTED_JSON='{"stitch_drone":{"path":"res://assets/enemies/stitch_drone.png","png_sha256":"39a2625999a6ac02b1cc3a96e1a0ed0f399997538620e3cc1ccc76b13ca099d8","rgba_sha256":"bf36af7b9e557bf00c36067661cb4f1634973b8fee1765779aeac7a28a04bb29","alpha_sha256":"4a50a093a8216433a59a9e5423c5f913579afe6fe1d447e36071cac005a93b90","frames":[{"tile_region":[0,0,418,418],"alpha_bbox":[115,49,221,335],"crop_region":[115,49,221,335],"margin":[98,63,197,83],"tile_rgba_sha256":"ec63012dd91017836dcd0527d7939ce5184d3cbda7bb0a083c540eebf484dd1e","tile_alpha_sha256":"7b527294733d1cd92d28117f36fcce82de39eba227763c1d3aba3a47c50a7fd2"},{"tile_region":[418,0,418,418],"alpha_bbox":[99,49,228,323],"crop_region":[517,49,228,323],"margin":[95,75,190,95],"tile_rgba_sha256":"f8bc4103e5db9ed3486816df30ddc4ddd00afcea40defa54f256af2232880dd6","tile_alpha_sha256":"c097ce7069c4c30f25f9a6f6772da453e8914a9c1d379d0a86bcb7ee667d608d"},{"tile_region":[836,0,418,418],"alpha_bbox":[97,62,216,323],"crop_region":[933,62,216,323],"margin":[101,75,202,95],"tile_rgba_sha256":"e7e929bd9fbe2830eed010e5de174d650de1c686baf6ed34f04e3a08b89bf752","tile_alpha_sha256":"0d00819732c706952250b8b611cf8eeb9a11a22141d3c0cdf09dc7217d0a7038"},{"tile_region":[0,418,418,418],"alpha_bbox":[112,52,244,334],"crop_region":[112,470,244,334],"margin":[87,64,174,84],"tile_rgba_sha256":"db1e4446fbfc7ac62c3459ae46392ff47353ebc22e8ba44a7ddd66c15e29b828","tile_alpha_sha256":"865a24637980d33246efd40c7210d1be7203eb03929540df3e8d7fb97b3d7fff"},{"tile_region":[418,418,418,418],"alpha_bbox":[96,47,245,336],"crop_region":[514,465,245,336],"margin":[86,62,173,82],"tile_rgba_sha256":"6c74db23609065a14e0138124d3b5c534b098474ae04201f21b7bcb6e24c144c","tile_alpha_sha256":"dc45e68927f41282846c38f623685d1a6c8bdde99023215a68591491ff96cd32"},{"tile_region":[836,418,418,418],"alpha_bbox":[96,42,242,329],"crop_region":[932,460,242,329],"margin":[88,69,176,89],"tile_rgba_sha256":"84ef07ba4ed5112289ef20a377e2392f6fa827780e95482deb15ee437faebd26","tile_alpha_sha256":"547eb53493908e7ae6f61606cef24873cb4346f00138c5e2cc2c9933a43b9aac"},{"tile_region":[0,836,418,418],"alpha_bbox":[111,44,233,326],"crop_region":[111,880,233,326],"margin":[92,72,185,92],"tile_rgba_sha256":"8b0c801e065a3cb92860274a238314b6163c1ae41b5c8233ba82ee8577533986","tile_alpha_sha256":"9cfb40fc2fc5972029b67fa32c4ac50ff98f8b61f07566c924027e37ae47b3b4"},{"tile_region":[418,836,418,418],"alpha_bbox":[96,36,234,326],"crop_region":[514,872,234,326],"margin":[92,72,184,92],"tile_rgba_sha256":"30ee108a7ddea35663d15fd3ec052b28cf0cf22e675cc3708dc64d46cd459e50","tile_alpha_sha256":"123d5aa21cb918da248f61b1a22f94a7243115534b970b3976eb151c47940724"},{"tile_region":[836,836,418,418],"alpha_bbox":[99,34,235,332],"crop_region":[935,870,235,332],"margin":[91,66,183,86],"tile_rgba_sha256":"cf169c329f19bf2f2df40260eda99b93b4cfa70276b904b41be0b6961ab8c8db","tile_alpha_sha256":"0176732cc3d071421d71bbe633e8ac343cd201ff0642ce17bf97ba3d716d01c9"}]},"stitch_drone_channel":{"path":"res://assets/actions/stitch_drone/stitch_drone_channel.png","png_sha256":"4af2efab9604bd461095d60b60d6df46ce09db6a25eeabeed09fb8813efee180","rgba_sha256":"15d469532792247aaca75ed8ec69de08e6533f88dd812cd9c9445cf933e82d97","alpha_sha256":"f0e0e7e61ce19dd12bee3bef74ecbdbcfd2e050abceafaba89642c30e68fe28e","frames":[{"tile_region":[0,0,418,418],"alpha_bbox":[107,49,235,340],"crop_region":[107,49,235,340],"margin":[91,58,183,78],"tile_rgba_sha256":"375f59200214666438fbfce86bca6ba455ae2a03b97105f8fdc2149f3f74aa35","tile_alpha_sha256":"af5f78c746ca52102a5f2cfe785e8e4628b8ab4fe30c6e076ae63005f71c7436"},{"tile_region":[418,0,418,418],"alpha_bbox":[67,49,273,337],"crop_region":[485,49,273,337],"margin":[72,61,145,81],"tile_rgba_sha256":"7ee4c5b5dcb743b14b247212cec67527ab683e4de4832ac2c7edfa3e96983d01","tile_alpha_sha256":"e645c042bbab88266153bf545643da90da81eeabf2f9ad1088dac3e2375baf13"},{"tile_region":[836,0,418,418],"alpha_bbox":[54,55,294,333],"crop_region":[890,55,294,333],"margin":[62,65,124,85],"tile_rgba_sha256":"c00af58c8f36fb55935550a8a1b44f1b139f4fcacc56179c5c29a4e2c6b5fab7","tile_alpha_sha256":"56a09043824279bb7627ef30774172fec2455c61d171a763701a69b45f5d1c46"},{"tile_region":[0,418,418,418],"alpha_bbox":[68,50,292,337],"crop_region":[68,468,292,337],"margin":[63,61,126,81],"tile_rgba_sha256":"3e9706aa2adad9e84083cd2ebe67fe2f9d56d398d0586fc2a586bb7e3332fd69","tile_alpha_sha256":"0aadabd6dbf17f4c70d792966ddf2d6f692408703606c1a4c3c8ca5321661af9"},{"tile_region":[418,418,418,418],"alpha_bbox":[58,48,294,341],"crop_region":[476,466,294,341],"margin":[62,57,124,77],"tile_rgba_sha256":"72b0673651315bc55da89528fcead3ca1ff1fb06bb0fab3275d9bea4a15dc753","tile_alpha_sha256":"e7eb6c29ee04701ed8bafe118de2122a04809f0e9a4585edd4b1816cda625666"},{"tile_region":[836,418,418,418],"alpha_bbox":[51,45,292,345],"crop_region":[887,463,292,345],"margin":[63,53,126,73],"tile_rgba_sha256":"162c2e4271b6ede01813b9e834ee4a512d55150dffe234fb081db31717f46f31","tile_alpha_sha256":"ababb9aad00934cd7214c7e34617f1294464b02fd470b67b5759a611c3422c11"},{"tile_region":[0,836,418,418],"alpha_bbox":[82,38,279,336],"crop_region":[82,874,279,336],"margin":[69,62,139,82],"tile_rgba_sha256":"e980f64c33c5c57125714828fdaa3f99a525aafbd047b0c920e980f1d8b14832","tile_alpha_sha256":"eaa97128a8f7365fc8188635d70e1db365b4ab985c431d09bd333431dd518f30"},{"tile_region":[418,836,418,418],"alpha_bbox":[68,40,278,332],"crop_region":[486,876,278,332],"margin":[70,66,140,86],"tile_rgba_sha256":"45dc59e79290b5d5fd977fd2dedd40bd522490e291234a3b9f8caa0bf914ccf1","tile_alpha_sha256":"feba93dcd82ed2058ddd0a44c9881cfa7cd56265a80bda600974dc9a861938bf"},{"tile_region":[836,836,418,418],"alpha_bbox":[96,34,242,339],"crop_region":[932,870,242,339],"margin":[88,59,176,79],"tile_rgba_sha256":"3ab14b2a7c22b078e4d15f2068207c1baafd3129380cc80b7fed083e348c02a4","tile_alpha_sha256":"5d8fda019113895bcd376c0e7a3729da06df07812a7a286a7c3c315dc72110d0"}]},"stitch_drone_hurt":{"path":"res://assets/actions/stitch_drone/stitch_drone_hurt.png","png_sha256":"f2e8505ad992177f5b2d86e8a5b1e0cdc0c96d8f933751b87c6a165302297efe","rgba_sha256":"9eeba27ca3eb7639c1a0d325c36015ec54f225b1ad9d2714313bbfc268475627","alpha_sha256":"20e84ca938ce847e105ab90c55996b1263f0c4dd6ca6526ca043c344990deaf6","frames":[{"tile_region":[0,0,418,418],"alpha_bbox":[110,50,230,340],"crop_region":[110,50,230,340],"margin":[94,58,188,78],"tile_rgba_sha256":"42ecc6cc88d1590236a43a554695b044f2b26e53864dbace8e2b15db0de1a5f5","tile_alpha_sha256":"b9849bc073bd796f99e17244310b35442d90e8a2ac3ce6cbbca7a634a6c876b3"},{"tile_region":[418,0,418,418],"alpha_bbox":[77,60,267,332],"crop_region":[495,60,267,332],"margin":[75,66,151,86],"tile_rgba_sha256":"4edc340a1445628f846f004d728ae5447aa6c683051aec686ebe9545c9249fda","tile_alpha_sha256":"4061d5e9dc68dcc51c6d22d0dd314c7dce5793eab42da08ae0b2691964f517fb"},{"tile_region":[836,0,418,418],"alpha_bbox":[67,71,315,324],"crop_region":[903,71,315,324],"margin":[51,74,103,94],"tile_rgba_sha256":"217b4f4d8c43e3b0fb87865562b8e3e97a87527b1796d09928ba7bd8c2761476","tile_alpha_sha256":"7d39ad8e9d970d10f03a3898bb35e814d59af876aa9641ccebff99821b6e13e0"},{"tile_region":[0,418,418,418],"alpha_bbox":[65,55,330,327],"crop_region":[65,473,330,327],"margin":[44,71,88,91],"tile_rgba_sha256":"005cd188996da4f5c626aace01fb628fd9be55aa220ea486b9b8e5d4cc813223","tile_alpha_sha256":"225ed4e6d90b4d3ff9dc5ba8812cee7413ae67debee1a2d556c2d3fb47a79b01"},{"tile_region":[418,418,418,418],"alpha_bbox":[59,59,319,319],"crop_region":[477,477,319,319],"margin":[49,79,99,99],"tile_rgba_sha256":"9135ae56948d292fe656fe07f007664fe8e1858503b3ddc65d126732cf9751e6","tile_alpha_sha256":"9f98a0414e9213cc131dd08f666a5c0f161bcc6993b61100e8896a8028c7def9"},{"tile_region":[836,418,418,418],"alpha_bbox":[88,50,269,336],"crop_region":[924,468,269,336],"margin":[74,62,149,82],"tile_rgba_sha256":"e7638a1be0d8ccfe3ca1580b746be8b0ffcf38038df1074b828685d328a5c3cf","tile_alpha_sha256":"797d620f94c20389553cf2ef72b1e4ef34b64d8c604b8e61ee4809503dee2eeb"},{"tile_region":[0,836,418,418],"alpha_bbox":[105,42,258,338],"crop_region":[105,878,258,338],"margin":[80,60,160,80],"tile_rgba_sha256":"513a4b7fce54f620a7dd9b8d091540e4dab406f057c351f77f0174303c35c09c","tile_alpha_sha256":"6fe73c4f7267414001e34ec884b577d4e30054be7f9efe982f17cb42e45b24aa"},{"tile_region":[418,836,418,418],"alpha_bbox":[87,38,253,340],"crop_region":[505,874,253,340],"margin":[82,58,165,78],"tile_rgba_sha256":"84688b2a5c27279ee4f8fd591c44759a55cef851053436143f9f7ea4c7088446","tile_alpha_sha256":"8dc75c4bdf1cddfd381fc3878d4f5b6221df6cf28fdaef3254e4ba60b605cca8"},{"tile_region":[836,836,418,418],"alpha_bbox":[94,36,240,340],"crop_region":[930,872,240,340],"margin":[89,58,178,78],"tile_rgba_sha256":"6ccbfaf67c570ba3f17ca22db9af0113f2f57d4b1bddc780b2d7c9bec19d78f2","tile_alpha_sha256":"d4cdde97b7eff983dc63b0346c70a6b6a2136c4b8bec5cab33d688870c2fb292"}]},"stitch_drone_death":{"path":"res://assets/actions/stitch_drone/stitch_drone_death.png","png_sha256":"3d5ab456066a67baaf357a4a7c1c2cfe389626ed44b819a148718973a4002e5b","rgba_sha256":"c74d33a90a405f72d2e16d64defde3238d19d39b79cfc2fc5a3238df5bc2226b","alpha_sha256":"dc56ac1557415885b96c6d3312c3aff4773398ef7fc8953d1a10f822b4ef1094","frames":[{"tile_region":[0,0,418,418],"alpha_bbox":[96,47,285,350],"crop_region":[96,47,285,350],"margin":[66,48,133,68],"tile_rgba_sha256":"8f70c3ad83df8b0b8bbab5327a5f208a2825438bc772c19a0e90594a07c61c67","tile_alpha_sha256":"b08f10fb6321feaaccb2fec55c5386951a6e5def8021e7e4f850fb7d30a210e0"},{"tile_region":[418,0,418,418],"alpha_bbox":[83,78,294,318],"crop_region":[501,78,294,318],"margin":[62,80,124,100],"tile_rgba_sha256":"83ffc601dbd698dd4107a10711d96edfaca06faefcffb441e9a9a9f682cfb027","tile_alpha_sha256":"63e822371cade954bc1a826dec34b4c0bb224f65c6dce4cc1d2689b2808a9c59"},{"tile_region":[836,0,418,418],"alpha_bbox":[70,121,291,284],"crop_region":[906,121,291,284],"margin":[63,114,127,134],"tile_rgba_sha256":"a77fe53bb86f8c5a35ba2491d6a564f68fe7c9155bd67d6622b4903c07919aaf","tile_alpha_sha256":"700dd544755ef13c636bd8b029d9a627a899e2595feefe4529f8fb27feee5d66"},{"tile_region":[0,418,418,418],"alpha_bbox":[75,112,318,277],"crop_region":[75,530,318,277],"margin":[50,121,100,141],"tile_rgba_sha256":"7fae7ace76bad4211a2eed30a2d573e1d345e18c6f97bd21fd70027576decf40","tile_alpha_sha256":"26937af0a76c2bef9def8cdf2248a8bae037b5fb998ed953f2e9dcc3d2174b16"},{"tile_region":[418,418,418,418],"alpha_bbox":[67,170,318,218],"crop_region":[485,588,318,218],"margin":[50,180,100,200],"tile_rgba_sha256":"952d060a1c7feaee2b4ea068d78ca4f76e543ede05df724e36022a0d86645e46","tile_alpha_sha256":"951c23c4e40358452c86dbcbb3e12873fb19ca3f9e55330e0c604ca31eac9cef"},{"tile_region":[836,418,418,418],"alpha_bbox":[66,164,299,222],"crop_region":[902,582,299,222],"margin":[59,176,119,196],"tile_rgba_sha256":"9f4f02429fb1c56c3b0e8793ee697c523ed7540b0404f1d0e1e7a4ae13cb6f47","tile_alpha_sha256":"5c074f05c66d64f541fdc7e67100249b731d0d10de1df355e2b6d7d5829fb3f1"},{"tile_region":[0,836,418,418],"alpha_bbox":[93,124,290,224],"crop_region":[93,960,290,224],"margin":[64,174,128,194],"tile_rgba_sha256":"1f7935fbb19dcfabc0a41781949c1ac61971d9d135d463644dc6613b132d3ce7","tile_alpha_sha256":"56e60168662b72b012d5435ceed72d2e268bc0cb365b577526a4d08600b59f7b"},{"tile_region":[418,836,418,418],"alpha_bbox":[76,127,295,222],"crop_region":[494,963,295,222],"margin":[61,176,123,196],"tile_rgba_sha256":"91d48ce7e2c594b8b412d907ac4b8848dbfc4d3b5306dd2b4e03c5be79cb2880","tile_alpha_sha256":"a660d0e8ca8e48a5012a9c7799e3559856f3c6cab960d08df47ac8e5bce4e2e9"},{"tile_region":[836,836,418,418],"alpha_bbox":[68,124,300,225],"crop_region":[904,960,300,225],"margin":[59,173,118,193],"tile_rgba_sha256":"892a3f41b85fccfaad5b0a2a1d4c9f6c7dac61188b916ac56da20e167aa8c63e","tile_alpha_sha256":"c3e2f2b71b8c52f1bb8f1f341800cebef38ccfca36107f935bd7a871be26050c"}]}}'
++var imported_rgba:Dictionary={}
++var checks:=0
++var failures:Array=[]
++func ck(ok:bool,label:String)->void:
++ checks+=1
++ if not ok:failures.append(label)
++func digest(data:PackedByteArray)->String:
++ var h:=HashingContext.new();h.start(HashingContext.HASH_SHA256);h.update(data);return h.finish().hex_encode()
++func alpha_bytes(image:Image)->PackedByteArray:
++ var data:PackedByteArray=image.get_data();var alpha:=PackedByteArray();alpha.resize(data.size()/4)
++ for i in range(alpha.size()):alpha[i]=data[i*4+3]
++ return alpha
++func _initialize()->void:call_deferred("run")
++func inspect_assets()->void:
++ var expected:Dictionary=JSON.parse_string(EXPECTED_JSON)
++ var em:Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://assets/enemies/enemy_manifest.json"))
++ var am:Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://assets/actions/stitch_drone/action_manifest.json"))
++ var config:Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://data/actor_actions.json"))
++ var d=Director.new();d.load_default()
++ ck(config.additional_manifests.has("res://assets/actions/stitch_drone/action_manifest.json"),"extra action manifest registered")
++ ck(config.profiles.stitch_drone==JSON.parse_string(JSON.stringify({"attack":"stitch_drone_channel","hurt":"stitch_drone_hurt","death":"stitch_drone_death","phase_frames":{"warning":[0,5],"attack":[6,6],"recover":[7,8]},"phase_driven_attack":true,"locked_aim_states":["warning","recover"]})),"exact authored support profile")
++ for name in expected:
++  var row:Dictionary=expected[name]
++  var texture=load(row.path)
++  ck(texture is Texture2D,"PNG imported Texture2D "+name)
++  if not texture is Texture2D:continue
++  var image:Image=texture.get_image();image.convert(Image.FORMAT_RGBA8)
++  ck(image.get_size()==Vector2i(1254,1254),"actual image size "+name)
++  imported_rgba[name]=digest(image.get_data())
++  ck(digest(alpha_bytes(image))==row.alpha_sha256,"decoded alpha identity vs original PNG "+name)
++  var asset:Dictionary=em.enemies[name] if name=="stitch_drone" else am.actions[name]
++  ck(asset.frames.size()==9,"nine frame metadata "+name)
++  if name!="stitch_drone":
++   ck(d.assets.has(name) and d.assets[name].frames.get_frame_count("action")==9,"actual director loaded all nine frames "+name)
++  for i in range(9):
++   var ref:Dictionary=row.frames[i];var actual:Dictionary=asset.frames[i]
++   var rect:=Rect2i(ref.tile_region[0],ref.tile_region[1],418,418)
++   ck(digest(alpha_bytes(image.get_region(rect)))==ref.tile_alpha_sha256,"tile alpha "+name+"/"+str(i))
++   if name=="stitch_drone":
++    ck(actual.region==ref.tile_region and actual.alpha_bbox==ref.alpha_bbox,"hover fullcell and alpha bbox "+str(i))
++   else:
++    ck(actual.region==ref.crop_region and actual.margin==ref.margin,"independent alpha crop/padding "+name+"/"+str(i))
++    var atlas:AtlasTexture=d.assets[name].frames.get_frame_texture("action",i)
++    ck(atlas.region==Rect2(ref.crop_region[0],ref.crop_region[1],ref.crop_region[2],ref.crop_region[3]) and atlas.margin==Rect2(ref.margin[0],ref.margin[1],ref.margin[2],ref.margin[3]) and atlas.get_size()==Vector2(418,418),"actual AtlasTexture layout "+name+"/"+str(i))
++func run()->void:
++ inspect_assets()
++ var args:=OS.get_cmdline_user_args()
++ if args.size()==2 and args[0]=="--expected-imported":
++  var baseline=JSON.parse_string(FileAccess.get_file_as_string(args[1]))
++  ck(baseline is Dictionary and baseline.get("imported_rgba")==imported_rgba,"actual packed imported pixels equal separately recorded source imported images")
++ print(JSON.stringify({"pass":failures.is_empty(),"checks":checks,"failures":failures,"imported_rgba":imported_rgba,"scope":"4 original PNG alpha identities/36 tile alpha and independent alpha8 crop geometry, actual3 action SpriteFrames/AtlasTextures and normalized handprofile. Imported RGBA recorded separately because fix_alpha_border can alter transparent RGB; only packed --expected-imported compares against source imported output, not independent decoder oracle. No native aesthetics claim."}))
++ quit(0 if failures.is_empty() else 1)
+--- r2/tests/independent_support_authority.gd
++++ final/tests/independent_support_authority.gd
+@@ -0,0 +1,128 @@
++extends SceneTree
++# Independent hand expectations from frozen C2; no target implementation consulted.
++const Support=preload("res://scripts/gameplay/enemy_support.gd")
++var checks:=0
++var failures:Array=[]
++func ck(ok:bool,label:String)->void:
++ checks+=1
++ if not ok:failures.append(label)
++func actor(id:int,hp:float=10.0,maximum:float=20.0,pos:Vector2=Vector2(40,0))->Dictionary:
++ return {"id":id,"kind":"crawler","behavior":"chase","boss":false,"parent_id":-1,"pos":pos,"hp":hp,"max_hp":maximum,"anim_hp":hp}
++func drone(id:int=10)->Dictionary:
++ var s:=actor(id,34,34,Vector2.ZERO)
++ s.merge({"kind":"stitch_drone","behavior":"support_repair","support_radius":150.,"support_channel":1.2,"support_cooldown":5.,"support_retry":1.,"support_heal":10.,"support_max_alive":1,"ai_state":"move","cooldown_left":.8,"warning_left":0.,"recover_left":0.,"support_target_id":-1,"support_start_hp":0.,"support_due":false,"support_cancel_pending":{},"support_target_pos":Vector2.ZERO,"support_channel_token":null},true)
++ return s
++func arm(s:Dictionary,t:Dictionary,left:float=0.0)->Dictionary:
++ s.ai_state="warning";s.support_target_id=t.id;s.support_start_hp=s.hp;s.warning_left=left;s.support_due=left<=0;s.support_target_pos=t.pos;s.support_channel_token=RefCounted.new()
++ return {"source_id":s.id,"channel_token":s.support_channel_token}
++func cleared(s:Dictionary)->bool:
++ return s.support_target_id==-1 and s.support_start_hp==0 and not s.support_due and s.support_channel_token==null
++func values_only(v:Variant)->bool:
++ if v is Object:return false
++ if v is Dictionary:
++  for x in v.values():
++   if not values_only(x):return false
++ if v is Array:
++  for x in v:
++   if not values_only(x):return false
++ return true
++func _initialize()->void:call_deferred("run")
++func run()->void:
++ var s:=drone();var a:=actor(2,5,10,Vector2(60,0));var b:=actor(3,10,20,Vector2(40,0));var world:Array=[s,a,b]
++ var before:=world.duplicate(true)
++ ck(Support.select_target(s,world)==3,"equal ratios nearest")
++ ck(world==before,"selection is pure")
++ a.pos=Vector2(40,0)
++ ck(Support.select_target(s,[b,s,a])==2,"exact distance tie smallest stableID independent order")
++ var c:=actor(4,5,20,Vector2(149,0));ck(Support.select_target(s,[s,a,b,c])==4,"ratio precedes distance")
++ for point in [Vector2(150,0),Vector2(90,120)]:
++  a.pos=point;ck(Support.select_target(s,[s,a])==2,"inclusive Euclidean radius "+str(point))
++ a.pos=Vector2(150.0001,0);ck(Support.select_target(s,[s,a])==-1,"just outside radius")
++ for spec in [["hp",20.],["hp",0.],["hp",-1.],["boss",true],["parent_id",10],["kind","stitch_drone"],["behavior","support_repair"]]:
++  a=actor(2);a[spec[0]]=spec[1];ck(Support.select_target(s,[s,a])==-1,"recipient exclusion "+str(spec))
++ ck(Support.select_target(s,[s])==-1,"no self repair")
++ for spec in [["hp",true],["hp",NAN],["max_hp",INF],["max_hp",0.],["pos",Vector2(INF,0)],["pos",[0,0]],["id",true],["id",2.5],["id",0]]:
++  a=actor(2);a[spec[0]]=spec[1];ck(Support.select_target(s,[s,a])==-1,"malformed recipient failsclosed "+str(spec[0]))
++ a=actor(2);b=actor(2);ck(Support.select_target(s,[s,a,b])==-1,"duplicate global IDs failclosed")
++ a=actor(2);ck(not Support.can_repair(s,a),"can_repair requires active channel")
++ var ticket:=arm(s,a,1.2);before=[s,a].duplicate(true)
++ ck(Support.can_repair(s,a),"manual exact active schema valid")
++ ck([s,a]==before,"can_repair pure including token identity")
++ s.hp-=.000001;ck(not Support.can_repair(s,a),"small actual HP loss no epsilon")
++ s=drone();a=actor(2,17,20);ticket=arm(s,a)
++ var records:Array=Support.settle([a,s],[ticket],true)
++ ck(a.hp==20 and a.anim_hp==20,"heal clamp and future hurt baseline")
++ ck(records.size()==1 and records[0].kind=="complete" and records[0].amount==3,"actual nonzero amount not proposed10")
++ ck(values_only(records),"detached public records no token/actor")
++ ck(s.ai_state=="recover" and s.cooldown_left==5 and s.recover_left==.7 and cleared(s),"success resets lifecycle exactly")
++ ck(Support.settle([s,a],[ticket],true).is_empty() and a.hp==20,"used ticket cannot heal twice")
++ s=drone();a=actor(2,17,20);ticket=arm(s,a,1.2);a.hp=12
++ ck(Support.can_repair(s,a),"target nonlethal injury is not source interruption")
++ var due:Array=Support.advance([s,a],1.2,true)
++ records=Support.settle([s,a],due,true)
++ ck(a.hp==20 and records.size()==1 and records[0].amount==8,"target actual HP clamp after injury")
++ for bad_ticket in [{"source_id":10,"channel_token":RefCounted.new()},{"source_id":999,"channel_token":RefCounted.new()},{"source_id":true,"channel_token":RefCounted.new()},17,{}]:
++  s=drone();a=actor(2);ticket=arm(s,a)
++  ck(Support.settle([s,a],[bad_ticket],true).is_empty() and a.hp==10,"forged malformed ticket rejects")
++  ck(s.ai_state=="warning" and s.support_due,"missing exact ticket leaves valid due pending")
++  ck(Support.settle([s,a],[ticket,ticket],true).size()==1 and a.hp==20,"duplicate authentic ticket heals once")
++ s=drone();a=actor(2,5,100);ticket=arm(s,a);var old_token:RefCounted=s.support_channel_token
++ Support.settle([s,a],[ticket],true);arm(s,a)
++ ck(s.support_channel_token!=old_token,"new channel fresh identity")
++ ck(Support.settle([s,a],[ticket],true).is_empty() and a.hp==15,"old channel ID ticket cannot heal new channel")
++ for dead_source in [false,true]:
++  s=drone();a=actor(2);ticket=arm(s,a)
++  if dead_source:s.hp=0
++  else:a.hp=0
++  records=Support.settle([s,a],[ticket],true)
++  ck(a.hp==0 if not dead_source else a.hp==10,"dead-but-present never repaired")
++  ck(records.is_empty() if dead_source else records.size()==1 and records[0].kind=="cancel","dead source no burst; living source targetdeath cancel")
++ s=drone();a=actor(2);ticket=arm(s,a,1.2);s.hp=33
++ due=Support.advance([s,a],0,true)
++ ck(due.is_empty() and s.ai_state=="recover" and cleared(s),"A source-loss cancels without reacquisition")
++ ck(not s.support_cancel_pending.is_empty(),"A stores detached pending cancel")
++ records=Support.settle([s,a],due,true)
++ ck(records.size()==1 and records[0].kind=="cancel" and records[0].amount==0,"B drains A cancel once")
++ ck(s.support_cancel_pending.is_empty() and Support.settle([s,a],[],true).is_empty(),"no duplicate cancellation")
++ s=drone();a=actor(2);due=Support.advance([s,a],.8,true)
++ ck(due.is_empty() and s.ai_state=="warning" and s.warning_left==1.2,"entry tick not subtracted from channel")
++ ck(a.hp==10 and Support.settle([s,a],due,true).is_empty(),"acquisition does not immediately repair")
++ due=Support.advance([s,a],100,true)
++ ck(due.size()==1 and s.warning_left<=0,"large dt produces one ticket; negative remaining valid")
++ records=Support.settle([s,a],due,true)
++ ck(records.size()==1 and a.hp==20 and s.cooldown_left==5,"large dt no catchup / new cooldown not aged")
++ s=drone();due=Support.advance([s],.8,true)
++ ck(due.is_empty() and s.ai_state=="move" and s.cooldown_left==1,"no recipient retry1")
++ s=drone();a=actor(2);s.hp=33;due=Support.advance([s,a],.8,true)
++ ck(s.support_start_hp==33 and Support.can_repair(s,a),"pre-entry damage is baseline")
++ s.hp=32;records=Support.settle([s,a],due,true)
++ ck(records.size()==1 and records[0].kind=="cancel" and a.hp==10,"late same-entry tick HP loss cancels")
++ for endpoint in [Vector2(150.001,0),Vector2(1000,0)]:
++  s=drone();a=actor(2);ticket=arm(s,a);a.pos=endpoint
++  records=Support.settle([s,a],[ticket],true)
++  ck(a.hp==10 and records.size()==1 and records[0].kind=="cancel","late current endpoint not clamped for eligibility")
++ for initial_hp in [75.,95.]:
++  for reverse in [false,true]:
++   s=drone(10);var s2:=drone(11);a=actor(2,initial_hp,100)
++   var t1:=arm(s,a);var t2:=arm(s2,a)
++   records=Support.settle([a,s2,s] if reverse else [s,a,s2],[t2,t1,t2],true)
++   ck(a.hp==95 if initial_hp==75 else a.hp==100,"multi-source clamps liveHP")
++   ck(records.size()==2 and records[0].source_id==10 and records[1].source_id==11,"stable source order not input/ticket order")
++   ck(records[0].kind=="complete" and records[1].kind==("complete" if initial_hp==75 else "cancel"),"second pulse sees first actual heal")
++ for invalid_dt in [-1.,NAN,INF]:
++  s=drone();a=actor(2);arm(s,a,1.2);before=[s,a].duplicate(true)
++  ck(Support.advance([s,a],invalid_dt,true).is_empty() and [s,a]==before,"invalid dt no progression")
++ s=drone();a=actor(2);ticket=arm(s,a)
++ ck(Support.settle([s,a],[ticket],false).is_empty() and a.hp==10 and cleared(s),"terminal suppresses repair and transitions")
++ # Config diagnostics: seven old kinds need no new fields; support declaration is strict.
++ ck(Support.validate_entry({"id":"crawler","behavior":"chase"}).is_empty(),"old row no support config")
++ var entry:Dictionary=drone();entry.id="stitch_drone"
++ ck(Support.validate_entry(entry).is_empty(),"exact new declared config")
++ entry.support_max_alive=1.0;ck(Support.validate_entry(entry).is_empty(),"integral JSON numeric count accepted")
++ for key in ["support_radius","support_channel","support_cooldown","support_retry","support_heal","support_max_alive"]:
++  var missing:Dictionary=entry.duplicate(true);missing.erase(key);ck(not Support.validate_entry(missing).is_empty(),"missing required support field "+key)
++  for value in [true,NAN,INF,0.,-1.]:
++   var malformed:Dictionary=entry.duplicate(true);malformed[key]=value;ck(not Support.validate_entry(malformed).is_empty(),"invalid support numeric "+key+"/"+str(value))
++ entry.support_max_alive=1.5;ck(not Support.validate_entry(entry).is_empty(),"fractional support cap rejected")
++ print(JSON.stringify({"pass":failures.is_empty(),"checks":checks,"failures":failures,"scope":"Independent C2 hand policy and lifecycle cases; actual runtime integration/asset/native evidence separate."}))
++ quit(0 if failures.is_empty() else 1)
+--- r2/tests/independent_support_death_disposal.gd
++++ final/tests/independent_support_death_disposal.gd
+@@ -0,0 +1,27 @@
++extends SceneTree
++# C3 requires death to clear ephemeral channel identity even when old death loop removes actor before B.
++const Runtime=preload("res://scripts/gameplay/combat_runtime.gd")
++var checks:=0
++var failures:Array=[]
++var observations:Array=[]
++var g
++func ck(ok:bool,label:String)->void:
++ checks+=1
++ if not ok:failures.append(label)
++func _initialize()->void:call_deferred("run")
++func run()->void:
++ g=load("res://scenes/main.tscn").instantiate();root.add_child(g);g.set_process(false)
++ for mode in ["arena","rooms"]:
++  g._title();g._select_mode(mode);g._start_run(3810);g.elapsed=10.;g.spawn_clock=999.;g.weapon_clocks.fill(999.);g.combat_frame.area=g.config.arena;g.player_pos=Vector2(500,350);g.hero.position=g.player_pos
++  var s:Dictionary=g._spawn_kind("stitch_drone",Vector2(580,350));var t:Dictionary=g._spawn_kind("crawler",Vector2(580,440));s.speed=0.;t.speed=0.;t.hp=50.;t.max_hp=100.;t.anim_hp=50.;s.cooldown_left=0.
++  Runtime.step(g.combat_frame,0.)
++  ck(s.ai_state=="warning" and s.support_channel_token is RefCounted,"real acquisition before lethal "+mode)
++  g.bullets=[{"pos":s.pos,"velocity":Vector2.ZERO,"life":2.,"damage":1000.,"pierce":0,"hit":[],"weapon":"rivet_gun","returning":false}]
++  Runtime.step(g.combat_frame,1.2)
++  ck(s.hp<=0 and not g.enemies.has(s) and t.hp==50.,"actual lethal collision removes source without heal "+mode)
++  ck(s.support_channel_token==null and s.support_target_id==-1 and s.support_start_hp==0. and not s.support_due and s.support_cancel_pending.is_empty(),"removed dead source ephemeral identity disposed "+mode)
++  ck(g.effect_visuals.filter(func(v):return str(v.kind).begins_with("support_")).is_empty(),"death emits no repair/cancel burst "+mode)
++  observations.append({"mode":mode,"source_removed":not g.enemies.has(s),"source_hp":s.hp,"target_hp":t.hp,"token_present":s.support_channel_token!=null,"target_id":s.support_target_id,"witness":s.support_start_hp,"due":s.support_due,"pending":s.support_cancel_pending})
++ var cleanup=preload("res://tests/support/audio_teardown.gd").new();cleanup.prepare([g]);g.queue_free();await process_frame;await cleanup.finish(self)
++ print(JSON.stringify({"pass":failures.is_empty(),"checks":checks,"failures":failures,"observations":observations,"scope":"Two-mode actual late projectile source death and retained dictionary disposal. Separate supplemental C3 post-first static gap, original126/104/369/38 results unchanged."}))
++ quit(0 if failures.is_empty() else 1)
+--- r2/tests/independent_support_encounters.gd
++++ final/tests/independent_support_encounters.gd
+@@ -0,0 +1,316 @@
++extends SceneTree
++# Exact held v37 data projection and original RNG sequence control, not all-seed balance proof.
++const Arena=preload("res://scripts/modes/arena_mode.gd")
++const Room=preload("res://scripts/modes/room_mode.gd")
++const EnemyAI=preload("res://scripts/enemy_ai.gd")
++var g
++var checks:=0
++var failures:Array=[]
++func ck(ok:bool,label:String)->void:
++ checks+=1
++ if not ok:failures.append(label)
++func expected_request(pool:Array,random:RandomNumberGenerator)->Dictionary:
++ var pos:Vector2=g.player_pos+Vector2.from_angle(random.randf_range(0,TAU))*random.randf_range(330,440)
++ pos=pos.clamp(Vector2(20,20),Vector2(g.config.arena.width-20,g.config.arena.height-20))
++ if pos.distance_to(g.player_pos)<180 or pool.is_empty():return {}
++ return {"kind":pool[random.randi_range(0,pool.size()-1)],"pos":pos}
++func _initialize()->void:call_deferred("run")
++func run()->void:
++ g=load("res://scenes/main.tscn").instantiate();root.add_child(g);g.set_process(false);g._select_mode("arena");g._start_run(3802);g.spawn_clock=999;g.weapon_clocks.fill(999.)
++ var old:Dictionary=JSON.parse_string(OLD_ENCOUNTERS);var old_rooms:Dictionary=JSON.parse_string(OLD_ROOMS)
++ var now:Dictionary=g.encounters.duplicate(true);var rooms:Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://data/room_encounters.json"))
++ ck(now.enemies.size()==8 and now.enemies[-1].id=="stitch_drone","exact one appended eighth enemy")
++ var drone:Dictionary=now.enemies.pop_back()
++ ck(drone.behavior=="support_repair" and drone.boss==false,"new support identity")
++ for spec in [["hp",34],["speed",30],["damage",6],["xp",7],["scale",1],["desired_distance",210],["support_radius",150],["support_channel",1.2],["support_cooldown",5],["support_retry",1],["support_heal",10],["support_max_alive",1]]:
++  ck(drone.get(spec[0])==spec[1],"hand-declared shipped parameter "+spec[0])
++ ck(now.waves[3].pool[-1]=="stitch_drone" and now.waves[3].pool.size()==old.waves[3].pool.size()+1,"onlywave4 appended support")
++ now.waves[3].pool.pop_back();ck(now==old,"entire old encounter projection exact")
++ ck(rooms.stages.size()==3 and rooms.stages[0]==old_rooms.stages[0],"entry untouched")
++ for stage in [1,2]:
++  ck(rooms.stages[stage].enemies.size()==5 and rooms.stages[stage].enemies[-1]=={"kind":"stitch_drone","at":[.5,.18]},"exact fifth room entry "+str(stage))
++  rooms.stages[stage].enemies.pop_back()
++ ck(rooms==old_rooms,"entire old room projection exact")
++ ck(EnemyAI.validate(g.encounters).is_empty(),"new actual encounter schema valid")
++ var arena:=Arena.new();g.wave=4;g.player_pos=Vector2(g.config.arena.width*.5,g.config.arena.height*.5)
++ for config_case in ["old","new_no_source","new_live_source","new_dead_source","new_saturated_only_support"]:
++  var config_data:Dictionary=old.duplicate(true) if config_case=="old" else g.encounters.duplicate(true)
++  var expected_pool:Array=config_data.waves[3].pool.duplicate()
++  g._title();g._select_mode("arena");g._start_run(3802);g.wave=4;g.player_pos=Vector2(g.config.arena.width*.5,g.config.arena.height*.5);g.spawn_clock=999;g.weapon_clocks.fill(999.)
++  if config_case in ["new_live_source","new_dead_source","new_saturated_only_support"]:
++   var spawned:Dictionary=g._spawn_kind("stitch_drone",g.player_pos+Vector2(70,0))
++   if config_case=="new_dead_source":spawned.hp=0.
++  if config_case=="new_saturated_only_support":config_data.waves[3].pool=["stitch_drone"];expected_pool=[]
++  elif config_case=="new_live_source":expected_pool.erase("stitch_drone")
++  for seed_value in range(1,33):
++   var actual_rng:=RandomNumberGenerator.new();actual_rng.seed=seed_value;var reference_rng:=RandomNumberGenerator.new();reference_rng.seed=seed_value
++   var expected:Dictionary=expected_request(expected_pool,reference_rng)
++   var actual:Dictionary=arena.regular_request(g.run,g.combat,g.config,config_data,actual_rng)
++   ck(actual==expected,"actual spawn versus held original draw order / "+config_case+"/"+str(seed_value))
++   ck(actual_rng.state==reference_rng.state,"no extra RNG draw / "+config_case+"/"+str(seed_value))
++ g._title();g._select_mode("arena");g._start_run(3802)
++ # Room policy is the actual current class; acknowledge only successful spawns, fifth actor gates completion.
++ var current_rooms:Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://data/room_encounters.json"))
++ for stage in [2,3]:
++  var mode:=Room.new(current_rooms);mode.begin_stage(stage);g.wave=stage
++  var random:=RandomNumberGenerator.new();random.seed=44;var before_state:int=random.state
++  for index in range(5):
++   var request:Dictionary=mode.regular_request(g.run,g.combat,g.config,g.encounters,random)
++   ck(request.plan_index==index,"room exact finite request index")
++   if index==4:ck(request.kind=="stitch_drone","fifth actual request is support")
++   mode.acknowledge(request,{})
++   ck(mode.planned_index==index,"failed spawn doesnot consume finite quota")
++   mode.acknowledge(request,{"id":100+index})
++  ck(mode.planned_index==5 and mode.planned_count==5 and random.state==before_state,"actual room fifth quota complete without RNG")
++  var live:Dictionary=g._spawn_kind("stitch_drone",Vector2(200,200));mode.advance_clear(10.,g.combat)
++  ck(not mode.can_end(g.run,g.combat,g.encounters),"remaining support prevents room clear")
++  live.sprite.queue_free();g.enemies.clear();mode.advance_clear(.6,g.combat)
++  ck(mode.can_end(g.run,g.combat,g.encounters),"all five gone permits exact clear delay")
++ var teardown=preload("res://tests/support/audio_teardown.gd").new();teardown.prepare([g]);g.queue_free();await process_frame;await teardown.finish(self)
++ print(JSON.stringify({"pass":failures.is_empty(),"checks":checks,"failures":failures,"scope":"Heldv37 data projection, finite32seed draw controls in5poolstates and actualRoom5quota policy; old6/24 combat parity separately executed."}))
++ quit(0 if failures.is_empty() else 1)
++
++const OLD_ENCOUNTERS = """{
++  "enemies": [
++    {
++      "id": "crawler",
++      "name": "Scrap Crawler",
++      "behavior": "chase",
++      "hp": 22,
++      "speed": 53,
++      "damage": 9,
++      "xp": 4,
++      "scale": 1,
++      "color": "ffffff",
++      "boss": false,
++      "cooldown": 1,
++      "warning": 0.65,
++      "projectile_speed": 145,
++      "charge_speed": 310,
++      "charge_duration": 0.6,
++      "desired_distance": 230,
++      "summon_limit": 3,
++      "phase_threshold": 0.5,
++      "phase_speed": 1.25,
++      "description": "Direct pursuit; contact damage.",
++      "tell": "No ranged attack.",
++      "dodge": "Keep moving and create distance."
++    },
++    {
++      "id": "charger",
++      "name": "Amber Ram",
++      "behavior": "charge",
++      "hp": 42,
++      "speed": 36,
++      "damage": 15,
++      "xp": 7,
++      "scale": 1.2,
++      "color": "e9b660",
++      "boss": false,
++      "cooldown": 3.2,
++      "warning": 0.65,
++      "projectile_speed": 145,
++      "charge_speed": 310,
++      "charge_duration": 0.6,
++      "brace_degrees": 120.0,
++      "brace_multiplier": 0.5,
++      "desired_distance": 230,
++      "summon_limit": 3,
++      "phase_threshold": 0.5,
++      "phase_speed": 1.25,
++      "description": "Locks a route and braces its front while warning, then charges.",
++      "tell": "Pale front arc halves incoming primary damage during the 0.65 s warning; orange marks the charge route.",
++      "dodge": "Flank or wait: side/rear, charge and recovery take full damage. Warning and recovery remain contact-safe."
++    },
++    {
++      "id": "spitter",
++      "name": "Violet Spitter",
++      "behavior": "ranged",
++      "hp": 30,
++      "speed": 46,
++      "damage": 8,
++      "xp": 6,
++      "scale": 0.95,
++      "color": "be9ae6",
++      "boss": false,
++      "cooldown": 2,
++      "warning": 0.65,
++      "projectile_speed": 145,
++      "charge_speed": 310,
++      "charge_duration": 0.6,
++      "desired_distance": 230,
++      "summon_limit": 3,
++      "phase_threshold": 0.5,
++      "phase_speed": 1.25,
++      "description": "Maintains 230 px distance and fires aimed projectiles.",
++      "tell": "Orange ring marks its 0.65 s firing preparation.",
++      "dodge": "Strafe after its aim locks; pink bullets can be dodged."
++    },
++    {
++      "id": "flanker",
++      "name": "Knifeleg Flanker",
++      "behavior": "flank",
++      "hp": 26,
++      "speed": 72,
++      "damage": 8,
++      "xp": 6,
++      "scale": 0.9,
++      "color": "90d7e0",
++      "boss": false,
++      "cooldown": 1,
++      "warning": 0.65,
++      "projectile_speed": 145,
++      "charge_speed": 310,
++      "charge_duration": 0.6,
++      "desired_distance": 230,
++      "summon_limit": 3,
++      "phase_threshold": 0.5,
++      "phase_speed": 1.25,
++      "description": "Weaves sideways while approaching rather than taking a direct line.",
++      "tell": "Alternating lateral path; no ranged attack.",
++      "dodge": "Avoid retreating into its side path."
++    },
++    {
++      "id": "brood_keeper",
++      "name": "Moss Broodkeeper",
++      "behavior": "brood_cycle",
++      "hp": 75,
++      "speed": 22,
++      "damage": 11,
++      "xp": 12,
++      "scale": 1.35,
++      "color": "90bd74",
++      "boss": false,
++      "cooldown": 6,
++      "warning": 0.65,
++      "projectile_speed": 145,
++      "charge_speed": 310,
++      "charge_duration": 0.6,
++      "desired_distance": 230,
++      "summon_limit": 3,
++      "phase_threshold": 0.5,
++      "phase_speed": 1.25,
++      "description": "Alternates a hollow ground pulse first, then its existing summon. At most 3 living children.",
++      "tell": "Pulse: two orange edges mark a fixed 70\u2013180 px band for 1.0 s. Summon: the old small ring for 0.65 s.",
++      "dodge": "Enter the inner pocket or leave the outer circle; both orange edges hurt. Other enemies still hit. Leave its body before recovery ends.",
++      "pulse_inner_radius": 70,
++      "pulse_outer_radius": 180,
++      "pulse_warning": 1.0
++    },
++    {
++      "id": "boss_warden",
++      "name": "Scrap Warden",
++      "behavior": "warden",
++      "hp": 950,
++      "speed": 35,
++      "damage": 18,
++      "xp": 60,
++      "scale": 2.6,
++      "color": "e9bd74",
++      "boss": true,
++      "cooldown": 3,
++      "warning": 0.85,
++      "projectile_speed": 145,
++      "charge_speed": 310,
++      "charge_duration": 0.6,
++      "desired_distance": 230,
++      "summon_limit": 3,
++      "phase_threshold": 0.5,
++      "phase_speed": 1.25,
++      "description": "Wave 3 boss: alternates a locked charge and targeted ground blast. Below half HP it moves and attacks faster.",
++      "tell": "0.85 s line or ground circle. Warning/recovery have no contact damage.",
++      "dodge": "Dodge sideways from line; leave the marked circle before detonation."
++    },
++    {
++      "id": "boss_core",
++      "name": "Spore Reactor",
++      "behavior": "core",
++      "hp": 1600,
++      "speed": 25,
++      "damage": 15,
++      "xp": 100,
++      "scale": 2.9,
++      "color": "9de0c4",
++      "boss": true,
++      "cooldown": 3.4,
++      "warning": 0.85,
++      "projectile_speed": 145,
++      "charge_speed": 310,
++      "charge_duration": 0.6,
++      "desired_distance": 230,
++      "summon_limit": 3,
++      "phase_threshold": 0.5,
++      "phase_speed": 1.25,
++      "description": "Wave 6 boss: maintains distance and fires ring volleys. Below half HP, 12-shot rings alternate with summons.",
++      "tell": "0.85 s orange ring before each release.",
++      "dodge": "Use gaps in the slow ring; dash is briefly invulnerable. Clear summons."
++    }
++  ],
++  "waves": [
++    {
++      "number": 1,
++      "pool": [
++        "crawler"
++      ],
++      "boss": ""
++    },
++    {
++      "number": 2,
++      "pool": [
++        "crawler",
++        "charger",
++        "spitter"
++      ],
++      "boss": ""
++    },
++    {
++      "number": 3,
++      "pool": [
++        "crawler",
++        "flanker"
++      ],
++      "boss": "boss_warden"
++    },
++    {
++      "number": 4,
++      "pool": [
++        "charger",
++        "spitter",
++        "flanker"
++      ],
++      "boss": ""
++    },
++    {
++      "number": 5,
++      "pool": [
++        "spitter",
++        "flanker",
++        "brood_keeper"
++      ],
++      "boss": ""
++    },
++    {
++      "number": 6,
++      "pool": [
++        "crawler",
++        "spitter",
++        "brood_keeper"
++      ],
++      "boss": "boss_core"
++    }
++  ]
++}
++"""
++
++const OLD_ROOMS = """{
++  "id":"rooms","name":"ROOM ENCOUNTERS · PROTOTYPE",
++  "field":{"width":960,"height":640,"tile_size":80},
++  "spawn_interval":0.3,"clear_delay":0.6,
++  "reward":{"coins":24,"heal":15,"upgrades":1},
++  "stages":[
++    {"name":"ENTRY","enemies":[{"kind":"crawler","at":[0.18,0.22]},{"kind":"crawler","at":[0.82,0.22]},{"kind":"flanker","at":[0.8,0.8]}]},
++    {"name":"CROSSFIRE","enemies":[{"kind":"spitter","at":[0.16,0.2]},{"kind":"charger","at":[0.82,0.8]},{"kind":"crawler","at":[0.18,0.8]},{"kind":"flanker","at":[0.82,0.22]}]},
++    {"name":"BROOD","enemies":[{"kind":"brood_keeper","at":[0.18,0.2]},{"kind":"charger","at":[0.82,0.2]},{"kind":"spitter","at":[0.82,0.8]},{"kind":"crawler","at":[0.18,0.8]}]}
++  ]
++}
++"""
+--- r2/tests/independent_support_projectiles.gd
++++ final/tests/independent_support_projectiles.gd
+@@ -0,0 +1,43 @@
++extends SceneTree
++# Supplemental pre-target concrete projectile variants; shared HP seam covered separately.
++const Runtime=preload("res://scripts/gameplay/combat_runtime.gd")
++const Rules=preload("res://scripts/rules.gd")
++var g
++var checks:=0
++var failures:Array=[]
++var observations:Array=[]
++func ck(ok:bool,label:String)->void:
++ checks+=1
++ if not ok:failures.append(label)
++func setup(mode:String,weapon:String)->Array:
++ g._title();g._select_mode(mode);g._start_run(3803);g.build.weapons=[weapon];g._recompute();g.weapon_clocks.fill(999.);g.spawn_clock=999.;g.elapsed=10.;g.player_pos=Vector2(500,350);g.hero.position=g.player_pos;g.combat_frame.area=g.config.arena;g.hurt_clock=0.
++ var s:Dictionary=g._spawn_kind("stitch_drone",Vector2(580,350));var t:Dictionary=g._spawn_kind("crawler",Vector2(580,440));s.speed=0.;t.speed=0.;t.hp=50.;t.max_hp=100.;t.anim_hp=50.
++ s.ai_state="warning";s.support_target_id=t.id;s.support_start_hp=s.hp;s.support_due=false;s.warning_left=0.;s.support_target_pos=t.pos;s.support_channel_token=RefCounted.new();s.support_cancel_pending={}
++ return [s,t]
++func _initialize()->void:call_deferred("run")
++func run()->void:
++ g=load("res://scenes/main.tscn").instantiate();root.add_child(g);g.set_process(false)
++ for mode in ["arena","rooms"]:
++  for spec in [["rivet_gun",false],["scrap_shotgun",false],["rail_lance",false],["return_disc",false],["return_disc",true]]:
++   var pair:Array=setup(mode,spec[0]);var s:Dictionary=pair[0];var t:Dictionary=pair[1]
++   var b:Dictionary={"pos":s.pos,"launch_start":s.pos,"velocity":Vector2.RIGHT*470.,"life":1.,"damage":1.,"pierce":0,"hit":[],"weapon":spec[0],"returning":spec[1],"outbound_left":.5}
++   if spec[1]:b.erase("launch_start") # Existing return leg needs positive elapsed travel, not launch overlap.
++   g.bullets=[b];Runtime.step(g.combat_frame,.001 if spec[1] else 0.)
++   ck(s.hp==33. and t.hp==50.,"concrete late projectile damage1 interruptsdue "+str(spec)+"/"+mode)
++   ck(s.ai_state=="recover" and s.support_channel_token==null,"actual projectile route cancels once")
++   ck(b.hit.has(s.id),"actual collision records source ID")
++   observations.append({"mode":mode,"weapon":spec[0],"returning":spec[1],"controlled_projectile_damage":1.,"source_hp":s.hp,"target_hp":t.hp})
++  var pair:Array=setup(mode,"bankshot_driver");var s:Dictionary=pair[0];var t:Dictionary=pair[1]
++  g.weapon_combat.fire_bankshot(Rules.catalog_entry(g.catalog,"bankshot_driver"),0,1.,g.config.arena)
++  ck(g.bullets.size()==1 and g.bullets[0].behavior=="field_bankshot","actual bankshot spawn, not direct hit callback")
++  Runtime.step(g.combat_frame,.3)
++  ck(s.hp==33. and t.hp==50. and s.ai_state=="recover","actual bankshot trajectory latehit cancels dueheal")
++  pair=setup(mode,"shock_mortar");s=pair[0];t=pair[1];s.hp=100.;s.max_hp=100.;s.anim_hp=100.;s.support_start_hp=100.
++  g.weapon_combat.fire("shock_mortar",0,g.config.arena)
++  ck(g.pending_blasts.size()==1,"actual mortar launch queued")
++  Runtime.step(g.combat_frame,.6)
++  ck(s.hp==64. and t.hp==50. and s.ai_state=="recover","actual mortar36 earlydue damage cancels ongoing channel")
++  observations.append({"mode":mode,"weapon":"shock_mortar","controlled_source_hp":100.,"catalog_damage":36.,"source_after":s.hp,"target_after":t.hp})
++ var teardown=preload("res://tests/support/audio_teardown.gd").new();teardown.prepare([g]);g.queue_free();await process_frame;await teardown.finish(self)
++ print(JSON.stringify({"pass":failures.is_empty(),"checks":checks,"failures":failures,"observations":observations,"scope":"Concrete bolt/pellet/rail/return-out/in controlled projectile damage1, actual bankshot trajectory and actual launched mortar36 in both modes. Not an ordinary acquisition or new numeric balance oracle."}))
++ quit(0 if failures.is_empty() else 1)
+--- r2/tests/independent_support_runtime.gd
++++ final/tests/independent_support_runtime.gd
+@@ -0,0 +1,118 @@
++extends SceneTree
++# Independent runtime phase/HP-path oracle. C3 late-event injection is explicitly NOT a production proc.
++const Runtime=preload("res://scripts/gameplay/combat_runtime.gd")
++const Rules=preload("res://scripts/rules.gd")
++const Support=preload("res://scripts/gameplay/enemy_support.gd")
++class InjectedLateDamage:
++ extends "res://scripts/effects.gd"
++ var trigger_kind:String=""
++ var victim_id:int=-1
++ var injected_count:int=0
++ func process(event:Dictionary,context:Dictionary)->Array:
++  var commands:Array=super.process(event,context)
++  if str(event.kind)==trigger_kind and injected_count==0:
++   injected_count+=1
++   commands.append({"kind":"chain","targets":[victim_id],"damage":1000.,"pos":context.pos})
++  return commands
++var g
++var checks:=0
++var failures:Array=[]
++var observations:Array=[]
++func ck(ok:bool,label:String)->void:
++ checks+=1
++ if not ok:failures.append(label)
++func setup(mode:String,items:Dictionary={},weapons:Array=["rivet_gun"])->Array:
++ g._title();g._select_mode(mode);g._start_run(3801)
++ g.build.weapons=weapons.duplicate(true);g.build.items=items.duplicate(true);g._recompute();g.effects.reset(g.build.items);g.effect_runtime.engine=g.effects
++ g.elapsed=10.;g.spawn_clock=999.;g.weapon_clocks.fill(999.);g.player_pos=Vector2(500,350);g.hero.position=g.player_pos;g.stats.hp=100.;g.stats.dash_time=0.;g.hurt_clock=0.;g.combat_frame.area=g.config.arena
++ var source:Dictionary=g._spawn_kind("stitch_drone",Vector2(580,350));var target:Dictionary=g._spawn_kind("crawler",Vector2(580,440))
++ source.speed=0.;target.speed=0.;target.hp=50.;target.max_hp=100.;target.anim_hp=50.
++ return [source,target]
++func arm(source:Dictionary,target:Dictionary,left:float=0.0)->void:
++ source.ai_state="warning";source.support_target_id=target.id;source.support_start_hp=source.hp;source.support_due=false;source.warning_left=left;source.support_target_pos=target.pos;source.support_channel_token=RefCounted.new();source.support_cancel_pending={}
++func shot(point:Vector2,damage:float=1.0,weapon:String="rivet_gun")->Dictionary:
++ return {"pos":point,"velocity":Vector2.ZERO,"life":1.,"damage":damage,"pierce":0,"hit":[],"weapon":weapon,"returning":false}
++func emit_hit(target:Dictionary,damage:float=10.,weapon:String="rivet_gun")->void:
++ g.effect_runtime.emit_event("hit",{"target":target.id,"pos":target.pos,"damage":damage,"weapon":weapon})
++func apply_path(name:String,source:Dictionary,target:Dictionary)->void:
++ match name:
++  "orbit":g.weapon_combat.fire("orbit_saw",0,g.config.arena)
++  "cone":g.weapon_combat.fire("cryo_sprayer",0,g.config.arena)
++  "segment":g.weapon_combat.hit_segment(shot(source.pos),source.pos,source.pos)
++  "bankshot":g.weapon_combat._bankshot_hit(source,{"damage":1.,"pos":source.pos,"dx":1.,"dy":0.,"weapon":"bankshot_driver"})
++  "feedback":
++   g.stats.dash_time=.3;g.effects.feedback_armed=true
++   g.effect_runtime.emit_event("projectile_contact",{"owner":source.id,"source":"hostile_projectile","depth":0})
++  "fracture":
++   source.chill_until=11.;source.chill_weapon="cryo_sprayer";source.chill_speed=.65;emit_hit(source)
++  "chain":emit_hit(target)
++  "echo":g.effects.echo_hits=4;emit_hit(source)
++  "phase":g.effects.phase_charge=1;emit_hit(source)
++  "thorns":g.effect_runtime.emit_event("hurt",{"amount":1.,"pos":g.player_pos})
++  "mine":
++   g.effect_runtime.emit_event("pickup",{"source":"normal","pos":source.pos});g.effect_runtime.advance_hazards(.3)
++  "scorch":
++   g.effect_runtime.emit_event("mortar",{"pos":source.pos});g.effect_runtime.advance_hazards(0.)
++  "trail":
++   g.effect_runtime.emit_event("dash",{"pos":source.pos});g.effect_runtime.advance_hazards(0.)
++  "mortar":
++   g.pending_blasts=[{"pos":source.pos,"delay":0.,"damage":1.,"radius":20.,"weapon":"shock_mortar"}];g.effect_runtime.advance_mortars(0.)
++func _initialize()->void:call_deferred("run")
++func run()->void:
++ g=load("res://scenes/main.tscn").instantiate();root.add_child(g);g.set_process(false)
++ var paths:Array=[
++  ["orbit",{},["orbit_saw"]],["cone",{},["cryo_sprayer"]],["segment",{},["rivet_gun"]],["bankshot",{},["rivet_gun"]],
++  ["feedback",{"feedback_diode":1},["rivet_gun"]],["fracture",{"fracture_coil":1},["rivet_gun"]],["chain",{"arc_relay":1},["rivet_gun"]],
++  ["echo",{"echo_chamber":1},["rivet_gun"]],["phase",{"phase_capacitor":1},["rivet_gun"]],["thorns",{"thorn_crown":1},["rivet_gun"]],
++  ["mine",{"scrap_mine":1},["rivet_gun"]],["scorch",{"blast_fuse":1},["rivet_gun"]],["trail",{"dash_resin":1},["rivet_gun"]],["mortar",{},["rivet_gun"]]]
++ for mode in ["arena","rooms"]:
++  for spec in paths:
++   var pair:Array=setup(mode,spec[1],spec[2]);var s:Dictionary=pair[0];var t:Dictionary=pair[1];arm(s,t)
++   var hp:float=s.hp;apply_path(spec[0],s,t)
++   ck(s.hp>0 and s.hp<hp,"actual existing HP write "+mode+"/"+spec[0])
++   var before:float=t.hp;Runtime.step(g.combat_frame,0.)
++   ck(t.hp==before and s.ai_state=="recover" and s.support_channel_token==null,"real runtime cancels ongoing channel after "+spec[0])
++   observations.append({"class":"existing_damage_path","mode":mode,"path":spec[0],"source_loss":hp-s.hp,"target_unchanged_by_support":t.hp==before})
++  # Exact full-runtime phase placement: early primary vs late projectiles.
++  var pair:Array=setup(mode,{},["orbit_saw"]);var s:Dictionary=pair[0];var t:Dictionary=pair[1]
++  s.cooldown_left=0.;g.weapon_clocks[0]=0.;Runtime.step(g.combat_frame,0.)
++  ck(s.hp<34 and s.ai_state=="warning" and s.support_start_hp==s.hp,"early primary before acquisition is new snapshot")
++  ck(t.hp==50 and s.warning_left==1.2,"same-step acquisition neither retroactive cancel nor immediateheal")
++  pair=setup(mode);s=pair[0];t=pair[1];arm(s,t);g.bullets=[shot(s.pos,1.)];Runtime.step(g.combat_frame,0.)
++  ck(s.hp==33 and t.hp==50 and s.ai_state=="recover","due source late projectile hit beatsrepair")
++  pair=setup(mode);s=pair[0];t=pair[1];arm(s,t);g.bullets=[shot(t.pos,1000.)];Runtime.step(g.combat_frame,0.)
++  ck(t.hp<=0 and not g.enemies.has(t),"due target primarydeath neverresurrects")
++  pair=setup(mode,{"feedback_diode":1});s=pair[0];t=pair[1];arm(s,t);g.stats.dash_time=.3;g.effects.feedback_armed=true
++  g.enemy_bullets=[{"pos":g.player_pos,"velocity":Vector2.ZERO,"life":1.,"damage":1.,"owner":s.id}];Runtime.step(g.combat_frame,0.)
++  ck(s.hp<34 and t.hp==50 and s.ai_state=="recover","actual hostile contact feedback afterA beats dueheal")
++  pair=setup(mode);s=pair[0];t=pair[1];arm(s,t);g.bullets=[shot(s.pos,0.)];Runtime.step(g.combat_frame,0.)
++  ck(s.hp==34 and t.hp==60,"zero resolved primary doesnot interrupt")
++  pair=setup(mode);s=pair[0];t=pair[1];arm(s,t);s.chill_until=12.;s.chill_weapon="cryo_sprayer";s.chill_speed=.65;Runtime.step(g.combat_frame,0.)
++  ck(t.hp==60,"chill-only doesnot interrupt")
++  ck(t.anim_hp==60,"lateheal synchronizes next hurt baseline")
++  g.bullets=[shot(t.pos,1.)];Runtime.step(g.combat_frame,0.)
++  ck(t.hp==59 and t.anim_hp==59,"next small hit retains exact updated HP baseline")
++  # No natural kill/pickup immediate damage exists. Explicit test-engine fault injection only.
++  for event_kind in ["kill","pickup"]:
++   for victim_source in [false,true]:
++    pair=setup(mode);s=pair[0];t=pair[1];arm(s,t)
++    var injected:=InjectedLateDamage.new();injected.configure(g.catalog);injected.reset({});injected.trigger_kind=event_kind;injected.victim_id=s.id if victim_source else t.id;g.effect_runtime.engine=injected
++    if event_kind=="kill":
++     var trigger:Dictionary=g._spawn_kind("crawler",Vector2(100,100));trigger.hp=0.;g.enemies=[trigger,s,t]
++    else:g.pickups=[{"pos":g.player_pos,"xp":0,"coins":0,"source":"normal"}]
++    Runtime.step(g.combat_frame,0.)
++    var victim:Dictionary=s if victim_source else t
++    ck(injected.injected_count==1 and victim.hp<=0,"fault-injected real "+event_kind+" event executes actual EffectRuntime lethalwrite")
++    ck(g.enemies.has(victim),"late dead remains without second olddeathflush")
++    ck(t.hp==50 if victim_source else t.hp<=0,"late fault-injecteddeath cannotbe healed")
++    observations.append({"class":"fault_injected_late_event_NOT_existing_module","mode":mode,"event":event_kind,"victim":"source" if victim_source else "target","injections":injected.injected_count,"dead_present":g.enemies.has(victim)})
++    g.effect_runtime.engine=g.effects
++  pair=setup(mode);s=pair[0];t=pair[1];arm(s,t,1.2)
++  var before:Dictionary=s.duplicate(true);g.state="paused";Runtime.step(g.combat_frame,0.)
++  ck(s==before and t.hp==50,"directpaused support state frozen")
++  g.state="dead";Runtime.step(g.combat_frame,0.)
++  ck(t.hp==50 and s.support_channel_token==null,"directterminal clears support withoutheal")
++  g._title();ck(g.enemies.is_empty(),"title removes allactor channel identities")
++ var teardown=preload("res://tests/support/audio_teardown.gd").new();teardown.prepare([g]);g.queue_free();await process_frame;await teardown.finish(self)
++ print(JSON.stringify({"pass":failures.is_empty(),"checks":checks,"failures":failures,"observations":observations,"scope":"Two modes; actual existing14 HP-source paths plus separately labelled test-engine late-event fault injections. No physical audio/native acquisition claim."}))
++ quit(0 if failures.is_empty() else 1)

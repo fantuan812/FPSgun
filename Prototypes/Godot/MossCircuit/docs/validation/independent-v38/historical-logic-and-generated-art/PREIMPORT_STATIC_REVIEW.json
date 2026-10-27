@@ -1,0 +1,81 @@
+{
+  "pass": true,
+  "scope": "Independent pre-execution static review only; no target import/run",
+  "inputs": 745,
+  "map_sha256": "5311b2e8d666398b1f4482c4e87edf6d954c872befabfda4c56ccc81b0d92fd2",
+  "changed_existing": 12,
+  "new": 11,
+  "runner_sha256": "fa2462f54df59cc8ca91b8d99c59470a4b2a21ea5a2205d8d5667ec7eecdda31",
+  "changes_sha256": "6230b2c02fbb2d3df331779b2032d715ea7abcf7d9dfca67a76e8fdb8e1f5528",
+  "projection_review_sha256": "0c899441a0f3b4efdd0170c06e24e8d2a153182d5fb68a307235ee30d524760f",
+  "policy_review": [
+    "warning/nonwarning schema",
+    "detached pending exact fields",
+    "invalid identity mutators clear failclosed",
+    "recover later tick expiry may acquire without entry dt",
+    "rounded zero increase emits no completion",
+    "A after all AI/clamp/spawns; B after death/pickup; no second death flush",
+    "immediate terminal cleanup before delayed result"
+  ],
+  "assets": [
+    {
+      "path": "assets/enemies/stitch_drone.png",
+      "sha256": "39a2625999a6ac02b1cc3a96e1a0ed0f399997538620e3cc1ccc76b13ca099d8",
+      "rgba_sha256": "bf36af7b9e557bf00c36067661cb4f1634973b8fee1765779aeac7a28a04bb29",
+      "size": [
+        1254,
+        1254
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "path": "assets/actions/stitch_drone/stitch_drone_channel.png",
+      "sha256": "4af2efab9604bd461095d60b60d6df46ce09db6a25eeabeed09fb8813efee180",
+      "rgba_sha256": "15d469532792247aaca75ed8ec69de08e6533f88dd812cd9c9445cf933e82d97",
+      "size": [
+        1254,
+        1254
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "path": "assets/actions/stitch_drone/stitch_drone_hurt.png",
+      "sha256": "f2e8505ad992177f5b2d86e8a5b1e0cdc0c96d8f933751b87c6a165302297efe",
+      "rgba_sha256": "9eeba27ca3eb7639c1a0d325c36015ec54f225b1ad9d2714313bbfc268475627",
+      "size": [
+        1254,
+        1254
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "path": "assets/actions/stitch_drone/stitch_drone_death.png",
+      "sha256": "3d5ab456066a67baaf357a4a7c1c2cfe389626ed44b819a148718973a4002e5b",
+      "rgba_sha256": "c74d33a90a405f72d2e16d64defde3238d19d39b79cfc2fc5a3238df5bc2226b",
+      "size": [
+        1254,
+        1254
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    }
+  ],
+  "visual_review": "Directly viewed all four original full source sheets: distinct cyan spool/needle hover enemy, channel/hurt/death sequences. Static only, no in-game size/alignment/native claims.",
+  "first_run": "Author cold import + eight focused scripts, 180s each, strict exit/errors/resource warnings/semantic marker, first failure stops, original inputs checked after; independent four oracles separate",
+  "limitations": [
+    "Runtime/parser untested",
+    "Windows and physical audible unverified",
+    "Independent source/PCK/native/ordinary/full-suite still pending"
+  ]
+}

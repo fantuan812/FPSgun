@@ -1,0 +1,55 @@
+{
+  "pass": true,
+  "scope": "Independent raw/trace/helper review of author two routes, not independent rerun",
+  "observations": [
+    {
+      "name": "transactions",
+      "cases": 6,
+      "trace_sha256": "48c6705e27d301857f8a52ad849a29b27f6a302f8bcab8f7a2ec5a1d69ee7e63",
+      "last_helper": {
+        "discarded": 0,
+        "elapsed_us": 166147,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      }
+    },
+    {
+      "name": "combat",
+      "cases": 24,
+      "trace_sha256": "7cd6062fe08d107b8b3eb6e41f2f8dce0ce90f0a1c4448768e8c0624c317c358",
+      "last_helper": {
+        "discarded": 0,
+        "elapsed_us": 152183,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      }
+    }
+  ],
+  "plan_sha256": "7789901132eefe0c59209a8f0ffd5ad23079853ba019183e4b28705ce3f295dd",
+  "raw": {
+    "transactions.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "STEPS.json": "eea823ae200fea8e4072569ec8e56b02470cf55084625537c15a191d9c62bc71",
+    "transactions.stdout": "23d41a2d251d9a95c317856ff2eac53665fe2be0d0bcbf7bc5956b6103b6004c",
+    "PINS_BEFORE.json": "7e5567e67c2a4a637e45a2465212ee918f7e1b9e67c5f15160b32cf7f5438940",
+    "combat.json": "7cd6062fe08d107b8b3eb6e41f2f8dce0ce90f0a1c4448768e8c0624c317c358",
+    "transactions.json": "48c6705e27d301857f8a52ad849a29b27f6a302f8bcab8f7a2ec5a1d69ee7e63",
+    "combat.stdout": "58f46e0a152036a629ffc4cf990c9a9edd0e6f0be350bcc8eccf29f06cc93881",
+    "combat.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "PINS_AFTER.json": "7e5567e67c2a4a637e45a2465212ee918f7e1b9e67c5f15160b32cf7f5438940",
+    "RESULT.json": "41c2e91e2877a3c632bbdab3073ccc9008d75dd76199ea906977679e1cd22152"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "status": "PROPOSED_NOT_APPLIED",
+  "reason": "Actual PCK whole-byte privacy scan found eight executor paths. Source-only presentation derivatives cannot change old PCK bytes.",
+  "old_source_inputs": 787,
+  "old_pck_sha256": "795ce7c1761766f73d23c5feec620c5f2d59d7ed005eb1cdfe33a6e8d54815d1",
+  "proposed_source_changes": [
+    "art_source/stitch_drone/metadata/measured_assets.json",
+    "MANIFEST.json"
+  ],
+  "metadata_old_sha256": "52ecdddf2b4a9f63e39a8481dd3fd21aef229e5bddb95045f49c4bd92c0b66e6",
+  "metadata_new_sha256": "5e7354f6a65432340ddef8e4b85f8dcc5fc7235f2367719f4d9c12c63b0b9693",
+  "exact_json_changes": [
+    {
+      "field": "/records/hover/export_command/1",
+      "old": "<WORKSPACE>/moss-v38-svg-redraw/source/stitch_drone_hover.svg",
+      "new": "source/stitch_drone_hover.svg"
+    },
+    {
+      "field": "/records/hover/export_command/3",
+      "old": "--export-filename=<WORKSPACE>/moss-v38-svg-redraw/exports/stitch_drone_hover.png",
+      "new": "--export-filename=exports/stitch_drone_hover.png"
+    },
+    {
+      "field": "/records/channel/export_command/1",
+      "old": "<WORKSPACE>/moss-v38-svg-redraw/source/stitch_drone_channel.svg",
+      "new": "source/stitch_drone_channel.svg"
+    },
+    {
+      "field": "/records/channel/export_command/3",
+      "old": "--export-filename=<WORKSPACE>/moss-v38-svg-redraw/exports/stitch_drone_channel.png",
+      "new": "--export-filename=exports/stitch_drone_channel.png"
+    },
+    {
+      "field": "/records/hurt/export_command/1",
+      "old": "<WORKSPACE>/moss-v38-svg-redraw/source/stitch_drone_hurt.svg",
+      "new": "source/stitch_drone_hurt.svg"
+    },
+    {
+      "field": "/records/hurt/export_command/3",
+      "old": "--export-filename=<WORKSPACE>/moss-v38-svg-redraw/exports/stitch_drone_hurt.png",
+      "new": "--export-filename=exports/stitch_drone_hurt.png"
+    },
+    {
+      "field": "/records/death/export_command/1",
+      "old": "<WORKSPACE>/moss-v38-svg-redraw/source/stitch_drone_death.svg",
+      "new": "source/stitch_drone_death.svg"
+    },
+    {
+      "field": "/records/death/export_command/3",
+      "old": "--export-filename=<WORKSPACE>/moss-v38-svg-redraw/exports/stitch_drone_death.png",
+      "new": "--export-filename=exports/stitch_drone_death.png"
+    }
+  ],
+  "preserved": "All gameplay/UI/data/scenes/PNG/SVG/import resources unchanged; original candidate and failed assembly preserved.",
+  "proposed_verification": [
+    "New source map and exactly two source paths changed",
+    "Resource-only reexport with generic exact-PCK resource identity",
+    "Parse every old/new PCK record; unchanged path set and payloads except the one nonruntime metadata JSON (plus manifest if actually exported)",
+    "Whole PCK byte private-prefix scan zero",
+    "Dedicated source/packed121 pixel/Atlas proof",
+    "Bounded ordinary native main launch/normal exit; no second28 or ordinary play claim unless separately required"
+  ],
+  "remaining_authorization": "Root verification scope decision before candidate execution"
+}

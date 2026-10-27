@@ -1,0 +1,71 @@
+{
+  "source_map_sha256": "50c09012653db0249d0b13088ed6ccbcee73b126bd0ee6cc94fb8be884f95846",
+  "commands": [
+    [
+      "support-author",
+      [
+        "--script",
+        "res://tests/test_stitch_drone.gd"
+      ],
+      true
+    ],
+    [
+      "projection-negatives",
+      [
+        "--script",
+        "res://tests/test_support_encounter_projection.gd"
+      ],
+      true
+    ],
+    [
+      "historical-reservation",
+      [
+        "--script",
+        "res://tests/independent_reservation_records.gd"
+      ],
+      true
+    ],
+    [
+      "historical-annulus",
+      [
+        "--script",
+        "res://tests/independent_annulus_data.gd"
+      ],
+      true
+    ],
+    [
+      "historical-brace",
+      [
+        "--script",
+        "res://tests/independent_brace_geometry.gd"
+      ],
+      true
+    ],
+    [
+      "enemy-ui",
+      [
+        "--script",
+        "res://tests/independent_enemy_ui.gd"
+      ],
+      true
+    ],
+    [
+      "modes",
+      [
+        "--script",
+        "res://tests/test_modes.gd"
+      ],
+      true
+    ],
+    [
+      "encounters",
+      [
+        "--script",
+        "res://tests/test_encounters.gd"
+      ],
+      true
+    ]
+  ],
+  "timeout_per_command": 180,
+  "stop_on_first_rejection": true
+}

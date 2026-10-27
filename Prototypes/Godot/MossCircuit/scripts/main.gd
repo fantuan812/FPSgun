@@ -25,6 +25,7 @@ var base_arena:Dictionary
 var room_profile:Dictionary
 const CharacterMotor=preload("res://scripts/gameplay/character_motor.gd")
 const TargetStatus=preload("res://scripts/gameplay/target_status.gd")
+const EnemySupport=preload("res://scripts/gameplay/enemy_support.gd")
 const PrimaryDefense=preload("res://scripts/gameplay/primary_defense.gd")
 const WeaponCombat=preload("res://scripts/gameplay/weapon_combat.gd")
 const WeaponPresentation=preload("res://scripts/gameplay/weapon_presentation.gd")
@@ -536,6 +537,10 @@ func _spawn_kind(kind: String, pos: Vector2, parent_id: int = -1) -> Dictionary:
 	data.attack = ""
 	data.aim = Vector2.RIGHT
 	data.target = pos
+	if data.kind == "stitch_drone" and data.behavior == "support_repair":
+		EnemySupport.initialize(data)
+		data.attack="repair"
+		data.warning_span=float(data.support_channel)
 	enemies.append(data)
 	return data
 
@@ -649,6 +654,7 @@ func _finish(won: bool) -> void:
 	reserved_offer.clear()
 	_clear_transients()
 	state = "won" if won else "dead"
+	EnemySupport.settle(enemies,[],false)
 	stats.hp = maxf(0,stats.hp)
 	if won:
 		_show_result(true)
@@ -659,6 +665,8 @@ func _finish(won: bool) -> void:
 		ui.hide_modal()
 
 func _show_result(won:bool) -> void:
+	EnemySupport.settle(enemies,[],false)
+	effect_visuals=effect_visuals.filter(func(v):return v.kind not in ["support_complete","support_cancel"])
 	var view:=_view()
 	view.won=won
 	ui.show_result(view)
@@ -695,7 +703,7 @@ func _draw() -> void:
 		draw_circle(hazard.pos,hazard.radius,Color(.95,.5,.12,.22) if hazard.kind in ["trail","scorch"] else Color(.9,.85,.3,.3))
 		if hazard.kind == "mine": draw_rect(Rect2(hazard.pos-Vector2(6,6),Vector2(12,12)),Color("f3d66d"))
 	for visual in effect_visuals:
-		if visual.kind == "annulus_impact": continue # Drawn only by the hole-preserving telegraph layer.
+		if visual.kind in ["annulus_impact","support_complete","support_cancel"]: continue # Drawn only by the hole-preserving telegraph layer.
 		if visual.kind=="cryo_cone":
 			var points:=PackedVector2Array([visual.pos])
 			var angle:float=visual.direction.angle()
@@ -1240,6 +1248,13 @@ func _sync_telegraphs() -> void:
 		markers.append({"kind":"circle","pos":blast.pos,"radius":blast.radius,"color":Color("9ddcf6")})
 	for enemy in enemies:
 		if enemy.hp <= 0 or enemy.ai_state != "warning": continue
+		if enemy.get("behavior","")=="support_repair":
+			if state in ["title","dead","won"]:continue
+			for recipient in enemies:
+				if EnemySupport.can_repair(enemy,recipient):
+					markers.append({"kind":"support_tether","pos":enemy.pos,"end":recipient.pos,"progress":clampf(1.0-float(enemy.warning_left)/float(enemy.support_channel),0.0,1.0),"color":Color("86e5ed")})
+					break
+			continue
 		var color := Color(1,.35,.18,.9)
 		var brace:Dictionary=PrimaryDefense.brace(enemy) if state not in ["title","dead","won"] else {}
 		if not brace.is_empty():
@@ -1253,6 +1268,10 @@ func _sync_telegraphs() -> void:
 		else:
 			markers.append({"kind":"circle","pos":enemy.target if enemy.attack=="blast" else enemy.pos,"radius":105 if enemy.attack=="blast" else 34*enemy.scale,"color":color})
 	for visual in effect_visuals:
+		if visual.kind in ["support_complete","support_cancel"]:
+			if state not in ["title","dead","won"]:
+				markers.append({"kind":visual.kind,"pos":visual.pos,"end":visual.end,"color":Color(.52,.9,.93,(.45 if settings.reduced_flashes else .9)*clampf(float(visual.life)/.3,0.0,1.0))})
+			continue
 		if visual.kind == "annulus_impact":
 			markers.append({"kind":"annulus","pos":visual.pos,"inner_radius":visual.inner_radius,"outer_radius":visual.outer_radius,"color":Color(1,.55,.18,.8),"fill_alpha":(.035 if settings.reduced_flashes else .08)*clampf(float(visual.life)/.2,0,1)})
 		if visual.kind in ["mine","mortar","phase"]:

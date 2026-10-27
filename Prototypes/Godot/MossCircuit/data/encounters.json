@@ -172,6 +172,36 @@
       "description": "Wave 6 boss: maintains distance and fires ring volleys. Below half HP, 12-shot rings alternate with summons.",
       "tell": "0.85 s orange ring before each release.",
       "dodge": "Use gaps in the slow ring; dash is briefly invulnerable. Clear summons."
+    },
+    {
+      "id": "stitch_drone",
+      "name": "Stitch Drone",
+      "behavior": "support_repair",
+      "hp": 34,
+      "speed": 30,
+      "damage": 6,
+      "xp": 7,
+      "scale": 1,
+      "color": "86e5ed",
+      "boss": false,
+      "cooldown": 5,
+      "warning": 1.2,
+      "projectile_speed": 145,
+      "charge_speed": 310,
+      "charge_duration": 0.6,
+      "desired_distance": 210,
+      "summon_limit": 3,
+      "phase_threshold": 0.5,
+      "phase_speed": 1.25,
+      "description": "Channels a 10 HP repair to one wounded ordinary ally within 150 px. Cannot repair bosses, summons or support drones.",
+      "tell": "Cyan dashed tether and four-notch progress mark a 1.2 s repair; any actual damage to the drone interrupts it.",
+      "dodge": "Hit the drone, finish its ally or separate them beyond the tether. It has no damage immunity. Warning and recovery are contact-safe.",
+      "support_radius": 150,
+      "support_channel": 1.2,
+      "support_cooldown": 5,
+      "support_retry": 1,
+      "support_heal": 10,
+      "support_max_alive": 1
     }
   ],
   "waves": [
@@ -204,7 +234,8 @@
       "pool": [
         "charger",
         "spitter",
-        "flanker"
+        "flanker",
+        "stitch_drone"
       ],
       "boss": ""
     },

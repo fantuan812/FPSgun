@@ -1,0 +1,17 @@
+{
+  "status": "PREPARED_NOT_EXECUTED_REQUIRES_ROOT_APPROVAL_AND_CPU_LANE",
+  "utc": "2026-10-27T07:39:31.587409+00:00",
+  "original_sha256": "a65145d1613995ba83703071b685371b123546daaebcc1c0bbaa5bd46c54fc13",
+  "instrumented_sha256": "ff04fd4c2c0628d1050745ae0566388ffaf83918e956f032d83c00ae8c2fc1e3",
+  "source_map_sha256": "2c82f7343613a2f130a04e541558fba5edf3150e0755295d837349e8ab710cf8",
+  "source": "evidence-workspace/moss-v38-final",
+  "per_command_seconds": 180,
+  "attempts": 1,
+  "assertions": "Original960 checks/invalid102 input matrix/assertion text+order unchanged; original scope/output retained. Added observational prefix only.",
+  "observer": "Replace only external fixture audio Node after run setup with subclass inheriting same FeedbackAudio implementation and super.stop_all forwarding counter; old idle node freed immediately before per-decision work, no additional await/sleep. No production/source/stream/volume/clip-duration change.",
+  "measurements": "Actual requested/immediate/after-heavy-snap playing flags, monotonic elapsed wall timings and explicit stop_all call deltas. Natural finish remains possible; no forced long clip or artificial pause.",
+  "interpretation": "Diagnostic regardless outcome; original Rooms1/5 FAIL retained. A zero forwarded stop count localizes explicit controller stop authority; duration/playing observations must be reported, not assumed to reproduce historical timing.",
+  "no_target_mutation": true,
+  "revision": 2,
+  "preexecution_change": "Remove extra observer-setup await; old idle audio freed directly, no original loop/await changed. Original unexecuted r1 retained."
+}

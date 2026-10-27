@@ -1,0 +1,4707 @@
+{
+  "pass": true,
+  "separate_reviewer": true,
+  "reviewer": "/root/audit_v38_full_regression",
+  "review_type": "Independent read-only audit of original coordinated QA execution, NOT rerun",
+  "source_map_sha256": "bcf2b8555bd6acd17ca4ce62a209fe1701ec886937ec991223a59f560a6784cc",
+  "input_map_sha256": "bcf2b8555bd6acd17ca4ce62a209fe1701ec886937ec991223a59f560a6784cc",
+  "utc": "2026-10-27T08:25:12.933348+00:00",
+  "source": "<WORKSPACE>/moss-v38-final-r2",
+  "raw": "<WORKSPACE>/moss-v38-final-r2-prep/full-regression",
+  "counts": {
+    "frozen_inputs": 772,
+    "production": 139,
+    "commands": 139,
+    "raw_logs": 139,
+    "json_sidecars": 8,
+    "semantic_json_records": 114,
+    "bounded_teardown_reports": 119,
+    "audit_checks": 576,
+    "warning_lines": 48
+  },
+  "original_full_seconds": 969.6895011269953,
+  "max_case_seconds": 114.013,
+  "warnings": [
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "line": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\"."
+    }
+  ],
+  "checks": [
+    {
+      "check": "772 frozen file bytes match",
+      "pass": true
+    },
+    {
+      "check": "139 production hashes match",
+      "pass": true
+    },
+    {
+      "check": "139 production bytes identical to repaired R2",
+      "pass": true
+    },
+    {
+      "check": "pinned map identity",
+      "pass": true
+    },
+    {
+      "check": "source manifest identity",
+      "pass": true
+    },
+    {
+      "check": "declared revision changed hashes",
+      "pass": true
+    },
+    {
+      "check": "declared revision added hashes",
+      "pass": true
+    },
+    {
+      "check": "historical773 exact old source",
+      "pass": true
+    },
+    {
+      "check": "Arena partition only loop edit",
+      "pass": true
+    },
+    {
+      "check": "Rooms partition only loop edit and resource97 removal",
+      "pass": true
+    },
+    {
+      "check": "runner only partial-timeout preservation and Rooms dispatch",
+      "pass": true
+    },
+    {
+      "check": "actual plan runner identity",
+      "pass": true
+    },
+    {
+      "check": "exact139 discovery and recorded execution order",
+      "pass": true
+    },
+    {
+      "check": "exact139 original logs",
+      "pass": true
+    },
+    {
+      "check": "all139 native0 within original per-command180",
+      "pass": true
+    },
+    {
+      "check": "native and wrapper original terminal0",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan import",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_actions.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_actions.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_actions.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty independent_actions.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_annulus_data.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_annulus_data.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty independent_annulus_data.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_annulus_runtime.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_annulus_runtime.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_annulus_runtime.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty independent_annulus_runtime.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_bankshot_contacts.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_bankshot_contacts.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty independent_bankshot_contacts.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_bankshot_integration.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_bankshot_integration.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_bankshot_integration.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty independent_bankshot_integration.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_bankshot_trajectory.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_bankshot_trajectory.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty independent_bankshot_trajectory.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_brace_geometry.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_brace_geometry.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty independent_brace_geometry.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_brace_runtime.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_brace_runtime.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_brace_runtime.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty independent_brace_runtime.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_brood_assets.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_brood_assets.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_brood_assets.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_brood_events.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_brood_events.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_brood_events.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_brood_events.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_brood_parity.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_brood_parity.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_brood_parity.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_brood_parity.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_charger_assets.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_charger_assets.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_charger_assets.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_charger_gameplay_parity.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_charger_gameplay_parity.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_charger_gameplay_parity.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_charger_gameplay_parity.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_charger_lifecycle.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_charger_lifecycle.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_charger_lifecycle.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_core_reactions.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_core_reactions.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_core_reactions.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty independent_core_reactions.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_crawler_flanker.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_crawler_flanker.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_crawler_flanker.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty independent_crawler_flanker.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_crawler_hit_pipeline.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_crawler_hit_pipeline.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_crawler_hit_pipeline.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty independent_crawler_hit_pipeline.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_cryo_contract.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_cryo_contract.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_cryo_contract.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty independent_cryo_contract.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_cryo_shop.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_cryo_shop.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_cryo_shop.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty independent_cryo_shop.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_enemy_ui.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_enemy_ui.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_enemy_ui.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty independent_enemy_ui.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_feedback_authority.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_feedback_authority.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_feedback_authority.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty independent_feedback_authority.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_feedback_authority_rooms.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_feedback_authority_rooms.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_feedback_authority_rooms.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty independent_feedback_authority_rooms.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_feedback_mixer.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_feedback_mixer.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty independent_feedback_mixer.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_feedback_runtime.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_feedback_runtime.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_feedback_runtime.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty independent_feedback_runtime.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_feedback_shop.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_feedback_shop.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_feedback_shop.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty independent_feedback_shop.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_feedback_validation.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_feedback_validation.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty independent_feedback_validation.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_feedback_views.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_feedback_views.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_feedback_views.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty independent_feedback_views.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_focus_authority.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_focus_authority.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_focus_authority.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty independent_focus_authority.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_focus_combat.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_focus_combat.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_focus_combat.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty independent_focus_combat.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_focus_views.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_focus_views.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_focus_views.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty independent_focus_views.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_forecast_authority.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_forecast_authority.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty independent_forecast_authority.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_forecast_controller.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_forecast_controller.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_forecast_controller.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty independent_forecast_controller.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_forecast_legacy.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_forecast_legacy.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty independent_forecast_legacy.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_forecast_views.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_forecast_views.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_forecast_views.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty independent_forecast_views.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_modes.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_modes.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_modes.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_modifier_compatibility.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_modifier_compatibility.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_modifier_compatibility.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty independent_modifier_compatibility.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_policy_validation.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_policy_validation.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_qa.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_qa.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_qa.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty independent_qa.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_reservation_records.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_reservation_records.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_reservation_records.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty independent_reservation_records.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_reservation_runtime.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_reservation_runtime.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_reservation_runtime.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty independent_reservation_runtime.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_reservation_views.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_reservation_views.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_reservation_views.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty independent_reservation_views.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_resolution.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_resolution.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_resolution.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_room_boundaries.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_room_boundaries.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_room_boundaries.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_salvage_runtime.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_salvage_runtime.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_salvage_runtime.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty independent_salvage_runtime.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_salvage_views.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_salvage_views.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_salvage_views.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty independent_salvage_views.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_scavenger_authority.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_scavenger_authority.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_scavenger_authority.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty independent_scavenger_authority.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_scavenger_events.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_scavenger_events.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_scavenger_events.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty independent_scavenger_events.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_scavenger_settlement.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_scavenger_settlement.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_scavenger_settlement.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty independent_scavenger_settlement.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_scavenger_views.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_scavenger_views.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_scavenger_views.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty independent_scavenger_views.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_settlement_types.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_settlement_types.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_settlement_types.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_settlement_types.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty independent_settlement_types.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_shop.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_shop.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_shop.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty independent_shop.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_spitter_assets.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_spitter_assets.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_spitter_assets.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_spitter_events.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_spitter_events.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_spitter_events.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_spitter_events.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_spitter_parity.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_spitter_parity.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_spitter_parity.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_spitter_parity.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_starting_loadout_views.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_starting_loadout_views.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_starting_loadout_views.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty independent_starting_loadout_views.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_starting_loadouts.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_starting_loadouts.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_starting_loadouts.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty independent_starting_loadouts.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_support_assets.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_support_assets.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty independent_support_assets.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic pass independent_support_assets.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_support_authority.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_support_authority.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty independent_support_authority.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic pass independent_support_authority.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_support_death_disposal.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_support_death_disposal.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_support_death_disposal.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty independent_support_death_disposal.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic pass independent_support_death_disposal.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_support_encounters.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_support_encounters.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_support_encounters.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty independent_support_encounters.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic pass independent_support_encounters.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_support_projectiles.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_support_projectiles.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_support_projectiles.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty independent_support_projectiles.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic pass independent_support_projectiles.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_support_runtime.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_support_runtime.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_support_runtime.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty independent_support_runtime.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic pass independent_support_runtime.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_tag_authority.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_tag_authority.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_tag_authority.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty independent_tag_authority.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_tag_views.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_tag_views.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_tag_views.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty independent_tag_views.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_tempering_authority.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_tempering_authority.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_tempering_authority.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty independent_tempering_authority.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_tempering_combat.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_tempering_combat.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_tempering_combat.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty independent_tempering_combat.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_tempering_hint.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_tempering_hint.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_tempering_hint.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty independent_tempering_hint.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_tempering_views.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_tempering_views.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_tempering_views.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty independent_tempering_views.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_ui.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_ui.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_ui.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty independent_ui.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_v2.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_v2.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_v2.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty independent_v2.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_v3.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_v3.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_v3.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty independent_v3.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_v4.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_v4.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_v4.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty independent_v4.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_v5.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_v5.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_v5.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty independent_v5.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_vfx.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_vfx.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_vfx.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty independent_vfx.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_warden_reactions.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_warden_reactions.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_warden_reactions.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty independent_warden_reactions.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_weapon_authority.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_weapon_authority.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_weapon_authority.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty independent_weapon_authority.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_weapon_order.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_weapon_order.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_weapon_order.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty independent_weapon_order.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_weapon_order_views.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_weapon_order_views.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_weapon_order_views.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty independent_weapon_order_views.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_weapon_readouts.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_weapon_readouts.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_weapon_readouts.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty independent_weapon_readouts.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan independent_weapon_rig.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker independent_weapon_rig.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown independent_weapon_rig.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty independent_weapon_rig.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan test_actor_actions.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker test_actor_actions.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown test_actor_actions.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty test_actor_actions.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan test_audio_teardown_predicate.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker test_audio_teardown_predicate.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty test_audio_teardown_predicate.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan test_bankshot_build.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker test_bankshot_build.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown test_bankshot_build.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty test_bankshot_build.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan test_boundary_shot.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker test_boundary_shot.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty test_boundary_shot.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan test_brood_actions.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker test_brood_actions.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown test_brood_actions.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty test_brood_actions.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan test_brood_pulse.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker test_brood_pulse.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown test_brood_pulse.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan test_build_forecast.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker test_build_forecast.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown test_build_forecast.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty test_build_forecast.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan test_builds.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker test_builds.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown test_builds.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty test_builds.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan test_charger_actions.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker test_charger_actions.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown test_charger_actions.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty test_charger_actions.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan test_combat_focus.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker test_combat_focus.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown test_combat_focus.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty test_combat_focus.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan test_combat_hud_readability.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker test_combat_hud_readability.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown test_combat_hud_readability.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty test_combat_hud_readability.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan test_contact_enemy_actions.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker test_contact_enemy_actions.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown test_contact_enemy_actions.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan test_core_reactions.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker test_core_reactions.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown test_core_reactions.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty test_core_reactions.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan test_core_summon.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker test_core_summon.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown test_core_summon.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty test_core_summon.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan test_core_summon_assets.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker test_core_summon_assets.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan test_crawler_hurt_registration.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker test_crawler_hurt_registration.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan test_cryo_build.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker test_cryo_build.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown test_cryo_build.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty test_cryo_build.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan test_discrete_ui_numbers.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker test_discrete_ui_numbers.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty test_discrete_ui_numbers.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan test_effects.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker test_effects.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown test_effects.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty test_effects.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan test_encounters.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker test_encounters.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown test_encounters.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty test_encounters.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan test_expansion.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker test_expansion.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown test_expansion.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty test_expansion.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan test_export_contract.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker test_export_contract.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty test_export_contract.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan test_feedback_diode.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker test_feedback_diode.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown test_feedback_diode.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty test_feedback_diode.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan test_feedback_mixer.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker test_feedback_mixer.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty test_feedback_mixer.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan test_feedback_teardown.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker test_feedback_teardown.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty test_feedback_teardown.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan test_focus_fire.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker test_focus_fire.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown test_focus_fire.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty test_focus_fire.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan test_game.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker test_game.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown test_game.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty test_game.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan test_hud_layout.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker test_hud_layout.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown test_hud_layout.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty test_hud_layout.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan test_input_lifecycle.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker test_input_lifecycle.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown test_input_lifecycle.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty test_input_lifecycle.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan test_modes.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker test_modes.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown test_modes.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty test_modes.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan test_modifier_copy.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker test_modifier_copy.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown test_modifier_copy.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty test_modifier_copy.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan test_player_feedback.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker test_player_feedback.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown test_player_feedback.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty test_player_feedback.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan test_primary_brace.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker test_primary_brace.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown test_primary_brace.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan test_resolution_validation.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker test_resolution_validation.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown test_resolution_validation.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty test_resolution_validation.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan test_scavenger_reel.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker test_scavenger_reel.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown test_scavenger_reel.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty test_scavenger_reel.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan test_settlement_levels.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker test_settlement_levels.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown test_settlement_levels.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty test_settlement_levels.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan test_shop_offer_visibility.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker test_shop_offer_visibility.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown test_shop_offer_visibility.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty test_shop_offer_visibility.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan test_shop_reservation.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker test_shop_reservation.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown test_shop_reservation.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty test_shop_reservation.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan test_spitter_actions.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker test_spitter_actions.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown test_spitter_actions.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty test_spitter_actions.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan test_starting_loadouts.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker test_starting_loadouts.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown test_starting_loadouts.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan test_stitch_drone.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker test_stitch_drone.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown test_stitch_drone.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty test_stitch_drone.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic pass test_stitch_drone.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan test_support_encounter_projection.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker test_support_encounter_projection.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty test_support_encounter_projection.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic pass test_support_encounter_projection.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan test_tag_synergy_progress.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker test_tag_synergy_progress.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown test_tag_synergy_progress.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty test_tag_synergy_progress.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan test_telegraph_readability.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker test_telegraph_readability.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown test_telegraph_readability.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty test_telegraph_readability.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan test_tempered_combat.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker test_tempered_combat.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown test_tempered_combat.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty test_tempered_combat.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failed zero test_tempered_combat.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan test_upgrade_salvage.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker test_upgrade_salvage.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown test_upgrade_salvage.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty test_upgrade_salvage.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failed zero test_upgrade_salvage.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan test_vfx.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker test_vfx.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown test_vfx.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty test_vfx.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan test_warden_charge.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker test_warden_charge.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown test_warden_charge.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty test_warden_charge.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan test_warden_charge_assets.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker test_warden_charge_assets.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan test_warden_reactions.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker test_warden_reactions.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown test_warden_reactions.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty test_warden_reactions.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan test_weapon_mounts.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker test_weapon_mounts.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown test_weapon_mounts.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty test_weapon_mounts.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan test_weapon_order.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker test_weapon_order.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown test_weapon_order.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty test_weapon_order.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failed zero test_weapon_order.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan test_weapon_readout.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker test_weapon_readout.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown test_weapon_readout.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty test_weapon_readout.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan test_weapon_tempering.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker test_weapon_tempering.gd",
+      "pass": true
+    },
+    {
+      "check": "bounded teardown test_weapon_tempering.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failures empty test_weapon_tempering.gd",
+      "pass": true
+    },
+    {
+      "check": "semantic failed zero test_weapon_tempering.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan test_ui.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker test_ui.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan check_build_expansion_icons.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker check_build_expansion_icons.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan check_icons.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker check_icons.gd",
+      "pass": true
+    },
+    {
+      "check": "clean error/resource scan check_mechanism_icons.gd",
+      "pass": true
+    },
+    {
+      "check": "raw success marker check_mechanism_icons.gd",
+      "pass": true
+    },
+    {
+      "check": "sidecar empty failures independent_settlement_types.json",
+      "pass": true
+    },
+    {
+      "check": "sidecar empty failures independent_feedback_authority.json",
+      "pass": true
+    },
+    {
+      "check": "sidecar empty failures independent_feedback_views.json",
+      "pass": true
+    },
+    {
+      "check": "sidecar empty failures independent_feedback_authority_rooms.json",
+      "pass": true
+    },
+    {
+      "check": "sidecar empty failures independent_feedback_mixer.json",
+      "pass": true
+    },
+    {
+      "check": "runner before/after map current bytes all equal",
+      "pass": true
+    },
+    {
+      "check": "aggregate original result consistency",
+      "pass": true
+    },
+    {
+      "check": "exact sidecar checks independent_feedback_authority",
+      "pass": true
+    },
+    {
+      "check": "exact sidecar checks independent_feedback_authority_rooms",
+      "pass": true
+    },
+    {
+      "check": "exact sidecar checks independent_settlement_types",
+      "pass": true
+    },
+    {
+      "check": "exact sidecar checks independent_feedback_views",
+      "pass": true
+    },
+    {
+      "check": "exact sidecar checks independent_feedback_mixer",
+      "pass": true
+    },
+    {
+      "check": "all204 invalid controller boundaries",
+      "pass": true
+    },
+    {
+      "check": "all204 zero explicit stop and true positive controls",
+      "pass": true
+    },
+    {
+      "check": "authority observations arena",
+      "pass": true
+    },
+    {
+      "check": "authority observations rooms",
+      "pass": true
+    },
+    {
+      "check": "support exact count authority",
+      "pass": true
+    },
+    {
+      "check": "support exact count runtime",
+      "pass": true
+    },
+    {
+      "check": "support exact count encounters",
+      "pass": true
+    },
+    {
+      "check": "support exact count projectiles",
+      "pass": true
+    },
+    {
+      "check": "support exact count death_disposal",
+      "pass": true
+    },
+    {
+      "check": "support exact count assets",
+      "pass": true
+    },
+    {
+      "check": "actor exact418",
+      "pass": true
+    },
+    {
+      "check": "both retained dead dictionaries fully disposed no recipient heal",
+      "pass": true
+    },
+    {
+      "check": "old rejected report pinned identity",
+      "pass": true
+    },
+    {
+      "check": "all original rejected evidence bytes retained",
+      "pass": true
+    },
+    {
+      "check": "old135/138 remains rejected",
+      "pass": true
+    },
+    {
+      "check": "retained original semantic failures independent_settlement_types.gd",
+      "pass": true
+    },
+    {
+      "check": "retained original semantic failures test_actor_actions.gd",
+      "pass": true
+    },
+    {
+      "check": "old partial timeout unknown retained",
+      "pass": true
+    },
+    {
+      "check": "synthetic logger receipt pinned identity",
+      "pass": true
+    },
+    {
+      "check": "all manifest entries match current source",
+      "pass": true
+    },
+    {
+      "check": "no undeclared source changes beyond regenerated manifest",
+      "pass": true
+    },
+    {
+      "check": "only two declared files and two imported UIDs added",
+      "pass": true
+    },
+    {
+      "check": "48 draw_rect warnings exactly same source/count as rejected old aggregate",
+      "pass": true
+    },
+    {
+      "check": "warning-producing fixture unchanged",
+      "pass": true
+    },
+    {
+      "check": "retained diagnostic960 does not reproduce old failures",
+      "pass": true
+    },
+    {
+      "check": "separate original cold/focused receipts successful",
+      "pass": true
+    }
+  ],
+  "raw_sha256": {
+    "import.log": "9572934ad4d57fbab2c09b2c82f3821584fba7ba71d7e1dec5055bc7fa531f3f",
+    "independent_actions.gd.log": "8f5395e277648f49a84f423d237f50b3ef360fa4f4902578365265f62f865774",
+    "independent_annulus_data.gd.log": "8d2af156e3a9910dc36b80c3b640065c63318ae90e3c2c2ce453811ef2832146",
+    "independent_annulus_runtime.gd.log": "3f71d8f8c191e9da865f5846616f754afa587c9c63f6734f544adc1ed547aa1b",
+    "independent_bankshot_contacts.gd.log": "64c132669e806db32d6b1786cdb7c91c3b43e19e44696d79a8d409c2f90e3037",
+    "independent_bankshot_integration.gd.log": "66dfefe6846bad2c4f72c438829457298289c79484983f45ba2232910835c201",
+    "independent_bankshot_trajectory.gd.log": "c0044e51347e1011736e467002ac616b3eca2df4e52a308c1d564eaf2bda7e40",
+    "independent_brace_geometry.gd.log": "b69f6f704269a0868be04e3f283d006256d932c97e1b9998dbc7ef96f52e1673",
+    "independent_brace_runtime.gd.log": "563dba2134809a6e94c4bc77bce53ae805a3614a25ded4e478ff2bc408a0f8a8",
+    "independent_brood_assets.gd.log": "5461a44a24c97cbe656528aa93c58cc10156853643e3347fe1188e4a32ff3eea",
+    "independent_brood_events.gd.log": "1d07706fc6597f1e26b6d93557fe59a08f7bfb0bc79d38746db5964339fa6915",
+    "independent_brood_parity.gd.log": "2b99b309019bc9080d89601f27d62b8832fdf20ba88a871718ac46ab832c5748",
+    "independent_charger_assets.gd.log": "6ecd80ce3e377c0b2198df3053f38b225e70399a4bce9e1f3eb154b4e9602f9a",
+    "independent_charger_gameplay_parity.gd.log": "31c98923af9abb8e50202183fbef2b6a481424672ceca31b0d237deca5f7b7b8",
+    "independent_charger_lifecycle.gd.log": "7900cc183fae6d7943a1be91dd4f8669c33f8c2988ca6449a9b91d00afeadb45",
+    "independent_core_reactions.gd.log": "3110d8c5ee5dbc2f4a145f6e21cb91c136eaaeb83b9000a0cae057f7e544a232",
+    "independent_crawler_flanker.gd.log": "92eacc588bcc34d9db9c5ce1efe8ed9bae15b41282eabb05ad6e8ccbcfaa3c4a",
+    "independent_crawler_hit_pipeline.gd.log": "d7d9fd04c1438c6e01c4515aa4fe5fbb6625c39ad43bc32eefbd773ed75b35e4",
+    "independent_cryo_contract.gd.log": "db187f9d19780da70b6b516b88d8e1533b50df63d37f512c94a49e485169d0f5",
+    "independent_cryo_shop.gd.log": "cb7f0b855c1b7171fc03e769318fcffd12625cec28426021e152e20f989a1ee5",
+    "independent_enemy_ui.gd.log": "463371775cbfdbf50065d3c5a945e580bc03b09d28de246d983adbeabe623dfb",
+    "independent_feedback_authority.gd.log": "b5701e573a7cf4f43ced0ef334e02de531b359d2002f0da3cde396c61536101a",
+    "independent_feedback_authority_rooms.gd.log": "9583a8817e0c0a4e648da9f526ba9bb08eaa9998ae2e9b91d26a95a2fffdc4c6",
+    "independent_feedback_mixer.gd.log": "718718bdbab6d8e14d9d968380d51583228351c458bca3af9c8b47fea96d3d60",
+    "independent_feedback_runtime.gd.log": "7228f7036f4f66bd1d784427b8ea7dca9c6b4805ac9f1097cc62dd96e3b9f894",
+    "independent_feedback_shop.gd.log": "232676772e0bcb7de8d222ab7bd847b5403f11c8784b8b1603d693dc6d487b22",
+    "independent_feedback_validation.gd.log": "b14f01acbd0b42f756564679a3d4382110012cfc85d46bcd27f0bb2574229603",
+    "independent_feedback_views.gd.log": "7a1affe2c519b2aff4bdd07ecdca18d2fba6620b528a5092447fa4f357ecf18a",
+    "independent_focus_authority.gd.log": "db8a6c4a7fa76aaf879d64e287e9ce3a7babb94a8db7eabdeed557932654f85b",
+    "independent_focus_combat.gd.log": "34755a7aa05c1c77ac4404b70f794ee0b0f5e585da8a08be519ca1f250bba25e",
+    "independent_focus_views.gd.log": "c7d390526bf2878311fa082255d2fdd97268b17efa121aff2345f5c665ee84df",
+    "independent_forecast_authority.gd.log": "c194d6799f92399c7e9b5b8fecf71a529d6348e2ef35e0c30c11b5912f11b51b",
+    "independent_forecast_controller.gd.log": "41c7bf534b8d9c5c17cb03b2a93c2e48e07b3938fb570b0b2dd8883bbda0de51",
+    "independent_forecast_legacy.gd.log": "b7edd243d0333b08432ff1aec13c85a70f03978f2cc47d19ff6dda32988c3e01",
+    "independent_forecast_views.gd.log": "a585a724694bda86f36d791e6536c7191e20ec842a664f6fc2f0c6e6e74150fc",
+    "independent_modes.gd.log": "0d5c53af0528c936fb5ad6541b11c4643bb61eaf368d848d93f312c34bfa5ee2",
+    "independent_modifier_compatibility.gd.log": "b8182a2cc5184474c0bbf9457c0400866175e77789d2986a251f0f18f04b1f2e",
+    "independent_policy_validation.gd.log": "483caced6c929fd1a021e0db88f20e7e77f4e5377cc3a98cdbb3993a1f1e1bf7",
+    "independent_qa.gd.log": "8f73567ec89ff210c356d40eee662728d6cbadc1ca70d7eeed87a7badd9b1b9e",
+    "independent_reservation_records.gd.log": "2a234b5feb11f33c577d42e4149f9103a5578614891e10c0b48100aa6ec3491d",
+    "independent_reservation_runtime.gd.log": "7c48c6aa8982de80bdfab0125cb3755617cd175c2117d19c3bf3692d8186c671",
+    "independent_reservation_views.gd.log": "4ad95a28de944237880c8516d556979e22f3ebe50a9eb5cb254ffcbd8597556f",
+    "independent_resolution.gd.log": "b1b03819a3bb717340a6059c643615ed555b3214365ad55043555a849e5bd29e",
+    "independent_room_boundaries.gd.log": "1e4a3ad960a6c1dd8bea5344a56afeead5d362ac4d6f3223a09f44a8ee6fb71a",
+    "independent_salvage_runtime.gd.log": "0cb64d31cca236ee517e6a7ec806c498b57d7914b96e50c2aba9125bae54e9e5",
+    "independent_salvage_views.gd.log": "2b192a49eef918f74cc8b412a63dc24ba8e30593896923729e0caab87bcdf6d7",
+    "independent_scavenger_authority.gd.log": "31583ad8bcd555ab421487443828820c5746c078e837b4b3ceb57ac52817e3c1",
+    "independent_scavenger_events.gd.log": "cb88f5ac9a02a9d258860cf3457254fd7f2da0983d6d7ceded8938d28023f1ff",
+    "independent_scavenger_settlement.gd.log": "0ed2c9730dd5c9ffd4a3d9d872b6a63c03acab74a89902cfa0145ef36d7975e0",
+    "independent_scavenger_views.gd.log": "58b2f40b6bc9c1ba728cc2c623b8be3801798bdf206b5f6ae43baf246d9df09e",
+    "independent_settlement_types.gd.log": "74cf11ffff4326b79ef3fadd57e154d063dab3028239e8f9051c5269be43049c",
+    "independent_shop.gd.log": "6a714720757a17e74f9095a7f1f076b51d0d97017b3878c54dd91535b8595371",
+    "independent_spitter_assets.gd.log": "22116216c1de31e552e232c865a9f7d950d64b2f9b7dfa831a3bf9d8f5fcfffd",
+    "independent_spitter_events.gd.log": "74dc0f155de354ca6b5ef994b6772bb0be362061d88eb3388bafa2b0113e17e7",
+    "independent_spitter_parity.gd.log": "daae56f47709028b58c43b2c944dca8cfd98c63938102e570686ad449f70a5de",
+    "independent_starting_loadout_views.gd.log": "21ab3f9d6e19cf9e6329f2c7234a3c74fec635df48de1cd4ab40801ea6219ff6",
+    "independent_starting_loadouts.gd.log": "e9c73475349fae9a3389959f738a8668134321c1051a7e972f0e9ec1e3e96907",
+    "independent_support_assets.gd.log": "8de845d2b127aac2685282075709a5e81d62a2f5033681197b12804416e4366e",
+    "independent_support_authority.gd.log": "2b9bc66678f0009795111d676c572abf23528f2f0099cca54ae1155ab3a69330",
+    "independent_support_death_disposal.gd.log": "b4f525b1b36d7dda4f0004fce0b4d20051d87d2e93774f926c0b66e168c62daa",
+    "independent_support_encounters.gd.log": "d6cd7b09bbab2453ee0423ac65f4c70b880e27e86edae007e9295262006677c4",
+    "independent_support_projectiles.gd.log": "e5b27cd6bd20a288fc7049e234a5e5e8dd3fe8c160a1f7f3ee4f48d7937fd47c",
+    "independent_support_runtime.gd.log": "454f47fd2bde47960a0cf21ad1532cfaf16b0f4d3e7580ad95385ae290398b28",
+    "independent_tag_authority.gd.log": "764693eeab12a7d83a844b314d4ec91af8674589ef6b4bc45a0b6450a925e986",
+    "independent_tag_views.gd.log": "abb8bd94201a628abad9120ded8ef708aa082dd493dd2545fa20e2791f780522",
+    "independent_tempering_authority.gd.log": "21416c583c30548af54a4dc97b40eb2bffbe0acb25431c838a843fc18eb3ed6c",
+    "independent_tempering_combat.gd.log": "ca7fcae7dcd5063d52159c60d5c68eb6163d0cd40414a162a1dc47a01a427882",
+    "independent_tempering_hint.gd.log": "397f5d510fa4d0d9d189bf58819200d4e2817f6707f266649d846c76fec0b9f7",
+    "independent_tempering_views.gd.log": "367787f5f2bc97f2ea1faa8c886b5275d5c674739227829e7bce4bec9877f5d1",
+    "independent_ui.gd.log": "fa86d62ca20027803db61a3b89d5d439dceea2ecada6ea003e98bd12fcad29bf",
+    "independent_v2.gd.log": "f2db13adb08934ce2b54efb0afa2462c94af458489e57a01349d52a8a105ceab",
+    "independent_v3.gd.log": "46a1c0f971d33cc66b9473c30b078b95e8a2224f30ea92dbe690fcdd1f84affc",
+    "independent_v4.gd.log": "c14c2a517dc6e2e75941d433f8dc85e80e974a53b229d6321b0df3b840a352ff",
+    "independent_v5.gd.log": "e361a8d65597adb7597572e956e91e5453a2c80792460e8e9b8f4b600f94e755",
+    "independent_vfx.gd.log": "f55dfbb19ff0b8ea6ebd51c80b2bfdb41a3500bc506d7307afcb82aaadf0aa51",
+    "independent_warden_reactions.gd.log": "cd126d950a9a3d1735ce94efec01910d9d4c138c1e82525aa68ec375d44fbe23",
+    "independent_weapon_authority.gd.log": "0095ff8209154b99fb5ac8ec45365075350190452a11bebed339457d58a38ba2",
+    "independent_weapon_order.gd.log": "68c10ff41a14a8775cb559ce46b9c3a954e7594f0c0c28ab603fbb889a87cfe7",
+    "independent_weapon_order_views.gd.log": "d2d83c2318bde2a1f18c825497df458a34414ddbd67af08525a98fd14cfef068",
+    "independent_weapon_readouts.gd.log": "29a8b6f0763a0288edd1104acc304cdf0a2a12740087fb6a96d1278fba9f8324",
+    "independent_weapon_rig.gd.log": "98f6184744fb767c8f83321d552559bfddecab1c6652059a5d08fc2a10a81aae",
+    "test_actor_actions.gd.log": "434a6fc59de9d576b19206f130bd723d0333bdd1463cfdaeef056d1fe4832ec9",
+    "test_audio_teardown_predicate.gd.log": "fe105e767702ba930014233031db522ca5a1ff882a8bce5541ac5db6f46286ed",
+    "test_bankshot_build.gd.log": "9ce17b64cf1b0bf243327bcece48b83fcd123bd8f329e0a451f7c104522305ed",
+    "test_boundary_shot.gd.log": "3ca047f7566515f10af88540ad5913d19e8d705d039fa57a0250560b09a435bd",
+    "test_brood_actions.gd.log": "ec182e3df3f969fad7dddac2805d6cae9335303c67c46fbefcdddb6204044e70",
+    "test_brood_pulse.gd.log": "9348a7bf84dd78e004ed600dedd0b865d21d5b2c7f36866939ab3ce8cc89caeb",
+    "test_build_forecast.gd.log": "dbab7cb59d996a93bc06d0ed70b520d362899e24bbb4d7d1d52f5b47350fc661",
+    "test_builds.gd.log": "5a8ad290f9572fb585dc9739117096c901276ea0bd2ba7d5a583ca0b922492ed",
+    "test_charger_actions.gd.log": "e9b15127ab1bad8c62ce412c35dd25ceb62199f01a976209075b27e6d7bf1749",
+    "test_combat_focus.gd.log": "8983112336f1bdd00358dcb8d928c47c67ee781ef503f384c1a7c9d3b93170c0",
+    "test_combat_hud_readability.gd.log": "c606d2c0e3d6e85a2aac8f53b3c78e51f65ab7e647cdc5bfbdc60a7e5af08904",
+    "test_contact_enemy_actions.gd.log": "b50bdda192000f9d7262e003c62a6ed407494852445b9521a1f5dacb6e892847",
+    "test_core_reactions.gd.log": "608670d02ecbf3d7741881cacc042c6962b07954189a79bc023f84872ce0b41d",
+    "test_core_summon.gd.log": "a50b5f1b6e889fd07b626fe128f777db835675ee8ede901d98d890ebefa86288",
+    "test_core_summon_assets.gd.log": "f910e27789afbe5a10f3f7dea6ce8cb61d7369c35a62d05d6f1c88e2393a4368",
+    "test_crawler_hurt_registration.gd.log": "e8d1222ec4ab2d4880ef8088eee3613a20be1fe831d000dd57da9924e7b3212c",
+    "test_cryo_build.gd.log": "1724e340ec6702a646c9d291b63013d89c3cadc8bdb83bedb940ee3c7ee99259",
+    "test_discrete_ui_numbers.gd.log": "962629822513f2eb534b2799baec24f49d7e1978a2d5beb1b5ac1f8ae5774023",
+    "test_effects.gd.log": "21e9c2b275c18f40def7c7fde763b2be1e69d2ebe3fc76002f4c175fd6ed6ceb",
+    "test_encounters.gd.log": "cc33fd874ddfba96171d1f53bf058cf87f4eeba1ade02e62b576f0692da8b7da",
+    "test_expansion.gd.log": "628c0232fcc1018d912b7b254cda52d57e149ce4f8caf8d779cbbdfb331f043e",
+    "test_export_contract.gd.log": "48e0b8c6f5d4c2e7cb8ea202390ffbd92f81c67575661774a65d31a6dc4f2ee8",
+    "test_feedback_diode.gd.log": "6edc570d1b0886083a165ea3db132b10f8743b6aae8c01b1623f8b12828d6278",
+    "test_feedback_mixer.gd.log": "d2611251e4e051222bd43107abff85ecf759187af82a7d6d56cf526601ba7e29",
+    "test_feedback_teardown.gd.log": "c82dfe31687b4c3e9de4b61c007fcce9420c3d29b83138945d74ec6fada80f97",
+    "test_focus_fire.gd.log": "b6b412c4bd4ff942be81f2026eb1f2745d7c02996f880cfdbe29510e243ff335",
+    "test_game.gd.log": "9bb2e1f5931fca71e79405260da1bfb13610362099176337bcac658a690b2aee",
+    "test_hud_layout.gd.log": "cb77aec1129463ede4d2c6b00c9be381f12e4613f058f0e674aa0768a405c9d1",
+    "test_input_lifecycle.gd.log": "cba7e15feb7d269d940119b07a17111aaf654fea9209ca7cff5d5b290e3751b7",
+    "test_modes.gd.log": "0790c46c13cc17574b9f46d93a2887f986bc50ab79f37f236b10c107d3161997",
+    "test_modifier_copy.gd.log": "af9e90f06a1789a63a0267f0bcbd8395e5372319acd492fd8d18540533950e36",
+    "test_player_feedback.gd.log": "918481810d9a172c25568ddcc201f7a7bdb744c3fa40994397fb4b79d6dc5124",
+    "test_primary_brace.gd.log": "a560d1a6703adaf186da9fa448c28be6256873442a51a5e79d8f96723acefa22",
+    "test_resolution_validation.gd.log": "62e8f506f21bd670b81850dec2eafabaa009857a74101b2d895904eef97a8013",
+    "test_scavenger_reel.gd.log": "d1048411c7d8bff74cc9ed8726da9e3f27fb1f71e7c5931791030978aa9f98fa",
+    "test_settlement_levels.gd.log": "35b6d4d985eeeaafc6fa8650782047f9a33dcd51bd4f1ff1294786e68716a513",
+    "test_shop_offer_visibility.gd.log": "eab7f8abb2cccc324ee367313b235d338fc069801f05f42ac7466fe24daba70f",
+    "test_shop_reservation.gd.log": "92ae0c603cc38b7ee66867821cc0fc538622a135c5c3a144ed071f7392d2675b",
+    "test_spitter_actions.gd.log": "93e35fc30671969fd182f28f574728a5416e39d12096791322175e35797e5a93",
+    "test_starting_loadouts.gd.log": "70a562dcaa4ec6489f28302078637ca2c5b2d23c0480098f6802e2641dfde7c6",
+    "test_stitch_drone.gd.log": "97966c60f5801693ae3ec5d630131811241df3d66d895bd3d97e3b0b7041ff2a",
+    "test_support_encounter_projection.gd.log": "57a01377875228e409a439678ef907b0163905cd09afe338a28b32f6989c5cd1",
+    "test_tag_synergy_progress.gd.log": "267832615b81aa992d8e5c9c2cc34bb022b8ed1d21f2f3ed6c0184ad9919adc6",
+    "test_telegraph_readability.gd.log": "5a12f40eb42cea461a44e398546ba18d068e9cb0f5594ca17bb21d870f8a2947",
+    "test_tempered_combat.gd.log": "10664645ff869f7a5634446209c7444801c1ce7062350b2eb8e534cd30ff1fb4",
+    "test_upgrade_salvage.gd.log": "3d5793e8b87b85b337569479ab2c7a1d86b9fc3b779eaf47291cdaa7fa435491",
+    "test_vfx.gd.log": "96390f78e404233104dc519e28845354b17e10e238f52f4d1d87840070325898",
+    "test_warden_charge.gd.log": "fed998f2ee743beec5abce49264ffa81183826fc7a3fc4379f7fccfa5b3e9ce4",
+    "test_warden_charge_assets.gd.log": "02c4257c18aa57ee30fc0c2725e0cf70158092abfd65b89308a91edfeb3a9f9b",
+    "test_warden_reactions.gd.log": "57c2b00b3276667e78772addeb4cccd93a66c2821b0d0dc5a10099144d2d2fa3",
+    "test_weapon_mounts.gd.log": "76c49c04101d4bbe8c06b667fa0276bd741c8b16878cf09e99aff5069076e466",
+    "test_weapon_order.gd.log": "9e066ba35faaece06e6fb400f3a8f9fe5b0752007c68a1b7adc7103c0c9726b0",
+    "test_weapon_readout.gd.log": "371947b69af28de67c5f91b676b71c13b9fcdabd508e6f805225066524344848",
+    "test_weapon_tempering.gd.log": "d50ca7a679f950b4a5d0845b30c1d875baae51470bbc5be86c000d137b9d49e4",
+    "test_ui.gd.log": "17fa24b5af573f32c02ece54ec801f04ccbdef625c165bfdc4ad86a93cc52989",
+    "check_build_expansion_icons.gd.log": "6c16f380bea9c98776e7b0a6403e2587fff7af409bfd01df85b5761ed9b44915",
+    "check_icons.gd.log": "31571934063d0d8a8f9e9b4e4d59280b1b20a8f997347f54d9a2198fadd33939",
+    "check_mechanism_icons.gd.log": "6c16f380bea9c98776e7b0a6403e2587fff7af409bfd01df85b5761ed9b44915",
+    "independent_settlement_types.json": "f7316b3e983344ac6f95c17cbc860484b26e9753130df739e12d9d4700c49373",
+    "independent_feedback_authority.json": "36439bf0ea2bb8a4df9fc81c717ed0dc26b259df7bfc08c946218cc3e4504b1d",
+    "independent_feedback_views.json": "10b109b08f157d2ab876e19036686b82ec488ad3b50fa43cc4abb97375668d4b",
+    "independent_feedback_authority_rooms.json": "298b00e82f93c96250a81d624ab584e4516487df2023d0172c7c3f78fafc0647",
+    "input-hashes.json": "4d312e97e4a89d9ca029faf51a6ab7c4ed76efcd1e513a64f7c73b6543745933",
+    "result.json": "005afab8e7be01371922222837e0508f88454b683a65bcb9b6e99e23292b9e36",
+    "independent_feedback_mixer.json": "6c8315b7eb00d32472d670d3a7a5fd065b5fd1543f236cbfef41ff7eeb2f0ff7",
+    "summary.json": "c646a62cd258fed7b9a410b86ae8c6a13f7be5faecb47acc256b434fef979afe"
+  },
+  "teardown": [
+    {
+      "test": "independent_actions.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 152028,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 12
+    },
+    {
+      "test": "independent_annulus_runtime.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 151317,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 12
+    },
+    {
+      "test": "independent_bankshot_integration.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 166034,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 13
+    },
+    {
+      "test": "independent_brace_runtime.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 158569,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 12
+    },
+    {
+      "test": "independent_brood_assets.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 160144,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 14
+    },
+    {
+      "test": "independent_brood_events.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 154064,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 13
+    },
+    {
+      "test": "independent_brood_events.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 158051,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 13
+    },
+    {
+      "test": "independent_brood_parity.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 153984,
+        "game_owner_count": 2,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 2,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 7680,
+        "streams_released": true
+      },
+      "observations": 13
+    },
+    {
+      "test": "independent_brood_parity.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 177335,
+        "game_owner_count": 2,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 2,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 14
+    },
+    {
+      "test": "independent_charger_assets.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 153060,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 13
+    },
+    {
+      "test": "independent_charger_gameplay_parity.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 159505,
+        "game_owner_count": 2,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 2,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 14
+    },
+    {
+      "test": "independent_charger_gameplay_parity.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 156957,
+        "game_owner_count": 2,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 2,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 13
+    },
+    {
+      "test": "independent_charger_lifecycle.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 155164,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 13
+    },
+    {
+      "test": "independent_core_reactions.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 154553,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 13
+    },
+    {
+      "test": "independent_crawler_flanker.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 153271,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 13
+    },
+    {
+      "test": "independent_crawler_hit_pipeline.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 174067,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 15
+    },
+    {
+      "test": "independent_cryo_contract.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 158470,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 13
+    },
+    {
+      "test": "independent_cryo_shop.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 160992,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 14
+    },
+    {
+      "test": "independent_enemy_ui.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 157770,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 13
+    },
+    {
+      "test": "independent_feedback_authority.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 158458,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 13
+    },
+    {
+      "test": "independent_feedback_authority_rooms.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 166138,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 13
+    },
+    {
+      "test": "independent_feedback_runtime.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 157936,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 13
+    },
+    {
+      "test": "independent_feedback_shop.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 150940,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 12
+    },
+    {
+      "test": "independent_feedback_views.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 151569,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 12
+    },
+    {
+      "test": "independent_focus_authority.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 150498,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 12
+    },
+    {
+      "test": "independent_focus_combat.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 158484,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 12
+    },
+    {
+      "test": "independent_focus_views.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 172623,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 13
+    },
+    {
+      "test": "independent_forecast_controller.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 188195,
+        "game_owner_count": 2,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 2,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 16
+    },
+    {
+      "test": "independent_forecast_views.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 190328,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 6
+    },
+    {
+      "test": "independent_modes.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 153121,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 13
+    },
+    {
+      "test": "independent_modifier_compatibility.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 172575,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 14
+    },
+    {
+      "test": "independent_qa.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 152669,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 13
+    },
+    {
+      "test": "independent_reservation_records.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 163955,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 14
+    },
+    {
+      "test": "independent_reservation_runtime.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 163976,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 13
+    },
+    {
+      "test": "independent_reservation_views.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 154039,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 12
+    },
+    {
+      "test": "independent_resolution.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 151548,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 12
+    },
+    {
+      "test": "independent_room_boundaries.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 167823,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 14
+    },
+    {
+      "test": "independent_salvage_runtime.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 151724,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 11
+    },
+    {
+      "test": "independent_salvage_views.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 150872,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 13
+    },
+    {
+      "test": "independent_scavenger_authority.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 172723,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 14
+    },
+    {
+      "test": "independent_scavenger_events.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 159696,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 14
+    },
+    {
+      "test": "independent_scavenger_settlement.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 167085,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 14
+    },
+    {
+      "test": "independent_scavenger_views.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 307082,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 9
+    },
+    {
+      "test": "independent_settlement_types.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 194555,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 15
+    },
+    {
+      "test": "independent_settlement_types.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 194130,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 15
+    },
+    {
+      "test": "independent_shop.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 172179,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 11
+    },
+    {
+      "test": "independent_spitter_assets.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 167815,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 14
+    },
+    {
+      "test": "independent_spitter_events.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 181939,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 15
+    },
+    {
+      "test": "independent_spitter_events.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 157403,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 13
+    },
+    {
+      "test": "independent_spitter_parity.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 180863,
+        "game_owner_count": 2,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 2,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 15
+    },
+    {
+      "test": "independent_spitter_parity.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 151230,
+        "game_owner_count": 2,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 2,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 7680,
+        "streams_released": true
+      },
+      "observations": 12
+    },
+    {
+      "test": "independent_starting_loadout_views.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 150230,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 12
+    },
+    {
+      "test": "independent_starting_loadouts.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 179907,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 14
+    },
+    {
+      "test": "independent_support_death_disposal.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 153289,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 13
+    },
+    {
+      "test": "independent_support_encounters.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 153304,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 13
+    },
+    {
+      "test": "independent_support_projectiles.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 152437,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 13
+    },
+    {
+      "test": "independent_support_runtime.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 152772,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 13
+    },
+    {
+      "test": "independent_tag_authority.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 157980,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 13
+    },
+    {
+      "test": "independent_tag_views.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 186487,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 16
+    },
+    {
+      "test": "independent_tempering_authority.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 163327,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 13
+    },
+    {
+      "test": "independent_tempering_combat.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 156995,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 13
+    },
+    {
+      "test": "independent_tempering_hint.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 166679,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 13
+    },
+    {
+      "test": "independent_tempering_views.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 157878,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 13
+    },
+    {
+      "test": "independent_ui.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 158595,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 13
+    },
+    {
+      "test": "independent_v2.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 152668,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 13
+    },
+    {
+      "test": "independent_v3.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 160537,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 14
+    },
+    {
+      "test": "independent_v4.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 180869,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 15
+    },
+    {
+      "test": "independent_v5.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 152669,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 13
+    },
+    {
+      "test": "independent_vfx.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 152607,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 13
+    },
+    {
+      "test": "independent_warden_reactions.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 190419,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 14
+    },
+    {
+      "test": "independent_weapon_authority.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 173524,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 13
+    },
+    {
+      "test": "independent_weapon_order.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 152117,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 12
+    },
+    {
+      "test": "independent_weapon_order_views.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 173694,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 14
+    },
+    {
+      "test": "independent_weapon_readouts.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 158317,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 12
+    },
+    {
+      "test": "independent_weapon_rig.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 152605,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 13
+    },
+    {
+      "test": "test_actor_actions.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 158842,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 11
+    },
+    {
+      "test": "test_bankshot_build.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 167102,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 14
+    },
+    {
+      "test": "test_brood_actions.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 152593,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 13
+    },
+    {
+      "test": "test_brood_pulse.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 158602,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 13
+    },
+    {
+      "test": "test_build_forecast.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 151380,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 12
+    },
+    {
+      "test": "test_builds.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 152629,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 13
+    },
+    {
+      "test": "test_charger_actions.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 159535,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 14
+    },
+    {
+      "test": "test_combat_focus.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 161685,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 13
+    },
+    {
+      "test": "test_combat_hud_readability.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 152006,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 12
+    },
+    {
+      "test": "test_contact_enemy_actions.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 174212,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 15
+    },
+    {
+      "test": "test_core_reactions.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 233695,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 16
+    },
+    {
+      "test": "test_core_summon.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 152968,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 7680,
+        "streams_released": true
+      },
+      "observations": 13
+    },
+    {
+      "test": "test_cryo_build.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 153012,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 13
+    },
+    {
+      "test": "test_effects.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 152813,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 13
+    },
+    {
+      "test": "test_encounters.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 169624,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 14
+    },
+    {
+      "test": "test_expansion.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 160147,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 14
+    },
+    {
+      "test": "test_feedback_diode.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 160156,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 12
+    },
+    {
+      "test": "test_focus_fire.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 151299,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 12
+    },
+    {
+      "test": "test_game.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 167096,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 14
+    },
+    {
+      "test": "test_hud_layout.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 158506,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 13
+    },
+    {
+      "test": "test_input_lifecycle.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 167135,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 14
+    },
+    {
+      "test": "test_modes.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 179731,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 14
+    },
+    {
+      "test": "test_modifier_copy.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 254139,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 11
+    },
+    {
+      "test": "test_player_feedback.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 152595,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 13
+    },
+    {
+      "test": "test_primary_brace.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 175891,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 12
+    },
+    {
+      "test": "test_resolution_validation.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 183599,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 16
+    },
+    {
+      "test": "test_scavenger_reel.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 162272,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 13
+    },
+    {
+      "test": "test_settlement_levels.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 155013,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 13
+    },
+    {
+      "test": "test_shop_offer_visibility.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 186632,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 15
+    },
+    {
+      "test": "test_shop_reservation.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 158129,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 12
+    },
+    {
+      "test": "test_spitter_actions.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 152641,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 13
+    },
+    {
+      "test": "test_starting_loadouts.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 152465,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 13
+    },
+    {
+      "test": "test_stitch_drone.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 153097,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 13
+    },
+    {
+      "test": "test_tag_synergy_progress.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 169307,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 11
+    },
+    {
+      "test": "test_telegraph_readability.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 152464,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 13
+    },
+    {
+      "test": "test_tempered_combat.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 150750,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 12
+    },
+    {
+      "test": "test_upgrade_salvage.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 165126,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 13
+    },
+    {
+      "test": "test_vfx.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 152860,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 2,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 13
+    },
+    {
+      "test": "test_warden_charge.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 174039,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 15
+    },
+    {
+      "test": "test_warden_reactions.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 159529,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 14
+    },
+    {
+      "test": "test_weapon_mounts.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 152575,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 13
+    },
+    {
+      "test": "test_weapon_order.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 158833,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 12
+    },
+    {
+      "test": "test_weapon_readout.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 158538,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 13
+    },
+    {
+      "test": "test_weapon_tempering.gd",
+      "final": {
+        "discarded": 0,
+        "elapsed_us": 151824,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      },
+      "observations": 12
+    }
+  ],
+  "limits": [
+    "No Godot/game/test rerun performed by separate reviewer.",
+    "New audio435/338 each180,total360 differs from original single180; original135/138 rejection retained.",
+    "Original timeout partial streams NOT_CAPTURED; no claim of clean earlier output.",
+    "Original settlement two failures not reproduced; cause unresolved.204 playing gates replaced with explicitstop contract and204 true-stop positivecontrols; playing is telemetry.",
+    "Teardown proves bounded recorded Dummy internal silence/resource release only, not physical output or universal timing guarantee.",
+    "Export/PCK/native/ordinary/Windows/physical listening/campaign/CI/GitHub v38 publication not accepted by this source audit."
+  ],
+  "blockers": []
+}

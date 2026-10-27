@@ -1,0 +1,80 @@
+{
+  "pass": true,
+  "scope": "Independent read-only raw/JSON/source-phase/semantic-SVG review; no test rerun. Full live787/binary rehash deferred until native serial execution window free. Old full139/ordinary not relabelled for SVG. Native result not included.",
+  "proof": {
+    "source_commands": 4,
+    "packed_commands": 3,
+    "logic_exact_files": 88,
+    "final_inputs": 787,
+    "final_map_sha256": "ea4a577c51c98c3d9f6aad4c66a421dd0c00ef2eb705b20ea47cabea9f731401",
+    "semantic_svg_sheets": 4,
+    "export_commands": 7,
+    "packed_resources": {
+      "action_frames": 308,
+      "actions": 28,
+      "checks": 916,
+      "exact_files": 72,
+      "failures": [],
+      "images": 62,
+      "scope": "editor reader of exported PCK, no source fallback; dynamic resources and controlled integration, not native GUI or Windows runtime acceptance"
+    }
+  },
+  "raw_sha256": {
+    "<WORKSPACE>/moss-v38-svg-qa/source-first/import.stdout": "13ffe243cdc0f9fad796029d7fe2d1c932703152486855a9a55e322332dca3b9",
+    "<WORKSPACE>/moss-v38-svg-qa/source-first/import.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "<WORKSPACE>/moss-v38-svg-qa/source-first/svg-assets.stdout": "6b8b8916e96a6aed9ab8d8ccaca389f51e1e8aeafe4834b63575382441f2eac1",
+    "<WORKSPACE>/moss-v38-svg-qa/source-first/svg-assets.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "<WORKSPACE>/moss-v38-svg-qa/source-first/actor.stdout": "355c0cc4a586d8b8bdcc16ce5d11b1205653f21e4da6fdf95f4f255537e81dea",
+    "<WORKSPACE>/moss-v38-svg-qa/source-first/actor.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "<WORKSPACE>/moss-v38-svg-qa/source-first/animation.stdout": "ef5ca3da5f800a63d597dcc36d45e0eaffeb05ad4d91ebe81ac5c72715e20e86",
+    "<WORKSPACE>/moss-v38-svg-qa/source-first/animation.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "<WORKSPACE>/moss-v38-svg-qa/packed-first/assets.stdout": "a804971f081a92b71c2b9a8e7979f5face8f0cca1965fb9b055df78a2d57386b",
+    "<WORKSPACE>/moss-v38-svg-qa/packed-first/assets.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "<WORKSPACE>/moss-v38-svg-qa/packed-first/actor.stdout": "74e578098af8a2f04db5699f85daf62a3ef37a9d42d39cc68539b345848c0dbd",
+    "<WORKSPACE>/moss-v38-svg-qa/packed-first/actor.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "<WORKSPACE>/moss-v38-svg-qa/packed-first/animation.stdout": "682781b15046fb77f15ccc088a1accae17dd49b8677078cb5960577f1e1902b4",
+    "<WORKSPACE>/moss-v38-svg-qa/packed-first/animation.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "<WORKSPACE>/moss-v38-svg-pack/logs/engine-version.log": "1e07780c365549219ffd8e6bd120a818c80424e8295d4ee7451c10d0ed0fa84f",
+    "<WORKSPACE>/moss-v38-svg-pack/logs/python-safety.log": "06e0cf1c8b9833c2d6dca88409c07cf1521d0b2ff36eb29b6e84124d1b43b172",
+    "<WORKSPACE>/moss-v38-svg-pack/logs/linux-pack.log": "5a2ca2e290ef25f9f658f3c1ef116a54f9a029f3f0958b70860897965aaa8a50",
+    "<WORKSPACE>/moss-v38-svg-pack/logs/windows-pack.log": "5a2ca2e290ef25f9f658f3c1ef116a54f9a029f3f0958b70860897965aaa8a50",
+    "<WORKSPACE>/moss-v38-svg-pack/logs/source-fingerprint.log": "64f0e48e97aabaa3d456feb74d6dcef5e78ac3e17108f14a5a35c7e3a490be3c",
+    "<WORKSPACE>/moss-v38-svg-pack/logs/packed-resources.log": "cc1ac00e3071b70a49d529df27cf702f478497a7fa014e951a147ec9f3142af4",
+    "<WORKSPACE>/moss-v38-svg-pack/logs/native-headless.log": "a9912b85473f126d3f4f63ec824170c828df3473a292f866dde86cafda5b66da"
+  },
+  "strict_helper_observations": [
+    {
+      "case": "actor",
+      "folder": "source-first",
+      "fresh": 8192,
+      "silent": 8192,
+      "elapsed_us": 179939
+    },
+    {
+      "case": "animation",
+      "folder": "source-first",
+      "fresh": 8192,
+      "silent": 8192,
+      "elapsed_us": 163431
+    },
+    {
+      "case": "actor",
+      "folder": "packed-first",
+      "fresh": 8192,
+      "silent": 8192,
+      "elapsed_us": 157451
+    },
+    {
+      "case": "animation",
+      "folder": "packed-first",
+      "fresh": 8192,
+      "silent": 8192,
+      "elapsed_us": 177691
+    }
+  ],
+  "deferred": [
+    "live full787 hashes",
+    "PCK/ELF full byte hashes",
+    "new controlled native outcome"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "pass": true,
+  "files": {
+    "scenes/main.tscn": {
+      "sha256": "dc2ae31e03a0a3f34cabb8d53f28067c4efbb484f9c9d4b851a174040812fe38",
+      "bytes": 164,
+      "equal": true
+    },
+    "scripts/main.gd": {
+      "sha256": "ff44c00dfc5fb3e1a348b4a17f463935b267415d1034cff92246ca1a575fd912",
+      "bytes": 59770,
+      "equal": true
+    },
+    "scripts/main.gd.uid": {
+      "sha256": "d41a71d3426455393b959db8531c07e17efa1b7e0c6f2238fc36e47e5644ce29",
+      "bytes": 20,
+      "equal": true
+    },
+    "project.godot": {
+      "sha256": "81308766e212e949545605aea2ac3ebd72006373313fc8ada93d7a78980b5e97",
+      "bytes": 651,
+      "equal": true
+    },
+    "export_presets.cfg": {
+      "sha256": "9383bc38015cf926d4ad0a13f0ecd86d3277e9c170af1afd7ce7913f4a2dc86d",
+      "bytes": 1442,
+      "equal": true
+    }
+  },
+  "scene_text": "[gd_scene load_steps=2 format=3]\n[ext_resource type=\"Script\" path=\"res://scripts/main.gd\" id=\"1\"]\n[node name=\"MossCircuit\" type=\"Node2D\"]\nscript = ExtResource(\"1\")\n",
+  "scope": "Specific source scene/script UID and export configuration identity; not semantic decoder or exception acceptance"
+}

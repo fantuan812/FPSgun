@@ -1,0 +1,50 @@
+--- tested/art_source/stitch_drone/metadata/measured_assets.json
++++ proposed/art_source/stitch_drone/metadata/measured_assets.json
+@@ -155,9 +155,9 @@
+       "repeat_export_byte_identical": true,
+       "export_command": [
+         "inkscape",
+-        "<WORKSPACE>/moss-v38-svg-redraw/source/stitch_drone_hover.svg",
++        "source/stitch_drone_hover.svg",
+         "--export-type=png",
+-        "--export-filename=<WORKSPACE>/moss-v38-svg-redraw/exports/stitch_drone_hover.png"
++        "--export-filename=exports/stitch_drone_hover.png"
+       ]
+     },
+     "channel": {
+@@ -314,9 +314,9 @@
+       "repeat_export_byte_identical": true,
+       "export_command": [
+         "inkscape",
+-        "<WORKSPACE>/moss-v38-svg-redraw/source/stitch_drone_channel.svg",
++        "source/stitch_drone_channel.svg",
+         "--export-type=png",
+-        "--export-filename=<WORKSPACE>/moss-v38-svg-redraw/exports/stitch_drone_channel.png"
++        "--export-filename=exports/stitch_drone_channel.png"
+       ]
+     },
+     "hurt": {
+@@ -473,9 +473,9 @@
+       "repeat_export_byte_identical": true,
+       "export_command": [
+         "inkscape",
+-        "<WORKSPACE>/moss-v38-svg-redraw/source/stitch_drone_hurt.svg",
++        "source/stitch_drone_hurt.svg",
+         "--export-type=png",
+-        "--export-filename=<WORKSPACE>/moss-v38-svg-redraw/exports/stitch_drone_hurt.png"
++        "--export-filename=exports/stitch_drone_hurt.png"
+       ]
+     },
+     "death": {
+@@ -632,9 +632,9 @@
+       "repeat_export_byte_identical": true,
+       "export_command": [
+         "inkscape",
+-        "<WORKSPACE>/moss-v38-svg-redraw/source/stitch_drone_death.svg",
++        "source/stitch_drone_death.svg",
+         "--export-type=png",
+-        "--export-filename=<WORKSPACE>/moss-v38-svg-redraw/exports/stitch_drone_death.png"
++        "--export-filename=exports/stitch_drone_death.png"
+       ]
+     }
+   },

@@ -1,0 +1,18 @@
+{
+  "command": [
+    "python",
+    "evidence-workspace/moss-v38-final-r2/tests/run_regression.py",
+    "--project",
+    "evidence-workspace/moss-v38-final-r2",
+    "--output",
+    "evidence-workspace/moss-v38-final-r2-prep/full-regression",
+    "--godot",
+    "godot"
+  ],
+  "inputs": 772,
+  "input_map_sha256": "bcf2b8555bd6acd17ca4ce62a209fe1701ec886937ec991223a59f560a6784cc",
+  "runner_sha256": "4f5c41e186f0ecb8bd8660c209a8256e8549e65298c001adfeea57a9d0f22821",
+  "expected_total_with_import": 139,
+  "per_case_seconds": 180,
+  "semantics": "Root-coordinated final aggregate, assembled/executed by QA worker, NOT an independently authored/repeated full suite. Declared new source mode-partition total360, each180. Generic discovery with only logged timeout-stream preservation and newRoomsJSON dispatch; original timeout remainsFAIL. Preserve all failures, no retry or per-case extension. Separate reviewer raw audit required."
+}

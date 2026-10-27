@@ -1,0 +1,7 @@
+from pathlib import Path
+import json,hashlib,difflib
+r=Path('<WORKSPACE_ROOT>/shared');q=Path(__file__).parent;s=r/'moss-v38-svg-candidate';o=q/'packed-harness';o.mkdir(exist_ok=True);sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest();rows=[]
+helper=s/'tests/support/audio_teardown.gd';(o/'audio_teardown.gd').write_bytes(helper.read_bytes())
+for name,rel in [('assets','tests/independent_support_assets.gd'),('actor','tests/test_actor_actions.gd'),('animation','tests/independent_actions.gd')]:
+ src=s/rel;old=src.read_text();new=old.replace('res://tests/support/audio_teardown.gd',str(o/'audio_teardown.gd'));dest=o/(name+'.gd');dest.write_text(new);assert new.replace(str(o/'audio_teardown.gd'),'res://tests/support/audio_teardown.gd')==old;(o/(name+'.patch')).write_text(''.join(difflib.unified_diff(old.splitlines(True),new.splitlines(True),fromfile=rel,tofile=dest.name)));rows.append({'name':name,'source':rel,'source_sha256':sha(src),'external_script':str(dest),'external_sha256':sha(dest),'only_helper_path_rebound':name!='assets','inverse_exact':True})
+(q/'PACKED_HARNESS_FREEZE.json').write_text(json.dumps({'bindings':rows,'helper_sha256':sha(helper),'source_map_sha256':sha(r/'moss-v38-svg-candidate-prep/FINAL_INPUTS.json'),'new_source_import_baseline_sha256':sha(q/'SOURCE_IMPORTED_BASELINE.json'),'scope':'New SVG assets121 plus unchanged actor418/animation35 exactPCK; no old139/native/ordinary claim transferred.'},indent=2)+'\n');print('prepared3')

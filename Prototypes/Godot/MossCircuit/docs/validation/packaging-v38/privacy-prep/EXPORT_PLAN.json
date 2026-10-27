@@ -1,0 +1,15 @@
+{
+  "scope": "Approved packaging-only reexport after portable recipe isolated reproduction PASS; old pack retained rejected for publication privacy",
+  "source": "<WORKSPACE>/moss-v38-svg-portable",
+  "map_sha256": "6d1305662c8545466cd4551743b7a3ab8ccd22821397a3d3f6f1386515c05909",
+  "builder": "<WORKSPACE>/moss-v33-prep/build_pack.py",
+  "builder_sha256": "572315af3ccca471f71e903704e8c9b2736867d10a9b3fa1a47336c5eaee3654",
+  "output": "<WORKSPACE>/moss-v38-svg-portable-pack",
+  "builder_existing_step_cap_seconds": 240,
+  "specialist_gate_cap_seconds": 180,
+  "expected_pck_records": 219,
+  "allowed_payload_changes": [
+    "art_source/stitch_drone/metadata/measured_assets.json"
+  ],
+  "physical_audio_windows_not_claimed": true
+}

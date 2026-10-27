@@ -1,0 +1,10 @@
+--- <WORKSPACE>/moss-v38-final/tests/independent_support_projectiles.gd
++++ <WORKSPACE>/moss-v38-qa/packed-harness/support-projectiles.gd
+@@ -38,6 +38,6 @@
+   Runtime.step(g.combat_frame,.6)
+   ck(s.hp==64. and t.hp==50. and s.ai_state=="recover","actual mortar36 earlydue damage cancels ongoing channel")
+   observations.append({"mode":mode,"weapon":"shock_mortar","controlled_source_hp":100.,"catalog_damage":36.,"source_after":s.hp,"target_after":t.hp})
+- var teardown=preload("res://tests/support/audio_teardown.gd").new();teardown.prepare([g]);g.queue_free();await process_frame;await teardown.finish(self)
++ var teardown=preload("<WORKSPACE>/moss-v38-qa/packed-harness/audio_teardown.gd").new();teardown.prepare([g]);g.queue_free();await process_frame;await teardown.finish(self)
+  print(JSON.stringify({"pass":failures.is_empty(),"checks":checks,"failures":failures,"observations":observations,"scope":"Concrete bolt/pellet/rail/return-out/in controlled projectile damage1, actual bankshot trajectory and actual launched mortar36 in both modes. Not an ordinary acquisition or new numeric balance oracle."}))
+  quit(0 if failures.is_empty() else 1)

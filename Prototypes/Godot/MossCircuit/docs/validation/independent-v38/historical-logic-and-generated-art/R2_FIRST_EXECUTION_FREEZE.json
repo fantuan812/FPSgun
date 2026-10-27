@@ -1,0 +1,27 @@
+{
+  "pass": true,
+  "utc": "2026-10-27T07:13:10.277669+00:00",
+  "scope": "Independent static exact newcandidate diff before first import",
+  "source": "<WORKSPACE>/moss-v38-r2",
+  "inputs": 753,
+  "source_map": "<WORKSPACE>/moss-v38-root-death-fix/CANDIDATE_INPUTS.json",
+  "source_map_sha256": "cfe9908e3d28b68c266712510c3d5f93ee91cda410d51f6bfec9a96a83f2c393",
+  "only_changed": [
+    "scripts/gameplay/combat_runtime.gd"
+  ],
+  "production_fix_sha256": "52ed9228baf8cf5b010cc31e85796f3d9a6b9b06ec0ca914df110d8154622678",
+  "proposal_exact": true,
+  "original753_unchanged": true,
+  "no_cache": true,
+  "runner_sha256": "7ffc42ffcc4d821de5225f54cd6686b7bd1d8efd27a41a78a4c0a3a02925e977",
+  "scripts": {
+    "death_disposal": "2dbc52c5f568f6f42b48fb39cffb56861dbc7fdafefc46fdd22038742286a703",
+    "authority": "143ff2027718bb558c0d697d51e57944ab0e7dc989b0ec875c16c314d07bbb8e",
+    "runtime": "6a8556490f3b7039b35edd981061ef086dd6d4aa2b9e447a11adb96d8aa07f8a",
+    "encounters": "9aa6722b30b7e17bb9b1eaf9b6c47b4818cf4bde7cacd5ab2c6abf2752749863",
+    "projectiles": "7eb7c8be9ce3a4542d39849c096bfd6ca2df1bf50f0f2dbfb84a9f998ef1a1d1"
+  },
+  "per_command_seconds": 180,
+  "count": 6,
+  "root_production_author_independent_qa": true
+}

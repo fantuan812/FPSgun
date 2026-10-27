@@ -153,6 +153,30 @@
     "flanker": {
       "hurt": "flanker_hurt",
       "death": "flanker_death"
+    },
+    "stitch_drone": {
+      "attack": "stitch_drone_channel",
+      "hurt": "stitch_drone_hurt",
+      "death": "stitch_drone_death",
+      "phase_frames": {
+        "warning": [
+          0,
+          5
+        ],
+        "attack": [
+          6,
+          6
+        ],
+        "recover": [
+          7,
+          8
+        ]
+      },
+      "phase_driven_attack": true,
+      "locked_aim_states": [
+        "warning",
+        "recover"
+      ]
     }
   },
   "hero_modular_manifest": "res://assets/weapon_mounts/hero_modular_manifest.json",
@@ -165,6 +189,7 @@
     "res://assets/actions/boss_warden/action_manifest.json",
     "res://assets/actions/boss_core/action_manifest.json",
     "res://assets/actions/boss_warden/attack_manifest.json",
-    "res://assets/actions/boss_core/attack_manifest.json"
+    "res://assets/actions/boss_core/attack_manifest.json",
+    "res://assets/actions/stitch_drone/action_manifest.json"
   ]
 }

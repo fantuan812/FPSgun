@@ -1,3 +1,17 @@
+# MossCircuit v38 — Stitch Drone / editable SVG source
+
+An interruptible support enemy changes target priority: one wounded ordinary ally,1.2-second warning and up to10HP repair. Damage the source to interrupt; repair never resurrects. Arena wave4 and two Rooms stages receive bounded additions. Four semantic editable SVG sheets generate the formal runtime PNGs; AI predecessors are reference-only, not embedded raster masquerading as SVG. [Feature, all retained failures and verification limits](docs/V38_STITCH_DRONE.md).
+
+The final portable PCK is **42,955,188 bytes**, SHA-256 `b8f648cc2f9378dfffc162375e105dd2e5ccd21044cb6496e4ebe39027a38740`. The earlier functional SVG pack was rejected for eight private staging paths inside a non-runtime JSON record. A new metadata/recording-only candidate was exported and independently checked; the original rejection remains. A second strict record comparison rejected a changed generated scene ID; only the exact four-byte/one-ID difference was later authorized after real scene decoding. All217 other PCK payloads remain byte-identical, and the final pack is whole-byte privacy-clean. New asset121 checks and one bounded normal native main/title launch passed. This is not a replay of28 gameplay steps or an ordinary session.
+
+Historical gameplay source139/139 was independently raw-reviewed, retaining48 warnings. The original135/138 FAIL, missing-context smoke failure and death-disposal failures remain. Audio authority uses Arena435/Rooms338, each180s/totalmax360—a different gate from the rejected single180s run. The prior SVG functional checkpoint passed source120/418/35, packed121/418/35 and28 controlled native steps with29 stills. Old ordinary observations apply only to generated-art bytes. No historical full suite or screenshot is relabelled as final-package execution.
+
+The inherited modal-focus leakage is documented for a later UI revision, not silently fixed here. Non-drone legacy raster art remains pending migration. Dummy does not prove physical listening; Windows, exhaustive campaign/seeds, balance and performance are unverified. [Pack identity and delivery boundaries](docs/DELIVERY.md). The unchanged delivery helper passed10 total local cases (two successful operations and eight rejections);74 historical catalog rows remain exact, two records append15 chunks, and actual v37→v38→v37 file-only backup/replacement/rollback passed. This is not a Git download or gameplay rollback test. Local acceptance does not claim a new v38 GitHub commit.
+
+The v37-and-earlier text below is an exact historical accepted-document suffix; its publication statements describe those original checkpoints, not today's remote state.
+
+---
+
 # MossCircuit v37 — Shop Build Forecast
 
 See what a purchase or selected weapon replacement will do **before buying**: remaining scrap and slots, mechanisms enabled/disabled, relevant missing prerequisites and expandable projected equipped-weapon stats. The existing selector updates only its own card; the original purchase remains the sole commit. No new multiplier, item, shop-pool change, audio or extra reward. [Exact feature and limits](docs/V37_BUILD_FORECAST.md).

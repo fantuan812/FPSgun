@@ -1,0 +1,48 @@
+{
+  "status": "PREPARED_NOT_EXECUTED_ACTUAL_PACK_PENDING",
+  "utc": "2026-10-27T08:23:41.078336+00:00",
+  "fixture_sha256": "5554cba79d3ab5a5389dad67637f72e9984ca5ce86a286dcab87c4670c32bc50",
+  "helper_sha256": "9e9676e34296cb55d4560b1169c5954a82508f70e9051fcc942d1bb6839c23bd",
+  "controlled_combinations": 4,
+  "real_runtime_steps_per_combination": 7,
+  "total_required_observations": 28,
+  "modes": [
+    "arena",
+    "rooms"
+  ],
+  "sizes": [
+    [
+      960,
+      540
+    ],
+    [
+      1280,
+      720
+    ]
+  ],
+  "reduced_flashes": "Enabled at1280; not presented as physical accessibility/user research acceptance",
+  "steps": [
+    "fresh acquisition warning1.2 noheal",
+    "real .6 warning noearlyheal",
+    "real .6 dueheal10+anim_hp60/singlecomplete",
+    "reset controlled geometry+realacquire/.6",
+    "actualbullet1HPsource loss interrupts/singlecancel",
+    "reset controlled geometry+realacquire/.6",
+    "actuallethalbullet same-due step noheal/no burst/removed dictionary token+target+witness+due cleared"
+  ],
+  "controls": "H real Runtime step; N only after seven steps; F9 asserts all28 before closure. Continuously only actor presentation ticks, no simulation. External supplied geometry/HP/zero movement/disabled autonomous weapons. Not normal gameplay.",
+  "runtime_routes": "Controlled: native Godot runtime --main-pack exact PCK external fixture. Ordinary: unchanged original ELF plus adjacent exactPCK, no fixture.",
+  "ordinary_finite": "One defaultseed240102/Rivet Rooms, natural ENTRY/firstshop/CROSSFIRE support interaction or roomclear or earlierdeath; no reset/reroll/injection to obtain repair success. If not observed report absence.",
+  "acceptance": "Require native exit0, no engine/resourceexit errors,28uniquecase/stage observations with nofailures, actual mode/window/screenshot evidence, strictfreshcleanup; direct still visual review does not replace runtime causality or ordinary witness.",
+  "launchers": {
+    "launch_pack_native.sh": "dd2817df76a291dbe4b09fb9d1dd85f3370e58d41e2fcf53ea1ee28389efd76d",
+    "ordinary/launch_sidecar.sh": "5e5d6c3a9a3a0acef2584deb6d4f324cb0483f29b0ee2cfe308959287f11c4e3"
+  },
+  "pending": "Actual export and independent packed16PASS, actualPCK/ELF/source/fixture/helper/launcherpins freeze, root staticnative review before launch",
+  "not_claimed": [
+    "Windows runtime",
+    "physical audio",
+    "all resolutions",
+    "campaign/balance/performance"
+  ]
+}

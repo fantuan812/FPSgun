@@ -1,0 +1,17 @@
+{
+  "status": "FROZEN_BEFORE_FIRST_ASSET_ENGINE_RUN",
+  "utc": "2026-10-27T07:05:11.757129+00:00",
+  "files": {
+    "prepare_asset_oracle.py": "056d85733ae2c9c62fd6140fa39f5d896b651844c98f5b184aab58d172ba8c1d",
+    "ASSET_REFERENCE.json": "52975e0ad95b3082fde533c681b51c4899393e254c20583eb8308a627d6a95bd",
+    "checks/independent_support_assets.gd": "c828f6b83c33d6c149f9a6733215d034a171aed950233ca30aa066d652be8166"
+  },
+  "source_map_sha256": "50c09012653db0249d0b13088ed6ccbcee73b126bd0ee6cc94fb8be884f95846",
+  "scope": "One source then exactPCK route. Independent original PNG alpha/crop oracle plus actual imported RGBA recorded as source-to-pack identity only. fix_alpha_border import may change transparent RGB, so no rawRGBA-equals-imported assumption; no production import setting changes. Handprofile normalized through same JSON numeric layer.",
+  "timeout_seconds": 180,
+  "strict": "native0/complete pass true with failuresempty and checkspositive/no ERROR/resource warnings; source +script/reference before/after unchanged",
+  "counts": "fixture actual counter, not inferred from asset count",
+  "no_prior_failure_reclassified": true,
+  "revision": 2,
+  "preexecution_corrections": "Original unexecuted r1 retained; profile literal normalized, original alpha oracle distinguished from source-imported RGBA baseline. No engine failure or target-derived expected gameplay value."
+}

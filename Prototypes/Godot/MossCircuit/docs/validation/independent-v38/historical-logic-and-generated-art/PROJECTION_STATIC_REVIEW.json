@@ -1,0 +1,33 @@
+{
+  "utc": "2026-10-27T06:50:14.426016+00:00",
+  "declaration_sha256": "ef5562679cd9a404c108158d2827bc6510f20ec46e813e3a312c190a5deadf01",
+  "projection_paths": [
+    {
+      "path": "data/encounters.json",
+      "old_sha256": "853bb3699bb05c2ed1eb7d1c8dc3e51844428c233ffa3127ac035a2762a3f356",
+      "current_sha256": "4d802f8beb8e580ce4e72986c9c685c40ede232947983b6ea1fd6e2e4d5331c8",
+      "inverse_byte_exact": true
+    },
+    {
+      "path": "data/room_encounters.json",
+      "old_sha256": "4a0067faa08241d91042505d72b3a027956ef27571710d74d8559462ac2c5131",
+      "current_sha256": "0023a8337db5fdc8392dc4f4e3aa404c77cc692cad4b72dd3d1b3e2cf70bc9db",
+      "inverse_byte_exact": true
+    }
+  ],
+  "original_fixture_hashes": {
+    "independent_annulus_data": "dba57cf2d62c0666ca3bc98e882ca99eb398bcd34c8dccdb51b294bec9bd4a10",
+    "independent_brace_geometry": "f92114f5f8dbdce35aee34b1aa4d7835be9fa8739d2973d6dd8c4666e958d282",
+    "independent_reservation_records": "9c65b4666b94010284a9f6045a40badb0b73522193aa7217292768b58b72f902"
+  },
+  "candidate_hashes": {
+    "independent_annulus_data": "7ec08c7105bc1116bf3789593fdb3642c03d865abead0fd29ba8bf8ebc7d961b",
+    "independent_brace_geometry": "d4b2a80cc00fc50dc0f304130a471b00d464918c07f9f48b2c222c74dcc6b726",
+    "independent_reservation_records": "db5a84c012244eb423c7fb6154f8fe58c3a7b0de40384918e60600600548966a",
+    "tests/support/v38_encounter_projection.gd": "799286faa1319c03d5afd370efe6770a7ec98d41f06a879241b58eb6ea7a09de",
+    "tests/test_support_encounter_projection.gd": "e7a7b01469b094d0bca4007296bc8d1cf490f7be61c1a41bf36857eef37a940e"
+  },
+  "status": "PASS_PREIMPORT_STRICT_ENCOUNTER_PROJECTION_STATIC",
+  "scope": "Three test-only historical projections; new row/pool/room append declaration reviewed as design, no executed candidate outputs used as expected. Original853bb/4a006/f7a0 goldens preserved. New schema guards and genuine mutation negativecontrols reviewed but unexecuted.",
+  "old_assertion_constants_unchanged": true
+}

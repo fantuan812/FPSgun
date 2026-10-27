@@ -1,0 +1,16 @@
+{
+  "pass": true,
+  "scope": "Separate reviewer directly viewed only these three exact stills. Visual legibility/obstruction check, not independent gameplay replay or damage causality.",
+  "captures": {
+    "03-arena960-half.jpg": "6034a8709d566866bf722895d11e7c23ba2376ebe5a19f3bee773fec2a8b96fb",
+    "04-arena960-heal.jpg": "4df10e8595592250c9cc95a77a1d99fa30e7b749fd6df6fd3569873d25ceb151",
+    "06-arena960-interrupt.jpg": "984976ff385f06f1ded4c264754c25e23d1048f3c84b5d869e380c93bd2b1b60"
+  },
+  "observations": [
+    "New drone silhouette distinct from crawler",
+    "Cyan dashed tether and four ticks visible",
+    "Success plus and broken-line feedback visible",
+    "No new obstruction of HUD/focus reticle"
+  ],
+  "limits": "ActualHP change/interruption comes from controlled realRuntime raw, not inferred from pictures. Death still briefly shows authored death animation after authoritative removal; not revival."
+}

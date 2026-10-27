@@ -1,0 +1,30 @@
+{
+  "pass": true,
+  "scope": "Static attribution only; not proof of actual elapsed timing or no runtime stop",
+  "unchanged_authorities_vs_v37": {
+    "scripts/gameplay/run_flow.gd": "2af880ced71f9139f4fec82e1f9de1abebb642bdb69431d28d19fa25532db124",
+    "scripts/feedback_audio.gd": "395b372481a2f7e5374923e11cbf62afcf8e468f64fd432381b5ac2c9b591684",
+    "main._complete_wave": "12bb6e3ec1028625810cf2f9042188e191e888a08873151304a96680cffeac50",
+    "main._stop_feedback_audio": "ac0c06e060fbde47a80947ca35b1dc3900ca33abc89840575f61c6783f8030e0"
+  },
+  "actual_failed_invalid_inputs": {
+    "rooms1": {
+      "terminal": "true",
+      "shop": false,
+      "next_stage": 2,
+      "upgrades": 0,
+      "coins": 10,
+      "heal": 5
+    },
+    "rooms5": {
+      "terminal": 1,
+      "shop": false,
+      "next_stage": 2,
+      "upgrades": 0,
+      "coins": 10,
+      "heal": 5
+    }
+  },
+  "fixture_policy": "After each actual mode start, replaces g.mode with Policy: can_end true, resolution returns supplied invalid. It never consults Rooms planned_count or clear completion in this loop.",
+  "playing_observation": "Both cues requested then _complete_wave then large full-world+actor snapshot before playing assertion. Canonical clips .16 and .12 seconds, not held indefinitely. Runtime stop/natural expiration not distinguished by original log."
+}

@@ -1,0 +1,32 @@
+{
+  "status": "DIAGNOSTIC_ONLY_ORIGINAL_EXACT_ONE_RECORD_GATE_REJECTED",
+  "scene_size": 684,
+  "scene_different_byte_offsets": [
+    508,
+    509,
+    510,
+    511
+  ],
+  "surrounding_field_bytes_hex": "05000000090000006e6f64655f696473002000000001000000",
+  "field_interpretation": "node_ids string followed by type32/count1; exact semantic decoder verification pending",
+  "old_uint32": 106410627,
+  "new_uint32": 707380806,
+  "all_other_scene_bytes_equal": true,
+  "source_actual_hashes_verified": 787,
+  "source_changes": [],
+  "packs": [
+    {
+      "platform": "linux",
+      "sha256": "b8f648cc2f9378dfffc162375e105dd2e5ccd21044cb6496e4ebe39027a38740",
+      "bytes": 42955188,
+      "private_markers": []
+    },
+    {
+      "platform": "windows",
+      "sha256": "b8f648cc2f9378dfffc162375e105dd2e5ccd21044cb6496e4ebe39027a38740",
+      "bytes": 42955188,
+      "private_markers": []
+    }
+  ],
+  "not_claimed": "No gate relaxation, no native or load test, no proof of random-origin causality"
+}

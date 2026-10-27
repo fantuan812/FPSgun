@@ -1,0 +1,11 @@
+--- old/art_source/stitch_drone/export_and_measure.py
++++ new/art_source/stitch_drone/export_and_measure.py
+@@ -41,7 +41,7 @@
+  record=dict(path=path,source_sha256=sha(out.read_bytes()),editable_source='art_source/stitch_drone/source/'+src.name,editable_sha256=sha(src.read_bytes()),frames=frames)
+  if kind=='hover':record.update(name='补缀蜂 / Stitch Drone',size=[1254,1254],grid=[3,3],action='hover / move');hover[name]=record
+  else:record.update(anchor=[.5,398/418],reference_height=336,release_frame=6 if kind=='channel' else 1,facing='left',logical_canvas=[418,418],source_grid=[3,3],alignment='SVG-derived alpha8 crop, centered integer padding, bottom20');actions[name]=record
+- records[kind]=dict(png_sha256=sha(out.read_bytes()),svg_sha256=sha(src.read_bytes()),rgba_sha256=sha(im.tobytes()),alpha_sha256=sha(im.getchannel('A').tobytes()),frames=raw,repeat_export_byte_identical=True,export_command=cmd)
++ records[kind]=dict(png_sha256=sha(out.read_bytes()),svg_sha256=sha(src.read_bytes()),rgba_sha256=sha(im.tobytes()),alpha_sha256=sha(im.getchannel('A').tobytes()),frames=raw,repeat_export_byte_identical=True,export_command=['inkscape','source/'+src.name,'--export-type=png','--export-filename=exports/'+out.name])
+ contact=Image.new('RGBA',(756,400),(24,36,44,255))
+ for i,row in enumerate(all_rows):contact.alpha_composite(row,(0,i*100))
+ contact.save(R/'previews'/'all_runtime_nearest.png')

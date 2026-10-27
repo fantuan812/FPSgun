@@ -1,0 +1,16 @@
+{
+  "status": "PREPARED_PENDING_NEW_CANDIDATE_DEATH_FIX_AND_FOCUSED_REVIEW",
+  "utc": "2026-10-27T07:10:59.603635+00:00",
+  "files": {
+    "checks/independent_support_authority.gd": "143ff2027718bb558c0d697d51e57944ab0e7dc989b0ec875c16c314d07bbb8e",
+    "checks/independent_support_runtime.gd": "6a8556490f3b7039b35edd981061ef086dd6d4aa2b9e447a11adb96d8aa07f8a",
+    "checks/independent_support_encounters.gd": "9aa6722b30b7e17bb9b1eaf9b6c47b4818cf4bde7cacd5ab2c6abf2752749863",
+    "checks/independent_support_projectiles.gd": "7eb7c8be9ce3a4542d39849c096bfd6ca2df1bf50f0f2dbfb84a9f998ef1a1d1",
+    "checks/independent_support_assets.gd": "c828f6b83c33d6c149f9a6733215d034a171aed950233ca30aa066d652be8166",
+    "checks/independent_support_death_disposal.gd": "2dbc52c5f568f6f42b48fb39cffb56861dbc7fdafefc46fdd22038742286a703"
+  },
+  "portable": true,
+  "runner_parameters": "default stdout single JSON; no output path required. Assets default independent alpha/layout; packed gets separate --expected-imported source baseline.",
+  "do_not_promote_yet": "Death disposal currently fails exact753; target remains frozen and no production edits before publication priority clears. Original first/diagnostic receipts retained.",
+  "native_fixture": "support_native_fixture.gd is draft external controlled UI only; not part of standard source suite"
+}

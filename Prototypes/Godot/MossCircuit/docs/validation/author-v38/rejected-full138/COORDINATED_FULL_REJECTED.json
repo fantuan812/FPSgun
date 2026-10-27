@@ -1,0 +1,48 @@
+{
+  "status": "REJECTED_COORDINATED_FIRST_FULL_PERMANENT",
+  "native_exit": 1,
+  "passed": 135,
+  "commands": 138,
+  "inputs": 768,
+  "production": 139,
+  "input_map_sha256": "2c82f7343613a2f130a04e541558fba5edf3150e0755295d837349e8ab710cf8",
+  "frozen_inputs_unchanged": true,
+  "failures": [
+    {
+      "test": "independent_feedback_authority.gd",
+      "exit": 124,
+      "error": false,
+      "success_marker": false,
+      "seconds": 180.121,
+      "pass": false
+    },
+    {
+      "test": "independent_settlement_types.gd",
+      "exit": 1,
+      "error": false,
+      "success_marker": false,
+      "seconds": 17.007,
+      "pass": false
+    },
+    {
+      "test": "test_actor_actions.gd",
+      "exit": 1,
+      "error": false,
+      "success_marker": false,
+      "seconds": 2.356,
+      "pass": false
+    }
+  ],
+  "timeout_partial_streams": "NOT_CAPTURED by original unchanged generic runner; record.error=false only applies timeout exception text. Cannot infer last phase/no prior engine error.",
+  "artifact_sha256": {
+    "COORDINATED_FULL_GATE.json": "95e9016d2aa4a2f6c61655de19773eff97a8a5e83337be2ecd27b6e983bbd58e",
+    "full-exit.txt": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+    "full-native-exit.txt": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+    "full-regression/result.json": "13b2d756911c9134e0d34386ac99fd21fc20dcf8290e6aa3ef0531fad1979b41",
+    "full-regression/summary.json": "43df47579185e7f6374c4edc61710ae7fbe5e318c053f3e4637db16ac210e269",
+    "full-regression/independent_feedback_authority.gd.log": "8ed7225303b115ddf07ff131dea7e83c02040c9828b6c7dbba6601773b6645e3",
+    "full-regression/independent_settlement_types.gd.log": "cb8109573ba030b3d0e8a13dd5a38105a5e49c0672a356b4f4c47356531e24a3",
+    "full-regression/test_actor_actions.gd.log": "cb8972c5504c48f46f550216d109c107fbfeedec67ed79c8f9e16face3cba518"
+  },
+  "attribution": "Assembled and executed by QA under coordinated plan; not independently authored full aggregate. A separate reviewer is still required for any later accepted full aggregate."
+}

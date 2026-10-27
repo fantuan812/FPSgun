@@ -1,0 +1,20 @@
+--- original25
++++ strict25plus3
+@@ -11,6 +11,17 @@
+ 	var director=game.actor_anim
+ 	var expected_ids:Array=["hero_attack","hero_hurt","hero_death","hero_dash","boss_warden_attack","boss_core_attack","charger_charge","charger_hurt","charger_death","spitter_shoot","spitter_hurt","spitter_death","brood_keeper_summon","brood_keeper_hurt","brood_keeper_death","crawler_hurt","crawler_death","flanker_hurt","flanker_death","boss_warden_hurt","boss_warden_death","boss_core_hurt","boss_core_death","boss_warden_charge","boss_core_summon"]
+ 	var actual_ids:Array=director.assets.keys();expected_ids.sort();actual_ids.sort()
++	# Strict v38 addition proof before projecting back to the unchanged historical25-ID assertion.
++	var support_ids:Array=["stitch_drone_channel","stitch_drone_hurt","stitch_drone_death"]
++	var full_expected:Array=expected_ids.duplicate();full_expected.append_array(support_ids);full_expected.sort()
++	check(actual_ids==full_expected,"exact historical25 plus declared three support actions, no others")
++	for id in support_ids:
++		var declared_path:String="res://assets/actions/stitch_drone/"+id+".png"
++		check(director.assets.has(id) and director.assets[id].frames.get_frame_texture("action",0).atlas.resource_path==declared_path,"new action uses its declared original sheet "+id)
++	check(ResourceLoader.exists("res://assets/enemies/stitch_drone.png"),"fourth new sheet is the dedicated hover texture")
++	var support_profile:Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://data/actor_actions.json")).profiles.stitch_drone
++	check(support_profile.attack=="stitch_drone_channel" and support_profile.hurt=="stitch_drone_hurt" and support_profile.death=="stitch_drone_death","new actions belong to the support profile")
++	actual_ids=actual_ids.filter(func(id):return id not in support_ids)
+ 	check(actual_ids==expected_ids,"exact approved authored action ID set")
+ 	for id in director.assets:
+ 		var count:int=16 if id in ["brood_keeper_summon","brood_keeper_death","crawler_death","flanker_death","boss_warden_death","boss_core_death","boss_warden_charge","boss_core_summon"] else 9

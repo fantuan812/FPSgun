@@ -1,0 +1,11 @@
+--- <WORKSPACE>/moss-v38-final-r2/tests/independent_support_encounters.gd
++++ <WORKSPACE>/moss-v38-qa/packed-harness/support-encounters.gd
+@@ -66,7 +66,7 @@
+   ck(not mode.can_end(g.run,g.combat,g.encounters),"remaining support prevents room clear")
+   live.sprite.queue_free();g.enemies.clear();mode.advance_clear(.6,g.combat)
+   ck(mode.can_end(g.run,g.combat,g.encounters),"all five gone permits exact clear delay")
+- var teardown=preload("res://tests/support/audio_teardown.gd").new();teardown.prepare([g]);g.queue_free();await process_frame;await teardown.finish(self)
++ var teardown=preload("<WORKSPACE>/moss-v38-qa/packed-harness/audio_teardown.gd").new();teardown.prepare([g]);g.queue_free();await process_frame;await teardown.finish(self)
+  print(JSON.stringify({"pass":failures.is_empty(),"checks":checks,"failures":failures,"scope":"Heldv37 data projection, finite32seed draw controls in5poolstates and actualRoom5quota policy; old6/24 combat parity separately executed."}))
+  quit(0 if failures.is_empty() else 1)
+ 

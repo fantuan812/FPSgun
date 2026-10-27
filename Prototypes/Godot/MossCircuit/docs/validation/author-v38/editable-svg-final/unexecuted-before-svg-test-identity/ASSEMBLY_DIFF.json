@@ -1,0 +1,92 @@
+{
+  "status": "ASSET_ONLY_CANDIDATE_NOT_IMPORTED_NOT_ACCEPTED",
+  "baseline_inputs": 772,
+  "candidate_inputs": 783,
+  "changed": [
+    {
+      "path": "MANIFEST.json",
+      "old_sha256": "aa4e90d6c3ee417e105b539b5eb6a968d6b0d1f6021bb905f63cff427c74dd99",
+      "new_sha256": "0f1145d48b851711a68e1c0420b8c3af5f60cca910b50f7bb72893014de8e205"
+    },
+    {
+      "path": "assets/actions/stitch_drone/action_manifest.json",
+      "old_sha256": "f7f5a201f16fb7aadd1021a734941e5a406fa484278d944464773daf0deb80a0",
+      "new_sha256": "7a77702753e94c525a30df80c5acd4431eab89a30179f43fa74d8612d907c0c3"
+    },
+    {
+      "path": "assets/actions/stitch_drone/stitch_drone_channel.png",
+      "old_sha256": "4af2efab9604bd461095d60b60d6df46ce09db6a25eeabeed09fb8813efee180",
+      "new_sha256": "6970cce2e0c9883789774fa5c118f7d69a093a739e085f07d9188783fee5a091"
+    },
+    {
+      "path": "assets/actions/stitch_drone/stitch_drone_death.png",
+      "old_sha256": "3d5ab456066a67baaf357a4a7c1c2cfe389626ed44b819a148718973a4002e5b",
+      "new_sha256": "87c0eaece4ee29fd4854b84eff36a354aa42e093695380241148374582a71e74"
+    },
+    {
+      "path": "assets/actions/stitch_drone/stitch_drone_hurt.png",
+      "old_sha256": "f2e8505ad992177f5b2d86e8a5b1e0cdc0c96d8f933751b87c6a165302297efe",
+      "new_sha256": "8e7d29fa34ca8670658415103098760403ff4d0ca31a4125326cafa1ff30c879"
+    },
+    {
+      "path": "assets/enemies/enemy_manifest.json",
+      "old_sha256": "0b2d07885c112bf84b22efc1269f03556ba19d771c28680027394b3c7fb4f249",
+      "new_sha256": "8983de6a721fe7051d0aaed26bfa238ee11cedb3680b804c54beebb644bc114e"
+    },
+    {
+      "path": "assets/enemies/stitch_drone.png",
+      "old_sha256": "39a2625999a6ac02b1cc3a96e1a0ed0f399997538620e3cc1ccc76b13ca099d8",
+      "new_sha256": "ecf056d8b5a644e4762739facfb58a12590430e11078fbb1d7a3eb48a9873e0e"
+    }
+  ],
+  "added": [
+    {
+      "path": "art_source/stitch_drone/README.md",
+      "sha256": "db0d89047e436467870ac3d8e6ad6468864c399749bbb84e291bfa43cb856579"
+    },
+    {
+      "path": "art_source/stitch_drone/SOURCE_MAP.json",
+      "sha256": "ce0161090d5cf854dfacac212ff18c82ba0731ceffc4143c789374338bfe6042"
+    },
+    {
+      "path": "art_source/stitch_drone/export_and_measure.py",
+      "sha256": "aea376357e35cda400d07e9879e626f168bdc73f9525750ca774fd4caf9902d2"
+    },
+    {
+      "path": "art_source/stitch_drone/metadata/measured_assets.json",
+      "sha256": "52ecdddf2b4a9f63e39a8481dd3fd21aef229e5bddb95045f49c4bd92c0b66e6"
+    },
+    {
+      "path": "art_source/stitch_drone/metadata/reference_provenance.json",
+      "sha256": "62bf7178741c6d28d477f20524376be38ede41749e08066c6c8a9861ba5f03c5"
+    },
+    {
+      "path": "art_source/stitch_drone/source/draw_stitch.py",
+      "sha256": "9d15f5dfd369a549461683541aaabfb141ca9e7511539200302a701489596a40"
+    },
+    {
+      "path": "art_source/stitch_drone/source/palette_and_poses.json",
+      "sha256": "2d52a2eaf2610325c7d4cd307faa0ec1101f6a766c3fc57595e3e167c50fa74e"
+    },
+    {
+      "path": "art_source/stitch_drone/source/stitch_drone_channel.svg",
+      "sha256": "ff8859445678044d674a3d9afb4b50e7d5b77b087de1f451dd0530c219da83fd"
+    },
+    {
+      "path": "art_source/stitch_drone/source/stitch_drone_death.svg",
+      "sha256": "e60ba0039cf29876ace50d212c40a4b3a3fa0bb4a2c49f3602d26069c5dba116"
+    },
+    {
+      "path": "art_source/stitch_drone/source/stitch_drone_hover.svg",
+      "sha256": "2d8c39cb84c6885c6a53015784e5350e3ad419d13dce397268b98e28a101e41f"
+    },
+    {
+      "path": "art_source/stitch_drone/source/stitch_drone_hurt.svg",
+      "sha256": "11d75388be9c173ee4a0fb8c53e0917404905601161270c661f401ca03f4be8f"
+    }
+  ],
+  "removed": [],
+  "logic_scripts_ui_data_scenes_exact": true,
+  "old_frozen_772_unchanged": true,
+  "old_asset_tests_identity_expected_obsolete": "Historical assertions preserved; require new QA oracle, no old full139 pass claimed"
+}

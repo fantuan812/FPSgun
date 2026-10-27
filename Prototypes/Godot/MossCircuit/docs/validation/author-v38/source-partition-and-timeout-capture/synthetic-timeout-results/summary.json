@@ -1,0 +1,26 @@
+[
+  {
+    "test": "timeout-with-marker-and-error",
+    "exit": 124,
+    "error": true,
+    "success_marker": true,
+    "seconds": 0.205,
+    "pass": false
+  },
+  {
+    "test": "timeout-invalid-utf8",
+    "exit": 124,
+    "error": false,
+    "success_marker": false,
+    "seconds": 0.206,
+    "pass": false
+  },
+  {
+    "test": "normal-success",
+    "exit": 0,
+    "error": false,
+    "success_marker": true,
+    "seconds": 0.024,
+    "pass": true
+  }
+]

@@ -1,0 +1,54 @@
+{
+  "status": "PROPOSAL_ONLY_CURRENT_AGGREGATE_STILL_RUNNING_NOT_APPLIED",
+  "utc": "2026-10-27T07:29:53.142567+00:00",
+  "original_source_fixture_sha256": "e733fc08d6ca4d3c16c6f3e8ae5a7abc415b5b96b4c20823da1b5ac5a96ba690",
+  "current_timeout_partial_streams": "NOT_CAPTURED by original generic runner; cannot infer last phase or absence of prior errors",
+  "historical_timing": "Existing v36 instrumented exact fixture shows make_game/snap wall timings for that prior run only; not current v38 causal diagnosis. No new long timing rerun proposed.",
+  "parts": [
+    {
+      "mode": "arena",
+      "sha256": "27d1fa0885b3c18bc57d78b4e2e1a8dac137910ea1fb57270ebbdbe22d13b1c6",
+      "checks": 435,
+      "inverse_exact": true,
+      "historical_accepted_partition_exact_except_helper_path": true
+    },
+    {
+      "mode": "rooms",
+      "sha256": "86af190868b41f873261828cf24cea30f3b0126683503a037e2e57550ea02b87",
+      "checks": 338,
+      "inverse_exact": true,
+      "historical_accepted_partition_exact_except_helper_path": true
+    }
+  ],
+  "coverage": "Arena original initial resource97 + original mode338 =435; Rooms original mode338. Every case/assert/order/await/cleanup and resulting72 observations retained, fresh process per mode.",
+  "proposed_paths": {
+    "tests/independent_feedback_authority.gd": "Arena partition retains old filename/UID",
+    "tests/independent_feedback_authority_rooms.gd": "new Rooms partition",
+    "tests/support/historical_feedback_authority_v35.gd": "byte-exact original773 script retained, excluded from top-level standalone discovery"
+  },
+  "budget": "Explicit NEW source functional gate each180,totalmax360 instead of original single180. Original v38 source timeout remainsFAIL. Generic per-command180 unchanged but total gate budget is changed and must be approved, not hidden.",
+  "discovery": "Current137standalone+import138 becomes138standalone+import139; actual discovery must verify. No production changes.",
+  "runner_changes": [
+    "Logging-only preserve TimeoutExpired stdout/stderr exact bytes pluscombined log; native124 and error/success/cap/continue rules unchanged",
+    "Add new Rooms filename to existing four-file JSON-output dispatch so36 observations saved; old original predicates unchanged"
+  ],
+  "required_before_adoption": [
+    "original138 terminal",
+    "explicit scope approval",
+    "small synthetic timeout-stream preservation validation, not rerunning longfixture",
+    "new candidate only; all original768/raw immutable",
+    "independent static inverse/pin review and new full aggregate"
+  ],
+  "files": {
+    "rooms_dispatch.patch": "69688a433915c22ef7ece14b409967b0b94867a2f19d1d7fc3e1aab76868e226",
+    "arena.patch": "0a06cd6db9aba86cc2da1423a61d45676af871297009a7b0ecffb34c38b6b201",
+    "rooms.gd": "86af190868b41f873261828cf24cea30f3b0126683503a037e2e57550ea02b87",
+    "prepare.py": "9520dbc87bfe62b30291e34141998ddba584c33d110f40746d3c32cb331ac0bb",
+    "arena.gd": "27d1fa0885b3c18bc57d78b4e2e1a8dac137910ea1fb57270ebbdbe22d13b1c6",
+    "original.gd": "e733fc08d6ca4d3c16c6f3e8ae5a7abc415b5b96b4c20823da1b5ac5a96ba690",
+    "rooms.patch": "61d7707417e1ecb1109ef06592e43de1c27d23951fe766843c17691163a4ed19",
+    "run_regression.proposed.py": "4f5c41e186f0ecb8bd8660c209a8256e8549e65298c001adfeea57a9d0f22821",
+    "logging_only.patch": "329a9746c530d93bd727e46a2a5465be380037f83a35270393569cb5b8a68e48",
+    "run_regression.logging_only.py": "97c441a1331e16c67610786626bb30a9c875f9a4ae9d62aef0c90c5f6cd61d29"
+  }
+}

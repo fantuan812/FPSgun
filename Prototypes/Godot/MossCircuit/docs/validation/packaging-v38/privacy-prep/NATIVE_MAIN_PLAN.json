@@ -1,0 +1,29 @@
+{
+  "scope": "One bounded native display normal main/title launch from unchanged release ELF with adjacent exact portable PCK, normal --quit-after exit. No gameplay interactions, no new ordinary/28/full139 acceptance. Dummy not physical listening.",
+  "source": "<WORKSPACE>/moss-v38-svg-portable",
+  "source_map": "<WORKSPACE>/moss-v38-packaging-privacy-prep/PORTABLE_INPUTS.json",
+  "command": [
+    "<WORKSPACE>/moss-v38-svg-portable-pack/linux/MossCircuit.x86_64",
+    "--audio-driver",
+    "Dummy",
+    "--resolution",
+    "960x540",
+    "--position",
+    "92,120",
+    "--max-fps",
+    "60",
+    "--quit-after",
+    "600"
+  ],
+  "cap_seconds": 180,
+  "pins": {
+    "<WORKSPACE>/moss-v38-packaging-privacy-prep/run_native_main.py": "d9042b21e123e6c8e8b8c27a69dfe25fe5c1b61ba3fb563a8fc1bc9708f4e4d0",
+    "<WORKSPACE>/moss-v38-packaging-privacy-prep/launch_native_main.sh": "d6f150b27fa8d392d5eee8c428aff6d85a0e3d527ffd86e13c8aa9ad8e9c948c",
+    "<WORKSPACE>/moss-v38-packaging-privacy-prep/PORTABLE_INPUTS.json": "6d1305662c8545466cd4551743b7a3ab8ccd22821397a3d3f6f1386515c05909",
+    "<WORKSPACE>/moss-v38-svg-portable-pack/linux/MossCircuit.pck": "b8f648cc2f9378dfffc162375e105dd2e5ccd21044cb6496e4ebe39027a38740",
+    "<WORKSPACE>/moss-v38-svg-portable-pack/linux/MossCircuit.x86_64": "2c78919325d7f29fa7607287c7c1eeac367ea4c94e7b8b6f5f4c6b20492f73d0",
+    "<WORKSPACE>/moss-v38-packaging-privacy-prep/PACKED_ASSET_PLAN.json": "3fda407909f76460d7f1ede4d90e49652a06a03f90abc37e15f662e1fc3a8859",
+    "<WORKSPACE>/moss-v38-packaging-privacy-prep/run_packed_assets.py": "6b41c49e67df8924562a74da026cb500057a06054472d22e02705dd871d6a2c0",
+    "<WORKSPACE>/moss-v38-packaging-privacy-prep/scene-decode-first/RESULT.json": "77aff88805db53f8ff71a3eca47e3c06f658c69e8b0cecd7b01ed1bee6a1edd0"
+  }
+}

@@ -1151,6 +1151,168 @@
         0,
         255
       ]
+    },
+    "stitch_drone": {
+      "path": "res://assets/enemies/stitch_drone.png",
+      "source_sha256": "ecf056d8b5a644e4762739facfb58a12590430e11078fbb1d7a3eb48a9873e0e",
+      "editable_source": "art_source/stitch_drone/source/stitch_drone_hover.svg",
+      "editable_sha256": "2d8c39cb84c6885c6a53015784e5350e3ad419d13dce397268b98e28a101e41f",
+      "frames": [
+        {
+          "region": [
+            0,
+            0,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            95,
+            35,
+            225,
+            336
+          ],
+          "minimum_clear_margin": 35,
+          "pixel_sha256": "c0e690b01580ccad0db5c50c0608739b654cb44fcbdb110fb08cbe88225833cf"
+        },
+        {
+          "region": [
+            418,
+            0,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            95,
+            29,
+            224,
+            342
+          ],
+          "minimum_clear_margin": 29,
+          "pixel_sha256": "574e600283da750a59809f337eee68f954b0a06a82d0a3cccfffc211ae2e4aa8"
+        },
+        {
+          "region": [
+            836,
+            0,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            95,
+            23,
+            223,
+            348
+          ],
+          "minimum_clear_margin": 23,
+          "pixel_sha256": "f405942c847222e36c0c4b300b0cd3065663d0378a6de58840e0ca1faed4d304"
+        },
+        {
+          "region": [
+            0,
+            418,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            95,
+            29,
+            224,
+            342
+          ],
+          "minimum_clear_margin": 29,
+          "pixel_sha256": "574e600283da750a59809f337eee68f954b0a06a82d0a3cccfffc211ae2e4aa8"
+        },
+        {
+          "region": [
+            418,
+            418,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            95,
+            35,
+            225,
+            336
+          ],
+          "minimum_clear_margin": 35,
+          "pixel_sha256": "c0e690b01580ccad0db5c50c0608739b654cb44fcbdb110fb08cbe88225833cf"
+        },
+        {
+          "region": [
+            836,
+            418,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            94,
+            41,
+            227,
+            330
+          ],
+          "minimum_clear_margin": 41,
+          "pixel_sha256": "fdf98ae95329ece6667873250d0520dd766efc2d9f63e3373fbfc68ba97d1755"
+        },
+        {
+          "region": [
+            0,
+            836,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            94,
+            47,
+            228,
+            324
+          ],
+          "minimum_clear_margin": 47,
+          "pixel_sha256": "a925ec3d85603570ea9c39e218ae7f8c6b9570ba6cd44f439193270c07375fa0"
+        },
+        {
+          "region": [
+            418,
+            836,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            94,
+            41,
+            227,
+            330
+          ],
+          "minimum_clear_margin": 41,
+          "pixel_sha256": "fdf98ae95329ece6667873250d0520dd766efc2d9f63e3373fbfc68ba97d1755"
+        },
+        {
+          "region": [
+            836,
+            836,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            95,
+            35,
+            225,
+            336
+          ],
+          "minimum_clear_margin": 35,
+          "pixel_sha256": "c0e690b01580ccad0db5c50c0608739b654cb44fcbdb110fb08cbe88225833cf"
+        }
+      ],
+      "name": "补缀蜂 / Stitch Drone",
+      "size": [
+        1254,
+        1254
+      ],
+      "grid": [
+        3,
+        3
+      ],
+      "action": "hover / move"
     }
   }
 }

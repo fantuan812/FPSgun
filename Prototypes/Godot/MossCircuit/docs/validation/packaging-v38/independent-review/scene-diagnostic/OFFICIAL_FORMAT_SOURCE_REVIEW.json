@@ -1,0 +1,22 @@
+{
+  "scope": "Independent read-only review of exact Godot4.6.3-stable primary source; supports field decoding and possible serialization mechanism, not a retroactive execution trace or automatic gate exception",
+  "sources": [
+    {
+      "url": "https://github.com/godotengine/godot/blob/4.6.3-stable/scene/resources/packed_scene.cpp#L1016-L1039",
+      "finding": "For a saved node whose unique scene ID is unassigned or duplicated, engine requests a ResourceUID, keeps it positive, assigns and stores it in ids."
+    },
+    {
+      "url": "https://github.com/godotengine/godot/blob/4.6.3-stable/scene/resources/packed_scene.cpp#L1705",
+      "finding": "Bundled node_ids is populated from ids."
+    },
+    {
+      "url": "https://github.com/godotengine/godot/blob/4.6.3-stable/core/io/resource_format_binary.cpp#L65",
+      "finding": "Binary format tag32 denotes PackedInt32Array."
+    },
+    {
+      "url": "https://github.com/godotengine/godot/blob/4.6.3-stable/core/io/resource_format_binary.cpp#L498-L514",
+      "finding": "Decoder consumes count and count times4 payload bytes for this array."
+    }
+  ],
+  "actual_bytes": "Observed node_ids tag32 count1 followed by only4 changed bytes, positive IDs106410627 and707380806; remaining680 scene bytes equal. Actual engine resource decoder pending."
+}

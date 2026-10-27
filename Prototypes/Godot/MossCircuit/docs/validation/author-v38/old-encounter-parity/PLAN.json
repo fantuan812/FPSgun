@@ -1,0 +1,34 @@
+{
+  "status": "STATIC_TWO_ROUTE_PLAN_NOT_EXECUTED",
+  "routes": [
+    {
+      "name": "transactions",
+      "fixture": "evidence-workspace/moss-v38-parity/transactions.gd",
+      "fixture_sha256": "da608adb0ad811e8e41f2ec1178eaedf3a6bec911fde18d5895ec6fc4ca085ee",
+      "original": "evidence-workspace/moss-v37-parity/current_transactions.gd",
+      "original_sha256": "5d4359c6e432d81e645952436f371c327c3cf7d670854f419efe8566a16c3932",
+      "retained_trace": "evidence-workspace/moss-v37-parity/results/current-transactions-candidate.json",
+      "retained_sha256": "48c6705e27d301857f8a52ad849a29b27f6a302f8bcab8f7a2ec5a1d69ee7e63",
+      "case_count": 6
+    },
+    {
+      "name": "combat",
+      "fixture": "evidence-workspace/moss-v38-parity/combat.gd",
+      "fixture_sha256": "7221e17d382dbdd061bab09f0c5c54ce0f2753e0805ad47fe40310bf4a7d14d6",
+      "original": "evidence-workspace/moss-v36-qa/checks/new_catalog_old_combat.gd",
+      "original_sha256": "09f36f257e275e765963d8b120a2c1d4f7d7d0941eaeb9a1da8a6d9fddcbbb2d",
+      "retained_trace": "evidence-workspace/moss-v37-parity/results/current-combat.json",
+      "retained_sha256": "7cd6062fe08d107b8b3eb6e41f2f8dce0ce90f0a1c4448768e8c0624c317c358",
+      "case_count": 24
+    }
+  ],
+  "inputs": {
+    "encounters.json": "853bb3699bb05c2ed1eb7d1c8dc3e51844428c233ffa3127ac035a2762a3f356",
+    "room_encounters.json": "4a0067faa08241d91042505d72b3a027956ef27571710d74d8559462ac2c5131",
+    "injection.txt": "52806c177612316b0f9136a24569b692cae12e0e62377d19700cbfbfcfc9b157"
+  },
+  "source_map": "evidence-workspace/moss-v38-prep/CORRECTED_INPUTS.json",
+  "source_map_sha256": "50c09012653db0249d0b13088ed6ccbcee73b126bd0ee6cc94fb8be884f95846",
+  "budget_each_seconds": 180,
+  "scope": "Only v38 with exact held v37 encounters/Rooms and unchanged current catalog. Original6transaction and24combat assertions/projection/order unchanged; whole output bytes must equal actually executed held v37 traces. Not a baseline rerun or new encounter all-seed parity claim."
+}

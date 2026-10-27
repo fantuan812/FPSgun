@@ -1,0 +1,11 @@
+--- <WORKSPACE>/moss-v38-final-r2/tests/independent_feedback_views.gd
++++ <WORKSPACE>/moss-v38-qa/packed-harness/audio-views.gd
+@@ -81,7 +81,7 @@
+     click(button("BACK"));await process_frame;await process_frame
+     ck(g.state==source,"BACK correct actual route "+source)
+     ck(events.is_empty(),"navigation never sound")
+- var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
++ var audio_teardown = preload("<WORKSPACE>/moss-v38-qa/packed-harness/audio_teardown.gd").new()
+  audio_teardown.prepare([g])
+  g.queue_free();await process_frame
+  await audio_teardown.finish(self)

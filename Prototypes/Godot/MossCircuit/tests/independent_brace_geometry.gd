@@ -1,4 +1,5 @@
 extends SceneTree
+const EncounterHistory=preload("res://tests/support/v38_encounter_projection.gd")
 # Independent contract oracle; expected booleans and numeric amounts are not obtained from brace().
 const Defense=preload("res://scripts/gameplay/primary_defense.gd")
 const AI=preload("res://scripts/enemy_ai.gd")
@@ -18,6 +19,9 @@ func entry(config:Dictionary,id:String)->Dictionary:
 func _initialize()->void:
  var config:Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://data/encounters.json"))
  ck(AI.validate(config).is_empty(),"authored encounters validate")
+ var encounter_history:Dictionary=EncounterHistory.project(FileAccess.get_file_as_string("res://data/encounters.json"),FileAccess.get_file_as_string("res://data/room_encounters.json"))
+ ck(encounter_history.get("pass",false),"strict v38 additions before original historical roster oracle")
+ config=encounter_history.encounters
  ck(config.enemies.map(func(e):return e.id)==["crawler","charger","spitter","flanker","brood_keeper","boss_warden","boss_core"],"exact seven IDs and ordering")
  var charger:Dictionary=entry(config,"charger")
  ck(charger.get("brace_degrees")==120 and charger.get("brace_multiplier")==.5,"frozen authored120/.5")
@@ -83,7 +87,7 @@ func _initialize()->void:
  var e:Dictionary=host();e.scale=(16.0+.0001)/16.0
  eq(Defense.resolve(e,15,Vector2(16,0),Vector2.RIGHT),7.5,"strict threshold equality remains directional")
  for nominal in [0.0,.5,7.25,15.0,30.0,1000.0]:eq(Defense.resolve(host(),nominal,Vector2(100,0),Vector2.RIGHT),nominal*.5,"fraction/nominal overkill no round or HP clamp")
- var result:Dictionary={"checks":checks,"failures":failures,"scope":"Independent fixed contract geometry/data oracle; no real combat/native/balance claim"}
+ var result:Dictionary={"checks":checks,"failures":failures,"scope":"Independent fixed historical geometry/data oracle after strict declared v38 enemy/wave/Rooms append reversal; no real combat/native/balance claim"}
  var args:=OS.get_cmdline_user_args()
  if not args.is_empty():FileAccess.open(args[0],FileAccess.WRITE).store_string(JSON.stringify(result,"  ")+"\n")
  print(JSON.stringify(result));quit(0 if failures.is_empty() else 1)

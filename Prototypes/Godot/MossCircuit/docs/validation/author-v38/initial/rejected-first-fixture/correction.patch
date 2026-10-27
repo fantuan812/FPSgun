@@ -1,0 +1,11 @@
+--- failed/test_stitch_drone.gd
++++ corrected/test_stitch_drone.gd
+@@ -9,7 +9,7 @@
+ func _initialize()->void:call_deferred("run")
+ func run()->void:
+  var g=load("res://scenes/main.tscn").instantiate();root.add_child(g);g.set_process(false)
+- g._start_run(3803);g.spawn_clock=999.;g.weapon_clocks.fill(999.)
++ g._start_run(3803);g.combat_frame.area=g.config.arena;g.spawn_clock=999.;g.weapon_clocks.fill(999.)
+  var source:Dictionary=g._spawn_kind("stitch_drone",Vector2(100,100))
+  var target:Dictionary=g._spawn_kind("crawler",Vector2(150,100))
+  source.speed=0.;target.speed=0.;source.cooldown_left=0.;target.hp=5.;target.anim_hp=5.

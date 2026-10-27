@@ -1,0 +1,26 @@
+{
+  "scope": "The verification plan approved asset-only new candidate; 8 changed prior paths/11added; no gameplaylogic change. Old772/full139/ordinary evidence historical only.",
+  "input_map": "<WORKSPACE>/moss-v38-svg-candidate-prep/INPUTS_PREIMPORT.json",
+  "source_inputs": 783,
+  "per_command_cap_seconds": 180,
+  "routes": [
+    "truecoldimport",
+    "svg-assets120",
+    "actor418",
+    "animation35"
+  ],
+  "stop_first_rejection": true,
+  "pins": {
+    "<WORKSPACE>/moss-v38-svg-candidate-prep/INPUTS_PREIMPORT.json": "4cf7339887ec924caaafbb498aebfa5f934ed2062133411b462818fd448ecd64",
+    "<WORKSPACE>/moss-v38-svg-candidate-prep/ASSEMBLY_DIFF.json": "1aa06690f96e5816ea2f9f32edff19ba7d3de7c33caf8bcbab30faac47d52cb2",
+    "<WORKSPACE>/moss-v38-svg-qa/run_source.py": "da7419604e0b1185507b2d05c73cd0f26a78870da94c8bf081fe00e641c7e6c4",
+    "<WORKSPACE>/moss-v38-svg-qa/STAGING_REVIEW.json": "8666c99b9ecb72f8b91096c9eff7ab55948a2240603efd12e46bef1595d10b70",
+    "<WORKSPACE>/moss-v38-svg-qa/EXPECTED_ASSETS.json": "4753a95cb7bf2ed0621a3157c8b40d5a01b2f28965543f30fee31a1bfe01eb03"
+  },
+  "expected_new_import_files": [
+    "art_source/stitch_drone/source/stitch_drone_hover.svg.import",
+    "art_source/stitch_drone/source/stitch_drone_channel.svg.import",
+    "art_source/stitch_drone/source/stitch_drone_hurt.svg.import",
+    "art_source/stitch_drone/source/stitch_drone_death.svg.import"
+  ]
+}

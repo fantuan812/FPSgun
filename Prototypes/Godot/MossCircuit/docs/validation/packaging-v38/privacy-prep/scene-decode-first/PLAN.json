@@ -1,0 +1,20 @@
+{
+  "pins": {
+    "<WORKSPACE>/moss-v38-packaging-privacy-prep/PORTABLE_INPUTS.json": "6d1305662c8545466cd4551743b7a3ab8ccd22821397a3d3f6f1386515c05909",
+    "<WORKSPACE>/moss-v38-svg-portable-pack/linux/MossCircuit.pck": "b8f648cc2f9378dfffc162375e105dd2e5ccd21044cb6496e4ebe39027a38740",
+    "<WORKSPACE>/moss-v38-svg-author-review/scene-diagnostic/decode_scene.gd": "63ecc917d3f97a07a11cefeb1e402dfca42d086f37b71a6563ffa277b70291f7",
+    "<WORKSPACE>/moss-v38-svg-author-review/scene-diagnostic/old.scn": "6e84105e22580ec5cee259a3987ee987b6c46dff29110d096a6512aeedec143c",
+    "<WORKSPACE>/moss-v38-svg-author-review/scene-diagnostic/new.scn": "8899c818542ea9c9191c272392cf3f81df1209629dd31211fc74004e5a015e68",
+    "<WORKSPACE>/moss-v38-packaging-privacy-prep/run_scene_decode.py": "2ef1dc097abab70cfa4609d81b871a2320eb118d75b1d933081c3bab96a47f5b"
+  },
+  "cap_seconds": 180,
+  "scope": "one decode-only load of actual old/new PackedScene under new exact PCK; no instantiate; original only-metadata gate remains FAIL",
+  "byte_offsets": [
+    508,
+    509,
+    510,
+    511
+  ],
+  "old_node_id": 106410627,
+  "new_node_id": 707380806
+}

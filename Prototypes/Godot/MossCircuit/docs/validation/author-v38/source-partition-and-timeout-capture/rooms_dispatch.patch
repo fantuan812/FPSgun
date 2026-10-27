@@ -1,0 +1,11 @@
+--- logging-only
++++ logging-and-rooms-output
+@@ -65,7 +65,7 @@
+     if not test.read_text().lstrip().startswith("extends SceneTree"):
+         continue
+     switches = ["--script", "res://" + str(test.relative_to(project))]
+-    promoted_feedback = {"independent_feedback_authority.gd", "independent_feedback_mixer.gd", "independent_feedback_views.gd", "independent_settlement_types.gd"}
++    promoted_feedback = {"independent_feedback_authority.gd", "independent_feedback_authority_rooms.gd", "independent_feedback_mixer.gd", "independent_feedback_views.gd", "independent_settlement_types.gd"}
+     if test.name in promoted_feedback:
+         switches += ["--", str(output / (test.stem + ".json"))]
+         if test.name == "independent_feedback_mixer.gd":

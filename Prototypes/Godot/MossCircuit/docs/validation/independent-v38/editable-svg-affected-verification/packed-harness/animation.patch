@@ -1,0 +1,11 @@
+--- tests/independent_actions.gd
++++ animation.gd
+@@ -98,7 +98,7 @@
+ 	check(outcomes[0]==outcomes[1],"authored actions versus fallback preserve damage and RNG")
+ 	a.assets=saved
+ 	check(g.telegraphs.z_index>g.vfx.z_index,"danger geometry remains above decoration")
+-	var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
++	var audio_teardown = preload("<WORKSPACE>/moss-v38-svg-qa/packed-harness/audio_teardown.gd").new()
+ 	audio_teardown.prepare([g])
+ 	g.queue_free();await process_frame
+ 	await audio_teardown.finish(self)

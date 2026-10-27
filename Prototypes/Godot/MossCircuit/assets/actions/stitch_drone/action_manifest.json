@@ -1,0 +1,644 @@
+{
+  "schema_version": 1,
+  "actions": {
+    "stitch_drone_channel": {
+      "path": "res://assets/actions/stitch_drone/stitch_drone_channel.png",
+      "source_sha256": "6970cce2e0c9883789774fa5c118f7d69a093a739e085f07d9188783fee5a091",
+      "editable_source": "art_source/stitch_drone/source/stitch_drone_channel.svg",
+      "editable_sha256": "ff8859445678044d674a3d9afb4b50e7d5b77b087de1f451dd0530c219da83fd",
+      "frames": [
+        {
+          "region": [
+            95,
+            35,
+            225,
+            336
+          ],
+          "margin": [
+            96,
+            62,
+            193,
+            82
+          ],
+          "alpha_bbox": [
+            96,
+            62,
+            225,
+            336
+          ],
+          "source_frame": 0
+        },
+        {
+          "region": [
+            514,
+            29,
+            224,
+            342
+          ],
+          "margin": [
+            97,
+            56,
+            194,
+            76
+          ],
+          "alpha_bbox": [
+            97,
+            56,
+            224,
+            342
+          ],
+          "source_frame": 1
+        },
+        {
+          "region": [
+            933,
+            29,
+            223,
+            348
+          ],
+          "margin": [
+            97,
+            50,
+            195,
+            70
+          ],
+          "alpha_bbox": [
+            97,
+            50,
+            223,
+            348
+          ],
+          "source_frame": 2
+        },
+        {
+          "region": [
+            98,
+            441,
+            222,
+            342
+          ],
+          "margin": [
+            98,
+            56,
+            196,
+            76
+          ],
+          "alpha_bbox": [
+            98,
+            56,
+            222,
+            342
+          ],
+          "source_frame": 3
+        },
+        {
+          "region": [
+            517,
+            441,
+            221,
+            336
+          ],
+          "margin": [
+            98,
+            62,
+            197,
+            82
+          ],
+          "alpha_bbox": [
+            98,
+            62,
+            221,
+            336
+          ],
+          "source_frame": 4
+        },
+        {
+          "region": [
+            937,
+            441,
+            219,
+            330
+          ],
+          "margin": [
+            99,
+            68,
+            199,
+            88
+          ],
+          "alpha_bbox": [
+            99,
+            68,
+            219,
+            330
+          ],
+          "source_frame": 5
+        },
+        {
+          "region": [
+            66,
+            865,
+            252,
+            324
+          ],
+          "margin": [
+            83,
+            74,
+            166,
+            94
+          ],
+          "alpha_bbox": [
+            83,
+            74,
+            252,
+            324
+          ],
+          "source_frame": 6
+        },
+        {
+          "region": [
+            515,
+            871,
+            223,
+            330
+          ],
+          "margin": [
+            97,
+            68,
+            195,
+            88
+          ],
+          "alpha_bbox": [
+            97,
+            68,
+            223,
+            330
+          ],
+          "source_frame": 7
+        },
+        {
+          "region": [
+            931,
+            877,
+            225,
+            336
+          ],
+          "margin": [
+            96,
+            62,
+            193,
+            82
+          ],
+          "alpha_bbox": [
+            96,
+            62,
+            225,
+            336
+          ],
+          "source_frame": 8
+        }
+      ],
+      "anchor": [
+        0.5,
+        0.9521531100478469
+      ],
+      "reference_height": 336,
+      "release_frame": 6,
+      "facing": "left",
+      "logical_canvas": [
+        418,
+        418
+      ],
+      "source_grid": [
+        3,
+        3
+      ],
+      "alignment": "SVG-derived alpha8 crop, centered integer padding, bottom20"
+    },
+    "stitch_drone_hurt": {
+      "path": "res://assets/actions/stitch_drone/stitch_drone_hurt.png",
+      "source_sha256": "8e7d29fa34ca8670658415103098760403ff4d0ca31a4125326cafa1ff30c879",
+      "editable_source": "art_source/stitch_drone/source/stitch_drone_hurt.svg",
+      "editable_sha256": "11d75388be9c173ee4a0fb8c53e0917404905601161270c661f401ca03f4be8f",
+      "frames": [
+        {
+          "region": [
+            95,
+            35,
+            225,
+            336
+          ],
+          "margin": [
+            96,
+            62,
+            193,
+            82
+          ],
+          "alpha_bbox": [
+            96,
+            62,
+            225,
+            336
+          ],
+          "source_frame": 0
+        },
+        {
+          "region": [
+            507,
+            37,
+            239,
+            339
+          ],
+          "margin": [
+            89,
+            59,
+            179,
+            79
+          ],
+          "alpha_bbox": [
+            89,
+            59,
+            239,
+            339
+          ],
+          "source_frame": 1
+        },
+        {
+          "region": [
+            922,
+            45,
+            245,
+            341
+          ],
+          "margin": [
+            86,
+            57,
+            173,
+            77
+          ],
+          "alpha_bbox": [
+            86,
+            57,
+            245,
+            341
+          ],
+          "source_frame": 2
+        },
+        {
+          "region": [
+            88,
+            467,
+            240,
+            339
+          ],
+          "margin": [
+            89,
+            59,
+            178,
+            79
+          ],
+          "alpha_bbox": [
+            89,
+            59,
+            240,
+            339
+          ],
+          "source_frame": 3
+        },
+        {
+          "region": [
+            505,
+            459,
+            238,
+            336
+          ],
+          "margin": [
+            90,
+            62,
+            180,
+            82
+          ],
+          "alpha_bbox": [
+            90,
+            62,
+            238,
+            336
+          ],
+          "source_frame": 4
+        },
+        {
+          "region": [
+            916,
+            453,
+            237,
+            330
+          ],
+          "margin": [
+            90,
+            68,
+            181,
+            88
+          ],
+          "alpha_bbox": [
+            90,
+            68,
+            237,
+            330
+          ],
+          "source_frame": 5
+        },
+        {
+          "region": [
+            97,
+            865,
+            221,
+            324
+          ],
+          "margin": [
+            98,
+            74,
+            197,
+            94
+          ],
+          "alpha_bbox": [
+            98,
+            74,
+            221,
+            324
+          ],
+          "source_frame": 6
+        },
+        {
+          "region": [
+            512,
+            871,
+            227,
+            330
+          ],
+          "margin": [
+            95,
+            68,
+            191,
+            88
+          ],
+          "alpha_bbox": [
+            95,
+            68,
+            227,
+            330
+          ],
+          "source_frame": 7
+        },
+        {
+          "region": [
+            931,
+            871,
+            225,
+            336
+          ],
+          "margin": [
+            96,
+            62,
+            193,
+            82
+          ],
+          "alpha_bbox": [
+            96,
+            62,
+            225,
+            336
+          ],
+          "source_frame": 8
+        }
+      ],
+      "anchor": [
+        0.5,
+        0.9521531100478469
+      ],
+      "reference_height": 336,
+      "release_frame": 1,
+      "facing": "left",
+      "logical_canvas": [
+        418,
+        418
+      ],
+      "source_grid": [
+        3,
+        3
+      ],
+      "alignment": "SVG-derived alpha8 crop, centered integer padding, bottom20"
+    },
+    "stitch_drone_death": {
+      "path": "res://assets/actions/stitch_drone/stitch_drone_death.png",
+      "source_sha256": "87c0eaece4ee29fd4854b84eff36a354aa42e093695380241148374582a71e74",
+      "editable_source": "art_source/stitch_drone/source/stitch_drone_death.svg",
+      "editable_sha256": "e60ba0039cf29876ace50d212c40a4b3a3fa0bb4a2c49f3602d26069c5dba116",
+      "frames": [
+        {
+          "region": [
+            95,
+            35,
+            225,
+            336
+          ],
+          "margin": [
+            96,
+            62,
+            193,
+            82
+          ],
+          "alpha_bbox": [
+            96,
+            62,
+            225,
+            336
+          ],
+          "source_frame": 0
+        },
+        {
+          "region": [
+            507,
+            43,
+            239,
+            327
+          ],
+          "margin": [
+            89,
+            71,
+            179,
+            91
+          ],
+          "alpha_bbox": [
+            89,
+            71,
+            239,
+            327
+          ],
+          "source_frame": 1
+        },
+        {
+          "region": [
+            918,
+            57,
+            257,
+            308
+          ],
+          "margin": [
+            80,
+            90,
+            161,
+            110
+          ],
+          "alpha_bbox": [
+            80,
+            90,
+            257,
+            308
+          ],
+          "source_frame": 2
+        },
+        {
+          "region": [
+            80,
+            502,
+            293,
+            271
+          ],
+          "margin": [
+            62,
+            127,
+            125,
+            147
+          ],
+          "alpha_bbox": [
+            62,
+            127,
+            293,
+            271
+          ],
+          "source_frame": 3
+        },
+        {
+          "region": [
+            513,
+            566,
+            304,
+            235
+          ],
+          "margin": [
+            57,
+            163,
+            114,
+            183
+          ],
+          "alpha_bbox": [
+            57,
+            163,
+            304,
+            235
+          ],
+          "source_frame": 4
+        },
+        {
+          "region": [
+            955,
+            575,
+            290,
+            234
+          ],
+          "margin": [
+            64,
+            164,
+            128,
+            184
+          ],
+          "alpha_bbox": [
+            64,
+            164,
+            290,
+            234
+          ],
+          "source_frame": 5
+        },
+        {
+          "region": [
+            123,
+            996,
+            287,
+            238
+          ],
+          "margin": [
+            65,
+            160,
+            131,
+            180
+          ],
+          "alpha_bbox": [
+            65,
+            160,
+            287,
+            238
+          ],
+          "source_frame": 6
+        },
+        {
+          "region": [
+            543,
+            995,
+            286,
+            239
+          ],
+          "margin": [
+            66,
+            159,
+            132,
+            179
+          ],
+          "alpha_bbox": [
+            66,
+            159,
+            286,
+            239
+          ],
+          "source_frame": 7
+        },
+        {
+          "region": [
+            961,
+            994,
+            286,
+            241
+          ],
+          "margin": [
+            66,
+            157,
+            132,
+            177
+          ],
+          "alpha_bbox": [
+            66,
+            157,
+            286,
+            241
+          ],
+          "source_frame": 8
+        }
+      ],
+      "anchor": [
+        0.5,
+        0.9521531100478469
+      ],
+      "reference_height": 336,
+      "release_frame": 1,
+      "facing": "left",
+      "logical_canvas": [
+        418,
+        418
+      ],
+      "source_grid": [
+        3,
+        3
+      ],
+      "alignment": "SVG-derived alpha8 crop, centered integer padding, bottom20"
+    }
+  }
+}

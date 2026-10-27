@@ -1,9 +1,18 @@
 extends RefCounted
+const EnemySupport=preload("res://scripts/gameplay/enemy_support.gd")
 const PrimaryDefense=preload("res://scripts/gameplay/primary_defense.gd")
 ## Data-driven timer/state transitions. Events consumed by the combat controller.
 static func tick(enemy: Dictionary, player: Vector2, dt: float, time: float) -> Array:
 	var events: Array = []
 	if enemy.hp <= 0: return events
+	if enemy.behavior == "support_repair":
+		# Support timers are advanced once, at the unified post-movement phase.
+		if enemy.ai_state == "move":
+			var support_distance:float=enemy.pos.distance_to(player)
+			var direction:Vector2=(player-enemy.pos).normalized()
+			if support_distance<enemy.desired_distance-30:enemy.pos-=direction*enemy.speed*dt
+			elif support_distance>enemy.desired_distance+30:enemy.pos+=direction*enemy.speed*dt
+		return events
 	enemy.cooldown_left -= dt
 	enemy.phase = 2 if enemy.boss and enemy.hp <= enemy.max_hp * enemy.phase_threshold else 1
 	var speed: float = enemy.speed * (enemy.phase_speed if enemy.phase == 2 else 1.0)
@@ -82,9 +91,10 @@ static func validate(config: Dictionary) -> Array:
 		if not valid: errors.append("Missing enemy field"); continue
 		if not entry.id is String or not entry.name is String or not entry.boss is bool: errors.append("Invalid enemy identity"); continue
 		errors.append_array(PrimaryDefense.validate_entry(entry))
+		errors.append_array(EnemySupport.validate_entry(entry))
 		if kinds.has(entry.id): errors.append("Duplicate enemy ID")
 		kinds[entry.id] = entry.boss
-		if not entry.behavior in ["chase","charge","ranged","flank","summon","brood_cycle","warden","core"]: errors.append("Unknown behavior")
+		if not entry.behavior in ["chase","charge","ranged","flank","summon","brood_cycle","warden","core","support_repair"]: errors.append("Unknown behavior")
 		if entry.behavior == "brood_cycle":
 			var pulse_valid := true
 			for key in ["pulse_inner_radius","pulse_outer_radius","pulse_warning"]:

@@ -1,0 +1,10 @@
+--- <WORKSPACE>/moss-v38-final-r2/tests/independent_support_death_disposal.gd
++++ <WORKSPACE>/moss-v38-qa/packed-harness/support-death-disposal.gd
+@@ -22,6 +22,6 @@
+   ck(s.support_channel_token==null and s.support_target_id==-1 and s.support_start_hp==0. and not s.support_due and s.support_cancel_pending.is_empty(),"removed dead source ephemeral identity disposed "+mode)
+   ck(g.effect_visuals.filter(func(v):return str(v.kind).begins_with("support_")).is_empty(),"death emits no repair/cancel burst "+mode)
+   observations.append({"mode":mode,"source_removed":not g.enemies.has(s),"source_hp":s.hp,"target_hp":t.hp,"token_present":s.support_channel_token!=null,"target_id":s.support_target_id,"witness":s.support_start_hp,"due":s.support_due,"pending":s.support_cancel_pending})
+- var cleanup=preload("res://tests/support/audio_teardown.gd").new();cleanup.prepare([g]);g.queue_free();await process_frame;await cleanup.finish(self)
++ var cleanup=preload("<WORKSPACE>/moss-v38-qa/packed-harness/audio_teardown.gd").new();cleanup.prepare([g]);g.queue_free();await process_frame;await cleanup.finish(self)
+  print(JSON.stringify({"pass":failures.is_empty(),"checks":checks,"failures":failures,"observations":observations,"scope":"Two-mode actual late projectile source death and retained dictionary disposal. Separate supplemental C3 post-first static gap, original126/104/369/38 results unchanged."}))
+  quit(0 if failures.is_empty() else 1)

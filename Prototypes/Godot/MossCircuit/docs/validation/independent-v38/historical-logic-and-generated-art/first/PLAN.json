@@ -1,0 +1,65 @@
+{
+  "utc": "2026-10-27T06:59:37.308136+00:00",
+  "source_map": "<WORKSPACE>/moss-v38-prep/CORRECTED_INPUTS.json",
+  "source_map_sha256": "50c09012653db0249d0b13088ed6ccbcee73b126bd0ee6cc94fb8be884f95846",
+  "inputs": 753,
+  "scripts_and_plan_pins": {
+    "HAND_ORACLE.md": "58b47ebfc5710053368b34bb441645778bb84afd98dce046caf17064a7abab6a",
+    "BASELINE_DAMAGE_SEAMS.md": "ef9f6940aa2f945ae897ef8987bc269cd52cbc13341054c30bd7f658f905c1f8",
+    "checks/independent_support_authority.gd": "143ff2027718bb558c0d697d51e57944ab0e7dc989b0ec875c16c314d07bbb8e",
+    "checks/independent_support_encounters.gd": "9aa6722b30b7e17bb9b1eaf9b6c47b4818cf4bde7cacd5ab2c6abf2752749863",
+    "checks/independent_support_runtime.gd": "6a8556490f3b7039b35edd981061ef086dd6d4aa2b9e447a11adb96d8aa07f8a",
+    "checks/independent_support_projectiles.gd": "7eb7c8be9ce3a4542d39849c096bfd6ca2df1bf50f0f2dbfb84a9f998ef1a1d1",
+    "ORACLE_FREEZE.json": "42c5f485ebe463eb1dc98a6bda6b0b3fab5b1dda117c4d9cda8947caf7867a5d",
+    "PROJECTILE_SUPPLEMENT_FREEZE.json": "149e91c30f478b6f24e29bee687be8969cb3fea404d751837013999555e339bc",
+    "PREIMPORT_STATIC_REVIEW.json": "01cfb601b0ee14d1625c9bb8a077a37e16cbad3ca07d99155644a26f8395c5c9",
+    "run_first.py": "74fa54e4492da5dfd40c0bdae9aa4734b95d88ce0ec227d360518520bad771d1"
+  },
+  "cases": [
+    [
+      "cold-import",
+      [
+        "--editor",
+        "--import",
+        "--quit"
+      ],
+      false
+    ],
+    [
+      "authority",
+      [
+        "--script",
+        "<WORKSPACE>/moss-v38-qa/checks/independent_support_authority.gd"
+      ],
+      false
+    ],
+    [
+      "runtime",
+      [
+        "--script",
+        "<WORKSPACE>/moss-v38-qa/checks/independent_support_runtime.gd"
+      ],
+      true
+    ],
+    [
+      "encounters",
+      [
+        "--script",
+        "<WORKSPACE>/moss-v38-qa/checks/independent_support_encounters.gd"
+      ],
+      true
+    ],
+    [
+      "projectiles",
+      [
+        "--script",
+        "<WORKSPACE>/moss-v38-qa/checks/independent_support_projectiles.gd"
+      ],
+      true
+    ]
+  ],
+  "timeout_per_case_seconds": 180,
+  "stop_on_first_failure": true,
+  "independent_source_copy": "<WORKSPACE>/moss-v38-qa/source-first",
+  "no_prior_result_reclassified": true
+}

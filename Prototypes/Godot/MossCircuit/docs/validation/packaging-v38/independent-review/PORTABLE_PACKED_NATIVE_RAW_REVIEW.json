@@ -1,0 +1,35 @@
+{
+  "pass": true,
+  "scope": "Independent original raw/native-exit/plan-pins audit, not rerun; no new controlled28/ordinary/full139 claim",
+  "routes": [
+    {
+      "route": "packed-assets-first",
+      "native_exit": 0,
+      "seconds": 2.792970405003871,
+      "files": {
+        "RESULT.json": "6b9f6b7eb9f75585234b0dfa443425847485f05fe9d7bdb48164cacc987f6fda",
+        "stdout.raw": "a804971f081a92b71c2b9a8e7979f5face8f0cca1965fb9b055df78a2d57386b",
+        "stderr.raw": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "native.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      }
+    },
+    {
+      "route": "native-main-first",
+      "native_exit": 0,
+      "seconds": 21.052774081996176,
+      "files": {
+        "RESULT.json": "8985a891e6b703ebfa55a5ad0606698f87027315ec61f1376e14f48e55240be5",
+        "stdout.raw": "d78fb126cc36438cd9d839e222fe275c93fca9eebd251ad73755eddc29a2fe21",
+        "stderr.raw": "12bab35d551a3e20a027c0a1164acc445f84527e1e857d5d898cfa9e45f3a5b0",
+        "native.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+      }
+    }
+  ],
+  "new_pck_sha256": "b8f648cc2f9378dfffc162375e105dd2e5ccd21044cb6496e4ebe39027a38740",
+  "new_pck_bytes": 42955188,
+  "native_visual_attribution": "QA directly observed title window1180x812 and closure; reviewer does not have saved title screenshot. PRIVATE-terminal-after-exit.jpg is not title proof and must not be public.",
+  "warnings_retained": [
+    "Unsupported VSync"
+  ],
+  "original_failed_gates_retained": true
+}

@@ -1,0 +1,35 @@
+{
+  "changed_existing": {
+    "data/encounters.json": {
+      "before": "853bb3699bb05c2ed1eb7d1c8dc3e51844428c233ffa3127ac035a2762a3f356",
+      "after": "4d802f8beb8e580ce4e72986c9c685c40ede232947983b6ea1fd6e2e4d5331c8"
+    },
+    "data/room_encounters.json": {
+      "before": "4a0067faa08241d91042505d72b3a027956ef27571710d74d8559462ac2c5131",
+      "after": "0023a8337db5fdc8392dc4f4e3aa404c77cc692cad4b72dd3d1b3e2cf70bc9db"
+    },
+    "scripts/enemy_ai.gd": {
+      "before": "b1bb114a11c29655438b9e8f08011597dee15ba2c32ffaeac9ca30374d42847f",
+      "after": "07072200aefc9cd80ee979648f737eb081fdb9d5d711715aa09cf1d36065cc2d"
+    },
+    "scripts/gameplay/combat_runtime.gd": {
+      "before": "b3780370207636e597e7c15fe7f3652a053bd3c6e68895fd628541893119a9cd",
+      "after": "9365e8b35cd9bb61d3ff34a7099096c2e74071da1aa390c0250d9c20b148dfc7"
+    },
+    "scripts/main.gd": {
+      "before": "715e995695b9a14a4bfda14e40e2fbabac0328f74df4d38cda4b641c9abfb6c0",
+      "after": "3c11077e8c8e6730a91815e80731ba8dcbbb3e81c8c30041808f6e043c5942eb"
+    },
+    "scripts/modes/arena_mode.gd": {
+      "before": "6e9ad0205d8f3474375ce5d893784a483b4caa387c5d00765369a79fa36d7a2e",
+      "after": "89303d2a93cf4cc10976f5d6586082655b4ab146fb87daa28c00b20c0c9c7999"
+    },
+    "scripts/telegraph_layer.gd": {
+      "before": "58a5746f3f9df3ae0d66f5748254e28b0199cfa31a22aa2fe6a7fb1c305433f0",
+      "after": "e9be823ab3ffe6fd0284f2b8c92e5ad4fcee53a195654f332f7ab3a93a3da1af"
+    }
+  },
+  "new_policy": "scripts/gameplay/enemy_support.gd",
+  "assets_pending": true,
+  "target_executed": false
+}

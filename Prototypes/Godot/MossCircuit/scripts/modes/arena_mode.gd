@@ -1,4 +1,5 @@
 extends RefCounted
+const EnemySupport=preload("res://scripts/gameplay/enemy_support.gd")
 ## Survival policy. Only this module knows timed waves, random ring spawning and mandatory bosses.
 var id:="arena"
 var name:="ARENA SURVIVAL"
@@ -22,6 +23,23 @@ func regular_request(session:RefCounted,world:RefCounted,config:Dictionary,encou
 	pos=pos.clamp(Vector2(20,20),Vector2(config.arena.width-20,config.arena.height-20))
 	if pos.distance_to(world.player_pos)<180:return {}
 	var pool:Array=encounters.waves[mini(session.wave-1,encounters.waves.size()-1)].pool
+	var support_rows:Dictionary={}
+	for entry in encounters.get("enemies",[]):
+		if entry is Dictionary and entry.get("behavior")=="support_repair":support_rows[entry.get("id","")]=entry
+	if pool.any(func(kind):return support_rows.has(kind)):
+		var known:Array=encounters.enemies.map(func(entry):return entry.id)
+		for kind in pool:
+			if not kind is String or kind not in known:return {}
+		var eligible:Array=[]
+		for kind in pool:
+			if not support_rows.has(kind):eligible.append(kind);continue
+			var row:Dictionary=support_rows[kind]
+			if not EnemySupport.validate_entry(row).is_empty():return {}
+			var living:int=world.enemies.filter(func(e):return e.get("kind")==kind and e.get("hp",0)>0).size()
+			if living<int(row.support_max_alive):eligible.append(kind)
+		if eligible.is_empty():return {}
+		pool=eligible
+	if pool.is_empty():return {}
 	return {"kind":pool[rng.randi_range(0,pool.size()-1)],"pos":pos}
 func tick_spawn(dt:float,session:RefCounted,config:Dictionary)->bool:
 	spawn_clock-=dt

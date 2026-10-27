@@ -1,3 +1,17 @@
+# v38 complete resource pack — final portable SVG package
+
+Both preset PCKs are **42,955,188 bytes**, SHA-256 `b8f648cc2f9378dfffc162375e105dd2e5ccd21044cb6496e4ebe39027a38740`. Linux ELF remains `2c78919325d7f29fa7607287c7c1eeac367ea4c94e7b8b6f5f4c6b20492f73d0`,0755. This is a complete resource pack, not a standalone executable, ZIP or delta patch. Original platform programs/licenses remain required; Windows was not executed.
+
+The earlier795ce7c1 pack is historical functional evidence, **not the formal delivered pack**: it failed whole-package privacy scanning. The new portable candidate changes metadata/recorded export paths plus MANIFEST, not gameplay or pixels. Fresh recipe reproduction and seven-step reexport passed. A first strict PCK-record test rejected an additional scene-ID change; actual decode proved one pinned integer only. A separately approved exact exception accepts only684-byte scene offsets508–511,106410627→707380806, with all other680bytes unchanged. The original strictFAIL stays recorded. All219 paths match,217 other payloads are exact, and final PCK whole-byte privacy scan is clear. [Full chronology](V38_STITCH_DRONE.md).
+
+New actual-PCK asset121 checks and a bounded normal native title/main launch passed, exit0. The title was directly observed by QA but no local title screenshot was saved; private terminal screenshots are not public title proof. No new28-step or ordinary gameplay/full139 run is claimed. Prior SVG gameplay stills retain their old pack identity. Unsupported VSync warning, Dummy/Windows/campaign/balance/performance limits and inherited modal-focus issue remain.
+
+Delivery is now locally verified: the original74 catalog rows remain exact, two v38 records bring the total to76, and15 chunks reconstruct the final42,955,188-byte pack. All18 delivery payloads were hashed. The unchanged helper passed10 total cases: verify and restore succeeded; overwrite, six mutation/path controls and symlink output were rejected. Actual v37→v38→v37 backup/replacement/rollback restored the original PCK, unchanged ELF and modes. These are file operations, not game execution or Git-download proof. From a complete checkout use `python Deliveries/MossCircuit/restore_deliveries.py --version v38 --verify-only`, then `python Deliveries/MossCircuit/restore_deliveries.py --version v38 --output ./restored-v38` to a new directory. Close the game, uniquely back up/hash the actual old pack, restore/verify the complete new pack, manually replace only adjacent `MossCircuit.pck`, and launch the original program normally. The unchanged helper does not install/execute; atomicity is per output file, not a whole version batch. No remote-download or v38 commit is inferred from local checks.
+
+The historical v37-and-earlier delivery text below is retained byte-for-byte and refers to its own checkpoints.
+
+---
+
 # v37 complete resource pack — local verification, not publication
 
 Both preset PCKs are identical:41,462,412 bytes, SHA-256 `156466cddbf44497e5be9c2d2f1d6f221c4aa2ccf545b0c5bca4d06fbb8ba471`. Linux ELF remains `2c78919325d7f29fa7607287c7c1eeac367ea4c94e7b8b6f5f4c6b20492f73d0`,0755. Windows executable is historical and unexecuted here. This is a complete resource pack, not a standalone executable, ZIP or delta patch; original platform programs/licenses remain required.

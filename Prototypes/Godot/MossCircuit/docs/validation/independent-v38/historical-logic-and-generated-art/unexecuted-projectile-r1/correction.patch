@@ -1,0 +1,12 @@
+--- unexecuted-r1
++++ preexecution-r2
+@@ -21,7 +21,8 @@
+   for spec in [["rivet_gun",false],["scrap_shotgun",false],["rail_lance",false],["return_disc",false],["return_disc",true]]:
+    var pair:Array=setup(mode,spec[0]);var s:Dictionary=pair[0];var t:Dictionary=pair[1]
+    var b:Dictionary={"pos":s.pos,"launch_start":s.pos,"velocity":Vector2.RIGHT*470.,"life":1.,"damage":1.,"pierce":0,"hit":[],"weapon":spec[0],"returning":spec[1],"outbound_left":.5}
+-   g.bullets=[b];Runtime.step(g.combat_frame,0.)
++   if spec[1]:b.erase("launch_start") # Existing return leg needs positive elapsed travel, not launch overlap.
++   g.bullets=[b];Runtime.step(g.combat_frame,.001 if spec[1] else 0.)
+    ck(s.hp==33. and t.hp==50.,"concrete late projectile damage1 interruptsdue "+str(spec)+"/"+mode)
+    ck(s.ai_state=="recover" and s.support_channel_token==null,"actual projectile route cancels once")
+    ck(b.hit.has(s.id),"actual collision records source ID")

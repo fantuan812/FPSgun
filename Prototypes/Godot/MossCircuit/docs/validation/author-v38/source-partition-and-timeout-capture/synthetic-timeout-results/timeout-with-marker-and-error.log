@@ -1,0 +1,4 @@
+PASS: synthetic reached
+ERROR: synthetic before timeout
+
+Command '['/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python', '-u', '-c', "import os,time;os.write(1,b'PASS: synthetic reached\\n');os.write(2,b'ERROR: synthetic before timeout\\n');time.sleep(2)"]' timed out after 0.2 seconds

@@ -1,0 +1,35 @@
+{
+  "bindings": [
+    {
+      "name": "assets",
+      "source": "tests/independent_support_assets.gd",
+      "source_sha256": "669cb0f26f484fae842bee68934057be139f666456036dd3d8b8080254735be5",
+      "external_script": "<WORKSPACE>/moss-v38-svg-qa/packed-harness/assets.gd",
+      "external_sha256": "669cb0f26f484fae842bee68934057be139f666456036dd3d8b8080254735be5",
+      "only_helper_path_rebound": false,
+      "inverse_exact": true
+    },
+    {
+      "name": "actor",
+      "source": "tests/test_actor_actions.gd",
+      "source_sha256": "8cf9aa0c5c15958eef98120de510560d6d0770021c3479667d93d5a4a8db3b2b",
+      "external_script": "<WORKSPACE>/moss-v38-svg-qa/packed-harness/actor.gd",
+      "external_sha256": "a30989fc82617a0c53dc0e084d651148f93883eba4596da6aa4f542896891700",
+      "only_helper_path_rebound": true,
+      "inverse_exact": true
+    },
+    {
+      "name": "animation",
+      "source": "tests/independent_actions.gd",
+      "source_sha256": "6422edbd83b420e31c711517f9b37cd9aff684575d9e15d67b29954d10093228",
+      "external_script": "<WORKSPACE>/moss-v38-svg-qa/packed-harness/animation.gd",
+      "external_sha256": "3f67e3b3a6b2f248c5f8985309f1c9ac85ff5e286003a2be04cb95e4fe3528a3",
+      "only_helper_path_rebound": true,
+      "inverse_exact": true
+    }
+  ],
+  "helper_sha256": "9e9676e34296cb55d4560b1169c5954a82508f70e9051fcc942d1bb6839c23bd",
+  "source_map_sha256": "ea4a577c51c98c3d9f6aad4c66a421dd0c00ef2eb705b20ea47cabea9f731401",
+  "new_source_import_baseline_sha256": "df415b655e6cd7767cd8a639baaa8bd55067bb88e4ca9d2fe89d54de48fa9e27",
+  "scope": "New SVG assets121 plus unchanged actor418/animation35 exactPCK; no old139/native/ordinary claim transferred."
+}

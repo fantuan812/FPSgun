@@ -1,0 +1,12 @@
+ # Exact held v37 encounter/Rooms injection, before any mode construction/run.
+ var old_encounters:String=FileAccess.get_file_as_string("evidence-workspace/moss-v38-parity/encounters.json")
+ var old_rooms:String=FileAccess.get_file_as_string("evidence-workspace/moss-v38-parity/room_encounters.json")
+ if old_encounters.sha256_text()!="853bb3699bb05c2ed1eb7d1c8dc3e51844428c233ffa3127ac035a2762a3f356" or old_rooms.sha256_text()!="4a0067faa08241d91042505d72b3a027956ef27571710d74d8559462ac2c5131":
+  failures.append("held encounter bytes changed")
+ var current:Dictionary=preload("res://tests/support/v38_encounter_projection.gd").project(FileAccess.get_file_as_string("res://data/encounters.json"),FileAccess.get_file_as_string("res://data/room_encounters.json"))
+ if not current.get("pass",false) or current.encounter_bytes!=old_encounters or current.room_bytes!=old_rooms:failures.append("candidate additions not exactly declared")
+ var shared_encounters:Dictionary=g.encounters
+ var shared_rooms:Dictionary=g.room_profile
+ g.encounters.clear();g.encounters.merge(JSON.parse_string(old_encounters),true)
+ g.room_profile.clear();g.room_profile.merge(JSON.parse_string(old_rooms),true)
+ if shared_encounters!=JSON.parse_string(old_encounters) or shared_rooms!=JSON.parse_string(old_rooms):failures.append("actual shared authority injection failed")

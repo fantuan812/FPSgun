@@ -1,0 +1,2253 @@
+--- v37/assets/actions/stitch_drone/action_manifest.json
++++ v38/assets/actions/stitch_drone/action_manifest.json
+@@ -0,0 +1,638 @@
++{
++  "schema_version": 1,
++  "actions": {
++    "stitch_drone_channel": {
++      "path": "res://assets/actions/stitch_drone/stitch_drone_channel.png",
++      "frames": [
++        {
++          "region": [
++            107,
++            49,
++            235,
++            340
++          ],
++          "margin": [
++            91,
++            58,
++            183,
++            78
++          ],
++          "alpha_bbox": [
++            91,
++            58,
++            235,
++            340
++          ],
++          "source_frame": 0
++        },
++        {
++          "region": [
++            485,
++            49,
++            273,
++            337
++          ],
++          "margin": [
++            72,
++            61,
++            145,
++            81
++          ],
++          "alpha_bbox": [
++            72,
++            61,
++            273,
++            337
++          ],
++          "source_frame": 1
++        },
++        {
++          "region": [
++            890,
++            55,
++            294,
++            333
++          ],
++          "margin": [
++            62,
++            65,
++            124,
++            85
++          ],
++          "alpha_bbox": [
++            62,
++            65,
++            294,
++            333
++          ],
++          "source_frame": 2
++        },
++        {
++          "region": [
++            68,
++            468,
++            292,
++            337
++          ],
++          "margin": [
++            63,
++            61,
++            126,
++            81
++          ],
++          "alpha_bbox": [
++            63,
++            61,
++            292,
++            337
++          ],
++          "source_frame": 3
++        },
++        {
++          "region": [
++            476,
++            466,
++            294,
++            341
++          ],
++          "margin": [
++            62,
++            57,
++            124,
++            77
++          ],
++          "alpha_bbox": [
++            62,
++            57,
++            294,
++            341
++          ],
++          "source_frame": 4
++        },
++        {
++          "region": [
++            887,
++            463,
++            292,
++            345
++          ],
++          "margin": [
++            63,
++            53,
++            126,
++            73
++          ],
++          "alpha_bbox": [
++            63,
++            53,
++            292,
++            345
++          ],
++          "source_frame": 5
++        },
++        {
++          "region": [
++            82,
++            874,
++            279,
++            336
++          ],
++          "margin": [
++            69,
++            62,
++            139,
++            82
++          ],
++          "alpha_bbox": [
++            69,
++            62,
++            279,
++            336
++          ],
++          "source_frame": 6
++        },
++        {
++          "region": [
++            486,
++            876,
++            278,
++            332
++          ],
++          "margin": [
++            70,
++            66,
++            140,
++            86
++          ],
++          "alpha_bbox": [
++            70,
++            66,
++            278,
++            332
++          ],
++          "source_frame": 7
++        },
++        {
++          "region": [
++            932,
++            870,
++            242,
++            339
++          ],
++          "margin": [
++            88,
++            59,
++            176,
++            79
++          ],
++          "alpha_bbox": [
++            88,
++            59,
++            242,
++            339
++          ],
++          "source_frame": 8
++        }
++      ],
++      "anchor": [
++        0.5,
++        0.9521531100478469
++      ],
++      "reference_height": 340,
++      "release_frame": 6,
++      "facing": "left",
++      "source_sha256": "4af2efab9604bd461095d60b60d6df46ce09db6a25eeabeed09fb8813efee180",
++      "logical_canvas": [
++        418,
++        418
++      ],
++      "source_grid": [
++        3,
++        3
++      ],
++      "alignment": "non-destructive alpha8 atlas crop; integer centered, bottom20; original PNG unchanged"
++    },
++    "stitch_drone_hurt": {
++      "path": "res://assets/actions/stitch_drone/stitch_drone_hurt.png",
++      "frames": [
++        {
++          "region": [
++            110,
++            50,
++            230,
++            340
++          ],
++          "margin": [
++            94,
++            58,
++            188,
++            78
++          ],
++          "alpha_bbox": [
++            94,
++            58,
++            230,
++            340
++          ],
++          "source_frame": 0
++        },
++        {
++          "region": [
++            495,
++            60,
++            267,
++            332
++          ],
++          "margin": [
++            75,
++            66,
++            151,
++            86
++          ],
++          "alpha_bbox": [
++            75,
++            66,
++            267,
++            332
++          ],
++          "source_frame": 1
++        },
++        {
++          "region": [
++            903,
++            71,
++            315,
++            324
++          ],
++          "margin": [
++            51,
++            74,
++            103,
++            94
++          ],
++          "alpha_bbox": [
++            51,
++            74,
++            315,
++            324
++          ],
++          "source_frame": 2
++        },
++        {
++          "region": [
++            65,
++            473,
++            330,
++            327
++          ],
++          "margin": [
++            44,
++            71,
++            88,
++            91
++          ],
++          "alpha_bbox": [
++            44,
++            71,
++            330,
++            327
++          ],
++          "source_frame": 3
++        },
++        {
++          "region": [
++            477,
++            477,
++            319,
++            319
++          ],
++          "margin": [
++            49,
++            79,
++            99,
++            99
++          ],
++          "alpha_bbox": [
++            49,
++            79,
++            319,
++            319
++          ],
++          "source_frame": 4
++        },
++        {
++          "region": [
++            924,
++            468,
++            269,
++            336
++          ],
++          "margin": [
++            74,
++            62,
++            149,
++            82
++          ],
++          "alpha_bbox": [
++            74,
++            62,
++            269,
++            336
++          ],
++          "source_frame": 5
++        },
++        {
++          "region": [
++            105,
++            878,
++            258,
++            338
++          ],
++          "margin": [
++            80,
++            60,
++            160,
++            80
++          ],
++          "alpha_bbox": [
++            80,
++            60,
++            258,
++            338
++          ],
++          "source_frame": 6
++        },
++        {
++          "region": [
++            505,
++            874,
++            253,
++            340
++          ],
++          "margin": [
++            82,
++            58,
++            165,
++            78
++          ],
++          "alpha_bbox": [
++            82,
++            58,
++            253,
++            340
++          ],
++          "source_frame": 7
++        },
++        {
++          "region": [
++            930,
++            872,
++            240,
++            340
++          ],
++          "margin": [
++            89,
++            58,
++            178,
++            78
++          ],
++          "alpha_bbox": [
++            89,
++            58,
++            240,
++            340
++          ],
++          "source_frame": 8
++        }
++      ],
++      "anchor": [
++        0.5,
++        0.9521531100478469
++      ],
++      "reference_height": 340,
++      "release_frame": 1,
++      "facing": "left",
++      "source_sha256": "f2e8505ad992177f5b2d86e8a5b1e0cdc0c96d8f933751b87c6a165302297efe",
++      "logical_canvas": [
++        418,
++        418
++      ],
++      "source_grid": [
++        3,
++        3
++      ],
++      "alignment": "non-destructive alpha8 atlas crop; integer centered, bottom20; original PNG unchanged"
++    },
++    "stitch_drone_death": {
++      "path": "res://assets/actions/stitch_drone/stitch_drone_death.png",
++      "frames": [
++        {
++          "region": [
++            96,
++            47,
++            285,
++            350
++          ],
++          "margin": [
++            66,
++            48,
++            133,
++            68
++          ],
++          "alpha_bbox": [
++            66,
++            48,
++            285,
++            350
++          ],
++          "source_frame": 0
++        },
++        {
++          "region": [
++            501,
++            78,
++            294,
++            318
++          ],
++          "margin": [
++            62,
++            80,
++            124,
++            100
++          ],
++          "alpha_bbox": [
++            62,
++            80,
++            294,
++            318
++          ],
++          "source_frame": 1
++        },
++        {
++          "region": [
++            906,
++            121,
++            291,
++            284
++          ],
++          "margin": [
++            63,
++            114,
++            127,
++            134
++          ],
++          "alpha_bbox": [
++            63,
++            114,
++            291,
++            284
++          ],
++          "source_frame": 2
++        },
++        {
++          "region": [
++            75,
++            530,
++            318,
++            277
++          ],
++          "margin": [
++            50,
++            121,
++            100,
++            141
++          ],
++          "alpha_bbox": [
++            50,
++            121,
++            318,
++            277
++          ],
++          "source_frame": 3
++        },
++        {
++          "region": [
++            485,
++            588,
++            318,
++            218
++          ],
++          "margin": [
++            50,
++            180,
++            100,
++            200
++          ],
++          "alpha_bbox": [
++            50,
++            180,
++            318,
++            218
++          ],
++          "source_frame": 4
++        },
++        {
++          "region": [
++            902,
++            582,
++            299,
++            222
++          ],
++          "margin": [
++            59,
++            176,
++            119,
++            196
++          ],
++          "alpha_bbox": [
++            59,
++            176,
++            299,
++            222
++          ],
++          "source_frame": 5
++        },
++        {
++          "region": [
++            93,
++            960,
++            290,
++            224
++          ],
++          "margin": [
++            64,
++            174,
++            128,
++            194
++          ],
++          "alpha_bbox": [
++            64,
++            174,
++            290,
++            224
++          ],
++          "source_frame": 6
++        },
++        {
++          "region": [
++            494,
++            963,
++            295,
++            222
++          ],
++          "margin": [
++            61,
++            176,
++            123,
++            196
++          ],
++          "alpha_bbox": [
++            61,
++            176,
++            295,
++            222
++          ],
++          "source_frame": 7
++        },
++        {
++          "region": [
++            904,
++            960,
++            300,
++            225
++          ],
++          "margin": [
++            59,
++            173,
++            118,
++            193
++          ],
++          "alpha_bbox": [
++            59,
++            173,
++            300,
++            225
++          ],
++          "source_frame": 8
++        }
++      ],
++      "anchor": [
++        0.5,
++        0.9521531100478469
++      ],
++      "reference_height": 350,
++      "release_frame": 1,
++      "facing": "left",
++      "source_sha256": "3d5ab456066a67baaf357a4a7c1c2cfe389626ed44b819a148718973a4002e5b",
++      "logical_canvas": [
++        418,
++        418
++      ],
++      "source_grid": [
++        3,
++        3
++      ],
++      "alignment": "non-destructive alpha8 atlas crop; integer centered, bottom20; original PNG unchanged"
++    }
++  }
++}
+--- v37/assets/enemies/enemy_manifest.json
++++ v38/assets/enemies/enemy_manifest.json
+@@ -1151,6 +1151,166 @@
+         0,
+         255
+       ]
++    },
++    "stitch_drone": {
++      "name": "补缀蜂 / Stitch Drone",
++      "path": "res://assets/enemies/stitch_drone.png",
++      "size": [
++        1254,
++        1254
++      ],
++      "grid": [
++        3,
++        3
++      ],
++      "action": "hover / move",
++      "frames": [
++        {
++          "region": [
++            0,
++            0,
++            418,
++            418
++          ],
++          "alpha_bbox": [
++            115,
++            49,
++            221,
++            335
++          ],
++          "minimum_clear_margin": 34,
++          "pixel_sha256": "ec63012dd91017836dcd0527d7939ce5184d3cbda7bb0a083c540eebf484dd1e"
++        },
++        {
++          "region": [
++            418,
++            0,
++            418,
++            418
++          ],
++          "alpha_bbox": [
++            99,
++            49,
++            228,
++            323
++          ],
++          "minimum_clear_margin": 46,
++          "pixel_sha256": "f8bc4103e5db9ed3486816df30ddc4ddd00afcea40defa54f256af2232880dd6"
++        },
++        {
++          "region": [
++            836,
++            0,
++            418,
++            418
++          ],
++          "alpha_bbox": [
++            97,
++            62,
++            216,
++            323
++          ],
++          "minimum_clear_margin": 33,
++          "pixel_sha256": "e7e929bd9fbe2830eed010e5de174d650de1c686baf6ed34f04e3a08b89bf752"
++        },
++        {
++          "region": [
++            0,
++            418,
++            418,
++            418
++          ],
++          "alpha_bbox": [
++            112,
++            52,
++            244,
++            334
++          ],
++          "minimum_clear_margin": 32,
++          "pixel_sha256": "db1e4446fbfc7ac62c3459ae46392ff47353ebc22e8ba44a7ddd66c15e29b828"
++        },
++        {
++          "region": [
++            418,
++            418,
++            418,
++            418
++          ],
++          "alpha_bbox": [
++            96,
++            47,
++            245,
++            336
++          ],
++          "minimum_clear_margin": 35,
++          "pixel_sha256": "6c74db23609065a14e0138124d3b5c534b098474ae04201f21b7bcb6e24c144c"
++        },
++        {
++          "region": [
++            836,
++            418,
++            418,
++            418
++          ],
++          "alpha_bbox": [
++            96,
++            42,
++            242,
++            329
++          ],
++          "minimum_clear_margin": 42,
++          "pixel_sha256": "84ef07ba4ed5112289ef20a377e2392f6fa827780e95482deb15ee437faebd26"
++        },
++        {
++          "region": [
++            0,
++            836,
++            418,
++            418
++          ],
++          "alpha_bbox": [
++            111,
++            44,
++            233,
++            326
++          ],
++          "minimum_clear_margin": 44,
++          "pixel_sha256": "8b0c801e065a3cb92860274a238314b6163c1ae41b5c8233ba82ee8577533986"
++        },
++        {
++          "region": [
++            418,
++            836,
++            418,
++            418
++          ],
++          "alpha_bbox": [
++            96,
++            36,
++            234,
++            326
++          ],
++          "minimum_clear_margin": 36,
++          "pixel_sha256": "30ee108a7ddea35663d15fd3ec052b28cf0cf22e675cc3708dc64d46cd459e50"
++        },
++        {
++          "region": [
++            836,
++            836,
++            418,
++            418
++          ],
++          "alpha_bbox": [
++            99,
++            34,
++            235,
++            332
++          ],
++          "minimum_clear_margin": 34,
++          "pixel_sha256": "cf169c329f19bf2f2df40260eda99b93b4cfa70276b904b41be0b6961ab8c8db"
++        }
++      ],
++      "source_sha256": "39a2625999a6ac02b1cc3a96e1a0ed0f399997538620e3cc1ccc76b13ca099d8"
+     }
+   }
+ }
+--- v37/data/actor_actions.json
++++ v38/data/actor_actions.json
+@@ -153,6 +153,30 @@
+     "flanker": {
+       "hurt": "flanker_hurt",
+       "death": "flanker_death"
++    },
++    "stitch_drone": {
++      "attack": "stitch_drone_channel",
++      "hurt": "stitch_drone_hurt",
++      "death": "stitch_drone_death",
++      "phase_frames": {
++        "warning": [
++          0,
++          5
++        ],
++        "attack": [
++          6,
++          6
++        ],
++        "recover": [
++          7,
++          8
++        ]
++      },
++      "phase_driven_attack": true,
++      "locked_aim_states": [
++        "warning",
++        "recover"
++      ]
+     }
+   },
+   "hero_modular_manifest": "res://assets/weapon_mounts/hero_modular_manifest.json",
+@@ -165,6 +189,7 @@
+     "res://assets/actions/boss_warden/action_manifest.json",
+     "res://assets/actions/boss_core/action_manifest.json",
+     "res://assets/actions/boss_warden/attack_manifest.json",
+-    "res://assets/actions/boss_core/attack_manifest.json"
++    "res://assets/actions/boss_core/attack_manifest.json",
++    "res://assets/actions/stitch_drone/action_manifest.json"
+   ]
+ }
+--- v37/data/encounters.json
++++ v38/data/encounters.json
+@@ -172,6 +172,36 @@
+       "description": "Wave 6 boss: maintains distance and fires ring volleys. Below half HP, 12-shot rings alternate with summons.",
+       "tell": "0.85 s orange ring before each release.",
+       "dodge": "Use gaps in the slow ring; dash is briefly invulnerable. Clear summons."
++    },
++    {
++      "id": "stitch_drone",
++      "name": "Stitch Drone",
++      "behavior": "support_repair",
++      "hp": 34,
++      "speed": 30,
++      "damage": 6,
++      "xp": 7,
++      "scale": 1,
++      "color": "86e5ed",
++      "boss": false,
++      "cooldown": 5,
++      "warning": 1.2,
++      "projectile_speed": 145,
++      "charge_speed": 310,
++      "charge_duration": 0.6,
++      "desired_distance": 210,
++      "summon_limit": 3,
++      "phase_threshold": 0.5,
++      "phase_speed": 1.25,
++      "description": "Channels a 10 HP repair to one wounded ordinary ally within 150 px. Cannot repair bosses, summons or support drones.",
++      "tell": "Cyan dashed tether and four-notch progress mark a 1.2 s repair; any actual damage to the drone interrupts it.",
++      "dodge": "Hit the drone, finish its ally or separate them beyond the tether. It has no damage immunity. Warning and recovery are contact-safe.",
++      "support_radius": 150,
++      "support_channel": 1.2,
++      "support_cooldown": 5,
++      "support_retry": 1,
++      "support_heal": 10,
++      "support_max_alive": 1
+     }
+   ],
+   "waves": [
+@@ -204,7 +234,8 @@
+       "pool": [
+         "charger",
+         "spitter",
+-        "flanker"
++        "flanker",
++        "stitch_drone"
+       ],
+       "boss": ""
+     },
+--- v37/data/room_encounters.json
++++ v38/data/room_encounters.json
+@@ -5,7 +5,7 @@
+   "reward":{"coins":24,"heal":15,"upgrades":1},
+   "stages":[
+     {"name":"ENTRY","enemies":[{"kind":"crawler","at":[0.18,0.22]},{"kind":"crawler","at":[0.82,0.22]},{"kind":"flanker","at":[0.8,0.8]}]},
+-    {"name":"CROSSFIRE","enemies":[{"kind":"spitter","at":[0.16,0.2]},{"kind":"charger","at":[0.82,0.8]},{"kind":"crawler","at":[0.18,0.8]},{"kind":"flanker","at":[0.82,0.22]}]},
+-    {"name":"BROOD","enemies":[{"kind":"brood_keeper","at":[0.18,0.2]},{"kind":"charger","at":[0.82,0.2]},{"kind":"spitter","at":[0.82,0.8]},{"kind":"crawler","at":[0.18,0.8]}]}
++    {"name":"CROSSFIRE","enemies":[{"kind":"spitter","at":[0.16,0.2]},{"kind":"charger","at":[0.82,0.8]},{"kind":"crawler","at":[0.18,0.8]},{"kind":"flanker","at":[0.82,0.22]},{"kind":"stitch_drone","at":[0.5,0.18]}]},
++    {"name":"BROOD","enemies":[{"kind":"brood_keeper","at":[0.18,0.2]},{"kind":"charger","at":[0.82,0.2]},{"kind":"spitter","at":[0.82,0.8]},{"kind":"crawler","at":[0.18,0.8]},{"kind":"stitch_drone","at":[0.5,0.18]}]}
+   ]
+ }
+--- v37/docs/art/stitch_drone/prompts.json
++++ v38/docs/art/stitch_drone/prompts.json
+@@ -0,0 +1,6 @@
++{
++  "hover": "Use case: stylized-concept. Asset type: production 2D game enemy animation spritesheet, RGBA transparent background. Create ONE square spritesheet with exactly 9 frames in a perfectly regular 3 columns by 3 rows grid, equal invisible cells, row-major looping hover animation. Every frame is the SAME small original Stitch Drone repair robot, viewed from a fixed elevated three-quarter angle facing left. Character design: compact floating brass-and-dark-iron sewing spool body, bright cyan thread wound around its central spool, two curved suture-needle antennae projecting upward, tiny cyan lens, two small articulated repair pincers folded beside the body, a small downward hover emitter. Distinct narrow flying silhouette; no legs, no cannon, no beetle body. Hand-painted high-quality crisp game sprite style, thick dark contours, worn bronze rims, subtle teal enamel panels, warm highlights, readable at 57 pixels tall; not photoreal, not smooth vector. All 9 frames keep identical design, camera, scale and palette, gently bobbing 2–4 pixels while antennae and hover emission cycle. Image must have genuine alpha transparency with no background, no ground shadow, no text, no frames or grid lines, no labels, no watermark, no extra objects. Center each entire character within its own equal cell, occupy only central 55% of each cell width and height, generous fully transparent margin on all sides. No cropped antennae or overlapping frames. This is the neutral hover/move cycle, not an attack or death.",
++  "channel": "Use case: identity-preserve. Asset type: production 2D game animation spritesheet, transparent RGBA. Reference image is the exact Stitch Drone character identity and rendering style. Create its REPAIR CHANNEL action sheet, exactly 9 equal cells in a regular 3 columns by 3 rows square grid, row-major. Preserve this same bronze/cyan floating sewing-spool robot, two tall curved needle antennae, cyan thread, left-facing lens, paired small side pincers, tiny hover engine. Preserve fixed three-quarter left-facing camera and same body scale in all cells. Frames 1–6: slowly open and angle the repair pincers forward, cyan thread coils become slightly brighter, needle tips align, clear readable deliberate channel buildup. Frame7: brief cyan thread spark just between the pincers, not a projectile and no target. Frames8–9: pincers relax back into neutral recovery pose and light fades; frame9 is calm folded neutral. Never morph body or add limbs. Every frame stays fully inside its cell with generous transparent margins including needle tips and spark (at least 35px in a 1254px square sheet), no beam outside the cell, no text, no symbols, no background, no ground shadow, no frame borders. Crisp hand-painted outlined game sprite, same identity and colors as reference. Do not copy the neutral hover poses unchanged: this must visibly open/reclose the repair tools.",
++  "hurt": "Use case: identity-preserve. Asset type: production 2D game enemy HURT reaction spritesheet, genuine transparent RGBA. Reference is exact character identity. Create exactly 9 equal cells in a regular square 3 columns by 3 rows grid, row-major short recoil animation of this same Stitch Drone. Preserve bronze rims, cyan sewing-thread spool torso, two tall curved gold needle antennas, left-facing cyan lens, two repair pincers, no legs, hovering. Fixed elevated three-quarter left-facing camera and same body scale. Frames1–2 intact neutral entering a sudden small recoil; frames3–5 lean backward about 10 degrees, needle tips wobble and pincers briefly spread, lens briefly dimmer with a few tiny cyan sparks close to the body; frames6–9 smoothly return upright with folded tools. No permanent damage, no missing body parts, no giant hit burst, no separate projectile, no red flash baked across sprite. Hand-painted thick dark contour game sprite exactly same style and character as reference. Every full robot and every spark stays inside its cell with generous clear alpha margins (at least 35 pixels for1254 square output), no cropping, no ground/shadow/background/gridlines/text/watermark. Distinct changed recoil poses, not merely repeated idle images.",
++  "death": "Use case: identity-preserve. Asset type: production 2D game enemy DEATH spritesheet, transparent RGBA. Reference is the exact Stitch Drone identity. Create exactly9 animation frames in a square regular3 columns by3 rows equal invisible grid, row-major death/collapse sequence. Fixed elevated three-quarter left-facing camera. Same small original hovering bronze-rim cyan sewing-spool robot with twin curved needle antennas, cyan lens and two repair pincers. Frames1–2: body reels, needle antennae buckle slightly and hover engine flickers. Frames3–4: hover shuts off, body tips sideways downward; one rim loosens with a few tiny cyan sparks. Frames5–6: settles into a compact broken spool wreck; cyan thread loosens close to chassis, both needles bent, detached pincer nearby. Frames7–9: small inert dark bronze broken spool heap, no hover flame, dim and then unlit lens, no motion except fading tiny spark. Distinct irreversible death, NOT returning to standing, NOT vaporizing into an invisible last frame. No gore, no smoke cloud, no giant explosion, no text. Keep every robot or wreck at identical designed body scale and aligned bottom baseline within its own cell, with at least40pixels fully transparent clear space on all cell boundaries at1254 square output. All debris/needle tips/sparks must remain inside its cell, no overlap. Crisp hand-painted outlined game sprite matching reference, preserve exact materials/colors until final dim state. Genuine transparent background, no floor, no ground shadow, no grids or borders or watermark."
++}
+--- v37/docs/art/stitch_drone/provenance.json
++++ v38/docs/art/stitch_drone/provenance.json
+@@ -0,0 +1,694 @@
++{
++  "asset": "Stitch Drone",
++  "tool": "built-in image_gen.imagegen",
++  "creation": "Original character generated for MossCircuit v38; channel/hurt/death generated with the neutral sheet as identity reference. Existing spitter sheet inspected only as style context; no existing pixels copied.",
++  "prompt_file": "prompts.json",
++  "files": {
++    "stitch_drone.png": {
++      "sha256": "39a2625999a6ac02b1cc3a96e1a0ed0f399997538620e3cc1ccc76b13ca099d8",
++      "bytes": 1173152,
++      "mode": "RGBA",
++      "size": [
++        1254,
++        1254
++      ],
++      "alpha_extrema": [
++        0,
++        255
++      ],
++      "frames": [
++        {
++          "frame": 0,
++          "alpha8_bbox": [
++            115,
++            49,
++            221,
++            335
++          ],
++          "alpha8_clear_margin": 34,
++          "border_alpha_max": 1,
++          "nonzero_alpha_bbox": [
++            0,
++            29,
++            418,
++            418
++          ]
++        },
++        {
++          "frame": 1,
++          "alpha8_bbox": [
++            99,
++            49,
++            228,
++            323
++          ],
++          "alpha8_clear_margin": 46,
++          "border_alpha_max": 1,
++          "nonzero_alpha_bbox": [
++            1,
++            46,
++            418,
++            418
++          ]
++        },
++        {
++          "frame": 2,
++          "alpha8_bbox": [
++            97,
++            62,
++            216,
++            323
++          ],
++          "alpha8_clear_margin": 33,
++          "border_alpha_max": 1,
++          "nonzero_alpha_bbox": [
++            1,
++            29,
++            398,
++            418
++          ]
++        },
++        {
++          "frame": 3,
++          "alpha8_bbox": [
++            112,
++            52,
++            244,
++            334
++          ],
++          "alpha8_clear_margin": 32,
++          "border_alpha_max": 1,
++          "nonzero_alpha_bbox": [
++            0,
++            0,
++            418,
++            418
++          ]
++        },
++        {
++          "frame": 4,
++          "alpha8_bbox": [
++            96,
++            47,
++            245,
++            336
++          ],
++          "alpha8_clear_margin": 35,
++          "border_alpha_max": 1,
++          "nonzero_alpha_bbox": [
++            1,
++            1,
++            418,
++            418
++          ]
++        },
++        {
++          "frame": 5,
++          "alpha8_bbox": [
++            96,
++            42,
++            242,
++            329
++          ],
++          "alpha8_clear_margin": 42,
++          "border_alpha_max": 1,
++          "nonzero_alpha_bbox": [
++            1,
++            1,
++            404,
++            418
++          ]
++        },
++        {
++          "frame": 6,
++          "alpha8_bbox": [
++            111,
++            44,
++            233,
++            326
++          ],
++          "alpha8_clear_margin": 44,
++          "border_alpha_max": 1,
++          "nonzero_alpha_bbox": [
++            0,
++            1,
++            418,
++            418
++          ]
++        },
++        {
++          "frame": 7,
++          "alpha8_bbox": [
++            96,
++            36,
++            234,
++            326
++          ],
++          "alpha8_clear_margin": 36,
++          "border_alpha_max": 1,
++          "nonzero_alpha_bbox": [
++            0,
++            0,
++            418,
++            418
++          ]
++        },
++        {
++          "frame": 8,
++          "alpha8_bbox": [
++            99,
++            34,
++            235,
++            332
++          ],
++          "alpha8_clear_margin": 34,
++          "border_alpha_max": 1,
++          "nonzero_alpha_bbox": [
++            0,
++            4,
++            408,
++            418
++          ]
++        }
++      ],
++      "pixel_sha256_rgba": "bf36af7b9e557bf00c36067661cb4f1634973b8fee1765779aeac7a28a04bb29",
++      "original_generation_filename": "exec-fda1f5d9-17fb-46cd-85a3-8a25ad0d1898.png",
++      "bytes_unchanged": true
++    },
++    "stitch_drone_channel.png": {
++      "sha256": "4af2efab9604bd461095d60b60d6df46ce09db6a25eeabeed09fb8813efee180",
++      "bytes": 1294234,
++      "mode": "RGBA",
++      "size": [
++        1254,
++        1254
++      ],
++      "alpha_extrema": [
++        0,
++        255
++      ],
++      "frames": [
++        {
++          "frame": 0,
++          "alpha8_bbox": [
++            107,
++            49,
++            235,
++            340
++          ],
++          "alpha8_clear_margin": 29,
++          "border_alpha_max": 1,
++          "nonzero_alpha_bbox": [
++            0,
++            9,
++            418,
++            400
++          ]
++        },
++        {
++          "frame": 1,
++          "alpha8_bbox": [
++            67,
++            49,
++            273,
++            337
++          ],
++          "alpha8_clear_margin": 32,
++          "border_alpha_max": 1,
++          "nonzero_alpha_bbox": [
++            1,
++            43,
++            418,
++            418
++          ]
++        },
++        {
++          "frame": 2,
++          "alpha8_bbox": [
++            54,
++            55,
++            294,
++            333
++          ],
++          "alpha8_clear_margin": 30,
++          "border_alpha_max": 0,
++          "nonzero_alpha_bbox": [
++            1,
++            47,
++            402,
++            411
++          ]
++        },
++        {
++          "frame": 3,
++          "alpha8_bbox": [
++            68,
++            50,
++            292,
++            337
++          ],
++          "alpha8_clear_margin": 31,
++          "border_alpha_max": 1,
++          "nonzero_alpha_bbox": [
++            0,
++            1,
++            418,
++            418
++          ]
++        },
++        {
++          "frame": 4,
++          "alpha8_bbox": [
++            58,
++            48,
++            294,
++            341
++          ],
++          "alpha8_clear_margin": 29,
++          "border_alpha_max": 1,
++          "nonzero_alpha_bbox": [
++            1,
++            0,
++            418,
++            418
++          ]
++        },
++        {
++          "frame": 5,
++          "alpha8_bbox": [
++            51,
++            45,
++            292,
++            345
++          ],
++          "alpha8_clear_margin": 28,
++          "border_alpha_max": 1,
++          "nonzero_alpha_bbox": [
++            1,
++            1,
++            398,
++            418
++          ]
++        },
++        {
++          "frame": 6,
++          "alpha8_bbox": [
++            82,
++            38,
++            279,
++            336
++          ],
++          "alpha8_clear_margin": 38,
++          "border_alpha_max": 1,
++          "nonzero_alpha_bbox": [
++            21,
++            0,
++            418,
++            402
++          ]
++        },
++        {
++          "frame": 7,
++          "alpha8_bbox": [
++            68,
++            40,
++            278,
++            332
++          ],
++          "alpha8_clear_margin": 40,
++          "border_alpha_max": 1,
++          "nonzero_alpha_bbox": [
++            0,
++            0,
++            418,
++            418
++          ]
++        },
++        {
++          "frame": 8,
++          "alpha8_bbox": [
++            96,
++            34,
++            242,
++            339
++          ],
++          "alpha8_clear_margin": 34,
++          "border_alpha_max": 1,
++          "nonzero_alpha_bbox": [
++            0,
++            1,
++            402,
++            418
++          ]
++        }
++      ],
++      "pixel_sha256_rgba": "15d469532792247aaca75ed8ec69de08e6533f88dd812cd9c9445cf933e82d97",
++      "original_generation_filename": "exec-6b9778ba-190f-4cd0-9fed-fd95e26c56a7.png",
++      "bytes_unchanged": true
++    },
++    "stitch_drone_hurt.png": {
++      "sha256": "f2e8505ad992177f5b2d86e8a5b1e0cdc0c96d8f933751b87c6a165302297efe",
++      "bytes": 1241317,
++      "mode": "RGBA",
++      "size": [
++        1254,
++        1254
++      ],
++      "alpha_extrema": [
++        0,
++        255
++      ],
++      "frames": [
++        {
++          "frame": 0,
++          "alpha8_bbox": [
++            110,
++            50,
++            230,
++            340
++          ],
++          "alpha8_clear_margin": 28,
++          "border_alpha_max": 1,
++          "nonzero_alpha_bbox": [
++            0,
++            23,
++            418,
++            415
++          ]
++        },
++        {
++          "frame": 1,
++          "alpha8_bbox": [
++            77,
++            60,
++            267,
++            332
++          ],
++          "alpha8_clear_margin": 26,
++          "border_alpha_max": 1,
++          "nonzero_alpha_bbox": [
++            1,
++            19,
++            416,
++            418
++          ]
++        },
++        {
++          "frame": 2,
++          "alpha8_bbox": [
++            67,
++            71,
++            315,
++            324
++          ],
++          "alpha8_clear_margin": 23,
++          "border_alpha_max": 1,
++          "nonzero_alpha_bbox": [
++            9,
++            19,
++            386,
++            418
++          ]
++        },
++        {
++          "frame": 3,
++          "alpha8_bbox": [
++            65,
++            55,
++            330,
++            327
++          ],
++          "alpha8_clear_margin": 23,
++          "border_alpha_max": 1,
++          "nonzero_alpha_bbox": [
++            21,
++            1,
++            418,
++            418
++          ]
++        },
++        {
++          "frame": 4,
++          "alpha8_bbox": [
++            59,
++            59,
++            319,
++            319
++          ],
++          "alpha8_clear_margin": 40,
++          "border_alpha_max": 1,
++          "nonzero_alpha_bbox": [
++            1,
++            5,
++            418,
++            418
++          ]
++        },
++        {
++          "frame": 5,
++          "alpha8_bbox": [
++            88,
++            50,
++            269,
++            336
++          ],
++          "alpha8_clear_margin": 32,
++          "border_alpha_max": 1,
++          "nonzero_alpha_bbox": [
++            7,
++            0,
++            398,
++            418
++          ]
++        },
++        {
++          "frame": 6,
++          "alpha8_bbox": [
++            105,
++            42,
++            258,
++            338
++          ],
++          "alpha8_clear_margin": 38,
++          "border_alpha_max": 1,
++          "nonzero_alpha_bbox": [
++            0,
++            5,
++            418,
++            418
++          ]
++        },
++        {
++          "frame": 7,
++          "alpha8_bbox": [
++            87,
++            38,
++            253,
++            340
++          ],
++          "alpha8_clear_margin": 38,
++          "border_alpha_max": 1,
++          "nonzero_alpha_bbox": [
++            1,
++            11,
++            414,
++            418
++          ]
++        },
++        {
++          "frame": 8,
++          "alpha8_bbox": [
++            94,
++            36,
++            240,
++            340
++          ],
++          "alpha8_clear_margin": 36,
++          "border_alpha_max": 0,
++          "nonzero_alpha_bbox": [
++            1,
++            1,
++            390,
++            395
++          ]
++        }
++      ],
++      "pixel_sha256_rgba": "9eeba27ca3eb7639c1a0d325c36015ec54f225b1ad9d2714313bbfc268475627",
++      "original_generation_filename": "exec-a520d145-b25d-4b9b-b8b9-80fe8e189279.png",
++      "bytes_unchanged": true
++    },
++    "stitch_drone_death.png": {
++      "sha256": "3d5ab456066a67baaf357a4a7c1c2cfe389626ed44b819a148718973a4002e5b",
++      "bytes": 1328393,
++      "mode": "RGBA",
++      "size": [
++        1254,
++        1254
++      ],
++      "alpha_extrema": [
++        0,
++        255
++      ],
++      "frames": [
++        {
++          "frame": 0,
++          "alpha8_bbox": [
++            96,
++            47,
++            285,
++            350
++          ],
++          "alpha8_clear_margin": 21,
++          "border_alpha_max": 1,
++          "nonzero_alpha_bbox": [
++            0,
++            0,
++            418,
++            418
++          ]
++        },
++        {
++          "frame": 1,
++          "alpha8_bbox": [
++            83,
++            78,
++            294,
++            318
++          ],
++          "alpha8_clear_margin": 22,
++          "border_alpha_max": 1,
++          "nonzero_alpha_bbox": [
++            0,
++            17,
++            418,
++            418
++          ]
++        },
++        {
++          "frame": 2,
++          "alpha8_bbox": [
++            70,
++            121,
++            291,
++            284
++          ],
++          "alpha8_clear_margin": 13,
++          "border_alpha_max": 1,
++          "nonzero_alpha_bbox": [
++            1,
++            0,
++            418,
++            418
++          ]
++        },
++        {
++          "frame": 3,
++          "alpha8_bbox": [
++            75,
++            112,
++            318,
++            277
++          ],
++          "alpha8_clear_margin": 25,
++          "border_alpha_max": 1,
++          "nonzero_alpha_bbox": [
++            0,
++            0,
++            418,
++            418
++          ]
++        },
++        {
++          "frame": 4,
++          "alpha8_bbox": [
++            67,
++            170,
++            318,
++            218
++          ],
++          "alpha8_clear_margin": 30,
++          "border_alpha_max": 1,
++          "nonzero_alpha_bbox": [
++            0,
++            0,
++            418,
++            418
++          ]
++        },
++        {
++          "frame": 5,
++          "alpha8_bbox": [
++            66,
++            164,
++            299,
++            222
++          ],
++          "alpha8_clear_margin": 32,
++          "border_alpha_max": 1,
++          "nonzero_alpha_bbox": [
++            1,
++            0,
++            412,
++            418
++          ]
++        },
++        {
++          "frame": 6,
++          "alpha8_bbox": [
++            93,
++            124,
++            290,
++            224
++          ],
++          "alpha8_clear_margin": 35,
++          "border_alpha_max": 1,
++          "nonzero_alpha_bbox": [
++            0,
++            0,
++            418,
++            418
++          ]
++        },
++        {
++          "frame": 7,
++          "alpha8_bbox": [
++            76,
++            127,
++            295,
++            222
++          ],
++          "alpha8_clear_margin": 47,
++          "border_alpha_max": 1,
++          "nonzero_alpha_bbox": [
++            0,
++            0,
++            418,
++            418
++          ]
++        },
++        {
++          "frame": 8,
++          "alpha8_bbox": [
++            68,
++            124,
++            300,
++            225
++          ],
++          "alpha8_clear_margin": 50,
++          "border_alpha_max": 1,
++          "nonzero_alpha_bbox": [
++            0,
++            0,
++            406,
++            402
++          ]
++        }
++      ],
++      "pixel_sha256_rgba": "c74d33a90a405f72d2e16d64defde3238d19d39b79cfc2fc5a3238df5bc2226b",
++      "original_generation_filename": "exec-1e79edb6-c343-433b-81fe-713e4109d216.png",
++      "bytes_unchanged": true
++    }
++  },
++  "processing": "Original PNG bytes retained. Atlas regions/margins computed non-destructively at alpha threshold8; no image edits or re-encoding.",
++  "visual_scope": "Static source-sheet inspection only; actual PCK/native checks are separate."
++}
+--- v37/scripts/enemy_ai.gd
++++ v38/scripts/enemy_ai.gd
+@@ -1,9 +1,18 @@
+ extends RefCounted
++const EnemySupport=preload("res://scripts/gameplay/enemy_support.gd")
+ const PrimaryDefense=preload("res://scripts/gameplay/primary_defense.gd")
+ ## Data-driven timer/state transitions. Events consumed by the combat controller.
+ static func tick(enemy: Dictionary, player: Vector2, dt: float, time: float) -> Array:
+ 	var events: Array = []
+ 	if enemy.hp <= 0: return events
++	if enemy.behavior == "support_repair":
++		# Support timers are advanced once, at the unified post-movement phase.
++		if enemy.ai_state == "move":
++			var support_distance:float=enemy.pos.distance_to(player)
++			var direction:Vector2=(player-enemy.pos).normalized()
++			if support_distance<enemy.desired_distance-30:enemy.pos-=direction*enemy.speed*dt
++			elif support_distance>enemy.desired_distance+30:enemy.pos+=direction*enemy.speed*dt
++		return events
+ 	enemy.cooldown_left -= dt
+ 	enemy.phase = 2 if enemy.boss and enemy.hp <= enemy.max_hp * enemy.phase_threshold else 1
+ 	var speed: float = enemy.speed * (enemy.phase_speed if enemy.phase == 2 else 1.0)
+@@ -82,9 +91,10 @@
+ 		if not valid: errors.append("Missing enemy field"); continue
+ 		if not entry.id is String or not entry.name is String or not entry.boss is bool: errors.append("Invalid enemy identity"); continue
+ 		errors.append_array(PrimaryDefense.validate_entry(entry))
++		errors.append_array(EnemySupport.validate_entry(entry))
+ 		if kinds.has(entry.id): errors.append("Duplicate enemy ID")
+ 		kinds[entry.id] = entry.boss
+-		if not entry.behavior in ["chase","charge","ranged","flank","summon","brood_cycle","warden","core"]: errors.append("Unknown behavior")
++		if not entry.behavior in ["chase","charge","ranged","flank","summon","brood_cycle","warden","core","support_repair"]: errors.append("Unknown behavior")
+ 		if entry.behavior == "brood_cycle":
+ 			var pulse_valid := true
+ 			for key in ["pulse_inner_radius","pulse_outer_radius","pulse_warning"]:
+--- v37/scripts/gameplay/combat_runtime.gd
++++ v38/scripts/gameplay/combat_runtime.gd
+@@ -1,4 +1,5 @@
+ extends RefCounted
++const EnemySupport=preload("res://scripts/gameplay/enemy_support.gd")
+ const ScavengerReel=preload("res://scripts/gameplay/scavenger_reel.gd")
+ const Context=preload("res://scripts/gameplay/combat_context.gd")
+ const RunFlow=preload("res://scripts/gameplay/run_flow.gd")
+@@ -10,6 +11,10 @@
+ ## Mode-independent combat step: weapons, AI, projectiles, deaths and pickups.
+ ## No wave timer, spawn schedule, completion policy, UI or shop dependency.
+ static func step(frame:Context,dt:float)->void:
++	# Direct paused probes preserve support timers; terminal probes discard only support state.
++	if frame.session.state != "playing" and frame.world.enemies.any(func(e):return e.get("behavior","")=="support_repair"):
++		if frame.session.state in ["title","dead","won"]:EnemySupport.settle(frame.world.enemies,[],false)
++		return
+ 	_prune_focus(frame.world)
+ 	for prep_slot in range(frame.session.build.weapons.size()):
+ 		var soon:float=frame.world.weapon_clocks[prep_slot]
+@@ -65,6 +70,9 @@
+ 			frame.hurt.call(e.damage)
+ 		if frame.session.state != "playing": return
+ 	for request in spawn_requests: frame.spawn_kind.call("crawler",request.pos,request.parent_id)
++	# A: every actor now has its normal clamped position; no mixed-order selection.
++	var support_due:Array=EnemySupport.advance(frame.world.enemies,dt,true)
++	_sync_support(frame)
+ 	var living_owners: Array = frame.world.enemies.filter(func(enemy): return enemy.hp > 0).map(func(enemy): return enemy.id)
+ 	frame.world.enemy_bullets = frame.world.enemy_bullets.filter(func(projectile): return projectile.owner in living_owners)
+ 	for i in range(frame.world.enemy_bullets.size() - 1,-1,-1):
+@@ -132,7 +140,24 @@
+ 	for i in range(frame.world.flashes.size() - 1, -1, -1):
+ 		frame.world.flashes[i].life -= dt
+ 		if frame.world.flashes[i].life <= 0: frame.world.flashes.remove_at(i)
++	# B: all existing projectile, death and pickup callbacks precede repair.
++	var support_events:Array=EnemySupport.settle(frame.world.enemies,support_due,frame.session.state=="playing")
++	for event in support_events:
++		var old:Array=frame.world.effect_visuals.filter(func(v):return v.kind in ["support_complete","support_cancel"])
++		if old.size()>=8:frame.world.effect_visuals.erase(old[0])
++		frame.world.effect_visuals.append({"kind":"support_"+event.kind,"pos":event.target_pos,"end":event.source_pos,"life":.3})
++	_sync_support(frame)
+ 	_prune_focus(frame.world)
++
++static func _sync_support(frame:Context)->void:
++	for enemy in frame.world.enemies:
++		if enemy.get("behavior","")=="support_repair" and enemy.hp>0:
++			if enemy.ai_state=="warning":
++				for recipient in frame.world.enemies:
++					if EnemySupport.can_repair(enemy,recipient):
++						enemy.aim=(recipient.pos-enemy.pos).normalized()
++						break
++			frame.actor.observe_enemy(enemy,enemy.ai_state,frame.world.player_pos)
+ 
+ static func _prune_focus(world:RefCounted)->void:
+ 	if world.focus_enemy_id!=0 and Focus.find(world.enemies,world.focus_enemy_id).is_empty():world.focus_enemy_id=0
+--- v37/scripts/gameplay/enemy_support.gd
++++ v38/scripts/gameplay/enemy_support.gd
+@@ -0,0 +1,194 @@
++extends RefCounted
++## Enemy-only repair authority. No RNG, Nodes, callbacks, player settlement or damage changes.
++const KIND := "stitch_drone"
++const BEHAVIOR := "support_repair"
++const LIMITS := {"support_radius":[1.0,1000.0],"support_channel":[.05,60.0],"support_cooldown":[.05,60.0],"support_retry":[.05,60.0],"support_heal":[0.0,1000.0],"support_max_alive":[1.0,4.0]}
++
++static func number(value:Variant)->bool:
++	return (value is int or value is float) and is_finite(float(value))
++
++static func point(value:Variant)->bool:
++	return value is Vector2 and is_finite(value.x) and is_finite(value.y)
++
++static func validate_entry(entry:Dictionary)->Array:
++	if entry.get("behavior") != BEHAVIOR:return []
++	var errors:Array=[]
++	if entry.get("id") is String and entry.id!=KIND:errors.append("Unknown support identity")
++	if not entry.get("boss") is bool or entry.boss:errors.append("Support must be ordinary")
++	for key in LIMITS:
++		var value:Variant=entry.get(key)
++		if not number(value):errors.append("Invalid support number " + key);continue
++		if value < LIMITS[key][0] or value > LIMITS[key][1] or (key=="support_heal" and value<=0):errors.append("Support bounds " + key)
++		if key=="support_max_alive" and float(value)!=floorf(float(value)):errors.append("Support cap must be integral")
++	return errors
++
++static func _identity(actor:Dictionary)->bool:
++	return actor.get("id") is int and actor.id>0
++
++static func _identities(enemies:Array)->bool:
++	var seen:Dictionary={}
++	for value in enemies:
++		if not value is Dictionary or not _identity(value) or seen.has(value.id):return false
++		seen[value.id]=true
++	return true
++
++static func _base(actor:Dictionary)->bool:
++	return _identity(actor) and actor.get("kind") is String and actor.get("behavior") is String and actor.get("boss") is bool and actor.get("parent_id") is int and point(actor.get("pos")) and number(actor.get("hp")) and number(actor.get("max_hp")) and actor.max_hp>0
++
++static func _source_kind(actor:Dictionary)->bool:
++	return actor.get("kind")==KIND and actor.get("behavior")==BEHAVIOR
++
++static func _source(actor:Dictionary)->bool:
++	if not _base(actor) or not _source_kind(actor) or actor.boss or actor.parent_id!=-1 or actor.hp<=0:return false
++	if not validate_entry(actor).is_empty():return false
++	if not actor.get("ai_state") in ["move","warning","recover"]:return false
++	for key in ["cooldown_left","warning_left","recover_left","support_start_hp"]:
++		if not number(actor.get(key)):return false
++	if not actor.get("support_target_id") is int or not actor.get("support_due") is bool or not _pending_valid(actor) or not point(actor.get("support_target_pos")):return false
++	if actor.ai_state=="warning":
++		return actor.support_target_id>0 and actor.support_start_hp>0 and actor.get("support_channel_token") is RefCounted and actor.support_cancel_pending.is_empty()
++	return actor.support_target_id==-1 and actor.support_start_hp==0 and not actor.support_due and actor.get("support_channel_token")==null
++
++static func _pending_valid(source:Dictionary)->bool:
++	var value:Variant=source.get("support_cancel_pending")
++	if not value is Dictionary:return false
++	if value.is_empty():return true
++	return value.size()==6 and value.get("source_id") is int and value.source_id==source.get("id") and value.get("target_id") is int and value.target_id>0 and value.get("kind")=="cancel" and number(value.get("amount")) and value.amount==0 and point(value.get("source_pos")) and point(value.get("target_pos"))
++
++static func _discard_invalid_world(enemies:Array)->void:
++	for value in enemies:
++		if value is Dictionary and (value.get("kind")==KIND or value.get("behavior")==BEHAVIOR):_discard(value)
++
++static func _recipient(source:Dictionary,target:Dictionary)->bool:
++	return _base(target) and target.id!=source.id and not target.boss and target.parent_id==-1 and target.kind!=KIND and target.behavior!=BEHAVIOR and target.hp>0 and target.hp<target.max_hp and number(target.get("anim_hp")) and source.pos.distance_squared_to(target.pos)<=float(source.support_radius)*float(source.support_radius)
++
++static func _find(enemies:Array,id:int)->Dictionary:
++	for value in enemies:
++		if value is Dictionary and value.get("id")==id:return value
++	return {}
++
++static func _sources(enemies:Array)->Array:
++	var result:Array=[]
++	for value in enemies:
++		if value is Dictionary and (value.get("kind")==KIND or value.get("behavior")==BEHAVIOR):result.append(value)
++	result.sort_custom(func(a,b):return int(a.get("id",0))<int(b.get("id",0)))
++	return result
++
++static func select_target(source:Dictionary,enemies:Array)->int:
++	if not _identities(enemies) or not _source(source):return -1
++	if _find(enemies,source.id).is_empty():return -1
++	var chosen:Dictionary={}
++	for target in enemies:
++		if not _recipient(source,target):continue
++		if chosen.is_empty():chosen=target;continue
++		var ratio:float=float(target.hp)/float(target.max_hp)
++		var old_ratio:float=float(chosen.hp)/float(chosen.max_hp)
++		var distance:float=source.pos.distance_squared_to(target.pos)
++		var old_distance:float=source.pos.distance_squared_to(chosen.pos)
++		if ratio<old_ratio or (ratio==old_ratio and (distance<old_distance or (distance==old_distance and target.id<chosen.id))):chosen=target
++	return -1 if chosen.is_empty() else int(chosen.id)
++
++static func can_repair(source:Dictionary,target:Dictionary)->bool:
++	return _source(source) and source.ai_state=="warning" and source.support_target_id>0 and source.support_start_hp>0 and source.support_channel_token is RefCounted and _recipient(source,target) and target.id==source.support_target_id and source.hp>=source.support_start_hp
++
++static func initialize(source:Dictionary)->void:
++	source.support_target_id=-1
++	source.support_start_hp=0.0
++	source.support_due=false
++	source.support_cancel_pending={}
++	source.support_target_pos=source.pos
++	source.support_channel_token=null
++	source.support_max_alive=int(source.support_max_alive)
++
++static func _clear(source:Dictionary)->void:
++	source.support_target_id=-1
++	source.support_start_hp=0.0
++	source.support_due=false
++	source.support_channel_token=null
++
++static func _discard(source:Dictionary)->void:
++	_clear(source)
++	source.support_cancel_pending={}
++	if source.get("ai_state")=="warning":source.ai_state="move"
++
++static func _finish(source:Dictionary)->void:
++	_clear(source)
++	source.ai_state="recover"
++	source.recover_left=.7
++	source.cooldown_left=float(source.support_cooldown)
++
++static func _cancel(source:Dictionary,target:Dictionary)->void:
++	if not target.is_empty() and (not _base(target) or not number(target.get("anim_hp"))):_discard(source);return
++	var endpoint:Variant=target.get("pos",source.get("support_target_pos"))
++	if not point(endpoint):endpoint=source.get("support_target_pos")
++	var record:Dictionary={}
++	if number(source.get("hp")) and source.hp>0 and point(source.get("pos")) and point(endpoint):
++		record={"source_id":source.id,"target_id":source.support_target_id,"kind":"cancel","amount":0.0,"source_pos":source.pos,"target_pos":endpoint}
++	_finish(source)
++	source.support_cancel_pending=record
++
++static func advance(enemies:Array,dt:float,playing:bool)->Array:
++	var due:Array=[]
++	if not is_finite(dt) or dt<0:return due
++	if not _identities(enemies):_discard_invalid_world(enemies);return due
++	for source in _sources(enemies):
++		if not playing or not _source(source):_discard(source);continue
++		if source.ai_state=="warning":
++			var warning_target:Dictionary=_find(enemies,source.support_target_id)
++			if not can_repair(source,warning_target):_cancel(source,warning_target);continue
++			source.support_target_pos=warning_target.pos
++			source.warning_left-=dt
++			if source.warning_left<=0:
++				source.support_due=true
++				due.append({"source_id":source.id,"channel_token":source.support_channel_token})
++			continue
++		source.cooldown_left-=dt
++		if source.ai_state=="recover":
++			source.recover_left-=dt
++			if source.recover_left<=0:source.ai_state="move"
++			else:continue
++		if source.cooldown_left>0:continue
++		var selected:int=select_target(source,enemies)
++		if selected<0:source.cooldown_left=float(source.support_retry);continue
++		var acquired_target:Dictionary=_find(enemies,selected)
++		source.ai_state="warning"
++		source.support_target_id=selected
++		source.support_target_pos=acquired_target.pos
++		source.support_start_hp=float(source.hp)
++		source.support_channel_token=RefCounted.new()
++		source.support_due=false
++		source.support_cancel_pending={}
++		source.warning_left=float(source.support_channel)
++	return due
++
++static func _drain(source:Dictionary,records:Array,playing:bool)->void:
++	var pending:Variant=source.get("support_cancel_pending",{})
++	if _pending_valid(source) and not pending.is_empty() and playing and number(source.get("hp")) and source.hp>0:
++		records.append(pending.duplicate(true))
++	source.support_cancel_pending={}
++
++static func settle(enemies:Array,due_tickets:Array,playing:bool)->Array:
++	var records:Array=[]
++	if not _identities(enemies):_discard_invalid_world(enemies);return records
++	for source in _sources(enemies):
++		if not playing or not _source(source):_discard(source);continue
++		_drain(source,records,playing)
++		if source.ai_state!="warning":continue
++		var target:Dictionary=_find(enemies,source.support_target_id)
++		if not can_repair(source,target):
++			_cancel(source,target)
++			_drain(source,records,playing)
++			continue
++		source.support_target_pos=target.pos
++		if not source.support_due or source.warning_left>0:continue
++		var authentic:=false
++		for ticket in due_tickets:
++			if ticket is Dictionary and ticket.get("source_id") is int and ticket.source_id==source.id and ticket.get("channel_token") is RefCounted and ticket.channel_token==source.support_channel_token:authentic=true;break
++		if not authentic:continue
++		var before:float=target.hp
++		target.hp=minf(float(target.max_hp),float(target.hp)+float(source.support_heal))
++		target.anim_hp=target.hp # Preserve current animation; reset only next damage baseline.
++		var record:Dictionary={"source_id":source.id,"target_id":target.id,"kind":"complete","amount":target.hp-before,"source_pos":source.pos,"target_pos":target.pos}
++		_finish(source)
++		if record.amount>0:records.append(record)
++	return records
+--- v37/scripts/main.gd
++++ v38/scripts/main.gd
+@@ -25,6 +25,7 @@
+ var room_profile:Dictionary
+ const CharacterMotor=preload("res://scripts/gameplay/character_motor.gd")
+ const TargetStatus=preload("res://scripts/gameplay/target_status.gd")
++const EnemySupport=preload("res://scripts/gameplay/enemy_support.gd")
+ const PrimaryDefense=preload("res://scripts/gameplay/primary_defense.gd")
+ const WeaponCombat=preload("res://scripts/gameplay/weapon_combat.gd")
+ const WeaponPresentation=preload("res://scripts/gameplay/weapon_presentation.gd")
+@@ -536,6 +537,10 @@
+ 	data.attack = ""
+ 	data.aim = Vector2.RIGHT
+ 	data.target = pos
++	if data.kind == "stitch_drone" and data.behavior == "support_repair":
++		EnemySupport.initialize(data)
++		data.attack="repair"
++		data.warning_span=float(data.support_channel)
+ 	enemies.append(data)
+ 	return data
+ 
+@@ -649,6 +654,7 @@
+ 	reserved_offer.clear()
+ 	_clear_transients()
+ 	state = "won" if won else "dead"
++	EnemySupport.settle(enemies,[],false)
+ 	stats.hp = maxf(0,stats.hp)
+ 	if won:
+ 		_show_result(true)
+@@ -659,6 +665,8 @@
+ 		ui.hide_modal()
+ 
+ func _show_result(won:bool) -> void:
++	EnemySupport.settle(enemies,[],false)
++	effect_visuals=effect_visuals.filter(func(v):return v.kind not in ["support_complete","support_cancel"])
+ 	var view:=_view()
+ 	view.won=won
+ 	ui.show_result(view)
+@@ -695,7 +703,7 @@
+ 		draw_circle(hazard.pos,hazard.radius,Color(.95,.5,.12,.22) if hazard.kind in ["trail","scorch"] else Color(.9,.85,.3,.3))
+ 		if hazard.kind == "mine": draw_rect(Rect2(hazard.pos-Vector2(6,6),Vector2(12,12)),Color("f3d66d"))
+ 	for visual in effect_visuals:
+-		if visual.kind == "annulus_impact": continue # Drawn only by the hole-preserving telegraph layer.
++		if visual.kind in ["annulus_impact","support_complete","support_cancel"]: continue # Drawn only by the hole-preserving telegraph layer.
+ 		if visual.kind=="cryo_cone":
+ 			var points:=PackedVector2Array([visual.pos])
+ 			var angle:float=visual.direction.angle()
+@@ -1240,6 +1248,13 @@
+ 		markers.append({"kind":"circle","pos":blast.pos,"radius":blast.radius,"color":Color("9ddcf6")})
+ 	for enemy in enemies:
+ 		if enemy.hp <= 0 or enemy.ai_state != "warning": continue
++		if enemy.get("behavior","")=="support_repair":
++			if state in ["title","dead","won"]:continue
++			for recipient in enemies:
++				if EnemySupport.can_repair(enemy,recipient):
++					markers.append({"kind":"support_tether","pos":enemy.pos,"end":recipient.pos,"progress":clampf(1.0-float(enemy.warning_left)/float(enemy.support_channel),0.0,1.0),"color":Color("86e5ed")})
++					break
++			continue
+ 		var color := Color(1,.35,.18,.9)
+ 		var brace:Dictionary=PrimaryDefense.brace(enemy) if state not in ["title","dead","won"] else {}
+ 		if not brace.is_empty():
+@@ -1253,6 +1268,10 @@
+ 		else:
+ 			markers.append({"kind":"circle","pos":enemy.target if enemy.attack=="blast" else enemy.pos,"radius":105 if enemy.attack=="blast" else 34*enemy.scale,"color":color})
+ 	for visual in effect_visuals:
++		if visual.kind in ["support_complete","support_cancel"]:
++			if state not in ["title","dead","won"]:
++				markers.append({"kind":visual.kind,"pos":visual.pos,"end":visual.end,"color":Color(.52,.9,.93,(.45 if settings.reduced_flashes else .9)*clampf(float(visual.life)/.3,0.0,1.0))})
++			continue
+ 		if visual.kind == "annulus_impact":
+ 			markers.append({"kind":"annulus","pos":visual.pos,"inner_radius":visual.inner_radius,"outer_radius":visual.outer_radius,"color":Color(1,.55,.18,.8),"fill_alpha":(.035 if settings.reduced_flashes else .08)*clampf(float(visual.life)/.2,0,1)})
+ 		if visual.kind in ["mine","mortar","phase"]:
+--- v37/scripts/modes/arena_mode.gd
++++ v38/scripts/modes/arena_mode.gd
+@@ -1,4 +1,5 @@
+ extends RefCounted
++const EnemySupport=preload("res://scripts/gameplay/enemy_support.gd")
+ ## Survival policy. Only this module knows timed waves, random ring spawning and mandatory bosses.
+ var id:="arena"
+ var name:="ARENA SURVIVAL"
+@@ -22,6 +23,23 @@
+ 	pos=pos.clamp(Vector2(20,20),Vector2(config.arena.width-20,config.arena.height-20))
+ 	if pos.distance_to(world.player_pos)<180:return {}
+ 	var pool:Array=encounters.waves[mini(session.wave-1,encounters.waves.size()-1)].pool
++	var support_rows:Dictionary={}
++	for entry in encounters.get("enemies",[]):
++		if entry is Dictionary and entry.get("behavior")=="support_repair":support_rows[entry.get("id","")]=entry
++	if pool.any(func(kind):return support_rows.has(kind)):
++		var known:Array=encounters.enemies.map(func(entry):return entry.id)
++		for kind in pool:
++			if not kind is String or kind not in known:return {}
++		var eligible:Array=[]
++		for kind in pool:
++			if not support_rows.has(kind):eligible.append(kind);continue
++			var row:Dictionary=support_rows[kind]
++			if not EnemySupport.validate_entry(row).is_empty():return {}
++			var living:int=world.enemies.filter(func(e):return e.get("kind")==kind and e.get("hp",0)>0).size()
++			if living<int(row.support_max_alive):eligible.append(kind)
++		if eligible.is_empty():return {}
++		pool=eligible
++	if pool.is_empty():return {}
+ 	return {"kind":pool[rng.randi_range(0,pool.size()-1)],"pos":pos}
+ func tick_spawn(dt:float,session:RefCounted,config:Dictionary)->bool:
+ 	spawn_clock-=dt
+--- v37/scripts/telegraph_layer.gd
++++ v38/scripts/telegraph_layer.gd
+@@ -25,7 +25,38 @@
+ 	queue_redraw()
+ func _draw() -> void:
+ 	for marker in markers:
+-		if marker.kind == "line":
++		if marker.kind == "support_tether":
++			var delta:Vector2=marker.end-marker.pos
++			var length:float=delta.length()
++			if length>.001:
++				var axis:Vector2=delta/length
++				for offset in range(0,int(length),12):
++					var a:Vector2=marker.pos+axis*float(offset)
++					var b:Vector2=marker.pos+axis*minf(float(offset)+7.0,length)
++					draw_line(a,b,Color(.03,.08,.1,.9),4)
++					draw_line(a,b,marker.color,2)
++			# Four discrete repair notches and a center needle; never an orange damage disc.
++			var center:Vector2=marker.pos+Vector2(0,-30)
++			for i in range(4):
++				var a:Vector2=center+Vector2(-13+float(i)*7,-5)
++				var b:Vector2=a+Vector2(0,10)
++				var color:Color=marker.color if marker.progress>=float(i+1)/4.0 else Color(.2,.35,.4,.8)
++				draw_line(a,b,Color(.03,.08,.1,.95),5)
++				draw_line(a,b,color,3)
++		elif marker.kind == "support_complete":
++			var center:Vector2=marker.pos+Vector2(0,-24)
++			for axis in [Vector2.RIGHT,Vector2.DOWN]:
++				draw_line(center-axis*7,center+axis*7,Color(.03,.08,.1,marker.color.a),5)
++				draw_line(center-axis*7,center+axis*7,marker.color,3)
++		elif marker.kind == "support_cancel":
++			var center:Vector2=(marker.pos+marker.end)*.5
++			var axis:Vector2=(marker.end-marker.pos).normalized()
++			if axis==Vector2.ZERO:axis=Vector2.RIGHT
++			var side:Vector2=axis.orthogonal()
++			draw_line(center-axis*16,center-axis*5,marker.color,2)
++			draw_line(center+axis*5,center+axis*16,marker.color,2)
++			draw_line(center-side*5-axis*3,center+side*5+axis*3,marker.color,2)
++		elif marker.kind == "line":
+ 			draw_line(marker.pos,marker.end,line_fill(marker.color),marker.width)
+ 			var outline:=line_outline(marker)
+ 			if not outline.is_empty():
+--- v37/tests/independent_annulus_data.gd
++++ v38/tests/independent_annulus_data.gd
+@@ -1,4 +1,5 @@
+ extends SceneTree
++const EncounterHistory=preload("res://tests/support/v38_encounter_projection.gd")
+ # Independent fixed-roster/data oracle. The projection masks exactly seven reviewed
+ # Broodkeeper fields plus the five explicitly reviewed v32 Amber Ram fields.
+ # The original semantic golden remains unchanged; no whole entry is masked.
+@@ -16,6 +17,9 @@
+ func _initialize()->void:
+  var c:Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://data/encounters.json"))
+  ck(AI.validate(c).is_empty(),"current encounter config valid")
++ var encounter_history:Dictionary=EncounterHistory.project(FileAccess.get_file_as_string("res://data/encounters.json"),FileAccess.get_file_as_string("res://data/room_encounters.json"))
++ ck(encounter_history.get("pass",false),"strict v38 additions before original historical roster oracle")
++ c=encounter_history.encounters
+  ck(c.enemies.map(func(e):return e.id)==["crawler","charger","spitter","flanker","brood_keeper","boss_warden","boss_core"],"exact old seven IDs/order")
+  var e:Dictionary=keeper(c)
+  ck(e.behavior=="brood_cycle","only keeper opts in")
+@@ -42,7 +46,7 @@
+  var old:Dictionary=c.duplicate(true);keeper(old).behavior="summon"
+  for key in ["pulse_inner_radius","pulse_outer_radius","pulse_warning"]:keeper(old).erase(key)
+  ck(AI.validate(old).is_empty(),"legacy summon behavior still supported")
+- var result:Dictionary={"checks":count,"failures":failures,"scope":"controlled exact roster preservation and malformed new-field validation; not gameplay/native/balance evidence"}
++ var result:Dictionary={"checks":count,"failures":failures,"scope":"controlled exact historical roster preservation after strict declared v38 enemy/wave/Rooms append reversal and malformed new-field validation; not gameplay/native/balance evidence"}
+  var args:=OS.get_cmdline_user_args()
+  if not args.is_empty():FileAccess.open(args[0],FileAccess.WRITE).store_string(JSON.stringify(result,"  ")+"\n")
+  print(JSON.stringify(result));quit(0 if failures.is_empty() else 1)
+--- v37/tests/independent_brace_geometry.gd
++++ v38/tests/independent_brace_geometry.gd
+@@ -1,4 +1,5 @@
+ extends SceneTree
++const EncounterHistory=preload("res://tests/support/v38_encounter_projection.gd")
+ # Independent contract oracle; expected booleans and numeric amounts are not obtained from brace().
+ const Defense=preload("res://scripts/gameplay/primary_defense.gd")
+ const AI=preload("res://scripts/enemy_ai.gd")
+@@ -18,6 +19,9 @@
+ func _initialize()->void:
+  var config:Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://data/encounters.json"))
+  ck(AI.validate(config).is_empty(),"authored encounters validate")
++ var encounter_history:Dictionary=EncounterHistory.project(FileAccess.get_file_as_string("res://data/encounters.json"),FileAccess.get_file_as_string("res://data/room_encounters.json"))
++ ck(encounter_history.get("pass",false),"strict v38 additions before original historical roster oracle")
++ config=encounter_history.encounters
+  ck(config.enemies.map(func(e):return e.id)==["crawler","charger","spitter","flanker","brood_keeper","boss_warden","boss_core"],"exact seven IDs and ordering")
+  var charger:Dictionary=entry(config,"charger")
+  ck(charger.get("brace_degrees")==120 and charger.get("brace_multiplier")==.5,"frozen authored120/.5")
+@@ -83,7 +87,7 @@
+  var e:Dictionary=host();e.scale=(16.0+.0001)/16.0
+  eq(Defense.resolve(e,15,Vector2(16,0),Vector2.RIGHT),7.5,"strict threshold equality remains directional")
+  for nominal in [0.0,.5,7.25,15.0,30.0,1000.0]:eq(Defense.resolve(host(),nominal,Vector2(100,0),Vector2.RIGHT),nominal*.5,"fraction/nominal overkill no round or HP clamp")
+- var result:Dictionary={"checks":checks,"failures":failures,"scope":"Independent fixed contract geometry/data oracle; no real combat/native/balance claim"}
++ var result:Dictionary={"checks":checks,"failures":failures,"scope":"Independent fixed historical geometry/data oracle after strict declared v38 enemy/wave/Rooms append reversal; no real combat/native/balance claim"}
+  var args:=OS.get_cmdline_user_args()
+  if not args.is_empty():FileAccess.open(args[0],FileAccess.WRITE).store_string(JSON.stringify(result,"  ")+"\n")
+  print(JSON.stringify(result));quit(0 if failures.is_empty() else 1)
+--- v37/tests/independent_reservation_records.gd
++++ v38/tests/independent_reservation_records.gd
+@@ -1,4 +1,5 @@
+ extends SceneTree
++const EncounterHistory=preload("res://tests/support/v38_encounter_projection.gd")
+ const CatalogHistory=preload("res://tests/support/v36_catalog_projection.gd")
+ const Rules=preload("res://scripts/rules.gd")
+ const Held=preload("res://scripts/gameplay/shop_reservation.gd")
+@@ -40,8 +41,10 @@
+  ck(c.items.map(func(e):return e.id)==ITEM_IDS+["scavenger_reel"],"exact ordered 30 module IDs with old order preserved")
+  ck(c.weapons.map(func(e):return e.id)==["rivet_gun","scrap_shotgun","rail_lance","orbit_saw","return_disc","shock_mortar","cryo_sprayer","bankshot_driver"],"exact ordered eight weapon IDs")
+  ck(FileAccess.get_sha256("res://data/balance.json")=="180c521a222f737a93498768acccdb98e6bb93f606de7e6719f88261eb41815c","six existing upgrades and economy unchanged")
+- ck(FileAccess.get_sha256("res://data/encounters.json")=="853bb3699bb05c2ed1eb7d1c8dc3e51844428c233ffa3127ac035a2762a3f356","exact v32 encounter bytes; reviewed Amber Ram brace/copy only")
+- ck(FileAccess.get_sha256("res://data/room_encounters.json")=="4a0067faa08241d91042505d72b3a027956ef27571710d74d8559462ac2c5131","Rooms stages/rewards unchanged")
++ var encounter_history:Dictionary=EncounterHistory.project(FileAccess.get_file_as_string("res://data/encounters.json"),FileAccess.get_file_as_string("res://data/room_encounters.json"))
++ ck(encounter_history.get("pass",false),"strict declared v38 row/wave/Rooms append and original raw identity")
++ ck(encounter_history.encounter_bytes.sha256_text()=="853bb3699bb05c2ed1eb7d1c8dc3e51844428c233ffa3127ac035a2762a3f356","exact v32 encounter bytes; reviewed Amber Ram brace/copy only")
++ ck(encounter_history.room_bytes.sha256_text()=="4a0067faa08241d91042505d72b3a027956ef27571710d74d8559462ac2c5131","Rooms stages/rewards unchanged")
+  var b:Dictionary=Rules.new_build(c)
+  var offer:Dictionary={"id":"rail_lance","sold":false,"weight":1.0,"weight_multiplier":1.0,"bias_reasons":["original"]}
+  var good:Dictionary=Held.create(b,c,offer,3,42)
+@@ -88,7 +91,7 @@
+  audio_teardown.prepare([g])
+  g.queue_free();await process_frame
+  await audio_teardown.finish(self)
+- var result:Dictionary={"checks":checks,"failures":failures,"scope":"Strict historical v27 catalog-byte preservation after verified exact v36 item/pair/link projection and reviewed v33 profile removal, and reviewed v32 encounter preservation plus malformed reservation/catalog type guards and actual held-card association. Corruption is controlled diagnostic input, not an observed ordinary-run occurrence."}
++ var result:Dictionary={"checks":checks,"failures":failures,"scope":"Strict historical v27 catalog-byte preservation after verified exact v36 item/pair/link projection and reviewed v33 profile removal, and reviewed v32 encounter preservation after strict declared v38 enemy/wave/Rooms append reversal plus malformed reservation/catalog type guards and actual held-card association. Corruption is controlled diagnostic input, not an observed ordinary-run occurrence."}
+  var args:=OS.get_cmdline_user_args()
+  if not args.is_empty():FileAccess.open(args[0],FileAccess.WRITE).store_string(JSON.stringify(result,"  ")+"\n")
+  print(JSON.stringify(result));quit(0 if failures.is_empty() else 1)
+--- v37/tests/support/v38_encounter_projection.gd
++++ v38/tests/support/v38_encounter_projection.gd
+@@ -0,0 +1,23 @@
++extends RefCounted
++## Test-only strict v38 declaration then reverse original byte identity. No golden replacement.
++const DECLARED_ROW = "{\"id\":\"stitch_drone\",\"name\":\"Stitch Drone\",\"behavior\":\"support_repair\",\"hp\":34,\"speed\":30,\"damage\":6,\"xp\":7,\"scale\":1,\"color\":\"86e5ed\",\"boss\":false,\"cooldown\":5,\"warning\":1.2,\"projectile_speed\":145,\"charge_speed\":310,\"charge_duration\":0.6,\"desired_distance\":210,\"summon_limit\":3,\"phase_threshold\":0.5,\"phase_speed\":1.25,\"description\":\"Channels a 10 HP repair to one wounded ordinary ally within 150 px. Cannot repair bosses, summons or support drones.\",\"tell\":\"Cyan dashed tether and four-notch progress mark a 1.2 s repair; any actual damage to the drone interrupts it.\",\"dodge\":\"Hit the drone, finish its ally or separate them beyond the tether. It has no damage immunity. Warning and recovery are contact-safe.\",\"support_radius\":150,\"support_channel\":1.2,\"support_cooldown\":5,\"support_retry\":1,\"support_heal\":10,\"support_max_alive\":1}"
++const ENCOUNTERS_OLD = "\n  ],\n  \"waves\": [\n    {\n      \"number\": 1,\n      \"pool\": [\n        \"crawler\"\n      ],\n      \"boss\": \"\"\n    },\n    {\n      \"number\": 2,\n      \"pool\": [\n        \"crawler\",\n        \"charger\",\n        \"spitter\"\n      ],\n      \"boss\": \"\"\n    },\n    {\n      \"number\": 3,\n      \"pool\": [\n        \"crawler\",\n        \"flanker\"\n      ],\n      \"boss\": \"boss_warden\"\n    },\n    {\n      \"number\": 4,\n      \"pool\": [\n        \"charger\",\n        \"spitter\",\n        \"flanker"
++const ENCOUNTERS_NEW = ",\n    {\n      \"id\": \"stitch_drone\",\n      \"name\": \"Stitch Drone\",\n      \"behavior\": \"support_repair\",\n      \"hp\": 34,\n      \"speed\": 30,\n      \"damage\": 6,\n      \"xp\": 7,\n      \"scale\": 1,\n      \"color\": \"86e5ed\",\n      \"boss\": false,\n      \"cooldown\": 5,\n      \"warning\": 1.2,\n      \"projectile_speed\": 145,\n      \"charge_speed\": 310,\n      \"charge_duration\": 0.6,\n      \"desired_distance\": 210,\n      \"summon_limit\": 3,\n      \"phase_threshold\": 0.5,\n      \"phase_speed\": 1.25,\n      \"description\": \"Channels a 10 HP repair to one wounded ordinary ally within 150 px. Cannot repair bosses, summons or support drones.\",\n      \"tell\": \"Cyan dashed tether and four-notch progress mark a 1.2 s repair; any actual damage to the drone interrupts it.\",\n      \"dodge\": \"Hit the drone, finish its ally or separate them beyond the tether. It has no damage immunity. Warning and recovery are contact-safe.\",\n      \"support_radius\": 150,\n      \"support_channel\": 1.2,\n      \"support_cooldown\": 5,\n      \"support_retry\": 1,\n      \"support_heal\": 10,\n      \"support_max_alive\": 1\n    }\n  ],\n  \"waves\": [\n    {\n      \"number\": 1,\n      \"pool\": [\n        \"crawler\"\n      ],\n      \"boss\": \"\"\n    },\n    {\n      \"number\": 2,\n      \"pool\": [\n        \"crawler\",\n        \"charger\",\n        \"spitter\"\n      ],\n      \"boss\": \"\"\n    },\n    {\n      \"number\": 3,\n      \"pool\": [\n        \"crawler\",\n        \"flanker\"\n      ],\n      \"boss\": \"boss_warden\"\n    },\n    {\n      \"number\": 4,\n      \"pool\": [\n        \"charger\",\n        \"spitter\",\n        \"flanker\",\n        \"stitch_drone"
++const ENCOUNTERS_OLD_SHA = "853bb3699bb05c2ed1eb7d1c8dc3e51844428c233ffa3127ac035a2762a3f356"
++const ROOMS_OLD = "]},\n    {\"name\":\"BROOD\",\"enemies\":[{\"kind\":\"brood_keeper\",\"at\":[0.18,0.2]},{\"kind\":\"charger\",\"at\":[0.82,0.2]},{\"kind\":\"spitter\",\"at\":[0.82,0.8]},{\"kind\":\"crawler\",\"at\":[0.18,0."
++const ROOMS_NEW = ",{\"kind\":\"stitch_drone\",\"at\":[0.5,0.18]}]},\n    {\"name\":\"BROOD\",\"enemies\":[{\"kind\":\"brood_keeper\",\"at\":[0.18,0.2]},{\"kind\":\"charger\",\"at\":[0.82,0.2]},{\"kind\":\"spitter\",\"at\":[0.82,0.8]},{\"kind\":\"crawler\",\"at\":[0.18,0.8]},{\"kind\":\"stitch_drone\",\"at\":[0.5,0.1"
++const ROOMS_OLD_SHA = "4a0067faa08241d91042505d72b3a027956ef27571710d74d8559462ac2c5131"
++static func project(encounter_raw:String,room_raw:String)->Dictionary:
++ var fail:Dictionary={"pass":false,"encounter_bytes":"","room_bytes":"","encounters":{},"rooms":{}}
++ var c:Variant=JSON.parse_string(encounter_raw);var rooms:Variant=JSON.parse_string(room_raw)
++ if not c is Dictionary or not rooms is Dictionary:return fail
++ if not c.get("enemies") is Array or c.enemies.size()!=8 or c.enemies[-1]!=JSON.parse_string(DECLARED_ROW):return fail
++ if not c.get("waves") is Array or c.waves.size()!=6 or not c.waves[3] is Dictionary or not c.waves[3].get("pool") is Array or c.waves[3].pool!=JSON.parse_string('["charger","spitter","flanker","stitch_drone"]'):return fail
++ if not rooms.get("stages") is Array or rooms.stages.size()!=3:return fail
++ for i in [1,2]:
++  if not rooms.stages[i] is Dictionary or not rooms.stages[i].get("enemies") is Array or rooms.stages[i].enemies.size()!=5 or rooms.stages[i].enemies[-1]!=JSON.parse_string('{"kind":"stitch_drone","at":[0.5,0.18]}'):return fail
++ if encounter_raw.count(ENCOUNTERS_NEW)!=1 or room_raw.count(ROOMS_NEW)!=1:return fail
++ var original_encounters:String=encounter_raw.replace(ENCOUNTERS_NEW,ENCOUNTERS_OLD)
++ var original_rooms:String=room_raw.replace(ROOMS_NEW,ROOMS_OLD)
++ if original_encounters.sha256_text()!=ENCOUNTERS_OLD_SHA or original_rooms.sha256_text()!=ROOMS_OLD_SHA:return fail
++ return {"pass":true,"encounter_bytes":original_encounters,"room_bytes":original_rooms,"encounters":JSON.parse_string(original_encounters),"rooms":JSON.parse_string(original_rooms)}
+--- v37/tests/test_stitch_drone.gd
++++ v38/tests/test_stitch_drone.gd
+@@ -0,0 +1,44 @@
++extends SceneTree
++const Runtime=preload("res://scripts/gameplay/combat_runtime.gd")
++const Support=preload("res://scripts/gameplay/enemy_support.gd")
++var checks:=0
++var failures:Array=[]
++func ck(ok:bool,label:String)->void:
++ checks+=1
++ if not ok:failures.append(label)
++func _initialize()->void:call_deferred("run")
++func run()->void:
++ var g=load("res://scenes/main.tscn").instantiate();root.add_child(g);g.set_process(false)
++ g._start_run(3803);g.spawn_clock=999.;g.weapon_clocks.fill(999.)
++ var source:Dictionary=g._spawn_kind("stitch_drone",Vector2(100,100))
++ var target:Dictionary=g._spawn_kind("crawler",Vector2(150,100))
++ source.speed=0.;target.speed=0.;source.cooldown_left=0.;target.hp=5.;target.anim_hp=5.
++ ck(source.support_max_alive is int and source.support_max_alive==1,"JSON integral cap becomes actual int")
++ ck(source.sprite.sprite_frames.get_frame_count("walk")==9,"authored nine-frame source sheet")
++ for id in ["stitch_drone_channel","stitch_drone_hurt","stitch_drone_death"]:
++  ck(g.actor_anim.assets.has(id) and g.actor_anim.assets[id].frames.get_frame_count("action")==9,"authored action present "+id)
++ Runtime.step(g.combat_frame,0.)
++ ck(source.ai_state=="warning" and source.warning_left==1.2,"post-movement acquisition owns fresh span")
++ ck(source.support_target_id==target.id and source.support_channel_token is RefCounted,"identity-bound channel")
++ g._sync_telegraphs()
++ ck(g.telegraphs.markers.filter(func(m):return m.kind=="support_tether").size()==1,"one authoritative tether")
++ Runtime.step(g.combat_frame,1.2)
++ ck(target.hp==15. and target.anim_hp==15.,"actual runtime repairs ten and reconciles hurt baseline")
++ ck(source.ai_state=="recover" and source.cooldown_left==5. and source.support_channel_token==null,"one completion resets lifecycle")
++ ck(g.effect_visuals.filter(func(v):return v.kind=="support_complete").size()==1,"success visual is authority-derived")
++ var hp:float=target.hp;Runtime.step(g.combat_frame,0.)
++ ck(target.hp==hp,"no duplicate repair after completion")
++ source.ai_state="move";source.cooldown_left=0.;Runtime.step(g.combat_frame,0.)
++ source.hp-=1.;Runtime.step(g.combat_frame,0.)
++ ck(source.ai_state=="recover" and target.hp==hp,"actual loss cancels without heal")
++ ck(g.effect_visuals.filter(func(v):return v.kind=="support_cancel").size()==1,"one cancellation visual")
++ g._sync_telegraphs();ck(g.telegraphs.markers.filter(func(m):return m.kind=="support_tether").is_empty(),"cancel drops live tether")
++ source.ai_state="move";source.cooldown_left=0.;Runtime.step(g.combat_frame,0.)
++ var before:Dictionary=source.duplicate(true);g.state="paused";Runtime.step(g.combat_frame,.2)
++ ck(source==before,"paused direct step preserves channel")
++ g.state="dead";Runtime.step(g.combat_frame,.2)
++ ck(source.support_channel_token==null and target.hp==hp,"terminal direct step never repairs")
++ g._sync_telegraphs();ck(g.telegraphs.markers.filter(func(m):return m.kind.begins_with("support_")).is_empty(),"terminal hides all support markers")
++ var cleanup=preload("res://tests/support/audio_teardown.gd").new();cleanup.prepare([g]);g.queue_free();await process_frame;await cleanup.finish(self)
++ print(JSON.stringify({"pass":failures.is_empty(),"checks":checks,"failures":failures,"scope":"Author smoke of actual support lifecycle and authored atlas presence; independent policy/path/native gates separate."}))
++ quit(0 if failures.is_empty() else 1)
+--- v37/tests/test_support_encounter_projection.gd
++++ v38/tests/test_support_encounter_projection.gd
+@@ -0,0 +1,44 @@
++extends SceneTree
++const History=preload("res://tests/support/v38_encounter_projection.gd")
++var checks:=0
++var failures:Array=[]
++func ck(ok:bool,label:String)->void:
++ checks+=1
++ if not ok:failures.append(label)
++func _initialize()->void:call_deferred("run")
++func run()->void:
++ var raw:String=FileAccess.get_file_as_string("res://data/encounters.json")
++ var rooms:String=FileAccess.get_file_as_string("res://data/room_encounters.json")
++ ck(History.project(raw,rooms).get("pass",false),"exact declared append reconstructs old raw")
++ var changes:Array=[
++  [raw.replace('"hp": 22','"hp": 23'),rooms,"old enemy field"],
++  [raw.replace('"pool": [\n        "crawler"\n      ]','"pool": [\n        "flanker"\n      ]'),rooms,"old wave"],
++  [raw.replace('"support_heal": 10','"support_heal": 11'),rooms,"new heal numeric"],
++  [raw.replace('"color": "86e5ed"','"color": "ffffff"'),rooms,"new declared color"],
++  [raw.replace('"name": "Stitch Drone"','"name": "Other Drone"'),rooms,"new declared name"],
++  [raw,rooms.replace('[0.5,0.18]','[0.5,0.19]'),"room append position"],
++  [raw,rooms.replace('"coins":24','"coins":25'),"old room reward"],
++  [raw+" ",rooms,"extra raw text"],
++  [raw,rooms+"\n","room raw text"],
++  [raw,rooms.replace(',{"kind":"stitch_drone","at":[0.5,0.18]}',''),"missing two room additions"]]
++ for change in changes:
++  ck(change[0]!=raw or change[1]!=rooms,"negative actually mutates "+change[2])
++  ck(not History.project(change[0],change[1]).get("pass",false),"reject "+change[2])
++ var c:Dictionary=JSON.parse_string(raw)
++ for which in range(5):
++  var bad:Dictionary=c.duplicate(true)
++  match which:
++   0:bad.enemies.append(bad.enemies[-1].duplicate(true))
++   1:bad.enemies.reverse()
++   2:bad.waves[3].pool.append("crawler")
++   3:bad.waves[3].pool.reverse()
++   4:bad.waves[3]=17
++  ck(not History.project(JSON.stringify(bad,"  ")+"\n",rooms).get("pass",false),"reject extra row or order "+str(which))
++ var parsed_rooms:Dictionary=JSON.parse_string(rooms)
++ for index in [1,2]:
++  for malformed in [null,[]]:
++   var bad_rooms:Dictionary=parsed_rooms.duplicate(true);bad_rooms.stages[index]=malformed
++   ck(not History.project(raw,JSON.stringify(bad_rooms)).get("pass",false),"malformed room stage cleanly rejected")
++ ck(raw==FileAccess.get_file_as_string("res://data/encounters.json") and rooms==FileAccess.get_file_as_string("res://data/room_encounters.json"),"read-only source and input values")
++ print(JSON.stringify({"pass":failures.is_empty(),"checks":checks,"failures":failures,"scope":"Strict declared v38 additions and historical raw projection, with changed-value/extra/order/raw negative controls; not runtime gameplay."}))
++ quit(0 if failures.is_empty() else 1)

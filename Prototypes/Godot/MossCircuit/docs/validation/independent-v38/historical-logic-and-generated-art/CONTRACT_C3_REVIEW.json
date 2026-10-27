@@ -1,0 +1,9 @@
+{
+  "status": "PASS_C3_STATIC_EVIDENCE_ATTRIBUTION_ADDENDUM",
+  "utc": "2026-10-27T06:41:51.858382+00:00",
+  "contract_sha256": "1427535395d58eea8f4ab4e2ecf5d5a34bed0513338f820d746418e10124b9e9",
+  "prior_review": "CONTRACT_REVIEW.json",
+  "change": "C3 explicitly distinguishes current real damage paths from defensive test-only kill/pickup event injection; no gameplay/API numeric change. Baseline Effects.process has no immediate kill/pickup enemy-damage proc.",
+  "oracle_freeze_sha256": "42c5f485ebe463eb1dc98a6bda6b0b3fab5b1dda117c4d9cda8947caf7867a5d",
+  "no_target_execution": true
+}

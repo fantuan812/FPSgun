@@ -1,0 +1,19 @@
+--- <WORKSPACE>/moss-v38-qa/checks/support_native_fixture.gd
++++ support_native_fixture.gd
+@@ -1,7 +1,7 @@
+ extends SceneTree
+ # External controlled geometry and steps. Not ordinary encounter/acquisition.
+ const Runtime=preload("res://scripts/gameplay/combat_runtime.gd")
+-const Teardown=preload("<WORKSPACE>/moss-v38-qa/native-support/audio_teardown.gd")
++const Teardown=preload("<WORKSPACE>/moss-v38-svg-qa/native-support/audio_teardown.gd")
+ var g
+ var index:=0
+ var stage:=-1
+@@ -85,6 +85,6 @@
+ func finish()->void:
+  ready_case=false
+  ck(index==3 and stage==6 and observations.size()==28,"all four cases and seven real steps completed")
+- print(JSON.stringify({"fixture_terminal":true,"cases_completed":index+1,"observations":observations.size(),"failures":failures,"scope":"Controlled4 combinations: Arena/Rooms at960 and1280; reduced flashes at1280. Animation only continuously advances; actual Runtime steps only H. Separate ordinary originalELF run required."}))
++ print(JSON.stringify({"fixture_terminal":true,"cases_completed":index+1,"observations":observations.size(),"failures":failures,"scope":"Controlled4 combinations: Arena/Rooms at960 and1280; reduced flashes at1280. Animation only continuously advances; actual Runtime steps only H. SVG asset-only rerun: historical original-art ordinary remains separately scoped; no new ordinary run."}))
+  var cleanup=Teardown.new();cleanup.prepare([g]);source={};target={};g.queue_free();await process_frame;await cleanup.finish(self)
+  quit(0 if failures.is_empty() else 1)

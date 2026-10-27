@@ -1,0 +1,52 @@
+{
+  "added": {
+    "tests/independent_feedback_authority_rooms.gd": "86af190868b41f873261828cf24cea30f3b0126683503a037e2e57550ea02b87",
+    "tests/support/historical_feedback_authority_v35.gd": "e733fc08d6ca4d3c16c6f3e8ae5a7abc415b5b96b4c20823da1b5ac5a96ba690"
+  },
+  "base_inputs": 768,
+  "changed": {
+    "README.md": {
+      "after": "c7846f6af7edac381201d2e7151fcccf1de637406cfa042681ec0e9b00f0c9d6",
+      "before": "6e507b3b176087ac1cb8da50d3e7eef7b8a23b5252f33f7bcf922c3f4871b3ca"
+    },
+    "docs/DELIVERY.md": {
+      "after": "cc79231fe18302508c0f08ecbb792b0a7ad0868fcc7a420093831d75649e1017",
+      "before": "2378a6c24f01d96102acb85a8c71591485306b1bd190932a97ab6c77b2e33635"
+    },
+    "docs/V38_STITCH_DRONE.md": {
+      "after": "61bbdc866c35aa9aba668e6474200b4e63123f86dc940352459aaba01ab03d83",
+      "before": "31dcaece2997bbb0284ba7d2b676fd7540e8565630d738f1a1fa4d195d8d4417"
+    },
+    "tests/independent_feedback_authority.gd": {
+      "after": "27d1fa0885b3c18bc57d78b4e2e1a8dac137910ea1fb57270ebbdbe22d13b1c6",
+      "before": "e733fc08d6ca4d3c16c6f3e8ae5a7abc415b5b96b4c20823da1b5ac5a96ba690"
+    },
+    "tests/independent_settlement_types.gd": {
+      "after": "ebab77ad7acf1b98f3c79fccb650c0bf1351ef0bc18b4fece06ace34993af092",
+      "before": "a65145d1613995ba83703071b685371b123546daaebcc1c0bbaa5bd46c54fc13"
+    },
+    "tests/run_regression.py": {
+      "after": "4f5c41e186f0ecb8bd8660c209a8256e8549e65298c001adfeea57a9d0f22821",
+      "before": "2b913410f2f121c6296d94a65086a921576aba8a0ec9fe3262bdd51a16bb08f1"
+    },
+    "tests/test_actor_actions.gd": {
+      "after": "8cf9aa0c5c15958eef98120de510560d6d0770021c3479667d93d5a4a8db3b2b",
+      "before": "3b790dabd7f4f80590fdaa4926916c40fb7736ccff2d146c50a48df4927da1f9"
+    }
+  },
+  "discovery_standalone": 138,
+  "expected_after_import_inputs": 772,
+  "next": "Root static review, truecoldfreeze, focused changed authority435/338+settlement1164+actor418+supportdeath8+assets120, then one newfull139 if focused passes. Each command180, no retries.",
+  "old_full_rejected_sha256": "b27458565c912a3cc7de92ac1d788280d568f1ea776c5090bd5df34e6236b624",
+  "preimport_inputs": 770,
+  "production139_exact": true,
+  "removed": [],
+  "runner_change_scope": "Only timeout partial stream preservation and newRoomsJSON dispatch;180/return124/predicates/fullcontinue unchanged",
+  "runner_new_sha256": "4f5c41e186f0ecb8bd8660c209a8256e8549e65298c001adfeea57a9d0f22821",
+  "runner_original_sha256": "2b913410f2f121c6296d94a65086a921576aba8a0ec9fe3262bdd51a16bb08f1",
+  "source_audio_budget": "NEW explicit each180,total360 instead of old single180; old timeout remainsFAIL",
+  "status": "PREPARED_NOT_IMPORTED_OR_EXECUTED",
+  "synthetic_logging_pass_sha256": "95c0e40fb8181eb140df1a54dd45f7f59713d472f1431480beab976483f76581",
+  "utc": "2026-10-27T07:49:21.809436+00:00",
+  "with_import": 139
+}

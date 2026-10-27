@@ -1,0 +1,31 @@
+{
+  "pass": true,
+  "review_scope": "Independent read of author first rejected run, not target rerun",
+  "author_result": false,
+  "cold_import_pass": true,
+  "author_smoke_native_exit": 1,
+  "script_errors": 6,
+  "checks": 18,
+  "failures": [
+    "post-movement acquisition owns fresh span",
+    "identity-bound channel",
+    "one authoritative tether",
+    "actual runtime repairs ten and reconciles hurt baseline",
+    "one completion resets lifecycle",
+    "success visual is authority-derived",
+    "actual loss cancels without heal",
+    "one cancellation visual"
+  ],
+  "remaining_unexecuted": 7,
+  "cause": "Author direct Runtime fixture omitted combat_frame.area initialization; old clamp access width fails before support A. No evidenced production failure from this run.",
+  "proposed_correction": "test-only assign g.combat_frame.area=g.config.arena after start_run; preserve original and execute separate remaining8 plan with original 180s gates, no cold retry",
+  "raw": {
+    "support-author.stderr": "d640f35f1653ef4740c629003aa12cc5ba3b11d9ac978fb6ac357804fa1dd754",
+    "cold-import.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "cold-import.stdout": "af5cd48827fd7a9606cdc8edc6b19bbc663bd42effc33818db40b655a37de09e",
+    "STEPS.json": "aeef1d7e499c45588f869ec95b35e4b4ee0301d8323158fc7e30b32ccb36051e",
+    "PLAN.json": "4dafa0a66ef6d1253164701bf52164af4cc55941f8a9c0ba94ef077e8df7146d",
+    "support-author.stdout": "9c693de328b1bada2e6e98e445c7928d22f92eca8786ba46f031f518a9083bbe",
+    "RESULT.json": "672aad9a3b4133d884a1e1ae476359e07c7e9bab6f797625ae293fa376d32a5d"
+  }
+}

@@ -1,0 +1,47 @@
+--- original960
++++ external-diagnostic
+@@ -1,6 +1,12 @@
+ extends SceneTree
+ ## Independently bounded type-totality / atomic invalid-settlement regression.
+ const Flow=preload("res://scripts/gameplay/run_flow.gd")
++class StopAudit extends "res://scripts/feedback_audio.gd":
++ var explicit_stop_all_calls:=0
++ func stop_all()->void:
++  explicit_stop_all_calls+=1
++  super.stop_all()
++var diagnostic_rows:Array=[]
+ class Policy extends RefCounted:
+  var decision:Variant
+  func can_end(_session:RefCounted,_world:RefCounted,_encounters:Dictionary)->bool:return true
+@@ -70,14 +76,25 @@
+  for mode in ["arena","rooms"]:
+   var g=load("res://scenes/main.tscn").instantiate();root.add_child(g);g.set_process(false);g._select_mode(mode);g._start_run(3517);g.spawn_clock=999;g.weapon_clocks=[-.2];g.stats.hp=73;g.build.coin_fraction=.3;g.upgrade_pending=2;g.shop_pending=true
+   g.pickups=[{"pos":g.player_pos,"xp":7,"coins":3}];g.hazards=[{"kind":"mine","pos":g.player_pos,"life":2.,"age":0.,"tick":0.,"radius":70.,"slow":false}]
++  # Observer-only replacement preserves actual base FeedbackAudio request/stream/player/stop implementations.
++  var original_audio=g.feedback_audio
++  var observed_audio:=StopAudit.new();g.add_child(observed_audio);g.feedback_audio=observed_audio
++  original_audio.queue_free();await process_frame
+   var policy:=Policy.new();g.mode=policy
+   for i in range(invalid.size()):
+    policy.decision=invalid[i];var before:Dictionary=snap(g)
+    ck(Flow.settle(g.combat,g.run,policy,g.config,g.effects,g.encounters)=="invalid","invalid flow returns explicitly before mutation "+mode+str(i))
+    ck(snap(g)==before,"world/session/build/effects/RNG unchanged on invalid flow "+mode+str(i))
++   var request_started:int=Time.get_ticks_usec()
+    g.feedback_audio.request("player_damage");g.feedback_audio.request("shield_block")
++   var requested_at:int=Time.get_ticks_usec();var before_calls:int=observed_audio.explicit_stop_all_calls
++   var requested_playing:Array=[observed_audio.players.player_damage.playing,observed_audio.players.shield_block.playing]
+    g._complete_wave()
++   var call_finished:int=Time.get_ticks_usec();var call_stops:int=observed_audio.explicit_stop_all_calls-before_calls
++   var immediately_playing:Array=[observed_audio.players.player_damage.playing,observed_audio.players.shield_block.playing]
+    ck(snap(g)==before,"controller invalid policy remains atomic "+mode+str(i))
++   var snap_finished:int=Time.get_ticks_usec()
++   diagnostic_rows.append({"mode":mode,"index":i,"requested_playing":requested_playing,"immediately_playing":immediately_playing,"after_snap_playing":[observed_audio.players.player_damage.playing,observed_audio.players.shield_block.playing],"request_elapsed_us":requested_at-request_started,"call_elapsed_us":call_finished-requested_at,"snapshot_elapsed_us":snap_finished-call_finished,"total_after_request_us":snap_finished-requested_at,"explicit_stop_all_calls_during_controller":call_stops,"stop_calls_through_snapshot":observed_audio.explicit_stop_all_calls-before_calls})
+    ck(g.feedback_audio.players.player_damage.playing and g.feedback_audio.players.shield_block.playing,"invalid controller settlement does not add audio stop "+mode+str(i))
+    g.feedback_audio.stop_all()
+   g.queue_free();await process_frame;await create_timer(.25).timeout
+@@ -96,4 +113,5 @@
+  var report:Dictionary={"checks":checks,"failures":failures,"invalid_decisions":invalid.size(),"scope":"Controlled pure type-totality and exact invalid-settlement atomicity. Original malformed String repro retained separately; no ordinary authored-data failure or broad policy redesign claim."}
+  var args:=OS.get_cmdline_user_args()
+  if not args.is_empty():FileAccess.open(args[0],FileAccess.WRITE).store_string(JSON.stringify(report,"  ")+"\n")
++ print("SETTLEMENT_TIMING "+JSON.stringify({"rows":diagnostic_rows,"scope":"Diagnostic only: same original960assertions; real baseaudio with stop_all forwarding counter, low-volume saved perdecision timing. Not original-timeout reconstruction or automatic acceptance retry."}))
+  print(JSON.stringify(report));quit(0 if failures.is_empty() else 1)

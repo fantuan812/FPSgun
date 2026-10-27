@@ -1,0 +1,12 @@
+{
+  "status": "PROPOSAL_ONLY_NOT_APPLIED",
+  "original_sha256": "a65145d1613995ba83703071b685371b123546daaebcc1c0bbaa5bd46c54fc13",
+  "proposed_sha256": "ebab77ad7acf1b98f3c79fccb650c0bf1351ef0bc18b4fece06ace34993af092",
+  "unchanged": "All102invalid decisions and all pure-type/Flow/controller snapshot/valid outcome assertions remain, original loops/modes/teardown/sleeps unchanged. Production139 unchanged.",
+  "replacement": "Exactly one static assertion executed204times replaces short-clip playing after expensive snapshot with real forwarded stop_all counter unchanged across controller call+snapshot. This tests no explicit stop rather than an invalid indefinite-playback assumption.",
+  "added": "One static positive-control assertion executed204times: canonical damage/block requests accepted, actual super.stop_all counted+1 and real players stopped. Telemetry keeps requested/immediate/after-snapshot flags and elapsed wall timings.",
+  "expected_checks": 1164,
+  "historical": "Original aggregate two playingFAILs remain; subsequent instrumented960 diagnosis allPASS/204zero stop calls did not reproduce cause. No retrospective natural-expiration/environment assertion.",
+  "observer_setup": "Replace idle base Audio Node in external test with subclass using unmodified inherited request/install/player logic and override stop_all counting then super; immediate free old idle node, no new await/sleep.",
+  "negative_sensitivity": "A misplaced real stop_all during invalid settlement increments counter and fails regardless of eventual playing state; explicit positive call proves counter and real stop remain active."
+}

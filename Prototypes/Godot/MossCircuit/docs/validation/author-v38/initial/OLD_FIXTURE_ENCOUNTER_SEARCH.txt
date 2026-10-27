@@ -1,0 +1,79 @@
+evidence-workspace/moss-v37-final/tests/test_brood_actions.gd:88:	check(g.enemies.size()==int(g.config.waves.max_enemies) and children(g,e).is_empty() and g.next_enemy_id==next_id,"global cap can yield zero children")
+evidence-workspace/moss-v37-final/tests/independent_reservation_records.gd:43: ck(FileAccess.get_sha256("res://data/encounters.json")=="853bb3699bb05c2ed1eb7d1c8dc3e51844428c233ffa3127ac035a2762a3f356","exact v32 encounter bytes; reviewed Amber Ram brace/copy only")
+evidence-workspace/moss-v37-final/tests/independent_reservation_records.gd:44: ck(FileAccess.get_sha256("res://data/room_encounters.json")=="4a0067faa08241d91042505d72b3a027956ef27571710d74d8559462ac2c5131","Rooms stages/rewards unchanged")
+evidence-workspace/moss-v37-final/tests/test_vfx.gd:65:	game.enemies[0].hp=1000
+evidence-workspace/moss-v37-final/tests/test_core_summon.gd:57:	check(game.enemies.size()==3 and game.enemies.filter(func(e):return e.parent_id==enemy.id).size()==2,"phase2 release creates original two children")
+evidence-workspace/moss-v37-final/tests/test_core_summon.gd:60:	check(game.enemies.size()==3,"hurt cannot duplicate summon")
+evidence-workspace/moss-v37-final/tests/test_core_summon.gd:65:	check(game.enemies.size()==4 and enemy.sprite.frame==7,"capped attempt still shows release but creates zero children")
+evidence-workspace/moss-v37-final/tests/independent_resolution.gd:39:	check(g.enemies.size()==1 and is_instance_valid(sprite) and not sprite.is_queued_for_deletion(),"invalid decision preserves live enemy sprite through frame boundary")
+evidence-workspace/moss-v37-final/tests/independent_v2.gd:79:	game.enemies[0].pos = game.player_pos + Vector2(30,0)
+evidence-workspace/moss-v37-final/tests/independent_v2.gd:89:	var hp: float = game.enemies[0].hp
+evidence-workspace/moss-v37-final/tests/independent_v2.gd:92:	check(game.bullets.is_empty() and game.enemies[0].hp < hp, "radial melee real damage")
+evidence-workspace/moss-v37-final/tests/independent_v2.gd:98:	game.enemies[0].pos = game.player_pos
+evidence-workspace/moss-v37-final/tests/independent_v2.gd:99:	game.enemies[0].hp = 1
+evidence-workspace/moss-v37-final/tests/test_builds.gd:75:	game.enemies[0].pos = game.player_pos + Vector2(50,0)
+evidence-workspace/moss-v37-final/tests/test_builds.gd:81:	var hp: float = game.enemies[0].hp
+evidence-workspace/moss-v37-final/tests/test_builds.gd:83:	check(game.enemies[0].hp < hp and game.bullets.size() == 1, "radial melee damages without projectile")
+evidence-workspace/moss-v37-final/tests/test_builds.gd:89:	game.enemies[0].pos = game.player_pos
+evidence-workspace/moss-v37-final/tests/test_builds.gd:90:	game.enemies[0].hp = 1
+evidence-workspace/moss-v37-final/tests/test_boundary_shot.gd:56:  check(hits==[50] and enemies[0].hp==982,"overlap carry prevents immediate double hit")
+evidence-workspace/moss-v37-final/tests/test_encounters.gd:13:	check(AI.validate(game.encounters).is_empty(),"encounter schema valid")
+evidence-workspace/moss-v37-final/tests/test_encounters.gd:15:	var bad: Dictionary = game.encounters.duplicate(true)
+evidence-workspace/moss-v37-final/tests/test_encounters.gd:16:	bad.enemies[0].warning = 0
+evidence-workspace/moss-v37-final/tests/independent_focus_combat.gd:123:   fire(id);aimed(id,high.pos,mode+" marked tie "+id);ck(g.enemies[0].id==20 and g.enemies[1].id==10,"no enemy reorder "+id)
+evidence-workspace/moss-v37-final/tests/test_modes.gd:11:	var profile=JSON.parse_string(FileAccess.get_file_as_string("res://data/room_encounters.json"))
+evidence-workspace/moss-v37-final/tests/test_modes.gd:12:	var encounter_data=JSON.parse_string(FileAccess.get_file_as_string("res://data/encounters.json"))
+evidence-workspace/moss-v37-final/tests/test_modes.gd:36:	check(g.enemies.size()==1 and g.mode.planned_index==1,"room spawns deterministic finite plan")
+evidence-workspace/moss-v37-final/tests/test_modes.gd:45:		check(g.enemies.size()==count,"finite plan does not over-spawn stage "+str(stage))
+evidence-workspace/moss-v37-final/tests/independent_qa.gd:45:	game.enemies[0].pos = game.player_pos
+evidence-workspace/moss-v37-final/tests/independent_brood_events.gd:47:		while g.enemies.size()<int(g.config.waves.max_enemies):g._spawn_kind("crawler",Vector2(40,40))
+evidence-workspace/moss-v37-final/tests/independent_brood_events.gd:48:		check(g.enemies.size()==90 and int(g.config.waves.max_enemies)==90,mode+" global-cap fixture uses original90 limit")
+evidence-workspace/moss-v37-final/tests/independent_brood_events.gd:50:		check(children(g,e.id).size()==2 and g.enemies.size()==90 and g.next_enemy_id==next_id and actor.phase=="recover",mode+" global cap blocks child despite available parent capacity")
+evidence-workspace/moss-v37-final/tests/independent_brood_events.gd:91:			check(g.state=="playing" and not g.mode.can_end(g.run,g.combat,g.encounters),"living orphan children block finite room completion")
+evidence-workspace/moss-v37-final/tests/independent_brood_events.gd:106:	print("INDEPENDENT BROOD EVENTS: ",passed," passed; ",failures.size()," failed")
+evidence-workspace/moss-v37-final/tests/test_actor_actions.gd:41:	var enemy:Dictionary=game.enemies[0]
+evidence-workspace/moss-v37-final/tests/independent_core_reactions.gd:100:			check(not g.mode.can_end(g.run,g.combat,g.encounters),"room children block clear")
+evidence-workspace/moss-v37-final/tests/independent_brood_assets.gd:110:	check(e.sprite.frame<7 and g.enemies.size()==1,"real pre-release tick cannot show release or child")
+evidence-workspace/moss-v37-final/tests/independent_brood_assets.gd:112:	check(e.sprite.frame==7 and g.enemies.size()==2,"real summon attempt and source release7 occur in same authoritative tick")
+evidence-workspace/moss-v37-final/tests/independent_brood_assets.gd:115:	check(a.state=="hurt" and g.enemies.size()==3,"hurt conceals only body attempt, never child")
+evidence-workspace/moss-v37-final/tests/independent_brood_assets.gd:118:	check(a.state=="recover" and e.sprite.frame>7 and g.enemies.size()==3,"hurt end displays current recovery frame without replaying attempt7")
+evidence-workspace/moss-v37-final/tests/independent_brood_assets.gd:120:	check(g.enemies.size()==4 and e.sprite.frame==7,"third child genuinely spawned at attempt frame7")
+evidence-workspace/moss-v37-final/tests/independent_brood_assets.gd:123:	check(g.enemies.size()==4 and g.next_enemy_id==next_id and e.sprite.frame==7,"capped attempt frame7 never means guaranteed child appearance")
+evidence-workspace/moss-v37-final/tests/independent_brood_assets.gd:137:	print("INDEPENDENT BROOD ASSETS: ",passed," passed; ",failures.size()," failed")
+evidence-workspace/moss-v37-final/tests/independent_scavenger_settlement.gd:25:  var policy:=Policy.new();var outcome:String=Flow.settle(g.combat,g.run,policy,g.config,g.effects,g.encounters)
+evidence-workspace/moss-v37-final/tests/independent_scavenger_settlement.gd:28:  var stable:Dictionary=snapshot();ck(Flow.settle(g.combat,g.run,policy,g.config,g.effects,g.encounters)=="ignored" and snapshot()==stable,"repeat transition cannot credit twice "+mode)
+evidence-workspace/moss-v37-final/tests/independent_scavenger_settlement.gd:30:  ck(Flow.settle(g.combat,g.run,policy,g.config,g.effects,g.encounters)=="invalid" and snapshot()==stable,"malformed policy cannot mutate new metadata/world "+mode)
+evidence-workspace/moss-v37-final/tests/independent_enemy_ui.gd:28:	for entry in g.encounters.enemies:
+evidence-workspace/moss-v37-final/tests/independent_brood_parity.gd:37:				a.enemies[0].hp-=1;b.enemies[0].hp-=1
+evidence-workspace/moss-v37-final/tests/independent_brood_parity.gd:44:			var before_state:String=a.enemies[0].ai_state if not a.enemies.is_empty() else ""
+evidence-workspace/moss-v37-final/tests/independent_brood_parity.gd:46:			if before_state=="warning" and not a.enemies.is_empty() and a.enemies[0].ai_state=="recover":shots+=1
+evidence-workspace/moss-v37-final/tests/independent_brood_parity.gd:49:		check(a.enemies.size()>=2 and a.enemies.all(func(e):return e.kind=="crawler" and e.parent_id>0),"children persist after parent death "+mode_id)
+evidence-workspace/moss-v37-final/tests/independent_brood_parity.gd:57:	print("INDEPENDENT BROOD PARITY: ",passed," passed; ",failures.size()," failed")
+evidence-workspace/moss-v37-final/tests/test_game.gd:49:	check(game.enemies.size() == 1, "spawn enemy")
+evidence-workspace/moss-v37-final/tests/test_game.gd:50:	game.enemies[0].pos = game.player_pos + Vector2(30, 0)
+evidence-workspace/moss-v37-final/tests/test_game.gd:80:	game.enemies[0].pos = game.player_pos
+evidence-workspace/moss-v37-final/tests/test_expansion.gd:75:	game.enemies[0].hp=200.0
+evidence-workspace/moss-v37-final/tests/test_expansion.gd:77:	var target_hp: float=game.enemies[0].hp
+evidence-workspace/moss-v37-final/tests/test_expansion.gd:80:	check(game.enemies[0].hp==target_hp,"warning has no damage")
+evidence-workspace/moss-v37-final/tests/test_expansion.gd:82:	check(game.enemies[0].hp<target_hp and game.hazards.size()==1,"detonation damage and fuse")
+evidence-workspace/moss-v37-final/tests/independent_spitter_parity.gd:34:				a.enemies[0].hp-=1;b.enemies[0].hp-=1
+evidence-workspace/moss-v37-final/tests/independent_spitter_parity.gd:39:			var before_state:String=a.enemies[0].ai_state if not a.enemies.is_empty() else ""
+evidence-workspace/moss-v37-final/tests/independent_spitter_parity.gd:41:			if before_state=="warning" and not a.enemies.is_empty() and a.enemies[0].ai_state=="recover":shots+=1
+evidence-workspace/moss-v37-final/tests/independent_brace_geometry.gd:19: var config:Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://data/encounters.json"))
+evidence-workspace/moss-v37-final/tests/independent_brace_geometry.gd:20: ck(AI.validate(config).is_empty(),"authored encounters validate")
+evidence-workspace/moss-v37-final/tests/independent_charger_gameplay_parity.gd:33:				a.enemies[0].hp-=1;b.enemies[0].hp-=1
+evidence-workspace/moss-v37-final/tests/test_primary_brace.gd:47:	var data:Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://data/encounters.json"))
+evidence-workspace/moss-v37-final/tests/independent_policy_validation.gd:9:	var profile:Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://data/room_encounters.json"))
+evidence-workspace/moss-v37-final/tests/independent_policy_validation.gd:10:	var enemies:Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://data/encounters.json"))
+evidence-workspace/moss-v37-final/tests/independent_policy_validation.gd:21:		bad.stages[0].enemies[0].at[1]=value
+evidence-workspace/moss-v37-final/tests/test_resolution_validation.gd:6:	func can_end(_session,_world,_encounters)->bool:return true
+evidence-workspace/moss-v37-final/tests/test_resolution_validation.gd:59:			ck(Flow.settle(g.combat,g.run,policy,g.config,g.effects,g.encounters)=="invalid","real settle returns invalid "+mode_id)
+evidence-workspace/moss-v37-final/tests/test_resolution_validation.gd:71:		ck(Flow.settle(g.combat,g.run,policy,g.config,g.effects,g.encounters)=="next","valid policy still advances")
+evidence-workspace/moss-v37-final/tests/independent_annulus_data.gd:17: var c:Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://data/encounters.json"))
+evidence-workspace/moss-v37-final/tests/independent_room_boundaries.gd:36:	var child:Dictionary=g._spawn_kind("crawler",Vector2(60,60),g.enemies[0].id)
+evidence-workspace/moss-v37-final/tests/independent_room_boundaries.gd:40:	check(g.state=="playing" and g.enemies.size()==1 and not g.mode.can_end(g.run,g.combat,g.encounters),"living summoned child blocks clear")
+evidence-workspace/moss-v37-final/tests/test_brood_pulse.gd:89:	var data:Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://data/encounters.json"))
+evidence-workspace/moss-v37-final/tests/test_brood_pulse.gd:104:	print("BROOD PULSE: ",passed," passed; ",failures.size()," failed")
+evidence-workspace/moss-v37-final/tests/independent_settlement_types.gd:6: func can_end(_session:RefCounted,_world:RefCounted,_encounters:Dictionary)->bool:return true
+evidence-workspace/moss-v37-final/tests/independent_settlement_types.gd:76:   ck(Flow.settle(g.combat,g.run,policy,g.config,g.effects,g.encounters)=="invalid","invalid flow returns explicitly before mutation "+mode+str(i))
+evidence-workspace/moss-v37-final/tests/independent_settlement_types.gd:88:  var result:String=Flow.settle(g.combat,g.run,policy,g.config,g.effects,g.encounters)

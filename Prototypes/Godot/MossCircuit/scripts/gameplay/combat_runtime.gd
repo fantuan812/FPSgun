@@ -1,4 +1,5 @@
 extends RefCounted
+const EnemySupport=preload("res://scripts/gameplay/enemy_support.gd")
 const ScavengerReel=preload("res://scripts/gameplay/scavenger_reel.gd")
 const Context=preload("res://scripts/gameplay/combat_context.gd")
 const RunFlow=preload("res://scripts/gameplay/run_flow.gd")
@@ -10,6 +11,10 @@ const Focus=preload("res://scripts/gameplay/combat_focus.gd")
 ## Mode-independent combat step: weapons, AI, projectiles, deaths and pickups.
 ## No wave timer, spawn schedule, completion policy, UI or shop dependency.
 static func step(frame:Context,dt:float)->void:
+	# Direct paused probes preserve support timers; terminal probes discard only support state.
+	if frame.session.state != "playing" and frame.world.enemies.any(func(e):return e.get("behavior","")=="support_repair"):
+		if frame.session.state in ["title","dead","won"]:EnemySupport.settle(frame.world.enemies,[],false)
+		return
 	_prune_focus(frame.world)
 	for prep_slot in range(frame.session.build.weapons.size()):
 		var soon:float=frame.world.weapon_clocks[prep_slot]
@@ -65,6 +70,9 @@ static func step(frame:Context,dt:float)->void:
 			frame.hurt.call(e.damage)
 		if frame.session.state != "playing": return
 	for request in spawn_requests: frame.spawn_kind.call("crawler",request.pos,request.parent_id)
+	# A: every actor now has its normal clamped position; no mixed-order selection.
+	var support_due:Array=EnemySupport.advance(frame.world.enemies,dt,true)
+	_sync_support(frame)
 	var living_owners: Array = frame.world.enemies.filter(func(enemy): return enemy.hp > 0).map(func(enemy): return enemy.id)
 	frame.world.enemy_bullets = frame.world.enemy_bullets.filter(func(projectile): return projectile.owner in living_owners)
 	for i in range(frame.world.enemy_bullets.size() - 1,-1,-1):
@@ -102,6 +110,8 @@ static func step(frame:Context,dt:float)->void:
 	for i in range(frame.world.enemies.size() - 1, -1, -1):
 		var e: Dictionary = frame.world.enemies[i]
 		if e.hp <= 0:
+			# Dispose ephemeral support identity before the old death loop removes this actor.
+			if e.get("kind","")=="stitch_drone" or e.get("behavior","")=="support_repair":EnemySupport.settle([e],[],false)
 			if e.boss: frame.boss_killed.call(e)
 			var source: String = e.get("last_source","primary")
 			frame.procs.emit_event("kill",{"pos":e.pos,"source":source,"depth":0 if source == "primary" else 1})
@@ -132,7 +142,24 @@ static func step(frame:Context,dt:float)->void:
 	for i in range(frame.world.flashes.size() - 1, -1, -1):
 		frame.world.flashes[i].life -= dt
 		if frame.world.flashes[i].life <= 0: frame.world.flashes.remove_at(i)
+	# B: all existing projectile, death and pickup callbacks precede repair.
+	var support_events:Array=EnemySupport.settle(frame.world.enemies,support_due,frame.session.state=="playing")
+	for event in support_events:
+		var old:Array=frame.world.effect_visuals.filter(func(v):return v.kind in ["support_complete","support_cancel"])
+		if old.size()>=8:frame.world.effect_visuals.erase(old[0])
+		frame.world.effect_visuals.append({"kind":"support_"+event.kind,"pos":event.target_pos,"end":event.source_pos,"life":.3})
+	_sync_support(frame)
 	_prune_focus(frame.world)
+
+static func _sync_support(frame:Context)->void:
+	for enemy in frame.world.enemies:
+		if enemy.get("behavior","")=="support_repair" and enemy.hp>0:
+			if enemy.ai_state=="warning":
+				for recipient in frame.world.enemies:
+					if EnemySupport.can_repair(enemy,recipient):
+						enemy.aim=(recipient.pos-enemy.pos).normalized()
+						break
+			frame.actor.observe_enemy(enemy,enemy.ai_state,frame.world.player_pos)
 
 static func _prune_focus(world:RefCounted)->void:
 	if world.focus_enemy_id!=0 and Focus.find(world.enemies,world.focus_enemy_id).is_empty():world.focus_enemy_id=0

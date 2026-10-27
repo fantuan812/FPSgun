@@ -1,0 +1,281 @@
+--- v37/data/encounters.json
++++ v38/data/encounters.json
+@@ -172,6 +172,36 @@
+       "description": "Wave 6 boss: maintains distance and fires ring volleys. Below half HP, 12-shot rings alternate with summons.",
+       "tell": "0.85 s orange ring before each release.",
+       "dodge": "Use gaps in the slow ring; dash is briefly invulnerable. Clear summons."
++    },
++    {
++      "id": "stitch_drone",
++      "name": "Stitch Drone",
++      "behavior": "support_repair",
++      "hp": 34,
++      "speed": 30,
++      "damage": 6,
++      "xp": 7,
++      "scale": 1,
++      "color": "86e5ed",
++      "boss": false,
++      "cooldown": 5,
++      "warning": 1.2,
++      "projectile_speed": 145,
++      "charge_speed": 310,
++      "charge_duration": 0.6,
++      "desired_distance": 210,
++      "summon_limit": 3,
++      "phase_threshold": 0.5,
++      "phase_speed": 1.25,
++      "description": "Channels a 10 HP repair to one wounded ordinary ally within 150 px. Cannot repair bosses, summons or support drones.",
++      "tell": "Cyan dashed tether and four-notch progress mark a 1.2 s repair; any actual damage to the drone interrupts it.",
++      "dodge": "Hit the drone, finish its ally or separate them beyond the tether. It has no damage immunity. Warning and recovery are contact-safe.",
++      "support_radius": 150,
++      "support_channel": 1.2,
++      "support_cooldown": 5,
++      "support_retry": 1,
++      "support_heal": 10,
++      "support_max_alive": 1
+     }
+   ],
+   "waves": [
+@@ -204,7 +234,8 @@
+       "pool": [
+         "charger",
+         "spitter",
+-        "flanker"
++        "flanker",
++        "stitch_drone"
+       ],
+       "boss": ""
+     },
+--- v37/data/room_encounters.json
++++ v38/data/room_encounters.json
+@@ -5,7 +5,7 @@
+   "reward":{"coins":24,"heal":15,"upgrades":1},
+   "stages":[
+     {"name":"ENTRY","enemies":[{"kind":"crawler","at":[0.18,0.22]},{"kind":"crawler","at":[0.82,0.22]},{"kind":"flanker","at":[0.8,0.8]}]},
+-    {"name":"CROSSFIRE","enemies":[{"kind":"spitter","at":[0.16,0.2]},{"kind":"charger","at":[0.82,0.8]},{"kind":"crawler","at":[0.18,0.8]},{"kind":"flanker","at":[0.82,0.22]}]},
+-    {"name":"BROOD","enemies":[{"kind":"brood_keeper","at":[0.18,0.2]},{"kind":"charger","at":[0.82,0.2]},{"kind":"spitter","at":[0.82,0.8]},{"kind":"crawler","at":[0.18,0.8]}]}
++    {"name":"CROSSFIRE","enemies":[{"kind":"spitter","at":[0.16,0.2]},{"kind":"charger","at":[0.82,0.8]},{"kind":"crawler","at":[0.18,0.8]},{"kind":"flanker","at":[0.82,0.22]},{"kind":"stitch_drone","at":[0.5,0.18]}]},
++    {"name":"BROOD","enemies":[{"kind":"brood_keeper","at":[0.18,0.2]},{"kind":"charger","at":[0.82,0.2]},{"kind":"spitter","at":[0.82,0.8]},{"kind":"crawler","at":[0.18,0.8]},{"kind":"stitch_drone","at":[0.5,0.18]}]}
+   ]
+ }
+--- v37/scripts/enemy_ai.gd
++++ v38/scripts/enemy_ai.gd
+@@ -1,9 +1,18 @@
+ extends RefCounted
++const EnemySupport=preload("res://scripts/gameplay/enemy_support.gd")
+ const PrimaryDefense=preload("res://scripts/gameplay/primary_defense.gd")
+ ## Data-driven timer/state transitions. Events consumed by the combat controller.
+ static func tick(enemy: Dictionary, player: Vector2, dt: float, time: float) -> Array:
+ 	var events: Array = []
+ 	if enemy.hp <= 0: return events
++	if enemy.behavior == "support_repair":
++		# Support timers are advanced once, at the unified post-movement phase.
++		if enemy.ai_state == "move":
++			var distance:float=enemy.pos.distance_to(player)
++			var direction:Vector2=(player-enemy.pos).normalized()
++			if distance<enemy.desired_distance-30:enemy.pos-=direction*enemy.speed*dt
++			elif distance>enemy.desired_distance+30:enemy.pos+=direction*enemy.speed*dt
++		return events
+ 	enemy.cooldown_left -= dt
+ 	enemy.phase = 2 if enemy.boss and enemy.hp <= enemy.max_hp * enemy.phase_threshold else 1
+ 	var speed: float = enemy.speed * (enemy.phase_speed if enemy.phase == 2 else 1.0)
+@@ -82,9 +91,10 @@
+ 		if not valid: errors.append("Missing enemy field"); continue
+ 		if not entry.id is String or not entry.name is String or not entry.boss is bool: errors.append("Invalid enemy identity"); continue
+ 		errors.append_array(PrimaryDefense.validate_entry(entry))
++		errors.append_array(EnemySupport.validate_entry(entry))
+ 		if kinds.has(entry.id): errors.append("Duplicate enemy ID")
+ 		kinds[entry.id] = entry.boss
+-		if not entry.behavior in ["chase","charge","ranged","flank","summon","brood_cycle","warden","core"]: errors.append("Unknown behavior")
++		if not entry.behavior in ["chase","charge","ranged","flank","summon","brood_cycle","warden","core","support_repair"]: errors.append("Unknown behavior")
+ 		if entry.behavior == "brood_cycle":
+ 			var pulse_valid := true
+ 			for key in ["pulse_inner_radius","pulse_outer_radius","pulse_warning"]:
+--- v37/scripts/gameplay/combat_runtime.gd
++++ v38/scripts/gameplay/combat_runtime.gd
+@@ -1,4 +1,5 @@
+ extends RefCounted
++const EnemySupport=preload("res://scripts/gameplay/enemy_support.gd")
+ const ScavengerReel=preload("res://scripts/gameplay/scavenger_reel.gd")
+ const Context=preload("res://scripts/gameplay/combat_context.gd")
+ const RunFlow=preload("res://scripts/gameplay/run_flow.gd")
+@@ -10,6 +11,10 @@
+ ## Mode-independent combat step: weapons, AI, projectiles, deaths and pickups.
+ ## No wave timer, spawn schedule, completion policy, UI or shop dependency.
+ static func step(frame:Context,dt:float)->void:
++	# Direct paused probes preserve support timers; terminal probes discard only support state.
++	if frame.session.state != "playing" and frame.world.enemies.any(func(e):return e.get("behavior","")=="support_repair"):
++		if frame.session.state in ["title","dead","won"]:EnemySupport.settle(frame.world.enemies,[],false)
++		return
+ 	_prune_focus(frame.world)
+ 	for prep_slot in range(frame.session.build.weapons.size()):
+ 		var soon:float=frame.world.weapon_clocks[prep_slot]
+@@ -65,6 +70,9 @@
+ 			frame.hurt.call(e.damage)
+ 		if frame.session.state != "playing": return
+ 	for request in spawn_requests: frame.spawn_kind.call("crawler",request.pos,request.parent_id)
++	# A: every actor now has its normal clamped position; no mixed-order selection.
++	var support_due:Array=EnemySupport.advance(frame.world.enemies,dt,true)
++	_sync_support(frame)
+ 	var living_owners: Array = frame.world.enemies.filter(func(enemy): return enemy.hp > 0).map(func(enemy): return enemy.id)
+ 	frame.world.enemy_bullets = frame.world.enemy_bullets.filter(func(projectile): return projectile.owner in living_owners)
+ 	for i in range(frame.world.enemy_bullets.size() - 1,-1,-1):
+@@ -132,7 +140,19 @@
+ 	for i in range(frame.world.flashes.size() - 1, -1, -1):
+ 		frame.world.flashes[i].life -= dt
+ 		if frame.world.flashes[i].life <= 0: frame.world.flashes.remove_at(i)
++	# B: all existing projectile, death and pickup callbacks precede repair.
++	var support_events:Array=EnemySupport.settle(frame.world.enemies,support_due,frame.session.state=="playing")
++	for event in support_events:
++		var old:Array=frame.world.effect_visuals.filter(func(v):return v.kind in ["support_complete","support_cancel"])
++		if old.size()>=8:frame.world.effect_visuals.erase(old[0])
++		frame.world.effect_visuals.append({"kind":"support_"+event.kind,"pos":event.target_pos,"end":event.source_pos,"life":.3})
++	_sync_support(frame)
+ 	_prune_focus(frame.world)
++
++static func _sync_support(frame:Context)->void:
++	for enemy in frame.world.enemies:
++		if enemy.get("behavior","")=="support_repair" and enemy.hp>0:
++			frame.actor.observe_enemy(enemy,enemy.ai_state,frame.world.player_pos)
+ 
+ static func _prune_focus(world:RefCounted)->void:
+ 	if world.focus_enemy_id!=0 and Focus.find(world.enemies,world.focus_enemy_id).is_empty():world.focus_enemy_id=0
+--- v37/scripts/main.gd
++++ v38/scripts/main.gd
+@@ -25,6 +25,7 @@
+ var room_profile:Dictionary
+ const CharacterMotor=preload("res://scripts/gameplay/character_motor.gd")
+ const TargetStatus=preload("res://scripts/gameplay/target_status.gd")
++const EnemySupport=preload("res://scripts/gameplay/enemy_support.gd")
+ const PrimaryDefense=preload("res://scripts/gameplay/primary_defense.gd")
+ const WeaponCombat=preload("res://scripts/gameplay/weapon_combat.gd")
+ const WeaponPresentation=preload("res://scripts/gameplay/weapon_presentation.gd")
+@@ -536,6 +537,10 @@
+ 	data.attack = ""
+ 	data.aim = Vector2.RIGHT
+ 	data.target = pos
++	if data.kind == "stitch_drone" and data.behavior == "support_repair":
++		EnemySupport.initialize(data)
++		data.attack="repair"
++		data.warning_span=float(data.support_channel)
+ 	enemies.append(data)
+ 	return data
+ 
+@@ -659,6 +664,8 @@
+ 		ui.hide_modal()
+ 
+ func _show_result(won:bool) -> void:
++	EnemySupport.settle(enemies,[],false)
++	effect_visuals=effect_visuals.filter(func(v):return v.kind not in ["support_complete","support_cancel"])
+ 	var view:=_view()
+ 	view.won=won
+ 	ui.show_result(view)
+@@ -695,7 +702,7 @@
+ 		draw_circle(hazard.pos,hazard.radius,Color(.95,.5,.12,.22) if hazard.kind in ["trail","scorch"] else Color(.9,.85,.3,.3))
+ 		if hazard.kind == "mine": draw_rect(Rect2(hazard.pos-Vector2(6,6),Vector2(12,12)),Color("f3d66d"))
+ 	for visual in effect_visuals:
+-		if visual.kind == "annulus_impact": continue # Drawn only by the hole-preserving telegraph layer.
++		if visual.kind in ["annulus_impact","support_complete","support_cancel"]: continue # Drawn only by the hole-preserving telegraph layer.
+ 		if visual.kind=="cryo_cone":
+ 			var points:=PackedVector2Array([visual.pos])
+ 			var angle:float=visual.direction.angle()
+@@ -1240,6 +1247,13 @@
+ 		markers.append({"kind":"circle","pos":blast.pos,"radius":blast.radius,"color":Color("9ddcf6")})
+ 	for enemy in enemies:
+ 		if enemy.hp <= 0 or enemy.ai_state != "warning": continue
++		if enemy.get("behavior","")=="support_repair":
++			if state in ["title","dead","won"]:continue
++			for recipient in enemies:
++				if EnemySupport.can_repair(enemy,recipient):
++					markers.append({"kind":"support_tether","pos":enemy.pos,"end":recipient.pos,"progress":clampf(1.0-float(enemy.warning_left)/float(enemy.support_channel),0.0,1.0),"color":Color("86e5ed")})
++					break
++			continue
+ 		var color := Color(1,.35,.18,.9)
+ 		var brace:Dictionary=PrimaryDefense.brace(enemy) if state not in ["title","dead","won"] else {}
+ 		if not brace.is_empty():
+@@ -1253,6 +1267,10 @@
+ 		else:
+ 			markers.append({"kind":"circle","pos":enemy.target if enemy.attack=="blast" else enemy.pos,"radius":105 if enemy.attack=="blast" else 34*enemy.scale,"color":color})
+ 	for visual in effect_visuals:
++		if visual.kind in ["support_complete","support_cancel"]:
++			if state not in ["title","dead","won"]:
++				markers.append({"kind":visual.kind,"pos":visual.pos,"end":visual.end,"color":Color(.52,.9,.93,(.45 if settings.reduced_flashes else .9)*clampf(float(visual.life)/.3,0.0,1.0))})
++			continue
+ 		if visual.kind == "annulus_impact":
+ 			markers.append({"kind":"annulus","pos":visual.pos,"inner_radius":visual.inner_radius,"outer_radius":visual.outer_radius,"color":Color(1,.55,.18,.8),"fill_alpha":(.035 if settings.reduced_flashes else .08)*clampf(float(visual.life)/.2,0,1)})
+ 		if visual.kind in ["mine","mortar","phase"]:
+--- v37/scripts/modes/arena_mode.gd
++++ v38/scripts/modes/arena_mode.gd
+@@ -1,4 +1,5 @@
+ extends RefCounted
++const EnemySupport=preload("res://scripts/gameplay/enemy_support.gd")
+ ## Survival policy. Only this module knows timed waves, random ring spawning and mandatory bosses.
+ var id:="arena"
+ var name:="ARENA SURVIVAL"
+@@ -22,6 +23,23 @@
+ 	pos=pos.clamp(Vector2(20,20),Vector2(config.arena.width-20,config.arena.height-20))
+ 	if pos.distance_to(world.player_pos)<180:return {}
+ 	var pool:Array=encounters.waves[mini(session.wave-1,encounters.waves.size()-1)].pool
++	var support_rows:Dictionary={}
++	for entry in encounters.get("enemies",[]):
++		if entry is Dictionary and entry.get("behavior")=="support_repair":support_rows[entry.get("id","")]=entry
++	if pool.any(func(kind):return support_rows.has(kind)):
++		var known:Array=encounters.enemies.map(func(entry):return entry.id)
++		for kind in pool:
++			if not kind is String or kind not in known:return {}
++		var eligible:Array=[]
++		for kind in pool:
++			if not support_rows.has(kind):eligible.append(kind);continue
++			var row:Dictionary=support_rows[kind]
++			if not EnemySupport.validate_entry(row).is_empty():return {}
++			var living:int=world.enemies.filter(func(e):return e.get("kind")==kind and e.get("hp",0)>0).size()
++			if living<int(row.support_max_alive):eligible.append(kind)
++		if eligible.is_empty():return {}
++		pool=eligible
++	if pool.is_empty():return {}
+ 	return {"kind":pool[rng.randi_range(0,pool.size()-1)],"pos":pos}
+ func tick_spawn(dt:float,session:RefCounted,config:Dictionary)->bool:
+ 	spawn_clock-=dt
+--- v37/scripts/telegraph_layer.gd
++++ v38/scripts/telegraph_layer.gd
+@@ -25,7 +25,38 @@
+ 	queue_redraw()
+ func _draw() -> void:
+ 	for marker in markers:
+-		if marker.kind == "line":
++		if marker.kind == "support_tether":
++			var delta:Vector2=marker.end-marker.pos
++			var length:float=delta.length()
++			if length>.001:
++				var axis:Vector2=delta/length
++				for offset in range(0,int(length),12):
++					var a:Vector2=marker.pos+axis*float(offset)
++					var b:Vector2=marker.pos+axis*minf(float(offset)+7.0,length)
++					draw_line(a,b,Color(.03,.08,.1,.9),4)
++					draw_line(a,b,marker.color,2)
++			# Four discrete repair notches and a center needle; never an orange damage disc.
++			var center:Vector2=marker.pos+Vector2(0,-30)
++			for i in range(4):
++				var a:Vector2=center+Vector2(-13+float(i)*7,-5)
++				var b:Vector2=a+Vector2(0,10)
++				var color:Color=marker.color if marker.progress>=float(i+1)/4.0 else Color(.2,.35,.4,.8)
++				draw_line(a,b,Color(.03,.08,.1,.95),5)
++				draw_line(a,b,color,3)
++		elif marker.kind == "support_complete":
++			var center:Vector2=marker.pos+Vector2(0,-24)
++			for axis in [Vector2.RIGHT,Vector2.DOWN]:
++				draw_line(center-axis*7,center+axis*7,Color(.03,.08,.1,marker.color.a),5)
++				draw_line(center-axis*7,center+axis*7,marker.color,3)
++		elif marker.kind == "support_cancel":
++			var center:Vector2=(marker.pos+marker.end)*.5
++			var axis:Vector2=(marker.end-marker.pos).normalized()
++			if axis==Vector2.ZERO:axis=Vector2.RIGHT
++			var side:Vector2=axis.orthogonal()
++			draw_line(center-axis*16,center-axis*5,marker.color,2)
++			draw_line(center+axis*5,center+axis*16,marker.color,2)
++			draw_line(center-side*5-axis*3,center+side*5+axis*3,marker.color,2)
++		elif marker.kind == "line":
+ 			draw_line(marker.pos,marker.end,line_fill(marker.color),marker.width)
+ 			var outline:=line_outline(marker)
+ 			if not outline.is_empty():

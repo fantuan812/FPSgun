@@ -1,0 +1,4870 @@
+{
+  "status": "DIAGNOSTIC_ONLY_NOT_ACCEPTANCE_RETRY",
+  "native_exit": 0,
+  "seconds": 13.464,
+  "timeout": false,
+  "clean": true,
+  "reports": [
+    {
+      "checks": 960,
+      "failures": [],
+      "invalid_decisions": 102,
+      "scope": "Controlled pure type-totality and exact invalid-settlement atomicity. Original malformed String repro retained separately; no ordinary authored-data failure or broad policy redesign claim."
+    }
+  ],
+  "timings": [
+    {
+      "rows": [
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 99,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 0,
+          "mode": "arena",
+          "request_elapsed_us": 428,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 11636,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 11735
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 38,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 1,
+          "mode": "arena",
+          "request_elapsed_us": 313,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 7483,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 7521
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 85,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 2,
+          "mode": "arena",
+          "request_elapsed_us": 743,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 7679,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 7764
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 35,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 3,
+          "mode": "arena",
+          "request_elapsed_us": 214,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 5557,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 5592
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 199,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 4,
+          "mode": "arena",
+          "request_elapsed_us": 501,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 8155,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 8354
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 35,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 5,
+          "mode": "arena",
+          "request_elapsed_us": 433,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 6129,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 6164
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 31,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 6,
+          "mode": "arena",
+          "request_elapsed_us": 200,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 9853,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 9884
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 31,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 7,
+          "mode": "arena",
+          "request_elapsed_us": 231,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 7808,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 7839
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 28,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 8,
+          "mode": "arena",
+          "request_elapsed_us": 175,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 5516,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 5544
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 29,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 9,
+          "mode": "arena",
+          "request_elapsed_us": 206,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 6112,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 6141
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 29,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 10,
+          "mode": "arena",
+          "request_elapsed_us": 198,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 6619,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 6648
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 27,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 11,
+          "mode": "arena",
+          "request_elapsed_us": 204,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 7363,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 7390
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 29,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 12,
+          "mode": "arena",
+          "request_elapsed_us": 262,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 6934,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 6963
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 27,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 13,
+          "mode": "arena",
+          "request_elapsed_us": 170,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 6709,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 6736
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 27,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 14,
+          "mode": "arena",
+          "request_elapsed_us": 206,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 6931,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 6958
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 28,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 15,
+          "mode": "arena",
+          "request_elapsed_us": 235,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 6345,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 6373
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 26,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 16,
+          "mode": "arena",
+          "request_elapsed_us": 166,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 9146,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 9172
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 29,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 17,
+          "mode": "arena",
+          "request_elapsed_us": 221,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 6194,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 6223
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 30,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 18,
+          "mode": "arena",
+          "request_elapsed_us": 529,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 5641,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 5671
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 135,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 19,
+          "mode": "arena",
+          "request_elapsed_us": 218,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 5449,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 5584
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 25,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 20,
+          "mode": "arena",
+          "request_elapsed_us": 177,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 5771,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 5796
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 27,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 21,
+          "mode": "arena",
+          "request_elapsed_us": 606,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 9348,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 9375
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 27,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 22,
+          "mode": "arena",
+          "request_elapsed_us": 188,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 7353,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 7380
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 25,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 23,
+          "mode": "arena",
+          "request_elapsed_us": 155,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 5922,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 5947
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 24,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 24,
+          "mode": "arena",
+          "request_elapsed_us": 188,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 4998,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 5022
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 25,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 25,
+          "mode": "arena",
+          "request_elapsed_us": 180,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 7433,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 7458
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 37,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 26,
+          "mode": "arena",
+          "request_elapsed_us": 473,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 6984,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 7021
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 28,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 27,
+          "mode": "arena",
+          "request_elapsed_us": 245,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 10837,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 10865
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 27,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 28,
+          "mode": "arena",
+          "request_elapsed_us": 202,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 5575,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 5602
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 34,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 29,
+          "mode": "arena",
+          "request_elapsed_us": 282,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 6288,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 6322
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 351,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 30,
+          "mode": "arena",
+          "request_elapsed_us": 169,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 6619,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 6970
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 27,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 31,
+          "mode": "arena",
+          "request_elapsed_us": 258,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 16637,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 16664
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 33,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 32,
+          "mode": "arena",
+          "request_elapsed_us": 294,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 6542,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 6575
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 62,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 33,
+          "mode": "arena",
+          "request_elapsed_us": 190,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 10145,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 10207
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 32,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 34,
+          "mode": "arena",
+          "request_elapsed_us": 225,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 5162,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 5194
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 30,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 35,
+          "mode": "arena",
+          "request_elapsed_us": 293,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 11749,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 11779
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 31,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 36,
+          "mode": "arena",
+          "request_elapsed_us": 223,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 6466,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 6497
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 29,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 37,
+          "mode": "arena",
+          "request_elapsed_us": 235,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 6746,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 6775
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 38,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 38,
+          "mode": "arena",
+          "request_elapsed_us": 1278,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 8322,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 8360
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 30,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 39,
+          "mode": "arena",
+          "request_elapsed_us": 242,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 6469,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 6499
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 30,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 40,
+          "mode": "arena",
+          "request_elapsed_us": 375,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 6594,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 6624
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 28,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 41,
+          "mode": "arena",
+          "request_elapsed_us": 380,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 8444,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 8472
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 29,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 42,
+          "mode": "arena",
+          "request_elapsed_us": 202,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 6569,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 6598
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 31,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 43,
+          "mode": "arena",
+          "request_elapsed_us": 590,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 7823,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 7854
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 30,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 44,
+          "mode": "arena",
+          "request_elapsed_us": 203,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 9561,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 9591
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 29,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 45,
+          "mode": "arena",
+          "request_elapsed_us": 341,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 5590,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 5619
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 27,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 46,
+          "mode": "arena",
+          "request_elapsed_us": 209,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 10311,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 10338
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 26,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 47,
+          "mode": "arena",
+          "request_elapsed_us": 158,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 6273,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 6299
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 30,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 48,
+          "mode": "arena",
+          "request_elapsed_us": 752,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 9888,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 9918
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 31,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 49,
+          "mode": "arena",
+          "request_elapsed_us": 213,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 5937,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 5968
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 29,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 50,
+          "mode": "arena",
+          "request_elapsed_us": 221,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 5748,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 5777
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 29,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 51,
+          "mode": "arena",
+          "request_elapsed_us": 362,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 5842,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 5871
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 28,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 52,
+          "mode": "arena",
+          "request_elapsed_us": 444,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 8539,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 8567
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 28,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 53,
+          "mode": "arena",
+          "request_elapsed_us": 312,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 9603,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 9631
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 99,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 54,
+          "mode": "arena",
+          "request_elapsed_us": 195,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 6135,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 6234
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 27,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 55,
+          "mode": "arena",
+          "request_elapsed_us": 296,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 5745,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 5772
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 26,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 56,
+          "mode": "arena",
+          "request_elapsed_us": 162,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 6444,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 6470
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 107,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 57,
+          "mode": "arena",
+          "request_elapsed_us": 531,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 11146,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 11253
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 27,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 58,
+          "mode": "arena",
+          "request_elapsed_us": 464,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 5520,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 5547
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 27,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 59,
+          "mode": "arena",
+          "request_elapsed_us": 159,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 6079,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 6106
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 35,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 60,
+          "mode": "arena",
+          "request_elapsed_us": 253,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 10253,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 10288
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 49,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 61,
+          "mode": "arena",
+          "request_elapsed_us": 212,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 10944,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 10993
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 33,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 62,
+          "mode": "arena",
+          "request_elapsed_us": 259,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 14382,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 14415
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 31,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 63,
+          "mode": "arena",
+          "request_elapsed_us": 248,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 5407,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 5438
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 27,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 64,
+          "mode": "arena",
+          "request_elapsed_us": 223,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 5824,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 5851
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 24,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 65,
+          "mode": "arena",
+          "request_elapsed_us": 148,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 5045,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 5069
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 29,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 66,
+          "mode": "arena",
+          "request_elapsed_us": 348,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 6956,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 6985
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 27,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 67,
+          "mode": "arena",
+          "request_elapsed_us": 223,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 5974,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 6001
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 26,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 68,
+          "mode": "arena",
+          "request_elapsed_us": 183,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 5582,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 5608
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 24,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 69,
+          "mode": "arena",
+          "request_elapsed_us": 186,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 6327,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 6351
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 25,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 70,
+          "mode": "arena",
+          "request_elapsed_us": 161,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 5084,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 5109
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 23,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 71,
+          "mode": "arena",
+          "request_elapsed_us": 148,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 14648,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 14671
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 42,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 72,
+          "mode": "arena",
+          "request_elapsed_us": 369,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 7900,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 7942
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 31,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 73,
+          "mode": "arena",
+          "request_elapsed_us": 243,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 6944,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 6975
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 29,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 74,
+          "mode": "arena",
+          "request_elapsed_us": 226,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 4992,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 5021
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 29,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 75,
+          "mode": "arena",
+          "request_elapsed_us": 177,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 5952,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 5981
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 32,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 76,
+          "mode": "arena",
+          "request_elapsed_us": 323,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 6763,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 6795
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 27,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 77,
+          "mode": "arena",
+          "request_elapsed_us": 167,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 6707,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 6734
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 296,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 78,
+          "mode": "arena",
+          "request_elapsed_us": 430,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 7893,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 8189
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 26,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 79,
+          "mode": "arena",
+          "request_elapsed_us": 237,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 5769,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 5795
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 46,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 80,
+          "mode": "arena",
+          "request_elapsed_us": 391,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 12110,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 12156
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 148,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 81,
+          "mode": "arena",
+          "request_elapsed_us": 201,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 6658,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 6806
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 26,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 82,
+          "mode": "arena",
+          "request_elapsed_us": 168,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 10138,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 10164
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 27,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 83,
+          "mode": "arena",
+          "request_elapsed_us": 165,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 7757,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 7784
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 29,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 84,
+          "mode": "arena",
+          "request_elapsed_us": 266,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 6145,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 6174
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 27,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 85,
+          "mode": "arena",
+          "request_elapsed_us": 185,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 6421,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 6448
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 113,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 86,
+          "mode": "arena",
+          "request_elapsed_us": 298,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 6207,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 6320
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 27,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 87,
+          "mode": "arena",
+          "request_elapsed_us": 471,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 6435,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 6462
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 22,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 88,
+          "mode": "arena",
+          "request_elapsed_us": 138,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 5154,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 5176
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 24,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 89,
+          "mode": "arena",
+          "request_elapsed_us": 198,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 5913,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 5937
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 27,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 90,
+          "mode": "arena",
+          "request_elapsed_us": 248,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 6954,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 6981
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 25,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 91,
+          "mode": "arena",
+          "request_elapsed_us": 209,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 5418,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 5443
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 24,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 92,
+          "mode": "arena",
+          "request_elapsed_us": 148,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 6560,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 6584
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 23,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 93,
+          "mode": "arena",
+          "request_elapsed_us": 159,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 5344,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 5367
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 24,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 94,
+          "mode": "arena",
+          "request_elapsed_us": 188,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 7513,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 7537
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 25,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 95,
+          "mode": "arena",
+          "request_elapsed_us": 151,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 8949,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 8974
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 16,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 96,
+          "mode": "arena",
+          "request_elapsed_us": 186,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 6528,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 6544
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 15,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 97,
+          "mode": "arena",
+          "request_elapsed_us": 269,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 4905,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 4920
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 15,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 98,
+          "mode": "arena",
+          "request_elapsed_us": 211,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 5550,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 5565
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 13,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 99,
+          "mode": "arena",
+          "request_elapsed_us": 138,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 5408,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 5421
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 17,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 100,
+          "mode": "arena",
+          "request_elapsed_us": 460,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 6232,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 6249
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 16,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 101,
+          "mode": "arena",
+          "request_elapsed_us": 211,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 5940,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 5956
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 37,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 0,
+          "mode": "rooms",
+          "request_elapsed_us": 219,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 9553,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 9590
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 106,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 1,
+          "mode": "rooms",
+          "request_elapsed_us": 155,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 7634,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 7740
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 30,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 2,
+          "mode": "rooms",
+          "request_elapsed_us": 193,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 11838,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 11868
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 27,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 3,
+          "mode": "rooms",
+          "request_elapsed_us": 139,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 7220,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 7247
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 28,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 4,
+          "mode": "rooms",
+          "request_elapsed_us": 158,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 8007,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 8035
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 27,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 5,
+          "mode": "rooms",
+          "request_elapsed_us": 146,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 6756,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 6783
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 26,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 6,
+          "mode": "rooms",
+          "request_elapsed_us": 403,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 7784,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 7810
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 62,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 7,
+          "mode": "rooms",
+          "request_elapsed_us": 234,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 6337,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 6399
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 27,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 8,
+          "mode": "rooms",
+          "request_elapsed_us": 190,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 11208,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 11235
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 27,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 9,
+          "mode": "rooms",
+          "request_elapsed_us": 153,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 6465,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 6492
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 26,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 10,
+          "mode": "rooms",
+          "request_elapsed_us": 149,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 6135,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 6161
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 27,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 11,
+          "mode": "rooms",
+          "request_elapsed_us": 146,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 6385,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 6412
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 26,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 12,
+          "mode": "rooms",
+          "request_elapsed_us": 156,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 6181,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 6207
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 25,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 13,
+          "mode": "rooms",
+          "request_elapsed_us": 142,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 5837,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 5862
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 28,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 14,
+          "mode": "rooms",
+          "request_elapsed_us": 166,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 5536,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 5564
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 28,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 15,
+          "mode": "rooms",
+          "request_elapsed_us": 248,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 7350,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 7378
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 44,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 16,
+          "mode": "rooms",
+          "request_elapsed_us": 211,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 6073,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 6117
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 27,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 17,
+          "mode": "rooms",
+          "request_elapsed_us": 167,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 8860,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 8887
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 27,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 18,
+          "mode": "rooms",
+          "request_elapsed_us": 159,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 8154,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 8181
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 29,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 19,
+          "mode": "rooms",
+          "request_elapsed_us": 296,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 19206,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 19235
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 27,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 20,
+          "mode": "rooms",
+          "request_elapsed_us": 157,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 6438,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 6465
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 27,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 21,
+          "mode": "rooms",
+          "request_elapsed_us": 149,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 6979,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 7006
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 27,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 22,
+          "mode": "rooms",
+          "request_elapsed_us": 226,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 6748,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 6775
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 27,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 23,
+          "mode": "rooms",
+          "request_elapsed_us": 254,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 6457,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 6484
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 25,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 24,
+          "mode": "rooms",
+          "request_elapsed_us": 150,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 9145,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 9170
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 60,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 25,
+          "mode": "rooms",
+          "request_elapsed_us": 382,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 12936,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 12996
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 32,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 26,
+          "mode": "rooms",
+          "request_elapsed_us": 195,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 19297,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 19329
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 32,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 27,
+          "mode": "rooms",
+          "request_elapsed_us": 178,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 12557,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 12589
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 37,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 28,
+          "mode": "rooms",
+          "request_elapsed_us": 2236,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 20886,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 20923
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 70,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 29,
+          "mode": "rooms",
+          "request_elapsed_us": 367,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 13189,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 13259
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 42,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 30,
+          "mode": "rooms",
+          "request_elapsed_us": 251,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 11643,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 11685
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 1616,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 31,
+          "mode": "rooms",
+          "request_elapsed_us": 238,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 15313,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 16929
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 38,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 32,
+          "mode": "rooms",
+          "request_elapsed_us": 193,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 9194,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 9232
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 50,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 33,
+          "mode": "rooms",
+          "request_elapsed_us": 2312,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 14620,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 14670
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 43,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 34,
+          "mode": "rooms",
+          "request_elapsed_us": 1893,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 25826,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 25869
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 42,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 35,
+          "mode": "rooms",
+          "request_elapsed_us": 439,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 14127,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 14169
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 37,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 36,
+          "mode": "rooms",
+          "request_elapsed_us": 180,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 30828,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 30865
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 36,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 37,
+          "mode": "rooms",
+          "request_elapsed_us": 229,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 30320,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 30356
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 43,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 38,
+          "mode": "rooms",
+          "request_elapsed_us": 221,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 34025,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 34068
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 42,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 39,
+          "mode": "rooms",
+          "request_elapsed_us": 225,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 18799,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 18841
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 41,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 40,
+          "mode": "rooms",
+          "request_elapsed_us": 208,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 18660,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 18701
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 43,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 41,
+          "mode": "rooms",
+          "request_elapsed_us": 631,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 13404,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 13447
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 79,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 42,
+          "mode": "rooms",
+          "request_elapsed_us": 189,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 6885,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 6964
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 32,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 43,
+          "mode": "rooms",
+          "request_elapsed_us": 356,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 6149,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 6181
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 30,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 44,
+          "mode": "rooms",
+          "request_elapsed_us": 168,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 6162,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 6192
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 29,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 45,
+          "mode": "rooms",
+          "request_elapsed_us": 296,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 5172,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 5201
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 26,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 46,
+          "mode": "rooms",
+          "request_elapsed_us": 258,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 8521,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 8547
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 26,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 47,
+          "mode": "rooms",
+          "request_elapsed_us": 207,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 11792,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 11818
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 29,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 48,
+          "mode": "rooms",
+          "request_elapsed_us": 193,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 7770,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 7799
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 27,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 49,
+          "mode": "rooms",
+          "request_elapsed_us": 179,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 6620,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 6647
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 33,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 50,
+          "mode": "rooms",
+          "request_elapsed_us": 339,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 12161,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 12194
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 31,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 51,
+          "mode": "rooms",
+          "request_elapsed_us": 217,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 7615,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 7646
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 28,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 52,
+          "mode": "rooms",
+          "request_elapsed_us": 230,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 20226,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 20254
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 63,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 53,
+          "mode": "rooms",
+          "request_elapsed_us": 177,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 13531,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 13594
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 31,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 54,
+          "mode": "rooms",
+          "request_elapsed_us": 181,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 6062,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 6093
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 145,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 55,
+          "mode": "rooms",
+          "request_elapsed_us": 198,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 6895,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 7040
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 27,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 56,
+          "mode": "rooms",
+          "request_elapsed_us": 509,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 6497,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 6524
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 27,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 57,
+          "mode": "rooms",
+          "request_elapsed_us": 224,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 6311,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 6338
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 68,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 58,
+          "mode": "rooms",
+          "request_elapsed_us": 168,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 9904,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 9972
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 30,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 59,
+          "mode": "rooms",
+          "request_elapsed_us": 248,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 5446,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 5476
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 26,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 60,
+          "mode": "rooms",
+          "request_elapsed_us": 157,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 6160,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 6186
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 24,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 61,
+          "mode": "rooms",
+          "request_elapsed_us": 148,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 5695,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 5719
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 26,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 62,
+          "mode": "rooms",
+          "request_elapsed_us": 188,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 9749,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 9775
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 29,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 63,
+          "mode": "rooms",
+          "request_elapsed_us": 1052,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 12446,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 12475
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 29,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 64,
+          "mode": "rooms",
+          "request_elapsed_us": 190,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 7106,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 7135
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 29,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 65,
+          "mode": "rooms",
+          "request_elapsed_us": 217,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 8136,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 8165
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 32,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 66,
+          "mode": "rooms",
+          "request_elapsed_us": 267,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 6333,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 6365
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 34,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 67,
+          "mode": "rooms",
+          "request_elapsed_us": 298,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 8656,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 8690
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 28,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 68,
+          "mode": "rooms",
+          "request_elapsed_us": 165,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 6208,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 6236
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 27,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 69,
+          "mode": "rooms",
+          "request_elapsed_us": 164,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 6003,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 6030
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 29,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 70,
+          "mode": "rooms",
+          "request_elapsed_us": 160,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 6946,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 6975
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 27,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 71,
+          "mode": "rooms",
+          "request_elapsed_us": 265,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 5468,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 5495
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 28,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 72,
+          "mode": "rooms",
+          "request_elapsed_us": 179,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 10745,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 10773
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 26,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 73,
+          "mode": "rooms",
+          "request_elapsed_us": 185,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 11214,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 11240
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 38,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 74,
+          "mode": "rooms",
+          "request_elapsed_us": 498,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 7991,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 8029
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 25,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 75,
+          "mode": "rooms",
+          "request_elapsed_us": 190,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 6729,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 6754
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 23,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 76,
+          "mode": "rooms",
+          "request_elapsed_us": 138,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 7284,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 7307
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 25,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 77,
+          "mode": "rooms",
+          "request_elapsed_us": 274,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 6005,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 6030
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 24,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 78,
+          "mode": "rooms",
+          "request_elapsed_us": 140,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 5541,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 5565
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 23,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 79,
+          "mode": "rooms",
+          "request_elapsed_us": 156,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 5978,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 6001
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 26,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 80,
+          "mode": "rooms",
+          "request_elapsed_us": 242,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 7009,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 7035
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 24,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 81,
+          "mode": "rooms",
+          "request_elapsed_us": 138,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 7020,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 7044
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 488,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 82,
+          "mode": "rooms",
+          "request_elapsed_us": 216,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 8790,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 9278
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 27,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 83,
+          "mode": "rooms",
+          "request_elapsed_us": 173,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 6884,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 6911
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 27,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 84,
+          "mode": "rooms",
+          "request_elapsed_us": 313,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 22554,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 22581
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 29,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 85,
+          "mode": "rooms",
+          "request_elapsed_us": 260,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 7257,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 7286
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 26,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 86,
+          "mode": "rooms",
+          "request_elapsed_us": 145,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 6589,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 6615
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 25,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 87,
+          "mode": "rooms",
+          "request_elapsed_us": 173,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 6037,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 6062
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 24,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 88,
+          "mode": "rooms",
+          "request_elapsed_us": 174,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 6577,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 6601
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 31,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 89,
+          "mode": "rooms",
+          "request_elapsed_us": 177,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 5372,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 5403
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 28,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 90,
+          "mode": "rooms",
+          "request_elapsed_us": 903,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 6961,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 6989
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 28,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 91,
+          "mode": "rooms",
+          "request_elapsed_us": 333,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 5767,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 5795
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 27,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 92,
+          "mode": "rooms",
+          "request_elapsed_us": 162,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 7000,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 7027
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 27,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 93,
+          "mode": "rooms",
+          "request_elapsed_us": 305,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 5987,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 6014
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 27,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 94,
+          "mode": "rooms",
+          "request_elapsed_us": 659,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 7506,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 7533
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 27,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 95,
+          "mode": "rooms",
+          "request_elapsed_us": 407,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 12514,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 12541
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 18,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 96,
+          "mode": "rooms",
+          "request_elapsed_us": 160,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 5957,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 5975
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 20,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 97,
+          "mode": "rooms",
+          "request_elapsed_us": 182,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 6761,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 6781
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 18,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 98,
+          "mode": "rooms",
+          "request_elapsed_us": 164,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 5236,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 5254
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 17,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 99,
+          "mode": "rooms",
+          "request_elapsed_us": 187,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 6036,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 6053
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 17,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 100,
+          "mode": "rooms",
+          "request_elapsed_us": 310,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 10938,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 10955
+        },
+        {
+          "after_snap_playing": [
+            true,
+            true
+          ],
+          "call_elapsed_us": 16,
+          "explicit_stop_all_calls_during_controller": 0,
+          "immediately_playing": [
+            true,
+            true
+          ],
+          "index": 101,
+          "mode": "rooms",
+          "request_elapsed_us": 177,
+          "requested_playing": [
+            true,
+            true
+          ],
+          "snapshot_elapsed_us": 8485,
+          "stop_calls_through_snapshot": 0,
+          "total_after_request_us": 8501
+        }
+      ],
+      "scope": "Diagnostic only: same original960assertions; real baseaudio with stop_all forwarding counter, low-volume saved perdecision timing. Not original-timeout reconstruction or automatic acceptance retry."
+    }
+  ],
+  "helpers": [
+    {
+      "capture_removed": true,
+      "complete": true,
+      "driver": "Dummy",
+      "game_owner_count": 1,
+      "mix_rate": 44100.0,
+      "observations": [
+        {
+          "discarded": 0,
+          "elapsed_us": 113,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 0,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 0,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 13258,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 0,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 0,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 27054,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 0,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 0,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 41397,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 0,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 0,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 55318,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 0,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 0,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 68635,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 0,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 0,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 83267,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 4096,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 4096,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 96470,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 4096,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 4096,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 110091,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 4096,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 4096,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 123619,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 4096,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 4096,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 137438,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 4096,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 4096,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 151613,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 4096,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 4096,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 169029,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 8192,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 8192,
+          "streams_released": true
+        }
+      ],
+      "pre_window_drained": 0,
+      "prepare_errors": [],
+      "requested_owner_count": 1,
+      "scope": "Test-only bounded final-owner resource release and fresh internal silence; not physical output or a universal timing guarantee.",
+      "tracked_owner_count": 1,
+      "tracked_stream_count": 2
+    },
+    {
+      "capture_removed": true,
+      "complete": true,
+      "driver": "Dummy",
+      "game_owner_count": 1,
+      "mix_rate": 44100.0,
+      "observations": [
+        {
+          "discarded": 0,
+          "elapsed_us": 113,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 0,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 0,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 13185,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 0,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 0,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 27161,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 0,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 0,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 41908,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 4096,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 4096,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 54908,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 4096,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 4096,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 68532,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 4096,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 4096,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 82675,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 4096,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 4096,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 95997,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 4096,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 4096,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 109835,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 4096,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 4096,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 123582,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 4096,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 4096,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 139261,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 8192,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 8192,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 151901,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 8192,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 8192,
+          "streams_released": true
+        }
+      ],
+      "pre_window_drained": 0,
+      "prepare_errors": [],
+      "requested_owner_count": 1,
+      "scope": "Test-only bounded final-owner resource release and fresh internal silence; not physical output or a universal timing guarantee.",
+      "tracked_owner_count": 1,
+      "tracked_stream_count": 2
+    }
+  ],
+  "parse_errors": [],
+  "source_changes": [],
+  "pinchanges": []
+}

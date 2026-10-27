@@ -1,0 +1,11 @@
+{
+  "id":"rooms","name":"ROOM ENCOUNTERS · PROTOTYPE",
+  "field":{"width":960,"height":640,"tile_size":80},
+  "spawn_interval":0.3,"clear_delay":0.6,
+  "reward":{"coins":24,"heal":15,"upgrades":1},
+  "stages":[
+    {"name":"ENTRY","enemies":[{"kind":"crawler","at":[0.18,0.22]},{"kind":"crawler","at":[0.82,0.22]},{"kind":"flanker","at":[0.8,0.8]}]},
+    {"name":"CROSSFIRE","enemies":[{"kind":"spitter","at":[0.16,0.2]},{"kind":"charger","at":[0.82,0.8]},{"kind":"crawler","at":[0.18,0.8]},{"kind":"flanker","at":[0.82,0.22]}]},
+    {"name":"BROOD","enemies":[{"kind":"brood_keeper","at":[0.18,0.2]},{"kind":"charger","at":[0.82,0.2]},{"kind":"spitter","at":[0.82,0.8]},{"kind":"crawler","at":[0.18,0.8]}]}
+  ]
+}

@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "<WORKSPACE>/moss-v38-portable-delivery-prep/staging/Deliveries/MossCircuit/restore_deliveries.py", line 137, in <module>
+    main()
+  File "<WORKSPACE>/moss-v38-portable-delivery-prep/staging/Deliveries/MossCircuit/restore_deliveries.py", line 131, in main
+    restore(root, record, args.output)
+  File "<WORKSPACE>/moss-v38-portable-delivery-prep/staging/Deliveries/MossCircuit/restore_deliveries.py", line 93, in restore
+    stream_verified(root, record, out)
+  File "<WORKSPACE>/moss-v38-portable-delivery-prep/staging/Deliveries/MossCircuit/restore_deliveries.py", line 76, in stream_verified
+    raise ValueError("Chunk identity mismatch: " + part["path"])
+ValueError: Chunk identity mismatch: Deliveries/MossCircuit/v38/chunks/MossCircuit.pck/chunk-001.bin

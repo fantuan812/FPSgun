@@ -1,0 +1,982 @@
+{
+  "pass": true,
+  "native_exit": 0,
+  "actual_game_window_absent_after_exit": true,
+  "cases": 4,
+  "runtime_observations": 28,
+  "original_jpg": 29,
+  "rows": [
+    {
+      "case": 1,
+      "failures": [],
+      "markers": [
+        "support_tether"
+      ],
+      "mode": "arena",
+      "recipient_anim_hp": 50.0,
+      "recipient_hp": 50.0,
+      "source_hp": 34.0,
+      "source_present": true,
+      "source_state": "warning",
+      "stage": 0,
+      "support_visuals": [],
+      "token_present": true,
+      "warning_left": 1.2
+    },
+    {
+      "case": 1,
+      "failures": [],
+      "markers": [
+        "support_tether"
+      ],
+      "mode": "arena",
+      "recipient_anim_hp": 50.0,
+      "recipient_hp": 50.0,
+      "source_hp": 34.0,
+      "source_present": true,
+      "source_state": "warning",
+      "stage": 1,
+      "support_visuals": [],
+      "token_present": true,
+      "warning_left": 0.6
+    },
+    {
+      "case": 1,
+      "failures": [],
+      "markers": [
+        "support_complete"
+      ],
+      "mode": "arena",
+      "recipient_anim_hp": 60.0,
+      "recipient_hp": 60.0,
+      "source_hp": 34.0,
+      "source_present": true,
+      "source_state": "recover",
+      "stage": 2,
+      "support_visuals": [
+        {
+          "end": "(580.0, 350.0)",
+          "kind": "support_complete",
+          "life": 0.3,
+          "pos": "(580.0, 440.0)"
+        }
+      ],
+      "token_present": false,
+      "warning_left": 0.0
+    },
+    {
+      "case": 1,
+      "failures": [],
+      "markers": [
+        "support_tether"
+      ],
+      "mode": "arena",
+      "recipient_anim_hp": 50.0,
+      "recipient_hp": 50.0,
+      "source_hp": 34.0,
+      "source_present": true,
+      "source_state": "warning",
+      "stage": 3,
+      "support_visuals": [],
+      "token_present": true,
+      "warning_left": 0.6
+    },
+    {
+      "case": 1,
+      "failures": [],
+      "markers": [
+        "support_cancel"
+      ],
+      "mode": "arena",
+      "recipient_anim_hp": 50.0,
+      "recipient_hp": 50.0,
+      "source_hp": 33.0,
+      "source_present": true,
+      "source_state": "recover",
+      "stage": 4,
+      "support_visuals": [
+        {
+          "end": "(580.0, 350.0)",
+          "kind": "support_cancel",
+          "life": 0.3,
+          "pos": "(580.0, 440.0)"
+        }
+      ],
+      "token_present": false,
+      "warning_left": 0.6
+    },
+    {
+      "case": 1,
+      "failures": [],
+      "markers": [
+        "support_tether"
+      ],
+      "mode": "arena",
+      "recipient_anim_hp": 50.0,
+      "recipient_hp": 50.0,
+      "source_hp": 34.0,
+      "source_present": true,
+      "source_state": "warning",
+      "stage": 5,
+      "support_visuals": [],
+      "token_present": true,
+      "warning_left": 0.6
+    },
+    {
+      "case": 1,
+      "failures": [],
+      "markers": [],
+      "mode": "arena",
+      "recipient_anim_hp": 50.0,
+      "recipient_hp": 50.0,
+      "source_hp": -966.0,
+      "source_present": false,
+      "source_state": "move",
+      "stage": 6,
+      "support_visuals": [],
+      "token_present": false,
+      "warning_left": 0.0
+    },
+    {
+      "case": 2,
+      "failures": [],
+      "markers": [
+        "support_tether"
+      ],
+      "mode": "rooms",
+      "recipient_anim_hp": 50.0,
+      "recipient_hp": 50.0,
+      "source_hp": 34.0,
+      "source_present": true,
+      "source_state": "warning",
+      "stage": 0,
+      "support_visuals": [],
+      "token_present": true,
+      "warning_left": 1.2
+    },
+    {
+      "case": 2,
+      "failures": [],
+      "markers": [
+        "support_tether"
+      ],
+      "mode": "rooms",
+      "recipient_anim_hp": 50.0,
+      "recipient_hp": 50.0,
+      "source_hp": 34.0,
+      "source_present": true,
+      "source_state": "warning",
+      "stage": 1,
+      "support_visuals": [],
+      "token_present": true,
+      "warning_left": 0.6
+    },
+    {
+      "case": 2,
+      "failures": [],
+      "markers": [
+        "support_complete"
+      ],
+      "mode": "rooms",
+      "recipient_anim_hp": 60.0,
+      "recipient_hp": 60.0,
+      "source_hp": 34.0,
+      "source_present": true,
+      "source_state": "recover",
+      "stage": 2,
+      "support_visuals": [
+        {
+          "end": "(580.0, 350.0)",
+          "kind": "support_complete",
+          "life": 0.3,
+          "pos": "(580.0, 440.0)"
+        }
+      ],
+      "token_present": false,
+      "warning_left": 0.0
+    },
+    {
+      "case": 2,
+      "failures": [],
+      "markers": [
+        "support_tether"
+      ],
+      "mode": "rooms",
+      "recipient_anim_hp": 50.0,
+      "recipient_hp": 50.0,
+      "source_hp": 34.0,
+      "source_present": true,
+      "source_state": "warning",
+      "stage": 3,
+      "support_visuals": [],
+      "token_present": true,
+      "warning_left": 0.6
+    },
+    {
+      "case": 2,
+      "failures": [],
+      "markers": [
+        "support_cancel"
+      ],
+      "mode": "rooms",
+      "recipient_anim_hp": 50.0,
+      "recipient_hp": 50.0,
+      "source_hp": 33.0,
+      "source_present": true,
+      "source_state": "recover",
+      "stage": 4,
+      "support_visuals": [
+        {
+          "end": "(580.0, 350.0)",
+          "kind": "support_cancel",
+          "life": 0.3,
+          "pos": "(580.0, 440.0)"
+        }
+      ],
+      "token_present": false,
+      "warning_left": 0.6
+    },
+    {
+      "case": 2,
+      "failures": [],
+      "markers": [
+        "support_tether"
+      ],
+      "mode": "rooms",
+      "recipient_anim_hp": 50.0,
+      "recipient_hp": 50.0,
+      "source_hp": 34.0,
+      "source_present": true,
+      "source_state": "warning",
+      "stage": 5,
+      "support_visuals": [],
+      "token_present": true,
+      "warning_left": 0.6
+    },
+    {
+      "case": 2,
+      "failures": [],
+      "markers": [],
+      "mode": "rooms",
+      "recipient_anim_hp": 50.0,
+      "recipient_hp": 50.0,
+      "source_hp": -966.0,
+      "source_present": false,
+      "source_state": "move",
+      "stage": 6,
+      "support_visuals": [],
+      "token_present": false,
+      "warning_left": 0.0
+    },
+    {
+      "case": 3,
+      "failures": [],
+      "markers": [
+        "support_tether"
+      ],
+      "mode": "arena",
+      "recipient_anim_hp": 50.0,
+      "recipient_hp": 50.0,
+      "source_hp": 34.0,
+      "source_present": true,
+      "source_state": "warning",
+      "stage": 0,
+      "support_visuals": [],
+      "token_present": true,
+      "warning_left": 1.2
+    },
+    {
+      "case": 3,
+      "failures": [],
+      "markers": [
+        "support_tether"
+      ],
+      "mode": "arena",
+      "recipient_anim_hp": 50.0,
+      "recipient_hp": 50.0,
+      "source_hp": 34.0,
+      "source_present": true,
+      "source_state": "warning",
+      "stage": 1,
+      "support_visuals": [],
+      "token_present": true,
+      "warning_left": 0.6
+    },
+    {
+      "case": 3,
+      "failures": [],
+      "markers": [
+        "support_complete"
+      ],
+      "mode": "arena",
+      "recipient_anim_hp": 60.0,
+      "recipient_hp": 60.0,
+      "source_hp": 34.0,
+      "source_present": true,
+      "source_state": "recover",
+      "stage": 2,
+      "support_visuals": [
+        {
+          "end": "(580.0, 350.0)",
+          "kind": "support_complete",
+          "life": 0.3,
+          "pos": "(580.0, 440.0)"
+        }
+      ],
+      "token_present": false,
+      "warning_left": 0.0
+    },
+    {
+      "case": 3,
+      "failures": [],
+      "markers": [
+        "support_tether"
+      ],
+      "mode": "arena",
+      "recipient_anim_hp": 50.0,
+      "recipient_hp": 50.0,
+      "source_hp": 34.0,
+      "source_present": true,
+      "source_state": "warning",
+      "stage": 3,
+      "support_visuals": [],
+      "token_present": true,
+      "warning_left": 0.6
+    },
+    {
+      "case": 3,
+      "failures": [],
+      "markers": [
+        "support_cancel"
+      ],
+      "mode": "arena",
+      "recipient_anim_hp": 50.0,
+      "recipient_hp": 50.0,
+      "source_hp": 33.0,
+      "source_present": true,
+      "source_state": "recover",
+      "stage": 4,
+      "support_visuals": [
+        {
+          "end": "(580.0, 350.0)",
+          "kind": "support_cancel",
+          "life": 0.3,
+          "pos": "(580.0, 440.0)"
+        }
+      ],
+      "token_present": false,
+      "warning_left": 0.6
+    },
+    {
+      "case": 3,
+      "failures": [],
+      "markers": [
+        "support_tether"
+      ],
+      "mode": "arena",
+      "recipient_anim_hp": 50.0,
+      "recipient_hp": 50.0,
+      "source_hp": 34.0,
+      "source_present": true,
+      "source_state": "warning",
+      "stage": 5,
+      "support_visuals": [],
+      "token_present": true,
+      "warning_left": 0.6
+    },
+    {
+      "case": 3,
+      "failures": [],
+      "markers": [],
+      "mode": "arena",
+      "recipient_anim_hp": 50.0,
+      "recipient_hp": 50.0,
+      "source_hp": -966.0,
+      "source_present": false,
+      "source_state": "move",
+      "stage": 6,
+      "support_visuals": [],
+      "token_present": false,
+      "warning_left": 0.0
+    },
+    {
+      "case": 4,
+      "failures": [],
+      "markers": [
+        "support_tether"
+      ],
+      "mode": "rooms",
+      "recipient_anim_hp": 50.0,
+      "recipient_hp": 50.0,
+      "source_hp": 34.0,
+      "source_present": true,
+      "source_state": "warning",
+      "stage": 0,
+      "support_visuals": [],
+      "token_present": true,
+      "warning_left": 1.2
+    },
+    {
+      "case": 4,
+      "failures": [],
+      "markers": [
+        "support_tether"
+      ],
+      "mode": "rooms",
+      "recipient_anim_hp": 50.0,
+      "recipient_hp": 50.0,
+      "source_hp": 34.0,
+      "source_present": true,
+      "source_state": "warning",
+      "stage": 1,
+      "support_visuals": [],
+      "token_present": true,
+      "warning_left": 0.6
+    },
+    {
+      "case": 4,
+      "failures": [],
+      "markers": [
+        "support_complete"
+      ],
+      "mode": "rooms",
+      "recipient_anim_hp": 60.0,
+      "recipient_hp": 60.0,
+      "source_hp": 34.0,
+      "source_present": true,
+      "source_state": "recover",
+      "stage": 2,
+      "support_visuals": [
+        {
+          "end": "(580.0, 350.0)",
+          "kind": "support_complete",
+          "life": 0.3,
+          "pos": "(580.0, 440.0)"
+        }
+      ],
+      "token_present": false,
+      "warning_left": 0.0
+    },
+    {
+      "case": 4,
+      "failures": [],
+      "markers": [
+        "support_tether"
+      ],
+      "mode": "rooms",
+      "recipient_anim_hp": 50.0,
+      "recipient_hp": 50.0,
+      "source_hp": 34.0,
+      "source_present": true,
+      "source_state": "warning",
+      "stage": 3,
+      "support_visuals": [],
+      "token_present": true,
+      "warning_left": 0.6
+    },
+    {
+      "case": 4,
+      "failures": [],
+      "markers": [
+        "support_cancel"
+      ],
+      "mode": "rooms",
+      "recipient_anim_hp": 50.0,
+      "recipient_hp": 50.0,
+      "source_hp": 33.0,
+      "source_present": true,
+      "source_state": "recover",
+      "stage": 4,
+      "support_visuals": [
+        {
+          "end": "(580.0, 350.0)",
+          "kind": "support_cancel",
+          "life": 0.3,
+          "pos": "(580.0, 440.0)"
+        }
+      ],
+      "token_present": false,
+      "warning_left": 0.6
+    },
+    {
+      "case": 4,
+      "failures": [],
+      "markers": [
+        "support_tether"
+      ],
+      "mode": "rooms",
+      "recipient_anim_hp": 50.0,
+      "recipient_hp": 50.0,
+      "source_hp": 34.0,
+      "source_present": true,
+      "source_state": "warning",
+      "stage": 5,
+      "support_visuals": [],
+      "token_present": true,
+      "warning_left": 0.6
+    },
+    {
+      "case": 4,
+      "failures": [],
+      "markers": [],
+      "mode": "rooms",
+      "recipient_anim_hp": 50.0,
+      "recipient_hp": 50.0,
+      "source_hp": -966.0,
+      "source_present": false,
+      "source_state": "move",
+      "stage": 6,
+      "support_visuals": [],
+      "token_present": false,
+      "warning_left": 0.0
+    }
+  ],
+  "terminal": {
+    "cases_completed": 4,
+    "failures": [],
+    "fixture_terminal": true,
+    "observations": 28,
+    "scope": "Controlled4 combinations: Arena/Rooms at960 and1280; reduced flashes at1280. Animation only continuously advances; actual Runtime steps only H. SVG asset-only rerun: historical original-art ordinary remains separately scoped; no new ordinary run."
+  },
+  "helper": {
+    "capture_removed": true,
+    "complete": true,
+    "driver": "Dummy",
+    "game_owner_count": 1,
+    "mix_rate": 44100.0,
+    "observations": [
+      {
+        "discarded": 0,
+        "elapsed_us": 478,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 0,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 0,
+        "streams_released": true
+      },
+      {
+        "discarded": 0,
+        "elapsed_us": 12599,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 0,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 0,
+        "streams_released": true
+      },
+      {
+        "discarded": 0,
+        "elapsed_us": 20727,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 0,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 0,
+        "streams_released": true
+      },
+      {
+        "discarded": 0,
+        "elapsed_us": 29611,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 0,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 0,
+        "streams_released": true
+      },
+      {
+        "discarded": 0,
+        "elapsed_us": 46038,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 0,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 0,
+        "streams_released": true
+      },
+      {
+        "discarded": 0,
+        "elapsed_us": 70872,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 0,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 0,
+        "streams_released": true
+      },
+      {
+        "discarded": 0,
+        "elapsed_us": 81387,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 4096,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 4096,
+        "streams_released": true
+      },
+      {
+        "discarded": 0,
+        "elapsed_us": 129039,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 4096,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 4096,
+        "streams_released": true
+      },
+      {
+        "discarded": 0,
+        "elapsed_us": 137985,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 4096,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 4096,
+        "streams_released": true
+      },
+      {
+        "discarded": 0,
+        "elapsed_us": 146059,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 4096,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 4096,
+        "streams_released": true
+      },
+      {
+        "discarded": 0,
+        "elapsed_us": 159770,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 4096,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 4096,
+        "streams_released": true
+      },
+      {
+        "discarded": 0,
+        "elapsed_us": 178628,
+        "game_owner_count": 1,
+        "invalid": 0,
+        "new_pushed": 8192,
+        "owner_count": 1,
+        "owners_released": true,
+        "prepare_errors": 0,
+        "required_frames": 6615,
+        "silent_frames": 8192,
+        "streams_released": true
+      }
+    ],
+    "pre_window_drained": 0,
+    "prepare_errors": [],
+    "requested_owner_count": 1,
+    "scope": "Test-only bounded final-owner resource release and fresh internal silence; not physical output or a universal timing guarantee.",
+    "tracked_owner_count": 1,
+    "tracked_stream_count": 2
+  },
+  "images": [
+    {
+      "path": "native-captures/01-arena960-acquire.jpg",
+      "sha256": "5d3e5b6934ec8a3ae0685ec65292b7475b1eef9f25668f254e66a6cc3e642da3",
+      "bytes": 125367,
+      "dimensions": [
+        960,
+        540
+      ]
+    },
+    {
+      "path": "native-captures/02-arena960-half.jpg",
+      "sha256": "90449d392322c438ce2f20859d3e3cf5403c72e4e1e5c7fc484a3e9ab1a7c14d",
+      "bytes": 125569,
+      "dimensions": [
+        960,
+        540
+      ]
+    },
+    {
+      "path": "native-captures/03-arena960-heal.jpg",
+      "sha256": "30984cdda76bce05f4ed4328bcf02e0b77d94c41a968d94047dd38b39f3b563b",
+      "bytes": 125158,
+      "dimensions": [
+        960,
+        540
+      ]
+    },
+    {
+      "path": "native-captures/04-arena960-second.jpg",
+      "sha256": "f3832b4167a7e630d32bf11ce80bfc130802baa7b1821ab04e8f769ee300689d",
+      "bytes": 125543,
+      "dimensions": [
+        960,
+        540
+      ]
+    },
+    {
+      "path": "native-captures/05-arena960-interrupt.jpg",
+      "sha256": "933422273e39ef89f3da2372d4f7a422918f79c69b4e4eac58ac1f5289310136",
+      "bytes": 125267,
+      "dimensions": [
+        960,
+        540
+      ]
+    },
+    {
+      "path": "native-captures/06-arena960-third.jpg",
+      "sha256": "29206df9d17f7d9f06c9ebaa6c2e0b27cf06ebbcddc8a6056c34269f9c9136f6",
+      "bytes": 125580,
+      "dimensions": [
+        960,
+        540
+      ]
+    },
+    {
+      "path": "native-captures/07-arena960-death.jpg",
+      "sha256": "c5e5d03170feeeb863f8799fc99f804893af90eb0e19d81e47cfe0d4b6c38f76",
+      "bytes": 124872,
+      "dimensions": [
+        960,
+        540
+      ]
+    },
+    {
+      "path": "native-captures/08-rooms960-acquire.jpg",
+      "sha256": "b49f46e415dc4381456107a494935eff39d51757895b37d1f27d6a27e5821c84",
+      "bytes": 125026,
+      "dimensions": [
+        960,
+        540
+      ]
+    },
+    {
+      "path": "native-captures/09-rooms960-half.jpg",
+      "sha256": "7512258ae34a7a46eb9d0e430daa37600806fca8e0ad1faf9c3d1c80fb0baeb4",
+      "bytes": 125211,
+      "dimensions": [
+        960,
+        540
+      ]
+    },
+    {
+      "path": "native-captures/10-rooms960-heal.jpg",
+      "sha256": "5e9191e6bd2b8fe7064edbc6522821a82773667f78fed5640281a71712dd3189",
+      "bytes": 124688,
+      "dimensions": [
+        960,
+        540
+      ]
+    },
+    {
+      "path": "native-captures/11-rooms960-second.jpg",
+      "sha256": "4e0e9e8ad3f9c838722a90c47d83e9820a3d639f6fecbb890f5d7b62872c31e2",
+      "bytes": 125220,
+      "dimensions": [
+        960,
+        540
+      ]
+    },
+    {
+      "path": "native-captures/12-rooms960-interrupt.jpg",
+      "sha256": "c5b510e9cd11f55efaf364d3d9c732b6072574a1c9c658d9b217a2cf93213590",
+      "bytes": 124858,
+      "dimensions": [
+        960,
+        540
+      ]
+    },
+    {
+      "path": "native-captures/13-rooms960-third.jpg",
+      "sha256": "4e0e9e8ad3f9c838722a90c47d83e9820a3d639f6fecbb890f5d7b62872c31e2",
+      "bytes": 125220,
+      "dimensions": [
+        960,
+        540
+      ]
+    },
+    {
+      "path": "native-captures/14-rooms960-death.jpg",
+      "sha256": "2622beae1d5573c1c186efe47621fbd1b839bcf1674b9c5880c2b8281d656115",
+      "bytes": 124547,
+      "dimensions": [
+        960,
+        540
+      ]
+    },
+    {
+      "path": "native-captures/14b-rooms960-death-late.jpg",
+      "sha256": "c0f7ff93b109d2885124dec58a2e7524ae9b5f26f8b0e8853811f29de43bcbe9",
+      "bytes": 123450,
+      "dimensions": [
+        960,
+        540
+      ]
+    },
+    {
+      "path": "native-captures/15-arena1280-acquire.jpg",
+      "sha256": "ed73183c5211b86a0af4c5dcfc4fc997a149cc45f013251ae52931a4d14c1212",
+      "bytes": 201121,
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "native-captures/16-arena1280-half.jpg",
+      "sha256": "c421ea5b573000b7080ecda97151addda3e1c29b0fa94a647ac132c836fb0877",
+      "bytes": 201374,
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "native-captures/17-arena1280-heal.jpg",
+      "sha256": "e5e8da7bc1904e90dbeae882a896aed0aacec397fb1a29c1e5cac59d97a80972",
+      "bytes": 200945,
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "native-captures/18-arena1280-second.jpg",
+      "sha256": "c421ea5b573000b7080ecda97151addda3e1c29b0fa94a647ac132c836fb0877",
+      "bytes": 201374,
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "native-captures/19-arena1280-interrupt.jpg",
+      "sha256": "8c373f225b5d35afc61f926d48e918444e4a22bf26b41a05f98989d30c79af09",
+      "bytes": 201022,
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "native-captures/20-arena1280-third.jpg",
+      "sha256": "c421ea5b573000b7080ecda97151addda3e1c29b0fa94a647ac132c836fb0877",
+      "bytes": 201374,
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "native-captures/21-arena1280-death.jpg",
+      "sha256": "61896782b32279e156fb5643791ce6fe9f700e3d8a6eaaca73181369060a5380",
+      "bytes": 200650,
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "native-captures/22-rooms1280-acquire.jpg",
+      "sha256": "097fb1665b4bde8b6925c080c1db5f9f7c25e09f45826c22d5c37a8683f6822d",
+      "bytes": 200061,
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "native-captures/23-rooms1280-half.jpg",
+      "sha256": "05a5e31632a2afafc739085bf79eb52dfe9c3ae1e033516c7804363333c9531b",
+      "bytes": 200233,
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "native-captures/24-rooms1280-heal.jpg",
+      "sha256": "4d23e99c7de68e7b16b911b05f3902d5dc1eb62200d6d296afc7c754fe4d9133",
+      "bytes": 199835,
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "native-captures/25-rooms1280-second.jpg",
+      "sha256": "291f73ce079b8c1b9710a53dacc3564398c1bc74ecd1108e4c6b12a8b2381591",
+      "bytes": 200275,
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "native-captures/26-rooms1280-interrupt.jpg",
+      "sha256": "fb22a0656026057abb084102cb9dfe241171dedd53bea68cd11d2879e0809c2f",
+      "bytes": 199933,
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "native-captures/27-rooms1280-third.jpg",
+      "sha256": "291f73ce079b8c1b9710a53dacc3564398c1bc74ecd1108e4c6b12a8b2381591",
+      "bytes": 200275,
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "native-captures/28-rooms1280-death.jpg",
+      "sha256": "ed1e1454e71749ace5583341daff92755dcfd519119d34c4c9cfff4d66243aea",
+      "bytes": 199867,
+      "dimensions": [
+        1280,
+        720
+      ]
+    }
+  ],
+  "pck_sha256": "795ce7c1761766f73d23c5feec620c5f2d59d7ed005eb1cdfe33a6e8d54815d1",
+  "warnings": [
+    "WARNING: Could not set V-Sync mode, as changing V-Sync mode is not supported by the graphics driver."
+  ],
+  "scope": "Actual Godot native exact newSVG PCK, controlled2modes x2sizes x7realRuntime steps; reduced-flash at1280. No newordinary/full139/audio-listening/Windows claim.",
+  "visual_review": "All29 original stills directly viewed during operation. New drone silhouette/coil/tether/plus/interrupt and death motion distinguishable; no new crop/HUD obstruction observed at these sizes. Runtime causal evidence is raw, not still inference. 14/28 death stills show earlier lit falling animation, not finaldarkframe; 07/21 show darkcollapsed. 14b is late corpse removal, not extra gameplay step.",
+  "additional_visual_review": "Directly reviewed03heal/05interrupt/07death only; bounded visual no newblocker, not causalassertion."
+}

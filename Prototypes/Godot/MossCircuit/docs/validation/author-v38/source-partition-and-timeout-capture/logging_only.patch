@@ -1,0 +1,18 @@
+--- original-runner
++++ logging-only
+@@ -44,7 +44,14 @@
+         result = subprocess.run([args.godot, "--headless", "--path", str(project), *switches], env=env, capture_output=True, text=True, timeout=180)
+         log, code = result.stdout + result.stderr, result.returncode
+     except subprocess.TimeoutExpired as error:
+-        log, code = str(error), 124
++        # Preserve partial timeout streams; timeout remains native124 and rejected.
++        partial_stdout = error.stdout or b""
++        partial_stderr = error.stderr or b""
++        stdout_bytes = partial_stdout.encode("utf-8") if isinstance(partial_stdout, str) else partial_stdout
++        stderr_bytes = partial_stderr.encode("utf-8") if isinstance(partial_stderr, str) else partial_stderr
++        (output / (label + ".timeout.stdout")).write_bytes(stdout_bytes)
++        (output / (label + ".timeout.stderr")).write_bytes(stderr_bytes)
++        log, code = stdout_bytes.decode("utf-8", errors="replace") + stderr_bytes.decode("utf-8", errors="replace") + "\n" + str(error), 124
+     (output / (label + ".log")).write_text(log)
+     record = {"test": label, "exit": code, "error": "ERROR:" in log, "success_marker": success_marker(log) if marker else None, "seconds": round(time.monotonic() - start, 3)}
+     record["pass"] = code == 0 and not record["error"] and (not marker or record["success_marker"])
