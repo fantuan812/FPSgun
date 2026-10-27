@@ -168,6 +168,19 @@
       "runtime_pck_sha256": "8ec850cc2fd8b5490ee1f945d56cdb674fa38460191c3eb75be0fdb419ee9aba",
       "runtime_instructions_url": "https://github.com/fantuan812/FPSgun/blob/9466cb5eefd9b6a56ecbf8934b6caa2e4df91333/Deliveries/MossCircuit/v33/READ_ME_v33.txt",
       "scope": "Duplicate STANDARD weapon tempering retains one selected copy at 1.6 nominal primary damage, consumes another standard copy, frees its slot and preserves remaining timers. Tag thresholds and per-copy readouts are recomputed without transaction RNG. R1 results and ordinary maximum-tier hint defect retained; isolated R2 fixes hint copy only and passes recorded source, packed and native gates. No claim of higher total damage than two copies, Windows/controller/full-campaign acceptance or balance certification."
+    },
+    {
+      "version": "v34",
+      "commit": "72be6565da7c3cf2a0db21e26ed55e0a20cd1f42",
+      "tree": "af90491131d72cd264ab2bc3bef108c2c7d8018d",
+      "source_files": 6756,
+      "source_path": "Prototypes/Godot/MossCircuit",
+      "source_url": "https://github.com/fantuan812/FPSgun/tree/72be6565da7c3cf2a0db21e26ed55e0a20cd1f42/Prototypes/Godot/MossCircuit",
+      "source_manifest_sha256": "07fe297757d3df09b87b6ec69e79c9cf7189799b6730be936564cdeb41687876",
+      "runtime_delivery": "Complete PCK restored with version v34 from CATALOG.json chunks; unchanged verified executable required, manual backup/replacement. Preserve prior deliveries.",
+      "runtime_pck_sha256": "250ea5966ff7ca35b42a13cd813ba5ff156288cfc97110a411dd73664ccbbe02",
+      "runtime_instructions_url": "https://github.com/fantuan812/FPSgun/blob/72be6565da7c3cf2a0db21e26ed55e0a20cd1f42/Deliveries/MossCircuit/v34/READ_ME_v34.txt",
+      "scope": "Playing-only pointer selection prioritizes one live enemy for eligible directional weapon aim; empty ground clears, nearest-target fallback and damage/collision rules remain unchanged. Views are read-only, pause retains focus and terminal/encounter boundaries clear it. Exact old six transaction and 24 combat controls, source, packed and finite controlled-native gates pass. Rejected fixture assumptions and objective-height clarification retained. One ordinary attempt has explicitly limited observations, not all-action success. No Windows/controller/audio/full-campaign or broad balance/performance acceptance."
     }
   ],
   "note": "Independent accepted source snapshots committed in order; immutable release bytes retained. Runtime archive coverage is separately indexed, not inferred from source equivalence."
