@@ -1,0 +1,13 @@
+--- frozen-final/tests/independent_tempering_views.gd
++++ r4/tests/independent_tempering_views.gd
+@@ -115,7 +115,10 @@
+     ck(selector.get_item_text(0).contains("SLOT 1") and selector.get_item_text(0).contains("TEMPERED") and selector.get_item_text(1).contains("STANDARD"),"replacement labels preserve slot/tier")
+    setup(mode,["rivet_gun","rivet_gun"]);g.bullets=[{"life":1.0}];g._render_shop();await process_frame;await process_frame
+    ck(buttons("TEMPER / CONSUME SLOT ").is_empty() and text().contains("shots are still active"),"outstanding-flight UI unavailable")
++ var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
++ audio_teardown.prepare([g])
+  g.queue_free();await process_frame
++ await audio_teardown.finish(self)
+  var result:Dictionary={"checks":checks,"failures":failures,"scope":"Controlled all-eight ownership lifecycle, malformed-state fail-safe, snapshot seam, detached actual view arithmetic and UI hierarchy/rectangles/action dispatch at both modes/sizes. Synthetic ui_accept, no physical-controller/native pixel/ordinary claim."}
+  var args:=OS.get_cmdline_user_args()
+  if not args.is_empty():FileAccess.open(args[0],FileAccess.WRITE).store_string(JSON.stringify(result,"  ")+"\n")

@@ -1,0 +1,57 @@
+{
+  "pass": true,
+  "steps": [
+    {
+      "name": "cold-import",
+      "started_utc": "2026-10-27T01:33:33.055067+00:00",
+      "exit": 0,
+      "seconds": 6.844,
+      "engine_error": false,
+      "pass": true,
+      "log_sha256": "88a65891fcfd1b9f913a70de3df0508e5bc3ce83dca9418150bf4d7ac5d341b2"
+    },
+    {
+      "name": "settlement-types",
+      "started_utc": "2026-10-27T01:33:39.900268+00:00",
+      "exit": 0,
+      "seconds": 9.736,
+      "engine_error": false,
+      "pass": true,
+      "log_sha256": "fe932d50f2b19077bec3e3409582e0fce44c7cfa3a33824823fba168f355761f",
+      "script_sha256": "4c1e7647e6d4741983f7c764129ff5a45ea4099a1822169ad347aecada0456d5",
+      "checks": 960,
+      "failures": [],
+      "result_sha256": "996b743b754ca8b26eec57cdb01ff207c0bbaa09c89211d1e230b1c03e0e4c3f"
+    },
+    {
+      "name": "mixer",
+      "started_utc": "2026-10-27T01:33:49.637673+00:00",
+      "exit": 0,
+      "seconds": 12.107,
+      "engine_error": false,
+      "pass": true,
+      "log_sha256": "033e71564593f5c85409e7302a99c0dbf532d6d546eb8017943170e33feb8e21",
+      "script_sha256": "1589fcbc740481bbc7cca47901a4dd355d9f6564778a935be3a7d5535b43552e",
+      "checks": 236,
+      "failures": [],
+      "result_sha256": "22a4a24da176ee9484643f96e1c3ce36a6fe094b41b7e18db545850ea1efae99"
+    },
+    {
+      "name": "views",
+      "started_utc": "2026-10-27T01:34:01.753387+00:00",
+      "exit": 0,
+      "seconds": 5.183,
+      "engine_error": false,
+      "pass": true,
+      "log_sha256": "5657fba9cd5439dfdebbdff1283a5effc8fe76feab026fb20d8178c6c8f54094",
+      "script_sha256": "fb7bd2c5df6edcd1b8963ef32707d308c8971b76fbba2ddc502e73d36990688e",
+      "checks": 168,
+      "failures": [],
+      "result_sha256": "10b109b08f157d2ab876e19036686b82ec488ad3b50fa43cc4abb97375668d4b"
+    }
+  ],
+  "source_inputs": 683,
+  "input_changes": [],
+  "source_map_sha256": "b9bb1fb3a8f891906316346cc36eb3a851fb4fedd1787335203453a0b4ff97d6",
+  "import_scope": "initial exact slim copy had no .godot cache"
+}

@@ -82,7 +82,10 @@ func run() -> void:
 	check(game.state == "dead", "contact death")
 	game._start_run(8)
 	check(game.state == "playing" and game.kills == 0 and game.bullets.is_empty() and game.wave == 1 and game.stats.hp == 100, "retry complete reset")
+	var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
+	audio_teardown.prepare([game])
 	game.queue_free()
 	await process_frame
+	await audio_teardown.finish(self)
 	print(JSON.stringify({"passed":passed, "failures":failures, "scope":"Godot headless finite rules and scene transitions; not human playtest"}))
 	quit(0 if failures.is_empty() else 1)

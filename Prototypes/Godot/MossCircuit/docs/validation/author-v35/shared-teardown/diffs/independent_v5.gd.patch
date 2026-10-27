@@ -1,0 +1,12 @@
+--- frozen-final/tests/independent_v5.gd
++++ r4/tests/independent_v5.gd
+@@ -94,6 +94,9 @@
+ 	var delay: float = g.pending_blasts[0].delay
+ 	g._on_intent("pause",{});g._process(1)
+ 	check(g.pending_blasts.size() == 1 and g.pending_blasts[0].delay == delay,"pause freezes pending mortar")
++	var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
++	audio_teardown.prepare([g])
+ 	g.queue_free();await process_frame
++	await audio_teardown.finish(self)
+ 	print(JSON.stringify({"independent_v5_passed":passed,"failures":failures}))
+ 	quit(0 if failures.is_empty() else 1)

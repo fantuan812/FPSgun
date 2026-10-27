@@ -80,6 +80,9 @@ func run()->void:
 					if not enabled:baseline.append(trace(game))
 					else:check(trace(game)==baseline[tick],"authority parity "+mode_id+" phase2="+str(phase2)+" tick="+str(tick))
 	director.config.profiles.boss_core.attack_profiles=variants
+	var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
+	audio_teardown.prepare([game])
 	game.queue_free();await process_frame
+	await audio_teardown.finish(self)
 	print(JSON.stringify({"core_summon_passed":passed,"failures":failures,"scope":"actual Boss scale, true AI attempt/caps, original ring and finite authority/RNG parity; GUI separate"}))
 	quit(0 if failures.is_empty() else 1)

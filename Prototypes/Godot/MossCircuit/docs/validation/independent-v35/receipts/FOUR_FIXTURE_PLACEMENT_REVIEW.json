@@ -1,0 +1,40 @@
+{
+  "status": "PASS_CORRECTED_FIXTURE_SCOPE",
+  "initial_rejected_patch_sha256": "8f2814acc522bd5bc1e13bb9b327ced4c92749d486adbaee20b338191617b338",
+  "corrected_patch_sha256": "da3924be9b4bf731b8731229abf6ad68453afee3f918c1779f0318c9c1210901",
+  "four_files": [
+    {
+      "path": "tests/independent_annulus_runtime.gd",
+      "before_sha256": "6629f3c07fb5de413a2eeaa1e172feaa25ad3ca50c42c2099d1a0987ff29f2c3",
+      "after_sha256": "e19d583d3ae463f569a72af2fbc6f6a40b60c08c6d5b5b5afe807d59b1e72247",
+      "exact_one_post_disposal_line": true
+    },
+    {
+      "path": "tests/independent_brood_parity.gd",
+      "before_sha256": "9f0eff00bd73f0992c0901496f5f10e1345999d41a5bbc66a6d9dcec258d4fbe",
+      "after_sha256": "964d695db8fb8585e4f7c9cea1c21af083aa804f00b9862d1e393d8a9240e4ac",
+      "exact_one_post_disposal_line": true
+    },
+    {
+      "path": "tests/independent_weapon_rig.gd",
+      "before_sha256": "382c350140ad9cc8db77ee0a3c307e44a982a5002c919a01cde8fd8fe038bf72",
+      "after_sha256": "f969aa824a5e3e2d6d3bd28a9e4dd7e5d8bea3179afdd25a666d263caa312e59",
+      "exact_one_post_disposal_line": true
+    },
+    {
+      "path": "tests/test_core_summon.gd",
+      "before_sha256": "e7908853e7ced6c35bf3eba48e354d784fc761c15d947f13821a49512b309ef3",
+      "after_sha256": "697c999fe68eafa758ae7164d284cd86cd9694c6d9292a219eeaec0e6c0ba395",
+      "exact_one_post_disposal_line": true
+    }
+  ],
+  "initial_finding": "Core wait was in early failure branch; corrected to normal final disposal before any targeted run. No executed failing-targeted result is invented.",
+  "dedicated_regression": "Both voices now explicitly required playing immediately before disposal after first actual nonzero mixed frames; stream+playback weakrefs and fresh discarded-zero drain/silence checked. Results remain separate.",
+  "qa_receipt_correction": "A first QA receipt copy raced the author correction and associated the corrected patch hash with the initial placement finding. That incorrect association is preserved in rejected-receipt-association; this receipt reads the separately preserved original and current files explicitly. No production/test execution was misreported.",
+  "scope": "Independent read-only source review, all four original semantic assertions/error policy preserved; no new independent engine run.",
+  "chronology_clarification": {
+    "author_reported_tool_start_utc": "2026-10-27T01:10:02Z approximately",
+    "independent_corrected_review_utc": "2026-10-27T01:10:09Z",
+    "scope": "Independent review preceded Core test but not the whole targeted runner. My initial message inferred earlier-than-run from delivery-message time; corrected upon actual start report. Wrong-placement source never executed."
+  }
+}

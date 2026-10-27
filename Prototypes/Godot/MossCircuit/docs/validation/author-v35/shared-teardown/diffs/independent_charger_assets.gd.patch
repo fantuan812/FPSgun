@@ -1,0 +1,13 @@
+--- frozen-final/tests/independent_charger_assets.gd
++++ r4/tests/independent_charger_assets.gd
+@@ -61,7 +61,10 @@
+ 				check(e.sprite.frame>=row[1] and e.sprite.frame<=row[2],"clamped phase cannot cross segment "+row[0])
+ 		ad.set_phase(e.id,"warning",.99);ad.set_phase(e.id,"recover",.9)
+ 		check(e.sprite.frame==8,"skipped low-FPS phases show current recovery, not replay charge")
++	var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
++	audio_teardown.prepare([g])
+ 	g.queue_free();await process_frame
++	await audio_teardown.finish(self)
+ 	print("INDEPENDENT CHARGER ASSETS: ",passed," passed; ",failures.size()," failed")
+ 	for failure in failures:push_error(failure)
+ 	quit(0 if failures.is_empty() else 1)

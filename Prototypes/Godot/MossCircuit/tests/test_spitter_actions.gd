@@ -81,6 +81,9 @@ func run_checks()->void:
 	a.advance(.081);check(not a.actors.has(e.id),"one-shot corpse reclaimed")
 	g._title();g._select_mode("rooms");g._start_run(1111)
 	check(a.corpses.is_empty() and a.actors.keys()==[0] and g.enemy_bullets.is_empty(),"cross-mode new run clears all old shot/action references")
+	var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
+	audio_teardown.prepare([g])
 	g.queue_free();await process_frame
+	await audio_teardown.finish(self)
 	print(JSON.stringify({"passed":passed,"failures":failures,"scope":"v11 data-only spitter actions; no gameplay code change"}))
 	quit(0 if failures.is_empty() else 1)

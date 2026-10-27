@@ -1,0 +1,259 @@
+--- v34/scripts/main.gd
++++ v35/scripts/main.gd
+@@ -36,7 +36,9 @@
+ var weapon_rig:Node2D
+ const ActorDirector = preload("res://scripts/actor_director.gd")
+ var actor_anim = ActorDirector.new()
+-var settings := {"reduced_flashes":false}
++const FeedbackAudio = preload("res://scripts/feedback_audio.gd")
++var feedback_audio: FeedbackAudio
++var settings := {"reduced_flashes":false,"mute_feedback_sounds":false}
+ var settings_return := "title"
+ var visual_cooldowns:Dictionary={}
+ var result_pending := false
+@@ -250,6 +252,9 @@
+ 	combat_frame.hurt=_hurt;combat_frame.spawn_kind=_spawn_kind;combat_frame.boss_killed=_boss_killed;combat_frame.play_vfx=_vfx
+ 	telegraphs = Telegraphs.new()
+ 	add_child(telegraphs)
++	feedback_audio = FeedbackAudio.new()
++	add_child(feedback_audio)
++	feedback_audio.set_muted(settings.mute_feedback_sounds)
+ 	_build_ui()
+ 	mode_status=ModeStatus.new()
+ 	add_child(mode_status)
+@@ -266,6 +271,7 @@
+ 
+ 
+ func _title() -> void:
++	_stop_feedback_audio()
+ 	combat.focus_enemy_id=0
+ 	weapon_rig.clear()
+ 	reserved_offer.clear()
+@@ -307,6 +313,7 @@
+ func _start_run(seed_value: int,loadout_id:Variant=StartingLoadouts.DEFAULT_ID) -> bool:
+ 	var fresh_build:=StartingLoadouts.make_build(starting_loadouts,catalog,loadout_id)
+ 	if fresh_build.is_empty():return false
++	_stop_feedback_audio()
+ 	combat.focus_enemy_id=0
+ 	weapon_rig.clear()
+ 	reserved_offer.clear()
+@@ -428,8 +435,9 @@
+ func _notification(what:int) -> void:
+ 	# Losing application focus must never spend combat or room-clear time.
+ 	# Focus returning is deliberately not a resume action.
+-	if what==NOTIFICATION_APPLICATION_FOCUS_OUT and is_instance_valid(ui):
+-		_on_intent("pause",{})
++	if what==NOTIFICATION_APPLICATION_FOCUS_OUT:
++		_stop_feedback_audio()
++		if is_instance_valid(ui): _on_intent("pause",{})
+ 
+ 
+ func _resume() -> void:
+@@ -539,6 +547,7 @@
+ 	if state != "playing" or hurt_clock > 0 or stats.dash_time > 0: return
+ 	if _effect_event("before_hurt",{}):
+ 		hurt_clock = .25
++		_request_feedback_audio("shield_block")
+ 		return
+ 	actor_anim.trigger(0,"hurt")
+ 	_vfx("hit_spark",player_pos)
+@@ -546,6 +555,8 @@
+ 	_effect_event("hurt",{"amount":actual_loss})
+ 	hurt_clock = .75
+ 	if stats.hp <= 0: _finish(false)
++	# Same resolved cue may finish after lethal cleanup; no later dead-state request.
++	if is_finite(actual_loss) and actual_loss > 0: _request_feedback_audio("player_damage")
+ 
+ func _boss_killed(enemy: Dictionary) -> void:
+ 	if RunFlow.award_boss(combat,run,enemy):
+@@ -567,6 +578,7 @@
+ 	var retiring:Array=enemies.duplicate()
+ 	var outcome:=RunFlow.settle(combat,run,mode,config,effects,encounters)
+ 	if outcome in ["invalid","ignored"]:return
++	_stop_feedback_audio()
+ 	vfx.clear();telegraphs.show_markers([])
+ 	actor_anim.clear(true,true)
+ 	for enemy in retiring:
+@@ -583,6 +595,7 @@
+ 
+ 
+ func _show_upgrades() -> void:
++	_stop_feedback_audio()
+ 	effects.invalidate()
+ 	state = "upgrade"
+ 	choice_generation += 1
+@@ -628,6 +641,7 @@
+ 		_hide_modal()
+ 
+ func _finish(won: bool) -> void:
++	_stop_feedback_audio()
+ 	combat.focus_enemy_id=0
+ 	weapon_rig.clear()
+ 	reserved_offer.clear()
+@@ -801,6 +815,7 @@
+ 	return true
+ 
+ func _open_shop() -> void:
++	_stop_feedback_audio()
+ 	state = "shop"
+ 	shop_pending = false
+ 	shop_message = "Buy, sell or replace. Replacement discards old weapon without refund."
+@@ -972,7 +987,7 @@
+ 	_hide_modal()
+ 
+ func _view() -> Dictionary:
+-	if build.is_empty(): return {"seed":run_seed,"settings":settings.duplicate(true),"mode_id":mode.id,"mode_name":mode.name,"objective":""}
++	if build.is_empty(): return {"seed":run_seed,"settings":settings.duplicate(true),"feedback_audio":_feedback_audio_view(),"mode_id":mode.id,"mode_name":mode.name,"objective":""}
+ 	var view := {"coins":build.coins,"wave":wave,"level":level,"hp":stats.hp,"max_hp":stats.max_hp,"xp":xp,"xp_max":Rules.xp_threshold(level),"time":elapsed,"kills":kills,"seed":run_seed,"stats":stats,"weapons":[],"items":[],"synergies":stats.synergies,"generation":shop_generation,"refresh_price":catalog.refresh_price,"weapon_slots":catalog.weapon_slots,"item_slots":catalog.item_slots,"message":shop_message,"offers":[],"rewards":rewards,"synergy_status":[],"mechanics":{"shield":effects.shield,"chain_charges":effects.chain_charges,"hazards":hazards.size(),"echo_hits":effects.echo_hits,"phase_charge":effects.phase_charge,"medic_damage":effects.medic_damage,"cooldowns":{}}}
+ 	view.focus=_focus_view()
+ 	view.starting_loadout=StartingLoadouts.entry(starting_loadouts,catalog,run.starting_loadout_id)
+@@ -984,6 +999,7 @@
+ 	view.actor_state=actor_anim.state_of(0)
+ 	view.dash_cooldown=stats.get("dash_cooldown",0.0)
+ 	view.settings=settings.duplicate(true)
++	view.feedback_audio=_feedback_audio_view()
+ 	view.weapon_order=_weapon_order_view()
+ 	view.weapon_tempering=catalog.weapon_tempering.duplicate(true)
+ 	view.reserved_offer=Reservation.describe(build,catalog,reserved_offer)
+@@ -1071,13 +1087,19 @@
+ 				state="settings"
+ 				ui.show_settings(_view())
+ 		"set_setting":
+-			if state=="settings" and payload.get("key","")=="reduced_flashes" and payload.get("value") is bool:
+-				settings.reduced_flashes=payload.value
+-				vfx.reduced_flashes=payload.value
+-				actor_anim.reduced_flashes=payload.value
+-				vfx.refresh_style()
+-				actor_anim.refresh_style()
+-				ui.show_settings(_view())
++			if state!="settings" or not payload.get("key") is String or not payload.get("value") is bool:return
++			match payload.key:
++				"reduced_flashes":
++					settings.reduced_flashes=payload.value
++					vfx.reduced_flashes=payload.value
++					actor_anim.reduced_flashes=payload.value
++					vfx.refresh_style()
++					actor_anim.refresh_style()
++				"mute_feedback_sounds":
++					settings.mute_feedback_sounds=payload.value
++					if is_instance_valid(feedback_audio):feedback_audio.set_muted(payload.value)
++				_:return
++			ui.show_settings(_view())
+ 		"close_settings":
+ 			if state=="settings":
+ 				if settings_return=="title":_title()
+@@ -1137,14 +1159,26 @@
+ 				else: _hide_modal()
+ 
+ func _present_inventory() -> void:
++	_stop_feedback_audio()
+ 	effects.invalidate()
+ 	ui.show_inventory(_view())
+ 
+ 
+ func _present_pause() -> void:
++	_stop_feedback_audio()
+ 	effects.invalidate()
+ 	ui.show_pause(_view())
+ 
++
++func _request_feedback_audio(cue: String) -> void:
++	if is_instance_valid(feedback_audio): feedback_audio.request(cue)
++
++func _stop_feedback_audio() -> void:
++	if is_instance_valid(feedback_audio): feedback_audio.stop_all()
++
++func _feedback_audio_view() -> Dictionary:
++	if is_instance_valid(feedback_audio): return feedback_audio.status()
++	return {"driver":AudioServer.get_driver_name(),"dummy":AudioServer.get_driver_name()=="Dummy","muted":settings.mute_feedback_sounds,"unavailable":["player_damage","shield_block"]}
+ 
+ func _hide_modal() -> void:
+ 	ui.hide_modal()
+@@ -1264,6 +1298,7 @@
+ 	camera.position=FieldLayout.camera_position(player_pos,config.arena)
+ func _begin_room_clear()->void:
+ 	if state!="playing":return
++	_stop_feedback_audio()
+ 	combat.focus_enemy_id=0
+ 	state="room_clear"
+ 	bullets.clear();enemy_bullets.clear();pending_blasts.clear();hazards.clear();flashes.clear()
+--- v34/ui/moss_ui.gd
++++ v35/ui/moss_ui.gd
+@@ -357,7 +357,7 @@
+ 			intent.emit("start_loadout",{"seed":live_seed.text.to_int(),"id":chosen_id,"generation":generation}))
+ 	body.add_child(start);first_focus=start
+ 	_button(body,"ENEMY FIELD GUIDE","codex")
+-	_button(body,"DISPLAY SETTINGS","settings")
++	_button(body,"PRESENTATION SETTINGS","settings")
+ 	_finish()
+ 
+ func _starting_loadout_card(parent:Node,data:Dictionary,selected:bool,generation:int)->void:
+@@ -573,7 +573,7 @@
+ 	_button(body, "RESUME", "resume")
+ 	_button(body, "INSPECT BUILD", "inventory")
+ 	_button(body, "ENEMY FIELD GUIDE", "codex")
+-	_button(body, "DISPLAY SETTINGS", "settings")
++	_button(body, "PRESENTATION SETTINGS", "settings")
+ 	_button(body, "RETURN TO TITLE", "title")
+ 	_finish()
+ 
+@@ -689,7 +689,7 @@
+ 	_finish()
+ 
+ func show_settings(view: Dictionary) -> void:
+-	_begin("settings", "DISPLAY SETTINGS", "Presentation only. Changes apply immediately and last for this session.")
++	_begin("settings", "PRESENTATION SETTINGS", "Presentation only. Changes apply immediately and last for this session.")
+ 	var content := _scroll(body)
+ 	var values: Dictionary = view.get("settings", {})
+ 	var reduced := CheckButton.new()
+@@ -701,6 +701,18 @@
+ 	first_focus = reduced
+ 	_text(content, "Lowers decorative effect brightness and the hit-white flash. Attack warnings and collision timing remain unchanged, so hazards are still readable.", 15)
+ 	_text(content, "This is a flash-reduction option, not a guarantee that every flashing image is removed. Preferences are not saved to disk in this prototype.", 13)
++	var mute := CheckButton.new()
++	mute.text = "MUTE PLAYER FEEDBACK SOUNDS"
++	mute.custom_minimum_size.y = 44
++	mute.set_pressed_no_signal(bool(values.get("mute_feedback_sounds", false)))
++	mute.toggled.connect(func(enabled: bool): intent.emit("set_setting", {"key":"mute_feedback_sounds", "value":enabled}))
++	content.add_child(mute)
++	_text(content, "Only HP-loss and Mirror Shell block cues. Session only; no music.", 15)
++	var audio: Dictionary = view.get("feedback_audio", {})
++	var driver := str(audio.get("driver", "unavailable"))
++	_text(content, "Audio backend: " + driver + (" — no physical device output." if bool(audio.get("dummy", false)) else ". Device playback has not been verified here."), 13)
++	var unavailable: Array = audio.get("unavailable", [])
++	if not unavailable.is_empty(): _text(content, "Unavailable cues: " + ", ".join(unavailable) + ". Gameplay remains active.", 13)
+ 	_text(content, "ANIMATION COVERAGE", 16).add_theme_color_override("font_color", AMBER)
+ 	_text(content, "Action-state feedback is controller-driven. Some effects and actor states use shared frames or procedural presentation rather than separate hand-drawn animation sheets. Not every action has independent artwork.", 13)
+ 	_button(body, "BACK", "close_settings")
+--- v34/ui/test_ui.gd
++++ v35/ui/test_ui.gd
+@@ -186,7 +186,7 @@
+ 	check(ui.body.size.x <= ui.modal.size.x and ui.body.size.y <= ui.modal.size.y, "settings fits viewport")
+ 	var toggle: CheckButton
+ 	for button in buttons(ui.modal):
+-		if button is CheckButton: toggle = button
++		if button is CheckButton and button.text == "REDUCE DECORATIVE FLASHES": toggle = button
+ 	check(toggle != null and toggle.has_focus() and not toggle.button_pressed, "settings toggle initial value and keyboard focus")
+ 	toggle.button_pressed = true
+ 	check(received.back() == ["set_setting", {"key": "reduced_flashes", "value": true}], "toggle emits controller-owned setting intent")
+@@ -194,17 +194,17 @@
+ 	view.settings.reduced_flashes = true
+ 	ui.show_settings(view); await process_frame
+ 	for button in buttons(ui.modal):
+-		if button is CheckButton: check(button.button_pressed, "reopened settings reflects session value")
++		if button is CheckButton and button.text == "REDUCE DECORATIVE FLASHES": check(button.button_pressed, "reopened settings reflects session value")
+ 		if button.text == "BACK": button.pressed.emit()
+ 	check(received.back() == ["close_settings", {}], "settings close intent")
+ 	check(all_text(ui.modal).contains("not saved to disk") and all_text(ui.modal).contains("shared frames"), "settings states persistence and animation limitations")
+ 	ui.show_pause(); await process_frame
+ 	for button in buttons(ui.modal):
+-		if button.text == "DISPLAY SETTINGS": button.pressed.emit()
++		if button.text == "PRESENTATION SETTINGS": button.pressed.emit()
+ 	check(received.back() == ["settings", {}], "pause opens settings")
+ 	ui.show_title(); await process_frame
+ 	for button in buttons(ui.modal):
+-		if button.text == "DISPLAY SETTINGS": button.pressed.emit()
++		if button.text == "PRESENTATION SETTINGS": button.pressed.emit()
+ 	check(received.back() == ["settings", {}], "title opens settings")
+ 	ui.hide_modal()
+ 	check(not ui.modal_visible(), "hide modal")

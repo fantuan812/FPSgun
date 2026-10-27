@@ -1,0 +1,12 @@
+{
+  "status": "PASS_EXACT_AUTHORIZED_PREDICATE_ONLY",
+  "before_sha256": "8a0fe9f8fdb3843a2505e9e365cdddf6649cca82d27b05af1cd2064c204334f7",
+  "after_sha256": "2af880ced71f9139f4fec82e1f9de1abebb642bdb69431d28d19fa25532db124",
+  "production_changes": [
+    "scripts/gameplay/run_flow.gd"
+  ],
+  "other127_exact": true,
+  "change": "Only actual-bool short-circuit guard in terminal consistency predicate; all other validator/settle and audio code exact R2.",
+  "test_script_sha256": "b7e6cd1b5143c4d90fa591e4613201cd9d22c68423b35cc7a75a46459d707d61",
+  "scope": "Independent byte/diff review before author focused execution; no execution claim."
+}

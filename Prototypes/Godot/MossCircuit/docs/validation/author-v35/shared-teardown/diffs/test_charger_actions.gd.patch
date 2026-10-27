@@ -1,0 +1,12 @@
+--- frozen-final/tests/test_charger_actions.gd
++++ r4/tests/test_charger_actions.gd
+@@ -66,6 +66,9 @@
+ 	a.advance(.081);check(not a.actors.has(e.id),"death one-shot reclaimed")
+ 	g._title();g._select_mode("rooms");g._start_run(1010)
+ 	check(a.actors.keys()==[0] and a.corpses.is_empty(),"new mode has no old body callbacks or corpses")
++	var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
++	audio_teardown.prepare([g])
+ 	g.queue_free();await process_frame
++	await audio_teardown.finish(self)
+ 	print(JSON.stringify({"passed":passed,"failures":failures,"scope":"v10 authored charger phase presentation only"}))
+ 	quit(0 if failures.is_empty() else 1)

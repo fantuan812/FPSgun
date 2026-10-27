@@ -79,6 +79,9 @@ func run()->void:
 			check("CURRENT WEAPON STATS" in labels and "BASE BEHAVIOR" in labels,"owned stat/description scopes")
 			check(not labels.any(func(s):return s.to_lower().begins_with("damage:") or s.to_lower().begins_with("fire interval:")),"no misleading starter damage/interval")
 			check(labels.any(func(s):return s.begins_with("Global weapon-damage bonus:")) and labels.any(func(s):return s.begins_with("Additive attack-rate bonus:")),"modifiers labeled")
+	var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
+	audio_teardown.prepare([game])
 	game.queue_free();await process_frame
+	await audio_teardown.finish(self)
 	print(JSON.stringify({"weapon_readout_checks":checks,"failures":failures}))
 	quit(0 if failures.is_empty() else 1)

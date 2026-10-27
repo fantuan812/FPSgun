@@ -71,7 +71,10 @@ func run()->void:
 	check(g.kills==kills+1,"corpse frame cannot duplicate kill reward")
 	g._title();g._select_mode("rooms");g._start_run(8080)
 	check(ad.corpses.is_empty() and not ad.actors.has(e.id),"cross-mode restart clears prior corpse entry")
+	var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
+	audio_teardown.prepare([g])
 	g.queue_free();await process_frame
+	await audio_teardown.finish(self)
 	print("INDEPENDENT CHARGER LIFECYCLE: ",passed," passed; ",failures.size()," failed")
 	for failure in failures:push_error(failure)
 	quit(0 if failures.is_empty() else 1)

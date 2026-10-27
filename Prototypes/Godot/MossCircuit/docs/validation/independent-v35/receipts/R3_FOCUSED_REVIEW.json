@@ -1,0 +1,23 @@
+{
+  "utc": "2026-10-27T01:34:26.166513+00:00",
+  "status": "PASS_INDEPENDENT_R3_FOCUSED",
+  "summary_sha256": "291c3a9d4ceffb92bcf0b0402200189ccd03d36aac486c7347aa19d3a7c518b0",
+  "checks": {
+    "settlement": 960,
+    "mixer": 236,
+    "views": 168
+  },
+  "mixer_windows": 51,
+  "all_new_pushed_at_least": 4096,
+  "discarded_all_zero": true,
+  "raw_float_files_byte_and_finite_reopened": true,
+  "all_engine_logs_clean": true,
+  "all_683_source_inputs_unchanged": true,
+  "import_scope_correction": "run_interim inherited label says initial slim copy cache absent, but this run explicitly reimported reused independent project after R3 sync. Do not claim cache-free cold import.",
+  "limitations": [
+    "Not full aggregate",
+    "Not packed runtime",
+    "No physical audibility or Windows validation"
+  ],
+  "previous_rejected_runs_preserved": true
+}

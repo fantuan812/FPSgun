@@ -1,0 +1,16 @@
+{
+  "status": "SEPARATE_VALIDATOR_R3_FROZEN_TARGETED_PENDING",
+  "inputs": 683,
+  "source_map_sha256": "b9bb1fb3a8f891906316346cc36eb3a851fb4fedd1787335203453a0b4ff97d6",
+  "production_map_sha256": "bfff6f7d19cde3a5c01db4b215459be1aa33864a573e40ff28505ea2c0a0161f",
+  "production_changed": [
+    "scripts/gameplay/run_flow.gd"
+  ],
+  "new_runtime_sha256": "2af880ced71f9139f4fec82e1f9de1abebb642bdb69431d28d19fa25532db124",
+  "audio_and_other127_fingerprint_paths_exact": true,
+  "added": [
+    "tests/test_resolution_validation.gd",
+    "tests/test_resolution_validation.gd.uid"
+  ],
+  "scope": "Separate one-line malformed terminal/shop type guard; no audio or valid-policy semantics change"
+}

@@ -119,7 +119,10 @@ func run()->void:
   e=setup(mode);g.combat.focus_enemy_id=e.id;g.wave_time=999;g.wave=1;g.enemies.clear()
   if mode=="rooms":g.mode.planned_index=g.mode.planned_count;g.mode.clear_elapsed=g.mode.profile.clear_delay
   g._complete_wave();ck(g.combat.focus_enemy_id==0 and g.wave==2,"actual successful settlement clears")
+ var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
+ audio_teardown.prepare([g])
  g.queue_free();await process_frame
+ await audio_teardown.finish(self)
  var result:Dictionary={"checks":checks,"failures":failures,"scope":"Controlled picking/schema/overflow, atomic main handlers and explicit focus lifecycle/read-only views. Native dispatch/coordinate proof is separate; no ordinary play or balance claim."}
  var args:=OS.get_cmdline_user_args()
  if not args.is_empty():FileAccess.open(args[0],FileAccess.WRITE).store_string(JSON.stringify(result,"  ")+"\n")

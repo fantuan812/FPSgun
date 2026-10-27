@@ -1,0 +1,36 @@
+{
+  "status": "REJECTED_FINAL_AGGREGATE",
+  "exit": 1,
+  "commands_including_import": 119,
+  "clean": 116,
+  "failed": [
+    {
+      "test": "independent_charger_lifecycle.gd",
+      "exit": 0,
+      "error": true,
+      "success_marker": true,
+      "seconds": 1.791,
+      "pass": false
+    },
+    {
+      "test": "test_game.gd",
+      "exit": 0,
+      "error": true,
+      "success_marker": true,
+      "seconds": 2.359,
+      "pass": false
+    },
+    {
+      "test": "test_warden_charge.gd",
+      "exit": 0,
+      "error": true,
+      "success_marker": true,
+      "seconds": 2.562,
+      "pass": false
+    }
+  ],
+  "source_count": 692,
+  "source_changes": [],
+  "production_change": false,
+  "next": "Combined exact resource-owner diagnosis proposed; no retry or edits"
+}

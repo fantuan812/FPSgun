@@ -103,7 +103,10 @@ func run() -> void:
 			check(game.state == "shop", "wave enters shop")
 			game._leave_shop(game.shop_generation)
 	check(game.state == "won", "six wave economic loop")
+	var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
+	audio_teardown.prepare([game])
 	game.queue_free()
 	await process_frame
+	await audio_teardown.finish(self)
 	print(JSON.stringify({"passed":passed,"failures":failures,"scope":"v2 build/economy headless"}))
 	quit(0 if failures.is_empty() else 1)

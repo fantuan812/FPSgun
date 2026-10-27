@@ -1,0 +1,12 @@
+--- frozen-final/tests/test_shop_offer_visibility.gd
++++ r4/tests/test_shop_offer_visibility.gd
+@@ -47,6 +47,9 @@
+ 			disclosure.button_pressed=false
+ 			await process_frame
+ 			check(game.shop_generation==generation and game.build.coins==coins,"read-only disclosure never rerolls or purchases "+entry.id)
++	var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
++	audio_teardown.prepare([game])
+ 	game.queue_free();await process_frame
++	await audio_teardown.finish(self)
+ 	print(JSON.stringify({"shop_offer_visibility_passed":passed,"failures":failures,"scope":"all32 catalog first-offer purchase rectangles and disclosure lifecycle at960x540; GUI separate"}))
+ 	quit(0 if failures.is_empty() else 1)

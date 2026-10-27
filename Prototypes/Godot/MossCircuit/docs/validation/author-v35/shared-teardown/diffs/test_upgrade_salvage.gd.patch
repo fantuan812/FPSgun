@@ -1,0 +1,12 @@
+--- frozen-final/tests/test_upgrade_salvage.gd
++++ r4/tests/test_upgrade_salvage.gd
+@@ -118,6 +118,9 @@
+ 			check(game.ui.modal.get_global_rect().encloses(salvage_button.get_global_rect()), "salvage visible inside modal " + mode_id + str(size))
+ 			old = whole_state(); game.ui.show_upgrade(game.choices, game.choice_generation, game._upgrade_salvage_view())
+ 			check(whole_state() == old, "render is read-only " + mode_id + str(size))
++	var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
++	audio_teardown.prepare([game])
+ 	game.queue_free(); await process_frame
++	await audio_teardown.finish(self)
+ 	print(JSON.stringify({"passed":passed,"failed":failures.size(),"failures":failures}))
+ 	quit(0 if failures.is_empty() else 1)

@@ -76,7 +76,10 @@ func run()->void:
 			check(g.wave==2 and g.build.coins==coins,"repeated settlement cannot credit old spitter twice")
 		g._title();g._select_mode("rooms" if mode=="arena" else "arena");g._start_run(81127)
 		check(g.actor_anim.corpses.is_empty() and g.enemy_bullets.is_empty() and not g.actor_anim.actors.has(e.id),mode+" cross-mode new run drops corpse and shot state")
+		var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
+		audio_teardown.prepare([g])
 		g.queue_free();await process_frame
+		await audio_teardown.finish(self)
 	print("INDEPENDENT SPITTER EVENTS: ",passed," passed; ",failures.size()," failed")
 	for failure in failures:push_error(failure)
 	quit(0 if failures.is_empty() else 1)

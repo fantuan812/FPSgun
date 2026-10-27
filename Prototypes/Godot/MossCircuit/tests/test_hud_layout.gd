@@ -24,6 +24,9 @@ func run()->void:
 			if mode_id=="rooms":
 				check(game.mode_status.badge.position.y>=hud_rect.end.y+8,"room badge below HUD "+context)
 				check(objective_rect.position.x>=game.mode_status.badge.position.x+48,"room objective does not overlap badge "+context)
+	var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
+	audio_teardown.prepare([game])
 	game.queue_free();await process_frame
+	await audio_teardown.finish(self)
 	print(JSON.stringify({"hud_layout_passed":passed,"failures":failures,"scope":"headless actual control rectangles; rendered-window acceptance separate"}))
 	quit(0 if failures.is_empty() else 1)

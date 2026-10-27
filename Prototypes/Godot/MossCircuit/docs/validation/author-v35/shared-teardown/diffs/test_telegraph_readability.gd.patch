@@ -1,0 +1,12 @@
+--- frozen-final/tests/test_telegraph_readability.gd
++++ r4/tests/test_telegraph_readability.gd
+@@ -39,6 +39,9 @@
+ 		check(game.telegraphs.z_index>game.vfx.z_index and game.telegraphs.z_index>enemy.sprite.z_index,"warning outline remains above actor and decorative effects "+mode_id)
+ 		enemy.attack="blast";enemy.target=game.player_pos;game._sync_telegraphs()
+ 		check(game.telegraphs.markers[0].kind=="circle" and game.telegraphs.markers[0].pos==enemy.target and game.telegraphs.markers[0].radius==105,"blast geometry unchanged "+mode_id)
++	var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
++	audio_teardown.prepare([game])
+ 	game.queue_free();await process_frame
++	await audio_teardown.finish(self)
+ 	print(JSON.stringify({"telegraph_readability_passed":passed,"failures":failures,"scope":"exact marker/outline geometry and style contract; actual GUI contrast separate"}))
+ 	quit(0 if failures.is_empty() else 1)

@@ -1,0 +1,29 @@
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+SCRIPT ERROR: Invalid operands 'String' and 'bool' in operator '=='.
+          at: validate_resolution (res://scripts/gameplay/run_flow.gd:41)
+          GDScript backtrace (most recent call first):
+              [0] validate_resolution (res://scripts/gameplay/run_flow.gd:41)
+              [1] settle (res://scripts/gameplay/run_flow.gd:9)
+              [2] _complete_wave (res://scripts/main.gd:579)
+              [3] run (<QA_ROOT>/checks/independent_feedback_authority.gd:192)
+SCRIPT ERROR: Invalid access to property or key 'heal' on a base object of type 'Dictionary'.
+          at: settle (res://scripts/gameplay/run_flow.gd:22)
+          GDScript backtrace (most recent call first):
+              [0] settle (res://scripts/gameplay/run_flow.gd:22)
+              [1] _complete_wave (res://scripts/main.gd:579)
+              [2] run (<QA_ROOT>/checks/independent_feedback_authority.gd:192)
+SCRIPT ERROR: Invalid operands 'String' and 'bool' in operator '=='.
+          at: validate_resolution (res://scripts/gameplay/run_flow.gd:41)
+          GDScript backtrace (most recent call first):
+              [0] validate_resolution (res://scripts/gameplay/run_flow.gd:41)
+              [1] settle (res://scripts/gameplay/run_flow.gd:9)
+              [2] _complete_wave (res://scripts/main.gd:579)
+              [3] run (<QA_ROOT>/checks/independent_feedback_authority.gd:192)
+SCRIPT ERROR: Invalid access to property or key 'heal' on a base object of type 'Dictionary'.
+          at: settle (res://scripts/gameplay/run_flow.gd:22)
+          GDScript backtrace (most recent call first):
+              [0] settle (res://scripts/gameplay/run_flow.gd:22)
+              [1] _complete_wave (res://scripts/main.gd:579)
+              [2] run (<QA_ROOT>/checks/independent_feedback_authority.gd:192)
+{"checks":773,"failures":["invalid boundary does not acquire stop side effect invalid_settlement","invalid boundary does not acquire stop side effect invalid_settlement"]}

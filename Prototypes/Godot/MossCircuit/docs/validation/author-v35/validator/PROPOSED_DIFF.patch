@@ -1,0 +1,11 @@
+--- current/scripts/gameplay/run_flow.gd
++++ proposed/scripts/gameplay/run_flow.gd
+@@ -38,7 +38,7 @@
+ 	for key in ["coins","heal"]:
+ 		if not (data.get(key) is int or data.get(key) is float):errors.append(key+" must be numeric")
+ 		elif not is_finite(float(data[key])) or float(data[key])<0 or float(data[key])>1000000:errors.append(key+" bounds")
+-	if data.get("terminal")==true and (data.get("shop")==true or (data.get("upgrades") is int and data.upgrades>0)):errors.append("terminal cannot open shop or upgrade")
++	if data.get("terminal") is bool and data.terminal and ((data.get("shop") is bool and data.shop) or (data.get("upgrades") is int and data.upgrades>0)):errors.append("terminal cannot open shop or upgrade")
+ 	return errors
+ 
+ static func accrue_levels(session:RunSession,queue_choices:bool=true)->void:

@@ -1,0 +1,13 @@
+--- frozen-final/tests/independent_tag_authority.gd
++++ r4/tests/independent_tag_authority.gd
+@@ -103,7 +103,10 @@
+   setup(mode,["rail_lance","rail_lance","rivet_gun","scrap_shotgun"],{"capacitor":1});g._open_shop();g.shop_offers=[{"id":"rail_lance","sold":false}];check(g._buy(0,g.shop_generation,0),mode+" same-ID replacement success");verify(mode+"/same_replacement",{"electric":3,"melee":0,"spread":1})
+   g.shop_offers=[{"id":"capacitor","sold":false}];g.build.coins=0;snap=state_projection();check(not g._buy(0,g.shop_generation) and state_projection()==snap,mode+" insufficient funds do not contribute offer tag")
+   setup(mode,["rivet_gun"],{});verify(mode+"/reset",{"electric":0,"melee":0,"spread":0});await process_frame
++ var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
++ audio_teardown.prepare([g])
+  g.queue_free();await process_frame
++ await audio_teardown.finish(self)
+  var result={"scope":"Controlled actual shared ownership/equipment transactions/primary contacts and seeded shop projection; no ordinary/native campaign claim","checks":checks,"failures":failures,"records":records}
+  print(JSON.stringify({"checks":checks,"failures":failures,"cases":records.size()}));var args:=OS.get_cmdline_user_args();if not args.is_empty():FileAccess.open(args[0],FileAccess.WRITE).store_string(JSON.stringify(result,"  ")+"\n")
+  quit(0 if failures.is_empty() else 1)

@@ -1,0 +1,155 @@
+{
+  "utc": "2026-10-27T02:43:57.624784+00:00",
+  "status": "PASS_BOUNDED_CONTROLLED_NATIVE",
+  "pck_sha256": "99b5232f7d5866ab3152f78990ed6ad37ed55957cf85f1712418c056daa3638d",
+  "process_exit": 0,
+  "fresh_window_absence_verified": true,
+  "cases": [
+    {
+      "case": 1,
+      "mode": "arena",
+      "size": [
+        960,
+        540
+      ],
+      "route": "title settings mousemute thenTabReturnunmute"
+    },
+    {
+      "case": 2,
+      "mode": "rooms",
+      "size": [
+        960,
+        540
+      ],
+      "route": "controlledMirrorblock thenHP100to89; pause settings toggleboth; resume mutedhurt89to78"
+    },
+    {
+      "case": 3,
+      "mode": "arena",
+      "size": [
+        1280,
+        720
+      ],
+      "route": "settingsretainmute/reducedflash acrossnewrun; unmute; controlledblock/loss"
+    },
+    {
+      "case": 4,
+      "mode": "rooms",
+      "size": [
+        1280,
+        720
+      ],
+      "route": "settingslayout,block/loss,actualWMfocuspause"
+    }
+  ],
+  "cues": [
+    {
+      "accepted": true,
+      "case": 2,
+      "driver": {
+        "driver": "Dummy",
+        "dummy": true,
+        "muted": false,
+        "unavailable": []
+      },
+      "hp": 100.0,
+      "resolved_cue": "shield_block",
+      "shield": 0,
+      "state": "playing"
+    },
+    {
+      "accepted": true,
+      "case": 2,
+      "driver": {
+        "driver": "Dummy",
+        "dummy": true,
+        "muted": false,
+        "unavailable": []
+      },
+      "hp": 89.0,
+      "resolved_cue": "player_damage",
+      "shield": 0,
+      "state": "playing"
+    },
+    {
+      "accepted": false,
+      "case": 2,
+      "driver": {
+        "driver": "Dummy",
+        "dummy": true,
+        "muted": true,
+        "unavailable": []
+      },
+      "hp": 78.0,
+      "resolved_cue": "player_damage",
+      "shield": 0,
+      "state": "playing"
+    },
+    {
+      "accepted": true,
+      "case": 3,
+      "driver": {
+        "driver": "Dummy",
+        "dummy": true,
+        "muted": false,
+        "unavailable": []
+      },
+      "hp": 100.0,
+      "resolved_cue": "shield_block",
+      "shield": 0,
+      "state": "playing"
+    },
+    {
+      "accepted": true,
+      "case": 3,
+      "driver": {
+        "driver": "Dummy",
+        "dummy": true,
+        "muted": false,
+        "unavailable": []
+      },
+      "hp": 89.0,
+      "resolved_cue": "player_damage",
+      "shield": 0,
+      "state": "playing"
+    },
+    {
+      "accepted": true,
+      "case": 4,
+      "driver": {
+        "driver": "Dummy",
+        "dummy": true,
+        "muted": false,
+        "unavailable": []
+      },
+      "hp": 100.0,
+      "resolved_cue": "shield_block",
+      "shield": 0,
+      "state": "playing"
+    },
+    {
+      "accepted": true,
+      "case": 4,
+      "driver": {
+        "driver": "Dummy",
+        "dummy": true,
+        "muted": false,
+        "unavailable": []
+      },
+      "hp": 89.0,
+      "resolved_cue": "player_damage",
+      "shield": 0,
+      "state": "playing"
+    }
+  ],
+  "capture_count": 11,
+  "fixture_pin": "ed72d2881f473fa2d6dd292404407baca27a4690f8b984f418a89311d6a327c6",
+  "focus_scope": "Actual2017 applicationfocusout notification observed withstatepaused. Last damageplayingfalse at186523027us; focusout at186910089us,387062uslater. Therefore no proof focusout cut an active cue; controlledheadless counterpart remains separate.",
+  "warnings": "Native Mesa/llvmpipe VSync unsupportedwarning retained; noERROR/resourceleaks.",
+  "limits": [
+    "ExternalcontrolledMirrorownership/hurtclock/HP/timers, notordinaryacquisition",
+    "NativeCUA mouse/keyboard, notphysicalcontroller",
+    "ExplicitDummy internal backend; nophysicalaudio/listening/Windows"
+  ],
+  "source_modified": false
+}

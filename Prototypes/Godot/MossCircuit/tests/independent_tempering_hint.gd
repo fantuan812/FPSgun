@@ -55,7 +55,10 @@ func run()->void:
     g.build.weapon_temper=invalid;before=snapshot();single=g._weapon_temper_view(0)
     ck(not single.available and single.reason.begins_with("Weapon tier data"),"invalid metadata never gets maximum or donor hint")
     ck(snapshot()==before,"invalid hint does not repair state")
+ var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
+ audio_teardown.prepare([g])
  g.queue_free();await process_frame
+ await audio_teardown.finish(self)
  var result:Dictionary={"checks":checks,"failures":failures,"scope":"Controlled all-eight/both-mode sole-copy reason, actual fusion/render, prior-guard priority and rejection atomicity; no ordinary acquisition or native pixel claim."}
  var args:=OS.get_cmdline_user_args()
  if not args.is_empty():FileAccess.open(args[0],FileAccess.WRITE).store_string(JSON.stringify(result,"  ")+"\n")

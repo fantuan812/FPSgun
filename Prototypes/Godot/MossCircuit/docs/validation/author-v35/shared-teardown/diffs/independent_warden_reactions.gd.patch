@@ -1,0 +1,12 @@
+--- frozen-final/tests/independent_warden_reactions.gd
++++ r4/tests/independent_warden_reactions.gd
+@@ -103,6 +103,9 @@
+ 				var f:int=e.sprite.frame;a.reduced_flashes=true;a.refresh_style()
+ 				check(e.sprite.frame==f and e.sprite.modulate==a.actors[id].base_color,"reduced flashes preserves hurt pose")
+ 				a.reduced_flashes=false
++	var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
++	audio_teardown.prepare([g])
+ 	g.queue_free();await process_frame
++	await audio_teardown.finish(self)
+ 	print(JSON.stringify({"independent_warden_reactions_passed":passed,"failures":failures,"scope":"headless authority/visual-overlay/lifecycle/anchor checks; no GUI or Windows playtest"}))
+ 	quit(0 if failures.is_empty() else 1)

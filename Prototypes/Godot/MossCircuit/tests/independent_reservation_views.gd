@@ -98,7 +98,10 @@ func run()->void:
    else:ck(false,"release button after synthetic ui_accept")
    ck(before==[g.build.coins,g.build.revision,g.shop_rng.state],"mapped UI toggles preserve coins/revision/RNG")
    samples.append({"mode":mode,"window":[size.x,size.y],"entries":g.catalog.weapons.size()+g.catalog.items.size(),"mapped_event":"synthetic InputEventAction ui_accept through Viewport.push_input"})
+ var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
+ audio_teardown.prepare([g])
  g.queue_free();await process_frame
+ await audio_teardown.finish(self)
  var result:Dictionary={"checks":checks,"failures":failures,"layouts":samples,"scope":"Actual UI hierarchy geometry, button callbacks and synthetic existing ui_accept action dispatch in both modes/two sizes. This is not native pixel review, physical controller gameplay or ordinary acquisition."}
  var args:=OS.get_cmdline_user_args()
  if not args.is_empty():FileAccess.open(args[0],FileAccess.WRITE).store_string(JSON.stringify(result,"  ")+"\n")

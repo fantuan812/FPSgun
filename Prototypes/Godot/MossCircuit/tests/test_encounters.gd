@@ -98,7 +98,10 @@ func run() -> void:
 	owner.hp = 0
 	game._simulate(.01)
 	check(game.stats.hp == 100,"dead owner projectiles removed before hit")
+	var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
+	audio_teardown.prepare([game])
 	game.queue_free()
 	await process_frame
+	await audio_teardown.finish(self)
 	print(JSON.stringify({"passed":passed,"failures":failures,"scope":"enemy telegraph, phase, boss gate/reward headless"}))
 	quit(0 if failures.is_empty() else 1)

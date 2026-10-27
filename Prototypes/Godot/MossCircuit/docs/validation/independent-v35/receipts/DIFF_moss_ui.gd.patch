@@ -1,0 +1,48 @@
+--- <WORKSPACE>/moss-v34-final/ui/moss_ui.gd	2026-10-26 15:37:52.218834696 -0700
++++ <QA_ROOT>/project/ui/moss_ui.gd	2026-10-26 17:43:47.244629880 -0700
+@@ -357,7 +357,7 @@
+ 			intent.emit("start_loadout",{"seed":live_seed.text.to_int(),"id":chosen_id,"generation":generation}))
+ 	body.add_child(start);first_focus=start
+ 	_button(body,"ENEMY FIELD GUIDE","codex")
+-	_button(body,"DISPLAY SETTINGS","settings")
++	_button(body,"PRESENTATION SETTINGS","settings")
+ 	_finish()
+ 
+ func _starting_loadout_card(parent:Node,data:Dictionary,selected:bool,generation:int)->void:
+@@ -573,7 +573,7 @@
+ 	_button(body, "RESUME", "resume")
+ 	_button(body, "INSPECT BUILD", "inventory")
+ 	_button(body, "ENEMY FIELD GUIDE", "codex")
+-	_button(body, "DISPLAY SETTINGS", "settings")
++	_button(body, "PRESENTATION SETTINGS", "settings")
+ 	_button(body, "RETURN TO TITLE", "title")
+ 	_finish()
+ 
+@@ -689,7 +689,7 @@
+ 	_finish()
+ 
+ func show_settings(view: Dictionary) -> void:
+-	_begin("settings", "DISPLAY SETTINGS", "Presentation only. Changes apply immediately and last for this session.")
++	_begin("settings", "PRESENTATION SETTINGS", "Presentation only. Changes apply immediately and last for this session.")
+ 	var content := _scroll(body)
+ 	var values: Dictionary = view.get("settings", {})
+ 	var reduced := CheckButton.new()
+@@ -701,6 +701,18 @@
+ 	first_focus = reduced
+ 	_text(content, "Lowers decorative effect brightness and the hit-white flash. Attack warnings and collision timing remain unchanged, so hazards are still readable.", 15)
+ 	_text(content, "This is a flash-reduction option, not a guarantee that every flashing image is removed. Preferences are not saved to disk in this prototype.", 13)
++	var mute := CheckButton.new()
++	mute.text = "MUTE PLAYER FEEDBACK SOUNDS"
++	mute.custom_minimum_size.y = 44
++	mute.set_pressed_no_signal(bool(values.get("mute_feedback_sounds", false)))
++	mute.toggled.connect(func(enabled: bool): intent.emit("set_setting", {"key":"mute_feedback_sounds", "value":enabled}))
++	content.add_child(mute)
++	_text(content, "Only HP-loss and Mirror Shell block cues. Session only; no music.", 15)
++	var audio: Dictionary = view.get("feedback_audio", {})
++	var driver := str(audio.get("driver", "unavailable"))
++	_text(content, "Audio backend: " + driver + (" — no physical device output." if bool(audio.get("dummy", false)) else ". Device playback has not been verified here."), 13)
++	var unavailable: Array = audio.get("unavailable", [])
++	if not unavailable.is_empty(): _text(content, "Unavailable cues: " + ", ".join(unavailable) + ". Gameplay remains active.", 13)
+ 	_text(content, "ANIMATION COVERAGE", 16).add_theme_color_override("font_color", AMBER)
+ 	_text(content, "Action-state feedback is controller-driven. Some effects and actor states use shared frames or procedural presentation rather than separate hand-drawn animation sheets. Not every action has independent artwork.", 13)
+ 	_button(body, "BACK", "close_settings")

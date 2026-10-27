@@ -63,7 +63,10 @@ func run()->void:
     if observed_reach>=0:check(near(observed_reach,expect_reach),label+" actual cone/sweep/path reach")
     records.append({"mode":mode,"case":c.name,"weapon":id,"primary_damage":shot_damage,"actual_hp_loss":1000-e.hp,"scheduled_interval":g.weapon_clocks[0],"projectile_count":projectile_count,"observed_reach":observed_reach,"expected_reach":expect_reach,"stats":{"damage_bonus":g.stats.damage_bonus,"haste":g.stats.haste,"range_bonus":g.stats.range_bonus,"electric_bonus":g.stats.electric_bonus,"melee_bonus":g.stats.melee_bonus,"extra_pellets":g.stats.extra_pellets,"pierce":g.stats.pierce},"rng_after":[g.rng.state,g.loot_rng.state,g.shop_rng.state]})
    await process_frame
+ var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
+ audio_teardown.prepare([g])
  g.queue_free();await process_frame
+ await audio_teardown.finish(self)
  var result:Dictionary={"scope":"Controlled actual-fire/clock/contact matrix, eight pinned weapons, six modifier setups, both modes; not ordinary/native play","checks":checks,"failures":failures,"records":records}
  print(JSON.stringify({"checks":checks,"failures":failures,"cases":records.size()}));var args:=OS.get_cmdline_user_args();if not args.is_empty():FileAccess.open(args[0],FileAccess.WRITE).store_string(JSON.stringify(result,"  ")+"\n")
  quit(0 if failures.is_empty() else 1)

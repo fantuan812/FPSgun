@@ -71,7 +71,10 @@ func run()->void:
    g.ui.show_upgrade(g.choices,g.choice_generation);await process_frame;await process_frame
    ck(buttons("SELECT").size()==3 and buttons("SALVAGE THIS UPGRADE").is_empty(),"legacy optional context retained")
    ck(authority()==before,"legacy render read-only")
+ var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
+ audio_teardown.prepare([g])
  g.queue_free();await process_frame
+ await audio_teardown.finish(self)
  var r:Dictionary={"checks":checks,"failures":failures,"scope":"Controlled UI hierarchy/geometry,20 three-of-six combinations per mode/size, actual button callback and synthetic ui_accept. Native pixels/keyboard/mouse and ordinary acquisition remain separate. No physical controller claim."}
  var args:=OS.get_cmdline_user_args()
  if not args.is_empty():FileAccess.open(args[0],FileAccess.WRITE).store_string(JSON.stringify(r,"  ")+"\n")

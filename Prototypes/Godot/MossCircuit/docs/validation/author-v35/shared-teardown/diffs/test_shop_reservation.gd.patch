@@ -1,0 +1,12 @@
+--- frozen-final/tests/test_shop_reservation.gd
++++ r4/tests/test_shop_reservation.gd
+@@ -147,6 +147,9 @@
+ 					if b.text=="RELEASE":release=b
+ 				check(first_buy!=null and visible_in_scroll(first_buy),"first held purchase visible "+mode+str(size)+str(full))
+ 				check(release!=null and visible_in_scroll(release),"held release visible "+mode+str(size)+str(full))
++	var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
++	audio_teardown.prepare([game])
+ 	game.queue_free();await process_frame
++	await audio_teardown.finish(self)
+ 	print(JSON.stringify({"reservation_passed":passed,"failures":failures,"scope":"Controlled pure stock policy, actual reservation/purchase/lifecycle handlers and headless UI geometry; native acceptance separate."}))
+ 	quit(0 if failures.is_empty() else 1)

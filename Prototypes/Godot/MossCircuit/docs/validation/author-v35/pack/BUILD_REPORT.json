@@ -1,0 +1,84 @@
+{
+  "pass": true,
+  "source_inputs": 696,
+  "source_inputs_unchanged": true,
+  "resource_only": true,
+  "uses_existing_source_import_cache": true,
+  "files": {
+    "linux/MossCircuit.pck": {
+      "bytes": 41438836,
+      "sha256": "99b5232f7d5866ab3152f78990ed6ad37ed55957cf85f1712418c056daa3638d",
+      "mode": "0o644"
+    },
+    "windows/MossCircuit.pck": {
+      "bytes": 41438836,
+      "sha256": "99b5232f7d5866ab3152f78990ed6ad37ed55957cf85f1712418c056daa3638d",
+      "mode": "0o644"
+    },
+    "linux/MossCircuit.x86_64": {
+      "bytes": 71075864,
+      "sha256": "2c78919325d7f29fa7607287c7c1eeac367ea4c94e7b8b6f5f4c6b20492f73d0",
+      "mode": "0o755"
+    },
+    "source-imported-fingerprints.json": {
+      "bytes": 31327,
+      "sha256": "b708500bfe0910a97028bdd7fe1eb7408983418ba4f4529445ce61f0d4150d88",
+      "mode": "0o644"
+    }
+  },
+  "steps": [
+    {
+      "step": "engine-version",
+      "exit": 0,
+      "engine_error": false,
+      "seconds": 0.616,
+      "pass": true
+    },
+    {
+      "step": "python-safety",
+      "exit": 0,
+      "engine_error": false,
+      "seconds": 0.396,
+      "pass": true
+    },
+    {
+      "step": "linux-pack",
+      "exit": 0,
+      "engine_error": false,
+      "seconds": 8.016,
+      "pass": true
+    },
+    {
+      "step": "windows-pack",
+      "exit": 0,
+      "engine_error": false,
+      "seconds": 5.438,
+      "pass": true
+    },
+    {
+      "step": "source-fingerprint",
+      "exit": 0,
+      "engine_error": false,
+      "seconds": 5.069,
+      "pass": true
+    },
+    {
+      "step": "packed-resources",
+      "exit": 0,
+      "engine_error": false,
+      "seconds": 7.588,
+      "pass": true
+    },
+    {
+      "step": "native-headless",
+      "exit": 0,
+      "engine_error": false,
+      "seconds": 2.178,
+      "pass": true
+    }
+  ],
+  "windows_runtime_tested": false,
+  "native_gui_tested": false,
+  "external_actions": [],
+  "scope": "Two identical resource-only preset exports, source-imported dynamic-resource/pixel parity, portable packed checks and unchanged ELF headless startup. Independent native/ordinary verification remains separate."
+}

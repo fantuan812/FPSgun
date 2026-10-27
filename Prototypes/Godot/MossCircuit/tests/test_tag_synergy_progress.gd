@@ -89,7 +89,10 @@ func run()->void:
      check(expected in labels and row.description in labels and row.qualifier in labels,"complete row present "+row.id)
      if row.active and row.matching_weapons.is_empty():check(("Active, but no equipped %s weapon currently benefits." % row.tag) in labels,"active without matching weapon honestly shown")
     check(JSON.stringify([game.build,game.stats,game.shop_offers,game.rng.state])==before,"view/render doesn't mutate authority or RNG")
+ var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
+ audio_teardown.prepare([game])
  game.queue_free();await process_frame
+ await audio_teardown.finish(self)
  check(JSON.stringify(c)==before_catalog,"catalog bytes/data unchanged")
  print(JSON.stringify({"tag_synergy_progress_checks":checks,"failures":failures}))
  quit(0 if failures.is_empty() else 1)

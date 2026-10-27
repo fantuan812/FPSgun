@@ -1,0 +1,16 @@
+{
+  "status": "PROMOTED_PENDING_COLD_IMPORT_AND_FREEZE",
+  "source": "moss-v35-r3",
+  "target": "moss-v35-final",
+  "added": {
+    "tests/independent_feedback_authority.gd": "e7fa6cb8403f614bef508362da5490f936e655c363d825979cc9fd137261b9bd",
+    "tests/independent_feedback_mixer.gd": "1589fcbc740481bbc7cca47901a4dd355d9f6564778a935be3a7d5535b43552e",
+    "tests/independent_feedback_views.gd": "fb7bd2c5df6edcd1b8963ef32707d308c8971b76fbba2ddc502e73d36990688e",
+    "tests/independent_settlement_types.gd": "4c1e7647e6d4741983f7c764129ff5a45ea4099a1822169ad347aecada0456d5",
+    "tests/independent_feedback_pcm.py": "e952b55586056bfb9c772e19035a0b7f357c6d620f56ca30ffab2ede92211d47"
+  },
+  "production128_exact_r3": true,
+  "runner_changes": "Output JSON/raw args only for four newly promoted checks; ALL tests retain original180s/error/marker unchanged",
+  "documentation_only_other_change": "docs/V35_PLAYER_FEEDBACK.md",
+  "unexecuted_correction": "Initial600s proposed runner preserved separately and never executed; QA clarified established final aggregate cap180s, restored before freeze/aggregate."
+}

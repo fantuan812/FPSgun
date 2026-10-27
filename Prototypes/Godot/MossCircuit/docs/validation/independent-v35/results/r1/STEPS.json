@@ -1,0 +1,27 @@
+[
+  {
+    "name": "cold-import",
+    "started_utc": "2026-10-27T01:12:22.308347+00:00",
+    "exit": 0,
+    "seconds": 20.69,
+    "engine_error": false,
+    "pass": true,
+    "log_sha256": "bbc21675436c6179951c91d7fed3107098c06bf6e4b41e1564897b9590729232"
+  },
+  {
+    "name": "authority",
+    "started_utc": "2026-10-27T01:12:42.999305+00:00",
+    "exit": 1,
+    "seconds": 156.804,
+    "engine_error": true,
+    "pass": false,
+    "log_sha256": "d439464e5dcdcde467cd431f44fbcb784bb906d93f96e5c30e64adf9944dbbf7",
+    "script_sha256": "1262d82ecaa882aaced441e2a5a8e29573d9a9d73d70781e5ca9992eccff1093",
+    "checks": 773,
+    "failures": [
+      "invalid boundary does not acquire stop side effect invalid_settlement",
+      "invalid boundary does not acquire stop side effect invalid_settlement"
+    ],
+    "result_sha256": "20773e8deb37e07ada0c7aba3491503f0cc10b9792fa6f8bcde0cd5e48679a51"
+  }
+]

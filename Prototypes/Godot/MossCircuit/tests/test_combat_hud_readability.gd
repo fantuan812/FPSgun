@@ -54,6 +54,9 @@ func run()->void:
 			game.ui.hide_modal();await process_frame
 			check(not game.ui.modal_visible(),"pause dismisses "+context)
 	check(intent_count==0,"read-only display updates do not emit gameplay intents")
+	var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
+	audio_teardown.prepare([game])
 	game.queue_free();await process_frame
+	await audio_teardown.finish(self)
 	print(JSON.stringify({"combat_hud_readability_passed":passed,"failures":failures,"scope":"headless layout/style/read-only checks; native-window readability is separate"}))
 	quit(0 if failures.is_empty() else 1)

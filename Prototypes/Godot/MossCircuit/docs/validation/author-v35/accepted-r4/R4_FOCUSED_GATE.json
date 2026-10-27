@@ -1,0 +1,159 @@
+{
+  "all_pass": true,
+  "steps": [
+    {
+      "case": "cold-import",
+      "exit": 0,
+      "seconds": 19.838040105998516,
+      "error": false,
+      "resource_warning": false,
+      "semantic_marker": true,
+      "teardown_observations": 0,
+      "pass": true
+    },
+    {
+      "case": "test_audio_teardown_predicate.gd",
+      "exit": 0,
+      "seconds": 0.29515421100950334,
+      "error": false,
+      "resource_warning": false,
+      "semantic_marker": true,
+      "teardown_observations": 0,
+      "pass": true
+    },
+    {
+      "case": "independent_charger_lifecycle.gd",
+      "exit": 0,
+      "seconds": 4.035221102007199,
+      "error": false,
+      "resource_warning": false,
+      "semantic_marker": true,
+      "teardown_observations": 1,
+      "pass": true
+    },
+    {
+      "case": "test_game.gd",
+      "exit": 0,
+      "seconds": 2.873823795001954,
+      "error": false,
+      "resource_warning": false,
+      "semantic_marker": true,
+      "teardown_observations": 1,
+      "pass": true
+    },
+    {
+      "case": "test_warden_charge.gd",
+      "exit": 0,
+      "seconds": 2.782069777997094,
+      "error": false,
+      "resource_warning": false,
+      "semantic_marker": true,
+      "teardown_observations": 1,
+      "pass": true
+    },
+    {
+      "case": "independent_annulus_runtime.gd",
+      "exit": 0,
+      "seconds": 6.6465209430025425,
+      "error": false,
+      "resource_warning": false,
+      "semantic_marker": true,
+      "teardown_observations": 1,
+      "pass": true
+    },
+    {
+      "case": "independent_brood_parity.gd",
+      "exit": 0,
+      "seconds": 3.9241127540008165,
+      "error": false,
+      "resource_warning": false,
+      "semantic_marker": true,
+      "teardown_observations": 2,
+      "pass": true
+    },
+    {
+      "case": "independent_weapon_rig.gd",
+      "exit": 0,
+      "seconds": 2.60444560200267,
+      "error": false,
+      "resource_warning": false,
+      "semantic_marker": true,
+      "teardown_observations": 1,
+      "pass": true
+    },
+    {
+      "case": "test_core_summon.gd",
+      "exit": 0,
+      "seconds": 3.515334726005676,
+      "error": false,
+      "resource_warning": false,
+      "semantic_marker": true,
+      "teardown_observations": 1,
+      "pass": true
+    },
+    {
+      "case": "test_player_feedback.gd",
+      "exit": 0,
+      "seconds": 4.1712704569945345,
+      "error": false,
+      "resource_warning": false,
+      "semantic_marker": true,
+      "teardown_observations": 1,
+      "pass": true
+    },
+    {
+      "case": "independent_feedback_views.gd",
+      "exit": 0,
+      "seconds": 3.4174380359909264,
+      "error": false,
+      "resource_warning": false,
+      "semantic_marker": true,
+      "teardown_observations": 1,
+      "pass": true
+    },
+    {
+      "case": "independent_feedback_authority.gd",
+      "exit": 0,
+      "seconds": 168.45393811199756,
+      "error": false,
+      "resource_warning": false,
+      "semantic_marker": true,
+      "teardown_observations": 2,
+      "pass": true
+    },
+    {
+      "case": "independent_settlement_types.gd",
+      "exit": 0,
+      "seconds": 9.600469120006892,
+      "error": false,
+      "resource_warning": false,
+      "semantic_marker": true,
+      "teardown_observations": 2,
+      "pass": true
+    },
+    {
+      "case": "test_primary_brace.gd",
+      "exit": 0,
+      "seconds": 3.0357336650049547,
+      "error": false,
+      "resource_warning": false,
+      "semantic_marker": true,
+      "teardown_observations": 1,
+      "pass": true
+    },
+    {
+      "case": "test_starting_loadouts.gd",
+      "exit": 0,
+      "seconds": 3.2405653150053695,
+      "error": false,
+      "resource_warning": false,
+      "semantic_marker": true,
+      "teardown_observations": 1,
+      "pass": true
+    }
+  ],
+  "inputs": 696,
+  "changed": [],
+  "original119aggregate": "retainedFAIL116/119",
+  "scope": "Focused revised test-onlyfinal disposal; not finalaggregate/pack/physicalaudio"
+}

@@ -1,0 +1,20 @@
+{
+  "status": "FROZEN_TEST_ONLY_R2_TARGETED_PENDING",
+  "inputs": 681,
+  "source_map_sha256": "568ede3d9ba4170e63cd1b3129a932e1ab495127a19cb0a72e58596c3135849e",
+  "production_map_sha256": "95405b1991463acd80ca9d00e1b576aafedf7fe18d0e06d35d6593aa829e99b3",
+  "production_changes": [],
+  "fixture_changes": [
+    "tests/independent_annulus_runtime.gd",
+    "tests/independent_brood_parity.gd",
+    "tests/independent_weapon_rig.gd",
+    "tests/test_core_summon.gd"
+  ],
+  "added": [
+    "tests/test_feedback_teardown.gd",
+    "tests/test_feedback_teardown.gd.uid"
+  ],
+  "manifest_regenerated": true,
+  "held_r1": "Immutable679 source retained; full109/113 rejected with4 teardown errors",
+  "scope": "Four one-line post-disposal waits + active playback/stream weakref regression; no gameplay or production delay"
+}

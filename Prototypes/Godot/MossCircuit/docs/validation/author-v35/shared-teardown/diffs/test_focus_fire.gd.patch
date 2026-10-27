@@ -1,0 +1,11 @@
+--- frozen-final/tests/test_focus_fire.gd
++++ r4/tests/test_focus_fire.gd
+@@ -88,5 +88,8 @@
+ 		setup(mode,"cryo_sprayer",true);var ram:Dictionary=enemy(Vector2(100,0),"charger");ram.ai_state="warning";ram.attack="charge";ram.aim=Vector2.LEFT;g.combat.focus_enemy_id=ram.id;g._fire_weapon("cryo_sprayer",0)
+ 		ck(is_equal_approx(ram.hp,992.8),"tempered focus primary still halves at brace")
+ 		await process_frame
++	var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
++	audio_teardown.prepare([g])
+ 	g.queue_free();await process_frame
++	await audio_teardown.finish(self)
+ 	print(JSON.stringify({"passed":passed,"failures":failures,"scope":"Controlled actual8-path primary/pose, mixed tier, fallback, interception, snapshot and same-step-death checks; not ordinary damage/balance proof."}));quit(0 if failures.is_empty() else 1)

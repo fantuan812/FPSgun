@@ -1,0 +1,432 @@
+{
+  "diagnostic_pass": true,
+  "cases": [
+    {
+      "case": "independent_charger_lifecycle.gd",
+      "exit": 0,
+      "seconds": 7.173085581001942,
+      "error": false,
+      "result": {
+        "after_one_frame": {
+          "player_damage": true,
+          "shield_block": false
+        },
+        "before": {
+          "player_damage": {
+            "class": "AudioStreamWAV",
+            "id": -9223371976003811403,
+            "path": "res://assets/audio/player_damage.wav",
+            "playing": false
+          },
+          "shield_block": {
+            "class": "AudioStreamWAV",
+            "id": -9223371975785707592,
+            "path": "res://assets/audio/shield_block.wav",
+            "playing": false
+          }
+        },
+        "capture_removed": true,
+        "case": "independent_charger_lifecycle.gd",
+        "chunks": [
+          {
+            "elapsed_us": 38,
+            "frames": 0,
+            "peak": 0.0,
+            "pushed": 4096,
+            "refs_released": false
+          },
+          {
+            "elapsed_us": 3308,
+            "frames": 0,
+            "peak": 0.0,
+            "pushed": 4096,
+            "refs_released": true
+          },
+          {
+            "elapsed_us": 14563,
+            "frames": 0,
+            "peak": 0.0,
+            "pushed": 4096,
+            "refs_released": true
+          },
+          {
+            "elapsed_us": 28268,
+            "frames": 0,
+            "peak": 0.0,
+            "pushed": 4096,
+            "refs_released": true
+          },
+          {
+            "elapsed_us": 42233,
+            "frames": 0,
+            "peak": 0.0,
+            "pushed": 4096,
+            "refs_released": true
+          },
+          {
+            "elapsed_us": 56696,
+            "frames": 4096,
+            "peak": 0.0,
+            "pushed": 8192,
+            "refs_released": true
+          },
+          {
+            "elapsed_us": 70057,
+            "frames": 0,
+            "peak": 0.0,
+            "pushed": 8192,
+            "refs_released": true
+          },
+          {
+            "elapsed_us": 83465,
+            "frames": 0,
+            "peak": 0.0,
+            "pushed": 8192,
+            "refs_released": true
+          },
+          {
+            "elapsed_us": 97200,
+            "frames": 0,
+            "peak": 0.0,
+            "pushed": 8192,
+            "refs_released": true
+          },
+          {
+            "elapsed_us": 110998,
+            "frames": 0,
+            "peak": 0.0,
+            "pushed": 8192,
+            "refs_released": true
+          },
+          {
+            "elapsed_us": 124856,
+            "frames": 0,
+            "peak": 0.0,
+            "pushed": 8192,
+            "refs_released": true
+          },
+          {
+            "elapsed_us": 139460,
+            "frames": 0,
+            "peak": 0.0,
+            "pushed": 8192,
+            "refs_released": true
+          },
+          {
+            "elapsed_us": 154735,
+            "frames": 4096,
+            "peak": 0.0,
+            "pushed": 12288,
+            "refs_released": true
+          }
+        ],
+        "complete": true,
+        "deadline_ms": 1000,
+        "discarded": 0,
+        "elapsed_us": 154757,
+        "invalid_samples": 0,
+        "new_pushed": 8192,
+        "node_freed": true,
+        "pre_window_drained": 4096,
+        "required_frames": 6615,
+        "scope": "External disposal-only owner observation; original failed resource identities for non-reproduced cases remain unknown.",
+        "silent_frames": 8192
+      }
+    },
+    {
+      "case": "test_game.gd",
+      "exit": 0,
+      "seconds": 3.1455521909956587,
+      "error": false,
+      "result": {
+        "after_one_frame": {
+          "player_damage": true,
+          "shield_block": false
+        },
+        "before": {
+          "player_damage": {
+            "class": "AudioStreamWAV",
+            "id": -9223371974141540384,
+            "path": "res://assets/audio/player_damage.wav",
+            "playing": false
+          },
+          "shield_block": {
+            "class": "AudioStreamWAV",
+            "id": -9223371973923436573,
+            "path": "res://assets/audio/shield_block.wav",
+            "playing": false
+          }
+        },
+        "capture_removed": true,
+        "case": "test_game.gd",
+        "chunks": [
+          {
+            "elapsed_us": 48,
+            "frames": 0,
+            "peak": 0.0,
+            "pushed": 4096,
+            "refs_released": false
+          },
+          {
+            "elapsed_us": 1429,
+            "frames": 0,
+            "peak": 0.0,
+            "pushed": 4096,
+            "refs_released": true
+          },
+          {
+            "elapsed_us": 7606,
+            "frames": 0,
+            "peak": 0.0,
+            "pushed": 4096,
+            "refs_released": true
+          },
+          {
+            "elapsed_us": 21395,
+            "frames": 0,
+            "peak": 0.0,
+            "pushed": 4096,
+            "refs_released": true
+          },
+          {
+            "elapsed_us": 35092,
+            "frames": 0,
+            "peak": 0.0,
+            "pushed": 4096,
+            "refs_released": true
+          },
+          {
+            "elapsed_us": 49165,
+            "frames": 0,
+            "peak": 0.0,
+            "pushed": 4096,
+            "refs_released": true
+          },
+          {
+            "elapsed_us": 63112,
+            "frames": 0,
+            "peak": 0.0,
+            "pushed": 4096,
+            "refs_released": true
+          },
+          {
+            "elapsed_us": 76635,
+            "frames": 0,
+            "peak": 0.0,
+            "pushed": 4096,
+            "refs_released": true
+          },
+          {
+            "elapsed_us": 91549,
+            "frames": 4096,
+            "peak": 0.0,
+            "pushed": 8192,
+            "refs_released": true
+          },
+          {
+            "elapsed_us": 104823,
+            "frames": 0,
+            "peak": 0.0,
+            "pushed": 8192,
+            "refs_released": true
+          },
+          {
+            "elapsed_us": 117964,
+            "frames": 0,
+            "peak": 0.0,
+            "pushed": 8192,
+            "refs_released": true
+          },
+          {
+            "elapsed_us": 131806,
+            "frames": 0,
+            "peak": 0.0,
+            "pushed": 8192,
+            "refs_released": true
+          },
+          {
+            "elapsed_us": 145570,
+            "frames": 0,
+            "peak": 0.0,
+            "pushed": 8192,
+            "refs_released": true
+          },
+          {
+            "elapsed_us": 159963,
+            "frames": 0,
+            "peak": 0.0,
+            "pushed": 8192,
+            "refs_released": true
+          },
+          {
+            "elapsed_us": 173338,
+            "frames": 0,
+            "peak": 0.0,
+            "pushed": 8192,
+            "refs_released": true
+          },
+          {
+            "elapsed_us": 187914,
+            "frames": 4096,
+            "peak": 0.0,
+            "pushed": 12288,
+            "refs_released": true
+          }
+        ],
+        "complete": true,
+        "deadline_ms": 1000,
+        "discarded": 0,
+        "elapsed_us": 187932,
+        "invalid_samples": 0,
+        "new_pushed": 8192,
+        "node_freed": true,
+        "pre_window_drained": 4096,
+        "required_frames": 6615,
+        "scope": "External disposal-only owner observation; original failed resource identities for non-reproduced cases remain unknown.",
+        "silent_frames": 8192
+      }
+    },
+    {
+      "case": "test_warden_charge.gd",
+      "exit": 0,
+      "seconds": 3.476644287002273,
+      "error": false,
+      "result": {
+        "after_one_frame": {
+          "player_damage": true,
+          "shield_block": false
+        },
+        "before": {
+          "player_damage": {
+            "class": "AudioStreamWAV",
+            "id": -9223371975970256971,
+            "path": "res://assets/audio/player_damage.wav",
+            "playing": true
+          },
+          "shield_block": {
+            "class": "AudioStreamWAV",
+            "id": -9223371975752153160,
+            "path": "res://assets/audio/shield_block.wav",
+            "playing": false
+          }
+        },
+        "capture_removed": true,
+        "case": "test_warden_charge.gd",
+        "chunks": [
+          {
+            "elapsed_us": 71,
+            "frames": 0,
+            "peak": 0.0,
+            "pushed": 0,
+            "refs_released": false
+          },
+          {
+            "elapsed_us": 1269,
+            "frames": 0,
+            "peak": 0.0,
+            "pushed": 0,
+            "refs_released": false
+          },
+          {
+            "elapsed_us": 7763,
+            "frames": 0,
+            "peak": 0.0,
+            "pushed": 0,
+            "refs_released": false
+          },
+          {
+            "elapsed_us": 22853,
+            "frames": 4096,
+            "peak": 0.111979089677334,
+            "pushed": 4096,
+            "refs_released": false
+          },
+          {
+            "elapsed_us": 35187,
+            "frames": 0,
+            "peak": 0.0,
+            "pushed": 4096,
+            "refs_released": true
+          },
+          {
+            "elapsed_us": 49370,
+            "frames": 0,
+            "peak": 0.0,
+            "pushed": 4096,
+            "refs_released": true
+          },
+          {
+            "elapsed_us": 62881,
+            "frames": 0,
+            "peak": 0.0,
+            "pushed": 4096,
+            "refs_released": true
+          },
+          {
+            "elapsed_us": 76630,
+            "frames": 0,
+            "peak": 0.0,
+            "pushed": 4096,
+            "refs_released": true
+          },
+          {
+            "elapsed_us": 90887,
+            "frames": 0,
+            "peak": 0.0,
+            "pushed": 4096,
+            "refs_released": true
+          },
+          {
+            "elapsed_us": 104156,
+            "frames": 0,
+            "peak": 0.0,
+            "pushed": 4096,
+            "refs_released": true
+          },
+          {
+            "elapsed_us": 119082,
+            "frames": 4096,
+            "peak": 0.0,
+            "pushed": 8192,
+            "refs_released": true
+          },
+          {
+            "elapsed_us": 132359,
+            "frames": 0,
+            "peak": 0.0,
+            "pushed": 8192,
+            "refs_released": true
+          },
+          {
+            "elapsed_us": 145701,
+            "frames": 0,
+            "peak": 0.0,
+            "pushed": 8192,
+            "refs_released": true
+          },
+          {
+            "elapsed_us": 159442,
+            "frames": 0,
+            "peak": 0.0,
+            "pushed": 8192,
+            "refs_released": true
+          }
+        ],
+        "complete": true,
+        "deadline_ms": 1000,
+        "discarded": 0,
+        "elapsed_us": 159493,
+        "invalid_samples": 0,
+        "new_pushed": 8192,
+        "node_freed": true,
+        "pre_window_drained": 0,
+        "required_frames": 6615,
+        "scope": "External disposal-only owner observation; original failed resource identities for non-reproduced cases remain unknown.",
+        "silent_frames": 7680
+      }
+    }
+  ],
+  "source_count": 692,
+  "source_changes": [],
+  "scope": "Current external owner observations only; original119aggregate remains rejected and other2 original resource identities unknown."
+}

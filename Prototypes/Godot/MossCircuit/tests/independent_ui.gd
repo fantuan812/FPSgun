@@ -38,7 +38,10 @@ func run() -> void:
 	check(root.gui_get_focus_owner() != null and root.gui_get_focus_owner().is_visible_in_tree(),"upgrade focus visible")
 	game._take_upgrade(0,game.choice_generation)
 	check(root.gui_get_focus_owner() == null,"playing releases modal focus")
+	var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
+	audio_teardown.prepare([game])
 	game.queue_free()
 	await process_frame
+	await audio_teardown.finish(self)
 	print(JSON.stringify({"independent_ui_passed":passed,"failures":failures,"scope":"headless structure and resources, no visual window"}))
 	quit(0 if failures.is_empty() else 1)

@@ -1,3 +1,15 @@
+# v35 complete resource pack — locally verified, not published
+
+The complete PCK is 41,438,836 bytes, SHA-256 `99b5232f7d5866ab3152f78990ed6ad37ed55957cf85f1712418c056daa3638d`. Both presets match and reuse unchanged Linux ELF `2c78919325d7f29fa7607287c7c1eeac367ea4c94e7b8b6f5f4c6b20492f73d0`; Windows executable retains its historical identity and was not rebuilt or executed. This is not a standalone program, ZIP or delta patch; existing platform files and original licenses are required.
+
+From a checkout containing all chunks: `python Deliveries/MossCircuit/restore_deliveries.py --version v35 --output recovered-v35`. See [exact instructions](../../../../Deliveries/MossCircuit/v35/READ_ME_v35.txt). Close the game, uniquely back up and hash your actual old PCK, verify the new file, then manually replace only adjacent MossCircuit.pck. Start the existing executable normally: release binaries reject --main-pack path overrides. The helper does not install or execute anything and refuses overwrite/unsafe paths; its atomicity is per output file, not a whole-version transaction.
+
+All 68 prior local catalog records remain exact; two v35 records append 14 chunks and instructions. Local v32–v35 publication is not claimed; the last accepted remote remains v31 until separate commit/reachability/readback verification. Calculated Git blob IDs and local files are not remote-delivery proof. No duplicate platform ZIP or user attachment is produced.
+
+Author final 120-command aggregate passed and was independently raw-reviewed. Independent exact-PCK resource/authority/mixer/GUI/settlement and PCM/helper checks passed, with separately scoped native and ordinary observations. The ordinary first-shop run did not establish HP loss or natural Mirror/block; physical output, Windows and full campaign/performance remain unverified. Earlier failed aggregates and startup attempts remain preserved. See [independent evidence](validation/independent-v35/QA_REPORT.md) and [implementation chronology](V35_PLAYER_FEEDBACK.md). File-only v34→v35→v34 backup/restore tests are separately recorded; no old-version gameplay or Git-download claim follows.
+
+---
+
 # v34 GitHub-only complete resource pack — locally verified, not published
 
 The complete PCK is41,405,276 bytes, SHA256 `250ea5966ff7ca35b42a13cd813ba5ff156288cfc97110a411dd73664ccbbe02`. Both presets match and reuse unchanged Linux ELF `2c78919325d7f29fa7607287c7c1eeac367ea4c94e7b8b6f5f4c6b20492f73d0`; Windows EXE retains its historical identity and was not rebuilt or run. This is not a standalone program, ZIP or delta patch. First installation still needs the existing full platform package and licenses.

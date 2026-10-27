@@ -1,0 +1,48 @@
+{
+  "acceptance": "Author focused95/mixer48/Python2 and actual6/24 parity passed; full/independent/native/pack pending",
+  "added": [
+    "assets/audio/player_damage.wav",
+    "assets/audio/player_damage.wav.import",
+    "assets/audio/provenance.json",
+    "assets/audio/shield_block.wav",
+    "assets/audio/shield_block.wav.import",
+    "docs/V35_PLAYER_FEEDBACK.md",
+    "docs/V35_PLAYER_FEEDBACK_CONTRACT.md",
+    "scripts/feedback_audio.gd",
+    "scripts/feedback_audio.gd.uid",
+    "tests/test_feedback_mixer.gd",
+    "tests/test_feedback_mixer.gd.uid",
+    "tests/test_feedback_pcm.py",
+    "tests/test_player_feedback.gd",
+    "tests/test_player_feedback.gd.uid",
+    "tools/generate_feedback_audio.py"
+  ],
+  "art_data_project_export": "All old asset/data/project/export bytes exact",
+  "contract_sha256": "23bdca56bcce0c19ed1934a4f9803f28b1a3def635e42759578f1d1b3f0f01f6",
+  "deleted": [],
+  "inputs": 679,
+  "legacy_test_change": "ui/test_ui.gd narrow UI expectation adaptation; retained failed original",
+  "old_changed": [
+    "MANIFEST.json",
+    "README.md",
+    "docs/DELIVERY.md",
+    "docs/REACTION_COVERAGE.md",
+    "docs/V34_COMBAT_PRIORITY.md",
+    "scripts/main.gd",
+    "ui/moss_ui.gd",
+    "ui/test_ui.gd"
+  ],
+  "pcm_imports": {
+    "assets/audio/player_damage.wav.import": "becf42e81f6cd87f3872cdda27ba20132ee3ff5e13ba5e524d933988b9eef6f3",
+    "assets/audio/shield_block.wav.import": "d70d7ef87a93bbd8e9ef7d939e8143a598a9e95baf8f0ad9e225547a66dc8271"
+  },
+  "production_map_sha256": "95405b1991463acd80ca9d00e1b576aafedf7fe18d0e06d35d6593aa829e99b3",
+  "production_projection": 128,
+  "runtime_production_old_changes": [
+    "scripts/main.gd",
+    "ui/moss_ui.gd"
+  ],
+  "source_map_sha256": "3ed5cc2e9c6fc0e969f2b7af0ae72f2b76a4e559e105d515f7311d391fef8ffc",
+  "status": "HELD_R1_FROZEN_AUTHOR_FULL_PENDING",
+  "timestamp_utc": "2026-10-27T00:53:09.714091+00:00"
+}

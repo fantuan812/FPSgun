@@ -1,0 +1,13 @@
+--- frozen-final/tests/independent_weapon_order.gd
++++ r4/tests/independent_weapon_order.gd
+@@ -155,7 +155,10 @@
+   before=snap();ck(not g._buy(0,obsolete,0) and same(snap(),before),"stale replacement selection cannot address new slot")
+   ck(g._buy(0,g.shop_generation,0) and g.build.weapons==["rail_lance","rivet_gun","orbit_saw","bankshot_driver"],"fresh replacement replaces visibly current slot")
+   await process_frame
++ var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
++ audio_teardown.prepare([g])
+  g.queue_free();await process_frame
++ await audio_teardown.finish(self)
+  var result:Dictionary={"scope":"Controlled contract-level raw transactions, exact declared authority/rig snapshots, all eight weapon IDs, both modes, strict malformed/stale guards and genuine generated shot states. Not ordinary acquisition/native/balance proof.","checks":checks,"failures":failures}
+  var args:=OS.get_cmdline_user_args()
+  if not args.is_empty():FileAccess.open(args[0],FileAccess.WRITE).store_string(JSON.stringify(result,"  ")+"\n")

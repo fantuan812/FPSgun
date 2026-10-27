@@ -1,0 +1,13 @@
+--- frozen-final/tests/independent_v4.gd
++++ r4/tests/independent_v4.gd
+@@ -141,7 +141,10 @@
+ 	check(b.last_source == "chain","chain killed target not reattributed by orbit")
+ 	g._simulate(.01)
+ 	check(g.pickups.filter(func(p):return p.get("source","") == "energy").size() == 1,"orbit chain kills only one primary orb")
++	var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
++	audio_teardown.prepare([g])
+ 	g.queue_free()
+ 	await process_frame
++	await audio_teardown.finish(self)
+ 	print(JSON.stringify({"independent_v4_passed":passed,"failures":failures}))
+ 	quit(0 if failures.is_empty() else 1)

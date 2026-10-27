@@ -1,0 +1,10 @@
+{
+  "status": "ORACLE_FIXTURE_RESCOPED_NOT_PRODUCT_FIXED",
+  "original_script_sha256": "1262d82ecaa882aaced441e2a5a8e29573d9a9d73d70781e5ca9992eccff1093",
+  "corrected_script_sha256": "e7fa6cb8403f614bef508362da5490f936e655c363d825979cc9fd137261b9bd",
+  "rejected_result": "results/r1/authority.json",
+  "rejected_log": "results/r1/authority.log",
+  "only_change": "InvalidMode now supplies a schema-correct but invalid negative-coins settlement. This targets the existing safe rejection path for v35 no-stop validation.",
+  "preserved_finding": "unrelated-findings/INVALID_RESOLUTION_FINDING.json retains the real unchanged-v34 malformed terminal:String issue and minimal repro. No assertion removed, source changed or previous execution called PASS.",
+  "prior_terminal": "773 checks, two invalid-settlement failures plus engine script errors; all681 inputs unchanged."
+}

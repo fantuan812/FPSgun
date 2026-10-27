@@ -41,6 +41,9 @@ func run_checks()->void:
 		if a.assets.has(kind+"_death"):check(e.sprite.frame==15,"last frame shown before recycle "+kind)
 		a.advance(.002)
 		check(not a.actors.has(e.id),"corpse recycled after duration "+kind)
+	var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
+	audio_teardown.prepare([g])
 	g.queue_free();await process_frame
+	await audio_teardown.finish(self)
 	print("CONTACT_ENEMY_ACTIONS ",passed," passed; failures=",failures)
 	quit(0 if failures.is_empty() else 1)

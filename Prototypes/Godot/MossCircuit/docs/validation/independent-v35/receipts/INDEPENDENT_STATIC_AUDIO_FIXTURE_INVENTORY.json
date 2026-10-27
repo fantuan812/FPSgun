@@ -1,0 +1,1581 @@
+[
+  {
+    "path": "tests/test_brood_actions.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 9,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://other.png",
+      "res://scenes/main.tscn",
+      "res://scripts/actor_director.gd"
+    ]
+  },
+  {
+    "path": "tests/independent_vfx.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 1,
+    "simulate": 2,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn"
+    ]
+  },
+  {
+    "path": "tests/independent_focus_authority.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 0,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn",
+      "res://scripts/gameplay/combat_focus.gd",
+      "res://scripts/gameplay/combat_runtime.gd"
+    ]
+  },
+  {
+    "path": "tests/independent_starting_loadout_views.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 0,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn"
+    ]
+  },
+  {
+    "path": "tests/test_weapon_mounts.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 0,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn",
+      "res://scripts/weapon_rig.gd"
+    ]
+  },
+  {
+    "path": "tests/test_feedback_mixer.gd",
+    "scene": 1,
+    "audio": 5,
+    "hurt": 9,
+    "simulate": 0,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn"
+    ]
+  },
+  {
+    "path": "tests/test_player_feedback.gd",
+    "scene": 1,
+    "audio": 17,
+    "hurt": 12,
+    "simulate": 0,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://assets/audio/provenance.json",
+      "res://scenes/main.tscn",
+      "res://scripts/feedback_audio.gd"
+    ]
+  },
+  {
+    "path": "tests/independent_shop.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 0,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://data/catalog.json",
+      "res://scenes/main.tscn",
+      "res://scripts/rules.gd"
+    ]
+  },
+  {
+    "path": "tests/independent_feedback_mixer.gd",
+    "scene": 1,
+    "audio": 14,
+    "hurt": 7,
+    "simulate": 0,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn"
+    ]
+  },
+  {
+    "path": "tests/test_warden_reactions.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 7,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn"
+    ]
+  },
+  {
+    "path": "tests/independent_reservation_runtime.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 1,
+    "simulate": 0,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn",
+      "res://scripts/modes/arena_mode.gd",
+      "res://scripts/rules.gd"
+    ]
+  },
+  {
+    "path": "tests/test_spitter_actions.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 7,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn"
+    ]
+  },
+  {
+    "path": "tests/test_core_reactions.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 7,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn"
+    ]
+  },
+  {
+    "path": "tests/independent_reservation_records.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 0,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://data/balance.json",
+      "res://data/catalog.json",
+      "res://data/encounters.json",
+      "res://data/room_encounters.json",
+      "res://scenes/main.tscn",
+      "res://scripts/gameplay/shop_reservation.gd",
+      "res://scripts/rules.gd"
+    ]
+  },
+  {
+    "path": "tests/independent_cryo_contract.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 0,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn",
+      "res://scripts/gameplay/combat_runtime.gd",
+      "res://scripts/rules.gd"
+    ]
+  },
+  {
+    "path": "tests/test_shop_offer_visibility.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 0,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn"
+    ]
+  },
+  {
+    "path": "tests/independent_tag_authority.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 0,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn",
+      "res://scripts/rules.gd"
+    ]
+  },
+  {
+    "path": "tests/test_weapon_tempering.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 0,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn",
+      "res://scripts/gameplay/weapon_tempering.gd",
+      "res://scripts/rules.gd",
+      "res://scripts/weapon_readout.gd"
+    ]
+  },
+  {
+    "path": "tests/test_combat_focus.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 0,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn",
+      "res://scripts/gameplay/combat_focus.gd",
+      "res://scripts/gameplay/combat_runtime.gd",
+      "res://scripts/rules.gd"
+    ]
+  },
+  {
+    "path": "tests/independent_weapon_order.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 0,
+    "queue_free": 2,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn",
+      "res://scripts/gameplay/combat_runtime.gd",
+      "res://scripts/rules.gd"
+    ]
+  },
+  {
+    "path": "tests/test_vfx.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 1,
+    "simulate": 0,
+    "queue_free": 2,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://data/vfx.json",
+      "res://scenes/main.tscn",
+      "res://scripts/vfx_layer.gd"
+    ]
+  },
+  {
+    "path": "tests/test_core_summon.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 9,
+    "queue_free": 2,
+    "free": 0,
+    "quit": 2,
+    "sleep250": true,
+    "source_ref": [
+      "res://scenes/main.tscn"
+    ]
+  },
+  {
+    "path": "tests/test_starting_loadouts.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 0,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://data/catalog.json",
+      "res://data/starting_loadouts.json",
+      "res://scenes/main.tscn",
+      "res://scripts/gameplay/starting_loadouts.gd",
+      "res://scripts/rules.gd"
+    ]
+  },
+  {
+    "path": "tests/independent_crawler_hit_pipeline.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 0,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn"
+    ]
+  },
+  {
+    "path": "tests/test_input_lifecycle.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 0,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn"
+    ]
+  },
+  {
+    "path": "tests/independent_focus_views.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 0,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn",
+      "res://scripts/gameplay/field_layout.gd"
+    ]
+  },
+  {
+    "path": "tests/test_weapon_order.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 0,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn",
+      "res://scripts/rules.gd"
+    ]
+  },
+  {
+    "path": "tests/independent_resolution.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 0,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn"
+    ]
+  },
+  {
+    "path": "tests/test_shop_reservation.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 0,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn",
+      "res://scripts/gameplay/shop_reservation.gd",
+      "res://scripts/rules.gd"
+    ]
+  },
+  {
+    "path": "tests/test_cryo_build.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 0,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn",
+      "res://scripts/effects.gd",
+      "res://scripts/enemy_ai.gd",
+      "res://scripts/gameplay/target_status.gd",
+      "res://scripts/rules.gd"
+    ]
+  },
+  {
+    "path": "tests/test_charger_actions.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 2,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn",
+      "res://scripts/actor_director.gd"
+    ]
+  },
+  {
+    "path": "tests/independent_v2.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 1,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn",
+      "res://scripts/rules.gd"
+    ]
+  },
+  {
+    "path": "tests/independent_weapon_authority.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 0,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn",
+      "res://scripts/gameplay/combat_runtime.gd"
+    ]
+  },
+  {
+    "path": "tests/independent_v5.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 3,
+    "simulate": 2,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn"
+    ]
+  },
+  {
+    "path": "tests/test_tempered_combat.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 0,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn",
+      "res://scripts/gameplay/combat_runtime.gd",
+      "res://scripts/gameplay/target_status.gd",
+      "res://scripts/gameplay/weapon_tempering.gd",
+      "res://scripts/rules.gd"
+    ]
+  },
+  {
+    "path": "tests/test_builds.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 1,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://data/balance.json",
+      "res://data/catalog.json",
+      "res://scenes/main.tscn",
+      "res://scripts/rules.gd"
+    ]
+  },
+  {
+    "path": "tests/test_hud_layout.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 0,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn"
+    ]
+  },
+  {
+    "path": "tests/independent_modifier_compatibility.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 0,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn",
+      "res://scripts/gameplay/combat_runtime.gd",
+      "res://scripts/gameplay/target_status.gd",
+      "res://scripts/rules.gd"
+    ]
+  },
+  {
+    "path": "tests/test_encounters.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 1,
+    "simulate": 2,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn",
+      "res://scripts/enemy_ai.gd"
+    ]
+  },
+  {
+    "path": "tests/independent_bankshot_integration.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 0,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn",
+      "res://scripts/gameplay/combat_runtime.gd",
+      "res://scripts/rules.gd"
+    ]
+  },
+  {
+    "path": "tests/independent_spitter_assets.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 4,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn"
+    ]
+  },
+  {
+    "path": "tests/independent_tag_views.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 0,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn",
+      "res://scripts/rules.gd"
+    ]
+  },
+  {
+    "path": "tests/independent_focus_combat.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 0,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn",
+      "res://scripts/gameplay/combat_runtime.gd",
+      "res://scripts/rules.gd",
+      "res://scripts/weapon_rig.gd"
+    ]
+  },
+  {
+    "path": "tests/independent_weapon_readouts.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 0,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn"
+    ]
+  },
+  {
+    "path": "tests/independent_weapon_rig.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 1,
+    "simulate": 0,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": true,
+    "source_ref": [
+      "res://assets/weapon_mounts/clean_hero_attack.png",
+      "res://scenes/main.tscn",
+      "res://scripts/rules.gd",
+      "res://scripts/weapon_rig.gd"
+    ]
+  },
+  {
+    "path": "tests/independent_feedback_views.gd",
+    "scene": 1,
+    "audio": 9,
+    "hurt": 0,
+    "simulate": 0,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn"
+    ]
+  },
+  {
+    "path": "tests/independent_modes.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 0,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn"
+    ]
+  },
+  {
+    "path": "tests/independent_tempering_views.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 0,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn",
+      "res://scripts/rules.gd"
+    ]
+  },
+  {
+    "path": "tests/independent_feedback_authority.gd",
+    "scene": 1,
+    "audio": 22,
+    "hurt": 7,
+    "simulate": 0,
+    "queue_free": 10,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn",
+      "res://scripts/feedback_audio.gd",
+      "res://scripts/gameplay/combat_runtime.gd",
+      "res://scripts/modes/arena_mode.gd"
+    ]
+  },
+  {
+    "path": "tests/test_modes.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 4,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://data/encounters.json",
+      "res://data/room_encounters.json",
+      "res://scenes/main.tscn",
+      "res://scripts/gameplay/run_flow.gd",
+      "res://scripts/modes/room_mode.gd"
+    ]
+  },
+  {
+    "path": "tests/independent_tempering_authority.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 0,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn",
+      "res://scripts/gameplay/weapon_tempering.gd",
+      "res://scripts/rules.gd"
+    ]
+  },
+  {
+    "path": "tests/independent_qa.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 1,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn"
+    ]
+  },
+  {
+    "path": "tests/independent_reservation_views.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 0,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn",
+      "res://scripts/rules.gd"
+    ]
+  },
+  {
+    "path": "tests/test_tag_synergy_progress.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 0,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://data/balance.json",
+      "res://data/catalog.json",
+      "res://scenes/main.tscn",
+      "res://scripts/rules.gd"
+    ]
+  },
+  {
+    "path": "tests/independent_charger_lifecycle.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 5,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn"
+    ]
+  },
+  {
+    "path": "tests/independent_brood_events.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 23,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn"
+    ]
+  },
+  {
+    "path": "tests/test_combat_hud_readability.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 0,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn"
+    ]
+  },
+  {
+    "path": "tests/test_actor_actions.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 1,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn"
+    ]
+  },
+  {
+    "path": "tests/independent_core_reactions.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 0,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn"
+    ]
+  },
+  {
+    "path": "tests/test_telegraph_readability.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 0,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn",
+      "res://scripts/telegraph_layer.gd"
+    ]
+  },
+  {
+    "path": "tests/test_focus_fire.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 0,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn",
+      "res://scripts/gameplay/combat_focus.gd",
+      "res://scripts/gameplay/combat_runtime.gd",
+      "res://scripts/rules.gd"
+    ]
+  },
+  {
+    "path": "tests/independent_feedback_shop.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 0,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn",
+      "res://scripts/gameplay/character_motor.gd",
+      "res://scripts/rules.gd"
+    ]
+  },
+  {
+    "path": "tests/test_feedback_diode.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 1,
+    "simulate": 0,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn",
+      "res://scripts/effects.gd",
+      "res://scripts/gameplay/character_motor.gd",
+      "res://scripts/gameplay/combat_runtime.gd",
+      "res://scripts/rules.gd"
+    ]
+  },
+  {
+    "path": "tests/independent_v3.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 1,
+    "simulate": 6,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn",
+      "res://scripts/enemy_ai.gd"
+    ]
+  },
+  {
+    "path": "tests/independent_tempering_combat.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 0,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn",
+      "res://scripts/gameplay/character_motor.gd",
+      "res://scripts/gameplay/combat_runtime.gd"
+    ]
+  },
+  {
+    "path": "tests/test_weapon_readout.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 0,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://data/balance.json",
+      "res://data/catalog.json",
+      "res://scenes/main.tscn",
+      "res://scripts/rules.gd",
+      "res://scripts/weapon_readout.gd"
+    ]
+  },
+  {
+    "path": "tests/independent_v4.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 3,
+    "simulate": 5,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn"
+    ]
+  },
+  {
+    "path": "tests/independent_weapon_order_views.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 0,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn"
+    ]
+  },
+  {
+    "path": "tests/independent_salvage_runtime.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 0,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn",
+      "res://scripts/modes/arena_mode.gd",
+      "res://scripts/rules.gd"
+    ]
+  },
+  {
+    "path": "tests/independent_brood_assets.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 7,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://assets/enemies/crawler.png",
+      "res://scenes/main.tscn"
+    ]
+  },
+  {
+    "path": "tests/independent_crawler_flanker.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 2,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn"
+    ]
+  },
+  {
+    "path": "tests/independent_enemy_ui.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 0,
+    "queue_free": 1,
+    "free": 1,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://assets/enemies/",
+      "res://assets/enemies/enemy_manifest.json",
+      "res://scenes/main.tscn",
+      "res://scripts/art.gd"
+    ]
+  },
+  {
+    "path": "tests/test_settlement_levels.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 1,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn",
+      "res://scripts/rules.gd"
+    ]
+  },
+  {
+    "path": "tests/independent_brood_parity.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 0,
+    "queue_free": 2,
+    "free": 0,
+    "quit": 1,
+    "sleep250": true,
+    "source_ref": [
+      "res://scenes/main.tscn"
+    ]
+  },
+  {
+    "path": "tests/independent_charger_assets.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 0,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn"
+    ]
+  },
+  {
+    "path": "tests/independent_feedback_runtime.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 0,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn",
+      "res://scripts/effects.gd",
+      "res://scripts/gameplay/character_motor.gd",
+      "res://scripts/gameplay/combat_runtime.gd",
+      "res://scripts/rules.gd"
+    ]
+  },
+  {
+    "path": "tests/independent_ui.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 0,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn"
+    ]
+  },
+  {
+    "path": "tests/test_game.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 2,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://assets/beetle_walk.png",
+      "res://assets/hero_walk.png",
+      "res://data/balance.json",
+      "res://scenes/main.tscn",
+      "res://scripts/art.gd",
+      "res://scripts/rules.gd"
+    ]
+  },
+  {
+    "path": "tests/independent_tempering_hint.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 0,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn"
+    ]
+  },
+  {
+    "path": "tests/independent_cryo_shop.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 0,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn",
+      "res://scripts/rules.gd"
+    ]
+  },
+  {
+    "path": "tests/test_warden_charge.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 7,
+    "queue_free": 2,
+    "free": 0,
+    "quit": 2,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn"
+    ]
+  },
+  {
+    "path": "tests/test_feedback_teardown.gd",
+    "scene": 0,
+    "audio": 1,
+    "hurt": 0,
+    "simulate": 0,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scripts/feedback_audio.gd"
+    ]
+  },
+  {
+    "path": "tests/test_expansion.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 0,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://data/catalog.json",
+      "res://scenes/main.tscn",
+      "res://scripts/effects.gd",
+      "res://scripts/rules.gd"
+    ]
+  },
+  {
+    "path": "tests/independent_spitter_parity.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 0,
+    "queue_free": 2,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn"
+    ]
+  },
+  {
+    "path": "tests/independent_actions.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 1,
+    "simulate": 6,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn"
+    ]
+  },
+  {
+    "path": "tests/independent_annulus_runtime.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 0,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": true,
+    "source_ref": [
+      "res://scenes/main.tscn",
+      "res://scripts/gameplay/character_motor.gd",
+      "res://scripts/gameplay/combat_runtime.gd"
+    ]
+  },
+  {
+    "path": "tests/test_bankshot_build.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 0,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://docs/V23_CATALOG_ADDITIONS.json",
+      "res://scenes/main.tscn",
+      "res://scripts/gameplay/boundary_shot.gd",
+      "res://scripts/gameplay/target_status.gd",
+      "res://scripts/rules.gd"
+    ]
+  },
+  {
+    "path": "tests/test_upgrade_salvage.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 0,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn",
+      "res://scripts/rules.gd"
+    ]
+  },
+  {
+    "path": "tests/independent_charger_gameplay_parity.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 0,
+    "queue_free": 2,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn"
+    ]
+  },
+  {
+    "path": "tests/test_effects.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 2,
+    "simulate": 0,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn",
+      "res://scripts/effects.gd"
+    ]
+  },
+  {
+    "path": "tests/independent_warden_reactions.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 0,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn"
+    ]
+  },
+  {
+    "path": "tests/independent_salvage_views.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 0,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn",
+      "res://scripts/rules.gd"
+    ]
+  },
+  {
+    "path": "tests/independent_starting_loadouts.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 0,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn",
+      "res://scripts/gameplay/combat_runtime.gd",
+      "res://scripts/gameplay/starting_loadouts.gd",
+      "res://scripts/rules.gd",
+      "res://scripts/weapon_readout.gd"
+    ]
+  },
+  {
+    "path": "tests/test_primary_brace.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 0,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://data/encounters.json",
+      "res://scenes/main.tscn",
+      "res://scripts/enemy_ai.gd",
+      "res://scripts/gameplay/combat_runtime.gd",
+      "res://scripts/gameplay/primary_defense.gd"
+    ]
+  },
+  {
+    "path": "tests/test_contact_enemy_actions.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 1,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn"
+    ]
+  },
+  {
+    "path": "tests/test_resolution_validation.gd",
+    "scene": 1,
+    "audio": 4,
+    "hurt": 0,
+    "simulate": 0,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": true,
+    "source_ref": [
+      "res://scenes/main.tscn",
+      "res://scripts/gameplay/run_flow.gd"
+    ]
+  },
+  {
+    "path": "tests/independent_brace_runtime.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 0,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn",
+      "res://scripts/gameplay/boundary_shot.gd",
+      "res://scripts/gameplay/character_motor.gd",
+      "res://scripts/gameplay/combat_runtime.gd",
+      "res://scripts/rules.gd"
+    ]
+  },
+  {
+    "path": "tests/independent_room_boundaries.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 4,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn"
+    ]
+  },
+  {
+    "path": "tests/test_brood_pulse.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 0,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://data/encounters.json",
+      "res://scenes/main.tscn",
+      "res://scripts/enemy_ai.gd",
+      "res://scripts/gameplay/annulus_geometry.gd",
+      "res://scripts/gameplay/character_motor.gd",
+      "res://scripts/gameplay/combat_runtime.gd"
+    ]
+  },
+  {
+    "path": "tests/independent_spitter_events.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 11,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://scenes/main.tscn"
+    ]
+  },
+  {
+    "path": "tests/test_modifier_copy.gd",
+    "scene": 1,
+    "audio": 0,
+    "hurt": 0,
+    "simulate": 0,
+    "queue_free": 1,
+    "free": 0,
+    "quit": 1,
+    "sleep250": false,
+    "source_ref": [
+      "res://data/balance.json",
+      "res://data/catalog.json",
+      "res://docs/V22_MODIFIER_COPY.json",
+      "res://docs/V23_CATALOG_ADDITIONS.json",
+      "res://docs/V26_CATALOG_ADDITIONS.json",
+      "res://scenes/main.tscn",
+      "res://scripts/rules.gd",
+      "res://tests/fixtures/v21_modifier_baseline.json"
+    ]
+  },
+  {
+    "path": "tests/independent_settlement_types.gd",
+    "scene": 2,
+    "audio": 5,
+    "hurt": 0,
+    "simulate": 0,
+    "queue_free": 2,
+    "free": 0,
+    "quit": 1,
+    "sleep250": true,
+    "source_ref": [
+      "res://scenes/main.tscn",
+      "res://scripts/gameplay/run_flow.gd"
+    ]
+  }
+]

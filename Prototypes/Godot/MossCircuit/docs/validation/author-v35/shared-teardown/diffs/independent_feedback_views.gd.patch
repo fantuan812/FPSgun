@@ -1,0 +1,13 @@
+--- frozen-final/tests/independent_feedback_views.gd
++++ r4/tests/independent_feedback_views.gd
+@@ -81,7 +81,10 @@
+     click(button("BACK"));await process_frame;await process_frame
+     ck(g.state==source,"BACK correct actual route "+source)
+     ck(events.is_empty(),"navigation never sound")
++ var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
++ audio_teardown.prepare([g])
+  g.queue_free();await process_frame
++ await audio_teardown.finish(self)
+  var result:Dictionary={"checks":checks,"failures":failures,"samples":samples,"scope":"Actual GUI controls with synthetic mouse/ui_accept, title and paused routes, both modes at 960/1280. Not native hardware mouse, controller, WM focus, physical listening or audio mix proof."}
+  var args:=OS.get_cmdline_user_args()
+  if not args.is_empty():FileAccess.open(args[0],FileAccess.WRITE).store_string(JSON.stringify(result,"  ")+"\n")

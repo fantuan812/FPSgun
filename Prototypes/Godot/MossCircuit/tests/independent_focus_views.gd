@@ -89,7 +89,10 @@ func run()->void:
     ck(g.ui.hud.get_global_rect().position.x>=0 and g.ui.hud.get_global_rect().end.x<=visible.end.x+.1,"HUD within viewport width")
     samples.append({"mode":mode,"window":[size.x,size.y],"visible":[visible.size.x,visible.size.y],"edge":edge,"focus":g.combat.focus_enemy_id,"objective":g.mode_status.objective.text,"transform":str(g.get_global_transform_with_canvas())})
     await process_frame
+ var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
+ audio_teardown.prepare([g])
  g.queue_free();await process_frame
+ await audio_teardown.finish(self)
  var result:Dictionary={"checks":checks,"failures":failures,"samples":samples,"scope":"Synthetic viewport-local mouse events dispatched through real GUI then unhandled input; actual controls/camera and both modes at three window sizes. Physical mouse and letterbox host coordinates require separate native proof."}
  var args:=OS.get_cmdline_user_args()
  if not args.is_empty():FileAccess.open(args[0],FileAccess.WRITE).store_string(JSON.stringify(result,"  ")+"\n")

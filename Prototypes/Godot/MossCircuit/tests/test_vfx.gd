@@ -92,7 +92,10 @@ func run() -> void:
 	game._vfx("hit_spark",Vector2.ZERO)
 	game._title()
 	check(game.vfx.active.is_empty(),"title clears visual leftovers")
+	var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
+	audio_teardown.prepare([game, layer])
 	game.queue_free();layer.queue_free()
 	await process_frame
+	await audio_teardown.finish(self)
 	print(JSON.stringify({"passed":passed,"failures":failures,"pending_assets":pending,"scope":"v6 pure presentation pipeline"}))
 	quit(0 if failures.is_empty() else 1)

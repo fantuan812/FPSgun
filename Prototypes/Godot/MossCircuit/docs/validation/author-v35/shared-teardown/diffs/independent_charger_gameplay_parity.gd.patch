@@ -1,0 +1,13 @@
+--- frozen-final/tests/independent_charger_gameplay_parity.gd
++++ r4/tests/independent_charger_gameplay_parity.gd
+@@ -40,7 +40,10 @@
+ 		check(a.kills==1 and b.kills==1,"one real charger death reward per mode "+mode_id)
+ 		a._title();b._title()
+ 		check(a.actor_anim.corpses.is_empty() and b.actor_anim.corpses.is_empty(),"title clears both authored/procedural corpse pools "+mode_id)
++		var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
++		audio_teardown.prepare([a, b])
+ 		a.queue_free();b.queue_free();await process_frame
++		await audio_teardown.finish(self)
+ 	print("INDEPENDENT CHARGER PARITY: ",passed," passed; ",failures.size()," failed")
+ 	for failure in failures:push_error(failure)
+ 	quit(0 if failures.is_empty() else 1)

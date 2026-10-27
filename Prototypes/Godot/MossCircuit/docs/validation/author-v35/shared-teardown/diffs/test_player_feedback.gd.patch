@@ -1,0 +1,12 @@
+--- frozen-final/tests/test_player_feedback.gd
++++ r4/tests/test_player_feedback.gd
+@@ -88,5 +88,9 @@
+ 			g._hurt(7);g.hurt_clock=0;g._hurt(13)
+ 			var trace:Dictionary=state_snapshot();trace.effects[0]-=origin_epoch;traces.append(trace)
+ 		ck(traces[0]==traces[1],"enabled/muted authority exact parity "+mode)
++	var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
++	audio_teardown.prepare([g])
++	source.clear() # Release this fixture's retained PCM references after its last assertion.
+ 	g.queue_free();await process_frame
++	await audio_teardown.finish(self)
+ 	print(JSON.stringify({"passed":passed,"failures":failures,"scope":"Author controlled requests, resources, settings and lifecycle; actual mixer and independent authority remain separate."}));quit(0 if failures.is_empty() else 1)

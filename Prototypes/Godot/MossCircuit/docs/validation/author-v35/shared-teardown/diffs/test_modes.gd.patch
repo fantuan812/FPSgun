@@ -1,0 +1,12 @@
+--- frozen-final/tests/test_modes.gd
++++ r4/tests/test_modes.gd
+@@ -82,6 +82,9 @@
+ 			if weapon=="orbit_saw":fired=target.hp<hp
+ 			if weapon=="shock_mortar":fired=g.pending_blasts.size()==1
+ 			check(fired,"same combat fires "+weapon+" in "+mode_id)
++	var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
++	audio_teardown.prepare([g])
+ 	g.queue_free();await process_frame
++	await audio_teardown.finish(self)
+ 	print(JSON.stringify({"passed":passed,"failures":failures,"scope":"v9 shared combat, finite mode and lifecycle"}))
+ 	quit(0 if failures.is_empty() else 1)

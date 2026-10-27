@@ -1,0 +1,86 @@
+{
+  "status": "PASS",
+  "steps": [
+    {
+      "step": "independent-source-oracle",
+      "exit": 0,
+      "seconds": 7.218,
+      "engine_error": false,
+      "resource_warning": false,
+      "pass": true
+    },
+    {
+      "step": "packed-resources",
+      "exit": 0,
+      "seconds": 9.136,
+      "engine_error": false,
+      "resource_warning": false,
+      "pass": true
+    },
+    {
+      "step": "packed-authority",
+      "exit": 0,
+      "seconds": 140.343,
+      "engine_error": false,
+      "resource_warning": false,
+      "pass": true
+    },
+    {
+      "step": "packed-mixer",
+      "exit": 0,
+      "seconds": 11.396,
+      "engine_error": false,
+      "resource_warning": false,
+      "pass": true
+    },
+    {
+      "step": "packed-views",
+      "exit": 0,
+      "seconds": 3.475,
+      "engine_error": false,
+      "resource_warning": false,
+      "pass": true
+    },
+    {
+      "step": "packed-settlement-types",
+      "exit": 0,
+      "seconds": 8.98,
+      "engine_error": false,
+      "resource_warning": false,
+      "pass": true
+    },
+    {
+      "step": "independent-pcm",
+      "exit": 0,
+      "seconds": 0.067,
+      "engine_error": false,
+      "resource_warning": false,
+      "pass": true
+    },
+    {
+      "step": "python-safety",
+      "exit": 0,
+      "seconds": 0.328,
+      "engine_error": false,
+      "resource_warning": false,
+      "pass": true
+    }
+  ],
+  "source_inputs": 696,
+  "input_changes": [],
+  "source_execution_scope": "Author full120 aggregate independently raw-audited; QA selected source fingerprint and exact packed routes. No independent full120 replay.",
+  "source_oracle_exact": true,
+  "both_preset_packs_equal": true,
+  "pck": {
+    "bytes": 41438836,
+    "sha256": "99b5232f7d5866ab3152f78990ed6ad37ed55957cf85f1712418c056daa3638d"
+  },
+  "elf": {
+    "bytes": 71075864,
+    "sha256": "2c78919325d7f29fa7607287c7c1eeac367ea4c94e7b8b6f5f4c6b20492f73d0"
+  },
+  "ordinary_gui_pending": true,
+  "physical_audibility_verified": false,
+  "source_and_packed_internal_dummy_capture_only": true,
+  "windows_executed": false
+}

@@ -80,8 +80,11 @@ func run() -> void:
 		g._finish(true)
 		g._on_intent("new_seed",{})
 		check(g._view().mode_id == id and g.run_seed == 9348 and g.state == "playing","new seed retains mode " + id)
+	var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
+	audio_teardown.prepare([g])
 	g.queue_free()
 	await process_frame
+	await audio_teardown.finish(self)
 	print("INDEPENDENT MODES: ",passed," passed; ",failures.size()," failed")
 	for failure in failures:push_error(failure)
 	quit(0 if failures.is_empty() else 1)

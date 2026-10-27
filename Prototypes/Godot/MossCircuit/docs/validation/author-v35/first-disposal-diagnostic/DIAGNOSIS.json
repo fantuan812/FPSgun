@@ -1,0 +1,51 @@
+{
+  "status": "DIAGNOSIS_CONFIRMED_NO_SOURCE_REVISION",
+  "baseline_full": "REJECTED 109/113; four exit resource errors, semantic assertions passed",
+  "resource": "player_damage.wav AudioStreamWAV and AudioStreamPlaybackWAV, refcount1 at shutdown",
+  "control": "Unchanged held audio helper, node freed, unused block resource released; hurt resource retained one frame then freed after bounded fresh mixer drain",
+  "drain": {
+    "block_alive_after": false,
+    "block_alive_one_frame": false,
+    "discarded": 0,
+    "driver": "Dummy",
+    "frames": 12288,
+    "helper": "unchanged held R1",
+    "hurt_alive_after": false,
+    "hurt_alive_one_frame": true,
+    "mode": "drain",
+    "node_freed": true,
+    "peak": 0.0,
+    "pushed_after": 12288,
+    "pushed_before": 0,
+    "requested": true
+  },
+  "annulus_control": "All948 same assertions pass; only appended250ms post-disposal wait, no error/leak diagnostic",
+  "held_679_inputs_unchanged": true,
+  "production_change_proposed": false,
+  "proposed_fixture_changes": [
+    "independent_annulus_runtime.gd",
+    "independent_brood_parity.gd",
+    "independent_weapon_rig.gd",
+    "test_core_summon.gd"
+  ],
+  "policy": "No suppression/ERROR allowlist; add bounded disposal-only wait after existing game-free, plus dedicated resource weakref/fresh-frame teardown regression",
+  "source_support": [
+    "https://raw.githubusercontent.com/godotengine/godot/4.6.3-stable/scene/audio/audio_stream_player_internal.cpp",
+    "https://raw.githubusercontent.com/godotengine/godot/4.6.3-stable/servers/audio/audio_server.cpp"
+  ],
+  "files": {
+    "annulus-drain-exit.txt": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "annulus-drain.log": "68a10c912017004b2774337eaf8002f371c04cfb1e565295d0056bbd4d0e3a83",
+    "annulus-verbose-exit.txt": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "annulus-verbose.log": "cd5f0c4be9e32a68cdaba2b96d6d34ce99e736cd3c703657be37d344dd126f06",
+    "annulus_drain_control.gd": "2af441636a2a688335d2f6dd84c927ac407f1b4443ff2dd184325827dbbd7ed8",
+    "annulus_drain_control.patch": "8438459f9c27545cf55670bfa6d4b7c81e2413d4fb3511511a37f82ddf51aaa8",
+    "control.gd": "f5c30d300ce51b6c0df094b6e06973d58c5ec79644ad3acfb5ddc7f334748cc5",
+    "drain-exit.txt": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "drain.json": "4ae2793a6a77f544034f0348680acf097d679f0d9e258eb9f5a620460a13b3cc",
+    "drain.log": "009b629ecb57e9d1ff9cd0f1a2a075c84745ec914703e01571ca2e600e02ae32",
+    "immediate-exit.txt": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "immediate.json": "dc84b296a528de0d2bd45abcaa4d25709c13cc643475ac814b2b5e80e17cee6c",
+    "immediate.log": "d1ad57d41371f522a0a7a929573190b228332ce23c56a00cd63e0e970e134905"
+  }
+}

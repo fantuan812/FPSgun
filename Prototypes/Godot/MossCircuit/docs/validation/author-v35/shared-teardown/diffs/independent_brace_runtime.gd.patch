@@ -1,0 +1,13 @@
+--- frozen-final/tests/independent_brace_runtime.gd
++++ r4/tests/independent_brace_runtime.gd
+@@ -236,7 +236,10 @@
+   ck(not g.telegraphs.markers.any(func(m):return m.kind=="brace"),"dead actor cue absent before cleanup")
+   step(0);g._sync_telegraphs();ck(not g.telegraphs.markers.any(func(m):return m.kind=="brace"),"removed actor cue absent")
+   await process_frame
++ var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
++ audio_teardown.prepare([g])
+  g.queue_free();await process_frame
++ await audio_teardown.finish(self)
+  var result:Dictionary={"checks":checks,"failures":failures,"cases":cases,"scope":"Controlled real shared hit/AI/proc pipelines, all eight weapons and both modes; no ordinary/native/balance certification"}
+  var args:=OS.get_cmdline_user_args()
+  if not args.is_empty():FileAccess.open(args[0],FileAccess.WRITE).store_string(JSON.stringify(result,"  ")+"\n")

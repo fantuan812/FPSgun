@@ -73,7 +73,10 @@ func run()->void:
 	for step in range(6):g._simulate(.05)
 	ad.advance(.3)
 	check(a.state=="recover" and e.sprite.frame>4 and g.enemy_bullets.size()==1,"hurt end displays current recovery frame without replaying release4")
+	var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
+	audio_teardown.prepare([g])
 	g.queue_free();await process_frame
+	await audio_teardown.finish(self)
 	print("INDEPENDENT SPITTER ASSETS: ",passed," passed; ",failures.size()," failed")
 	for failure in failures:push_error(failure)
 	quit(0 if failures.is_empty() else 1)

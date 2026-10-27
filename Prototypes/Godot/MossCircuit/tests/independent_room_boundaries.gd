@@ -89,7 +89,10 @@ func run()->void:
 	g.weapon_clocks=[999.0]
 	for n in range(20):g._process(.05)
 	check(g.state=="playing" and g.wave==1 and g.mode.clear_elapsed==0 and g.build.coins==int(g.catalog.starting_coins),"title restart cancels stale clear timer and reward")
+	var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
+	audio_teardown.prepare([g])
 	g.queue_free();await process_frame
+	await audio_teardown.finish(self)
 	print("INDEPENDENT ROOM BOUNDARIES: ",passed," passed; ",failures.size()," failed")
 	for failure in failures:push_error(failure)
 	quit(0 if failures.is_empty() else 1)

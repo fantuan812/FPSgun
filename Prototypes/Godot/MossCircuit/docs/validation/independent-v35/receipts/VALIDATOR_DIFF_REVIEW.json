@@ -1,0 +1,12 @@
+{
+  "status": "APPROVED_SCOPE_EXACT_DIFF_REVIEW",
+  "original_source_sha256": "8a0fe9f8fdb3843a2505e9e365cdddf6649cca82d27b05af1cd2064c204334f7",
+  "proposed_diff_sha256": "afb51bd15c535e2e78f2f6649be50fb24c59db4dc9ba144ba5b3c934ef3be43a",
+  "scope": "One terminal consistency predicate adds actual-bool short-circuit guards to terminal and shop; preserves every other validator line and existing settle pre-mutation invalid return.",
+  "accepted_semantics": "All actual bool terminal/shop values retain prior truth table. Existing integer/numeric/bounds rules unchanged. Invalid boolean-like forms now return already-collected errors rather than runtime error/default return.",
+  "regression_prepared": "checks/independent_settlement_types.gd",
+  "regression_sha256": "4c1e7647e6d4741983f7c764129ff5a45ea4099a1822169ad347aecada0456d5",
+  "original_case": "Restore original terminal:String invalid policy in independent feedback authority after correction, rather than claiming negative-coins substitution fixes it.",
+  "approval": "Predicate-only correction was separately scoped after the prior QA run reached terminal state.",
+  "limits": "No implementation or new engine result claimed by this diff review."
+}

@@ -1,0 +1,12 @@
+--- frozen-final/tests/test_weapon_order.gd
++++ r4/tests/test_weapon_order.gd
+@@ -109,6 +109,9 @@
+ 			check(buttons(game.ui.modal).filter(func(b):return b.text.begins_with("MOVE ")).is_empty(),"ordinary inventory has no order action "+mode_id+str(size))
+ 		setup(mode_id);game.shop_offers=[];game.reserved_offer.clear();game._render_shop();await process_frame
+ 		check(game.ui.first_focus!=null and not game.ui.first_focus.text.begins_with("MOVE "),"empty-stock move not default "+mode_id)
++	var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
++	audio_teardown.prepare([game])
+ 	game.queue_free();await process_frame
++	await audio_teardown.finish(self)
+ 	print(JSON.stringify({"passed":passed,"failed":failures.size(),"failures":failures}))
+ 	quit(0 if failures.is_empty() else 1)

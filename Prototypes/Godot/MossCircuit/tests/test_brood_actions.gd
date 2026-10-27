@@ -110,6 +110,9 @@ func run_checks()->void:
 	a.advance(.021);check(not a.actors.has(e.id),"parent corpse reclaimed independently of child")
 	g._title();g._select_mode("rooms");g._start_run(1212)
 	check(a.corpses.is_empty() and a.actors.keys()==[0] and g.enemies.is_empty(),"cross-mode restart clears parent/child visual references")
+	var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
+	audio_teardown.prepare([g])
 	g.queue_free();await process_frame
+	await audio_teardown.finish(self)
 	print(JSON.stringify({"passed":passed,"failures":failures,"scope":"v12 variable-length broodkeeper actions; summon attempt does not guarantee child"}))
 	quit(0 if failures.is_empty() else 1)

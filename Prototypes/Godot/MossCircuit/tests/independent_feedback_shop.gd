@@ -72,7 +72,10 @@ func run()->void:
    var v:Dictionary=g._view();g.ui.show_inventory(v);g.ui.show_shop(v)
   ck(state_before==JSON.stringify({"build":g.build,"stats":g.stats,"armed":g.effects.feedback_armed,"rng":[g.rng.state,g.shop_rng.state,g.loot_rng.state]}),mode+" read-only repeated view/render")
   await process_frame
+ var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
+ audio_teardown.prepare([g])
  g.queue_free();await process_frame
+ await audio_teardown.finish(self)
  var result={"checks":checks,"failures":failures,"scope":"controlled actual transactions/view/resource; no ordinary acquisition claim"}
  var args=OS.get_cmdline_user_args();if not args.is_empty():FileAccess.open(args[0],FileAccess.WRITE).store_string(JSON.stringify(result,"  ")+"\n")
  print(JSON.stringify(result));quit(0 if failures.is_empty() else 1)

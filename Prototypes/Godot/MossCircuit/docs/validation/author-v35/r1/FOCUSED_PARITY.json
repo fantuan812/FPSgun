@@ -1,0 +1,65 @@
+{
+  "pass": true,
+  "steps": [
+    {
+      "name": "test_player_feedback-final",
+      "exit": 0,
+      "engine_error": false,
+      "seconds": 4.377,
+      "pass": true
+    },
+    {
+      "name": "test_feedback_mixer-final",
+      "exit": 0,
+      "engine_error": false,
+      "seconds": 6.457,
+      "pass": true
+    },
+    {
+      "name": "test_combat_focus-final",
+      "exit": 0,
+      "engine_error": false,
+      "seconds": 2.959,
+      "pass": true
+    },
+    {
+      "name": "test_focus_fire-final",
+      "exit": 0,
+      "engine_error": false,
+      "seconds": 6.428,
+      "pass": true
+    },
+    {
+      "name": "test_actor_actions-final",
+      "exit": 0,
+      "engine_error": false,
+      "seconds": 2.652,
+      "pass": true
+    },
+    {
+      "name": "legacy-ui-final",
+      "exit": 0,
+      "engine_error": false,
+      "seconds": 2.147,
+      "pass": true
+    },
+    {
+      "name": "old-six-transactions",
+      "exit": 0,
+      "engine_error": false,
+      "seconds": 6.68,
+      "pass": true
+    },
+    {
+      "name": "old-24-combat",
+      "exit": 0,
+      "engine_error": false,
+      "seconds": 12.306,
+      "pass": true
+    }
+  ],
+  "transactions_sha256": "22e28521ba76fb7285a59b98593aecc7c4af9e24d497853119f73495324feaf8",
+  "combat_sha256": "e7d93a1fcf01345c540bf9f868632310fd3e85572dbe431dbe12d43bf19212ec",
+  "baseline": "Eligible actual v34 replay with pinned final production identity; not a fresh v34 baseline run",
+  "engine_scope": "Headless source only; independent/native/pack still pending"
+}

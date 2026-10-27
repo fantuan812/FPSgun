@@ -1,0 +1,1407 @@
+Godot Engine v4.6.3.stable.official.7d41c59c4 - https://godotengine.org
+
+SCRIPT ERROR: Invalid access to property or key 'effects' on a base object of type 'Dictionary'.
+          at: derive (res://scripts/rules.gd:231)
+          GDScript backtrace (most recent call first):
+              [0] derive (res://scripts/rules.gd:231)
+              [1] _recompute (res://scripts/main.gd:779)
+              [2] setup (res://tests/test_player_feedback.gd:15)
+              [3] run (res://tests/test_player_feedback.gd:48)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _recompute (res://scripts/main.gd:780)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:780)
+              [1] setup (res://tests/test_player_feedback.gd:15)
+              [2] run (res://tests/test_player_feedback.gd:48)
+SCRIPT ERROR: Invalid access to property or key 'hp' on a base object of type 'Dictionary'.
+          at: _view (res://scripts/main.gd:991)
+          GDScript backtrace (most recent call first):
+              [0] _view (res://scripts/main.gd:991)
+              [1] run (res://tests/test_player_feedback.gd:49)
+SCRIPT ERROR: Invalid access to property or key 'damage' on a base object of type 'Dictionary'.
+          at: emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+          GDScript backtrace (most recent call first):
+              [0] emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+              [1] _effect_event (res://scripts/main.gd:1203)
+              [2] _hurt (res://scripts/main.gd:548)
+              [3] run (res://tests/test_player_feedback.gd:52)
+SCRIPT ERROR: Invalid access to property or key 'hp' on a base object of type 'Dictionary'.
+          at: apply_damage (res://scripts/gameplay/character_motor.gd:16)
+          GDScript backtrace (most recent call first):
+              [0] apply_damage (res://scripts/gameplay/character_motor.gd:16)
+              [1] _hurt (res://scripts/main.gd:554)
+              [2] run (res://tests/test_player_feedback.gd:52)
+SCRIPT ERROR: Invalid access to property or key 'damage' on a base object of type 'Dictionary'.
+          at: emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+          GDScript backtrace (most recent call first):
+              [0] emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+              [1] _effect_event (res://scripts/main.gd:1203)
+              [2] _hurt (res://scripts/main.gd:555)
+              [3] run (res://tests/test_player_feedback.gd:52)
+SCRIPT ERROR: Invalid access to property or key 'hp' on a base object of type 'Dictionary'.
+          at: _hurt (res://scripts/main.gd:557)
+          GDScript backtrace (most recent call first):
+              [0] _hurt (res://scripts/main.gd:557)
+              [1] run (res://tests/test_player_feedback.gd:52)
+SCRIPT ERROR: Invalid access to property or key 'effects' on a base object of type 'Dictionary'.
+          at: derive (res://scripts/rules.gd:231)
+          GDScript backtrace (most recent call first):
+              [0] derive (res://scripts/rules.gd:231)
+              [1] _recompute (res://scripts/main.gd:779)
+              [2] setup (res://tests/test_player_feedback.gd:15)
+              [3] run (res://tests/test_player_feedback.gd:54)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _recompute (res://scripts/main.gd:780)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:780)
+              [1] setup (res://tests/test_player_feedback.gd:15)
+              [2] run (res://tests/test_player_feedback.gd:54)
+SCRIPT ERROR: Invalid access to property or key 'damage' on a base object of type 'Dictionary'.
+          at: emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+          GDScript backtrace (most recent call first):
+              [0] emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+              [1] _effect_event (res://scripts/main.gd:1203)
+              [2] _hurt (res://scripts/main.gd:548)
+              [3] run (res://tests/test_player_feedback.gd:54)
+SCRIPT ERROR: Invalid access to property or key 'hp' on a base object of type 'Dictionary'.
+          at: apply_damage (res://scripts/gameplay/character_motor.gd:16)
+          GDScript backtrace (most recent call first):
+              [0] apply_damage (res://scripts/gameplay/character_motor.gd:16)
+              [1] _hurt (res://scripts/main.gd:554)
+              [2] run (res://tests/test_player_feedback.gd:54)
+SCRIPT ERROR: Invalid access to property or key 'damage' on a base object of type 'Dictionary'.
+          at: emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+          GDScript backtrace (most recent call first):
+              [0] emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+              [1] _effect_event (res://scripts/main.gd:1203)
+              [2] _hurt (res://scripts/main.gd:555)
+              [3] run (res://tests/test_player_feedback.gd:54)
+SCRIPT ERROR: Invalid access to property or key 'hp' on a base object of type 'Dictionary'.
+          at: _hurt (res://scripts/main.gd:557)
+          GDScript backtrace (most recent call first):
+              [0] _hurt (res://scripts/main.gd:557)
+              [1] run (res://tests/test_player_feedback.gd:54)
+SCRIPT ERROR: Invalid access to property or key 'damage' on a base object of type 'Dictionary'.
+          at: emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+          GDScript backtrace (most recent call first):
+              [0] emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+              [1] _effect_event (res://scripts/main.gd:1203)
+              [2] _hurt (res://scripts/main.gd:548)
+              [3] run (res://tests/test_player_feedback.gd:56)
+SCRIPT ERROR: Invalid access to property or key 'hp' on a base object of type 'Dictionary'.
+          at: apply_damage (res://scripts/gameplay/character_motor.gd:16)
+          GDScript backtrace (most recent call first):
+              [0] apply_damage (res://scripts/gameplay/character_motor.gd:16)
+              [1] _hurt (res://scripts/main.gd:554)
+              [2] run (res://tests/test_player_feedback.gd:56)
+SCRIPT ERROR: Invalid access to property or key 'damage' on a base object of type 'Dictionary'.
+          at: emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+          GDScript backtrace (most recent call first):
+              [0] emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+              [1] _effect_event (res://scripts/main.gd:1203)
+              [2] _hurt (res://scripts/main.gd:555)
+              [3] run (res://tests/test_player_feedback.gd:56)
+SCRIPT ERROR: Invalid access to property or key 'hp' on a base object of type 'Dictionary'.
+          at: _hurt (res://scripts/main.gd:557)
+          GDScript backtrace (most recent call first):
+              [0] _hurt (res://scripts/main.gd:557)
+              [1] run (res://tests/test_player_feedback.gd:56)
+SCRIPT ERROR: Invalid access to property or key 'effects' on a base object of type 'Dictionary'.
+          at: derive (res://scripts/rules.gd:231)
+          GDScript backtrace (most recent call first):
+              [0] derive (res://scripts/rules.gd:231)
+              [1] _recompute (res://scripts/main.gd:779)
+              [2] setup (res://tests/test_player_feedback.gd:15)
+              [3] run (res://tests/test_player_feedback.gd:58)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _recompute (res://scripts/main.gd:780)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:780)
+              [1] setup (res://tests/test_player_feedback.gd:15)
+              [2] run (res://tests/test_player_feedback.gd:58)
+SCRIPT ERROR: Invalid access to property or key 'effects' on a base object of type 'Dictionary'.
+          at: derive (res://scripts/rules.gd:231)
+          GDScript backtrace (most recent call first):
+              [0] derive (res://scripts/rules.gd:231)
+              [1] _recompute (res://scripts/main.gd:779)
+              [2] setup (res://tests/test_player_feedback.gd:15)
+              [3] run (res://tests/test_player_feedback.gd:58)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _recompute (res://scripts/main.gd:780)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:780)
+              [1] setup (res://tests/test_player_feedback.gd:15)
+              [2] run (res://tests/test_player_feedback.gd:58)
+SCRIPT ERROR: Invalid access to property or key 'effects' on a base object of type 'Dictionary'.
+          at: derive (res://scripts/rules.gd:231)
+          GDScript backtrace (most recent call first):
+              [0] derive (res://scripts/rules.gd:231)
+              [1] _recompute (res://scripts/main.gd:779)
+              [2] setup (res://tests/test_player_feedback.gd:15)
+              [3] run (res://tests/test_player_feedback.gd:58)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _recompute (res://scripts/main.gd:780)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:780)
+              [1] setup (res://tests/test_player_feedback.gd:15)
+              [2] run (res://tests/test_player_feedback.gd:58)
+SCRIPT ERROR: Invalid access to property or key 'effects' on a base object of type 'Dictionary'.
+          at: derive (res://scripts/rules.gd:231)
+          GDScript backtrace (most recent call first):
+              [0] derive (res://scripts/rules.gd:231)
+              [1] _recompute (res://scripts/main.gd:779)
+              [2] setup (res://tests/test_player_feedback.gd:15)
+              [3] run (res://tests/test_player_feedback.gd:58)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _recompute (res://scripts/main.gd:780)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:780)
+              [1] setup (res://tests/test_player_feedback.gd:15)
+              [2] run (res://tests/test_player_feedback.gd:58)
+SCRIPT ERROR: Invalid access to property or key 'effects' on a base object of type 'Dictionary'.
+          at: derive (res://scripts/rules.gd:231)
+          GDScript backtrace (most recent call first):
+              [0] derive (res://scripts/rules.gd:231)
+              [1] _recompute (res://scripts/main.gd:779)
+              [2] setup (res://tests/test_player_feedback.gd:15)
+              [3] run (res://tests/test_player_feedback.gd:58)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _recompute (res://scripts/main.gd:780)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:780)
+              [1] setup (res://tests/test_player_feedback.gd:15)
+              [2] run (res://tests/test_player_feedback.gd:58)
+SCRIPT ERROR: Invalid access to property or key 'effects' on a base object of type 'Dictionary'.
+          at: derive (res://scripts/rules.gd:231)
+          GDScript backtrace (most recent call first):
+              [0] derive (res://scripts/rules.gd:231)
+              [1] _recompute (res://scripts/main.gd:779)
+              [2] setup (res://tests/test_player_feedback.gd:15)
+              [3] run (res://tests/test_player_feedback.gd:58)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _recompute (res://scripts/main.gd:780)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:780)
+              [1] setup (res://tests/test_player_feedback.gd:15)
+              [2] run (res://tests/test_player_feedback.gd:58)
+SCRIPT ERROR: Invalid access to property or key 'effects' on a base object of type 'Dictionary'.
+          at: derive (res://scripts/rules.gd:231)
+          GDScript backtrace (most recent call first):
+              [0] derive (res://scripts/rules.gd:231)
+              [1] _recompute (res://scripts/main.gd:779)
+              [2] setup (res://tests/test_player_feedback.gd:15)
+              [3] run (res://tests/test_player_feedback.gd:58)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _recompute (res://scripts/main.gd:780)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:780)
+              [1] setup (res://tests/test_player_feedback.gd:15)
+              [2] run (res://tests/test_player_feedback.gd:58)
+SCRIPT ERROR: Invalid access to property or key 'effects' on a base object of type 'Dictionary'.
+          at: derive (res://scripts/rules.gd:231)
+          GDScript backtrace (most recent call first):
+              [0] derive (res://scripts/rules.gd:231)
+              [1] _recompute (res://scripts/main.gd:779)
+              [2] setup (res://tests/test_player_feedback.gd:15)
+              [3] run (res://tests/test_player_feedback.gd:58)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _recompute (res://scripts/main.gd:780)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:780)
+              [1] setup (res://tests/test_player_feedback.gd:15)
+              [2] run (res://tests/test_player_feedback.gd:58)
+SCRIPT ERROR: Invalid access to property or key 'effects' on a base object of type 'Dictionary'.
+          at: derive (res://scripts/rules.gd:231)
+          GDScript backtrace (most recent call first):
+              [0] derive (res://scripts/rules.gd:231)
+              [1] _recompute (res://scripts/main.gd:779)
+              [2] setup (res://tests/test_player_feedback.gd:15)
+              [3] run (res://tests/test_player_feedback.gd:58)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _recompute (res://scripts/main.gd:780)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:780)
+              [1] setup (res://tests/test_player_feedback.gd:15)
+              [2] run (res://tests/test_player_feedback.gd:58)
+SCRIPT ERROR: Invalid access to property or key 'effects' on a base object of type 'Dictionary'.
+          at: derive (res://scripts/rules.gd:231)
+          GDScript backtrace (most recent call first):
+              [0] derive (res://scripts/rules.gd:231)
+              [1] _recompute (res://scripts/main.gd:779)
+              [2] setup (res://tests/test_player_feedback.gd:15)
+              [3] run (res://tests/test_player_feedback.gd:59)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _recompute (res://scripts/main.gd:780)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:780)
+              [1] setup (res://tests/test_player_feedback.gd:15)
+              [2] run (res://tests/test_player_feedback.gd:59)
+SCRIPT ERROR: Invalid access to property or key 'effects' on a base object of type 'Dictionary'.
+          at: derive (res://scripts/rules.gd:231)
+          GDScript backtrace (most recent call first):
+              [0] derive (res://scripts/rules.gd:231)
+              [1] _recompute (res://scripts/main.gd:779)
+              [2] setup (res://tests/test_player_feedback.gd:15)
+              [3] run (res://tests/test_player_feedback.gd:61)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _recompute (res://scripts/main.gd:780)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:780)
+              [1] setup (res://tests/test_player_feedback.gd:15)
+              [2] run (res://tests/test_player_feedback.gd:61)
+SCRIPT ERROR: Invalid access to property or key 'damage' on a base object of type 'Dictionary'.
+          at: emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+          GDScript backtrace (most recent call first):
+              [0] emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+              [1] _effect_event (res://scripts/main.gd:1203)
+              [2] _hurt (res://scripts/main.gd:548)
+              [3] run (res://tests/test_player_feedback.gd:61)
+SCRIPT ERROR: Invalid access to property or key 'hp' on a base object of type 'Dictionary'.
+          at: apply_damage (res://scripts/gameplay/character_motor.gd:16)
+          GDScript backtrace (most recent call first):
+              [0] apply_damage (res://scripts/gameplay/character_motor.gd:16)
+              [1] _hurt (res://scripts/main.gd:554)
+              [2] run (res://tests/test_player_feedback.gd:61)
+SCRIPT ERROR: Invalid access to property or key 'damage' on a base object of type 'Dictionary'.
+          at: emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+          GDScript backtrace (most recent call first):
+              [0] emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+              [1] _effect_event (res://scripts/main.gd:1203)
+              [2] _hurt (res://scripts/main.gd:555)
+              [3] run (res://tests/test_player_feedback.gd:61)
+SCRIPT ERROR: Invalid access to property or key 'hp' on a base object of type 'Dictionary'.
+          at: _hurt (res://scripts/main.gd:557)
+          GDScript backtrace (most recent call first):
+              [0] _hurt (res://scripts/main.gd:557)
+              [1] run (res://tests/test_player_feedback.gd:61)
+SCRIPT ERROR: Invalid access to property or key 'effects' on a base object of type 'Dictionary'.
+          at: derive (res://scripts/rules.gd:231)
+          GDScript backtrace (most recent call first):
+              [0] derive (res://scripts/rules.gd:231)
+              [1] _recompute (res://scripts/main.gd:779)
+              [2] setup (res://tests/test_player_feedback.gd:15)
+              [3] run (res://tests/test_player_feedback.gd:61)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _recompute (res://scripts/main.gd:780)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:780)
+              [1] setup (res://tests/test_player_feedback.gd:15)
+              [2] run (res://tests/test_player_feedback.gd:61)
+SCRIPT ERROR: Invalid access to property or key 'damage' on a base object of type 'Dictionary'.
+          at: emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+          GDScript backtrace (most recent call first):
+              [0] emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+              [1] _effect_event (res://scripts/main.gd:1203)
+              [2] _hurt (res://scripts/main.gd:548)
+              [3] run (res://tests/test_player_feedback.gd:61)
+SCRIPT ERROR: Invalid access to property or key 'hp' on a base object of type 'Dictionary'.
+          at: apply_damage (res://scripts/gameplay/character_motor.gd:16)
+          GDScript backtrace (most recent call first):
+              [0] apply_damage (res://scripts/gameplay/character_motor.gd:16)
+              [1] _hurt (res://scripts/main.gd:554)
+              [2] run (res://tests/test_player_feedback.gd:61)
+SCRIPT ERROR: Invalid access to property or key 'damage' on a base object of type 'Dictionary'.
+          at: emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+          GDScript backtrace (most recent call first):
+              [0] emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+              [1] _effect_event (res://scripts/main.gd:1203)
+              [2] _hurt (res://scripts/main.gd:555)
+              [3] run (res://tests/test_player_feedback.gd:61)
+SCRIPT ERROR: Invalid access to property or key 'hp' on a base object of type 'Dictionary'.
+          at: _hurt (res://scripts/main.gd:557)
+          GDScript backtrace (most recent call first):
+              [0] _hurt (res://scripts/main.gd:557)
+              [1] run (res://tests/test_player_feedback.gd:61)
+SCRIPT ERROR: Invalid access to property or key 'effects' on a base object of type 'Dictionary'.
+          at: derive (res://scripts/rules.gd:231)
+          GDScript backtrace (most recent call first):
+              [0] derive (res://scripts/rules.gd:231)
+              [1] _recompute (res://scripts/main.gd:779)
+              [2] setup (res://tests/test_player_feedback.gd:15)
+              [3] run (res://tests/test_player_feedback.gd:62)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _recompute (res://scripts/main.gd:780)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:780)
+              [1] setup (res://tests/test_player_feedback.gd:15)
+              [2] run (res://tests/test_player_feedback.gd:62)
+SCRIPT ERROR: Invalid access to property or key 'damage' on a base object of type 'Dictionary'.
+          at: emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+          GDScript backtrace (most recent call first):
+              [0] emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+              [1] _effect_event (res://scripts/main.gd:1203)
+              [2] run (res://tests/test_player_feedback.gd:62)
+SCRIPT ERROR: Invalid access to property or key 'effects' on a base object of type 'Dictionary'.
+          at: derive (res://scripts/rules.gd:231)
+          GDScript backtrace (most recent call first):
+              [0] derive (res://scripts/rules.gd:231)
+              [1] _recompute (res://scripts/main.gd:779)
+              [2] setup (res://tests/test_player_feedback.gd:15)
+              [3] run (res://tests/test_player_feedback.gd:63)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _recompute (res://scripts/main.gd:780)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:780)
+              [1] setup (res://tests/test_player_feedback.gd:15)
+              [2] run (res://tests/test_player_feedback.gd:63)
+SCRIPT ERROR: Invalid access to property or key 'damage' on a base object of type 'Dictionary'.
+          at: emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+          GDScript backtrace (most recent call first):
+              [0] emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+              [1] _effect_event (res://scripts/main.gd:1203)
+              [2] _hurt (res://scripts/main.gd:548)
+              [3] run (res://tests/test_player_feedback.gd:63)
+SCRIPT ERROR: Invalid access to property or key 'damage' on a base object of type 'Dictionary'.
+          at: emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+          GDScript backtrace (most recent call first):
+              [0] emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+              [1] _effect_event (res://scripts/main.gd:1203)
+              [2] _hurt (res://scripts/main.gd:555)
+              [3] run (res://tests/test_player_feedback.gd:63)
+SCRIPT ERROR: Invalid access to property or key 'effects' on a base object of type 'Dictionary'.
+          at: derive (res://scripts/rules.gd:231)
+          GDScript backtrace (most recent call first):
+              [0] derive (res://scripts/rules.gd:231)
+              [1] _recompute (res://scripts/main.gd:779)
+              [2] setup (res://tests/test_player_feedback.gd:15)
+              [3] run (res://tests/test_player_feedback.gd:68)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _recompute (res://scripts/main.gd:780)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:780)
+              [1] setup (res://tests/test_player_feedback.gd:15)
+              [2] run (res://tests/test_player_feedback.gd:68)
+SCRIPT ERROR: Invalid access to property or key 'hp' on a base object of type 'Dictionary'.
+          at: _view (res://scripts/main.gd:991)
+          GDScript backtrace (most recent call first):
+              [0] _view (res://scripts/main.gd:991)
+              [1] _present_pause (res://scripts/main.gd:1170)
+              [2] run (res://tests/test_player_feedback.gd:68)
+SCRIPT ERROR: Invalid access to property or key 'effects' on a base object of type 'Dictionary'.
+          at: derive (res://scripts/rules.gd:231)
+          GDScript backtrace (most recent call first):
+              [0] derive (res://scripts/rules.gd:231)
+              [1] _recompute (res://scripts/main.gd:779)
+              [2] setup (res://tests/test_player_feedback.gd:15)
+              [3] run (res://tests/test_player_feedback.gd:68)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _recompute (res://scripts/main.gd:780)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:780)
+              [1] setup (res://tests/test_player_feedback.gd:15)
+              [2] run (res://tests/test_player_feedback.gd:68)
+SCRIPT ERROR: Invalid access to property or key 'hp' on a base object of type 'Dictionary'.
+          at: _view (res://scripts/main.gd:991)
+          GDScript backtrace (most recent call first):
+              [0] _view (res://scripts/main.gd:991)
+              [1] _present_inventory (res://scripts/main.gd:1164)
+              [2] run (res://tests/test_player_feedback.gd:68)
+SCRIPT ERROR: Invalid access to property or key 'effects' on a base object of type 'Dictionary'.
+          at: derive (res://scripts/rules.gd:231)
+          GDScript backtrace (most recent call first):
+              [0] derive (res://scripts/rules.gd:231)
+              [1] _recompute (res://scripts/main.gd:779)
+              [2] setup (res://tests/test_player_feedback.gd:15)
+              [3] run (res://tests/test_player_feedback.gd:68)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _recompute (res://scripts/main.gd:780)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:780)
+              [1] setup (res://tests/test_player_feedback.gd:15)
+              [2] run (res://tests/test_player_feedback.gd:68)
+SCRIPT ERROR: Invalid access to property or key 'effects' on a base object of type 'Dictionary'.
+          at: derive (res://scripts/rules.gd:231)
+          GDScript backtrace (most recent call first):
+              [0] derive (res://scripts/rules.gd:231)
+              [1] _recompute (res://scripts/main.gd:779)
+              [2] setup (res://tests/test_player_feedback.gd:15)
+              [3] run (res://tests/test_player_feedback.gd:68)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _recompute (res://scripts/main.gd:780)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:780)
+              [1] setup (res://tests/test_player_feedback.gd:15)
+              [2] run (res://tests/test_player_feedback.gd:68)
+SCRIPT ERROR: Invalid access to property or key 'hp' on a base object of type 'Dictionary'.
+          at: _view (res://scripts/main.gd:991)
+          GDScript backtrace (most recent call first):
+              [0] _view (res://scripts/main.gd:991)
+              [1] _render_shop (res://scripts/main.gd:829)
+              [2] _open_shop (res://scripts/main.gd:825)
+              [3] run (res://tests/test_player_feedback.gd:68)
+SCRIPT ERROR: Invalid access to property or key 'effects' on a base object of type 'Dictionary'.
+          at: derive (res://scripts/rules.gd:231)
+          GDScript backtrace (most recent call first):
+              [0] derive (res://scripts/rules.gd:231)
+              [1] _recompute (res://scripts/main.gd:779)
+              [2] setup (res://tests/test_player_feedback.gd:15)
+              [3] run (res://tests/test_player_feedback.gd:68)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _recompute (res://scripts/main.gd:780)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:780)
+              [1] setup (res://tests/test_player_feedback.gd:15)
+              [2] run (res://tests/test_player_feedback.gd:68)
+SCRIPT ERROR: Invalid access to property or key 'effects' on a base object of type 'Dictionary'.
+          at: derive (res://scripts/rules.gd:231)
+          GDScript backtrace (most recent call first):
+              [0] derive (res://scripts/rules.gd:231)
+              [1] _recompute (res://scripts/main.gd:779)
+              [2] setup (res://tests/test_player_feedback.gd:15)
+              [3] run (res://tests/test_player_feedback.gd:68)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _recompute (res://scripts/main.gd:780)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:780)
+              [1] setup (res://tests/test_player_feedback.gd:15)
+              [2] run (res://tests/test_player_feedback.gd:68)
+SCRIPT ERROR: Invalid access to property or key 'effects' on a base object of type 'Dictionary'.
+          at: derive (res://scripts/rules.gd:231)
+          GDScript backtrace (most recent call first):
+              [0] derive (res://scripts/rules.gd:231)
+              [1] _recompute (res://scripts/main.gd:779)
+              [2] setup (res://tests/test_player_feedback.gd:15)
+              [3] run (res://tests/test_player_feedback.gd:69)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _recompute (res://scripts/main.gd:780)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:780)
+              [1] setup (res://tests/test_player_feedback.gd:15)
+              [2] run (res://tests/test_player_feedback.gd:69)
+SCRIPT ERROR: Invalid access to property or key 'effects' on a base object of type 'Dictionary'.
+          at: derive (res://scripts/rules.gd:231)
+          GDScript backtrace (most recent call first):
+              [0] derive (res://scripts/rules.gd:231)
+              [1] _recompute (res://scripts/main.gd:779)
+              [2] setup (res://tests/test_player_feedback.gd:15)
+              [3] run (res://tests/test_player_feedback.gd:71)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _recompute (res://scripts/main.gd:780)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:780)
+              [1] setup (res://tests/test_player_feedback.gd:15)
+              [2] run (res://tests/test_player_feedback.gd:71)
+SCRIPT ERROR: Invalid access to property or key 'hp' on a base object of type 'Dictionary'.
+          at: _finish (res://scripts/main.gd:650)
+          GDScript backtrace (most recent call first):
+              [0] _finish (res://scripts/main.gd:650)
+              [1] run (res://tests/test_player_feedback.gd:71)
+SCRIPT ERROR: Invalid access to property or key 'effects' on a base object of type 'Dictionary'.
+          at: derive (res://scripts/rules.gd:231)
+          GDScript backtrace (most recent call first):
+              [0] derive (res://scripts/rules.gd:231)
+              [1] _recompute (res://scripts/main.gd:779)
+              [2] setup (res://tests/test_player_feedback.gd:15)
+              [3] run (res://tests/test_player_feedback.gd:72)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _recompute (res://scripts/main.gd:780)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:780)
+              [1] setup (res://tests/test_player_feedback.gd:15)
+              [2] run (res://tests/test_player_feedback.gd:72)
+SCRIPT ERROR: Invalid access to property or key 'hp' on a base object of type 'Dictionary'.
+          at: _view (res://scripts/main.gd:991)
+          GDScript backtrace (most recent call first):
+              [0] _view (res://scripts/main.gd:991)
+              [1] _present_pause (res://scripts/main.gd:1170)
+              [2] _on_intent (res://scripts/main.gd:1128)
+              [3] run (res://tests/test_player_feedback.gd:72)
+SCRIPT ERROR: Invalid access to property or key 'hp' on a base object of type 'Dictionary'.
+          at: _view (res://scripts/main.gd:991)
+          GDScript backtrace (most recent call first):
+              [0] _view (res://scripts/main.gd:991)
+              [1] _on_intent (res://scripts/main.gd:1088)
+              [2] run (res://tests/test_player_feedback.gd:72)
+SCRIPT ERROR: Invalid access to property or key 'hp' on a base object of type 'Dictionary'.
+          at: _view (res://scripts/main.gd:991)
+          GDScript backtrace (most recent call first):
+              [0] _view (res://scripts/main.gd:991)
+              [1] _on_intent (res://scripts/main.gd:1102)
+              [2] run (res://tests/test_player_feedback.gd:76)
+SCRIPT ERROR: Invalid access to property or key 'hp' on a base object of type 'Dictionary'.
+          at: _view (res://scripts/main.gd:991)
+          GDScript backtrace (most recent call first):
+              [0] _view (res://scripts/main.gd:991)
+              [1] _present_pause (res://scripts/main.gd:1170)
+              [2] _on_intent (res://scripts/main.gd:1108)
+              [3] run (res://tests/test_player_feedback.gd:78)
+SCRIPT ERROR: Invalid access to property or key 'damage' on a base object of type 'Dictionary'.
+          at: emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+          GDScript backtrace (most recent call first):
+              [0] emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+              [1] _effect_event (res://scripts/main.gd:1203)
+              [2] _hurt (res://scripts/main.gd:548)
+              [3] run (res://tests/test_player_feedback.gd:78)
+SCRIPT ERROR: Invalid access to property or key 'hp' on a base object of type 'Dictionary'.
+          at: apply_damage (res://scripts/gameplay/character_motor.gd:16)
+          GDScript backtrace (most recent call first):
+              [0] apply_damage (res://scripts/gameplay/character_motor.gd:16)
+              [1] _hurt (res://scripts/main.gd:554)
+              [2] run (res://tests/test_player_feedback.gd:78)
+SCRIPT ERROR: Invalid access to property or key 'damage' on a base object of type 'Dictionary'.
+          at: emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+          GDScript backtrace (most recent call first):
+              [0] emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+              [1] _effect_event (res://scripts/main.gd:1203)
+              [2] _hurt (res://scripts/main.gd:555)
+              [3] run (res://tests/test_player_feedback.gd:78)
+SCRIPT ERROR: Invalid access to property or key 'hp' on a base object of type 'Dictionary'.
+          at: _hurt (res://scripts/main.gd:557)
+          GDScript backtrace (most recent call first):
+              [0] _hurt (res://scripts/main.gd:557)
+              [1] run (res://tests/test_player_feedback.gd:78)
+SCRIPT ERROR: Invalid access to property or key 'hp' on a base object of type 'Dictionary'.
+          at: _view (res://scripts/main.gd:991)
+          GDScript backtrace (most recent call first):
+              [0] _view (res://scripts/main.gd:991)
+              [1] _present_pause (res://scripts/main.gd:1170)
+              [2] _on_intent (res://scripts/main.gd:1128)
+              [3] run (res://tests/test_player_feedback.gd:80)
+SCRIPT ERROR: Invalid access to property or key 'hp' on a base object of type 'Dictionary'.
+          at: _view (res://scripts/main.gd:991)
+          GDScript backtrace (most recent call first):
+              [0] _view (res://scripts/main.gd:991)
+              [1] _on_intent (res://scripts/main.gd:1088)
+              [2] run (res://tests/test_player_feedback.gd:80)
+SCRIPT ERROR: Invalid access to property or key 'hp' on a base object of type 'Dictionary'.
+          at: _view (res://scripts/main.gd:991)
+          GDScript backtrace (most recent call first):
+              [0] _view (res://scripts/main.gd:991)
+              [1] _on_intent (res://scripts/main.gd:1102)
+              [2] run (res://tests/test_player_feedback.gd:81)
+SCRIPT ERROR: Invalid access to property or key 'hp' on a base object of type 'Dictionary'.
+          at: _view (res://scripts/main.gd:991)
+          GDScript backtrace (most recent call first):
+              [0] _view (res://scripts/main.gd:991)
+              [1] _present_pause (res://scripts/main.gd:1170)
+              [2] _on_intent (res://scripts/main.gd:1108)
+              [3] run (res://tests/test_player_feedback.gd:81)
+SCRIPT ERROR: Invalid access to property or key 'effects' on a base object of type 'Dictionary'.
+          at: derive (res://scripts/rules.gd:231)
+          GDScript backtrace (most recent call first):
+              [0] derive (res://scripts/rules.gd:231)
+              [1] _recompute (res://scripts/main.gd:779)
+              [2] setup (res://tests/test_player_feedback.gd:15)
+              [3] run (res://tests/test_player_feedback.gd:85)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _recompute (res://scripts/main.gd:780)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:780)
+              [1] setup (res://tests/test_player_feedback.gd:15)
+              [2] run (res://tests/test_player_feedback.gd:85)
+SCRIPT ERROR: Invalid access to property or key 'damage' on a base object of type 'Dictionary'.
+          at: emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+          GDScript backtrace (most recent call first):
+              [0] emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+              [1] _effect_event (res://scripts/main.gd:1203)
+              [2] _hurt (res://scripts/main.gd:548)
+              [3] run (res://tests/test_player_feedback.gd:85)
+SCRIPT ERROR: Invalid access to property or key 'hp' on a base object of type 'Dictionary'.
+          at: apply_damage (res://scripts/gameplay/character_motor.gd:16)
+          GDScript backtrace (most recent call first):
+              [0] apply_damage (res://scripts/gameplay/character_motor.gd:16)
+              [1] _hurt (res://scripts/main.gd:554)
+              [2] run (res://tests/test_player_feedback.gd:85)
+SCRIPT ERROR: Invalid access to property or key 'damage' on a base object of type 'Dictionary'.
+          at: emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+          GDScript backtrace (most recent call first):
+              [0] emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+              [1] _effect_event (res://scripts/main.gd:1203)
+              [2] _hurt (res://scripts/main.gd:555)
+              [3] run (res://tests/test_player_feedback.gd:85)
+SCRIPT ERROR: Invalid access to property or key 'hp' on a base object of type 'Dictionary'.
+          at: _hurt (res://scripts/main.gd:557)
+          GDScript backtrace (most recent call first):
+              [0] _hurt (res://scripts/main.gd:557)
+              [1] run (res://tests/test_player_feedback.gd:85)
+SCRIPT ERROR: Invalid access to property or key 'damage' on a base object of type 'Dictionary'.
+          at: emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+          GDScript backtrace (most recent call first):
+              [0] emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+              [1] _effect_event (res://scripts/main.gd:1203)
+              [2] _hurt (res://scripts/main.gd:548)
+              [3] run (res://tests/test_player_feedback.gd:85)
+SCRIPT ERROR: Invalid access to property or key 'hp' on a base object of type 'Dictionary'.
+          at: apply_damage (res://scripts/gameplay/character_motor.gd:16)
+          GDScript backtrace (most recent call first):
+              [0] apply_damage (res://scripts/gameplay/character_motor.gd:16)
+              [1] _hurt (res://scripts/main.gd:554)
+              [2] run (res://tests/test_player_feedback.gd:85)
+SCRIPT ERROR: Invalid access to property or key 'damage' on a base object of type 'Dictionary'.
+          at: emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+          GDScript backtrace (most recent call first):
+              [0] emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+              [1] _effect_event (res://scripts/main.gd:1203)
+              [2] _hurt (res://scripts/main.gd:555)
+              [3] run (res://tests/test_player_feedback.gd:85)
+SCRIPT ERROR: Invalid access to property or key 'hp' on a base object of type 'Dictionary'.
+          at: _hurt (res://scripts/main.gd:557)
+          GDScript backtrace (most recent call first):
+              [0] _hurt (res://scripts/main.gd:557)
+              [1] run (res://tests/test_player_feedback.gd:85)
+SCRIPT ERROR: Invalid access to property or key 'effects' on a base object of type 'Dictionary'.
+          at: derive (res://scripts/rules.gd:231)
+          GDScript backtrace (most recent call first):
+              [0] derive (res://scripts/rules.gd:231)
+              [1] _recompute (res://scripts/main.gd:779)
+              [2] setup (res://tests/test_player_feedback.gd:15)
+              [3] run (res://tests/test_player_feedback.gd:85)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _recompute (res://scripts/main.gd:780)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:780)
+              [1] setup (res://tests/test_player_feedback.gd:15)
+              [2] run (res://tests/test_player_feedback.gd:85)
+SCRIPT ERROR: Invalid access to property or key 'damage' on a base object of type 'Dictionary'.
+          at: emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+          GDScript backtrace (most recent call first):
+              [0] emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+              [1] _effect_event (res://scripts/main.gd:1203)
+              [2] _hurt (res://scripts/main.gd:548)
+              [3] run (res://tests/test_player_feedback.gd:85)
+SCRIPT ERROR: Invalid access to property or key 'hp' on a base object of type 'Dictionary'.
+          at: apply_damage (res://scripts/gameplay/character_motor.gd:16)
+          GDScript backtrace (most recent call first):
+              [0] apply_damage (res://scripts/gameplay/character_motor.gd:16)
+              [1] _hurt (res://scripts/main.gd:554)
+              [2] run (res://tests/test_player_feedback.gd:85)
+SCRIPT ERROR: Invalid access to property or key 'damage' on a base object of type 'Dictionary'.
+          at: emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+          GDScript backtrace (most recent call first):
+              [0] emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+              [1] _effect_event (res://scripts/main.gd:1203)
+              [2] _hurt (res://scripts/main.gd:555)
+              [3] run (res://tests/test_player_feedback.gd:85)
+SCRIPT ERROR: Invalid access to property or key 'hp' on a base object of type 'Dictionary'.
+          at: _hurt (res://scripts/main.gd:557)
+          GDScript backtrace (most recent call first):
+              [0] _hurt (res://scripts/main.gd:557)
+              [1] run (res://tests/test_player_feedback.gd:85)
+SCRIPT ERROR: Invalid access to property or key 'damage' on a base object of type 'Dictionary'.
+          at: emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+          GDScript backtrace (most recent call first):
+              [0] emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+              [1] _effect_event (res://scripts/main.gd:1203)
+              [2] _hurt (res://scripts/main.gd:548)
+              [3] run (res://tests/test_player_feedback.gd:85)
+SCRIPT ERROR: Invalid access to property or key 'hp' on a base object of type 'Dictionary'.
+          at: apply_damage (res://scripts/gameplay/character_motor.gd:16)
+          GDScript backtrace (most recent call first):
+              [0] apply_damage (res://scripts/gameplay/character_motor.gd:16)
+              [1] _hurt (res://scripts/main.gd:554)
+              [2] run (res://tests/test_player_feedback.gd:85)
+SCRIPT ERROR: Invalid access to property or key 'damage' on a base object of type 'Dictionary'.
+          at: emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+          GDScript backtrace (most recent call first):
+              [0] emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+              [1] _effect_event (res://scripts/main.gd:1203)
+              [2] _hurt (res://scripts/main.gd:555)
+              [3] run (res://tests/test_player_feedback.gd:85)
+SCRIPT ERROR: Invalid access to property or key 'hp' on a base object of type 'Dictionary'.
+          at: _hurt (res://scripts/main.gd:557)
+          GDScript backtrace (most recent call first):
+              [0] _hurt (res://scripts/main.gd:557)
+              [1] run (res://tests/test_player_feedback.gd:85)
+SCRIPT ERROR: Invalid access to property or key 'effects' on a base object of type 'Dictionary'.
+          at: derive (res://scripts/rules.gd:231)
+          GDScript backtrace (most recent call first):
+              [0] derive (res://scripts/rules.gd:231)
+              [1] _recompute (res://scripts/main.gd:779)
+              [2] setup (res://tests/test_player_feedback.gd:15)
+              [3] run (res://tests/test_player_feedback.gd:48)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _recompute (res://scripts/main.gd:780)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:780)
+              [1] setup (res://tests/test_player_feedback.gd:15)
+              [2] run (res://tests/test_player_feedback.gd:48)
+SCRIPT ERROR: Invalid access to property or key 'hp' on a base object of type 'Dictionary'.
+          at: _view (res://scripts/main.gd:991)
+          GDScript backtrace (most recent call first):
+              [0] _view (res://scripts/main.gd:991)
+              [1] run (res://tests/test_player_feedback.gd:49)
+SCRIPT ERROR: Invalid access to property or key 'damage' on a base object of type 'Dictionary'.
+          at: emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+          GDScript backtrace (most recent call first):
+              [0] emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+              [1] _effect_event (res://scripts/main.gd:1203)
+              [2] _hurt (res://scripts/main.gd:548)
+              [3] run (res://tests/test_player_feedback.gd:52)
+SCRIPT ERROR: Invalid access to property or key 'hp' on a base object of type 'Dictionary'.
+          at: apply_damage (res://scripts/gameplay/character_motor.gd:16)
+          GDScript backtrace (most recent call first):
+              [0] apply_damage (res://scripts/gameplay/character_motor.gd:16)
+              [1] _hurt (res://scripts/main.gd:554)
+              [2] run (res://tests/test_player_feedback.gd:52)
+SCRIPT ERROR: Invalid access to property or key 'damage' on a base object of type 'Dictionary'.
+          at: emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+          GDScript backtrace (most recent call first):
+              [0] emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+              [1] _effect_event (res://scripts/main.gd:1203)
+              [2] _hurt (res://scripts/main.gd:555)
+              [3] run (res://tests/test_player_feedback.gd:52)
+SCRIPT ERROR: Invalid access to property or key 'hp' on a base object of type 'Dictionary'.
+          at: _hurt (res://scripts/main.gd:557)
+          GDScript backtrace (most recent call first):
+              [0] _hurt (res://scripts/main.gd:557)
+              [1] run (res://tests/test_player_feedback.gd:52)
+SCRIPT ERROR: Invalid access to property or key 'effects' on a base object of type 'Dictionary'.
+          at: derive (res://scripts/rules.gd:231)
+          GDScript backtrace (most recent call first):
+              [0] derive (res://scripts/rules.gd:231)
+              [1] _recompute (res://scripts/main.gd:779)
+              [2] setup (res://tests/test_player_feedback.gd:15)
+              [3] run (res://tests/test_player_feedback.gd:54)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _recompute (res://scripts/main.gd:780)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:780)
+              [1] setup (res://tests/test_player_feedback.gd:15)
+              [2] run (res://tests/test_player_feedback.gd:54)
+SCRIPT ERROR: Invalid access to property or key 'damage' on a base object of type 'Dictionary'.
+          at: emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+          GDScript backtrace (most recent call first):
+              [0] emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+              [1] _effect_event (res://scripts/main.gd:1203)
+              [2] _hurt (res://scripts/main.gd:548)
+              [3] run (res://tests/test_player_feedback.gd:54)
+SCRIPT ERROR: Invalid access to property or key 'hp' on a base object of type 'Dictionary'.
+          at: apply_damage (res://scripts/gameplay/character_motor.gd:16)
+          GDScript backtrace (most recent call first):
+              [0] apply_damage (res://scripts/gameplay/character_motor.gd:16)
+              [1] _hurt (res://scripts/main.gd:554)
+              [2] run (res://tests/test_player_feedback.gd:54)
+SCRIPT ERROR: Invalid access to property or key 'damage' on a base object of type 'Dictionary'.
+          at: emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+          GDScript backtrace (most recent call first):
+              [0] emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+              [1] _effect_event (res://scripts/main.gd:1203)
+              [2] _hurt (res://scripts/main.gd:555)
+              [3] run (res://tests/test_player_feedback.gd:54)
+SCRIPT ERROR: Invalid access to property or key 'hp' on a base object of type 'Dictionary'.
+          at: _hurt (res://scripts/main.gd:557)
+          GDScript backtrace (most recent call first):
+              [0] _hurt (res://scripts/main.gd:557)
+              [1] run (res://tests/test_player_feedback.gd:54)
+SCRIPT ERROR: Invalid access to property or key 'damage' on a base object of type 'Dictionary'.
+          at: emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+          GDScript backtrace (most recent call first):
+              [0] emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+              [1] _effect_event (res://scripts/main.gd:1203)
+              [2] _hurt (res://scripts/main.gd:548)
+              [3] run (res://tests/test_player_feedback.gd:56)
+SCRIPT ERROR: Invalid access to property or key 'hp' on a base object of type 'Dictionary'.
+          at: apply_damage (res://scripts/gameplay/character_motor.gd:16)
+          GDScript backtrace (most recent call first):
+              [0] apply_damage (res://scripts/gameplay/character_motor.gd:16)
+              [1] _hurt (res://scripts/main.gd:554)
+              [2] run (res://tests/test_player_feedback.gd:56)
+SCRIPT ERROR: Invalid access to property or key 'damage' on a base object of type 'Dictionary'.
+          at: emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+          GDScript backtrace (most recent call first):
+              [0] emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+              [1] _effect_event (res://scripts/main.gd:1203)
+              [2] _hurt (res://scripts/main.gd:555)
+              [3] run (res://tests/test_player_feedback.gd:56)
+SCRIPT ERROR: Invalid access to property or key 'hp' on a base object of type 'Dictionary'.
+          at: _hurt (res://scripts/main.gd:557)
+          GDScript backtrace (most recent call first):
+              [0] _hurt (res://scripts/main.gd:557)
+              [1] run (res://tests/test_player_feedback.gd:56)
+SCRIPT ERROR: Invalid access to property or key 'effects' on a base object of type 'Dictionary'.
+          at: derive (res://scripts/rules.gd:231)
+          GDScript backtrace (most recent call first):
+              [0] derive (res://scripts/rules.gd:231)
+              [1] _recompute (res://scripts/main.gd:779)
+              [2] setup (res://tests/test_player_feedback.gd:15)
+              [3] run (res://tests/test_player_feedback.gd:58)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _recompute (res://scripts/main.gd:780)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:780)
+              [1] setup (res://tests/test_player_feedback.gd:15)
+              [2] run (res://tests/test_player_feedback.gd:58)
+SCRIPT ERROR: Invalid access to property or key 'effects' on a base object of type 'Dictionary'.
+          at: derive (res://scripts/rules.gd:231)
+          GDScript backtrace (most recent call first):
+              [0] derive (res://scripts/rules.gd:231)
+              [1] _recompute (res://scripts/main.gd:779)
+              [2] setup (res://tests/test_player_feedback.gd:15)
+              [3] run (res://tests/test_player_feedback.gd:58)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _recompute (res://scripts/main.gd:780)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:780)
+              [1] setup (res://tests/test_player_feedback.gd:15)
+              [2] run (res://tests/test_player_feedback.gd:58)
+SCRIPT ERROR: Invalid access to property or key 'effects' on a base object of type 'Dictionary'.
+          at: derive (res://scripts/rules.gd:231)
+          GDScript backtrace (most recent call first):
+              [0] derive (res://scripts/rules.gd:231)
+              [1] _recompute (res://scripts/main.gd:779)
+              [2] setup (res://tests/test_player_feedback.gd:15)
+              [3] run (res://tests/test_player_feedback.gd:58)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _recompute (res://scripts/main.gd:780)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:780)
+              [1] setup (res://tests/test_player_feedback.gd:15)
+              [2] run (res://tests/test_player_feedback.gd:58)
+SCRIPT ERROR: Invalid access to property or key 'effects' on a base object of type 'Dictionary'.
+          at: derive (res://scripts/rules.gd:231)
+          GDScript backtrace (most recent call first):
+              [0] derive (res://scripts/rules.gd:231)
+              [1] _recompute (res://scripts/main.gd:779)
+              [2] setup (res://tests/test_player_feedback.gd:15)
+              [3] run (res://tests/test_player_feedback.gd:58)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _recompute (res://scripts/main.gd:780)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:780)
+              [1] setup (res://tests/test_player_feedback.gd:15)
+              [2] run (res://tests/test_player_feedback.gd:58)
+SCRIPT ERROR: Invalid access to property or key 'effects' on a base object of type 'Dictionary'.
+          at: derive (res://scripts/rules.gd:231)
+          GDScript backtrace (most recent call first):
+              [0] derive (res://scripts/rules.gd:231)
+              [1] _recompute (res://scripts/main.gd:779)
+              [2] setup (res://tests/test_player_feedback.gd:15)
+              [3] run (res://tests/test_player_feedback.gd:58)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _recompute (res://scripts/main.gd:780)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:780)
+              [1] setup (res://tests/test_player_feedback.gd:15)
+              [2] run (res://tests/test_player_feedback.gd:58)
+SCRIPT ERROR: Invalid access to property or key 'effects' on a base object of type 'Dictionary'.
+          at: derive (res://scripts/rules.gd:231)
+          GDScript backtrace (most recent call first):
+              [0] derive (res://scripts/rules.gd:231)
+              [1] _recompute (res://scripts/main.gd:779)
+              [2] setup (res://tests/test_player_feedback.gd:15)
+              [3] run (res://tests/test_player_feedback.gd:58)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _recompute (res://scripts/main.gd:780)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:780)
+              [1] setup (res://tests/test_player_feedback.gd:15)
+              [2] run (res://tests/test_player_feedback.gd:58)
+SCRIPT ERROR: Invalid access to property or key 'effects' on a base object of type 'Dictionary'.
+          at: derive (res://scripts/rules.gd:231)
+          GDScript backtrace (most recent call first):
+              [0] derive (res://scripts/rules.gd:231)
+              [1] _recompute (res://scripts/main.gd:779)
+              [2] setup (res://tests/test_player_feedback.gd:15)
+              [3] run (res://tests/test_player_feedback.gd:58)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _recompute (res://scripts/main.gd:780)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:780)
+              [1] setup (res://tests/test_player_feedback.gd:15)
+              [2] run (res://tests/test_player_feedback.gd:58)
+SCRIPT ERROR: Invalid access to property or key 'effects' on a base object of type 'Dictionary'.
+          at: derive (res://scripts/rules.gd:231)
+          GDScript backtrace (most recent call first):
+              [0] derive (res://scripts/rules.gd:231)
+              [1] _recompute (res://scripts/main.gd:779)
+              [2] setup (res://tests/test_player_feedback.gd:15)
+              [3] run (res://tests/test_player_feedback.gd:58)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _recompute (res://scripts/main.gd:780)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:780)
+              [1] setup (res://tests/test_player_feedback.gd:15)
+              [2] run (res://tests/test_player_feedback.gd:58)
+SCRIPT ERROR: Invalid access to property or key 'effects' on a base object of type 'Dictionary'.
+          at: derive (res://scripts/rules.gd:231)
+          GDScript backtrace (most recent call first):
+              [0] derive (res://scripts/rules.gd:231)
+              [1] _recompute (res://scripts/main.gd:779)
+              [2] setup (res://tests/test_player_feedback.gd:15)
+              [3] run (res://tests/test_player_feedback.gd:58)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _recompute (res://scripts/main.gd:780)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:780)
+              [1] setup (res://tests/test_player_feedback.gd:15)
+              [2] run (res://tests/test_player_feedback.gd:58)
+SCRIPT ERROR: Invalid access to property or key 'effects' on a base object of type 'Dictionary'.
+          at: derive (res://scripts/rules.gd:231)
+          GDScript backtrace (most recent call first):
+              [0] derive (res://scripts/rules.gd:231)
+              [1] _recompute (res://scripts/main.gd:779)
+              [2] setup (res://tests/test_player_feedback.gd:15)
+              [3] run (res://tests/test_player_feedback.gd:59)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _recompute (res://scripts/main.gd:780)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:780)
+              [1] setup (res://tests/test_player_feedback.gd:15)
+              [2] run (res://tests/test_player_feedback.gd:59)
+SCRIPT ERROR: Invalid access to property or key 'effects' on a base object of type 'Dictionary'.
+          at: derive (res://scripts/rules.gd:231)
+          GDScript backtrace (most recent call first):
+              [0] derive (res://scripts/rules.gd:231)
+              [1] _recompute (res://scripts/main.gd:779)
+              [2] setup (res://tests/test_player_feedback.gd:15)
+              [3] run (res://tests/test_player_feedback.gd:61)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _recompute (res://scripts/main.gd:780)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:780)
+              [1] setup (res://tests/test_player_feedback.gd:15)
+              [2] run (res://tests/test_player_feedback.gd:61)
+SCRIPT ERROR: Invalid access to property or key 'damage' on a base object of type 'Dictionary'.
+          at: emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+          GDScript backtrace (most recent call first):
+              [0] emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+              [1] _effect_event (res://scripts/main.gd:1203)
+              [2] _hurt (res://scripts/main.gd:548)
+              [3] run (res://tests/test_player_feedback.gd:61)
+SCRIPT ERROR: Invalid access to property or key 'hp' on a base object of type 'Dictionary'.
+          at: apply_damage (res://scripts/gameplay/character_motor.gd:16)
+          GDScript backtrace (most recent call first):
+              [0] apply_damage (res://scripts/gameplay/character_motor.gd:16)
+              [1] _hurt (res://scripts/main.gd:554)
+              [2] run (res://tests/test_player_feedback.gd:61)
+SCRIPT ERROR: Invalid access to property or key 'damage' on a base object of type 'Dictionary'.
+          at: emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+          GDScript backtrace (most recent call first):
+              [0] emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+              [1] _effect_event (res://scripts/main.gd:1203)
+              [2] _hurt (res://scripts/main.gd:555)
+              [3] run (res://tests/test_player_feedback.gd:61)
+SCRIPT ERROR: Invalid access to property or key 'hp' on a base object of type 'Dictionary'.
+          at: _hurt (res://scripts/main.gd:557)
+          GDScript backtrace (most recent call first):
+              [0] _hurt (res://scripts/main.gd:557)
+              [1] run (res://tests/test_player_feedback.gd:61)
+SCRIPT ERROR: Invalid access to property or key 'effects' on a base object of type 'Dictionary'.
+          at: derive (res://scripts/rules.gd:231)
+          GDScript backtrace (most recent call first):
+              [0] derive (res://scripts/rules.gd:231)
+              [1] _recompute (res://scripts/main.gd:779)
+              [2] setup (res://tests/test_player_feedback.gd:15)
+              [3] run (res://tests/test_player_feedback.gd:61)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _recompute (res://scripts/main.gd:780)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:780)
+              [1] setup (res://tests/test_player_feedback.gd:15)
+              [2] run (res://tests/test_player_feedback.gd:61)
+SCRIPT ERROR: Invalid access to property or key 'damage' on a base object of type 'Dictionary'.
+          at: emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+          GDScript backtrace (most recent call first):
+              [0] emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+              [1] _effect_event (res://scripts/main.gd:1203)
+              [2] _hurt (res://scripts/main.gd:548)
+              [3] run (res://tests/test_player_feedback.gd:61)
+SCRIPT ERROR: Invalid access to property or key 'hp' on a base object of type 'Dictionary'.
+          at: apply_damage (res://scripts/gameplay/character_motor.gd:16)
+          GDScript backtrace (most recent call first):
+              [0] apply_damage (res://scripts/gameplay/character_motor.gd:16)
+              [1] _hurt (res://scripts/main.gd:554)
+              [2] run (res://tests/test_player_feedback.gd:61)
+SCRIPT ERROR: Invalid access to property or key 'damage' on a base object of type 'Dictionary'.
+          at: emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+          GDScript backtrace (most recent call first):
+              [0] emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+              [1] _effect_event (res://scripts/main.gd:1203)
+              [2] _hurt (res://scripts/main.gd:555)
+              [3] run (res://tests/test_player_feedback.gd:61)
+SCRIPT ERROR: Invalid access to property or key 'hp' on a base object of type 'Dictionary'.
+          at: _hurt (res://scripts/main.gd:557)
+          GDScript backtrace (most recent call first):
+              [0] _hurt (res://scripts/main.gd:557)
+              [1] run (res://tests/test_player_feedback.gd:61)
+SCRIPT ERROR: Invalid access to property or key 'effects' on a base object of type 'Dictionary'.
+          at: derive (res://scripts/rules.gd:231)
+          GDScript backtrace (most recent call first):
+              [0] derive (res://scripts/rules.gd:231)
+              [1] _recompute (res://scripts/main.gd:779)
+              [2] setup (res://tests/test_player_feedback.gd:15)
+              [3] run (res://tests/test_player_feedback.gd:62)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _recompute (res://scripts/main.gd:780)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:780)
+              [1] setup (res://tests/test_player_feedback.gd:15)
+              [2] run (res://tests/test_player_feedback.gd:62)
+SCRIPT ERROR: Invalid access to property or key 'damage' on a base object of type 'Dictionary'.
+          at: emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+          GDScript backtrace (most recent call first):
+              [0] emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+              [1] _effect_event (res://scripts/main.gd:1203)
+              [2] run (res://tests/test_player_feedback.gd:62)
+SCRIPT ERROR: Invalid access to property or key 'effects' on a base object of type 'Dictionary'.
+          at: derive (res://scripts/rules.gd:231)
+          GDScript backtrace (most recent call first):
+              [0] derive (res://scripts/rules.gd:231)
+              [1] _recompute (res://scripts/main.gd:779)
+              [2] setup (res://tests/test_player_feedback.gd:15)
+              [3] run (res://tests/test_player_feedback.gd:63)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _recompute (res://scripts/main.gd:780)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:780)
+              [1] setup (res://tests/test_player_feedback.gd:15)
+              [2] run (res://tests/test_player_feedback.gd:63)
+SCRIPT ERROR: Invalid access to property or key 'damage' on a base object of type 'Dictionary'.
+          at: emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+          GDScript backtrace (most recent call first):
+              [0] emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+              [1] _effect_event (res://scripts/main.gd:1203)
+              [2] _hurt (res://scripts/main.gd:548)
+              [3] run (res://tests/test_player_feedback.gd:63)
+SCRIPT ERROR: Invalid access to property or key 'damage' on a base object of type 'Dictionary'.
+          at: emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+          GDScript backtrace (most recent call first):
+              [0] emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+              [1] _effect_event (res://scripts/main.gd:1203)
+              [2] _hurt (res://scripts/main.gd:555)
+              [3] run (res://tests/test_player_feedback.gd:63)
+SCRIPT ERROR: Invalid access to property or key 'effects' on a base object of type 'Dictionary'.
+          at: derive (res://scripts/rules.gd:231)
+          GDScript backtrace (most recent call first):
+              [0] derive (res://scripts/rules.gd:231)
+              [1] _recompute (res://scripts/main.gd:779)
+              [2] setup (res://tests/test_player_feedback.gd:15)
+              [3] run (res://tests/test_player_feedback.gd:68)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _recompute (res://scripts/main.gd:780)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:780)
+              [1] setup (res://tests/test_player_feedback.gd:15)
+              [2] run (res://tests/test_player_feedback.gd:68)
+SCRIPT ERROR: Invalid access to property or key 'hp' on a base object of type 'Dictionary'.
+          at: _view (res://scripts/main.gd:991)
+          GDScript backtrace (most recent call first):
+              [0] _view (res://scripts/main.gd:991)
+              [1] _present_pause (res://scripts/main.gd:1170)
+              [2] run (res://tests/test_player_feedback.gd:68)
+SCRIPT ERROR: Invalid access to property or key 'effects' on a base object of type 'Dictionary'.
+          at: derive (res://scripts/rules.gd:231)
+          GDScript backtrace (most recent call first):
+              [0] derive (res://scripts/rules.gd:231)
+              [1] _recompute (res://scripts/main.gd:779)
+              [2] setup (res://tests/test_player_feedback.gd:15)
+              [3] run (res://tests/test_player_feedback.gd:68)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _recompute (res://scripts/main.gd:780)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:780)
+              [1] setup (res://tests/test_player_feedback.gd:15)
+              [2] run (res://tests/test_player_feedback.gd:68)
+SCRIPT ERROR: Invalid access to property or key 'hp' on a base object of type 'Dictionary'.
+          at: _view (res://scripts/main.gd:991)
+          GDScript backtrace (most recent call first):
+              [0] _view (res://scripts/main.gd:991)
+              [1] _present_inventory (res://scripts/main.gd:1164)
+              [2] run (res://tests/test_player_feedback.gd:68)
+SCRIPT ERROR: Invalid access to property or key 'effects' on a base object of type 'Dictionary'.
+          at: derive (res://scripts/rules.gd:231)
+          GDScript backtrace (most recent call first):
+              [0] derive (res://scripts/rules.gd:231)
+              [1] _recompute (res://scripts/main.gd:779)
+              [2] setup (res://tests/test_player_feedback.gd:15)
+              [3] run (res://tests/test_player_feedback.gd:68)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _recompute (res://scripts/main.gd:780)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:780)
+              [1] setup (res://tests/test_player_feedback.gd:15)
+              [2] run (res://tests/test_player_feedback.gd:68)
+SCRIPT ERROR: Invalid access to property or key 'effects' on a base object of type 'Dictionary'.
+          at: derive (res://scripts/rules.gd:231)
+          GDScript backtrace (most recent call first):
+              [0] derive (res://scripts/rules.gd:231)
+              [1] _recompute (res://scripts/main.gd:779)
+              [2] setup (res://tests/test_player_feedback.gd:15)
+              [3] run (res://tests/test_player_feedback.gd:68)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _recompute (res://scripts/main.gd:780)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:780)
+              [1] setup (res://tests/test_player_feedback.gd:15)
+              [2] run (res://tests/test_player_feedback.gd:68)
+SCRIPT ERROR: Invalid access to property or key 'hp' on a base object of type 'Dictionary'.
+          at: _view (res://scripts/main.gd:991)
+          GDScript backtrace (most recent call first):
+              [0] _view (res://scripts/main.gd:991)
+              [1] _render_shop (res://scripts/main.gd:829)
+              [2] _open_shop (res://scripts/main.gd:825)
+              [3] run (res://tests/test_player_feedback.gd:68)
+SCRIPT ERROR: Invalid access to property or key 'effects' on a base object of type 'Dictionary'.
+          at: derive (res://scripts/rules.gd:231)
+          GDScript backtrace (most recent call first):
+              [0] derive (res://scripts/rules.gd:231)
+              [1] _recompute (res://scripts/main.gd:779)
+              [2] setup (res://tests/test_player_feedback.gd:15)
+              [3] run (res://tests/test_player_feedback.gd:68)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _recompute (res://scripts/main.gd:780)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:780)
+              [1] setup (res://tests/test_player_feedback.gd:15)
+              [2] run (res://tests/test_player_feedback.gd:68)
+SCRIPT ERROR: Invalid access to property or key 'effects' on a base object of type 'Dictionary'.
+          at: derive (res://scripts/rules.gd:231)
+          GDScript backtrace (most recent call first):
+              [0] derive (res://scripts/rules.gd:231)
+              [1] _recompute (res://scripts/main.gd:779)
+              [2] setup (res://tests/test_player_feedback.gd:15)
+              [3] run (res://tests/test_player_feedback.gd:68)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _recompute (res://scripts/main.gd:780)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:780)
+              [1] setup (res://tests/test_player_feedback.gd:15)
+              [2] run (res://tests/test_player_feedback.gd:68)
+SCRIPT ERROR: Invalid access to property or key 'effects' on a base object of type 'Dictionary'.
+          at: derive (res://scripts/rules.gd:231)
+          GDScript backtrace (most recent call first):
+              [0] derive (res://scripts/rules.gd:231)
+              [1] _recompute (res://scripts/main.gd:779)
+              [2] setup (res://tests/test_player_feedback.gd:15)
+              [3] run (res://tests/test_player_feedback.gd:69)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _recompute (res://scripts/main.gd:780)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:780)
+              [1] setup (res://tests/test_player_feedback.gd:15)
+              [2] run (res://tests/test_player_feedback.gd:69)
+SCRIPT ERROR: Invalid access to property or key 'effects' on a base object of type 'Dictionary'.
+          at: derive (res://scripts/rules.gd:231)
+          GDScript backtrace (most recent call first):
+              [0] derive (res://scripts/rules.gd:231)
+              [1] _recompute (res://scripts/main.gd:779)
+              [2] setup (res://tests/test_player_feedback.gd:15)
+              [3] run (res://tests/test_player_feedback.gd:71)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _recompute (res://scripts/main.gd:780)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:780)
+              [1] setup (res://tests/test_player_feedback.gd:15)
+              [2] run (res://tests/test_player_feedback.gd:71)
+SCRIPT ERROR: Invalid access to property or key 'hp' on a base object of type 'Dictionary'.
+          at: _finish (res://scripts/main.gd:650)
+          GDScript backtrace (most recent call first):
+              [0] _finish (res://scripts/main.gd:650)
+              [1] run (res://tests/test_player_feedback.gd:71)
+SCRIPT ERROR: Invalid access to property or key 'effects' on a base object of type 'Dictionary'.
+          at: derive (res://scripts/rules.gd:231)
+          GDScript backtrace (most recent call first):
+              [0] derive (res://scripts/rules.gd:231)
+              [1] _recompute (res://scripts/main.gd:779)
+              [2] setup (res://tests/test_player_feedback.gd:15)
+              [3] run (res://tests/test_player_feedback.gd:72)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _recompute (res://scripts/main.gd:780)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:780)
+              [1] setup (res://tests/test_player_feedback.gd:15)
+              [2] run (res://tests/test_player_feedback.gd:72)
+SCRIPT ERROR: Invalid access to property or key 'hp' on a base object of type 'Dictionary'.
+          at: _view (res://scripts/main.gd:991)
+          GDScript backtrace (most recent call first):
+              [0] _view (res://scripts/main.gd:991)
+              [1] _present_pause (res://scripts/main.gd:1170)
+              [2] _on_intent (res://scripts/main.gd:1128)
+              [3] run (res://tests/test_player_feedback.gd:72)
+SCRIPT ERROR: Invalid access to property or key 'hp' on a base object of type 'Dictionary'.
+          at: _view (res://scripts/main.gd:991)
+          GDScript backtrace (most recent call first):
+              [0] _view (res://scripts/main.gd:991)
+              [1] _on_intent (res://scripts/main.gd:1088)
+              [2] run (res://tests/test_player_feedback.gd:72)
+SCRIPT ERROR: Invalid access to property or key 'hp' on a base object of type 'Dictionary'.
+          at: _view (res://scripts/main.gd:991)
+          GDScript backtrace (most recent call first):
+              [0] _view (res://scripts/main.gd:991)
+              [1] _on_intent (res://scripts/main.gd:1102)
+              [2] run (res://tests/test_player_feedback.gd:76)
+SCRIPT ERROR: Invalid access to property or key 'hp' on a base object of type 'Dictionary'.
+          at: _view (res://scripts/main.gd:991)
+          GDScript backtrace (most recent call first):
+              [0] _view (res://scripts/main.gd:991)
+              [1] _present_pause (res://scripts/main.gd:1170)
+              [2] _on_intent (res://scripts/main.gd:1108)
+              [3] run (res://tests/test_player_feedback.gd:78)
+SCRIPT ERROR: Invalid access to property or key 'damage' on a base object of type 'Dictionary'.
+          at: emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+          GDScript backtrace (most recent call first):
+              [0] emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+              [1] _effect_event (res://scripts/main.gd:1203)
+              [2] _hurt (res://scripts/main.gd:548)
+              [3] run (res://tests/test_player_feedback.gd:78)
+SCRIPT ERROR: Invalid access to property or key 'hp' on a base object of type 'Dictionary'.
+          at: apply_damage (res://scripts/gameplay/character_motor.gd:16)
+          GDScript backtrace (most recent call first):
+              [0] apply_damage (res://scripts/gameplay/character_motor.gd:16)
+              [1] _hurt (res://scripts/main.gd:554)
+              [2] run (res://tests/test_player_feedback.gd:78)
+SCRIPT ERROR: Invalid access to property or key 'damage' on a base object of type 'Dictionary'.
+          at: emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+          GDScript backtrace (most recent call first):
+              [0] emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+              [1] _effect_event (res://scripts/main.gd:1203)
+              [2] _hurt (res://scripts/main.gd:555)
+              [3] run (res://tests/test_player_feedback.gd:78)
+SCRIPT ERROR: Invalid access to property or key 'hp' on a base object of type 'Dictionary'.
+          at: _hurt (res://scripts/main.gd:557)
+          GDScript backtrace (most recent call first):
+              [0] _hurt (res://scripts/main.gd:557)
+              [1] run (res://tests/test_player_feedback.gd:78)
+SCRIPT ERROR: Invalid access to property or key 'hp' on a base object of type 'Dictionary'.
+          at: _view (res://scripts/main.gd:991)
+          GDScript backtrace (most recent call first):
+              [0] _view (res://scripts/main.gd:991)
+              [1] _present_pause (res://scripts/main.gd:1170)
+              [2] _on_intent (res://scripts/main.gd:1128)
+              [3] run (res://tests/test_player_feedback.gd:80)
+SCRIPT ERROR: Invalid access to property or key 'hp' on a base object of type 'Dictionary'.
+          at: _view (res://scripts/main.gd:991)
+          GDScript backtrace (most recent call first):
+              [0] _view (res://scripts/main.gd:991)
+              [1] _on_intent (res://scripts/main.gd:1088)
+              [2] run (res://tests/test_player_feedback.gd:80)
+SCRIPT ERROR: Invalid access to property or key 'hp' on a base object of type 'Dictionary'.
+          at: _view (res://scripts/main.gd:991)
+          GDScript backtrace (most recent call first):
+              [0] _view (res://scripts/main.gd:991)
+              [1] _on_intent (res://scripts/main.gd:1102)
+              [2] run (res://tests/test_player_feedback.gd:81)
+SCRIPT ERROR: Invalid access to property or key 'hp' on a base object of type 'Dictionary'.
+          at: _view (res://scripts/main.gd:991)
+          GDScript backtrace (most recent call first):
+              [0] _view (res://scripts/main.gd:991)
+              [1] _present_pause (res://scripts/main.gd:1170)
+              [2] _on_intent (res://scripts/main.gd:1108)
+              [3] run (res://tests/test_player_feedback.gd:81)
+SCRIPT ERROR: Invalid access to property or key 'effects' on a base object of type 'Dictionary'.
+          at: derive (res://scripts/rules.gd:231)
+          GDScript backtrace (most recent call first):
+              [0] derive (res://scripts/rules.gd:231)
+              [1] _recompute (res://scripts/main.gd:779)
+              [2] setup (res://tests/test_player_feedback.gd:15)
+              [3] run (res://tests/test_player_feedback.gd:85)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _recompute (res://scripts/main.gd:780)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:780)
+              [1] setup (res://tests/test_player_feedback.gd:15)
+              [2] run (res://tests/test_player_feedback.gd:85)
+SCRIPT ERROR: Invalid access to property or key 'damage' on a base object of type 'Dictionary'.
+          at: emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+          GDScript backtrace (most recent call first):
+              [0] emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+              [1] _effect_event (res://scripts/main.gd:1203)
+              [2] _hurt (res://scripts/main.gd:548)
+              [3] run (res://tests/test_player_feedback.gd:85)
+SCRIPT ERROR: Invalid access to property or key 'hp' on a base object of type 'Dictionary'.
+          at: apply_damage (res://scripts/gameplay/character_motor.gd:16)
+          GDScript backtrace (most recent call first):
+              [0] apply_damage (res://scripts/gameplay/character_motor.gd:16)
+              [1] _hurt (res://scripts/main.gd:554)
+              [2] run (res://tests/test_player_feedback.gd:85)
+SCRIPT ERROR: Invalid access to property or key 'damage' on a base object of type 'Dictionary'.
+          at: emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+          GDScript backtrace (most recent call first):
+              [0] emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+              [1] _effect_event (res://scripts/main.gd:1203)
+              [2] _hurt (res://scripts/main.gd:555)
+              [3] run (res://tests/test_player_feedback.gd:85)
+SCRIPT ERROR: Invalid access to property or key 'hp' on a base object of type 'Dictionary'.
+          at: _hurt (res://scripts/main.gd:557)
+          GDScript backtrace (most recent call first):
+              [0] _hurt (res://scripts/main.gd:557)
+              [1] run (res://tests/test_player_feedback.gd:85)
+SCRIPT ERROR: Invalid access to property or key 'damage' on a base object of type 'Dictionary'.
+          at: emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+          GDScript backtrace (most recent call first):
+              [0] emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+              [1] _effect_event (res://scripts/main.gd:1203)
+              [2] _hurt (res://scripts/main.gd:548)
+              [3] run (res://tests/test_player_feedback.gd:85)
+SCRIPT ERROR: Invalid access to property or key 'hp' on a base object of type 'Dictionary'.
+          at: apply_damage (res://scripts/gameplay/character_motor.gd:16)
+          GDScript backtrace (most recent call first):
+              [0] apply_damage (res://scripts/gameplay/character_motor.gd:16)
+              [1] _hurt (res://scripts/main.gd:554)
+              [2] run (res://tests/test_player_feedback.gd:85)
+SCRIPT ERROR: Invalid access to property or key 'damage' on a base object of type 'Dictionary'.
+          at: emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+          GDScript backtrace (most recent call first):
+              [0] emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+              [1] _effect_event (res://scripts/main.gd:1203)
+              [2] _hurt (res://scripts/main.gd:555)
+              [3] run (res://tests/test_player_feedback.gd:85)
+SCRIPT ERROR: Invalid access to property or key 'hp' on a base object of type 'Dictionary'.
+          at: _hurt (res://scripts/main.gd:557)
+          GDScript backtrace (most recent call first):
+              [0] _hurt (res://scripts/main.gd:557)
+              [1] run (res://tests/test_player_feedback.gd:85)
+SCRIPT ERROR: Invalid access to property or key 'effects' on a base object of type 'Dictionary'.
+          at: derive (res://scripts/rules.gd:231)
+          GDScript backtrace (most recent call first):
+              [0] derive (res://scripts/rules.gd:231)
+              [1] _recompute (res://scripts/main.gd:779)
+              [2] setup (res://tests/test_player_feedback.gd:15)
+              [3] run (res://tests/test_player_feedback.gd:85)
+SCRIPT ERROR: Invalid access to property or key 'max_hp' on a base object of type 'Dictionary'.
+          at: _recompute (res://scripts/main.gd:780)
+          GDScript backtrace (most recent call first):
+              [0] _recompute (res://scripts/main.gd:780)
+              [1] setup (res://tests/test_player_feedback.gd:15)
+              [2] run (res://tests/test_player_feedback.gd:85)
+SCRIPT ERROR: Invalid access to property or key 'damage' on a base object of type 'Dictionary'.
+          at: emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+          GDScript backtrace (most recent call first):
+              [0] emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+              [1] _effect_event (res://scripts/main.gd:1203)
+              [2] _hurt (res://scripts/main.gd:548)
+              [3] run (res://tests/test_player_feedback.gd:85)
+SCRIPT ERROR: Invalid access to property or key 'hp' on a base object of type 'Dictionary'.
+          at: apply_damage (res://scripts/gameplay/character_motor.gd:16)
+          GDScript backtrace (most recent call first):
+              [0] apply_damage (res://scripts/gameplay/character_motor.gd:16)
+              [1] _hurt (res://scripts/main.gd:554)
+              [2] run (res://tests/test_player_feedback.gd:85)
+SCRIPT ERROR: Invalid access to property or key 'damage' on a base object of type 'Dictionary'.
+          at: emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+          GDScript backtrace (most recent call first):
+              [0] emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+              [1] _effect_event (res://scripts/main.gd:1203)
+              [2] _hurt (res://scripts/main.gd:555)
+              [3] run (res://tests/test_player_feedback.gd:85)
+SCRIPT ERROR: Invalid access to property or key 'hp' on a base object of type 'Dictionary'.
+          at: _hurt (res://scripts/main.gd:557)
+          GDScript backtrace (most recent call first):
+              [0] _hurt (res://scripts/main.gd:557)
+              [1] run (res://tests/test_player_feedback.gd:85)
+SCRIPT ERROR: Invalid access to property or key 'damage' on a base object of type 'Dictionary'.
+          at: emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+          GDScript backtrace (most recent call first):
+              [0] emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+              [1] _effect_event (res://scripts/main.gd:1203)
+              [2] _hurt (res://scripts/main.gd:548)
+              [3] run (res://tests/test_player_feedback.gd:85)
+SCRIPT ERROR: Invalid access to property or key 'hp' on a base object of type 'Dictionary'.
+          at: apply_damage (res://scripts/gameplay/character_motor.gd:16)
+          GDScript backtrace (most recent call first):
+              [0] apply_damage (res://scripts/gameplay/character_motor.gd:16)
+              [1] _hurt (res://scripts/main.gd:554)
+              [2] run (res://tests/test_player_feedback.gd:85)
+SCRIPT ERROR: Invalid access to property or key 'damage' on a base object of type 'Dictionary'.
+          at: emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+          GDScript backtrace (most recent call first):
+              [0] emit_event (res://scripts/gameplay/effect_runtime.gd:30)
+              [1] _effect_event (res://scripts/main.gd:1203)
+              [2] _hurt (res://scripts/main.gd:555)
+              [3] run (res://tests/test_player_feedback.gd:85)
+SCRIPT ERROR: Invalid access to property or key 'hp' on a base object of type 'Dictionary'.
+          at: _hurt (res://scripts/main.gd:557)
+          GDScript backtrace (most recent call first):
+              [0] _hurt (res://scripts/main.gd:557)
+              [1] run (res://tests/test_player_feedback.gd:85)
+{"failures":["resolved positive loss once","hurt cooldown no extra","genuine consumed Mirror block only","spent shield actual loss","muted real damage silent","enabled/muted authority exact parity arena","resolved positive loss once","hurt cooldown no extra","genuine consumed Mirror block only","spent shield actual loss","muted real damage silent","enabled/muted authority exact parity rooms"],"passed":83,"scope":"Author controlled requests, resources, settings and lifecycle; actual mixer and independent authority remain separate."}

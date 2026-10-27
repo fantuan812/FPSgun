@@ -1,0 +1,13 @@
+--- frozen-final/tests/independent_resolution.gd
++++ r4/tests/independent_resolution.gd
+@@ -37,7 +37,10 @@
+ 	await process_frame
+ 	check(g.state=="playing" and g.wave==1 and g.build==before_build,"invalid decision rejects without economy/stage mutation")
+ 	check(g.enemies.size()==1 and is_instance_valid(sprite) and not sprite.is_queued_for_deletion(),"invalid decision preserves live enemy sprite through frame boundary")
++	var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
++	audio_teardown.prepare([g])
+ 	g.queue_free();await process_frame
++	await audio_teardown.finish(self)
+ 	print("INDEPENDENT RESOLUTION: ",passed," passed; ",failures.size()," failed")
+ 	for failure in failures:push_error(failure)
+ 	quit(0 if failures.is_empty() else 1)

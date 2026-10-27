@@ -1,0 +1,27 @@
+{
+  "status": "PASS_READ_ONLY_DIAGNOSTIC_REVIEW",
+  "files": {
+    "control.gd": "f5c30d300ce51b6c0df094b6e06973d58c5ec79644ad3acfb5ddc7f334748cc5",
+    "immediate.json": "dc84b296a528de0d2bd45abcaa4d25709c13cc643475ac814b2b5e80e17cee6c",
+    "immediate.log": "d1ad57d41371f522a0a7a929573190b228332ce23c56a00cd63e0e970e134905",
+    "drain.json": "4ae2793a6a77f544034f0348680acf097d679f0d9e258eb9f5a620460a13b3cc",
+    "drain.log": "009b629ecb57e9d1ff9cd0f1a2a075c84745ec914703e01571ca2e600e02ae32",
+    "annulus-verbose.log": "cd5f0c4be9e32a68cdaba2b96d6d34ce99e736cd3c703657be37d344dd126f06",
+    "annulus_drain_control.gd": "2af441636a2a688335d2f6dd84c927ac407f1b4443ff2dd184325827dbbd7ed8",
+    "annulus_drain_control.patch": "8438459f9c27545cf55670bfa6d4b7c81e2413d4fb3511511a37f82ddf51aaa8",
+    "annulus-drain.log": "68a10c912017004b2774337eaf8002f371c04cfb1e565295d0056bbd4d0e3a83"
+  },
+  "observed": {
+    "exact_leaked_resource": "player_damage.wav AudioStreamWAV + AudioStreamPlaybackWAV, reference 1 each",
+    "immediate_node_freed": true,
+    "immediate_played_stream_remains": true,
+    "never_played_block_stream_released": true,
+    "after250ms_fresh_frames": 12288,
+    "discarded": 0,
+    "played_stream_released": true,
+    "annulus_semantic_assertions_unchanged": 948,
+    "only_external_annulus_delta": "250ms after node disposal, before process quit"
+  },
+  "conclusion": "Supports deferred AudioServer playback release after node disposal; does not support a persistent helper reference leak. Minimal fixture-only drain may be proposed; production delays/error suppression are unwarranted. Actual four-fixture revalidation remains separate.",
+  "limits": "Independent source/receipt review, not an independent diagnostic engine execution or physical silence proof."
+}

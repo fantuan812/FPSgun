@@ -65,6 +65,9 @@ func run() -> void:
 	var offers: Array = g.shop_offers.duplicate(true)
 	g._start_run(42);g._open_shop();g.build.coins = 100;g._refresh_shop(g.shop_generation)
 	check(g.shop_offers == offers,"same seed same operations replay")
+	var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
+	audio_teardown.prepare([g])
 	g.queue_free();await process_frame
+	await audio_teardown.finish(self)
 	print(JSON.stringify({"independent_shop_passed":passed,"failures":failures,"samples":4000,"neutral_firstslot_spool":hits_neutral,"boosted_firstslot_spool":hits_boosted,"scope":"fixed seeded first-slot ensemble, not exact four-slot inclusion probability or guaranteed offer"}))
 	quit(0 if failures.is_empty() else 1)

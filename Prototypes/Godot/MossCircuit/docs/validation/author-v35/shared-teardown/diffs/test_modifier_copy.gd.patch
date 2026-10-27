@@ -1,0 +1,12 @@
+--- frozen-final/tests/test_modifier_copy.gd
++++ r4/tests/test_modifier_copy.gd
+@@ -100,6 +100,9 @@
+    for item in view.items:item.count=1
+    game.ui.show_inventory(view);await process_frame;await process_frame
+    for id in ["power_coil","cryo_sprayer","fracture_coil"]:check(entry(catalog,id).description in labels(game.ui.modal),"shared inventory exact copy "+id)
++ var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
++ audio_teardown.prepare([game])
+  game.queue_free();await process_frame
++ await audio_teardown.finish(self)
+  print(JSON.stringify({"modifier_copy_checks":checks,"failures":failures,"scope":"v22 four-field copy preservation within the old catalog; exact v23/v26/v33 additions separately asserted; native appearance separate"}))
+  quit(0 if failures.is_empty() else 1)

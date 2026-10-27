@@ -1,0 +1,133 @@
+{
+  "after_one_frame": {
+    "player_damage": true,
+    "shield_block": false
+  },
+  "before": {
+    "player_damage": {
+      "class": "AudioStreamWAV",
+      "id": -9223371975970256971,
+      "path": "res://assets/audio/player_damage.wav",
+      "playing": true
+    },
+    "shield_block": {
+      "class": "AudioStreamWAV",
+      "id": -9223371975752153160,
+      "path": "res://assets/audio/shield_block.wav",
+      "playing": false
+    }
+  },
+  "capture_removed": true,
+  "case": "test_warden_charge.gd",
+  "chunks": [
+    {
+      "elapsed_us": 71,
+      "frames": 0,
+      "peak": 0.0,
+      "pushed": 0,
+      "refs_released": false
+    },
+    {
+      "elapsed_us": 1269,
+      "frames": 0,
+      "peak": 0.0,
+      "pushed": 0,
+      "refs_released": false
+    },
+    {
+      "elapsed_us": 7763,
+      "frames": 0,
+      "peak": 0.0,
+      "pushed": 0,
+      "refs_released": false
+    },
+    {
+      "elapsed_us": 22853,
+      "frames": 4096,
+      "peak": 0.111979089677334,
+      "pushed": 4096,
+      "refs_released": false
+    },
+    {
+      "elapsed_us": 35187,
+      "frames": 0,
+      "peak": 0.0,
+      "pushed": 4096,
+      "refs_released": true
+    },
+    {
+      "elapsed_us": 49370,
+      "frames": 0,
+      "peak": 0.0,
+      "pushed": 4096,
+      "refs_released": true
+    },
+    {
+      "elapsed_us": 62881,
+      "frames": 0,
+      "peak": 0.0,
+      "pushed": 4096,
+      "refs_released": true
+    },
+    {
+      "elapsed_us": 76630,
+      "frames": 0,
+      "peak": 0.0,
+      "pushed": 4096,
+      "refs_released": true
+    },
+    {
+      "elapsed_us": 90887,
+      "frames": 0,
+      "peak": 0.0,
+      "pushed": 4096,
+      "refs_released": true
+    },
+    {
+      "elapsed_us": 104156,
+      "frames": 0,
+      "peak": 0.0,
+      "pushed": 4096,
+      "refs_released": true
+    },
+    {
+      "elapsed_us": 119082,
+      "frames": 4096,
+      "peak": 0.0,
+      "pushed": 8192,
+      "refs_released": true
+    },
+    {
+      "elapsed_us": 132359,
+      "frames": 0,
+      "peak": 0.0,
+      "pushed": 8192,
+      "refs_released": true
+    },
+    {
+      "elapsed_us": 145701,
+      "frames": 0,
+      "peak": 0.0,
+      "pushed": 8192,
+      "refs_released": true
+    },
+    {
+      "elapsed_us": 159442,
+      "frames": 0,
+      "peak": 0.0,
+      "pushed": 8192,
+      "refs_released": true
+    }
+  ],
+  "complete": true,
+  "deadline_ms": 1000,
+  "discarded": 0,
+  "elapsed_us": 159493,
+  "invalid_samples": 0,
+  "new_pushed": 8192,
+  "node_freed": true,
+  "pre_window_drained": 0,
+  "required_frames": 6615,
+  "scope": "External disposal-only owner observation; original failed resource identities for non-reproduced cases remain unknown.",
+  "silent_frames": 7680
+}

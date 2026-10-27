@@ -98,6 +98,9 @@ func run()->void:
 	check(outcomes[0]==outcomes[1],"authored actions versus fallback preserve damage and RNG")
 	a.assets=saved
 	check(g.telegraphs.z_index>g.vfx.z_index,"danger geometry remains above decoration")
+	var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
+	audio_teardown.prepare([g])
 	g.queue_free();await process_frame
+	await audio_teardown.finish(self)
 	print(JSON.stringify({"independent_actions_passed":passed,"failures":failures,"scope":"headless state clocks and resources, no GUI playtest"}))
 	quit(0 if failures.is_empty() else 1)

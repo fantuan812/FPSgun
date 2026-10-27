@@ -1,0 +1,46 @@
+{
+  "cues": {
+    "player_damage": {
+      "bits": 16,
+      "bytes": 14156,
+      "channels": 1,
+      "f0": 320,
+      "f1": 140,
+      "first": 0,
+      "harmonic": 0.25,
+      "last": 0,
+      "mean": 3.460042871315193e-08,
+      "pcm_sha256": "a738bbedcd3b01986f6cd4206303886002500b7589e5b27ee33c66deacd30118",
+      "peak": 0.25,
+      "rate": 44100,
+      "rms": 0.15887196461146635,
+      "samples": 7056,
+      "seconds": 0.16,
+      "wav_sha256": "34a9aa9fe8cab5273d2ea5199b127d303975df7ff088acce2441f14a922ec125"
+    },
+    "shield_block": {
+      "bits": 16,
+      "bytes": 10628,
+      "channels": 1,
+      "f0": 720,
+      "f1": 1080,
+      "first": 0,
+      "harmonic": 0.15,
+      "last": 0,
+      "mean": 4.036716683201058e-08,
+      "pcm_sha256": "7933a54e3ca54b14fc8286c3d8bfae3a8023e6a1351e2c4e9a20c3c57e3611cc",
+      "peak": 0.25,
+      "rate": 44100,
+      "rms": 0.1625011707337911,
+      "samples": 5292,
+      "seconds": 0.12,
+      "wav_sha256": "c4e21aa5500c8d4f01dd29c561e325a3f97173f103b29c1a291df54a6c8766f1"
+    }
+  },
+  "generator_sha256": "4c5be03db4a9d124439b27b9c826582252aacdc1a089b3001aa73582de74dd4b",
+  "implementation": "CPython",
+  "origin": "Original deterministic procedural non-voice synthesis for MossCircuit v35; no external audio inputs.",
+  "python": "3.12.14",
+  "reproducibility": "Canonical WAV bytes and pinned toolchain; cross-platform libm identity not asserted.",
+  "scope": "Two finite player feedback cues; no new license waiver or third-party licensing claim."
+}

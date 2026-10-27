@@ -1,0 +1,150 @@
+{
+  "utc": "2026-10-27T02:06:17.168353+00:00",
+  "status": "PASS_R4_FOCUSED_INDEPENDENT_REVIEW",
+  "commands": 15,
+  "source_inputs": 696,
+  "source_unchanged": true,
+  "records": [
+    {
+      "case": "independent_charger_lifecycle.gd",
+      "owners": 1,
+      "streams": 2,
+      "new": 8192,
+      "silent": 8192,
+      "us": 152861
+    },
+    {
+      "case": "test_game.gd",
+      "owners": 1,
+      "streams": 2,
+      "new": 8192,
+      "silent": 8192,
+      "us": 159553
+    },
+    {
+      "case": "test_warden_charge.gd",
+      "owners": 1,
+      "streams": 2,
+      "new": 8192,
+      "silent": 7680,
+      "us": 154150
+    },
+    {
+      "case": "independent_annulus_runtime.gd",
+      "owners": 1,
+      "streams": 2,
+      "new": 8192,
+      "silent": 7680,
+      "us": 173050
+    },
+    {
+      "case": "independent_brood_parity.gd",
+      "owners": 2,
+      "streams": 4,
+      "new": 8192,
+      "silent": 8192,
+      "us": 167296
+    },
+    {
+      "case": "independent_brood_parity.gd",
+      "owners": 2,
+      "streams": 4,
+      "new": 8192,
+      "silent": 7680,
+      "us": 158147
+    },
+    {
+      "case": "independent_weapon_rig.gd",
+      "owners": 1,
+      "streams": 2,
+      "new": 8192,
+      "silent": 7680,
+      "us": 152952
+    },
+    {
+      "case": "test_core_summon.gd",
+      "owners": 1,
+      "streams": 2,
+      "new": 8192,
+      "silent": 7680,
+      "us": 152928
+    },
+    {
+      "case": "test_player_feedback.gd",
+      "owners": 1,
+      "streams": 2,
+      "new": 8192,
+      "silent": 8192,
+      "us": 153307
+    },
+    {
+      "case": "independent_feedback_views.gd",
+      "owners": 1,
+      "streams": 2,
+      "new": 8192,
+      "silent": 8192,
+      "us": 152232
+    },
+    {
+      "case": "independent_feedback_authority.gd",
+      "owners": 1,
+      "streams": 2,
+      "new": 8192,
+      "silent": 8192,
+      "us": 151401
+    },
+    {
+      "case": "independent_feedback_authority.gd",
+      "owners": 1,
+      "streams": 2,
+      "new": 8192,
+      "silent": 8192,
+      "us": 161504
+    },
+    {
+      "case": "independent_settlement_types.gd",
+      "owners": 1,
+      "streams": 2,
+      "new": 8192,
+      "silent": 8192,
+      "us": 186579
+    },
+    {
+      "case": "independent_settlement_types.gd",
+      "owners": 1,
+      "streams": 2,
+      "new": 8192,
+      "silent": 8192,
+      "us": 307026
+    },
+    {
+      "case": "test_primary_brace.gd",
+      "owners": 1,
+      "streams": 2,
+      "new": 8192,
+      "silent": 8192,
+      "us": 186296
+    },
+    {
+      "case": "test_starting_loadouts.gd",
+      "owners": 1,
+      "streams": 2,
+      "new": 8192,
+      "silent": 8192,
+      "us": 152415
+    }
+  ],
+  "actual_views_saved_resource_released": true,
+  "actual_function_dictionary_release_proven": true,
+  "actual_two_owner_resource_release_proven": true,
+  "preserved_assertions": {
+    "independent_charger_lifecycle.gd": "30 passed; 0 failed",
+    "test_game.gd": "\"passed\":193",
+    "test_warden_charge.gd": "\"warden_charge_passed\":2510",
+    "independent_feedback_authority.gd": "\"checks\":773",
+    "independent_feedback_views.gd": "\"checks\":168",
+    "independent_settlement_types.gd": "\"checks\":960"
+  },
+  "authority_seconds": 168.45393811199756,
+  "remaining": "Full newaggregate, exactexportedpack/native/ordinary pending; prior119 remainsFAIL. No physicaloutput/Windows proof."
+}

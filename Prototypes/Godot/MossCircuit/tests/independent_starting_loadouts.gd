@@ -171,7 +171,10 @@ func run()->void:
   g._title();select("rail");ck(g._start_run(99),"legacy one-argument call succeeds");fresh("rivet",99,"legacy direct remains Rivet regardless draft")
   g._title();g._on_intent("start",{"seed":100});fresh("rivet",100,"legacy intent remains Rivet")
   await process_frame
+ var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
+ audio_teardown.prepare([g])
  g.queue_free();await process_frame
+ await audio_teardown.finish(self)
  var result:Dictionary={"scope":"Controlled registry, strict actual title intents, all three starter initialization and original-kit retry after actual buy/reorder/sale, both modes, shared scheduled fire/collision and read-only origin. Not native or ordinary acquisition/balance evidence.","checks":checks,"failures":failures}
  var args:=OS.get_cmdline_user_args()
  if not args.is_empty():FileAccess.open(args[0],FileAccess.WRITE).store_string(JSON.stringify(result,"  ")+"\n")

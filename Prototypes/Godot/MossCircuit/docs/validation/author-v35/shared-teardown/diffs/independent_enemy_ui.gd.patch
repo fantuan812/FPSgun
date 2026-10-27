@@ -1,0 +1,13 @@
+--- frozen-final/tests/independent_enemy_ui.gd
++++ r4/tests/independent_enemy_ui.gd
+@@ -56,7 +56,10 @@
+ 	g._start_run(2)
+ 	g._update_hud()
+ 	check(not g.ui.boss_panel.visible,"restart clears boss HUD")
++	var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
++	audio_teardown.prepare([g])
+ 	g.queue_free()
+ 	await process_frame
++	await audio_teardown.finish(self)
+ 	print(JSON.stringify({"independent_enemy_ui_passed":passed,"failures":failures,"scope":"headless assets and UI structure, not rendered-window verification"}))
+ 	quit(0 if failures.is_empty() else 1)

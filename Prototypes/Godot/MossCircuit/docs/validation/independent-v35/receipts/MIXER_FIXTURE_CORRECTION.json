@@ -1,0 +1,19 @@
+{
+  "utc": "2026-10-27T01:22:05.600513+00:00",
+  "status": "EXTERNAL_CAPTURE_FIXTURE_CORRECTION",
+  "rejected_script_sha256": "81a16b9e65d73f00e5c966d10322e6e27cf37c7eee8a00d9bdef7f85efb22df7",
+  "revised_script_sha256": "1589fcbc740481bbc7cca47901a4dd355d9f6564778a935be3a7d5535b43552e",
+  "rejected_result": "results/r2/mixer.json",
+  "rejected_raw_capture": "results/r2/mixer-raw",
+  "actual_rejected_facts": {
+    "startup_discarded_frames": 4608,
+    "discarded_counter_then_constant": true,
+    "short_windows": "pre-stop reads included queued frames without a newly pushed mixer block"
+  },
+  "fix": [
+    "Install test-only capture after scene/resources are ready, not before expensive construction. Do not reset/ignore a nonzero discarded counter.",
+    "Each window now waits bounded requested seconds plus at most300ms for at least2048 newly pushed frames and records queued-at-start/fresh counts/actual time. Discarded0 remains mandatory.",
+    "Assert actual voice still playing immediately before each controlled stop."
+  ],
+  "scope": "No production/resource change; entire rejected run remains rejected despite strong waveform correlation."
+}

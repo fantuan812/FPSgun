@@ -1,0 +1,12 @@
+--- frozen-final/tests/test_warden_charge.gd
++++ r4/tests/test_warden_charge.gd
+@@ -78,6 +78,9 @@
+ 					if not enabled:baseline.append(trace(game,enemy))
+ 					else:check(trace(game,enemy)==baseline[tick],"authority parity "+mode_id+" phase2="+str(phase2)+" tick="+str(tick))
+ 	actor.config.profiles.boss_warden.attack_profiles=variants
++	var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
++	audio_teardown.prepare([game])
+ 	game.queue_free();await process_frame
++	await audio_teardown.finish(self)
+ 	print(JSON.stringify({"warden_charge_passed":passed,"failures":failures,"scope":"phase selection, anchor, hurt/contact arbitration, finite authority/RNG parity; GUI separate"}))
+ 	quit(0 if failures.is_empty() else 1)

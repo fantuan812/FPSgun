@@ -1,0 +1,66 @@
+{
+  "all_pass": true,
+  "steps": [
+    {
+      "test": "test_resolution_validation",
+      "exit": 0,
+      "seconds": 4.709,
+      "error": false,
+      "resource_warning": false,
+      "pass": true
+    },
+    {
+      "test": "test_settlement_levels",
+      "exit": 0,
+      "seconds": 3.167,
+      "error": false,
+      "resource_warning": false,
+      "pass": true
+    },
+    {
+      "test": "test_modes",
+      "exit": 0,
+      "seconds": 5.233,
+      "error": false,
+      "resource_warning": false,
+      "pass": true
+    },
+    {
+      "test": "independent_modes",
+      "exit": 0,
+      "seconds": 3.838,
+      "error": false,
+      "resource_warning": false,
+      "pass": true
+    },
+    {
+      "test": "independent_room_boundaries",
+      "exit": 0,
+      "seconds": 2.29,
+      "error": false,
+      "resource_warning": false,
+      "pass": true
+    },
+    {
+      "test": "old-six-transactions",
+      "exit": 0,
+      "seconds": 13.194,
+      "error": false,
+      "resource_warning": false,
+      "pass": true
+    },
+    {
+      "test": "old-24-combat",
+      "exit": 0,
+      "seconds": 25.063,
+      "error": false,
+      "resource_warning": false,
+      "pass": true
+    }
+  ],
+  "inputs": 683,
+  "changed": [],
+  "six_route_sha256": "22e28521ba76fb7285a59b98593aecc7c4af9e24d497853119f73495324feaf8",
+  "combat24_sha256": "e7d93a1fcf01345c540bf9f868632310fd3e85572dbe431dbe12d43bf19212ec",
+  "scope": "Focused separate validator correction plus actual6/24 preservation; not full final aggregate"
+}

@@ -132,6 +132,9 @@ func run()->void:
 	reset(g);g._hurt(9999);g._sync_weapon_rig()
 	check(g.weapon_rig.slots.is_empty(),"death removes equipment presentation")
 	reset(g);check(g.weapon_rig.last_shot.is_empty(),"restart clears old recoil identity")
+	var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
+	audio_teardown.prepare([g])
 	g.queue_free();await process_frame
+	await audio_teardown.finish(self)
 	print(JSON.stringify({"independent_weapon_rig_passed":passed,"failures":failures,"scope":"headless geometry and state; no GUI"}))
 	quit(0 if failures.is_empty() else 1)

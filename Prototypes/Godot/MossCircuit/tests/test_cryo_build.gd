@@ -150,6 +150,9 @@ func run()->void:
 	check(g.vfx.active.size()<=96,"new effects obey existing VFX cap")
 	for id in ["cryo_sprayer","fracture_coil"]:check(g.ui.icon(id)!=null,"new icon present "+id)
 	check(g.weapon_rig.assets.has("cryo_sprayer"),"dedicated world sprite present")
+	var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
+	audio_teardown.prepare([g])
 	g._title();g.queue_free();await process_frame
+	await audio_teardown.finish(self)
 	print("CRYO_BUILD_CHECKS "+JSON.stringify({"checks":checks,"failures":failures}))
 	quit(0 if failures.is_empty() else 1)

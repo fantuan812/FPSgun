@@ -145,7 +145,10 @@ func run()->void:
   ck(g.state=="dead" and g.stats.hp==0,mode+" actual hostile shot enters terminal state")
   ck(echoes().is_empty() and g.telegraphs.markers.filter(func(v):return v.kind=="annulus").is_empty(),mode+" terminal death cannot regenerate pending annulus warning")
   await process_frame
+ var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
+ audio_teardown.prepare([g])
  g.queue_free();await process_frame
+ await audio_teardown.finish(self)
  var result:Dictionary={"checks":checks,"failures":failures,"scope":"controlled actual shared runtime, exact annulus geometry/timing/hurt/lock/lifecycle; not ordinary native or full campaign proof"}
  var args:=OS.get_cmdline_user_args()
  if not args.is_empty():FileAccess.open(args[0],FileAccess.WRITE).store_string(JSON.stringify(result,"  ")+"\n")

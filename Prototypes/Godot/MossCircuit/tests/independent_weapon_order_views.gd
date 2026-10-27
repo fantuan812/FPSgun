@@ -79,7 +79,10 @@ func run()->void:
    ck(buttons("MOVE EARLIER").is_empty() and buttons("MOVE LATER").is_empty(),"ordinary inventory is not editable")
    g.state="shop";g.shop_offers=[];g._render_shop();await process_frame;await process_frame
    ck(not root.gui_get_focus_owner() in buttons("MOVE EARLIER")+buttons("MOVE LATER"),"no default reorder even synthetic empty stock")
+ var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
+ audio_teardown.prepare([g])
  g.queue_free();await process_frame
+ await audio_teardown.finish(self)
  var result:Dictionary={"scope":"Controlled actual UI hierarchy/rectangles, all8 weapon identities and repeated copies, 1–4 slots, both modes/960x540 and1280x720; real bound callbacks plus synthetic InputEventAction ui_accept. Native pixels/keyboard/mouse and ordinary acquisition are separate. No controller mapping/hardware claim.","checks":checks,"failures":failures}
  var args:=OS.get_cmdline_user_args()
  if not args.is_empty():FileAccess.open(args[0],FileAccess.WRITE).store_string(JSON.stringify(result,"  ")+"\n")

@@ -45,6 +45,9 @@ func run()->void:
 	check(game.upgrade_pending==0 and not game.shop_pending,"terminal settlement queues no inaccessible choice or shop")
 	game._process(.01)
 	check(game.state=="won","terminal level cannot reopen upgrade")
+	var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
+	audio_teardown.prepare([game])
 	game.queue_free();await process_frame
+	await audio_teardown.finish(self)
 	print(JSON.stringify({"settlement_levels_passed":passed,"failures":failures,"scope":"earned XP ordering, reward idempotence and terminal result; UI timing tested separately"}))
 	quit(0 if failures.is_empty() else 1)

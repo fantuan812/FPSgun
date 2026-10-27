@@ -53,6 +53,9 @@ func run()->void:
   reset(mode,{"phase_capacitor":1});targets=group();g._effect_event("dash",{"pos":g.player_pos,"angle":0.0});check(g.effects.phase_charge==1,mode+" K actualdashstorescharge");cone();check(targets.all(func(t):return near(t.hp,479)) and g.effects.phase_charge==0,mode+" K once12splashalltargets")
   reset(mode,{"dash_resin":1,"pulse_boots":1,"fracture_coil":1},["cryo_sprayer","rivet_gun"]);g._effect_event("dash",{"pos":g.player_pos,"angle":0.0});e=spawn(Vector2(40,0));g.effect_runtime.advance_hazards(.01);check(near(e.hp,492) and near(e.slow_until,10.6),mode+" L actualresinhazard applies oldslow");cone();check(near(Status.movement_factor(e,g.elapsed),.55),mode+" L stronger not multiplied");rivet(e);check(not Status.chilled(e,g.elapsed) and near(e.slow_until,10.6) and near(Status.movement_factor(e,g.elapsed),.55),mode+" L consume keepsresinslow");g.elapsed=10.61;check(near(Status.movement_factor(e,g.elapsed),1.0),mode+" L oldslow expiresindependently")
   await process_frame
+ var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
+ audio_teardown.prepare([g])
  g.queue_free();await process_frame
+ await audio_teardown.finish(self)
  var result:Dictionary={"checks":checks,"failures":failures,"observations":observations,"scope":"frozen finite advertised compatibility matrix; controlled runtime in both modes; not GUI or balance"};print(JSON.stringify(result));var args:=OS.get_cmdline_user_args();if not args.is_empty():FileAccess.open(args[0],FileAccess.WRITE).store_string(JSON.stringify(result,"  ")+"\n")
  quit(0 if failures.is_empty() else 1)

@@ -1,0 +1,48 @@
+{
+  "all_pass": true,
+  "steps": [
+    {
+      "test": "independent_annulus_runtime",
+      "exit": 0,
+      "seconds": 10.436,
+      "error": false,
+      "resource_warning": false,
+      "pass": true
+    },
+    {
+      "test": "independent_brood_parity",
+      "exit": 0,
+      "seconds": 4.585,
+      "error": false,
+      "resource_warning": false,
+      "pass": true
+    },
+    {
+      "test": "independent_weapon_rig",
+      "exit": 0,
+      "seconds": 2.684,
+      "error": false,
+      "resource_warning": false,
+      "pass": true
+    },
+    {
+      "test": "test_core_summon",
+      "exit": 0,
+      "seconds": 3.41,
+      "error": false,
+      "resource_warning": false,
+      "pass": true
+    },
+    {
+      "test": "test_feedback_teardown",
+      "exit": 0,
+      "seconds": 0.963,
+      "error": false,
+      "resource_warning": false,
+      "pass": true
+    }
+  ],
+  "source_count": 681,
+  "input_changes": [],
+  "scope": "Targeted fixture disposal checks only; original full109/113 remains rejected, final full aggregate after independent promotion"
+}

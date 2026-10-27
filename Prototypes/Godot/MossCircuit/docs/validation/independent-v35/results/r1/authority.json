@@ -1,0 +1,826 @@
+{
+  "checks": 773,
+  "failures": [
+    "invalid boundary does not acquire stop side effect invalid_settlement",
+    "invalid boundary does not acquire stop side effect invalid_settlement"
+  ],
+  "observations": [
+    {
+      "audio": "enabled",
+      "case": "loss",
+      "hp": 89.0,
+      "mode": "arena",
+      "requests": [
+        {
+          "accepted": true,
+          "cue": "player_damage"
+        }
+      ],
+      "state": "playing"
+    },
+    {
+      "audio": "muted",
+      "case": "loss",
+      "hp": 89.0,
+      "mode": "arena",
+      "requests": [
+        {
+          "accepted": false,
+          "cue": "player_damage"
+        }
+      ],
+      "state": "playing"
+    },
+    {
+      "audio": "missing",
+      "case": "loss",
+      "hp": 89.0,
+      "mode": "arena",
+      "requests": [
+        {
+          "accepted": false,
+          "cue": "player_damage"
+        }
+      ],
+      "state": "playing"
+    },
+    {
+      "audio": "enabled",
+      "case": "overkill",
+      "hp": 0.0,
+      "mode": "arena",
+      "requests": [
+        {
+          "accepted": true,
+          "cue": "player_damage"
+        }
+      ],
+      "state": "dead"
+    },
+    {
+      "audio": "muted",
+      "case": "overkill",
+      "hp": 0.0,
+      "mode": "arena",
+      "requests": [
+        {
+          "accepted": false,
+          "cue": "player_damage"
+        }
+      ],
+      "state": "dead"
+    },
+    {
+      "audio": "missing",
+      "case": "overkill",
+      "hp": 0.0,
+      "mode": "arena",
+      "requests": [
+        {
+          "accepted": false,
+          "cue": "player_damage"
+        }
+      ],
+      "state": "dead"
+    },
+    {
+      "audio": "enabled",
+      "case": "zero",
+      "hp": 100.0,
+      "mode": "arena",
+      "requests": [],
+      "state": "playing"
+    },
+    {
+      "audio": "muted",
+      "case": "zero",
+      "hp": 100.0,
+      "mode": "arena",
+      "requests": [],
+      "state": "playing"
+    },
+    {
+      "audio": "missing",
+      "case": "zero",
+      "hp": 100.0,
+      "mode": "arena",
+      "requests": [],
+      "state": "playing"
+    },
+    {
+      "audio": "enabled",
+      "case": "negative",
+      "hp": 103.0,
+      "mode": "arena",
+      "requests": [],
+      "state": "playing"
+    },
+    {
+      "audio": "muted",
+      "case": "negative",
+      "hp": 103.0,
+      "mode": "arena",
+      "requests": [],
+      "state": "playing"
+    },
+    {
+      "audio": "missing",
+      "case": "negative",
+      "hp": 103.0,
+      "mode": "arena",
+      "requests": [],
+      "state": "playing"
+    },
+    {
+      "audio": "enabled",
+      "case": "infinite incoming finite capped loss",
+      "hp": 0.0,
+      "mode": "arena",
+      "requests": [
+        {
+          "accepted": true,
+          "cue": "player_damage"
+        }
+      ],
+      "state": "dead"
+    },
+    {
+      "audio": "muted",
+      "case": "infinite incoming finite capped loss",
+      "hp": 0.0,
+      "mode": "arena",
+      "requests": [
+        {
+          "accepted": false,
+          "cue": "player_damage"
+        }
+      ],
+      "state": "dead"
+    },
+    {
+      "audio": "missing",
+      "case": "infinite incoming finite capped loss",
+      "hp": 0.0,
+      "mode": "arena",
+      "requests": [
+        {
+          "accepted": false,
+          "cue": "player_damage"
+        }
+      ],
+      "state": "dead"
+    },
+    {
+      "audio": "enabled",
+      "case": "nonfinite returned loss",
+      "hp": "nan",
+      "mode": "arena",
+      "requests": [],
+      "state": "playing"
+    },
+    {
+      "audio": "muted",
+      "case": "nonfinite returned loss",
+      "hp": "nan",
+      "mode": "arena",
+      "requests": [],
+      "state": "playing"
+    },
+    {
+      "audio": "missing",
+      "case": "nonfinite returned loss",
+      "hp": "nan",
+      "mode": "arena",
+      "requests": [],
+      "state": "playing"
+    },
+    {
+      "audio": "enabled",
+      "case": "NaN returned loss",
+      "hp": "nan",
+      "mode": "arena",
+      "requests": [],
+      "state": "playing"
+    },
+    {
+      "audio": "muted",
+      "case": "NaN returned loss",
+      "hp": "nan",
+      "mode": "arena",
+      "requests": [],
+      "state": "playing"
+    },
+    {
+      "audio": "missing",
+      "case": "NaN returned loss",
+      "hp": "nan",
+      "mode": "arena",
+      "requests": [],
+      "state": "playing"
+    },
+    {
+      "audio": "enabled",
+      "case": "mirror",
+      "hp": 100.0,
+      "mode": "arena",
+      "requests": [
+        {
+          "accepted": true,
+          "cue": "shield_block"
+        }
+      ],
+      "state": "playing"
+    },
+    {
+      "audio": "muted",
+      "case": "mirror",
+      "hp": 100.0,
+      "mode": "arena",
+      "requests": [
+        {
+          "accepted": false,
+          "cue": "shield_block"
+        }
+      ],
+      "state": "playing"
+    },
+    {
+      "audio": "missing",
+      "case": "mirror",
+      "hp": 100.0,
+      "mode": "arena",
+      "requests": [
+        {
+          "accepted": false,
+          "cue": "shield_block"
+        }
+      ],
+      "state": "playing"
+    },
+    {
+      "audio": "enabled",
+      "case": "mirror zero",
+      "hp": 100.0,
+      "mode": "arena",
+      "requests": [
+        {
+          "accepted": true,
+          "cue": "shield_block"
+        }
+      ],
+      "state": "playing"
+    },
+    {
+      "audio": "muted",
+      "case": "mirror zero",
+      "hp": 100.0,
+      "mode": "arena",
+      "requests": [
+        {
+          "accepted": false,
+          "cue": "shield_block"
+        }
+      ],
+      "state": "playing"
+    },
+    {
+      "audio": "missing",
+      "case": "mirror zero",
+      "hp": 100.0,
+      "mode": "arena",
+      "requests": [
+        {
+          "accepted": false,
+          "cue": "shield_block"
+        }
+      ],
+      "state": "playing"
+    },
+    {
+      "audio": "enabled",
+      "case": "mirror negative",
+      "hp": 100.0,
+      "mode": "arena",
+      "requests": [
+        {
+          "accepted": true,
+          "cue": "shield_block"
+        }
+      ],
+      "state": "playing"
+    },
+    {
+      "audio": "muted",
+      "case": "mirror negative",
+      "hp": 100.0,
+      "mode": "arena",
+      "requests": [
+        {
+          "accepted": false,
+          "cue": "shield_block"
+        }
+      ],
+      "state": "playing"
+    },
+    {
+      "audio": "missing",
+      "case": "mirror negative",
+      "hp": 100.0,
+      "mode": "arena",
+      "requests": [
+        {
+          "accepted": false,
+          "cue": "shield_block"
+        }
+      ],
+      "state": "playing"
+    },
+    {
+      "audio": "enabled",
+      "case": "mirror thorns",
+      "hp": 100.0,
+      "mode": "arena",
+      "requests": [
+        {
+          "accepted": true,
+          "cue": "shield_block"
+        }
+      ],
+      "state": "playing"
+    },
+    {
+      "audio": "muted",
+      "case": "mirror thorns",
+      "hp": 100.0,
+      "mode": "arena",
+      "requests": [
+        {
+          "accepted": false,
+          "cue": "shield_block"
+        }
+      ],
+      "state": "playing"
+    },
+    {
+      "audio": "missing",
+      "case": "mirror thorns",
+      "hp": 100.0,
+      "mode": "arena",
+      "requests": [
+        {
+          "accepted": false,
+          "cue": "shield_block"
+        }
+      ],
+      "state": "playing"
+    },
+    {
+      "audio": "enabled",
+      "case": "medic thorns",
+      "hp": 69.0,
+      "mode": "arena",
+      "requests": [
+        {
+          "accepted": true,
+          "cue": "player_damage"
+        }
+      ],
+      "state": "playing"
+    },
+    {
+      "audio": "muted",
+      "case": "medic thorns",
+      "hp": 69.0,
+      "mode": "arena",
+      "requests": [
+        {
+          "accepted": false,
+          "cue": "player_damage"
+        }
+      ],
+      "state": "playing"
+    },
+    {
+      "audio": "missing",
+      "case": "medic thorns",
+      "hp": 69.0,
+      "mode": "arena",
+      "requests": [
+        {
+          "accepted": false,
+          "cue": "player_damage"
+        }
+      ],
+      "state": "playing"
+    },
+    {
+      "audio": "enabled",
+      "case": "loss",
+      "hp": 89.0,
+      "mode": "rooms",
+      "requests": [
+        {
+          "accepted": true,
+          "cue": "player_damage"
+        }
+      ],
+      "state": "playing"
+    },
+    {
+      "audio": "muted",
+      "case": "loss",
+      "hp": 89.0,
+      "mode": "rooms",
+      "requests": [
+        {
+          "accepted": false,
+          "cue": "player_damage"
+        }
+      ],
+      "state": "playing"
+    },
+    {
+      "audio": "missing",
+      "case": "loss",
+      "hp": 89.0,
+      "mode": "rooms",
+      "requests": [
+        {
+          "accepted": false,
+          "cue": "player_damage"
+        }
+      ],
+      "state": "playing"
+    },
+    {
+      "audio": "enabled",
+      "case": "overkill",
+      "hp": 0.0,
+      "mode": "rooms",
+      "requests": [
+        {
+          "accepted": true,
+          "cue": "player_damage"
+        }
+      ],
+      "state": "dead"
+    },
+    {
+      "audio": "muted",
+      "case": "overkill",
+      "hp": 0.0,
+      "mode": "rooms",
+      "requests": [
+        {
+          "accepted": false,
+          "cue": "player_damage"
+        }
+      ],
+      "state": "dead"
+    },
+    {
+      "audio": "missing",
+      "case": "overkill",
+      "hp": 0.0,
+      "mode": "rooms",
+      "requests": [
+        {
+          "accepted": false,
+          "cue": "player_damage"
+        }
+      ],
+      "state": "dead"
+    },
+    {
+      "audio": "enabled",
+      "case": "zero",
+      "hp": 100.0,
+      "mode": "rooms",
+      "requests": [],
+      "state": "playing"
+    },
+    {
+      "audio": "muted",
+      "case": "zero",
+      "hp": 100.0,
+      "mode": "rooms",
+      "requests": [],
+      "state": "playing"
+    },
+    {
+      "audio": "missing",
+      "case": "zero",
+      "hp": 100.0,
+      "mode": "rooms",
+      "requests": [],
+      "state": "playing"
+    },
+    {
+      "audio": "enabled",
+      "case": "negative",
+      "hp": 103.0,
+      "mode": "rooms",
+      "requests": [],
+      "state": "playing"
+    },
+    {
+      "audio": "muted",
+      "case": "negative",
+      "hp": 103.0,
+      "mode": "rooms",
+      "requests": [],
+      "state": "playing"
+    },
+    {
+      "audio": "missing",
+      "case": "negative",
+      "hp": 103.0,
+      "mode": "rooms",
+      "requests": [],
+      "state": "playing"
+    },
+    {
+      "audio": "enabled",
+      "case": "infinite incoming finite capped loss",
+      "hp": 0.0,
+      "mode": "rooms",
+      "requests": [
+        {
+          "accepted": true,
+          "cue": "player_damage"
+        }
+      ],
+      "state": "dead"
+    },
+    {
+      "audio": "muted",
+      "case": "infinite incoming finite capped loss",
+      "hp": 0.0,
+      "mode": "rooms",
+      "requests": [
+        {
+          "accepted": false,
+          "cue": "player_damage"
+        }
+      ],
+      "state": "dead"
+    },
+    {
+      "audio": "missing",
+      "case": "infinite incoming finite capped loss",
+      "hp": 0.0,
+      "mode": "rooms",
+      "requests": [
+        {
+          "accepted": false,
+          "cue": "player_damage"
+        }
+      ],
+      "state": "dead"
+    },
+    {
+      "audio": "enabled",
+      "case": "nonfinite returned loss",
+      "hp": "nan",
+      "mode": "rooms",
+      "requests": [],
+      "state": "playing"
+    },
+    {
+      "audio": "muted",
+      "case": "nonfinite returned loss",
+      "hp": "nan",
+      "mode": "rooms",
+      "requests": [],
+      "state": "playing"
+    },
+    {
+      "audio": "missing",
+      "case": "nonfinite returned loss",
+      "hp": "nan",
+      "mode": "rooms",
+      "requests": [],
+      "state": "playing"
+    },
+    {
+      "audio": "enabled",
+      "case": "NaN returned loss",
+      "hp": "nan",
+      "mode": "rooms",
+      "requests": [],
+      "state": "playing"
+    },
+    {
+      "audio": "muted",
+      "case": "NaN returned loss",
+      "hp": "nan",
+      "mode": "rooms",
+      "requests": [],
+      "state": "playing"
+    },
+    {
+      "audio": "missing",
+      "case": "NaN returned loss",
+      "hp": "nan",
+      "mode": "rooms",
+      "requests": [],
+      "state": "playing"
+    },
+    {
+      "audio": "enabled",
+      "case": "mirror",
+      "hp": 100.0,
+      "mode": "rooms",
+      "requests": [
+        {
+          "accepted": true,
+          "cue": "shield_block"
+        }
+      ],
+      "state": "playing"
+    },
+    {
+      "audio": "muted",
+      "case": "mirror",
+      "hp": 100.0,
+      "mode": "rooms",
+      "requests": [
+        {
+          "accepted": false,
+          "cue": "shield_block"
+        }
+      ],
+      "state": "playing"
+    },
+    {
+      "audio": "missing",
+      "case": "mirror",
+      "hp": 100.0,
+      "mode": "rooms",
+      "requests": [
+        {
+          "accepted": false,
+          "cue": "shield_block"
+        }
+      ],
+      "state": "playing"
+    },
+    {
+      "audio": "enabled",
+      "case": "mirror zero",
+      "hp": 100.0,
+      "mode": "rooms",
+      "requests": [
+        {
+          "accepted": true,
+          "cue": "shield_block"
+        }
+      ],
+      "state": "playing"
+    },
+    {
+      "audio": "muted",
+      "case": "mirror zero",
+      "hp": 100.0,
+      "mode": "rooms",
+      "requests": [
+        {
+          "accepted": false,
+          "cue": "shield_block"
+        }
+      ],
+      "state": "playing"
+    },
+    {
+      "audio": "missing",
+      "case": "mirror zero",
+      "hp": 100.0,
+      "mode": "rooms",
+      "requests": [
+        {
+          "accepted": false,
+          "cue": "shield_block"
+        }
+      ],
+      "state": "playing"
+    },
+    {
+      "audio": "enabled",
+      "case": "mirror negative",
+      "hp": 100.0,
+      "mode": "rooms",
+      "requests": [
+        {
+          "accepted": true,
+          "cue": "shield_block"
+        }
+      ],
+      "state": "playing"
+    },
+    {
+      "audio": "muted",
+      "case": "mirror negative",
+      "hp": 100.0,
+      "mode": "rooms",
+      "requests": [
+        {
+          "accepted": false,
+          "cue": "shield_block"
+        }
+      ],
+      "state": "playing"
+    },
+    {
+      "audio": "missing",
+      "case": "mirror negative",
+      "hp": 100.0,
+      "mode": "rooms",
+      "requests": [
+        {
+          "accepted": false,
+          "cue": "shield_block"
+        }
+      ],
+      "state": "playing"
+    },
+    {
+      "audio": "enabled",
+      "case": "mirror thorns",
+      "hp": 100.0,
+      "mode": "rooms",
+      "requests": [
+        {
+          "accepted": true,
+          "cue": "shield_block"
+        }
+      ],
+      "state": "playing"
+    },
+    {
+      "audio": "muted",
+      "case": "mirror thorns",
+      "hp": 100.0,
+      "mode": "rooms",
+      "requests": [
+        {
+          "accepted": false,
+          "cue": "shield_block"
+        }
+      ],
+      "state": "playing"
+    },
+    {
+      "audio": "missing",
+      "case": "mirror thorns",
+      "hp": 100.0,
+      "mode": "rooms",
+      "requests": [
+        {
+          "accepted": false,
+          "cue": "shield_block"
+        }
+      ],
+      "state": "playing"
+    },
+    {
+      "audio": "enabled",
+      "case": "medic thorns",
+      "hp": 69.0,
+      "mode": "rooms",
+      "requests": [
+        {
+          "accepted": true,
+          "cue": "player_damage"
+        }
+      ],
+      "state": "playing"
+    },
+    {
+      "audio": "muted",
+      "case": "medic thorns",
+      "hp": 69.0,
+      "mode": "rooms",
+      "requests": [
+        {
+          "accepted": false,
+          "cue": "player_damage"
+        }
+      ],
+      "state": "playing"
+    },
+    {
+      "audio": "missing",
+      "case": "medic thorns",
+      "hp": 69.0,
+      "mode": "rooms",
+      "requests": [
+        {
+          "accepted": false,
+          "cue": "player_damage"
+        }
+      ],
+      "state": "playing"
+    }
+  ],
+  "scope": "Controlled imported PCM identity, resolved authority, actual four hostile routes, disabled-audio gameplay equality, strict setting and explicit lifecycle. No fresh mixer capture/native/hardware claim."
+}

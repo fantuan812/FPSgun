@@ -1,0 +1,49 @@
+{
+  "pass": true,
+  "files": 720,
+  "indexed_bytes": 9534748,
+  "index_sha256": "0ac4fc50ca6fedadd34dc401ba844ca59f2907971a09ae231529629913135508",
+  "copies": 716,
+  "exact_copies": 696,
+  "derivatives": 20,
+  "private_marker_findings": [],
+  "full_readback_verified": true,
+  "failed_original_script_pins": [
+    {
+      "source_label": "moss-v35-work/tests/independent_annulus_runtime.gd",
+      "sha256": "6629f3c07fb5de413a2eeaa1e172feaa25ad3ca50c42c2099d1a0987ff29f2c3",
+      "held_map": "moss-v35-prep/HELD_R1_INPUTS.json"
+    },
+    {
+      "source_label": "moss-v35-work/tests/independent_brood_parity.gd",
+      "sha256": "9f0eff00bd73f0992c0901496f5f10e1345999d41a5bbc66a6d9dcec258d4fbe",
+      "held_map": "moss-v35-prep/HELD_R1_INPUTS.json"
+    },
+    {
+      "source_label": "moss-v35-work/tests/independent_weapon_rig.gd",
+      "sha256": "382c350140ad9cc8db77ee0a3c307e44a982a5002c919a01cde8fd8fe038bf72",
+      "held_map": "moss-v35-prep/HELD_R1_INPUTS.json"
+    },
+    {
+      "source_label": "moss-v35-work/tests/test_core_summon.gd",
+      "sha256": "e7908853e7ced6c35bf3eba48e354d784fc761c15d947f13821a49512b309ef3",
+      "held_map": "moss-v35-prep/HELD_R1_INPUTS.json"
+    },
+    {
+      "source_label": "moss-v35-final/tests/independent_charger_lifecycle.gd",
+      "sha256": "ab0590e0b230b1b042e846b141aa04f28ae9f83f839e229f4a853f003b34bbfe",
+      "held_map": "moss-v35-final-prep/FINAL_INPUTS.json"
+    },
+    {
+      "source_label": "moss-v35-final/tests/test_game.gd",
+      "sha256": "834fe24f01cc9f5f233e8283f5a7016b282b3abaf1b56737c71a4ebbf9ee0c67",
+      "held_map": "moss-v35-final-prep/FINAL_INPUTS.json"
+    },
+    {
+      "source_label": "moss-v35-final/tests/test_warden_charge.gd",
+      "sha256": "06d19bc5be9bebcc9de4b3ee07537d3fc6e520fedfd016a8d6bc395a654f48ea",
+      "held_map": "moss-v35-final-prep/FINAL_INPUTS.json"
+    }
+  ],
+  "assembly_attempt_note": "First local assembly stopped at incorrect run_flow path before final index; uncompleted output retained outside public evidence. Correct path used by completed assembly."
+}

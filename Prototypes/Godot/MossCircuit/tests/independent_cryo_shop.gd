@@ -71,7 +71,10 @@ func run()->void:
 	for pair in bad.mechanism_synergies:
 		if pair.id=="cold_snap":pair.requires_other_weapon_than="unknown"
 	check(not Rules.validate_catalog(bad).is_empty(),"reject unknown alternate-weapon prerequisite")
+	var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
+	audio_teardown.prepare([g])
 	g.queue_free();await process_frame
+	await audio_teardown.finish(self)
 	var report:Dictionary={"checks":checks,"failures":failures,"scope":"independent controlled catalog/affinity/UI-view/transaction test; not native button interaction"}
 	var outputs:PackedStringArray=OS.get_cmdline_user_args()
 	if not outputs.is_empty():FileAccess.open(outputs[0],FileAccess.WRITE).store_string(JSON.stringify(report,"\t"))

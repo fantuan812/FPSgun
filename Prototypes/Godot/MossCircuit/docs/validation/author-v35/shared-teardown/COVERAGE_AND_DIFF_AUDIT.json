@@ -1,0 +1,2632 @@
+{
+  "status": "PREPARED_NOT_IMPORTED_OR_EXECUTED",
+  "original_command_count": 119,
+  "import_row": "no runtime scene/gameplay playback; retained unchanged",
+  "fixtures": [
+    {
+      "fixture": "tests/independent_actions.gd",
+      "source_sha256": "bcfa575f16e43ab39617b63e78145653d49bf9beba0d5e4c12650f8e0835eadb",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "46:g._hurt(9999)",
+        "57:g._simulate(.001)",
+        "59:g._simulate(.001)",
+        "66:g._simulate(.001)",
+        "84:g._simulate(.001)",
+        "87:g._simulate(.002)",
+        "96:for i in range(20):a.advance(.016);g._simulate(.016)",
+        "101:g.queue_free();await process_frame",
+        "103:quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 101,
+      "owners": [
+        "g"
+      ],
+      "candidate_sha256": "6422edbd83b420e31c711517f9b37cd9aff684575d9e15d67b29954d10093228",
+      "removed_original_lines": [
+        "\tg.queue_free();await process_frame"
+      ],
+      "new_block": "\tvar audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n\taudio_teardown.prepare([g])\n\tg.queue_free();await process_frame\n\tawait audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/independent_annulus_data.gd",
+      "source_sha256": "dba57cf2d62c0666ca3bc98e882ca99eb398bcd34c8dccdb51b294bec9bd4a10",
+      "audio_class": "none",
+      "evidence": [
+        "Reviewed creation/import boundary: data/geometry/visual/UI-only fixture, no main scene or audio controller construction; support modules provide no audio playback."
+      ],
+      "action": "unchanged"
+    },
+    {
+      "fixture": "tests/independent_annulus_runtime.gd",
+      "source_sha256": "e19d583d3ae463f569a72af2fbc6f6a40b60c08c6d5b5b5afe807d59b1e72247",
+      "audio_class": "definite",
+      "evidence": [
+        "24:g.elapsed+=dt;Runtime.step(g.combat_frame,dt)",
+        "148:g.queue_free();await process_frame",
+        "153:print(JSON.stringify(result));quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 148,
+      "owners": [
+        "g"
+      ],
+      "candidate_sha256": "b8dc9dce2ac5ec066d0267f99c765976ffd444de6c4f9bba66c7d9b17da2c51b",
+      "removed_original_lines": [
+        " g.queue_free();await process_frame",
+        " await create_timer(.25).timeout # Post-disposal mixer release; no gameplay/assertion timing change."
+      ],
+      "new_block": " var audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n audio_teardown.prepare([g])\n g.queue_free();await process_frame\n await audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/independent_bankshot_contacts.gd",
+      "source_sha256": "d2d2d440db753d371c008905b7125d7f82f2ee8aa4a83ab4980b777c21539d34",
+      "audio_class": "none",
+      "evidence": [
+        "Reviewed creation/import boundary: data/geometry/visual/UI-only fixture, no main scene or audio controller construction; support modules provide no audio playback."
+      ],
+      "action": "unchanged"
+    },
+    {
+      "fixture": "tests/independent_bankshot_integration.gd",
+      "source_sha256": "6f491ec2765b628753424b4962cf66380ea230dd745222a1045f3c4a8ea99d49",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "45:g.bullets.clear();g.weapon_clocks[0]=0;Runtime.step(g.combat_frame,0.0)",
+        "71:fresh(mode,[\"bankshot_driver\"],{\"kill_cell\":1});e=foe(Vector2(-90,0),18);b=fire();advance(b);Runtime.step(g.combat_frame,0)",
+        "73:fresh(mode,[\"cryo_sprayer\",\"bankshot_driver\"],{\"kill_cell\":1,\"fracture_coil\":1});e=foe(Vector2(-90,0),40);g._fire_weapon(\"cryo_sprayer\",0);b=fire(1);advance(b);Runtime.step(g.combat_frame,0)",
+        "90:g._title();g.queue_free();await process_frame",
+        "94:print(JSON.stringify({\"checks\":checks,\"failures\":failures}));quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 90,
+      "owners": [
+        "g"
+      ],
+      "candidate_sha256": "1a980850d7a2e2188194b7b8bf323cade52cc42362f48047bb7c9bd57fb27219",
+      "removed_original_lines": [
+        " g._title();g.queue_free();await process_frame"
+      ],
+      "new_block": " var audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n audio_teardown.prepare([g])\n g._title();g.queue_free();await process_frame\n await audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/independent_bankshot_trajectory.gd",
+      "source_sha256": "809281e7d874e0b33b0cdaaeca1b58173903aba0067bfca9d94d4919582f178a",
+      "audio_class": "none",
+      "evidence": [
+        "Reviewed creation/import boundary: data/geometry/visual/UI-only fixture, no main scene or audio controller construction; support modules provide no audio playback."
+      ],
+      "action": "unchanged"
+    },
+    {
+      "fixture": "tests/independent_brace_geometry.gd",
+      "source_sha256": "f92114f5f8dbdce35aee34b1aa4d7835be9fa8739d2973d6dd8c4666e958d282",
+      "audio_class": "none",
+      "evidence": [
+        "Reviewed creation/import boundary: data/geometry/visual/UI-only fixture, no main scene or audio controller construction; support modules provide no audio playback."
+      ],
+      "action": "unchanged"
+    },
+    {
+      "fixture": "tests/independent_brace_runtime.gd",
+      "source_sha256": "41f8f29c794ec49125716e1c3d3a84bbaf8c9f51539911f4b4a0aca8612a3450",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "39:g.elapsed+=dt;Runtime.step(g.combat_frame,dt)",
+        "239:g.queue_free();await process_frame",
+        "243:print(JSON.stringify({\"checks\":checks,\"failures\":failures,\"cases\":cases.size()}));quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 239,
+      "owners": [
+        "g"
+      ],
+      "candidate_sha256": "7450a379b78e28fc736f8381c8f58a2efbdc6e62481fc6e21d6187cd6a75540f",
+      "removed_original_lines": [
+        " g.queue_free();await process_frame"
+      ],
+      "new_block": " var audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n audio_teardown.prepare([g])\n g.queue_free();await process_frame\n await audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/independent_brood_assets.gd",
+      "source_sha256": "d280a717a6642fc5a269757e8280526f21366ffa41f8861aad527a5213d9eedc",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "109:g._simulate(.05)",
+        "111:g._simulate(.05)",
+        "114:ad.trigger(e.id,\"hurt\");g._simulate(.05)",
+        "116:for step in range(6):g._simulate(.05)",
+        "119:e.ai_state=\"warning\";e.warning_left=.001;g._simulate(.05)",
+        "122:e.ai_state=\"warning\";e.warning_left=.001;g._simulate(.05)",
+        "128:e.hp=0;g._simulate(.001)",
+        "133:g.queue_free();await process_frame",
+        "136:quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 133,
+      "owners": [
+        "g"
+      ],
+      "candidate_sha256": "ea216a7b4b3f67b0e74885a76c2798601220827729b783fd2b1847b64aa08ee1",
+      "removed_original_lines": [
+        "\tg.queue_free();await process_frame"
+      ],
+      "new_block": "\tvar audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n\taudio_teardown.prepare([g])\n\tg.queue_free();await process_frame\n\tawait audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/independent_brood_events.gd",
+      "source_sha256": "47570311a3851a62df84afa3faf67741c3ae3adeac872766610888121c7b2c06",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "20:e.attack_index=1;e.cooldown_left=0;g._simulate(.01)",
+        "22:e.warning_left=.06;g._simulate(.05)",
+        "24:g._simulate(.05)",
+        "29:g._simulate(.05)",
+        "32:for cycle in range(2):arm(e);g._simulate(.05)",
+        "35:arm(e);g._simulate(.05)",
+        "37:children(g,e.id)[0].hp=0;g._simulate(.001)",
+        "39:arm(e,.02);ad.observe_enemy(e,\"move\",g.player_pos);e.hp-=1;g._simulate(.001)",
+        "41:g._simulate(.05)",
+        "43:for step in range(6):g._simulate(.05);ad.advance(.05)",
+        "46:children(g,e.id)[0].hp=0;g._simulate(.001)",
+        "49:next_id=g.next_enemy_id;arm(e);g._simulate(.05)",
+        "53:g._simulate(.001)",
+        "62:g._simulate(.001);check(g.stats.hp==hp,mode+\" warning overlap stays contact safe\")",
+        "64:g._simulate(.001);check(g.stats.hp==hp-11,mode+\" moving contact retains exact original11 damage\")",
+        "66:g._simulate(.001);check(g.stats.hp==hp,mode+\" recovery overlap stays contact safe\")",
+        "75:next_id=g.next_enemy_id;g._simulate(.95)",
+        "77:g._simulate(.95)",
+        "79:children(g,e.id)[0].hp=0;g._simulate(.001);arm(e)",
+        "82:e.warning_left=.001;e.hp=0;g._simulate(.05)",
+        "84:ad.observe_enemy(e,\"warning\",g.player_pos);ad.trigger(e.id,\"attack\");g._simulate(.05)",
+        "90:g._simulate(.001)",
+        "93:g._simulate(.001)",
+        "102:g.queue_free();await process_frame",
+        "105:quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 102,
+      "owners": [
+        "g"
+      ],
+      "candidate_sha256": "fc34783899079fd2de61700472589d0a956c12405b907b252cb0b0c55f14a5f6",
+      "removed_original_lines": [
+        "\t\tg.queue_free();await process_frame"
+      ],
+      "new_block": "\t\tvar audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n\t\taudio_teardown.prepare([g])\n\t\tg.queue_free();await process_frame\n\t\tawait audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/independent_brood_parity.gd",
+      "source_sha256": "964d695db8fb8585e4f7c9cea1c21af083aa804f00b9862d1e393d8a9240e4ac",
+      "audio_class": "definite",
+      "evidence": [
+        "53:a.queue_free();b.queue_free();await process_frame",
+        "57:quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 53,
+      "owners": [
+        "a",
+        "b"
+      ],
+      "candidate_sha256": "58d23568dada92b42fc315fb45e26952b3991a4fea83c229b920d1ec1c93f9e6",
+      "removed_original_lines": [
+        "\t\ta.queue_free();b.queue_free();await process_frame",
+        "\t\tawait create_timer(.25).timeout # Post-disposal mixer release; no gameplay/assertion timing change."
+      ],
+      "new_block": "\t\tvar audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n\t\taudio_teardown.prepare([a, b])\n\t\ta.queue_free();b.queue_free();await process_frame\n\t\tawait audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/independent_charger_assets.gd",
+      "source_sha256": "354580f3659e219f5168b0581d4fb927feb13b9ce993dfea24a3400a27ce27ac",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "64:g.queue_free();await process_frame",
+        "67:quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 64,
+      "owners": [
+        "g"
+      ],
+      "candidate_sha256": "b96f3bc8adf61ad6c82b4a6e7ab7db30810ff73b2388ef884e20ac094fa48f27",
+      "removed_original_lines": [
+        "\tg.queue_free();await process_frame"
+      ],
+      "new_block": "\tvar audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n\taudio_teardown.prepare([g])\n\tg.queue_free();await process_frame\n\tawait audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/independent_charger_gameplay_parity.gd",
+      "source_sha256": "cfd797238912cc7d99f7be93eb3f85d2362d047771af0f8302b6c936eb9a931c",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "43:a.queue_free();b.queue_free();await process_frame",
+        "46:quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 43,
+      "owners": [
+        "a",
+        "b"
+      ],
+      "candidate_sha256": "5967a785e1e6f9b40bd8da1c78d75457357254454c497423b4a0393d87ad5fc3",
+      "removed_original_lines": [
+        "\t\ta.queue_free();b.queue_free();await process_frame"
+      ],
+      "new_block": "\t\tvar audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n\t\taudio_teardown.prepare([a, b])\n\t\ta.queue_free();b.queue_free();await process_frame\n\t\tawait audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/independent_charger_lifecycle.gd",
+      "source_sha256": "ab0590e0b230b1b042e846b141aa04f28ae9f83f839e229f4a853f003b34bbfe",
+      "audio_class": "definite",
+      "evidence": [
+        "55:g._simulate(.01);check(g.stats.hp==hp,\"warning collision remains contact safe\")",
+        "57:g.hurt_clock=0;g._simulate(.01)",
+        "60:g.hurt_clock=0;hp=g.stats.hp;g._simulate(.01)",
+        "64:g._simulate(.001)",
+        "70:g._simulate(.05)",
+        "74:g.queue_free();await process_frame",
+        "77:quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 74,
+      "owners": [
+        "g"
+      ],
+      "candidate_sha256": "298f1f105b85d6066ec9ddeb0f4e4635fee404c113fb8e3c23b425d20969e37a",
+      "removed_original_lines": [
+        "\tg.queue_free();await process_frame"
+      ],
+      "new_block": "\tvar audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n\taudio_teardown.prepare([g])\n\tg.queue_free();await process_frame\n\tawait audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/independent_core_reactions.gd",
+      "source_sha256": "bb7566ea80d8ea56d0331399656297beff7009fb0fb0d7ead64ab536d0f5b038",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "127:g.queue_free();await process_frame",
+        "129:quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 127,
+      "owners": [
+        "g"
+      ],
+      "candidate_sha256": "590b87dc748dab346f1aab690bccd6067a67b72b680dbf9a799a424f4fa060d8",
+      "removed_original_lines": [
+        "\tg.queue_free();await process_frame"
+      ],
+      "new_block": "\tvar audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n\taudio_teardown.prepare([g])\n\tg.queue_free();await process_frame\n\tawait audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/independent_crawler_flanker.gd",
+      "source_sha256": "cccfa83e4f4f4701b7f9cdff269e80753c8c882b3ad66c427b9b28de144e04f5",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "74:e.hp=0;g._simulate(.001)",
+        "76:g._simulate(.001);check(g.kills==1,\"no duplicate reward \"+kind)",
+        "79:g.queue_free();await process_frame",
+        "81:quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 79,
+      "owners": [
+        "g"
+      ],
+      "candidate_sha256": "03191a83ef69efbf6308011477e760da41eeedcb5a7e49078245f506348e8b7a",
+      "removed_original_lines": [
+        "\tg.queue_free();await process_frame"
+      ],
+      "new_block": "\tvar audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n\taudio_teardown.prepare([g])\n\tg.queue_free();await process_frame\n\tawait audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/independent_crawler_hit_pipeline.gd",
+      "source_sha256": "2233c1849066ba009e7dc1fabe86770a589274d01c7beec3f8b949ceb04b42e2",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "43:g.queue_free();await process_frame",
+        "45:quit(1 if failures else 0)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 43,
+      "owners": [
+        "g"
+      ],
+      "candidate_sha256": "4cb6e67c8f0a92ce0a32ad51bdf09d3e410ae0f2110a05eef40da2a03770b5ad",
+      "removed_original_lines": [
+        "\tg.queue_free();await process_frame"
+      ],
+      "new_block": "\tvar audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n\taudio_teardown.prepare([g])\n\tg.queue_free();await process_frame\n\tawait audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/independent_cryo_contract.gd",
+      "source_sha256": "4e4bd3ffb451765591403ac3569418f744b238b9a08d00a2fa40fe76aa626322",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "80:var pos:Vector2=e.pos;var speed:float=e.speed;Runtime.step(g.combat_frame,.1)",
+        "83:reset(mode_id);e=spawn(Vector2(100,0));g._fire_weapon(\"cryo_sprayer\",0);e.slow_until=11.0;var pos:Vector2=e.pos;var speed:float=e.speed;Runtime.step(g.combat_frame,.1)",
+        "86:reset(mode_id);e=spawn(Vector2(100,0),500,\"charger\");g._fire_weapon(\"cryo_sprayer\",0);e.ai_state=phase;e.warning_left=.5;e.recover_left=.5;e.charge_left=.5;e.aim=Vector2.RIGHT;pos=e.pos;Runtime.step(g.combat_frame,.1)",
+        "91:Runtime.step(g.combat_frame,0.0);check(g.kills==1 and not g.pickups.any(func(p):return p.get(\"source\",\"\")==\"energy\"),mode_id+\" fracture kill never Kill Cell proc\")",
+        "94:Runtime.step(g.combat_frame,0.0);check(g.pickups.any(func(p):return p.get(\"source\",\"\")==\"energy\"),mode_id+\" primary lethal preserves old Kill Cell\")",
+        "98:g.queue_free();await process_frame",
+        "102:print(JSON.stringify(report));quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 98,
+      "owners": [
+        "g"
+      ],
+      "candidate_sha256": "309b4584685c7653769c19c99a9bbf6603ba8ecb30daf86a91a0bc46ce14bf20",
+      "removed_original_lines": [
+        "\tg.queue_free();await process_frame"
+      ],
+      "new_block": "\tvar audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n\taudio_teardown.prepare([g])\n\tg.queue_free();await process_frame\n\tawait audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/independent_cryo_shop.gd",
+      "source_sha256": "0f8634260932beab2ac46952412583ebe04e695885d9765f472c06196cd64280",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "74:g.queue_free();await process_frame",
+        "78:print(JSON.stringify(report));quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 74,
+      "owners": [
+        "g"
+      ],
+      "candidate_sha256": "56efc315caf08f27ad47ff998f7040f0d9e33a2be82a1040aa6eaa329a92d4da",
+      "removed_original_lines": [
+        "\tg.queue_free();await process_frame"
+      ],
+      "new_block": "\tvar audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n\taudio_teardown.prepare([g])\n\tg.queue_free();await process_frame\n\tawait audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/independent_enemy_ui.gd",
+      "source_sha256": "a6a3990d51302de8f11217db914dd6cdb24a1dd40ca54f70c18c79157ab42e95",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "59:g.queue_free()",
+        "62:quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 59,
+      "owners": [
+        "g"
+      ],
+      "candidate_sha256": "11c8eacfdfdffb7fe4634a4b1eeb066d694f51332d54bc25500d0696b4aa9444",
+      "removed_original_lines": [
+        "\tg.queue_free()",
+        "\tawait process_frame"
+      ],
+      "new_block": "\tvar audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n\taudio_teardown.prepare([g])\n\tg.queue_free()\n\tawait process_frame\n\tawait audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/independent_feedback_authority.gd",
+      "source_sha256": "e7fa6cb8403f614bef508362da5490f936e655c363d825979cc9fd137261b9bd",
+      "audio_class": "definite",
+      "evidence": [
+        "55:ck(g.feedback_audio.request(\"player_damage\"),\"start damage lifecycle fixture\")",
+        "56:ck(g.feedback_audio.request(\"shield_block\"),\"start block lifecycle fixture\")",
+        "93:var initial=make_game(\"arena\");resource_checks(initial);initial.queue_free();await process_frame",
+        "116:g._hurt(spec.damage)",
+        "128:g.queue_free();await process_frame",
+        "130:g._hurt(11);g.hurt_clock=0;g._hurt(11)",
+        "134:g.state=state_value;g.hurt_clock=0;var before:Dictionary=snap(g);g._hurt(11);ck(events.is_empty() and snap(g)==before,\"wrong-state rejected without cue/mutation \"+state_value)",
+        "137:g.hurt_clock=.1 if guard==\"hurt_clock\" else 0.;g.stats.dash_time=.1 if guard==\"dash\" else 0.;var before:Dictionary=snap(g);g._hurt(11);ck(events.is_empty() and snap(g)==before,\"old damage guard no added request \"+guard)",
+        "141:g.queue_free();await process_frame",
+        "152:Runtime.step(g.combat_frame,.06)",
+        "155:g.queue_free();await process_frame",
+        "161:Runtime.step(g.combat_frame,0.)",
+        "164:g.queue_free();await process_frame",
+        "166:Runtime.step(g.combat_frame,0.);ck(g.stats.hp==78 and events.is_empty(),\"actual medical pickup heals without loss/block cue\")",
+        "167:g.queue_free();await process_frame",
+        "187:g.queue_free();await process_frame",
+        "196:g.queue_free();await process_frame",
+        "198:g=make_game(mode);events=[];record(g,events);g.stats.hp=7.;g._hurt(11)",
+        "200:var count:int=events.size();g._hurt(11);ck(events.size()==count,\"later dead hit cannot request\")",
+        "207:g.queue_free();await process_frame",
+        "222:g.queue_free();await process_frame",
+        "226:print(JSON.stringify({\"checks\":checks,\"failures\":failures}));quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 222,
+      "owners": [
+        "g"
+      ],
+      "candidate_sha256": "e733fc08d6ca4d3c16c6f3e8ae5a7abc415b5b96b4c20823da1b5ac5a96ba690",
+      "removed_original_lines": [
+        "  g.queue_free();await process_frame"
+      ],
+      "new_block": "  var audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n  audio_teardown.prepare([g])\n  g.queue_free();await process_frame\n  await audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 9,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/independent_feedback_mixer.gd",
+      "source_sha256": "1589fcbc740481bbc7cca47901a4dd355d9f6564778a935be3a7d5535b43552e",
+      "audio_class": "definite",
+      "evidence": [
+        "91:setup(mode,cue==\"shield_block\");g._hurt(11)",
+        "106:g._hurt(11);silence(await sample_window(\"silent_\"+blocked,.20),blocked)",
+        "113:for i in range(20):g.hurt_clock=0;g._hurt(1)",
+        "118:setup(\"arena\",true);g._hurt(11);g.hurt_clock=0;g._hurt(11)",
+        "124:setup();g.stats.hp=7;g._hurt(11);ck(g.state==\"dead\",\"actual lethal terminal state\")",
+        "132:setup();g._hurt(11);await sample_window(\"pre_stop_\"+stop_kind,.04)",
+        "139:\"teardown\":g.queue_free();await process_frame",
+        "152:print(JSON.stringify({\"checks\":checks,\"failures\":failures,\"seconds\":report.seconds_since_ready}));quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "existing_dedicated_cleanup",
+      "reason": "Dedicated independent mixer already observes real node/stream weakref release plus new silent frames and capture removal after final disposal."
+    },
+    {
+      "fixture": "tests/independent_feedback_runtime.gd",
+      "source_sha256": "13f50084efe4141c9d19077e2213d261c4a866a6456d200c908284ad36ed0a39",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "29:Runtime.step(g.combat_frame,dt)",
+        "161:g.queue_free();await process_frame",
+        "164:print(JSON.stringify(result));quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 161,
+      "owners": [
+        "g"
+      ],
+      "candidate_sha256": "dc802931a4774fe2cf1b466b15c1d5681a82a7dc56f7c3de28f0336dfb67dcae",
+      "removed_original_lines": [
+        " g.queue_free();await process_frame"
+      ],
+      "new_block": " var audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n audio_teardown.prepare([g])\n g.queue_free();await process_frame\n await audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/independent_feedback_shop.gd",
+      "source_sha256": "3e815e1c0a5a9f49f15649a9013bfa85cd1d575a9a879c05ce6f6036b4e987be",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "75:g.queue_free();await process_frame",
+        "78:print(JSON.stringify(result));quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 75,
+      "owners": [
+        "g"
+      ],
+      "candidate_sha256": "2c3a3c1c69741d12ef4683f1e865096a8e7e8e18d64a0817282587e99c18aecf",
+      "removed_original_lines": [
+        " g.queue_free();await process_frame"
+      ],
+      "new_block": " var audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n audio_teardown.prepare([g])\n g.queue_free();await process_frame\n await audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/independent_feedback_validation.gd",
+      "source_sha256": "700ffcd8358c73398d9532d5fe807740df32f031efbc3d9cd0f8553c6d30bb9c",
+      "audio_class": "none",
+      "evidence": [
+        "Reviewed creation/import boundary: data/geometry/visual/UI-only fixture, no main scene or audio controller construction; support modules provide no audio playback."
+      ],
+      "action": "unchanged"
+    },
+    {
+      "fixture": "tests/independent_feedback_views.gd",
+      "source_sha256": "fb7bd2c5df6edcd1b8963ef32707d308c8971b76fbba2ddc502e73d36990688e",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "84:g.queue_free();await process_frame",
+        "88:print(JSON.stringify({\"checks\":checks,\"failures\":failures}));quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 84,
+      "owners": [
+        "g"
+      ],
+      "candidate_sha256": "a7699495dbfb120e760d5a125f8f36fd79ef21c9536d126d17c5254e1e5dd668",
+      "removed_original_lines": [
+        " g.queue_free();await process_frame"
+      ],
+      "new_block": " var audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n audio_teardown.prepare([g])\n g.queue_free();await process_frame\n await audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/independent_focus_authority.gd",
+      "source_sha256": "08f24ab915c40816ac10d4028c657d7265a0c832af41789697bc7c35f9f812bb",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "98:Runtime.step(g.combat_frame,0.0);ck(g.combat.focus_enemy_id==0,\"shared step prunes dead focus\")",
+        "99:e=setup(mode);g.combat.focus_enemy_id=e.id;g.enemies.erase(e);stable=snap();ck(not g._focus_view().active,\"removed view inactive\");ck(snap()==stable,\"removed view pure\");Runtime.step(g.combat_frame,0.0);ck(g.combat.focus_enemy_id==0,\"shared step prunes removed focus\")",
+        "122:g.queue_free();await process_frame",
+        "126:print(JSON.stringify(result));quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 122,
+      "owners": [
+        "g"
+      ],
+      "candidate_sha256": "b2f012740b4125dbd5d378fd1c0ee51de5a1c75018a16217e483f9029d891fa7",
+      "removed_original_lines": [
+        " g.queue_free();await process_frame"
+      ],
+      "new_block": " var audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n audio_teardown.prepare([g])\n g.queue_free();await process_frame\n await audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/independent_focus_combat.gd",
+      "source_sha256": "1611243f4cbe56a37a6362b75194969b747b658cc3ab0b53ec39463bdad15af4",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "139:Runtime.step(g.combat_frame,0.0);ck(g.pending_blasts.size()==1 and g.pending_blasts[0].pos==near.pos,\"same-step dead focus fallback before death cleanup\");ck(g.combat.focus_enemy_id==0,\"dead focus pruned by shared step\")",
+        "172:g.queue_free();await process_frame",
+        "176:print(JSON.stringify(result));quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 172,
+      "owners": [
+        "g"
+      ],
+      "candidate_sha256": "37936f605d2a49d46296a715c4a80c07ae32021bcc1b565988c93a7345ed1d2e",
+      "removed_original_lines": [
+        " g.queue_free();await process_frame"
+      ],
+      "new_block": " var audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n audio_teardown.prepare([g])\n g.queue_free();await process_frame\n await audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/independent_focus_views.gd",
+      "source_sha256": "ea87d4716ced4c1b36e4d5a16c8340d15876785cf66419cd56eb02340fa34b53",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "92:g.queue_free();await process_frame",
+        "96:print(JSON.stringify(result));quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 92,
+      "owners": [
+        "g"
+      ],
+      "candidate_sha256": "cf080437986d7f5e14289be7729c8f325f780bb01e2ff15627b525e85694eca2",
+      "removed_original_lines": [
+        " g.queue_free();await process_frame"
+      ],
+      "new_block": " var audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n audio_teardown.prepare([g])\n g.queue_free();await process_frame\n await audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/independent_modes.gd",
+      "source_sha256": "e4cb0395472b40e2a853ee1b9edcdf3084c49714ef97562e5b470042612ebe5b",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "83:g.queue_free()",
+        "87:quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 83,
+      "owners": [
+        "g"
+      ],
+      "candidate_sha256": "b25030c24e4244c09379e7c4b761f5bc32dcf8dcfc06a4e3d0d7daddfb64bed8",
+      "removed_original_lines": [
+        "\tg.queue_free()",
+        "\tawait process_frame"
+      ],
+      "new_block": "\tvar audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n\taudio_teardown.prepare([g])\n\tg.queue_free()\n\tawait process_frame\n\tawait audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/independent_modifier_compatibility.gd",
+      "source_sha256": "33ee0ab7316bbdcedd1e75c193d0e93bf1af5c5fff092e53cd05d740297440ca",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "38:reset(mode,{\"cooling_fan\":1});e=spawn(Vector2(100,0));g.weapon_clocks[0]=0;Runtime.step(g.combat_frame,0.0);check(near(g.weapon_clocks[0],.65/1.12),mode+\" B fan actual scheduledclock\");check(near(e.chill_until,11.2),mode+\" B fan not chillduration\")",
+        "39:reset(mode);take_haste();e=spawn(Vector2(100,0));g.weapon_clocks[0]=0;Runtime.step(g.combat_frame,0.0);check(g.build.levels.get(\"haste\")==1 and g.state==\"playing\",mode+\" C actual chooser consumed upgrade\");check(near(g.weapon_clocks[0],.65/1.15),mode+\" C rate15 actual interval\");check(not near(g.weapon_clocks[0],.65*.85),mode+\" C description interval15 not actual\");observations.append({\"mode\":mode,\"case\":\"C\",\"observed_clock\":g.weapon_clocks[0],\"wording_expected_clock\":.65*.85,\"description\":g.config.upgrades.filter(func(u):return u.id==\"haste\")[0].description})",
+        "51:reset(mode,{\"kill_cell\":1});e=spawn(Vector2(100,0),9);cone();Runtime.step(g.combat_frame,0.0);check(g.pickups.filter(func(p):return p.get(\"source\",\"\")==\"energy\").size()==1,mode+\" J Cryoprimarykill energy\")",
+        "52:reset(mode,{\"kill_cell\":1,\"fracture_coil\":1},[\"cryo_sprayer\",\"rivet_gun\"]);e=spawn(Vector2(100,0),30);cone();rivet(e);check(e.hp<0 and e.last_source==\"fracture\",mode+\" J fracturedeathattribution\");Runtime.step(g.combat_frame,0.0);check(not g.pickups.any(func(p):return p.get(\"source\",\"\")==\"energy\"),mode+\" J secondarykillnoenergy\")",
+        "56:g.queue_free();await process_frame",
+        "58:quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 56,
+      "owners": [
+        "g"
+      ],
+      "candidate_sha256": "a2b8f6a5fae755a511249b77903bc64b3a329e06c4f50e06f2ee8da1d49b1702",
+      "removed_original_lines": [
+        " g.queue_free();await process_frame"
+      ],
+      "new_block": " var audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n audio_teardown.prepare([g])\n g.queue_free();await process_frame\n await audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/independent_policy_validation.gd",
+      "source_sha256": "762fa4602e6c495aa8478f97826164a4329210fe2d1bc55a0e2da712bbf2500d",
+      "audio_class": "none",
+      "evidence": [
+        "Reviewed creation/import boundary: data/geometry/visual/UI-only fixture, no main scene or audio controller construction; support modules provide no audio playback."
+      ],
+      "action": "unchanged"
+    },
+    {
+      "fixture": "tests/independent_qa.gd",
+      "source_sha256": "61f2a06db63edad20e1725bdb9b010ba872533b6fe6d1fb3c99d489e9618e4a9",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "47:game._simulate(0.016)",
+        "60:game.queue_free()",
+        "63:quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 60,
+      "owners": [
+        "game"
+      ],
+      "candidate_sha256": "f6c36695b197b31e1ee5489106a983c75d359d8f9dc384692e9c91d3494fecf1",
+      "removed_original_lines": [
+        "\tgame.queue_free()",
+        "\tawait process_frame"
+      ],
+      "new_block": "\tvar audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n\taudio_teardown.prepare([game])\n\tgame.queue_free()\n\tawait process_frame\n\tawait audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/independent_reservation_records.gd",
+      "source_sha256": "2b679edafe5ce4f43edbddff88357e8c727cadc0780151d8c72fa72a399a757f",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "64:g.queue_free();await process_frame",
+        "68:print(JSON.stringify(result));quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 64,
+      "owners": [
+        "g"
+      ],
+      "candidate_sha256": "bd5337129e51336dd38d18916624630b74420a0edb4ac0e6f9afeb4d90a97dac",
+      "removed_original_lines": [
+        " g.queue_free();await process_frame"
+      ],
+      "new_block": " var audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n audio_teardown.prepare([g])\n g.queue_free();await process_frame\n await audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/independent_reservation_runtime.gd",
+      "source_sha256": "938f0cabdb6e24531ee3a786a1ae7d827cba13f6f87d965b290adf0b011ef8cb",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "190:elif terminal==\"defeat\":g.hurt_clock=0;g.stats.dash_time=0;g._hurt(g.stats.hp+1)",
+        "220:g.queue_free();await process_frame",
+        "224:print(JSON.stringify(result));quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 220,
+      "owners": [
+        "g"
+      ],
+      "candidate_sha256": "a7c53f1902f824682c8d6516c04c52abc4843e06359a774505cf99f44e9bfaa0",
+      "removed_original_lines": [
+        " g.queue_free();await process_frame"
+      ],
+      "new_block": " var audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n audio_teardown.prepare([g])\n g.queue_free();await process_frame\n await audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/independent_reservation_views.gd",
+      "source_sha256": "585a4c45056762ee691142ce6bfe9375bf85e81247d918789c476d9fc1f684e9",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "101:g.queue_free();await process_frame",
+        "105:print(JSON.stringify(result));quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 101,
+      "owners": [
+        "g"
+      ],
+      "candidate_sha256": "8a6be4c3389d3e89ad3feff54ee22eb9662a6ba88f5115ac1cec6268a1d2b879",
+      "removed_original_lines": [
+        " g.queue_free();await process_frame"
+      ],
+      "new_block": " var audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n audio_teardown.prepare([g])\n g.queue_free();await process_frame\n await audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/independent_resolution.gd",
+      "source_sha256": "4eaac468133cdb5ec67aab8520a17273948c0017d5f76fde86bcbe3b5530b146",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "40:g.queue_free();await process_frame",
+        "43:quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 40,
+      "owners": [
+        "g"
+      ],
+      "candidate_sha256": "7b2bac7b1622f4d17f47c1440c572d71a34f52f6896a0fdf8855131d88424aa0",
+      "removed_original_lines": [
+        "\tg.queue_free();await process_frame"
+      ],
+      "new_block": "\tvar audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n\taudio_teardown.prepare([g])\n\tg.queue_free();await process_frame\n\tawait audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/independent_room_boundaries.gd",
+      "source_sha256": "fd8a06ccd2652b69e0cce30029f269e0210c9e2f8c739f26bf058c7cb2f4cc64",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "18:g._simulate(.001)",
+        "20:if g.state==\"playing\":g._simulate(.001)",
+        "34:g._simulate(.001)",
+        "39:g._simulate(.001);drain(g)",
+        "92:g.queue_free();await process_frame",
+        "95:quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 92,
+      "owners": [
+        "g"
+      ],
+      "candidate_sha256": "667510d2bb97d93d503f3b07756332071c20f4eddbdfc1bca3376088011d47d0",
+      "removed_original_lines": [
+        "\tg.queue_free();await process_frame"
+      ],
+      "new_block": "\tvar audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n\taudio_teardown.prepare([g])\n\tg.queue_free();await process_frame\n\tawait audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/independent_salvage_runtime.gd",
+      "source_sha256": "ab46e16f7b50ebc3912de1992cfc9231b88680883e1e2bc420a063f67e4fa773",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "149:g.queue_free();await process_frame",
+        "153:print(JSON.stringify(result));quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 149,
+      "owners": [
+        "g"
+      ],
+      "candidate_sha256": "34c8cf3030ece6e52134730d94c846e37dd0abcd836d1d9af9e8d8ae826905dd",
+      "removed_original_lines": [
+        " g.queue_free();await process_frame"
+      ],
+      "new_block": " var audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n audio_teardown.prepare([g])\n g.queue_free();await process_frame\n await audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/independent_salvage_views.gd",
+      "source_sha256": "715b23da9c34cb6ffa9b20118d576b6de4d8648c2407709fb6d60343ac390b25",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "74:g.queue_free();await process_frame",
+        "78:print(JSON.stringify(r));quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 74,
+      "owners": [
+        "g"
+      ],
+      "candidate_sha256": "e5551d3349d79a2f7f7e4b67d32800ab0663e73ed28c188e8b52fdfc3bec8fe3",
+      "removed_original_lines": [
+        " g.queue_free();await process_frame"
+      ],
+      "new_block": " var audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n audio_teardown.prepare([g])\n g.queue_free();await process_frame\n await audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/independent_settlement_types.gd",
+      "source_sha256": "4c1e7647e6d4741983f7c764129ff5a45ea4099a1822169ad347aecada0456d5",
+      "audio_class": "definite",
+      "evidence": [
+        "78:g.feedback_audio.request(\"player_damage\");g.feedback_audio.request(\"shield_block\")",
+        "83:g.queue_free();await process_frame;await create_timer(.25).timeout",
+        "92:g.queue_free();await process_frame;await create_timer(.25).timeout",
+        "96:print(JSON.stringify(report));quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 92,
+      "owners": [
+        "g"
+      ],
+      "candidate_sha256": "a65145d1613995ba83703071b685371b123546daaebcc1c0bbaa5bd46c54fc13",
+      "removed_original_lines": [
+        "  g.queue_free();await process_frame;await create_timer(.25).timeout"
+      ],
+      "new_block": "  var audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n  audio_teardown.prepare([g])\n  g.queue_free();await process_frame\n  await audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 1,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/independent_shop.gd",
+      "source_sha256": "d050b7cb464ebd7ad37dd7a8067d009dbb0eb648c4d6180436440fc59e1b6af0",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "68:g.queue_free();await process_frame",
+        "70:quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 68,
+      "owners": [
+        "g"
+      ],
+      "candidate_sha256": "b480c22f4e37170f02894373e924a6f2f153f025f57940174c7419f002d23953",
+      "removed_original_lines": [
+        "\tg.queue_free();await process_frame"
+      ],
+      "new_block": "\tvar audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n\taudio_teardown.prepare([g])\n\tg.queue_free();await process_frame\n\tawait audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/independent_spitter_assets.gd",
+      "source_sha256": "f17ad1bc20945c59c7c80aa60ba5fd25ad8c2e57f574e3205f5486d4976ccd22",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "66:g._simulate(.05)",
+        "68:g._simulate(.05)",
+        "71:ad.trigger(e.id,\"hurt\");g._simulate(.05)",
+        "73:for step in range(6):g._simulate(.05)",
+        "76:g.queue_free();await process_frame",
+        "79:quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 76,
+      "owners": [
+        "g"
+      ],
+      "candidate_sha256": "1ac409023d808cab53b1f5a9d3062ff55ed369260725698cec0d720cf023e40f",
+      "removed_original_lines": [
+        "\tg.queue_free();await process_frame"
+      ],
+      "new_block": "\tvar audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n\taudio_teardown.prepare([g])\n\tg.queue_free();await process_frame\n\tawait audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/independent_spitter_events.gd",
+      "source_sha256": "345b95fa4d0f059967605d3c44ccae4d1a72fe1e3727761bb8b89796e39c4c73",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "17:g._simulate(.01)",
+        "20:g._simulate(.05)",
+        "22:g._simulate(.05)",
+        "30:g._simulate(.05)",
+        "35:g._simulate(.001)",
+        "37:g._simulate(.05)",
+        "39:for step in range(5):g._simulate(.05);ad.advance(.05)",
+        "55:g._simulate(.05)",
+        "59:ad.observe_enemy(e,\"warning\",e.pos-Vector2(999,0));g._simulate(.05)",
+        "64:g._simulate(.001)",
+        "68:if g.state==\"playing\":g._simulate(.001)",
+        "79:g.queue_free();await process_frame",
+        "82:quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 79,
+      "owners": [
+        "g"
+      ],
+      "candidate_sha256": "881f473245fc9adc6428a49e68242e82d76a820d3dcdfe6f6676983b47e2c380",
+      "removed_original_lines": [
+        "\t\tg.queue_free();await process_frame"
+      ],
+      "new_block": "\t\tvar audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n\t\taudio_teardown.prepare([g])\n\t\tg.queue_free();await process_frame\n\t\tawait audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/independent_spitter_parity.gd",
+      "source_sha256": "89f2630dd66da6ab29d8435f7f2c323f9bc310bd9ec78831847db922c31ee694",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "47:a.queue_free();b.queue_free();await process_frame",
+        "50:quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 47,
+      "owners": [
+        "a",
+        "b"
+      ],
+      "candidate_sha256": "128c828eb30f2b1e2fa7b1a413f5a8474af7e34d1b27c99fb7ea6019fc01b66c",
+      "removed_original_lines": [
+        "\t\ta.queue_free();b.queue_free();await process_frame"
+      ],
+      "new_block": "\t\tvar audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n\t\taudio_teardown.prepare([a, b])\n\t\ta.queue_free();b.queue_free();await process_frame\n\t\tawait audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/independent_starting_loadout_views.gd",
+      "source_sha256": "56476342efbf304e27b4397dd2e365a305467ef80b9c10b9added560add1ae4f",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "131:g.queue_free();await process_frame",
+        "135:print(JSON.stringify(result));quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 131,
+      "owners": [
+        "g"
+      ],
+      "candidate_sha256": "7a8057895df4009a37544924df3a7f8055e6f8e1f3d9da8ed42b3678d66405fa",
+      "removed_original_lines": [
+        " g.queue_free();await process_frame"
+      ],
+      "new_block": " var audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n audio_teardown.prepare([g])\n g.queue_free();await process_frame\n await audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/independent_starting_loadouts.gd",
+      "source_sha256": "419e69c00e9ff6132ec1d74e45faa1fb766843be4d25142025f2694fc1bda001",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "111:Runtime.step(g.combat_frame,.001)",
+        "174:g.queue_free();await process_frame",
+        "178:print(JSON.stringify(result));quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 174,
+      "owners": [
+        "g"
+      ],
+      "candidate_sha256": "ffd7770e2d931f0f2336e68b159cc7f9e7b26cab9a92ed63d88f48a01e1c6749",
+      "removed_original_lines": [
+        " g.queue_free();await process_frame"
+      ],
+      "new_block": " var audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n audio_teardown.prepare([g])\n g.queue_free();await process_frame\n await audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/independent_tag_authority.gd",
+      "source_sha256": "c0fa8e057f6153ae599141d1014bb1b2311e35151cbfe477231c584165907011",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "106:g.queue_free();await process_frame",
+        "109:quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 106,
+      "owners": [
+        "g"
+      ],
+      "candidate_sha256": "ccc7a969ac9e375a5429ad6afe75ff53021201e76dd6a51de33d15e65ee973b9",
+      "removed_original_lines": [
+        " g.queue_free();await process_frame"
+      ],
+      "new_block": " var audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n audio_teardown.prepare([g])\n g.queue_free();await process_frame\n await audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/independent_tag_views.gd",
+      "source_sha256": "d4acef8724b9735f9b92e58a2633bb50e790f0f775d59185d3d54457837882b9",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "68:g.queue_free();await process_frame",
+        "72:quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 68,
+      "owners": [
+        "g"
+      ],
+      "candidate_sha256": "883ee051900cafc16f22d6b33a3841d61bddcdee61e21a3a4048841f742589a7",
+      "removed_original_lines": [
+        " g.queue_free();await process_frame"
+      ],
+      "new_block": " var audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n audio_teardown.prepare([g])\n g.queue_free();await process_frame\n await audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/independent_tempering_authority.gd",
+      "source_sha256": "b1b189e3c1cb119f9a34b46fab318c393717222e855a355153fa3b191e242e29",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "124:g.queue_free();await process_frame",
+        "128:print(JSON.stringify(result));quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 124,
+      "owners": [
+        "g"
+      ],
+      "candidate_sha256": "360e07a6da179cfbd013a9a5196d7f4ace279baebb592593e53355a8aefedce0",
+      "removed_original_lines": [
+        " g.queue_free();await process_frame"
+      ],
+      "new_block": " var audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n audio_teardown.prepare([g])\n g.queue_free();await process_frame\n await audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/independent_tempering_combat.gd",
+      "source_sha256": "22afcb227a70e028cda709090d9547610ca97208490044653b0475d510114c79",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "30:func step(dt:float)->void:g.elapsed+=dt;Runtime.step(g.combat_frame,dt)",
+        "103:g.queue_free();await process_frame",
+        "107:print(JSON.stringify(result));quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 103,
+      "owners": [
+        "g"
+      ],
+      "candidate_sha256": "6998b34796b8d83e12862fc03251f79100ccb6416fdb63c2c16d647969651b5e",
+      "removed_original_lines": [
+        " g.queue_free();await process_frame"
+      ],
+      "new_block": " var audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n audio_teardown.prepare([g])\n g.queue_free();await process_frame\n await audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/independent_tempering_hint.gd",
+      "source_sha256": "919177320cf5318547c3558e1b69d7cd06a0a065b6e1acb72f8c11a3a69a8e03",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "58:g.queue_free();await process_frame",
+        "62:print(JSON.stringify(result));quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 58,
+      "owners": [
+        "g"
+      ],
+      "candidate_sha256": "94310c8a3b5fa4b9f2daae92e0ec0335ef1da6c006596a58ac6b93ffa9bc13e1",
+      "removed_original_lines": [
+        " g.queue_free();await process_frame"
+      ],
+      "new_block": " var audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n audio_teardown.prepare([g])\n g.queue_free();await process_frame\n await audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/independent_tempering_views.gd",
+      "source_sha256": "eb9cfe64bfaf1782f256723ec8ad1ee67afad7ddac9f8c0c4c3a952319aedb3e",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "118:g.queue_free();await process_frame",
+        "122:print(JSON.stringify(result));quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 118,
+      "owners": [
+        "g"
+      ],
+      "candidate_sha256": "7e90250f7f4c6bd283baef08f2cb0bbec4fc7f5a719fbe80d3ecd07268591af8",
+      "removed_original_lines": [
+        " g.queue_free();await process_frame"
+      ],
+      "new_block": " var audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n audio_teardown.prepare([g])\n g.queue_free();await process_frame\n await audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/independent_ui.gd",
+      "source_sha256": "70495d8a214fc19fc23bab88dd850d263773871cb593a57ae6a50a8337226533",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "41:game.queue_free()",
+        "44:quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 41,
+      "owners": [
+        "game"
+      ],
+      "candidate_sha256": "4e16c2ac308fd5e8f8e3c778b1fe64a5a024f3e9a413c3fa2942ab35fec5c933",
+      "removed_original_lines": [
+        "\tgame.queue_free()",
+        "\tawait process_frame"
+      ],
+      "new_block": "\tvar audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n\taudio_teardown.prepare([game])\n\tgame.queue_free()\n\tawait process_frame\n\tawait audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/independent_v2.gd",
+      "source_sha256": "69594a11a871b4544e76ba3c958e3ae74eb86c534a1af436548e35d810896c02",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "102:game._simulate(.016)",
+        "112:game.queue_free()",
+        "115:quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 112,
+      "owners": [
+        "game"
+      ],
+      "candidate_sha256": "f2761662c8e62b15f129350d2fea4e05aa13cfba3acc51e345dcd13ea98528f3",
+      "removed_original_lines": [
+        "\tgame.queue_free()",
+        "\tawait process_frame"
+      ],
+      "new_block": "\tvar audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n\taudio_teardown.prepare([game])\n\tgame.queue_free()\n\tawait process_frame\n\tawait audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/independent_v3.gd",
+      "source_sha256": "ce879a738c4d9edb1a0c360beb227b6c16b56a624d887770e4050631b18edcf5",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "36:g._simulate(.1)",
+        "40:g._simulate(.1)",
+        "54:g._simulate(.02)",
+        "57:g._simulate(.02)",
+        "62:g._simulate(.02)",
+        "70:g._simulate(.01)",
+        "114:g._hurt(1000)",
+        "116:g.queue_free()",
+        "119:quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 116,
+      "owners": [
+        "g"
+      ],
+      "candidate_sha256": "45095ff03fae412a297dac1279c42d97be6033158db36ba1caee38090720ca1f",
+      "removed_original_lines": [
+        "\tg.queue_free()",
+        "\tawait process_frame"
+      ],
+      "new_block": "\tvar audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n\taudio_teardown.prepare([g])\n\tg.queue_free()\n\tawait process_frame\n\tawait audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/independent_v4.gd",
+      "source_sha256": "0c3a02f577d8e62684a3bc9d97f5ab24fa5b8aa0fc45b6ff0176f592081c0c89",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "48:g._simulate(.01)",
+        "51:g._simulate(.01)",
+        "55:g._simulate(.01)",
+        "59:g._hurt(9)",
+        "64:g.hurt_clock = 0;g.elapsed += 1.1;g._hurt(9)",
+        "67:a = enemy(g,Vector2(60,0));g._hurt(9)",
+        "85:g._simulate(.01)",
+        "142:g._simulate(.01)",
+        "144:g.queue_free()",
+        "147:quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 144,
+      "owners": [
+        "g"
+      ],
+      "candidate_sha256": "2c75200ff0921c1ac4ee85ff757b643e6325abfa23342fbd531cc59f1d7bf342",
+      "removed_original_lines": [
+        "\tg.queue_free()",
+        "\tawait process_frame"
+      ],
+      "new_block": "\tvar audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n\taudio_teardown.prepare([g])\n\tg.queue_free()\n\tawait process_frame\n\tawait audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/independent_v5.gd",
+      "source_sha256": "7b036ad89f049b6e52be314d4f546c288468d52a8fd9172c9a49b4db55aec794",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "23:for i in range(110):g._simulate(.016)",
+        "65:g._hurt(29)",
+        "67:g.hurt_clock = 0;g._hurt(1)",
+        "70:g._simulate(.01)",
+        "73:g._hurt(100)",
+        "97:g.queue_free();await process_frame",
+        "99:quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 97,
+      "owners": [
+        "g"
+      ],
+      "candidate_sha256": "d7a02eeeaa4f430a2e4b7142cbddf7cd7eefc40e71e0fd3cb23366671e267023",
+      "removed_original_lines": [
+        "\tg.queue_free();await process_frame"
+      ],
+      "new_block": "\tvar audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n\taudio_teardown.prepare([g])\n\tg.queue_free();await process_frame\n\tawait audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/independent_vfx.gd",
+      "source_sha256": "67b24655991c0341a47df89398ea630d9f117975209487b91724e9fec6188fd0",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "42:for i in range(20):g._simulate(.016)",
+        "45:g._hurt(5)",
+        "86:for i in range(20):g._simulate(.016)",
+        "89:g.queue_free();await process_frame",
+        "91:quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 89,
+      "owners": [
+        "g"
+      ],
+      "candidate_sha256": "218936663fe0d620b6a4d801ae41daaa92213f1cb8754d08335adff3722c403c",
+      "removed_original_lines": [
+        "\tg.queue_free();await process_frame"
+      ],
+      "new_block": "\tvar audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n\taudio_teardown.prepare([g])\n\tg.queue_free();await process_frame\n\tawait audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/independent_warden_reactions.gd",
+      "source_sha256": "ac3ccc59d6f4faccba94636a34ab2151659ba3b58aefbce381bdcdaef6bf7f6d",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "106:g.queue_free();await process_frame",
+        "108:quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 106,
+      "owners": [
+        "g"
+      ],
+      "candidate_sha256": "de3b0d24ee6c547745179475b27ce605b997ec07133e464ed1f2ded6dcce396e",
+      "removed_original_lines": [
+        "\tg.queue_free();await process_frame"
+      ],
+      "new_block": "\tvar audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n\taudio_teardown.prepare([g])\n\tg.queue_free();await process_frame\n\tawait audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/independent_weapon_authority.gd",
+      "source_sha256": "23fb1221a5fd9cfb62da0d8fdd1d5de32cb875a8f93e97fcbc8b83a0d2b0486e",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "43:g.weapon_clocks[0]=0;Runtime.step(g.combat_frame,0.0)",
+        "66:g.queue_free();await process_frame",
+        "69:quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 66,
+      "owners": [
+        "g"
+      ],
+      "candidate_sha256": "c884cea0779ca4a012c08577b943eb0ed4481c29bd1b4c18ca054bdfe67f9e3b",
+      "removed_original_lines": [
+        " g.queue_free();await process_frame"
+      ],
+      "new_block": " var audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n audio_teardown.prepare([g])\n g.queue_free();await process_frame\n await audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/independent_weapon_order.gd",
+      "source_sha256": "e1ce42b54e93b6e0fe745598abcea25b90d35d1d6fcaf3d029218ed192982d5d",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "118:Runtime.step(g.combat_frame,.1);ck(timed.hp==1000,\"move does not grant immediate free attack\")",
+        "119:g.elapsed+=.02;Runtime.step(g.combat_frame,.02);ck(timed.hp==991 and timed.get(\"chill_until\",0)>g.elapsed,\"earlier due Cryo remains same copy now slot1\")",
+        "120:g.elapsed+=.49;Runtime.step(g.combat_frame,.49);ck(timed.hp==955 and timed.get(\"chill_until\",0)<=g.elapsed,\"later Saw clock consumes existing mark, not forced alignment\")",
+        "127:retiring.sprite.queue_free();g.enemies.clear();g.mode.planned_index=g.mode.planned_count;g.mode.clear_elapsed=float(g.room_profile.clear_delay)",
+        "158:g.queue_free();await process_frame",
+        "162:print(JSON.stringify(result));quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 158,
+      "owners": [
+        "g"
+      ],
+      "candidate_sha256": "f581e743345b0440948f49ec186dce54cacf4655b4febdb3ca607eda23ca8d4c",
+      "removed_original_lines": [
+        " g.queue_free();await process_frame"
+      ],
+      "new_block": " var audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n audio_teardown.prepare([g])\n g.queue_free();await process_frame\n await audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 1,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/independent_weapon_order_views.gd",
+      "source_sha256": "d24e8a94c222817de003de012fe5d9ca7304c1243bd17b2337107786516a043e",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "82:g.queue_free();await process_frame",
+        "86:print(JSON.stringify(result));quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 82,
+      "owners": [
+        "g"
+      ],
+      "candidate_sha256": "0ec081841b4b6017d0bb7aac44114a4b4055d00a6ef1f4952c379bb59c362b4f",
+      "removed_original_lines": [
+        " g.queue_free();await process_frame"
+      ],
+      "new_block": " var audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n audio_teardown.prepare([g])\n g.queue_free();await process_frame\n await audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/independent_weapon_readouts.gd",
+      "source_sha256": "3bef8fa15076ac125f1c84b36eee1218936b8337cba8d8fed2d5bb305b612409",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "58:g.queue_free();await process_frame",
+        "61:quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 58,
+      "owners": [
+        "g"
+      ],
+      "candidate_sha256": "d5b5ca82be01459b6f937e3525194f7a0b8708e0fdad419e91dff9bc6e979069",
+      "removed_original_lines": [
+        " g.queue_free();await process_frame"
+      ],
+      "new_block": " var audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n audio_teardown.prepare([g])\n g.queue_free();await process_frame\n await audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/independent_weapon_rig.gd",
+      "source_sha256": "f969aa824a5e3e2d6d3bd28a9e4dd7e5d8bea3179afdd25a666d263caa312e59",
+      "audio_class": "definite",
+      "evidence": [
+        "132:reset(g);g._hurt(9999);g._sync_weapon_rig()",
+        "135:g.queue_free();await process_frame",
+        "138:quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 135,
+      "owners": [
+        "g"
+      ],
+      "candidate_sha256": "2af84fd3bd5bc466dcc044c7ea0d7d2bc61c293a298443151b790aeb5741b57d",
+      "removed_original_lines": [
+        "\tg.queue_free();await process_frame",
+        "\tawait create_timer(.25).timeout # Post-disposal mixer release; no gameplay/assertion timing change."
+      ],
+      "new_block": "\tvar audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n\taudio_teardown.prepare([g])\n\tg.queue_free();await process_frame\n\tawait audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/test_actor_actions.gd",
+      "source_sha256": "ce97d3f485e5eb80ad76c7d2289c4cc4d89d5ec01ffc8a59448b556734c31cb5",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "48:game._simulate(.001)",
+        "98:game.queue_free();await process_frame",
+        "100:quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 98,
+      "owners": [
+        "game"
+      ],
+      "candidate_sha256": "3b790dabd7f4f80590fdaa4926916c40fb7736ccff2d146c50a48df4927da1f9",
+      "removed_original_lines": [
+        "\tgame.queue_free();await process_frame"
+      ],
+      "new_block": "\tvar audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n\taudio_teardown.prepare([game])\n\tgame.queue_free();await process_frame\n\tawait audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/test_bankshot_build.gd",
+      "source_sha256": "0247da4340a65119a7f4996a892c10d3b887f678cee5d1a0787ef770752d5b93",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "94:g.queue_free();await process_frame",
+        "96:quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 94,
+      "owners": [
+        "g"
+      ],
+      "candidate_sha256": "5ff51f370b6c5f35fd217fe356fda05cf36edbc72c075e840a1d351c244171ea",
+      "removed_original_lines": [
+        " g.queue_free();await process_frame"
+      ],
+      "new_block": " var audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n audio_teardown.prepare([g])\n g.queue_free();await process_frame\n await audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/test_boundary_shot.gd",
+      "source_sha256": "4178d20648df3dc647327c90c289ddcf90c64112a778b5f964408458544ed6f1",
+      "audio_class": "none",
+      "evidence": [
+        "Reviewed creation/import boundary: data/geometry/visual/UI-only fixture, no main scene or audio controller construction; support modules provide no audio playback."
+      ],
+      "action": "unchanged"
+    },
+    {
+      "fixture": "tests/test_brood_actions.gd",
+      "source_sha256": "93035827b2af34360223d6a4075bab30462f6527f42d9b006c42344c908acfca",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "64:g._simulate(.64)",
+        "67:g._simulate(.02)",
+        "74:g._simulate(.7/9.0)",
+        "77:g._simulate(.08);check(e.ai_state==\"move\" and a.state_of(e.id)==\"move\",\"recovery returns to movement\")",
+        "81:e.warning_left=.001;var next_id:int=g.next_enemy_id;g._simulate(.02)",
+        "87:e.warning_left=.001;next_id=g.next_enemy_id;g._simulate(.02)",
+        "90:e=prepare(g);e.warning_left=.001;e.hp-=1;g._simulate(.02)",
+        "102:e.hp=0;var kills:int=g.kills;g._simulate(.001)",
+        "106:g._simulate(.01);check(g.kills==kills+1 and children(g,e).size()==1,\"corpse never spawns or rewards twice\")",
+        "113:g.queue_free();await process_frame",
+        "115:quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 113,
+      "owners": [
+        "g"
+      ],
+      "candidate_sha256": "6dc4a8a65ac1833af1920e7dad21d76de9e50e807d2489988e0912d106e238ff",
+      "removed_original_lines": [
+        "\tg.queue_free();await process_frame"
+      ],
+      "new_block": "\tvar audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n\taudio_teardown.prepare([g])\n\tg.queue_free();await process_frame\n\tawait audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/test_brood_pulse.gd",
+      "source_sha256": "4135e1b03b79949f245bf8613cd784bfbc92219b9610eace5e29cfed2b99a274",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "24:g.elapsed+=dt;Runtime.step(g.combat_frame,dt)",
+        "100:g.queue_free();await process_frame",
+        "103:quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 100,
+      "owners": [
+        "g"
+      ],
+      "candidate_sha256": "e9575076e6ddbc92c23473b9d2708ce8eb26e40780ad40b69c6f707be081f577",
+      "removed_original_lines": [
+        "\tg.queue_free();await process_frame"
+      ],
+      "new_block": "\tvar audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n\taudio_teardown.prepare([g])\n\tg.queue_free();await process_frame\n\tawait audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/test_builds.gd",
+      "source_sha256": "a5993d5d352ea2ab4128cd1a30eda00e2fed94c6208e3b609f1298b07bb20154",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "91:game._simulate(.016)",
+        "106:game.queue_free()",
+        "109:quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 106,
+      "owners": [
+        "game"
+      ],
+      "candidate_sha256": "e55080b46f2ed0bf63aaf1ce9d097754149df0ca9d6cd69230979d98599dc474",
+      "removed_original_lines": [
+        "\tgame.queue_free()",
+        "\tawait process_frame"
+      ],
+      "new_block": "\tvar audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n\taudio_teardown.prepare([game])\n\tgame.queue_free()\n\tawait process_frame\n\tawait audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/test_charger_actions.gd",
+      "source_sha256": "b8a2df06e80d3cd65cf47b50e5bf0430a01fcffb416a8735081afb0949b57edf",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "60:e.hp=0;var kills:int=g.kills;g._simulate(.001)",
+        "62:g._simulate(.001);check(g.kills==kills+1,\"corpse cannot duplicate kill reward\")",
+        "69:g.queue_free();await process_frame",
+        "71:quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 69,
+      "owners": [
+        "g"
+      ],
+      "candidate_sha256": "ca5399a86ff07eba4e181cc450e40b900738aa26b100450a7fba810766e7951e",
+      "removed_original_lines": [
+        "\tg.queue_free();await process_frame"
+      ],
+      "new_block": "\tvar audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n\taudio_teardown.prepare([g])\n\tg.queue_free();await process_frame\n\tawait audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/test_combat_focus.gd",
+      "source_sha256": "1892d1d2a544afcbc1624341a85025a7559bfdb85d2605220bf30527852251b1",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "91:g.queue_free();await process_frame",
+        "92:print(JSON.stringify({\"passed\":passed,\"failures\":failures,\"scope\":\"Controlled geometry, input gate, purity, range-aware idle presentation and lifecycle; actual GUI dispatch/native input independently required.\"}));quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 91,
+      "owners": [
+        "g"
+      ],
+      "candidate_sha256": "113b703b2ef7e6e4fced49977d0a3981a2be5045526edb67e1b1ab4cc856e175",
+      "removed_original_lines": [
+        "\tg.queue_free();await process_frame"
+      ],
+      "new_block": "\tvar audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n\taudio_teardown.prepare([g])\n\tg.queue_free();await process_frame\n\tawait audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/test_combat_hud_readability.gd",
+      "source_sha256": "3a68a32b07f329ad0f62d8a4d52574a7c856abdc52be99510a4e2ef358806ffb",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "57:game.queue_free();await process_frame",
+        "59:quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 57,
+      "owners": [
+        "game"
+      ],
+      "candidate_sha256": "d0afdb08946fc8b7deb18209979f5a4a28f66fb80ce14d333c724513cb273c87",
+      "removed_original_lines": [
+        "\tgame.queue_free();await process_frame"
+      ],
+      "new_block": "\tvar audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n\taudio_teardown.prepare([game])\n\tgame.queue_free();await process_frame\n\tawait audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/test_contact_enemy_actions.gd",
+      "source_sha256": "e6b8be58ba27257fea242ba3bc00f16cbcdc1c62637cb156d352637dbf2e0120",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "25:g._simulate(.01)",
+        "44:g.queue_free();await process_frame",
+        "46:quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 44,
+      "owners": [
+        "g"
+      ],
+      "candidate_sha256": "ad19c93a5591ae78e70a138095ad62f487d11abe5467fdc9dcb5d4dcaf67a655",
+      "removed_original_lines": [
+        "\tg.queue_free();await process_frame"
+      ],
+      "new_block": "\tvar audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n\taudio_teardown.prepare([g])\n\tg.queue_free();await process_frame\n\tawait audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/test_core_reactions.gd",
+      "source_sha256": "91c5a9872bdc4e345127d2edb20911eae8541a744dd2c7027229191daa28ec78",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "37:g._simulate(.02)",
+        "44:g._simulate(.1);a.advance(.28)",
+        "51:e.warning_left=.01;e.hp-=1;g._simulate(.02)",
+        "54:g._simulate(.1);a.advance(.28)",
+        "62:g._simulate(.01)",
+        "70:var rewarded:int=g.build.coins;g._simulate(.01)",
+        "76:g.wave_time=g.config.waves.duration-.001;g._simulate(.01)",
+        "79:g.queue_free();await process_frame",
+        "81:quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 79,
+      "owners": [
+        "g"
+      ],
+      "candidate_sha256": "2e7dd66fc21bac3491c964c3910a18fd14d2d5e9525b6c40a0808a1af801d88a",
+      "removed_original_lines": [
+        "\tg.queue_free();await process_frame"
+      ],
+      "new_block": "\tvar audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n\taudio_teardown.prepare([g])\n\tg.queue_free();await process_frame\n\tawait audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/test_core_summon.gd",
+      "source_sha256": "697c999fe68eafa758ae7164d284cd86cd9694c6d9292a219eeaec0e6c0ba395",
+      "audio_class": "definite",
+      "evidence": [
+        "29:game.queue_free();await process_frame",
+        "30:print(JSON.stringify({\"core_summon_passed\":passed,\"failures\":failures}));quit(1);return",
+        "35:game._simulate(.01)",
+        "54:enemy=prepare(game);game._simulate(.01);enemy.warning_left=.001",
+        "55:game._simulate(.002)",
+        "58:director.trigger(enemy.id,\"hurt\");game._simulate(.3);director.advance(.28)",
+        "62:enemy=prepare(game);game._simulate(.01)",
+        "64:enemy.warning_left=.001;game._simulate(.002)",
+        "67:game._simulate(.01)",
+        "69:enemy.warning_left=.001;game._simulate(.002)",
+        "79:director.advance(.02);game._simulate(.02)",
+        "83:game.queue_free();await process_frame",
+        "86:quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 83,
+      "owners": [
+        "game"
+      ],
+      "candidate_sha256": "061996e5039c0c9d2068f20c8c6427bfe07e011246f30c689d4d33aba248757e",
+      "removed_original_lines": [
+        "\tgame.queue_free();await process_frame",
+        "\tawait create_timer(.25).timeout # Post-disposal mixer release; no gameplay/assertion timing change."
+      ],
+      "new_block": "\tvar audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n\taudio_teardown.prepare([game])\n\tgame.queue_free();await process_frame\n\tawait audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 1,
+      "early_failure_exits": true
+    },
+    {
+      "fixture": "tests/test_core_summon_assets.gd",
+      "source_sha256": "aab4958a0a36eb78a12aef1dfac0e084b0f44a1058e40aef94a95cd9f6151638",
+      "audio_class": "none",
+      "evidence": [
+        "Reviewed creation/import boundary: data/geometry/visual/UI-only fixture, no main scene or audio controller construction; support modules provide no audio playback."
+      ],
+      "action": "unchanged"
+    },
+    {
+      "fixture": "tests/test_crawler_hurt_registration.gd",
+      "source_sha256": "9a5778ebf3258fcd20318f469df6e7245fbe42676f88e6816f0e76a4675efec4",
+      "audio_class": "none",
+      "evidence": [
+        "Reviewed creation/import boundary: data/geometry/visual/UI-only fixture, no main scene or audio controller construction; support modules provide no audio playback."
+      ],
+      "action": "unchanged"
+    },
+    {
+      "fixture": "tests/test_cryo_build.gd",
+      "source_sha256": "0de0f4ed23e610d98c3b8b4efecce85dc13b18f20764fe64cdcb186a520e0fe3",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "153:g._title();g.queue_free();await process_frame",
+        "155:quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 153,
+      "owners": [
+        "g"
+      ],
+      "candidate_sha256": "7692f11f02446ac1038a93a46111cf156a04f559cd6101e5f08c1bd3335f586d",
+      "removed_original_lines": [
+        "\tg._title();g.queue_free();await process_frame"
+      ],
+      "new_block": "\tvar audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n\taudio_teardown.prepare([g])\n\tg._title();g.queue_free();await process_frame\n\tawait audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/test_discrete_ui_numbers.gd",
+      "source_sha256": "f5c4c79e2d880d4d9453ba76b417de25a7a609c542395b194f0dd14ee7e095d4",
+      "audio_class": "none",
+      "evidence": [
+        "Reviewed creation/import boundary: data/geometry/visual/UI-only fixture, no main scene or audio controller construction; support modules provide no audio playback."
+      ],
+      "action": "unchanged"
+    },
+    {
+      "fixture": "tests/test_effects.gd",
+      "source_sha256": "2bbe87c0804437f517c43414ea2712849ab17af519900a06c4e35b3cd0686e31",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "92:game._hurt(20)",
+        "94:game.hurt_clock=0;game._hurt(20)",
+        "110:game.queue_free();await process_frame",
+        "112:quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 110,
+      "owners": [
+        "game"
+      ],
+      "candidate_sha256": "7acaec2b284a285785221bb3d8cea0d93f040c0e65a571b9fa7529a940db517a",
+      "removed_original_lines": [
+        "\tgame.queue_free();await process_frame"
+      ],
+      "new_block": "\tvar audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n\taudio_teardown.prepare([game])\n\tgame.queue_free();await process_frame\n\tawait audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/test_encounters.gd",
+      "source_sha256": "81bd6db931fceb7cdc787e110e1df84fb99affca2e12e87990a4a3dcab7d8e27",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "87:game._hurt(999)",
+        "95:game._simulate(.01)",
+        "99:game._simulate(.01)",
+        "101:game.queue_free()",
+        "104:quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 101,
+      "owners": [
+        "game"
+      ],
+      "candidate_sha256": "af874983aa3f25465cf90e9850bce989fcd17c50fa14cadc726eec115db30e28",
+      "removed_original_lines": [
+        "\tgame.queue_free()",
+        "\tawait process_frame"
+      ],
+      "new_block": "\tvar audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n\taudio_teardown.prepare([game])\n\tgame.queue_free()\n\tawait process_frame\n\tawait audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/test_expansion.gd",
+      "source_sha256": "3cbbb48e35f25c9dc1cfa9f912a7f67cda5c0ff61e49d0c2ff95c64110531922",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "95:game.queue_free()",
+        "98:quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 95,
+      "owners": [
+        "game"
+      ],
+      "candidate_sha256": "1e2c834e814ebfe239a2edeb8e28c30932b8b64dbf6c7ec0bb84dcebc9868ee0",
+      "removed_original_lines": [
+        "\tgame.queue_free()",
+        "\tawait process_frame"
+      ],
+      "new_block": "\tvar audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n\taudio_teardown.prepare([game])\n\tgame.queue_free()\n\tawait process_frame\n\tawait audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/test_export_contract.gd",
+      "source_sha256": "771ccf70e847d4ba3d2b0d569bb5056cd18b8dbdef6cc31269b101b7b1928c6b",
+      "audio_class": "none",
+      "evidence": [
+        "Reviewed creation/import boundary: data/geometry/visual/UI-only fixture, no main scene or audio controller construction; support modules provide no audio playback."
+      ],
+      "action": "unchanged"
+    },
+    {
+      "fixture": "tests/test_feedback_diode.gd",
+      "source_sha256": "146c0313a49d0f087cb7ed45a44f3b66cbbd69165ea68fd22efdd854ff6432d1",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "34:Runtime.step(game.combat_frame,dt)",
+        "78:fresh(mode); enemy=owner(); dash(); game._hurt(50)",
+        "101:game.queue_free(); await process_frame",
+        "103:quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 101,
+      "owners": [
+        "game"
+      ],
+      "candidate_sha256": "af6d0909f6b462274ed1baa1ceee83ef4baa49e59f39223a2bc64f898b3c9aa6",
+      "removed_original_lines": [
+        "\tgame.queue_free(); await process_frame"
+      ],
+      "new_block": "\tvar audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n\taudio_teardown.prepare([game])\n\tgame.queue_free(); await process_frame\n\tawait audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/test_feedback_mixer.gd",
+      "source_sha256": "8a813ba3938a6cad4ff7dc9ae8b688cb7ed52c54de10d6b480b847abf9db1eb7",
+      "audio_class": "definite",
+      "evidence": [
+        "45:g._hurt(8)",
+        "50:setup(true);await collect(.20);g._hurt(8);g.hurt_clock=0;g._hurt(8)",
+        "54:for i in range(4):g.hurt_clock=0;g._hurt(1)",
+        "58:setup();g._hurt(8);g.feedback_audio.set_muted(true)",
+        "61:g.hurt_clock=0;g._hurt(8);windows.muted=await collect(.20);window_ok(windows.muted,\"muted resolved loss\",false)",
+        "63:setup();g.stats.hp=1;g._hurt(8);windows.lethal=await collect(.35);window_ok(windows.lethal,\"post-finish lethal tail\",true)",
+        "64:g._hurt(8);windows.dead=await collect(.15);window_ok(windows.dead,\"later dead call\",false)",
+        "65:setup();g._hurt(8);g._on_intent(\"pause\",{});windows.pause_drain=await collect(.20)",
+        "68:g.queue_free();await process_frame",
+        "74:print(JSON.stringify(report));quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "existing_dedicated_cleanup",
+      "reason": "Dedicated mixer observes completed voices and fresh drained/resumed silence before owner disposal; preserve its capture semantics."
+    },
+    {
+      "fixture": "tests/test_feedback_teardown.gd",
+      "source_sha256": "4be462488ef1cc162df5a4bec76c220f9724d7034188cbbb117869fbc36fa573",
+      "audio_class": "definite",
+      "evidence": [
+        "36:audio.queue_free();await process_frame",
+        "51:print(JSON.stringify(report));quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "existing_dedicated_cleanup",
+      "reason": "Dedicated real disposal test already asserts node/stream/playback weakref release and new silent frames."
+    },
+    {
+      "fixture": "tests/test_focus_fire.gd",
+      "source_sha256": "b2727c37a2eb4e3ef6d9c51a1299f0d8c8b12d96427b0fd0e620c3a4f2e5d1c4",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "83:Runtime.step(g.combat_frame,0.0)",
+        "91:g.queue_free();await process_frame",
+        "92:print(JSON.stringify({\"passed\":passed,\"failures\":failures,\"scope\":\"Controlled actual8-path primary/pose, mixed tier, fallback, interception, snapshot and same-step-death checks; not ordinary damage/balance proof.\"}));quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 91,
+      "owners": [
+        "g"
+      ],
+      "candidate_sha256": "c32be38c22d4ed467e1519b3befa69e2579fde9e58a488f2323b97f4ffcb42d5",
+      "removed_original_lines": [
+        "\tg.queue_free();await process_frame"
+      ],
+      "new_block": "\tvar audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n\taudio_teardown.prepare([g])\n\tg.queue_free();await process_frame\n\tawait audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/test_game.gd",
+      "source_sha256": "834fe24f01cc9f5f233e8283f5a7016b282b3abaf1b56737c71a4ebbf9ee0c67",
+      "audio_class": "definite",
+      "evidence": [
+        "54:for i in range(30): game._simulate(1.0 / 60)",
+        "81:game._simulate(0.016)",
+        "85:game.queue_free()",
+        "88:quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 85,
+      "owners": [
+        "game"
+      ],
+      "candidate_sha256": "0be2b33d1de16a757ca5c8bcbc9d5d24954c8895ba309be8bd138e1bcbdaffe1",
+      "removed_original_lines": [
+        "\tgame.queue_free()",
+        "\tawait process_frame"
+      ],
+      "new_block": "\tvar audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n\taudio_teardown.prepare([game])\n\tgame.queue_free()\n\tawait process_frame\n\tawait audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/test_hud_layout.gd",
+      "source_sha256": "654af641cceb9f775a2d2bc0c8e4ba253e8d9d87e26b6c313227d531f7280788",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "27:game.queue_free();await process_frame",
+        "29:quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 27,
+      "owners": [
+        "game"
+      ],
+      "candidate_sha256": "b33c51105dd70601baeb0e86e53f0e070b6312c754450ca558cf21460b32fddf",
+      "removed_original_lines": [
+        "\tgame.queue_free();await process_frame"
+      ],
+      "new_block": "\tvar audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n\taudio_teardown.prepare([game])\n\tgame.queue_free();await process_frame\n\tawait audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/test_input_lifecycle.gd",
+      "source_sha256": "bd117e5a297631d1bd335d76ae3ece8ff033f53c31ca4b12eb72935ffa206c5a",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "62:game.queue_free();await process_frame",
+        "64:quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 62,
+      "owners": [
+        "game"
+      ],
+      "candidate_sha256": "a010c0524276f0cce6a6d5d877a825be15f3fb76adac81f3bdf69a6226e087a5",
+      "removed_original_lines": [
+        "\tgame.queue_free();await process_frame"
+      ],
+      "new_block": "\tvar audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n\taudio_teardown.prepare([game])\n\tgame.queue_free();await process_frame\n\tawait audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/test_modes.gd",
+      "source_sha256": "7e069e9a4df2a6143b7b5fc45c2c6023702906f135b6c4202a9abbea3b9df8a0",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "35:g.spawn_clock=0;g._simulate(.01)",
+        "37:g.wave_time=1000;g.spawn_clock=999;g._simulate(.01)",
+        "48:g._simulate(.01)",
+        "50:if g.state==\"playing\":g._simulate(.001)",
+        "85:g.queue_free();await process_frame",
+        "87:quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 85,
+      "owners": [
+        "g"
+      ],
+      "candidate_sha256": "cc68c456fc966170d874880402679dcd6e978d27f405548e51ea13765095d194",
+      "removed_original_lines": [
+        "\tg.queue_free();await process_frame"
+      ],
+      "new_block": "\tvar audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n\taudio_teardown.prepare([g])\n\tg.queue_free();await process_frame\n\tawait audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/test_modifier_copy.gd",
+      "source_sha256": "dc19831af8c74ef77c21c7bd2045dc16c9bd4404fe6edfeb62ffd0c3482656b3",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "103:game.queue_free();await process_frame",
+        "105:quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 103,
+      "owners": [
+        "game"
+      ],
+      "candidate_sha256": "fd2b20f89a06b09dc9a428a287c3fec10b99802df49900111da0d439cd7e6039",
+      "removed_original_lines": [
+        " game.queue_free();await process_frame"
+      ],
+      "new_block": " var audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n audio_teardown.prepare([game])\n game.queue_free();await process_frame\n await audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/test_player_feedback.gd",
+      "source_sha256": "4ed7eb8e696e4f226a307d608f6b0686b63a7e716619db785796342baa1cb33f",
+      "audio_class": "definite",
+      "evidence": [
+        "19:g.feedback_audio.request(\"player_damage\");g.feedback_audio.request(\"shield_block\")",
+        "46:ck(not g.feedback_audio.install_stream(cue,invalid) and not g.feedback_audio.request(cue),\"invalid stream silent \"+field)",
+        "53:g._hurt(9);ck(requests==[[\"player_damage\",true]] and g.stats.hp==91 and g.hurt_clock==.75,\"resolved positive loss once\")",
+        "54:g._hurt(9);ck(requests.size()==1,\"hurt cooldown no extra\")",
+        "55:setup(mode,true);g._hurt(9)",
+        "57:g.hurt_clock=0;g._hurt(9);ck(requests==[[\"shield_block\",true],[\"player_damage\",true]],\"spent shield actual loss\")",
+        "59:setup(mode);g.state=phase;g._hurt(9);ck(requests.is_empty(),\"wrong phase no request \"+phase)",
+        "60:setup(mode);g.stats.dash_time=.1;g._hurt(9);ck(requests.is_empty(),\"dash immunity no cue\")",
+        "62:setup(mode);g._hurt(amount);ck(requests.is_empty(),\"nonpositive returned loss no cue\")",
+        "64:setup(mode);g.stats.hp=3;g._hurt(999)",
+        "66:g._hurt(9);ck(requests.size()==1,\"later dead request rejected\")",
+        "79:g._on_intent(\"close_settings\",{});g._on_intent(\"resume\",{});g.hurt_clock=0;g._hurt(7)",
+        "88:g._hurt(7);g.hurt_clock=0;g._hurt(13)",
+        "91:g.queue_free();await process_frame",
+        "92:print(JSON.stringify({\"passed\":passed,\"failures\":failures,\"scope\":\"Author controlled requests, resources, settings and lifecycle; actual mixer and independent authority remain separate.\"}));quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 91,
+      "owners": [
+        "g"
+      ],
+      "candidate_sha256": "369035cc4da12d1446a0aaf24d993b479b248b8b103b91ee8828ab04b09f96c1",
+      "removed_original_lines": [
+        "\tg.queue_free();await process_frame"
+      ],
+      "new_block": "\tvar audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n\taudio_teardown.prepare([g])\n\tsource.clear() # Release this fixture's retained PCM references after its last assertion.\n\tg.queue_free();await process_frame\n\tawait audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false,
+      "explicit_fixture_ref_release": "source Dictionary owns both canonical PCM streams; clear only after last assertion, before final disposal; helper not relaxed."
+    },
+    {
+      "fixture": "tests/test_primary_brace.gd",
+      "source_sha256": "551ede2730b7fe9b47a14f46f6b074be404c364553670ef3524f4a40190e9905",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "87:Runtime.step(g.combat_frame,.3)",
+        "97:g.queue_free();quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 97,
+      "owners": [
+        "g"
+      ],
+      "candidate_sha256": "3700bd135d33ae0ca59d8977c23197408b4d89a4f6765aa60b822b70e97654c8",
+      "removed_original_lines": [
+        "\tg.queue_free();quit(0 if failures.is_empty() else 1)"
+      ],
+      "new_block": "\tvar audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n\taudio_teardown.prepare([g])\n\tg.queue_free();await process_frame\n\tawait audio_teardown.finish(self)\n\tquit(0 if failures.is_empty() else 1)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/test_resolution_validation.gd",
+      "source_sha256": "e491f0eaa4727c93bfb95c0057c92e0e55b21daf0e637a258ce79de1bc7e32a2",
+      "audio_class": "definite",
+      "evidence": [
+        "62:g.feedback_audio.request(\"player_damage\")",
+        "73:g.queue_free();await process_frame",
+        "78:print(JSON.stringify(report));quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 73,
+      "owners": [
+        "g"
+      ],
+      "candidate_sha256": "d47fbc0d56b62fecab0dc87a6c1e46688dcba8a1d675a866321fe18d6d45e8d6",
+      "removed_original_lines": [
+        "\tg.queue_free();await process_frame",
+        "\tawait create_timer(.25).timeout # Presentation playback release after test disposal only."
+      ],
+      "new_block": "\tvar audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n\taudio_teardown.prepare([g])\n\tg.queue_free();await process_frame\n\tawait audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/test_settlement_levels.gd",
+      "source_sha256": "42007ed9ca0674327968d4d6782a65958f9287be889ba596233140ce26be7819",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "35:game._simulate(.001)",
+        "48:game.queue_free();await process_frame",
+        "50:quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 48,
+      "owners": [
+        "game"
+      ],
+      "candidate_sha256": "8acf3ae8914dc1166d21874921c492173fef9ec5d896dd8fb6c46cd1dedeb129",
+      "removed_original_lines": [
+        "\tgame.queue_free();await process_frame"
+      ],
+      "new_block": "\tvar audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n\taudio_teardown.prepare([game])\n\tgame.queue_free();await process_frame\n\tawait audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/test_shop_offer_visibility.gd",
+      "source_sha256": "04e0379ca49def471462c1b035d33aa7bb3cbd13859b2f32decf975804cd708f",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "50:game.queue_free();await process_frame",
+        "52:quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 50,
+      "owners": [
+        "game"
+      ],
+      "candidate_sha256": "3f4cea9d3a9aed708f16f5cd29c9305c862c9c25a4894fcfa39e4b73027bc5e5",
+      "removed_original_lines": [
+        "\tgame.queue_free();await process_frame"
+      ],
+      "new_block": "\tvar audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n\taudio_teardown.prepare([game])\n\tgame.queue_free();await process_frame\n\tawait audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/test_shop_reservation.gd",
+      "source_sha256": "4123722a5fcfd8ca5ed9ec76bb2722e5540cc165e161bb95b9681d153ce201f6",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "150:game.queue_free();await process_frame",
+        "152:quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 150,
+      "owners": [
+        "game"
+      ],
+      "candidate_sha256": "8d8aa999c999dfda24a964d8a5848db81ff9e487ec9156edf0e0d4f3e5485c6f",
+      "removed_original_lines": [
+        "\tgame.queue_free();await process_frame"
+      ],
+      "new_block": "\tvar audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n\taudio_teardown.prepare([game])\n\tgame.queue_free();await process_frame\n\tawait audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/test_spitter_actions.gd",
+      "source_sha256": "c2ccb65e2e0ba7e03f8afdaf2f5a8cd4dfab754f120e126bd2e35616c703fbf3",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "40:g._simulate(.64)",
+        "43:g._simulate(.02)",
+        "52:g._simulate(.14)",
+        "55:g._simulate(.15)",
+        "59:g._simulate(.02)",
+        "74:e.hp=0;var kills:int=g.kills;g._simulate(.001)",
+        "77:g._simulate(.01);check(g.kills==kills+1,\"death clip grants no duplicate reward\")",
+        "84:g.queue_free();await process_frame",
+        "86:quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 84,
+      "owners": [
+        "g"
+      ],
+      "candidate_sha256": "d1951f3a16018705630e66d17ca48dbf120265ec3616d3ed98f2d0ab5c0e42a3",
+      "removed_original_lines": [
+        "\tg.queue_free();await process_frame"
+      ],
+      "new_block": "\tvar audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n\taudio_teardown.prepare([g])\n\tg.queue_free();await process_frame\n\tawait audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/test_starting_loadouts.gd",
+      "source_sha256": "adc88bcb7ac3a7e18714a64677f32e88dc57fd3894f889d0da5d88f710c960ac",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "91:g.queue_free();quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 91,
+      "owners": [
+        "g"
+      ],
+      "candidate_sha256": "b08c9f02d1ffbb9900222efdda162de92c55b980978579647f14cc8ab9567011",
+      "removed_original_lines": [
+        "\tg.queue_free();quit(0 if failures.is_empty() else 1)"
+      ],
+      "new_block": "\tvar audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n\taudio_teardown.prepare([g])\n\tg.queue_free();await process_frame\n\tawait audio_teardown.finish(self)\n\tquit(0 if failures.is_empty() else 1)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/test_tag_synergy_progress.gd",
+      "source_sha256": "e85a673e4dd85f313b0e753d142a40013f9dcc44b4536ceea2092a4e9a20e735",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "92:game.queue_free();await process_frame",
+        "95:quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 92,
+      "owners": [
+        "game"
+      ],
+      "candidate_sha256": "7dcf6bab70578dfa42c81d834941afdb08d24ff1c613ca80225f3f977835edab",
+      "removed_original_lines": [
+        " game.queue_free();await process_frame"
+      ],
+      "new_block": " var audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n audio_teardown.prepare([game])\n game.queue_free();await process_frame\n await audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/test_telegraph_readability.gd",
+      "source_sha256": "f66d73e10dffcda5c88f28cb7bdc0e7d41bc8109d5f830e446bb4c1141607741",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "42:game.queue_free();await process_frame",
+        "44:quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 42,
+      "owners": [
+        "game"
+      ],
+      "candidate_sha256": "cab957dc1fb001f8cfc54e0a16ea6ae4fcc8f7afc3589ba2e8a0828d7228e1ce",
+      "removed_original_lines": [
+        "\tgame.queue_free();await process_frame"
+      ],
+      "new_block": "\tvar audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n\taudio_teardown.prepare([game])\n\tgame.queue_free();await process_frame\n\tawait audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/test_tempered_combat.gd",
+      "source_sha256": "88f6c0246578fd8643389df29fd20a211d2821d7c972003d55dd4c32275fd3f6",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "91:Runtime.step(game.combat_frame,.3)",
+        "94:game.queue_free();await process_frame",
+        "96:quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 94,
+      "owners": [
+        "game"
+      ],
+      "candidate_sha256": "2b694c42ab3d21fd7056f92212b8e8a85a157956e21df5124f9fb9588764ae56",
+      "removed_original_lines": [
+        "\tgame.queue_free();await process_frame"
+      ],
+      "new_block": "\tvar audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n\taudio_teardown.prepare([game])\n\tgame.queue_free();await process_frame\n\tawait audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/test_upgrade_salvage.gd",
+      "source_sha256": "c891d2f22797a68d4f12454b4291980c01d1a97a50830550eb3dbf68ee513a76",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "121:game.queue_free(); await process_frame",
+        "123:quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 121,
+      "owners": [
+        "game"
+      ],
+      "candidate_sha256": "b626955de1d121b13cc38bde12075978f27442912266fd3395ac494c680ed620",
+      "removed_original_lines": [
+        "\tgame.queue_free(); await process_frame"
+      ],
+      "new_block": "\tvar audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n\taudio_teardown.prepare([game])\n\tgame.queue_free(); await process_frame\n\tawait audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/test_vfx.gd",
+      "source_sha256": "ab995cce7b4afeb36c387cea2132fd36a053b8fedb25f2efb9fd5b5abfc20617",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "76:game._hurt(8)",
+        "95:game.queue_free();layer.queue_free()",
+        "98:quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 95,
+      "owners": [
+        "game",
+        "layer"
+      ],
+      "candidate_sha256": "cfbc160a8e0cc3ff93595b3fd198cb3f0bd66a11093a7d3619658b5eedb9dbd6",
+      "removed_original_lines": [
+        "\tgame.queue_free();layer.queue_free()",
+        "\tawait process_frame"
+      ],
+      "new_block": "\tvar audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n\taudio_teardown.prepare([game, layer])\n\tgame.queue_free();layer.queue_free()\n\tawait process_frame\n\tawait audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/test_warden_charge.gd",
+      "source_sha256": "06d19bc5be9bebcc9de4b3ee07537d3fc6e520fedfd016a8d6bc395a654f48ea",
+      "audio_class": "definite",
+      "evidence": [
+        "24:game.queue_free();await process_frame",
+        "25:print(JSON.stringify({\"warden_charge_passed\":passed,\"failures\":failures}));quit(1);return",
+        "30:game._simulate(.01)",
+        "53:game._simulate(.002)",
+        "55:actor.trigger(enemy.id,\"hurt\");game._simulate(.1);actor.advance(.28)",
+        "59:enemy.recover_left=.001;game._simulate(.002)",
+        "63:game._simulate(.01)",
+        "65:enemy.warning_left=.001;game._simulate(.002)",
+        "77:actor.advance(.02);game._simulate(.02)",
+        "81:game.queue_free();await process_frame",
+        "83:quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 81,
+      "owners": [
+        "game"
+      ],
+      "candidate_sha256": "9736f57df82941ae0ea6ec9569c992589da27fafcf61dbc5a3b761a395632820",
+      "removed_original_lines": [
+        "\tgame.queue_free();await process_frame"
+      ],
+      "new_block": "\tvar audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n\taudio_teardown.prepare([game])\n\tgame.queue_free();await process_frame\n\tawait audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 1,
+      "early_failure_exits": true
+    },
+    {
+      "fixture": "tests/test_warden_charge_assets.gd",
+      "source_sha256": "3ad0bda217c1705884d9c021ea7339b4f888d6af24d65f081be20993c171dac4",
+      "audio_class": "none",
+      "evidence": [
+        "Reviewed creation/import boundary: data/geometry/visual/UI-only fixture, no main scene or audio controller construction; support modules provide no audio playback."
+      ],
+      "action": "unchanged"
+    },
+    {
+      "fixture": "tests/test_warden_reactions.gd",
+      "source_sha256": "12dc0b352e87dd1589e3333438a24862103b4820e7f7178f9b0c702f97e47efa",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "31:g._simulate(.02)",
+        "37:g._simulate(.1)",
+        "43:g._simulate(.1)",
+        "53:g._simulate(.01)",
+        "60:g._simulate(.01)",
+        "71:g._simulate(.01)",
+        "73:g.wave_time=g.config.waves.duration-.001;g._simulate(.01)",
+        "77:g.queue_free();await process_frame",
+        "79:quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 77,
+      "owners": [
+        "g"
+      ],
+      "candidate_sha256": "8c2ba67e9924490bdd0735cbb5f45b6405464185d9e78e0367a9e3d28fd79f19",
+      "removed_original_lines": [
+        "\tg.queue_free();await process_frame"
+      ],
+      "new_block": "\tvar audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n\taudio_teardown.prepare([g])\n\tg.queue_free();await process_frame\n\tawait audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/test_weapon_mounts.gd",
+      "source_sha256": "9cd00c44340b3f7f060af3cc3685f781be89eda7a224eb0cb844f5a03f55f529",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "81:game.queue_free();await process_frame",
+        "82:print(JSON.stringify({\"passed\":passed,\"failures\":failures,\"scope\":\"v8 deterministic modular loadout and deliberate launch geometry\"}));quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 81,
+      "owners": [
+        "game"
+      ],
+      "candidate_sha256": "3872f819fa4dbd81bbd09e41b818fc9f4a403b5e2f2388ffebb3c555b035810f",
+      "removed_original_lines": [
+        "\tgame.queue_free();await process_frame"
+      ],
+      "new_block": "\tvar audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n\taudio_teardown.prepare([game])\n\tgame.queue_free();await process_frame\n\tawait audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/test_weapon_order.gd",
+      "source_sha256": "8ed6bdd930cd965facc8fe3c4b727e93ef40e46b2317699fbb1ba8885f49a403",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "112:game.queue_free();await process_frame",
+        "114:quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 112,
+      "owners": [
+        "game"
+      ],
+      "candidate_sha256": "c6018c2cd64ae224648271fdb827e55ce3f60a82ec4f29d478bc7a9adacda001",
+      "removed_original_lines": [
+        "\tgame.queue_free();await process_frame"
+      ],
+      "new_block": "\tvar audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n\taudio_teardown.prepare([game])\n\tgame.queue_free();await process_frame\n\tawait audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/test_weapon_readout.gd",
+      "source_sha256": "195cfb050327fe3871e791961c4d85d7a80c85efbb5d10465198e96c4f794be2",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "82:game.queue_free();await process_frame",
+        "84:quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 82,
+      "owners": [
+        "game"
+      ],
+      "candidate_sha256": "be3588ee9f035fcee33855c96604b10d06b466d39777c3dfc652c70abb831e18",
+      "removed_original_lines": [
+        "\tgame.queue_free();await process_frame"
+      ],
+      "new_block": "\tvar audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n\taudio_teardown.prepare([game])\n\tgame.queue_free();await process_frame\n\tawait audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "tests/test_weapon_tempering.gd",
+      "source_sha256": "fb6afcce0f563347d02c186e5c761fe68c23cc1b7051a8b852827f921c572ff9",
+      "audio_class": "possible_indirect",
+      "evidence": [
+        "140:game.queue_free();await process_frame",
+        "142:quit(0 if failures.is_empty() else 1)"
+      ],
+      "action": "shared_final_disposal_observer",
+      "original_final_line": 140,
+      "owners": [
+        "game"
+      ],
+      "candidate_sha256": "36e7113fe2c34d3a70d9a35fb6ce9f292b4378d6a8e0c775ad6573d31211c76e",
+      "removed_original_lines": [
+        "\tgame.queue_free();await process_frame"
+      ],
+      "new_block": "\tvar audio_teardown = preload(\"res://tests/support/audio_teardown.gd\").new()\n\taudio_teardown.prepare([game])\n\tgame.queue_free();await process_frame\n\tawait audio_teardown.finish(self)",
+      "earlier_disposal_sites_unchanged": 0,
+      "early_failure_exits": false
+    },
+    {
+      "fixture": "ui/test_ui.gd",
+      "source_sha256": "b3988076803f256ca3ec20fc888383318c15644aef0a1745f9269debead2ff16",
+      "audio_class": "none",
+      "evidence": [
+        "Reviewed creation/import boundary: data/geometry/visual/UI-only fixture, no main scene or audio controller construction; support modules provide no audio playback."
+      ],
+      "action": "unchanged"
+    },
+    {
+      "fixture": "docs/art/check_build_expansion_icons.gd",
+      "source_sha256": "3d33b59270b3a2e076783056acb67e0fa162b023c71f8d71f4322660751c8730",
+      "audio_class": "none",
+      "evidence": [
+        "Reviewed creation/import boundary: data/geometry/visual/UI-only fixture, no main scene or audio controller construction; support modules provide no audio playback."
+      ],
+      "action": "unchanged"
+    },
+    {
+      "fixture": "docs/art/check_icons.gd",
+      "source_sha256": "b8f3f6d40e4f72a5154cae0d5cd39096f053cd7377c6653fc588c21f476130c2",
+      "audio_class": "none",
+      "evidence": [
+        "Reviewed creation/import boundary: data/geometry/visual/UI-only fixture, no main scene or audio controller construction; support modules provide no audio playback."
+      ],
+      "action": "unchanged"
+    },
+    {
+      "fixture": "docs/art/check_mechanism_icons.gd",
+      "source_sha256": "41a72fe268ba4e31fce202965f028ebed86667af2070b18d1eaf1e4c46909c12",
+      "audio_class": "none",
+      "evidence": [
+        "Reviewed creation/import boundary: data/geometry/visual/UI-only fixture, no main scene or audio controller construction; support modules provide no audio playback."
+      ],
+      "action": "unchanged"
+    }
+  ],
+  "counts": {
+    "definite": 14,
+    "possible_indirect": 88,
+    "none": 16
+  },
+  "changed_fixtures": [
+    "tests/independent_actions.gd",
+    "tests/independent_annulus_runtime.gd",
+    "tests/independent_bankshot_integration.gd",
+    "tests/independent_brace_runtime.gd",
+    "tests/independent_brood_assets.gd",
+    "tests/independent_brood_events.gd",
+    "tests/independent_brood_parity.gd",
+    "tests/independent_charger_assets.gd",
+    "tests/independent_charger_gameplay_parity.gd",
+    "tests/independent_charger_lifecycle.gd",
+    "tests/independent_core_reactions.gd",
+    "tests/independent_crawler_flanker.gd",
+    "tests/independent_crawler_hit_pipeline.gd",
+    "tests/independent_cryo_contract.gd",
+    "tests/independent_cryo_shop.gd",
+    "tests/independent_enemy_ui.gd",
+    "tests/independent_feedback_authority.gd",
+    "tests/independent_feedback_runtime.gd",
+    "tests/independent_feedback_shop.gd",
+    "tests/independent_feedback_views.gd",
+    "tests/independent_focus_authority.gd",
+    "tests/independent_focus_combat.gd",
+    "tests/independent_focus_views.gd",
+    "tests/independent_modes.gd",
+    "tests/independent_modifier_compatibility.gd",
+    "tests/independent_qa.gd",
+    "tests/independent_reservation_records.gd",
+    "tests/independent_reservation_runtime.gd",
+    "tests/independent_reservation_views.gd",
+    "tests/independent_resolution.gd",
+    "tests/independent_room_boundaries.gd",
+    "tests/independent_salvage_runtime.gd",
+    "tests/independent_salvage_views.gd",
+    "tests/independent_settlement_types.gd",
+    "tests/independent_shop.gd",
+    "tests/independent_spitter_assets.gd",
+    "tests/independent_spitter_events.gd",
+    "tests/independent_spitter_parity.gd",
+    "tests/independent_starting_loadout_views.gd",
+    "tests/independent_starting_loadouts.gd",
+    "tests/independent_tag_authority.gd",
+    "tests/independent_tag_views.gd",
+    "tests/independent_tempering_authority.gd",
+    "tests/independent_tempering_combat.gd",
+    "tests/independent_tempering_hint.gd",
+    "tests/independent_tempering_views.gd",
+    "tests/independent_ui.gd",
+    "tests/independent_v2.gd",
+    "tests/independent_v3.gd",
+    "tests/independent_v4.gd",
+    "tests/independent_v5.gd",
+    "tests/independent_vfx.gd",
+    "tests/independent_warden_reactions.gd",
+    "tests/independent_weapon_authority.gd",
+    "tests/independent_weapon_order.gd",
+    "tests/independent_weapon_order_views.gd",
+    "tests/independent_weapon_readouts.gd",
+    "tests/independent_weapon_rig.gd",
+    "tests/test_actor_actions.gd",
+    "tests/test_bankshot_build.gd",
+    "tests/test_brood_actions.gd",
+    "tests/test_brood_pulse.gd",
+    "tests/test_builds.gd",
+    "tests/test_charger_actions.gd",
+    "tests/test_combat_focus.gd",
+    "tests/test_combat_hud_readability.gd",
+    "tests/test_contact_enemy_actions.gd",
+    "tests/test_core_reactions.gd",
+    "tests/test_core_summon.gd",
+    "tests/test_cryo_build.gd",
+    "tests/test_effects.gd",
+    "tests/test_encounters.gd",
+    "tests/test_expansion.gd",
+    "tests/test_feedback_diode.gd",
+    "tests/test_focus_fire.gd",
+    "tests/test_game.gd",
+    "tests/test_hud_layout.gd",
+    "tests/test_input_lifecycle.gd",
+    "tests/test_modes.gd",
+    "tests/test_modifier_copy.gd",
+    "tests/test_player_feedback.gd",
+    "tests/test_primary_brace.gd",
+    "tests/test_resolution_validation.gd",
+    "tests/test_settlement_levels.gd",
+    "tests/test_shop_offer_visibility.gd",
+    "tests/test_shop_reservation.gd",
+    "tests/test_spitter_actions.gd",
+    "tests/test_starting_loadouts.gd",
+    "tests/test_tag_synergy_progress.gd",
+    "tests/test_telegraph_readability.gd",
+    "tests/test_tempered_combat.gd",
+    "tests/test_upgrade_salvage.gd",
+    "tests/test_vfx.gd",
+    "tests/test_warden_charge.gd",
+    "tests/test_warden_reactions.gd",
+    "tests/test_weapon_mounts.gd",
+    "tests/test_weapon_order.gd",
+    "tests/test_weapon_readout.gd",
+    "tests/test_weapon_tempering.gd"
+  ],
+  "production128_exact": true,
+  "per_case_budget180_unchanged": true,
+  "runner_unchanged": true,
+  "scope": "Final disposal only; prior failed119 remains immutable. Special missingasset failure exits unchanged and alreadyfail, not acceptance paths. This inventory is conservative about indirect routes."
+}

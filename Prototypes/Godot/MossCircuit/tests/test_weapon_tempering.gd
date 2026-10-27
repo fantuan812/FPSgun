@@ -137,6 +137,9 @@ func run()->void:
 			before=whole();game._view();game._render_shop();check(whole()==before,"UI repeated pure")
 			game.state="inventory";game.ui.show_inventory(game._view())
 			check(buttons(game.ui.modal).filter(func(b):return b.text.begins_with("TEMPER /")).is_empty(),"inventory readonly")
+	var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
+	audio_teardown.prepare([game])
 	game.queue_free();await process_frame
+	await audio_teardown.finish(self)
 	print(JSON.stringify({"passed":passed,"failed":failures.size(),"failures":failures}))
 	quit(0 if failures.is_empty() else 1)

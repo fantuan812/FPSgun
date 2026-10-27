@@ -1,0 +1,17 @@
+--- R3/tests/run_regression.py
++++ final/tests/run_regression.py
+@@ -57,7 +57,13 @@
+ for test in tests:
+     if not test.read_text().lstrip().startswith("extends SceneTree"):
+         continue
+-    run(test.name, ["--script", "res://" + str(test.relative_to(project))])
++    switches = ["--script", "res://" + str(test.relative_to(project))]
++    promoted_feedback = {"independent_feedback_authority.gd", "independent_feedback_mixer.gd", "independent_feedback_views.gd", "independent_settlement_types.gd"}
++    if test.name in promoted_feedback:
++        switches += ["--", str(output / (test.stem + ".json"))]
++        if test.name == "independent_feedback_mixer.gd":
++            switches.append(str(output / "independent-mixer-raw"))
++    run(test.name, switches)
+ after = input_hashes()
+ changed = sorted(key for key in before.keys() | after.keys() if before.get(key) != after.get(key))
+ (output / "input-hashes.json").write_text(json.dumps({"before": before, "after": after, "changed": changed}, indent=2) + "\n")

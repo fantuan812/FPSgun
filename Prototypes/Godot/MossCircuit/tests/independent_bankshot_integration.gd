@@ -87,7 +87,10 @@ func run()->void:
   fresh(mode);g.build.weapons=["rivet_gun"];g._recompute();foe(Vector2(-90,0));g._fire_weapon("rivet_gun",0);check(not g.bullets.is_empty(),mode+" old cleanup probe non-vacuous")
   g.build.weapons=["rail_lance"];g._recompute();check(g.bullets.is_empty(),mode+" no Bankshot old loadout cleanup unchanged")
   await process_frame
+ var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
+ audio_teardown.prepare([g])
  g._title();g.queue_free();await process_frame
+ await audio_teardown.finish(self)
  var report={"checks":checks,"failures":failures,"observations":observations,"scope":"controlled actual weapon firing, shared proc/clock/cleanup pipeline; no injected helper projectile or fabricated hit event; not ordinary play or GUI"}
  var args=OS.get_cmdline_user_args()
  if not args.is_empty():FileAccess.open(args[0],FileAccess.WRITE).store_string(JSON.stringify(report,"\t"))

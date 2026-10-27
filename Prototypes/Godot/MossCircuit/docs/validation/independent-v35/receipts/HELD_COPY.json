@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "utc": "2026-10-27T00:53:50.211033+00:00",
+  "source_count": 679,
+  "production_count": 128,
+  "held_input_map_sha256": "3ed5cc2e9c6fc0e969f2b7af0ae72f2b76a4e559e105d515f7311d391fef8ffc",
+  "all_bytes_verified": true,
+  "copied_cache": false,
+  "changed_from_v34": [
+    "MANIFEST.json",
+    "README.md",
+    "docs/DELIVERY.md",
+    "docs/REACTION_COVERAGE.md",
+    "docs/V34_COMBAT_PRIORITY.md",
+    "scripts/main.gd",
+    "ui/moss_ui.gd",
+    "ui/test_ui.gd"
+  ],
+  "added": [
+    "assets/audio/player_damage.wav",
+    "assets/audio/player_damage.wav.import",
+    "assets/audio/provenance.json",
+    "assets/audio/shield_block.wav",
+    "assets/audio/shield_block.wav.import",
+    "docs/V35_PLAYER_FEEDBACK.md",
+    "docs/V35_PLAYER_FEEDBACK_CONTRACT.md",
+    "scripts/feedback_audio.gd",
+    "scripts/feedback_audio.gd.uid",
+    "tests/test_feedback_mixer.gd",
+    "tests/test_feedback_mixer.gd.uid",
+    "tests/test_feedback_pcm.py",
+    "tests/test_player_feedback.gd",
+    "tests/test_player_feedback.gd.uid",
+    "tools/generate_feedback_audio.py"
+  ],
+  "removed": [],
+  "production_changed_from_v34": [
+    "scripts/main.gd",
+    "ui/moss_ui.gd",
+    "ui/test_ui.gd"
+  ],
+  "scope": "One isolated slim exact held copy, not engine execution or final acceptance."
+}

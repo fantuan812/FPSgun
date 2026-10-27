@@ -1,0 +1,30 @@
+{
+  "utc": "2026-10-27T01:51:34.144262+00:00",
+  "status": "PASS_EXTERNAL_OWNER_PLAN_STATIC",
+  "plan_sha256": "ea666e3f5d334aebc0e59443320bd35fd5d8467588730d4169ad33b630bf9f8e",
+  "cases": [
+    {
+      "case": "independent_charger_lifecycle.gd",
+      "source_sha256": "ab0590e0b230b1b042e846b141aa04f28ae9f83f839e229f4a853f003b34bbfe",
+      "external_sha256": "a9087344bcea422aa49ca7f9ec9803571417d26fd265a5ca3cdec4c1421200fc",
+      "only_changed_seam": "final queue_free/oneprocessframe, original assertions unchanged"
+    },
+    {
+      "case": "test_game.gd",
+      "source_sha256": "834fe24f01cc9f5f233e8283f5a7016b282b3abaf1b56737c71a4ebbf9ee0c67",
+      "external_sha256": "eae6cbdde7b1167b4781acb3bb301c4503c6d1f180f450d098204991fa6820e1",
+      "only_changed_seam": "final queue_free/oneprocessframe, original assertions unchanged"
+    },
+    {
+      "case": "test_warden_charge.gd",
+      "source_sha256": "06d19bc5be9bebcc9de4b3ee07537d3fc6e520fedfd016a8d6bc395a654f48ea",
+      "external_sha256": "644def41e737a81ac4856dc33ba032db197f836659de523f33b8ea6899d99090",
+      "only_changed_seam": "final queue_free/oneprocessframe, original assertions unchanged"
+    }
+  ],
+  "exact_original_prefix_suffix_and_assertions": true,
+  "no_observer_strong_resource_retained": true,
+  "fresh_frames_finite_no_discards_bounded_and_node_release_checked": true,
+  "source_untouched": true,
+  "not_execution": true
+}

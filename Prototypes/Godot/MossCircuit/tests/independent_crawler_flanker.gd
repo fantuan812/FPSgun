@@ -76,6 +76,9 @@ func run()->void:
 			g._simulate(.001);check(g.kills==1,"no duplicate reward "+kind)
 			var generation:int=a.generation
 			reset(g);check(a.generation>generation and a.corpses.is_empty() and a.actors.size()==1,"reset clears tails "+kind)
+	var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
+	audio_teardown.prepare([g])
 	g.queue_free();await process_frame
+	await audio_teardown.finish(self)
 	print(JSON.stringify({"independent_crawler_flanker_passed":passed,"failures":failures,"scope":"headless lifecycle and geometric anchors; image appearance requires separate pixel inspection"}))
 	quit(0 if failures.is_empty() else 1)

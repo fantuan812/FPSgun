@@ -55,7 +55,10 @@ func run()->void:
     check(snapshot()==before,label+" repeated view/UI no catalog/build/stats/RNG/clock mutation")
     records.append({"mode":mode,"modified":modified,"weapon":id,"owned":own,"offer":offer})
    await process_frame
+ var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
+ audio_teardown.prepare([g])
  g.queue_free();await process_frame
+ await audio_teardown.finish(self)
  var result:Dictionary={"scope":"Independent expected-unit/value/generated-card/read-only assertions; controlled headless, not native appearance","checks":checks,"failures":failures,"records":records}
  print(JSON.stringify({"checks":checks,"failures":failures,"cases":records.size()}));var args:=OS.get_cmdline_user_args();if not args.is_empty():FileAccess.open(args[0],FileAccess.WRITE).store_string(JSON.stringify(result,"  ")+"\n")
  quit(0 if failures.is_empty() else 1)

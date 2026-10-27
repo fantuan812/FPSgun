@@ -1,0 +1,47 @@
+{
+  "status": "REJECTED_FULL_R1",
+  "exit": 1,
+  "result": {
+    "entries": 112,
+    "passed": 109,
+    "import_included_in_passed": true,
+    "input_changes": [],
+    "all_pass": false
+  },
+  "failures": [
+    {
+      "test": "independent_annulus_runtime.gd",
+      "exit": 0,
+      "error": true,
+      "success_marker": true,
+      "seconds": 7.587,
+      "pass": false
+    },
+    {
+      "test": "independent_brood_parity.gd",
+      "exit": 0,
+      "error": true,
+      "success_marker": true,
+      "seconds": 4.028,
+      "pass": false
+    },
+    {
+      "test": "independent_weapon_rig.gd",
+      "exit": 0,
+      "error": true,
+      "success_marker": true,
+      "seconds": 2.289,
+      "pass": false
+    },
+    {
+      "test": "test_core_summon.gd",
+      "exit": 0,
+      "error": true,
+      "success_marker": true,
+      "seconds": 3.209,
+      "pass": false
+    }
+  ],
+  "all_679_inputs_unchanged": true,
+  "classification": "Four semantic-pass cases have resource-at-exit ERROR; cause still under diagnosis; no acceptance."
+}

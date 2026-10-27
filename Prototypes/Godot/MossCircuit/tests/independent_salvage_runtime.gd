@@ -146,7 +146,10 @@ func run()->void:
  ck(g.state=="upgrade" and g.upgrade_pending==1 and not g.shop_pending,"controlled no-shop policy choice")
  var coins:int=g.build.coins
  ck(g._salvage_upgrade(g.choice_generation,"salvage_upgrade") and g.state=="playing" and g.build.coins==coins+10,"no-shop policy remains no shop")
+ var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
+ audio_teardown.prepare([g])
  g.queue_free();await process_frame
+ await audio_teardown.finish(self)
  var result:Dictionary={"checks":checks,"failures":failures,"scope":"Controlled actual main salvage guards/fixed currency/fraction/read-only metadata/queue continuation; no ordinary acquisition or balance claim. Includes actual weapon in-flight state, settlement/terminal paths and held affordability/purchase. UI/native and old-path parity gates remain separate."}
  var args:=OS.get_cmdline_user_args()
  if not args.is_empty():FileAccess.open(args[0],FileAccess.WRITE).store_string(JSON.stringify(result,"  ")+"\n")

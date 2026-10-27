@@ -1,0 +1,988 @@
+{
+  "utc": "2026-10-27T02:26:04.923702+00:00",
+  "status": "PASS_INDEPENDENT_REVIEW_OF_AUTHOR_120",
+  "author_commands": 120,
+  "exact_discovered_argv_order": true,
+  "all_native0_clean_semantic_success": true,
+  "all99_final_owner_adapted_fixtures_observed": true,
+  "teardown_observation_count": 106,
+  "records": [
+    {
+      "case": "independent_actions.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 159906,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "independent_annulus_runtime.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 158769,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "independent_bankshot_integration.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 158587,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "independent_brace_runtime.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 151342,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "independent_brood_assets.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 153464,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "independent_brood_events.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 152633,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "independent_brood_events.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 166810,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "independent_brood_parity.gd",
+      "owners": 2,
+      "streams": 4,
+      "elapsed_us": 159594,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "independent_brood_parity.gd",
+      "owners": 2,
+      "streams": 4,
+      "elapsed_us": 151443,
+      "fresh": 8192,
+      "silent": 7680
+    },
+    {
+      "case": "independent_charger_assets.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 159798,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "independent_charger_gameplay_parity.gd",
+      "owners": 2,
+      "streams": 4,
+      "elapsed_us": 187985,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "independent_charger_gameplay_parity.gd",
+      "owners": 2,
+      "streams": 4,
+      "elapsed_us": 158601,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "independent_charger_lifecycle.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 152672,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "independent_core_reactions.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 153127,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "independent_crawler_flanker.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 159448,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "independent_crawler_hit_pipeline.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 152799,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "independent_cryo_contract.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 159462,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "independent_cryo_shop.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 168257,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "independent_enemy_ui.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 339140,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "independent_feedback_authority.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 179241,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "independent_feedback_authority.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 186538,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "independent_feedback_runtime.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 151689,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "independent_feedback_shop.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 157967,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "independent_feedback_views.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 166221,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "independent_focus_authority.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 150936,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "independent_focus_combat.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 166279,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "independent_focus_views.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 184267,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "independent_modes.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 174364,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "independent_modifier_compatibility.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 189105,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "independent_qa.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 174724,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "independent_reservation_records.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 151251,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "independent_reservation_runtime.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 163859,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "independent_reservation_views.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 158265,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "independent_resolution.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 193660,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "independent_room_boundaries.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 152577,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "independent_salvage_runtime.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 165301,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "independent_salvage_views.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 171928,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "independent_settlement_types.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 186746,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "independent_settlement_types.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 166098,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "independent_shop.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 159419,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "independent_spitter_assets.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 154392,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "independent_spitter_events.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 174333,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "independent_spitter_events.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 151724,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "independent_spitter_parity.gd",
+      "owners": 2,
+      "streams": 4,
+      "elapsed_us": 187857,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "independent_spitter_parity.gd",
+      "owners": 2,
+      "streams": 4,
+      "elapsed_us": 151183,
+      "fresh": 8192,
+      "silent": 7680
+    },
+    {
+      "case": "independent_starting_loadout_views.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 151973,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "independent_starting_loadouts.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 163481,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "independent_tag_authority.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 158522,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "independent_tag_views.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 157824,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "independent_tempering_authority.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 151323,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "independent_tempering_combat.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 151211,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "independent_tempering_hint.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 159176,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "independent_tempering_views.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 151516,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "independent_ui.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 194107,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "independent_v2.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 167130,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "independent_v3.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 152838,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "independent_v4.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 152671,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "independent_v5.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 160580,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "independent_vfx.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 152719,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "independent_warden_reactions.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 181050,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "independent_weapon_authority.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 193577,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "independent_weapon_order.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 151546,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "independent_weapon_order_views.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 182980,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "independent_weapon_readouts.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 151707,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "independent_weapon_rig.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 152505,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "test_actor_actions.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 158282,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "test_bankshot_build.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 152462,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "test_brood_actions.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 160440,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "test_brood_pulse.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 164945,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "test_builds.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 152661,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "test_charger_actions.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 154505,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "test_combat_focus.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 167321,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "test_combat_hud_readability.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 158815,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "test_contact_enemy_actions.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 188487,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "test_core_reactions.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 159990,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "test_core_summon.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 152652,
+      "fresh": 8192,
+      "silent": 7680
+    },
+    {
+      "case": "test_cryo_build.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 153584,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "test_effects.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 153484,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "test_encounters.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 167105,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "test_expansion.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 153643,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "test_feedback_diode.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 188142,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "test_focus_fire.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 178204,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "test_game.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 152597,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "test_hud_layout.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 193288,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "test_input_lifecycle.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 159917,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "test_modes.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 178911,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "test_modifier_copy.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 166055,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "test_player_feedback.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 152696,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "test_primary_brace.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 186676,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "test_resolution_validation.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 159829,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "test_settlement_levels.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 159888,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "test_shop_offer_visibility.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 152680,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "test_shop_reservation.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 153362,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "test_spitter_actions.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 155096,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "test_starting_loadouts.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 152684,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "test_tag_synergy_progress.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 166491,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "test_telegraph_readability.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 161108,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "test_tempered_combat.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 177280,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "test_upgrade_salvage.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 183373,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "test_vfx.gd",
+      "owners": 2,
+      "streams": 2,
+      "elapsed_us": 159412,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "test_warden_charge.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 159607,
+      "fresh": 8192,
+      "silent": 7680
+    },
+    {
+      "case": "test_warden_reactions.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 174190,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "test_weapon_mounts.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 154206,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "test_weapon_order.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 151097,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "test_weapon_readout.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 159632,
+      "fresh": 8192,
+      "silent": 8192
+    },
+    {
+      "case": "test_weapon_tempering.gd",
+      "owners": 1,
+      "streams": 2,
+      "elapsed_us": 150047,
+      "fresh": 8192,
+      "silent": 8192
+    }
+  ],
+  "log_sha256": {
+    "import.log": "9572934ad4d57fbab2c09b2c82f3821584fba7ba71d7e1dec5055bc7fa531f3f",
+    "independent_actions.gd.log": "1a3f1364b9d7552230bebabef5fb5e1daca597236cf5d7e6c29abf27d83fa050",
+    "independent_annulus_data.gd.log": "ae5f52356e10e74b2b020d6fede224c0063f02f8d50157939568bc1ee3614e80",
+    "independent_annulus_runtime.gd.log": "2d82119bd92853e3b71ac848f8e50bc553bebef9ada6ee3faa9b89ebb9de4f8e",
+    "independent_bankshot_contacts.gd.log": "64c132669e806db32d6b1786cdb7c91c3b43e19e44696d79a8d409c2f90e3037",
+    "independent_bankshot_integration.gd.log": "719af590595d6c6c5b8fc03b20dae8b6f95a537dc429eb7a7c52120b11e6f395",
+    "independent_bankshot_trajectory.gd.log": "c0044e51347e1011736e467002ac616b3eca2df4e52a308c1d564eaf2bda7e40",
+    "independent_brace_geometry.gd.log": "cdedc5dc4f10124bcc94883febbb3d366ef55ab7646ff9840bfed04b1300d76b",
+    "independent_brace_runtime.gd.log": "7df244e021f1e93bfacf50e4783c205e0e3e6bd40bb25a9540f17f7cbd9fcac1",
+    "independent_brood_assets.gd.log": "378170abf8ac67b5428eec08f75bc407b7c54063c5aa407c39e4b066f03c8ea7",
+    "independent_brood_events.gd.log": "10b8cf6bd446a64e47635bbb75d3532e0f519da14f5281792359b7c7a989f3fa",
+    "independent_brood_parity.gd.log": "232629e6b1ac4be331f84209bd550cc403981635515d16630305a60b6242a55e",
+    "independent_charger_assets.gd.log": "47fb470a67e7ae02537ce34003a5cd4b5d53f4037c65af9439b8c35a71b0277c",
+    "independent_charger_gameplay_parity.gd.log": "e3ac7d27a48f640db09adeb4a4caba511592f7c7e2860a59b5326e68d4042953",
+    "independent_charger_lifecycle.gd.log": "053608d2a4be6b9d5abee53cecfad0e0a811b8e0ba4548646a48e7f8bfea0b1b",
+    "independent_core_reactions.gd.log": "52c5fc986bb192f91a2c85225d92621e0d590ce5f2eaa82dadcedf3562222f91",
+    "independent_crawler_flanker.gd.log": "9e8b7f087981d7e55b6e7dc3ac43c00b24447a082e8bcb318f43b6326ae60199",
+    "independent_crawler_hit_pipeline.gd.log": "699711e10ce824f14c50c500782fe7eb79b5fa7088a89766beb0379909434531",
+    "independent_cryo_contract.gd.log": "2e8ff0102dd10d1ac1526ab78c478f156f3bc3374faba6237285e7108a120f10",
+    "independent_cryo_shop.gd.log": "30126082b1cc42087caed983ddfccc0a5f824de6dcfac47698a0ffd68df3de51",
+    "independent_enemy_ui.gd.log": "3959e403dfc1caa25cd2b9ddbe2fdb20b299a6c4d24767b6e0ffeab316da6cdf",
+    "independent_feedback_authority.gd.log": "94fc31cadc6673ccdf9ab93d6a2a2f799f0e20bc8ef61800105987e7d3d2f653",
+    "independent_feedback_mixer.gd.log": "ea26fe629b3a143d31b08b18fd0bc69ae8eec68dd22f3968095f50327cbd8500",
+    "independent_feedback_runtime.gd.log": "578ab030e9c7b804cda79d70750c628e52ced6e7d83598fadddd85a8fc790254",
+    "independent_feedback_shop.gd.log": "2d87760e32c9512983491673c389344f788b5ed63c4b49af07bd222759890849",
+    "independent_feedback_validation.gd.log": "b14f01acbd0b42f756564679a3d4382110012cfc85d46bcd27f0bb2574229603",
+    "independent_feedback_views.gd.log": "74f843efbe14aad937eeaff8d21d968c66aa1801e3f8ed43b0ab3036c6eb612c",
+    "independent_focus_authority.gd.log": "effd68bd564ad1286e28d4ac8d77c325dcf4c331a58ff93097d10430c7b44189",
+    "independent_focus_combat.gd.log": "cd0228d4e3efb46cb7f8f97bc6436678b8af9176458ee134a8671f6ce93b0df5",
+    "independent_focus_views.gd.log": "7a15117d888ac9902b9ad665d84d3efb259a3dedb69cef05b8c8f2ccf6f4c425",
+    "independent_modes.gd.log": "fb0acbe6dd99f4bdf82fe4819236696ea05313f3205ecaa20e0b177b95132b0a",
+    "independent_modifier_compatibility.gd.log": "d301137fbef5d4bb5bfeb8d1b27db93645ed92e646d11de84d33c372caa49a05",
+    "independent_policy_validation.gd.log": "483caced6c929fd1a021e0db88f20e7e77f4e5377cc3a98cdbb3993a1f1e1bf7",
+    "independent_qa.gd.log": "d6ce21d181a0c143a256b427a3ba14eee0a5f9257120c43c63faa52c8af6cfcf",
+    "independent_reservation_records.gd.log": "93004db6222c8f96f73f85e081c62a7ae3a93b0a626a3b7e753a021bfa344fd6",
+    "independent_reservation_runtime.gd.log": "92cbe8c9a521bd0995e123a7b6198d8ff158ef91f4f7d44447e81331648d3f84",
+    "independent_reservation_views.gd.log": "bd4a35c6b88d83fb1fd548bdcbdc0229a3d1c26dea5df347e575379a90408032",
+    "independent_resolution.gd.log": "6dea4bc29c928b05b0ff3ded4cc1025a76391cbd408a6c9386912360806bde10",
+    "independent_room_boundaries.gd.log": "549a35815910818cb900bd1e602874c579a359a2607675ddc9504cf841b281dd",
+    "independent_salvage_runtime.gd.log": "0287a5c5f8697d7b34517b03f51d5dacd129f7e1bcf4b0f9f91eebd36bf42c4a",
+    "independent_salvage_views.gd.log": "d2380768e766a9c1bcb6edfbef2452bd96cee59cf174134801ebab9ca8a910ad",
+    "independent_settlement_types.gd.log": "f6020dd05d64535eed047678b1e4a97628928c36daf826997656bca03d73d7d7",
+    "independent_shop.gd.log": "e5873fc0537746d7faa1514535030c8d5a3757ca53145ebf7e5decc7f824e2e8",
+    "independent_spitter_assets.gd.log": "070cf50c632b6ac2790a92b60ab65468bd05ad39c60376ec235f8eb23076194f",
+    "independent_spitter_events.gd.log": "3a09ca311547e8b66b94d2a78bf50c54a4a920c0ebf09817d31436a065c4bcab",
+    "independent_spitter_parity.gd.log": "f07d259033a4bfcceabeedc2f210d597072eba66890e079801d67793f746728d",
+    "independent_starting_loadout_views.gd.log": "8c6bdd4226e8696bc6eee756475f3eb2f3cf5574a532bbb50b6e0ebeb03cf8c4",
+    "independent_starting_loadouts.gd.log": "fe9140e469fc8893c7facc1bc51d8071be665d3a9fb3ae0a5a507662578f9c99",
+    "independent_tag_authority.gd.log": "39ce9cf490d33d0933570231c8be0fa1d5aa12d3bf54be0058654a6b8d7af487",
+    "independent_tag_views.gd.log": "9b5820e1e2eca710afe4112c56fd5227bc5d3c638d072989dbb55b3f7ddff2af",
+    "independent_tempering_authority.gd.log": "d36cbf31e3249e18603cb5d99f1f54ed30921aaf283148a91731387bab1b0b26",
+    "independent_tempering_combat.gd.log": "65c80848abb4bcc0db8e71912f1707aaa8da58806deeb3bba55e0dcd85ad4d96",
+    "independent_tempering_hint.gd.log": "2915a27fe81e6e5f17fd1f4a36ff8c22cbd563ddba56ae14b9d1450c2513675e",
+    "independent_tempering_views.gd.log": "826f29b5778647b7e1b6d5e4b8f3e97c3dfdfecb6e362795cca3cf50b350acb1",
+    "independent_ui.gd.log": "d2f33b28015995abf456bfea3329d8bf34934cc28ae8f1d624d45908f55f483d",
+    "independent_v2.gd.log": "b7c4f5f2b2f8d8b49fe57517f10e3d015968843a9164f2f93a97273d6c968c9b",
+    "independent_v3.gd.log": "0140f28fd3b6e7e6f47de9bb8435d2d024a49f9ed6f8f1009c8adace0894c39d",
+    "independent_v4.gd.log": "c09ac3f59e744e0017506a235e1681a0e63400fac08ad6ba490be9b4c87a3cf7",
+    "independent_v5.gd.log": "e3f8ee2ad872ad4cc472e82b509a5e748f0d046c8305cc331441ddffef820410",
+    "independent_vfx.gd.log": "fe73f5a0d84f1947c88c1093763eb1c293cbb2300cb98615440e9dc338a2ba80",
+    "independent_warden_reactions.gd.log": "f4928ee1230522a387e78aa83a738434eda3346cee1eb21d5cee55099b433d5d",
+    "independent_weapon_authority.gd.log": "bc91d10f3fac4718d41780f87207f68382b54c756afe374c1f69184df43b5f98",
+    "independent_weapon_order.gd.log": "a2ed1939b45f231360b658f5e786fde20af7c5588a2bfcdb5f0f4e1a4003ec55",
+    "independent_weapon_order_views.gd.log": "870acb4f508651e583df9f41ea98959cf961bdce035f434e3036616891e0d4a6",
+    "independent_weapon_readouts.gd.log": "222775c56fabcbc4b9ef1d20dde8190977b1de6240753d4d7df82d789c1e5797",
+    "independent_weapon_rig.gd.log": "064d4884fa2d0c1ab551e334db4dee663e55c9c62ed6a0454896209009e16914",
+    "test_actor_actions.gd.log": "481978fade96ccea811a8c5d623e63028caeead8237cca40598da44adc0c7631",
+    "test_audio_teardown_predicate.gd.log": "fe105e767702ba930014233031db522ca5a1ff882a8bce5541ac5db6f46286ed",
+    "test_bankshot_build.gd.log": "3ad326f08046462099cf8b73c574bc73695506a59d566ad4d6d2ba864689bd31",
+    "test_boundary_shot.gd.log": "3ca047f7566515f10af88540ad5913d19e8d705d039fa57a0250560b09a435bd",
+    "test_brood_actions.gd.log": "563ce429d358a938e694cc7b6027c0e9c970a60dee59c16f5be96f548698e3b4",
+    "test_brood_pulse.gd.log": "7cc8609fda9a0460e54fa129e07871259089bfc3b94681b1f5c41a3d6a7d3e8c",
+    "test_builds.gd.log": "1429ddd0e4bddaf84d7f6278ada6dedf26ba6ba3d86143d61ffb240d083945ea",
+    "test_charger_actions.gd.log": "82b1881e448e3b154ccc9c22b295d810cd2c052cd7700546ecd4bc9f28abe628",
+    "test_combat_focus.gd.log": "6e05101df9a3dc1ba4e85345e8e27faa0a241045a19d608d5fad6ffd8d8ef29e",
+    "test_combat_hud_readability.gd.log": "07aa4d4c2cd677f7590383f87c670b82e21063c5a47dd279acc9fe12606ee294",
+    "test_contact_enemy_actions.gd.log": "c19146719631c4c5e5efeaa47e68eba9341b14391d883e1a4d93cccbeea5a225",
+    "test_core_reactions.gd.log": "ea873c60417e2f494717d6dd13708f55dbcf24e5288fe2fcaa78d7014d2b998a",
+    "test_core_summon.gd.log": "3b707a6caed23e04059b3309b1c79de219d0e1196d5e29864e168c15a386ce6d",
+    "test_core_summon_assets.gd.log": "f910e27789afbe5a10f3f7dea6ce8cb61d7369c35a62d05d6f1c88e2393a4368",
+    "test_crawler_hurt_registration.gd.log": "e8d1222ec4ab2d4880ef8088eee3613a20be1fe831d000dd57da9924e7b3212c",
+    "test_cryo_build.gd.log": "478dd84fe5d8da1613779f8f92c0ffc534816f8b1097c36150c0555abecbae77",
+    "test_discrete_ui_numbers.gd.log": "962629822513f2eb534b2799baec24f49d7e1978a2d5beb1b5ac1f8ae5774023",
+    "test_effects.gd.log": "cb4228e182a5374b04faf80fd393f2f1b487973317f21bd90581626dbe376ba1",
+    "test_encounters.gd.log": "23e17e5961301814e103feb8dcb5eee12a55c1e7204e221a5e57f5863005a264",
+    "test_expansion.gd.log": "a73d5eb5f39f2aebc3d73c08c576504ddebaba8acf11d4abc524d24cd1de7867",
+    "test_export_contract.gd.log": "48e0b8c6f5d4c2e7cb8ea202390ffbd92f81c67575661774a65d31a6dc4f2ee8",
+    "test_feedback_diode.gd.log": "fa8665b8afa2d608ece8877e203c6b866879b9f76a8f13e538d9317c7d46403e",
+    "test_feedback_mixer.gd.log": "a6c9201c4bbf6a6a035a230a0142d07bfe5686f395909e9fd825b0b4f2324fdd",
+    "test_feedback_teardown.gd.log": "c82dfe31687b4c3e9de4b61c007fcce9420c3d29b83138945d74ec6fada80f97",
+    "test_focus_fire.gd.log": "161e014f760ebeded8aef307da48c9ca3b7b1b860d1bd9157c922869b146e045",
+    "test_game.gd.log": "9103d5324e8edc8d3db5af2b3b4b3f9d25be6f66917c46ee81e9f38267eb66fb",
+    "test_hud_layout.gd.log": "d10bfcb5fb7043299e771daadc8db2448a6c9f0bf5de8f0880a43d5305bbac58",
+    "test_input_lifecycle.gd.log": "9b2fe64f87cf4abf89f57a8244983ac53c9cf5c696f17820f46c4cc12678c426",
+    "test_modes.gd.log": "f7744467c0c03ffb755019c908e393d72ce0b954cb2c540b78d172d755b2159a",
+    "test_modifier_copy.gd.log": "eb7a4159ac8ab6553f778d2f3fbcb3d61466c17ecb97cf5f4ef0b3b6365681fa",
+    "test_player_feedback.gd.log": "4d31a956300efda3d5e8635c7df947a91b851cba9a6059783fd7ec6d591ee922",
+    "test_primary_brace.gd.log": "13c28eb71cd75da83b988b3a56059da2522735de1afa78f28a5755203b30e46f",
+    "test_resolution_validation.gd.log": "f6590858d3a8c40991c5f95acf4e529f9bcffd96eb5c13d739fa7af77613af7d",
+    "test_settlement_levels.gd.log": "7970f8331fe46e3d80f32a03b3e5df6ed068cbf670c67ada96a5ca008af32fd5",
+    "test_shop_offer_visibility.gd.log": "514f51daf7360891c587f9f6f0b9b397b010ba9c3cbf3d0f8cf94e87dc476765",
+    "test_shop_reservation.gd.log": "5572ba67e4edd7e3f5c7317456f0e87ebd0197a0938379a3ed6d3add7b473b5b",
+    "test_spitter_actions.gd.log": "0f7f3ddbb5edee1ff7fbd1dad03ab2ad2f3ae6d779ff53c5e590efcf87150d3f",
+    "test_starting_loadouts.gd.log": "cf156c9ac532378aec1303592166195a12f325d762f5a281e3188f7898e33cb9",
+    "test_tag_synergy_progress.gd.log": "e2394ec44cd3876a452d103f2f60937ea9b308afaf6a0e6a06f418cd34344539",
+    "test_telegraph_readability.gd.log": "2aa71b40053af4ab0d84faf3caa1d99ea91e949dc271b9a1163b3ccfefda76c3",
+    "test_tempered_combat.gd.log": "18b1814f9f1b6682eb43d1a602f3298eae57faf74afa3a4ac8ebae4373fac729",
+    "test_upgrade_salvage.gd.log": "238bcf6064034f1d66b53fa1a77605d1a4d4e4cbe4652d860945aecea11758e8",
+    "test_vfx.gd.log": "ad9617df881d7058d9840e193c0d76ee0a7f906a8450f0ebfd1e64a690186b59",
+    "test_warden_charge.gd.log": "2d17b0f31630309cec5ba4cf9e41d2078bebf4d4f09bf476da3d20722b471fe3",
+    "test_warden_charge_assets.gd.log": "02c4257c18aa57ee30fc0c2725e0cf70158092abfd65b89308a91edfeb3a9f9b",
+    "test_warden_reactions.gd.log": "86cd3e3eea00070e07f218148b3047d6e0f985aee76b76444e2eccfbe2f7e037",
+    "test_weapon_mounts.gd.log": "31b25b31c63a7e4056a30932f97f4263a8a13f5cda47106c413bf083a4a9d13d",
+    "test_weapon_order.gd.log": "142c9d61a23607d5ce62c9007a8016cad813bb1fb1ccdeee2e9c528401f9d119",
+    "test_weapon_readout.gd.log": "5421cab773e3c463f2cbd3e665fab28c0365b1e8609fe890cf2c094fd95ede35",
+    "test_weapon_tempering.gd.log": "e31c1cd26920c6bcff89ca18fadabc92e5360abe73ac659d5fd4a5d7278fe288",
+    "test_ui.gd.log": "17fa24b5af573f32c02ece54ec801f04ccbdef625c165bfdc4ad86a93cc52989",
+    "check_build_expansion_icons.gd.log": "6c16f380bea9c98776e7b0a6403e2587fff7af409bfd01df85b5761ed9b44915",
+    "check_icons.gd.log": "31571934063d0d8a8f9e9b4e4d59280b1b20a8f997347f54d9a2198fadd33939",
+    "check_mechanism_icons.gd.log": "6c16f380bea9c98776e7b0a6403e2587fff7af409bfd01df85b5761ed9b44915"
+  },
+  "author_inputhashes_exact": true,
+  "source_map_sha256": "809cd03b85be0219cf31fb16973a4a7826681ec6bee754f129d66c49dffa376f",
+  "independent_full_rerun": false,
+  "scope": "Independent reopening and audit of author rawoutputs, not independently rerunning120. Source/packed/native externalverification remains separate.",
+  "final696_source_reopened_exact": true,
+  "held_copy_same696_exact": true,
+  "sync_changed_count": 112
+}

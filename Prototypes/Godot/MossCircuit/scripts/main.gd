@@ -36,7 +36,9 @@ const WeaponRig = preload("res://scripts/weapon_rig.gd")
 var weapon_rig:Node2D
 const ActorDirector = preload("res://scripts/actor_director.gd")
 var actor_anim = ActorDirector.new()
-var settings := {"reduced_flashes":false}
+const FeedbackAudio = preload("res://scripts/feedback_audio.gd")
+var feedback_audio: FeedbackAudio
+var settings := {"reduced_flashes":false,"mute_feedback_sounds":false}
 var settings_return := "title"
 var visual_cooldowns:Dictionary={}
 var result_pending := false
@@ -250,6 +252,9 @@ func _ready() -> void:
 	combat_frame.hurt=_hurt;combat_frame.spawn_kind=_spawn_kind;combat_frame.boss_killed=_boss_killed;combat_frame.play_vfx=_vfx
 	telegraphs = Telegraphs.new()
 	add_child(telegraphs)
+	feedback_audio = FeedbackAudio.new()
+	add_child(feedback_audio)
+	feedback_audio.set_muted(settings.mute_feedback_sounds)
 	_build_ui()
 	mode_status=ModeStatus.new()
 	add_child(mode_status)
@@ -266,6 +271,7 @@ func _build_ui() -> void:
 
 
 func _title() -> void:
+	_stop_feedback_audio()
 	combat.focus_enemy_id=0
 	weapon_rig.clear()
 	reserved_offer.clear()
@@ -307,6 +313,7 @@ func _start_selected_loadout(id:Variant,generation:Variant,seed_value:Variant)->
 func _start_run(seed_value: int,loadout_id:Variant=StartingLoadouts.DEFAULT_ID) -> bool:
 	var fresh_build:=StartingLoadouts.make_build(starting_loadouts,catalog,loadout_id)
 	if fresh_build.is_empty():return false
+	_stop_feedback_audio()
 	combat.focus_enemy_id=0
 	weapon_rig.clear()
 	reserved_offer.clear()
@@ -428,8 +435,9 @@ func _focus_status_text()->String:
 func _notification(what:int) -> void:
 	# Losing application focus must never spend combat or room-clear time.
 	# Focus returning is deliberately not a resume action.
-	if what==NOTIFICATION_APPLICATION_FOCUS_OUT and is_instance_valid(ui):
-		_on_intent("pause",{})
+	if what==NOTIFICATION_APPLICATION_FOCUS_OUT:
+		_stop_feedback_audio()
+		if is_instance_valid(ui): _on_intent("pause",{})
 
 
 func _resume() -> void:
@@ -539,6 +547,7 @@ func _hurt(damage: float) -> void:
 	if state != "playing" or hurt_clock > 0 or stats.dash_time > 0: return
 	if _effect_event("before_hurt",{}):
 		hurt_clock = .25
+		_request_feedback_audio("shield_block")
 		return
 	actor_anim.trigger(0,"hurt")
 	_vfx("hit_spark",player_pos)
@@ -546,6 +555,8 @@ func _hurt(damage: float) -> void:
 	_effect_event("hurt",{"amount":actual_loss})
 	hurt_clock = .75
 	if stats.hp <= 0: _finish(false)
+	# Same resolved cue may finish after lethal cleanup; no later dead-state request.
+	if is_finite(actual_loss) and actual_loss > 0: _request_feedback_audio("player_damage")
 
 func _boss_killed(enemy: Dictionary) -> void:
 	if RunFlow.award_boss(combat,run,enemy):
@@ -567,6 +578,7 @@ func _complete_wave() -> void:
 	var retiring:Array=enemies.duplicate()
 	var outcome:=RunFlow.settle(combat,run,mode,config,effects,encounters)
 	if outcome in ["invalid","ignored"]:return
+	_stop_feedback_audio()
 	vfx.clear();telegraphs.show_markers([])
 	actor_anim.clear(true,true)
 	for enemy in retiring:
@@ -583,6 +595,7 @@ func _complete_wave() -> void:
 
 
 func _show_upgrades() -> void:
+	_stop_feedback_audio()
 	effects.invalidate()
 	state = "upgrade"
 	choice_generation += 1
@@ -628,6 +641,7 @@ func _resolve_upgrade_choice() -> void:
 		_hide_modal()
 
 func _finish(won: bool) -> void:
+	_stop_feedback_audio()
 	combat.focus_enemy_id=0
 	weapon_rig.clear()
 	reserved_offer.clear()
@@ -801,6 +815,7 @@ func _release_offer(token:int,generation:int)->bool:
 	return true
 
 func _open_shop() -> void:
+	_stop_feedback_audio()
 	state = "shop"
 	shop_pending = false
 	shop_message = "Buy, sell or replace. Replacement discards old weapon without refund."
@@ -972,7 +987,7 @@ func _leave_shop(generation: int) -> void:
 	_hide_modal()
 
 func _view() -> Dictionary:
-	if build.is_empty(): return {"seed":run_seed,"settings":settings.duplicate(true),"mode_id":mode.id,"mode_name":mode.name,"objective":""}
+	if build.is_empty(): return {"seed":run_seed,"settings":settings.duplicate(true),"feedback_audio":_feedback_audio_view(),"mode_id":mode.id,"mode_name":mode.name,"objective":""}
 	var view := {"coins":build.coins,"wave":wave,"level":level,"hp":stats.hp,"max_hp":stats.max_hp,"xp":xp,"xp_max":Rules.xp_threshold(level),"time":elapsed,"kills":kills,"seed":run_seed,"stats":stats,"weapons":[],"items":[],"synergies":stats.synergies,"generation":shop_generation,"refresh_price":catalog.refresh_price,"weapon_slots":catalog.weapon_slots,"item_slots":catalog.item_slots,"message":shop_message,"offers":[],"rewards":rewards,"synergy_status":[],"mechanics":{"shield":effects.shield,"chain_charges":effects.chain_charges,"hazards":hazards.size(),"echo_hits":effects.echo_hits,"phase_charge":effects.phase_charge,"medic_damage":effects.medic_damage,"cooldowns":{}}}
 	view.focus=_focus_view()
 	view.starting_loadout=StartingLoadouts.entry(starting_loadouts,catalog,run.starting_loadout_id)
@@ -984,6 +999,7 @@ func _view() -> Dictionary:
 	view.actor_state=actor_anim.state_of(0)
 	view.dash_cooldown=stats.get("dash_cooldown",0.0)
 	view.settings=settings.duplicate(true)
+	view.feedback_audio=_feedback_audio_view()
 	view.weapon_order=_weapon_order_view()
 	view.weapon_tempering=catalog.weapon_tempering.duplicate(true)
 	view.reserved_offer=Reservation.describe(build,catalog,reserved_offer)
@@ -1071,13 +1087,19 @@ func _on_intent(action: String, payload: Dictionary) -> void:
 				state="settings"
 				ui.show_settings(_view())
 		"set_setting":
-			if state=="settings" and payload.get("key","")=="reduced_flashes" and payload.get("value") is bool:
-				settings.reduced_flashes=payload.value
-				vfx.reduced_flashes=payload.value
-				actor_anim.reduced_flashes=payload.value
-				vfx.refresh_style()
-				actor_anim.refresh_style()
-				ui.show_settings(_view())
+			if state!="settings" or not payload.get("key") is String or not payload.get("value") is bool:return
+			match payload.key:
+				"reduced_flashes":
+					settings.reduced_flashes=payload.value
+					vfx.reduced_flashes=payload.value
+					actor_anim.reduced_flashes=payload.value
+					vfx.refresh_style()
+					actor_anim.refresh_style()
+				"mute_feedback_sounds":
+					settings.mute_feedback_sounds=payload.value
+					if is_instance_valid(feedback_audio):feedback_audio.set_muted(payload.value)
+				_:return
+			ui.show_settings(_view())
 		"close_settings":
 			if state=="settings":
 				if settings_return=="title":_title()
@@ -1137,14 +1159,26 @@ func _on_intent(action: String, payload: Dictionary) -> void:
 				else: _hide_modal()
 
 func _present_inventory() -> void:
+	_stop_feedback_audio()
 	effects.invalidate()
 	ui.show_inventory(_view())
 
 
 func _present_pause() -> void:
+	_stop_feedback_audio()
 	effects.invalidate()
 	ui.show_pause(_view())
 
+
+func _request_feedback_audio(cue: String) -> void:
+	if is_instance_valid(feedback_audio): feedback_audio.request(cue)
+
+func _stop_feedback_audio() -> void:
+	if is_instance_valid(feedback_audio): feedback_audio.stop_all()
+
+func _feedback_audio_view() -> Dictionary:
+	if is_instance_valid(feedback_audio): return feedback_audio.status()
+	return {"driver":AudioServer.get_driver_name(),"dummy":AudioServer.get_driver_name()=="Dummy","muted":settings.mute_feedback_sounds,"unavailable":["player_damage","shield_block"]}
 
 func _hide_modal() -> void:
 	ui.hide_modal()
@@ -1264,6 +1298,7 @@ func _enter_field(seed_value:int)->void:
 	camera.position=FieldLayout.camera_position(player_pos,config.arena)
 func _begin_room_clear()->void:
 	if state!="playing":return
+	_stop_feedback_audio()
 	combat.focus_enemy_id=0
 	state="room_clear"
 	bullets.clear();enemy_bullets.clear();pending_blasts.clear();hazards.clear();flashes.clear()

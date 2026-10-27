@@ -1,0 +1,48 @@
+{
+  "utc": "2026-10-27T02:43:57.625017+00:00",
+  "status": "FINITE_ORDINARY_OBSERVATION_COMPLETED_WITH_LIMITS",
+  "actual_size": [
+    1180,
+    812
+  ],
+  "requested_size_not_honored": [
+    960,
+    540
+  ],
+  "mode": "arena",
+  "seed": 240102,
+  "loadout": "Rivet Starter",
+  "executable_sha256": "2c78919325d7f29fa7607287c7c1eeac367ea4c94e7b8b6f5f4c6b20492f73d0",
+  "pck_sha256": "99b5232f7d5866ab3152f78990ed6ad37ed55957cf85f1712418c056daa3638d",
+  "launches": [
+    {
+      "mode": "explicit main-pack override",
+      "exit": 1,
+      "outcome": "Rejected before gamewindow: releaseELF disablespathoverrides;originalerrorpreserved"
+    },
+    {
+      "mode": "standard adjacent same-namePCK",
+      "exit": 0,
+      "outcome": "one actualrun, normalWMclose, freshwindowabsenceverified"
+    }
+  ],
+  "observations": [
+    "Freshprocess shows bothpresentationtogglesoff and Dummy no physical output",
+    "Defaultseed unchanged; actualArena100HP at14s/14kills",
+    "One1300msleftmovement acquirednormalXP; Escape arrivedduringupgrade ratherthanpaused",
+    "SelectedSalvageMagnet thenforfeitedfourremainingearnedchoices throughnormal UI; scrap124to164",
+    "Reachedfirstnormalshop, Rivet15damage/.400interval, no purchase/reroll/newrun",
+    "Stopped atfirstshop; nofullcampaignclaim"
+  ],
+  "capture_notes": "Capture03stillshowedtitle immediatelyafterstartclick; capture04shows14srun. Secondclickafterstaleview is retained, not claimed clean synchronous startup.",
+  "capture_count": 10,
+  "not_observed": [
+    "DefiniteordinaryHPdecrease",
+    "NaturalMirroracquisition orblock",
+    "Ordinaryaudiblecue/mixerwaveform",
+    "Fullvictory/defeat",
+    "Physicaloutput/Windows"
+  ],
+  "warnings": "VSyncunsupportedMesa/llvmpipewarning retained; standardrun noERROR/resourceleaks",
+  "no_runtime_injection_or_retry_for_clean_outcome": true
+}

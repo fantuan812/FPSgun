@@ -1,0 +1,13 @@
+--- frozen-final/tests/independent_reservation_runtime.gd
++++ r4/tests/independent_reservation_runtime.gd
+@@ -217,7 +217,10 @@
+   g._roll_offers()
+   ck(g.shop_offers.size()==available+1 and g.shop_offers[available]==held.offer and g.reserved_offer.slot==3,"short pool insertion and stable preferred slot "+str(available))
+   await process_frame
++ var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
++ audio_teardown.prepare([g])
+  g.queue_free();await process_frame
++ await audio_teardown.finish(self)
+  var result:Dictionary={"checks":checks,"failures":failures,"scope":"Controlled actual main transaction/refresh/lifecycle paths plus independent weighted-selection oracle in both modes. No ordinary acquisition, balance or physical-controller certification. Short-pool tests use explicitly over-cap synthetic ownership only to exhaust the pool.","observations":observations}
+  var args:=OS.get_cmdline_user_args()
+  if not args.is_empty():FileAccess.open(args[0],FileAccess.WRITE).store_string(JSON.stringify(result,"  ")+"\n")

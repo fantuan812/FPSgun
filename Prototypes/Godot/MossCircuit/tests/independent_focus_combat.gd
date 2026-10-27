@@ -169,7 +169,10 @@ func run()->void:
   close(near.hp,976,"tempered interceptor hit24");close(side1.hp,990.4,"Arc first nearest9.6");close(side2.hp,990.4,"Arc second nearest9.6");close(far.hp,1000,"marked third Arc candidate gains no secondary priority")
   ck(hits.size()==1 and hits[0].target==near.id,"no extra primary from secondary focus")
   await process_frame
+ var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
+ audio_teardown.prepare([g])
  g.queue_free();await process_frame
+ await audio_teardown.finish(self)
  var result:Dictionary={"checks":checks,"failures":failures,"scope":"Controlled actual eight-path acquisition/range/tie, same-step death, snapshot, tier/brace/Arc/interception. No ordinary play, balance or platform certification."}
  var args:=OS.get_cmdline_user_args()
  if not args.is_empty():FileAccess.open(args[0],FileAccess.WRITE).store_string(JSON.stringify(result,"  ")+"\n")

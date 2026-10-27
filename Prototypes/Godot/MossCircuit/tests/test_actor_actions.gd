@@ -95,6 +95,9 @@ func run()->void:
 	await process_frame
 	game._start_run(770)
 	check(game.enemies.is_empty() and director.actors.size()==1,"title then restart no freed-instance reuse")
+	var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
+	audio_teardown.prepare([game])
 	game.queue_free();await process_frame
+	await audio_teardown.finish(self)
 	print(JSON.stringify({"passed":passed,"failures":failures,"scope":"v7 authored and procedural action contracts"}))
 	quit(0 if failures.is_empty() else 1)

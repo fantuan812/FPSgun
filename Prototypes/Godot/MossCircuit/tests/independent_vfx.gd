@@ -86,6 +86,9 @@ func run() -> void:
 		for i in range(20):g._simulate(.016)
 		outcomes.append([a.hp,g.stats.hp,g.rng.state,g.loot_rng.state,g.shop_rng.state,g.kills,g.bullets.size()])
 	check(outcomes[0] == outcomes[1],"VFX pool-full vs disabled damage and RNG identical")
+	var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
+	audio_teardown.prepare([g])
 	g.queue_free();await process_frame
+	await audio_teardown.finish(self)
 	print(JSON.stringify({"independent_vfx_passed":passed,"failures":failures,"scope":"headless timing hooks isolation; no rendered-window review"}))
 	quit(0 if failures.is_empty() else 1)

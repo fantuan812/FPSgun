@@ -97,7 +97,10 @@ func run()->void:
 			ck(not AI.validate(modified).is_empty(),"invalid pulse field "+key+"/"+str(bad))
 	var reversed:Dictionary=data.duplicate(true);reversed.enemies[keeper_index].pulse_inner_radius=180
 	ck(not AI.validate(reversed).is_empty(),"closed or reversed annulus invalid")
+	var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
+	audio_teardown.prepare([g])
 	g.queue_free();await process_frame
+	await audio_teardown.finish(self)
 	print("BROOD PULSE: ",passed," passed; ",failures.size()," failed")
 	for failure in failures:push_error(failure)
 	quit(0 if failures.is_empty() else 1)

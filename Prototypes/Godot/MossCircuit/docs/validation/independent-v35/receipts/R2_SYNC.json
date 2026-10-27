@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "utc": "2026-10-27T01:11:15.632248+00:00",
+  "inputs": 681,
+  "map_sha256": "568ede3d9ba4170e63cd1b3129a932e1ab495127a19cb0a72e58596c3135849e",
+  "delta": [
+    "MANIFEST.json",
+    "tests/independent_annulus_runtime.gd",
+    "tests/independent_brood_parity.gd",
+    "tests/independent_weapon_rig.gd",
+    "tests/test_core_summon.gd",
+    "tests/test_feedback_teardown.gd",
+    "tests/test_feedback_teardown.gd.uid"
+  ],
+  "production_128_exact": true,
+  "all_bytes_exact": true,
+  "cache_exists": false,
+  "scope": "Explicit test/manifest-only sync into the one unimported independent project. No new full copy or engine run."
+}

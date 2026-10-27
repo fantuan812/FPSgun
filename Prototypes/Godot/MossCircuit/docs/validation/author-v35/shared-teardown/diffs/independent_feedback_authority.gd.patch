@@ -1,0 +1,14 @@
+--- frozen-final/tests/independent_feedback_authority.gd
++++ r4/tests/independent_feedback_authority.gd
+@@ -219,7 +219,10 @@
+   g._finish(false);g._on_intent("retry",{});ck(g.feedback_audio.muted,"retry retains mute")
+   g.state="settings";g._on_intent("set_setting",{"key":"mute_feedback_sounds","value":false});ck(not g.feedback_audio.muted and none_playing(g) and events.is_empty(),"unmute never replays")
+   var before_view:Dictionary=snap(g);g._feedback_audio_view();g._view();g.ui.show_settings(g._view());ck(snap(g)==before_view and events.is_empty(),"views/settings presentation read-only")
+-  g.queue_free();await process_frame
++  var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
++  audio_teardown.prepare([g])
++  g.queue_free();await process_frame
++  await audio_teardown.finish(self)
+  var result:Dictionary={"checks":checks,"failures":failures,"observations":observations,"scope":"Controlled imported PCM identity, resolved authority, actual four hostile routes, disabled-audio gameplay equality, strict setting and explicit lifecycle. No fresh mixer capture/native/hardware claim."}
+  var args:=OS.get_cmdline_user_args()
+  if not args.is_empty():FileAccess.open(args[0],FileAccess.WRITE).store_string(JSON.stringify(result,"  ")+"\n")

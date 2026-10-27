@@ -1,0 +1,10 @@
+{
+  "status": "FROZEN_PENDING_QA_STATIC_PIN",
+  "source": "moss-v35-r4",
+  "timeout_each_seconds": 180,
+  "preparation": "One cold import, freeze all inputs, then focused cases serially; no source edits while running.",
+  "cases": ["test_audio_teardown_predicate.gd", "independent_charger_lifecycle.gd", "test_game.gd", "test_warden_charge.gd", "independent_annulus_runtime.gd", "independent_brood_parity.gd", "independent_weapon_rig.gd", "test_core_summon.gd", "test_player_feedback.gd", "independent_feedback_views.gd", "independent_feedback_authority.gd", "independent_settlement_types.gd", "test_primary_brace.gd", "test_starting_loadouts.gd"],
+  "success": "All original semantic success markers, native0, no ERROR or resource-leak warning; each helper complete/capture_removed with nonempty tracked owners and finite fresh silence; final source hashes unchanged.",
+  "failure": "Retain rejected raw results, stop focused batch on first failure, no automatic retries or predicate/budget changes.",
+  "coverage": "Seven historical resource-exit failures, dual-owner group, intentional PCM reference holder, scoped saved-stream GUI, multi-scene authority, settlement loops and inline-quit fixtures; predicate negatives are deterministic model checks, not runtime leak injection."
+}

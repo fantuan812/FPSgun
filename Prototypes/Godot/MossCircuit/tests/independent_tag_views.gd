@@ -65,7 +65,10 @@ func run()->void:
       while p!=null and not p is ScrollContainer:p=p.get_parent()
       if p is ScrollContainer:found=p.get_global_rect().encloses(n.get_global_rect()) and not n.disabled
     check(found,"first purchase/replace fully visible at "+str(size))
+ var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
+ audio_teardown.prepare([g])
  g.queue_free();await process_frame
+ await audio_teardown.finish(self)
  print(JSON.stringify({"tag_view_checks":checks,"failures":failures}))
  var args:=OS.get_cmdline_user_args()
  if not args.is_empty():FileAccess.open(args[0],FileAccess.WRITE).store_string(JSON.stringify({"checks":checks,"failures":failures},"  ")+"\n")

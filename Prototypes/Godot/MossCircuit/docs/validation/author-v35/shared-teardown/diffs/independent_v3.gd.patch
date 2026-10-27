@@ -1,0 +1,13 @@
+--- frozen-final/tests/independent_v3.gd
++++ r4/tests/independent_v3.gd
+@@ -113,7 +113,10 @@
+ 	check(g.state == "won" and g.rewards.size() == 1,"final boss trophy and victory")
+ 	g._hurt(1000)
+ 	check(g.state == "won","victory cannot become death")
++	var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
++	audio_teardown.prepare([g])
+ 	g.queue_free()
+ 	await process_frame
++	await audio_teardown.finish(self)
+ 	print(JSON.stringify({"independent_v3_passed":passed,"failures":failures}))
+ 	quit(0 if failures.is_empty() else 1)

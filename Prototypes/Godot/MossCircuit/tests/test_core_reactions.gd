@@ -76,6 +76,9 @@ func run_checks()->void:
 	g.wave_time=g.config.waves.duration-.001;g._simulate(.01)
 	check(g.state=="won" and g.enemies.is_empty(),"original terminal settlement clears surviving child at timer")
 	g._title();check(a.corpses.is_empty(),"title clears remaining tails")
+	var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
+	audio_teardown.prepare([g])
 	g.queue_free();await process_frame
+	await audio_teardown.finish(self)
 	print(JSON.stringify({"core_reactions_passed":passed,"failures":failures}))
 	quit(0 if failures.is_empty() else 1)

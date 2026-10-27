@@ -1,0 +1,14 @@
+--- frozen-final/tests/test_resolution_validation.gd
++++ r4/tests/test_resolution_validation.gd
+@@ -70,8 +70,10 @@
+ 		var coins_before:float=g.build.coins
+ 		ck(Flow.settle(g.combat,g.run,policy,g.config,g.effects,g.encounters)=="next","valid policy still advances")
+ 		ck(g.wave==2 and g.build.coins==coins_before+12 and g.stats.hp==69 and g.pickups.is_empty(),"valid pickup/heal/economy unchanged")
++	var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
++	audio_teardown.prepare([g])
+ 	g.queue_free();await process_frame
+-	await create_timer(.25).timeout # Presentation playback release after test disposal only.
++	await audio_teardown.finish(self)
+ 	var report:Dictionary={"checks":checks,"failures":failures,"scope":"Separate pre-existing malformed-boolean validator correction; valid policy and non-vacuous invalid-settle/controller preservation, not new audio behavior."}
+ 	var args:=OS.get_cmdline_user_args()
+ 	if not args.is_empty():FileAccess.open(args[0],FileAccess.WRITE).store_string(JSON.stringify(report,"  ")+"\n")

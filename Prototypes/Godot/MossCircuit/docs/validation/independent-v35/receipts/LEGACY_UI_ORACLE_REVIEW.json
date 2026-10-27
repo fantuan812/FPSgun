@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "old_sha256": "2de2533cf64a20488260cd85fae53b0019941bcd5e5e311918ab4d7ca6e91980",
+  "new_sha256": "b3988076803f256ca3ec20fc888383318c15644aef0a1745f9269debead2ff16",
+  "changes": [
+    "Find original flash CheckButton by exact existing text (two occurrences), instead of treating every CheckButton as the original.",
+    "Update exact title/pause settings entry names to approved PRESENTATION SETTINGS (two occurrences)."
+  ],
+  "preserved": "All prior assertions and their original flash-setting meaning remain; new mute tested independently.",
+  "scope": "Read-only narrow fixture review, not a new engine run."
+}

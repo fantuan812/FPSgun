@@ -59,6 +59,9 @@ func run()->void:
 		game.state=state_name
 		game.notification(Node.NOTIFICATION_APPLICATION_FOCUS_OUT)
 		check(game.state==state_name,"focus loss leaves existing "+state_name+" unchanged")
+	var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
+	audio_teardown.prepare([game])
 	game.queue_free();await process_frame
+	await audio_teardown.finish(self)
 	print(JSON.stringify({"input_lifecycle_passed":passed,"failures":failures,"scope":"headless input/notification dispatch; not OS focus or GUI acceptance"}))
 	quit(0 if failures.is_empty() else 1)

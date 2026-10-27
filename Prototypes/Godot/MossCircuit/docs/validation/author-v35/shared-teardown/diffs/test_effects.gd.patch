@@ -1,0 +1,12 @@
+--- frozen-final/tests/test_effects.gd
++++ r4/tests/test_effects.gd
+@@ -107,6 +107,9 @@
+ 	check(game.hazards==snapshot and game.effects.chain_charges==2,"inventory freezes persistent effects")
+ 	game._start_run(89)
+ 	check(game.hazards.is_empty() and game.effect_visuals.is_empty() and game.effects.shield==0,"run resets all effect state")
++	var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
++	audio_teardown.prepare([game])
+ 	game.queue_free();await process_frame
++	await audio_teardown.finish(self)
+ 	print(JSON.stringify({"passed":passed,"failures":failures,"scope":"v4 real effects, anti-recursion and removal"}))
+ 	quit(0 if failures.is_empty() else 1)

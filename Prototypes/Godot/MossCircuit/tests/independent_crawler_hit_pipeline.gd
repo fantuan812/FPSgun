@@ -40,6 +40,9 @@ func run()->void:
 			check(g.kills==1 and not g.enemies.has(e),"authoritative kill exactly once")
 			check(not a.trigger(e.id,"hurt"),"dead reaction cannot restart")
 			sample(g,e,"lethal interruption")
+	var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
+	audio_teardown.prepare([g])
 	g.queue_free();await process_frame
+	await audio_teardown.finish(self)
 	print(JSON.stringify({"checks":checks,"failures":failures,"trace":trace,"scope":"controlled actual primary hit-segment + simulation damage observer; no GUI or human feel claim"}))
 	quit(1 if failures else 0)

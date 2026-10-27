@@ -92,7 +92,10 @@ func run() -> void:
 	var out_pos:Vector2=disc.pos
 	game._advance_disc(disc,.1)
 	check(disc.pos.distance_to(game.player_pos)<out_pos.distance_to(game.player_pos),"disc homes back")
+	var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
+	audio_teardown.prepare([game])
 	game.queue_free()
 	await process_frame
+	await audio_teardown.finish(self)
 	print(JSON.stringify({"passed":passed,"failures":failures,"scope":"v5 expansion + weighted shop"}))
 	quit(0 if failures.is_empty() else 1)

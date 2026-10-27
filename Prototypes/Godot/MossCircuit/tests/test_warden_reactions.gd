@@ -74,6 +74,9 @@ func run_checks()->void:
 	check(g.wave==4 and g.state=="upgrade","original wave completion does not wait for death sheet")
 	check(a.corpses.has(e.id),"visual corpse preserved through settlement")
 	g._title();check(a.corpses.is_empty(),"title clears Warden tail")
+	var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
+	audio_teardown.prepare([g])
 	g.queue_free();await process_frame
+	await audio_teardown.finish(self)
 	print(JSON.stringify({"warden_reactions_passed":passed,"failures":failures}))
 	quit(0 if failures.is_empty() else 1)

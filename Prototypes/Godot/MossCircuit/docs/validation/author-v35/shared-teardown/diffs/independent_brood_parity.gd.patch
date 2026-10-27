@@ -1,0 +1,14 @@
+--- frozen-final/tests/independent_brood_parity.gd
++++ r4/tests/independent_brood_parity.gd
+@@ -50,8 +50,10 @@
+ 		check(a.kills==1 and b.kills==1,"one real brood_keeper death reward per mode "+mode_id)
+ 		a._title();b._title()
+ 		check(a.actor_anim.corpses.is_empty() and b.actor_anim.corpses.is_empty(),"title clears both authored/procedural corpse pools "+mode_id)
++		var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
++		audio_teardown.prepare([a, b])
+ 		a.queue_free();b.queue_free();await process_frame
+-		await create_timer(.25).timeout # Post-disposal mixer release; no gameplay/assertion timing change.
++		await audio_teardown.finish(self)
+ 	print("INDEPENDENT BROOD PARITY: ",passed," passed; ",failures.size()," failed")
+ 	for failure in failures:push_error(failure)
+ 	quit(0 if failures.is_empty() else 1)

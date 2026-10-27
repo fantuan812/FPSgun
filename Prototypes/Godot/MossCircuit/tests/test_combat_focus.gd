@@ -88,5 +88,8 @@ func run()->void:
 		g._start_run(3401);ck(g.combat.focus_enemy_id==0,"new run no reused ID focus")
 		setup(mode);near=enemy(Vector2(100,0));g.combat.focus_enemy_id=near.id;g.wave_time=30
 		if mode=="arena":g._complete_wave();ck(g.combat.focus_enemy_id==0,"actual arena settlement clears")
+	var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
+	audio_teardown.prepare([g])
 	g.queue_free();await process_frame
+	await audio_teardown.finish(self)
 	print(JSON.stringify({"passed":passed,"failures":failures,"scope":"Controlled geometry, input gate, purity, range-aware idle presentation and lifecycle; actual GUI dispatch/native input independently required."}));quit(0 if failures.is_empty() else 1)

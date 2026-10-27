@@ -1,0 +1,27 @@
+{
+  "status": "PREPARED_NOT_EXECUTED",
+  "cases": [
+    {
+      "case": "independent_charger_lifecycle.gd",
+      "source_sha256": "ab0590e0b230b1b042e846b141aa04f28ae9f83f839e229f4a853f003b34bbfe",
+      "external_sha256": "c0f4cf1684cc303477b8dda989ed7beca808e0bd243924563ad19b7022a965fa",
+      "only_changed_seam": "final queue_free/oneprocessframe, original assertions unchanged"
+    },
+    {
+      "case": "test_game.gd",
+      "source_sha256": "834fe24f01cc9f5f233e8283f5a7016b282b3abaf1b56737c71a4ebbf9ee0c67",
+      "external_sha256": "b7c3f0c8ecd860efbbca94b338d4a83d742dd8677988ebfe69d31d5c4424bc7b",
+      "only_changed_seam": "final queue_free/oneprocessframe, original assertions unchanged"
+    },
+    {
+      "case": "test_warden_charge.gd",
+      "source_sha256": "06d19bc5be9bebcc9de4b3ee07537d3fc6e520fedfd016a8d6bc395a654f48ea",
+      "external_sha256": "06eb2595d31c1c57bd77eb7de1e85092e54c170a6020bf3ee5b996d0484e156f",
+      "only_changed_seam": "final queue_free/oneprocessframe, original assertions unchanged"
+    }
+  ],
+  "deadline_ms": 1000,
+  "completion": "all production stream weakrefs released + >=150ms (ceil mix_rate*.15) newly pushed consecutive silent frames after explicit pre-window queue drain + zero discarded + node freed; test-only capture removed",
+  "source_mutation": false,
+  "negative_scope": "Charger/game original failure resource identity remains unknown if not reproduced. This observation is not whole-suite acceptance."
+}

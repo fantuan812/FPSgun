@@ -1,0 +1,39 @@
+--- held-R1/tests/independent_annulus_runtime.gd
++++ fixture-R2/tests/independent_annulus_runtime.gd
+@@ -146,6 +146,7 @@
+   ck(echoes().is_empty() and g.telegraphs.markers.filter(func(v):return v.kind=="annulus").is_empty(),mode+" terminal death cannot regenerate pending annulus warning")
+   await process_frame
+  g.queue_free();await process_frame
++ await create_timer(.25).timeout # Post-disposal mixer release; no gameplay/assertion timing change.
+  var result:Dictionary={"checks":checks,"failures":failures,"scope":"controlled actual shared runtime, exact annulus geometry/timing/hurt/lock/lifecycle; not ordinary native or full campaign proof"}
+  var args:=OS.get_cmdline_user_args()
+  if not args.is_empty():FileAccess.open(args[0],FileAccess.WRITE).store_string(JSON.stringify(result,"  ")+"\n")
+--- held-R1/tests/independent_brood_parity.gd
++++ fixture-R2/tests/independent_brood_parity.gd
+@@ -51,6 +51,7 @@
+ 		a._title();b._title()
+ 		check(a.actor_anim.corpses.is_empty() and b.actor_anim.corpses.is_empty(),"title clears both authored/procedural corpse pools "+mode_id)
+ 		a.queue_free();b.queue_free();await process_frame
++		await create_timer(.25).timeout # Post-disposal mixer release; no gameplay/assertion timing change.
+ 	print("INDEPENDENT BROOD PARITY: ",passed," passed; ",failures.size()," failed")
+ 	for failure in failures:push_error(failure)
+ 	quit(0 if failures.is_empty() else 1)
+--- held-R1/tests/independent_weapon_rig.gd
++++ fixture-R2/tests/independent_weapon_rig.gd
+@@ -133,5 +133,6 @@
+ 	check(g.weapon_rig.slots.is_empty(),"death removes equipment presentation")
+ 	reset(g);check(g.weapon_rig.last_shot.is_empty(),"restart clears old recoil identity")
+ 	g.queue_free();await process_frame
++	await create_timer(.25).timeout # Post-disposal mixer release; no gameplay/assertion timing change.
+ 	print(JSON.stringify({"independent_weapon_rig_passed":passed,"failures":failures,"scope":"headless geometry and state; no GUI"}))
+ 	quit(0 if failures.is_empty() else 1)
+--- held-R1/tests/test_core_summon.gd
++++ fixture-R2/tests/test_core_summon.gd
+@@ -27,6 +27,7 @@
+ 	check(director.assets.has("boss_core_summon"),"distinct Core summon source loaded")
+ 	if not director.assets.has("boss_core_summon"):
+ 		game.queue_free();await process_frame
++		await create_timer(.25).timeout # Post-disposal mixer release; no gameplay/assertion timing change.
+ 		print(JSON.stringify({"core_summon_passed":passed,"failures":failures}));quit(1);return
+ 	var asset:Dictionary=director.assets.boss_core_summon
+ 	check(asset.frames.get_frame_count("action")==16,"exact sixteen summon poses")

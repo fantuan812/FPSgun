@@ -186,7 +186,7 @@ func run() -> void:
 	check(ui.body.size.x <= ui.modal.size.x and ui.body.size.y <= ui.modal.size.y, "settings fits viewport")
 	var toggle: CheckButton
 	for button in buttons(ui.modal):
-		if button is CheckButton: toggle = button
+		if button is CheckButton and button.text == "REDUCE DECORATIVE FLASHES": toggle = button
 	check(toggle != null and toggle.has_focus() and not toggle.button_pressed, "settings toggle initial value and keyboard focus")
 	toggle.button_pressed = true
 	check(received.back() == ["set_setting", {"key": "reduced_flashes", "value": true}], "toggle emits controller-owned setting intent")
@@ -194,17 +194,17 @@ func run() -> void:
 	view.settings.reduced_flashes = true
 	ui.show_settings(view); await process_frame
 	for button in buttons(ui.modal):
-		if button is CheckButton: check(button.button_pressed, "reopened settings reflects session value")
+		if button is CheckButton and button.text == "REDUCE DECORATIVE FLASHES": check(button.button_pressed, "reopened settings reflects session value")
 		if button.text == "BACK": button.pressed.emit()
 	check(received.back() == ["close_settings", {}], "settings close intent")
 	check(all_text(ui.modal).contains("not saved to disk") and all_text(ui.modal).contains("shared frames"), "settings states persistence and animation limitations")
 	ui.show_pause(); await process_frame
 	for button in buttons(ui.modal):
-		if button.text == "DISPLAY SETTINGS": button.pressed.emit()
+		if button.text == "PRESENTATION SETTINGS": button.pressed.emit()
 	check(received.back() == ["settings", {}], "pause opens settings")
 	ui.show_title(); await process_frame
 	for button in buttons(ui.modal):
-		if button.text == "DISPLAY SETTINGS": button.pressed.emit()
+		if button.text == "PRESENTATION SETTINGS": button.pressed.emit()
 	check(received.back() == ["settings", {}], "title opens settings")
 	ui.hide_modal()
 	check(not ui.modal_visible(), "hide modal")

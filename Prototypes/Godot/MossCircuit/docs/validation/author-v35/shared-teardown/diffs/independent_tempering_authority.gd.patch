@@ -1,0 +1,13 @@
+--- frozen-final/tests/independent_tempering_authority.gd
++++ r4/tests/independent_tempering_authority.gd
+@@ -121,7 +121,10 @@
+    setup(mode,[kind,kind,kind]);g.build.items={};g._recompute();g.stats.hp=41.0;g.stats.dash_time=.04;g.stats.dash_cooldown=1.7
+    await apply(0,1,mode+" threshold "+kind)
+    var s:Dictionary=g.stats;ck(s.synergies.is_empty(),"three to two loses threshold");eq(s.electric_bonus,0,"electric threshold absent");eq(s.melee_bonus,0,"melee threshold absent");ck(s.extra_pellets==0,"spread threshold absent")
++ var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
++ audio_teardown.prepare([g])
+  g.queue_free();await process_frame
++ await audio_teardown.finish(self)
+  var result:Dictionary={"checks":checks,"failures":failures,"scope":"Independent controlled pure config/metadata plus actual guarded shop authority, copy-clock/rig identity, threshold and lifetime checks; no ordinary/Windows/balance claim."}
+  var args:=OS.get_cmdline_user_args()
+  if not args.is_empty():FileAccess.open(args[0],FileAccess.WRITE).store_string(JSON.stringify(result,"  ")+"\n")

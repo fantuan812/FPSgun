@@ -128,7 +128,10 @@ func run()->void:
    ck(buttons("CHOOSE ").is_empty() and buttons("START RUN").size()==1,"legacy two-argument title unchanged")
    buttons("START RUN")[0].emit_signal("pressed");await process_frame
    ck(g.build.weapons==["rivet_gun"] and g.build.coins==35 and g.run.starting_loadout_id=="rivet","legacy UI start remains old default")
+ var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
+ audio_teardown.prepare([g])
  g.queue_free();await process_frame
+ await audio_teardown.finish(self)
  var result:Dictionary={"scope":"Controlled actual title UI layout, all3 choices/both modes/960x540 and1280x720, native-size rectangles, signal callbacks and syntheticui_accept, default focus, stale callbacks, seed retention and read-only origin. Native pixels/mouse/keyboard and ordinary exported starts remain separate; no physical-controller claim.","checks":checks,"failures":failures}
  var args:=OS.get_cmdline_user_args()
  if not args.is_empty():FileAccess.open(args[0],FileAccess.WRITE).store_string(JSON.stringify(result,"  ")+"\n")

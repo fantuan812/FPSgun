@@ -1,3 +1,17 @@
+# MossCircuit v35 — two resolved player-feedback sounds
+
+Actual positive player HP loss triggers one short falling sound; a genuinely consumed Mirror Shell charge triggers one rising sound. These are original procedural, non-voice clips, not generic hit/VFX sounds. Other actions, music and speech remain silent. Two fixed one-voice players use gain 0.5; repeated same-cue requests replace, never queue. No gameplay RNG, damage, reward, timing or progression depends on audio.
+
+PRESENTATION SETTINGS retains Reduced Flashes and adds MUTE PLAYER FEEDBACK SOUNDS. Mute is session-only, survives title/retry within that process, does not change OS/bus volume, and never replays old sounds on resume/unmute. Named modal/settlement/focus/teardown boundaries stop playback; a just-resolved lethal hit can submit the same short hurt cue after cleanup. Mixer buffers may drain after stop: instantaneous device silence is not promised. Invalid/missing resources disable only their cue; both canonical resources are present in the accepted pack.
+
+Local verification: author final 119 standalone scripts + import = 120 passed, with 696 frozen inputs unchanged; independent raw review checked all logs and 106 conditional owner-cleanup observations. Independent exact-PCK routes passed resources 853, authority 773, actual internal mixer 236, GUI 168 and settlement 960, plus PCM 38 and export-helper safety 3. This is not an independent rerun of the whole 120-command suite. Earlier 109/113 and 116/119 failed aggregates remain failed and are preserved.
+
+Four controlled native cases cover Arena/Rooms at 960×540 and 1280×720. One ordinary release-ELF Arena/Rivet/default-seed attempt reached its first shop without injected state or reroll, then closed normally. Ordinary HP loss or naturally acquired Mirror/block were not established; controlled evidence is not relabeled as ordinary proof. Physical audio/listening, Windows, all-device latency and broad campaign/balance/performance remain unverified. Dummy status explicitly means no physical output.
+
+Read [implementation and failure chronology](docs/V35_PLAYER_FEEDBACK.md), [technical contract](docs/V35_PLAYER_FEEDBACK_CONTRACT.md), [independent evidence](docs/validation/independent-v35/QA_REPORT.md) and [runtime prerequisites](docs/DELIVERY.md). This source and complete PCK are locally prepared, not yet claimed published to GitHub. Earlier version sections below are historical, artifact-specific records; their no-audio statements do not describe v35.
+
+---
+
 # MossCircuit v34 — choose an enemy priority
 
 Automatic fire remains the default. During play, **left-click near an enemy CENTER** to mark that current enemy; click empty playfield to return to AUTO. Each aimed weapon prefers the mark only inside its own existing range, otherwise it uses its original nearest target. Orbit stays radial. This helps choose a Spitter/Broodkeeper/boss instead of always spending aim on the closest crawler, but can leave nearby threats alive. It is not homing, extra range, free piercing or a guaranteed hit.

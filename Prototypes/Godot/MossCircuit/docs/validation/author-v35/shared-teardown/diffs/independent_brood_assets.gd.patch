@@ -1,0 +1,13 @@
+--- frozen-final/tests/independent_brood_assets.gd
++++ r4/tests/independent_brood_assets.gd
+@@ -130,7 +130,10 @@
+ 	check(ad.actors.has(e.id) and e.sprite.frame==15,"sixteenth death pose accessible before unchanged .72 duration")
+ 	ad.advance(.021)
+ 	check(not ad.actors.has(e.id),"more source poses do not extend original corpse lifetime")
++	var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
++	audio_teardown.prepare([g])
+ 	g.queue_free();await process_frame
++	await audio_teardown.finish(self)
+ 	print("INDEPENDENT BROOD ASSETS: ",passed," passed; ",failures.size()," failed")
+ 	for failure in failures:push_error(failure)
+ 	quit(0 if failures.is_empty() else 1)

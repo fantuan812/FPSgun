@@ -1,0 +1,13 @@
+--- frozen-final/tests/independent_cryo_contract.gd
++++ r4/tests/independent_cryo_contract.gd
+@@ -95,7 +95,10 @@
+ 		reset(mode_id);e=spawn(Vector2(100,0),9.0);g._fire_weapon("cryo_sprayer",0);check(e.hp==0 and not e.has("chill_until"),mode_id+" lethal Cryo applies no mark")
+ 		g._title();g._start_run(874205);check(g.enemies.is_empty() and g.effect_visuals.is_empty(),mode_id+" run reset clears targets and feedback")
+ 		await process_frame
++	var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
++	audio_teardown.prepare([g])
+ 	g.queue_free();await process_frame
++	await audio_teardown.finish(self)
+ 	var report:Dictionary={"checks":checks,"failures":failures,"scope":"independent controlled source integration contract; both modes, geometry, six old primary routes, status and proc ordering; not GUI"}
+ 	var outputs:PackedStringArray=OS.get_cmdline_user_args()
+ 	if not outputs.is_empty():FileAccess.open(outputs[0],FileAccess.WRITE).store_string(JSON.stringify(report,"\t"))

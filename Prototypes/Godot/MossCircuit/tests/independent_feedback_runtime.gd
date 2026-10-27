@@ -158,7 +158,10 @@ func run()->void:
   event.epoch=engine.epoch;event.sequence=engine.last_sequence+1;event.source=bad.source;event.depth=bad.depth
   ck(engine.process(event,c).is_empty() and engine.feedback_armed,"protocol wrong source/depth")
  engine.sync({});engine.sync({"feedback_diode":1});ck(not engine.feedback_armed,"protocol removal/rebuy no arm")
+ var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
+ audio_teardown.prepare([g])
  g.queue_free();await process_frame
+ await audio_teardown.finish(self)
  var result={"checks":n,"failures":failures,"observations":observations,"scope":"Controlled shared-runtime and actual AI/Motor integration; proc isolation profile intentionally exceeds equipment slots; not native ordinary play"}
  var args=OS.get_cmdline_user_args();if not args.is_empty():FileAccess.open(args[0],FileAccess.WRITE).store_string(JSON.stringify(result,"  ")+"\n")
  print(JSON.stringify(result));quit(0 if failures.is_empty() else 1)

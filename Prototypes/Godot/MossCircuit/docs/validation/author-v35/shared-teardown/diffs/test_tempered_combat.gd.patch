@@ -1,0 +1,12 @@
+--- frozen-final/tests/test_tempered_combat.gd
++++ r4/tests/test_tempered_combat.gd
+@@ -91,6 +91,9 @@
+ 			Runtime.step(game.combat_frame,.3)
+ 			if not fused:pair_damage=1000.0-enemy.hp
+ 			else:check(is_equal_approx(pair_damage,30.0) and is_equal_approx(1000.0-enemy.hp,24.0),"one cycle sacrifices independent timer "+mode)
++	var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
++	audio_teardown.prepare([game])
+ 	game.queue_free();await process_frame
++	await audio_teardown.finish(self)
+ 	print(JSON.stringify({"passed":passed,"failed":failures.size(),"failures":failures}))
+ 	quit(0 if failures.is_empty() else 1)

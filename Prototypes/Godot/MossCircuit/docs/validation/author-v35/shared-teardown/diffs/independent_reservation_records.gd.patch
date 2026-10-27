@@ -1,0 +1,13 @@
+--- frozen-final/tests/independent_reservation_records.gd
++++ r4/tests/independent_reservation_records.gd
+@@ -61,7 +61,10 @@
+  var coins:int=g.build.coins;var gen:int=g.shop_generation
+  ck(not g._buy(0,gen) and g.build.coins==coins and g.shop_generation==gen,"removed catalog ID never charges")
+  ck(g._view().offers[0].reserved and not g._view().offers[0].can_buy,"removed catalog entry has safe reserved fallback card")
++ var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
++ audio_teardown.prepare([g])
+  g.queue_free();await process_frame
++ await audio_teardown.finish(self)
+  var result:Dictionary={"checks":checks,"failures":failures,"scope":"Strict v27 catalog-byte preservation after only reviewed v33 profile removal, and reviewed v32 encounter preservation plus malformed reservation/catalog type guards and actual held-card association. Corruption is controlled diagnostic input, not an observed ordinary-run occurrence."}
+  var args:=OS.get_cmdline_user_args()
+  if not args.is_empty():FileAccess.open(args[0],FileAccess.WRITE).store_string(JSON.stringify(result,"  ")+"\n")

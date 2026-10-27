@@ -78,5 +78,8 @@ func run()->void:
 	check(rig.slots.is_empty() and rig.disc_sprites.is_empty(),"death clears weapon nodes")
 	game._start_run(808);game._sync_weapon_rig()
 	check(rig.slots.size()==1 and not rig.slots[0].hidden and rig.last_shot.is_empty(),"restart no stale loadout / hidden disc")
+	var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
+	audio_teardown.prepare([game])
 	game.queue_free();await process_frame
+	await audio_teardown.finish(self)
 	print(JSON.stringify({"passed":passed,"failures":failures,"scope":"v8 deterministic modular loadout and deliberate launch geometry"}));quit(0 if failures.is_empty() else 1)

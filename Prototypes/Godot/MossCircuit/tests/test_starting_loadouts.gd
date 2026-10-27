@@ -88,4 +88,8 @@ func run()->void:
 	check(g.build.weapons==[final_row.weapon] and g.build.coins==final_row.starting_scrap,"caller coins/weapon ignored")
 	print("Starting loadouts: %d checks, %d failures" % [checks,failures.size()])
 	for failure in failures:print("FAIL: "+str(failure))
-	g.queue_free();quit(0 if failures.is_empty() else 1)
+	var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
+	audio_teardown.prepare([g])
+	g.queue_free();await process_frame
+	await audio_teardown.finish(self)
+	quit(0 if failures.is_empty() else 1)

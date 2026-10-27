@@ -57,7 +57,10 @@ func run() -> void:
 	game._title()
 	game._process(1.0)
 	check(game.state == "title" and game.elapsed == 0, "title frozen")
+	var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
+	audio_teardown.prepare([game])
 	game.queue_free()
 	await process_frame
+	await audio_teardown.finish(self)
 	print(JSON.stringify({"independent_passed":passed,"failures":failures,"scope":"additional headless scenarios, no rendered-window validation"}))
 	quit(0 if failures.is_empty() else 1)

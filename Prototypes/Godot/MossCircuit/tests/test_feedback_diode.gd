@@ -98,6 +98,9 @@ func run() -> void:
 		fresh(mode);dash();game._title();check(not game.effects.feedback_armed,mode+" title reset")
 		fresh(mode);dash();game.effects.reset(game.build.items);check(not game.effects.feedback_armed,mode+" stage reset")
 		await process_frame
+	var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
+	audio_teardown.prepare([game])
 	game.queue_free(); await process_frame
+	await audio_teardown.finish(self)
 	print(JSON.stringify({"checks":checks,"failures":failures,"scope":"controlled motor/shared-runtime contact and lifecycle checks; not native gameplay"}))
 	quit(0 if failures.is_empty() else 1)

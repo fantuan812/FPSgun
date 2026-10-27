@@ -91,6 +91,9 @@ func run()->void:
   check(not g._buy(0,gen) and g.build.coins==100,"full weapon slots require selection")
   check(g._buy(0,gen,2) and g.build.weapons[2]=="bankshot_driver" and g.build.coins==58,"explicit replacement exact price")
   check(g.ui.icon("bankshot_driver")!=null and g.ui.icon("bounce_guide")!=null and g.weapon_rig.assets.has("bankshot_driver"),"dedicated assets resolve")
+ var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
+ audio_teardown.prepare([g])
  g.queue_free();await process_frame
+ await audio_teardown.finish(self)
  print(JSON.stringify({"bankshot_build_checks":checks,"failures":failures,"scope":"controlled integration; native appearance and ordinary acquisition separate"}))
  quit(0 if failures.is_empty() else 1)

@@ -100,7 +100,10 @@ func run()->void:
   eq(a.hp,976,"Feedback stays24 with tempered equipment")
   setup(mode,"orbit_saw",{"kill_cell":1});a=spawn(g.player_pos+Vector2(60,0),true);a.hp=1;g.weapon_clocks=[0.0,999.0];step(0)
   ck(hits.size()==1 and hits[0].damage==16 and g.kills==1,"nominal16 overkill/one death");ck(g.pickups.size()==2,"one old energy+normal drop")
+ var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
+ audio_teardown.prepare([g])
  g.queue_free();await process_frame
+ await audio_teardown.finish(self)
  var result:Dictionary={"checks":checks,"failures":failures,"scope":"Controlled all-eight actual primary paths, mixed-copy cadence, snapshot, brace, derived/fixed proc and same-ID Cryo checks; no ordinary/balance/Windows claim."}
  var args:=OS.get_cmdline_user_args()
  if not args.is_empty():FileAccess.open(args[0],FileAccess.WRITE).store_string(JSON.stringify(result,"  ")+"\n")

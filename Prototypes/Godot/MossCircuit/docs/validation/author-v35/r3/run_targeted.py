@@ -1,0 +1,11 @@
+from pathlib import Path
+import os,subprocess,time,json,hashlib
+r=Path('workspace/shared');src=r/'moss-v35-r3';out=r/'moss-v35-r3-prep';env=os.environ.copy()
+for k,v in [('HOME','home'),('XDG_CONFIG_HOME','config'),('XDG_CACHE_HOME','cache'),('XDG_DATA_HOME','data')]:env[k]=str(out/v)
+rows=[]
+def run(name,script,args=[]):
+ start=time.monotonic();p=subprocess.run(['godot','--headless','--audio-driver','Dummy','--path',str(src),'--script',script,*(['--',*args] if args else [])],env=env,capture_output=True,text=True,timeout=180);log=p.stdout+p.stderr;(out/'logs'/(name+'.log')).write_text(log);row={'test':name,'exit':p.returncode,'seconds':round(time.monotonic()-start,3),'error':'ERROR:' in log,'resource_warning':'instances leaked' in log or 'resources still in use' in log};row['pass']=p.returncode==0 and not row['error'] and not row['resource_warning'];rows.append(row);(out/'TARGETED_STEPS.json').write_text(json.dumps(rows,indent=2)+'\n');print(row,flush=True);assert row['pass'],name+' failed; preserved'
+for name in ['test_resolution_validation','test_settlement_levels','test_modes','independent_modes','independent_room_boundaries']:run(name,'res://tests/'+name+'.gd')
+run('old-six-transactions',str(r/'moss-v33-qa/checks/no_temper_transactions.gd'),[str(out/'old-transactions.json')]);run('old-24-combat',str(r/'moss-v33-qa/baseline/no_reorder_trace.gd'),[str(out/'old-combat.json')])
+assert (out/'old-transactions.json').read_bytes()==(r/'moss-v34-qa/baseline/transactions.json').read_bytes();assert (out/'old-combat.json').read_bytes()==(r/'moss-v34-qa/baseline/combat.json').read_bytes()
+m=json.loads((out/'CANDIDATE_INPUTS.json').read_text());changes=[k for k,v in m.items() if hashlib.sha256((src/k).read_bytes()).hexdigest()!=v];report={'all_pass':not changes,'steps':rows,'inputs':len(m),'changed':changes,'six_route_sha256':hashlib.sha256((out/'old-transactions.json').read_bytes()).hexdigest(),'combat24_sha256':hashlib.sha256((out/'old-combat.json').read_bytes()).hexdigest(),'scope':'Focused separate validator correction plus actual6/24 preservation; not full final aggregate'};(out/'TARGETED_GATE.json').write_text(json.dumps(report,indent=2)+'\n');print(report,flush=True);raise SystemExit(0 if not changes else 1)
