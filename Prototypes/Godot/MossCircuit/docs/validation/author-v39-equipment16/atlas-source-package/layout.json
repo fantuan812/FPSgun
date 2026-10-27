@@ -1,0 +1,359 @@
+{
+  "scope": "independent asset-only candidate; explicit replacement of primary icon_manifest not additive extra",
+  "old_atlas": "res://assets/items/equipment_atlas_v2.png",
+  "old_manifest_sha256": "ad978274d7d3e86ce68f02c80e1473b59c3464076765270f1ae3e6612327bb33",
+  "icons": [
+    {
+      "id": "rivet_gun",
+      "name": "铆钉枪",
+      "category": "weapon",
+      "rect": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "old_rect": [
+        0,
+        0,
+        313,
+        313
+      ],
+      "source": "art_source/icons/rivet_gun.svg",
+      "accepted_source_package": "moss-legacy-svg-L1-C2",
+      "source_sha256": "1c64cae97c310a9a18cdbe0a56cadd7de11eb104902bbb337811f3febe88bbfd",
+      "reference_runtime_png": "validation_inputs/accepted_png/rivet_gun.png",
+      "accepted_reference_PNG_sha256": "645e4d37d9d641911d47684746b423eb6f9c495784d0d3f9562df4f840600da6"
+    },
+    {
+      "id": "scrap_shotgun",
+      "name": "废铁散弹枪",
+      "category": "weapon",
+      "rect": [
+        64,
+        0,
+        64,
+        64
+      ],
+      "old_rect": [
+        313,
+        0,
+        314,
+        313
+      ],
+      "source": "art_source/icons/scrap_shotgun.svg",
+      "accepted_source_package": "moss-legacy-svg-L1-C2",
+      "source_sha256": "56bb144abc18deb00f3e2922579431c4c8bf1ede33f07d802461b08705e2f458",
+      "reference_runtime_png": "validation_inputs/accepted_png/scrap_shotgun.png",
+      "accepted_reference_PNG_sha256": "158df1f6e3deb54ff4762fc286c7840ff9857a9a2e4776f59976bb2b251dcc9b"
+    },
+    {
+      "id": "rail_lance",
+      "name": "电磁长枪",
+      "category": "weapon",
+      "rect": [
+        128,
+        0,
+        64,
+        64
+      ],
+      "old_rect": [
+        627,
+        0,
+        313,
+        313
+      ],
+      "source": "art_source/icons/rail_lance.svg",
+      "accepted_source_package": "moss-legacy-svg-L1-C2",
+      "source_sha256": "48348be0a7dae08a5768986ea33fd9e9ab2134d8f07dfcd7669edd2ff516b8fa",
+      "reference_runtime_png": "validation_inputs/accepted_png/rail_lance.png",
+      "accepted_reference_PNG_sha256": "b95842e2224441c4ad9e7f5d33d1a5adb8bb4188acb54fef2eb8b0b79dc5c2ef"
+    },
+    {
+      "id": "orbit_saw",
+      "name": "环绕圆锯",
+      "category": "weapon",
+      "rect": [
+        192,
+        0,
+        64,
+        64
+      ],
+      "old_rect": [
+        940,
+        0,
+        314,
+        313
+      ],
+      "source": "art_source/icons/orbit_saw.svg",
+      "accepted_source_package": "moss-legacy-svg-L1-C2",
+      "source_sha256": "52e6a25e65ebd47918e1c24b2b1e43ed5178ffed37d77123d4324a916e5a6e50",
+      "reference_runtime_png": "validation_inputs/accepted_png/orbit_saw.png",
+      "accepted_reference_PNG_sha256": "2425a94fa6aff259263b3fcdc944c46aadb071b8baf51bdb89cf9fa2b046bbbd"
+    },
+    {
+      "id": "power_coil",
+      "name": "动力线圈",
+      "category": "item",
+      "rect": [
+        0,
+        64,
+        64,
+        64
+      ],
+      "old_rect": [
+        0,
+        313,
+        313,
+        314
+      ],
+      "source": "art_source/icons/power_coil.svg",
+      "accepted_source_package": "moss-legacy-svg-L2",
+      "source_sha256": "5e1bbf27b69b0af7d2164958b609437103d2fb654aeb92a4f740251aef607585",
+      "reference_runtime_png": "validation_inputs/accepted_png/power_coil.png",
+      "accepted_reference_PNG_sha256": "ba01a4b939c6b70340f6985463bba22169170441c2acc42f594ea9e456b04877"
+    },
+    {
+      "id": "cooling_fan",
+      "name": "冷却风扇",
+      "category": "item",
+      "rect": [
+        64,
+        64,
+        64,
+        64
+      ],
+      "old_rect": [
+        313,
+        313,
+        314,
+        314
+      ],
+      "source": "art_source/icons/cooling_fan.svg",
+      "accepted_source_package": "moss-legacy-svg-L2",
+      "source_sha256": "ada31f4aa0ada159414dee427db6181e8c1b573e7b3e68ad947339597ddf2ae4",
+      "reference_runtime_png": "validation_inputs/accepted_png/cooling_fan.png",
+      "accepted_reference_PNG_sha256": "d1dd75a7ae2e9ba53684542e8603b7b28346e989f04049cda2ec6b4317469685"
+    },
+    {
+      "id": "iron_plate",
+      "name": "铁甲板",
+      "category": "item",
+      "rect": [
+        128,
+        64,
+        64,
+        64
+      ],
+      "old_rect": [
+        627,
+        313,
+        313,
+        314
+      ],
+      "source": "art_source/icons/iron_plate.svg",
+      "accepted_source_package": "moss-legacy-svg-L2",
+      "source_sha256": "bfa530ce34468f5974cf6a5399180430e2a833f1f3c23bcf05319edb94e7c6fb",
+      "reference_runtime_png": "validation_inputs/accepted_png/iron_plate.png",
+      "accepted_reference_PNG_sha256": "1f893451e260887c54c0b8e484a095c39949f9ad21c5d9375982133d4f148af1"
+    },
+    {
+      "id": "moss_patch",
+      "name": "苔藓药贴",
+      "category": "item",
+      "rect": [
+        192,
+        64,
+        64,
+        64
+      ],
+      "old_rect": [
+        940,
+        313,
+        314,
+        314
+      ],
+      "source": "art_source/icons/moss_patch.svg",
+      "accepted_source_package": "moss-legacy-svg-L2",
+      "source_sha256": "b0a57e3e0471b03f94f5150017ddbfce60819fa0f5ba6e47035db0ae3387f9a5",
+      "reference_runtime_png": "validation_inputs/accepted_png/moss_patch.png",
+      "accepted_reference_PNG_sha256": "d616001f7cf0e21ce501e23a142cb986e146ab2edb7ce3de83d671dc8bed7250"
+    },
+    {
+      "id": "running_boots",
+      "name": "疾行靴",
+      "category": "item",
+      "rect": [
+        0,
+        128,
+        64,
+        64
+      ],
+      "old_rect": [
+        0,
+        627,
+        313,
+        313
+      ],
+      "source": "art_source/icons/running_boots.svg",
+      "accepted_source_package": "moss-legacy-svg-L2",
+      "source_sha256": "32865d4276f14277dfd98ce57846988e867bfd8ca7fe0bd4a3e11d9f659ae128",
+      "reference_runtime_png": "validation_inputs/accepted_png/running_boots.png",
+      "accepted_reference_PNG_sha256": "00afa3812ac51b4fbb7a16923d49e9f190366a5eb53ba5be748778f1424110a3"
+    },
+    {
+      "id": "salvage_magnet",
+      "name": "废料磁铁",
+      "category": "item",
+      "rect": [
+        64,
+        128,
+        64,
+        64
+      ],
+      "old_rect": [
+        313,
+        627,
+        314,
+        313
+      ],
+      "source": "art_source/icons/salvage_magnet.svg",
+      "accepted_source_package": "moss-legacy-svg-L2",
+      "source_sha256": "00d8a114a0248a25c99dc8995daebdd21cbae62b519e1511410d8403d6a4e06a",
+      "reference_runtime_png": "validation_inputs/accepted_png/salvage_magnet.png",
+      "accepted_reference_PNG_sha256": "60c05040d8c98846d0c8e0612b2cc040f7ecb593a7d22e2ff6ff72540c9df57d"
+    },
+    {
+      "id": "lucky_chip",
+      "name": "幸运芯片",
+      "category": "item",
+      "rect": [
+        128,
+        128,
+        64,
+        64
+      ],
+      "old_rect": [
+        627,
+        627,
+        313,
+        313
+      ],
+      "source": "art_source/icons/lucky_chip.svg",
+      "accepted_source_package": "moss-legacy-svg-L2",
+      "source_sha256": "c250f5c670e398742fb5991401fb8e316c72048d5b86a3ae745d046772533ec4",
+      "reference_runtime_png": "validation_inputs/accepted_png/lucky_chip.png",
+      "accepted_reference_PNG_sha256": "653f9754e80458aa40dec5b17fcb92f074f3c0ee8d8a0b3ef73b108c448041c6"
+    },
+    {
+      "id": "lens",
+      "name": "聚焦透镜",
+      "category": "item",
+      "rect": [
+        192,
+        128,
+        64,
+        64
+      ],
+      "old_rect": [
+        940,
+        627,
+        314,
+        313
+      ],
+      "source": "art_source/icons/lens.svg",
+      "accepted_source_package": "moss-legacy-svg-L2",
+      "source_sha256": "d77d2299946f2a055fa4f84a3281b50069b60443d4fc0ed7a1c128246657aa9e",
+      "reference_runtime_png": "validation_inputs/accepted_png/lens.png",
+      "accepted_reference_PNG_sha256": "3caa081a202143d2d04f8a21fec29dc800358d588a2f6dbdb55b1b76db85c581"
+    },
+    {
+      "id": "capacitor",
+      "name": "电容",
+      "category": "item",
+      "rect": [
+        0,
+        192,
+        64,
+        64
+      ],
+      "old_rect": [
+        0,
+        940,
+        313,
+        314
+      ],
+      "source": "art_source/icons/capacitor.svg",
+      "accepted_source_package": "moss-legacy-svg-L2",
+      "source_sha256": "7acd828432eaed34f271a43a9f75878a0f0dc4d193f9bfcc2d98b6964d7a17c3",
+      "reference_runtime_png": "validation_inputs/accepted_png/capacitor.png",
+      "accepted_reference_PNG_sha256": "1937bb6c457b18d181f8b3ff3e45cdc818a8f1c014e47afb754aa0720780caee"
+    },
+    {
+      "id": "gear",
+      "name": "齿轮",
+      "category": "item",
+      "rect": [
+        64,
+        192,
+        64,
+        64
+      ],
+      "old_rect": [
+        313,
+        940,
+        314,
+        314
+      ],
+      "source": "art_source/icons/gear.svg",
+      "accepted_source_package": "moss-legacy-svg-L2",
+      "source_sha256": "dc06ed04f0f2495159c04fb2fcc630ef8b4103eac06593110f856d5f4daf8de0",
+      "reference_runtime_png": "validation_inputs/accepted_png/gear.png",
+      "accepted_reference_PNG_sha256": "89dae7bd24df40ff762793d6ce029da94c83e64365855b77e260402735e8c764"
+    },
+    {
+      "id": "pellet_pouch",
+      "name": "弹丸袋",
+      "category": "item",
+      "rect": [
+        128,
+        192,
+        64,
+        64
+      ],
+      "old_rect": [
+        627,
+        940,
+        313,
+        314
+      ],
+      "source": "art_source/icons/pellet_pouch.svg",
+      "accepted_source_package": "moss-legacy-svg-L2",
+      "source_sha256": "c142b7034234472ba830fb4ee584f1533a33e1b5f947c692ae6d888d9c0c3bd8",
+      "reference_runtime_png": "validation_inputs/accepted_png/pellet_pouch.png",
+      "accepted_reference_PNG_sha256": "5337c94d21b52c34f5c4c07b932d24ab4fd9e29993d370b4a505f8eb86e2e2f1"
+    },
+    {
+      "id": "recycler",
+      "name": "回收机",
+      "category": "item",
+      "rect": [
+        192,
+        192,
+        64,
+        64
+      ],
+      "old_rect": [
+        940,
+        940,
+        314,
+        314
+      ],
+      "source": "art_source/icons/recycler.svg",
+      "accepted_source_package": "moss-legacy-svg-L2",
+      "source_sha256": "71c4cc802979bdb565b47a548deedd3ba20148554fef998b21d418f722d62373",
+      "reference_runtime_png": "validation_inputs/accepted_png/recycler.png",
+      "accepted_reference_PNG_sha256": "3b89935327e2164f859e39eb668f34fbce68e3abac921c3680e993dd609a799f"
+    }
+  ]
+}

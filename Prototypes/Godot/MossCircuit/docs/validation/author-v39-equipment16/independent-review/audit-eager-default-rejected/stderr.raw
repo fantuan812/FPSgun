@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "evidence-workspace/moss-equipment16-independent-integration-review/audit.py", line 32, in <module>
+    d=new if id in new['icons'] else j(B/'assets/items/expansion_A_icon_manifest.json');a=d['icons'][id];assert e['rect']==a['rect'] and e['name']==a['name'] and e['category']==a['category'];assert e['atlas']==a.get('atlas',d['atlas'])
+                                                                                                                                                                                                                                ~^^^^^^^^^
+KeyError: 'atlas'

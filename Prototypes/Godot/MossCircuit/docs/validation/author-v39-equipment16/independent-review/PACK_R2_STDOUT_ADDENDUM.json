@@ -1,0 +1,9 @@
+{
+  "pass": true,
+  "scope": "Preexecution stdout label correction only; full report errors array and all actual predicates/native exits unchanged",
+  "prior_static_receipt_sha256": "354e27b27a9db6b15f918d0a4d2638762ae5668049999a523151d9b443a81cd5",
+  "plan_sha256": "434e1c9aab15b6469a3784c4655173eaadb6d81501c83b2dd008d8bc318bb38a",
+  "audit_sha256": "ab99e49bb28f0733cab9ea537c6045df7350c2bd026adbd8a38f8be15486f819",
+  "runner_sha256": "d0c455b0c07f75ae0af687d7a0b17cbdb684bd2a3f7f4c478b5d28b2af0981a3",
+  "reason": "Strict generic ERROR regex would also flag successful errors:[] JSON key; print findings label instead, retain original full report."
+}

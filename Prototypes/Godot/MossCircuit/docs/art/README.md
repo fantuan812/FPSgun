@@ -1,3 +1,11 @@
+# Historical equipment-atlas v2 checkpoint
+
+The original document below is retained verbatim as a historical description of the earlier generated 1254-pixel equipment atlas. Its statements about the old atlas being in current use or a final asset describe that past checkpoint, not the v39-equipment16 runtime. The old PNG and its import descriptor are removed from the current source tree, while historical Git commits and this record remain available.
+
+The current replacement is a semantic editable SVG atlas with a derived 256x256 PNG and sixteen 64x64 cells. See [v39-equipment16 scope and verification](../V39_EQUIPMENT16.md). This migration changes one inventory atlas only; other legacy raster assets are not claimed migrated.
+
+---
+
 # Moss Circuit v2 装备图标
 
 - `assets/items/equipment_atlas_v2.png`：实际使用内置 image_gen 生成、再使用 image_gen 修正格间留白；未经代码重绘、抠图或重采样。

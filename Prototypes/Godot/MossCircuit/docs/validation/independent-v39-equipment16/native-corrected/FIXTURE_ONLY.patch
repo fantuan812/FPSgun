@@ -1,0 +1,30 @@
+--- <WORKSPACE>/moss-v39-ui/equipment16-native/cards.gd
++++ <WORKSPACE>/moss-v39-ui/equipment16-native-r2/cards.gd
+@@ -71,7 +71,7 @@
+ func open_build()->bool:
+ 	var b:Button=button("BUILD [I]")
+ 	if b==null:return false
+-	click(b.get_global_rect().get_center());await frames();return g.state=="inventory" and g.ui.modal.visible
++	click(b.get_global_rect().get_center());await frames();return g.state=="inventory" and g.ui.modal_visible()
+ func card(id:String)->void:
+ 	var entry:Dictionary=Rules.catalog_entry(g.catalog,id)
+ 	var prefix:String=str(entry.name)+("  [SLOT " if entry.kind=="weapon" else "  x")
+@@ -108,10 +108,14 @@
+ 	var reverse:Dictionary=await focus_cycle(true);ck(reverse["pass"],"ShiftTab isolation "+name)
+ 	var back:Button=button("BACK")
+ 	if back!=null:click(back.get_global_rect().get_center());await frames()
+-	ck(g.state=="playing" and not g.ui.modal.visible and g.combat.focus_enemy_id==selected,"actual BACK closes no world activation "+name)
+-	var reopened:bool=await open_build();key(KEY_ESCAPE);await frames()
+-	ck(reopened and g.state=="playing" and not g.ui.modal.visible and g.combat.focus_enemy_id==selected,"reopen Escape closes "+name)
+-	groups.append({"name":name,"forward":forward,"reverse":reverse,"selected_before_after":selected})
++	var closed_record:Dictionary={"state":g.state,"modal_visible":g.ui.modal_visible(),"local_panel_visible":g.ui.modal.visible,"focus_enemy":g.combat.focus_enemy_id,"expected_focus_enemy":selected}
++	ck(g.state=="playing" and not g.ui.modal_visible() and g.combat.focus_enemy_id==selected,"actual BACK closes no world activation "+name)
++	var reopened:bool=await open_build()
++	var reopen_record:Dictionary={"state":g.state,"modal_visible":g.ui.modal_visible(),"focus_enemy":g.combat.focus_enemy_id,"open_result":reopened}
++	key(KEY_ESCAPE);await frames()
++	var escaped_record:Dictionary={"state":g.state,"modal_visible":g.ui.modal_visible(),"local_panel_visible":g.ui.modal.visible,"focus_enemy":g.combat.focus_enemy_id,"expected_focus_enemy":selected}
++	ck(reopened and g.state=="playing" and not g.ui.modal_visible() and g.combat.focus_enemy_id==selected,"reopen Escape closes "+name)
++	groups.append({"name":name,"forward":forward,"reverse":reverse,"selected_before_after":selected,"after_back":closed_record,"after_reopen":reopen_record,"after_escape":escaped_record})
+ func _initialize()->void:call_deferred("run")
+ func run()->void:
+ 	var args:PackedStringArray=OS.get_cmdline_user_args()

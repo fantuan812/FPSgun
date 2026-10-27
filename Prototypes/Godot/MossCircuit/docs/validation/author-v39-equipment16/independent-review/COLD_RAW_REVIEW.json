@@ -1,0 +1,60 @@
+{
+  "pass": true,
+  "scope": "Independent raw and full after-map audit of one actual cold import + source UI21 identity; not independent rerun/PCK/native",
+  "plan_sha256": "f30eea6661ed724799dd194f09a29403df86570c7beb28a510febbec3908cc4a",
+  "runner_sha256": "67e5de51fee8339bd84e3be5370c840a3b612e28ec5e9c3cf849f5fca6df51af",
+  "source_files_before": 886,
+  "source_files_after": 888,
+  "added_exact_two_import_sidecars": true,
+  "base869_unchanged": true,
+  "phases": [
+    {
+      "name": "cold_import",
+      "log_sha256": "5abd129537afc1eb0c1bb417a5bbaadedc15be16590ea848d7ba9b1ddc88b312",
+      "exit": 0,
+      "elapsed_seconds": 64.59697393499664
+    },
+    {
+      "name": "actual_UI21_source_identity",
+      "log_sha256": "2a946e25940104c66d2f7b78ee040aab9e02c7f9e1a6aadba6b808708ad2bbfe",
+      "exit": 0,
+      "elapsed_seconds": 1.6863299969991203
+    }
+  ],
+  "checks": 240,
+  "unique_icons": 21,
+  "visible_rgba_all21_exact": true,
+  "raw_rgba_changed_from_source_ids": [
+    "rivet_gun",
+    "scrap_shotgun",
+    "rail_lance",
+    "orbit_saw",
+    "power_coil",
+    "cooling_fan",
+    "iron_plate",
+    "moss_patch",
+    "running_boots",
+    "salvage_magnet",
+    "lucky_chip",
+    "lens",
+    "capacitor",
+    "gear",
+    "pellet_pouch",
+    "recycler",
+    "lock_memory",
+    "recoil_plate",
+    "return_collar",
+    "seismic_drum",
+    "tether_emitter"
+  ],
+  "raw_identity_boundary": "Uncanonicalized imported hashes are separately retained. Only alpha==0 RGB are normalized for visible identity; all alpha and all nonzero-alpha RGB remain exact. This does not assert raw imported/source equality or visual/native readability.",
+  "actual_alias_scope": "Six non-null alias calls only, no alias-specific pixel proof",
+  "merged_stdout_stderr": true,
+  "original_native_exit_source": "Per-command files plus author original wrapper94012 actual tool exit0 reported; reviewer subprocess is not target execution",
+  "remaining": [
+    "actual export and all PCK record/payload checks",
+    "old atlas PNG/.import/ctex absent and source/reference exclusion actual PCK proof",
+    "same UI21 on actual packed resources",
+    "controlled native visual/UI acceptance"
+  ]
+}

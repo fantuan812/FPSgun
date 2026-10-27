@@ -1,0 +1,3 @@
+# Read-only auditor correction
+
+The first static auditor assumed original accepted source/package filenames exactly matched the normalized per-ID atlas filenames. That assumption was false for L1-C2 inventory assets (for example rivet_gun). The assertion failed before any export/engine execution. The original auditor is retained as review_static.before-basename-assumption.py. Corrected discovery matches actual SHA256 across SVG/PNG files in the declared accepted original package, not a guessed basename. No candidate/source/expected pixel bytes were changed. The corrected full static pass separately verifies all sixteen source trees, cells, old ID/name/category/order, and placement.

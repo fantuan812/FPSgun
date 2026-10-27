@@ -1,0 +1,13 @@
+# Equipment16 — author and reproducibility evidence
+
+This bundle covers one editable inventory atlas, its16 semantic SVG cell sources and exact derived PNG, assembly/cold/source texture checks, original resource export failure, corrected same-pack continuation, and independent raw/static reviews. Native original178 PASS, firstcards79/2FAIL, correctedcards145 and49 native captures are in the separate QA bundle, not duplicated here.
+
+The first independent SVG export's strict stderr gate failed despite native0 and matching PNG: Fontconfig cache errors and two wrapping warnings were retained. A separately approved isolated HOME/XDG gate permits only up to one each of the two exact Pango/Gtk wrapping warning bodies per invocation. All other stderr remains rejected. Its one fresh atlas export, complete PNG and16 cell identity checks passed. This is a renderer-only exception, not a Godot warning relaxation or runtime proof.
+
+Initial asset integration886 preserved A869 except19 additions,2 removals and2 changed paths. Cold import added exactly2 sidecars (888). Source UI21 passed240. First resource attempt stopped at5/8 because one exported PNG import descriptor was incorrectly compared with the full source descriptor. That original FAIL is retained. A narrow descriptor-only correction and three previously unrun routes reused the original pack:254-record/MD5/privacy/old-resource absence, source fingerprints, packed968 and UI21/240 passed. Do not relabel the original8-command attempt PASS.
+
+The actual pack is42,250,592bytes, SHA256 fac259f0e5406c8b3ab56f21c4b7bf5113ae58d50fdc02344fbc09b8b273f23d. Packed21 raw imported observations equal source-imported observations; source PNG raw RGBA equality is not asserted because zero-alpha RGB import changes are explicitly recorded.
+
+Original source bytes remain private and immutable. Public evidence is an explicit presentation derivative: machine-local paths and internal coordination labels are replaced by neutral relative labels; scanner marker literals in Python are split into equivalent expressions, and descriptive marker strings in JSON/text become neutral category names. Each artifact records raw/public SHA and whether changed. Original PNG and other binary evidence remain exact. Historical scripts illustrate the pinned run and may contain rebased presentation paths; this is not a guarantee that those evidence scripts are a standalone runnable installation.
+
+No full gameplay rerun, new ordinary playthrough, Windows execution, B expansion, held art migration or other atlas integration is claimed. Other legacy raster assets remain active. Actual delivery restoration and Git publication have separate receipts.

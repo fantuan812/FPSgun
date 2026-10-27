@@ -1,3 +1,11 @@
+# MossCircuit v39-equipment16 — 16 editable inventory icons
+
+Asset-only migration of one old atlas to editable SVG + derived PNG. No new weapon, item, balance, held art or B gameplay changes. See [exact scope and retained failures](docs/V39_EQUIPMENT16.md). The new pack is `fac259f0…`,42,250,592bytes; actual cold/source240, packed968+240, and native178+corrected145 evidence is distinct from inherited A gameplay evidence. One old raster sheet is replaced;55 active legacy raster-authoritative files remain.
+
+Delivery verification is complete:78 historical records retained,80 total,15 chunks/18 paths;10 helper controls and actual A→atlas→A file rollback passed. Git publication remains separate and is recorded only after actual commit/readback. The complete accepted A README follows verbatim as history; its prior current-version wording does not describe this new atlas pack.
+
+---
+
 # MossCircuit v39 A — Locked Pulses and Traveling Rings
 
 Two new attack forms, three mechanic items and two free starters expand the game to **10 weapons / 33 items / 5 starters**. Tether Emitter locks four timed pulses to one target; Seismic Drum launches a narrow traveling ring. Lock Memory, Return Collar and Recoil Plate alter timing, return hits and defensive spacing rather than merely adding a generic multiplier. The four-weapon/eight-distinct-item limits remain. [Mechanics, retained failures and precise evidence](docs/V39_BUILD_EXPANSION_A.md).

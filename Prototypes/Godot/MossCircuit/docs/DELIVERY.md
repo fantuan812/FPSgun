@@ -1,3 +1,11 @@
+# v39-equipment16 resource-only delivery checkpoint
+
+This candidate restores the existing verified executable with the new42,250,592byte PCK `fac259f0e5406c8b3ab56f21c4b7bf5113ae58d50fdc02344fbc09b8b273f23d`. It changes one inventory atlas, not A gameplay. Verified delivery:78 historical catalog records preserved,2 appended (80 total),15 chunks/18 delivery paths. The original stage and checker both exited0. All10 helper cases passed (2 positive and8 negative with their intended rejection reasons), and actual A→atlas→A file backup/replacement/rollback restored both original bytes and modes. This is a local file-level test, not a new runtime or Git-download test. Do not infer Windows execution or new ordinary play. See [verification boundaries](V39_EQUIPMENT16.md).
+
+The complete accepted A delivery document follows verbatim as history; its PCK identity is not the new atlas PCK.
+
+---
+
 # v39 A complete resource pack — bounded local evidence
 
 Both platform preset packs are43,017,204bytes with SHA256 `2d9969dedc30f460e0da61eef49fd224ddd5d54bbc6973e1a76ffa6656a12f56`. The original Linux ELF remains `2c78919325d7f29fa7607287c7c1eeac367ea4c94e7b8b6f5f4c6b20492f73d0`,0755. This is a complete external resource pack, not an executable, ZIP or delta patch. The Windows preset export is not a Windows runtime test.

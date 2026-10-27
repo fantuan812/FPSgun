@@ -1,310 +1,291 @@
 {
   "version": 1,
-  "atlas": "res://assets/items/equipment_atlas_v2.png",
+  "atlas": "res://assets/items/equipment_atlas_editable.png",
   "size": [
-    1254,
-    1254
+    256,
+    256
   ],
   "grid": {
     "columns": 4,
     "rows": 4,
     "order": "row-major",
-    "edges": "floor(i*size/4), no image resampling"
+    "edges": "exact 64-pixel cells"
   },
-  "source_sha256": "5ac0811ec65274ed650c6ed75890561ed27070f4e5f996de14c34a5fdc5fa807",
+  "source_sha256": "69823d89afb0cb1eaaf83d7986a017c591245bb19ee260abaefa8e920fad0bdd",
+  "editable_source": "art_source/equipment_atlas_editable.svg",
+  "svg_sha256": "b0913c265f27d5c2449ad69d7b5f64d86896f0dc2a63a514cbf1173bdd82adb1",
   "icons": {
     "rivet_gun": {
       "rect": [
         0,
         0,
-        313,
-        313
+        64,
+        64
       ],
       "name": "铆钉枪",
       "category": "weapon",
       "visible_alpha_bbox_local": [
-        75,
-        99,
-        249,
-        273
+        12,
+        12,
+        54,
+        56
       ],
-      "cell_rgba_sha256": "8d77a2571aeb2660130653f6673fcf30846dd72cd143558084b7389961af39bc"
+      "cell_rgba_sha256": "3e00f80f4a93cb9be64084d9abfddf0fe83b8ea8b4c3ecb0cb796908f20f2549"
     },
     "scrap_shotgun": {
       "rect": [
-        313,
+        64,
         0,
-        314,
-        313
+        64,
+        64
       ],
       "name": "废铁散弹枪",
       "category": "weapon",
       "visible_alpha_bbox_local": [
-        66,
-        106,
-        261,
-        272
+        9,
+        13,
+        52,
+        54
       ],
-      "cell_rgba_sha256": "8a0a5a5aacd10c2df6f09bca608d4784045baf9e261913200ffb514b81ba7f75"
+      "cell_rgba_sha256": "502a2dfd9f3597eb7d6f7006e1fd38437db46c18d29dc00b2ddb314f9ae2dc17"
     },
     "rail_lance": {
       "rect": [
-        627,
+        128,
         0,
-        313,
-        313
+        64,
+        64
       ],
       "name": "电磁长枪",
       "category": "weapon",
       "visible_alpha_bbox_local": [
-        41,
-        103,
-        258,
-        271
+        5,
+        9,
+        59,
+        56
       ],
-      "cell_rgba_sha256": "e57f5a0b50ccc3d98bec28c0827d974ec71c79cac534e23efa180c7a2aea887e"
+      "cell_rgba_sha256": "c856c7e3fc20f496a63e094ef4cd413d71e979f6d71a52265a855d341b70e121"
     },
     "orbit_saw": {
       "rect": [
-        940,
+        192,
         0,
-        314,
-        313
+        64,
+        64
       ],
       "name": "环绕圆锯",
       "category": "weapon",
       "visible_alpha_bbox_local": [
-        56,
-        104,
-        225,
-        276
+        5,
+        5,
+        59,
+        59
       ],
-      "cell_rgba_sha256": "6e733670659d1f4f3e44fb7bb4a1e64d1f79c4762d0bdd4bd8985a07f3378749"
+      "cell_rgba_sha256": "ecf66ae02b20b6617aaa78d40695e2e461f6cc2175b613cba98c1536124b808e"
     },
     "power_coil": {
       "rect": [
         0,
-        313,
-        313,
-        314
+        64,
+        64,
+        64
       ],
       "name": "动力线圈",
       "category": "item",
       "visible_alpha_bbox_local": [
-        94,
-        72,
-        233,
-        264
+        14,
+        7,
+        50,
+        56
       ],
-      "cell_rgba_sha256": "aeb8beb38992a85d98da9fe5a3fa762360f5549c558f56f32d11ea517b6847db"
+      "cell_rgba_sha256": "c6cec3130c152c10ab3eecb98c57e7b9537c12dfe553aee219a2c7f4483d365a"
     },
     "cooling_fan": {
       "rect": [
-        313,
-        313,
-        314,
-        314
+        64,
+        64,
+        64,
+        64
       ],
       "name": "冷却风扇",
       "category": "item",
       "visible_alpha_bbox_local": [
-        70,
-        75,
-        251,
-        266
+        8,
+        8,
+        56,
+        56
       ],
-      "cell_rgba_sha256": "dc9a80be9864234a76af153c70c2ef03734090bedda108603006191a799bc016"
+      "cell_rgba_sha256": "b3f964ff958d9edc6a5a3e73b53e39dede6a74402a5de1e72ed96bc778896597"
     },
     "iron_plate": {
       "rect": [
-        627,
-        313,
-        313,
-        314
+        128,
+        64,
+        64,
+        64
       ],
       "name": "铁甲板",
       "category": "item",
       "visible_alpha_bbox_local": [
-        67,
-        75,
-        242,
-        265
+        11,
+        8,
+        53,
+        56
       ],
-      "cell_rgba_sha256": "b1e96281f86870c372bd94c8900cde6a9b653590d54bd0cdceab6c997e01acbf"
+      "cell_rgba_sha256": "43db00bf6d968689b4f3b07b885e735fde8cc4c4ca31e6f4d95a0604f42811eb"
     },
     "moss_patch": {
       "rect": [
-        940,
-        313,
-        314,
-        314
+        192,
+        64,
+        64,
+        64
       ],
       "name": "苔藓药贴",
       "category": "item",
       "visible_alpha_bbox_local": [
-        57,
-        88,
-        232,
-        260
+        8,
+        9,
+        56,
+        55
       ],
-      "cell_rgba_sha256": "6c5df2c26c8ea318941805ad37990490e710844a649a4659c9e7843e9e5afaf9"
+      "cell_rgba_sha256": "aac5c27effb7516de6bde6f0ca2df0ed61eef1324411bbe24513c4d388e560de"
     },
     "running_boots": {
       "rect": [
         0,
-        627,
-        313,
-        313
+        128,
+        64,
+        64
       ],
       "name": "疾行靴",
       "category": "item",
       "visible_alpha_bbox_local": [
-        62,
-        64,
-        259,
-        240
+        4,
+        12,
+        54,
+        55
       ],
-      "cell_rgba_sha256": "beb7fafd9954978ac9415446076fc0a8f825a1568e9c82dfea3febd05bab8a63"
+      "cell_rgba_sha256": "248711148b674638ca24c212c2579bb8c8694bb08c9dda2e298f66ce12de3ad4"
     },
     "salvage_magnet": {
       "rect": [
-        313,
-        627,
-        314,
-        313
+        64,
+        128,
+        64,
+        64
       ],
       "name": "废料磁铁",
       "category": "item",
       "visible_alpha_bbox_local": [
-        69,
-        69,
-        249,
-        246
+        8,
+        7,
+        53,
+        51
       ],
-      "cell_rgba_sha256": "caaa270053c17ff86cf24b7e4985fe5ed1323110c42876af7f68f066b2843558"
+      "cell_rgba_sha256": "a98af0c8c65080ac58a9880d46507821364d1b4d51a0b4612cef529208a66da4"
     },
     "lucky_chip": {
       "rect": [
-        627,
-        627,
-        313,
-        313
+        128,
+        128,
+        64,
+        64
       ],
       "name": "幸运芯片",
       "category": "item",
       "visible_alpha_bbox_local": [
-        57,
-        65,
-        242,
-        239
+        6,
+        6,
+        58,
+        58
       ],
-      "cell_rgba_sha256": "2c08bebb99e2d6a8435e2782a9977547e908b04883b091d8b6d403bca3aebee1"
+      "cell_rgba_sha256": "bf2cc616176347c3bf92d4fe554ec983d9b62b067283732c00e676330a936efb"
     },
     "lens": {
       "rect": [
-        940,
-        627,
-        314,
-        313
+        192,
+        128,
+        64,
+        64
       ],
       "name": "聚焦透镜",
       "category": "item",
       "visible_alpha_bbox_local": [
-        58,
-        62,
-        248,
-        232
+        7,
+        6,
+        59,
+        56
       ],
-      "cell_rgba_sha256": "18173463c60f8659e95515fbc93c10e382c2037896ac1f57848df6731066d728"
+      "cell_rgba_sha256": "567b6c41e236d2fd62651c8cf80e5c19271b951374c4ccbb2c800f0292e1859e"
     },
     "capacitor": {
       "rect": [
         0,
-        940,
-        313,
-        314
+        192,
+        64,
+        64
       ],
       "name": "电容",
       "category": "item",
       "visible_alpha_bbox_local": [
-        80,
-        36,
-        245,
-        215
+        10,
+        6,
+        52,
+        58
       ],
-      "cell_rgba_sha256": "54acefec0d07b7578b51d26aae657e312edc850005133d0071dbaddca8ca1fd2"
+      "cell_rgba_sha256": "2f524c1715b4179f3aca5d23d1ad05a74f3948c55a44712957c3a24ea41d667b"
     },
     "gear": {
       "rect": [
-        313,
-        940,
-        314,
-        314
+        64,
+        192,
+        64,
+        64
       ],
       "name": "齿轮",
       "category": "item",
       "visible_alpha_bbox_local": [
-        69,
-        29,
-        254,
-        211
+        5,
+        5,
+        59,
+        59
       ],
-      "cell_rgba_sha256": "f6b29fb90555f343fb12fbc00ecada7d3a0d0ae3f30faee8476aed515407a19f"
+      "cell_rgba_sha256": "282348686ff7a0abe07dfe231eb07373f91890f5a462e5610baba9d471411938"
     },
     "pellet_pouch": {
       "rect": [
-        627,
-        940,
-        313,
-        314
+        128,
+        192,
+        64,
+        64
       ],
       "name": "弹丸袋",
       "category": "item",
       "visible_alpha_bbox_local": [
-        60,
-        29,
-        241,
-        218
+        10,
+        9,
+        53,
+        56
       ],
-      "cell_rgba_sha256": "a5560bbf676006502d10b6572f08131a8e804fb55de9b14a4485f8d4185ad97c"
+      "cell_rgba_sha256": "616a82d24eb08620535fc21b7701cdfa6681b4e763bca0cf5ea909e6db2b4a47"
     },
     "recycler": {
       "rect": [
-        940,
-        940,
-        314,
-        314
+        192,
+        192,
+        64,
+        64
       ],
       "name": "回收机",
       "category": "item",
       "visible_alpha_bbox_local": [
-        56,
-        27,
-        242,
-        216
+        9,
+        7,
+        55,
+        55
       ],
-      "cell_rgba_sha256": "5b1dd9c2d3cc31a7066a02ed96cbe96beaedf3b3302dbe84421b8f44a675a275"
+      "cell_rgba_sha256": "f645d5f231ab8b2775821567d40b44a7e57aa355cc473ed4af9182d17a18d7e2"
     }
-  },
-  "generation": {
-    "tool": "image_gen built-in",
-    "generated_at": "2026-10-22",
-    "prompt": "docs/art/equipment_generation_prompt.txt",
-    "original_generation": "exec-e1ebfb2b-efeb-43aa-99d2-4eb0d2028215.png",
-    "packing_repair": "exec-14ab93cb-d390-484a-aecd-f113e470a065.png",
-    "pixel_edits": "None. Copied PNG byte-for-byte; Godot AtlasTexture slices only."
-  },
-  "qa": {
-    "catalog_count": 16,
-    "nonempty_cells": 16,
-    "unique_cell_hashes": 16,
-    "visible_alpha_threshold": 32,
-    "all_visible_content_inside_cell": true,
-    "transparent_background": true,
-    "caveats": [
-      "Generated art has tiny near-transparent alpha residue below 9/255 outside visible silhouettes. Original alpha preserved.",
-      "Pixel-art look, not guaranteed strict low-resolution pixel grid; use nearest filtering and no mipmaps.",
-      "Square source is 1254px; cell widths alternate 313/314px. Exact rects avoid seams."
-    ]
   }
 }

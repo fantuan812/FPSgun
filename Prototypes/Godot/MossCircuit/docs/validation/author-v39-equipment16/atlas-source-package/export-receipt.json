@@ -1,0 +1,15 @@
+{
+  "scope": "author atlas composition/export evidence only; independent QA/cold/PCK/native pending",
+  "start_utc": "2026-10-27T10:19:14.404571383Z",
+  "end_utc": "2026-10-27T10:19:16.404920651Z",
+  "command": "export_atlas.py twice + cmp main manifest/composition checks",
+  "observed_exit": 0,
+  "repeat_PNG_and_manifest_identical": true,
+  "all_16_cells_full_RGBA_equal_accepted_independent_PNGs": true,
+  "engine_runs": 0,
+  "production_writes": 0,
+  "main_manifest_sha256": "7b873a7ca56109d3b351cac7a4d6e415d718ade3cd48afb3fc08dc909da0f430",
+  "atlas_PNG_sha256": "69823d89afb0cb1eaaf83d7986a017c591245bb19ee260abaefa8e920fad0bdd",
+  "atlas_SVG_sha256": "b0913c265f27d5c2449ad69d7b5f64d86896f0dc2a63a514cbf1173bdd82adb1",
+  "portability_note": "After render, accepted comparison PNGs copied byte-identically to validation_inputs/accepted_png and comparison lookup made relative. Geometry, SVG, atlas PNG and main manifest unchanged; no additional render."
+}

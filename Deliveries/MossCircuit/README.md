@@ -1,3 +1,7 @@
+## v39-equipment16 — editable inventory atlas
+
+One legacy inventory sheet is replaced by an editable SVG atlas/derived PNG containing16 existing icons. No gameplay, held art or B expansion changes. See [restoration and exact evidence boundaries](v39-equipment16/READ_ME_v39-equipment16.txt). The accepted A delivery README below remains verbatim history; this pack has a different identity. Actual source publication is recorded separately in SOURCE_VERSIONS only after a reachable commit.
+
 ## v39 A 本地验证：锁定脉冲与往返震波
 
 新增2武器、3机制道具与2免费起始构筑（10武器/33道具/5起始套装），新增7图为可编辑SVG导出。原full149/151 FAIL保留；仅两测试+MANIFEST修订后的cold903/837/124与不变旧149组成明确证据，不虚称第二151/151。实际PCK/受控native与普通尝试分别归属。详见[v39恢复与验证边界](v39/READ_ME_v39.txt)。

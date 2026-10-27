@@ -1,0 +1,18 @@
+{
+  "diagnosis_confirmed": true,
+  "original_gate_pass": false,
+  "original_failed_assertion": "Exact full source .import bytes equality to exported .import",
+  "only_failed_inventory_error": [
+    "source bytes differ assets/items/equipment_atlas_editable.png.import"
+  ],
+  "pck_sha256": "fac259f0e5406c8b3ab56f21c4b7bf5113ae58d50fdc02344fbc09b8b273f23d",
+  "pck_bytes": 42250592,
+  "records": 254,
+  "member": "assets/items/equipment_atlas_editable.png.import",
+  "source_sha256": "9ba89aa6dc371577e3611810ceaa47b656004377f78bdf578559160c1420c49a",
+  "packed_sha256": "19998999af3fa632b98a9afeb16a17f321218c522802d579145590dc82692af9",
+  "packed_bytes": 212,
+  "exact_observed_transformation": "Preserve source remap section bytes through metadata close, one newline then one trailing NUL; remove source deps and params sections. No remap value changes.",
+  "proposed_narrow_new_oracle": "For this specific member only assert actual==source remap prefix stripped trailing newlines + newline+NUL, plus exact current source/PCK pins and remap ctex exists. Keep all other exact files/MD5/privacy/old resource absence gates unchanged. Do not rerun export; new audit plus previously NOT_RUN remaining routes require QA/root scope approval.",
+  "not_established": "No actual packed-resource/UI21/native pass yet; export-only does not establish final acceptance."
+}

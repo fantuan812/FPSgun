@@ -1,0 +1,51 @@
+{
+  "pass": true,
+  "scope": "Independent read-only full source identity and static integration/oracle review; no Godot import, export, PCK or native execution",
+  "base_files": 869,
+  "candidate_files": 886,
+  "added": [
+    "art_source/equipment_atlas_editable.svg",
+    "art_source/icons/.gdignore",
+    "art_source/icons/capacitor.svg",
+    "art_source/icons/cooling_fan.svg",
+    "art_source/icons/gear.svg",
+    "art_source/icons/iron_plate.svg",
+    "art_source/icons/lens.svg",
+    "art_source/icons/lucky_chip.svg",
+    "art_source/icons/moss_patch.svg",
+    "art_source/icons/orbit_saw.svg",
+    "art_source/icons/pellet_pouch.svg",
+    "art_source/icons/power_coil.svg",
+    "art_source/icons/rail_lance.svg",
+    "art_source/icons/recycler.svg",
+    "art_source/icons/rivet_gun.svg",
+    "art_source/icons/running_boots.svg",
+    "art_source/icons/salvage_magnet.svg",
+    "art_source/icons/scrap_shotgun.svg",
+    "assets/items/equipment_atlas_editable.png"
+  ],
+  "removed": [
+    "assets/items/equipment_atlas_v2.png",
+    "assets/items/equipment_atlas_v2.png.import"
+  ],
+  "changed": [
+    "assets/items/icon_manifest.json",
+    "export_presets.cfg"
+  ],
+  "source_pin_sha256": "f11dc8236542bc8f3a3f96e605255dcd9c5ed96b8338d8139a67633739701268",
+  "production_code_data_scenes_tests_unchanged": true,
+  "primary_16_ids_order_names_categories_preserved": true,
+  "rects_new_64px_grid_match_accepted_atlas": true,
+  "audit_correction": "First read-only audit incorrectly assumed old 1254px rects/provenance should equal new 256px SVG atlas. Original AssertionError retained; corrected check uses approved atlas full manifest equality plus old IDs/order/names/categories. Not an asset or target failure. Second audit-only KeyError from eager Python default d[atlas] on per-entry A atlas corrected to d.get; original retained.",
+  "A5_manifest_original": true,
+  "expected_21_pixels_recomputed": true,
+  "normalization": "Runtime visible RGBA permits RGB normalization ONLY at alpha zero; preserves every alpha and every nonzero-alpha RGB, raw hashes separately reported; not raw imported RGBA equality or visual quality proof. Source PNG raw bytes match accepted atlas exactly.",
+  "static_fixture_review": "Actual MossUI ready merge/icon and AtlasTexture paths/rect/filter_clip are used; both manifest and expected rects parsed JSON numbers. Six aliases only non-null coverage, not six extra pixel identities.",
+  "pending": [
+    "cold import and real UI icon identity",
+    "actual PCK absence old PNG/import/ctex and excluded sources/references",
+    "native visual readability"
+  ],
+  "historical_docs": "Untouched tested baseline still contains historical private labels; eventual release must use already-published v39 presentation mapping, not publish raw historical docs.",
+  "manifest": "Source MANIFEST inherited stale until final source freeze; not claimed final release manifest."
+}

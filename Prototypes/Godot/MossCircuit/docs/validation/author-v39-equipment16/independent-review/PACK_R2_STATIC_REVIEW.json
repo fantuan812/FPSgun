@@ -1,0 +1,18 @@
+{
+  "pass": true,
+  "scope": "Static exact-member serialization correction and finite continuation review; no re-export or target execution",
+  "plan_sha256": "c777202a7a39fad484c319e0b878e7bd082175bcda58e185fbb40f790ee9e55f",
+  "runner_sha256": "d0c455b0c07f75ae0af687d7a0b17cbdb684bd2a3f7f4c478b5d28b2af0981a3",
+  "original_5of8_gate_still_failed": true,
+  "new_routes": [
+    "corrected PCK audit",
+    "previously not run source fingerprint",
+    "previously not run packed968",
+    "previously not run packed UI21/240"
+  ],
+  "specific_import_rule": "Only equipment_atlas_editable.png.import: exact original remap prefix + LF + NUL. All other required files unchanged; exact pack pinned.",
+  "diagnosis_sha256": "0f6bf6d0870669bcddaab3cdc9d1b8ac2bf788a61d79648049d5a2c71dc8753a",
+  "budget": "First3 share180s, UI90s; not rerun exports",
+  "source_and_dual_pack_before_after_guards": true,
+  "no_Godot_warning_exception": true
+}

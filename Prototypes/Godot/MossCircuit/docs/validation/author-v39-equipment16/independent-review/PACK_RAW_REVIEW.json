@@ -1,0 +1,80 @@
+{
+  "pass": true,
+  "scope": "Independent raw/readback audit; combined original resource export4PASS+original auditFAIL retained+new corrected audit and previously unrun3 routesPASS. Not original8routeallPASS, no independent engine rerun/nativeGUI/Windows runtime",
+  "pck_sha256": "fac259f0e5406c8b3ab56f21c4b7bf5113ae58d50fdc02344fbc09b8b273f23d",
+  "pck_bytes": 42250592,
+  "both_preset_packs_exact": true,
+  "records": 254,
+  "all_MD5_valid": true,
+  "wholebytes_privacy_markers_absent": true,
+  "oldPNG_import_ctex_UID_and_reference_payloads_absent": true,
+  "specific_import_normalization_only": "assets/items/equipment_atlas_editable.png.import",
+  "source888_base869_unchanged": true,
+  "generic_checks": 968,
+  "exact_files": 78,
+  "images": 69,
+  "actions": 28,
+  "frames": 308,
+  "UI_checks": 240,
+  "UI_unique_icons": 21,
+  "packed_UI_raw_source_imported_exact": true,
+  "source_PNG_raw_equality_not_claimed": true,
+  "original_fail_retained": true,
+  "raw": [
+    {
+      "run": "pack-gate",
+      "phase": "engine-version",
+      "native_exit": 0,
+      "sha256": "1e07780c365549219ffd8e6bd120a818c80424e8295d4ee7451c10d0ed0fa84f"
+    },
+    {
+      "run": "pack-gate",
+      "phase": "python-safety",
+      "native_exit": 0,
+      "sha256": "c368d223aa5a5329e47c36779bce9f00bc20e3b012d46f95f3a1293ad2972fc5"
+    },
+    {
+      "run": "pack-gate",
+      "phase": "linux-pack",
+      "native_exit": 0,
+      "sha256": "99d0a89bed7a4c1e593542c6512789cfd9239a8d7ee7277ddd7d0e47b0916352"
+    },
+    {
+      "run": "pack-gate",
+      "phase": "windows-pack",
+      "native_exit": 0,
+      "sha256": "99d0a89bed7a4c1e593542c6512789cfd9239a8d7ee7277ddd7d0e47b0916352"
+    },
+    {
+      "run": "pack-gate",
+      "phase": "actual-pck-enumeration",
+      "native_exit": 1,
+      "sha256": "ee0eff92a385eaf370e4031836eb53e4b1bced3568e20b1535c19047a66454cc"
+    },
+    {
+      "run": "pack-gate-r2",
+      "phase": "actual-pck-enumeration",
+      "native_exit": 0,
+      "sha256": "14ccff8897dd14ccfa6fd8c2f1b86fe874088433289ca08b36108c7ce82e7275"
+    },
+    {
+      "run": "pack-gate-r2",
+      "phase": "source-fingerprint",
+      "native_exit": 0,
+      "sha256": "cbfbe9ca6c3a89945cb9bb93d85189abd370e658caf6eff1008724e51d3ce322"
+    },
+    {
+      "run": "pack-gate-r2",
+      "phase": "packed-resources",
+      "native_exit": 0,
+      "sha256": "aa28902a49978dda7612d4f77457a8e7dced9dc389536307c0f1fb677befd37c"
+    },
+    {
+      "run": "pack-gate-r2",
+      "phase": "actual_UI21_packed_identity",
+      "native_exit": 0,
+      "sha256": "2a946e25940104c66d2f7b78ee040aab9e02c7f9e1a6aadba6b808708ad2bbfe"
+    }
+  ],
+  "remaining": "Separate native UI/visual acceptance and final source/release documentation freeze; not yet authorized publication"
+}

@@ -1,0 +1,37 @@
+{
+  "scope": "Python-only strict_audio function extracted from candidate runner; no Godot/target execution or replacement of native gate",
+  "runner_sha256": "ab9963f3695a04a8e31b2f97d5afbcf7204cce10ad11d06fae87f0cbc17f4482",
+  "cases": [
+    {
+      "name": "historical valid helper as positive parser fixture",
+      "expected": true,
+      "actual": true
+    },
+    {
+      "name": "wrongrequired",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "name": "nonfinitemix",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "name": "boolmix",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "name": "lastownerlive",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "name": "early release still pending legal",
+      "expected": true,
+      "actual": true
+    }
+  ],
+  "pass": true
+}

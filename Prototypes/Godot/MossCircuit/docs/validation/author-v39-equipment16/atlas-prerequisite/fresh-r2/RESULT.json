@@ -1,0 +1,38 @@
+{
+  "pass": true,
+  "native_exit": 0,
+  "error": null,
+  "after_guard_error": null,
+  "seconds": 1.0190284252166748,
+  "warning_classification": {
+    "pass": true,
+    "counts": {
+      "pango": 1,
+      "gtk": 1
+    },
+    "normalized": [
+      "** (inkscape:<PID>): WARNING **: <TIME>: Failed to wrap object of type 'PangoFT2FontMap'. Hint: this error is commonly caused by failing to call a library init() function.",
+      "** (inkscape:<PID>): WARNING **: <TIME>: Failed to wrap object of type 'GtkRecentManager'. Hint: this error is commonly caused by failing to call a library init() function."
+    ],
+    "scope": "Only up to one each exact PangoFT2FontMap/GtkRecentManager warning; other stderr rejected"
+  },
+  "verified_cell_ids": [
+    "rivet_gun",
+    "scrap_shotgun",
+    "rail_lance",
+    "orbit_saw",
+    "power_coil",
+    "cooling_fan",
+    "iron_plate",
+    "moss_patch",
+    "running_boots",
+    "salvage_magnet",
+    "lucky_chip",
+    "lens",
+    "capacitor",
+    "gear",
+    "pellet_pouch",
+    "recycler"
+  ],
+  "scope": "New preapproved bounded stderr gate: up to one each exact two known GObject warnings; all other stderr rejected. One independently rendered atlas/all16 cells, not runtime/native; original strict FAIL retained"
+}

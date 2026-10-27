@@ -1,0 +1,149 @@
+{
+  "pass": false,
+  "completed": 5,
+  "pck_sha256": "fac259f0e5406c8b3ab56f21c4b7bf5113ae58d50fdc02344fbc09b8b273f23d",
+  "phases": [
+    {
+      "phase": "engine-version",
+      "command": [
+        "godot",
+        "--headless",
+        "--version"
+      ],
+      "start_utc": "2026-10-27T13:53:17.738152+00:00",
+      "end_utc": "2026-10-27T13:53:19.246554+00:00",
+      "elapsed_seconds": 1.5084344209899427,
+      "started": true,
+      "effective_timeout_seconds": 30.0,
+      "resource_group_elapsed_seconds": 1.5084419259947026,
+      "exit": 0,
+      "timeout": false,
+      "launch_error": null,
+      "guards_error": [],
+      "strict_log_findings": [],
+      "source_888_unchanged": true,
+      "base_869_unchanged": true,
+      "test_pins_unchanged": true,
+      "plan_unchanged": true,
+      "raw_stream": "original stdout/stderr merged",
+      "pass": true
+    },
+    {
+      "phase": "python-safety",
+      "command": [
+        "python",
+        "evidence-workspace/moss-equipment16-integration-candidate/tests/test_export_tools.py"
+      ],
+      "start_utc": "2026-10-27T13:53:19.249934+00:00",
+      "end_utc": "2026-10-27T13:53:20.552400+00:00",
+      "elapsed_seconds": 1.3024881769961212,
+      "started": true,
+      "effective_timeout_seconds": 90.0,
+      "resource_group_elapsed_seconds": 2.8142878639919218,
+      "exit": 0,
+      "timeout": false,
+      "launch_error": null,
+      "guards_error": [],
+      "strict_log_findings": [],
+      "source_888_unchanged": true,
+      "base_869_unchanged": true,
+      "test_pins_unchanged": true,
+      "plan_unchanged": true,
+      "raw_stream": "original stdout/stderr merged",
+      "pass": true
+    },
+    {
+      "phase": "linux-pack",
+      "command": [
+        "godot",
+        "--headless",
+        "--path",
+        "evidence-workspace/moss-equipment16-integration-candidate",
+        "--export-pack",
+        "Linux x86_64",
+        "evidence-workspace/moss-equipment16-integration-review/pack-gate/linux/MossCircuit.pck"
+      ],
+      "start_utc": "2026-10-27T13:53:20.560348+00:00",
+      "end_utc": "2026-10-27T13:53:32.884955+00:00",
+      "elapsed_seconds": 12.324629873997765,
+      "started": true,
+      "effective_timeout_seconds": 236.52610208500118,
+      "resource_group_elapsed_seconds": 15.146844277987839,
+      "exit": 0,
+      "timeout": false,
+      "launch_error": null,
+      "guards_error": [],
+      "strict_log_findings": [],
+      "source_888_unchanged": true,
+      "base_869_unchanged": true,
+      "test_pins_unchanged": true,
+      "plan_unchanged": true,
+      "raw_stream": "original stdout/stderr merged",
+      "pck_sha256": "fac259f0e5406c8b3ab56f21c4b7bf5113ae58d50fdc02344fbc09b8b273f23d",
+      "pass": true
+    },
+    {
+      "phase": "windows-pack",
+      "command": [
+        "godot",
+        "--headless",
+        "--path",
+        "evidence-workspace/moss-equipment16-integration-candidate",
+        "--export-pack",
+        "Windows x86_64",
+        "evidence-workspace/moss-equipment16-integration-review/pack-gate/windows/MossCircuit.pck"
+      ],
+      "start_utc": "2026-10-27T13:53:33.073954+00:00",
+      "end_utc": "2026-10-27T13:53:43.493538+00:00",
+      "elapsed_seconds": 10.41991488399799,
+      "started": true,
+      "effective_timeout_seconds": 224.1030850570096,
+      "resource_group_elapsed_seconds": 25.75573615898611,
+      "exit": 0,
+      "timeout": false,
+      "launch_error": null,
+      "guards_error": [],
+      "strict_log_findings": [],
+      "source_888_unchanged": true,
+      "base_869_unchanged": true,
+      "test_pins_unchanged": true,
+      "plan_unchanged": true,
+      "raw_stream": "original stdout/stderr merged",
+      "preset_pack_bytes_identical": true,
+      "pass": true
+    },
+    {
+      "phase": "actual-pck-enumeration",
+      "command": [
+        "python",
+        "evidence-workspace/moss-equipment16-integration-review/pack-prep/audit_pck.py",
+        "evidence-workspace/moss-equipment16-integration-review/pack-gate/linux/MossCircuit.pck",
+        "evidence-workspace/moss-equipment16-integration-review/pack-gate/PCK_INVENTORY.json"
+      ],
+      "start_utc": "2026-10-27T13:53:43.821238+00:00",
+      "end_utc": "2026-10-27T13:53:45.918861+00:00",
+      "elapsed_seconds": 2.097645726011251,
+      "started": true,
+      "effective_timeout_seconds": 60.0,
+      "resource_group_elapsed_seconds": 28.180748990998836,
+      "exit": 1,
+      "timeout": false,
+      "launch_error": null,
+      "guards_error": [],
+      "strict_log_findings": [
+        {
+          "line": 1,
+          "text": "{\"pass\": false, \"files\": 254, \"errors\": [\"source bytes differ assets/items/equipment_atlas_editable.png.import\"], \"pck_sha256\": \"fac259f0e5406c8b3ab56f21c4b7bf5113ae58d50fdc02344fbc09b8b273f23d\"}"
+        }
+      ],
+      "source_888_unchanged": true,
+      "base_869_unchanged": true,
+      "test_pins_unchanged": true,
+      "plan_unchanged": true,
+      "raw_stream": "original stdout/stderr merged",
+      "postcondition_error": "AssertionError()",
+      "pass": false
+    }
+  ],
+  "scope": "resource-only two preset PCKs, actual fullpack privacy/oldatlasabsence, source-imported full resource parity, packed UI21. No originalfull151 rerun, no nativeGUI/Windows runtime, no release/upload"
+}

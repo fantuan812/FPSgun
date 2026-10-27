@@ -1,0 +1,36 @@
+{
+  "status": "BOUNDED_ASSET_SOURCE_AND_FRESH_EXPORT_PASS_NOT_RUNTIME_ACCEPTED",
+  "static": {
+    "path": "STATIC_REVIEW.json",
+    "sha256": "b85bb8560bc9493b9446a8b9abc82f9c98229b27a24907557813bc316922bccf"
+  },
+  "original_strict_gate": {
+    "pass": false,
+    "path": "fresh-first/RESULT.json",
+    "sha256": "a67b72becc2643ff9f0a35f00f4835d72a63e7c4decaeb37cec7d7a6629dfdac",
+    "cause": "Fontconfig31 error lines and two GObject warnings rejected by original strict substring gate; native0 and equalPNG did not override failure"
+  },
+  "new_bounded_gate": {
+    "path": "fresh-r2/RESULT.json",
+    "sha256": "e0290fa62254b7a89ff41156ee07aa3e1ba54bbf9b6f1dd83d200bb1958bd29b",
+    "pass": true,
+    "native_exit": 0,
+    "wrapper_exit": 0,
+    "warnings": {
+      "PangoFT2FontMap": 1,
+      "GtkRecentManager": 1
+    },
+    "only_exact_two_warning_exception": true,
+    "fontconfig_errors": 0,
+    "cells": 16,
+    "plan_sha256": "7455b62aba820a2f7e3a5fe0821cf6822ef9bcc186dcf18dc846d9d92461cfae"
+  },
+  "candidate_manifest_sha256": "7b873a7ca56109d3b351cac7a4d6e415d718ade3cd48afb3fc08dc909da0f430",
+  "not_established": [
+    "production integration",
+    "actual imported texture",
+    "PCK old atlas/resource absence",
+    "native consuming UI visibility"
+  ],
+  "no_candidate_mutation": true
+}

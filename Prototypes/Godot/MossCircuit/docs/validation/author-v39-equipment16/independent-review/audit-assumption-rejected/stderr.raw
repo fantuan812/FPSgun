@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "evidence-workspace/moss-equipment16-independent-integration-review/audit.py", line 16, in <module>
+    old=j(B/'assets/items/icon_manifest.json');new=j(T/'assets/items/icon_manifest.json');assert old['icons']==new['icons'] and len(new['icons'])==16;assert set(old)==set(new);assert {k:v for k,v in old.items() if k!='atlas'}=={k:v for k,v in new.items() if k!='atlas'}
+                                                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

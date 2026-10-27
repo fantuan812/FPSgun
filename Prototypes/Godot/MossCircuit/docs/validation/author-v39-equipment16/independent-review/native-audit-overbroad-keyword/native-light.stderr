@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "evidence-workspace/moss-equipment16-independent-integration-review/audit_native_light.py", line 6, in <module>
+    p=Ureview-role/phase;r=J(p/'RESULT.json');log=(p/'native.log').read_text();assert r['exit']==rc==int((p/'native.exit').read_text()) and r['report']['checks']==count;assert not r['timeout'] and not r['runner_errors'] and not r['json_marker_errors'];assert not re.search(r'ERROR|SCRIPT ERROR|Parse Error|leaked|Orphan',log,re.I)
+                                                                                                                                                                                                                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

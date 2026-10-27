@@ -1,0 +1,24 @@
+{
+  "overall_pass": false,
+  "original_wrapper_exit": 1,
+  "actual178_pass": true,
+  "cards_original_checks": 79,
+  "cards_original_failures": [
+    "actual BACK closes no world activation legacy_first",
+    "reopen Escape closes legacy_first"
+  ],
+  "cards_original_records": 12,
+  "source_pck_pins_unchanged": true,
+  "diagnosis": "Production hide_modal hides shade, not local modal.visible. Public modal_visible reports shade visibility. Original fixture used wrong local property; static evidence only, original raw lacks separate state predicate values.",
+  "repair_scope": "external3 public API calls; preserved145 original assertions; per-close telemetry added. No production/assets/PCK changes. No rerun of178.",
+  "tool_prelaunch": "cua typeText terminal47 refused noneditable before input/launch; documented typeCharacters then screenshot verified command before sole Return. Not a game retry.",
+  "raw_pins": {
+    "<WORKSPACE>/moss-v39-ui/equipment16-native/PLAN.json": "a938dde2c98d214bf07eff7822445477ca026f30939623e8c107b1146440076a",
+    "<WORKSPACE>/moss-v39-ui/equipment16-native/cards.gd": "a6cceadea1414809b6b0edb7575fbaceb7ab124c1bf08b846b9021ec1fcd8bca",
+    "<WORKSPACE>/moss-v39-ui/equipment16-native/actual_ui/RESULT.json": "33a62ed185f1237659967fe5fab31fb9087b3b31313b104047507d7f8e82c660",
+    "<WORKSPACE>/moss-v39-ui/equipment16-native/actual_ui/native.log": "99f6a459b361ffe4e6b0ee245cf598ec78af15e589f11f73e4500adfdaa7a995",
+    "<WORKSPACE>/moss-v39-ui/equipment16-native/cards21/RESULT.json": "16d7a1ed397ddc036841e057132436689cad3ab19e5a2a99d79a5f592b4c3096",
+    "<WORKSPACE>/moss-v39-ui/equipment16-native/cards21/native.log": "c7ba2d355c4c7fa15d3ea4439818b925cd4431b692eec02c7c1ebad8dbabd8e3",
+    "<WORKSPACE>/moss-v39-ui/equipment16-native/wrapper.exit": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+  }
+}

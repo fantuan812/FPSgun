@@ -1,0 +1,118 @@
+{
+  "status": "FROZEN_QA_APPROVED",
+  "source": "evidence-workspace/moss-equipment16-integration-candidate",
+  "base": "evidence-workspace/moss-v39-final-r2",
+  "source_input_map": "evidence-workspace/moss-equipment16-integration-review/POST_IMPORT_888_PINS.json",
+  "output": "evidence-workspace/moss-equipment16-integration-review/pack-gate-r2",
+  "phases": [
+    {
+      "name": "actual-pck-enumeration",
+      "command": [
+        "python",
+        "evidence-workspace/moss-equipment16-integration-review/pack-prep-r2/audit_pck.py",
+        "evidence-workspace/moss-equipment16-integration-review/pack-gate/linux/MossCircuit.pck",
+        "evidence-workspace/moss-equipment16-integration-review/pack-gate-r2/PCK_INVENTORY.json"
+      ],
+      "timeout_seconds": 60
+    },
+    {
+      "name": "source-fingerprint",
+      "command": [
+        "godot",
+        "--headless",
+        "--path",
+        "evidence-workspace/moss-equipment16-integration-candidate",
+        "--script",
+        "res://tools/export_source_fingerprint.gd",
+        "--",
+        "evidence-workspace/moss-equipment16-integration-review/pack-prep-r2/expected-resources.json",
+        "evidence-workspace/moss-equipment16-integration-review/pack-gate-r2/source-imported-fingerprints.json"
+      ],
+      "timeout_seconds": 180
+    },
+    {
+      "name": "packed-resources",
+      "command": [
+        "godot",
+        "--headless",
+        "--path",
+        "evidence-workspace/moss-equipment16-integration-review/pack-gate-r2/empty-runtime",
+        "--main-pack",
+        "evidence-workspace/moss-equipment16-integration-review/pack-gate/linux/MossCircuit.pck",
+        "--script",
+        "evidence-workspace/moss-equipment16-integration-candidate/tools/verify_export_pack.gd",
+        "--",
+        "evidence-workspace/moss-equipment16-integration-review/pack-gate-r2/source-imported-fingerprints.json",
+        "evidence-workspace/moss-equipment16-integration-review/pack-gate-r2/packed-resource-report.json"
+      ],
+      "timeout_seconds": 180
+    },
+    {
+      "name": "actual_UI21_packed_identity",
+      "command": [
+        "godot",
+        "--headless",
+        "--path",
+        "evidence-workspace/moss-equipment16-integration-review/pack-gate-r2/empty-runtime",
+        "--main-pack",
+        "evidence-workspace/moss-equipment16-integration-review/pack-gate/linux/MossCircuit.pck",
+        "--audio-driver",
+        "Dummy",
+        "--script",
+        "evidence-workspace/moss-equipment16-integration-review/actual_icon_identity.gd",
+        "--",
+        "evidence-workspace/moss-equipment16-integration-review/EXPECTED_ICONS.json",
+        "evidence-workspace/moss-equipment16-integration-review/pack-gate-r2/identity.json"
+      ],
+      "timeout_seconds": 90
+    }
+  ],
+  "scope": "Four-route test-only continuation on EXACT original exported PCK; original5/8FAIL preserved. No export, source edit, nativeGUI, upload or reclassification of old failure.",
+  "policy": "Exactly four routes, originalPCK both hashes before/after everyphase, source888/base869/test/plan guards, firstFAILstop, full original mergedraw trueexit, resource3phase combined180 +UI90. Only specifiedPNG.import serializedremap expectation corrected; all otherbytes/MD5/privacy/absence contracts unchanged.",
+  "postconditions": [
+    "both preset PCK byte-identical",
+    "source888/base869 no changes",
+    "actual PCK allrecordMD5/fullbytesprivacy +oldPNG/import/ctex/reference hashes absent",
+    "78 exact runtimefiles and69 source-imported images; existing actions/frame parity via actual helper",
+    "packed UI240checks/21uniqueobs; raw image hashes also exact source-imported UI21 report (not PNG raw)"
+  ],
+  "MANIFEST": "old baseline excluded MANIFEST unchanged; external888 map authority; delivery metadata update separate",
+  "native_followup": "freeze exactnewPCK and independent gate result; separate nativeUI plan, never borrow AoldPCK17 PASS",
+  "pins": {
+    "evidence-workspace/moss-equipment16-integration-review/pack-prep-r2/run_pack_gate.py": "d0c455b0c07f75ae0af687d7a0b17cbdb684bd2a3f7f4c478b5d28b2af0981a3",
+    "evidence-workspace/moss-equipment16-integration-review/pack-prep-r2/audit_pck.py": "ab99e49bb28f0733cab9ea537c6045df7350c2bd026adbd8a38f8be15486f819",
+    "evidence-workspace/moss-equipment16-integration-review/pack-prep-r2/parse_pck.py": "d6367b60f15aee5fc2634138f4e05ef19a26d875b784fa83da7c79caaaf9f459",
+    "evidence-workspace/moss-equipment16-integration-review/pack-prep-r2/expected-resources.json": "44052cb57e25a18f486c867359f73f6b9de3316287e590ace4a304ee9f404483",
+    "evidence-workspace/moss-equipment16-integration-review/POST_IMPORT_888_PINS.json": "bec2314a1d91b6e3535117ccd36e6fb6df72d3ba9021639627bc7c45d4b76c90",
+    "evidence-workspace/moss-equipment16-integration-review/BASE_PINS.json": "178883e2dc584a4c68e85eb59df84801e4ab635c226ab56ef3499ee0c7339ea1",
+    "evidence-workspace/moss-equipment16-integration-review/actual_icon_identity.gd": "51eb9ea6a7fa51268be4a05eddfd043af79d1e3005f734637b2b425973bf9e11",
+    "evidence-workspace/moss-equipment16-integration-review/EXPECTED_ICONS.json": "4239175228d0f266742a8b385c12dd3c4706f74ef7f2abab73e0f5357ce454cc",
+    "evidence-workspace/moss-equipment16-integration-review/cold-gate/RESULT.json": "9516a0a9dcee923f6b269c93a9857e4d4c9ffe9bbd3bee35c993ce78ee0c8e11",
+    "evidence-workspace/moss-equipment16-integration-review/cold-gate/identity.json": "efaac001c0a1834464e65948a8f4244deb2495ddb17ab7ddf9a254e69bfa6128",
+    "evidence-workspace/moss-equipment16-integration-candidate/tools/export_source_fingerprint.gd": "21fdb0e0756e403a4c6fd7500fec009045158ed52ef13edb0ae0c61c1d1fe797",
+    "evidence-workspace/moss-equipment16-integration-candidate/tools/verify_export_pack.gd": "ebb52ffa4e7b53dbcf384848505cc6181b5922f170a7692995d69d100db38590",
+    "evidence-workspace/moss-equipment16-integration-candidate/tests/test_export_tools.py": "93c4a0a4f93d8e748ecaf3ecf21f2b5cac5ca013d8628584cec4d96acc363073",
+    "evidence-workspace/moss-v39-public-prep/EXPORT_PCK_RAW_REVIEW.json": "32113c979484d0109287106b10548c904cbfe47ec246ff100099fef4798900cc",
+    "evidence-workspace/moss-equipment16-independent-integration-review/COLD_RAW_REVIEW.json": "10fd5a0d527589f68d4c428fcb3b097125923b4517fb48f204de742314be985d",
+    "evidence-workspace/moss-equipment16-integration-review/pack-gate/RESULT.json": "fa963b49f1f636a0976aa60fc9786df0b0e706a815698af437e05a8b82592386",
+    "evidence-workspace/moss-equipment16-integration-review/pack-gate/linux/MossCircuit.pck": "fac259f0e5406c8b3ab56f21c4b7bf5113ae58d50fdc02344fbc09b8b273f23d",
+    "evidence-workspace/moss-equipment16-integration-review/pack-gate/windows/MossCircuit.pck": "fac259f0e5406c8b3ab56f21c4b7bf5113ae58d50fdc02344fbc09b8b273f23d",
+    "evidence-workspace/moss-equipment16-independent-integration-review/PACK_IMPORT_DIAGNOSIS.json": "0f6bf6d0870669bcddaab3cdc9d1b8ac2bf788a61d79648049d5a2c71dc8753a"
+  },
+  "budgets": {
+    "resource_group_total_seconds": 180,
+    "phases": [
+      "actual-pck-enumeration",
+      "source-fingerprint",
+      "packed-resources"
+    ],
+    "dedicated_UI21_seconds": 90,
+    "reason": "180 is below original240 minus consumed28.18; no broader resource budget requested"
+  },
+  "cold_independent_receipt": "evidence-workspace/moss-equipment16-independent-integration-review/COLD_RAW_REVIEW.json",
+  "existing_linux_pck": "evidence-workspace/moss-equipment16-integration-review/pack-gate/linux/MossCircuit.pck",
+  "existing_windows_pck": "evidence-workspace/moss-equipment16-integration-review/pack-gate/windows/MossCircuit.pck",
+  "existing_pck_sha256": "fac259f0e5406c8b3ab56f21c4b7bf5113ae58d50fdc02344fbc09b8b273f23d",
+  "serialization_correction": "Only assets/items/equipment_atlas_editable.png.import: exact source[remap] prefix before[deps],rstrip(newlines)+oneLF+NUL; all fields uid/path/metadata retained byteexact. Full212B equality, not key whitelist or blanket ignore.",
+  "audit_stdout": "Explicit PCK_AUDIT_PASS/FAIL prefix plus findings key, avoiding false strict-log ERROR match on a successful JSON errors:[] field; full errors array remains untouched in PCK_INVENTORY report."
+}

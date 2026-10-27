@@ -1,0 +1,28 @@
+{
+  "cmd": [
+    "godot",
+    "--path",
+    "<WORKSPACE>/moss-v39-ui/equipment16-native/empty-runtime",
+    "--main-pack",
+    "<WORKSPACE>/moss-equipment16-integration-review/pack-gate/linux/MossCircuit.pck",
+    "--audio-driver",
+    "Dummy",
+    "--resolution",
+    "960x540",
+    "--position",
+    "0,60",
+    "--script",
+    "<WORKSPACE>/moss-v39-ui/equipment16-native/cards_observed.gd",
+    "--",
+    "<WORKSPACE>/moss-equipment16-integration-review/EXPECTED_ICONS.json"
+  ],
+  "timeout_seconds": 180,
+  "env": {
+    "HOME": "<WORKSPACE>/moss-v39-ui/equipment16-native/home",
+    "XDG_CONFIG_HOME": "<WORKSPACE>/moss-v39-ui/equipment16-native/config",
+    "XDG_DATA_HOME": "<WORKSPACE>/moss-v39-ui/equipment16-native/data",
+    "XDG_CACHE_HOME": "<WORKSPACE>/moss-v39-ui/equipment16-native/cache",
+    "DISPLAY": ":0",
+    "WAYLAND_DISPLAY": null
+  }
+}

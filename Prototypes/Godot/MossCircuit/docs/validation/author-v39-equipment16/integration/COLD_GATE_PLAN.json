@@ -1,0 +1,50 @@
+{
+  "status": "FROZEN_QA_APPROVED",
+  "source": "evidence-workspace/moss-equipment16-integration-candidate",
+  "base": "evidence-workspace/moss-v39-final-r2",
+  "phases": [
+    {
+      "name": "cold_import",
+      "command": [
+        "godot",
+        "--headless",
+        "--editor",
+        "--path",
+        "evidence-workspace/moss-equipment16-integration-candidate",
+        "--import"
+      ],
+      "timeout_seconds": 180
+    },
+    {
+      "name": "actual_UI21_source_identity",
+      "command": [
+        "godot",
+        "--headless",
+        "--path",
+        "evidence-workspace/moss-equipment16-integration-candidate",
+        "--audio-driver",
+        "Dummy",
+        "--script",
+        "evidence-workspace/moss-equipment16-integration-review/actual_icon_identity.gd",
+        "--",
+        "evidence-workspace/moss-equipment16-integration-review/EXPECTED_ICONS.json",
+        "evidence-workspace/moss-equipment16-integration-review/cold-gate/identity.json"
+      ],
+      "timeout_seconds": 90
+    }
+  ],
+  "preflight": "Source exact CANDIDATE_PINS, base exact BASE_PINS, no .godot, test/expected/plan pins, fresh output directory, process-local owned HOME/XDG",
+  "source_change_policy": "Exactly these two newly generated assets/items/equipment_atlas_editable.png.import and art_source/equipment_atlas_editable.svg.import must be added by cold importer; no existing file changes/deletions. Record full before/after. Any other difference stops gate for review, do not auto-whitelist.",
+  "raw_policy": "Original command exit/UTC/elapsed/stdout/stderr; stop first nonzero/error/warning/unexpected output unless a precise pre-approved diagnostic policy exists. No broad warning suppression or automatic retry.",
+  "identity": "Expected exactly21 texture observations: equipment16 + A5. Assert actual UI merged43, primary newatlas and oldatlas unresolvable. Compare all nonzero-alpha pixels exactly (zero-alpha RGB canonicalized only) and record uncanonicalized raw hashes separately. This is not rawRGBA equality claim or native visual proof.",
+  "remaining": "Separate actual export/PCK enumeration and packed UI21 gate, followed by frozen nativeUI3routes. Do not invoke any of those from this finite cold lease.",
+  "test_pins": {
+    "evidence-workspace/moss-equipment16-integration-review/actual_icon_identity.gd": "51eb9ea6a7fa51268be4a05eddfd043af79d1e3005f734637b2b425973bf9e11",
+    "evidence-workspace/moss-equipment16-integration-review/EXPECTED_ICONS.json": "4239175228d0f266742a8b385c12dd3c4706f74ef7f2abab73e0f5357ce454cc",
+    "evidence-workspace/moss-equipment16-integration-review/run_cold_gate.py": "67e5de51fee8339bd84e3be5370c840a3b612e28ec5e9c3cf849f5fca6df51af",
+    "evidence-workspace/moss-equipment16-integration-review/CANDIDATE_PINS.json": "f11dc8236542bc8f3a3f96e605255dcd9c5ed96b8338d8139a67633739701268",
+    "evidence-workspace/moss-equipment16-integration-review/BASE_PINS.json": "178883e2dc584a4c68e85eb59df84801e4ab635c226ab56ef3499ee0c7339ea1"
+  },
+  "expected_identity_checks": 240,
+  "launch_contract": "python run_cold_gate.py --plan-sha256 <exact frozen SHA>; original stdout/stderr merged; all post-phase guard exceptions recorded as failure"
+}

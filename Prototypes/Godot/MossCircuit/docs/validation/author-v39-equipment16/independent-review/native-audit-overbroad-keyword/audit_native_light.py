@@ -1,0 +1,25 @@
+from pathlib import Path
+import json,hashlib,re
+from PIL import Image
+U=Path('evidence-workspace/moss-v39-ui');O=Path(__file__).parent;J=lambda p:json.loads(p.read_text());H=lambda p:hashlib.sha256(p.read_bytes()).hexdigest();rows=[]
+for root,phase,count,rc in [('equipment16-native','actual_ui',178,0),('equipment16-native','cards21',79,1),('equipment16-native-r2','cards21',145,0)]:
+ p=Ureview-role/phase;r=J(p/'RESULT.json');log=(p/'native.log').read_text();assert r['exit']==rc==int((p/'native.exit').read_text()) and r['report']['checks']==count;assert not r['timeout'] and not r['runner_errors'] and not r['json_marker_errors'];assert not re.search(r'ERROR|SCRIPT ERROR|Parse Error|leaked|Orphan',log,re.I)
+ warnings=[x for x in log.splitlines() if 'WARNING' in x];assert warnings==['WARNING: Could not set V-Sync mode, as changing V-Sync mode is not supported by the graphics driver.']
+ assert J(p/'SOURCE_BEFORE.json')==J(p/'SOURCE_AFTER.json');assert J(p/'AUTHOR_SOURCE_BEFORE.json')==J(p/'AUTHOR_SOURCE_AFTER.json')
+ reportlines=[json.loads(x) for x in log.splitlines() if x.startswith('{')];assert reportlines==[r['report']]
+ helpers=[json.loads(x.split(' ',1)[1]) for x in log.splitlines() if x.startswith('TEST_AUDIO_TEARDOWN ')];assert len(helpers)==1;z=helpers[0];assert z['complete'] and z['capture_removed'] and z['tracked_owner_count']>0 and z['tracked_stream_count']>0;v=z['observations'][-1];assert v['new_pushed']>=v['required_frames'] and v['silent_frames']>=v['required_frames'] and v['elapsed_us']<=1000000 and v['invalid']==v['discarded']==v['prepare_errors']==0 and v['owners_released'] and v['streams_released']
+ if rc==0:assert r['report']['failures']==[] and r['strict_pass']
+ else:assert r['report']['failures']==['actual BACK closes no world activation legacy_first','reopen Escape closes legacy_first'] and not r['strict_pass']
+ rows.append({'route':root+'/'+phase,'checks':count,'exit':rc,'strict_pass':r['strict_pass'],'result_sha256':H(p/'RESULT.json'),'log_sha256':H(p/'native.log'),'helper_final':v,'warning_retained':warnings})
+r=J(U/'equipment16-native-r2/cards21/RESULT.json');report=r['report'];assert len(report['groups'])==3;assert len(report['records'])==21
+for g in report['groups']:
+ assert g['forward']['pass'] and g['reverse']['pass'] and g['forward']['isolated'] and g['reverse']['isolated']
+ for key in ['after_back','after_escape']:
+  v=g[key];assert v['state']=='playing' and v['modal_visible'] is False and v['local_panel_visible'] is True and v['focus_enemy']==v['expected_focus_enemy']==g['selected_before_after']
+ assert g['after_reopen']['state']=='inventory' and g['after_reopen']['modal_visible'] and g['after_reopen']['open_result']
+images=[];image_root=U/'equipment16-native-r2/cards21/images';assert len(list(image_root.glob('*.png')))==21
+for v in r['decoded_images']:
+ p=image_root/v['name'];im=Image.open(p);im.load();assert list(im.size)==v['size']==[960,540] and H(p)==v['sha256'];images.append({'path':str(p),'sha256':H(p),'direct_pixels_viewed':True,'size':[960,540]})
+assert {x['image'] for x in report['records']}=={x['name'] for x in r['decoded_images']}
+for x in report['records']:assert x['save_error']==0 and x['modal_layer']==20 and x['os_size']=='(960, 540)' and x['content_scale']=='(960, 540)'
+receipt={'pass':True,'scope':'Light independent original native raw/record/map-equality review and direct viewing of ALL21 corrected card PNGs; no new engine run and no full source/PCK live rehash during B165','routes':rows,'all21_corrected_card_images_directly_viewed':True,'images':images,'visual_findings':'All21 intended icons visibly drawn and distinguishable, target card labels/details readable, no magenta/missing texture or atlas bleed observed; fixed BACK remains unobscured. Partial neighboring cards clipped by scroll viewport as expected, not target card missing. Small inventory icons retain game scale; not a claim of enlarged art. Lens visibly circular. Existing A5 icons unchanged in appearance.','actual_action_boundary':'Raw real input path reports forward/reverse Tab isolation and BACK/reopen/Escape for three controlled groups. Effective modal visibility false while local panel visible true matches shade-hidden implementation. Did not independently operate hardware input or infer natural acquisition.','original79_2FAIL_preserved':True,'corrected145_does_not_rerun178':True,'normalization_scope':'Identity proof comes from separate source/PCK21 texture gates; these21 screenshots are visual/layout evidence, not per-screen pixel equal to sourcePNG','source_maps_only':'Recorded before/after maps compared, full live888/PCK rehash deferred to post-B window/final release audit','not_claimed':['new full gameplay regression','ordinary play of migrated atlas','Windows runtime','B integration'],'release_boundary':'Only one legacy inventory atlas migration; held art and other legacy images remain unchanged.'};(O/'NATIVE_LIGHT_RAW_ALL21_VISUAL_REVIEW.json').write_text(json.dumps(receipt,indent=2)+'\n');print(H(O/'NATIVE_LIGHT_RAW_ALL21_VISUAL_REVIEW.json'))
