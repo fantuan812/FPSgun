@@ -1,0 +1,83 @@
+{
+  "review_pass": true,
+  "scope": "Direct inspection of all nine original ordinary JPEGs only, not replay or telemetry reconstruction.",
+  "observation_sha256": "b03ec38996367f3b3dc20ff0a359eed1de309cda69fa27aedf6c778dc9137aec",
+  "images": [
+    {
+      "path": "01_default_title.jpg",
+      "sha256": "fa0df5b5041af0307e69bcc99601a3e8f6ab899d51f87aeff91aea91816866e6",
+      "bytes": 141891,
+      "format": "JPEG original window capture",
+      "directly_viewed": true
+    },
+    {
+      "path": "02_rooms_rivet_selected.jpg",
+      "sha256": "6f831a251cffaaf74aedca4fcf1d87ce34500e409251443c3731cf345f7f0bee",
+      "bytes": 142860,
+      "format": "JPEG original window capture",
+      "directly_viewed": true
+    },
+    {
+      "path": "03_entry_started.jpg",
+      "sha256": "d8080dfe92e2c7e2563e26449ce991815a248fab36f621f8279e9003e054fc52",
+      "bytes": 119340,
+      "format": "JPEG original window capture",
+      "directly_viewed": true
+    },
+    {
+      "path": "04_natural_upgrade_66_scrap.jpg",
+      "sha256": "d8080dfe92e2c7e2563e26449ce991815a248fab36f621f8279e9003e054fc52",
+      "bytes": 119340,
+      "format": "JPEG original window capture",
+      "directly_viewed": true
+    },
+    {
+      "path": "05_second_natural_upgrade.jpg",
+      "sha256": "1fdca33ce5798605b596c091dd0e3763b1a0d4c56bf904d3deb9a594903d8fc2",
+      "bytes": 120105,
+      "format": "JPEG original window capture",
+      "directly_viewed": true
+    },
+    {
+      "path": "06_first_shop_66_scrap.jpg",
+      "sha256": "21fb566d477be504d8c43ea3d1c715670ba3503a54d14b6d788083eb35f3dd10",
+      "bytes": 147309,
+      "format": "JPEG original window capture",
+      "directly_viewed": true
+    },
+    {
+      "path": "07_first_shop_lucky_chip.jpg",
+      "sha256": "d84484215a46f321f1ef4aa3023489e856411f04a3a0bd908c1ac2f8407b233c",
+      "bytes": 141656,
+      "format": "JPEG original window capture",
+      "directly_viewed": true
+    },
+    {
+      "path": "08_first_shop_rivet_offer.jpg",
+      "sha256": "f8e11ad76d95cddff573ba503b1cfe2a1f6ac6bc3eb0f4bb79b524c3b28641ab",
+      "bytes": 143315,
+      "format": "JPEG original window capture",
+      "directly_viewed": true
+    },
+    {
+      "path": "09_first_shop_mirror_shell_bottom.jpg",
+      "sha256": "26e4c7038ed63e0da5661fa2278082261ec6fecfbc4c2c046bf89ca24ad3c771",
+      "bytes": 146097,
+      "format": "JPEG original window capture",
+      "directly_viewed": true
+    }
+  ],
+  "findings": [
+    "Default seed240102 and Rivet selection, then Rooms selected, are visible in title snapshots.",
+    "03 is the same upgrade image as04, not a captured combat frame.",
+    "Split Capacitor and Rapid Circuit upgrade offers appear; selection actions are attributed to the QA direct-action receipt, not inferred solely from stills.",
+    "First shop shows66scrap. Power Coil, Lucky Chip and Mirror Shell labels appear; the Rivet offer frame shows the lower weapon-stat section with title scrolled above the viewport.",
+    "No B item is shown, and no natural B mechanic acceptance follows from this run."
+  ],
+  "limits": [
+    "No whole campaign, all combat frames or video proof.",
+    "No static-image claim of purchase count or refresh count; those actions are attributed to QA.",
+    "Original wrapper1/passfalse is retained despite native0; exact platform-warning exception is separately audited."
+  ],
+  "engine_launched": false
+}

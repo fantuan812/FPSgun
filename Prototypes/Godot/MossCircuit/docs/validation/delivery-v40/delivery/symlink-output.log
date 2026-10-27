@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "<WORKSPACE>/moss-v40-delivery-prep/staging/Deliveries/MossCircuit/restore_deliveries.py", line 137, in <module>
+    main()
+    ~~~~^^
+  File "<WORKSPACE>/moss-v40-delivery-prep/staging/Deliveries/MossCircuit/restore_deliveries.py", line 121, in main
+    raise ValueError("Output symlinks are not accepted")
+ValueError: Output symlinks are not accepted

@@ -1,0 +1,13 @@
+{
+  "cmd": [
+    "evidence-workspace/moss-v39-B-equipment16-pack/linux/MossCircuit.x86_64",
+    "--audio-driver",
+    "Dummy",
+    "--resolution",
+    "960x540",
+    "--position",
+    "0,60"
+  ],
+  "scope": "Exactly once default seed Rooms/Rivet, first shop or death. Only if naturally affordable B at first shop, ordinary purchase then next shop/death; no injection/refresh/restart. QA CUA actions, separate goal evidence.",
+  "no_gameplay_injection": true
+}

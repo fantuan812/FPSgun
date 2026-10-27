@@ -1,0 +1,28 @@
+{
+  "pass": true,
+  "scope": "pre-execution static only",
+  "plan_sha256": "ee267739ea92aeb1eaf8233dcbe853b292782e56d60c9585cbb7733a36f91067",
+  "routes": [
+    "independent exactcopy cold",
+    "Pin-ring126/14",
+    "actualhooks62/2"
+  ],
+  "other_reviewer": "implement_build_expansion",
+  "api_reviewer": "expand_build_item_mechanics",
+  "reviewed": [
+    "all pins",
+    "actual894 source set",
+    "fixture API/setup",
+    "126=14*(2+7)",
+    "62=31*2",
+    "two shared owner1 helpers",
+    "180 each first fail stop",
+    "all guards finally",
+    "no repeated source/target execution"
+  ],
+  "limitations": [
+    "pre-R2-execution not preimplementation",
+    "controlled actors/ages/mark/notifications/eligibility not ordinary",
+    "no B full/native claim"
+  ]
+}

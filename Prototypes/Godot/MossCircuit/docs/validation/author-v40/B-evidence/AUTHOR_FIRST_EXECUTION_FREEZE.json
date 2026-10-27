@@ -1,0 +1,49 @@
+{
+  "runner_path": "evidence-workspace/moss-v39-items/run_B_focused.py",
+  "runner_sha256": "0fbf8672a531b08f534b6b663495050c9f90bd012a0cc72fa69829cd43f3e098",
+  "harness_files": {
+    "data/catalog.json": {
+      "size": 28917,
+      "sha256": "28281a0b5df6bfdc0e325df1589e8288c2afcdb8e39c57f20b58a649099727d7"
+    },
+    "project.godot": {
+      "size": 128,
+      "sha256": "17f92bffa3704a82cd936f32f370b8e34ea1e357280d7f22197c48be4de8d6a9"
+    },
+    "scripts/gameplay/build_items_adapter.gd": {
+      "size": 1014,
+      "sha256": "9a35217024f5749248cb6a1158e37e87f03a5e6725f42f36ee1eda0a6ea67bb0"
+    },
+    "scripts/gameplay/build_items_runtime.gd": {
+      "size": 19142,
+      "sha256": "bddebbd960a25f6aa7abb8fbe239c67a0b9af8c273d985e95dd4a2afd41b8dac"
+    },
+    "tests/test_build_items_runtime.gd": {
+      "size": 16897,
+      "sha256": "1b07189c6bf09f728a70c9b121af5993da941d0b8d42e17967b20f7be0badaf1"
+    }
+  },
+  "initial_uids": {},
+  "expected_checks": 318,
+  "static_count_path": "evidence-workspace/moss-v39-items/B-evidence/AUTHOR_STATIC_COUNT.json",
+  "independent_freeze_path": "evidence-workspace/moss-v39-B-qa/pretarget/FREEZE.json",
+  "pins": {
+    "evidence-workspace/moss-v39-items/B-evidence/AUTHOR_FIRST_EXECUTION_PLAN.md": "b9463955c1dda17706fc08193a6d4f5692f15449406819d02639e81efc949eca",
+    "evidence-workspace/moss-v39-items/B-evidence/AUTHOR_STATIC_COUNT.json": "dda638c0abcf50357c6debdc178b221f5335f08bd3496e519adeb55606add9fd",
+    "evidence-workspace/moss-v39-items/B-evidence/AUTHOR_R1_FREEZE.json": "62493950ebc6c23ccec6c31777506c4c4f12d1b562e2cc8c3708924d3db70a36",
+    "evidence-workspace/moss-v39-items/B-final-review/B_API_SIGNATURES.md": "32974e101e39a2bef9aca00c872027a6af789024b50e4513fd7850f374b37e2e",
+    "evidence-workspace/moss-v39-items/B-final-review/B_CANONICAL_ERRATA.md": "ecdffecb43788d54d1b264fdd22ad9838ea9da23c6b3876fe8af6933b3927336",
+    "evidence-workspace/moss-v39-items/B-final-review/B_FINAL_CONTRACT.md": "d16f130e022482d18dd73bc85c43f520a58d6d2b78c72d5156bf056ba178cbd7",
+    "evidence-workspace/moss-v39-items/B-final-review/B_OBSERVABLE_STATE_ADDENDUM.md": "10fb918a8dd74c68268645676bcd4c844f3461f35518c8eace23d05c34fa8cee",
+    "evidence-workspace/moss-v39-items/B-final-review/B_EXPECTED_HAND_CASES.json": "66b5170259886f2943a3d9b1611b912dadb73fecbd14538e20a80011634ffe79",
+    "evidence-workspace/moss-v39-B-qa/pretarget/FREEZE.json": "14cc1667a6e6dee6979610f31924f8c2c5d77f0a5918851b08d0a452c6619647"
+  },
+  "engine_command": [
+    "/usr/local/bin/godot",
+    "--headless",
+    "--path",
+    "evidence-workspace/moss-v39-items/B-harness",
+    "--script",
+    "res://tests/test_build_items_runtime.gd"
+  ]
+}

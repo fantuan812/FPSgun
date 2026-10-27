@@ -1,0 +1,224 @@
+{
+  "origin": "Independent QA finite typed-boundary expectations, not target-generated",
+  "cases": [
+    {
+      "field": "kind",
+      "value": null,
+      "expect": "pre_admission_reject_whole_snapshot_unchanged"
+    },
+    {
+      "field": "kind",
+      "value": true,
+      "expect": "pre_admission_reject_whole_snapshot_unchanged"
+    },
+    {
+      "field": "kind",
+      "value": 0,
+      "expect": "pre_admission_reject_whole_snapshot_unchanged"
+    },
+    {
+      "field": "kind",
+      "value": [],
+      "expect": "pre_admission_reject_whole_snapshot_unchanged"
+    },
+    {
+      "field": "kind",
+      "value": {},
+      "expect": "pre_admission_reject_whole_snapshot_unchanged"
+    },
+    {
+      "field": "source",
+      "value": null,
+      "expect": "pre_admission_reject_whole_snapshot_unchanged"
+    },
+    {
+      "field": "source",
+      "value": true,
+      "expect": "pre_admission_reject_whole_snapshot_unchanged"
+    },
+    {
+      "field": "source",
+      "value": 0,
+      "expect": "pre_admission_reject_whole_snapshot_unchanged"
+    },
+    {
+      "field": "source",
+      "value": [],
+      "expect": "pre_admission_reject_whole_snapshot_unchanged"
+    },
+    {
+      "field": "source",
+      "value": {},
+      "expect": "pre_admission_reject_whole_snapshot_unchanged"
+    },
+    {
+      "field": "depth",
+      "value": null,
+      "expect": "pre_admission_reject_whole_snapshot_unchanged"
+    },
+    {
+      "field": "depth",
+      "value": true,
+      "expect": "pre_admission_reject_whole_snapshot_unchanged"
+    },
+    {
+      "field": "depth",
+      "value": 1.0,
+      "expect": "pre_admission_reject_whole_snapshot_unchanged"
+    },
+    {
+      "field": "depth",
+      "value": "1",
+      "expect": "pre_admission_reject_whole_snapshot_unchanged"
+    },
+    {
+      "field": "depth",
+      "value": [],
+      "expect": "pre_admission_reject_whole_snapshot_unchanged"
+    },
+    {
+      "field": "epoch",
+      "value": null,
+      "expect": "pre_admission_reject_whole_snapshot_unchanged"
+    },
+    {
+      "field": "epoch",
+      "value": true,
+      "expect": "pre_admission_reject_whole_snapshot_unchanged"
+    },
+    {
+      "field": "epoch",
+      "value": 1.0,
+      "expect": "pre_admission_reject_whole_snapshot_unchanged"
+    },
+    {
+      "field": "epoch",
+      "value": "1",
+      "expect": "pre_admission_reject_whole_snapshot_unchanged"
+    },
+    {
+      "field": "epoch",
+      "value": [],
+      "expect": "pre_admission_reject_whole_snapshot_unchanged"
+    },
+    {
+      "field": "sequence",
+      "value": null,
+      "expect": "pre_admission_reject_whole_snapshot_unchanged"
+    },
+    {
+      "field": "sequence",
+      "value": true,
+      "expect": "pre_admission_reject_whole_snapshot_unchanged"
+    },
+    {
+      "field": "sequence",
+      "value": 1.0,
+      "expect": "pre_admission_reject_whole_snapshot_unchanged"
+    },
+    {
+      "field": "sequence",
+      "value": "1",
+      "expect": "pre_admission_reject_whole_snapshot_unchanged"
+    },
+    {
+      "field": "sequence",
+      "value": [],
+      "expect": "pre_admission_reject_whole_snapshot_unchanged"
+    },
+    {
+      "field": "target",
+      "value": null,
+      "expect": "pre_admission_reject_whole_snapshot_unchanged"
+    },
+    {
+      "field": "target",
+      "value": true,
+      "expect": "pre_admission_reject_whole_snapshot_unchanged"
+    },
+    {
+      "field": "target",
+      "value": 1.0,
+      "expect": "pre_admission_reject_whole_snapshot_unchanged"
+    },
+    {
+      "field": "target",
+      "value": "1",
+      "expect": "pre_admission_reject_whole_snapshot_unchanged"
+    },
+    {
+      "field": "target",
+      "value": [],
+      "expect": "pre_admission_reject_whole_snapshot_unchanged"
+    },
+    {
+      "field": "kind",
+      "value": "",
+      "expect": "admitted_sequence_consumed_no_mechanic"
+    },
+    {
+      "field": "kind",
+      "value": "unknown",
+      "expect": "admitted_sequence_consumed_no_mechanic"
+    },
+    {
+      "field": "source",
+      "value": "",
+      "expect": "admitted_sequence_consumed_no_mechanic"
+    },
+    {
+      "field": "source",
+      "value": "chain",
+      "expect": "admitted_sequence_consumed_no_mechanic"
+    },
+    {
+      "field": "depth",
+      "value": 1,
+      "expect": "admitted_sequence_consumed_no_mechanic"
+    },
+    {
+      "field": "weapon",
+      "value": "",
+      "expect": "admitted_sequence_consumed_no_mechanic"
+    },
+    {
+      "field": "weapon",
+      "value": "not_registered",
+      "expect": "admitted_sequence_consumed_no_mechanic"
+    },
+    {
+      "field": "target",
+      "value": 0,
+      "expect": "admitted_sequence_consumed_no_mechanic"
+    },
+    {
+      "field": "target",
+      "value": -1,
+      "expect": "admitted_sequence_consumed_no_mechanic"
+    }
+  ],
+  "context_boundaries": [
+    "nonbool playing",
+    "backward time",
+    "nonfinite time",
+    "wrong epoch",
+    "duplicate sequence",
+    "negative stepserial",
+    "nonfinite playerpos",
+    "nonarray enemies",
+    "nondictionary area"
+  ],
+  "context_expected": "whole snapshot unchanged for admission rejection",
+  "config_mutations": [
+    "duplicate ID",
+    "bool max_stack",
+    "fraction structural count",
+    "zero duration",
+    "nonfinite duration",
+    "unknown source array",
+    "field factor 0",
+    "field factor >1",
+    "missing paired definition field"
+  ],
+  "config_expected": "atomic failure all state/definitions/configuration window unchanged; absent all B rows in valid old catalog accepted"
+}

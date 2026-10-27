@@ -1,0 +1,26 @@
+{
+  "name": "tests__test_audio_teardown_predicate",
+  "native_exit": 0,
+  "timeout": false,
+  "seconds": 0.33739091000461485,
+  "stderr_bytes": 0,
+  "stderr_policy": {
+    "accepted": true,
+    "warning_count": 0
+  },
+  "tags": [],
+  "parse_errors": [],
+  "semantic": true,
+  "file_report_validation": null,
+  "helper_ok": true,
+  "reports": [
+    {
+      "checks": 15,
+      "failures": [],
+      "scope": "Deterministic predicate negatives: retained owners/resources, nonfinite/drop, missing or insufficient fresh/silent frames, early/late completion. Real engine ownership checked separately."
+    }
+  ],
+  "helpers": [],
+  "exception": null,
+  "pass": true
+}

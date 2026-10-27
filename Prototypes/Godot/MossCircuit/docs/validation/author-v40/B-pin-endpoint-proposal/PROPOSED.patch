@@ -1,0 +1,15 @@
+--- a/scripts/gameplay/effect_runtime.gd
++++ b/scripts/gameplay/effect_runtime.gd
+@@ -142,7 +142,11 @@
+ 	if session.state == "playing" and build_items.bind_epoch(engine.epoch,session.elapsed):
+ 		var canonical:Dictionary=BuildItemsAdapter.canonical_event(kind,data,int(event.epoch),int(event.sequence))
+ 		for control in build_items.process(canonical,build_items_context()):
+-			build_items.apply_control(control,world.enemies,recoil_area)
++			var moved:Dictionary=build_items.apply_control(control,world.enemies,recoil_area)
++			if moved.get("moved",false) and world.new_weapon_motion.has(moved.target_id):
++				# Control is a discrete endpoint, never a replacement normal-motion segment.
++				var motion:Dictionary=world.new_weapon_motion[moved.target_id]
++				motion.final_pos=moved.to
+ 	else:build_items.cancel_pending()
+ 	return blocked
+ 

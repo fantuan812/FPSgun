@@ -1,0 +1,14 @@
+{
+  "unexecuted_old_sha256": "b36ea651edf507fc47a13ae861df29a8b8824a68b8a4669fed2f6e970da944e5",
+  "new_sha256": "61ed45bd1a67dc9b8fca51c6fc6c22e8be8a3b9c48596d5f3f4af1f66355a6bb",
+  "changes": [
+    "Initialization g.projectiles nonexistent; actual existing g.bullets API used",
+    "Original B contract lines48-49: marked target death consumes mark and starts cooldown without pull. Original hand cases promised no displacement/damage/revive, not null cooldown. Corrected extra fixture cooldown assertion to actual now+1 independently from original frozen contract."
+  ],
+  "unchanged": [
+    "all literal HP and geometry expectations",
+    "7-case independent hand freeze2070a55c",
+    "126checks/14observations",
+    "no target run occurred"
+  ]
+}

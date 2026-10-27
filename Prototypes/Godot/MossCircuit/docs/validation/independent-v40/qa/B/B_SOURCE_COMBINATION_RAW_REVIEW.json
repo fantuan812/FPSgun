@@ -1,0 +1,1771 @@
+{
+  "review_pass": true,
+  "source_combination_pass": true,
+  "scope": "35 original strict routes + separately independently reviewed original435 + remaining129; original36-stop FAIL retained, not a new single165 process. Cold separate; excludes packed/native/ordinary.",
+  "original_aggregate_pass": false,
+  "original_first35": 35,
+  "original435_independent_review_sha256": "ec6e4f34ed28ca6e6aaf20be38cde5ed3125b0d94cebe681b8cc24b932cb8565",
+  "remaining129": 129,
+  "total_distinct_source_routes": 165,
+  "live_source_files": 907,
+  "live_pins": 1124,
+  "original_failure_preserved": true,
+  "rows": [
+    {
+      "name": "test_B_catalog_current",
+      "execution": "source",
+      "native_exit": 0,
+      "checks": {
+        "checks": 27
+      },
+      "helpers": 0,
+      "stderr_bytes": 0,
+      "result_sha256": "72ae2d2dfc5204c6789527476432feb250519128047319cd46195a7b8b2bd895"
+    },
+    {
+      "name": "test_B_legacy_cache",
+      "execution": "source",
+      "native_exit": 0,
+      "checks": {
+        "checks": 20
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "e7e4d8363462d32e6e206526793d40a8379c2bab86784a5e66275bf2e2552158"
+    },
+    {
+      "name": "test_B_pickup_sources",
+      "execution": "source",
+      "native_exit": 0,
+      "checks": {
+        "checks": 34
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "be28c0a3c3171580987a66b284df963b879077409ed01a99e354840abfa73a55"
+    },
+    {
+      "name": "test_B_projection",
+      "execution": "source",
+      "native_exit": 0,
+      "checks": {
+        "checks": 24
+      },
+      "helpers": 0,
+      "stderr_bytes": 0,
+      "result_sha256": "a10493c0add5efb8e2ba6fe1d2587458cbeee9a16aaa31927e32fd409589c631"
+    },
+    {
+      "name": "actual_hooks56",
+      "execution": "source",
+      "native_exit": 0,
+      "checks": {
+        "B_real_hook_checks": 56
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "779cb0dcd5e4d613fbd36eafa6c4bdc38651921490d13d4123cd5983068f4785"
+    },
+    {
+      "name": "ui20",
+      "execution": "source",
+      "native_exit": 0,
+      "checks": {
+        "checks": 20
+      },
+      "helpers": 0,
+      "stderr_bytes": 0,
+      "result_sha256": "6c25e4e3d6d84716dea0a66c51f69da1a351ed9fd5393ed9248074bea6fac4d5"
+    },
+    {
+      "name": "pin_ring",
+      "execution": "source",
+      "native_exit": 0,
+      "checks": {
+        "independent_B_pin_ring_checks": 126
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "dea5ade323e278cdec803c7b6ea838091296182f6f220f997e5243b28e5907af"
+    },
+    {
+      "name": "real_hooks",
+      "execution": "source",
+      "native_exit": 0,
+      "checks": {
+        "independent_B_real_hook_checks": 62
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "1769f83f9b624f0047d04e6ae83aaa2c73d304c079b8c34662ada2c7dd635443"
+    },
+    {
+      "name": "validator63",
+      "execution": "source",
+      "native_exit": 0,
+      "checks": {
+        "B_rules_configuration_checks": 63
+      },
+      "helpers": 0,
+      "stderr_bytes": 0,
+      "result_sha256": "93ae92668745d47a8d479c4dd8164cd410944b307118958d1a6fda44eb89f067"
+    },
+    {
+      "name": "pure_initial_state",
+      "execution": "source",
+      "native_exit": 0,
+      "checks": {
+        "checks": 30
+      },
+      "helpers": 0,
+      "stderr_bytes": 0,
+      "result_sha256": "6a69def95ef3c01eef842fb0d80b6632d1dd1100859b8cf4a792fb18106b53b5"
+    },
+    {
+      "name": "pure_admission",
+      "execution": "source",
+      "native_exit": 0,
+      "checks": {
+        "checks": 349
+      },
+      "helpers": 0,
+      "stderr_bytes": 0,
+      "result_sha256": "6a0f774c8c685cf39d03bce76804d348cf435da9be019403da6a8565684ffd56"
+    },
+    {
+      "name": "pure_mechanics",
+      "execution": "source",
+      "native_exit": 0,
+      "checks": {
+        "checks": 207
+      },
+      "helpers": 0,
+      "stderr_bytes": 0,
+      "result_sha256": "cfed393dab55b0ae038243352d1e6bbbc94683335d326062f0ea80c19daf9a66"
+    },
+    {
+      "name": "pure_configuration",
+      "execution": "source",
+      "native_exit": 0,
+      "checks": {
+        "checks": 61
+      },
+      "helpers": 0,
+      "stderr_bytes": 0,
+      "result_sha256": "c806c6c0c2f910d808a31c4fbcdad0b235e19353c411b40aed30e7f7f8418f74"
+    },
+    {
+      "name": "pure_author318",
+      "execution": "source",
+      "native_exit": 0,
+      "checks": {
+        "B_author_checks": 318
+      },
+      "helpers": 0,
+      "stderr_bytes": 0,
+      "result_sha256": "c0c7f4303c2476b7036fe0cc27d8fd63368f0158b0c83b3e7095028c5c6a3ecd"
+    },
+    {
+      "name": "independent_B_icons",
+      "execution": "source",
+      "native_exit": 0,
+      "checks": {
+        "checks": 201
+      },
+      "helpers": 0,
+      "stderr_bytes": 0,
+      "result_sha256": "5dfeb0f15fe9e8272ace337fb9ae1ba673d7d3eea37c7bdb8ebfeedef4f8f9c5"
+    },
+    {
+      "name": "tests__independent_actions",
+      "execution": "source",
+      "native_exit": 0,
+      "checks": {
+        "independent_actions_passed": 35
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "8b6f8526ea61dc09b0aedd0170796270df106191bdd129c2d5b0680ae1703860"
+    },
+    {
+      "name": "tests__independent_annulus_data",
+      "execution": "source",
+      "native_exit": 0,
+      "checks": {
+        "checks": 46
+      },
+      "helpers": 0,
+      "stderr_bytes": 0,
+      "result_sha256": "f922e26c8bd9b5fd36e85e54ba75a6c9491667e120511596ddedb2b271ecdbc6"
+    },
+    {
+      "name": "tests__independent_annulus_runtime",
+      "execution": "source",
+      "native_exit": 0,
+      "checks": {
+        "checks": 948
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "b4c27dd4950c5177a35ce2bf92853b7c328c7779d3e997c882c485cee7aee83c"
+    },
+    {
+      "name": "tests__independent_bankshot_contacts",
+      "execution": "source",
+      "native_exit": 0,
+      "checks": {
+        "checks": 62
+      },
+      "helpers": 0,
+      "stderr_bytes": 0,
+      "result_sha256": "4fc91e241e3aecd8b3f19a7b18ba4913e21c6442d9e4eb98eb1ec93a85591b09"
+    },
+    {
+      "name": "tests__independent_bankshot_integration",
+      "execution": "source",
+      "native_exit": 0,
+      "checks": {
+        "checks": 96
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "776f20115086922d4047dd73c6d1fe3cf9060f5acf622ceea73374c6db17cae1"
+    },
+    {
+      "name": "tests__independent_bankshot_trajectory",
+      "execution": "source",
+      "native_exit": 0,
+      "checks": {
+        "checks": 234
+      },
+      "helpers": 0,
+      "stderr_bytes": 0,
+      "result_sha256": "e844e96b56b59868b628641bd2acb9c6ff097e04ad8e97449722bc67d8091633"
+    },
+    {
+      "name": "tests__independent_brace_geometry",
+      "execution": "source",
+      "native_exit": 0,
+      "checks": {
+        "checks": 670
+      },
+      "helpers": 0,
+      "stderr_bytes": 0,
+      "result_sha256": "81904b67a6b0443ee47a2745b304d0e69db0a49f16b9f7c3e6afacf361952e55"
+    },
+    {
+      "name": "tests__independent_brace_runtime",
+      "execution": "source",
+      "native_exit": 0,
+      "checks": {
+        "checks": 370
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "734831a035b81499e6912a45479397ec37d0835e55cf0b95ea9a847a354c03db"
+    },
+    {
+      "name": "tests__independent_brood_assets",
+      "execution": "source",
+      "native_exit": 0,
+      "checks": null,
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "78ba6864d3b2fbb2017f0d6413594b9e074e34c3476ff2bfd6e420991115babf"
+    },
+    {
+      "name": "tests__independent_brood_events",
+      "execution": "source",
+      "native_exit": 0,
+      "checks": null,
+      "helpers": 2,
+      "stderr_bytes": 0,
+      "result_sha256": "4e6b8fa5fa1b074ede04b7137263c5e90b494f6d62daf4cad14e396594d187e5"
+    },
+    {
+      "name": "tests__independent_brood_parity",
+      "execution": "source",
+      "native_exit": 0,
+      "checks": null,
+      "helpers": 2,
+      "stderr_bytes": 0,
+      "result_sha256": "42c92e4e642bde602d618e17cb9f323047aabe9d264f2208ad6f3ec2422a2863"
+    },
+    {
+      "name": "tests__independent_charger_assets",
+      "execution": "source",
+      "native_exit": 0,
+      "checks": null,
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "5d30526ac40be05e735c1eeee71f753047e1c3ac392c1a1fd7d168d84fce898a"
+    },
+    {
+      "name": "tests__independent_charger_gameplay_parity",
+      "execution": "source",
+      "native_exit": 0,
+      "checks": null,
+      "helpers": 2,
+      "stderr_bytes": 0,
+      "result_sha256": "d58e30da8f2a1f636143ba65b8e28006f9c37d03f9025c0e0f56bbcc42f52d1a"
+    },
+    {
+      "name": "tests__independent_charger_lifecycle",
+      "execution": "source",
+      "native_exit": 0,
+      "checks": null,
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "a11fa687aceda0cf89abf494f68f30a05acf156a5e3c254054634b1f2b2589d8"
+    },
+    {
+      "name": "tests__independent_core_reactions",
+      "execution": "source",
+      "native_exit": 0,
+      "checks": {
+        "independent_core_reactions_passed": 403
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "e47c426d34276c1cec3501a6e9456ad410a5b831cd92ee4fb2f585eb373dffd3"
+    },
+    {
+      "name": "tests__independent_crawler_flanker",
+      "execution": "source",
+      "native_exit": 0,
+      "checks": {
+        "independent_crawler_flanker_passed": 736
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "e820456877067fcb08764f645c83bd337a845d6b635bbaa758266e3902edc306"
+    },
+    {
+      "name": "tests__independent_crawler_hit_pipeline",
+      "execution": "source",
+      "native_exit": 0,
+      "checks": {
+        "checks": 48
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "4a6e2b0a091b22888aea127f02db2e928419ea79947c9394ea0db2b30bc929dc"
+    },
+    {
+      "name": "tests__independent_cryo_contract",
+      "execution": "source",
+      "native_exit": 0,
+      "checks": {
+        "checks": 446
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "0cf9a788fd15c305d41a4abbefde522d73bfe7d94f9e1bedc45731636038ca51"
+    },
+    {
+      "name": "tests__independent_cryo_shop",
+      "execution": "source",
+      "native_exit": 0,
+      "checks": {
+        "checks": 320
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "94d4ead5f7959ad73aacf7cfa098c028dcf053fd0393b479b1dfad0f40887ec2"
+    },
+    {
+      "name": "tests__independent_enemy_ui",
+      "execution": "source",
+      "native_exit": 0,
+      "checks": {
+        "independent_enemy_ui_passed": 124
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "b4addb12b27320aadf7707eb4d69eed7094855002a2c78c1e940dd30ae64aa0f"
+    },
+    {
+      "name": "tests__independent_feedback_authority_rooms",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "checks": 338
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "0bf79346b1c4c96ce03a489655bbcf2119ed5f753816f7743a3843303fb73f8b"
+    },
+    {
+      "name": "tests__independent_feedback_mixer",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "checks": 236
+      },
+      "helpers": 0,
+      "stderr_bytes": 0,
+      "result_sha256": "f68d8325202b8fcc02f19f683aa4c443aeb92a03bf4f2b668dfdfb90b5919af4"
+    },
+    {
+      "name": "tests__independent_feedback_runtime",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "checks": 249
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "eebdb7fbe33c3e8bf23313697016ca9f5f41fe38ef9aba9bbc73b899766421b3"
+    },
+    {
+      "name": "tests__independent_feedback_shop",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "checks": 102
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "4732b13a69eb9034c7e75658b4ddbd9b94cfce6023b61949f497831ba90468b3"
+    },
+    {
+      "name": "tests__independent_feedback_validation",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "checks": 29
+      },
+      "helpers": 0,
+      "stderr_bytes": 0,
+      "result_sha256": "3cadf5d212d6b2f44417bf3d6d96aa7cd5d986c3c6fb8869e740cda97e282a24"
+    },
+    {
+      "name": "tests__independent_feedback_views",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "checks": 168
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "f6311b14d94a3c97446c4708598b918907f466998350b4fbbc1f4269648151af"
+    },
+    {
+      "name": "tests__independent_focus_authority",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "checks": 356
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "7a310cd61c22e941f7c9a7cf8e7ba34b159c3cc160137d1fc47df1b0993f0d3a"
+    },
+    {
+      "name": "tests__independent_focus_combat",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "checks": 945
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "c2eac3808b20a1ebcb075b3afd2fb86604e955bcce64dd4a48c464e7875b904c"
+    },
+    {
+      "name": "tests__independent_focus_views",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "checks": 366
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "45f75a81d94393b157ca61dfb7cbd94ee1eddb60075a617b912cdcf1347d4921"
+    },
+    {
+      "name": "tests__independent_forecast_authority",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "checks": 108
+      },
+      "helpers": 0,
+      "stderr_bytes": 0,
+      "result_sha256": "894cb6c4203f31dabd4220633b5569fa0ad7dc35febfe8e93f47259c5a067f70"
+    },
+    {
+      "name": "tests__independent_forecast_controller",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "checks": 306
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "192c3bbd891bf6bf4b00610dc05a54388aed185277f64dd8ed18957a710ccccb"
+    },
+    {
+      "name": "tests__independent_forecast_legacy",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "checks": 808
+      },
+      "helpers": 0,
+      "stderr_bytes": 0,
+      "result_sha256": "056b09df8dfb623b3d3f644e9d9c166ce2b3bd5dcc49cbc9a2f6d94bed51b92c"
+    },
+    {
+      "name": "tests__independent_forecast_views",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "checks": 42
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "b7aae487e3b3f8360881ff0549edb697208d70d07d740cf0fc7ddc472f6f0388"
+    },
+    {
+      "name": "tests__independent_modes",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": null,
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "1bafcb91642889fc6813e68018b3ef18517eead136b89179090ff7a44a0188ad"
+    },
+    {
+      "name": "tests__independent_modifier_compatibility",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "checks": 84
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "9fda1cd77cdb0e0e85b93232ccb6411d7d34bb664d3d2d65d3014c2e6b30ceeb"
+    },
+    {
+      "name": "tests__independent_new_weapon_caps",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "checks": 14
+      },
+      "helpers": 0,
+      "stderr_bytes": 0,
+      "result_sha256": "d7b6deb442387b8cbe6ec426a7f338e6a8ed147375bfecbac597d53b3fd0825c"
+    },
+    {
+      "name": "tests__independent_new_weapon_geometry",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "checks": 850
+      },
+      "helpers": 0,
+      "stderr_bytes": 0,
+      "result_sha256": "a927779268898a791756e35f42aa20cd315256867806bc0c29f377c021df736f"
+    },
+    {
+      "name": "tests__independent_new_weapon_lifecycle",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "checks": 124
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "7c0f983e94908d3fcddab0f6db70ceb1be88de6fcfa9665d970dc97b0940dbe0"
+    },
+    {
+      "name": "tests__independent_new_weapon_motion",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "checks": 14
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "ef0a35ad85e2f88a1ccccaba4c70f6a0594344a91017f9adc3b60c9e3d3b3eb8"
+    },
+    {
+      "name": "tests__independent_new_weapon_policy",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "checks": 59
+      },
+      "helpers": 0,
+      "stderr_bytes": 0,
+      "result_sha256": "02da4bc09fd4d95df9704f6a00159ebf1dfea3751b59ae44e67f8d34f03be0f5"
+    },
+    {
+      "name": "tests__independent_new_weapon_runtime",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "checks": 46
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "ab97cc873d046d9099b36ac96288d9629020c66d99d966a872825b8f85610fe9"
+    },
+    {
+      "name": "tests__independent_policy_validation",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": null,
+      "helpers": 0,
+      "stderr_bytes": 0,
+      "result_sha256": "a188e36218fe38baa73706477d6585d15e51d93ba44dc82a128f4c1a210a29a6"
+    },
+    {
+      "name": "tests__independent_qa",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "independent_passed": 11
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "358a96d2eff6b48aa0e5b28fcd6473608574362b60f6adfc0f42f0d08ed3fcad"
+    },
+    {
+      "name": "tests__independent_reservation_records",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "checks": 300
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "70d294b1e11b54c4910326fad6d2be300b0aad55d0f3b88eefe473b334fdae9e"
+    },
+    {
+      "name": "tests__independent_reservation_runtime",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "checks": 901
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "c24117319f7cc86e107198cf1e877aebba5dba92f8afb5b4278f01ca00fc5686"
+    },
+    {
+      "name": "tests__independent_reservation_views",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "checks": 3254
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "671a43a0ef6813a03e87e7c9b37d17f8ae4810453496913bf1f5a7b2c1ac3c43"
+    },
+    {
+      "name": "tests__independent_resolution",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": null,
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "8d4e95152df520c842dac2012d171bd0a09572a12f2f076fb880e953bb5a756b"
+    },
+    {
+      "name": "tests__independent_room_boundaries",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": null,
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "5174f249fcd584c5270a9ae2937f1b72db1d29fc3ca3ae495d9293e3695a4f82"
+    },
+    {
+      "name": "tests__independent_salvage_runtime",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "checks": 294
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "5703907b75eb3cf75c252f62badcd104e2a88e3934dd743175c556450716adbf"
+    },
+    {
+      "name": "tests__independent_salvage_views",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "checks": 901
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "9d76b3a0f1ca3c573d3da91670b2013f4cc88a63303bad9687050f11d010f511"
+    },
+    {
+      "name": "tests__independent_scavenger_authority",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "checks": 178
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "dd6c529508bc762e1ef72eb626c31aa6e247ff106530099187d96c4617edaf96"
+    },
+    {
+      "name": "tests__independent_scavenger_events",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "checks": 46
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "dd705a0fb51b7db5ec152b517d21d4639bd9bef10b22dab525586e14058f10dc"
+    },
+    {
+      "name": "tests__independent_scavenger_settlement",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "checks": 30
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "fa236816a005446be212df0939d9dc2744bcee1bbfa8702aaa19186f3f87b9dd"
+    },
+    {
+      "name": "tests__independent_scavenger_views",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "checks": 132
+      },
+      "helpers": 1,
+      "stderr_bytes": 11040,
+      "result_sha256": "38d76998b3d8afdaa59f6ff1ae32f564993525adf0cb9b7daec2c32b838da46e"
+    },
+    {
+      "name": "tests__independent_settlement_types",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "checks": 1164
+      },
+      "helpers": 2,
+      "stderr_bytes": 0,
+      "result_sha256": "26cb65d688bf7ff929ab3246eb06ce2616914d5f326785591dd1d49b8d3e7b79"
+    },
+    {
+      "name": "tests__independent_shop",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "independent_shop_passed": 216
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "2c69b42d5ff7046797a7cd80d670c9bbf2053adff44603543e9ce1a9b64169de"
+    },
+    {
+      "name": "tests__independent_spitter_assets",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": null,
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "5e49f76607b18e76017fe946a8a8efb2dd96cd18e66a6bc2b5f87c4c9237073e"
+    },
+    {
+      "name": "tests__independent_spitter_events",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": null,
+      "helpers": 2,
+      "stderr_bytes": 0,
+      "result_sha256": "140193fb6dde42323012b9815eb08f875487a46a1c7e395519b461a85534803e"
+    },
+    {
+      "name": "tests__independent_spitter_parity",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": null,
+      "helpers": 2,
+      "stderr_bytes": 0,
+      "result_sha256": "d4d232ab29b9938403ec650c594906d4fef6aa58762de61a60e33bd68017b16e"
+    },
+    {
+      "name": "tests__independent_starting_loadout_views",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "checks": 544
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "e67acbe0eb9cccf7e7f7ee2a8956da7763d65892ff2c1db9464895cc8b33650f"
+    },
+    {
+      "name": "tests__independent_starting_loadouts",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "checks": 977
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "b98276d9d966c8ce56b8c64156d622b4ea028de709823c573fb1d6fd0313471c"
+    },
+    {
+      "name": "tests__independent_support_assets",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "checks": 120
+      },
+      "helpers": 0,
+      "stderr_bytes": 0,
+      "result_sha256": "6741261471a0260bfccff8f7707bf8baa60c2afcaaa2823459fac76f11554b44"
+    },
+    {
+      "name": "tests__independent_support_authority",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "checks": 126
+      },
+      "helpers": 0,
+      "stderr_bytes": 0,
+      "result_sha256": "3bf367f36bc3294e06d0c944d506e0accf6965a66a2bf50d4e41dbb20c9cc6c3"
+    },
+    {
+      "name": "tests__independent_support_death_disposal",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "checks": 8
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "d69a2757b4623d673a8686f92d664bc719cad5d50442dd4021800952780262c9"
+    },
+    {
+      "name": "tests__independent_support_encounters",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "checks": 369
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "58f9e6fb7abcabc5d06afbd07875b18b391d145709b080ca1e018776be47caa7"
+    },
+    {
+      "name": "tests__independent_support_projectiles",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "checks": 38
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "8a8f13211a428b91f7bc933b7f8581b875902907588d18281c02911481ad65fb"
+    },
+    {
+      "name": "tests__independent_support_runtime",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "checks": 104
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "b21ea27bf58f01f8c60af405cfc240873e635eeb73d3acb646ea69a9a850bff5"
+    },
+    {
+      "name": "tests__independent_tag_authority",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "checks": 561
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "3f212c0758265f7e2976d47ce9e791502dae47a163299a65d9a3ddf9e9900e4b"
+    },
+    {
+      "name": "tests__independent_tag_views",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "tag_view_checks": 848
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "9906b8983b9772f9ff3815ee8ca5c21c1c3d1d412dbdea4db6607a92f3e1ee2a"
+    },
+    {
+      "name": "tests__independent_tempering_authority",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "checks": 903
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "966bfb0c095ab72c0ebc660c59835a43a0caa23dc9d61ce2cb983d4379d15abe"
+    },
+    {
+      "name": "tests__independent_tempering_combat",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "checks": 626
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "d74687b8f84775e07ea30274d2fe2a8f6fb37de99ab57346dc58ca16ce8734c9"
+    },
+    {
+      "name": "tests__independent_tempering_hint",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "checks": 528
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "6f3f18b80f6c300d2f803236787e157d0321d02aed24c7efe177d4da0bae11c7"
+    },
+    {
+      "name": "tests__independent_tempering_views",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "checks": 872
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "358ba774184c1f0ff4da2388b08efb841bcf359f5e075747791ae79ca2c44d27"
+    },
+    {
+      "name": "tests__independent_ui",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "independent_ui_passed": 84
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "5ce9bed106199f709da503a6e8f4c6283f8b937572a5938934d9375bed735d66"
+    },
+    {
+      "name": "tests__independent_v2",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "independent_v2_passed": 28
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "8861247050dd2db6557a482dfe1ba74b61d9ddc9e2cf65777a5fc1c1046b2857"
+    },
+    {
+      "name": "tests__independent_v3",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "independent_v3_passed": 20
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "ba9bbf25ebc88867c31d881de73685ff080cb6c0b6b424406736e0fe24df7632"
+    },
+    {
+      "name": "tests__independent_v4",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "independent_v4_passed": 35
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "4dfb62087390a43cef00811c250f10919e543ccfb5e7cbbf741e81fb03cb1598"
+    },
+    {
+      "name": "tests__independent_v5",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "independent_v5_passed": 26
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "557113057160eee0b9dc2b0b6e6d07aa82c9910f942f608fafb45f0de4a65cef"
+    },
+    {
+      "name": "tests__independent_vfx",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "independent_vfx_passed": 130
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "0e084b9f3dad2199fa85e76ee38bd6815db3ad0b7204d14a55c05548b7327fdf"
+    },
+    {
+      "name": "tests__independent_warden_reactions",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "independent_warden_reactions_passed": 942
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "34307efbd992b40e38becc55892f30f32f68f48f2f078568c39260055c612c3d"
+    },
+    {
+      "name": "tests__independent_weapon_authority",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "checks": 517
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "df5698704234c04dbe8c51ace981e5675199579c8e266e10cf4d9cb8936cb6d4"
+    },
+    {
+      "name": "tests__independent_weapon_order",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "checks": 837
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "2f5e00ef96b683ca2b8229b9da21d9d6b66d16a5e161a07d36e91326d35bd30e"
+    },
+    {
+      "name": "tests__independent_weapon_order_views",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "checks": 512
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "0f06fa8df9d6476c918a9d6906cf28f5db7ca39be9cd093b06f71b6ccc23b891"
+    },
+    {
+      "name": "tests__independent_weapon_readouts",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "checks": 465
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "c7aaf7cd4cfcabb194aa928de50926593fbb70c184280cfe2e7024c1a7c7243e"
+    },
+    {
+      "name": "tests__independent_weapon_rig",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "independent_weapon_rig_passed": 273
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "8a4517a74d0c93528106b7985cac7b6a64dd9c227bcf57168432d48f66c08dea"
+    },
+    {
+      "name": "tests__test_A_catalog_links",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "checks": 17
+      },
+      "helpers": 0,
+      "stderr_bytes": 0,
+      "result_sha256": "c178301ed354fc6f49a20eee26b13ffe1cdcd90f4acdc205202b25da4a885fb9"
+    },
+    {
+      "name": "tests__test_A_item_transactions",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "A_item_transaction_checks": 208
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "ad9ab02779bcbb9ffecb2bf308734eb8910d523bc65f5d422c2c92ed0f1aa0c0"
+    },
+    {
+      "name": "tests__test_A_profile_negatives",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "checks": 165
+      },
+      "helpers": 0,
+      "stderr_bytes": 0,
+      "result_sha256": "f33cb0c524cfd2ce0e8170351499c9018fa9eec1d14907fe3d71783a925de020"
+    },
+    {
+      "name": "tests__test_actor_actions",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "passed": 418
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "65dd18cf6489bff3b8334dfb30c7d6c60616323b84b577f3aba902db8820287a"
+    },
+    {
+      "name": "tests__test_audio_teardown_predicate",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "checks": 15
+      },
+      "helpers": 0,
+      "stderr_bytes": 0,
+      "result_sha256": "9f6b045ff0786ff821bc68aa3a26e7dad7d99d101d2f31f9458bb22ca5b208e3"
+    },
+    {
+      "name": "tests__test_bankshot_build",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "bankshot_build_checks": 114
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "930a600c395be263fa94ee9864ed18cb0ebd664b5b4f1f880646e83552c67f7b"
+    },
+    {
+      "name": "tests__test_boundary_shot",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "boundary_shot_checks": 35
+      },
+      "helpers": 0,
+      "stderr_bytes": 0,
+      "result_sha256": "5b04d3b51780c6c3b88a660b9fcca165fa86a88007cde1c2d6c9eeedc9c9a1dc"
+    },
+    {
+      "name": "tests__test_brood_actions",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "passed": 229
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "657eee0cdb69b7fde5e1a769e6a4a699cf3872655eb20c2ec3e9640254bdaf17"
+    },
+    {
+      "name": "tests__test_brood_pulse",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": null,
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "f76bd2d4534ad77423ccc5fed5e3b7c8682f1bf195e34ba23f6901496caef001"
+    },
+    {
+      "name": "tests__test_build_forecast",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "passed": 21
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "9fa334e1fc826fbc43c16b018280e8c54bde5dc50d8e5db8252527af60589331"
+    },
+    {
+      "name": "tests__test_builds",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "passed": 221
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "369f62520d17023422c82d59309a369206c06929013e81df6f30d8bc02cde61d"
+    },
+    {
+      "name": "tests__test_charger_actions",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "passed": 130
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "bfe6874d70d44122e9b3fb791a9ef4deda90d2d2fa56442023f039b74510a90b"
+    },
+    {
+      "name": "tests__test_combat_focus",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "passed": 344
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "3e6ef5fc5737189442b5d41e328491161529f22e5e0a3bf4ae92e2339f712626"
+    },
+    {
+      "name": "tests__test_combat_hud_readability",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "combat_hud_readability_passed": 265
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "7b5f1ab5354dbbbae22f210704e24e109c17f7706e76dd32a73f683fdaffe74c"
+    },
+    {
+      "name": "tests__test_contact_enemy_actions",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": null,
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "6aa8b6f0b93ecd1c48770f6554d8aef8d617673e7ef0be68798f9750ab529775"
+    },
+    {
+      "name": "tests__test_core_reactions",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "core_reactions_passed": 56
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "d83bb57b52d55849a58a4d07fc7c098ba9aea44633f4ee5509acf3213757b74e"
+    },
+    {
+      "name": "tests__test_core_summon",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "core_summon_passed": 2510
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "6b3c227440a0a57d718fc0f90f67a63beddec41aec9e080f199320e8be44e031"
+    },
+    {
+      "name": "tests__test_core_summon_assets",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": null,
+      "helpers": 0,
+      "stderr_bytes": 0,
+      "result_sha256": "769e72fd369b00aa0b69251f0ec15ee9193c60074d3c2fd35e2471e3d91957eb"
+    },
+    {
+      "name": "tests__test_crawler_hurt_registration",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": null,
+      "helpers": 0,
+      "stderr_bytes": 0,
+      "result_sha256": "be1af5d6a45a182b55c8478002d11229b8fae29cc9d8cd5f0a918597d62ea065"
+    },
+    {
+      "name": "tests__test_cryo_build",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "checks": 205
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "af921b63a164986becbb2c1e8cccf240df5884e60f7d3efa68f299673fd7cce4"
+    },
+    {
+      "name": "tests__test_discrete_ui_numbers",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "discrete_ui_checks": 34
+      },
+      "helpers": 0,
+      "stderr_bytes": 0,
+      "result_sha256": "8b824385ac3ab515648736d84ddf7d5220cc74da07327b445e47fbf8f898b936"
+    },
+    {
+      "name": "tests__test_effects",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "passed": 133
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "34c20fa2973b24a9c1b33dabd9edcc10748111daa3da86e5ee3c342fe58f462b"
+    },
+    {
+      "name": "tests__test_encounters",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "passed": 25
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "71634e1655945deb9cf422920444222568ad6ec90d4b83e1be5c33dd3a4cff4d"
+    },
+    {
+      "name": "tests__test_expansion",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "passed": 571
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "d7c633021b36cec09a456dfc5bef36dfe1f6198004abeaefd4fe1fdb169e06cb"
+    },
+    {
+      "name": "tests__test_expansion_weapon_readout",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "checks": 8
+      },
+      "helpers": 0,
+      "stderr_bytes": 0,
+      "result_sha256": "177cbf2bcfa7a92f277cf7dccc4829162a6145b1f0dc2815bcb626ede2442bdb"
+    },
+    {
+      "name": "tests__test_export_contract",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "export_contract_checks": 46
+      },
+      "helpers": 0,
+      "stderr_bytes": 0,
+      "result_sha256": "0339b21df5366027cfd3fdc23eb19dab19784916d823f689c75710607594960e"
+    },
+    {
+      "name": "tests__test_feedback_diode",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "checks": 115
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "31723af62b32ed34a52086be291c294269279a58a28086980c4c59d0cc94b480"
+    },
+    {
+      "name": "tests__test_feedback_mixer",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "passed": 48
+      },
+      "helpers": 0,
+      "stderr_bytes": 0,
+      "result_sha256": "3a70deb0414d4df47c22d9f431a1678ee64e1335c9690a774d3fa359f20088f7"
+    },
+    {
+      "name": "tests__test_feedback_teardown",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "checks": 13
+      },
+      "helpers": 0,
+      "stderr_bytes": 0,
+      "result_sha256": "efad2e1e7836f202df4323aec72757ae0f4a0c36bb7dbcc66add0d2f21773b0b"
+    },
+    {
+      "name": "tests__test_focus_fire",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "passed": 228
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "b97a6c7c3bd1928cc0860619c433229daf73d914acd4bab06895f01c2c2863c2"
+    },
+    {
+      "name": "tests__test_game",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "passed": 193
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "26f8c7d0bc56a3df16296b9e9bcfa13e14b7fe1ff2a8a6545e4896db913e0832"
+    },
+    {
+      "name": "tests__test_hud_layout",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "hud_layout_passed": 12
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "d577580316b71e6df6909a18290d0a5961565a52acbd7b091d4fd844db88d404"
+    },
+    {
+      "name": "tests__test_input_lifecycle",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "input_lifecycle_passed": 20
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "43cb60134d3abf2abba6af45210d922939e57272e934c4e4f1b4fa6bec8e5987"
+    },
+    {
+      "name": "tests__test_modes",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "passed": 70
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "ee333d7d364b69019f74432638eceb0dc27c8c567a0969008f246c04f06fa33d"
+    },
+    {
+      "name": "tests__test_modifier_copy",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "modifier_copy_checks": 112
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "a4459f9b83d585a5794a56e6465ba3e71136a302cf084b2b32f94acd4b76ce22"
+    },
+    {
+      "name": "tests__test_player_feedback",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "passed": 95
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "f90c9e947a4dbb5dee3a01bc5e5464d75575a842deeb5e453e78a039012cea93"
+    },
+    {
+      "name": "tests__test_primary_brace",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": null,
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "d29860cc080b6fbeaa65676a4ba05753940b9f2af7195d58e9222833dc77dc69"
+    },
+    {
+      "name": "tests__test_recoil_plate",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "recoil_checks": 130
+      },
+      "helpers": 0,
+      "stderr_bytes": 0,
+      "result_sha256": "8c3a94efdbdb5d088b3ae1b4f2019afce8def5f9fe977619dd94c5af1552d1c2"
+    },
+    {
+      "name": "tests__test_resolution_validation",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "checks": 305
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "9c97a40efee4711c6ab935ef02f9e6c967a71f15cfb04f71b85e40ee3dc488ce"
+    },
+    {
+      "name": "tests__test_scavenger_reel",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "passed": 48
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "2c5885fb668381c64bcbf695c8a6a6a691207ce46d55e7204c2d961bda9213e3"
+    },
+    {
+      "name": "tests__test_settlement_levels",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "settlement_levels_passed": 20
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "739572c14f091d8a7682af8c6041f016d8633ec3380b853583a3a0e71c830e06"
+    },
+    {
+      "name": "tests__test_shop_offer_visibility",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "shop_offer_visibility_passed": 190
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "0ceaad485d4ce12efac0aff3406c4c8d329cedd24879c47501d12b28044a10de"
+    },
+    {
+      "name": "tests__test_shop_reservation",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "reservation_passed": 520
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "988aa696fdf15c92c23a5a94f7fd402349217657282f972d1fc6b0b11fd06598"
+    },
+    {
+      "name": "tests__test_spitter_actions",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "passed": 162
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "6961edbfb512ee88505e84fbd0cfc28768746d39d8354d43d30ff9f305b6c249"
+    },
+    {
+      "name": "tests__test_starting_loadouts",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": null,
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "5e1fa05224efcdb6b8ff4477afc1d75ae7cab65eb97535cc778c9783d48d885b"
+    },
+    {
+      "name": "tests__test_stitch_drone",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "checks": 18
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "0a89a7c57e94529718921e5c3456c81ffd53bba62934b0ef7366f511b77a1f5a"
+    },
+    {
+      "name": "tests__test_support_encounter_projection",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "checks": 31
+      },
+      "helpers": 0,
+      "stderr_bytes": 0,
+      "result_sha256": "1e321a78e7307d40c9cda91227faa4052777595354633d56f6def646094c0e84"
+    },
+    {
+      "name": "tests__test_tag_synergy_progress",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "tag_synergy_progress_checks": 467
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "c189248cd48ee9499269ab4df564bbfdb9ae59a9c25cf48e4462b76d203746d2"
+    },
+    {
+      "name": "tests__test_telegraph_readability",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "telegraph_readability_passed": 97
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "f2604b5f47d823eb119570d5be3e05eb488ad00af93f90325431c45d317578d1"
+    },
+    {
+      "name": "tests__test_tempered_combat",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "passed": 290
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "bd775091feebaac452cc0202d3e272e24e5bd494852aff6bad5cdbfedb141112"
+    },
+    {
+      "name": "tests__test_upgrade_salvage",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "passed": 147
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "e88d76944e3746af6d15be59f976d18407dde752e54a8fe936ee816b42d32584"
+    },
+    {
+      "name": "tests__test_v39_legacy_inputs",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "checks": 19
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "919017f39e78aef67d315d930e7f8c908dd094e777eefb66b319afee7bacbf10"
+    },
+    {
+      "name": "tests__test_vfx",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "passed": 161
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "23f3c79fa907404a00d6cc1f3c4a63ec37c7bffc509f7106145d82376e1bd01b"
+    },
+    {
+      "name": "tests__test_warden_charge",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "warden_charge_passed": 2510
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "5c1a23efec8a755a03e31fd3fb8a4cae2c5c23b25d9397e06d1b40a4c7fc3f51"
+    },
+    {
+      "name": "tests__test_warden_charge_assets",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": null,
+      "helpers": 0,
+      "stderr_bytes": 0,
+      "result_sha256": "e0d3a9dfee0be1ca8a4f3311bc0fff783e46cf6a260e18dfafc63ac541f5bbea"
+    },
+    {
+      "name": "tests__test_warden_reactions",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "warden_reactions_passed": 38
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "37555acf1f9766d96b03675eced5b8d9c4150f5a1ed7fbcf3d9245555b8a356e"
+    },
+    {
+      "name": "tests__test_weapon_mounts",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "passed": 189
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "79ddeca5d351be1e5af23ac9507429c0690bcb59047223e084918977bf6c0b26"
+    },
+    {
+      "name": "tests__test_weapon_order",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "passed": 321
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "f9208cc82392175eb91185198b234df9bb708b15b6c74f3be3583cedba463b31"
+    },
+    {
+      "name": "tests__test_weapon_readout",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "weapon_readout_checks": 411
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "8da7636d394e9aa72b76f488a7c11a284bcb9177c6faede3eb1d2e132a4ecf4a"
+    },
+    {
+      "name": "tests__test_weapon_tempering",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": {
+        "passed": 413
+      },
+      "helpers": 1,
+      "stderr_bytes": 0,
+      "result_sha256": "a33a06ca64acc91dfe93138b866560d92743d0f7bb6b7b1a54e20825cb798579"
+    },
+    {
+      "name": "ui__test_ui",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": null,
+      "helpers": 0,
+      "stderr_bytes": 0,
+      "result_sha256": "517c9c9b0098307912c6349f126524ea6b87e7b2ab0bb65acbc69111b34546cc"
+    },
+    {
+      "name": "docs__art__check_build_expansion_icons",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": null,
+      "helpers": 0,
+      "stderr_bytes": 0,
+      "result_sha256": "a0d65ec01229122636faedc652f27cbad66a7bca88ef6b00af5bd6dce54b079a"
+    },
+    {
+      "name": "docs__art__check_icons",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": null,
+      "helpers": 0,
+      "stderr_bytes": 0,
+      "result_sha256": "ea8cb49f2ba0505696b481ec5fc1321bad53b0ea7b0f6ac7b3d78464598bbd75"
+    },
+    {
+      "name": "docs__art__check_mechanism_icons",
+      "execution": "source-continue",
+      "native_exit": 0,
+      "checks": null,
+      "helpers": 0,
+      "stderr_bytes": 0,
+      "result_sha256": "5724ac7974beec6b37fffcdf2102b74abb0dea5f0c9cb361776a8121b44028e1"
+    }
+  ]
+}

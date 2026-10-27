@@ -1,0 +1,72 @@
+{
+  "name": "python-pcm",
+  "native_exit": 0,
+  "timeout": false,
+  "seconds": 0.682809410005575,
+  "reports": [
+    {
+      "checks": 38,
+      "cues": {
+        "player_damage": {
+          "bytes": 14156,
+          "first": 0,
+          "frames": 7056,
+          "last": 0,
+          "mean": 3.460042871315193e-08,
+          "pcm_sha256": "a738bbedcd3b01986f6cd4206303886002500b7589e5b27ee33c66deacd30118",
+          "peak": 0.25,
+          "rms": 0.15887196461146635,
+          "wav_sha256": "34a9aa9fe8cab5273d2ea5199b127d303975df7ff088acce2441f14a922ec125"
+        },
+        "shield_block": {
+          "bytes": 10628,
+          "first": 0,
+          "frames": 5292,
+          "last": 0,
+          "mean": 4.036716683201058e-08,
+          "pcm_sha256": "7933a54e3ca54b14fc8286c3d8bfae3a8023e6a1351e2c4e9a20c3c57e3611cc",
+          "peak": 0.25,
+          "rms": 0.1625011707337911,
+          "wav_sha256": "c4e21aa5500c8d4f01dd29c561e325a3f97173f103b29c1a291df54a6c8766f1"
+        }
+      },
+      "failures": [],
+      "scope": "Independent source bytes/formula/quantized numeric bounds only. No imported engine/mixer/human listening/physical output claim.",
+      "total_bytes": 24784
+    }
+  ],
+  "helpers": [],
+  "full_report": {
+    "checks": 38,
+    "cues": {
+      "player_damage": {
+        "bytes": 14156,
+        "first": 0,
+        "frames": 7056,
+        "last": 0,
+        "mean": 3.460042871315193e-08,
+        "pcm_sha256": "a738bbedcd3b01986f6cd4206303886002500b7589e5b27ee33c66deacd30118",
+        "peak": 0.25,
+        "rms": 0.15887196461146635,
+        "wav_sha256": "34a9aa9fe8cab5273d2ea5199b127d303975df7ff088acce2441f14a922ec125"
+      },
+      "shield_block": {
+        "bytes": 10628,
+        "first": 0,
+        "frames": 5292,
+        "last": 0,
+        "mean": 4.036716683201058e-08,
+        "pcm_sha256": "7933a54e3ca54b14fc8286c3d8bfae3a8023e6a1351e2c4e9a20c3c57e3611cc",
+        "peak": 0.25,
+        "rms": 0.1625011707337911,
+        "wav_sha256": "c4e21aa5500c8d4f01dd29c561e325a3f97173f103b29c1a291df54a6c8766f1"
+      }
+    },
+    "failures": [],
+    "scope": "Independent source bytes/formula/quantized numeric bounds only. No imported engine/mixer/human listening/physical output claim.",
+    "total_bytes": 24784
+  },
+  "exception": null,
+  "semantic": true,
+  "pass": true
+}

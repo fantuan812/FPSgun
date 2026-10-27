@@ -1,0 +1,11 @@
+--- evidence-workspace/moss-v39-ui/equipment16-native-r2/cards.gd
++++ evidence-workspace/moss-v39-ui/combined-native-cards/cards.gd
+@@ -124,7 +124,7 @@
+ 	if oracle.size()!=21:print("E16_NATIVE_ORACLE_REJECT");quit(2);return
+ 	g=load("res://scenes/main.tscn").instantiate();root.add_child(g);g.set_process(false);await frames()
+ 	DisplayServer.window_set_size(Vector2i(960,540));await frames()
+-	ck(g.ui.manifest.icons.size()==43,"actual merged43 unchanged")
++	ck(g.ui.manifest.icons.size()==46,"actual merged46 combined catalog")
+ 	await group("legacy_first",OLD_WEAPONS,OLD_ITEMS.slice(0,8),OLD_WEAPONS+OLD_ITEMS.slice(0,8))
+ 	if failures.is_empty():await group("legacy_rest",OLD_WEAPONS,OLD_ITEMS.slice(8,12),OLD_ITEMS.slice(8,12))
+ 	if failures.is_empty():await group("expansion_A",A_WEAPONS,A_ITEMS,A_WEAPONS+A_ITEMS)

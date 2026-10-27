@@ -1,0 +1,151 @@
+{
+  "scope": "Author lightweight raw readback and explicitly enumerated original-image visual sampling; not independent full source rehash, not all 56 images direct visual review.",
+  "b_phases": [
+    {
+      "mode": "arena_960",
+      "result_sha256": "71dec8954bb015090eacafd9951b9916a0fa2f534681114c79f29099b63bd30e",
+      "checks": 71,
+      "authority_guards": 47,
+      "unchanged": true,
+      "rig_stages": 28,
+      "seconds": 32.24711601699528,
+      "helper_pass": true,
+      "source_and_pins_runner_readback": true
+    },
+    {
+      "mode": "rooms_1280",
+      "result_sha256": "81385389053e818ae6e730e0a167a2fb46d5d7b39e89a6727874d73ef4d842fc",
+      "checks": 71,
+      "authority_guards": 47,
+      "unchanged": true,
+      "rig_stages": 28,
+      "seconds": 18.62749151600292,
+      "helper_pass": true,
+      "source_and_pins_runner_readback": true
+    }
+  ],
+  "b_directly_viewed_images": {
+    "arena_960": [
+      "arena_960_03_summaries_winch_row.png",
+      "arena_960_05_pin_vs_focus_normal.png",
+      "arena_960_07_salvage_fields_normal.png",
+      "arena_960_08_winch_pipeline_normal.png",
+      "arena_960_09_sale_room_room.png",
+      "arena_960_01_old_build_closed.png",
+      "arena_960_02_three_cards_crossfire_pin.png",
+      "arena_960_04_pin_readiness_cooldown.png"
+    ],
+    "rooms_1280": [
+      "rooms_1280_03_summaries_winch_row.png",
+      "rooms_1280_05_pin_vs_focus_normal.png",
+      "rooms_1280_07_salvage_fields_normal.png",
+      "rooms_1280_08_winch_pipeline_normal.png",
+      "rooms_1280_09_sale_room_room.png",
+      "rooms_1280_06_invalid_mark_pruned.png",
+      "rooms_1280_10_modal_layer_pause.png",
+      "rooms_1280_07_salvage_fields_reduced.png"
+    ]
+  },
+  "cards_directly_viewed_images": [
+    "card_return_collar.png",
+    "card_lens.png",
+    "card_rivet_gun.png"
+  ],
+  "visual_observations": [
+    "In both modes held guns are small after actual presentation sync; prior huge-gun r2 images retained.",
+    "Both modes show complete three summaries and fixed BACK. Pin anchor/amber small ticks differ from white priority brackets; small target ticks are subtle and this review does not establish all four corners visible.",
+    "Both modes show thin subdued field outlines below player; reduced sample remains subdued. Controlled dual fields use cooldown reset and are not claimed naturally coexisting.",
+    "Both Winch normal images show HP50/100 and unobscured small hero; medicine overlaps hero, so images alone do not prove movement/no-heal. Pipeline assertions, not stills, establish behavior.",
+    "Room-clear images show actual CIRCUIT UPGRADE modal above world, not BUILD summary.",
+    "Sample old build closed, complete Crossfire card, pruned mark, pause modal show expected hierarchy; cooldown still is at top weapons, not the cooldown row.",
+    "Cards representative Rivet/Lens/Return Collar have readable full target cards, un-stretched icons and fixed BACK. Paused background may contain unposed rig texture; this card-only scope is not world-render acceptance."
+  ],
+  "limitations": [
+    "Case04 verifies projection and pause freeze only; cooldown row was not actively scrolled into direct view.",
+    "Both OS sizes use logical960x540, not two logical layouts.",
+    "Controlled fixture, not natural acquisition or physical mouse.",
+    "Selected gameplay authority excludes intentionally mutable rig presentation.",
+    "Original native scroll21/1FAIL, diagnostic targetFAIL and r2 machinePASS/visualHOLD remain preserved."
+  ],
+  "cards": {
+    "result_sha256": "b2c8be52dbf3527872283ac1108152f88d04c05e8e475722566b12499155f7ac",
+    "checks": 145,
+    "records": 21,
+    "seconds": 26.913129364998895,
+    "groups": [
+      {
+        "after_back": {
+          "expected_focus_enemy": 0,
+          "focus_enemy": 0,
+          "local_panel_visible": true,
+          "modal_visible": false,
+          "state": "playing"
+        },
+        "after_escape": {
+          "expected_focus_enemy": 0,
+          "focus_enemy": 0,
+          "local_panel_visible": true,
+          "modal_visible": false,
+          "state": "playing"
+        },
+        "after_reopen": {
+          "focus_enemy": 0,
+          "modal_visible": true,
+          "open_result": true,
+          "state": "inventory"
+        },
+        "name": "legacy_first",
+        "selected_before_after": 0
+      },
+      {
+        "after_back": {
+          "expected_focus_enemy": 0,
+          "focus_enemy": 0,
+          "local_panel_visible": true,
+          "modal_visible": false,
+          "state": "playing"
+        },
+        "after_escape": {
+          "expected_focus_enemy": 0,
+          "focus_enemy": 0,
+          "local_panel_visible": true,
+          "modal_visible": false,
+          "state": "playing"
+        },
+        "after_reopen": {
+          "focus_enemy": 0,
+          "modal_visible": true,
+          "open_result": true,
+          "state": "inventory"
+        },
+        "name": "legacy_rest",
+        "selected_before_after": 0
+      },
+      {
+        "after_back": {
+          "expected_focus_enemy": 0,
+          "focus_enemy": 0,
+          "local_panel_visible": true,
+          "modal_visible": false,
+          "state": "playing"
+        },
+        "after_escape": {
+          "expected_focus_enemy": 0,
+          "focus_enemy": 0,
+          "local_panel_visible": true,
+          "modal_visible": false,
+          "state": "playing"
+        },
+        "after_reopen": {
+          "focus_enemy": 0,
+          "modal_visible": true,
+          "open_result": true,
+          "state": "inventory"
+        },
+        "name": "expansion_A",
+        "selected_before_after": 0
+      }
+    ]
+  },
+  "review_pass_with_stated_visual_limits": true
+}

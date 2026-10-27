@@ -1,0 +1,8 @@
+# Proposed B-only validator consistency revision — NOT APPLIED / NOT EXECUTED
+Current883/e37b source and coldPLAN5b78 remain untouched.
+
+New pure API `BuildItemsProfiles.configuration(catalog:Variant)->Dictionary`: exact frozen helper configure data admission (without configuration-window/state); returns ok/errors and on success detached compact registry/definitions/slot_caps. Uses original Runtime._whole and same profile validator; no Runtime instance, configure, world or live data mutation. Rules calls this only if typed recognized B row exists. Existing per-row validation retained. No B catalog preserves old positive generic slot domain.
+
+PROPOSED.patch only new profiles + Rules; original647 helper/adapter and expected unchanged. Helper configure is not refactored. Static function admits integral JSON slot numbers exactly4/8, rejects wrong registry kind/duplicateID/invalidstack/profile just like runtime. Forecast stays current detached weapon_types and does not use live configure.
+
+`test_B_rules_configuration.gd`:60 literal checks =1baseline +2slotfields×9values×3checks +3registry +1legal JSON integral +1noB compatibility. Uses original Rules API (so can capture original883 admission mismatch before applying proposal), and fresh helper only as **separate subject** not as generated expected. Each expected rejection explicit; source binary bytes unchanged. Original883 is expected to report failures for positive wrong slot counts and misplaced valid item row. Actual engine not launched; do not label those as observed failures yet. Strict route native0/exact60/no failures required only after authorized revision; original firstrun may intentionally FAIL and must be preserved, not rewritten.

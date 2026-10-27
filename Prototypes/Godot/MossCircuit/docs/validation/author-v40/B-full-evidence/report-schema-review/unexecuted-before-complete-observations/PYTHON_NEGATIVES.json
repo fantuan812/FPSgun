@@ -1,0 +1,471 @@
+{
+  "pass": true,
+  "checks": 66,
+  "tests": [
+    {
+      "route": "tests__independent_feedback_authority",
+      "case": "valid",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "route": "tests__independent_feedback_authority",
+      "case": "missing_scope",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "route": "tests__independent_feedback_authority",
+      "case": "scope_type",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "route": "tests__independent_feedback_authority",
+      "case": "scope_conflict",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "route": "tests__independent_feedback_authority",
+      "case": "extra_key",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "route": "tests__independent_feedback_authority",
+      "case": "shared_count_conflict",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "route": "tests__independent_feedback_authority",
+      "case": "failure",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "route": "tests__independent_feedback_authority",
+      "case": "observations_wrongtype",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "route": "tests__independent_feedback_authority",
+      "case": "observations_element",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "route": "tests__independent_feedback_authority",
+      "case": "observations_length",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "route": "tests__independent_feedback_authority_rooms",
+      "case": "valid",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "route": "tests__independent_feedback_authority_rooms",
+      "case": "missing_scope",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "route": "tests__independent_feedback_authority_rooms",
+      "case": "scope_type",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "route": "tests__independent_feedback_authority_rooms",
+      "case": "scope_conflict",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "route": "tests__independent_feedback_authority_rooms",
+      "case": "extra_key",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "route": "tests__independent_feedback_authority_rooms",
+      "case": "shared_count_conflict",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "route": "tests__independent_feedback_authority_rooms",
+      "case": "failure",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "route": "tests__independent_feedback_authority_rooms",
+      "case": "observations_wrongtype",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "route": "tests__independent_feedback_authority_rooms",
+      "case": "observations_element",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "route": "tests__independent_feedback_authority_rooms",
+      "case": "observations_length",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "route": "tests__independent_feedback_mixer",
+      "case": "valid",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "route": "tests__independent_feedback_mixer",
+      "case": "missing_scope",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "route": "tests__independent_feedback_mixer",
+      "case": "scope_type",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "route": "tests__independent_feedback_mixer",
+      "case": "scope_conflict",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "route": "tests__independent_feedback_mixer",
+      "case": "extra_key",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "route": "tests__independent_feedback_mixer",
+      "case": "shared_count_conflict",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "route": "tests__independent_feedback_mixer",
+      "case": "failure",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "route": "tests__independent_feedback_mixer",
+      "case": "windows_wrongtype",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "route": "tests__independent_feedback_mixer",
+      "case": "windows_element",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "route": "tests__independent_feedback_mixer",
+      "case": "windows_length",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "route": "tests__independent_feedback_mixer",
+      "case": "shapes_wrongtype",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "route": "tests__independent_feedback_mixer",
+      "case": "shapes_element",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "route": "tests__independent_feedback_mixer",
+      "case": "shapes_length",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "route": "tests__independent_feedback_mixer",
+      "case": "seconds_True",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "route": "tests__independent_feedback_mixer",
+      "case": "seconds_inf",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "route": "tests__independent_feedback_mixer",
+      "case": "seconds_-1.0",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "route": "tests__independent_feedback_views",
+      "case": "valid",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "route": "tests__independent_feedback_views",
+      "case": "missing_scope",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "route": "tests__independent_feedback_views",
+      "case": "scope_type",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "route": "tests__independent_feedback_views",
+      "case": "scope_conflict",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "route": "tests__independent_feedback_views",
+      "case": "extra_key",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "route": "tests__independent_feedback_views",
+      "case": "shared_count_conflict",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "route": "tests__independent_feedback_views",
+      "case": "failure",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "route": "tests__independent_feedback_views",
+      "case": "samples_wrongtype",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "route": "tests__independent_feedback_views",
+      "case": "samples_element",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "route": "tests__independent_feedback_views",
+      "case": "samples_length",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "route": "tests__independent_settlement_types",
+      "case": "valid",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "route": "tests__independent_settlement_types",
+      "case": "missing_scope",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "route": "tests__independent_settlement_types",
+      "case": "scope_type",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "route": "tests__independent_settlement_types",
+      "case": "scope_conflict",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "route": "tests__independent_settlement_types",
+      "case": "extra_key",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "route": "tests__independent_settlement_types",
+      "case": "shared_count_conflict",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "route": "tests__independent_settlement_types",
+      "case": "failure",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "route": "tests__independent_settlement_types",
+      "case": "audio_observations_wrongtype",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "route": "tests__independent_settlement_types",
+      "case": "audio_observations_element",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "route": "tests__independent_settlement_types",
+      "case": "audio_observations_length",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "route": "independent_B_icons",
+      "case": "valid",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "route": "independent_B_icons",
+      "case": "missing_scope",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "route": "independent_B_icons",
+      "case": "scope_type",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "route": "independent_B_icons",
+      "case": "scope_conflict",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "route": "independent_B_icons",
+      "case": "extra_key",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "route": "independent_B_icons",
+      "case": "shared_count_conflict",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "route": "independent_B_icons",
+      "case": "failure",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "route": "independent_B_icons",
+      "case": "observations_wrongtype",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "route": "independent_B_icons",
+      "case": "observations_element",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "route": "independent_B_icons",
+      "case": "observations_length",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    }
+  ],
+  "policy_sha256": "26393a77ba90febde2d4a0d49e261d59aeeb0784b6f3ed71dbcfb6cddaa300ca",
+  "classifier_sha256": "55adbfdeca97541e10f747a2b847558ec07567c8de77d07eaf93165fe1f411d1",
+  "scope": "pure Python only; does not rerun or relabel original36STOPFAIL"
+}

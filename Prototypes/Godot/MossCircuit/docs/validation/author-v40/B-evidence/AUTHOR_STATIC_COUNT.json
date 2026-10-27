@@ -1,0 +1,915 @@
+{
+  "status": "STATIC_SUCCESS_PATH_COUNT_NOT_EXECUTED",
+  "fixture_sha256": "1b07189c6bf09f728a70c9b121af5993da941d0b8d42e17967b20f7be0badaf1",
+  "helper_assertions": {
+    "fresh": 3,
+    "begin": 1,
+    "send": 0,
+    "pickups": 0
+  },
+  "loop_weights": {
+    "unique_bad": 33,
+    "numeric_bad": 72,
+    "duplicate_ID": 2,
+    "invalid_items": 6,
+    "invalid_weapons": 4,
+    "clamp": 3,
+    "typed_PRE": 28,
+    "actual_int": 4,
+    "field_creation": 3
+  },
+  "conditional_note": "success path includes the two explicit apply assertions after one-command assertion; any earlier failure still makes run fail",
+  "expected_count": 318,
+  "rows": [
+    {
+      "line": 39,
+      "counts": {
+        "ck": 0,
+        "fresh": 1,
+        "begin": 0
+      },
+      "loop_weight": 1,
+      "assertions": 3
+    },
+    {
+      "line": 41,
+      "counts": {
+        "ck": 1,
+        "fresh": 0,
+        "begin": 0
+      },
+      "loop_weight": 1,
+      "assertions": 1
+    },
+    {
+      "line": 44,
+      "counts": {
+        "ck": 1,
+        "fresh": 0,
+        "begin": 0
+      },
+      "loop_weight": 1,
+      "assertions": 1
+    },
+    {
+      "line": 45,
+      "counts": {
+        "ck": 1,
+        "fresh": 0,
+        "begin": 0
+      },
+      "loop_weight": 1,
+      "assertions": 1
+    },
+    {
+      "line": 50,
+      "counts": {
+        "ck": 1,
+        "fresh": 0,
+        "begin": 0
+      },
+      "loop_weight": 33,
+      "assertions": 33
+    },
+    {
+      "line": 57,
+      "counts": {
+        "ck": 1,
+        "fresh": 0,
+        "begin": 0
+      },
+      "loop_weight": 72,
+      "assertions": 72
+    },
+    {
+      "line": 63,
+      "counts": {
+        "ck": 1,
+        "fresh": 0,
+        "begin": 0
+      },
+      "loop_weight": 2,
+      "assertions": 2
+    },
+    {
+      "line": 65,
+      "counts": {
+        "ck": 1,
+        "fresh": 0,
+        "begin": 0
+      },
+      "loop_weight": 1,
+      "assertions": 1
+    },
+    {
+      "line": 66,
+      "counts": {
+        "ck": 1,
+        "fresh": 0,
+        "begin": 0
+      },
+      "loop_weight": 1,
+      "assertions": 1
+    },
+    {
+      "line": 68,
+      "counts": {
+        "ck": 1,
+        "fresh": 1,
+        "begin": 0
+      },
+      "loop_weight": 6,
+      "assertions": 24
+    },
+    {
+      "line": 70,
+      "counts": {
+        "ck": 1,
+        "fresh": 1,
+        "begin": 0
+      },
+      "loop_weight": 4,
+      "assertions": 16
+    },
+    {
+      "line": 71,
+      "counts": {
+        "ck": 1,
+        "fresh": 1,
+        "begin": 0
+      },
+      "loop_weight": 1,
+      "assertions": 4
+    },
+    {
+      "line": 72,
+      "counts": {
+        "ck": 1,
+        "fresh": 0,
+        "begin": 0
+      },
+      "loop_weight": 1,
+      "assertions": 1
+    },
+    {
+      "line": 74,
+      "counts": {
+        "ck": 0,
+        "fresh": 1,
+        "begin": 1
+      },
+      "loop_weight": 1,
+      "assertions": 4
+    },
+    {
+      "line": 77,
+      "counts": {
+        "ck": 1,
+        "fresh": 0,
+        "begin": 0
+      },
+      "loop_weight": 1,
+      "assertions": 1
+    },
+    {
+      "line": 78,
+      "counts": {
+        "ck": 1,
+        "fresh": 0,
+        "begin": 0
+      },
+      "loop_weight": 1,
+      "assertions": 1
+    },
+    {
+      "line": 79,
+      "counts": {
+        "ck": 1,
+        "fresh": 0,
+        "begin": 0
+      },
+      "loop_weight": 1,
+      "assertions": 1
+    },
+    {
+      "line": 80,
+      "counts": {
+        "ck": 1,
+        "fresh": 0,
+        "begin": 0
+      },
+      "loop_weight": 1,
+      "assertions": 1
+    },
+    {
+      "line": 81,
+      "counts": {
+        "ck": 0,
+        "fresh": 0,
+        "begin": 1
+      },
+      "loop_weight": 1,
+      "assertions": 1
+    },
+    {
+      "line": 83,
+      "counts": {
+        "ck": 1,
+        "fresh": 0,
+        "begin": 0
+      },
+      "loop_weight": 1,
+      "assertions": 1
+    },
+    {
+      "line": 86,
+      "counts": {
+        "ck": 1,
+        "fresh": 0,
+        "begin": 0
+      },
+      "loop_weight": 1,
+      "assertions": 1
+    },
+    {
+      "line": 87,
+      "counts": {
+        "ck": 1,
+        "fresh": 0,
+        "begin": 0
+      },
+      "loop_weight": 1,
+      "assertions": 1
+    },
+    {
+      "line": 88,
+      "counts": {
+        "ck": 0,
+        "fresh": 1,
+        "begin": 1
+      },
+      "loop_weight": 1,
+      "assertions": 4
+    },
+    {
+      "line": 89,
+      "counts": {
+        "ck": 1,
+        "fresh": 0,
+        "begin": 0
+      },
+      "loop_weight": 1,
+      "assertions": 1
+    },
+    {
+      "line": 90,
+      "counts": {
+        "ck": 0,
+        "fresh": 1,
+        "begin": 1
+      },
+      "loop_weight": 1,
+      "assertions": 4
+    },
+    {
+      "line": 91,
+      "counts": {
+        "ck": 1,
+        "fresh": 0,
+        "begin": 0
+      },
+      "loop_weight": 1,
+      "assertions": 1
+    },
+    {
+      "line": 92,
+      "counts": {
+        "ck": 1,
+        "fresh": 0,
+        "begin": 0
+      },
+      "loop_weight": 1,
+      "assertions": 1
+    },
+    {
+      "line": 93,
+      "counts": {
+        "ck": 0,
+        "fresh": 1,
+        "begin": 1
+      },
+      "loop_weight": 1,
+      "assertions": 4
+    },
+    {
+      "line": 94,
+      "counts": {
+        "ck": 1,
+        "fresh": 0,
+        "begin": 0
+      },
+      "loop_weight": 1,
+      "assertions": 1
+    },
+    {
+      "line": 95,
+      "counts": {
+        "ck": 1,
+        "fresh": 0,
+        "begin": 1
+      },
+      "loop_weight": 1,
+      "assertions": 2
+    },
+    {
+      "line": 96,
+      "counts": {
+        "ck": 0,
+        "fresh": 1,
+        "begin": 1
+      },
+      "loop_weight": 1,
+      "assertions": 4
+    },
+    {
+      "line": 97,
+      "counts": {
+        "ck": 1,
+        "fresh": 0,
+        "begin": 0
+      },
+      "loop_weight": 1,
+      "assertions": 1
+    },
+    {
+      "line": 98,
+      "counts": {
+        "ck": 0,
+        "fresh": 1,
+        "begin": 1
+      },
+      "loop_weight": 1,
+      "assertions": 4
+    },
+    {
+      "line": 99,
+      "counts": {
+        "ck": 1,
+        "fresh": 0,
+        "begin": 1
+      },
+      "loop_weight": 1,
+      "assertions": 2
+    },
+    {
+      "line": 103,
+      "counts": {
+        "ck": 1,
+        "fresh": 0,
+        "begin": 0
+      },
+      "loop_weight": 3,
+      "assertions": 3
+    },
+    {
+      "line": 105,
+      "counts": {
+        "ck": 0,
+        "fresh": 1,
+        "begin": 1
+      },
+      "loop_weight": 1,
+      "assertions": 4
+    },
+    {
+      "line": 108,
+      "counts": {
+        "ck": 1,
+        "fresh": 0,
+        "begin": 0
+      },
+      "loop_weight": 1,
+      "assertions": 1
+    },
+    {
+      "line": 109,
+      "counts": {
+        "ck": 1,
+        "fresh": 0,
+        "begin": 0
+      },
+      "loop_weight": 1,
+      "assertions": 1
+    },
+    {
+      "line": 110,
+      "counts": {
+        "ck": 1,
+        "fresh": 0,
+        "begin": 0
+      },
+      "loop_weight": 1,
+      "assertions": 1
+    },
+    {
+      "line": 114,
+      "counts": {
+        "ck": 1,
+        "fresh": 0,
+        "begin": 0
+      },
+      "loop_weight": 28,
+      "assertions": 28
+    },
+    {
+      "line": 117,
+      "counts": {
+        "ck": 1,
+        "fresh": 0,
+        "begin": 0
+      },
+      "loop_weight": 4,
+      "assertions": 4
+    },
+    {
+      "line": 118,
+      "counts": {
+        "ck": 1,
+        "fresh": 0,
+        "begin": 0
+      },
+      "loop_weight": 1,
+      "assertions": 1
+    },
+    {
+      "line": 119,
+      "counts": {
+        "ck": 1,
+        "fresh": 0,
+        "begin": 0
+      },
+      "loop_weight": 1,
+      "assertions": 1
+    },
+    {
+      "line": 120,
+      "counts": {
+        "ck": 1,
+        "fresh": 0,
+        "begin": 0
+      },
+      "loop_weight": 1,
+      "assertions": 1
+    },
+    {
+      "line": 122,
+      "counts": {
+        "ck": 0,
+        "fresh": 1,
+        "begin": 1
+      },
+      "loop_weight": 1,
+      "assertions": 4
+    },
+    {
+      "line": 123,
+      "counts": {
+        "ck": 1,
+        "fresh": 0,
+        "begin": 0
+      },
+      "loop_weight": 1,
+      "assertions": 1
+    },
+    {
+      "line": 124,
+      "counts": {
+        "ck": 1,
+        "fresh": 0,
+        "begin": 0
+      },
+      "loop_weight": 1,
+      "assertions": 1
+    },
+    {
+      "line": 127,
+      "counts": {
+        "ck": 1,
+        "fresh": 0,
+        "begin": 0
+      },
+      "loop_weight": 1,
+      "assertions": 1
+    },
+    {
+      "line": 128,
+      "counts": {
+        "ck": 1,
+        "fresh": 0,
+        "begin": 1
+      },
+      "loop_weight": 1,
+      "assertions": 2
+    },
+    {
+      "line": 129,
+      "counts": {
+        "ck": 1,
+        "fresh": 0,
+        "begin": 0
+      },
+      "loop_weight": 1,
+      "assertions": 1
+    },
+    {
+      "line": 130,
+      "counts": {
+        "ck": 1,
+        "fresh": 0,
+        "begin": 0
+      },
+      "loop_weight": 1,
+      "assertions": 1
+    },
+    {
+      "line": 131,
+      "counts": {
+        "ck": 1,
+        "fresh": 0,
+        "begin": 0
+      },
+      "loop_weight": 1,
+      "assertions": 1
+    },
+    {
+      "line": 132,
+      "counts": {
+        "ck": 1,
+        "fresh": 0,
+        "begin": 0
+      },
+      "loop_weight": 1,
+      "assertions": 1
+    },
+    {
+      "line": 133,
+      "counts": {
+        "ck": 1,
+        "fresh": 0,
+        "begin": 0
+      },
+      "loop_weight": 1,
+      "assertions": 1
+    },
+    {
+      "line": 134,
+      "counts": {
+        "ck": 1,
+        "fresh": 0,
+        "begin": 0
+      },
+      "loop_weight": 1,
+      "assertions": 1
+    },
+    {
+      "line": 135,
+      "counts": {
+        "ck": 1,
+        "fresh": 0,
+        "begin": 1
+      },
+      "loop_weight": 1,
+      "assertions": 2
+    },
+    {
+      "line": 136,
+      "counts": {
+        "ck": 0,
+        "fresh": 1,
+        "begin": 0
+      },
+      "loop_weight": 1,
+      "assertions": 3
+    },
+    {
+      "line": 138,
+      "counts": {
+        "ck": 0,
+        "fresh": 0,
+        "begin": 1
+      },
+      "loop_weight": 3,
+      "assertions": 3
+    },
+    {
+      "line": 139,
+      "counts": {
+        "ck": 1,
+        "fresh": 0,
+        "begin": 0
+      },
+      "loop_weight": 1,
+      "assertions": 1
+    },
+    {
+      "line": 140,
+      "counts": {
+        "ck": 0,
+        "fresh": 0,
+        "begin": 1
+      },
+      "loop_weight": 1,
+      "assertions": 1
+    },
+    {
+      "line": 141,
+      "counts": {
+        "ck": 1,
+        "fresh": 0,
+        "begin": 0
+      },
+      "loop_weight": 1,
+      "assertions": 1
+    },
+    {
+      "line": 143,
+      "counts": {
+        "ck": 1,
+        "fresh": 0,
+        "begin": 0
+      },
+      "loop_weight": 1,
+      "assertions": 1
+    },
+    {
+      "line": 145,
+      "counts": {
+        "ck": 0,
+        "fresh": 1,
+        "begin": 2
+      },
+      "loop_weight": 1,
+      "assertions": 5
+    },
+    {
+      "line": 147,
+      "counts": {
+        "ck": 1,
+        "fresh": 0,
+        "begin": 0
+      },
+      "loop_weight": 1,
+      "assertions": 1
+    },
+    {
+      "line": 148,
+      "counts": {
+        "ck": 1,
+        "fresh": 0,
+        "begin": 0
+      },
+      "loop_weight": 1,
+      "assertions": 1
+    },
+    {
+      "line": 149,
+      "counts": {
+        "ck": 1,
+        "fresh": 0,
+        "begin": 0
+      },
+      "loop_weight": 1,
+      "assertions": 1
+    },
+    {
+      "line": 151,
+      "counts": {
+        "ck": 1,
+        "fresh": 0,
+        "begin": 0
+      },
+      "loop_weight": 1,
+      "assertions": 1
+    },
+    {
+      "line": 152,
+      "counts": {
+        "ck": 1,
+        "fresh": 0,
+        "begin": 0
+      },
+      "loop_weight": 1,
+      "assertions": 1
+    },
+    {
+      "line": 153,
+      "counts": {
+        "ck": 1,
+        "fresh": 0,
+        "begin": 0
+      },
+      "loop_weight": 1,
+      "assertions": 1
+    },
+    {
+      "line": 154,
+      "counts": {
+        "ck": 0,
+        "fresh": 0,
+        "begin": 1
+      },
+      "loop_weight": 1,
+      "assertions": 1
+    },
+    {
+      "line": 155,
+      "counts": {
+        "ck": 1,
+        "fresh": 0,
+        "begin": 0
+      },
+      "loop_weight": 1,
+      "assertions": 1
+    },
+    {
+      "line": 156,
+      "counts": {
+        "ck": 1,
+        "fresh": 1,
+        "begin": 1
+      },
+      "loop_weight": 1,
+      "assertions": 5
+    },
+    {
+      "line": 157,
+      "counts": {
+        "ck": 1,
+        "fresh": 0,
+        "begin": 0
+      },
+      "loop_weight": 1,
+      "assertions": 1
+    },
+    {
+      "line": 158,
+      "counts": {
+        "ck": 1,
+        "fresh": 0,
+        "begin": 0
+      },
+      "loop_weight": 1,
+      "assertions": 1
+    },
+    {
+      "line": 159,
+      "counts": {
+        "ck": 0,
+        "fresh": 1,
+        "begin": 1
+      },
+      "loop_weight": 1,
+      "assertions": 4
+    },
+    {
+      "line": 160,
+      "counts": {
+        "ck": 1,
+        "fresh": 0,
+        "begin": 0
+      },
+      "loop_weight": 1,
+      "assertions": 1
+    },
+    {
+      "line": 161,
+      "counts": {
+        "ck": 0,
+        "fresh": 1,
+        "begin": 1
+      },
+      "loop_weight": 1,
+      "assertions": 4
+    },
+    {
+      "line": 162,
+      "counts": {
+        "ck": 1,
+        "fresh": 0,
+        "begin": 0
+      },
+      "loop_weight": 1,
+      "assertions": 1
+    },
+    {
+      "line": 164,
+      "counts": {
+        "ck": 0,
+        "fresh": 1,
+        "begin": 1
+      },
+      "loop_weight": 1,
+      "assertions": 4
+    },
+    {
+      "line": 165,
+      "counts": {
+        "ck": 0,
+        "fresh": 0,
+        "begin": 1
+      },
+      "loop_weight": 1,
+      "assertions": 1
+    },
+    {
+      "line": 166,
+      "counts": {
+        "ck": 1,
+        "fresh": 0,
+        "begin": 0
+      },
+      "loop_weight": 1,
+      "assertions": 1
+    },
+    {
+      "line": 167,
+      "counts": {
+        "ck": 1,
+        "fresh": 0,
+        "begin": 1
+      },
+      "loop_weight": 1,
+      "assertions": 2
+    },
+    {
+      "line": 168,
+      "counts": {
+        "ck": 1,
+        "fresh": 0,
+        "begin": 0
+      },
+      "loop_weight": 1,
+      "assertions": 1
+    },
+    {
+      "line": 170,
+      "counts": {
+        "ck": 1,
+        "fresh": 0,
+        "begin": 0
+      },
+      "loop_weight": 1,
+      "assertions": 1
+    },
+    {
+      "line": 171,
+      "counts": {
+        "ck": 1,
+        "fresh": 0,
+        "begin": 0
+      },
+      "loop_weight": 1,
+      "assertions": 1
+    },
+    {
+      "line": 172,
+      "counts": {
+        "ck": 1,
+        "fresh": 0,
+        "begin": 0
+      },
+      "loop_weight": 1,
+      "assertions": 1
+    },
+    {
+      "line": 173,
+      "counts": {
+        "ck": 1,
+        "fresh": 0,
+        "begin": 0
+      },
+      "loop_weight": 1,
+      "assertions": 1
+    },
+    {
+      "line": 174,
+      "counts": {
+        "ck": 1,
+        "fresh": 0,
+        "begin": 0
+      },
+      "loop_weight": 1,
+      "assertions": 1
+    },
+    {
+      "line": 176,
+      "counts": {
+        "ck": 1,
+        "fresh": 0,
+        "begin": 0
+      },
+      "loop_weight": 1,
+      "assertions": 1
+    }
+  ]
+}

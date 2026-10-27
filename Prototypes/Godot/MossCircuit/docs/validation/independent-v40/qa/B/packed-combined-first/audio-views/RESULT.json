@@ -1,0 +1,323 @@
+{
+  "name": "audio-views",
+  "native_exit": 0,
+  "timeout": false,
+  "seconds": 4.996272817996214,
+  "reports": [
+    {
+      "checks": 168,
+      "failures": []
+    }
+  ],
+  "helpers": [
+    {
+      "capture_removed": true,
+      "complete": true,
+      "driver": "Dummy",
+      "game_owner_count": 1,
+      "mix_rate": 44100.0,
+      "observations": [
+        {
+          "discarded": 0,
+          "elapsed_us": 676,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 0,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 0,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 18867,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 4096,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 4096,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 27942,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 4096,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 4096,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 41633,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 4096,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 4096,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 55593,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 4096,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 4096,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 69717,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 4096,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 4096,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 83996,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 4096,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 4096,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 97635,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 8192,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 8192,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 110636,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 8192,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 8192,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 124507,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 8192,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 8192,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 138661,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 8192,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 8192,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 152101,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 8192,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 8192,
+          "streams_released": true
+        }
+      ],
+      "pre_window_drained": 0,
+      "prepare_errors": [],
+      "requested_owner_count": 1,
+      "scope": "Test-only bounded final-owner resource release and fresh internal silence; not physical output or a universal timing guarantee.",
+      "tracked_owner_count": 1,
+      "tracked_stream_count": 2
+    }
+  ],
+  "full_report": {
+    "checks": 168,
+    "failures": [],
+    "samples": [
+      {
+        "back_rect": "[P: (34.0, 472.0), S: (892.0, 36.0)]",
+        "backend": {
+          "driver": "Dummy",
+          "dummy": true,
+          "muted": false,
+          "unavailable": []
+        },
+        "mode": "arena",
+        "mute_rect": "[P: (34.0, 237.0), S: (892.0, 44.0)]",
+        "size": [
+          960,
+          540
+        ],
+        "source": "title"
+      },
+      {
+        "back_rect": "[P: (34.0, 472.0), S: (892.0, 36.0)]",
+        "backend": {
+          "driver": "Dummy",
+          "dummy": true,
+          "muted": false,
+          "unavailable": []
+        },
+        "mode": "arena",
+        "mute_rect": "[P: (34.0, 237.0), S: (892.0, 44.0)]",
+        "size": [
+          960,
+          540
+        ],
+        "source": "paused"
+      },
+      {
+        "back_rect": "[P: (34.0, 472.0), S: (892.0, 36.0)]",
+        "backend": {
+          "driver": "Dummy",
+          "dummy": true,
+          "muted": false,
+          "unavailable": []
+        },
+        "mode": "arena",
+        "mute_rect": "[P: (34.0, 237.0), S: (892.0, 44.0)]",
+        "size": [
+          1280,
+          720
+        ],
+        "source": "title"
+      },
+      {
+        "back_rect": "[P: (34.0, 472.0), S: (892.0, 36.0)]",
+        "backend": {
+          "driver": "Dummy",
+          "dummy": true,
+          "muted": false,
+          "unavailable": []
+        },
+        "mode": "arena",
+        "mute_rect": "[P: (34.0, 237.0), S: (892.0, 44.0)]",
+        "size": [
+          1280,
+          720
+        ],
+        "source": "paused"
+      },
+      {
+        "back_rect": "[P: (34.0, 472.0), S: (892.0, 36.0)]",
+        "backend": {
+          "driver": "Dummy",
+          "dummy": true,
+          "muted": false,
+          "unavailable": []
+        },
+        "mode": "rooms",
+        "mute_rect": "[P: (34.0, 237.0), S: (892.0, 44.0)]",
+        "size": [
+          960,
+          540
+        ],
+        "source": "title"
+      },
+      {
+        "back_rect": "[P: (34.0, 472.0), S: (892.0, 36.0)]",
+        "backend": {
+          "driver": "Dummy",
+          "dummy": true,
+          "muted": false,
+          "unavailable": []
+        },
+        "mode": "rooms",
+        "mute_rect": "[P: (34.0, 237.0), S: (892.0, 44.0)]",
+        "size": [
+          960,
+          540
+        ],
+        "source": "paused"
+      },
+      {
+        "back_rect": "[P: (34.0, 472.0), S: (892.0, 36.0)]",
+        "backend": {
+          "driver": "Dummy",
+          "dummy": true,
+          "muted": false,
+          "unavailable": []
+        },
+        "mode": "rooms",
+        "mute_rect": "[P: (34.0, 237.0), S: (892.0, 44.0)]",
+        "size": [
+          1280,
+          720
+        ],
+        "source": "title"
+      },
+      {
+        "back_rect": "[P: (34.0, 472.0), S: (892.0, 36.0)]",
+        "backend": {
+          "driver": "Dummy",
+          "dummy": true,
+          "muted": false,
+          "unavailable": []
+        },
+        "mode": "rooms",
+        "mute_rect": "[P: (34.0, 237.0), S: (892.0, 44.0)]",
+        "size": [
+          1280,
+          720
+        ],
+        "source": "paused"
+      }
+    ],
+    "scope": "Actual GUI controls with synthetic mouse/ui_accept, title and paused routes, both modes at 960/1280. Not native hardware mouse, controller, WM focus, physical listening or audio mix proof."
+  },
+  "exception": null,
+  "semantic": true,
+  "pass": true
+}

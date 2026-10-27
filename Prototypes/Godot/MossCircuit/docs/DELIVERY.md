@@ -1,3 +1,18 @@
+# v40 delivery checkpoint — B + accepted editable equipment16
+
+This is a resource-delivery checkpoint, not a delivered-archive or Windows-execution claim. Intended complete resource pack: **42,300,876 bytes**, SHA-256 `6743bf0f468c25ad28cc2776d1b1f28fd6356b23ee6f5a36ad977e90863dd775`. The resource-only export and separate packed22 gate passed. Controlled native 142 and inventory-card 145 gates passed. The one ordinary first-shop observation and its retained strict-wrapper warning failure are bounded below; delivery-helper gates passed as recorded below.
+
+Actual combined-PCK controlled R3 native passed 142 assertions across 20 scenes and 56 original images; all 56 images were directly reviewed. Separate inventory-card native passed 145 checks / 21 cards. The first native run (21 checks, one failed summary assertion), its scroll diagnostic, and R2 machine-pass/oversized-sprite visual hold remain preserved; R3 corrected only the fixture presentation synchronization, not the 926-file production source. Cooldown-named stills were not scrolled to the summary, and static Winch images do not prove its trajectory; those semantics rely on the separately audited telemetry.
+
+One default-seed 240102 normal Linux ELF/adjacent-pack Rooms/Rivet attempt reached the first shop with 66 scrap after natural Split Capacitor and Rapid Circuit upgrades. Its four natural offers were Power Coil, Lucky Chip, Rivet Gun and Mirror Shell: no B offer/acquisition, purchase, refresh or restart. The process closed normally with native exit 0. The original strict wrapper exit 1 / pass false remains unchanged: a separate exact two-line unsupported-X11-VSync warning review accepted only that existing platform diagnostic, with no rerun. Nine original JPEGs record title, upgrade and shop views, not a complete combat sequence; image 03 is an upgrade screen despite its filename. This is a first-shop endpoint, not campaign completion, natural B interaction, all-seed balance or Windows execution.
+
+Delivery verification passed: 80 historical catalog records retained exactly, 82 total, 15 chunks / 18 payload paths. Original stage and checker exited 0; all 10 controls (2 positive and 8 negative with exact intended rejection reasons) passed. Actual local equipment16 → v40 → equipment16 resource-file backup/replacement/rollback restored initial bytes and modes. This is not a new runtime, arbitrary-installation or remote-download test. The restoration helper is unchanged. No whole platform archive or duplicate executable is included.
+
+Preserve the prior executable and resource pack before replacement. This is a resource-file update, not an automatic save migration. Only an actual reachable source commit and successful metadata/readback can create a SOURCE_VERSIONS entry. The equipment16 history below remains verbatim; its pack hash/results describe that older checkpoint, not v40.
+
+---
+## Accepted v39-equipment16 delivery history (verbatim)
+
 # v39-equipment16 resource-only delivery checkpoint
 
 This candidate restores the existing verified executable with the new42,250,592byte PCK `fac259f0e5406c8b3ab56f21c4b7bf5113ae58d50fdc02344fbc09b8b273f23d`. It changes one inventory atlas, not A gameplay. Verified delivery:78 historical catalog records preserved,2 appended (80 total),15 chunks/18 delivery paths. The original stage and checker both exited0. All10 helper cases passed (2 positive and8 negative with their intended rejection reasons), and actual A→atlas→A file backup/replacement/rollback restored both original bytes and modes. This is a local file-level test, not a new runtime or Git-download test. Do not infer Windows execution or new ordinary play. See [verification boundaries](V39_EQUIPMENT16.md).

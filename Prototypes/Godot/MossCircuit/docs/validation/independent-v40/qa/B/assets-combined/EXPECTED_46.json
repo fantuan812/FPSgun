@@ -1,0 +1,616 @@
+{
+  "old_ids": [
+    "arc_relay",
+    "bankshot_driver",
+    "blast_fuse",
+    "blood_valve",
+    "bounce_guide",
+    "capacitor",
+    "cooling_fan",
+    "cryo_sprayer",
+    "dash_resin",
+    "echo_chamber",
+    "feedback_diode",
+    "fracture_coil",
+    "gear",
+    "gravity_anchor",
+    "iron_plate",
+    "kill_cell",
+    "lens",
+    "lock_memory",
+    "lucky_chip",
+    "medic_seed",
+    "mirror_shell",
+    "moss_patch",
+    "orbit_saw",
+    "pellet_pouch",
+    "phase_capacitor",
+    "power_coil",
+    "pulse_boots",
+    "rail_lance",
+    "recoil_plate",
+    "recycler",
+    "return_collar",
+    "return_disc",
+    "return_spool",
+    "rivet_gun",
+    "running_boots",
+    "salvage_magnet",
+    "scavenger_reel",
+    "scrap_mine",
+    "scrap_shotgun",
+    "seismic_drum",
+    "shock_mortar",
+    "tether_emitter",
+    "thorn_crown"
+  ],
+  "icons": {
+    "rivet_gun": {
+      "atlas": "res://assets/items/equipment_atlas_editable.png",
+      "rect": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "name": "铆钉枪",
+      "category": "weapon"
+    },
+    "scrap_shotgun": {
+      "atlas": "res://assets/items/equipment_atlas_editable.png",
+      "rect": [
+        64,
+        0,
+        64,
+        64
+      ],
+      "name": "废铁散弹枪",
+      "category": "weapon"
+    },
+    "rail_lance": {
+      "atlas": "res://assets/items/equipment_atlas_editable.png",
+      "rect": [
+        128,
+        0,
+        64,
+        64
+      ],
+      "name": "电磁长枪",
+      "category": "weapon"
+    },
+    "orbit_saw": {
+      "atlas": "res://assets/items/equipment_atlas_editable.png",
+      "rect": [
+        192,
+        0,
+        64,
+        64
+      ],
+      "name": "环绕圆锯",
+      "category": "weapon"
+    },
+    "power_coil": {
+      "atlas": "res://assets/items/equipment_atlas_editable.png",
+      "rect": [
+        0,
+        64,
+        64,
+        64
+      ],
+      "name": "动力线圈",
+      "category": "item"
+    },
+    "cooling_fan": {
+      "atlas": "res://assets/items/equipment_atlas_editable.png",
+      "rect": [
+        64,
+        64,
+        64,
+        64
+      ],
+      "name": "冷却风扇",
+      "category": "item"
+    },
+    "iron_plate": {
+      "atlas": "res://assets/items/equipment_atlas_editable.png",
+      "rect": [
+        128,
+        64,
+        64,
+        64
+      ],
+      "name": "铁甲板",
+      "category": "item"
+    },
+    "moss_patch": {
+      "atlas": "res://assets/items/equipment_atlas_editable.png",
+      "rect": [
+        192,
+        64,
+        64,
+        64
+      ],
+      "name": "苔藓药贴",
+      "category": "item"
+    },
+    "running_boots": {
+      "atlas": "res://assets/items/equipment_atlas_editable.png",
+      "rect": [
+        0,
+        128,
+        64,
+        64
+      ],
+      "name": "疾行靴",
+      "category": "item"
+    },
+    "salvage_magnet": {
+      "atlas": "res://assets/items/equipment_atlas_editable.png",
+      "rect": [
+        64,
+        128,
+        64,
+        64
+      ],
+      "name": "废料磁铁",
+      "category": "item"
+    },
+    "lucky_chip": {
+      "atlas": "res://assets/items/equipment_atlas_editable.png",
+      "rect": [
+        128,
+        128,
+        64,
+        64
+      ],
+      "name": "幸运芯片",
+      "category": "item"
+    },
+    "lens": {
+      "atlas": "res://assets/items/equipment_atlas_editable.png",
+      "rect": [
+        192,
+        128,
+        64,
+        64
+      ],
+      "name": "聚焦透镜",
+      "category": "item"
+    },
+    "capacitor": {
+      "atlas": "res://assets/items/equipment_atlas_editable.png",
+      "rect": [
+        0,
+        192,
+        64,
+        64
+      ],
+      "name": "电容",
+      "category": "item"
+    },
+    "gear": {
+      "atlas": "res://assets/items/equipment_atlas_editable.png",
+      "rect": [
+        64,
+        192,
+        64,
+        64
+      ],
+      "name": "齿轮",
+      "category": "item"
+    },
+    "pellet_pouch": {
+      "atlas": "res://assets/items/equipment_atlas_editable.png",
+      "rect": [
+        128,
+        192,
+        64,
+        64
+      ],
+      "name": "弹丸袋",
+      "category": "item"
+    },
+    "recycler": {
+      "atlas": "res://assets/items/equipment_atlas_editable.png",
+      "rect": [
+        192,
+        192,
+        64,
+        64
+      ],
+      "name": "回收机",
+      "category": "item"
+    },
+    "arc_relay": {
+      "atlas": "res://assets/items/mechanism_atlas_v4.png",
+      "rect": [
+        0,
+        0,
+        443,
+        443
+      ],
+      "name": "链电继电器",
+      "category": "item"
+    },
+    "kill_cell": {
+      "atlas": "res://assets/items/mechanism_atlas_v4.png",
+      "rect": [
+        443,
+        0,
+        444,
+        443
+      ],
+      "name": "战利电池",
+      "category": "item"
+    },
+    "dash_resin": {
+      "atlas": "res://assets/items/mechanism_atlas_v4.png",
+      "rect": [
+        887,
+        0,
+        443,
+        443
+      ],
+      "name": "冲刺树脂",
+      "category": "item"
+    },
+    "mirror_shell": {
+      "atlas": "res://assets/items/mechanism_atlas_v4.png",
+      "rect": [
+        1330,
+        0,
+        444,
+        443
+      ],
+      "name": "镜面护壳",
+      "category": "item"
+    },
+    "thorn_crown": {
+      "atlas": "res://assets/items/mechanism_atlas_v4.png",
+      "rect": [
+        0,
+        443,
+        443,
+        444
+      ],
+      "name": "荆棘冠",
+      "category": "item"
+    },
+    "blood_valve": {
+      "atlas": "res://assets/items/mechanism_atlas_v4.png",
+      "rect": [
+        443,
+        443,
+        444,
+        444
+      ],
+      "name": "血能阀",
+      "category": "item"
+    },
+    "scrap_mine": {
+      "atlas": "res://assets/items/mechanism_atlas_v4.png",
+      "rect": [
+        887,
+        443,
+        443,
+        444
+      ],
+      "name": "拾荒地雷",
+      "category": "item"
+    },
+    "pulse_boots": {
+      "atlas": "res://assets/items/mechanism_atlas_v4.png",
+      "rect": [
+        1330,
+        443,
+        444,
+        444
+      ],
+      "name": "脉冲靴",
+      "category": "item"
+    },
+    "return_disc": {
+      "atlas": "res://assets/items/build_expansion_atlas_v5.png",
+      "rect": [
+        0,
+        0,
+        443,
+        443
+      ],
+      "name": "回旋飞盘",
+      "category": "weapon"
+    },
+    "shock_mortar": {
+      "atlas": "res://assets/items/build_expansion_atlas_v5.png",
+      "rect": [
+        443,
+        0,
+        444,
+        443
+      ],
+      "name": "震荡迫击炮",
+      "category": "weapon"
+    },
+    "return_spool": {
+      "atlas": "res://assets/items/build_expansion_atlas_v5.png",
+      "rect": [
+        887,
+        0,
+        443,
+        443
+      ],
+      "name": "回收线轴",
+      "category": "item"
+    },
+    "blast_fuse": {
+      "atlas": "res://assets/items/build_expansion_atlas_v5.png",
+      "rect": [
+        1330,
+        0,
+        444,
+        443
+      ],
+      "name": "余烬引信",
+      "category": "item"
+    },
+    "echo_chamber": {
+      "atlas": "res://assets/items/build_expansion_atlas_v5.png",
+      "rect": [
+        0,
+        443,
+        443,
+        444
+      ],
+      "name": "回声腔",
+      "category": "item"
+    },
+    "gravity_anchor": {
+      "atlas": "res://assets/items/build_expansion_atlas_v5.png",
+      "rect": [
+        443,
+        443,
+        444,
+        444
+      ],
+      "name": "重力锚",
+      "category": "item"
+    },
+    "medic_seed": {
+      "atlas": "res://assets/items/build_expansion_atlas_v5.png",
+      "rect": [
+        887,
+        443,
+        443,
+        444
+      ],
+      "name": "医疗种子",
+      "category": "item"
+    },
+    "phase_capacitor": {
+      "atlas": "res://assets/items/build_expansion_atlas_v5.png",
+      "rect": [
+        1330,
+        443,
+        444,
+        444
+      ],
+      "name": "相位电容",
+      "category": "item"
+    },
+    "cryo_sprayer": {
+      "atlas": "res://assets/items/cryo_sprayer_icon.png",
+      "rect": [
+        49,
+        79,
+        1314,
+        984
+      ],
+      "name": "霜雾喷射器",
+      "category": "weapon"
+    },
+    "fracture_coil": {
+      "atlas": "res://assets/items/fracture_coil.png",
+      "rect": [
+        88,
+        75,
+        1153,
+        1041
+      ],
+      "name": "裂霜线圈",
+      "category": "item"
+    },
+    "bankshot_driver": {
+      "atlas": "res://assets/items/bankshot_driver_icon.png",
+      "rect": [
+        171,
+        85,
+        1261,
+        840
+      ],
+      "name": "Bankshot Driver",
+      "category": "weapon"
+    },
+    "bounce_guide": {
+      "atlas": "res://assets/items/bounce_guide.png",
+      "rect": [
+        285,
+        75,
+        930,
+        943
+      ],
+      "name": "Bounce Guide",
+      "category": "item"
+    },
+    "feedback_diode": {
+      "atlas": "res://assets/items/feedback_diode.png",
+      "rect": [
+        83,
+        127,
+        1597,
+        671
+      ],
+      "name": "Feedback Diode",
+      "category": "item"
+    },
+    "scavenger_reel": {
+      "atlas": "res://assets/items/scavenger_reel.svg",
+      "rect": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "name": "Scavenger Reel",
+      "category": "item"
+    },
+    "lock_memory": {
+      "atlas": "res://assets/items/lock_memory.png",
+      "rect": [
+        12,
+        10,
+        40,
+        47
+      ],
+      "name": "Lock Memory",
+      "category": "item"
+    },
+    "recoil_plate": {
+      "atlas": "res://assets/items/recoil_plate.png",
+      "rect": [
+        6,
+        9,
+        52,
+        48
+      ],
+      "name": "Recoil Plate",
+      "category": "item"
+    },
+    "return_collar": {
+      "atlas": "res://assets/items/return_collar.png",
+      "rect": [
+        9,
+        8,
+        46,
+        47
+      ],
+      "name": "Return Collar",
+      "category": "item"
+    },
+    "seismic_drum": {
+      "atlas": "res://assets/items/seismic_drum_icon.png",
+      "rect": [
+        6,
+        8,
+        52,
+        49
+      ],
+      "name": "Seismic Drum",
+      "category": "weapon"
+    },
+    "tether_emitter": {
+      "atlas": "res://assets/items/tether_emitter_icon.png",
+      "rect": [
+        7,
+        12,
+        54,
+        43
+      ],
+      "name": "Tether Emitter",
+      "category": "weapon"
+    },
+    "crossfire_pin": {
+      "atlas": "res://assets/items/crossfire_pin.png",
+      "rect": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "name": "交叉定位钉",
+      "category": "item"
+    },
+    "salvage_capacitor": {
+      "atlas": "res://assets/items/salvage_capacitor.png",
+      "rect": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "name": "回收蓄能器",
+      "category": "item"
+    },
+    "medic_winch": {
+      "atlas": "res://assets/items/medic_winch.png",
+      "rect": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "name": "医疗绞盘",
+      "category": "item"
+    }
+  },
+  "new": {
+    "crossfire_pin": {
+      "rgba_sha256": "6f191b45e740c197c682b2d815b1b82f5d3be8f0469c83d5d8e7484816d9bd0f",
+      "visible_rgba_sha256": "0a7951017d3b754d1293f4047335a9ad306c6f17324cbade418a129286993659",
+      "alpha_sha256": "bd0d1e746b5ecc6ed4be1c70c613d5f290c493200c891b1818ce25bb88c79f60",
+      "bbox": [
+        7,
+        9,
+        50,
+        48
+      ],
+      "png_sha256": "cb484f693183e4b45c7cc817864d3bef521c548fdfab33c56004858a228c82dd"
+    },
+    "salvage_capacitor": {
+      "rgba_sha256": "f47e1434d9a116a02444eed0739c2875a2f0be7b11380f2223efa285c6fe293d",
+      "visible_rgba_sha256": "52ff45a07e412d71418ddd1ade20c5707ec28207577e35a835dff64683aea4c5",
+      "alpha_sha256": "4147af84118d3f50debee5525cda7f4c45eccf2d2e8bdf166148d29d8e4e07c3",
+      "bbox": [
+        7,
+        2,
+        51,
+        53
+      ],
+      "png_sha256": "db104fe6b3ba8fd93235162141ffecfe39261f59ce83f43258cd806b68439c9b"
+    },
+    "medic_winch": {
+      "rgba_sha256": "17765001ee2e4f40ddab0c99b6bd9bac8c99ceeb83217803b1de559796f5e012",
+      "visible_rgba_sha256": "3bffc440d0ad682c8c18dff64f5513056d9bae69bc817d0f019d6f3548e78582",
+      "alpha_sha256": "2b23709d5c74a84a82cc599dddc6102df99d07219dec829a7446cf712cabf4e7",
+      "bbox": [
+        2,
+        9,
+        58,
+        47
+      ],
+      "png_sha256": "b37a9f835c284a80c353691a94e5e2b9d0ea63be5a71ab1eac11dbda0aaeb5e7"
+    }
+  },
+  "provenance": "43 bindings from accepted A; 3 independent Pillow identities from accepted B art, alpha0 RGB only normalized",
+  "equipment16_override": {
+    "expected_sha256": "4239175228d0f266742a8b385c12dd3c4706f74ef7f2abab73e0f5357ce454cc",
+    "ids": [
+      "rivet_gun",
+      "scrap_shotgun",
+      "rail_lance",
+      "orbit_saw",
+      "power_coil",
+      "cooling_fan",
+      "iron_plate",
+      "moss_patch",
+      "running_boots",
+      "salvage_magnet",
+      "lucky_chip",
+      "lens",
+      "capacitor",
+      "gear",
+      "pellet_pouch",
+      "recycler"
+    ],
+    "scope": "Already accepted asset16 identities; no B target output used to generate expected values"
+  }
+}

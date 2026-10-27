@@ -1,0 +1,2679 @@
+{
+  "phase": "arena_960",
+  "exit": 0,
+  "monotonic_seconds": 35.344183752007666,
+  "timeout": false,
+  "strict_pass": true,
+  "runner_errors": [],
+  "json_marker_errors": [],
+  "report": {
+    "B_native_ui_checks": 71,
+    "failures": [],
+    "records": [
+      {
+        "assertions": [
+          {
+            "label": "no owned B empty projection",
+            "pass": true
+          },
+          {
+            "label": "actual BUILD no B section",
+            "pass": true
+          },
+          {
+            "label": "Escape closes",
+            "pass": true
+          },
+          {
+            "label": "old HUD and focus unchanged",
+            "pass": true
+          }
+        ],
+        "id": "01_old_build",
+        "stages": [
+          {
+            "B_snapshot_sha256": "1696ce192105b4c69aa2943923579215cef59a9e1db6222c59fdbe368488ced3",
+            "content_scale": "(960, 540)",
+            "elapsed": 0.0,
+            "focus_enemy": 0,
+            "image": "arena_960_01_old_build_before.png",
+            "keyboard_focus": "",
+            "logical": "[P: (0.0, 0.0), S: (960.0, 540.0)]",
+            "name": "before",
+            "os_position": "(92, 120)",
+            "os_size": "(960, 540)",
+            "projection": {
+              "fields": [],
+              "pin": {},
+              "rows": []
+            },
+            "reduced": false,
+            "save_error": 0,
+            "state": "playing"
+          },
+          {
+            "B_snapshot_sha256": "1696ce192105b4c69aa2943923579215cef59a9e1db6222c59fdbe368488ced3",
+            "content_scale": "(960, 540)",
+            "elapsed": 0.0,
+            "focus_enemy": 0,
+            "image": "arena_960_01_old_build_build.png",
+            "keyboard_focus": "review-role/MossCircuit/@CanvasLayer@8/@Control@9/@ColorRect@25/@PanelContainer@26/@VBoxContainer@398/@Button@532",
+            "logical": "[P: (0.0, 0.0), S: (960.0, 540.0)]",
+            "name": "build",
+            "os_position": "(92, 120)",
+            "os_size": "(960, 540)",
+            "projection": {
+              "fields": [],
+              "pin": {},
+              "rows": []
+            },
+            "reduced": false,
+            "save_error": 0,
+            "state": "inventory"
+          },
+          {
+            "B_snapshot_sha256": "1696ce192105b4c69aa2943923579215cef59a9e1db6222c59fdbe368488ced3",
+            "content_scale": "(960, 540)",
+            "elapsed": 0.0,
+            "focus_enemy": 0,
+            "image": "arena_960_01_old_build_closed.png",
+            "keyboard_focus": "",
+            "logical": "[P: (0.0, 0.0), S: (960.0, 540.0)]",
+            "name": "closed",
+            "os_position": "(92, 120)",
+            "os_size": "(960, 540)",
+            "projection": {
+              "fields": [],
+              "pin": {},
+              "rows": []
+            },
+            "reduced": false,
+            "save_error": 0,
+            "state": "playing"
+          }
+        ]
+      },
+      {
+        "assertions": [
+          {
+            "label": "exact B ownership",
+            "pass": true
+          },
+          {
+            "label": "whole card crossfire_pin",
+            "pass": true
+          },
+          {
+            "label": "actual card icon identity crossfire_pin",
+            "pass": true
+          },
+          {
+            "label": "whole card salvage_capacitor",
+            "pass": true
+          },
+          {
+            "label": "actual card icon identity salvage_capacitor",
+            "pass": true
+          },
+          {
+            "label": "whole card medic_winch",
+            "pass": true
+          },
+          {
+            "label": "actual card icon identity medic_winch",
+            "pass": true
+          }
+        ],
+        "id": "02_three_cards",
+        "stages": [
+          {
+            "B_snapshot_sha256": "0cffec248f4bbd75b2a4978fc649da3260247865ea984d1afb3746c88522a870",
+            "content_scale": "(960, 540)",
+            "elapsed": 0.0,
+            "focus_enemy": 0,
+            "image": "arena_960_02_three_cards_crossfire_pin.png",
+            "keyboard_focus": "review-role/MossCircuit/@CanvasLayer@8/@Control@9/@ColorRect@25/@PanelContainer@26/@VBoxContainer@779/@Button@950",
+            "logical": "[P: (0.0, 0.0), S: (960.0, 540.0)]",
+            "name": "crossfire_pin",
+            "os_position": "(92, 120)",
+            "os_size": "(960, 540)",
+            "projection": {
+              "fields": [],
+              "pin": {},
+              "rows": [
+                {
+                  "detail": "Pull control only; no added damage. Mark symbol is not a successful pull.",
+                  "id": "crossfire_pin",
+                  "status": "READY / awaiting first eligible contact"
+                },
+                {
+                  "detail": "Normal combat pickups charge it. Field: 70% movement speed, no damage; bosses and charging enemies excluded.",
+                  "id": "salvage_capacitor",
+                  "status": "CHARGING / 0/3 / fields 0/2"
+                },
+                {
+                  "detail": "NEEDS MEDICAL PICKUPS (currently Medic Seed). Normal combat pickups count; at most one pull per collection batch. Moves medicine only: no direct healing, creation or collection; no medicine still spends threshold.",
+                  "id": "medic_winch",
+                  "status": "PICKUPS 0/5"
+                }
+              ]
+            },
+            "reduced": false,
+            "save_error": 0,
+            "state": "inventory"
+          },
+          {
+            "B_snapshot_sha256": "0cffec248f4bbd75b2a4978fc649da3260247865ea984d1afb3746c88522a870",
+            "content_scale": "(960, 540)",
+            "elapsed": 0.0,
+            "focus_enemy": 0,
+            "image": "arena_960_02_three_cards_salvage_capacitor.png",
+            "keyboard_focus": "review-role/MossCircuit/@CanvasLayer@8/@Control@9/@ColorRect@25/@PanelContainer@26/@VBoxContainer@779/@Button@950",
+            "logical": "[P: (0.0, 0.0), S: (960.0, 540.0)]",
+            "name": "salvage_capacitor",
+            "os_position": "(92, 120)",
+            "os_size": "(960, 540)",
+            "projection": {
+              "fields": [],
+              "pin": {},
+              "rows": [
+                {
+                  "detail": "Pull control only; no added damage. Mark symbol is not a successful pull.",
+                  "id": "crossfire_pin",
+                  "status": "READY / awaiting first eligible contact"
+                },
+                {
+                  "detail": "Normal combat pickups charge it. Field: 70% movement speed, no damage; bosses and charging enemies excluded.",
+                  "id": "salvage_capacitor",
+                  "status": "CHARGING / 0/3 / fields 0/2"
+                },
+                {
+                  "detail": "NEEDS MEDICAL PICKUPS (currently Medic Seed). Normal combat pickups count; at most one pull per collection batch. Moves medicine only: no direct healing, creation or collection; no medicine still spends threshold.",
+                  "id": "medic_winch",
+                  "status": "PICKUPS 0/5"
+                }
+              ]
+            },
+            "reduced": false,
+            "save_error": 0,
+            "state": "inventory"
+          },
+          {
+            "B_snapshot_sha256": "0cffec248f4bbd75b2a4978fc649da3260247865ea984d1afb3746c88522a870",
+            "content_scale": "(960, 540)",
+            "elapsed": 0.0,
+            "focus_enemy": 0,
+            "image": "arena_960_02_three_cards_medic_winch.png",
+            "keyboard_focus": "review-role/MossCircuit/@CanvasLayer@8/@Control@9/@ColorRect@25/@PanelContainer@26/@VBoxContainer@779/@Button@950",
+            "logical": "[P: (0.0, 0.0), S: (960.0, 540.0)]",
+            "name": "medic_winch",
+            "os_position": "(92, 120)",
+            "os_size": "(960, 540)",
+            "projection": {
+              "fields": [],
+              "pin": {},
+              "rows": [
+                {
+                  "detail": "Pull control only; no added damage. Mark symbol is not a successful pull.",
+                  "id": "crossfire_pin",
+                  "status": "READY / awaiting first eligible contact"
+                },
+                {
+                  "detail": "Normal combat pickups charge it. Field: 70% movement speed, no damage; bosses and charging enemies excluded.",
+                  "id": "salvage_capacitor",
+                  "status": "CHARGING / 0/3 / fields 0/2"
+                },
+                {
+                  "detail": "NEEDS MEDICAL PICKUPS (currently Medic Seed). Normal combat pickups count; at most one pull per collection batch. Moves medicine only: no direct healing, creation or collection; no medicine still spends threshold.",
+                  "id": "medic_winch",
+                  "status": "PICKUPS 0/5"
+                }
+              ]
+            },
+            "reduced": false,
+            "save_error": 0,
+            "state": "inventory"
+          }
+        ]
+      },
+      {
+        "assertions": [
+          {
+            "label": "whole summary crossfire_pin",
+            "pass": true
+          },
+          {
+            "label": "whole summary salvage_capacitor",
+            "pass": true
+          },
+          {
+            "label": "whole summary medic_winch",
+            "pass": true
+          },
+          {
+            "label": "exact prerequisite",
+            "pass": true
+          },
+          {
+            "label": "exact charge",
+            "pass": true
+          },
+          {
+            "label": "Winch limitations",
+            "pass": true
+          },
+          {
+            "label": "fixed BACK remains inside viewport",
+            "pass": true
+          },
+          {
+            "label": "no summary horizontal overflow",
+            "pass": true
+          },
+          {
+            "label": "Tab closes inside modal",
+            "pass": true
+          },
+          {
+            "label": "ShiftTab closes inside modal",
+            "pass": true
+          }
+        ],
+        "forward_cycle": {
+          "closed": true,
+          "isolated": true,
+          "paths": [
+            "review-role/MossCircuit/@CanvasLayer@8/@Control@9/@ColorRect@25/@PanelContainer@26/@VBoxContainer@1197/@ScrollContainer@1202",
+            "review-role/MossCircuit/@CanvasLayer@8/@Control@9/@ColorRect@25/@PanelContainer@26/@VBoxContainer@1197/@ScrollContainer@1202/@VBoxContainer@1203/@PanelContainer@1206/@HBoxContainer@1207/@VBoxContainer@1209/@Button@1216",
+            "review-role/MossCircuit/@CanvasLayer@8/@Control@9/@ColorRect@25/@PanelContainer@26/@VBoxContainer@1197/@ScrollContainer@1202/@VBoxContainer@1203/@PanelContainer@1221/@HBoxContainer@1222/@VBoxContainer@1224/@Button@1231",
+            "review-role/MossCircuit/@CanvasLayer@8/@Control@9/@ColorRect@25/@PanelContainer@26/@VBoxContainer@1197/@Button@1368",
+            "review-role/MossCircuit/@CanvasLayer@8/@Control@9/@ColorRect@25/@PanelContainer@26/@VBoxContainer@1197/@ScrollContainer@1202"
+          ]
+        },
+        "id": "03_summaries",
+        "reverse_cycle": {
+          "closed": true,
+          "isolated": true,
+          "paths": [
+            "review-role/MossCircuit/@CanvasLayer@8/@Control@9/@ColorRect@25/@PanelContainer@26/@VBoxContainer@1197/@Button@1368",
+            "review-role/MossCircuit/@CanvasLayer@8/@Control@9/@ColorRect@25/@PanelContainer@26/@VBoxContainer@1197/@ScrollContainer@1202/@VBoxContainer@1203/@PanelContainer@1221/@HBoxContainer@1222/@VBoxContainer@1224/@Button@1231",
+            "review-role/MossCircuit/@CanvasLayer@8/@Control@9/@ColorRect@25/@PanelContainer@26/@VBoxContainer@1197/@ScrollContainer@1202/@VBoxContainer@1203/@PanelContainer@1206/@HBoxContainer@1207/@VBoxContainer@1209/@Button@1216",
+            "review-role/MossCircuit/@CanvasLayer@8/@Control@9/@ColorRect@25/@PanelContainer@26/@VBoxContainer@1197/@ScrollContainer@1202",
+            "review-role/MossCircuit/@CanvasLayer@8/@Control@9/@ColorRect@25/@PanelContainer@26/@VBoxContainer@1197/@Button@1368"
+          ]
+        },
+        "stages": [
+          {
+            "B_snapshot_sha256": "47fec3cd3860a14511eb8abac0beed691cf4b9004635be5b5470910a06ce2904",
+            "content_scale": "(960, 540)",
+            "elapsed": 0.0,
+            "focus_enemy": 0,
+            "image": "arena_960_03_summaries_pin_row.png",
+            "keyboard_focus": "review-role/MossCircuit/@CanvasLayer@8/@Control@9/@ColorRect@25/@PanelContainer@26/@VBoxContainer@1197/@Button@1368",
+            "logical": "[P: (0.0, 0.0), S: (960.0, 540.0)]",
+            "name": "pin_row",
+            "os_position": "(92, 120)",
+            "os_size": "(960, 540)",
+            "projection": {
+              "fields": [],
+              "pin": {},
+              "rows": [
+                {
+                  "detail": "Pull control only; no added damage. Mark symbol is not a successful pull.",
+                  "id": "crossfire_pin",
+                  "status": "INACTIVE / needs 2 distinct weapon types"
+                },
+                {
+                  "detail": "Normal combat pickups charge it. Field: 70% movement speed, no damage; bosses and charging enemies excluded.",
+                  "id": "salvage_capacitor",
+                  "status": "CHARGING / 0/3 / fields 0/2"
+                },
+                {
+                  "detail": "NEEDS MEDICAL PICKUPS (currently Medic Seed). Normal combat pickups count; at most one pull per collection batch. Moves medicine only: no direct healing, creation or collection; no medicine still spends threshold.",
+                  "id": "medic_winch",
+                  "status": "PICKUPS 0/5"
+                }
+              ]
+            },
+            "reduced": false,
+            "save_error": 0,
+            "state": "inventory"
+          },
+          {
+            "B_snapshot_sha256": "47fec3cd3860a14511eb8abac0beed691cf4b9004635be5b5470910a06ce2904",
+            "content_scale": "(960, 540)",
+            "elapsed": 0.0,
+            "focus_enemy": 0,
+            "image": "arena_960_03_summaries_salvage_row.png",
+            "keyboard_focus": "review-role/MossCircuit/@CanvasLayer@8/@Control@9/@ColorRect@25/@PanelContainer@26/@VBoxContainer@1197/@Button@1368",
+            "logical": "[P: (0.0, 0.0), S: (960.0, 540.0)]",
+            "name": "salvage_row",
+            "os_position": "(92, 120)",
+            "os_size": "(960, 540)",
+            "projection": {
+              "fields": [],
+              "pin": {},
+              "rows": [
+                {
+                  "detail": "Pull control only; no added damage. Mark symbol is not a successful pull.",
+                  "id": "crossfire_pin",
+                  "status": "INACTIVE / needs 2 distinct weapon types"
+                },
+                {
+                  "detail": "Normal combat pickups charge it. Field: 70% movement speed, no damage; bosses and charging enemies excluded.",
+                  "id": "salvage_capacitor",
+                  "status": "CHARGING / 0/3 / fields 0/2"
+                },
+                {
+                  "detail": "NEEDS MEDICAL PICKUPS (currently Medic Seed). Normal combat pickups count; at most one pull per collection batch. Moves medicine only: no direct healing, creation or collection; no medicine still spends threshold.",
+                  "id": "medic_winch",
+                  "status": "PICKUPS 0/5"
+                }
+              ]
+            },
+            "reduced": false,
+            "save_error": 0,
+            "state": "inventory"
+          },
+          {
+            "B_snapshot_sha256": "47fec3cd3860a14511eb8abac0beed691cf4b9004635be5b5470910a06ce2904",
+            "content_scale": "(960, 540)",
+            "elapsed": 0.0,
+            "focus_enemy": 0,
+            "image": "arena_960_03_summaries_winch_row.png",
+            "keyboard_focus": "review-role/MossCircuit/@CanvasLayer@8/@Control@9/@ColorRect@25/@PanelContainer@26/@VBoxContainer@1197/@Button@1368",
+            "logical": "[P: (0.0, 0.0), S: (960.0, 540.0)]",
+            "name": "winch_row",
+            "os_position": "(92, 120)",
+            "os_size": "(960, 540)",
+            "projection": {
+              "fields": [],
+              "pin": {},
+              "rows": [
+                {
+                  "detail": "Pull control only; no added damage. Mark symbol is not a successful pull.",
+                  "id": "crossfire_pin",
+                  "status": "INACTIVE / needs 2 distinct weapon types"
+                },
+                {
+                  "detail": "Normal combat pickups charge it. Field: 70% movement speed, no damage; bosses and charging enemies excluded.",
+                  "id": "salvage_capacitor",
+                  "status": "CHARGING / 0/3 / fields 0/2"
+                },
+                {
+                  "detail": "NEEDS MEDICAL PICKUPS (currently Medic Seed). Normal combat pickups count; at most one pull per collection batch. Moves medicine only: no direct healing, creation or collection; no medicine still spends threshold.",
+                  "id": "medic_winch",
+                  "status": "PICKUPS 0/5"
+                }
+              ]
+            },
+            "reduced": false,
+            "save_error": 0,
+            "state": "inventory"
+          }
+        ]
+      },
+      {
+        "assertions": [
+          {
+            "label": "duplicate type inactive",
+            "pass": true
+          },
+          {
+            "label": "distinct ready",
+            "pass": true
+          },
+          {
+            "label": "actual first mark",
+            "pass": true
+          },
+          {
+            "label": "actual consume CD",
+            "pass": true
+          },
+          {
+            "label": "BUILD cooldown",
+            "pass": true
+          },
+          {
+            "label": "pause render frozen",
+            "pass": true
+          }
+        ],
+        "id": "04_pin_readiness",
+        "stages": [
+          {
+            "B_snapshot_sha256": "82e0bcd4580e2d8fbe9dd922451d0dd8a65438e769262f75a2de49f5fe36abf0",
+            "content_scale": "(960, 540)",
+            "elapsed": 0.0,
+            "focus_enemy": 0,
+            "image": "arena_960_04_pin_readiness_prerequisite.png",
+            "keyboard_focus": "review-role/MossCircuit/@CanvasLayer@8/@Control@9/@ColorRect@25/@PanelContainer@26/@VBoxContainer@1615/@Button@1761",
+            "logical": "[P: (0.0, 0.0), S: (960.0, 540.0)]",
+            "name": "prerequisite",
+            "os_position": "(92, 120)",
+            "os_size": "(960, 540)",
+            "projection": {
+              "fields": [],
+              "pin": {},
+              "rows": [
+                {
+                  "detail": "Pull control only; no added damage. Mark symbol is not a successful pull.",
+                  "id": "crossfire_pin",
+                  "status": "INACTIVE / needs 2 distinct weapon types"
+                }
+              ]
+            },
+            "reduced": false,
+            "save_error": 0,
+            "state": "inventory"
+          },
+          {
+            "B_snapshot_sha256": "e0b1bea9d455f8d4a52fe1d97a15b8ba2bfcda5302dc969a0e550dfb1e6d3228",
+            "content_scale": "(960, 540)",
+            "elapsed": 0.0,
+            "focus_enemy": 0,
+            "image": "arena_960_04_pin_readiness_cooldown.png",
+            "keyboard_focus": "review-role/MossCircuit/@CanvasLayer@8/@Control@9/@ColorRect@25/@PanelContainer@26/@VBoxContainer@1767/@Button@1913",
+            "logical": "[P: (0.0, 0.0), S: (960.0, 540.0)]",
+            "name": "cooldown",
+            "os_position": "(92, 120)",
+            "os_size": "(960, 540)",
+            "projection": {
+              "fields": [],
+              "pin": {},
+              "rows": [
+                {
+                  "detail": "Pull control only; no added damage. Mark symbol is not a successful pull.",
+                  "id": "crossfire_pin",
+                  "status": "COOLDOWN / 1.00s"
+                }
+              ]
+            },
+            "reduced": false,
+            "save_error": 0,
+            "state": "inventory"
+          }
+        ]
+      },
+      {
+        "assertions": [
+          {
+            "label": "stored anchor",
+            "pass": true
+          },
+          {
+            "label": "live target",
+            "pass": true
+          },
+          {
+            "label": "actual click distinct priority",
+            "pass": true
+          },
+          {
+            "label": "reduced projection same",
+            "pass": true
+          },
+          {
+            "label": "render no mutation",
+            "pass": true
+          },
+          {
+            "label": "actual pull45",
+            "pass": true
+          },
+          {
+            "label": "Pin no damage",
+            "pass": true
+          },
+          {
+            "label": "consumed no priority replacement",
+            "pass": true
+          }
+        ],
+        "id": "05_pin_vs_focus",
+        "stages": [
+          {
+            "B_snapshot_sha256": "d4d5d09f0de7778bc48c2c4ef72443609d6aa44b6376606c6ddb08280c12401c",
+            "content_scale": "(960, 540)",
+            "elapsed": 0.0,
+            "focus_enemy": 2,
+            "image": "arena_960_05_pin_vs_focus_normal.png",
+            "keyboard_focus": "",
+            "logical": "[P: (0.0, 0.0), S: (960.0, 540.0)]",
+            "name": "normal",
+            "os_position": "(92, 120)",
+            "os_size": "(960, 540)",
+            "projection": {
+              "fields": [],
+              "pin": {
+                "anchor": "(400.0, 300.0)",
+                "target": "(500.0, 300.0)"
+              },
+              "rows": [
+                {
+                  "detail": "Pull control only; no added damage. Mark symbol is not a successful pull.",
+                  "id": "crossfire_pin",
+                  "status": "MARKED / 1.50s left / hit same target with another type"
+                }
+              ]
+            },
+            "reduced": false,
+            "save_error": 0,
+            "state": "playing"
+          },
+          {
+            "B_snapshot_sha256": "d4d5d09f0de7778bc48c2c4ef72443609d6aa44b6376606c6ddb08280c12401c",
+            "content_scale": "(960, 540)",
+            "elapsed": 0.0,
+            "focus_enemy": 2,
+            "image": "arena_960_05_pin_vs_focus_reduced.png",
+            "keyboard_focus": "",
+            "logical": "[P: (0.0, 0.0), S: (960.0, 540.0)]",
+            "name": "reduced",
+            "os_position": "(92, 120)",
+            "os_size": "(960, 540)",
+            "projection": {
+              "fields": [],
+              "pin": {
+                "anchor": "(400.0, 300.0)",
+                "target": "(500.0, 300.0)"
+              },
+              "rows": [
+                {
+                  "detail": "Pull control only; no added damage. Mark symbol is not a successful pull.",
+                  "id": "crossfire_pin",
+                  "status": "MARKED / 1.50s left / hit same target with another type"
+                }
+              ]
+            },
+            "reduced": true,
+            "save_error": 0,
+            "state": "playing"
+          },
+          {
+            "B_snapshot_sha256": "ec7a002abac701d94cf7a0695fc4abd7cd1c4d9adf8a048c2c921b295d57c842",
+            "content_scale": "(960, 540)",
+            "elapsed": 0.0,
+            "focus_enemy": 2,
+            "image": "arena_960_05_pin_vs_focus_consumed.png",
+            "keyboard_focus": "",
+            "logical": "[P: (0.0, 0.0), S: (960.0, 540.0)]",
+            "name": "consumed",
+            "os_position": "(92, 120)",
+            "os_size": "(960, 540)",
+            "projection": {
+              "fields": [],
+              "pin": {},
+              "rows": [
+                {
+                  "detail": "Pull control only; no added damage. Mark symbol is not a successful pull.",
+                  "id": "crossfire_pin",
+                  "status": "COOLDOWN / 1.00s"
+                }
+              ]
+            },
+            "reduced": true,
+            "save_error": 0,
+            "state": "playing"
+          }
+        ]
+      },
+      {
+        "assertions": [
+          {
+            "label": "real mark",
+            "pass": true
+          },
+          {
+            "label": "missing target hides marker",
+            "pass": true
+          },
+          {
+            "label": "honest stale status",
+            "pass": true
+          },
+          {
+            "label": "projection cannot prune",
+            "pass": true
+          },
+          {
+            "label": "actual step prunes CD",
+            "pass": true
+          }
+        ],
+        "id": "06_invalid_mark",
+        "stages": [
+          {
+            "B_snapshot_sha256": "fd810dd7020468f0264be19b06c9c009b4e24fe3109812d9315ca470707e7693",
+            "content_scale": "(960, 540)",
+            "elapsed": 0.0,
+            "focus_enemy": 0,
+            "image": "arena_960_06_invalid_mark_invalid.png",
+            "keyboard_focus": "",
+            "logical": "[P: (0.0, 0.0), S: (960.0, 540.0)]",
+            "name": "invalid",
+            "os_position": "(92, 120)",
+            "os_size": "(960, 540)",
+            "projection": {
+              "fields": [],
+              "pin": {},
+              "rows": [
+                {
+                  "detail": "Pull control only; no added damage. Mark symbol is not a successful pull.",
+                  "id": "crossfire_pin",
+                  "status": "NO VALID MARK / awaiting simulation update"
+                }
+              ]
+            },
+            "reduced": false,
+            "save_error": 0,
+            "state": "playing"
+          },
+          {
+            "B_snapshot_sha256": "ddbdbcd4b94ddbbbc5f5be284981c263b856f62cbb6ed300bc00b646e10c65d4",
+            "content_scale": "(960, 540)",
+            "elapsed": 0.0,
+            "focus_enemy": 0,
+            "image": "arena_960_06_invalid_mark_pruned.png",
+            "keyboard_focus": "",
+            "logical": "[P: (0.0, 0.0), S: (960.0, 540.0)]",
+            "name": "pruned",
+            "os_position": "(92, 120)",
+            "os_size": "(960, 540)",
+            "projection": {
+              "fields": [],
+              "pin": {},
+              "rows": [
+                {
+                  "detail": "Pull control only; no added damage. Mark symbol is not a successful pull.",
+                  "id": "crossfire_pin",
+                  "status": "COOLDOWN / 1.00s"
+                }
+              ]
+            },
+            "reduced": false,
+            "save_error": 0,
+            "state": "playing"
+          }
+        ]
+      },
+      {
+        "assertions": [
+          {
+            "label": "actual pickups charge3",
+            "pass": true
+          },
+          {
+            "label": "real dash saved origin",
+            "pass": true
+          },
+          {
+            "label": "two fields",
+            "pass": true
+          },
+          {
+            "label": "canonical radius80",
+            "pass": true
+          },
+          {
+            "label": "reduced no authority changes",
+            "pass": true
+          },
+          {
+            "label": "not old damaging hazards",
+            "pass": true
+          },
+          {
+            "label": "first expiry equality",
+            "pass": true
+          },
+          {
+            "label": "second expiry equality",
+            "pass": true
+          }
+        ],
+        "id": "07_salvage_fields",
+        "stages": [
+          {
+            "B_snapshot_sha256": "056c0ecbeed5fc371af16d112a241f06c1b6e0b60d7ed986068eecfab4ef09a5",
+            "content_scale": "(960, 540)",
+            "elapsed": 0.2,
+            "focus_enemy": 0,
+            "image": "arena_960_07_salvage_fields_normal.png",
+            "keyboard_focus": "",
+            "logical": "[P: (0.0, 0.0), S: (960.0, 540.0)]",
+            "name": "normal",
+            "os_position": "(92, 120)",
+            "os_size": "(960, 540)",
+            "projection": {
+              "fields": [
+                {
+                  "pos": "(300.0, 300.0)",
+                  "radius": 80.0
+                },
+                {
+                  "pos": "(420.0, 320.0)",
+                  "radius": 80.0
+                }
+              ],
+              "pin": {},
+              "rows": [
+                {
+                  "detail": "Normal combat pickups charge it. Field: 70% movement speed, no damage; bosses and charging enemies excluded.",
+                  "id": "salvage_capacitor",
+                  "status": "CHARGING / 0/3 / fields 2/2"
+                }
+              ]
+            },
+            "reduced": false,
+            "save_error": 0,
+            "state": "playing"
+          },
+          {
+            "B_snapshot_sha256": "056c0ecbeed5fc371af16d112a241f06c1b6e0b60d7ed986068eecfab4ef09a5",
+            "content_scale": "(960, 540)",
+            "elapsed": 0.2,
+            "focus_enemy": 0,
+            "image": "arena_960_07_salvage_fields_reduced.png",
+            "keyboard_focus": "",
+            "logical": "[P: (0.0, 0.0), S: (960.0, 540.0)]",
+            "name": "reduced",
+            "os_position": "(92, 120)",
+            "os_size": "(960, 540)",
+            "projection": {
+              "fields": [
+                {
+                  "pos": "(300.0, 300.0)",
+                  "radius": 80.0
+                },
+                {
+                  "pos": "(420.0, 320.0)",
+                  "radius": 80.0
+                }
+              ],
+              "pin": {},
+              "rows": [
+                {
+                  "detail": "Normal combat pickups charge it. Field: 70% movement speed, no damage; bosses and charging enemies excluded.",
+                  "id": "salvage_capacitor",
+                  "status": "CHARGING / 0/3 / fields 2/2"
+                }
+              ]
+            },
+            "reduced": true,
+            "save_error": 0,
+            "state": "playing"
+          },
+          {
+            "B_snapshot_sha256": "e6829bd2ffaa1b0237a4beced31bbec26180afa3ce89f5e2597451e3d51ff85a",
+            "content_scale": "(960, 540)",
+            "elapsed": 1.8,
+            "focus_enemy": 0,
+            "image": "arena_960_07_salvage_fields_expired.png",
+            "keyboard_focus": "",
+            "logical": "[P: (0.0, 0.0), S: (960.0, 540.0)]",
+            "name": "expired",
+            "os_position": "(92, 120)",
+            "os_size": "(960, 540)",
+            "projection": {
+              "fields": [
+                {
+                  "pos": "(420.0, 320.0)",
+                  "radius": 80.0
+                }
+              ],
+              "pin": {},
+              "rows": [
+                {
+                  "detail": "Normal combat pickups charge it. Field: 70% movement speed, no damage; bosses and charging enemies excluded.",
+                  "id": "salvage_capacitor",
+                  "status": "CHARGING / 0/3 / fields 1/2"
+                }
+              ]
+            },
+            "reduced": true,
+            "save_error": 0,
+            "state": "playing"
+          }
+        ]
+      },
+      {
+        "assertions": [
+          {
+            "label": "normal rewards once",
+            "pass": true
+          },
+          {
+            "label": "threshold spent",
+            "pass": true
+          },
+          {
+            "label": "move medicine no collect",
+            "pass": true
+          },
+          {
+            "label": "no direct healing",
+            "pass": true
+          },
+          {
+            "label": "reduced rendering no collection",
+            "pass": true
+          },
+          {
+            "label": "next actual collection heals",
+            "pass": true
+          },
+          {
+            "label": "medical excluded",
+            "pass": true
+          },
+          {
+            "label": "absent medicine still spends",
+            "pass": true
+          },
+          {
+            "label": "BUILD medical limitation",
+            "pass": true
+          }
+        ],
+        "id": "08_winch_pipeline",
+        "stages": [
+          {
+            "B_snapshot_sha256": "db458466f603211496847cd2489c51605ece5fe75a168930fce96ecf66cb0456",
+            "content_scale": "(960, 540)",
+            "elapsed": 0.0,
+            "focus_enemy": 0,
+            "image": "arena_960_08_winch_pipeline_normal.png",
+            "keyboard_focus": "",
+            "logical": "[P: (0.0, 0.0), S: (960.0, 540.0)]",
+            "name": "normal",
+            "os_position": "(92, 120)",
+            "os_size": "(960, 540)",
+            "projection": {
+              "fields": [],
+              "pin": {},
+              "rows": [
+                {
+                  "detail": "Normal combat pickups charge it. Field: 70% movement speed, no damage; bosses and charging enemies excluded.",
+                  "id": "salvage_capacitor",
+                  "status": "READY / next real dash spends charge / 3/3 / fields 0/2"
+                },
+                {
+                  "detail": "NEEDS MEDICAL PICKUPS (currently Medic Seed). Normal combat pickups count; at most one pull per collection batch. Moves medicine only: no direct healing, creation or collection; no medicine still spends threshold.",
+                  "id": "medic_winch",
+                  "status": "PICKUPS 0/5"
+                }
+              ]
+            },
+            "reduced": false,
+            "save_error": 0,
+            "state": "playing"
+          },
+          {
+            "B_snapshot_sha256": "db458466f603211496847cd2489c51605ece5fe75a168930fce96ecf66cb0456",
+            "content_scale": "(960, 540)",
+            "elapsed": 0.0,
+            "focus_enemy": 0,
+            "image": "arena_960_08_winch_pipeline_reduced.png",
+            "keyboard_focus": "",
+            "logical": "[P: (0.0, 0.0), S: (960.0, 540.0)]",
+            "name": "reduced",
+            "os_position": "(92, 120)",
+            "os_size": "(960, 540)",
+            "projection": {
+              "fields": [],
+              "pin": {},
+              "rows": [
+                {
+                  "detail": "Normal combat pickups charge it. Field: 70% movement speed, no damage; bosses and charging enemies excluded.",
+                  "id": "salvage_capacitor",
+                  "status": "READY / next real dash spends charge / 3/3 / fields 0/2"
+                },
+                {
+                  "detail": "NEEDS MEDICAL PICKUPS (currently Medic Seed). Normal combat pickups count; at most one pull per collection batch. Moves medicine only: no direct healing, creation or collection; no medicine still spends threshold.",
+                  "id": "medic_winch",
+                  "status": "PICKUPS 0/5"
+                }
+              ]
+            },
+            "reduced": true,
+            "save_error": 0,
+            "state": "playing"
+          },
+          {
+            "B_snapshot_sha256": "8d0ba0cd415f11e33f7da6ec5765af0eff62f71003853b65876558f8265b571d",
+            "content_scale": "(960, 540)",
+            "elapsed": 0.0,
+            "focus_enemy": 0,
+            "image": "arena_960_08_winch_pipeline_collected.png",
+            "keyboard_focus": "",
+            "logical": "[P: (0.0, 0.0), S: (960.0, 540.0)]",
+            "name": "collected",
+            "os_position": "(92, 120)",
+            "os_size": "(960, 540)",
+            "projection": {
+              "fields": [],
+              "pin": {},
+              "rows": [
+                {
+                  "detail": "Normal combat pickups charge it. Field: 70% movement speed, no damage; bosses and charging enemies excluded.",
+                  "id": "salvage_capacitor",
+                  "status": "READY / next real dash spends charge / 3/3 / fields 0/2"
+                },
+                {
+                  "detail": "NEEDS MEDICAL PICKUPS (currently Medic Seed). Normal combat pickups count; at most one pull per collection batch. Moves medicine only: no direct healing, creation or collection; no medicine still spends threshold.",
+                  "id": "medic_winch",
+                  "status": "PICKUPS 0/5"
+                }
+              ]
+            },
+            "reduced": true,
+            "save_error": 0,
+            "state": "playing"
+          },
+          {
+            "B_snapshot_sha256": "948549f09793778a77ae3c80436ebd1dc32af9ef60ad61247063ce9e8bdf4d76",
+            "content_scale": "(960, 540)",
+            "elapsed": 0.0,
+            "focus_enemy": 0,
+            "image": "arena_960_08_winch_pipeline_no_medicine.png",
+            "keyboard_focus": "review-role/MossCircuit/@CanvasLayer@8/@Control@9/@ColorRect@25/@PanelContainer@26/@VBoxContainer@2901/@Button@3060",
+            "logical": "[P: (0.0, 0.0), S: (960.0, 540.0)]",
+            "name": "no_medicine",
+            "os_position": "(92, 120)",
+            "os_size": "(960, 540)",
+            "projection": {
+              "fields": [],
+              "pin": {},
+              "rows": [
+                {
+                  "detail": "Normal combat pickups charge it. Field: 70% movement speed, no damage; bosses and charging enemies excluded.",
+                  "id": "salvage_capacitor",
+                  "status": "READY / next real dash spends charge / 3/3 / fields 0/2"
+                },
+                {
+                  "detail": "NEEDS MEDICAL PICKUPS (currently Medic Seed). Normal combat pickups count; at most one pull per collection batch. Moves medicine only: no direct healing, creation or collection; no medicine still spends threshold.",
+                  "id": "medic_winch",
+                  "status": "PICKUPS 0/5"
+                }
+              ]
+            },
+            "reduced": true,
+            "save_error": 0,
+            "state": "inventory"
+          }
+        ]
+      },
+      {
+        "assertions": [
+          {
+            "label": "accepted sale removes ownership",
+            "pass": true
+          },
+          {
+            "label": "sale removes row and marker",
+            "pass": true
+          },
+          {
+            "label": "last sale fastpath",
+            "pass": true
+          },
+          {
+            "label": "main room cleanup",
+            "pass": true
+          },
+          {
+            "label": "room prior CD preserved",
+            "pass": true
+          },
+          {
+            "label": "new room projection no cached markers",
+            "pass": true
+          }
+        ],
+        "id": "09_sale_room",
+        "stages": [
+          {
+            "B_snapshot_sha256": "38cee4219d6a7d45212a70af71b69f8b6aece05fed93e915d6842a4926faea32",
+            "content_scale": "(960, 540)",
+            "elapsed": 0.0,
+            "focus_enemy": 0,
+            "image": "arena_960_09_sale_room_sold.png",
+            "keyboard_focus": "review-role/MossCircuit/@CanvasLayer@8/@Control@9/@ColorRect@25/@PanelContainer@26/@VBoxContainer@3693/@HBoxContainer@3695/@ScrollContainer@3702/@VBoxContainer@3703/@PanelContainer@3726/@HBoxContainer@3727/@VBoxContainer@3729/@Button@3745",
+            "logical": "[P: (0.0, 0.0), S: (960.0, 540.0)]",
+            "name": "sold",
+            "os_position": "(92, 120)",
+            "os_size": "(960, 540)",
+            "projection": {
+              "fields": [],
+              "pin": {},
+              "rows": []
+            },
+            "reduced": false,
+            "save_error": 0,
+            "state": "shop"
+          },
+          {
+            "B_snapshot_sha256": "4d6644a384f7f77b8a7cd31285eed7be0715b867ef22233789c7bbbfe24ae240",
+            "content_scale": "(960, 540)",
+            "elapsed": 0.0,
+            "focus_enemy": 0,
+            "image": "arena_960_09_sale_room_room.png",
+            "keyboard_focus": "review-role/MossCircuit/@CanvasLayer@8/@Control@9/@ColorRect@25/@PanelContainer@26/@VBoxContainer@4111/@ScrollContainer@4116/@VBoxContainer@4117/@PanelContainer@4118/@HBoxContainer@4119/@VBoxContainer@4121/@Button@4124",
+            "logical": "[P: (0.0, 0.0), S: (960.0, 540.0)]",
+            "name": "room",
+            "os_position": "(92, 120)",
+            "os_size": "(960, 540)",
+            "projection": {
+              "fields": [],
+              "pin": {},
+              "rows": [
+                {
+                  "detail": "Pull control only; no added damage. Mark symbol is not a successful pull.",
+                  "id": "crossfire_pin",
+                  "status": "COOLDOWN / 1.00s"
+                },
+                {
+                  "detail": "Normal combat pickups charge it. Field: 70% movement speed, no damage; bosses and charging enemies excluded.",
+                  "id": "salvage_capacitor",
+                  "status": "CHARGING / 0/3 / fields 0/2"
+                },
+                {
+                  "detail": "NEEDS MEDICAL PICKUPS (currently Medic Seed). Normal combat pickups count; at most one pull per collection batch. Moves medicine only: no direct healing, creation or collection; no medicine still spends threshold.",
+                  "id": "medic_winch",
+                  "status": "PICKUPS 0/5"
+                }
+              ]
+            },
+            "reduced": false,
+            "save_error": 0,
+            "state": "upgrade"
+          }
+        ]
+      },
+      {
+        "assertions": [
+          {
+            "label": "valid mark and two fields",
+            "pass": true
+          },
+          {
+            "label": "actual BUILD opens",
+            "pass": true
+          },
+          {
+            "label": "modal HUD no focus",
+            "pass": true
+          },
+          {
+            "label": "BUILD no behind selection",
+            "pass": true
+          },
+          {
+            "label": "BUILD Escape restore",
+            "pass": true
+          },
+          {
+            "label": "actual PAUSE opens",
+            "pass": true
+          },
+          {
+            "label": "PAUSE no behind selection",
+            "pass": true
+          },
+          {
+            "label": "Escape restore and exact authorized cancel only",
+            "pass": true
+          }
+        ],
+        "id": "10_modal_layer",
+        "stages": [
+          {
+            "B_snapshot_sha256": "f678bc01f18d22f2ae0da710b9bf3210e06afb202a25d6199a20723c609c81f5",
+            "content_scale": "(960, 540)",
+            "elapsed": 0.2,
+            "focus_enemy": 2,
+            "image": "arena_960_10_modal_layer_world.png",
+            "keyboard_focus": "",
+            "logical": "[P: (0.0, 0.0), S: (960.0, 540.0)]",
+            "name": "world",
+            "os_position": "(92, 120)",
+            "os_size": "(960, 540)",
+            "projection": {
+              "fields": [
+                {
+                  "pos": "(300.0, 300.0)",
+                  "radius": 80.0
+                },
+                {
+                  "pos": "(420.0, 320.0)",
+                  "radius": 80.0
+                }
+              ],
+              "pin": {
+                "anchor": "(500.0, 300.0)",
+                "target": "(500.0, 300.0)"
+              },
+              "rows": [
+                {
+                  "detail": "Pull control only; no added damage. Mark symbol is not a successful pull.",
+                  "id": "crossfire_pin",
+                  "status": "MARKED / 1.50s left / hit same target with another type"
+                },
+                {
+                  "detail": "Normal combat pickups charge it. Field: 70% movement speed, no damage; bosses and charging enemies excluded.",
+                  "id": "salvage_capacitor",
+                  "status": "CHARGING / 0/3 / fields 2/2"
+                },
+                {
+                  "detail": "NEEDS MEDICAL PICKUPS (currently Medic Seed). Normal combat pickups count; at most one pull per collection batch. Moves medicine only: no direct healing, creation or collection; no medicine still spends threshold.",
+                  "id": "medic_winch",
+                  "status": "PICKUPS 1/5"
+                }
+              ]
+            },
+            "reduced": false,
+            "save_error": 0,
+            "state": "playing"
+          },
+          {
+            "B_snapshot_sha256": "cbc8d8cf797c75c0e2801ef2f3d133d5cb4928cd5305a9e5f1f7951463bca20a",
+            "content_scale": "(960, 540)",
+            "elapsed": 0.2,
+            "focus_enemy": 2,
+            "image": "arena_960_10_modal_layer_build.png",
+            "keyboard_focus": "review-role/MossCircuit/@CanvasLayer@8/@Control@9/@ColorRect@25/@PanelContainer@26/@VBoxContainer@4394/@Button@4565",
+            "logical": "[P: (0.0, 0.0), S: (960.0, 540.0)]",
+            "name": "build",
+            "os_position": "(92, 120)",
+            "os_size": "(960, 540)",
+            "projection": {
+              "fields": [
+                {
+                  "pos": "(300.0, 300.0)",
+                  "radius": 80.0
+                },
+                {
+                  "pos": "(420.0, 320.0)",
+                  "radius": 80.0
+                }
+              ],
+              "pin": {
+                "anchor": "(500.0, 300.0)",
+                "target": "(500.0, 300.0)"
+              },
+              "rows": [
+                {
+                  "detail": "Pull control only; no added damage. Mark symbol is not a successful pull.",
+                  "id": "crossfire_pin",
+                  "status": "MARKED / 1.50s left / hit same target with another type"
+                },
+                {
+                  "detail": "Normal combat pickups charge it. Field: 70% movement speed, no damage; bosses and charging enemies excluded.",
+                  "id": "salvage_capacitor",
+                  "status": "CHARGING / 0/3 / fields 2/2"
+                },
+                {
+                  "detail": "NEEDS MEDICAL PICKUPS (currently Medic Seed). Normal combat pickups count; at most one pull per collection batch. Moves medicine only: no direct healing, creation or collection; no medicine still spends threshold.",
+                  "id": "medic_winch",
+                  "status": "PICKUPS 1/5"
+                }
+              ]
+            },
+            "reduced": false,
+            "save_error": 0,
+            "state": "inventory"
+          },
+          {
+            "B_snapshot_sha256": "cbc8d8cf797c75c0e2801ef2f3d133d5cb4928cd5305a9e5f1f7951463bca20a",
+            "content_scale": "(960, 540)",
+            "elapsed": 0.2,
+            "focus_enemy": 2,
+            "image": "arena_960_10_modal_layer_pause.png",
+            "keyboard_focus": "review-role/MossCircuit/@CanvasLayer@8/@Control@9/@ColorRect@25/@PanelContainer@26/@VBoxContainer@4567/@Button@4571",
+            "logical": "[P: (0.0, 0.0), S: (960.0, 540.0)]",
+            "name": "pause",
+            "os_position": "(92, 120)",
+            "os_size": "(960, 540)",
+            "projection": {
+              "fields": [
+                {
+                  "pos": "(300.0, 300.0)",
+                  "radius": 80.0
+                },
+                {
+                  "pos": "(420.0, 320.0)",
+                  "radius": 80.0
+                }
+              ],
+              "pin": {
+                "anchor": "(500.0, 300.0)",
+                "target": "(500.0, 300.0)"
+              },
+              "rows": [
+                {
+                  "detail": "Pull control only; no added damage. Mark symbol is not a successful pull.",
+                  "id": "crossfire_pin",
+                  "status": "MARKED / 1.50s left / hit same target with another type"
+                },
+                {
+                  "detail": "Normal combat pickups charge it. Field: 70% movement speed, no damage; bosses and charging enemies excluded.",
+                  "id": "salvage_capacitor",
+                  "status": "CHARGING / 0/3 / fields 2/2"
+                },
+                {
+                  "detail": "NEEDS MEDICAL PICKUPS (currently Medic Seed). Normal combat pickups count; at most one pull per collection batch. Moves medicine only: no direct healing, creation or collection; no medicine still spends threshold.",
+                  "id": "medic_winch",
+                  "status": "PICKUPS 1/5"
+                }
+              ]
+            },
+            "reduced": false,
+            "save_error": 0,
+            "state": "paused"
+          }
+        ]
+      }
+    ],
+    "scope": "controlled actual B UI/pipeline; not ordinary acquisition, hardware input, or full B acceptance"
+  },
+  "helper_pass": true,
+  "helper_records": [
+    {
+      "capture_removed": true,
+      "complete": true,
+      "driver": "Dummy",
+      "game_owner_count": 1,
+      "mix_rate": 44100.0,
+      "observations": [
+        {
+          "discarded": 0,
+          "elapsed_us": 109,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 0,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 0,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 23650,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 0,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 0,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 49883,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 0,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 0,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 83394,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 4096,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 4096,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 125898,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 4096,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 4096,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 151950,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 4096,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 4096,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 175918,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 8192,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 8192,
+          "streams_released": true
+        }
+      ],
+      "pre_window_drained": 4096,
+      "prepare_errors": [],
+      "requested_owner_count": 1,
+      "scope": "Test-only bounded final-owner resource release and fresh internal silence; not physical output or a universal timing guarantee.",
+      "tracked_owner_count": 1,
+      "tracked_stream_count": 2
+    }
+  ],
+  "dimensions": [
+    {
+      "content_scale": "(960, 540)",
+      "logical": "[P: (0.0, 0.0), S: (960.0, 540.0)]",
+      "os_position": "(92, 120)",
+      "os_size": "(1180, 812)",
+      "root_window_size": "(1180, 812)"
+    },
+    {
+      "content_scale": "(960, 540)",
+      "logical": "[P: (0.0, 0.0), S: (960.0, 540.0)]",
+      "os_position": "(92, 120)",
+      "os_size": "(960, 540)",
+      "root_window_size": "(1180, 812)"
+    }
+  ],
+  "image_dimensions": [
+    {
+      "B_snapshot_sha256": "1696ce192105b4c69aa2943923579215cef59a9e1db6222c59fdbe368488ced3",
+      "content_scale": "(960, 540)",
+      "elapsed": 0.0,
+      "focus_enemy": 0,
+      "image": "arena_960_01_old_build_before.png",
+      "keyboard_focus": "",
+      "logical": "[P: (0.0, 0.0), S: (960.0, 540.0)]",
+      "name": "before",
+      "os_position": "(92, 120)",
+      "os_size": "(960, 540)",
+      "projection": {
+        "fields": [],
+        "pin": {},
+        "rows": []
+      },
+      "reduced": false,
+      "save_error": 0,
+      "state": "playing"
+    },
+    {
+      "B_snapshot_sha256": "1696ce192105b4c69aa2943923579215cef59a9e1db6222c59fdbe368488ced3",
+      "content_scale": "(960, 540)",
+      "elapsed": 0.0,
+      "focus_enemy": 0,
+      "image": "arena_960_01_old_build_build.png",
+      "keyboard_focus": "review-role/MossCircuit/@CanvasLayer@8/@Control@9/@ColorRect@25/@PanelContainer@26/@VBoxContainer@398/@Button@532",
+      "logical": "[P: (0.0, 0.0), S: (960.0, 540.0)]",
+      "name": "build",
+      "os_position": "(92, 120)",
+      "os_size": "(960, 540)",
+      "projection": {
+        "fields": [],
+        "pin": {},
+        "rows": []
+      },
+      "reduced": false,
+      "save_error": 0,
+      "state": "inventory"
+    },
+    {
+      "B_snapshot_sha256": "1696ce192105b4c69aa2943923579215cef59a9e1db6222c59fdbe368488ced3",
+      "content_scale": "(960, 540)",
+      "elapsed": 0.0,
+      "focus_enemy": 0,
+      "image": "arena_960_01_old_build_closed.png",
+      "keyboard_focus": "",
+      "logical": "[P: (0.0, 0.0), S: (960.0, 540.0)]",
+      "name": "closed",
+      "os_position": "(92, 120)",
+      "os_size": "(960, 540)",
+      "projection": {
+        "fields": [],
+        "pin": {},
+        "rows": []
+      },
+      "reduced": false,
+      "save_error": 0,
+      "state": "playing"
+    },
+    {
+      "B_snapshot_sha256": "0cffec248f4bbd75b2a4978fc649da3260247865ea984d1afb3746c88522a870",
+      "content_scale": "(960, 540)",
+      "elapsed": 0.0,
+      "focus_enemy": 0,
+      "image": "arena_960_02_three_cards_crossfire_pin.png",
+      "keyboard_focus": "review-role/MossCircuit/@CanvasLayer@8/@Control@9/@ColorRect@25/@PanelContainer@26/@VBoxContainer@779/@Button@950",
+      "logical": "[P: (0.0, 0.0), S: (960.0, 540.0)]",
+      "name": "crossfire_pin",
+      "os_position": "(92, 120)",
+      "os_size": "(960, 540)",
+      "projection": {
+        "fields": [],
+        "pin": {},
+        "rows": [
+          {
+            "detail": "Pull control only; no added damage. Mark symbol is not a successful pull.",
+            "id": "crossfire_pin",
+            "status": "READY / awaiting first eligible contact"
+          },
+          {
+            "detail": "Normal combat pickups charge it. Field: 70% movement speed, no damage; bosses and charging enemies excluded.",
+            "id": "salvage_capacitor",
+            "status": "CHARGING / 0/3 / fields 0/2"
+          },
+          {
+            "detail": "NEEDS MEDICAL PICKUPS (currently Medic Seed). Normal combat pickups count; at most one pull per collection batch. Moves medicine only: no direct healing, creation or collection; no medicine still spends threshold.",
+            "id": "medic_winch",
+            "status": "PICKUPS 0/5"
+          }
+        ]
+      },
+      "reduced": false,
+      "save_error": 0,
+      "state": "inventory"
+    },
+    {
+      "B_snapshot_sha256": "0cffec248f4bbd75b2a4978fc649da3260247865ea984d1afb3746c88522a870",
+      "content_scale": "(960, 540)",
+      "elapsed": 0.0,
+      "focus_enemy": 0,
+      "image": "arena_960_02_three_cards_salvage_capacitor.png",
+      "keyboard_focus": "review-role/MossCircuit/@CanvasLayer@8/@Control@9/@ColorRect@25/@PanelContainer@26/@VBoxContainer@779/@Button@950",
+      "logical": "[P: (0.0, 0.0), S: (960.0, 540.0)]",
+      "name": "salvage_capacitor",
+      "os_position": "(92, 120)",
+      "os_size": "(960, 540)",
+      "projection": {
+        "fields": [],
+        "pin": {},
+        "rows": [
+          {
+            "detail": "Pull control only; no added damage. Mark symbol is not a successful pull.",
+            "id": "crossfire_pin",
+            "status": "READY / awaiting first eligible contact"
+          },
+          {
+            "detail": "Normal combat pickups charge it. Field: 70% movement speed, no damage; bosses and charging enemies excluded.",
+            "id": "salvage_capacitor",
+            "status": "CHARGING / 0/3 / fields 0/2"
+          },
+          {
+            "detail": "NEEDS MEDICAL PICKUPS (currently Medic Seed). Normal combat pickups count; at most one pull per collection batch. Moves medicine only: no direct healing, creation or collection; no medicine still spends threshold.",
+            "id": "medic_winch",
+            "status": "PICKUPS 0/5"
+          }
+        ]
+      },
+      "reduced": false,
+      "save_error": 0,
+      "state": "inventory"
+    },
+    {
+      "B_snapshot_sha256": "0cffec248f4bbd75b2a4978fc649da3260247865ea984d1afb3746c88522a870",
+      "content_scale": "(960, 540)",
+      "elapsed": 0.0,
+      "focus_enemy": 0,
+      "image": "arena_960_02_three_cards_medic_winch.png",
+      "keyboard_focus": "review-role/MossCircuit/@CanvasLayer@8/@Control@9/@ColorRect@25/@PanelContainer@26/@VBoxContainer@779/@Button@950",
+      "logical": "[P: (0.0, 0.0), S: (960.0, 540.0)]",
+      "name": "medic_winch",
+      "os_position": "(92, 120)",
+      "os_size": "(960, 540)",
+      "projection": {
+        "fields": [],
+        "pin": {},
+        "rows": [
+          {
+            "detail": "Pull control only; no added damage. Mark symbol is not a successful pull.",
+            "id": "crossfire_pin",
+            "status": "READY / awaiting first eligible contact"
+          },
+          {
+            "detail": "Normal combat pickups charge it. Field: 70% movement speed, no damage; bosses and charging enemies excluded.",
+            "id": "salvage_capacitor",
+            "status": "CHARGING / 0/3 / fields 0/2"
+          },
+          {
+            "detail": "NEEDS MEDICAL PICKUPS (currently Medic Seed). Normal combat pickups count; at most one pull per collection batch. Moves medicine only: no direct healing, creation or collection; no medicine still spends threshold.",
+            "id": "medic_winch",
+            "status": "PICKUPS 0/5"
+          }
+        ]
+      },
+      "reduced": false,
+      "save_error": 0,
+      "state": "inventory"
+    },
+    {
+      "B_snapshot_sha256": "47fec3cd3860a14511eb8abac0beed691cf4b9004635be5b5470910a06ce2904",
+      "content_scale": "(960, 540)",
+      "elapsed": 0.0,
+      "focus_enemy": 0,
+      "image": "arena_960_03_summaries_pin_row.png",
+      "keyboard_focus": "review-role/MossCircuit/@CanvasLayer@8/@Control@9/@ColorRect@25/@PanelContainer@26/@VBoxContainer@1197/@Button@1368",
+      "logical": "[P: (0.0, 0.0), S: (960.0, 540.0)]",
+      "name": "pin_row",
+      "os_position": "(92, 120)",
+      "os_size": "(960, 540)",
+      "projection": {
+        "fields": [],
+        "pin": {},
+        "rows": [
+          {
+            "detail": "Pull control only; no added damage. Mark symbol is not a successful pull.",
+            "id": "crossfire_pin",
+            "status": "INACTIVE / needs 2 distinct weapon types"
+          },
+          {
+            "detail": "Normal combat pickups charge it. Field: 70% movement speed, no damage; bosses and charging enemies excluded.",
+            "id": "salvage_capacitor",
+            "status": "CHARGING / 0/3 / fields 0/2"
+          },
+          {
+            "detail": "NEEDS MEDICAL PICKUPS (currently Medic Seed). Normal combat pickups count; at most one pull per collection batch. Moves medicine only: no direct healing, creation or collection; no medicine still spends threshold.",
+            "id": "medic_winch",
+            "status": "PICKUPS 0/5"
+          }
+        ]
+      },
+      "reduced": false,
+      "save_error": 0,
+      "state": "inventory"
+    },
+    {
+      "B_snapshot_sha256": "47fec3cd3860a14511eb8abac0beed691cf4b9004635be5b5470910a06ce2904",
+      "content_scale": "(960, 540)",
+      "elapsed": 0.0,
+      "focus_enemy": 0,
+      "image": "arena_960_03_summaries_salvage_row.png",
+      "keyboard_focus": "review-role/MossCircuit/@CanvasLayer@8/@Control@9/@ColorRect@25/@PanelContainer@26/@VBoxContainer@1197/@Button@1368",
+      "logical": "[P: (0.0, 0.0), S: (960.0, 540.0)]",
+      "name": "salvage_row",
+      "os_position": "(92, 120)",
+      "os_size": "(960, 540)",
+      "projection": {
+        "fields": [],
+        "pin": {},
+        "rows": [
+          {
+            "detail": "Pull control only; no added damage. Mark symbol is not a successful pull.",
+            "id": "crossfire_pin",
+            "status": "INACTIVE / needs 2 distinct weapon types"
+          },
+          {
+            "detail": "Normal combat pickups charge it. Field: 70% movement speed, no damage; bosses and charging enemies excluded.",
+            "id": "salvage_capacitor",
+            "status": "CHARGING / 0/3 / fields 0/2"
+          },
+          {
+            "detail": "NEEDS MEDICAL PICKUPS (currently Medic Seed). Normal combat pickups count; at most one pull per collection batch. Moves medicine only: no direct healing, creation or collection; no medicine still spends threshold.",
+            "id": "medic_winch",
+            "status": "PICKUPS 0/5"
+          }
+        ]
+      },
+      "reduced": false,
+      "save_error": 0,
+      "state": "inventory"
+    },
+    {
+      "B_snapshot_sha256": "47fec3cd3860a14511eb8abac0beed691cf4b9004635be5b5470910a06ce2904",
+      "content_scale": "(960, 540)",
+      "elapsed": 0.0,
+      "focus_enemy": 0,
+      "image": "arena_960_03_summaries_winch_row.png",
+      "keyboard_focus": "review-role/MossCircuit/@CanvasLayer@8/@Control@9/@ColorRect@25/@PanelContainer@26/@VBoxContainer@1197/@Button@1368",
+      "logical": "[P: (0.0, 0.0), S: (960.0, 540.0)]",
+      "name": "winch_row",
+      "os_position": "(92, 120)",
+      "os_size": "(960, 540)",
+      "projection": {
+        "fields": [],
+        "pin": {},
+        "rows": [
+          {
+            "detail": "Pull control only; no added damage. Mark symbol is not a successful pull.",
+            "id": "crossfire_pin",
+            "status": "INACTIVE / needs 2 distinct weapon types"
+          },
+          {
+            "detail": "Normal combat pickups charge it. Field: 70% movement speed, no damage; bosses and charging enemies excluded.",
+            "id": "salvage_capacitor",
+            "status": "CHARGING / 0/3 / fields 0/2"
+          },
+          {
+            "detail": "NEEDS MEDICAL PICKUPS (currently Medic Seed). Normal combat pickups count; at most one pull per collection batch. Moves medicine only: no direct healing, creation or collection; no medicine still spends threshold.",
+            "id": "medic_winch",
+            "status": "PICKUPS 0/5"
+          }
+        ]
+      },
+      "reduced": false,
+      "save_error": 0,
+      "state": "inventory"
+    },
+    {
+      "B_snapshot_sha256": "82e0bcd4580e2d8fbe9dd922451d0dd8a65438e769262f75a2de49f5fe36abf0",
+      "content_scale": "(960, 540)",
+      "elapsed": 0.0,
+      "focus_enemy": 0,
+      "image": "arena_960_04_pin_readiness_prerequisite.png",
+      "keyboard_focus": "review-role/MossCircuit/@CanvasLayer@8/@Control@9/@ColorRect@25/@PanelContainer@26/@VBoxContainer@1615/@Button@1761",
+      "logical": "[P: (0.0, 0.0), S: (960.0, 540.0)]",
+      "name": "prerequisite",
+      "os_position": "(92, 120)",
+      "os_size": "(960, 540)",
+      "projection": {
+        "fields": [],
+        "pin": {},
+        "rows": [
+          {
+            "detail": "Pull control only; no added damage. Mark symbol is not a successful pull.",
+            "id": "crossfire_pin",
+            "status": "INACTIVE / needs 2 distinct weapon types"
+          }
+        ]
+      },
+      "reduced": false,
+      "save_error": 0,
+      "state": "inventory"
+    },
+    {
+      "B_snapshot_sha256": "e0b1bea9d455f8d4a52fe1d97a15b8ba2bfcda5302dc969a0e550dfb1e6d3228",
+      "content_scale": "(960, 540)",
+      "elapsed": 0.0,
+      "focus_enemy": 0,
+      "image": "arena_960_04_pin_readiness_cooldown.png",
+      "keyboard_focus": "review-role/MossCircuit/@CanvasLayer@8/@Control@9/@ColorRect@25/@PanelContainer@26/@VBoxContainer@1767/@Button@1913",
+      "logical": "[P: (0.0, 0.0), S: (960.0, 540.0)]",
+      "name": "cooldown",
+      "os_position": "(92, 120)",
+      "os_size": "(960, 540)",
+      "projection": {
+        "fields": [],
+        "pin": {},
+        "rows": [
+          {
+            "detail": "Pull control only; no added damage. Mark symbol is not a successful pull.",
+            "id": "crossfire_pin",
+            "status": "COOLDOWN / 1.00s"
+          }
+        ]
+      },
+      "reduced": false,
+      "save_error": 0,
+      "state": "inventory"
+    },
+    {
+      "B_snapshot_sha256": "d4d5d09f0de7778bc48c2c4ef72443609d6aa44b6376606c6ddb08280c12401c",
+      "content_scale": "(960, 540)",
+      "elapsed": 0.0,
+      "focus_enemy": 2,
+      "image": "arena_960_05_pin_vs_focus_normal.png",
+      "keyboard_focus": "",
+      "logical": "[P: (0.0, 0.0), S: (960.0, 540.0)]",
+      "name": "normal",
+      "os_position": "(92, 120)",
+      "os_size": "(960, 540)",
+      "projection": {
+        "fields": [],
+        "pin": {
+          "anchor": "(400.0, 300.0)",
+          "target": "(500.0, 300.0)"
+        },
+        "rows": [
+          {
+            "detail": "Pull control only; no added damage. Mark symbol is not a successful pull.",
+            "id": "crossfire_pin",
+            "status": "MARKED / 1.50s left / hit same target with another type"
+          }
+        ]
+      },
+      "reduced": false,
+      "save_error": 0,
+      "state": "playing"
+    },
+    {
+      "B_snapshot_sha256": "d4d5d09f0de7778bc48c2c4ef72443609d6aa44b6376606c6ddb08280c12401c",
+      "content_scale": "(960, 540)",
+      "elapsed": 0.0,
+      "focus_enemy": 2,
+      "image": "arena_960_05_pin_vs_focus_reduced.png",
+      "keyboard_focus": "",
+      "logical": "[P: (0.0, 0.0), S: (960.0, 540.0)]",
+      "name": "reduced",
+      "os_position": "(92, 120)",
+      "os_size": "(960, 540)",
+      "projection": {
+        "fields": [],
+        "pin": {
+          "anchor": "(400.0, 300.0)",
+          "target": "(500.0, 300.0)"
+        },
+        "rows": [
+          {
+            "detail": "Pull control only; no added damage. Mark symbol is not a successful pull.",
+            "id": "crossfire_pin",
+            "status": "MARKED / 1.50s left / hit same target with another type"
+          }
+        ]
+      },
+      "reduced": true,
+      "save_error": 0,
+      "state": "playing"
+    },
+    {
+      "B_snapshot_sha256": "ec7a002abac701d94cf7a0695fc4abd7cd1c4d9adf8a048c2c921b295d57c842",
+      "content_scale": "(960, 540)",
+      "elapsed": 0.0,
+      "focus_enemy": 2,
+      "image": "arena_960_05_pin_vs_focus_consumed.png",
+      "keyboard_focus": "",
+      "logical": "[P: (0.0, 0.0), S: (960.0, 540.0)]",
+      "name": "consumed",
+      "os_position": "(92, 120)",
+      "os_size": "(960, 540)",
+      "projection": {
+        "fields": [],
+        "pin": {},
+        "rows": [
+          {
+            "detail": "Pull control only; no added damage. Mark symbol is not a successful pull.",
+            "id": "crossfire_pin",
+            "status": "COOLDOWN / 1.00s"
+          }
+        ]
+      },
+      "reduced": true,
+      "save_error": 0,
+      "state": "playing"
+    },
+    {
+      "B_snapshot_sha256": "fd810dd7020468f0264be19b06c9c009b4e24fe3109812d9315ca470707e7693",
+      "content_scale": "(960, 540)",
+      "elapsed": 0.0,
+      "focus_enemy": 0,
+      "image": "arena_960_06_invalid_mark_invalid.png",
+      "keyboard_focus": "",
+      "logical": "[P: (0.0, 0.0), S: (960.0, 540.0)]",
+      "name": "invalid",
+      "os_position": "(92, 120)",
+      "os_size": "(960, 540)",
+      "projection": {
+        "fields": [],
+        "pin": {},
+        "rows": [
+          {
+            "detail": "Pull control only; no added damage. Mark symbol is not a successful pull.",
+            "id": "crossfire_pin",
+            "status": "NO VALID MARK / awaiting simulation update"
+          }
+        ]
+      },
+      "reduced": false,
+      "save_error": 0,
+      "state": "playing"
+    },
+    {
+      "B_snapshot_sha256": "ddbdbcd4b94ddbbbc5f5be284981c263b856f62cbb6ed300bc00b646e10c65d4",
+      "content_scale": "(960, 540)",
+      "elapsed": 0.0,
+      "focus_enemy": 0,
+      "image": "arena_960_06_invalid_mark_pruned.png",
+      "keyboard_focus": "",
+      "logical": "[P: (0.0, 0.0), S: (960.0, 540.0)]",
+      "name": "pruned",
+      "os_position": "(92, 120)",
+      "os_size": "(960, 540)",
+      "projection": {
+        "fields": [],
+        "pin": {},
+        "rows": [
+          {
+            "detail": "Pull control only; no added damage. Mark symbol is not a successful pull.",
+            "id": "crossfire_pin",
+            "status": "COOLDOWN / 1.00s"
+          }
+        ]
+      },
+      "reduced": false,
+      "save_error": 0,
+      "state": "playing"
+    },
+    {
+      "B_snapshot_sha256": "056c0ecbeed5fc371af16d112a241f06c1b6e0b60d7ed986068eecfab4ef09a5",
+      "content_scale": "(960, 540)",
+      "elapsed": 0.2,
+      "focus_enemy": 0,
+      "image": "arena_960_07_salvage_fields_normal.png",
+      "keyboard_focus": "",
+      "logical": "[P: (0.0, 0.0), S: (960.0, 540.0)]",
+      "name": "normal",
+      "os_position": "(92, 120)",
+      "os_size": "(960, 540)",
+      "projection": {
+        "fields": [
+          {
+            "pos": "(300.0, 300.0)",
+            "radius": 80.0
+          },
+          {
+            "pos": "(420.0, 320.0)",
+            "radius": 80.0
+          }
+        ],
+        "pin": {},
+        "rows": [
+          {
+            "detail": "Normal combat pickups charge it. Field: 70% movement speed, no damage; bosses and charging enemies excluded.",
+            "id": "salvage_capacitor",
+            "status": "CHARGING / 0/3 / fields 2/2"
+          }
+        ]
+      },
+      "reduced": false,
+      "save_error": 0,
+      "state": "playing"
+    },
+    {
+      "B_snapshot_sha256": "056c0ecbeed5fc371af16d112a241f06c1b6e0b60d7ed986068eecfab4ef09a5",
+      "content_scale": "(960, 540)",
+      "elapsed": 0.2,
+      "focus_enemy": 0,
+      "image": "arena_960_07_salvage_fields_reduced.png",
+      "keyboard_focus": "",
+      "logical": "[P: (0.0, 0.0), S: (960.0, 540.0)]",
+      "name": "reduced",
+      "os_position": "(92, 120)",
+      "os_size": "(960, 540)",
+      "projection": {
+        "fields": [
+          {
+            "pos": "(300.0, 300.0)",
+            "radius": 80.0
+          },
+          {
+            "pos": "(420.0, 320.0)",
+            "radius": 80.0
+          }
+        ],
+        "pin": {},
+        "rows": [
+          {
+            "detail": "Normal combat pickups charge it. Field: 70% movement speed, no damage; bosses and charging enemies excluded.",
+            "id": "salvage_capacitor",
+            "status": "CHARGING / 0/3 / fields 2/2"
+          }
+        ]
+      },
+      "reduced": true,
+      "save_error": 0,
+      "state": "playing"
+    },
+    {
+      "B_snapshot_sha256": "e6829bd2ffaa1b0237a4beced31bbec26180afa3ce89f5e2597451e3d51ff85a",
+      "content_scale": "(960, 540)",
+      "elapsed": 1.8,
+      "focus_enemy": 0,
+      "image": "arena_960_07_salvage_fields_expired.png",
+      "keyboard_focus": "",
+      "logical": "[P: (0.0, 0.0), S: (960.0, 540.0)]",
+      "name": "expired",
+      "os_position": "(92, 120)",
+      "os_size": "(960, 540)",
+      "projection": {
+        "fields": [
+          {
+            "pos": "(420.0, 320.0)",
+            "radius": 80.0
+          }
+        ],
+        "pin": {},
+        "rows": [
+          {
+            "detail": "Normal combat pickups charge it. Field: 70% movement speed, no damage; bosses and charging enemies excluded.",
+            "id": "salvage_capacitor",
+            "status": "CHARGING / 0/3 / fields 1/2"
+          }
+        ]
+      },
+      "reduced": true,
+      "save_error": 0,
+      "state": "playing"
+    },
+    {
+      "B_snapshot_sha256": "db458466f603211496847cd2489c51605ece5fe75a168930fce96ecf66cb0456",
+      "content_scale": "(960, 540)",
+      "elapsed": 0.0,
+      "focus_enemy": 0,
+      "image": "arena_960_08_winch_pipeline_normal.png",
+      "keyboard_focus": "",
+      "logical": "[P: (0.0, 0.0), S: (960.0, 540.0)]",
+      "name": "normal",
+      "os_position": "(92, 120)",
+      "os_size": "(960, 540)",
+      "projection": {
+        "fields": [],
+        "pin": {},
+        "rows": [
+          {
+            "detail": "Normal combat pickups charge it. Field: 70% movement speed, no damage; bosses and charging enemies excluded.",
+            "id": "salvage_capacitor",
+            "status": "READY / next real dash spends charge / 3/3 / fields 0/2"
+          },
+          {
+            "detail": "NEEDS MEDICAL PICKUPS (currently Medic Seed). Normal combat pickups count; at most one pull per collection batch. Moves medicine only: no direct healing, creation or collection; no medicine still spends threshold.",
+            "id": "medic_winch",
+            "status": "PICKUPS 0/5"
+          }
+        ]
+      },
+      "reduced": false,
+      "save_error": 0,
+      "state": "playing"
+    },
+    {
+      "B_snapshot_sha256": "db458466f603211496847cd2489c51605ece5fe75a168930fce96ecf66cb0456",
+      "content_scale": "(960, 540)",
+      "elapsed": 0.0,
+      "focus_enemy": 0,
+      "image": "arena_960_08_winch_pipeline_reduced.png",
+      "keyboard_focus": "",
+      "logical": "[P: (0.0, 0.0), S: (960.0, 540.0)]",
+      "name": "reduced",
+      "os_position": "(92, 120)",
+      "os_size": "(960, 540)",
+      "projection": {
+        "fields": [],
+        "pin": {},
+        "rows": [
+          {
+            "detail": "Normal combat pickups charge it. Field: 70% movement speed, no damage; bosses and charging enemies excluded.",
+            "id": "salvage_capacitor",
+            "status": "READY / next real dash spends charge / 3/3 / fields 0/2"
+          },
+          {
+            "detail": "NEEDS MEDICAL PICKUPS (currently Medic Seed). Normal combat pickups count; at most one pull per collection batch. Moves medicine only: no direct healing, creation or collection; no medicine still spends threshold.",
+            "id": "medic_winch",
+            "status": "PICKUPS 0/5"
+          }
+        ]
+      },
+      "reduced": true,
+      "save_error": 0,
+      "state": "playing"
+    },
+    {
+      "B_snapshot_sha256": "8d0ba0cd415f11e33f7da6ec5765af0eff62f71003853b65876558f8265b571d",
+      "content_scale": "(960, 540)",
+      "elapsed": 0.0,
+      "focus_enemy": 0,
+      "image": "arena_960_08_winch_pipeline_collected.png",
+      "keyboard_focus": "",
+      "logical": "[P: (0.0, 0.0), S: (960.0, 540.0)]",
+      "name": "collected",
+      "os_position": "(92, 120)",
+      "os_size": "(960, 540)",
+      "projection": {
+        "fields": [],
+        "pin": {},
+        "rows": [
+          {
+            "detail": "Normal combat pickups charge it. Field: 70% movement speed, no damage; bosses and charging enemies excluded.",
+            "id": "salvage_capacitor",
+            "status": "READY / next real dash spends charge / 3/3 / fields 0/2"
+          },
+          {
+            "detail": "NEEDS MEDICAL PICKUPS (currently Medic Seed). Normal combat pickups count; at most one pull per collection batch. Moves medicine only: no direct healing, creation or collection; no medicine still spends threshold.",
+            "id": "medic_winch",
+            "status": "PICKUPS 0/5"
+          }
+        ]
+      },
+      "reduced": true,
+      "save_error": 0,
+      "state": "playing"
+    },
+    {
+      "B_snapshot_sha256": "948549f09793778a77ae3c80436ebd1dc32af9ef60ad61247063ce9e8bdf4d76",
+      "content_scale": "(960, 540)",
+      "elapsed": 0.0,
+      "focus_enemy": 0,
+      "image": "arena_960_08_winch_pipeline_no_medicine.png",
+      "keyboard_focus": "review-role/MossCircuit/@CanvasLayer@8/@Control@9/@ColorRect@25/@PanelContainer@26/@VBoxContainer@2901/@Button@3060",
+      "logical": "[P: (0.0, 0.0), S: (960.0, 540.0)]",
+      "name": "no_medicine",
+      "os_position": "(92, 120)",
+      "os_size": "(960, 540)",
+      "projection": {
+        "fields": [],
+        "pin": {},
+        "rows": [
+          {
+            "detail": "Normal combat pickups charge it. Field: 70% movement speed, no damage; bosses and charging enemies excluded.",
+            "id": "salvage_capacitor",
+            "status": "READY / next real dash spends charge / 3/3 / fields 0/2"
+          },
+          {
+            "detail": "NEEDS MEDICAL PICKUPS (currently Medic Seed). Normal combat pickups count; at most one pull per collection batch. Moves medicine only: no direct healing, creation or collection; no medicine still spends threshold.",
+            "id": "medic_winch",
+            "status": "PICKUPS 0/5"
+          }
+        ]
+      },
+      "reduced": true,
+      "save_error": 0,
+      "state": "inventory"
+    },
+    {
+      "B_snapshot_sha256": "38cee4219d6a7d45212a70af71b69f8b6aece05fed93e915d6842a4926faea32",
+      "content_scale": "(960, 540)",
+      "elapsed": 0.0,
+      "focus_enemy": 0,
+      "image": "arena_960_09_sale_room_sold.png",
+      "keyboard_focus": "review-role/MossCircuit/@CanvasLayer@8/@Control@9/@ColorRect@25/@PanelContainer@26/@VBoxContainer@3693/@HBoxContainer@3695/@ScrollContainer@3702/@VBoxContainer@3703/@PanelContainer@3726/@HBoxContainer@3727/@VBoxContainer@3729/@Button@3745",
+      "logical": "[P: (0.0, 0.0), S: (960.0, 540.0)]",
+      "name": "sold",
+      "os_position": "(92, 120)",
+      "os_size": "(960, 540)",
+      "projection": {
+        "fields": [],
+        "pin": {},
+        "rows": []
+      },
+      "reduced": false,
+      "save_error": 0,
+      "state": "shop"
+    },
+    {
+      "B_snapshot_sha256": "4d6644a384f7f77b8a7cd31285eed7be0715b867ef22233789c7bbbfe24ae240",
+      "content_scale": "(960, 540)",
+      "elapsed": 0.0,
+      "focus_enemy": 0,
+      "image": "arena_960_09_sale_room_room.png",
+      "keyboard_focus": "review-role/MossCircuit/@CanvasLayer@8/@Control@9/@ColorRect@25/@PanelContainer@26/@VBoxContainer@4111/@ScrollContainer@4116/@VBoxContainer@4117/@PanelContainer@4118/@HBoxContainer@4119/@VBoxContainer@4121/@Button@4124",
+      "logical": "[P: (0.0, 0.0), S: (960.0, 540.0)]",
+      "name": "room",
+      "os_position": "(92, 120)",
+      "os_size": "(960, 540)",
+      "projection": {
+        "fields": [],
+        "pin": {},
+        "rows": [
+          {
+            "detail": "Pull control only; no added damage. Mark symbol is not a successful pull.",
+            "id": "crossfire_pin",
+            "status": "COOLDOWN / 1.00s"
+          },
+          {
+            "detail": "Normal combat pickups charge it. Field: 70% movement speed, no damage; bosses and charging enemies excluded.",
+            "id": "salvage_capacitor",
+            "status": "CHARGING / 0/3 / fields 0/2"
+          },
+          {
+            "detail": "NEEDS MEDICAL PICKUPS (currently Medic Seed). Normal combat pickups count; at most one pull per collection batch. Moves medicine only: no direct healing, creation or collection; no medicine still spends threshold.",
+            "id": "medic_winch",
+            "status": "PICKUPS 0/5"
+          }
+        ]
+      },
+      "reduced": false,
+      "save_error": 0,
+      "state": "upgrade"
+    },
+    {
+      "B_snapshot_sha256": "f678bc01f18d22f2ae0da710b9bf3210e06afb202a25d6199a20723c609c81f5",
+      "content_scale": "(960, 540)",
+      "elapsed": 0.2,
+      "focus_enemy": 2,
+      "image": "arena_960_10_modal_layer_world.png",
+      "keyboard_focus": "",
+      "logical": "[P: (0.0, 0.0), S: (960.0, 540.0)]",
+      "name": "world",
+      "os_position": "(92, 120)",
+      "os_size": "(960, 540)",
+      "projection": {
+        "fields": [
+          {
+            "pos": "(300.0, 300.0)",
+            "radius": 80.0
+          },
+          {
+            "pos": "(420.0, 320.0)",
+            "radius": 80.0
+          }
+        ],
+        "pin": {
+          "anchor": "(500.0, 300.0)",
+          "target": "(500.0, 300.0)"
+        },
+        "rows": [
+          {
+            "detail": "Pull control only; no added damage. Mark symbol is not a successful pull.",
+            "id": "crossfire_pin",
+            "status": "MARKED / 1.50s left / hit same target with another type"
+          },
+          {
+            "detail": "Normal combat pickups charge it. Field: 70% movement speed, no damage; bosses and charging enemies excluded.",
+            "id": "salvage_capacitor",
+            "status": "CHARGING / 0/3 / fields 2/2"
+          },
+          {
+            "detail": "NEEDS MEDICAL PICKUPS (currently Medic Seed). Normal combat pickups count; at most one pull per collection batch. Moves medicine only: no direct healing, creation or collection; no medicine still spends threshold.",
+            "id": "medic_winch",
+            "status": "PICKUPS 1/5"
+          }
+        ]
+      },
+      "reduced": false,
+      "save_error": 0,
+      "state": "playing"
+    },
+    {
+      "B_snapshot_sha256": "cbc8d8cf797c75c0e2801ef2f3d133d5cb4928cd5305a9e5f1f7951463bca20a",
+      "content_scale": "(960, 540)",
+      "elapsed": 0.2,
+      "focus_enemy": 2,
+      "image": "arena_960_10_modal_layer_build.png",
+      "keyboard_focus": "review-role/MossCircuit/@CanvasLayer@8/@Control@9/@ColorRect@25/@PanelContainer@26/@VBoxContainer@4394/@Button@4565",
+      "logical": "[P: (0.0, 0.0), S: (960.0, 540.0)]",
+      "name": "build",
+      "os_position": "(92, 120)",
+      "os_size": "(960, 540)",
+      "projection": {
+        "fields": [
+          {
+            "pos": "(300.0, 300.0)",
+            "radius": 80.0
+          },
+          {
+            "pos": "(420.0, 320.0)",
+            "radius": 80.0
+          }
+        ],
+        "pin": {
+          "anchor": "(500.0, 300.0)",
+          "target": "(500.0, 300.0)"
+        },
+        "rows": [
+          {
+            "detail": "Pull control only; no added damage. Mark symbol is not a successful pull.",
+            "id": "crossfire_pin",
+            "status": "MARKED / 1.50s left / hit same target with another type"
+          },
+          {
+            "detail": "Normal combat pickups charge it. Field: 70% movement speed, no damage; bosses and charging enemies excluded.",
+            "id": "salvage_capacitor",
+            "status": "CHARGING / 0/3 / fields 2/2"
+          },
+          {
+            "detail": "NEEDS MEDICAL PICKUPS (currently Medic Seed). Normal combat pickups count; at most one pull per collection batch. Moves medicine only: no direct healing, creation or collection; no medicine still spends threshold.",
+            "id": "medic_winch",
+            "status": "PICKUPS 1/5"
+          }
+        ]
+      },
+      "reduced": false,
+      "save_error": 0,
+      "state": "inventory"
+    },
+    {
+      "B_snapshot_sha256": "cbc8d8cf797c75c0e2801ef2f3d133d5cb4928cd5305a9e5f1f7951463bca20a",
+      "content_scale": "(960, 540)",
+      "elapsed": 0.2,
+      "focus_enemy": 2,
+      "image": "arena_960_10_modal_layer_pause.png",
+      "keyboard_focus": "review-role/MossCircuit/@CanvasLayer@8/@Control@9/@ColorRect@25/@PanelContainer@26/@VBoxContainer@4567/@Button@4571",
+      "logical": "[P: (0.0, 0.0), S: (960.0, 540.0)]",
+      "name": "pause",
+      "os_position": "(92, 120)",
+      "os_size": "(960, 540)",
+      "projection": {
+        "fields": [
+          {
+            "pos": "(300.0, 300.0)",
+            "radius": 80.0
+          },
+          {
+            "pos": "(420.0, 320.0)",
+            "radius": 80.0
+          }
+        ],
+        "pin": {
+          "anchor": "(500.0, 300.0)",
+          "target": "(500.0, 300.0)"
+        },
+        "rows": [
+          {
+            "detail": "Pull control only; no added damage. Mark symbol is not a successful pull.",
+            "id": "crossfire_pin",
+            "status": "MARKED / 1.50s left / hit same target with another type"
+          },
+          {
+            "detail": "Normal combat pickups charge it. Field: 70% movement speed, no damage; bosses and charging enemies excluded.",
+            "id": "salvage_capacitor",
+            "status": "CHARGING / 0/3 / fields 2/2"
+          },
+          {
+            "detail": "NEEDS MEDICAL PICKUPS (currently Medic Seed). Normal combat pickups count; at most one pull per collection batch. Moves medicine only: no direct healing, creation or collection; no medicine still spends threshold.",
+            "id": "medic_winch",
+            "status": "PICKUPS 1/5"
+          }
+        ]
+      },
+      "reduced": false,
+      "save_error": 0,
+      "state": "paused"
+    }
+  ],
+  "image_names": [
+    "arena_960_01_old_build_before.png",
+    "arena_960_01_old_build_build.png",
+    "arena_960_01_old_build_closed.png",
+    "arena_960_02_three_cards_crossfire_pin.png",
+    "arena_960_02_three_cards_medic_winch.png",
+    "arena_960_02_three_cards_salvage_capacitor.png",
+    "arena_960_03_summaries_pin_row.png",
+    "arena_960_03_summaries_salvage_row.png",
+    "arena_960_03_summaries_winch_row.png",
+    "arena_960_04_pin_readiness_cooldown.png",
+    "arena_960_04_pin_readiness_prerequisite.png",
+    "arena_960_05_pin_vs_focus_consumed.png",
+    "arena_960_05_pin_vs_focus_normal.png",
+    "arena_960_05_pin_vs_focus_reduced.png",
+    "arena_960_06_invalid_mark_invalid.png",
+    "arena_960_06_invalid_mark_pruned.png",
+    "arena_960_07_salvage_fields_expired.png",
+    "arena_960_07_salvage_fields_normal.png",
+    "arena_960_07_salvage_fields_reduced.png",
+    "arena_960_08_winch_pipeline_collected.png",
+    "arena_960_08_winch_pipeline_no_medicine.png",
+    "arena_960_08_winch_pipeline_normal.png",
+    "arena_960_08_winch_pipeline_reduced.png",
+    "arena_960_09_sale_room_room.png",
+    "arena_960_09_sale_room_sold.png",
+    "arena_960_10_modal_layer_build.png",
+    "arena_960_10_modal_layer_pause.png",
+    "arena_960_10_modal_layer_world.png"
+  ],
+  "decoded_images": [
+    {
+      "name": "arena_960_01_old_build_before.png",
+      "format": "PNG",
+      "size": [
+        960,
+        540
+      ],
+      "sha256": "9d6ef59604badc7fa26ded1f7405656f4618cfbecf111b22161d1c83670797d7"
+    },
+    {
+      "name": "arena_960_01_old_build_build.png",
+      "format": "PNG",
+      "size": [
+        960,
+        540
+      ],
+      "sha256": "437096146805f218a60929f4ed496a6a22c9f11b42900c3a3609b61fda5e3194"
+    },
+    {
+      "name": "arena_960_01_old_build_closed.png",
+      "format": "PNG",
+      "size": [
+        960,
+        540
+      ],
+      "sha256": "a017369d009d3f3c4a36a2b7eedfc99a34134e4e768ad2beb26d9c6d56eb7cea"
+    },
+    {
+      "name": "arena_960_02_three_cards_crossfire_pin.png",
+      "format": "PNG",
+      "size": [
+        960,
+        540
+      ],
+      "sha256": "ea15dc540c75311c2635fee306d3c11a09315b78d953bee9021699818f56ec49"
+    },
+    {
+      "name": "arena_960_02_three_cards_medic_winch.png",
+      "format": "PNG",
+      "size": [
+        960,
+        540
+      ],
+      "sha256": "a50219866d907c03659a9e8cfd293659d6900a65df5a1b889b350d0d7e785292"
+    },
+    {
+      "name": "arena_960_02_three_cards_salvage_capacitor.png",
+      "format": "PNG",
+      "size": [
+        960,
+        540
+      ],
+      "sha256": "bbccb3bfce6c80baa9d7c4dd69fe17f1dffbd259c048f08ea52c5de7380823cf"
+    },
+    {
+      "name": "arena_960_03_summaries_pin_row.png",
+      "format": "PNG",
+      "size": [
+        960,
+        540
+      ],
+      "sha256": "36b4bf553dcba9e4a203235133214941f2ab0954feed8dec90083d8e9cb522e2"
+    },
+    {
+      "name": "arena_960_03_summaries_salvage_row.png",
+      "format": "PNG",
+      "size": [
+        960,
+        540
+      ],
+      "sha256": "c93fc3b68e72aecd29fdb9930b067923644a88931361d88b39ad40268760283c"
+    },
+    {
+      "name": "arena_960_03_summaries_winch_row.png",
+      "format": "PNG",
+      "size": [
+        960,
+        540
+      ],
+      "sha256": "aba80d5d46ddc64ab7fa4b0f0cd5310dc89a75bb4625a096dedd27c0c8b20d47"
+    },
+    {
+      "name": "arena_960_04_pin_readiness_cooldown.png",
+      "format": "PNG",
+      "size": [
+        960,
+        540
+      ],
+      "sha256": "0ef9529f64719c9596419ebda1fe470e2d12a434485fcd27de2b80b1d3f16e2d"
+    },
+    {
+      "name": "arena_960_04_pin_readiness_prerequisite.png",
+      "format": "PNG",
+      "size": [
+        960,
+        540
+      ],
+      "sha256": "aee2844371ec19b6199274aa7b90d83c326dacbefaa34f1cb731459a9581b7ef"
+    },
+    {
+      "name": "arena_960_05_pin_vs_focus_consumed.png",
+      "format": "PNG",
+      "size": [
+        960,
+        540
+      ],
+      "sha256": "c7020814c3aed27f9aba08e7559faa6547cef5ac1475dca0d60af55957ac7463"
+    },
+    {
+      "name": "arena_960_05_pin_vs_focus_normal.png",
+      "format": "PNG",
+      "size": [
+        960,
+        540
+      ],
+      "sha256": "ec9b071fea49285818654a0ad0948cf36ae8a983280bbe0a714d95dacd9d4556"
+    },
+    {
+      "name": "arena_960_05_pin_vs_focus_reduced.png",
+      "format": "PNG",
+      "size": [
+        960,
+        540
+      ],
+      "sha256": "df90a0021de4cb7e15e8210f6f92ae5be81483483693f12628d29a37266640b1"
+    },
+    {
+      "name": "arena_960_06_invalid_mark_invalid.png",
+      "format": "PNG",
+      "size": [
+        960,
+        540
+      ],
+      "sha256": "6d6539565f59bfbc32811a33061c2d4195588d36f8fb90a4b3ceca24a0e4cca8"
+    },
+    {
+      "name": "arena_960_06_invalid_mark_pruned.png",
+      "format": "PNG",
+      "size": [
+        960,
+        540
+      ],
+      "sha256": "6d6539565f59bfbc32811a33061c2d4195588d36f8fb90a4b3ceca24a0e4cca8"
+    },
+    {
+      "name": "arena_960_07_salvage_fields_expired.png",
+      "format": "PNG",
+      "size": [
+        960,
+        540
+      ],
+      "sha256": "45f0ff11026fb2f4615c81a637206af7f73d6bbbe8dba09dd3ff26ff0b1a4d55"
+    },
+    {
+      "name": "arena_960_07_salvage_fields_normal.png",
+      "format": "PNG",
+      "size": [
+        960,
+        540
+      ],
+      "sha256": "c0c28a82840c97efe9ae3ceab3a3b677f7f84b6d6afae0f20d21473f600fa276"
+    },
+    {
+      "name": "arena_960_07_salvage_fields_reduced.png",
+      "format": "PNG",
+      "size": [
+        960,
+        540
+      ],
+      "sha256": "2030d5740e78be56b884b3840bd3cdc0231ff5491e1100c7a9570b23e21ef902"
+    },
+    {
+      "name": "arena_960_08_winch_pipeline_collected.png",
+      "format": "PNG",
+      "size": [
+        960,
+        540
+      ],
+      "sha256": "43cd2d99862e7232fde557b55f2eeb99f3dd04d3f934ab967bf6ce3927ee8cab"
+    },
+    {
+      "name": "arena_960_08_winch_pipeline_no_medicine.png",
+      "format": "PNG",
+      "size": [
+        960,
+        540
+      ],
+      "sha256": "b8623041b45e3db614e46f5b8c83f2a0e6ce488060b87463e47af456beef7d39"
+    },
+    {
+      "name": "arena_960_08_winch_pipeline_normal.png",
+      "format": "PNG",
+      "size": [
+        960,
+        540
+      ],
+      "sha256": "7dead966184fc6be56a4b1397365f67d15108cc81be1b8153e0ac77ea54b2635"
+    },
+    {
+      "name": "arena_960_08_winch_pipeline_reduced.png",
+      "format": "PNG",
+      "size": [
+        960,
+        540
+      ],
+      "sha256": "7dead966184fc6be56a4b1397365f67d15108cc81be1b8153e0ac77ea54b2635"
+    },
+    {
+      "name": "arena_960_09_sale_room_room.png",
+      "format": "PNG",
+      "size": [
+        960,
+        540
+      ],
+      "sha256": "241f7ffeb1d28963e833a8071d2997eccd5147c9f4fccfc9eb7793cbe8ce05fa"
+    },
+    {
+      "name": "arena_960_09_sale_room_sold.png",
+      "format": "PNG",
+      "size": [
+        960,
+        540
+      ],
+      "sha256": "92bddd7bd182acbb52a5d45f32a2df07244204b2bca05d7b66d675b9eaf37d27"
+    },
+    {
+      "name": "arena_960_10_modal_layer_build.png",
+      "format": "PNG",
+      "size": [
+        960,
+        540
+      ],
+      "sha256": "f8c8dfd95fcca4454b3fb6f4a3b0dee4c6bb83627a23cd8711997a795310b794"
+    },
+    {
+      "name": "arena_960_10_modal_layer_pause.png",
+      "format": "PNG",
+      "size": [
+        960,
+        540
+      ],
+      "sha256": "b9565df2ebac9cc4f22ddb0aac51527fc55367c8c9ba7d50527c8d3ad0aa43e9"
+    },
+    {
+      "name": "arena_960_10_modal_layer_world.png",
+      "format": "PNG",
+      "size": [
+        960,
+        540
+      ],
+      "sha256": "f37622fe8b12088041a94163fa07b615a6882d3afc0b87cdcb84c560864ab98a"
+    }
+  ],
+  "expected_image_names_match": true,
+  "source_before_after_expected_equal": true,
+  "all_pins_and_same_plan_after": true,
+  "scroll_final_records": [
+    {
+      "bar_max": 3988.0,
+      "bar_page": 360.0,
+      "budget": 128,
+      "first_exists": true,
+      "first_text": "PanelContainer",
+      "last_exists": true,
+      "merged_rect": "[P: (34.0, 231.0), S: (884.0, 229.0)]",
+      "result": true,
+      "scroll_exists": true,
+      "scroll_rect": "[P: (34.0, 104.0), S: (892.0, 360.0)]",
+      "scroll_vertical": 450
+    },
+    {
+      "bar_max": 3988.0,
+      "bar_page": 360.0,
+      "budget": 128,
+      "first_exists": true,
+      "first_text": "PanelContainer",
+      "last_exists": true,
+      "merged_rect": "[P: (34.0, 198.0), S: (884.0, 249.0)]",
+      "result": true,
+      "scroll_exists": true,
+      "scroll_rect": "[P: (34.0, 104.0), S: (892.0, 360.0)]",
+      "scroll_vertical": 720
+    },
+    {
+      "bar_max": 3988.0,
+      "bar_page": 360.0,
+      "budget": 128,
+      "first_exists": true,
+      "first_text": "PanelContainer",
+      "last_exists": true,
+      "merged_rect": "[P: (34.0, 140.0), S: (884.0, 297.0)]",
+      "result": true,
+      "scroll_exists": true,
+      "scroll_rect": "[P: (34.0, 104.0), S: (892.0, 360.0)]",
+      "scroll_vertical": 1035
+    },
+    {
+      "bar_max": 3988.0,
+      "bar_page": 360.0,
+      "budget": 128,
+      "first_exists": true,
+      "first_text": "Crossfire Pin: INACTIVE / needs 2 distinct weapon types",
+      "last_exists": true,
+      "merged_rect": "[P: (34.0, 386.0), S: (884.0, 43.0)]",
+      "result": true,
+      "scroll_exists": true,
+      "scroll_rect": "[P: (34.0, 104.0), S: (892.0, 360.0)]",
+      "scroll_vertical": 1125
+    },
+    {
+      "bar_max": 3988.0,
+      "bar_page": 360.0,
+      "budget": 128,
+      "first_exists": true,
+      "first_text": "Salvage Capacitor: CHARGING / 0/3 / fields 0/2",
+      "last_exists": true,
+      "merged_rect": "[P: (34.0, 392.0), S: (884.0, 43.0)]",
+      "result": true,
+      "scroll_exists": true,
+      "scroll_rect": "[P: (34.0, 104.0), S: (892.0, 360.0)]",
+      "scroll_vertical": 1170
+    },
+    {
+      "bar_max": 3988.0,
+      "bar_page": 360.0,
+      "budget": 128,
+      "first_exists": true,
+      "first_text": "Medic Winch: PICKUPS 0/5",
+      "last_exists": true,
+      "merged_rect": "[P: (34.0, 398.0), S: (884.0, 63.0)]",
+      "result": true,
+      "scroll_exists": true,
+      "scroll_rect": "[P: (34.0, 104.0), S: (892.0, 360.0)]",
+      "scroll_vertical": 1215
+    },
+    {
+      "bar_max": 3700.0,
+      "bar_page": 360.0,
+      "budget": 128,
+      "first_exists": true,
+      "first_text": "Medic Winch: PICKUPS 0/5",
+      "last_exists": true,
+      "merged_rect": "[P: (34.0, 380.0), S: (884.0, 63.0)]",
+      "result": true,
+      "scroll_exists": true,
+      "scroll_rect": "[P: (34.0, 104.0), S: (892.0, 360.0)]",
+      "scroll_vertical": 945
+    }
+  ],
+  "visual_pixels_reviewed": false,
+  "scope": "exact PCK controlled UI, not ordinary acquisition or hardware mouse"
+}

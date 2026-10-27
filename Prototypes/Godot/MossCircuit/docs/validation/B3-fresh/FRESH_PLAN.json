@@ -1,0 +1,101 @@
+{
+  "status": "FROZEN_WAIT_QA_WINDOW",
+  "scope": "Independent B3 semantic SVG fresh export 3x1, 180 seconds each, exact PNG/RGBA/alpha/bbox, no Godot/import/PCK/native acceptance. Root-approved up to one each exact two known renderer wrapping warnings per invocation, all other stderr rejected; warnings explicitly counted, not clean-log claim. Prior atlas strict FAIL remains unchanged.",
+  "inkscape_binary": "/usr/bin/inkscape",
+  "inkscape_binary_sha256": "a1db427b1666d73e477a841b925f2bc44185623cd178cd007f6da3ca8ab4c873",
+  "version_observed": "Inkscape 1.4 (e7c3feb100, 2024-10-09)",
+  "input_pins": {
+    "<WORKSPACE>/moss-v39-B-art/svg/crossfire_pin.svg": "f794b202f9b22dd3267c931089fccd6b9352032d2b36c0b76bce206c890d03e1",
+    "<WORKSPACE>/moss-v39-B-art/assets/items/crossfire_pin.png": "cb484f693183e4b45c7cc817864d3bef521c548fdfab33c56004858a228c82dd",
+    "<WORKSPACE>/moss-v39-B-r2/art_source/build_expansion_B/svg/crossfire_pin.svg": "f794b202f9b22dd3267c931089fccd6b9352032d2b36c0b76bce206c890d03e1",
+    "<WORKSPACE>/moss-v39-B-r2/assets/items/crossfire_pin.png": "cb484f693183e4b45c7cc817864d3bef521c548fdfab33c56004858a228c82dd",
+    "<WORKSPACE>/moss-v39-B-art/svg/salvage_capacitor.svg": "e71cace9df603e02598118b914bae65ad533e246fac764eb8f35cfaf86b15013",
+    "<WORKSPACE>/moss-v39-B-art/assets/items/salvage_capacitor.png": "db104fe6b3ba8fd93235162141ffecfe39261f59ce83f43258cd806b68439c9b",
+    "<WORKSPACE>/moss-v39-B-r2/art_source/build_expansion_B/svg/salvage_capacitor.svg": "e71cace9df603e02598118b914bae65ad533e246fac764eb8f35cfaf86b15013",
+    "<WORKSPACE>/moss-v39-B-r2/assets/items/salvage_capacitor.png": "db104fe6b3ba8fd93235162141ffecfe39261f59ce83f43258cd806b68439c9b",
+    "<WORKSPACE>/moss-v39-B-art/svg/medic_winch.svg": "5c815ff15b9fb05754e0ee9b062a814589df949d3291e38b5a02aa1d2259b45f",
+    "<WORKSPACE>/moss-v39-B-art/assets/items/medic_winch.png": "b37a9f835c284a80c353691a94e5e2b9d0ea63be5a71ab1eac11dbda0aaeb5e7",
+    "<WORKSPACE>/moss-v39-B-r2/art_source/build_expansion_B/svg/medic_winch.svg": "5c815ff15b9fb05754e0ee9b062a814589df949d3291e38b5a02aa1d2259b45f",
+    "<WORKSPACE>/moss-v39-B-r2/assets/items/medic_winch.png": "b37a9f835c284a80c353691a94e5e2b9d0ea63be5a71ab1eac11dbda0aaeb5e7",
+    "<WORKSPACE>/moss-v39-B-art/manifest.concept.json": "e58cffbdab068e2d76236326661fd01680dfbf9f740e1661ee237de98d4df4f6",
+    "<WORKSPACE>/moss-v39-B-art/provenance.json": "1bec49bae3f7d598a395740f422b5f39417e5d8b619d27b8ade24fbdb5ddb6d1",
+    "<WORKSPACE>/moss-v39-B-art/export-receipt.json": "60acec6f941d435a1838f4356d6023c6e845c04bab228c6c7796e295077c47e8",
+    "<WORKSPACE>/moss-v39-B-r2/assets/items/expansion_B_icon_manifest.json": "b443c8ccce6ed31d7a5929e3792ccb94850a3eb57a8bf11c6206dc742be91148"
+  },
+  "assets": [
+    {
+      "id": "crossfire_pin",
+      "svg": "<WORKSPACE>/moss-v39-B-art/svg/crossfire_pin.svg",
+      "png": "<WORKSPACE>/moss-v39-B-art/assets/items/crossfire_pin.png",
+      "svg_sha256": "f794b202f9b22dd3267c931089fccd6b9352032d2b36c0b76bce206c890d03e1",
+      "png_sha256": "cb484f693183e4b45c7cc817864d3bef521c548fdfab33c56004858a228c82dd",
+      "rgba_sha256": "6f191b45e740c197c682b2d815b1b82f5d3be8f0469c83d5d8e7484816d9bd0f",
+      "bbox_xywh": [
+        7,
+        9,
+        50,
+        48
+      ],
+      "semantic_layers": [
+        "two-distinct-locator-pins",
+        "mechanical-target-bracket",
+        "inward-pull-clamps",
+        "mounting-base"
+      ]
+    },
+    {
+      "id": "salvage_capacitor",
+      "svg": "<WORKSPACE>/moss-v39-B-art/svg/salvage_capacitor.svg",
+      "png": "<WORKSPACE>/moss-v39-B-art/assets/items/salvage_capacitor.png",
+      "svg_sha256": "e71cace9df603e02598118b914bae65ad533e246fac764eb8f35cfaf86b15013",
+      "png_sha256": "db104fe6b3ba8fd93235162141ffecfe39261f59ce83f43258cd806b68439c9b",
+      "rgba_sha256": "f47e1434d9a116a02444eed0739c2875a2f0be7b11380f2223efa285c6fe293d",
+      "bbox_xywh": [
+        7,
+        2,
+        51,
+        53
+      ],
+      "semantic_layers": [
+        "three-charge-cell-casing",
+        "scrap-intake",
+        "dash-origin-grid",
+        "origin-clamp-and-dash-mark"
+      ]
+    },
+    {
+      "id": "medic_winch",
+      "svg": "<WORKSPACE>/moss-v39-B-art/svg/medic_winch.svg",
+      "png": "<WORKSPACE>/moss-v39-B-art/assets/items/medic_winch.png",
+      "svg_sha256": "5c815ff15b9fb05754e0ee9b062a814589df949d3291e38b5a02aa1d2259b45f",
+      "png_sha256": "b37a9f835c284a80c353691a94e5e2b9d0ea63be5a71ab1eac11dbda0aaeb5e7",
+      "rgba_sha256": "17765001ee2e4f40ddab0c99b6bd9bac8c99ceeb83217803b1de559796f5e012",
+      "bbox_xywh": [
+        2,
+        9,
+        58,
+        47
+      ],
+      "semantic_layers": [
+        "mechanical-winch-casing",
+        "manual-crank",
+        "medical-identification",
+        "existing-supply-tether",
+        "mechanical-hook-and-existing-medical-orb"
+      ]
+    }
+  ],
+  "execution_pins": {
+    "<WORKSPACE>/moss-v39-B-art-independent-review/run_fresh.py": "f782589ef132abc0a89ddfc42c59ef644d65d79a31f8c99c143a20cc8ec09030",
+    "<WORKSPACE>/moss-v39-B-art-independent-review/STATIC_REVIEW.json": "21b193aafaa18ce560bb0c8da3c59760f9e6f1e9d2160e7fe9b5c42aa2861a27",
+    "<WORKSPACE>/moss-v39-B-art-independent-review/warning_policy.py": "80976977612ce9bc387da7183c7791b1ba6b9dc8d51eb377eb29857ce443f29c",
+    "<WORKSPACE>/moss-v39-B-art-independent-review/test_warning_policy.py": "7faa74426219290b2e20807719d55cfc73e826de0ea8cbb0c07bfbc2d0f8f277",
+    "<WORKSPACE>/moss-v39-B-art-independent-review/WARNING_POLICY_UNIT_RESULT.json": "eaf0501a6fbad8f1a24db0a7e763f2f502f7f89c2cd44988ae21963ce4d82b9c",
+    "<WORKSPACE>/moss-v39-B-art-independent-review/VERSION_PREFLIGHT_OBSERVATION.json": "e878ed46c3e1830aa4ae7f815630375aefe8f2a0126530a8c6ceeb3caac4d768"
+  },
+  "classifier_21_previous_checks": true,
+  "fontless_xml_proven": true,
+  "explicit_QA_lease_required": true,
+  "integrated_candidate": "moss-v39-B-r2",
+  "integrated_scope": "Only exact 3SVG/3PNG/manifest pinned; not full894 source gate"
+}

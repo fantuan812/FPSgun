@@ -1,0 +1,5320 @@
+{
+  "status": "DRAFT old raw is a reference not unreviewed B expected; temper/move corrected A final-r2 overrides required; extra external B routes to bind explicitly",
+  "discovered_current": 150,
+  "new_top_level_tests": [
+    {
+      "path": "tests/test_B_catalog_current.gd",
+      "checks": 27,
+      "helpers": 0,
+      "owners": 0
+    },
+    {
+      "path": "tests/test_B_legacy_cache.gd",
+      "checks": 20,
+      "helpers": 1,
+      "owners": 2
+    },
+    {
+      "path": "tests/test_B_pickup_sources.gd",
+      "checks": 34,
+      "helpers": 1,
+      "owners": 1
+    },
+    {
+      "path": "tests/test_B_projection.gd",
+      "checks": 24,
+      "helpers": 0,
+      "owners": 0
+    }
+  ],
+  "routes": [
+    {
+      "path": "tests/independent_actions.gd",
+      "sha256_before": "6422edbd83b420e31c711517f9b37cd9aff684575d9e15d67b29954d10093228",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_actions.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "independent_actions_passed": 35
+          },
+          "keys": [
+            "failures",
+            "independent_actions_passed",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "independent_actions_passed": 35
+          },
+          "keys": [
+            "failures",
+            "independent_actions_passed",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_annulus_data.gd",
+      "sha256_before": "7ec08c7105bc1116bf3789593fdb3642c03d865abead0fd29ba8bf8ebc7d961b",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_annulus_data.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 46
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 46
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_annulus_runtime.gd",
+      "sha256_before": "b8dc9dce2ac5ec066d0267f99c765976ffd444de6c4f9bba66c7d9b17da2c51b",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_annulus_runtime.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 948
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 948
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_bankshot_contacts.gd",
+      "sha256_before": "d2d2d440db753d371c008905b7125d7f82f2ee8aa4a83ab4980b777c21539d34",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_bankshot_contacts.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 62
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "rows",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 62
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "rows",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_bankshot_integration.gd",
+      "sha256_before": "1a980850d7a2e2188194b7b8bf323cade52cc42362f48047bb7c9bd57fb27219",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_bankshot_integration.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 96
+          },
+          "keys": [
+            "checks",
+            "failures"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 96
+          },
+          "keys": [
+            "checks",
+            "failures"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_bankshot_trajectory.gd",
+      "sha256_before": "809281e7d874e0b33b0cdaaeca1b58173903aba0067bfca9d94d4919582f178a",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_bankshot_trajectory.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 234
+          },
+          "keys": [
+            "checks",
+            "failures"
+          ]
+        }
+      ],
+      "helper_owner_counts": [],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 234
+          },
+          "keys": [
+            "checks",
+            "failures"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_brace_geometry.gd",
+      "sha256_before": "d4b2a80cc00fc50dc0f304130a471b00d464918c07f9f48b2c222c74dcc6b726",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_brace_geometry.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 670
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 670
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_brace_runtime.gd",
+      "sha256_before": "7450a379b78e28fc736f8381c8f58a2efbdc6e62481fc6e21d6187cd6a75540f",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_brace_runtime.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 370
+          },
+          "keys": [
+            "cases",
+            "checks",
+            "failures"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 370
+          },
+          "keys": [
+            "cases",
+            "checks",
+            "failures"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_brood_assets.gd",
+      "sha256_before": "ea216a7b4b3f67b0e74885a76c2798601220827729b783fd2b1847b64aa08ee1",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_brood_assets.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "text_reference": "INDEPENDENT BROOD ASSETS: 374 passed; 0 failed"
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "text_reference": "INDEPENDENT BROOD ASSETS: 374 passed; 0 failed"
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_brood_events.gd",
+      "sha256_before": "fc34783899079fd2de61700472589d0a956c12405b907b252cb0b0c55f14a5f6",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_brood_events.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "text_reference": "INDEPENDENT BROOD EVENTS: 66 passed; 0 failed"
+        }
+      ],
+      "helper_owner_counts": [
+        1,
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "text_reference": "INDEPENDENT BROOD EVENTS: 66 passed; 0 failed"
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_brood_parity.gd",
+      "sha256_before": "58d23568dada92b42fc315fb45e26952b3991a4fea83c229b920d1ec1c93f9e6",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_brood_parity.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "text_reference": "INDEPENDENT BROOD PARITY: 610 passed; 0 failed"
+        }
+      ],
+      "helper_owner_counts": [
+        2,
+        2
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "text_reference": "INDEPENDENT BROOD PARITY: 610 passed; 0 failed"
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_charger_assets.gd",
+      "sha256_before": "b96f3bc8adf61ad6c82b4a6e7ab7db30810ff73b2388ef884e20ac094fa48f27",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_charger_assets.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "text_reference": "INDEPENDENT CHARGER ASSETS: 194 passed; 0 failed"
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "text_reference": "INDEPENDENT CHARGER ASSETS: 194 passed; 0 failed"
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_charger_gameplay_parity.gd",
+      "sha256_before": "5967a785e1e6f9b40bd8da1c78d75457357254454c497423b4a0393d87ad5fc3",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_charger_gameplay_parity.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "text_reference": "INDEPENDENT CHARGER PARITY: 366 passed; 0 failed"
+        }
+      ],
+      "helper_owner_counts": [
+        2,
+        2
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "text_reference": "INDEPENDENT CHARGER PARITY: 366 passed; 0 failed"
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_charger_lifecycle.gd",
+      "sha256_before": "298f1f105b85d6066ec9ddeb0f4e4635fee404c113fb8e3c23b425d20969e37a",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_charger_lifecycle.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "text_reference": "INDEPENDENT CHARGER LIFECYCLE: 30 passed; 0 failed"
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "text_reference": "INDEPENDENT CHARGER LIFECYCLE: 30 passed; 0 failed"
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_core_reactions.gd",
+      "sha256_before": "590b87dc748dab346f1aab690bccd6067a67b72b680dbf9a799a424f4fa060d8",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_core_reactions.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "independent_core_reactions_passed": 403
+          },
+          "keys": [
+            "failures",
+            "independent_core_reactions_passed",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "independent_core_reactions_passed": 403
+          },
+          "keys": [
+            "failures",
+            "independent_core_reactions_passed",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_crawler_flanker.gd",
+      "sha256_before": "03191a83ef69efbf6308011477e760da41eeedcb5a7e49078245f506348e8b7a",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_crawler_flanker.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "independent_crawler_flanker_passed": 736
+          },
+          "keys": [
+            "failures",
+            "independent_crawler_flanker_passed",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "independent_crawler_flanker_passed": 736
+          },
+          "keys": [
+            "failures",
+            "independent_crawler_flanker_passed",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_crawler_hit_pipeline.gd",
+      "sha256_before": "4cb6e67c8f0a92ce0a32ad51bdf09d3e410ae0f2110a05eef40da2a03770b5ad",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_crawler_hit_pipeline.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 48
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "scope",
+            "trace"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 48
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "scope",
+            "trace"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_cryo_contract.gd",
+      "sha256_before": "309b4584685c7653769c19c99a9bbf6603ba8ecb30daf86a91a0bc46ce14bf20",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_cryo_contract.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 446
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 446
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_cryo_shop.gd",
+      "sha256_before": "2beeb0c2f635f428d5741152489cd1464266065deea6abf0499ad6411aee8c90",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_cryo_shop.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 320
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "historical v38 (or v36 through its original inverse)",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 320
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_enemy_ui.gd",
+      "sha256_before": "11c8eacfdfdffb7fe4634a4b1eeb066d694f51332d54bc25500d0696b4aa9444",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_enemy_ui.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "independent_enemy_ui_passed": 124
+          },
+          "keys": [
+            "failures",
+            "independent_enemy_ui_passed",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "independent_enemy_ui_passed": 124
+          },
+          "keys": [
+            "failures",
+            "independent_enemy_ui_passed",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_feedback_authority.gd",
+      "sha256_before": "27d1fa0885b3c18bc57d78b4e2e1a8dac137910ea1fb57270ebbdbe22d13b1c6",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_feedback_authority.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 435
+          },
+          "keys": [
+            "checks",
+            "failures"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 435
+          },
+          "keys": [
+            "checks",
+            "failures"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_feedback_authority_rooms.gd",
+      "sha256_before": "86af190868b41f873261828cf24cea30f3b0126683503a037e2e57550ea02b87",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_feedback_authority_rooms.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 338
+          },
+          "keys": [
+            "checks",
+            "failures"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 338
+          },
+          "keys": [
+            "checks",
+            "failures"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_feedback_mixer.gd",
+      "sha256_before": "1589fcbc740481bbc7cca47901a4dd355d9f6564778a935be3a7d5535b43552e",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_feedback_mixer.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 236
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "seconds"
+          ]
+        }
+      ],
+      "helper_owner_counts": [],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 236
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "seconds"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_feedback_runtime.gd",
+      "sha256_before": "dc802931a4774fe2cf1b466b15c1d5681a82a7dc56f7c3de28f0336dfb67dcae",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_feedback_runtime.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 249
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "observations",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 249
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "observations",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_feedback_shop.gd",
+      "sha256_before": "3533b5298d415a9a95a2efb1ed7dd2f663f45efa0e02aab98b7b92db71377e56",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_feedback_shop.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 102
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "historical v38 (or v36 through its original inverse)",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 102
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_feedback_validation.gd",
+      "sha256_before": "700ffcd8358c73398d9532d5fe807740df32f031efbc3d9cd0f8553c6d30bb9c",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_feedback_validation.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 29
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [],
+      "domain": "actual B (existing narrow scopes)",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 29
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_feedback_views.gd",
+      "sha256_before": "a7699495dbfb120e760d5a125f8f36fd79ef21c9536d126d17c5254e1e5dd668",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_feedback_views.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 168
+          },
+          "keys": [
+            "checks",
+            "failures"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 168
+          },
+          "keys": [
+            "checks",
+            "failures"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_focus_authority.gd",
+      "sha256_before": "b2f012740b4125dbd5d378fd1c0ee51de5a1c75018a16217e483f9029d891fa7",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_focus_authority.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 356
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 356
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_focus_combat.gd",
+      "sha256_before": "9cea44cfaae43e4bcdfdf6b865b8913ecac89377c314dbc28a81ca5f8893c4d7",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_focus_combat.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 945
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "historical v38 (or v36 through its original inverse)",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 945
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_focus_views.gd",
+      "sha256_before": "cf080437986d7f5e14289be7729c8f325f780bb01e2ff15627b525e85694eca2",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_focus_views.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 366
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "samples",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 366
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "samples",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_forecast_authority.gd",
+      "sha256_before": "b7fc11af1e5a404aab202fd8ec9d08077ab3f58b644638528c807d283a074ec5",
+      "proposed_sha256": "9f3960237f24074942ad8e4c54881ba0b4736ef4464b3b0a05294e223ae1f8a1",
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_forecast_authority.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 108
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [],
+      "domain": "historical v38 (or v36 through its original inverse)",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 108
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_forecast_controller.gd",
+      "sha256_before": "5e7c7ab0647fac5abd73dbd21dc2925c8fcc7c8e95f02f3d9fb6e11310d004b5",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_forecast_controller.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 306
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        2
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 306
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_forecast_legacy.gd",
+      "sha256_before": "da6eb26c3c31f6751024a7849b8ff49a24c2dbbdf71dbb2a8cc7d45308af5591",
+      "proposed_sha256": "fa402261c13a4e14755ad46723d0eaf247ccdc59c4813b86ef1566c472436f74",
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_forecast_legacy.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 808
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [],
+      "domain": "historical v38 (or v36 through its original inverse)",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 808
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_forecast_views.gd",
+      "sha256_before": "1c136a33d6703966f0de051756710b20224dec9069e7ee606c468afb1471dd4c",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_forecast_views.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 42
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 42
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_modes.gd",
+      "sha256_before": "b25030c24e4244c09379e7c4b761f5bc32dcf8dcfc06a4e3d0d7daddfb64bed8",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_modes.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "text_reference": "INDEPENDENT MODES: 42 passed; 0 failed"
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "text_reference": "INDEPENDENT MODES: 42 passed; 0 failed"
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_modifier_compatibility.gd",
+      "sha256_before": "a2b8f6a5fae755a511249b77903bc64b3a329e06c4f50e06f2ee8da1d49b1702",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_modifier_compatibility.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 84
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "observations",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 84
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "observations",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_new_weapon_caps.gd",
+      "sha256_before": "946cfc0ddb1e5c1145aa46c824218d7ae11067ac4e400574bd1f9ccb58ea137f",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_new_weapon_caps.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 14
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "pass",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [],
+      "domain": "actual B (existing narrow scopes)",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 14
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "pass",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_new_weapon_geometry.gd",
+      "sha256_before": "bc991e397966c6bdf259637f200d66a53ff1b961ac9e97345e97801348e4caa0",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_new_weapon_geometry.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 850
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "observations",
+            "pass",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 850
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "observations",
+            "pass",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_new_weapon_lifecycle.gd",
+      "sha256_before": "23d90bb487e7fd02d0e189e00b67c0a4726dc29d952463eb81b948a9c7377649",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_new_weapon_lifecycle.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 124
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "observations",
+            "pass",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 124
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "observations",
+            "pass",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_new_weapon_motion.gd",
+      "sha256_before": "d4029b9e12fb06cb76590ea47ea84a36a33cb2ec73a3f613fc2e0f071ad0e0cd",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_new_weapon_motion.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 14
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "observations",
+            "pass",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 14
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "observations",
+            "pass",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_new_weapon_policy.gd",
+      "sha256_before": "dee53e121d30a7cb0c514ccac7c2c87e4779ba4e1bf32dd1b846577f1d5a2a17",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_new_weapon_policy.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 59
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "observations",
+            "pass",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [],
+      "domain": "actual B (existing narrow scopes)",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 59
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "observations",
+            "pass",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_new_weapon_runtime.gd",
+      "sha256_before": "85c0c699a588ddde52447c08b857a942975ec1c7f0d911d429bfea4e88bfa853",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_new_weapon_runtime.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 46
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "observations",
+            "pass",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 46
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "observations",
+            "pass",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_policy_validation.gd",
+      "sha256_before": "762fa4602e6c495aa8478f97826164a4329210fe2d1bc55a0e2da712bbf2500d",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_policy_validation.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "text_reference": "INDEPENDENT POLICY VALIDATION: 109 passed; 0 failed"
+        }
+      ],
+      "helper_owner_counts": [],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "text_reference": "INDEPENDENT POLICY VALIDATION: 109 passed; 0 failed"
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_qa.gd",
+      "sha256_before": "f6c36695b197b31e1ee5489106a983c75d359d8f9dc384692e9c91d3494fecf1",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_qa.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "independent_passed": 11
+          },
+          "keys": [
+            "failures",
+            "independent_passed",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "independent_passed": 11
+          },
+          "keys": [
+            "failures",
+            "independent_passed",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_reservation_records.gd",
+      "sha256_before": "0ae96ce52bf20accb85532ba534358471531820b924e0d695e962a60aacb3e1b",
+      "proposed_sha256": "706edef6cda0d9623dd149ac9758fda0a48f86f99e6a4f67ab7cac5bce0a6983",
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_reservation_records.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 300
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "historical v38 (or v36 through its original inverse)",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 300
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_reservation_runtime.gd",
+      "sha256_before": "a7c53f1902f824682c8d6516c04c52abc4843e06359a774505cf99f44e9bfaa0",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_reservation_runtime.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 901
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "observations",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B catalog / old-only synthetic fixture",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 901
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "observations",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_reservation_views.gd",
+      "sha256_before": "798afe8de979c1310ab91df824e8fbc0502c90e2cd425e2aa3772c10fb996224",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_reservation_views.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 3254
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "layouts",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "historical v38 (or v36 through its original inverse)",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 3254
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "layouts",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_resolution.gd",
+      "sha256_before": "7b2bac7b1622f4d17f47c1440c572d71a34f52f6896a0fdf8855131d88424aa0",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_resolution.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "text_reference": "INDEPENDENT RESOLUTION: 9 passed; 0 failed"
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "text_reference": "INDEPENDENT RESOLUTION: 9 passed; 0 failed"
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_room_boundaries.gd",
+      "sha256_before": "667510d2bb97d93d503f3b07756332071c20f4eddbdfc1bca3376088011d47d0",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_room_boundaries.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "text_reference": "INDEPENDENT ROOM BOUNDARIES: 20 passed; 0 failed"
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "text_reference": "INDEPENDENT ROOM BOUNDARIES: 20 passed; 0 failed"
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_salvage_runtime.gd",
+      "sha256_before": "34c8cf3030ece6e52134730d94c846e37dd0abcd836d1d9af9e8d8ae826905dd",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_salvage_runtime.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 294
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 294
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_salvage_views.gd",
+      "sha256_before": "e5551d3349d79a2f7f7e4b67d32800ab0663e73ed28c188e8b52fdfc3bec8fe3",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_salvage_views.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 901
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 901
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_scavenger_authority.gd",
+      "sha256_before": "c1e522c003eb81fe3efe0d293d264805b4ca233f7aceeca388ac0cedf59e42d6",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_scavenger_authority.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 178
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 178
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_scavenger_events.gd",
+      "sha256_before": "4c53b0253dbb326144efb3691c72c096f76fa2d62605420b42b0734d9917fe86",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_scavenger_events.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 46
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B catalog / old-only synthetic fixture",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 46
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_scavenger_settlement.gd",
+      "sha256_before": "977a758021b2ac15b8aadbee12919ff869953a54d1e9513452f9fdb2a733b192",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_scavenger_settlement.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 30
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 30
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_scavenger_views.gd",
+      "sha256_before": "52995e143ca9e4ea163aff618948ff14b30bf37eea84bef6fd72594aaca3cc0f",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_scavenger_views.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 132
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B catalog / old-only synthetic fixture",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 132
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_settlement_types.gd",
+      "sha256_before": "ebab77ad7acf1b98f3c79fccb650c0bf1351ef0bc18b4fece06ace34993af092",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_settlement_types.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 1164
+          },
+          "keys": [
+            "audio_observations",
+            "audio_scope",
+            "checks",
+            "failures",
+            "invalid_decisions",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1,
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 1164
+          },
+          "keys": [
+            "audio_observations",
+            "audio_scope",
+            "checks",
+            "failures",
+            "invalid_decisions",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_shop.gd",
+      "sha256_before": "b480c22f4e37170f02894373e924a6f2f153f025f57940174c7419f002d23953",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_shop.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "independent_shop_passed": 216
+          },
+          "keys": [
+            "boosted_firstslot_spool",
+            "failures",
+            "independent_shop_passed",
+            "neutral_firstslot_spool",
+            "samples",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B (existing narrow scopes)",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "independent_shop_passed": 216
+          },
+          "keys": [
+            "boosted_firstslot_spool",
+            "failures",
+            "independent_shop_passed",
+            "neutral_firstslot_spool",
+            "samples",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_spitter_assets.gd",
+      "sha256_before": "1ac409023d808cab53b1f5a9d3062ff55ed369260725698cec0d720cf023e40f",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_spitter_assets.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "text_reference": "INDEPENDENT SPITTER ASSETS: 199 passed; 0 failed"
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "text_reference": "INDEPENDENT SPITTER ASSETS: 199 passed; 0 failed"
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_spitter_events.gd",
+      "sha256_before": "881f473245fc9adc6428a49e68242e82d76a820d3dcdfe6f6676983b47e2c380",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_spitter_events.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "text_reference": "INDEPENDENT SPITTER EVENTS: 50 passed; 0 failed"
+        }
+      ],
+      "helper_owner_counts": [
+        1,
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "text_reference": "INDEPENDENT SPITTER EVENTS: 50 passed; 0 failed"
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_spitter_parity.gd",
+      "sha256_before": "128c828eb30f2b1e2fa7b1a413f5a8474af7e34d1b27c99fb7ea6019fc01b66c",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_spitter_parity.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "text_reference": "INDEPENDENT SPITTER PARITY: 608 passed; 0 failed"
+        }
+      ],
+      "helper_owner_counts": [
+        2,
+        2
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "text_reference": "INDEPENDENT SPITTER PARITY: 608 passed; 0 failed"
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_starting_loadout_views.gd",
+      "sha256_before": "bf2659a7a1f1e9baabcfb0b1bb38d47bb15709081c7a24eceb53b5298a70462d",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_starting_loadout_views.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 544
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "historical v38 (or v36 through its original inverse)",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 544
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_starting_loadouts.gd",
+      "sha256_before": "3eb53b531ee862b5fa1744946cd7ede396cbfb4316b4ef16fa836153b74792e0",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_starting_loadouts.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 977
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "historical v38 (or v36 through its original inverse)",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 977
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_support_assets.gd",
+      "sha256_before": "669cb0f26f484fae842bee68934057be139f666456036dd3d8b8080254735be5",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_support_assets.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 120
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "imported_rgba",
+            "pass",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 120
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "imported_rgba",
+            "pass",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_support_authority.gd",
+      "sha256_before": "143ff2027718bb558c0d697d51e57944ab0e7dc989b0ec875c16c314d07bbb8e",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_support_authority.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 126
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "pass",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 126
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "pass",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_support_death_disposal.gd",
+      "sha256_before": "2dbc52c5f568f6f42b48fb39cffb56861dbc7fdafefc46fdd22038742286a703",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_support_death_disposal.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 8
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "observations",
+            "pass",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 8
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "observations",
+            "pass",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_support_encounters.gd",
+      "sha256_before": "9aa6722b30b7e17bb9b1eaf9b6c47b4818cf4bde7cacd5ab2c6abf2752749863",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_support_encounters.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 369
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "pass",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 369
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "pass",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_support_projectiles.gd",
+      "sha256_before": "7eb7c8be9ce3a4542d39849c096bfd6ca2df1bf50f0f2dbfb84a9f998ef1a1d1",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_support_projectiles.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 38
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "observations",
+            "pass",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 38
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "observations",
+            "pass",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_support_runtime.gd",
+      "sha256_before": "6a8556490f3b7039b35edd981061ef086dd6d4aa2b9e447a11adb96d8aa07f8a",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_support_runtime.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 104
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "observations",
+            "pass",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 104
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "observations",
+            "pass",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_tag_authority.gd",
+      "sha256_before": "1213d658e5b189c288bfefc5104e7132dc68a02be83db66064c808bc245bd61c",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_tag_authority.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 561
+          },
+          "keys": [
+            "cases",
+            "checks",
+            "failures"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "historical v38 (or v36 through its original inverse)",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 561
+          },
+          "keys": [
+            "cases",
+            "checks",
+            "failures"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_tag_views.gd",
+      "sha256_before": "883ee051900cafc16f22d6b33a3841d61bddcdee61e21a3a4048841f742589a7",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_tag_views.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "tag_view_checks": 848
+          },
+          "keys": [
+            "failures",
+            "tag_view_checks"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "tag_view_checks": 848
+          },
+          "keys": [
+            "failures",
+            "tag_view_checks"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_tempering_authority.gd",
+      "sha256_before": "ebfd6cc92151f6b3f47787e51465090fc7fbdab829726b6398a6965b6190f23f",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_tempering_authority.gd.log",
+      "reference_native_pass": false,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 903
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 903
+          },
+          "authority": "accepted A final-r2/PLAN.json"
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_tempering_combat.gd",
+      "sha256_before": "6998b34796b8d83e12862fc03251f79100ccb6416fdb63c2c16d647969651b5e",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_tempering_combat.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 626
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 626
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_tempering_hint.gd",
+      "sha256_before": "94310c8a3b5fa4b9f2daae92e0ec0335ef1da6c006596a58ac6b93ffa9bc13e1",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_tempering_hint.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 528
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 528
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_tempering_views.gd",
+      "sha256_before": "7e90250f7f4c6bd283baef08f2cb0bbec4fc7f5a719fbe80d3ecd07268591af8",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_tempering_views.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 872
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 872
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_ui.gd",
+      "sha256_before": "f63c923d39f0ab13f8838d351122ca5b2612e4bd4ecd6f9ab478eba4651022ad",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_ui.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "independent_ui_passed": 84
+          },
+          "keys": [
+            "failures",
+            "independent_ui_passed",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "historical v38 (or v36 through its original inverse)",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "independent_ui_passed": 84
+          },
+          "keys": [
+            "failures",
+            "independent_ui_passed",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_v2.gd",
+      "sha256_before": "f2761662c8e62b15f129350d2fea4e05aa13cfba3acc51e345dcd13ea98528f3",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_v2.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "independent_v2_passed": 28
+          },
+          "keys": [
+            "failures",
+            "independent_v2_passed"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "independent_v2_passed": 28
+          },
+          "keys": [
+            "failures",
+            "independent_v2_passed"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_v3.gd",
+      "sha256_before": "45095ff03fae412a297dac1279c42d97be6033158db36ba1caee38090720ca1f",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_v3.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "independent_v3_passed": 20
+          },
+          "keys": [
+            "failures",
+            "independent_v3_passed"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "independent_v3_passed": 20
+          },
+          "keys": [
+            "failures",
+            "independent_v3_passed"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_v4.gd",
+      "sha256_before": "2c75200ff0921c1ac4ee85ff757b643e6325abfa23342fbd531cc59f1d7bf342",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_v4.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "independent_v4_passed": 35
+          },
+          "keys": [
+            "failures",
+            "independent_v4_passed"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B catalog / old-only synthetic fixture",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "independent_v4_passed": 35
+          },
+          "keys": [
+            "failures",
+            "independent_v4_passed"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_v5.gd",
+      "sha256_before": "d7a02eeeaa4f430a2e4b7142cbddf7cd7eefc40e71e0fd3cb23366671e267023",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_v5.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "independent_v5_passed": 26
+          },
+          "keys": [
+            "failures",
+            "independent_v5_passed"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "independent_v5_passed": 26
+          },
+          "keys": [
+            "failures",
+            "independent_v5_passed"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_vfx.gd",
+      "sha256_before": "218936663fe0d620b6a4d801ae41daaa92213f1cb8754d08335adff3722c403c",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_vfx.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "independent_vfx_passed": 130
+          },
+          "keys": [
+            "failures",
+            "independent_vfx_passed",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "independent_vfx_passed": 130
+          },
+          "keys": [
+            "failures",
+            "independent_vfx_passed",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_warden_reactions.gd",
+      "sha256_before": "de3b0d24ee6c547745179475b27ce605b997ec07133e464ed1f2ded6dcce396e",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_warden_reactions.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "independent_warden_reactions_passed": 942
+          },
+          "keys": [
+            "failures",
+            "independent_warden_reactions_passed",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "independent_warden_reactions_passed": 942
+          },
+          "keys": [
+            "failures",
+            "independent_warden_reactions_passed",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_weapon_authority.gd",
+      "sha256_before": "c1b97017812849a89b3ed6cc1b2ce72a6d24773c8631ca4cdcabd93eacc9768c",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_weapon_authority.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 517
+          },
+          "keys": [
+            "cases",
+            "checks",
+            "failures"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "historical v38 (or v36 through its original inverse)",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 517
+          },
+          "keys": [
+            "cases",
+            "checks",
+            "failures"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_weapon_order.gd",
+      "sha256_before": "0d16099bef62df57a8df799f76bb854cfe1e189b1cde1e26294e6bb0d2e046cc",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_weapon_order.gd.log",
+      "reference_native_pass": false,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 837
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "historical v38 (or v36 through its original inverse)",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 837
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_weapon_order_views.gd",
+      "sha256_before": "0ec081841b4b6017d0bb7aac44114a4b4055d00a6ef1f4952c379bb59c362b4f",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_weapon_order_views.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 512
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 512
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_weapon_readouts.gd",
+      "sha256_before": "e26cc7e0572729b905775ac5e72ac8a1cb182e0103f7eb6e617b7a480217c560",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_weapon_readouts.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 465
+          },
+          "keys": [
+            "cases",
+            "checks",
+            "failures"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "historical v38 (or v36 through its original inverse)",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 465
+          },
+          "keys": [
+            "cases",
+            "checks",
+            "failures"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/independent_weapon_rig.gd",
+      "sha256_before": "2af84fd3bd5bc466dcc044c7ea0d7d2bc61c293a298443151b790aeb5741b57d",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_weapon_rig.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "independent_weapon_rig_passed": 273
+          },
+          "keys": [
+            "failures",
+            "independent_weapon_rig_passed",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "independent_weapon_rig_passed": 273
+          },
+          "keys": [
+            "failures",
+            "independent_weapon_rig_passed",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/test_A_catalog_links.gd",
+      "sha256_before": "95dc0cc0176e32cf7c1950d10ef537bd68321c27f0cf1c98976fcb075cd6c8b0",
+      "proposed_sha256": "9161637776e635b8366af2641757bb880ed20f58d7d875af60265c9d1c97185a",
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/test_A_catalog_links.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 17
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [],
+      "domain": "historical A",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 17
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/test_A_item_transactions.gd",
+      "sha256_before": "d19e7f00ab207416b602cd0854d9fa68c7b543a1a651d6929c8e8c0e249023ed",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/test_A_item_transactions.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "A_item_transaction_checks": 208
+          },
+          "keys": [
+            "A_item_transaction_checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "A_item_transaction_checks": 208
+          },
+          "keys": [
+            "A_item_transaction_checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/test_A_profile_negatives.gd",
+      "sha256_before": "591c2fbafca68f936b81bc46a453c70200d0f95ca83bd578255b0b676bda1c7a",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/test_A_profile_negatives.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 165
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "pass",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [],
+      "domain": "actual B (existing narrow scopes)",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 165
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "pass",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/test_actor_actions.gd",
+      "sha256_before": "8cf9aa0c5c15958eef98120de510560d6d0770021c3479667d93d5a4a8db3b2b",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/test_actor_actions.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "passed": 418
+          },
+          "keys": [
+            "failures",
+            "passed",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "passed": 418
+          },
+          "keys": [
+            "failures",
+            "passed",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/test_audio_teardown_predicate.gd",
+      "sha256_before": "b751ca96db1cac008b46b6267c09e2b6356db7c40df4c28eb3bc532b8f9bd867",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/test_audio_teardown_predicate.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 15
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 15
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/test_bankshot_build.gd",
+      "sha256_before": "ecc4788f4096ecae4d5805197a36be596d2aea1433ade2784c488e82a8e56734",
+      "proposed_sha256": "036322cff7a1f16b8fdbd4163a27dc365ab14abbe5dff665123992aa0fe7b503",
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/test_bankshot_build.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "bankshot_build_checks": 114
+          },
+          "keys": [
+            "bankshot_build_checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "historical v38 (or v36 through its original inverse)",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "bankshot_build_checks": 114
+          },
+          "keys": [
+            "bankshot_build_checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/test_boundary_shot.gd",
+      "sha256_before": "4178d20648df3dc647327c90c289ddcf90c64112a778b5f964408458544ed6f1",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/test_boundary_shot.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "boundary_shot_checks": 35
+          },
+          "keys": [
+            "boundary_shot_checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "boundary_shot_checks": 35
+          },
+          "keys": [
+            "boundary_shot_checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/test_brood_actions.gd",
+      "sha256_before": "6dc4a8a65ac1833af1920e7dad21d76de9e50e807d2489988e0912d106e238ff",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/test_brood_actions.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "passed": 229
+          },
+          "keys": [
+            "failures",
+            "passed",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "passed": 229
+          },
+          "keys": [
+            "failures",
+            "passed",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/test_brood_pulse.gd",
+      "sha256_before": "e9575076e6ddbc92c23473b9d2708ce8eb26e40780ad40b69c6f707be081f577",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/test_brood_pulse.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "text_reference": "BROOD PULSE: 441 passed; 0 failed"
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "text_reference": "BROOD PULSE: 441 passed; 0 failed"
+        }
+      ]
+    },
+    {
+      "path": "tests/test_build_forecast.gd",
+      "sha256_before": "06d3d7d7ec1614ee5b36fad132cd1ac0c2f34ea1c72f382265b7998318f7ad69",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/test_build_forecast.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "passed": 21
+          },
+          "keys": [
+            "failures",
+            "passed",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "passed": 21
+          },
+          "keys": [
+            "failures",
+            "passed",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/test_builds.gd",
+      "sha256_before": "6d3af6d9d21d28f67c4b77c7159a59b0e238b0ed25c8ccfc74e90b0cb9382ad9",
+      "proposed_sha256": "48d3492cad54cfe6c619c22124c2c552fc538ace8c921de126a0de47ba759507",
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/test_builds.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "passed": 221
+          },
+          "keys": [
+            "failures",
+            "passed",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "historical v38 (or v36 through its original inverse)",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "passed": 221
+          },
+          "keys": [
+            "failures",
+            "passed",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/test_charger_actions.gd",
+      "sha256_before": "ca5399a86ff07eba4e181cc450e40b900738aa26b100450a7fba810766e7951e",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/test_charger_actions.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "passed": 130
+          },
+          "keys": [
+            "failures",
+            "passed",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "passed": 130
+          },
+          "keys": [
+            "failures",
+            "passed",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/test_combat_focus.gd",
+      "sha256_before": "113b703b2ef7e6e4fced49977d0a3981a2be5045526edb67e1b1ab4cc856e175",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/test_combat_focus.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "passed": 344
+          },
+          "keys": [
+            "failures",
+            "passed",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "passed": 344
+          },
+          "keys": [
+            "failures",
+            "passed",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/test_combat_hud_readability.gd",
+      "sha256_before": "d0afdb08946fc8b7deb18209979f5a4a28f66fb80ce14d333c724513cb273c87",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/test_combat_hud_readability.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "combat_hud_readability_passed": 265
+          },
+          "keys": [
+            "combat_hud_readability_passed",
+            "failures",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "combat_hud_readability_passed": 265
+          },
+          "keys": [
+            "combat_hud_readability_passed",
+            "failures",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/test_contact_enemy_actions.gd",
+      "sha256_before": "ad19c93a5591ae78e70a138095ad62f487d11abe5467fdc9dcb5d4dcaf67a655",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/test_contact_enemy_actions.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "text_reference": "CONTACT_ENEMY_ACTIONS 38 passed; failures=[]"
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "text_reference": "CONTACT_ENEMY_ACTIONS 38 passed; failures=[]"
+        }
+      ]
+    },
+    {
+      "path": "tests/test_core_reactions.gd",
+      "sha256_before": "2e7dd66fc21bac3491c964c3910a18fd14d2d5e9525b6c40a0808a1af801d88a",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/test_core_reactions.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "core_reactions_passed": 56
+          },
+          "keys": [
+            "core_reactions_passed",
+            "failures"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "core_reactions_passed": 56
+          },
+          "keys": [
+            "core_reactions_passed",
+            "failures"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/test_core_summon.gd",
+      "sha256_before": "061996e5039c0c9d2068f20c8c6427bfe07e011246f30c689d4d33aba248757e",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/test_core_summon.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "core_summon_passed": 2510
+          },
+          "keys": [
+            "core_summon_passed",
+            "failures",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "core_summon_passed": 2510
+          },
+          "keys": [
+            "core_summon_passed",
+            "failures",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/test_core_summon_assets.gd",
+      "sha256_before": "aab4958a0a36eb78a12aef1dfac0e084b0f44a1058e40aef94a95cd9f6151638",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/test_core_summon_assets.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "text_reference": "CORE SUMMON ART: 78 checks, 0 failures"
+        }
+      ],
+      "helper_owner_counts": [],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "text_reference": "CORE SUMMON ART: 78 checks, 0 failures"
+        }
+      ]
+    },
+    {
+      "path": "tests/test_crawler_hurt_registration.gd",
+      "sha256_before": "9a5778ebf3258fcd20318f469df6e7245fbe42676f88e6816f0e76a4675efec4",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/test_crawler_hurt_registration.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "text_reference": "CRAWLER REGISTRATION: 316 checks, 0 failures; actual height 35.10869; terminal eye dx -0.25969 world px"
+        }
+      ],
+      "helper_owner_counts": [],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "text_reference": "CRAWLER REGISTRATION: 316 checks, 0 failures; actual height 35.10869; terminal eye dx -0.25969 world px"
+        }
+      ]
+    },
+    {
+      "path": "tests/test_cryo_build.gd",
+      "sha256_before": "7692f11f02446ac1038a93a46111cf156a04f559cd6101e5f08c1bd3335f586d",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/test_cryo_build.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "CRYO_BUILD_CHECKS ",
+          "counts": {
+            "checks": 205
+          },
+          "keys": [
+            "checks",
+            "failures"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B catalog / old-only synthetic fixture",
+      "planned_markers": [
+        {
+          "prefix": "CRYO_BUILD_CHECKS ",
+          "counts": {
+            "checks": 205
+          },
+          "keys": [
+            "checks",
+            "failures"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/test_discrete_ui_numbers.gd",
+      "sha256_before": "f5c4c79e2d880d4d9453ba76b417de25a7a609c542395b194f0dd14ee7e095d4",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/test_discrete_ui_numbers.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "discrete_ui_checks": 34
+          },
+          "keys": [
+            "discrete_ui_checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [],
+      "domain": "actual B (existing narrow scopes)",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "discrete_ui_checks": 34
+          },
+          "keys": [
+            "discrete_ui_checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/test_effects.gd",
+      "sha256_before": "7acaec2b284a285785221bb3d8cea0d93f040c0e65a571b9fa7529a940db517a",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/test_effects.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "passed": 133
+          },
+          "keys": [
+            "failures",
+            "passed",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "passed": 133
+          },
+          "keys": [
+            "failures",
+            "passed",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/test_encounters.gd",
+      "sha256_before": "af874983aa3f25465cf90e9850bce989fcd17c50fa14cadc726eec115db30e28",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/test_encounters.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "passed": 25
+          },
+          "keys": [
+            "failures",
+            "passed",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "passed": 25
+          },
+          "keys": [
+            "failures",
+            "passed",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/test_expansion.gd",
+      "sha256_before": "1128b8bad98aa2e36368cece8bb213287c8ee92b17858b061f210997de3deeab",
+      "proposed_sha256": "570d8e44b34049ec9a4a0e8445426b153ddc5a1d2aee7280c8ff7780619727d0",
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/test_expansion.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "passed": 571
+          },
+          "keys": [
+            "failures",
+            "passed",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "historical v38 (or v36 through its original inverse)",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "passed": 571
+          },
+          "keys": [
+            "failures",
+            "passed",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/test_expansion_weapon_readout.gd",
+      "sha256_before": "06312c5fe7444085c5ed0c614b6fb185e61e97e6d7ac7dc7fce3e93984a8fe0e",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/test_expansion_weapon_readout.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 8
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "kind"
+          ]
+        }
+      ],
+      "helper_owner_counts": [],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 8
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "kind"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/test_export_contract.gd",
+      "sha256_before": "771ccf70e847d4ba3d2b0d569bb5056cd18b8dbdef6cc31269b101b7b1928c6b",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/test_export_contract.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "export_contract_checks": 46
+          },
+          "keys": [
+            "export_contract_checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "export_contract_checks": 46
+          },
+          "keys": [
+            "export_contract_checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/test_feedback_diode.gd",
+      "sha256_before": "af6d0909f6b462274ed1baa1ceee83ef4baa49e59f39223a2bc64f898b3c9aa6",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/test_feedback_diode.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 115
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 115
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/test_feedback_mixer.gd",
+      "sha256_before": "8a813ba3938a6cad4ff7dc9ae8b688cb7ed52c54de10d6b480b847abf9db1eb7",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/test_feedback_mixer.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "passed": 48
+          },
+          "keys": [
+            "driver",
+            "failures",
+            "mix_rate",
+            "passed",
+            "scope",
+            "windows"
+          ]
+        }
+      ],
+      "helper_owner_counts": [],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "passed": 48
+          },
+          "keys": [
+            "driver",
+            "failures",
+            "mix_rate",
+            "passed",
+            "scope",
+            "windows"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/test_feedback_teardown.gd",
+      "sha256_before": "4be462488ef1cc162df5a4bec76c220f9724d7034188cbbb117869fbc36fa573",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/test_feedback_teardown.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 13
+          },
+          "keys": [
+            "checks",
+            "drain",
+            "driver",
+            "failures",
+            "hot",
+            "mix_rate",
+            "scope",
+            "silence"
+          ]
+        }
+      ],
+      "helper_owner_counts": [],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 13
+          },
+          "keys": [
+            "checks",
+            "drain",
+            "driver",
+            "failures",
+            "hot",
+            "mix_rate",
+            "scope",
+            "silence"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/test_focus_fire.gd",
+      "sha256_before": "c32be38c22d4ed467e1519b3befa69e2579fde9e58a488f2323b97f4ffcb42d5",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/test_focus_fire.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "passed": 228
+          },
+          "keys": [
+            "failures",
+            "passed",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "passed": 228
+          },
+          "keys": [
+            "failures",
+            "passed",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/test_game.gd",
+      "sha256_before": "0be2b33d1de16a757ca5c8bcbc9d5d24954c8895ba309be8bd138e1bcbdaffe1",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/test_game.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "passed": 193
+          },
+          "keys": [
+            "failures",
+            "passed",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "passed": 193
+          },
+          "keys": [
+            "failures",
+            "passed",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/test_hud_layout.gd",
+      "sha256_before": "b33c51105dd70601baeb0e86e53f0e070b6312c754450ca558cf21460b32fddf",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/test_hud_layout.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "hud_layout_passed": 12
+          },
+          "keys": [
+            "failures",
+            "hud_layout_passed",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "hud_layout_passed": 12
+          },
+          "keys": [
+            "failures",
+            "hud_layout_passed",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/test_input_lifecycle.gd",
+      "sha256_before": "a010c0524276f0cce6a6d5d877a825be15f3fb76adac81f3bdf69a6226e087a5",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/test_input_lifecycle.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "input_lifecycle_passed": 20
+          },
+          "keys": [
+            "failures",
+            "input_lifecycle_passed",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "input_lifecycle_passed": 20
+          },
+          "keys": [
+            "failures",
+            "input_lifecycle_passed",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/test_modes.gd",
+      "sha256_before": "cc68c456fc966170d874880402679dcd6e978d27f405548e51ea13765095d194",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/test_modes.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "passed": 70
+          },
+          "keys": [
+            "failures",
+            "passed",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "passed": 70
+          },
+          "keys": [
+            "failures",
+            "passed",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/test_modifier_copy.gd",
+      "sha256_before": "98890c46cb1c86137566f7af2d76884f32b4c4e6d9f15ede49bc6abc3c3f52be",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/test_modifier_copy.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "modifier_copy_checks": 112
+          },
+          "keys": [
+            "failures",
+            "modifier_copy_checks",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "historical v38 (or v36 through its original inverse)",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "modifier_copy_checks": 112
+          },
+          "keys": [
+            "failures",
+            "modifier_copy_checks",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/test_player_feedback.gd",
+      "sha256_before": "369035cc4da12d1446a0aaf24d993b479b248b8b103b91ee8828ab04b09f96c1",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/test_player_feedback.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "passed": 95
+          },
+          "keys": [
+            "failures",
+            "passed",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "passed": 95
+          },
+          "keys": [
+            "failures",
+            "passed",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/test_primary_brace.gd",
+      "sha256_before": "3700bd135d33ae0ca59d8977c23197408b4d89a4f6765aa60b822b70e97654c8",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/test_primary_brace.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "text_reference": "Primary brace: 201 checks, 0 failures"
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "text_reference": "Primary brace: 201 checks, 0 failures"
+        }
+      ]
+    },
+    {
+      "path": "tests/test_recoil_plate.gd",
+      "sha256_before": "68205e1add112fc30e53b3b92588ecbf15babe144d08863a06f6186bc246961d",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/test_recoil_plate.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "recoil_checks": 130
+          },
+          "keys": [
+            "failures",
+            "recoil_checks",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "recoil_checks": 130
+          },
+          "keys": [
+            "failures",
+            "recoil_checks",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/test_resolution_validation.gd",
+      "sha256_before": "d47fbc0d56b62fecab0dc87a6c1e46688dcba8a1d675a866321fe18d6d45e8d6",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/test_resolution_validation.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 305
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 305
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/test_scavenger_reel.gd",
+      "sha256_before": "f69f614fad596ef8638f3939a85a05c69218996b0b1fd96f7a7dcf591ec7c198",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/test_scavenger_reel.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "passed": 48
+          },
+          "keys": [
+            "failures",
+            "passed",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "passed": 48
+          },
+          "keys": [
+            "failures",
+            "passed",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/test_settlement_levels.gd",
+      "sha256_before": "8acf3ae8914dc1166d21874921c492173fef9ec5d896dd8fb6c46cd1dedeb129",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/test_settlement_levels.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "settlement_levels_passed": 20
+          },
+          "keys": [
+            "failures",
+            "scope",
+            "settlement_levels_passed"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "settlement_levels_passed": 20
+          },
+          "keys": [
+            "failures",
+            "scope",
+            "settlement_levels_passed"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/test_shop_offer_visibility.gd",
+      "sha256_before": "8931d64fc2a8275c8d3c86a17bfa4cbed27f532408f7ff9ae811c69a71f212a2",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/test_shop_offer_visibility.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "shop_offer_visibility_passed": 190
+          },
+          "keys": [
+            "failures",
+            "scope",
+            "shop_offer_visibility_passed"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "historical v38 (or v36 through its original inverse)",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "shop_offer_visibility_passed": 190
+          },
+          "keys": [
+            "failures",
+            "scope",
+            "shop_offer_visibility_passed"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/test_shop_reservation.gd",
+      "sha256_before": "8d8aa999c999dfda24a964d8a5848db81ff9e487ec9156edf0e0d4f3e5485c6f",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/test_shop_reservation.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "reservation_passed": 520
+          },
+          "keys": [
+            "failures",
+            "reservation_passed",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B catalog / old-only synthetic fixture",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "reservation_passed": 520
+          },
+          "keys": [
+            "failures",
+            "reservation_passed",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/test_spitter_actions.gd",
+      "sha256_before": "d1951f3a16018705630e66d17ca48dbf120265ec3616d3ed98f2d0ab5c0e42a3",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/test_spitter_actions.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "passed": 162
+          },
+          "keys": [
+            "failures",
+            "passed",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "passed": 162
+          },
+          "keys": [
+            "failures",
+            "passed",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/test_starting_loadouts.gd",
+      "sha256_before": "00d6ebf48047614a2a239f110516bac1bc41bdce708c28cc5707aff46e1df2b1",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/test_starting_loadouts.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "text_reference": "Starting loadouts: 173 checks, 0 failures"
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B (existing narrow scopes)",
+      "planned_markers": [
+        {
+          "text_reference": "Starting loadouts: 173 checks, 0 failures"
+        }
+      ]
+    },
+    {
+      "path": "tests/test_stitch_drone.gd",
+      "sha256_before": "2543cfabdc28f206121aecfec7fe6aed9119cead89e4a8be868c54062953ca14",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/test_stitch_drone.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 18
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "pass",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 18
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "pass",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/test_support_encounter_projection.gd",
+      "sha256_before": "e7a7b01469b094d0bca4007296bc8d1cf490f7be61c1a41bf36857eef37a940e",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/test_support_encounter_projection.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 31
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "pass",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 31
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "pass",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/test_tag_synergy_progress.gd",
+      "sha256_before": "7dcf6bab70578dfa42c81d834941afdb08d24ff1c613ca80225f3f977835edab",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/test_tag_synergy_progress.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "tag_synergy_progress_checks": 467
+          },
+          "keys": [
+            "failures",
+            "tag_synergy_progress_checks"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B (existing narrow scopes)",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "tag_synergy_progress_checks": 467
+          },
+          "keys": [
+            "failures",
+            "tag_synergy_progress_checks"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/test_telegraph_readability.gd",
+      "sha256_before": "cab957dc1fb001f8cfc54e0a16ea6ae4fcc8f7afc3589ba2e8a0828d7228e1ce",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/test_telegraph_readability.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "telegraph_readability_passed": 97
+          },
+          "keys": [
+            "failures",
+            "scope",
+            "telegraph_readability_passed"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "telegraph_readability_passed": 97
+          },
+          "keys": [
+            "failures",
+            "scope",
+            "telegraph_readability_passed"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/test_tempered_combat.gd",
+      "sha256_before": "2b694c42ab3d21fd7056f92212b8e8a85a157956e21df5124f9fb9588764ae56",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/test_tempered_combat.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "passed": 290
+          },
+          "keys": [
+            "failed",
+            "failures",
+            "passed"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "passed": 290
+          },
+          "keys": [
+            "failed",
+            "failures",
+            "passed"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/test_upgrade_salvage.gd",
+      "sha256_before": "d44fb7859a89f63f30799186d6ac8901771e06f86517e1ea2b9474504707ca89",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/test_upgrade_salvage.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "passed": 147
+          },
+          "keys": [
+            "failed",
+            "failures",
+            "passed"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "historical v38 (or v36 through its original inverse)",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "passed": 147
+          },
+          "keys": [
+            "failed",
+            "failures",
+            "passed"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/test_v39_legacy_inputs.gd",
+      "sha256_before": "ffcf94b2e4850abf119f67c8de73f74869ca427e290606a8e5ccb1f2db368b5c",
+      "proposed_sha256": "c0baa57bf8523e75160782d70ca391bf0d02d794f5a27d32fa21a5175a94a061",
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/test_v39_legacy_inputs.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 18
+          },
+          "keys": [
+            "checks",
+            "failures",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        2
+      ],
+      "domain": "actual B entry -> historical v38",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "checks": 19
+          },
+          "authority": "explicit reviewed new19, original18 retained"
+        }
+      ]
+    },
+    {
+      "path": "tests/test_vfx.gd",
+      "sha256_before": "cfbc160a8e0cc3ff93595b3fd198cb3f0bd66a11093a7d3619658b5eedb9dbd6",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/test_vfx.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "passed": 161
+          },
+          "keys": [
+            "failures",
+            "passed",
+            "pending_assets",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        2
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "passed": 161
+          },
+          "keys": [
+            "failures",
+            "passed",
+            "pending_assets",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/test_warden_charge.gd",
+      "sha256_before": "9736f57df82941ae0ea6ec9569c992589da27fafcf61dbc5a3b761a395632820",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/test_warden_charge.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "warden_charge_passed": 2510
+          },
+          "keys": [
+            "failures",
+            "scope",
+            "warden_charge_passed"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "warden_charge_passed": 2510
+          },
+          "keys": [
+            "failures",
+            "scope",
+            "warden_charge_passed"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/test_warden_charge_assets.gd",
+      "sha256_before": "3ad0bda217c1705884d9c021ea7339b4f888d6af24d65f081be20993c171dac4",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/test_warden_charge_assets.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "text_reference": "WARDEN CHARGE ART: 83 checks, 0 failures"
+        }
+      ],
+      "helper_owner_counts": [],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "text_reference": "WARDEN CHARGE ART: 83 checks, 0 failures"
+        }
+      ]
+    },
+    {
+      "path": "tests/test_warden_reactions.gd",
+      "sha256_before": "8c2ba67e9924490bdd0735cbb5f45b6405464185d9e78e0367a9e3d28fd79f19",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/test_warden_reactions.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "warden_reactions_passed": 38
+          },
+          "keys": [
+            "failures",
+            "warden_reactions_passed"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "warden_reactions_passed": 38
+          },
+          "keys": [
+            "failures",
+            "warden_reactions_passed"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/test_weapon_mounts.gd",
+      "sha256_before": "6333000fa01731893e5834b915ba633aa77f938de1328d99eb984fb115a73ffa",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/test_weapon_mounts.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "passed": 189
+          },
+          "keys": [
+            "failures",
+            "passed",
+            "scope"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "passed": 189
+          },
+          "keys": [
+            "failures",
+            "passed",
+            "scope"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/test_weapon_order.gd",
+      "sha256_before": "a0147b95c189e7de3c55df14f96ed6c7e6eb555eca2ade4446bd6f5546364859",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/test_weapon_order.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "passed": 321
+          },
+          "keys": [
+            "failed",
+            "failures",
+            "passed"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "historical v38 (or v36 through its original inverse)",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "passed": 321
+          },
+          "keys": [
+            "failed",
+            "failures",
+            "passed"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/test_weapon_readout.gd",
+      "sha256_before": "b2df6cd5f091d8bbf618857d548c1689c0500e35a2f8d7bd7366b55ca6a8d46b",
+      "proposed_sha256": "ec7c3b0b48eb6fb1b94415d1bf67de58df1cd761ea7f970208f86f6958d76b07",
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/test_weapon_readout.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "weapon_readout_checks": 411
+          },
+          "keys": [
+            "failures",
+            "weapon_readout_checks"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "historical v38 (or v36 through its original inverse)",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "weapon_readout_checks": 411
+          },
+          "keys": [
+            "failures",
+            "weapon_readout_checks"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "tests/test_weapon_tempering.gd",
+      "sha256_before": "36e7113fe2c34d3a70d9a35fb6ce9f292b4378d6a8e0c775ad6573d31211c76e",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/test_weapon_tempering.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "passed": 413
+          },
+          "keys": [
+            "failed",
+            "failures",
+            "passed"
+          ]
+        }
+      ],
+      "helper_owner_counts": [
+        1
+      ],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "prefix": "",
+          "counts": {
+            "passed": 413
+          },
+          "keys": [
+            "failed",
+            "failures",
+            "passed"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "ui/test_ui.gd",
+      "sha256_before": "b3988076803f256ca3ec20fc888383318c15644aef0a1745f9269debead2ff16",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/test_ui.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "text_reference": "UI_STRUCTURE_AND_INTENTS_PASS"
+        }
+      ],
+      "helper_owner_counts": [],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "text_reference": "UI_STRUCTURE_AND_INTENTS_PASS"
+        }
+      ]
+    },
+    {
+      "path": "docs/art/check_build_expansion_icons.gd",
+      "sha256_before": "3d33b59270b3a2e076783056acb67e0fa162b023c71f8d71f4322660751c8730",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/check_build_expansion_icons.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "text_reference": "PASS: imported atlas + 8 nonempty, unique Godot AtlasTexture slices"
+        }
+      ],
+      "helper_owner_counts": [],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "text_reference": "PASS: imported atlas + 8 nonempty, unique Godot AtlasTexture slices"
+        }
+      ]
+    },
+    {
+      "path": "docs/art/check_icons.gd",
+      "sha256_before": "b8f3f6d40e4f72a5154cae0d5cd39096f053cd7377c6653fc588c21f476130c2",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/check_icons.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "text_reference": "PASS: imported atlas + 16 nonempty, unique Godot AtlasTexture slices"
+        }
+      ],
+      "helper_owner_counts": [],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "text_reference": "PASS: imported atlas + 16 nonempty, unique Godot AtlasTexture slices"
+        }
+      ]
+    },
+    {
+      "path": "docs/art/check_mechanism_icons.gd",
+      "sha256_before": "41a72fe268ba4e31fce202965f028ebed86667af2070b18d1eaf1e4c46909c12",
+      "proposed_sha256": null,
+      "reference_log": "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/check_mechanism_icons.gd.log",
+      "reference_native_pass": true,
+      "reference_markers": [
+        {
+          "text_reference": "PASS: imported atlas + 8 nonempty, unique Godot AtlasTexture slices"
+        }
+      ],
+      "helper_owner_counts": [],
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "planned_markers": [
+        {
+          "text_reference": "PASS: imported atlas + 8 nonempty, unique Godot AtlasTexture slices"
+        }
+      ]
+    }
+  ],
+  "external_current_B_routes": [
+    {
+      "name": "actual_hooks56",
+      "script": "evidence-workspace/moss-v39-items/B-integration-tests/author_B_real_hooks_r2.gd",
+      "marker": "B_real_hook_checks",
+      "checks": 56,
+      "helpers": 1,
+      "owners": 1,
+      "sha256": "af51bf5b3801fb779d17f435b6ec8b61f3441efda988f35b33a67888659062ed",
+      "reference_plan": "evidence-workspace/moss-v39-items/B-integration-tests/r2-corrected-routes/PLAN.json"
+    },
+    {
+      "name": "ui20",
+      "script": "evidence-workspace/moss-v39-ui/B/tests/test_build_items_readout.gd",
+      "marker": "checks",
+      "checks": 20,
+      "helpers": 0,
+      "owners": 0,
+      "sha256": "9fd8b2ba6bd45a1b8cf5b167e00a13cbfd5a3afdec930a673d66a0ee5785fcb9",
+      "reference_plan": "evidence-workspace/moss-v39-items/B-integration-tests/r2-corrected-routes/PLAN.json"
+    },
+    {
+      "name": "pin_ring",
+      "script": "evidence-workspace/moss-v39-B-qa/integration/corrected/independent_B_pin_ring_r2.gd",
+      "marker": "independent_B_pin_ring_checks",
+      "checks": 126,
+      "observations": 14,
+      "helpers": 1,
+      "sha256": "21d5e47253736add2dc657db5a82f406a71bb9db06ba7225f7bbcf3e0cdbcf99",
+      "reference_plan": "evidence-workspace/moss-v39-B-qa/integration/corrected/PLAN.json",
+      "owners": 1
+    },
+    {
+      "name": "real_hooks",
+      "script": "evidence-workspace/moss-v39-B-qa/integration/independent_B_real_hooks.gd",
+      "marker": "independent_B_real_hook_checks",
+      "checks": 62,
+      "observations": 2,
+      "helpers": 1,
+      "sha256": "93eb63c0230726c2c51ff1a385225dc11bcf61fb66d20e0d8c3b844a555bc57d",
+      "reference_plan": "evidence-workspace/moss-v39-B-qa/integration/corrected/PLAN.json",
+      "owners": 1
+    },
+    {
+      "name": "validator63",
+      "script": "evidence-workspace/moss-v39-items/B-validator-proposal/test_B_rules_configuration.gd",
+      "marker": "B_rules_configuration_checks",
+      "checks": 63,
+      "helpers": 0,
+      "owners": 0,
+      "sha256": "f027590a9f39463e35a3bc04719bd7cde2f07798588091d92a44a958503e5817",
+      "reference_plan": "evidence-workspace/moss-v39-items/B-integration-tests/r2-routes/PLAN.json"
+    },
+    {
+      "name": "pure_initial_state",
+      "script": "evidence-workspace/moss-v39-B-qa/checks/independent_B_initial_state.gd",
+      "checks": 30,
+      "helpers": 0,
+      "owners": 0,
+      "sha256": "59a8f87a1e0850639106e29903825f59dd7d6de343998c80686dc32faa4dd108",
+      "marker": "checks"
+    },
+    {
+      "name": "pure_admission",
+      "script": "evidence-workspace/moss-v39-B-qa/checks/independent_B_admission.gd",
+      "checks": 349,
+      "helpers": 0,
+      "owners": 0,
+      "sha256": "fc2c9cc11726cd8be513cd0da92dbcec28c9f5d618a30b6360270e264fd50662",
+      "marker": "checks"
+    },
+    {
+      "name": "pure_mechanics",
+      "script": "evidence-workspace/moss-v39-B-qa/checks/independent_B_mechanics.gd",
+      "checks": 207,
+      "helpers": 0,
+      "owners": 0,
+      "sha256": "4610f56de8c343f13113e4d0f347ff5b9f061221b571fbcfde83a5b414c762cf",
+      "marker": "checks"
+    },
+    {
+      "name": "pure_configuration",
+      "script": "evidence-workspace/moss-v39-B-qa/checks/independent_B_configuration.gd",
+      "checks": 61,
+      "helpers": 0,
+      "owners": 0,
+      "sha256": "611a736611fa91cbb6a349334d5f9f9bf111872dbf908181ad111bae629b9ce8",
+      "marker": "checks"
+    },
+    {
+      "name": "pure_author318",
+      "script": "evidence-workspace/moss-v39-items/B-staged/tests/test_build_items_runtime.gd",
+      "checks": 318,
+      "helpers": 0,
+      "owners": 0,
+      "sha256": "1b07189c6bf09f728a70c9b121af5993da941d0b8d42e17967b20f7be0badaf1",
+      "marker": "B_author_checks"
+    },
+    {
+      "name": "independent_B_icons",
+      "script": "evidence-workspace/moss-v39-B-qa/assets/independent_B_icons.gd",
+      "sha256": "ff021f1cdbfcf11f72a3eceec9cd368d8764baa1faa31340f7a33e1d9d3a3a01",
+      "marker": "checks",
+      "checks": 201,
+      "observations": 3,
+      "helpers": 0,
+      "owners": 0,
+      "expected": "evidence-workspace/moss-v39-B-qa/assets/EXPECTED.json",
+      "expected_sha256": "98c27fe5ce33064ee64369958c053ea156ba066a1c4d0c5eef51bc7fb78e0b70",
+      "args": [
+        "EXPECTED.json",
+        "external-output-report.json"
+      ]
+    }
+  ],
+  "discovery_breakdown": {
+    "tests_gd": 148,
+    "tests_SceneTree": 146,
+    "ui_SceneTree": 1,
+    "docs_art_SceneTree": 3,
+    "existing_total": 150,
+    "new_local": 4,
+    "external_now": 11,
+    "pending": "scope review then new candidate exactmap, execution runner/freeze; not yet engine-authorized",
+    "planned_scripts": 165
+  }
+}

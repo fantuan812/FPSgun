@@ -1,0 +1,1080 @@
+--- a/art_source/build_expansion_B/README.md
++++ b/art_source/build_expansion_B/README.md
+@@ -0,0 +1,3 @@
++# B editable SVG concept sources
++
++Copied by exact art-lane hashes into isolated B integration candidate. These are editable SVG masters with 64px PNG previews. Author export and visual-semantic review only; independent fresh export and native UI acceptance remain pending. No raster AI image is a runtime source.
+--- a/art_source/build_expansion_B/manifest.concept.original.json
++++ b/art_source/build_expansion_B/manifest.concept.original.json
+@@ -0,0 +1,83 @@
++{
++  "version": 1,
++  "icons": {
++    "crossfire_pin": {
++      "id": "crossfire_pin",
++      "atlas": "res://assets/items/crossfire_pin.png",
++      "rect": [
++        0,
++        0,
++        64,
++        64
++      ],
++      "name": "交叉定位钉",
++      "category": "item",
++      "alpha_bbox": [
++        7,
++        9,
++        50,
++        48
++      ],
++      "source_sha256": "cb484f693183e4b45c7cc817864d3bef521c548fdfab33c56004858a228c82dd",
++      "editable_source": "svg/crossfire_pin.svg",
++      "svg_sha256": "f794b202f9b22dd3267c931089fccd6b9352032d2b36c0b76bce206c890d03e1",
++      "alpha_values": [
++        0,
++        255
++      ],
++      "status": "B-art-v1 concept candidate, not implemented runtime claim"
++    },
++    "salvage_capacitor": {
++      "id": "salvage_capacitor",
++      "atlas": "res://assets/items/salvage_capacitor.png",
++      "rect": [
++        0,
++        0,
++        64,
++        64
++      ],
++      "name": "回收蓄能器",
++      "category": "item",
++      "alpha_bbox": [
++        7,
++        2,
++        51,
++        53
++      ],
++      "source_sha256": "db104fe6b3ba8fd93235162141ffecfe39261f59ce83f43258cd806b68439c9b",
++      "editable_source": "svg/salvage_capacitor.svg",
++      "svg_sha256": "e71cace9df603e02598118b914bae65ad533e246fac764eb8f35cfaf86b15013",
++      "alpha_values": [
++        0,
++        255
++      ],
++      "status": "B-art-v1 concept candidate, not implemented runtime claim"
++    },
++    "medic_winch": {
++      "id": "medic_winch",
++      "atlas": "res://assets/items/medic_winch.png",
++      "rect": [
++        0,
++        0,
++        64,
++        64
++      ],
++      "name": "医疗绞盘",
++      "category": "item",
++      "alpha_bbox": [
++        2,
++        9,
++        58,
++        47
++      ],
++      "source_sha256": "b37a9f835c284a80c353691a94e5e2b9d0ea63be5a71ab1eac11dbda0aaeb5e7",
++      "editable_source": "svg/medic_winch.svg",
++      "svg_sha256": "5c815ff15b9fb05754e0ee9b062a814589df949d3291e38b5a02aa1d2259b45f",
++      "alpha_values": [
++        0,
++        255
++      ],
++      "status": "B-art-v1 concept candidate, not implemented runtime claim"
++    }
++  }
++}
+--- a/art_source/build_expansion_B/svg/crossfire_pin.svg
++++ b/art_source/build_expansion_B/svg/crossfire_pin.svg
+@@ -0,0 +1 @@
++<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" shape-rendering="crispEdges" role="img"><title>crossfire pin</title><desc>Original editable MossCircuit pixel geometry. No embedded raster. Palette tags are editable.</desc><g id="two-distinct-locator-pins"><polygon points="9,13 14,8 39,33 43,42 34,38" fill="#202832" data-palette="ink"/><polygon points="12,14 14,12 37,35 38,38 35,36" fill="#b87546" data-palette="copper"/><rect x="10" y="9" width="7" height="6" fill="#e8ac70" data-palette="copperlight"/><polygon points="50,9 56,15 30,40 21,44 26,35" fill="#202832" data-palette="ink"/><polygon points="50,13 52,15 28,38 25,39 28,36" fill="#8b929b" data-palette="steel"/><rect x="49" y="10" width="6" height="7" fill="#78e3e6" data-palette="cyan"/></g><g id="mechanical-target-bracket"><polygon points="21,20 29,20 29,24 25,24 25,28 21,28" fill="#d9d1ac" data-palette="cream"/><polygon points="35,20 43,20 43,28 39,28 39,24 35,24" fill="#d9d1ac" data-palette="cream"/><polygon points="21,36 25,36 25,40 29,40 29,44 21,44" fill="#d9d1ac" data-palette="cream"/><polygon points="39,36 43,36 43,44 35,44 35,40 39,40" fill="#d9d1ac" data-palette="cream"/><polygon points="29,27 35,27 35,29 37,29 37,35 35,35 35,37 29,37 29,35 27,35 27,29 29,29" fill="#202832" data-palette="ink"/><rect x="30" y="30" width="4" height="4" fill="#91a45a" data-palette="mosslight"/></g><g id="inward-pull-clamps"><polygon points="7,31 15,31 15,26 22,33 15,40 15,35 7,35" fill="#202832" data-palette="ink"/><polygon points="9,32 16,32 16,30 19,33 16,36 16,34 9,34" fill="#78e3e6" data-palette="cyan"/><polygon points="57,31 49,31 49,26 42,33 49,40 49,35 57,35" fill="#202832" data-palette="ink"/><polygon points="55,32 48,32 48,30 45,33 48,36 48,34 55,34" fill="#e8ac70" data-palette="copperlight"/></g><g id="mounting-base"><polygon points="26,47 38,47 38,49 40,49 40,55 38,55 38,57 26,57 26,55 24,55 24,49 26,49" fill="#202832" data-palette="ink"/><rect x="27" y="49" width="10" height="5" fill="#647540" data-palette="moss"/><rect x="30" y="49" width="4" height="4" fill="#202832" data-palette="ink"/><rect x="31" y="50" width="2" height="2" fill="#e8ac70" data-palette="copperlight"/></g></svg>
+--- a/art_source/build_expansion_B/svg/medic_winch.svg
++++ b/art_source/build_expansion_B/svg/medic_winch.svg
+@@ -0,0 +1 @@
++<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" shape-rendering="crispEdges" role="img"><title>medic winch</title><desc>Original editable MossCircuit pixel geometry. No embedded raster. Palette tags are editable.</desc><g id="mechanical-winch-casing"><polygon points="12,14 34,14 34,19 39,19 39,44 34,44 34,49 12,49 12,44 7,44 7,19 12,19" fill="#202832" data-palette="ink"/><polygon points="14,17 32,17 32,21 36,21 36,42 32,42 32,46 14,46 14,42 10,42 10,21 14,21" fill="#647540" data-palette="moss"/><rect x="10" y="22" width="5" height="18" fill="#d9d1ac" data-palette="cream"/><rect x="31" y="22" width="5" height="18" fill="#d9d1ac" data-palette="cream"/><polygon points="18,21 28,21 28,25 32,25 32,38 28,38 28,42 18,42 18,38 14,38 14,25 18,25" fill="#202832" data-palette="ink"/><polygon points="20,24 26,24 26,27 29,27 29,36 26,36 26,39 20,39 20,36 17,36 17,27 20,27" fill="#b87546" data-palette="copper"/><rect x="18" y="27" width="10" height="3" fill="#e8ac70" data-palette="copperlight"/><rect x="18" y="33" width="10" height="3" fill="#e8ac70" data-palette="copperlight"/><rect x="21" y="25" width="4" height="13" fill="#39434c" data-palette="shade"/></g><g id="manual-crank"><rect x="4" y="25" width="5" height="12" fill="#202832" data-palette="ink"/><rect x="2" y="25" width="4" height="4" fill="#d9d1ac" data-palette="cream"/><rect x="4" y="28" width="3" height="7" fill="#8b929b" data-palette="steel"/><rect x="12" y="41" width="4" height="4" fill="#202832" data-palette="ink"/><rect x="13" y="42" width="2" height="2" fill="#e8ac70" data-palette="copperlight"/></g><g id="medical-identification"><rect x="17" y="9" width="15" height="12" fill="#202832" data-palette="ink"/><rect x="20" y="11" width="9" height="8" fill="#d9d1ac" data-palette="cream"/><rect x="23" y="12" width="3" height="6" fill="#647540" data-palette="moss"/><rect x="21" y="14" width="7" height="2" fill="#647540" data-palette="moss"/></g><g id="existing-supply-tether"><polygon points="29,32 43,32 43,24 47,20 54,20 54,24 49,24 47,27 47,36 29,36" fill="#202832" data-palette="ink"/><polygon points="30,33 44,33 44,25 48,22 52,22 52,23 48,23 45,26 45,35 30,35" fill="#e8ac70" data-palette="copperlight"/></g><g id="mechanical-hook-and-existing-medical-orb"><rect x="50" y="23" width="4" height="11" fill="#8b929b" data-palette="steel"/><polygon points="50,31 50,36 54,39 58,36 58,31 56,31 56,35 54,36 52,35 52,31" fill="#8b929b" data-palette="steel"/><polygon points="47,40 56,40 56,44 60,44 60,52 56,52 56,56 47,56 47,52 43,52 43,44 47,44" fill="#202832" data-palette="ink"/><polygon points="49,43 54,43 54,46 57,46 57,50 54,50 54,53 49,53 49,50 46,50 46,46 49,46" fill="#35797a" data-palette="teal"/><rect x="49" y="44" width="3" height="8" fill="#d9d1ac" data-palette="cream"/><rect x="47" y="47" width="7" height="3" fill="#d9d1ac" data-palette="cream"/></g></svg>
+--- a/art_source/build_expansion_B/svg/salvage_capacitor.svg
++++ b/art_source/build_expansion_B/svg/salvage_capacitor.svg
+@@ -0,0 +1 @@
++<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" shape-rendering="crispEdges" role="img"><title>salvage capacitor</title><desc>Original editable MossCircuit pixel geometry. No embedded raster. Palette tags are editable.</desc><g id="three-charge-cell-casing"><polygon points="16,7 48,7 48,11 52,11 52,35 48,35 48,39 16,39 16,35 12,35 12,11 16,11" fill="#202832" data-palette="ink"/><polygon points="18,10 46,10 46,13 49,13 49,33 46,33 46,36 18,36 18,33 15,33 15,13 18,13" fill="#647540" data-palette="moss"/><rect x="20" y="10" width="24" height="3" fill="#d9d1ac" data-palette="cream"/><rect x="19" y="17" width="7" height="15" fill="#202832" data-palette="ink"/><rect x="21" y="20" width="3" height="9" fill="#e8b35a" data-palette="amber"/><rect x="21" y="20" width="3" height="2" fill="#f5ebca" data-palette="light"/><rect x="28" y="17" width="7" height="15" fill="#202832" data-palette="ink"/><rect x="30" y="20" width="3" height="9" fill="#e8b35a" data-palette="amber"/><rect x="30" y="20" width="3" height="2" fill="#f5ebca" data-palette="light"/><rect x="37" y="17" width="7" height="15" fill="#202832" data-palette="ink"/><rect x="39" y="20" width="3" height="9" fill="#e8b35a" data-palette="amber"/><rect x="39" y="20" width="3" height="2" fill="#f5ebca" data-palette="light"/><rect x="14" y="13" width="4" height="4" fill="#202832" data-palette="ink"/><rect x="15" y="14" width="2" height="2" fill="#e8ac70" data-palette="copperlight"/><rect x="46" y="30" width="4" height="4" fill="#202832" data-palette="ink"/><rect x="47" y="31" width="2" height="2" fill="#e8ac70" data-palette="copperlight"/></g><g id="scrap-intake"><rect x="25" y="4" width="15" height="5" fill="#202832" data-palette="ink"/><polygon points="27,5 30,2 34,5 34,8 27,8" fill="#b87546" data-palette="copper"/><rect x="36" y="4" width="3" height="4" fill="#8b929b" data-palette="steel"/></g><g id="dash-origin-grid"><polygon points="15,38 49,38 57,55 7,55" fill="#202832" data-palette="ink"/><polygon points="18,41 46,41 51,52 13,52" fill="#35797a" data-palette="teal"/><rect x="15" y="44" width="34" height="1" fill="#78e3e6" data-palette="cyan"/><rect x="15" y="48" width="34" height="1" fill="#78e3e6" data-palette="cyan"/><polygon points="23,41 25,41 23,52 21,52" fill="#78e3e6" data-palette="cyan"/><rect x="31" y="41" width="2" height="11" fill="#78e3e6" data-palette="cyan"/><polygon points="39,41 41,41 43,52 41,52" fill="#78e3e6" data-palette="cyan"/></g><g id="origin-clamp-and-dash-mark"><rect x="27" y="36" width="10" height="5" fill="#d9d1ac" data-palette="cream"/><polygon points="53,20 58,25 53,30 50,28 53,25 50,22" fill="#d9d1ac" data-palette="cream"/></g></svg>
+--- a/assets/items/expansion_B_icon_manifest.json
++++ b/assets/items/expansion_B_icon_manifest.json
+@@ -0,0 +1,83 @@
++{
++  "version": 1,
++  "icons": {
++    "crossfire_pin": {
++      "id": "crossfire_pin",
++      "atlas": "res://assets/items/crossfire_pin.png",
++      "rect": [
++        0,
++        0,
++        64,
++        64
++      ],
++      "name": "\u4ea4\u53c9\u5b9a\u4f4d\u9489",
++      "category": "item",
++      "alpha_bbox": [
++        7,
++        9,
++        50,
++        48
++      ],
++      "source_sha256": "cb484f693183e4b45c7cc817864d3bef521c548fdfab33c56004858a228c82dd",
++      "editable_source": "res://art_source/build_expansion_B/svg/crossfire_pin.svg",
++      "svg_sha256": "f794b202f9b22dd3267c931089fccd6b9352032d2b36c0b76bce206c890d03e1",
++      "alpha_values": [
++        0,
++        255
++      ],
++      "status": "B-art-v1 concept candidate, not implemented runtime claim"
++    },
++    "salvage_capacitor": {
++      "id": "salvage_capacitor",
++      "atlas": "res://assets/items/salvage_capacitor.png",
++      "rect": [
++        0,
++        0,
++        64,
++        64
++      ],
++      "name": "\u56de\u6536\u84c4\u80fd\u5668",
++      "category": "item",
++      "alpha_bbox": [
++        7,
++        2,
++        51,
++        53
++      ],
++      "source_sha256": "db104fe6b3ba8fd93235162141ffecfe39261f59ce83f43258cd806b68439c9b",
++      "editable_source": "res://art_source/build_expansion_B/svg/salvage_capacitor.svg",
++      "svg_sha256": "e71cace9df603e02598118b914bae65ad533e246fac764eb8f35cfaf86b15013",
++      "alpha_values": [
++        0,
++        255
++      ],
++      "status": "B-art-v1 concept candidate, not implemented runtime claim"
++    },
++    "medic_winch": {
++      "id": "medic_winch",
++      "atlas": "res://assets/items/medic_winch.png",
++      "rect": [
++        0,
++        0,
++        64,
++        64
++      ],
++      "name": "\u533b\u7597\u7ede\u76d8",
++      "category": "item",
++      "alpha_bbox": [
++        2,
++        9,
++        58,
++        47
++      ],
++      "source_sha256": "b37a9f835c284a80c353691a94e5e2b9d0ea63be5a71ab1eac11dbda0aaeb5e7",
++      "editable_source": "res://art_source/build_expansion_B/svg/medic_winch.svg",
++      "svg_sha256": "5c815ff15b9fb05754e0ee9b062a814589df949d3291e38b5a02aa1d2259b45f",
++      "alpha_values": [
++        0,
++        255
++      ],
++      "status": "B-art-v1 concept candidate, not implemented runtime claim"
++    }
++  }
++}
+--- a/data/catalog.json
++++ b/data/catalog.json
+@@ -819,6 +819,81 @@
+       "synergy_targets": [],
+       "radius": 100.0,
+       "distance": 55.0
++    },
++    {
++      "id": "crossfire_pin",
++      "name": "Crossfire Pin",
++      "kind": "item",
++      "price": 28,
++      "max_stack": 1,
++      "rarity": "uncommon",
++      "tags": [
++        "control"
++      ],
++      "effects": {},
++      "description": "Mark one living ordinary target for 1.5s; a different weapon type pulls it toward the saved point by up to 45px.",
++      "trigger": "Primary hits from two distinct weapon types",
++      "cost": "1 module slot; no extra damage; other targets cannot replace the active mark",
++      "cooldown": 1.0,
++      "stack_rule": "Unique: maximum 1",
++      "synergy_targets": [],
++      "mark_seconds": 1.5,
++      "pull_distance": 45.0,
++      "requires_distinct_weapon_types": 2
++    },
++    {
++      "id": "salvage_capacitor",
++      "name": "Salvage Capacitor",
++      "kind": "item",
++      "price": 28,
++      "max_stack": 1,
++      "rarity": "uncommon",
++      "tags": [
++        "mobility",
++        "salvage"
++      ],
++      "effects": {},
++      "description": "Three normal pickups charge a dash-origin slow field: 80px, 1.8s, speed factor 0.70. Energy and medical do not charge.",
++      "trigger": "Dash starts with three charges from actual in-combat normal pickups; settlement sweep excluded",
++      "cost": "1 module slot; no damage; bosses and committed charges unaffected; at most two fields",
++      "cooldown": 0,
++      "stack_rule": "Unique: maximum 1",
++      "synergy_targets": [],
++      "charge_limit": 3,
++      "field_radius": 80.0,
++      "field_seconds": 1.8,
++      "field_speed_factor": 0.7,
++      "field_limit": 2,
++      "pickup_sources": [
++        "normal"
++      ]
++    },
++    {
++      "id": "medic_winch",
++      "name": "Medic Winch",
++      "kind": "item",
++      "price": 24,
++      "max_stack": 1,
++      "rarity": "uncommon",
++      "tags": [
++        "salvage"
++      ],
++      "effects": {},
++      "description": "Every five normal pickups pull the nearest medical orb within 220px toward you by up to 80px. Requires medical pickups, currently from Medic Seed. At most one pull per same-step collection batch (\u540c\u4e00\u6279\u6536\u96c6\u6700\u591a\u7275\u5f15\u4e00\u6b21); extra thresholds are spent.",
++      "trigger": "Fifth actual in-combat normal pickup; settlement sweep excluded; chance spent even without medicine",
++      "cost": "1 module slot; no healing, new orb, or remote collection; energy and medical do not count",
++      "cooldown": 0,
++      "stack_rule": "Unique: maximum 1",
++      "synergy_targets": [
++        "medic_seed"
++      ],
++      "pickup_count": 5,
++      "medical_range": 220.0,
++      "pull_distance": 80.0,
++      "pickup_sources": [
++        "normal"
++      ],
++      "max_pulls_per_step": 1
+     }
+   ],
+   "synergies": [
+@@ -968,6 +1043,32 @@
+         "return_collar"
+       ],
+       "description": "A second inward leg over0.45s at half launch damage, once per target. Not Return Disc; longer waves can fill the cap."
++    },
++    {
++      "id": "crossfire_control",
++      "name": "Crossfire Control",
++      "requires": [
++        "crossfire_pin"
++      ],
++      "requires_distinct_weapon_types": 2,
++      "description": "Two different currently equipped weapon types mark then pull one ordinary target. No extra damage; one mark at a time."
++    },
++    {
++      "id": "salvage_field",
++      "name": "Salvage Field",
++      "requires": [
++        "salvage_capacitor"
++      ],
++      "description": "Three actual in-combat normal pickups charge a dash-origin slow field. Medical, energy and settlement rewards excluded. Inventory resets each room."
++    },
++    {
++      "id": "medical_recovery",
++      "name": "Medical Recovery",
++      "requires": [
++        "medic_winch",
++        "medic_seed"
++      ],
++      "description": "Medic Seed supplies existing medical orbs. Every five actual combat normal pickups request one pull; at most one per same batch. No direct healing; no target still spends the request."
+     }
+   ],
+   "affinity_links": [
+--- a/scripts/gameplay/build_forecast.gd
++++ b/scripts/gameplay/build_forecast.gd
+@@ -1,5 +1,6 @@
+ extends RefCounted
+ ## Detached equipped-build projection only. Never a live transaction or combat forecast.
++const BuildItemsProfiles=preload("res://scripts/gameplay/build_items_profiles.gd")
+ const Rules=preload("res://scripts/rules.gd")
+ const WeaponTempering=preload("res://scripts/gameplay/weapon_tempering.gd")
+ const WeaponReadout=preload("res://scripts/weapon_readout.gd")
+@@ -19,6 +20,13 @@
+ 			var requirement:String="a weapon type other than "+Rules.catalog_entry(catalog,excluded_weapon).name
+ 			required.append(requirement)
+ 			if not build.weapons.any(func(id):return id!=excluded_weapon):missing.append(requirement)
++		if pair_data.has("requires_distinct_weapon_types"):
++			var requirement:String="two different currently equipped weapon types"
++			required.append(requirement)
++			var types:Dictionary=BuildItemsProfiles.weapon_types(build.weapons,catalog)
++			var requirement_value:Variant=pair_data.requires_distinct_weapon_types
++			var valid_requirement:bool=(requirement_value is int or requirement_value is float) and is_finite(float(requirement_value)) and float(requirement_value)==2.0
++			if not valid_requirement or not types.valid or types.ids.size()<2:missing.append(requirement)
+ 		var description:String=ScavengerReel.describe(Rules.catalog_entry(catalog,"scavenger_reel")) if pair_data.get("id","")=="scavenger_return" else str(pair_data.description)
+ 		result.append({"name":pair_data.name,"active":missing.is_empty(),"requires":required,"missing":missing,"description":description})
+ 	return result.duplicate(true)
+--- a/scripts/gameplay/build_items_adapter.gd
++++ b/scripts/gameplay/build_items_adapter.gd
+@@ -0,0 +1,18 @@
++extends RefCounted
++## Pure value projection for the trusted internal EffectRuntime boundary only.
++## Does not touch the old event, defaults, command order or enemy dictionaries.
++static func _simple(value:Variant)->bool:
++	return value==null or value is int or value is float or value is bool or value is String or value is Vector2
++static func canonical_event(kind:String,data:Dictionary,epoch:int,sequence:int)->Dictionary:
++	var projected:Dictionary={"kind":kind,"epoch":epoch,"sequence":sequence}
++	for key in ["source","depth"]:
++		var value:Variant=data[key] if data.has(key) else (("normal" if kind=="pickup" else "primary") if key=="source" else 0)
++		if not _simple(value):return {}
++		projected[key]=value
++	var required:Array=["weapon","target"] if kind=="hit" else (["pos"] if kind=="dash" else [])
++	for key in required:
++		if not data.has(key):continue # Missing payload stays missing; helper PRE rejects.
++		var value:Variant=data[key]
++		if not _simple(value):return {}
++		projected[key]=value
++	return projected
+--- a/scripts/gameplay/build_items_profiles.gd
++++ b/scripts/gameplay/build_items_profiles.gd
+@@ -0,0 +1,18 @@
++extends RefCounted
++## Detached data-only projection. No live helper configure/sync or gameplay side effects.
++const Runtime=preload("res://scripts/gameplay/build_items_runtime.gd")
++static func definition(entry:Variant)->Dictionary:
++	if not entry is Dictionary or not entry.get("id") is String:return {}
++	if not str(entry.id) in Runtime.B_IDS:return {}
++	return Runtime._definition(entry).duplicate(true)
++static func weapon_types(weapons:Variant,catalog:Variant)->Dictionary:
++	var invalid:Dictionary={"valid":false,"ids":[]}
++	if not catalog is Dictionary or not catalog.get("weapons") is Array:return invalid
++	var known:Dictionary={}
++	for row in catalog.weapons:
++		if not row is Dictionary or not row.get("id") is String:return invalid
++		if str(row.id).is_empty() or known.has(row.id):return invalid
++		if not row.get("kind") is String or str(row.kind)!="weapon":return invalid
++		if not Runtime._whole(row.get("max_stack"),1):return invalid
++		known[row.id]={"kind":"weapon","max_stack":int(row.max_stack)}
++	return Runtime.distinct_weapon_types(weapons,known).duplicate(true)
+--- a/scripts/gameplay/build_items_readout.gd
++++ b/scripts/gameplay/build_items_readout.gd
+@@ -0,0 +1,59 @@
++extends RefCounted
++## Pure, bounded presentation of the canonical detached B snapshot.
++## Never calls runtime housekeeping, RNG, combat, healing or pickup collection.
++static func describe(snapshot:Dictionary, now:float, enemies:Array)->Dictionary:
++	var out:Dictionary={"rows":[],"pin":{},"fields":[]}
++	var owned:Dictionary=snapshot.get("owned_items",{})
++	var definitions:Dictionary=snapshot.get("definitions",{})
++	if not is_finite(now):return out
++	for id in ["crossfire_pin","salvage_capacitor","medic_winch"]:
++		if int(owned.get(id,0))<=0:continue
++		var profile:Dictionary=definitions.get(id,{})
++		if bool(snapshot.get("configuration_open",true)) or profile.is_empty():
++			out.rows.append({"id":id,"status":"INACTIVE / configuration unavailable","detail":"No active mechanic is implied."})
++			continue
++		match id:
++			"crossfire_pin":
++				var status:String="READY / awaiting first eligible contact"
++				var types:Array=snapshot.get("equipped_types",[])
++				var mark:Variant=snapshot.get("mark")
++				var ready:Variant=snapshot.get("pin_ready_at")
++				if types.size()<int(profile.requires_distinct_weapon_types):
++					status="INACTIVE / needs %d distinct weapon types" % int(profile.requires_distinct_weapon_types)
++				elif mark is Dictionary:
++					var target:Dictionary=_live_target(mark.get("target_id"),enemies)
++					if float(mark.get("expires",0))<=now or target.is_empty() or not types.has(mark.get("weapon")):
++						status="NO VALID MARK / awaiting simulation update"
++					else:
++						status="MARKED / %.2fs left / hit same target with another type" % (float(mark.expires)-now)
++						out.pin={"anchor":mark.position,"target":target.pos}
++				elif ready!=null and float(ready)>now:
++					status="COOLDOWN / %.2fs" % (float(ready)-now)
++				out.rows.append({"id":id,"status":status,"detail":"Pull control only; no added damage. Mark symbol is not a successful pull."})
++			"salvage_capacitor":
++				for field in snapshot.get("fields",[]):
++					if float(field.expires)>now:
++						out.fields.append({"pos":field.pos,"radius":float(profile.field_radius)})
++				var charges:int=int(snapshot.get("charges",0))
++				var status:String="CHARGING" if charges<int(profile.charge_limit) else "READY / next real dash spends charge"
++				out.rows.append({"id":id,"status":"%s / %d/%d / fields %d/%d" % [status,charges,int(profile.charge_limit),out.fields.size(),int(profile.field_limit)],"detail":"Normal combat pickups charge it. Field: %.0f%% movement speed, no damage; bosses and charging enemies excluded." % (100.0*float(profile.field_speed_factor))})
++			"medic_winch":
++				var status:String="PICKUPS %d/%d" % [int(snapshot.get("winch_count",0)),int(profile.pickup_count)]
++				if snapshot.get("pending")!=null:status+=" / pull queued for this batch"
++				out.rows.append({"id":id,"status":status,"detail":"NEEDS MEDICAL PICKUPS (currently Medic Seed). Normal combat pickups count; at most one pull per collection batch. Moves medicine only: no direct healing, creation or collection; no medicine still spends threshold."})
++	return out
++
++static func _live_target(id:Variant,enemies:Array)->Dictionary:
++	if not id is int or id<=0:return {}
++	var found:Dictionary={}
++	var matches:int=0
++	for enemy in enemies:
++		if not enemy is Dictionary or not enemy.get("id") is int or enemy.id!=id:continue
++		matches+=1
++		found=enemy
++	if matches!=1:return {}
++	if not (found.get("hp") is float or found.get("hp") is int):return {}
++	if not is_finite(float(found.hp)) or float(found.hp)<=0:return {}
++	if not found.get("boss") is bool or bool(found.boss):return {}
++	if not found.get("pos") is Vector2 or not found.pos.is_finite():return {}
++	return found
+--- a/scripts/gameplay/build_items_runtime.gd
++++ b/scripts/gameplay/build_items_runtime.gd
+@@ -0,0 +1,338 @@
++extends RefCounted
++## B-only bounded state/control helper. No scene, RNG, damage, collection or event emission.
++const MOTION_EPSILON:=0.00001
++const B_IDS:=["crossfire_pin","salvage_capacitor","medic_winch"]
++var configuration_open:=true
++var registry:Dictionary={}
++var slot_caps:Dictionary={}
++var definitions:Dictionary={"crossfire_pin":{},"salvage_capacitor":{},"medic_winch":{}}
++var owned_items:Dictionary={}
++var weapon_counts:Dictionary={}
++var equipped_types:Array=[]
++var mark:Variant=null
++var pin_ready_at:Variant=null
++var charges:=0
++var fields:Array=[]
++var next_field_sequence:=0
++var winch_count:=0
++var pending:Variant=null
++var winch_requested_this_batch:=false
++var bound_epoch:=-1
++var last_sequence:=0
++var last_now:=0.0
++var last_step_serial:=-1
++var batch_serial:=-1
++var batch_time:=0.0
++var batch_open:=false
++
++static func _number(value:Variant)->bool:
++	return (value is int or value is float) and is_finite(float(value))
++static func _positive(value:Variant)->bool:
++	return _number(value) and float(value)>0.0
++static func _whole(value:Variant,minimum:int=0)->bool:
++	if value is int:return value>=minimum
++	return value is float and is_finite(value) and value>=float(minimum) and value<=9223372036854774784.0 and floorf(value)==value
++static func _integer(value:Variant,minimum:int=0)->bool:
++	return value is int and value>=minimum
++static func _vector(value:Variant)->bool:
++	return value is Vector2 and is_finite(value.x) and is_finite(value.y)
++static func _area(area:Variant)->bool:
++	if not area is Dictionary:return false
++	for key in ["width","height"]:
++		if not _positive(area.get(key)) or float(area[key])<=40.0:return false
++	return _vector(Vector2(float(area.width)-20.0,float(area.height)-20.0))
++func _time(now:Variant)->bool:
++	return _number(now) and float(now)>=0.0 and float(now)>=last_now
++static func _future(now:float,duration:float)->Variant:
++	var result:float=now+duration
++	return result if is_finite(result) and result>now else null
++
++func configure(catalog:Variant)->Dictionary:
++	var errors:Array=[]
++	if not configuration_open:return {"ok":false,"errors":["configuration window closed"]}
++	if not catalog is Dictionary:return {"ok":false,"errors":["catalog must be dictionary"]}
++	if not catalog.get("weapons") is Array or not catalog.get("items") is Array:return {"ok":false,"errors":["catalog lists required"]}
++	if not _whole(catalog.get("weapon_slots"),1) or not _whole(catalog.get("item_slots"),1):return {"ok":false,"errors":["invalid slot counts"]}
++	if int(catalog.weapon_slots)!=4 or int(catalog.item_slots)!=8:return {"ok":false,"errors":["B preserves four weapon/eight item slots"]}
++	var next_registry:Dictionary={}
++	var next_definitions:Dictionary={"crossfire_pin":{},"salvage_capacitor":{},"medic_winch":{}}
++	var seen:Dictionary={}
++	for list_key in ["weapons","items"]:
++		var expected_kind:String="weapon" if list_key=="weapons" else "item"
++		for value in catalog[list_key]:
++			if not value is Dictionary:errors.append("entry must be dictionary");continue
++			var entry:Dictionary=value
++			if not entry.get("id") is String or str(entry.id).is_empty():errors.append("invalid ID");continue
++			var id:String=entry.id
++			if seen.has(id):errors.append("duplicate ID "+id);continue
++			seen[id]=true
++			if not entry.get("kind") is String or str(entry.kind)!=expected_kind:errors.append("wrong registry kind "+id);continue
++			if not _whole(entry.get("max_stack"),1):errors.append("invalid max stack "+id);continue
++			next_registry[id]={"kind":expected_kind,"max_stack":int(entry.max_stack)}
++			if id in B_IDS:
++				var definition:Dictionary=_definition(entry)
++				if definition.is_empty():errors.append("invalid B definition "+id)
++				else:next_definitions[id]=definition
++	if not errors.is_empty():return {"ok":false,"errors":errors}
++	registry=next_registry;definitions=next_definitions;slot_caps={"weapons":4,"items":8}
++	configuration_open=false
++	return {"ok":true,"errors":[]}
++
++static func _definition(entry:Dictionary)->Dictionary:
++	if not entry.get("kind") is String or str(entry.kind)!="item":return {}
++	if not _whole(entry.get("max_stack"),1) or int(entry.max_stack)!=1:return {}
++	if not _whole(entry.get("price"),0):return {}
++	if not entry.get("effects") is Dictionary or not entry.effects.is_empty():return {}
++	var id:String=entry.id
++	var result:Dictionary={}
++	var positive_keys:Array=[]
++	match id:
++		"crossfire_pin":
++			if not _whole(entry.get("requires_distinct_weapon_types"),1) or int(entry.requires_distinct_weapon_types)!=2:return {}
++			result.requires_distinct_weapon_types=2
++			positive_keys=["mark_seconds","pull_distance","cooldown"]
++		"salvage_capacitor":
++			if not _whole(entry.get("charge_limit"),1) or int(entry.charge_limit)!=3:return {}
++			if not _whole(entry.get("field_limit"),1) or int(entry.field_limit)!=2:return {}
++			result.charge_limit=3;result.field_limit=2
++			positive_keys=["field_radius","field_seconds","field_speed_factor"]
++			if not _positive(entry.get("field_speed_factor")) or float(entry.field_speed_factor)>1.0:return {}
++		"medic_winch":
++			if not _whole(entry.get("pickup_count"),1) or int(entry.pickup_count)!=5:return {}
++			if not _whole(entry.get("max_pulls_per_step"),1) or int(entry.max_pulls_per_step)!=1:return {}
++			result.pickup_count=5;result.max_pulls_per_step=1
++			positive_keys=["medical_range","pull_distance"]
++		_:return {}
++	for key in positive_keys:
++		if not _positive(entry.get(key)):return {}
++		result[key]=float(entry[key])
++	if id!="crossfire_pin":
++		if not entry.get("pickup_sources") is Array or entry.pickup_sources.size()!=1:return {}
++		if not entry.pickup_sources[0] is String or str(entry.pickup_sources[0])!="normal":return {}
++		result.pickup_sources=["normal"]
++	return result
++
++func clear_run(authoritative_epoch:Variant)->bool:
++	if not _integer(authoritative_epoch):return false
++	configuration_open=true;owned_items={};weapon_counts={};equipped_types=[]
++	mark=null;pin_ready_at=null;charges=0;fields=[];next_field_sequence=0;winch_count=0;pending=null
++	winch_requested_this_batch=false;bound_epoch=authoritative_epoch;last_sequence=0;last_now=0.0
++	last_step_serial=-1;batch_serial=-1;batch_time=0.0;batch_open=false
++	return true
++func bind_epoch(authoritative_epoch:Variant,now:Variant)->bool:
++	if not _integer(authoritative_epoch) or int(authoritative_epoch)<bound_epoch or not _time(now):return false
++	if int(authoritative_epoch)>bound_epoch:cancel_pending()
++	bound_epoch=int(authoritative_epoch);last_now=float(now)
++	return true
++
++static func distinct_weapon_types(weapons:Variant,known:Dictionary)->Dictionary:
++	var invalid:Dictionary={"valid":false,"ids":[]}
++	if not weapons is Array or weapons.size()>4:return invalid
++	var counts:Dictionary={}
++	for id in weapons:
++		if not id is String or str(id).is_empty() or not known.has(id):return invalid
++		var entry:Variant=known[id]
++		if not entry is Dictionary or not entry.get("kind") is String or str(entry.kind)!="weapon":return invalid
++		if not _integer(entry.get("max_stack"),1):return invalid
++		counts[id]=int(counts.get(id,0))+1
++		if counts[id]>entry.max_stack:return invalid
++	var ids:Array=counts.keys();ids.sort()
++	return {"valid":true,"ids":ids}
++
++func sync_build(items:Variant,weapons:Variant,now:Variant)->bool:
++	if configuration_open or not _time(now) or not items is Dictionary or items.size()>8:return false
++	var normalized_items:Dictionary={}
++	for id in items:
++		if not id is String or str(id).is_empty() or not registry.has(id):return false
++		if str(registry[id].kind)!="item" or not _whole(items[id],1):return false
++		if int(items[id])>int(registry[id].max_stack):return false
++		normalized_items[id]=int(items[id])
++	var types:Dictionary=distinct_weapon_types(weapons,registry)
++	if not types.valid:return false
++	var counts:Dictionary={}
++	for id in weapons:counts[id]=int(counts.get(id,0))+1
++	owned_items=normalized_items;weapon_counts=counts;equipped_types=types.ids;last_now=float(now)
++	if mark!=null and (not _pin_enabled() or not equipped_types.has(mark.weapon)):_consume_mark(last_now)
++	if not owned_items.has("salvage_capacitor"):charges=0;fields=[]
++	if not owned_items.has("medic_winch"):winch_count=0;pending=null
++	return true
++func _pin_enabled()->bool:
++	return owned_items.has("crossfire_pin") and not definitions.crossfire_pin.is_empty() and equipped_types.size()>=int(definitions.crossfire_pin.requires_distinct_weapon_types)
++
++func cancel_pending()->void:
++	batch_open=false;pending=null;winch_requested_this_batch=false
++func reset_encounter(now:Variant)->bool:
++	if not _time(now):return false
++	last_now=float(now);mark=null;charges=0;fields=[];winch_count=0
++	cancel_pending()
++	return true
++func begin_step(now:Variant,serial:Variant,enemies:Variant,area:Variant)->bool:
++	if configuration_open or bound_epoch<0 or not _time(now) or not _integer(serial) or int(serial)<=last_step_serial:return false
++	if not enemies is Array or not area is Dictionary:return false
++	last_now=float(now);last_step_serial=int(serial);batch_serial=int(serial);batch_time=last_now
++	batch_open=true;pending=null;winch_requested_this_batch=false
++	var alive_fields:Array=[]
++	for field in fields:
++		if _number(field.get("expires")) and float(field.expires)>last_now and _vector(field.get("pos")):alive_fields.append(field)
++	fields=alive_fields
++	_housekeep_pin(last_now,enemies)
++	return true
++
++static func _target(id:Variant,enemies:Array)->Dictionary:
++	if not _integer(id,1):return {}
++	var found:Dictionary={}
++	var matches:=0
++	for value in enemies:
++		if not value is Dictionary:continue
++		if not _integer(value.get("id"),1) or int(value.id)!=int(id):continue
++		matches+=1;found=value
++	if matches!=1:return {}
++	if not _positive(found.get("hp")) or not found.get("boss") is bool or bool(found.boss):return {}
++	if not _vector(found.get("pos")):return {}
++	return found
++func _consume_mark(now:float)->bool:
++	mark=null
++	if definitions.crossfire_pin.is_empty():return false
++	var future:Variant=_future(now,float(definitions.crossfire_pin.cooldown))
++	if future==null:return false
++	pin_ready_at=float(future)
++	return true
++func _housekeep_pin(now:float,enemies:Array)->bool:
++	if mark==null:return false
++	if not _pin_enabled() or not equipped_types.has(mark.weapon) or not _number(mark.expires) or now>=float(mark.expires) or _target(mark.target_id,enemies).is_empty():
++		_consume_mark(now)
++		return true
++	return false
++
++func _context(context:Variant,allow_nonplaying:bool=false)->bool:
++	if not context is Dictionary:return false
++	if not context.get("playing") is bool:return false
++	if not allow_nonplaying and not bool(context.playing):return false
++	if not _time(context.get("time")) or not _integer(context.get("effect_epoch")) or int(context.effect_epoch)!=bound_epoch:return false
++	if not _integer(context.get("step_serial")) or not _vector(context.get("player_pos")):return false
++	if not context.get("dash_active") is bool or not context.get("enemies") is Array or not context.get("area") is Dictionary:return false
++	return true
++func _admitted(event:Variant,context:Variant)->bool:
++	if configuration_open or bound_epoch<0 or not _context(context) or not event is Dictionary:return false
++	if not event.get("kind") is String or not event.get("source") is String or not event.get("depth") is int:return false
++	if not _integer(event.get("epoch")) or int(event.epoch)!=bound_epoch:return false
++	if not _integer(event.get("sequence"),1) or int(event.sequence)<=last_sequence:return false
++	if str(event.kind)=="hit" and (not event.get("weapon") is String or not event.get("target") is int):return false
++	if str(event.kind)=="dash" and not _vector(event.get("pos")):return false
++	return true
++func process(event:Variant,context:Variant)->Array:
++	if not _admitted(event,context):return []
++	last_sequence=int(event.sequence);last_now=float(context.time)
++	var kind:String=event.kind
++	if kind in ["hit","pickup"] and (not batch_open or int(context.step_serial)!=batch_serial or float(context.time)!=batch_time):return []
++	var cleared_mark:bool=_housekeep_pin(last_now,context.enemies)
++	if int(event.depth)!=0:return []
++	match kind:
++		"hit":
++			if str(event.source)!="primary" or not _pin_enabled() or cleared_mark:return []
++			var weapon:String=event.weapon
++			if weapon.is_empty() or not equipped_types.has(weapon) or not registry.has(weapon):return []
++			var enemy:Dictionary=_target(event.target,context.enemies)
++			if enemy.is_empty():return []
++			if mark!=null:
++				if int(mark.target_id)!=int(event.target) or str(mark.weapon)==weapon:return []
++				var anchor:Vector2=mark.position
++				if not _consume_mark(last_now):return []
++				return [{"kind":"pin_pull","target_id":int(event.target),"anchor":anchor,"distance":float(definitions.crossfire_pin.pull_distance),"source_item":"crossfire_pin"}]
++			if pin_ready_at!=null and last_now<float(pin_ready_at):return []
++			var expires:Variant=_future(last_now,float(definitions.crossfire_pin.mark_seconds))
++			if expires==null:return []
++			mark={"target_id":int(event.target),"weapon":weapon,"position":enemy.pos,"expires":float(expires)}
++		"pickup":
++			if str(event.source)!="normal":return []
++			if owned_items.has("salvage_capacitor") and not definitions.salvage_capacitor.is_empty():charges=mini(int(definitions.salvage_capacitor.charge_limit),charges+1)
++			if owned_items.has("medic_winch") and not definitions.medic_winch.is_empty():
++				winch_count+=1
++				if winch_count>=int(definitions.medic_winch.pickup_count):
++					winch_count=0
++					if not winch_requested_this_batch:
++						winch_requested_this_batch=true
++						pending={"origin":context.player_pos,"serial":batch_serial,"time":batch_time}
++		"dash":
++			if str(event.source)!="primary" or not bool(context.dash_active):return []
++			if not owned_items.has("salvage_capacitor") or definitions.salvage_capacitor.is_empty():return []
++			var profile:Dictionary=definitions.salvage_capacitor
++			if charges<int(profile.charge_limit):return []
++			charges=0
++			if not _area(context.area):return []
++			var expires:Variant=_future(last_now,float(profile.field_seconds))
++			if expires==null or next_field_sequence==9223372036854775807:return []
++			next_field_sequence+=1
++			if fields.size()>=int(profile.field_limit):fields.pop_front()
++			fields.append({"pos":event.pos,"expires":float(expires),"sequence":next_field_sequence})
++			return [{"kind":"salvage_field_created","sequence":next_field_sequence,"pos":event.pos,"radius":float(profile.field_radius),"expires":float(expires),"source_item":"salvage_capacitor"}]
++	return []
++
++func movement_factor(enemy:Variant,now:Variant,area:Variant)->float:
++	if configuration_open or not _time(now) or not _area(area) or not enemy is Dictionary:return 1.0
++	if not owned_items.has("salvage_capacitor") or definitions.salvage_capacitor.is_empty():return 1.0
++	if not _positive(enemy.get("hp")) or not enemy.get("boss") is bool or bool(enemy.boss):return 1.0
++	if not enemy.get("ai_state") is String or str(enemy.ai_state) not in ["move","warning","recover"] or not _vector(enemy.get("pos")):return 1.0
++	var radius:float=definitions.salvage_capacitor.field_radius
++	var radius_squared:float=radius*radius
++	if not is_finite(radius_squared):return 1.0
++	for field in fields:
++		if float(now)>=float(field.expires):continue
++		var distance_squared:float=enemy.pos.distance_squared_to(field.pos)
++		if is_finite(distance_squared) and distance_squared<=radius_squared:return float(definitions.salvage_capacitor.field_speed_factor)
++	return 1.0
++
++func apply_control(command:Variant,enemies:Variant,area:Variant)->Dictionary:
++	var failure:Dictionary={"moved":false,"target_id":-1,"from":Vector2.ZERO,"to":Vector2.ZERO,"reason":"invalid control"}
++	if configuration_open or not command is Dictionary or not enemies is Array or not _area(area):return failure
++	if not command.get("kind") is String or str(command.kind)!="pin_pull" or not _integer(command.get("target_id"),1):return failure
++	if not command.get("source_item") is String or str(command.source_item)!="crossfire_pin":return failure
++	if not _vector(command.get("anchor")) or not _positive(command.get("distance")):return failure
++	var enemy:Dictionary=_target(command.target_id,enemies)
++	if enemy.is_empty():return failure
++	var origin:Vector2=enemy.pos
++	var anchor:Vector2=command.anchor
++	var old_distance:float=origin.distance_to(anchor)
++	if not is_finite(old_distance):return failure
++	var candidate:Vector2=origin.move_toward(anchor,float(command.distance)).clamp(Vector2(20,20),Vector2(float(area.width)-20,float(area.height)-20))
++	if not _vector(candidate):return failure
++	var moved_distance:float=origin.distance_to(candidate)
++	var new_distance:float=candidate.distance_to(anchor)
++	if not is_finite(moved_distance) or not is_finite(new_distance):return failure
++	if moved_distance>float(command.distance)+MOTION_EPSILON or new_distance>old_distance+MOTION_EPSILON:return failure
++	if moved_distance==0.0 or (old_distance==0.0 and candidate!=origin):return failure
++	enemy.pos=candidate
++	return {"moved":true,"target_id":int(command.target_id),"from":origin,"to":candidate,"reason":"moved"}
++
++func flush_pickups(context:Variant,pickups:Variant)->Dictionary:
++	var result:Dictionary={"accepted":false,"moved_index":-1,"reason":"invalid batch"}
++	if configuration_open or not pickups is Array or not _context(context,true) or not batch_open:return result
++	if int(context.step_serial)!=batch_serial or float(context.time)!=batch_time:return result
++	batch_open=false
++	var request:Variant=pending
++	pending=null
++	result.accepted=true;result.reason="no movement"
++	if not bool(context.playing) or request==null or not _area(context.area):return result
++	if not owned_items.has("medic_winch") or definitions.medic_winch.is_empty():return result
++	var origin:Vector2=request.origin
++	var profile:Dictionary=definitions.medic_winch
++	var reach_squared:float=float(profile.medical_range)*float(profile.medical_range)
++	if not is_finite(reach_squared):return result
++	var selected:=-1
++	var nearest:=INF
++	for i in range(pickups.size()):
++		var pickup:Variant=pickups[i]
++		if not pickup is Dictionary or not pickup.get("source") is String or str(pickup.source)!="medical" or not _vector(pickup.get("pos")):continue
++		var distance_squared:float=pickup.pos.distance_squared_to(origin)
++		if not is_finite(distance_squared) or distance_squared>reach_squared:continue
++		if distance_squared<nearest:nearest=distance_squared;selected=i
++	if selected<0:return result
++	var before:Vector2=pickups[selected].pos
++	var after:Vector2=before.move_toward(origin,float(profile.pull_distance))
++	if not _vector(after) or before==after:return result
++	pickups[selected].pos=after
++	result.moved_index=selected;result.reason="moved"
++	return result
++
++func debug_snapshot()->Dictionary:
++	return {"configuration_open":configuration_open,"registry":registry,"slot_caps":slot_caps,"definitions":definitions,"owned_items":owned_items,"weapon_counts":weapon_counts,"equipped_types":equipped_types,"mark":mark,"pin_ready_at":pin_ready_at,"charges":charges,"fields":fields,"next_field_sequence":next_field_sequence,"winch_count":winch_count,"pending":pending,"winch_requested_this_batch":winch_requested_this_batch,"bound_epoch":bound_epoch,"last_sequence":last_sequence,"last_now":last_now,"last_step_serial":last_step_serial,"batch_serial":batch_serial,"batch_time":batch_time,"batch_open":batch_open}.duplicate(true)
+--- a/scripts/gameplay/build_items_visuals.gd
++++ b/scripts/gameplay/build_items_visuals.gd
+@@ -0,0 +1,23 @@
++extends RefCounted
++## Editable original code geometry; draw in the existing world CanvasItem.
++## No CanvasLayer, hit area or input node. HUD/modal layers remain authoritative.
++static func draw(canvas:CanvasItem, view:Dictionary, reduced:bool)->void:
++	var field_color:=Color(.48,.72,.57,.22 if reduced else .38)
++	for field in view.get("fields",[]):
++		# Outline only: never cover actors or imply an old damaging hazard.
++		canvas.draw_arc(field.pos,float(field.radius),0,TAU,48,field_color,1.5)
++		for angle in [0.0,PI*.5,PI,PI*1.5]:
++			var point:Vector2=field.pos+Vector2.from_angle(angle)*float(field.radius)
++			canvas.draw_line(point-Vector2(2,0),point+Vector2(2,0),field_color,1)
++	var pin:Dictionary=view.get("pin",{})
++	if pin.is_empty():return
++	var tint:=Color(.88,.72,.41,.42 if reduced else .66)
++	var anchor:Vector2=pin.anchor
++	var target:Vector2=pin.target
++	# Small square anchor and four corner ticks, unlike circular priority focus.
++	canvas.draw_rect(Rect2(anchor-Vector2(3,3),Vector2(6,6)),tint,false,1)
++	for side in [-1.0,1.0]:
++		for vertical in [-1.0,1.0]:
++			var corner:Vector2=target+Vector2(side*12,vertical*12)
++			canvas.draw_line(corner,corner-Vector2(side*4,0),tint,1.5)
++			canvas.draw_line(corner,corner-Vector2(0,vertical*4),tint,1.5)
+--- a/scripts/gameplay/combat_runtime.gd
++++ b/scripts/gameplay/combat_runtime.gd
+@@ -18,6 +18,7 @@
+ 	_prune_focus(frame.world)
+ 	frame.procs.recoil_area=frame.area
+ 	frame.world.combat_tick_serial+=1
++	frame.procs.begin_build_items_step(frame.area)
+ 	frame.world.new_weapon_motion.clear()
+ 	for prep_slot in range(frame.session.build.weapons.size()):
+ 		var soon:float=frame.world.weapon_clocks[prep_slot]
+@@ -40,7 +41,7 @@
+ 	for e in frame.world.enemies:
+ 		if e.hp <= 0: continue
+ 		var normal_speed: float = e.speed
+-		e.speed *= Status.movement_factor(e,frame.session.elapsed)
++		e.speed *= minf(Status.movement_factor(e,frame.session.elapsed),frame.procs.build_items.movement_factor(e,frame.session.elapsed,frame.area))
+ 		var previous_ai:String=e.ai_state
+ 		var motion_start:Vector2=e.pos
+ 		var events: Array = EnemyAI.tick(e,frame.world.player_pos,dt,frame.session.elapsed)
+@@ -153,6 +154,8 @@
+ 	for i in range(frame.world.flashes.size() - 1, -1, -1):
+ 		frame.world.flashes[i].life -= dt
+ 		if frame.world.flashes[i].life <= 0: frame.world.flashes.remove_at(i)
++	# Item B defers medicine movement until the entire collection pass is over.
++	frame.procs.flush_build_items_pickups()
+ 	# B: all existing projectile, death and pickup callbacks precede repair.
+ 	var support_events:Array=EnemySupport.settle(frame.world.enemies,support_due,frame.session.state=="playing")
+ 	for event in support_events:
+--- a/scripts/gameplay/effect_runtime.gd
++++ b/scripts/gameplay/effect_runtime.gd
+@@ -1,4 +1,7 @@
+ extends RefCounted
++const BuildItemsRuntime=preload("res://scripts/gameplay/build_items_runtime.gd")
++const BuildItemsAdapter=preload("res://scripts/gameplay/build_items_adapter.gd")
++var build_items=BuildItemsRuntime.new()
+ const RecoilPlate=preload("res://scripts/gameplay/recoil_plate.gd")
+ # Injected by main and refreshed from the actual combat frame; empty fails closed.
+ var recoil_area:Dictionary={}
+@@ -20,7 +23,9 @@
+ 	return engine.can_feedback(float(world.stats.get("dash_time",0.0)) > 0)
+ 
+ func emit_event(kind: String, data: Dictionary) -> bool:
+-	if session.state != "playing": return false
++	if session.state != "playing":
++		build_items.cancel_pending()
++		return false
+ 	if kind == "hit": play_vfx.call("hit_spark",data.pos)
+ 	elif kind == "dash":
+ 		actor.trigger(0,"dash",float(world.stats.dash_time) if world.stats.dash_time>0 else .16)
+@@ -133,6 +138,12 @@
+ 				var same: Array = world.hazards.filter(func(h): return h.kind == command.kind)
+ 				if same.size() >= maximum: world.hazards.erase(same[0])
+ 				world.hazards.append({"kind":command.kind,"pos":command.pos,"life":5.0 if command.kind == "mine" else 2.4,"age":0.0,"tick":0.0,"radius":70.0,"slow":command.get("slow",false)})
++	# B observes the real world only after every old/A command has applied.
++	if session.state == "playing" and build_items.bind_epoch(engine.epoch,session.elapsed):
++		var canonical:Dictionary=BuildItemsAdapter.canonical_event(kind,data,int(event.epoch),int(event.sequence))
++		for control in build_items.process(canonical,build_items_context()):
++			build_items.apply_control(control,world.enemies,recoil_area)
++	else:build_items.cancel_pending()
+ 	return blocked
+ 
+ func advance_hazards(dt: float) -> void:
+@@ -180,3 +191,26 @@
+ 		emit_event("mortar",{"pos":blast.pos})
+ 		world.effect_visuals.append({"kind":"mortar","pos":blast.pos,"radius":blast.radius,"life":.25})
+ 		world.pending_blasts.remove_at(i)
++
++# B-only lifecycle bridge; no changes to old Effects reset/sync or event sequence.
++func build_items_context()->Dictionary:
++	return {"playing":session.state=="playing","time":session.elapsed,"effect_epoch":engine.epoch,"step_serial":world.combat_tick_serial,"player_pos":world.player_pos,"dash_active":float(world.stats.get("dash_time",0.0))>0,"enemies":world.enemies,"area":recoil_area}
++func start_build_items(catalog:Dictionary)->bool:
++	if not build_items.clear_run(engine.epoch):return false
++	if not build_items.configure(catalog).ok:return false
++	return build_items.sync_build(session.build.items,session.build.weapons,session.elapsed)
++func sync_build_items()->bool:
++	if not build_items.bind_epoch(engine.epoch,session.elapsed):return false
++	return build_items.sync_build(session.build.items,session.build.weapons,session.elapsed)
++func reset_build_items_encounter()->void:
++	build_items.reset_encounter(session.elapsed)
++	build_items.bind_epoch(engine.epoch,session.elapsed)
++func begin_build_items_step(area:Dictionary)->void:
++	recoil_area=area
++	if session.state!="playing":
++		build_items.cancel_pending()
++		return
++	if build_items.bind_epoch(engine.epoch,session.elapsed):
++		build_items.begin_step(session.elapsed,world.combat_tick_serial,world.enemies,area)
++func flush_build_items_pickups()->Dictionary:
++	return build_items.flush_pickups(build_items_context(),world.pickups)
+--- a/scripts/main.gd
++++ b/scripts/main.gd
+@@ -1,5 +1,7 @@
+ extends Node2D
+ const NewWeaponRuntime=preload("res://scripts/gameplay/new_weapon_runtime.gd")
++const BuildItemsReadout=preload("res://scripts/gameplay/build_items_readout.gd")
++const BuildItemsVisuals=preload("res://scripts/gameplay/build_items_visuals.gd")
+ const NewWeaponVisuals=preload("res://scripts/gameplay/new_weapon_visuals.gd")
+ var new_weapon_runtime=NewWeaponRuntime.new()
+ const ScavengerReel=preload("res://scripts/gameplay/scavenger_reel.gd")
+@@ -280,6 +282,7 @@
+ 
+ 
+ func _title() -> void:
++	if effect_runtime:effect_runtime.reset_build_items_encounter()
+ 	new_weapon_runtime.clear(combat)
+ 	_stop_feedback_audio()
+ 	combat.focus_enemy_id=0
+@@ -375,6 +378,7 @@
+ 	resume_state="playing"
+ 	wave_time = 0.0
+ 	elapsed = 0.0
++	effect_runtime.start_build_items(catalog)
+ 	spawn_clock = 0.0
+ 	shot_clock = 0.0
+ 	hurt_clock = 0.0
+@@ -595,6 +599,7 @@
+ 	var retiring:Array=enemies.duplicate()
+ 	var outcome:=RunFlow.settle(combat,run,mode,config,effects,encounters)
+ 	if outcome in ["invalid","ignored"]:return
++	effect_runtime.reset_build_items_encounter()
+ 	_stop_feedback_audio()
+ 	vfx.clear();telegraphs.show_markers([])
+ 	actor_anim.clear(true,true)
+@@ -612,6 +617,7 @@
+ 
+ 
+ func _show_upgrades() -> void:
++	if effect_runtime:effect_runtime.build_items.cancel_pending()
+ 	_stop_feedback_audio()
+ 	effects.invalidate()
+ 	state = "upgrade"
+@@ -658,6 +664,7 @@
+ 		_hide_modal()
+ 
+ func _finish(won: bool) -> void:
++	if effect_runtime:effect_runtime.reset_build_items_encounter()
+ 	new_weapon_runtime.clear(combat)
+ 	_stop_feedback_audio()
+ 	combat.focus_enemy_id=0
+@@ -708,6 +715,7 @@
+ 	if (not build.is_empty() and "bankshot_driver" in build.weapons) or bullets.any(func(b):return b.get("behavior","")=="field_bankshot"):
+ 		# Additive inset cue; the pre-existing general field outline above is unchanged.
+ 		draw_rect(Rect2(3,3,config.arena.width-6,config.arena.height-6),Color(1,.78,.35,.32 if settings.reduced_flashes else .52),false,1.5)
++	if state not in ["title","dead","won"]:BuildItemsVisuals.draw(self,_build_items_view(),settings.reduced_flashes)
+ 	if state not in ["title","dead","won"]:NewWeaponVisuals.draw(self,combat,settings.reduced_flashes)
+ 	for blast in pending_blasts:
+ 		draw_circle(blast.pos,blast.radius,Color(.65,.8,1,.8),false,2)
+@@ -813,6 +821,7 @@
+ 	while weapon_clocks.size() < build.weapons.size(): weapon_clocks.append(0.0)
+ 	weapon_clocks.resize(build.weapons.size())
+ 	effects.sync(build.items)
++	effect_runtime.sync_build_items()
+ 	if not build.items.has("medic_seed"): pickups = pickups.filter(func(p): return p.get("source","") != "medical")
+ 	hazards = hazards.filter(func(h): return build.items.has("dash_resin" if h.kind == "trail" else ("blast_fuse" if h.kind == "scorch" else "scrap_mine")))
+ 	if not effects.pair("dash_resin","pulse_boots"):
+@@ -845,6 +854,7 @@
+ 	return true
+ 
+ func _open_shop() -> void:
++	if effect_runtime:effect_runtime.build_items.cancel_pending()
+ 	_stop_feedback_audio()
+ 	state = "shop"
+ 	shop_pending = false
+@@ -926,6 +936,7 @@
+ 		build.weapon_temper[slot] = build.weapon_temper[target]
+ 		build.weapon_temper[target] = moved_tier
+ 	weapon_rig.swap_copies(slot,target)
++	effect_runtime.sync_build_items()
+ 	build.revision += 1
+ 	shop_generation += 1
+ 	shop_message = "%s moved to SLOT %d. Free; remaining cooldown follows its copy." % [Rules.catalog_entry(catalog,moved_id).name,target+1]
+@@ -967,6 +978,7 @@
+ 	build.weapon_temper = projected.weapon_temper
+ 	weapon_clocks.remove_at(donor)
+ 	weapon_rig.consume_copy(donor)
++	effect_runtime.sync_build_items()
+ 	# Only weapon-derived stats change. Do not sync effects or clean up hazards.
+ 	var hp: float = stats.hp
+ 	var dash: float = stats.get("dash_time",0.0)
+@@ -1034,6 +1046,7 @@
+ func _view() -> Dictionary:
+ 	if build.is_empty(): return {"seed":run_seed,"settings":settings.duplicate(true),"feedback_audio":_feedback_audio_view(),"mode_id":mode.id,"mode_name":mode.name,"objective":""}
+ 	var view := {"coins":build.coins,"wave":wave,"level":level,"hp":stats.hp,"max_hp":stats.max_hp,"xp":xp,"xp_max":Rules.xp_threshold(level),"time":elapsed,"kills":kills,"seed":run_seed,"stats":stats,"weapons":[],"items":[],"synergies":stats.synergies,"generation":shop_generation,"refresh_price":catalog.refresh_price,"weapon_slots":catalog.weapon_slots,"item_slots":catalog.item_slots,"message":shop_message,"offers":[],"rewards":rewards,"synergy_status":[],"mechanics":{"shield":effects.shield,"chain_charges":effects.chain_charges,"hazards":hazards.size(),"echo_hits":effects.echo_hits,"phase_charge":effects.phase_charge,"medic_damage":effects.medic_damage,"cooldowns":{}}}
++	view.build_items=_build_items_view()
+ 	view.focus=_focus_view()
+ 	view.starting_loadout=StartingLoadouts.entry(starting_loadouts,catalog,run.starting_loadout_id)
+ 	view.mode_id=mode.id
+@@ -1198,12 +1211,14 @@
+ 				else: _hide_modal()
+ 
+ func _present_inventory() -> void:
++	if effect_runtime:effect_runtime.build_items.cancel_pending()
+ 	_stop_feedback_audio()
+ 	effects.invalidate()
+ 	ui.show_inventory(_view())
+ 
+ 
+ func _present_pause() -> void:
++	if effect_runtime:effect_runtime.build_items.cancel_pending()
+ 	_stop_feedback_audio()
+ 	effects.invalidate()
+ 	ui.show_pause(_view())
+@@ -1224,6 +1239,7 @@
+ 
+ 
+ func _clear_transients() -> void:
++	if effect_runtime:effect_runtime.build_items.cancel_pending()
+ 	visual_cooldowns.clear()
+ 	vfx.clear()
+ 	telegraphs.show_markers([])
+@@ -1357,6 +1373,7 @@
+ 	camera.position=FieldLayout.camera_position(player_pos,config.arena)
+ func _begin_room_clear()->void:
+ 	if state!="playing":return
++	effect_runtime.build_items.cancel_pending()
+ 	new_weapon_runtime.clear(combat)
+ 	_stop_feedback_audio()
+ 	combat.focus_enemy_id=0
+@@ -1365,3 +1382,10 @@
+ 	_clear_transients()
+ 	weapon_rig.clear()
+ 	actor_anim.set_phase(0,"idle")
++
++func _build_items_view()->Dictionary:
++	if build.is_empty() or effect_runtime==null:return {"rows":[],"pin":{},"fields":[]}
++	var owned:Dictionary=build.get("items",{})
++	if not owned.has("crossfire_pin") and not owned.has("salvage_capacitor") and not owned.has("medic_winch"):
++		return {"rows":[],"pin":{},"fields":[]}
++	return BuildItemsReadout.describe(effect_runtime.build_items.debug_snapshot(),elapsed,enemies)
+--- a/scripts/rules.gd
++++ b/scripts/rules.gd
+@@ -1,4 +1,5 @@
+ extends RefCounted
++const BuildItemsProfiles=preload("res://scripts/gameplay/build_items_profiles.gd")
+ const RecoilPlate=preload("res://scripts/gameplay/recoil_plate.gd")
+ const NewProfiles=preload("res://scripts/gameplay/new_weapon_profiles.gd")
+ const ScavengerReel=preload("res://scripts/gameplay/scavenger_reel.gd")
+@@ -178,6 +179,7 @@
+ 				if _positive_number(entry.get("chill_duration")) and entry.chill_duration>10: errors.append("Chill exceeds duration budget")
+ 				if _positive_number(entry.get("chill_speed")) and entry.chill_speed>1: errors.append("Chill cannot accelerate")
+ 		elif entry.kind == "item":
++			if entry.id in ["crossfire_pin","salvage_capacitor","medic_winch"] and BuildItemsProfiles.definition(entry).is_empty():errors.append("Invalid B item profile")
+ 			if entry.id=="recoil_plate" and RecoilPlate.definition(entry).is_empty():errors.append("Invalid Recoil Plate profile")
+ 			if entry.id in ["lock_memory","return_collar"] and NewProfiles.module(entry).is_empty():errors.append("Invalid dedicated module profile")
+ 			if entry.id=="scavenger_reel" and ScavengerReel.definition(entry).is_empty():errors.append("Invalid Scavenger Reel profile")
+@@ -210,6 +212,9 @@
+ 			if not link is Array or link.size()!=2: errors.append("Invalid affinity pair")
+ 			elif not seen.has(link[0]) or not seen.has(link[1]) or link[0]==link[1]: errors.append("Unknown/self affinity pair")
+ 	for pair_data in catalog.get("mechanism_synergies",[]):
++		if pair_data is Dictionary and pair_data.has("requires_distinct_weapon_types"):
++			var distinct:Variant=pair_data.requires_distinct_weapon_types
++			if not _positive_number(distinct) or float(distinct)!=2.0:errors.append("Invalid distinct weapon prerequisite")
+ 		if pair_data is Dictionary and pair_data.has("requires_other_weapon_than"):
+ 			var excluded:Variant=pair_data.requires_other_weapon_than
+ 			if not excluded is String or not seen.has(excluded):errors.append("Invalid companion weapon prerequisite")
+--- a/ui/moss_ui.gd
++++ b/ui/moss_ui.gd
+@@ -86,7 +86,7 @@
+ 	if FileAccess.file_exists("res://assets/items/icon_manifest.json"):
+ 		var parsed = JSON.parse_string(FileAccess.get_file_as_string("res://assets/items/icon_manifest.json"))
+ 		if parsed is Dictionary: manifest = parsed
+-	for extra_path in ["res://assets/items/mechanism_icon_manifest.json", "res://assets/items/build_expansion_icon_manifest.json", "res://assets/items/cryo_icon_manifest.json", "res://assets/items/bankshot_icon_manifest.json", "res://assets/items/feedback_icon_manifest.json", "res://assets/items/scavenger_icon_manifest.json", "res://assets/items/expansion_A_icon_manifest.json"]:
++	for extra_path in ["res://assets/items/mechanism_icon_manifest.json", "res://assets/items/build_expansion_icon_manifest.json", "res://assets/items/cryo_icon_manifest.json", "res://assets/items/bankshot_icon_manifest.json", "res://assets/items/feedback_icon_manifest.json", "res://assets/items/scavenger_icon_manifest.json", "res://assets/items/expansion_A_icon_manifest.json", "res://assets/items/expansion_B_icon_manifest.json"]:
+ 		if FileAccess.file_exists(extra_path):
+ 			var extra = JSON.parse_string(FileAccess.get_file_as_string(extra_path))
+ 			if extra is Dictionary:
+@@ -598,6 +598,12 @@
+ 	for item in view.get("items", []):
+ 		var c := _card(parent, item, "  x%d / %s" % [int(item.get("count", 1)), str(int(item.max_stack)) if item.has("max_stack") else "?"], view.get("synergy_status", []))
+ 		if selling: _button(c, "SELL ONE  +%d" % int(item.get("sell_price", 0)), "sell_item", {"id": item.get("id", ""), "generation": view.get("generation", 0)})
++	var build_items:Dictionary=view.get("build_items",{})
++	if not build_items.get("rows",[]).is_empty():
++		_label(parent,"CONTROL MODULES / LIVE SNAPSHOT",16)
++		for row in build_items.rows:
++			_text(parent,str(row.id).replace("_"," ").capitalize()+": "+str(row.status),13)
++			_text(parent,str(row.detail),12)
+ 	var rewards: Array = view.get("rewards", [])
+ 	if not rewards.is_empty():
+ 		_label(parent, "BOSS REWARDS / SECURED", 16).add_theme_color_override("font_color", AMBER)

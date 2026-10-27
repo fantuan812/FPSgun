@@ -1,0 +1,716 @@
+{
+  "origin": "Independent QA literal arithmetic and state expectations written before B implementation; not copied from author expected outputs, no target execution.",
+  "pin": [
+    {
+      "name": "two_types_actual_position",
+      "first": {
+        "time": 0,
+        "weapon": "rivet_gun",
+        "id": 7,
+        "pos": [
+          200,
+          200
+        ]
+      },
+      "second": {
+        "time": 0.2,
+        "weapon": "scrap_shotgun",
+        "id": 7,
+        "pos": [
+          260,
+          200
+        ]
+      },
+      "expected": {
+        "mark_expires": 1.5,
+        "pull_from": [
+          260,
+          200
+        ],
+        "pull_to": [
+          215,
+          200
+        ],
+        "mark_after": null,
+        "ready_at": 1.2,
+        "commands": 1
+      }
+    },
+    {
+      "name": "same_type_and_other_target_no_refresh",
+      "first": {
+        "time": 0,
+        "weapon": "rivet_gun",
+        "id": 7,
+        "pos": [
+          200,
+          200
+        ]
+      },
+      "later": [
+        {
+          "time": 0.2,
+          "weapon": "rivet_gun",
+          "id": 7,
+          "pos": [
+            260,
+            200
+          ]
+        },
+        {
+          "time": 0.4,
+          "weapon": "scrap_shotgun",
+          "id": 8,
+          "pos": [
+            220,
+            200
+          ]
+        }
+      ],
+      "expected": {
+        "anchor": [
+          200,
+          200
+        ],
+        "expires": 1.5,
+        "commands": 0
+      }
+    },
+    {
+      "name": "late_observed_expiry",
+      "expires": 1.5,
+      "observe_at": 4,
+      "expected": {
+        "mark": null,
+        "ready_at": 5,
+        "commands": 0
+      }
+    },
+    {
+      "name": "origin_removed_while_other_two_remain",
+      "weapons_before": [
+        "rivet_gun",
+        "scrap_shotgun",
+        "return_disc"
+      ],
+      "origin": "rivet_gun",
+      "weapons_after": [
+        "scrap_shotgun",
+        "return_disc"
+      ],
+      "time": 0.5,
+      "expected": {
+        "mark": null,
+        "ready_at": 1.5
+      }
+    },
+    {
+      "name": "remove_one_copy_keeps_type",
+      "weapons_before": [
+        "rivet_gun",
+        "rivet_gun",
+        "scrap_shotgun"
+      ],
+      "origin": "rivet_gun",
+      "weapons_after": [
+        "rivet_gun",
+        "scrap_shotgun"
+      ],
+      "expected": {
+        "mark_unchanged": true
+      }
+    },
+    {
+      "name": "one_type_two_slots_ineligible",
+      "weapons": [
+        "rivet_gun",
+        "rivet_gun"
+      ],
+      "expected": {
+        "mark": null,
+        "commands": 0
+      }
+    },
+    {
+      "name": "old_proc_dead_before_first",
+      "post_old_hp": 0,
+      "expected": {
+        "mark": null,
+        "commands": 0,
+        "cooldown_created": false
+      }
+    },
+    {
+      "name": "old_proc_dead_before_second",
+      "existing_mark": true,
+      "post_old_hp": 0,
+      "time": 0.6,
+      "expected": {
+        "mark": null,
+        "commands": 0,
+        "ready_at": 1.6
+      }
+    },
+    {
+      "name": "boss_and_duplicate_id_reject",
+      "world_cases": [
+        "boss_true",
+        "two_live_same_id"
+      ],
+      "expected": {
+        "mark": null,
+        "commands": 0
+      }
+    },
+    {
+      "name": "zero_primary_contact_counts",
+      "damage": 0,
+      "post_old_hp": 50,
+      "expected": {
+        "mark_created": true
+      }
+    },
+    {
+      "name": "sold_inflight_still_damages_but_no_pin",
+      "weapon": "rivet_gun",
+      "equipped": [
+        "scrap_shotgun",
+        "return_disc"
+      ],
+      "expected": {
+        "commands": 0,
+        "mark_created": false
+      }
+    },
+    {
+      "name": "zero_distance_consumes_without_motion",
+      "anchor": [
+        200,
+        200
+      ],
+      "current": [
+        200,
+        200
+      ],
+      "time": 0.25,
+      "expected": {
+        "moved": false,
+        "mark": null,
+        "ready_at": 1.25
+      }
+    },
+    {
+      "name": "clamp_cannot_extend_pull",
+      "area": [
+        800,
+        600
+      ],
+      "anchor": [
+        100,
+        200
+      ],
+      "current": [
+        -50,
+        200
+      ],
+      "expected": {
+        "moved": false,
+        "position": [
+          -50,
+          200
+        ],
+        "reason_scope": "clamping naive -5 to20 would move70 greater than45"
+      }
+    },
+    {
+      "name": "room_clear_no_new_cooldown",
+      "existing_mark": true,
+      "existing_ready_at": null,
+      "expected": {
+        "mark": null,
+        "ready_at": null
+      }
+    },
+    {
+      "name": "room_preserves_existing_cooldown",
+      "existing_ready_at": 7,
+      "room_at": 6,
+      "expected": {
+        "ready_at": 7
+      }
+    },
+    {
+      "name": "huge_clock_no_future_representable",
+      "time": 1e+308,
+      "duration": 1,
+      "expected": {
+        "mark_created": false,
+        "infinite_timer_created": false
+      }
+    }
+  ],
+  "salvage": [
+    {
+      "name": "normal_only_cap",
+      "sources": [
+        "normal",
+        "energy",
+        "normal",
+        "medical",
+        "normal",
+        "normal"
+      ],
+      "expected": {
+        "charge": 3
+      }
+    },
+    {
+      "name": "partial_dash_keeps_stock",
+      "charge": 2,
+      "expected": {
+        "charge": 2,
+        "fields": 0
+      }
+    },
+    {
+      "name": "dash_before_begin",
+      "charge": 3,
+      "dash_time": 1,
+      "origin": [
+        300,
+        200
+      ],
+      "player_after": [
+        370,
+        200
+      ],
+      "begin_time": 1,
+      "expected": {
+        "charge": 0,
+        "field_pos": [
+          300,
+          200
+        ],
+        "expires": 2.8,
+        "fields_after_begin": 1
+      }
+    },
+    {
+      "name": "two_field_oldest_eviction",
+      "dash_times": [
+        0,
+        0.2,
+        0.4
+      ],
+      "origins": [
+        [
+          200,
+          200
+        ],
+        [
+          300,
+          200
+        ],
+        [
+          400,
+          200
+        ]
+      ],
+      "expected": {
+        "field_positions": [
+          [
+            300,
+            200
+          ],
+          [
+            400,
+            200
+          ]
+        ],
+        "field_expiries": [
+          2,
+          2.2
+        ]
+      }
+    },
+    {
+      "name": "factor_radius_expiry_and_old_min",
+      "field_pos": [
+        300,
+        200
+      ],
+      "expires": 2.8,
+      "queries": [
+        {
+          "pos": [
+            380,
+            200
+          ],
+          "time": 2,
+          "boss": false,
+          "state": "move",
+          "old": 1,
+          "expected": 0.7
+        },
+        {
+          "pos": [
+            380.01,
+            200
+          ],
+          "time": 2,
+          "boss": false,
+          "state": "move",
+          "old": 1,
+          "expected": 1
+        },
+        {
+          "pos": [
+            300,
+            200
+          ],
+          "time": 2.8,
+          "boss": false,
+          "state": "move",
+          "old": 1,
+          "expected": 1
+        },
+        {
+          "pos": [
+            300,
+            200
+          ],
+          "time": 2,
+          "boss": true,
+          "state": "move",
+          "old": 1,
+          "expected": 1
+        },
+        {
+          "pos": [
+            300,
+            200
+          ],
+          "time": 2,
+          "boss": false,
+          "state": "charging",
+          "old": 1,
+          "expected": 1
+        },
+        {
+          "pos": [
+            300,
+            200
+          ],
+          "time": 2,
+          "boss": false,
+          "state": "move",
+          "old": 0.5,
+          "expected": 0.5
+        }
+      ]
+    },
+    {
+      "name": "bad_area_spends_no_eviction",
+      "charge": 3,
+      "fields_before": 2,
+      "area_width": 40,
+      "expected": {
+        "charge": 0,
+        "fields_unchanged": true
+      }
+    },
+    {
+      "name": "sale_room_newrun_clear_but_retained_sync_preserves",
+      "expected": {
+        "retained_charge_unchanged": true,
+        "sale_charge": 0,
+        "sale_fields": [],
+        "room_charge": 0,
+        "room_fields": []
+      }
+    }
+  ],
+  "winch": [
+    {
+      "name": "nearest_tie_preserves_first",
+      "origin": [
+        300,
+        300
+      ],
+      "medicine": [
+        [
+          460,
+          300
+        ],
+        [
+          140,
+          300
+        ]
+      ],
+      "normal_count": 5,
+      "expected": {
+        "moved_index": 0,
+        "medicine_after": [
+          [
+            380,
+            300
+          ],
+          [
+            140,
+            300
+          ]
+        ],
+        "count": 0
+      }
+    },
+    {
+      "name": "two_threshold_one_batch_first_origin",
+      "origins_for_thresholds": [
+        [
+          300,
+          300
+        ],
+        [
+          500,
+          300
+        ]
+      ],
+      "medicine": [
+        [
+          500,
+          300
+        ]
+      ],
+      "normal_count": 10,
+      "expected": {
+        "moved_index": 0,
+        "medicine_after": [
+          [
+            420,
+            300
+          ]
+        ],
+        "count": 0,
+        "pulls": 1
+      }
+    },
+    {
+      "name": "threshold_remainder",
+      "normal_count": 7,
+      "expected": {
+        "count": 2,
+        "requests": 1
+      }
+    },
+    {
+      "name": "no_medicine_spends",
+      "normal_count": 5,
+      "medicine": [],
+      "expected": {
+        "count": 0,
+        "pending_after_flush": false,
+        "moved_index": -1
+      }
+    },
+    {
+      "name": "range_closed_no_overshoot",
+      "origin": [
+        300,
+        300
+      ],
+      "cases": [
+        {
+          "medicine": [
+            520,
+            300
+          ],
+          "after": [
+            440,
+            300
+          ]
+        },
+        {
+          "medicine": [
+            520.1,
+            300
+          ],
+          "after": [
+            520.1,
+            300
+          ]
+        },
+        {
+          "medicine": [
+            330,
+            300
+          ],
+          "after": [
+            300,
+            300
+          ]
+        },
+        {
+          "medicine": [
+            300,
+            300
+          ],
+          "after": [
+            300,
+            300
+          ],
+          "moved_index": -1
+        }
+      ]
+    },
+    {
+      "name": "flush_after_removal_no_same_pass_award",
+      "initial_medicine": [
+        [
+          310,
+          300
+        ],
+        [
+          400,
+          300
+        ]
+      ],
+      "already_collected_indices": [
+        0
+      ],
+      "origin": [
+        300,
+        300
+      ],
+      "expected": {
+        "survivor_after": [
+          320,
+          300
+        ],
+        "new_awards": 0,
+        "new_events": 0,
+        "surviving_count": 1
+      }
+    },
+    {
+      "name": "non_normal_and_settlement_do_not_count",
+      "sources": [
+        "energy",
+        "medical"
+      ],
+      "settlement_normal_awards": 10,
+      "expected": {
+        "count": 0,
+        "pending": false
+      }
+    },
+    {
+      "name": "wrong_context_preserves_then_valid_closes",
+      "pending": true,
+      "bad_serial": 99,
+      "good_serial": 1,
+      "expected": {
+        "bad_accepted": false,
+        "pending_after_bad": true,
+        "good_accepted": true,
+        "repeat_accepted": false,
+        "max_moves": 1
+      }
+    },
+    {
+      "name": "pause_closes_no_refund",
+      "count_before": 0,
+      "pending_before": true,
+      "expected": {
+        "count_after": 0,
+        "pending_after": false,
+        "flush_after_resume_without_new_batch": false
+      }
+    }
+  ],
+  "guards": [
+    {
+      "name": "typed_wrong_source_consumes",
+      "sequence": 8,
+      "source": "chain",
+      "retry_source": "primary",
+      "expected": {
+        "last_sequence": 8,
+        "retry_rejected": true
+      }
+    },
+    {
+      "name": "null_source_pre_admission",
+      "sequence": 9,
+      "source": null,
+      "retry_source": "primary",
+      "expected": {
+        "last_sequence_before_retry": 8,
+        "retry_admitted_once": true
+      }
+    },
+    {
+      "name": "epoch_forward_keeps_sequence",
+      "before_epoch": 1,
+      "before_sequence": 12,
+      "bind_epoch": 2,
+      "incoming_sequence": 12,
+      "expected": {
+        "rejected": true,
+        "last_sequence": 12
+      }
+    },
+    {
+      "name": "event_cannot_bind_epoch",
+      "bound_epoch": 2,
+      "incoming_epoch": 99,
+      "expected": {
+        "unchanged": true
+      }
+    },
+    {
+      "name": "step_repeat_preserves_pending",
+      "serial": 4,
+      "repeat_serial": 4,
+      "expected": {
+        "begin_accepted": false,
+        "pending_unchanged": true
+      }
+    },
+    {
+      "name": "time_rollback_atomic",
+      "last_now": 2,
+      "incoming_now": 1,
+      "expected": {
+        "unchanged": true
+      }
+    },
+    {
+      "name": "invalid_sync_atomic",
+      "variants": [
+        "unknown_item",
+        "zero_count",
+        "bool_count",
+        "fraction_count",
+        "unknown_weapon",
+        "five_slots"
+      ],
+      "expected": {
+        "entire_snapshot_unchanged": true
+      }
+    },
+    {
+      "name": "clear_run_only_replay_reset",
+      "before_sequence": 12,
+      "newrun_epoch": 3,
+      "expected": {
+        "sequence": 0,
+        "last_step": -1,
+        "mark": null,
+        "charge": 0,
+        "fields": [],
+        "count": 0
+      }
+    }
+  ],
+  "schema_note": "API debug_snapshot empty mark/pending are null. Handcase labels such as anchor are literal expected mark.position; no target output is used to generate expectations."
+}

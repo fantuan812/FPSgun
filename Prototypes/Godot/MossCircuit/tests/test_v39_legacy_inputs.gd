@@ -1,7 +1,8 @@
 extends SceneTree
 ## Author integrity checks for explicit test-only old-data setup, not gameplay acceptance.
 const Legacy=preload("res://tests/support/v39_legacy_inputs.gd")
-const Catalog=preload("res://tests/support/v39_catalog_projection.gd")
+const Catalog=preload("res://tests/support/v39_B_then_A_catalog_projection.gd")
+const BProjection=preload("res://tests/support/v39_B_catalog_projection.gd")
 const Kits=preload("res://tests/support/v39_loadout_projection.gd")
 var checks:int=0
 var failures:Array=[]
@@ -14,7 +15,9 @@ func run()->void:
  var raw_c:String=FileAccess.get_file_as_string("res://data/catalog.json")
  var raw_k:String=FileAccess.get_file_as_string("res://data/starting_loadouts.json")
  var original_c:Dictionary=g.catalog.duplicate(true);var original_k:Dictionary=g.starting_loadouts.duplicate(true)
- ck(g.catalog.weapons.size()==10 and g.catalog.items.size()==33 and g.starting_loadouts.loadouts.size()==5,"actual current loader before history")
+ ck(g.catalog.weapons.size()==10 and g.catalog.items.size()==36 and g.starting_loadouts.loadouts.size()==5,"actual current loader before history")
+ var intermediate:Dictionary=BProjection.project(g.catalog,raw_c)
+ ck(intermediate.pass and intermediate.catalog.items.size()==33 and intermediate.bytes.sha256_text()=="67eb30bf64c36191f5e7609126da42b0195cb53840e00e60afa15ed55e13cccc","strict B intermediate preserves exact A bytes and33 items")
  var bad:Dictionary=g.catalog.duplicate(true);bad.weapons[0].damage+=1
  ck(not Catalog.project(bad,raw_c).pass,"reject unrelated legacy field mutation")
  bad=g.catalog.duplicate(true);bad.weapons[-1].damage+=1

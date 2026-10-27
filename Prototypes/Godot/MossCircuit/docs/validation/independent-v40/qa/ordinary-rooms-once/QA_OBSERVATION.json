@@ -1,0 +1,105 @@
+{
+  "scope": "One actual original release ELF/adjacent combined PCK manual default-seed Rooms/Rivet attempt; QA direct observations and actions, not an instrumented gameplay oracle.",
+  "pck_sha256": "6743bf0f468c25ad28cc2776d1b1f28fd6356b23ee6f5a36ad977e90863dd775",
+  "default_seed": 240102,
+  "mode": "Rooms",
+  "starter": "Rivet Gun",
+  "attempts": 1,
+  "started_utc": "2026-10-27T16:08:09Z",
+  "first_shop_observed_utc": "2026-10-27T16:09:16Z",
+  "normal_close_utc": "2026-10-27T16:15:46Z",
+  "stopping_condition": "First shop without a naturally offered B item; no continuation required.",
+  "objective_observed": true,
+  "shop_scrap": 66,
+  "natural_upgrades_selected": [
+    "Split Capacitor",
+    "Rapid Circuit"
+  ],
+  "natural_shop_offers_in_display_order": [
+    "Power Coil",
+    "Lucky Chip",
+    "Rivet Gun",
+    "Mirror Shell"
+  ],
+  "B_naturally_offered": false,
+  "B_purchased": false,
+  "shop_purchase_count": 0,
+  "refresh_count": 0,
+  "restart_count": 0,
+  "seed_changed": false,
+  "injection": false,
+  "observed_input": "Normal START/mode selection, brief D movement, two natural upgrade selections, ordinary shop wheel scrolling to final Mirror Shell card. No debug/script/main-pack inputs.",
+  "limits": [
+    "ENTRY clearance and some combat occurred between observations; not every hit or kill directly watched.",
+    "No natural B acquisition or natural B interaction observed; controlled B mechanism gates remain separate.",
+    "First shop endpoint, not a whole-run or balance claim.",
+    "Elapsed process duration includes paused shop inspection and evidence handling, not pure combat time.",
+    "Nine still images are not a continuous gameplay recording and contain no retained combat or B-trigger screenshot."
+  ],
+  "exit_notes": "Bound-window Alt+F4 attempts left window open; desktop Sky Alt_L+F4 then normal game-window removal/native0. No forced termination.",
+  "process_result_sha256": "e2fba6e92a346bccc38af7d7552636b4e796f145dfb0725ebda54879e7d32264",
+  "original_process_gate_pass": false,
+  "original_native_exit": 0,
+  "original_wrapper_exit": 1,
+  "platform_warning": "Only reported strict tag WARNING:; exact X11 unsupported VSync warning subject to separate read-only review. Original failure not rewritten.",
+  "screenshots": [
+    {
+      "path": "01_default_title.jpg",
+      "sha256": "fa0df5b5041af0307e69bcc99601a3e8f6ab899d51f87aeff91aea91816866e6",
+      "bytes": 141891,
+      "format": "JPEG original window capture"
+    },
+    {
+      "path": "02_rooms_rivet_selected.jpg",
+      "sha256": "6f831a251cffaaf74aedca4fcf1d87ce34500e409251443c3731cf345f7f0bee",
+      "bytes": 142860,
+      "format": "JPEG original window capture"
+    },
+    {
+      "path": "03_entry_started.jpg",
+      "sha256": "d8080dfe92e2c7e2563e26449ce991815a248fab36f621f8279e9003e054fc52",
+      "bytes": 119340,
+      "format": "JPEG original window capture"
+    },
+    {
+      "path": "04_natural_upgrade_66_scrap.jpg",
+      "sha256": "d8080dfe92e2c7e2563e26449ce991815a248fab36f621f8279e9003e054fc52",
+      "bytes": 119340,
+      "format": "JPEG original window capture"
+    },
+    {
+      "path": "05_second_natural_upgrade.jpg",
+      "sha256": "1fdca33ce5798605b596c091dd0e3763b1a0d4c56bf904d3deb9a594903d8fc2",
+      "bytes": 120105,
+      "format": "JPEG original window capture"
+    },
+    {
+      "path": "06_first_shop_66_scrap.jpg",
+      "sha256": "21fb566d477be504d8c43ea3d1c715670ba3503a54d14b6d788083eb35f3dd10",
+      "bytes": 147309,
+      "format": "JPEG original window capture"
+    },
+    {
+      "path": "07_first_shop_lucky_chip.jpg",
+      "sha256": "d84484215a46f321f1ef4aa3023489e856411f04a3a0bd908c1ac2f8407b233c",
+      "bytes": 141656,
+      "format": "JPEG original window capture"
+    },
+    {
+      "path": "08_first_shop_rivet_offer.jpg",
+      "sha256": "f8e11ad76d95cddff573ba503b1cfe2a1f6ac6bc3eb0f4bb79b524c3b28641ab",
+      "bytes": 143315,
+      "format": "JPEG original window capture"
+    },
+    {
+      "path": "09_first_shop_mirror_shell_bottom.jpg",
+      "sha256": "26e4c7038ed63e0da5661fa2278082261ec6fecfbc4c2c046bf89ca24ad3c771",
+      "bytes": 146097,
+      "format": "JPEG original window capture"
+    }
+  ],
+  "screenshot_label_corrections": {
+    "03_entry_started.jpg": "Capture occurred after natural progression to Circuit Upgrade; filename is not evidence of combat screen. Entry combat was directly observed earlier but not retained in this screenshot.",
+    "08_first_shop_rivet_offer.jpg": "Rivet card lower statistics are visible; title scrolled above viewport. Offer name is QA direct preceding observation, not asserted legible in this image."
+  }
+}

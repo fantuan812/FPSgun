@@ -1,0 +1,22 @@
+{
+  "pass": true,
+  "scope": "Static cold-import only. Not integration gameplay approval; original validator63 expected failure remains pending.",
+  "plan_sha256": "8afca4477a118e71f0f6af6461c0155f976c4245538df79acf1d6a2365ae964a",
+  "inputs": 883,
+  "expected_new_paths": [
+    "art_source/build_expansion_B/svg/crossfire_pin.svg.import",
+    "art_source/build_expansion_B/svg/medic_winch.svg.import",
+    "art_source/build_expansion_B/svg/salvage_capacitor.svg.import",
+    "assets/items/crossfire_pin.png.import",
+    "assets/items/medic_winch.png.import",
+    "assets/items/salvage_capacitor.png.import",
+    "scripts/gameplay/build_items_adapter.gd.uid",
+    "scripts/gameplay/build_items_profiles.gd.uid",
+    "scripts/gameplay/build_items_readout.gd.uid",
+    "scripts/gameplay/build_items_runtime.gd.uid",
+    "scripts/gameplay/build_items_visuals.gd.uid"
+  ],
+  "pins": 13,
+  "strict_seconds": 180,
+  "no_automatic_next_route": true
+}

@@ -1,5 +1,6 @@
 extends RefCounted
 ## Detached equipped-build projection only. Never a live transaction or combat forecast.
+const BuildItemsProfiles=preload("res://scripts/gameplay/build_items_profiles.gd")
 const Rules=preload("res://scripts/rules.gd")
 const WeaponTempering=preload("res://scripts/gameplay/weapon_tempering.gd")
 const WeaponReadout=preload("res://scripts/weapon_readout.gd")
@@ -19,6 +20,13 @@ static func mechanism_status(build:Dictionary,catalog:Dictionary)->Array:
 			var requirement:String="a weapon type other than "+Rules.catalog_entry(catalog,excluded_weapon).name
 			required.append(requirement)
 			if not build.weapons.any(func(id):return id!=excluded_weapon):missing.append(requirement)
+		if pair_data.has("requires_distinct_weapon_types"):
+			var requirement:String="two different currently equipped weapon types"
+			required.append(requirement)
+			var types:Dictionary=BuildItemsProfiles.weapon_types(build.weapons,catalog)
+			var requirement_value:Variant=pair_data.requires_distinct_weapon_types
+			var valid_requirement:bool=(requirement_value is int or requirement_value is float) and is_finite(float(requirement_value)) and float(requirement_value)==2.0
+			if not valid_requirement or not types.valid or types.ids.size()<2:missing.append(requirement)
 		var description:String=ScavengerReel.describe(Rules.catalog_entry(catalog,"scavenger_reel")) if pair_data.get("id","")=="scavenger_return" else str(pair_data.description)
 		result.append({"name":pair_data.name,"active":missing.is_empty(),"requires":required,"missing":missing,"description":description})
 	return result.duplicate(true)

@@ -1,0 +1,47 @@
+--- author_B_real_hooks.gd
++++ author_B_real_hooks_r2.gd
+@@ -16,7 +16,7 @@
+ func _initialize()->void:call_deferred("run")
+ func start(items:Dictionary)->void:
+ 	g._start_run(39031);g.set_process(false)
+-	g.build.items=items.duplicate(true);g.build.weapons=["rivet_gun","scatter_rig"];g._recompute()
++	g.build.items=items.duplicate(true);g.build.weapons=["rivet_gun","scrap_shotgun"];g._recompute()
+ 	g.player_pos=Vector2(300,300);g.weapon_clocks=[999.0,999.0];g.combat_frame.area=g.config.arena
+ func begin()->void:
+ 	g.combat.combat_tick_serial+=1;g.effect_runtime.begin_build_items_step(g.config.arena)
+@@ -30,7 +30,7 @@
+ 	ck(Rules.validate_catalog(g.catalog).is_empty(),"real B catalog valid")
+ 	start({"crossfire_pin":1});begin();var e:=enemy(Vector2(400,300));hit(e,"rivet_gun")
+ 	ck(g.effect_runtime.build_items.mark.position==Vector2(400,300),"real event mark current position")
+-	e.pos=Vector2(500,300);hit(e,"scatter_rig")
++	e.pos=Vector2(500,300);hit(e,"scrap_shotgun")
+ 	ck(e.pos==Vector2(455,300),"real event B control moves exactly45")
+ 	ck(e.hp==1000,"Pin no damage")
+ 	ck(g.effect_runtime.build_items.pin_ready_at==1.0,"actual run clock cooldown")
+@@ -42,7 +42,7 @@
+ 	ck(g.effect_runtime.build_items.mark==null,"secondary does not become primary")
+ 	g._effect_event("hit",{"target":e.id,"pos":e.pos,"weapon":"rivet_gun","damage":0.0})
+ 	ck(g.effect_runtime.build_items.mark!=null,"trusted absent source/depth defaults only")
+-	g.build.weapons=["scatter_rig","return_disc"];g._recompute()
++	g.build.weapons=["scrap_shotgun","return_disc"];g._recompute()
+ 	ck(g.effect_runtime.build_items.mark==null and g.effect_runtime.build_items.pin_ready_at==1.0,"actual recompute removes origin even two other types")
+ 	start({"salvage_capacitor":1,"medic_winch":1})
+ 	g.pickups=[{"pos":Vector2(380,300),"xp":0,"coins":0,"heal":8.0,"source":"medical"}]
+@@ -80,7 +80,7 @@
+ 	g.build.weapons=["rivet_gun","rivet_gun"];g._recompute()
+ 	var statuses:Array=Forecast.mechanism_status(g.build,g.catalog)
+ 	ck(not statuses.filter(func(row):return row.name=="Crossfire Control")[0].active,"forecast duplicate types not active")
+-	g.build.weapons=["rivet_gun","scatter_rig"];g._recompute();statuses=Forecast.mechanism_status(g.build,g.catalog)
++	g.build.weapons=["rivet_gun","scrap_shotgun"];g._recompute();statuses=Forecast.mechanism_status(g.build,g.catalog)
+ 	ck(statuses.filter(func(row):return row.name=="Crossfire Control")[0].active,"forecast distinct equipped types active")
+ 	for id in ["crossfire_pin","salvage_capacitor","medic_winch"]:
+ 		start({});g.build.coins=100;g.state="shop";g.shop_offers=[{"id":id,"sold":false}]
+@@ -107,7 +107,7 @@
+ 	g.state="shop";g._complete_wave()
+ 	ck(g.effect_runtime.build_items.debug_snapshot()==direct_before,"ignored controller leaves B unchanged")
+ 	# Actual main settlement keeps rewards but cannot manufacture pickup proc events.
+-	start({"crossfire_pin":1,"salvage_capacitor":1,"medic_winch":1});begin();e=enemy(Vector2(400,300));hit(e,"rivet_gun");e.pos=Vector2(500,300);hit(e,"scatter_rig")
++	start({"crossfire_pin":1,"salvage_capacitor":1,"medic_winch":1});begin();e=enemy(Vector2(400,300));hit(e,"rivet_gun");e.pos=Vector2(500,300);hit(e,"scrap_shotgun")
+ 	g._effect_event("pickup",{"source":"normal","pos":g.player_pos})
+ 	g.pickups=[{"pos":Vector2(700,300),"xp":1,"coins":2}];g.boss_defeated=true
+ 	var sequence_before:int=g.effect_sequence;var coins_before:float=g.build.coins;g._complete_wave()

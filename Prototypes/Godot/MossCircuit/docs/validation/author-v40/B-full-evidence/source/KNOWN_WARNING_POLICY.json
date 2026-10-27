@@ -1,0 +1,14 @@
+{
+  "route": "tests__independent_scavenger_views",
+  "count": 48,
+  "block": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\".\n     at: draw_rect (scene/main/canvas_item.cpp:823)\n     GDScript backtrace (most recent call first):\n         [0] _draw (res://scripts/main.gd:797)\n",
+  "old_expression_line": 789,
+  "new_expression_line": 797,
+  "expression": "\t\t\t\t\tdraw_rect(Rect2(b.pos+offset-Vector2(1.5,1.5),Vector2(3,3)),Color(.55,.94,.76,.55 if settings.reduced_flashes else .85) if pip<b.scavenger.remaining else Color(.4,.48,.44,.4),pip<b.scavenger.remaining,1.0)",
+  "evidence": {
+    "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_scavenger_views.gd.log": "9a370291949038499710e6faad6b8374b6e0a2501df1ad1bac730282ac8c6c32",
+    "evidence-workspace/moss-v39-final-r2/scripts/main.gd": "63ef7ced573dd732195224aafdac02f2871a395b09969099bdc8edac3625b24b",
+    "evidence-workspace/moss-v39-B-full/scripts/main.gd": "36fdaa2b2b47e22c2955583eeb709e622605bc0c15fde43f940839c1327ae6e9"
+  },
+  "scope": "Only exact prior filled+width warning at unchanged expression. Full raw preserved; not warning-free acceptance."
+}

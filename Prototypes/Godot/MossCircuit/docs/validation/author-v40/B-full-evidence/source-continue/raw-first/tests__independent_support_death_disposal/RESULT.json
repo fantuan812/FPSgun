@@ -1,0 +1,223 @@
+{
+  "name": "tests__independent_support_death_disposal",
+  "native_exit": 0,
+  "timeout": false,
+  "seconds": 10.649531759001547,
+  "stderr_bytes": 0,
+  "stderr_policy": {
+    "accepted": true,
+    "warning_count": 0
+  },
+  "tags": [],
+  "parse_errors": [],
+  "semantic": true,
+  "file_report_validation": null,
+  "helper_ok": true,
+  "reports": [
+    {
+      "checks": 8,
+      "failures": [],
+      "observations": [
+        {
+          "due": false,
+          "mode": "arena",
+          "pending": {},
+          "source_hp": -966.0,
+          "source_removed": true,
+          "target_hp": 50.0,
+          "target_id": -1,
+          "token_present": false,
+          "witness": 0.0
+        },
+        {
+          "due": false,
+          "mode": "rooms",
+          "pending": {},
+          "source_hp": -966.0,
+          "source_removed": true,
+          "target_hp": 50.0,
+          "target_id": -1,
+          "token_present": false,
+          "witness": 0.0
+        }
+      ],
+      "pass": true,
+      "scope": "Two-mode actual late projectile source death and retained dictionary disposal. Separate supplemental C3 post-first static gap, original126/104/369/38 results unchanged."
+    }
+  ],
+  "helpers": [
+    {
+      "capture_removed": true,
+      "complete": true,
+      "driver": "Dummy",
+      "game_owner_count": 1,
+      "mix_rate": 44100.0,
+      "observations": [
+        {
+          "discarded": 0,
+          "elapsed_us": 130,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 0,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 0,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 4811,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 0,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 0,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 17599,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 4096,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 4096,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 29148,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 4096,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 4096,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 42245,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 4096,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 4096,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 76543,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 4096,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 4096,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 89579,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 4096,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 4096,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 94699,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 4096,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 4096,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 114212,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 8192,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 8192,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 123625,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 8192,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 8192,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 137057,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 8192,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 8192,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 154876,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 8192,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 8192,
+          "streams_released": true
+        }
+      ],
+      "pre_window_drained": 4096,
+      "prepare_errors": [],
+      "requested_owner_count": 1,
+      "scope": "Test-only bounded final-owner resource release and fresh internal silence; not physical output or a universal timing guarantee.",
+      "tracked_owner_count": 1,
+      "tracked_stream_count": 2
+    }
+  ],
+  "exception": null,
+  "pass": true
+}

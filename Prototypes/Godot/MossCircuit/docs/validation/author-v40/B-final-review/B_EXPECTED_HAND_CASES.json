@@ -1,0 +1,1588 @@
+{
+  "status": "FINAL_AUTHOR_LITERAL_REVIEW_INPUTS_NOT_EXECUTED_NOT_INDEPENDENT_QA_ORACLE",
+  "contract": "B_FINAL_CONTRACT.md",
+  "api": "B_API_SIGNATURES.md",
+  "state_sequences": {
+    "crossfire": [
+      {
+        "name": "complete_mark_consume_expire_cycle",
+        "initial": {
+          "items": [
+            "crossfire_pin"
+          ],
+          "weapons": [
+            "rivet_gun",
+            "scrap_shotgun"
+          ],
+          "mark": null,
+          "ready_at": null
+        },
+        "steps": [
+          {
+            "time": 0,
+            "action": "primary_hit",
+            "weapon": "rivet_gun",
+            "target": 1,
+            "target_hp": 50,
+            "target_pos": [
+              100,
+              100
+            ],
+            "expected": {
+              "mark": {
+                "target": 1,
+                "weapon": "rivet_gun",
+                "pos": [
+                  100,
+                  100
+                ],
+                "expires": 1.5
+              },
+              "pulls": 0
+            }
+          },
+          {
+            "time": 0.2,
+            "action": "primary_hit",
+            "weapon": "rivet_gun",
+            "target": 1,
+            "target_hp": 40,
+            "target_pos": [
+              160,
+              100
+            ],
+            "expected": {
+              "same_mark": true,
+              "pulls": 0
+            }
+          },
+          {
+            "time": 0.3,
+            "action": "primary_hit",
+            "weapon": "scrap_shotgun",
+            "target": 2,
+            "target_hp": 40,
+            "target_pos": [
+              130,
+              100
+            ],
+            "expected": {
+              "same_mark": true,
+              "pulls": 0
+            }
+          },
+          {
+            "time": 0.5,
+            "action": "primary_hit",
+            "weapon": "scrap_shotgun",
+            "target": 1,
+            "target_hp": 30,
+            "target_pos": [
+              160,
+              100
+            ],
+            "expected": {
+              "mark": null,
+              "ready_at": 1.5,
+              "pulls": 1,
+              "target_pos": [
+                115,
+                100
+              ],
+              "extra_damage": 0
+            }
+          },
+          {
+            "time": 1.49,
+            "action": "primary_hit",
+            "weapon": "rivet_gun",
+            "target": 1,
+            "target_hp": 20,
+            "target_pos": [
+              115,
+              100
+            ],
+            "expected": {
+              "mark": null,
+              "ready_at": 1.5,
+              "pulls": 0
+            }
+          },
+          {
+            "time": 1.5,
+            "action": "primary_hit",
+            "weapon": "rivet_gun",
+            "target": 1,
+            "target_hp": 15,
+            "target_pos": [
+              115,
+              100
+            ],
+            "expected": {
+              "mark": {
+                "target": 1,
+                "weapon": "rivet_gun",
+                "pos": [
+                  115,
+                  100
+                ],
+                "expires": 3
+              },
+              "pulls": 0
+            }
+          },
+          {
+            "time": 3,
+            "action": "begin_step",
+            "expected": {
+              "mark": null,
+              "ready_at": 4,
+              "pulls": 0
+            }
+          },
+          {
+            "time": 3,
+            "action": "primary_hit",
+            "weapon": "scrap_shotgun",
+            "target": 1,
+            "target_hp": 10,
+            "target_pos": [
+              130,
+              100
+            ],
+            "expected": {
+              "mark": null,
+              "ready_at": 4,
+              "pulls": 0
+            }
+          }
+        ]
+      },
+      {
+        "name": "copy_is_not_distinct",
+        "weapons": [
+          "rivet_gun",
+          "rivet_gun"
+        ],
+        "primary_hit_weapon": "rivet_gun",
+        "expected_mark": null,
+        "expected_ready_at": null
+      },
+      {
+        "name": "sale_ineligibility_run_clock",
+        "steps": [
+          {
+            "time": 10,
+            "action": "mark",
+            "expires": 11.5
+          },
+          {
+            "time": 10.2,
+            "action": "sell_partner_leaving_one_type",
+            "expected_mark": null,
+            "expected_ready_at": 11.2
+          },
+          {
+            "time": 10.3,
+            "action": "rebuy_partner_then_hit",
+            "expected_mark": null,
+            "expected_ready_at": 11.2
+          },
+          {
+            "time": 10.4,
+            "action": "encounter_reset",
+            "expected_ready_at": 11.2
+          },
+          {
+            "time": 0,
+            "action": "new_run",
+            "expected_ready_at": null,
+            "expected_mark": null
+          }
+        ]
+      },
+      {
+        "name": "late_expiry_observed_policy",
+        "mark_expires": 1.5,
+        "next_begin_step": 8,
+        "expected_ready_at": 9,
+        "expected_mark": null
+      },
+      {
+        "name": "old_echo_kills_before_pin_processing",
+        "marked_target": 1,
+        "second_primary_surviving_hp": 5,
+        "old_echo_damage": 12,
+        "expected_mark": null,
+        "expected_pull_command": 0,
+        "expected_actual_movement": 0,
+        "extra_b_damage": 0
+      },
+      {
+        "name": "dead_boss_secondary_unknown_or_sold_weapon",
+        "inputs": [
+          "target_hp_zero",
+          "target_boss",
+          "source_chain_depth1",
+          "weapon_empty",
+          "weapon_unknown",
+          "known_weapon_not_equipped"
+        ],
+        "expected_marks_each": 0,
+        "expected_pulls_each": 0
+      },
+      {
+        "name": "origin_weapon_type_removed_but_two_types_remain",
+        "initial_weapons": [
+          "rivet_gun",
+          "scrap_shotgun",
+          "bankshot_driver"
+        ],
+        "mark": {
+          "weapon": "rivet_gun",
+          "target": 1,
+          "expires": 11.5
+        },
+        "time": 10.2,
+        "sync_weapons": [
+          "scrap_shotgun",
+          "bankshot_driver"
+        ],
+        "expected_mark": null,
+        "expected_ready_at": 11.2,
+        "sold_rivet_inflight_primary_damage": "unchanged legacy",
+        "sold_rivet_inflight_pin_commands": 0
+      },
+      {
+        "name": "one_copy_removed_type_still_present",
+        "initial_weapons": [
+          "rivet_gun",
+          "rivet_gun",
+          "scrap_shotgun"
+        ],
+        "mark": {
+          "weapon": "rivet_gun",
+          "target": 1,
+          "expires": 11.5
+        },
+        "time": 10.2,
+        "sync_weapons": [
+          "rivet_gun",
+          "scrap_shotgun"
+        ],
+        "expected_mark_unchanged": true,
+        "expected_new_cooldown": false
+      }
+    ],
+    "salvage": [
+      {
+        "name": "complete_source_dash_field_lifecycle",
+        "initial": {
+          "charges": 0,
+          "fields": []
+        },
+        "steps": [
+          {
+            "time": 0,
+            "action": "pickup",
+            "sources": [
+              "normal",
+              "energy",
+              "medical",
+              "normal"
+            ],
+            "expected_charges": 2
+          },
+          {
+            "time": 0.1,
+            "action": "dash_start",
+            "origin": [
+              100,
+              100
+            ],
+            "expected_charges": 2,
+            "expected_fields": []
+          },
+          {
+            "time": 0.2,
+            "action": "pickup",
+            "sources": [
+              "normal",
+              "normal"
+            ],
+            "expected_charges": 3
+          },
+          {
+            "time": 1,
+            "action": "dash_start",
+            "origin": [
+              100,
+              100
+            ],
+            "current_player_pos": [
+              200,
+              100
+            ],
+            "expected_charges": 0,
+            "expected_fields": [
+              {
+                "pos": [
+                  100,
+                  100
+                ],
+                "expires": 2.8
+              }
+            ]
+          },
+          {
+            "time": 1.2,
+            "action": "movement_sample",
+            "enemy_pos": [
+              180,
+              100
+            ],
+            "old_factor": 1,
+            "expected_factor": 0.7
+          },
+          {
+            "time": 1.2,
+            "action": "movement_sample",
+            "enemy_pos": [
+              180,
+              100
+            ],
+            "old_factor": 0.55,
+            "expected_factor": 0.55
+          },
+          {
+            "time": 1.2,
+            "action": "movement_sample",
+            "enemy_pos": [
+              180.001,
+              100
+            ],
+            "old_factor": 1,
+            "expected_factor": 1
+          },
+          {
+            "time": 1.2,
+            "action": "movement_sample",
+            "enemy_pos": [
+              100,
+              100
+            ],
+            "boss": true,
+            "old_factor": 1,
+            "expected_factor": 1
+          },
+          {
+            "time": 1.2,
+            "action": "movement_sample",
+            "enemy_pos": [
+              100,
+              100
+            ],
+            "ai_state": "charging",
+            "old_factor": 1,
+            "expected_factor": 1
+          },
+          {
+            "time": 2.8,
+            "action": "begin_step",
+            "expected_fields": [],
+            "expected_charges": 0
+          }
+        ],
+        "expected_damage_all_steps": 0,
+        "expected_new_pickups": 0
+      },
+      {
+        "name": "two_field_budget_forced_valid_dash_events",
+        "note": "state-machine cap fixture, not ordinary dash cooldown availability",
+        "fields_before": [
+          {
+            "sequence": 1,
+            "expires": 4
+          },
+          {
+            "sequence": 2,
+            "expires": 4.5
+          }
+        ],
+        "time": 3,
+        "charges": 3,
+        "action": "dash_start",
+        "expected_field_sequences": [
+          2,
+          3
+        ],
+        "expected_expiries": [
+          4.5,
+          4.8
+        ],
+        "expected_charges": 0
+      },
+      {
+        "name": "sale_reset_and_settlement",
+        "steps": [
+          {
+            "action": "prepare",
+            "charges": 3,
+            "fields": 1
+          },
+          {
+            "action": "sell_rebuy",
+            "expected_charges": 0,
+            "expected_fields": 0
+          },
+          {
+            "action": "settlement_sweep",
+            "normal_rewards": 8,
+            "expected_new_charges": 0,
+            "expected_rewards_unchanged": true
+          },
+          {
+            "action": "prepare",
+            "charges": 2,
+            "fields": 1
+          },
+          {
+            "action": "encounter_reset",
+            "expected_charges": 0,
+            "expected_fields": 0
+          }
+        ]
+      }
+    ],
+    "winch": [
+      {
+        "name": "complete_batch_remote_origin_tie_deferred",
+        "initial": {
+          "count": 3,
+          "player_pos": [
+            300,
+            100
+          ],
+          "medical_array": [
+            {
+              "pos": [
+                460,
+                100
+              ]
+            },
+            {
+              "pos": [
+                140,
+                100
+              ]
+            }
+          ]
+        },
+        "steps": [
+          {
+            "time": 1,
+            "action": "begin_step",
+            "serial": 1
+          },
+          {
+            "time": 1,
+            "action": "12_distinct_normal_pickups",
+            "pickup_pos": [
+              900,
+              100
+            ],
+            "expected_count": 0,
+            "expected_thresholds_consumed": 3,
+            "expected_pending_requests": 1,
+            "expected_medical_positions_before_flush": [
+              [
+                460,
+                100
+              ],
+              [
+                140,
+                100
+              ]
+            ]
+          },
+          {
+            "time": 1,
+            "action": "flush_after_full_pickup_loop",
+            "serial": 1,
+            "expected_medical_positions": [
+              [
+                380,
+                100
+              ],
+              [
+                140,
+                100
+              ]
+            ],
+            "expected_collects": 0,
+            "expected_heal": 0,
+            "expected_pending_requests": 0
+          },
+          {
+            "time": 1,
+            "action": "repeat_flush",
+            "serial": 1,
+            "expected_medical_positions": [
+              [
+                380,
+                100
+              ],
+              [
+                140,
+                100
+              ]
+            ],
+            "expected_moves": 0
+          },
+          {
+            "time": 1.1,
+            "action": "begin_step",
+            "serial": 2
+          },
+          {
+            "time": 1.1,
+            "action": "10_distinct_normal_pickups",
+            "expected_count": 0,
+            "expected_thresholds_consumed": 2,
+            "expected_pending_requests": 1
+          },
+          {
+            "time": 1.1,
+            "action": "flush_after_full_pickup_loop",
+            "serial": 2,
+            "expected_medical_positions": [
+              [
+                300,
+                100
+              ],
+              [
+                140,
+                100
+              ]
+            ],
+            "expected_collects": 0,
+            "expected_heal": 0
+          },
+          {
+            "time": 1.2,
+            "action": "next_regular_pickup_loop",
+            "expected_medical_collects": 1,
+            "expected_winch_count_from_medical": 0,
+            "note": "existing collection authority only; not Winch direct heal"
+          }
+        ]
+      },
+      {
+        "name": "no_medical_still_spends_and_sources",
+        "start_count": 4,
+        "events": [
+          "energy",
+          "medical",
+          "normal"
+        ],
+        "medical": [],
+        "expected_count": 0,
+        "expected_attempts": 1,
+        "expected_moves": 0
+      },
+      {
+        "name": "radius_closed_and_no_overshoot",
+        "player_pos": [
+          100,
+          100
+        ],
+        "cases": [
+          {
+            "medical_pos": [
+              320,
+              100
+            ],
+            "expected_pos": [
+              240,
+              100
+            ]
+          },
+          {
+            "medical_pos": [
+              320.001,
+              100
+            ],
+            "expected_pos": [
+              320.001,
+              100
+            ]
+          },
+          {
+            "medical_pos": [
+              130,
+              100
+            ],
+            "expected_pos": [
+              100,
+              100
+            ]
+          }
+        ]
+      },
+      {
+        "name": "frame_partition_explicit",
+        "start_count": 0,
+        "normal_pickups_total": 10,
+        "one_batch_expected_pulls": 1,
+        "two_batches_of_five_expected_pulls": 2,
+        "expected_count_both": 0
+      },
+      {
+        "name": "settlement_sale_fullhealth",
+        "start_count": 4,
+        "settlement_normal_rewards": 9,
+        "expected_after_settlement_before_boundary_count": 4,
+        "expected_settlement_pulls": 0,
+        "sale_rebuy_expected_count": 0,
+        "fullhealth_blocks_movement": false,
+        "energy_medical_increment": 0
+      }
+    ]
+  },
+  "guard_order": {
+    "epoch_sequence": [
+      {
+        "initial": {
+          "bound_epoch": 4,
+          "last_sequence": 7,
+          "last_now": 10
+        },
+        "event": {
+          "epoch": 5,
+          "sequence": 8
+        },
+        "context": {
+          "effect_epoch": 4,
+          "time": 10
+        },
+        "expected": "reject no changes; event cannot bind epoch"
+      },
+      {
+        "initial": {
+          "bound_epoch": 4,
+          "last_sequence": 7,
+          "last_now": 10
+        },
+        "action": "trusted bind_epoch(5,10)",
+        "expected": {
+          "bound_epoch": 5,
+          "last_sequence": 7,
+          "last_now": 10,
+          "batch_open": false
+        }
+      },
+      {
+        "initial": {
+          "bound_epoch": 5,
+          "last_sequence": 7,
+          "last_now": 10
+        },
+        "event": {
+          "epoch": 5,
+          "sequence": 7
+        },
+        "context": {
+          "effect_epoch": 5,
+          "time": 10
+        },
+        "expected": "reject duplicate even after real epoch advance"
+      },
+      {
+        "initial": {
+          "bound_epoch": 5,
+          "last_sequence": 7,
+          "last_now": 10
+        },
+        "event": {
+          "epoch": 5,
+          "sequence": 8
+        },
+        "context": {
+          "effect_epoch": 5,
+          "time": 10
+        },
+        "expected": "accept envelope; update last_sequence8; semantic guards still apply"
+      },
+      {
+        "initial": {
+          "bound_epoch": 5,
+          "last_sequence": 8,
+          "last_now": 10
+        },
+        "action": "trusted bind_epoch(4,10)",
+        "expected": "reject epoch rollback unchanged"
+      },
+      {
+        "initial": {
+          "bound_epoch": 5,
+          "last_sequence": 8,
+          "last_now": 10
+        },
+        "action": "clear_run(6)",
+        "expected": {
+          "bound_epoch": 6,
+          "last_sequence": 0,
+          "last_now": 0,
+          "last_step_serial": -1,
+          "batch_open": false,
+          "inventories_empty": true
+        }
+      },
+      {
+        "invalid_epoch_sequence_values": [
+          null,
+          true,
+          "1",
+          1.0,
+          -1,
+          "NaN",
+          "INF"
+        ],
+        "expected": "strict actual-int envelope reject without replay mutation"
+      },
+      {
+        "initial_last_now": 10,
+        "context_times": [
+          9.99,
+          "NaN",
+          "INF",
+          null,
+          true,
+          "10"
+        ],
+        "expected": "no state change; no clock rebase"
+      }
+    ],
+    "batch_order": [
+      {
+        "name": "actual dash precedes beginstep",
+        "initial": {
+          "charges": 3,
+          "fields": [],
+          "batch_open": false,
+          "last_step_serial": 6,
+          "last_now": 9.9,
+          "bound_epoch": 4
+        },
+        "steps": [
+          {
+            "time": 10,
+            "action": "trusted real dash event seq40 at old serial6",
+            "origin": [
+              100,
+              100
+            ],
+            "expected": {
+              "charges": 0,
+              "fields": [
+                {
+                  "pos": [
+                    100,
+                    100
+                  ],
+                  "expires": 11.8
+                }
+              ]
+            }
+          },
+          {
+            "time": 10,
+            "action": "begin_step serial7",
+            "expected": {
+              "batch_open": true,
+              "batch_serial": 7,
+              "fields": 1
+            }
+          },
+          {
+            "time": 10,
+            "action": "five distinct normal pickups seq41..45",
+            "expected": {
+              "winch_count": 0,
+              "pending": 1
+            }
+          },
+          {
+            "time": 10,
+            "action": "repeat begin_step serial7",
+            "expected": "reject; original pending1 remains"
+          },
+          {
+            "time": 10,
+            "action": "stale event seq45",
+            "expected": "reject; count0,pending1 unchanged"
+          },
+          {
+            "time": 10,
+            "action": "flush serial6",
+            "expected": "reject; pending1 unchanged"
+          },
+          {
+            "time": 10,
+            "action": "flush serial7 valid medicine",
+            "expected": {
+              "moves": 1,
+              "batch_open": false,
+              "pending": 0
+            }
+          },
+          {
+            "time": 10,
+            "action": "second flush serial7",
+            "expected": {
+              "moves": 0,
+              "accepted": false
+            }
+          }
+        ]
+      },
+      {
+        "name": "pause clears only pending",
+        "initial": {
+          "count": 2,
+          "pending": 1,
+          "charges": 2,
+          "fields": 1,
+          "mark": 1,
+          "pin_ready_at": 12,
+          "last_sequence": 45
+        },
+        "action": "cancel_pending",
+        "expected": {
+          "count": 2,
+          "pending": 0,
+          "charges": 2,
+          "fields": 1,
+          "mark": 1,
+          "pin_ready_at": 12,
+          "last_sequence": 45,
+          "batch_open": false
+        }
+      },
+      {
+        "name": "encounter clears inventory preserves existing cooldown",
+        "initial": {
+          "count": 4,
+          "pending": 1,
+          "charges": 3,
+          "fields": 2,
+          "mark": 1,
+          "pin_ready_at": 12,
+          "last_sequence": 45,
+          "last_step_serial": 7
+        },
+        "time": 11,
+        "action": "reset_encounter",
+        "expected": {
+          "count": 0,
+          "pending": 0,
+          "charges": 0,
+          "fields": 0,
+          "mark": 0,
+          "pin_ready_at": 12,
+          "last_sequence": 45,
+          "last_step_serial": 7
+        }
+      },
+      {
+        "name": "encounter does not invent cooldown from live mark",
+        "initial": {
+          "mark": 1,
+          "pin_ready_at": null
+        },
+        "time": 11,
+        "action": "reset_encounter",
+        "expected": {
+          "mark": 0,
+          "pin_ready_at": null
+        }
+      },
+      {
+        "name": "closed batch normal event cannot count",
+        "initial": {
+          "batch_open": false,
+          "count": 4,
+          "last_sequence": 45
+        },
+        "event": {
+          "sequence": 46,
+          "source": "normal"
+        },
+        "expected": {
+          "count": 4,
+          "pending": 0,
+          "last_sequence": 46
+        }
+      }
+    ],
+    "pin_live_and_clamp": [
+      {
+        "name": "zero_damage_primary_counts",
+        "primary_damage": 0,
+        "target": {
+          "id": 1,
+          "hp": 20,
+          "boss": false,
+          "pos": [
+            100,
+            100
+          ]
+        },
+        "weapons": [
+          "rivet_gun",
+          "scrap_shotgun"
+        ],
+        "expected_new_mark": 1
+      },
+      {
+        "name": "first target duplicate IDs",
+        "enemies": [
+          {
+            "id": 1,
+            "hp": 20,
+            "boss": false,
+            "pos": [
+              100,
+              100
+            ]
+          },
+          {
+            "id": 1,
+            "hp": 20,
+            "boss": false,
+            "pos": [
+              200,
+              100
+            ]
+          }
+        ],
+        "event_target": 1,
+        "expected_new_mark": 0,
+        "expected_new_cooldown": false
+      },
+      {
+        "name": "existing target duplicate IDs consumes invalid mark",
+        "time": 10,
+        "mark_target": 1,
+        "matching_live_records": 2,
+        "expected_mark": null,
+        "expected_ready_at": 11,
+        "expected_pull": 0
+      },
+      {
+        "name": "normal bounded pull",
+        "current": [
+          160,
+          100
+        ],
+        "anchor": [
+          100,
+          100
+        ],
+        "area": [
+          960,
+          540
+        ],
+        "candidate": [
+          115,
+          100
+        ],
+        "expected_pos": [
+          115,
+          100
+        ],
+        "success_vfx": true
+      },
+      {
+        "name": "old legacy push beyond boundary total clamp too far",
+        "current": [
+          -100,
+          100
+        ],
+        "anchor": [
+          100,
+          100
+        ],
+        "area": [
+          960,
+          540
+        ],
+        "raw_move": [
+          -55,
+          100
+        ],
+        "clamped_candidate": [
+          20,
+          100
+        ],
+        "total_distance": 120,
+        "expected_pos": [
+          -100,
+          100
+        ],
+        "consumed": true,
+        "success_vfx": false
+      },
+      {
+        "name": "clamp worsens mark distance",
+        "current": [
+          10,
+          100
+        ],
+        "anchor": [
+          5,
+          100
+        ],
+        "area": [
+          960,
+          540
+        ],
+        "raw_move": [
+          5,
+          100
+        ],
+        "clamped_candidate": [
+          20,
+          100
+        ],
+        "old_anchor_distance": 5,
+        "new_anchor_distance": 15,
+        "expected_pos": [
+          10,
+          100
+        ],
+        "consumed": true,
+        "success_vfx": false
+      },
+      {
+        "name": "already at outside anchor cannot be pushed away",
+        "current": [
+          10,
+          100
+        ],
+        "anchor": [
+          10,
+          100
+        ],
+        "area": [
+          960,
+          540
+        ],
+        "clamped_candidate": [
+          20,
+          100
+        ],
+        "expected_pos": [
+          10,
+          100
+        ],
+        "consumed": true,
+        "success_vfx": false
+      },
+      {
+        "name": "clamp small and improves distance allowed",
+        "current": [
+          10,
+          100
+        ],
+        "anchor": [
+          100,
+          100
+        ],
+        "area": [
+          960,
+          540
+        ],
+        "candidate": [
+          55,
+          100
+        ],
+        "expected_pos": [
+          55,
+          100
+        ],
+        "success_vfx": true
+      },
+      {
+        "name": "invalid area still consumes qualifying second hit",
+        "area": {},
+        "expected_mark": null,
+        "expected_cooldown_started": true,
+        "expected_movement": 0,
+        "success_vfx": false
+      },
+      {
+        "target_id_invalid": [
+          null,
+          true,
+          0,
+          -1,
+          1.0,
+          "1"
+        ],
+        "position_invalid": [
+          null,
+          "Vector2(INF,0)",
+          "Vector2(0,NaN)"
+        ],
+        "expected_new_marks": 0
+      }
+    ],
+    "canonical_sources": [
+      {
+        "raw": {
+          "kind": "hit",
+          "weapon": "rivet_gun"
+        },
+        "expected_added": {
+          "source": "primary",
+          "depth": 0
+        },
+        "old_payload_mutated": false
+      },
+      {
+        "raw": {
+          "kind": "pickup"
+        },
+        "expected_added": {
+          "source": "normal",
+          "depth": 0
+        },
+        "old_payload_mutated": false
+      },
+      {
+        "raw": {
+          "kind": "hit",
+          "source": "chain",
+          "depth": 1
+        },
+        "expected_preserved": true,
+        "expected_pin": 0
+      },
+      {
+        "raw": {
+          "kind": "hit",
+          "source": null,
+          "depth": 0
+        },
+        "expected_source": null,
+        "expected_helper_reject": true
+      },
+      {
+        "raw": {
+          "kind": "hit",
+          "source": "primary",
+          "depth": false
+        },
+        "expected_depth": false,
+        "expected_helper_reject": true
+      },
+      {
+        "direct_helper_missing_source": true,
+        "expected_reject": true
+      },
+      {
+        "direct_helper_missing_depth": true,
+        "expected_reject": true
+      }
+    ],
+    "invalid_geometry_and_flush": [
+      {
+        "name": "field invalidarea consumes full dash but no eviction",
+        "charges": 3,
+        "existing_fields": 2,
+        "area": {},
+        "expected_charges": 0,
+        "expected_fields": 2,
+        "new_visual": false
+      },
+      {
+        "name": "field malformedorigin rejects semantic no consume",
+        "charges": 3,
+        "origin": "Vector2(INF,0)",
+        "expected_charges": 3,
+        "expected_new_fields": 0
+      },
+      {
+        "name": "movement invalidarea neutral only",
+        "existing_old_factor": 0.55,
+        "area": {},
+        "expected_B_factor": 1,
+        "expected_combined_factor": 0.55,
+        "old_status_mutated": false
+      },
+      {
+        "name": "flush invalidarea consumes request and closes",
+        "pending": 1,
+        "area": {},
+        "expected_accepted": true,
+        "expected_moves": 0,
+        "expected_pending": 0,
+        "expected_batch_open": false
+      },
+      {
+        "name": "flush wrongtime leaves real request intact",
+        "batch_time": 10,
+        "context_time": 9.99,
+        "expected_accepted": false,
+        "expected_pending": 1
+      },
+      {
+        "name": "flush malformed medical skipped",
+        "medical_positions": [
+          "Vector2(INF,0)",
+          [
+            180,
+            100
+          ]
+        ],
+        "player": [
+          100,
+          100
+        ],
+        "expected_selected_index": 1,
+        "expected_pos": [
+          100,
+          100
+        ],
+        "direct_collects": 0
+      },
+      {
+        "name": "sale and samebatch rebuy cannot requeue",
+        "initial_count": 4,
+        "first_fifth_pending": 1,
+        "actions": [
+          "sell",
+          "rebuy",
+          "five normal samebatch"
+        ],
+        "expected_pending": 0,
+        "expected_count": 0,
+        "request_flag_stays_spent": true
+      }
+    ],
+    "admission_semantic": [
+      {
+        "name": "admitted wrong source cannot corrected replay",
+        "initial_last_sequence": 7,
+        "events": [
+          {
+            "sequence": 8,
+            "kind": "hit",
+            "source": "chain",
+            "depth": 0,
+            "weapon": "rivet_gun",
+            "target": 1
+          },
+          {
+            "sequence": 8,
+            "kind": "hit",
+            "source": "primary",
+            "depth": 0,
+            "weapon": "rivet_gun",
+            "target": 1
+          }
+        ],
+        "expected_last_sequence": [
+          8,
+          8
+        ],
+        "expected_marks": [
+          0,
+          0
+        ]
+      },
+      {
+        "name": "type invalid source not admitted correction allowed once",
+        "initial_last_sequence": 8,
+        "events": [
+          {
+            "sequence": 9,
+            "kind": "hit",
+            "source": null,
+            "depth": 0,
+            "weapon": "rivet_gun",
+            "target": 1
+          },
+          {
+            "sequence": 9,
+            "kind": "hit",
+            "source": "primary",
+            "depth": 0,
+            "weapon": "rivet_gun",
+            "target": 1
+          }
+        ],
+        "expected_last_sequence": [
+          8,
+          9
+        ],
+        "expected_marks": [
+          0,
+          1
+        ]
+      },
+      {
+        "name": "nonfinite dash origin preconsume",
+        "initial_last_sequence": 9,
+        "initial_charges": 3,
+        "event": {
+          "sequence": 10,
+          "kind": "dash",
+          "source": "primary",
+          "depth": 0,
+          "pos": "Vector2(INF,0)"
+        },
+        "expected_last_sequence": 9,
+        "expected_charges": 3,
+        "expected_fields": 0
+      },
+      {
+        "name": "unsupported typed values semantic consume",
+        "cases": [
+          {
+            "kind": ""
+          },
+          {
+            "kind": "unknown"
+          },
+          {
+            "source": ""
+          },
+          {
+            "source": "secondary"
+          },
+          {
+            "depth": -1
+          },
+          {
+            "depth": 1
+          },
+          {
+            "weapon": ""
+          },
+          {
+            "weapon": "unknown"
+          },
+          {
+            "target": 0
+          },
+          {
+            "target": -1
+          }
+        ],
+        "each_valid_envelope_sequence_spent": true,
+        "expected_marks_each": 0
+      }
+    ],
+    "sync_build_schema": [
+      {
+        "items": {
+          "echo_chamber": 1.0,
+          "crossfire_pin": 1
+        },
+        "weapons": [
+          "rivet_gun",
+          "rivet_gun",
+          "scrap_shotgun"
+        ],
+        "expected": "accept normalized itemcounts ints; distinctweaponset two"
+      },
+      {
+        "bad_item_counts": [
+          0,
+          -1,
+          1.5,
+          true,
+          null,
+          "1",
+          "NaN",
+          "INF"
+        ],
+        "expected": "reject entire snapshot, existing mark/CD/owned sets untouched"
+      },
+      {
+        "items": {
+          "unknown_item": 1
+        },
+        "expected": "reject entire snapshot"
+      },
+      {
+        "items": {
+          "rivet_gun": 1
+        },
+        "expected": "reject weapon ID used as item"
+      },
+      {
+        "weapons": [
+          "crossfire_pin"
+        ],
+        "expected": "reject item ID used as weapon"
+      },
+      {
+        "weapons": [
+          "rivet_gun",
+          null
+        ],
+        "expected": "reject entire snapshot, not partial single-rivet sync"
+      },
+      {
+        "items": {
+          "crossfire_pin": 2
+        },
+        "expected": "reject over max_stack"
+      },
+      {
+        "weapons": [
+          "rivet_gun",
+          "rivet_gun",
+          "rivet_gun",
+          "rivet_gun",
+          "rivet_gun"
+        ],
+        "expected": "reject over weapon_slots and max_stack"
+      }
+    ]
+  },
+  "configuration_and_overflow": [
+    {
+      "name": "legacy valid catalog no B rows",
+      "weapon_slots": 4,
+      "item_slots": 8,
+      "registered_old_ids_valid": true,
+      "B_rows": [],
+      "expected_ok": true,
+      "expected_B_enabled": []
+    },
+    {
+      "name": "duplicate B IDs whole configure failure",
+      "configuration_open": true,
+      "duplicate_id": "crossfire_pin",
+      "expected_ok": false,
+      "expected_old_registry_definitions_state_flags_unchanged": true
+    },
+    {
+      "name": "duplicate old ID whole configure failure",
+      "configuration_open": true,
+      "duplicate_id": "rivet_gun",
+      "expected_ok": false,
+      "expected_old_registry_definitions_state_flags_unchanged": true
+    },
+    {
+      "name": "midrun configure prohibited",
+      "configuration_open": false,
+      "otherwise_valid_catalog": true,
+      "expected_ok": false,
+      "expected_everything_unchanged": true
+    },
+    {
+      "name": "failed startup configure retains prior definitions and window",
+      "configuration_open": true,
+      "bad_field": "salvage_capacitor.field_seconds=NaN",
+      "expected_ok": false,
+      "expected_previous_definitions_retained": true,
+      "expected_configuration_open": true
+    },
+    {
+      "name": "successful startup closes config window only",
+      "configuration_open": true,
+      "valid_catalog": true,
+      "expected_ok": true,
+      "expected_configuration_open": false,
+      "expected_no_new_runtime_charge_mark_CD": true
+    },
+    {
+      "name": "shipping duration rounds away at huge finite time",
+      "now": 1e+308,
+      "duration": 1.0,
+      "floating_candidate": 1e+308,
+      "valid_future": false,
+      "action": "consume active Pin mark",
+      "prior_ready_at": 12,
+      "expected_mark": null,
+      "expected_ready_at": 12,
+      "expected_success_pull": false
+    },
+    {
+      "name": "Pin invalid future no previous cooldown",
+      "now": 1e+308,
+      "duration": 1.0,
+      "prior_ready_at": null,
+      "action": "observed expiry clears mark",
+      "expected_mark": null,
+      "expected_ready_at": null,
+      "same_event_remark": false
+    },
+    {
+      "name": "Pin cannot create mark with unrepresentable positive lifetime",
+      "now": 1e+308,
+      "mark_seconds": 1.5,
+      "floating_candidate": 1e+308,
+      "expected_new_mark": false,
+      "expected_new_CD": false
+    },
+    {
+      "name": "literal finite addition overflow field config",
+      "now": 1e+308,
+      "field_seconds": 1e+308,
+      "floating_candidate": "INF",
+      "charges_before": 3,
+      "existing_fields": 2,
+      "expected_charges": 0,
+      "expected_fields": 2,
+      "expected_new_visual": false
+    },
+    {
+      "name": "shipping field lifetime rounds away",
+      "now": 1e+308,
+      "field_seconds": 1.8,
+      "floating_candidate": 1e+308,
+      "charges_before": 3,
+      "existing_fields": 0,
+      "expected_charges": 0,
+      "expected_fields": 0,
+      "expected_new_visual": false
+    },
+    {
+      "name": "Pin overflow never writes infinite cooldown",
+      "now": 1e+308,
+      "cooldown": 1e+308,
+      "floating_candidate": "INF",
+      "prior_ready_at": 15,
+      "action": "consume active mark",
+      "expected_mark": null,
+      "expected_ready_at": 15,
+      "expected_success_pull": false
+    },
+    {
+      "name": "sync count over catalog-specific max rejected",
+      "owned_item": "crossfire_pin",
+      "count": 2,
+      "catalog_max_stack": 1,
+      "expected_ok": false,
+      "expected_full_old_state_unchanged": true
+    },
+    {
+      "name": "sync five equipped entries rejected even distinct",
+      "weapons": [
+        "rivet_gun",
+        "scrap_shotgun",
+        "rail_lance",
+        "orbit_saw",
+        "return_disc"
+      ],
+      "expected_ok": false,
+      "expected_full_old_state_unchanged": true
+    }
+  ]
+}

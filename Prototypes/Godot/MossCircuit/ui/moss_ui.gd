@@ -86,7 +86,7 @@ func _ready() -> void:
 	if FileAccess.file_exists("res://assets/items/icon_manifest.json"):
 		var parsed = JSON.parse_string(FileAccess.get_file_as_string("res://assets/items/icon_manifest.json"))
 		if parsed is Dictionary: manifest = parsed
-	for extra_path in ["res://assets/items/mechanism_icon_manifest.json", "res://assets/items/build_expansion_icon_manifest.json", "res://assets/items/cryo_icon_manifest.json", "res://assets/items/bankshot_icon_manifest.json", "res://assets/items/feedback_icon_manifest.json", "res://assets/items/scavenger_icon_manifest.json", "res://assets/items/expansion_A_icon_manifest.json"]:
+	for extra_path in ["res://assets/items/mechanism_icon_manifest.json", "res://assets/items/build_expansion_icon_manifest.json", "res://assets/items/cryo_icon_manifest.json", "res://assets/items/bankshot_icon_manifest.json", "res://assets/items/feedback_icon_manifest.json", "res://assets/items/scavenger_icon_manifest.json", "res://assets/items/expansion_A_icon_manifest.json", "res://assets/items/expansion_B_icon_manifest.json"]:
 		if FileAccess.file_exists(extra_path):
 			var extra = JSON.parse_string(FileAccess.get_file_as_string(extra_path))
 			if extra is Dictionary:
@@ -598,6 +598,12 @@ func _inventory(parent: Node, view: Dictionary, selling := false) -> void:
 	for item in view.get("items", []):
 		var c := _card(parent, item, "  x%d / %s" % [int(item.get("count", 1)), str(int(item.max_stack)) if item.has("max_stack") else "?"], view.get("synergy_status", []))
 		if selling: _button(c, "SELL ONE  +%d" % int(item.get("sell_price", 0)), "sell_item", {"id": item.get("id", ""), "generation": view.get("generation", 0)})
+	var build_items:Dictionary=view.get("build_items",{})
+	if not build_items.get("rows",[]).is_empty():
+		_label(parent,"CONTROL MODULES / LIVE SNAPSHOT",16)
+		for row in build_items.rows:
+			_text(parent,str(row.id).replace("_"," ").capitalize()+": "+str(row.status),13)
+			_text(parent,str(row.detail),12)
 	var rewards: Array = view.get("rewards", [])
 	if not rewards.is_empty():
 		_label(parent, "BOSS REWARDS / SECURED", 16).add_theme_color_override("font_color", AMBER)

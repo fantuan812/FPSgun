@@ -1,0 +1,29 @@
+--- evidence-workspace/moss-v39-ui/B/native/unexecuted-local-visible-v1/fixture.gd
++++ evidence-workspace/moss-v39-ui/B/native/fixture.gd
+@@ -87,7 +87,7 @@
+ func open_build()->bool:
+ 	await refresh();var b:Button=button("BUILD [I]")
+ 	if b==null:return false
+-	click(b.get_global_rect().get_center());await frames();return g.state=="inventory" and g.ui.modal.visible
++	click(b.get_global_rect().get_center());await frames();return g.state=="inventory" and g.ui.modal_visible()
+ func escape()->void:key(KEY_ESCAPE);await frames()
+ func fit_rect(scroll:ScrollContainer,rect:Rect2)->bool:return scroll.get_global_rect().encloses(rect)
+ func scroll_group(first:Control,last:Control)->bool:
+@@ -137,7 +137,7 @@
+ 	scene("01_old_build");await start();var focus:int=g.combat.focus_enemy_id;var hud:Array=[g.ui.hud_action.text,g.ui.hud_detail.text]
+ 	ck(small()=={"rows":[],"pin":{},"fields":[]},"no owned B empty projection");await stage("before")
+ 	var opened:bool=await open_build();ck(opened and label_start("CONTROL MODULES / LIVE SNAPSHOT")==null,"actual BUILD no B section");await stage("build")
+-	await escape();ck(g.state=="playing" and not g.ui.modal.visible,"Escape closes");await stage("closed")
++	await escape();ck(g.state=="playing" and not g.ui.modal_visible(),"Escape closes");await stage("closed")
+ 	ck(g.combat.focus_enemy_id==focus and [g.ui.hud_action.text,g.ui.hud_detail.text]==hud,"old HUD and focus unchanged")
+ func case02()->void:
+ 	scene("02_three_cards");await start(owned3());await open_build()
+@@ -245,7 +245,7 @@
+ 	var opened:bool=await open_build();ck(opened,"actual BUILD opens");ck(hud_focus()==[0,0],"modal HUD no focus");ck(g.combat.focus_enemy_id==priority.id,"BUILD no behind selection");await stage("build")
+ 	await escape();ck(g.state=="playing" and hud_focus()==focus_modes,"BUILD Escape restore")
+ 	b=button("PAUSE [ESC]");enemy(g.make_canvas_position_local(b.get_global_rect().get_center()));click(b.get_global_rect().get_center());await frames()
+-	ck(g.state=="paused" and g.ui.modal.visible,"actual PAUSE opens");ck(g.combat.focus_enemy_id==priority.id,"PAUSE no behind selection");await stage("pause")
++	ck(g.state=="paused" and g.ui.modal_visible(),"actual PAUSE opens");ck(g.combat.focus_enemy_id==priority.id,"PAUSE no behind selection");await stage("pause")
+ 	await escape();ck(g.state=="playing" and hud_focus()==focus_modes and state()==expected,"Escape restore and exact authorized cancel only")
+ func _initialize()->void:call_deferred("run")
+ func run()->void:

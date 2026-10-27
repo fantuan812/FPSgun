@@ -1,0 +1,21 @@
+{
+  "status": "DRAFT_BLOCKED_PENDING_ACTUAL_PACKED22_NATIVE_RECEIPTS",
+  "source": "evidence-workspace/moss-v39-B-equipment16",
+  "source_map": "evidence-workspace/moss-v39-items/B-equipment16-combination/assembly-first/INPUTS.json",
+  "elf": "evidence-workspace/moss-v39-B-equipment16-pack/linux/MossCircuit.x86_64",
+  "pck": "evidence-workspace/moss-v39-B-equipment16-pack/linux/MossCircuit.pck",
+  "pck_sha256": "6743bf0f468c25ad28cc2776d1b1f28fd6356b23ee6f5a36ad977e90863dd775",
+  "output": "evidence-workspace/moss-v39-B-qa/ordinary-rooms-once",
+  "preconditions": [
+    null,
+    null
+  ],
+  "pins": {
+    "evidence-workspace/moss-v39-B-qa/ordinary-prep/run.py": "6907b12b276ecacf74c16f0ad89a2def625b6b33be733236f519f5155af3cdec",
+    "evidence-workspace/moss-v39-B-qa/ordinary-prep/PLAN.md": "c2386cb774de682bab24cd4ad40bf2fa96fd8505666d07a542b933a1add81b71",
+    "evidence-workspace/moss-v39-items/B-equipment16-combination/assembly-first/INPUTS.json": "543d43c875b72b7682c312a4811094007e679c419d2142aa86c0d59728b57440",
+    "evidence-workspace/moss-v39-B-equipment16-pack/linux/MossCircuit.x86_64": "2c78919325d7f29fa7607287c7c1eeac367ea4c94e7b8b6f5f4c6b20492f73d0",
+    "evidence-workspace/moss-v39-B-equipment16-pack/linux/MossCircuit.pck": "6743bf0f468c25ad28cc2776d1b1f28fd6356b23ee6f5a36ad977e90863dd775"
+  },
+  "attempt": "Exactly once default seed Rooms/Rivet, first shop or death. Only if naturally affordable B at first shop, ordinary purchase then next shop/death; no injection/refresh/restart. QA CUA actions, separate goal evidence."
+}

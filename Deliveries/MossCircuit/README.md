@@ -1,3 +1,7 @@
+## v40 — control and collection builds
+
+Three mechanism items add cross-weapon pin control, dash-origin collection fields, and medical pickup pulls. The already accepted editable equipment16 migration remains present; no held8 candidate is included. See [restoration and exact evidence boundaries](v40/READ_ME_v40.txt). The accepted equipment16 delivery README below remains verbatim history; this pack has a different identity. Actual source publication is recorded separately in SOURCE_VERSIONS only after a reachable commit.
+
 ## v39-equipment16 — editable inventory atlas
 
 One legacy inventory sheet is replaced by an editable SVG atlas/derived PNG containing16 existing icons. No gameplay, held art or B expansion changes. See [restoration and exact evidence boundaries](v39-equipment16/READ_ME_v39-equipment16.txt). The accepted A delivery README below remains verbatim history; this pack has a different identity. Actual source publication is recorded separately in SOURCE_VERSIONS only after a reachable commit.

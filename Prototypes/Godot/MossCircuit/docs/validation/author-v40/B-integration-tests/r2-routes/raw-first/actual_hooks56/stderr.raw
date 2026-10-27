@@ -1,0 +1,21 @@
+SCRIPT ERROR: Invalid access to property or key 'tags' on a base object of type 'Dictionary'.
+          at: owned_tag_counts (res://scripts/rules.gd:97)
+          GDScript backtrace (most recent call first):
+              [0] owned_tag_counts (res://scripts/rules.gd:97)
+              [1] tag_synergy_status (res://scripts/rules.gd:103)
+              [2] derive (res://scripts/rules.gd:249)
+              [3] _recompute (res://scripts/main.gd:817)
+              [4] start (evidence-workspace/moss-v39-items/B-integration-tests/author_B_real_hooks.gd:19)
+              [5] run (evidence-workspace/moss-v39-items/B-integration-tests/author_B_real_hooks.gd:31)
+SCRIPT ERROR: Invalid access to property or key 'tags' on a base object of type 'Dictionary'.
+          at: tag_synergy_status (res://scripts/rules.gd:115)
+          GDScript backtrace (most recent call first):
+              [0] tag_synergy_status (res://scripts/rules.gd:115)
+              [1] derive (res://scripts/rules.gd:249)
+              [2] _recompute (res://scripts/main.gd:817)
+              [3] start (evidence-workspace/moss-v39-items/B-integration-tests/author_B_real_hooks.gd:19)
+              [4] run (evidence-workspace/moss-v39-items/B-integration-tests/author_B_real_hooks.gd:31)
+SCRIPT ERROR: Invalid access to property or key 'position' on a base object of type 'Nil'.
+          at: run (evidence-workspace/moss-v39-items/B-integration-tests/author_B_real_hooks.gd:32)
+          GDScript backtrace (most recent call first):
+              [0] run (evidence-workspace/moss-v39-items/B-integration-tests/author_B_real_hooks.gd:32)

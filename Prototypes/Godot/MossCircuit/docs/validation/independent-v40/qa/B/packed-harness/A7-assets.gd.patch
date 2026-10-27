@@ -1,0 +1,21 @@
+--- evidence-workspace/moss-v39-qa/packed-harness/A7-assets.gd
++++ evidence-workspace/moss-v39-B-qa/packed-harness/A7-assets.gd
+@@ -19,7 +19,9 @@
+  var imported=JSON.parse_string(FileAccess.get_file_as_string(args[1]))
+  ck(expected.rows.size()==7,"exact accepted seven source assets")
+  var g=load("res://scenes/main.tscn").instantiate();root.add_child(g);g.set_process(false)
+- ck(g.catalog.weapons.size()==10 and g.catalog.items.size()==33,"actual A catalog identity counts")
++ var historical_A=load("evidence-workspace/moss-v39-B-qa/packed-harness/v39_B_catalog_projection.gd").project(g.catalog,FileAccess.get_file_as_string("res://data/catalog.json"))
++ var A_catalog:Dictionary=historical_A.get("catalog",{})
++ ck(historical_A.get("pass",false) and A_catalog.get("weapons",[]).size()==10 and A_catalog.get("items",[]).size()==33,"strict B-only inverse A catalog identity counts; actual rig/UI remain current B")
+  var world=JSON.parse_string(FileAccess.get_file_as_string("res://assets/weapon_mounts/world_weapon_manifest.json"))
+  var icons=JSON.parse_string(FileAccess.get_file_as_string("res://assets/items/expansion_A_icon_manifest.json"))
+  for row in expected.rows:
+@@ -47,6 +49,6 @@
+    ck(icon is AtlasTexture and icon.filter_clip,"actual UI clipped icon "+id)
+    ck(icon is AtlasTexture and icon.region==Rect2(row.icon_rect[0],row.icon_rect[1],row.icon_rect[2],row.icon_rect[3]),"actual UI exact crop "+id)
+    ck(icon is AtlasTexture and sha(image_of(icon.atlas))==sha(im),"actual UI source atlas identity "+id)
+- var helper=load("evidence-workspace/moss-v39-qa/packed-harness/audio_teardown.gd").new();helper.prepare([g]);g.queue_free();await process_frame;await helper.finish(self)
++ var helper=load("evidence-workspace/moss-v39-B-qa/packed-harness/audio_teardown.gd").new();helper.prepare([g]);g.queue_free();await process_frame;await helper.finish(self)
+  var report={"checks":checks,"failures":failures,"scope":"Seven SVG-derived formal source identities, current actual rig/UI bindings, imported source vs PCK pixel equality; raw transparent RGB not assumed identical to imported"}
+  FileAccess.open(args[2],FileAccess.WRITE).store_string(JSON.stringify(report));print(JSON.stringify(report));quit(0 if failures.is_empty() else 1)

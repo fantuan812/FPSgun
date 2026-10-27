@@ -1,0 +1,494 @@
+{
+  "name": "tests__independent_crawler_hit_pipeline",
+  "native_exit": 0,
+  "timeout": false,
+  "seconds": 3.8336298649956007,
+  "stderr_bytes": 0,
+  "stderr_policy": {
+    "accepted": true,
+    "warning_count": 0
+  },
+  "tags": [],
+  "parse_errors": [],
+  "semantic": true,
+  "helper_ok": true,
+  "reports": [
+    {
+      "checks": 48,
+      "failures": [],
+      "scope": "controlled actual primary hit-segment + simulation damage observer; no GUI or human feel claim",
+      "trace": [
+        {
+          "elapsed": 0.02,
+          "enemy_count": 1,
+          "hp": 21.0,
+          "hurt_age": 0.0,
+          "kills": 0,
+          "label": "first hit",
+          "mode": "arena",
+          "pos": [
+            521.06005859375,
+            480.0
+          ],
+          "reaction": "hurt",
+          "rng": -4439465104664985820,
+          "runstate": "playing"
+        },
+        {
+          "elapsed": 0.15,
+          "enemy_count": 1,
+          "hp": 20.0,
+          "hurt_age": 0.13,
+          "kills": 0,
+          "label": "repeat hit",
+          "mode": "arena",
+          "pos": [
+            527.9501953125,
+            480.0
+          ],
+          "reaction": "hurt",
+          "rng": -4439465104664985820,
+          "runstate": "playing"
+        },
+        {
+          "elapsed": 0.3,
+          "enemy_count": 1,
+          "hp": 20.0,
+          "hurt_age": 0.28,
+          "kills": 0,
+          "label": "expired",
+          "mode": "arena",
+          "pos": [
+            535.900329589844,
+            480.0
+          ],
+          "reaction": "move",
+          "rng": -4439465104664985820,
+          "runstate": "playing"
+        },
+        {
+          "elapsed": 0.32,
+          "enemy_count": 0,
+          "hp": -81.0,
+          "hurt_age": 0.0,
+          "kills": 1,
+          "label": "lethal interruption",
+          "mode": "arena",
+          "pos": [
+            536.430358886719,
+            480.0
+          ],
+          "reaction": "death",
+          "rng": -4439465104664985820,
+          "runstate": "playing"
+        },
+        {
+          "elapsed": 0.02,
+          "enemy_count": 1,
+          "hp": 21.0,
+          "hurt_age": 0.0,
+          "kills": 0,
+          "label": "first hit",
+          "mode": "arena",
+          "pos": [
+            918.93994140625,
+            480.0
+          ],
+          "reaction": "hurt",
+          "rng": -4439465104664985820,
+          "runstate": "playing"
+        },
+        {
+          "elapsed": 0.15,
+          "enemy_count": 1,
+          "hp": 20.0,
+          "hurt_age": 0.13,
+          "kills": 0,
+          "label": "repeat hit",
+          "mode": "arena",
+          "pos": [
+            912.0498046875,
+            480.0
+          ],
+          "reaction": "hurt",
+          "rng": -4439465104664985820,
+          "runstate": "playing"
+        },
+        {
+          "elapsed": 0.3,
+          "enemy_count": 1,
+          "hp": 20.0,
+          "hurt_age": 0.28,
+          "kills": 0,
+          "label": "expired",
+          "mode": "arena",
+          "pos": [
+            904.099670410156,
+            480.0
+          ],
+          "reaction": "move",
+          "rng": -4439465104664985820,
+          "runstate": "playing"
+        },
+        {
+          "elapsed": 0.32,
+          "enemy_count": 0,
+          "hp": -81.0,
+          "hurt_age": 0.0,
+          "kills": 1,
+          "label": "lethal interruption",
+          "mode": "arena",
+          "pos": [
+            903.569641113281,
+            480.0
+          ],
+          "reaction": "death",
+          "rng": -4439465104664985820,
+          "runstate": "playing"
+        },
+        {
+          "elapsed": 0.02,
+          "enemy_count": 1,
+          "hp": 21.0,
+          "hurt_age": 0.0,
+          "kills": 0,
+          "label": "first hit",
+          "mode": "rooms",
+          "pos": [
+            281.059997558594,
+            320.0
+          ],
+          "reaction": "hurt",
+          "rng": -4439465104664985820,
+          "runstate": "playing"
+        },
+        {
+          "elapsed": 0.15,
+          "enemy_count": 1,
+          "hp": 20.0,
+          "hurt_age": 0.13,
+          "kills": 0,
+          "label": "repeat hit",
+          "mode": "rooms",
+          "pos": [
+            287.949981689453,
+            320.0
+          ],
+          "reaction": "hurt",
+          "rng": -4439465104664985820,
+          "runstate": "playing"
+        },
+        {
+          "elapsed": 0.3,
+          "enemy_count": 1,
+          "hp": 20.0,
+          "hurt_age": 0.28,
+          "kills": 0,
+          "label": "expired",
+          "mode": "rooms",
+          "pos": [
+            295.899963378906,
+            320.0
+          ],
+          "reaction": "move",
+          "rng": -4439465104664985820,
+          "runstate": "playing"
+        },
+        {
+          "elapsed": 0.32,
+          "enemy_count": 0,
+          "hp": -81.0,
+          "hurt_age": 0.0,
+          "kills": 1,
+          "label": "lethal interruption",
+          "mode": "rooms",
+          "pos": [
+            296.429962158203,
+            320.0
+          ],
+          "reaction": "death",
+          "rng": -4439465104664985820,
+          "runstate": "playing"
+        },
+        {
+          "elapsed": 0.02,
+          "enemy_count": 1,
+          "hp": 21.0,
+          "hurt_age": 0.0,
+          "kills": 0,
+          "label": "first hit",
+          "mode": "rooms",
+          "pos": [
+            678.93994140625,
+            320.0
+          ],
+          "reaction": "hurt",
+          "rng": -4439465104664985820,
+          "runstate": "playing"
+        },
+        {
+          "elapsed": 0.15,
+          "enemy_count": 1,
+          "hp": 20.0,
+          "hurt_age": 0.13,
+          "kills": 0,
+          "label": "repeat hit",
+          "mode": "rooms",
+          "pos": [
+            672.0498046875,
+            320.0
+          ],
+          "reaction": "hurt",
+          "rng": -4439465104664985820,
+          "runstate": "playing"
+        },
+        {
+          "elapsed": 0.3,
+          "enemy_count": 1,
+          "hp": 20.0,
+          "hurt_age": 0.28,
+          "kills": 0,
+          "label": "expired",
+          "mode": "rooms",
+          "pos": [
+            664.099670410156,
+            320.0
+          ],
+          "reaction": "move",
+          "rng": -4439465104664985820,
+          "runstate": "playing"
+        },
+        {
+          "elapsed": 0.32,
+          "enemy_count": 0,
+          "hp": -81.0,
+          "hurt_age": 0.0,
+          "kills": 1,
+          "label": "lethal interruption",
+          "mode": "rooms",
+          "pos": [
+            663.569641113281,
+            320.0
+          ],
+          "reaction": "death",
+          "rng": -4439465104664985820,
+          "runstate": "playing"
+        }
+      ]
+    }
+  ],
+  "helpers": [
+    {
+      "capture_removed": true,
+      "complete": true,
+      "driver": "Dummy",
+      "game_owner_count": 1,
+      "mix_rate": 44100.0,
+      "observations": [
+        {
+          "discarded": 0,
+          "elapsed_us": 145,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 0,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 0,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 1468,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 0,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 0,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 14616,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 0,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 0,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 28940,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 0,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 0,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 42831,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 0,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 0,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 56382,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 0,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 0,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 71280,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 0,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 0,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 84484,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 4096,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 4096,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 98091,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 4096,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 4096,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 111198,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 4096,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 4096,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 124985,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 4096,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 4096,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 138927,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 4096,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 4096,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 152691,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 4096,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 4096,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 166396,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 4096,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 4096,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 181258,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 8192,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 8192,
+          "streams_released": true
+        }
+      ],
+      "pre_window_drained": 8192,
+      "prepare_errors": [],
+      "requested_owner_count": 1,
+      "scope": "Test-only bounded final-owner resource release and fresh internal silence; not physical output or a universal timing guarantee.",
+      "tracked_owner_count": 1,
+      "tracked_stream_count": 2
+    }
+  ],
+  "exception": null,
+  "pass": true
+}

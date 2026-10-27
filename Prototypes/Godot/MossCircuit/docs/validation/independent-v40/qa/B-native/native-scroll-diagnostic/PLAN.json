@@ -1,0 +1,328 @@
+{
+  "status": "FROZEN_QA_APPROVED",
+  "target_path": null,
+  "target_map": null,
+  "pck": null,
+  "icon_oracle": "evidence-workspace/moss-v39-B-qa/assets/NATIVE_B3_EXPECTED.json",
+  "expected_per_command_checks": 71,
+  "expected_per_command_records": 10,
+  "assertions_per_case": {
+    "01": 4,
+    "02": 7,
+    "03": 10,
+    "04": 6,
+    "05": 8,
+    "06": 5,
+    "07": 8,
+    "08": 9,
+    "09": 6,
+    "10": 8
+  },
+  "source_authority": "Actual combined926 source/map543d; runtime exactcombined6743 PCK. Source readback only, no runtime fallback.",
+  "pins": {
+    "evidence-workspace/moss-v39-ui/B/native/fixture.gd": "531ddf9b1a1344865b363f03a2ac2afc4dcd85d1303715c8bf43302643e057d2",
+    "evidence-workspace/moss-v39-ui/B/native/observed.gd": "67481cab8a64c2f963eef58173eeaa221c57db3cd548c49dbc1ec287d583f2e3",
+    "evidence-workspace/moss-v39-ui/B/native/support/audio_teardown.gd": "9e9676e34296cb55d4560b1169c5954a82508f70e9051fcc942d1bb6839c23bd",
+    "evidence-workspace/moss-v39-ui/B/NATIVE_STAGE_MATRIX_v2.md": "ad23f1e17c5f0602d6ed4e8dbab526e1913448f940ebab9b87eba0916c7212de",
+    "evidence-workspace/moss-v39-B-qa/assets/NATIVE_B3_EXPECTED.json": "d45315f45c3c0f62f228f226e511f093b4e7ced5ee189caacf69fd87b209ed4c",
+    "evidence-workspace/moss-v39-ui/B/native/VISIBILITY_API_ONLY.patch": "10d96f8301e6a4b2528dd8cd8f5978e9303a6dc48e357f1f747fc8407409b23e",
+    "evidence-workspace/moss-v39-ui/B/native/run.py": "84f75496fcd3da7b5d2dee858ca68128008f647a8a6b54c90a73a88d896e47a5",
+    "evidence-workspace/moss-v39-ui/B/native/launch.sh": "32bc6cbe566f61c3499716d659c4411bcc95e9a71dc19189530056df0f9a862c",
+    "evidence-workspace/moss-v39-B-equipment16-pack/linux/MossCircuit.pck": "6743bf0f468c25ad28cc2776d1b1f28fd6356b23ee6f5a36ad977e90863dd775",
+    "evidence-workspace/moss-v39-items/B-equipment16-combination/assembly-first/INPUTS.json": "543d43c875b72b7682c312a4811094007e679c419d2142aa86c0d59728b57440",
+    "evidence-workspace/moss-v39-B-qa/B_SOURCE_COMBINATION_RAW_REVIEW.json": "66e6b8c01ae6b1b19d844f0ced70f76c49a3bc7b7a5985493fd57cb5197f985c",
+    "evidence-workspace/moss-v39-prep/B_COMBINED_SOURCE_RAW_REVIEW.json": "0faae1dad1dbcdf39029d6244d1137dde37a1a8aba2d67f0145e9e8f590f50d2",
+    "evidence-workspace/moss-v39-B-qa/packed-combined-first/SUMMARY.json": "5ec00fbfd7dabf2a423cbcba2cb7649631e7248b1669db7ec5ae52b2ebb12959",
+    "evidence-workspace/moss-v39-ui/B/native-scroll-diagnostic/observed.gd": "223a1c875cfa5d26f40632d1874c4d828751dc9f6e1f11ba3ad733b64fcc68eb",
+    "evidence-workspace/moss-v39-ui/B/native-scroll-diagnostic/run.py": "bae9c430fe6ef22c2101f3f3d4b7ff038a8c0d574527f1dce3388d2ca76bd78c",
+    "evidence-workspace/moss-v39-ui/B/native-scroll-diagnostic/launch.sh": "f6d6fb33a685089d1516c0e3b9631b8128dba001ed4a5af70178d0a519ea20a1",
+    "evidence-workspace/moss-v39-ui/B/native/PLAN.json": "a800b424176212b18c3ccc974eb8a45e773ec7b68c43d73c2540d8014e103696",
+    "evidence-workspace/moss-v39-ui/B/native/arena_960/RESULT.json": "8d9287fa949527a816958b35e5f13e73341d9b23b5691c0ab35589df71a472a3",
+    "evidence-workspace/moss-v39-ui/B/native/arena_960/native.log": "a2eddcb4997694b88859cf015af246d98783225f85802cc2aa5206e8c34490d3",
+    "evidence-workspace/moss-v39-ui/B/native/arena_960/native.exit": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+  },
+  "commands": [
+    {
+      "name": "arena_960",
+      "mode": "arena",
+      "os_requested": [
+        960,
+        540
+      ],
+      "timeout_seconds": 180,
+      "expected_checks": 71,
+      "expected_records": 10,
+      "images": [
+        "arena_960_01_old_build_before.png",
+        "arena_960_01_old_build_build.png",
+        "arena_960_01_old_build_closed.png",
+        "arena_960_02_three_cards_crossfire_pin.png",
+        "arena_960_02_three_cards_salvage_capacitor.png",
+        "arena_960_02_three_cards_medic_winch.png",
+        "arena_960_03_summaries_pin_row.png",
+        "arena_960_03_summaries_salvage_row.png",
+        "arena_960_03_summaries_winch_row.png",
+        "arena_960_04_pin_readiness_prerequisite.png",
+        "arena_960_04_pin_readiness_cooldown.png",
+        "arena_960_05_pin_vs_focus_normal.png",
+        "arena_960_05_pin_vs_focus_reduced.png",
+        "arena_960_05_pin_vs_focus_consumed.png",
+        "arena_960_06_invalid_mark_invalid.png",
+        "arena_960_06_invalid_mark_pruned.png",
+        "arena_960_07_salvage_fields_normal.png",
+        "arena_960_07_salvage_fields_reduced.png",
+        "arena_960_07_salvage_fields_expired.png",
+        "arena_960_08_winch_pipeline_normal.png",
+        "arena_960_08_winch_pipeline_reduced.png",
+        "arena_960_08_winch_pipeline_collected.png",
+        "arena_960_08_winch_pipeline_no_medicine.png",
+        "arena_960_09_sale_room_sold.png",
+        "arena_960_09_sale_room_room.png",
+        "arena_960_10_modal_layer_world.png",
+        "arena_960_10_modal_layer_build.png",
+        "arena_960_10_modal_layer_pause.png"
+      ]
+    },
+    {
+      "name": "rooms_1280",
+      "mode": "rooms",
+      "os_requested": [
+        1280,
+        720
+      ],
+      "timeout_seconds": 180,
+      "expected_checks": 71,
+      "expected_records": 10,
+      "images": [
+        "rooms_1280_01_old_build_before.png",
+        "rooms_1280_01_old_build_build.png",
+        "rooms_1280_01_old_build_closed.png",
+        "rooms_1280_02_three_cards_crossfire_pin.png",
+        "rooms_1280_02_three_cards_salvage_capacitor.png",
+        "rooms_1280_02_three_cards_medic_winch.png",
+        "rooms_1280_03_summaries_pin_row.png",
+        "rooms_1280_03_summaries_salvage_row.png",
+        "rooms_1280_03_summaries_winch_row.png",
+        "rooms_1280_04_pin_readiness_prerequisite.png",
+        "rooms_1280_04_pin_readiness_cooldown.png",
+        "rooms_1280_05_pin_vs_focus_normal.png",
+        "rooms_1280_05_pin_vs_focus_reduced.png",
+        "rooms_1280_05_pin_vs_focus_consumed.png",
+        "rooms_1280_06_invalid_mark_invalid.png",
+        "rooms_1280_06_invalid_mark_pruned.png",
+        "rooms_1280_07_salvage_fields_normal.png",
+        "rooms_1280_07_salvage_fields_reduced.png",
+        "rooms_1280_07_salvage_fields_expired.png",
+        "rooms_1280_08_winch_pipeline_normal.png",
+        "rooms_1280_08_winch_pipeline_reduced.png",
+        "rooms_1280_08_winch_pipeline_collected.png",
+        "rooms_1280_08_winch_pipeline_no_medicine.png",
+        "rooms_1280_09_sale_room_sold.png",
+        "rooms_1280_09_sale_room_room.png",
+        "rooms_1280_10_modal_layer_world.png",
+        "rooms_1280_10_modal_layer_build.png",
+        "rooms_1280_10_modal_layer_pause.png"
+      ]
+    }
+  ],
+  "limitations": [
+    "Controlled actual pipeline and viewport events, not natural acquisition or hardware mouse.",
+    "Second field requires controlled dash readiness reset before actual Motor, not ordinary cadence.",
+    "Room eligibility setup controlled; actual main complete_wave bridge, room modal may be upgrade/shop.",
+    "B cancellation changes batch_open/pending/winch_requested_this_batch even if pending already null.",
+    "Visual layering requires original-image direct review; state predicates alone insufficient.",
+    "B-only; equipment16 candidate not included."
+  ],
+  "visibility_api_note": "Original unexecuted adb333 retained; onlythreepublic modal_visible queries fixed after actual equipmentfixture79/2FAIL and staticactualUI API confirmation. No count/input/prod change.",
+  "source_path": "evidence-workspace/moss-v39-B-equipment16",
+  "original_source_path": "evidence-workspace/moss-v39-B-equipment16",
+  "source_input_map_path": "evidence-workspace/moss-v39-items/B-equipment16-combination/assembly-first/INPUTS.json",
+  "pck_path": "evidence-workspace/moss-v39-B-equipment16-pack/linux/MossCircuit.pck",
+  "pck_sha256": "6743bf0f468c25ad28cc2776d1b1f28fd6356b23ee6f5a36ad977e90863dd775",
+  "prerequisites": {
+    "source_full": {
+      "path": "evidence-workspace/moss-v39-B-qa/B_SOURCE_COMBINATION_RAW_REVIEW.json",
+      "criteria": [
+        {
+          "field_path": [
+            "review_pass"
+          ],
+          "expected": true
+        },
+        {
+          "field_path": [
+            "source_combination_pass"
+          ],
+          "expected": true
+        },
+        {
+          "field_path": [
+            "total_distinct_source_routes"
+          ],
+          "expected": 165
+        },
+        {
+          "field_path": [
+            "original_failure_preserved"
+          ],
+          "expected": true
+        },
+        {
+          "field_path": [
+            "original_aggregate_pass"
+          ],
+          "expected": false
+        }
+      ]
+    },
+    "packed_B_resources": {
+      "path": "evidence-workspace/moss-v39-B-qa/packed-combined-first/SUMMARY.json",
+      "criteria": [
+        {
+          "field_path": [
+            "pass"
+          ],
+          "expected": true
+        },
+        {
+          "field_path": [
+            "completed"
+          ],
+          "expected": 22
+        },
+        {
+          "field_path": [
+            "pck_sha256"
+          ],
+          "expected": "6743bf0f468c25ad28cc2776d1b1f28fd6356b23ee6f5a36ad977e90863dd775"
+        },
+        {
+          "field_path": [
+            "source_map_sha256"
+          ],
+          "expected": "543d43c875b72b7682c312a4811094007e679c419d2142aa86c0d59728b57440"
+        },
+        {
+          "field_path": [
+            "source_sets_unchanged"
+          ],
+          "expected": true
+        }
+      ],
+      "pck_sha256": "6743bf0f468c25ad28cc2776d1b1f28fd6356b23ee6f5a36ad977e90863dd775"
+    },
+    "combined_source_resources": {
+      "path": "evidence-workspace/moss-v39-prep/B_COMBINED_SOURCE_RAW_REVIEW.json",
+      "criteria": [
+        {
+          "field_path": [
+            "review_pass"
+          ],
+          "expected": true
+        },
+        {
+          "field_path": [
+            "source926_and_original907_888_live_exact"
+          ],
+          "expected": true
+        },
+        {
+          "field_path": [
+            "imported_observations_exact_prior_reports"
+          ],
+          "expected": true
+        }
+      ]
+    }
+  },
+  "phases": [
+    {
+      "name": "arena_960",
+      "script": "evidence-workspace/moss-v39-ui/B/native-scroll-diagnostic/observed.gd",
+      "args": [
+        "arena",
+        "evidence-workspace/moss-v39-B-qa/assets/NATIVE_B3_EXPECTED.json"
+      ],
+      "expected_checks": 21,
+      "expected_records": 3,
+      "expected_images": [
+        "arena_960_01_old_build_before.png",
+        "arena_960_01_old_build_build.png",
+        "arena_960_01_old_build_closed.png",
+        "arena_960_02_three_cards_crossfire_pin.png",
+        "arena_960_02_three_cards_salvage_capacitor.png",
+        "arena_960_02_three_cards_medic_winch.png",
+        "arena_960_03_summaries_pin_row.png",
+        "arena_960_03_summaries_salvage_row.png",
+        "arena_960_03_summaries_winch_row.png",
+        "scroll_fail_1.png"
+      ],
+      "expected_scene_ids": [
+        "01_old_build",
+        "02_three_cards",
+        "03_summaries"
+      ],
+      "scene_stages": {
+        "01_old_build": [
+          "before",
+          "build",
+          "closed"
+        ],
+        "02_three_cards": [
+          "crossfire_pin",
+          "salvage_capacitor",
+          "medic_winch"
+        ],
+        "03_summaries": [
+          "pin_row",
+          "salvage_row",
+          "winch_row"
+        ]
+      },
+      "scene_assertion_counts": {
+        "01_old_build": 4,
+        "02_three_cards": 7,
+        "03_summaries": 10
+      },
+      "expected_os_record": "(960, 540)",
+      "expected_stage_images": [
+        "arena_960_01_old_build_before.png",
+        "arena_960_01_old_build_build.png",
+        "arena_960_01_old_build_closed.png",
+        "arena_960_02_three_cards_crossfire_pin.png",
+        "arena_960_02_three_cards_salvage_capacitor.png",
+        "arena_960_02_three_cards_medic_winch.png",
+        "arena_960_03_summaries_pin_row.png",
+        "arena_960_03_summaries_salvage_row.png",
+        "arena_960_03_summaries_winch_row.png"
+      ],
+      "expected_failures": [
+        "03_summaries / whole summary crossfire_pin"
+      ],
+      "expected_failed_assertions": {
+        "03_summaries": [
+          "whole summary crossfire_pin"
+        ]
+      },
+      "expected_exit": 1
+    }
+  ],
+  "runner_contract": [
+    "two separate180s native commands, firstfailure stops",
+    "fixedCLI plan SHA thenapprovedstatus",
+    "allrecord stages names/counts/save_error0/logical960/actualOS exact",
+    "decodeall56PNG actual960x540",
+    "stricthelper owner1 percommand, mixfinite requiredceil15percent, lastrelease",
+    "markerinvalidprefixandbadJSONschema reject withRESULT",
+    "allsource/pins/freeze beforeafter",
+    "noequipment16resources or oldA gate substitution"
+  ],
+  "binding_scope": "Final target must combined B+accepted16 pack6743, neverold B pack or asset-onlyfac259; actual receipts/maps pending",
+  "source_gate_scope": "35 prior routes + independently reviewed original435 + remaining129 =165 distinct source routes; NOT single165 rerun. Combined926 source resource gate separate, originalFAIL preserved.",
+  "packed_receipt_note": "Actual packed22 terminalPASS5ec00f readback and pinned; launch waits QA/independent review release.",
+  "source_readback_note": "source_path and original_source_path are identical combined926 directory; this is same-source full before/after verification, NOT two independentcopies. Runtime uses emptycwd --main-pack.",
+  "scope": "Single first-Arena diagnostic reproducing original21/1FAIL with same24wheel inputs; diagnostic match is NOT native acceptance.",
+  "diagnostic_implementation": "Derived scroll_group delegates super original24; pointer and frames override only trace then super samecalls/waits. Before/after rect and actualwheel direction recorded. No additional input/clock/fit writes.",
+  "original_failure_receipt": "evidence-workspace/moss-v39-ui/B/native/arena_960/RESULT.json",
+  "outcome_contract": "diagnostic_completed requires replayoriginal21/1FAIL+nativeexit1/helper1/pins/telemetry. target_pass alwaysfalse; original target remainsFAIL. Budgetcause evaluated fromtrace, not predeclared24-as-success."
+}

@@ -1,0 +1,49 @@
+{
+  "status": "FROZEN_PENDING_STATIC_REVIEW_AND_LEASE",
+  "source": "evidence-workspace/moss-v39-B-r2",
+  "input_map": "evidence-workspace/moss-v39-items/B-evidence/INTEGRATION_R2_INPUTS.json",
+  "pins": {
+    "evidence-workspace/moss-v39-B-qa/integration/first/run.py": "e08820963db2d3c367c495d7d5c642432b9a03fd4ed0dce8317559f328d277a6",
+    "evidence-workspace/moss-v39-items/B-evidence/INTEGRATION_R2_INPUTS.json": "085f23a8742f903e722ee9a6416e6ba7dd45dc9952819189cd30b71d72103bcd",
+    "evidence-workspace/moss-v39-B-r2/tests/support/audio_teardown.gd": "9e9676e34296cb55d4560b1169c5954a82508f70e9051fcc942d1bb6839c23bd",
+    "evidence-workspace/moss-v39-B-qa/integration/independent_B_pin_ring.gd": "61ed45bd1a67dc9b8fca51c6fc6c22e8be8a3b9c48596d5f3f4af1f66355a6bb",
+    "evidence-workspace/moss-v39-B-qa/integration/independent_B_real_hooks.gd": "93eb63c0230726c2c51ff1a385225dc11bcf61fb66d20e0d8c3b844a555bc57d",
+    "evidence-workspace/moss-v39-B-qa/integration/PIN_RING_PHASE_HAND_CASES.json": "2070a55cdf072dde55b3ec89dadf9faf762903e717764f8ceb393a4f239f0ef4",
+    "evidence-workspace/moss-v39-B-qa/integration/INDEPENDENT_HAND_SCOPE.md": "2a1faac7a5e8af3bd7109f12242a8ae03a5ca485e72b458746d938e32e036b82",
+    "evidence-workspace/moss-v39-B-qa/integration/PIN_RING_PREEXECUTION_CORRECTION.json": "53efcef325c479f73ce59a4376ba2640c972b94d1a5748caa036a17c8415246a",
+    "evidence-workspace/moss-v39-items/B-integration-tests/cold-r2/raw-first/RESULT.json": "985365fad9319cffb98a9047a50283b49146abfb00194e6afbe96b9330475492",
+    "evidence-workspace/moss-v39-B-qa/B_R2_COLD_RAW_REVIEW.json": "88e5f0c93bd55f1ddcfa725b0409fdd62accb08d682ca165b42cf1877c2e8e73",
+    "evidence-workspace/moss-v39-items/B-final-review/B_FINAL_CONTRACT.md": "d16f130e022482d18dd73bc85c43f520a58d6d2b78c72d5156bf056ba178cbd7",
+    "evidence-workspace/moss-v39-items/B-final-review/B_API_SIGNATURES.md": "32974e101e39a2bef9aca00c872027a6af789024b50e4513fd7850f374b37e2e",
+    "evidence-workspace/moss-v39-items/B-final-review/B_OBSERVABLE_STATE_ADDENDUM.md": "10fb918a8dd74c68268645676bcd4c844f3461f35518c8eace23d05c34fa8cee",
+    "evidence-workspace/moss-v39-items/B-final-review/B_CANONICAL_ERRATA.md": "ecdffecb43788d54d1b264fdd22ad9838ea9da23c6b3876fe8af6933b3927336",
+    "evidence-workspace/moss-v39-B-qa/integration/corrected/run.py": "0c2f54abb4e551ead8680e020bea0040334f402ba81ec0d63c13e522f2bbcd09",
+    "evidence-workspace/moss-v39-B-qa/integration/corrected/independent_B_pin_ring_r2.gd": "21d5e47253736add2dc657db5a82f406a71bb9db06ba7225f7bbcf3e0cdbcf99",
+    "evidence-workspace/moss-v39-B-qa/integration/corrected/FIXTURE_ONLY.patch": "d116fb1f05583507fdb1de59a933cf417e36dfe3eded2dd61a9fde7a0de29bdf",
+    "evidence-workspace/moss-v39-B-qa/integration/first/raw-first/RESULT.json": "bd35ac7e35427eb5a4ab8f1db812bc8985619ba244965557310859f890cb4c86",
+    "evidence-workspace/moss-v39-B-qa/integration/pin-diagnostic/raw-first/RESULT.json": "8978e241ea11125e121c4a17c76ba9e0be1f72651ae816f9794de484fec1ad66",
+    "evidence-workspace/moss-v39-B-qa/integration/keytype-diagnostic/raw-first/RESULT.json": "5a140a5f21140ce8882eb6aea22a6413621bef8a05136b4245a25c69ce8d7bf7"
+  },
+  "routes": [
+    {
+      "name": "pin_ring",
+      "script": "evidence-workspace/moss-v39-B-qa/integration/corrected/independent_B_pin_ring_r2.gd",
+      "marker": "independent_B_pin_ring_checks",
+      "checks": 126,
+      "observations": 14,
+      "helpers": 1
+    },
+    {
+      "name": "real_hooks",
+      "script": "evidence-workspace/moss-v39-B-qa/integration/independent_B_real_hooks.gd",
+      "marker": "independent_B_real_hook_checks",
+      "checks": 62,
+      "observations": 2,
+      "helpers": 1
+    }
+  ],
+  "timeout_each": 180,
+  "first_fail_stop": true,
+  "no_retry": true,
+  "scope": "Pre-execution author+QA confirmed original death setup dot key StringName versus frozen actual String schema; change to bracket String, retain all126 literals and numeric fail-safe CD predicate. First62 follows only if126pass."
+}

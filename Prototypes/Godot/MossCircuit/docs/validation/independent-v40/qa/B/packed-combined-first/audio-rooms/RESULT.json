@@ -1,0 +1,629 @@
+{
+  "name": "audio-rooms",
+  "native_exit": 0,
+  "timeout": false,
+  "seconds": 85.52972220299125,
+  "reports": [
+    {
+      "checks": 338,
+      "failures": []
+    }
+  ],
+  "helpers": [
+    {
+      "capture_removed": true,
+      "complete": true,
+      "driver": "Dummy",
+      "game_owner_count": 1,
+      "mix_rate": 44100.0,
+      "observations": [
+        {
+          "discarded": 0,
+          "elapsed_us": 110,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 0,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 0,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 12385,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 0,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 0,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 26275,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 0,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 0,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 39698,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 0,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 0,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 53455,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 0,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 0,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 67207,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 0,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 0,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 82054,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 4096,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 4096,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 94802,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 4096,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 4096,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 109873,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 4096,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 4096,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 128891,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 4096,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 4096,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 136399,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 4096,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 4096,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 150012,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 4096,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 4096,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 163854,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 4096,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 4096,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 178346,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 8192,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 8192,
+          "streams_released": true
+        }
+      ],
+      "pre_window_drained": 4096,
+      "prepare_errors": [],
+      "requested_owner_count": 1,
+      "scope": "Test-only bounded final-owner resource release and fresh internal silence; not physical output or a universal timing guarantee.",
+      "tracked_owner_count": 1,
+      "tracked_stream_count": 2
+    }
+  ],
+  "full_report": {
+    "checks": 338,
+    "failures": [],
+    "observations": [
+      {
+        "audio": "enabled",
+        "case": "loss",
+        "hp": 89.0,
+        "mode": "rooms",
+        "requests": [
+          {
+            "accepted": true,
+            "cue": "player_damage"
+          }
+        ],
+        "state": "playing"
+      },
+      {
+        "audio": "muted",
+        "case": "loss",
+        "hp": 89.0,
+        "mode": "rooms",
+        "requests": [
+          {
+            "accepted": false,
+            "cue": "player_damage"
+          }
+        ],
+        "state": "playing"
+      },
+      {
+        "audio": "missing",
+        "case": "loss",
+        "hp": 89.0,
+        "mode": "rooms",
+        "requests": [
+          {
+            "accepted": false,
+            "cue": "player_damage"
+          }
+        ],
+        "state": "playing"
+      },
+      {
+        "audio": "enabled",
+        "case": "overkill",
+        "hp": 0.0,
+        "mode": "rooms",
+        "requests": [
+          {
+            "accepted": true,
+            "cue": "player_damage"
+          }
+        ],
+        "state": "dead"
+      },
+      {
+        "audio": "muted",
+        "case": "overkill",
+        "hp": 0.0,
+        "mode": "rooms",
+        "requests": [
+          {
+            "accepted": false,
+            "cue": "player_damage"
+          }
+        ],
+        "state": "dead"
+      },
+      {
+        "audio": "missing",
+        "case": "overkill",
+        "hp": 0.0,
+        "mode": "rooms",
+        "requests": [
+          {
+            "accepted": false,
+            "cue": "player_damage"
+          }
+        ],
+        "state": "dead"
+      },
+      {
+        "audio": "enabled",
+        "case": "zero",
+        "hp": 100.0,
+        "mode": "rooms",
+        "requests": [],
+        "state": "playing"
+      },
+      {
+        "audio": "muted",
+        "case": "zero",
+        "hp": 100.0,
+        "mode": "rooms",
+        "requests": [],
+        "state": "playing"
+      },
+      {
+        "audio": "missing",
+        "case": "zero",
+        "hp": 100.0,
+        "mode": "rooms",
+        "requests": [],
+        "state": "playing"
+      },
+      {
+        "audio": "enabled",
+        "case": "negative",
+        "hp": 103.0,
+        "mode": "rooms",
+        "requests": [],
+        "state": "playing"
+      },
+      {
+        "audio": "muted",
+        "case": "negative",
+        "hp": 103.0,
+        "mode": "rooms",
+        "requests": [],
+        "state": "playing"
+      },
+      {
+        "audio": "missing",
+        "case": "negative",
+        "hp": 103.0,
+        "mode": "rooms",
+        "requests": [],
+        "state": "playing"
+      },
+      {
+        "audio": "enabled",
+        "case": "infinite incoming finite capped loss",
+        "hp": 0.0,
+        "mode": "rooms",
+        "requests": [
+          {
+            "accepted": true,
+            "cue": "player_damage"
+          }
+        ],
+        "state": "dead"
+      },
+      {
+        "audio": "muted",
+        "case": "infinite incoming finite capped loss",
+        "hp": 0.0,
+        "mode": "rooms",
+        "requests": [
+          {
+            "accepted": false,
+            "cue": "player_damage"
+          }
+        ],
+        "state": "dead"
+      },
+      {
+        "audio": "missing",
+        "case": "infinite incoming finite capped loss",
+        "hp": 0.0,
+        "mode": "rooms",
+        "requests": [
+          {
+            "accepted": false,
+            "cue": "player_damage"
+          }
+        ],
+        "state": "dead"
+      },
+      {
+        "audio": "enabled",
+        "case": "nonfinite returned loss",
+        "hp": "nan",
+        "mode": "rooms",
+        "requests": [],
+        "state": "playing"
+      },
+      {
+        "audio": "muted",
+        "case": "nonfinite returned loss",
+        "hp": "nan",
+        "mode": "rooms",
+        "requests": [],
+        "state": "playing"
+      },
+      {
+        "audio": "missing",
+        "case": "nonfinite returned loss",
+        "hp": "nan",
+        "mode": "rooms",
+        "requests": [],
+        "state": "playing"
+      },
+      {
+        "audio": "enabled",
+        "case": "NaN returned loss",
+        "hp": "nan",
+        "mode": "rooms",
+        "requests": [],
+        "state": "playing"
+      },
+      {
+        "audio": "muted",
+        "case": "NaN returned loss",
+        "hp": "nan",
+        "mode": "rooms",
+        "requests": [],
+        "state": "playing"
+      },
+      {
+        "audio": "missing",
+        "case": "NaN returned loss",
+        "hp": "nan",
+        "mode": "rooms",
+        "requests": [],
+        "state": "playing"
+      },
+      {
+        "audio": "enabled",
+        "case": "mirror",
+        "hp": 100.0,
+        "mode": "rooms",
+        "requests": [
+          {
+            "accepted": true,
+            "cue": "shield_block"
+          }
+        ],
+        "state": "playing"
+      },
+      {
+        "audio": "muted",
+        "case": "mirror",
+        "hp": 100.0,
+        "mode": "rooms",
+        "requests": [
+          {
+            "accepted": false,
+            "cue": "shield_block"
+          }
+        ],
+        "state": "playing"
+      },
+      {
+        "audio": "missing",
+        "case": "mirror",
+        "hp": 100.0,
+        "mode": "rooms",
+        "requests": [
+          {
+            "accepted": false,
+            "cue": "shield_block"
+          }
+        ],
+        "state": "playing"
+      },
+      {
+        "audio": "enabled",
+        "case": "mirror zero",
+        "hp": 100.0,
+        "mode": "rooms",
+        "requests": [
+          {
+            "accepted": true,
+            "cue": "shield_block"
+          }
+        ],
+        "state": "playing"
+      },
+      {
+        "audio": "muted",
+        "case": "mirror zero",
+        "hp": 100.0,
+        "mode": "rooms",
+        "requests": [
+          {
+            "accepted": false,
+            "cue": "shield_block"
+          }
+        ],
+        "state": "playing"
+      },
+      {
+        "audio": "missing",
+        "case": "mirror zero",
+        "hp": 100.0,
+        "mode": "rooms",
+        "requests": [
+          {
+            "accepted": false,
+            "cue": "shield_block"
+          }
+        ],
+        "state": "playing"
+      },
+      {
+        "audio": "enabled",
+        "case": "mirror negative",
+        "hp": 100.0,
+        "mode": "rooms",
+        "requests": [
+          {
+            "accepted": true,
+            "cue": "shield_block"
+          }
+        ],
+        "state": "playing"
+      },
+      {
+        "audio": "muted",
+        "case": "mirror negative",
+        "hp": 100.0,
+        "mode": "rooms",
+        "requests": [
+          {
+            "accepted": false,
+            "cue": "shield_block"
+          }
+        ],
+        "state": "playing"
+      },
+      {
+        "audio": "missing",
+        "case": "mirror negative",
+        "hp": 100.0,
+        "mode": "rooms",
+        "requests": [
+          {
+            "accepted": false,
+            "cue": "shield_block"
+          }
+        ],
+        "state": "playing"
+      },
+      {
+        "audio": "enabled",
+        "case": "mirror thorns",
+        "hp": 100.0,
+        "mode": "rooms",
+        "requests": [
+          {
+            "accepted": true,
+            "cue": "shield_block"
+          }
+        ],
+        "state": "playing"
+      },
+      {
+        "audio": "muted",
+        "case": "mirror thorns",
+        "hp": 100.0,
+        "mode": "rooms",
+        "requests": [
+          {
+            "accepted": false,
+            "cue": "shield_block"
+          }
+        ],
+        "state": "playing"
+      },
+      {
+        "audio": "missing",
+        "case": "mirror thorns",
+        "hp": 100.0,
+        "mode": "rooms",
+        "requests": [
+          {
+            "accepted": false,
+            "cue": "shield_block"
+          }
+        ],
+        "state": "playing"
+      },
+      {
+        "audio": "enabled",
+        "case": "medic thorns",
+        "hp": 69.0,
+        "mode": "rooms",
+        "requests": [
+          {
+            "accepted": true,
+            "cue": "player_damage"
+          }
+        ],
+        "state": "playing"
+      },
+      {
+        "audio": "muted",
+        "case": "medic thorns",
+        "hp": 69.0,
+        "mode": "rooms",
+        "requests": [
+          {
+            "accepted": false,
+            "cue": "player_damage"
+          }
+        ],
+        "state": "playing"
+      },
+      {
+        "audio": "missing",
+        "case": "medic thorns",
+        "hp": 69.0,
+        "mode": "rooms",
+        "requests": [
+          {
+            "accepted": false,
+            "cue": "player_damage"
+          }
+        ],
+        "state": "playing"
+      }
+    ],
+    "scope": "Controlled imported PCM identity, resolved authority, actual four hostile routes, disabled-audio gameplay equality, strict setting and explicit lifecycle. No fresh mixer capture/native/hardware claim."
+  },
+  "exception": null,
+  "semantic": true,
+  "pass": true
+}

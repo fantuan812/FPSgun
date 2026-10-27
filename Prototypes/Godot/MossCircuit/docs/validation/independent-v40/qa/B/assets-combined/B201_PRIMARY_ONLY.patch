@@ -1,0 +1,11 @@
+--- original-B201
++++ combined-B201
+@@ -18,7 +18,7 @@
+  var ids: Array = ui.manifest.icons.keys(); ids.sort()
+  var wanted: Array = expected.icons.keys(); wanted.sort()
+  ck(ids==wanted and ids.size()==46,"exact actual46 IDs including preserved A43")
+- ck(ui.manifest.atlas=="res://assets/items/equipment_atlas_v2.png","B does not silently integrate equipment16 candidate")
++ ck(ui.manifest.atlas=="res://assets/items/equipment_atlas_editable.png","explicit B plus accepted equipment16 primary binding")
+  for id in wanted:
+   var e: Dictionary = expected.icons[id]
+   ck(ui.manifest.icons.has(id),"actual id "+id)

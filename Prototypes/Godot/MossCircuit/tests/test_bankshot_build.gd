@@ -22,7 +22,7 @@ func run()->void:
  g=load("res://scenes/main.tscn").instantiate();root.add_child(g);g.set_process(false)
  check(Rules.validate_catalog(g.catalog).is_empty(),"catalog valid")
  var expected:Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://docs/V23_CATALOG_ADDITIONS.json"))
- var a_history:Dictionary=preload("res://tests/support/v39_catalog_projection.gd").project(g.catalog,FileAccess.get_file_as_string("res://data/catalog.json"))
+ var a_history:Dictionary=preload("res://tests/support/v39_B_then_A_catalog_projection.gd").project(g.catalog,FileAccess.get_file_as_string("res://data/catalog.json"))
  check(a_history.pass and a_history.catalog.version==5 and a_history.catalog.weapons.size()==8 and a_history.catalog.items.size()==30 and a_history.catalog.items[-1].id=="scavenger_reel" and Rules.catalog_entry(a_history.catalog,"feedback_diode").id=="feedback_diode","explicit historical content version/count after strict A inverse")
  check(Rules.catalog_entry(g.catalog,"bankshot_driver")==expected.weapon,"entire reviewed weapon definition")
  check(Rules.catalog_entry(g.catalog,"bounce_guide")==expected.item,"entire reviewed guide definition")

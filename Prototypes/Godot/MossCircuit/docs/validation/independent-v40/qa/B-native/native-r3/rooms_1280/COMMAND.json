@@ -1,0 +1,29 @@
+{
+  "cmd": [
+    "godot",
+    "--path",
+    "evidence-workspace/moss-v39-ui/B/native-r3/empty-runtime",
+    "--main-pack",
+    "evidence-workspace/moss-v39-B-equipment16-pack/linux/MossCircuit.pck",
+    "--audio-driver",
+    "Dummy",
+    "--resolution",
+    "960x540",
+    "--position",
+    "0,60",
+    "--script",
+    "evidence-workspace/moss-v39-ui/B/native-r3/observed.gd",
+    "--",
+    "rooms",
+    "evidence-workspace/moss-v39-B-qa/assets/NATIVE_B3_EXPECTED.json"
+  ],
+  "timeout_seconds": 180,
+  "env": {
+    "HOME": "evidence-workspace/moss-v39-ui/B/native-r3/home",
+    "XDG_CONFIG_HOME": "evidence-workspace/moss-v39-ui/B/native-r3/config",
+    "XDG_DATA_HOME": "evidence-workspace/moss-v39-ui/B/native-r3/data",
+    "XDG_CACHE_HOME": "evidence-workspace/moss-v39-ui/B/native-r3/cache",
+    "DISPLAY": ":0",
+    "WAYLAND_DISPLAY": null
+  }
+}

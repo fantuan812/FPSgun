@@ -1,0 +1,38 @@
+{
+  "machine_gate_pass": true,
+  "visual_gate_pass": false,
+  "rows": [
+    {
+      "mode": "arena_960",
+      "seconds": 35.344183752007666,
+      "machine_checks": 71,
+      "records": 10,
+      "images": 28,
+      "helper": true,
+      "source_unchanged": true,
+      "pins_unchanged": true
+    },
+    {
+      "mode": "rooms_1280",
+      "seconds": 27.138347195010283,
+      "machine_checks": 71,
+      "records": 10,
+      "images": 28,
+      "helper": true,
+      "source_unchanged": true,
+      "pins_unchanged": true
+    }
+  ],
+  "visual_finding": "Directly viewed arena_960_05_pin_vs_focus_normal.png contains giant default-scale weapon sprites obscuring world. Paused fixture refresh lacks main production _sync_weapon_rig presentation call; no production mutation or gameplay failure inferred. All original images retained; new external presentation-only fixture pending.",
+  "pins": {
+    "evidence-workspace/moss-v39-ui/B/native-r2/PLAN.json": "f461e1af1dd5882fbd979ab6f74d3f1836ad84881abffe37d9c6392a3b2ed22a",
+    "evidence-workspace/moss-v39-ui/B/native-r2/wrapper.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "evidence-workspace/moss-v39-ui/B/native-r2/validation.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "evidence-workspace/moss-v39-ui/B/native-r2/arena_960/RESULT.json": "c8e4269183b99a09ca8c45026862219e7418a969b2731c73099ec9e0a5eb7f58",
+    "evidence-workspace/moss-v39-ui/B/native-r2/arena_960/native.log": "477395b009d317d7517429b27aa6cd963b6acbfda3dec74649ddf08ed7626fae",
+    "evidence-workspace/moss-v39-ui/B/native-r2/arena_960/native.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "evidence-workspace/moss-v39-ui/B/native-r2/rooms_1280/RESULT.json": "069d4d4076fa1b078022d95e5dcb5496026497e8afe7a56ec508e91a66c327f6",
+    "evidence-workspace/moss-v39-ui/B/native-r2/rooms_1280/native.log": "c021016fb346e310e26155636355271a8a79cfc2d2db6c664255ab9a5878618f",
+    "evidence-workspace/moss-v39-ui/B/native-r2/rooms_1280/native.exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+  }
+}

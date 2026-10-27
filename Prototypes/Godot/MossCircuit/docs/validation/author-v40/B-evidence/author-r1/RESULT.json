@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "expected_checks": 318,
+  "engine_command": [
+    "/usr/local/bin/godot",
+    "--headless",
+    "--path",
+    "evidence-workspace/moss-v39-items/B-harness",
+    "--script",
+    "res://tests/test_build_items_runtime.gd"
+  ],
+  "spawn_attempted": true,
+  "native_exit": 0,
+  "timeout_seconds": 180,
+  "timed_out": false,
+  "elapsed": 1.174105664002127,
+  "stderr_bytes": 0,
+  "strict_tags": [],
+  "marker_errors": [],
+  "records": [
+    {
+      "B_author_checks": 318,
+      "failures": [],
+      "scope": "isolated author helper/value-adapter; not independent oracle or actual engine integration"
+    }
+  ],
+  "diagnostic": null,
+  "before_issues": [],
+  "after_issues": [],
+  "approved_execution_freeze": "778999d53668e5d6bfbea22d3c6e5f80ad4184d4ba9fcc194128d6c11c1825ef"
+}

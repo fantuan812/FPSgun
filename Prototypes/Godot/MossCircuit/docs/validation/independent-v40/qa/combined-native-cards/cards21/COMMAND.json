@@ -1,0 +1,28 @@
+{
+  "cmd": [
+    "godot",
+    "--path",
+    "evidence-workspace/moss-v39-ui/combined-native-cards/empty-runtime",
+    "--main-pack",
+    "evidence-workspace/moss-v39-B-equipment16-pack/linux/MossCircuit.pck",
+    "--audio-driver",
+    "Dummy",
+    "--resolution",
+    "960x540",
+    "--position",
+    "0,60",
+    "--script",
+    "evidence-workspace/moss-v39-ui/combined-native-cards/cards_observed.gd",
+    "--",
+    "evidence-workspace/moss-equipment16-integration-review/EXPECTED_ICONS.json"
+  ],
+  "timeout_seconds": 180,
+  "env": {
+    "HOME": "evidence-workspace/moss-v39-ui/combined-native-cards/home",
+    "XDG_CONFIG_HOME": "evidence-workspace/moss-v39-ui/combined-native-cards/config",
+    "XDG_DATA_HOME": "evidence-workspace/moss-v39-ui/combined-native-cards/data",
+    "XDG_CACHE_HOME": "evidence-workspace/moss-v39-ui/combined-native-cards/cache",
+    "DISPLAY": ":0",
+    "WAYLAND_DISPLAY": null
+  }
+}

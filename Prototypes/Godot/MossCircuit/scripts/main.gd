@@ -1,5 +1,7 @@
 extends Node2D
 const NewWeaponRuntime=preload("res://scripts/gameplay/new_weapon_runtime.gd")
+const BuildItemsReadout=preload("res://scripts/gameplay/build_items_readout.gd")
+const BuildItemsVisuals=preload("res://scripts/gameplay/build_items_visuals.gd")
 const NewWeaponVisuals=preload("res://scripts/gameplay/new_weapon_visuals.gd")
 var new_weapon_runtime=NewWeaponRuntime.new()
 const ScavengerReel=preload("res://scripts/gameplay/scavenger_reel.gd")
@@ -280,6 +282,7 @@ func _build_ui() -> void:
 
 
 func _title() -> void:
+	if effect_runtime:effect_runtime.reset_build_items_encounter()
 	new_weapon_runtime.clear(combat)
 	_stop_feedback_audio()
 	combat.focus_enemy_id=0
@@ -375,6 +378,7 @@ func _start_run(seed_value: int,loadout_id:Variant=StartingLoadouts.DEFAULT_ID) 
 	resume_state="playing"
 	wave_time = 0.0
 	elapsed = 0.0
+	effect_runtime.start_build_items(catalog)
 	spawn_clock = 0.0
 	shot_clock = 0.0
 	hurt_clock = 0.0
@@ -595,6 +599,7 @@ func _complete_wave() -> void:
 	var retiring:Array=enemies.duplicate()
 	var outcome:=RunFlow.settle(combat,run,mode,config,effects,encounters)
 	if outcome in ["invalid","ignored"]:return
+	effect_runtime.reset_build_items_encounter()
 	_stop_feedback_audio()
 	vfx.clear();telegraphs.show_markers([])
 	actor_anim.clear(true,true)
@@ -612,6 +617,7 @@ func _complete_wave() -> void:
 
 
 func _show_upgrades() -> void:
+	if effect_runtime:effect_runtime.build_items.cancel_pending()
 	_stop_feedback_audio()
 	effects.invalidate()
 	state = "upgrade"
@@ -658,6 +664,7 @@ func _resolve_upgrade_choice() -> void:
 		_hide_modal()
 
 func _finish(won: bool) -> void:
+	if effect_runtime:effect_runtime.reset_build_items_encounter()
 	new_weapon_runtime.clear(combat)
 	_stop_feedback_audio()
 	combat.focus_enemy_id=0
@@ -708,6 +715,7 @@ func _draw() -> void:
 	if (not build.is_empty() and "bankshot_driver" in build.weapons) or bullets.any(func(b):return b.get("behavior","")=="field_bankshot"):
 		# Additive inset cue; the pre-existing general field outline above is unchanged.
 		draw_rect(Rect2(3,3,config.arena.width-6,config.arena.height-6),Color(1,.78,.35,.32 if settings.reduced_flashes else .52),false,1.5)
+	if state not in ["title","dead","won"]:BuildItemsVisuals.draw(self,_build_items_view(),settings.reduced_flashes)
 	if state not in ["title","dead","won"]:NewWeaponVisuals.draw(self,combat,settings.reduced_flashes)
 	for blast in pending_blasts:
 		draw_circle(blast.pos,blast.radius,Color(.65,.8,1,.8),false,2)
@@ -813,6 +821,7 @@ func _recompute() -> void:
 	while weapon_clocks.size() < build.weapons.size(): weapon_clocks.append(0.0)
 	weapon_clocks.resize(build.weapons.size())
 	effects.sync(build.items)
+	effect_runtime.sync_build_items()
 	if not build.items.has("medic_seed"): pickups = pickups.filter(func(p): return p.get("source","") != "medical")
 	hazards = hazards.filter(func(h): return build.items.has("dash_resin" if h.kind == "trail" else ("blast_fuse" if h.kind == "scorch" else "scrap_mine")))
 	if not effects.pair("dash_resin","pulse_boots"):
@@ -845,6 +854,7 @@ func _release_offer(token:int,generation:int)->bool:
 	return true
 
 func _open_shop() -> void:
+	if effect_runtime:effect_runtime.build_items.cancel_pending()
 	_stop_feedback_audio()
 	state = "shop"
 	shop_pending = false
@@ -926,6 +936,7 @@ func _move_weapon(slot: Variant, step: Variant, generation: Variant, id: Variant
 		build.weapon_temper[slot] = build.weapon_temper[target]
 		build.weapon_temper[target] = moved_tier
 	weapon_rig.swap_copies(slot,target)
+	effect_runtime.sync_build_items()
 	build.revision += 1
 	shop_generation += 1
 	shop_message = "%s moved to SLOT %d. Free; remaining cooldown follows its copy." % [Rules.catalog_entry(catalog,moved_id).name,target+1]
@@ -967,6 +978,7 @@ func _temper_weapon(slot: Variant, donor: Variant, generation: Variant, id: Vari
 	build.weapon_temper = projected.weapon_temper
 	weapon_clocks.remove_at(donor)
 	weapon_rig.consume_copy(donor)
+	effect_runtime.sync_build_items()
 	# Only weapon-derived stats change. Do not sync effects or clean up hazards.
 	var hp: float = stats.hp
 	var dash: float = stats.get("dash_time",0.0)
@@ -1034,6 +1046,7 @@ func _offer_forecast(index:Variant,generation:Variant,replace_slot:Variant=-1)->
 func _view() -> Dictionary:
 	if build.is_empty(): return {"seed":run_seed,"settings":settings.duplicate(true),"feedback_audio":_feedback_audio_view(),"mode_id":mode.id,"mode_name":mode.name,"objective":""}
 	var view := {"coins":build.coins,"wave":wave,"level":level,"hp":stats.hp,"max_hp":stats.max_hp,"xp":xp,"xp_max":Rules.xp_threshold(level),"time":elapsed,"kills":kills,"seed":run_seed,"stats":stats,"weapons":[],"items":[],"synergies":stats.synergies,"generation":shop_generation,"refresh_price":catalog.refresh_price,"weapon_slots":catalog.weapon_slots,"item_slots":catalog.item_slots,"message":shop_message,"offers":[],"rewards":rewards,"synergy_status":[],"mechanics":{"shield":effects.shield,"chain_charges":effects.chain_charges,"hazards":hazards.size(),"echo_hits":effects.echo_hits,"phase_charge":effects.phase_charge,"medic_damage":effects.medic_damage,"cooldowns":{}}}
+	view.build_items=_build_items_view()
 	view.focus=_focus_view()
 	view.starting_loadout=StartingLoadouts.entry(starting_loadouts,catalog,run.starting_loadout_id)
 	view.mode_id=mode.id
@@ -1198,12 +1211,14 @@ func _on_intent(action: String, payload: Dictionary) -> void:
 				else: _hide_modal()
 
 func _present_inventory() -> void:
+	if effect_runtime:effect_runtime.build_items.cancel_pending()
 	_stop_feedback_audio()
 	effects.invalidate()
 	ui.show_inventory(_view())
 
 
 func _present_pause() -> void:
+	if effect_runtime:effect_runtime.build_items.cancel_pending()
 	_stop_feedback_audio()
 	effects.invalidate()
 	ui.show_pause(_view())
@@ -1224,6 +1239,7 @@ func _hide_modal() -> void:
 
 
 func _clear_transients() -> void:
+	if effect_runtime:effect_runtime.build_items.cancel_pending()
 	visual_cooldowns.clear()
 	vfx.clear()
 	telegraphs.show_markers([])
@@ -1357,6 +1373,7 @@ func _enter_field(seed_value:int)->void:
 	camera.position=FieldLayout.camera_position(player_pos,config.arena)
 func _begin_room_clear()->void:
 	if state!="playing":return
+	effect_runtime.build_items.cancel_pending()
 	new_weapon_runtime.clear(combat)
 	_stop_feedback_audio()
 	combat.focus_enemy_id=0
@@ -1365,3 +1382,10 @@ func _begin_room_clear()->void:
 	_clear_transients()
 	weapon_rig.clear()
 	actor_anim.set_phase(0,"idle")
+
+func _build_items_view()->Dictionary:
+	if build.is_empty() or effect_runtime==null:return {"rows":[],"pin":{},"fields":[]}
+	var owned:Dictionary=build.get("items",{})
+	if not owned.has("crossfire_pin") and not owned.has("salvage_capacitor") and not owned.has("medic_winch"):
+		return {"rows":[],"pin":{},"fields":[]}
+	return BuildItemsReadout.describe(effect_runtime.build_items.debug_snapshot(),elapsed,enemies)

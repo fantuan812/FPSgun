@@ -1,0 +1,22 @@
+--- original-failed126
++++ type-safe-plus-telemetry126
+@@ -43,8 +43,10 @@
+  for mode in ["arena","rooms"]:
+   for row in cases:
+    var state:Dictionary=setup(mode,row);var e:Dictionary=state.enemy;var wave:Dictionary=state.wave;var beam:Dictionary=state.beam
++   print("B_PIN_TELEMETRY "+JSON.stringify({"stage":"before","mode":mode,"case":row.id,"time":g.elapsed,"serial":g.combat.combat_tick_serial,"effect_sequence":g.effect_sequence,"beam":beam.duplicate(true),"wave":wave.duplicate(true),"enemy_hp":e.hp,"enemy_pos":e.pos,"B":g.effect_runtime.build_items.debug_snapshot()}))
+    g.elapsed+=row.dt;g.combat.combat_tick_serial+=1;g.effect_runtime.begin_build_items_step(g.config.arena)
+    g.new_weapon_runtime.step(g.combat_frame,row.dt,g.combat.combat_tick_serial)
++   print("B_PIN_TELEMETRY "+JSON.stringify({"stage":"after","mode":mode,"case":row.id,"time":g.elapsed,"serial":g.combat.combat_tick_serial,"effect_sequence":g.effect_sequence,"beam":beam.duplicate(true),"wave":wave.duplicate(true),"enemy_hp":e.hp,"enemy_pos":e.pos,"B":g.effect_runtime.build_items.debug_snapshot()}))
+    var motion:Dictionary=g.combat.new_weapon_motion.get(e.id,{})
+    ck(e.pos==Vector2(row.to,300),mode+row.id+" accepted destination or dead no-op")
+    ck(near(e.hp,row.hp),mode+row.id+" literal primary/proc/wave HP")
+@@ -56,7 +58,7 @@
+    else:
+     ck(motion.p0==Vector2(row.x,300) and motion.p1==Vector2(row.x,300) and motion.has_segment==true,mode+row.id+" normal segment unchanged")
+     ck(motion.final_pos==e.pos,mode+row.id+" final endpoint matches actual position")
+-   ck(near(g.effect_runtime.build_items.pin_ready_at,11.0+row.dt),mode+row.id+" single cooldown from actual time; marked death housekeeping consumes mark without pull")
++   ck((g.effect_runtime.build_items.pin_ready_at is int or g.effect_runtime.build_items.pin_ready_at is float) and near(g.effect_runtime.build_items.pin_ready_at,11.0+row.dt),mode+row.id+" single cooldown from actual time; marked death housekeeping consumes mark without pull")
+    observations.append({"mode":mode,"case":row.id,"hp":e.hp,"position":[e.pos.x,e.pos.y],"motion":motion.duplicate(true),"pulse_index":beam.pulse_index,"wave_hit":wave.hit_out.has(e.id),"pin_ready_at":g.effect_runtime.build_items.pin_ready_at})
+  g._title();var helper=load("res://tests/support/audio_teardown.gd").new();helper.prepare([g]);g.queue_free();await process_frame;await helper.finish(self)
+  print(JSON.stringify({"independent_B_pin_ring_checks":checks,"failures":failures,"observations":observations,"scope":"Controlled real runtime launch and beam -> old/A proc -> Pin -> ring phase integration. Preexisting ages/mark and normal-motion samples are explicit fixture inputs, not ordinary play or physical CCD."}))

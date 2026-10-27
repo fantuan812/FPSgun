@@ -1,6 +1,7 @@
 extends RefCounted
 ## Test-only historical fixture input, never a production loader path.
-const Catalog=preload("res://tests/support/v39_catalog_projection.gd")
+const Catalog=preload("res://tests/support/v39_B_then_A_catalog_projection.gd")
+const BProfiles=preload("res://scripts/gameplay/build_items_profiles.gd")
 const Loadouts=preload("res://tests/support/v39_loadout_projection.gd")
 const MARKER="__test_history_alias_39__"
 static func install(game:Node)->Dictionary:
@@ -8,6 +9,8 @@ static func install(game:Node)->Dictionary:
  var c:Dictionary=Catalog.project(game.catalog,FileAccess.get_file_as_string("res://data/catalog.json"))
  var k:Dictionary=Loadouts.project(game.starting_loadouts,FileAccess.get_file_as_string("res://data/starting_loadouts.json"))
  if not c.pass or not k.pass:return {"pass":false,"errors":c.errors+k.errors}
+ var b_definition:Dictionary=BProfiles.configuration(c.catalog)
+ if not b_definition.ok or not game.effects.epoch is int or game.effects.epoch<0:return {"pass":false,"errors":["historical B input preflight"]}
  # Prove actual cache aliasing before mutation; remove marker regardless of result.
  if game.catalog.has(MARKER):return {"pass":false,"errors":["unexpected history marker"]}
  game.catalog[MARKER]=true
@@ -18,9 +21,15 @@ static func install(game:Node)->Dictionary:
  game.starting_loadouts.clear();game.starting_loadouts.merge(k.data,true)
  game.effects.configure(game.catalog)
  game.new_weapon_runtime.configure(game.catalog)
+ # Test-only title input reset, not a production loader or live preview mutation.
+ var b=game.effect_runtime.build_items
+ var b_reset:bool=b.clear_run(game.effects.epoch)
+ var b_configured:Dictionary=b.configure(game.catalog)
+ var b_state:Dictionary=b.debug_snapshot()
+ var b_coherent:bool=b_reset and b_configured.ok and b_state.registry==b_definition.registry and b_state.definitions==b_definition.definitions and b_state.slot_caps==b_definition.slot_caps and not b_state.configuration_open and b_state.bound_epoch==game.effects.epoch and b_state.owned_items.is_empty() and b_state.weapon_counts.is_empty() and b_state.equipped_types.is_empty() and b_state.mark==null and b_state.pin_ready_at==null and b_state.charges==0 and b_state.fields.is_empty() and b_state.next_field_sequence==0 and b_state.winch_count==0 and b_state.pending==null and not b_state.winch_requested_this_batch and b_state.last_sequence==0 and b_state.last_now==0.0 and b_state.last_step_serial==-1 and b_state.batch_serial==-1 and b_state.batch_time==0.0 and not b_state.batch_open
  game.ui.show_title(game.run_seed,game.mode.id,game._starting_loadout_context())
  var expected_fracture:Array=[]
  for weapon in c.catalog.weapons:
   if weapon.id!="cryo_sprayer":expected_fracture.append(str(weapon.id))
- var coherent:bool=game.catalog==c.catalog and game.combat_frame.catalog==c.catalog and game.weapon_combat.catalog==c.catalog and game.starting_loadouts==k.data and game.effects.fracture_weapons==expected_fracture and game.effects.recoil_definition.is_empty() and game.new_weapon_runtime.weapons.is_empty() and game.new_weapon_runtime.memory.is_empty() and game.new_weapon_runtime.collar.is_empty()
+ var coherent:bool=b_coherent and game.catalog==c.catalog and game.combat_frame.catalog==c.catalog and game.weapon_combat.catalog==c.catalog and game.starting_loadouts==k.data and game.effects.fracture_weapons==expected_fracture and game.effects.recoil_definition.is_empty() and game.new_weapon_runtime.weapons.is_empty() and game.new_weapon_runtime.memory.is_empty() and game.new_weapon_runtime.collar.is_empty()
  return {"pass":coherent,"errors":[] if coherent else ["historical cache coherence"],"catalog_bytes":c.bytes,"loadout_bytes":k.bytes,"scope":"Explicit original8/30/12/12/3 data under current production code; not current catalog acceptance"}

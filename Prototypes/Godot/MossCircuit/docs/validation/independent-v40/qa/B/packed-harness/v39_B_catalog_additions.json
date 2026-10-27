@@ -1,0 +1,121 @@
+{
+  "weapons": [],
+  "items": [
+    {
+      "id": "crossfire_pin",
+      "name": "Crossfire Pin",
+      "kind": "item",
+      "price": 28,
+      "max_stack": 1,
+      "rarity": "uncommon",
+      "tags": [
+        "control"
+      ],
+      "effects": {},
+      "description": "Mark one living ordinary target for 1.5s; a different weapon type pulls it toward the saved point by up to 45px.",
+      "trigger": "Primary hits from two distinct weapon types",
+      "cost": "1 module slot; no extra damage; other targets cannot replace the active mark",
+      "cooldown": 1.0,
+      "stack_rule": "Unique: maximum 1",
+      "synergy_targets": [],
+      "mark_seconds": 1.5,
+      "pull_distance": 45.0,
+      "requires_distinct_weapon_types": 2
+    },
+    {
+      "id": "salvage_capacitor",
+      "name": "Salvage Capacitor",
+      "kind": "item",
+      "price": 28,
+      "max_stack": 1,
+      "rarity": "uncommon",
+      "tags": [
+        "mobility",
+        "salvage"
+      ],
+      "effects": {},
+      "description": "Three normal pickups charge a dash-origin slow field: 80px, 1.8s, speed factor 0.70. Energy and medical do not charge.",
+      "trigger": "Dash starts with three charges from actual in-combat normal pickups; settlement sweep excluded",
+      "cost": "1 module slot; no damage; bosses and committed charges unaffected; at most two fields",
+      "cooldown": 0,
+      "stack_rule": "Unique: maximum 1",
+      "synergy_targets": [],
+      "charge_limit": 3,
+      "field_radius": 80.0,
+      "field_seconds": 1.8,
+      "field_speed_factor": 0.7,
+      "field_limit": 2,
+      "pickup_sources": [
+        "normal"
+      ]
+    },
+    {
+      "id": "medic_winch",
+      "name": "Medic Winch",
+      "kind": "item",
+      "price": 24,
+      "max_stack": 1,
+      "rarity": "uncommon",
+      "tags": [
+        "salvage"
+      ],
+      "effects": {},
+      "description": "Every five normal pickups pull the nearest medical orb within 220px toward you by up to 80px. Requires medical pickups, currently from Medic Seed. At most one pull per same-step collection batch (\u540c\u4e00\u6279\u6536\u96c6\u6700\u591a\u7275\u5f15\u4e00\u6b21); extra thresholds are spent.",
+      "trigger": "Fifth actual in-combat normal pickup; settlement sweep excluded; chance spent even without medicine",
+      "cost": "1 module slot; no healing, new orb, or remote collection; energy and medical do not count",
+      "cooldown": 0,
+      "stack_rule": "Unique: maximum 1",
+      "synergy_targets": [
+        "medic_seed"
+      ],
+      "pickup_count": 5,
+      "medical_range": 220.0,
+      "pull_distance": 80.0,
+      "pickup_sources": [
+        "normal"
+      ],
+      "max_pulls_per_step": 1
+    }
+  ],
+  "mechanism_synergies": [
+    {
+      "id": "crossfire_control",
+      "name": "Crossfire Control",
+      "requires": [
+        "crossfire_pin"
+      ],
+      "requires_distinct_weapon_types": 2,
+      "description": "Two different currently equipped weapon types mark then pull one ordinary target. No extra damage; one mark at a time."
+    },
+    {
+      "id": "salvage_field",
+      "name": "Salvage Field",
+      "requires": [
+        "salvage_capacitor"
+      ],
+      "description": "Three actual in-combat normal pickups charge a dash-origin slow field. Medical, energy and settlement rewards excluded. Inventory resets each room."
+    },
+    {
+      "id": "medical_recovery",
+      "name": "Medical Recovery",
+      "requires": [
+        "medic_winch",
+        "medic_seed"
+      ],
+      "description": "Medic Seed supplies existing medical orbs. Every five actual combat normal pickups request one pull; at most one per same batch. No direct healing; no target still spends the request."
+    }
+  ],
+  "affinity_links": [],
+  "raw_insertions": [
+    ",\n    {\n      \"id\": \"crossfire_pin\",\n      \"name\": \"Crossfire Pin\",\n      \"kind\": \"item\",\n      \"price\": 28,\n      \"max_stack\": 1,\n      \"rarity\": \"uncommon\",\n      \"tags\": [\n        \"control\"\n      ],\n      \"effects\": {},\n      \"description\": \"Mark one living ordinary target for 1.5s; a different weapon type pulls it toward the saved point by up to 45px.\",\n      \"trigger\": \"Primary hits from two distinct weapon types\",\n      \"cost\": \"1 module slot; no extra damage; other targets cannot replace the active mark\",\n      \"cooldown\": 1.0,\n      \"stack_rule\": \"Unique: maximum 1\",\n      \"synergy_targets\": [],\n      \"mark_seconds\": 1.5,\n      \"pull_distance\": 45.0,\n      \"requires_distinct_weapon_types\": 2\n    },\n    {\n      \"id\": \"salvage_capacitor\",\n      \"name\": \"Salvage Capacitor\",\n      \"kind\": \"item\",\n      \"price\": 28,\n      \"max_stack\": 1,\n      \"rarity\": \"uncommon\",\n      \"tags\": [\n        \"mobility\",\n        \"salvage\"\n      ],\n      \"effects\": {},\n      \"description\": \"Three normal pickups charge a dash-origin slow field: 80px, 1.8s, speed factor 0.70. Energy and medical do not charge.\",\n      \"trigger\": \"Dash starts with three charges from actual in-combat normal pickups; settlement sweep excluded\",\n      \"cost\": \"1 module slot; no damage; bosses and committed charges unaffected; at most two fields\",\n      \"cooldown\": 0,\n      \"stack_rule\": \"Unique: maximum 1\",\n      \"synergy_targets\": [],\n      \"charge_limit\": 3,\n      \"field_radius\": 80.0,\n      \"field_seconds\": 1.8,\n      \"field_speed_factor\": 0.7,\n      \"field_limit\": 2,\n      \"pickup_sources\": [\n        \"normal\"\n      ]\n    },\n    {\n      \"id\": \"medic_winch\",\n      \"name\": \"Medic Winch\",\n      \"kind\": \"item\",\n      \"price\": 24,\n      \"max_stack\": 1,\n      \"rarity\": \"uncommon\",\n      \"tags\": [\n        \"salvage\"\n      ],\n      \"effects\": {},\n      \"description\": \"Every five normal pickups pull the nearest medical orb within 220px toward you by up to 80px. Requires medical pickups, currently from Medic Seed. At most one pull per same-step collection batch (\\u540c\\u4e00\\u6279\\u6536\\u96c6\\u6700\\u591a\\u7275\\u5f15\\u4e00\\u6b21); extra thresholds are spent.\",\n      \"trigger\": \"Fifth actual in-combat normal pickup; settlement sweep excluded; chance spent even without medicine\",\n      \"cost\": \"1 module slot; no healing, new orb, or remote collection; energy and medical do not count\",\n      \"cooldown\": 0,\n      \"stack_rule\": \"Unique: maximum 1\",\n      \"synergy_targets\": [\n        \"medic_seed\"\n      ],\n      \"pickup_count\": 5,\n      \"medical_range\": 220.0,\n      \"pull_distance\": 80.0,\n      \"pickup_sources\": [\n        \"normal\"\n      ],\n      \"max_pulls_per_step\": 1\n    }",
+    ",\n    {\n      \"id\": \"crossfire_control\",\n      \"name\": \"Crossfire Control\",\n      \"requires\": [\n        \"crossfire_pin\"\n      ],\n      \"requires_distinct_weapon_types\": 2,\n      \"description\": \"Two different currently equipped weapon types mark then pull one ordinary target. No extra damage; one mark at a time.\"\n    },\n    {\n      \"id\": \"salvage_field\",\n      \"name\": \"Salvage Field\",\n      \"requires\": [\n        \"salvage_capacitor\"\n      ],\n      \"description\": \"Three actual in-combat normal pickups charge a dash-origin slow field. Medical, energy and settlement rewards excluded. Inventory resets each room.\"\n    },\n    {\n      \"id\": \"medical_recovery\",\n      \"name\": \"Medical Recovery\",\n      \"requires\": [\n        \"medic_winch\",\n        \"medic_seed\"\n      ],\n      \"description\": \"Medic Seed supplies existing medical orbs. Every five actual combat normal pickups request one pull; at most one per same batch. No direct healing; no target still spends the request.\"\n    }"
+  ],
+  "baseline_sha256": "67eb30bf64c36191f5e7609126da42b0195cb53840e00e60afa15ed55e13cccc",
+  "baseline_source": "accepted A final-r2 catalog; B inverse only, then unchanged strict A inverse",
+  "current_counts": {
+    "weapons": 10,
+    "items": 36,
+    "mechanism_synergies": 17,
+    "affinity_links": 14
+  }
+}

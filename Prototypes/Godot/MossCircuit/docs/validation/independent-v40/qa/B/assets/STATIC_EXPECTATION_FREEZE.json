@@ -1,0 +1,16 @@
+{
+  "status": "STATIC_EXPECTATIONS_NOT_EXECUTED",
+  "checks": 201,
+  "observations": 3,
+  "helper_owners": 0,
+  "formula": "2 + 46*4 + 3*5",
+  "scope": "accepted A43 exact bindings + actual46 icon loading; B3 independent Pillow visible RGBA/alpha/bbox. Native rendering separate.",
+  "pins": {
+    "evidence-workspace/moss-v39-B-qa/assets/independent_B_icons.gd": "ff021f1cdbfcf11f72a3eceec9cd368d8764baa1faa31340f7a33e1d9d3a3a01",
+    "evidence-workspace/moss-v39-B-qa/assets/EXPECTED.json": "98c27fe5ce33064ee64369958c053ea156ba066a1c4d0c5eef51bc7fb78e0b70",
+    "evidence-workspace/moss-v39-B-qa/assets/EXPECTED_SOURCE_PINS.json": "e60af3cb6674f8f420115fcea4f22c3a4900f749580bae9e8e8944ed1c3f2c1d",
+    "evidence-workspace/moss-v39-B-qa/assets/prepare_expected.py": "859a07a698e2e808e756bc31f7e3d7405515773cd6387460733f26bb760c2f39",
+    "evidence-workspace/moss-v39-B-qa/assets/NATIVE_B3_EXPECTED.json": "d45315f45c3c0f62f228f226e511f093b4e7ced5ee189caacf69fd87b209ed4c"
+  },
+  "expected_derivation": "No engine; old bindings from accepted final-r2 A manifests verified byte-identical in B-r2; B3 art PNG independently decoded by Pillow; transparent RGB canonicalized only at alpha0, raw identities separately retained."
+}

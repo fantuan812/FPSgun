@@ -1,4 +1,5 @@
 extends RefCounted
+const BuildItemsProfiles=preload("res://scripts/gameplay/build_items_profiles.gd")
 const RecoilPlate=preload("res://scripts/gameplay/recoil_plate.gd")
 const NewProfiles=preload("res://scripts/gameplay/new_weapon_profiles.gd")
 const ScavengerReel=preload("res://scripts/gameplay/scavenger_reel.gd")
@@ -178,6 +179,7 @@ static func validate_catalog(catalog: Dictionary) -> Array:
 				if _positive_number(entry.get("chill_duration")) and entry.chill_duration>10: errors.append("Chill exceeds duration budget")
 				if _positive_number(entry.get("chill_speed")) and entry.chill_speed>1: errors.append("Chill cannot accelerate")
 		elif entry.kind == "item":
+			if entry.id in ["crossfire_pin","salvage_capacitor","medic_winch"] and BuildItemsProfiles.definition(entry).is_empty():errors.append("Invalid B item profile")
 			if entry.id=="recoil_plate" and RecoilPlate.definition(entry).is_empty():errors.append("Invalid Recoil Plate profile")
 			if entry.id in ["lock_memory","return_collar"] and NewProfiles.module(entry).is_empty():errors.append("Invalid dedicated module profile")
 			if entry.id=="scavenger_reel" and ScavengerReel.definition(entry).is_empty():errors.append("Invalid Scavenger Reel profile")
@@ -210,10 +212,17 @@ static func validate_catalog(catalog: Dictionary) -> Array:
 			if not link is Array or link.size()!=2: errors.append("Invalid affinity pair")
 			elif not seen.has(link[0]) or not seen.has(link[1]) or link[0]==link[1]: errors.append("Unknown/self affinity pair")
 	for pair_data in catalog.get("mechanism_synergies",[]):
+		if pair_data is Dictionary and pair_data.has("requires_distinct_weapon_types"):
+			var distinct:Variant=pair_data.requires_distinct_weapon_types
+			if not _positive_number(distinct) or float(distinct)!=2.0:errors.append("Invalid distinct weapon prerequisite")
 		if pair_data is Dictionary and pair_data.has("requires_other_weapon_than"):
 			var excluded:Variant=pair_data.requires_other_weapon_than
 			if not excluded is String or not seen.has(excluded):errors.append("Invalid companion weapon prerequisite")
 			elif catalog_entry(catalog,excluded).kind!="weapon":errors.append("Companion prerequisite must name a weapon")
+	# Only B-bearing catalogs opt into B registry/slot admission; old schemas unchanged.
+	if (catalog.weapons+catalog.items).any(func(row):return row is Dictionary and row.get("id") is String and str(row.id) in ["crossfire_pin","salvage_capacitor","medic_winch"]):
+		var b_configuration:Dictionary=BuildItemsProfiles.configuration(catalog)
+		if not b_configuration.ok:errors.append_array(b_configuration.errors)
 	return errors
 
 static func new_build(catalog: Dictionary) -> Dictionary:

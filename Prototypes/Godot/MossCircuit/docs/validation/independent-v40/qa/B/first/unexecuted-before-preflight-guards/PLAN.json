@@ -1,0 +1,54 @@
+{
+  "status": "FROZEN_NOT_EXECUTED_PENDING_AUTHOR318_PASS_AND_QA_LEASE",
+  "author_source": "evidence-workspace/moss-v39-items/B-harness",
+  "author_result": "evidence-workspace/moss-v39-items/B-evidence/author-r1/RESULT.json",
+  "source_files": {
+    "data/catalog.json": "28281a0b5df6bfdc0e325df1589e8288c2afcdb8e39c57f20b58a649099727d7",
+    "project.godot": "17f92bffa3704a82cd936f32f370b8e34ea1e357280d7f22197c48be4de8d6a9",
+    "scripts/gameplay/build_items_adapter.gd": "9a35217024f5749248cb6a1158e37e87f03a5e6725f42f36ee1eda0a6ea67bb0",
+    "scripts/gameplay/build_items_runtime.gd": "bddebbd960a25f6aa7abb8fbe239c67a0b9af8c273d985e95dd4a2afd41b8dac",
+    "tests/test_build_items_runtime.gd": "1b07189c6bf09f728a70c9b121af5993da941d0b8d42e17967b20f7be0badaf1"
+  },
+  "pins": {
+    "evidence-workspace/moss-v39-B-qa/INDEPENDENT_FIXTURE_FREEZE.json": "7105d12ec6250928cedc69a427ad9d6d2e28e573a16286414fb3263b545df814",
+    "evidence-workspace/moss-v39-B-qa/first/run.py": "977062d0852892ee23121bb0cfb5cbd470bb8cb29572683ed1ae67b467ce172a",
+    "evidence-workspace/moss-v39-items/B-evidence/AUTHOR_FIRST_EXECUTION_FREEZE.json": "778999d53668e5d6bfbea22d3c6e5f80ad4184d4ba9fcc194128d6c11c1825ef",
+    "evidence-workspace/moss-v39-B-qa/checks/independent_B_admission.gd": "fc2c9cc11726cd8be513cd0da92dbcec28c9f5d618a30b6360270e264fd50662",
+    "evidence-workspace/moss-v39-B-qa/checks/independent_B_configuration.gd": "611a736611fa91cbb6a349334d5f9f9bf111872dbf908181ad111bae629b9ce8",
+    "evidence-workspace/moss-v39-B-qa/checks/independent_B_initial_state.gd": "59a8f87a1e0850639106e29903825f59dd7d6de343998c80686dc32faa4dd108",
+    "evidence-workspace/moss-v39-B-qa/checks/independent_B_mechanics.gd": "4610f56de8c343f13113e4d0f347ff5b9f061221b571fbcfde83a5b414c762cf",
+    "evidence-workspace/moss-v39-B-qa/pretarget/FREEZE.json": "14cc1667a6e6dee6979610f31924f8c2c5d77f0a5918851b08d0a452c6619647",
+    "evidence-workspace/moss-v39-B-qa/pretarget/CORE_HAND_CASES.json": "66abfca35d2638ce172d937d444afdc7d146d30e15cfad36b8c2c1b898e91f3a",
+    "evidence-workspace/moss-v39-B-qa/pretarget/ADMISSION_MATRIX.json": "fb2a07f231204d8e67ecc1bb31c71b0fa6b3295dc41b2ccbcc17d2a324b61cdb",
+    "evidence-workspace/moss-v39-items/B-final-review/B_FINAL_CONTRACT.md": "d16f130e022482d18dd73bc85c43f520a58d6d2b78c72d5156bf056ba178cbd7",
+    "evidence-workspace/moss-v39-items/B-final-review/B_API_SIGNATURES.md": "32974e101e39a2bef9aca00c872027a6af789024b50e4513fd7850f374b37e2e",
+    "evidence-workspace/moss-v39-items/B-final-review/B_OBSERVABLE_STATE_ADDENDUM.md": "10fb918a8dd74c68268645676bcd4c844f3461f35518c8eace23d05c34fa8cee",
+    "evidence-workspace/moss-v39-items/B-final-review/B_CANONICAL_ERRATA.md": "ecdffecb43788d54d1b264fdd22ad9838ea9da23c6b3876fe8af6933b3927336"
+  },
+  "routes": [
+    {
+      "name": "initial_state",
+      "script": "evidence-workspace/moss-v39-B-qa/checks/independent_B_initial_state.gd",
+      "checks": 30
+    },
+    {
+      "name": "admission",
+      "script": "evidence-workspace/moss-v39-B-qa/checks/independent_B_admission.gd",
+      "checks": 349
+    },
+    {
+      "name": "mechanics",
+      "script": "evidence-workspace/moss-v39-B-qa/checks/independent_B_mechanics.gd",
+      "checks": 207
+    },
+    {
+      "name": "configuration",
+      "script": "evidence-workspace/moss-v39-B-qa/checks/independent_B_configuration.gd",
+      "checks": 61
+    }
+  ],
+  "per_route_seconds": 180,
+  "first_failure_stops": true,
+  "expected_total": 647,
+  "no_scene_audio_or_integration_claim": true
+}

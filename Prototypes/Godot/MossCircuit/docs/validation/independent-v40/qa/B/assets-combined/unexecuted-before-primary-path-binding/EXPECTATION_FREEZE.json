@@ -1,0 +1,38 @@
+{
+  "status": "PRE_COMBINATION_EXECUTION_EXPECTATIONS",
+  "source_gate": "cold then independent201/3 + accepted21 identity240/21, no helper",
+  "packed_gate": "same201/3 +240/21, actual PCK and full absence separate",
+  "changed_bindings": [
+    "rivet_gun",
+    "scrap_shotgun",
+    "rail_lance",
+    "orbit_saw",
+    "power_coil",
+    "cooling_fan",
+    "iron_plate",
+    "moss_patch",
+    "running_boots",
+    "salvage_magnet",
+    "lucky_chip",
+    "lens",
+    "capacitor",
+    "gear",
+    "pellet_pouch",
+    "recycler"
+  ],
+  "unchanged_B3_expected": true,
+  "unchanged201_script": true,
+  "UI21_script_only_merged_count_43_to_46": true,
+  "preparation_correction": "First pure Python preparation assumed provenance was dict; TypeError before writing any expected file. Actual provenance is string, preserved; override metadata is separate top-level field. No engine/candidate execution occurred.",
+  "pins": {
+    "evidence-workspace/moss-v39-B-qa/assets/EXPECTED.json": "98c27fe5ce33064ee64369958c053ea156ba066a1c4d0c5eef51bc7fb78e0b70",
+    "evidence-workspace/moss-equipment16-integration-review/EXPECTED_ICONS.json": "4239175228d0f266742a8b385c12dd3c4706f74ef7f2abab73e0f5357ce454cc",
+    "evidence-workspace/moss-v39-B-qa/assets/independent_B_icons.gd": "ff021f1cdbfcf11f72a3eceec9cd368d8764baa1faa31340f7a33e1d9d3a3a01",
+    "evidence-workspace/moss-equipment16-integration-review/actual_icon_identity.gd": "51eb9ea6a7fa51268be4a05eddfd043af79d1e3005f734637b2b425973bf9e11",
+    "evidence-workspace/moss-v39-B-qa/assets-combined/independent_B_icons.gd": "ff021f1cdbfcf11f72a3eceec9cd368d8764baa1faa31340f7a33e1d9d3a3a01",
+    "evidence-workspace/moss-v39-B-qa/assets-combined/actual_icon_identity_combined.gd": "19ca4e9de3bafb8415c9f50b3bbb6c2569d2b6e72332fa2d719e7501581e3b6a",
+    "evidence-workspace/moss-v39-B-qa/assets-combined/EXPECTED_21.json": "4239175228d0f266742a8b385c12dd3c4706f74ef7f2abab73e0f5357ce454cc",
+    "evidence-workspace/moss-v39-B-qa/assets-combined/EXPECTED_46.json": "fc5b63814e5915668b03f014d9bc380e5d9b9d616ef1d941f326faf604d86744",
+    "evidence-workspace/moss-v39-B-qa/assets-combined/UI21_COUNT_ONLY.patch": "63edb81bb3869823c84187c13ab4f9957ce6932e315a56549750603eed4d8ee5"
+  }
+}

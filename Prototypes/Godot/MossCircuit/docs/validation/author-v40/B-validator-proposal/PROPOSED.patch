@@ -1,0 +1,49 @@
+--- a/scripts/gameplay/build_items_profiles.gd
++++ b/scripts/gameplay/build_items_profiles.gd
+@@ -16,3 +16,33 @@
+ 		if not Runtime._whole(row.get("max_stack"),1):return invalid
+ 		known[row.id]={"kind":"weapon","max_stack":int(row.max_stack)}
+ 	return Runtime.distinct_weapon_types(weapons,known).duplicate(true)
++
++## Exact configuration admission domain of frozen Runtime, without any instance/state.
++static func configuration(catalog:Variant)->Dictionary:
++	var errors:Array=[]
++	if not catalog is Dictionary:return {"ok":false,"errors":["catalog must be dictionary"]}
++	if not catalog.get("weapons") is Array or not catalog.get("items") is Array:return {"ok":false,"errors":["catalog lists required"]}
++	if not Runtime._whole(catalog.get("weapon_slots"),1) or not Runtime._whole(catalog.get("item_slots"),1):return {"ok":false,"errors":["invalid slot counts"]}
++	if int(catalog.weapon_slots)!=4 or int(catalog.item_slots)!=8:return {"ok":false,"errors":["B preserves four weapon/eight item slots"]}
++	var next_registry:Dictionary={}
++	var next_definitions:Dictionary={"crossfire_pin":{},"salvage_capacitor":{},"medic_winch":{}}
++	var seen:Dictionary={}
++	for list_key in ["weapons","items"]:
++		var expected_kind:String="weapon" if list_key=="weapons" else "item"
++		for value in catalog[list_key]:
++			if not value is Dictionary:errors.append("entry must be dictionary");continue
++			var entry:Dictionary=value
++			if not entry.get("id") is String or str(entry.id).is_empty():errors.append("invalid ID");continue
++			var id:String=entry.id
++			if seen.has(id):errors.append("duplicate ID "+id);continue
++			seen[id]=true
++			if not entry.get("kind") is String or str(entry.kind)!=expected_kind:errors.append("wrong registry kind "+id);continue
++			if not Runtime._whole(entry.get("max_stack"),1):errors.append("invalid max stack "+id);continue
++			next_registry[id]={"kind":expected_kind,"max_stack":int(entry.max_stack)}
++			if id in Runtime.B_IDS:
++				var profile:Dictionary=definition(entry)
++				if profile.is_empty():errors.append("invalid B definition "+id)
++				else:next_definitions[id]=profile
++	if not errors.is_empty():return {"ok":false,"errors":errors}
++	return {"ok":true,"errors":[],"registry":next_registry,"definitions":next_definitions,"slot_caps":{"weapons":4,"items":8}}
++
+--- a/scripts/rules.gd
++++ b/scripts/rules.gd
+@@ -219,6 +219,10 @@
+ 			var excluded:Variant=pair_data.requires_other_weapon_than
+ 			if not excluded is String or not seen.has(excluded):errors.append("Invalid companion weapon prerequisite")
+ 			elif catalog_entry(catalog,excluded).kind!="weapon":errors.append("Companion prerequisite must name a weapon")
++	# Only B-bearing catalogs opt into B registry/slot admission; old schemas unchanged.
++	if (catalog.weapons+catalog.items).any(func(row):return row is Dictionary and row.get("id") is String and str(row.id) in ["crossfire_pin","salvage_capacitor","medic_winch"]):
++		var b_configuration:Dictionary=BuildItemsProfiles.configuration(catalog)
++		if not b_configuration.ok:errors.append_array(b_configuration.errors)
+ 	return errors
+ 
+ static func new_build(catalog: Dictionary) -> Dictionary:

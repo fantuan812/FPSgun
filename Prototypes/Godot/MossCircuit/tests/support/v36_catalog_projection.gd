@@ -3,7 +3,7 @@ extends RefCounted
 const DECLARATION_SHA="b26ca154835eecd3ad85f7f1925aaa9f3089aac3f18d36d66b2425be99852622"
 static func project(catalog:Dictionary,raw:String)->Dictionary:
  if catalog.get("weapons") is Array and catalog.weapons.size()==10:
-  var a:Dictionary=preload("res://tests/support/v39_catalog_projection.gd").project(catalog,raw)
+  var a:Dictionary=preload("res://tests/support/v39_B_then_A_catalog_projection.gd").project(catalog,raw)
   if not a.pass:return a
   catalog=a.catalog;raw=a.bytes
  var errors:Array=[]

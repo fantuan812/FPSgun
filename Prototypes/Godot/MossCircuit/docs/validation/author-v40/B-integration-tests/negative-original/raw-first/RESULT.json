@@ -1,0 +1,26 @@
+{
+  "strict_pass": false,
+  "purpose": "PRE-FIX diagnostic; a known semantic failure is still STRICT FAIL, not acceptance",
+  "native_exit": 1,
+  "spawned": true,
+  "timed_out": false,
+  "seconds": 2.1418850110057974,
+  "stderr_bytes": 0,
+  "strict_tags": [],
+  "exception": null,
+  "after_issues": [],
+  "records": [
+    {
+      "B_rules_configuration_checks": 63,
+      "failures": [
+        "weapon_slots Rules rejects 5",
+        "item_slots Rules rejects 9",
+        "item in weapon registry rejected by Rules",
+        "reserved B ID as sole weapon row rejected by Rules"
+      ],
+      "scope": "literal Rules and frozen helper admission consistency; not gameplay/legacy raw identity"
+    }
+  ],
+  "marker_errors": [],
+  "approved_plan": "22a4196c80129e593b5e6cead7f3bd984b9e3ce9c4e8545615cb1e479d9f95fc"
+}

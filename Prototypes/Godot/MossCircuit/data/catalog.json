@@ -819,6 +819,81 @@
       "synergy_targets": [],
       "radius": 100.0,
       "distance": 55.0
+    },
+    {
+      "id": "crossfire_pin",
+      "name": "Crossfire Pin",
+      "kind": "item",
+      "price": 28,
+      "max_stack": 1,
+      "rarity": "uncommon",
+      "tags": [
+        "control"
+      ],
+      "effects": {},
+      "description": "Mark one living ordinary target for 1.5s; a different weapon type pulls it toward the saved point by up to 45px.",
+      "trigger": "Primary hits from two distinct weapon types",
+      "cost": "1 module slot; no extra damage; other targets cannot replace the active mark",
+      "cooldown": 1.0,
+      "stack_rule": "Unique: maximum 1",
+      "synergy_targets": [],
+      "mark_seconds": 1.5,
+      "pull_distance": 45.0,
+      "requires_distinct_weapon_types": 2
+    },
+    {
+      "id": "salvage_capacitor",
+      "name": "Salvage Capacitor",
+      "kind": "item",
+      "price": 28,
+      "max_stack": 1,
+      "rarity": "uncommon",
+      "tags": [
+        "mobility",
+        "salvage"
+      ],
+      "effects": {},
+      "description": "Three normal pickups charge a dash-origin slow field: 80px, 1.8s, speed factor 0.70. Energy and medical do not charge.",
+      "trigger": "Dash starts with three charges from actual in-combat normal pickups; settlement sweep excluded",
+      "cost": "1 module slot; no damage; bosses and committed charges unaffected; at most two fields",
+      "cooldown": 0,
+      "stack_rule": "Unique: maximum 1",
+      "synergy_targets": [],
+      "charge_limit": 3,
+      "field_radius": 80.0,
+      "field_seconds": 1.8,
+      "field_speed_factor": 0.7,
+      "field_limit": 2,
+      "pickup_sources": [
+        "normal"
+      ]
+    },
+    {
+      "id": "medic_winch",
+      "name": "Medic Winch",
+      "kind": "item",
+      "price": 24,
+      "max_stack": 1,
+      "rarity": "uncommon",
+      "tags": [
+        "salvage"
+      ],
+      "effects": {},
+      "description": "Every five normal pickups pull the nearest medical orb within 220px toward you by up to 80px. Requires medical pickups, currently from Medic Seed. At most one pull per same-step collection batch (\u540c\u4e00\u6279\u6536\u96c6\u6700\u591a\u7275\u5f15\u4e00\u6b21); extra thresholds are spent.",
+      "trigger": "Fifth actual in-combat normal pickup; settlement sweep excluded; chance spent even without medicine",
+      "cost": "1 module slot; no healing, new orb, or remote collection; energy and medical do not count",
+      "cooldown": 0,
+      "stack_rule": "Unique: maximum 1",
+      "synergy_targets": [
+        "medic_seed"
+      ],
+      "pickup_count": 5,
+      "medical_range": 220.0,
+      "pull_distance": 80.0,
+      "pickup_sources": [
+        "normal"
+      ],
+      "max_pulls_per_step": 1
     }
   ],
   "synergies": [
@@ -968,6 +1043,32 @@
         "return_collar"
       ],
       "description": "A second inward leg over0.45s at half launch damage, once per target. Not Return Disc; longer waves can fill the cap."
+    },
+    {
+      "id": "crossfire_control",
+      "name": "Crossfire Control",
+      "requires": [
+        "crossfire_pin"
+      ],
+      "requires_distinct_weapon_types": 2,
+      "description": "Two different currently equipped weapon types mark then pull one ordinary target. No extra damage; one mark at a time."
+    },
+    {
+      "id": "salvage_field",
+      "name": "Salvage Field",
+      "requires": [
+        "salvage_capacitor"
+      ],
+      "description": "Three actual in-combat normal pickups charge a dash-origin slow field. Medical, energy and settlement rewards excluded. Inventory resets each room."
+    },
+    {
+      "id": "medical_recovery",
+      "name": "Medical Recovery",
+      "requires": [
+        "medic_winch",
+        "medic_seed"
+      ],
+      "description": "Medic Seed supplies existing medical orbs. Every five actual combat normal pickups request one pull; at most one per same batch. No direct healing; no target still spends the request."
     }
   ],
   "affinity_links": [

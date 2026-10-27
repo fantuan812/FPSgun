@@ -1,4 +1,7 @@
 extends RefCounted
+const BuildItemsRuntime=preload("res://scripts/gameplay/build_items_runtime.gd")
+const BuildItemsAdapter=preload("res://scripts/gameplay/build_items_adapter.gd")
+var build_items=BuildItemsRuntime.new()
 const RecoilPlate=preload("res://scripts/gameplay/recoil_plate.gd")
 # Injected by main and refreshed from the actual combat frame; empty fails closed.
 var recoil_area:Dictionary={}
@@ -20,7 +23,9 @@ func can_feedback() -> bool:
 	return engine.can_feedback(float(world.stats.get("dash_time",0.0)) > 0)
 
 func emit_event(kind: String, data: Dictionary) -> bool:
-	if session.state != "playing": return false
+	if session.state != "playing":
+		build_items.cancel_pending()
+		return false
 	if kind == "hit": play_vfx.call("hit_spark",data.pos)
 	elif kind == "dash":
 		actor.trigger(0,"dash",float(world.stats.dash_time) if world.stats.dash_time>0 else .16)
@@ -133,6 +138,16 @@ func emit_event(kind: String, data: Dictionary) -> bool:
 				var same: Array = world.hazards.filter(func(h): return h.kind == command.kind)
 				if same.size() >= maximum: world.hazards.erase(same[0])
 				world.hazards.append({"kind":command.kind,"pos":command.pos,"life":5.0 if command.kind == "mine" else 2.4,"age":0.0,"tick":0.0,"radius":70.0,"slow":command.get("slow",false)})
+	# B observes the real world only after every old/A command has applied.
+	if session.state == "playing" and build_items.bind_epoch(engine.epoch,session.elapsed):
+		var canonical:Dictionary=BuildItemsAdapter.canonical_event(kind,data,int(event.epoch),int(event.sequence))
+		for control in build_items.process(canonical,build_items_context()):
+			var moved:Dictionary=build_items.apply_control(control,world.enemies,recoil_area)
+			if moved.get("moved",false) and world.new_weapon_motion.has(moved.target_id):
+				# Control is a discrete endpoint, never a replacement normal-motion segment.
+				var motion:Dictionary=world.new_weapon_motion[moved.target_id]
+				motion.final_pos=moved.to
+	else:build_items.cancel_pending()
 	return blocked
 
 func advance_hazards(dt: float) -> void:
@@ -180,3 +195,26 @@ func advance_mortars(dt: float) -> void:
 		emit_event("mortar",{"pos":blast.pos})
 		world.effect_visuals.append({"kind":"mortar","pos":blast.pos,"radius":blast.radius,"life":.25})
 		world.pending_blasts.remove_at(i)
+
+# B-only lifecycle bridge; no changes to old Effects reset/sync or event sequence.
+func build_items_context()->Dictionary:
+	return {"playing":session.state=="playing","time":session.elapsed,"effect_epoch":engine.epoch,"step_serial":world.combat_tick_serial,"player_pos":world.player_pos,"dash_active":float(world.stats.get("dash_time",0.0))>0,"enemies":world.enemies,"area":recoil_area}
+func start_build_items(catalog:Dictionary)->bool:
+	if not build_items.clear_run(engine.epoch):return false
+	if not build_items.configure(catalog).ok:return false
+	return build_items.sync_build(session.build.items,session.build.weapons,session.elapsed)
+func sync_build_items()->bool:
+	if not build_items.bind_epoch(engine.epoch,session.elapsed):return false
+	return build_items.sync_build(session.build.items,session.build.weapons,session.elapsed)
+func reset_build_items_encounter()->void:
+	build_items.reset_encounter(session.elapsed)
+	build_items.bind_epoch(engine.epoch,session.elapsed)
+func begin_build_items_step(area:Dictionary)->void:
+	recoil_area=area
+	if session.state!="playing":
+		build_items.cancel_pending()
+		return
+	if build_items.bind_epoch(engine.epoch,session.elapsed):
+		build_items.begin_step(session.elapsed,world.combat_tick_serial,world.enemies,area)
+func flush_build_items_pickups()->Dictionary:
+	return build_items.flush_pickups(build_items_context(),world.pickups)

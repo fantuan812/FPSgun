@@ -1,0 +1,310 @@
+{
+  "name": "tests__independent_support_projectiles",
+  "native_exit": 0,
+  "timeout": false,
+  "seconds": 7.6623051350034075,
+  "stderr_bytes": 0,
+  "stderr_policy": {
+    "accepted": true,
+    "warning_count": 0
+  },
+  "tags": [],
+  "parse_errors": [],
+  "semantic": true,
+  "file_report_validation": null,
+  "helper_ok": true,
+  "reports": [
+    {
+      "checks": 38,
+      "failures": [],
+      "observations": [
+        {
+          "controlled_projectile_damage": 1.0,
+          "mode": "arena",
+          "returning": false,
+          "source_hp": 33.0,
+          "target_hp": 50.0,
+          "weapon": "rivet_gun"
+        },
+        {
+          "controlled_projectile_damage": 1.0,
+          "mode": "arena",
+          "returning": false,
+          "source_hp": 33.0,
+          "target_hp": 50.0,
+          "weapon": "scrap_shotgun"
+        },
+        {
+          "controlled_projectile_damage": 1.0,
+          "mode": "arena",
+          "returning": false,
+          "source_hp": 33.0,
+          "target_hp": 50.0,
+          "weapon": "rail_lance"
+        },
+        {
+          "controlled_projectile_damage": 1.0,
+          "mode": "arena",
+          "returning": false,
+          "source_hp": 33.0,
+          "target_hp": 50.0,
+          "weapon": "return_disc"
+        },
+        {
+          "controlled_projectile_damage": 1.0,
+          "mode": "arena",
+          "returning": true,
+          "source_hp": 33.0,
+          "target_hp": 50.0,
+          "weapon": "return_disc"
+        },
+        {
+          "catalog_damage": 36.0,
+          "controlled_source_hp": 100.0,
+          "mode": "arena",
+          "source_after": 64.0,
+          "target_after": 50.0,
+          "weapon": "shock_mortar"
+        },
+        {
+          "controlled_projectile_damage": 1.0,
+          "mode": "rooms",
+          "returning": false,
+          "source_hp": 33.0,
+          "target_hp": 50.0,
+          "weapon": "rivet_gun"
+        },
+        {
+          "controlled_projectile_damage": 1.0,
+          "mode": "rooms",
+          "returning": false,
+          "source_hp": 33.0,
+          "target_hp": 50.0,
+          "weapon": "scrap_shotgun"
+        },
+        {
+          "controlled_projectile_damage": 1.0,
+          "mode": "rooms",
+          "returning": false,
+          "source_hp": 33.0,
+          "target_hp": 50.0,
+          "weapon": "rail_lance"
+        },
+        {
+          "controlled_projectile_damage": 1.0,
+          "mode": "rooms",
+          "returning": false,
+          "source_hp": 33.0,
+          "target_hp": 50.0,
+          "weapon": "return_disc"
+        },
+        {
+          "controlled_projectile_damage": 1.0,
+          "mode": "rooms",
+          "returning": true,
+          "source_hp": 33.0,
+          "target_hp": 50.0,
+          "weapon": "return_disc"
+        },
+        {
+          "catalog_damage": 36.0,
+          "controlled_source_hp": 100.0,
+          "mode": "rooms",
+          "source_after": 64.0,
+          "target_after": 50.0,
+          "weapon": "shock_mortar"
+        }
+      ],
+      "pass": true,
+      "scope": "Concrete bolt/pellet/rail/return-out/in controlled projectile damage1, actual bankshot trajectory and actual launched mortar36 in both modes. Not an ordinary acquisition or new numeric balance oracle."
+    }
+  ],
+  "helpers": [
+    {
+      "capture_removed": true,
+      "complete": true,
+      "driver": "Dummy",
+      "game_owner_count": 1,
+      "mix_rate": 44100.0,
+      "observations": [
+        {
+          "discarded": 0,
+          "elapsed_us": 105,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 0,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 0,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 2996,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 0,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 0,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 15701,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 0,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 0,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 29181,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 0,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 0,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 44000,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 0,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 0,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 56698,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 4096,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 4096,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 69808,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 4096,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 4096,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 83593,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 4096,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 4096,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 97343,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 4096,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 4096,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 111264,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 4096,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 4096,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 125072,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 4096,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 4096,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 139719,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 8192,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 8192,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 152546,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 8192,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 8192,
+          "streams_released": true
+        }
+      ],
+      "pre_window_drained": 8192,
+      "prepare_errors": [],
+      "requested_owner_count": 1,
+      "scope": "Test-only bounded final-owner resource release and fresh internal silence; not physical output or a universal timing guarantee.",
+      "tracked_owner_count": 1,
+      "tracked_stream_count": 2
+    }
+  ],
+  "exception": null,
+  "pass": true
+}

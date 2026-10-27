@@ -1,0 +1,180 @@
+{
+  "status": "DRAFT_COMBINED_WAITING_SOURCE_MAP_AND_PACKED22",
+  "source_path": "evidence-workspace/moss-v39-B-equipment16",
+  "original_source_path": "evidence-workspace/moss-v39-B-equipment16",
+  "source_input_map_path": "evidence-workspace/moss-v39-items/B-equipment16-combination/assembly-first/INPUTS.json",
+  "pck_path": "evidence-workspace/moss-v39-B-equipment16-pack/linux/MossCircuit.pck",
+  "pck_sha256": "6743bf0f468c25ad28cc2776d1b1f28fd6356b23ee6f5a36ad977e90863dd775",
+  "prerequisites": {
+    "source_full": {
+      "path": "evidence-workspace/moss-v39-B-qa/B_SOURCE_COMBINATION_RAW_REVIEW.json",
+      "criteria": [
+        {
+          "field_path": [
+            "review_pass"
+          ],
+          "expected": true
+        },
+        {
+          "field_path": [
+            "source_combination_pass"
+          ],
+          "expected": true
+        },
+        {
+          "field_path": [
+            "total_distinct_source_routes"
+          ],
+          "expected": 165
+        },
+        {
+          "field_path": [
+            "original_failure_preserved"
+          ],
+          "expected": true
+        },
+        {
+          "field_path": [
+            "original_aggregate_pass"
+          ],
+          "expected": false
+        }
+      ]
+    },
+    "packed_combined": {
+      "path": "evidence-workspace/moss-v39-B-qa/packed-combined-first/SUMMARY.json",
+      "criteria": [
+        {
+          "field_path": [
+            "pass"
+          ],
+          "expected": true
+        },
+        {
+          "field_path": [
+            "completed"
+          ],
+          "expected": 22
+        },
+        {
+          "field_path": [
+            "pck_sha256"
+          ],
+          "expected": "6743bf0f468c25ad28cc2776d1b1f28fd6356b23ee6f5a36ad977e90863dd775"
+        },
+        {
+          "field_path": [
+            "source_map_sha256"
+          ],
+          "expected": "543d43c875b72b7682c312a4811094007e679c419d2142aa86c0d59728b57440"
+        },
+        {
+          "field_path": [
+            "source_sets_unchanged"
+          ],
+          "expected": true
+        }
+      ],
+      "pck_sha256": "6743bf0f468c25ad28cc2776d1b1f28fd6356b23ee6f5a36ad977e90863dd775"
+    },
+    "combined_source_resources": {
+      "path": "evidence-workspace/moss-v39-prep/B_COMBINED_SOURCE_RAW_REVIEW.json",
+      "criteria": [
+        {
+          "field_path": [
+            "review_pass"
+          ],
+          "expected": true
+        },
+        {
+          "field_path": [
+            "source926_and_original907_888_live_exact"
+          ],
+          "expected": true
+        },
+        {
+          "field_path": [
+            "imported_observations_exact_prior_reports"
+          ],
+          "expected": true
+        }
+      ]
+    }
+  },
+  "pins": {
+    "evidence-workspace/moss-v39-ui/combined-native-cards/cards.gd": "afe111a437a0b22ce9fdf05c9016293ab4e8fa083eaddeab47df0de6249fe4b1",
+    "evidence-workspace/moss-v39-ui/combined-native-cards/cards_observed.gd": "f240b9454f6d7c034c27e95fe38ec8af78d9ed4ddfbf93070737146b5383985a",
+    "evidence-workspace/moss-v39-ui/combined-native-cards/run.py": "43444bccbfa9264cea2f57e7983b3df317240b0f6fc0ed72d82204ace470a713",
+    "evidence-workspace/moss-v39-ui/combined-native-cards/launch.sh": "4e50840ce9bdab882a26fa20c0ba724bcec771002833721826c6fa0459cad581",
+    "evidence-workspace/moss-v39-ui/combined-native-cards/CATALOG_COUNT_ONLY.patch": "da2b6418b10a4ed9dbbde36d4222046caed34813476cc5e1a6207a309a396338",
+    "evidence-workspace/moss-v39-ui/equipment16-native-r2/cards.gd": "6a4f1c01728361c1c09898b8b9871c86c4761501e8f795dba27a2cb41aab9782",
+    "evidence-workspace/moss-v39-ui/equipment16-native/support/audio_teardown.gd": "9e9676e34296cb55d4560b1169c5954a82508f70e9051fcc942d1bb6839c23bd",
+    "evidence-workspace/moss-equipment16-integration-review/EXPECTED_ICONS.json": "4239175228d0f266742a8b385c12dd3c4706f74ef7f2abab73e0f5357ce454cc",
+    "evidence-workspace/moss-v39-B-equipment16-pack/linux/MossCircuit.pck": "6743bf0f468c25ad28cc2776d1b1f28fd6356b23ee6f5a36ad977e90863dd775",
+    "evidence-workspace/moss-v39-items/B-equipment16-combination/assembly-first/INPUTS.json": "543d43c875b72b7682c312a4811094007e679c419d2142aa86c0d59728b57440",
+    "evidence-workspace/moss-v39-B-qa/B_SOURCE_COMBINATION_RAW_REVIEW.json": "66e6b8c01ae6b1b19d844f0ced70f76c49a3bc7b7a5985493fd57cb5197f985c",
+    "evidence-workspace/moss-v39-prep/B_COMBINED_SOURCE_RAW_REVIEW.json": "0faae1dad1dbcdf39029d6244d1137dde37a1a8aba2d67f0145e9e8f590f50d2"
+  },
+  "phases": [
+    {
+      "name": "cards21",
+      "script": "evidence-workspace/moss-v39-ui/combined-native-cards/cards_observed.gd",
+      "args": [
+        "evidence-workspace/moss-equipment16-integration-review/EXPECTED_ICONS.json"
+      ],
+      "expected_checks": 145,
+      "expected_records": 21,
+      "expected_groups": 3,
+      "expected_images": [
+        "card_rivet_gun.png",
+        "card_scrap_shotgun.png",
+        "card_rail_lance.png",
+        "card_orbit_saw.png",
+        "card_power_coil.png",
+        "card_cooling_fan.png",
+        "card_iron_plate.png",
+        "card_moss_patch.png",
+        "card_running_boots.png",
+        "card_salvage_magnet.png",
+        "card_lucky_chip.png",
+        "card_lens.png",
+        "card_capacitor.png",
+        "card_gear.png",
+        "card_pellet_pouch.png",
+        "card_recycler.png",
+        "card_tether_emitter.png",
+        "card_seismic_drum.png",
+        "card_lock_memory.png",
+        "card_return_collar.png",
+        "card_recoil_plate.png"
+      ],
+      "expected_ids": [
+        "rivet_gun",
+        "scrap_shotgun",
+        "rail_lance",
+        "orbit_saw",
+        "power_coil",
+        "cooling_fan",
+        "iron_plate",
+        "moss_patch",
+        "running_boots",
+        "salvage_magnet",
+        "lucky_chip",
+        "lens",
+        "capacitor",
+        "gear",
+        "pellet_pouch",
+        "recycler",
+        "tether_emitter",
+        "seismic_drum",
+        "lock_memory",
+        "return_collar",
+        "recoil_plate"
+      ]
+    }
+  ],
+  "scope": "New combined B+accepted16 PCK:145checks on21old16+A5cards; B3coveredseparately; mergedmanifest46. Not inherited fac259PASS.",
+  "source_readback_note": "same source path twice is same map, not independentcopy; runtime emptycwd --main-pack only",
+  "source_gate_scope": "35 prior routes + independently reviewed original435 + remaining129 =165 distinct source routes; NOT single165 rerun. Combined926 source resource gate separate, originalFAIL preserved.",
+  "packed_receipt_note": "Expected output contract only; actual receipt not yet produced/read/pinned, cannotapproveorlaunch."
+}

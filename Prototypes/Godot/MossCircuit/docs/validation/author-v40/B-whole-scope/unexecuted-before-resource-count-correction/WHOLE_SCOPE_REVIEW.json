@@ -1,0 +1,64 @@
+{
+  "status": "SCOPE_REVIEW_ONLY_NOT_EXECUTION_AUTHORIZATION",
+  "base": "evidence-workspace/moss-v39-B-r2",
+  "base_inputs": "evidence-workspace/moss-v39-items/B-evidence/INTEGRATION_R2_INPUTS.json",
+  "new_candidate": "evidence-workspace/moss-v39-B-full",
+  "base_count": 894,
+  "modified_test_paths": 11,
+  "added_paths": 7,
+  "pre_cold_planned_count": 901,
+  "post_cold_planned_count": 907,
+  "manifest_policy": "Regenerate existing MANIFEST.json, exclude itself/cache and retain complete authored file set; explicit diff pinned. No runtime/data/art production changes from R2.",
+  "expected_added_cold_paths": [
+    "tests/support/v39_B_catalog_projection.gd.uid",
+    "tests/support/v39_B_then_A_catalog_projection.gd.uid",
+    "tests/test_B_legacy_cache.gd.uid",
+    "tests/test_B_catalog_current.gd.uid",
+    "tests/test_B_pickup_sources.gd.uid",
+    "tests/test_B_projection.gd.uid"
+  ],
+  "source_scripts": 165,
+  "source_cold_commands": 1,
+  "full_source_commands_including_cold": 166,
+  "ordering": "New author fixtures and external B gates first; then remaining original scripts, first FAIL stops; no blind continuation/retry. Every route per180 except explicitly existing separate audio partitions each180.",
+  "packed_commands": 21,
+  "packed_generic_checks": 995,
+  "packed_generic_math": "A968 +6 exact textfiles*2 +3 PNG*5; unchanged remaining verifier body",
+  "packed_exact_files": 84,
+  "packed_images": 72,
+  "packed_added_routes": [
+    {
+      "name": "pin_ring",
+      "checks": 126,
+      "observations": 14,
+      "helpers": 1
+    },
+    {
+      "name": "real_hooks",
+      "checks": 62,
+      "observations": 2,
+      "helpers": 1
+    },
+    {
+      "name": "B_readout",
+      "checks": 20,
+      "helpers": 0
+    },
+    {
+      "name": "B_icons",
+      "checks": 201,
+      "observations": 3,
+      "helpers": 0
+    }
+  ],
+  "native": "20 scenes,2 commands, Arena960 +Rooms1280, logical960; UI current static71checks/10records/28PNG each pending QA freeze",
+  "ordinary": "one default seed Rooms/Rivet; first shop/death, optional natural affordableB then nextshop/death; no injection/search/restarts/refresh-for-B",
+  "pins": {
+    "evidence-workspace/moss-v39-items/B-whole-scope/PLAN_DRAFT.md": "6962ecf039708fa6cc29641c47ce9e9e0c566e80b1b837f70a1ff046cda23ff0",
+    "evidence-workspace/moss-v39-items/B-whole-scope/AFFECTED_PATH_MATRIX_DRAFT.json": "69b573cb6f201fb553846159f04a5fad05ebd4fb63b0bd3a61e7f7b0819af9f9",
+    "evidence-workspace/moss-v39-items/B-whole-scope/SOURCE_DISCOVERY_REFERENCE_DRAFT.json": "c9272aa2c5fd096db5db0de98ade133d28c1ebf32d651bbdc7127fe82928c7a6",
+    "evidence-workspace/moss-v39-items/B-legacy-proposal/PROPOSED_TEST_CHANGES.json": "c519f05122957abf0f0cd63a4a90b45f8d8078ff29746d5fbeb317f315120c1c",
+    "evidence-workspace/moss-v39-items/B-legacy-proposal/ALL_TEST_CHANGES.patch": "35576fe78ce086f69beec10b3a42bda3fa0d6c71a675b598d28ea74469fd088b",
+    "evidence-workspace/moss-v39-B-qa/assets/STATIC_EXPECTATION_FREEZE.json": "b4162fef3666f985fbcd1a190078a2e65e4ef47fb6c849fe8d2f772befd8bc9d"
+  }
+}

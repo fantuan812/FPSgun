@@ -1,0 +1,87 @@
+{
+  "pass": true,
+  "scope": "Four independent pure-helper fixtures; not main/Effects/loop/native integration",
+  "exception": null,
+  "completed": 4,
+  "expected_total_checks": 647,
+  "actual_total_checks": 647,
+  "author_source_unchanged": true,
+  "all_pins_unchanged": true,
+  "after_issues": [],
+  "rows": [
+    {
+      "name": "initial_state",
+      "pass": true,
+      "native_exit": 0,
+      "timeout": false,
+      "seconds": 0.9280614510062151,
+      "exception": null,
+      "stderr_bytes": 0,
+      "strict_tags": [],
+      "parse_errors": [],
+      "reports": [
+        {
+          "checks": 30,
+          "failures": [],
+          "scope": "Independent frozen observable initial/reset/detachment contract; no scene, no gameplay integration"
+        }
+      ]
+    },
+    {
+      "name": "admission",
+      "pass": true,
+      "native_exit": 0,
+      "timeout": false,
+      "seconds": 0.8385559129965259,
+      "exception": null,
+      "stderr_bytes": 0,
+      "strict_tags": [],
+      "parse_errors": [],
+      "reports": [
+        {
+          "checks": 349,
+          "failures": [],
+          "scope": "Independent frozen 39 typed admissions and context clock/dash PRE guards, valid old catalog without B",
+          "typed_matrix_cases": 39
+        }
+      ]
+    },
+    {
+      "name": "mechanics",
+      "pass": true,
+      "native_exit": 0,
+      "timeout": false,
+      "seconds": 0.7727265479916241,
+      "exception": null,
+      "stderr_bytes": 0,
+      "strict_tags": [],
+      "parse_errors": [],
+      "reports": [
+        {
+          "checks": 207,
+          "failures": [],
+          "scope": "Independent literal B hand-sequence runtime policy, controlled current-world/pickup arrays; no main/Effects integration, no natural pickups or old damage claims"
+        }
+      ]
+    },
+    {
+      "name": "configuration",
+      "pass": true,
+      "native_exit": 0,
+      "timeout": false,
+      "seconds": 0.780768458993407,
+      "exception": null,
+      "stderr_bytes": 0,
+      "strict_tags": [],
+      "parse_errors": [],
+      "reports": [
+        {
+          "checks": 61,
+          "configuration_mutations": 9,
+          "failures": [],
+          "scope": "Independent frozen atomic configuration boundaries and JSON integral count domain"
+        }
+      ]
+    }
+  ]
+}

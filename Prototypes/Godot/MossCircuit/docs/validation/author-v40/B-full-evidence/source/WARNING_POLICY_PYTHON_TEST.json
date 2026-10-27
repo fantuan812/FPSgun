@@ -1,0 +1,69 @@
+{
+  "pass": true,
+  "checks": 10,
+  "cases": [
+    {
+      "case": "exact48",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "case": "47",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "case": "49",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "case": "body",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "case": "extra_line",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "case": "error",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "case": "wrong_line",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "case": "other_route",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "case": "empty_allowed_route",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "case": "empty_normal_route",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    }
+  ],
+  "policy_sha256": "5af7780a8fbc86fe58e84b53e03b650362929a5cf83d911a11cd7242f8fc1345",
+  "classifier_sha256": "cefe8e7f6c06d5bb4af43a83eaa63bf8d1ad12e13b8ade6a22a7fae70d54b30c",
+  "scope": "Pure Python finite classifier negatives; no Godot"
+}

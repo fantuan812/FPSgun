@@ -1,0 +1,11 @@
+--- accepted-equipment16-240
++++ combined-B-equipment16-240
+@@ -16,7 +16,7 @@
+  var ui = load("res://ui/moss_ui.gd").new()
+  root.add_child(ui)
+  await process_frame
+- ck(ui.manifest.icons.size()==43,"actual merged43icons")
++ ck(ui.manifest.icons.size()==46,"actual merged46icons")
+  ck(ui.manifest.atlas=="res://assets/items/equipment_atlas_editable.png","actual primary new atlas")
+  for id in expected.icons:
+   var e: Dictionary = expected.icons[id]

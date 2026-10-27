@@ -1,0 +1,118 @@
+{
+  "review_pass": true,
+  "checks": [
+    {
+      "check": "pin_ring native0",
+      "pass": true
+    },
+    {
+      "check": "pin_ring stderr empty",
+      "pass": true
+    },
+    {
+      "check": "pin_ring strict raw",
+      "pass": true
+    },
+    {
+      "check": "pin_ring exact report",
+      "pass": true
+    },
+    {
+      "check": "pin_ring observations",
+      "pass": true
+    },
+    {
+      "check": "pin_ring helper1",
+      "pass": true
+    },
+    {
+      "check": "pin_ring helper ownership",
+      "pass": true
+    },
+    {
+      "check": "pin_ring all observations clean",
+      "pass": true
+    },
+    {
+      "check": "pin_ring fresh silence final release",
+      "pass": true
+    },
+    {
+      "check": "real_hooks native0",
+      "pass": true
+    },
+    {
+      "check": "real_hooks stderr empty",
+      "pass": true
+    },
+    {
+      "check": "real_hooks strict raw",
+      "pass": true
+    },
+    {
+      "check": "real_hooks exact report",
+      "pass": true
+    },
+    {
+      "check": "real_hooks observations",
+      "pass": true
+    },
+    {
+      "check": "real_hooks helper1",
+      "pass": true
+    },
+    {
+      "check": "real_hooks helper ownership",
+      "pass": true
+    },
+    {
+      "check": "real_hooks all observations clean",
+      "pass": true
+    },
+    {
+      "check": "real_hooks fresh silence final release",
+      "pass": true
+    },
+    {
+      "check": "author full live894",
+      "pass": true
+    },
+    {
+      "check": "copy full live894",
+      "pass": true
+    },
+    {
+      "check": "BEFORE.json expected894",
+      "pass": true
+    },
+    {
+      "check": "AUTHOR_AFTER.json expected894",
+      "pass": true
+    },
+    {
+      "check": "COPY_AFTER.json expected894",
+      "pass": true
+    },
+    {
+      "check": "all execution pins still match",
+      "pass": true
+    }
+  ],
+  "routes": [
+    {
+      "name": "pin_ring",
+      "stdout_sha256": "bd72c67a3f094140cbc8d1f00f2494e93cac303106300c233c5421871f811ae6",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "count": 126,
+      "observations": 14
+    },
+    {
+      "name": "real_hooks",
+      "stdout_sha256": "d2cb8a980e7affde7efe024f5d3cdbf9bba724a81b897706c398fac23f2afc76",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "count": 62,
+      "observations": 2
+    }
+  ],
+  "scope": "Independent corrected126/62 controlled real hooks raw readback; not full/native/ordinary or visual acceptance; original failures retained"
+}

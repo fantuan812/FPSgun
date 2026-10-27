@@ -1,0 +1,10 @@
+--- evidence-workspace/moss-v39-ui/B/native-r2/fixture.gd
++++ evidence-workspace/moss-v39-ui/B/native-r3/fixture.gd
+@@ -47,6 +47,7 @@
+ 	await process_frame;await process_frame
+ func refresh()->void:
+ 	g.hero.position=g.player_pos.round();g.camera.position=Layout.camera_position(g.player_pos,g.config.arena)
++	g._sync_weapon_rig() # Actual presentation seam; no advance/process/simulation.
+ 	for e in g.enemies:
+ 		if is_instance_valid(e.get("sprite")):e.sprite.position=e.pos.round()
+ 	g._update_hud();g._sync_telegraphs();g.queue_redraw()

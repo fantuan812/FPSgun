@@ -1,0 +1,34 @@
+{
+  "review_pass": true,
+  "scope": "Actual single-setup diagnostic plus source write-site audit; fixture correction basis, not gameplay PASS",
+  "keytype_result_sha256": "5a140a5f21140ce8882eb6aea22a6413621bef8a05136b4245a25c69ce8d7bf7",
+  "actual_dot_type": "StringName21",
+  "actual_literal_and_bracket_type": "String4",
+  "weapons": "two String values",
+  "original126_timeout_retained": "bd35ac7e35427eb5a4ab8f1db812bc8985619ba244965557310859f890cb4c86",
+  "diagnostic126_four_fail_retained": "8978e241ea11125e121c4a17c76ba9e0be1f72651ae816f9794de484fec1ad66",
+  "production_write_sites": [
+    {
+      "file": "scripts/rules.gd",
+      "lines": "229 new_build items={};271 transaction id:String;293 bracket item insertion",
+      "sha256": "cdd0aa59a7a8881bec1cfb1256bcbc988555d365813423459dba40a8244a8248"
+    },
+    {
+      "file": "scripts/main.gd",
+      "lines": "883 buy delegates Rules.transaction;1015 sell id:String;1019-1020 bracket decrement/erase",
+      "sha256": "36fdaa2b2b47e22c2955583eeb709e622605bc0c15fde43f940839c1327ae6e9"
+    },
+    {
+      "file": "scripts/gameplay/starting_loadouts.gd",
+      "lines": "49-56 only weapons/coins, no modules supplied",
+      "sha256": "20b9bb00956e39aed333200a9f5bee7ddec024b9e5b20efc996c1d3963f72c21"
+    }
+  ],
+  "scan_scope": "scripts + ui; no production build.items.dot new-key writer or separate build-load path found",
+  "reviewers": [
+    "independent QA",
+    "implement_build_expansion",
+    "expand_build_item_mechanics"
+  ],
+  "decision": "Root approved fixture-only bracket String plus numeric CD guard; preserve strict actual String input contract and HP/CD/geometry expectations; revisit if future load/write paths added."
+}

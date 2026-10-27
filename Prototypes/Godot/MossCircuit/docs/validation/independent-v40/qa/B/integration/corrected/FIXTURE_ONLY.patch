@@ -1,0 +1,20 @@
+--- original-failed126
++++ corrected-String-key126
+@@ -11,7 +11,7 @@
+ func setup(mode:String,row:Dictionary)->Dictionary:
+  g._title();g._select_mode(mode);g._start_run(39073);g.set_process(false)
+  g.build.weapons=["tether_emitter","seismic_drum"];g.build.weapon_temper=[0,0];g.build.items={"crossfire_pin":1}
+- if row.id=="old_proc_death":g.build.items.echo_chamber=1
++ if row.id=="old_proc_death":g.build.items["echo_chamber"]=1
+  g._recompute();g.enemies.clear();g.bullets.clear();g.pickups.clear();g.hazards.clear()
+  g.player_pos=Vector2(400,300);g.elapsed=10.0;g.combat_frame.area=g.config.arena;g.weapon_clocks=[0.0,0.0]
+  var e:Dictionary=g._spawn_kind("crawler",Vector2(row.x,300));e.speed=0.0;e.damage=0.0;e.hp=1000.0;e.max_hp=1000.0;e.anim_hp=1000.0;e.scale=.1
+@@ -56,7 +56,7 @@
+    else:
+     ck(motion.p0==Vector2(row.x,300) and motion.p1==Vector2(row.x,300) and motion.has_segment==true,mode+row.id+" normal segment unchanged")
+     ck(motion.final_pos==e.pos,mode+row.id+" final endpoint matches actual position")
+-   ck(near(g.effect_runtime.build_items.pin_ready_at,11.0+row.dt),mode+row.id+" single cooldown from actual time; marked death housekeeping consumes mark without pull")
++   ck((g.effect_runtime.build_items.pin_ready_at is int or g.effect_runtime.build_items.pin_ready_at is float) and near(g.effect_runtime.build_items.pin_ready_at,11.0+row.dt),mode+row.id+" single cooldown from actual time; marked death housekeeping consumes mark without pull")
+    observations.append({"mode":mode,"case":row.id,"hp":e.hp,"position":[e.pos.x,e.pos.y],"motion":motion.duplicate(true),"pulse_index":beam.pulse_index,"wave_hit":wave.hit_out.has(e.id),"pin_ready_at":g.effect_runtime.build_items.pin_ready_at})
+  g._title();var helper=load("res://tests/support/audio_teardown.gd").new();helper.prepare([g]);g.queue_free();await process_frame;await helper.finish(self)
+  print(JSON.stringify({"independent_B_pin_ring_checks":checks,"failures":failures,"observations":observations,"scope":"Controlled real runtime launch and beam -> old/A proc -> Pin -> ring phase integration. Preexisting ages/mark and normal-motion samples are explicit fixture inputs, not ordinary play or physical CCD."}))

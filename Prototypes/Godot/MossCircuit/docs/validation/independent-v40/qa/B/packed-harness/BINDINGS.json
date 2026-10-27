@@ -1,0 +1,274 @@
+{
+  "status": "STATIC_EXTERNAL_BINDINGS_NOT_EXECUTED",
+  "scope": "16 packed specialist bindings, original expectations/counts unchanged. Only A7 count uses detached strict B-only inverse; actual game/catalog/rig/UI not mutated. No target source writes. Runner/plan separately owned by QA.",
+  "bindings": [
+    {
+      "source": "evidence-workspace/moss-v39-qa/packed-harness/geometry.gd",
+      "source_sha256": "c9ef25b097da27b190a0e7b8f91f3a279f3cedbc7e87888dfc9dcde94c909b06",
+      "bound": "evidence-workspace/moss-v39-B-qa/packed-harness/geometry.gd",
+      "bound_sha256": "14521f0ca1b6045c223c40cb4e8c466a34bc3228102ff06545b1c2ba79165dca",
+      "patch_sha256": "06f972ebb65e2f142c8870f9930e2109b0edf4bf63965b15b7953a2fd4a15153",
+      "replacements": [
+        [
+          "evidence-workspace/moss-v39-qa/packed-harness",
+          "evidence-workspace/moss-v39-B-qa/packed-harness"
+        ]
+      ],
+      "inverse_exact": true
+    },
+    {
+      "source": "evidence-workspace/moss-v39-qa/packed-harness/policy.gd",
+      "source_sha256": "dee53e121d30a7cb0c514ccac7c2c87e4779ba4e1bf32dd1b846577f1d5a2a17",
+      "bound": "evidence-workspace/moss-v39-B-qa/packed-harness/policy.gd",
+      "bound_sha256": "dee53e121d30a7cb0c514ccac7c2c87e4779ba4e1bf32dd1b846577f1d5a2a17",
+      "patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "replacements": [],
+      "inverse_exact": true
+    },
+    {
+      "source": "evidence-workspace/moss-v39-qa/packed-harness/runtime.gd",
+      "source_sha256": "90b51737cc23ff44e0a547f43b0fa33e8ae590bfa89ed2fb6ef608167464cb74",
+      "bound": "evidence-workspace/moss-v39-B-qa/packed-harness/runtime.gd",
+      "bound_sha256": "cb7eb9dd233ece408554ef4b3dd611b9a9dd83f26792a08c40063e2e9fd1db4e",
+      "patch_sha256": "dad57d04004f8ba84a8599627014fe39016b2ae45cfa904c8d52391d157435c8",
+      "replacements": [
+        [
+          "evidence-workspace/moss-v39-qa/packed-harness",
+          "evidence-workspace/moss-v39-B-qa/packed-harness"
+        ]
+      ],
+      "inverse_exact": true
+    },
+    {
+      "source": "evidence-workspace/moss-v39-qa/packed-harness/lifecycle.gd",
+      "source_sha256": "06fb0f4a6f30b4bb39d234af46b6cc6a859a30d7888a63bccc9edba8f4a761c0",
+      "bound": "evidence-workspace/moss-v39-B-qa/packed-harness/lifecycle.gd",
+      "bound_sha256": "6fec33ba85ad5a08bedf20330f006aefc2c3f25412c6fef58ec0bdacb5740670",
+      "patch_sha256": "9eef276d353faca738c681dfddda96a4e1653902679bb0b900e2d3008ea10ad8",
+      "replacements": [
+        [
+          "evidence-workspace/moss-v39-qa/packed-harness",
+          "evidence-workspace/moss-v39-B-qa/packed-harness"
+        ]
+      ],
+      "inverse_exact": true
+    },
+    {
+      "source": "evidence-workspace/moss-v39-qa/packed-harness/caps.gd",
+      "source_sha256": "946cfc0ddb1e5c1145aa46c824218d7ae11067ac4e400574bd1f9ccb58ea137f",
+      "bound": "evidence-workspace/moss-v39-B-qa/packed-harness/caps.gd",
+      "bound_sha256": "946cfc0ddb1e5c1145aa46c824218d7ae11067ac4e400574bd1f9ccb58ea137f",
+      "patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "replacements": [],
+      "inverse_exact": true
+    },
+    {
+      "source": "evidence-workspace/moss-v39-qa/packed-harness/motion.gd",
+      "source_sha256": "0ed8a9c1e52026f29e5b7f200dfeb11725be916e0c50b04367e3fa0e0cabb82c",
+      "bound": "evidence-workspace/moss-v39-B-qa/packed-harness/motion.gd",
+      "bound_sha256": "73dc2f87e264ee15d5d8ddcd966f5c6fecad7fe5bebf3b3a581eb4d850c73eb0",
+      "patch_sha256": "968ed5759d7d9c978993092ca8e9088a4cb8febf3fc30322bb04194209643d1a",
+      "replacements": [
+        [
+          "evidence-workspace/moss-v39-qa/packed-harness",
+          "evidence-workspace/moss-v39-B-qa/packed-harness"
+        ]
+      ],
+      "inverse_exact": true
+    },
+    {
+      "source": "evidence-workspace/moss-v39-qa/packed-harness/audio-arena.gd",
+      "source_sha256": "a70b6041e49008c17f50435dc239f23641d8770aa9170e9ae28c8baef0b7a604",
+      "bound": "evidence-workspace/moss-v39-B-qa/packed-harness/audio-arena.gd",
+      "bound_sha256": "75316841c9cb658fbff96219b500062b7cdc7ba46ef52e7b02a9b952705f2a5c",
+      "patch_sha256": "5f210afa49a4e26a10f8e2f0c4872a9e4347b4431d2e7c09fe3b63b143c2a186",
+      "replacements": [
+        [
+          "evidence-workspace/moss-v39-qa/packed-harness",
+          "evidence-workspace/moss-v39-B-qa/packed-harness"
+        ]
+      ],
+      "inverse_exact": true
+    },
+    {
+      "source": "evidence-workspace/moss-v39-qa/packed-harness/audio-rooms.gd",
+      "source_sha256": "d32aba9fff63735ca70c3831a012c6633bc0099821b471b58576d869a9e15a2e",
+      "bound": "evidence-workspace/moss-v39-B-qa/packed-harness/audio-rooms.gd",
+      "bound_sha256": "1a347e80055977e813f6d2b25ed70a5eaa2500b2abe821310f2927d74499034c",
+      "patch_sha256": "440a2525b3286c4e0434b5fe392ac967e6c50ca7e2cc574c2b66bdca9b6e216d",
+      "replacements": [
+        [
+          "evidence-workspace/moss-v39-qa/packed-harness",
+          "evidence-workspace/moss-v39-B-qa/packed-harness"
+        ]
+      ],
+      "inverse_exact": true
+    },
+    {
+      "source": "evidence-workspace/moss-v39-qa/packed-harness/audio-views.gd",
+      "source_sha256": "1b255fea48e04b9ddcf82f6e6c5353b80f01dd5df7694d4e691276087381558d",
+      "bound": "evidence-workspace/moss-v39-B-qa/packed-harness/audio-views.gd",
+      "bound_sha256": "e200b8cc6032d2110b7922c2104c3585518278646e28c11b64ea05ed12da4339",
+      "patch_sha256": "d345a9dc106bae27873515ae0d69beac3917b522912eb0e538189fce0fea920c",
+      "replacements": [
+        [
+          "evidence-workspace/moss-v39-qa/packed-harness",
+          "evidence-workspace/moss-v39-B-qa/packed-harness"
+        ]
+      ],
+      "inverse_exact": true
+    },
+    {
+      "source": "evidence-workspace/moss-v39-qa/packed-harness/audio-mixer.gd",
+      "source_sha256": "1589fcbc740481bbc7cca47901a4dd355d9f6564778a935be3a7d5535b43552e",
+      "bound": "evidence-workspace/moss-v39-B-qa/packed-harness/audio-mixer.gd",
+      "bound_sha256": "1589fcbc740481bbc7cca47901a4dd355d9f6564778a935be3a7d5535b43552e",
+      "patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "replacements": [],
+      "inverse_exact": true
+    },
+    {
+      "source": "evidence-workspace/moss-v39-qa/packed-harness/A7-assets.gd",
+      "source_sha256": "788492b032f1d9ec843263fb8b94daee49c4c0ad8c29f8efbf542041a6480d4e",
+      "bound": "evidence-workspace/moss-v39-B-qa/packed-harness/A7-assets.gd",
+      "bound_sha256": "6df5eef9dc99202e038f50a9978bf3c22ab46a61c52a03ee2f4eb56d1cb9565d",
+      "patch_sha256": "9a7abc1a1ba353091c225c6385a39394cfd81a9cf544d83cbe5ac0b95b5e48de",
+      "replacements": [
+        [
+          "evidence-workspace/moss-v39-qa/packed-harness",
+          "evidence-workspace/moss-v39-B-qa/packed-harness"
+        ],
+        [
+          " ck(g.catalog.weapons.size()==10 and g.catalog.items.size()==33,\"actual A catalog identity counts\")",
+          " var historical_A=load(\"evidence-workspace/moss-v39-B-qa/packed-harness/v39_B_catalog_projection.gd\").project(g.catalog,FileAccess.get_file_as_string(\"res://data/catalog.json\"))\n var A_catalog:Dictionary=historical_A.get(\"catalog\",{})\n ck(historical_A.get(\"pass\",false) and A_catalog.get(\"weapons\",[]).size()==10 and A_catalog.get(\"items\",[]).size()==33,\"strict B-only inverse A catalog identity counts; actual rig/UI remain current B\")"
+        ]
+      ],
+      "inverse_exact": true
+    },
+    {
+      "source": "evidence-workspace/moss-v39-B-qa/integration/corrected/independent_B_pin_ring_r2.gd",
+      "source_sha256": "21d5e47253736add2dc657db5a82f406a71bb9db06ba7225f7bbcf3e0cdbcf99",
+      "bound": "evidence-workspace/moss-v39-B-qa/packed-harness/B-pin-ring.gd",
+      "bound_sha256": "c5eb2170bc6ae43e33405084bf23d23f190ea85e82e3efae87031b739e9e3e5d",
+      "patch_sha256": "ce4142f3b78e8a68cb4165eb460d6b5d196c2e236c0cfc37c98506e1cdfb817c",
+      "replacements": [
+        [
+          "res://tests/support/audio_teardown.gd",
+          "evidence-workspace/moss-v39-B-qa/packed-harness/audio_teardown.gd"
+        ]
+      ],
+      "inverse_exact": true
+    },
+    {
+      "source": "evidence-workspace/moss-v39-B-qa/integration/independent_B_real_hooks.gd",
+      "source_sha256": "93eb63c0230726c2c51ff1a385225dc11bcf61fb66d20e0d8c3b844a555bc57d",
+      "bound": "evidence-workspace/moss-v39-B-qa/packed-harness/B-real-hooks.gd",
+      "bound_sha256": "1cb8097342d2f9de0efdb98f5927de06dff00e5519ca673ea80ed05e4081ac43",
+      "patch_sha256": "73536dcc1a3ce03196b9dcc3b0c216f9b1b1523d47803002451aad2b59937346",
+      "replacements": [
+        [
+          "res://tests/support/audio_teardown.gd",
+          "evidence-workspace/moss-v39-B-qa/packed-harness/audio_teardown.gd"
+        ]
+      ],
+      "inverse_exact": true
+    },
+    {
+      "source": "evidence-workspace/moss-v39-ui/B/tests/test_build_items_readout.gd",
+      "source_sha256": "9fd8b2ba6bd45a1b8cf5b167e00a13cbfd5a3afdec930a673d66a0ee5785fcb9",
+      "bound": "evidence-workspace/moss-v39-B-qa/packed-harness/B-ui20.gd",
+      "bound_sha256": "9fd8b2ba6bd45a1b8cf5b167e00a13cbfd5a3afdec930a673d66a0ee5785fcb9",
+      "patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "replacements": [],
+      "inverse_exact": true
+    },
+    {
+      "source": "evidence-workspace/moss-v39-B-qa/assets-combined/independent_B_icons.gd",
+      "source_sha256": "9a156a4dfd2f4c4c0ffbca8630bdd3dc2ce4fa22d3c68faef8c46370294b23e3",
+      "bound": "evidence-workspace/moss-v39-B-qa/packed-harness/B-icons201.gd",
+      "bound_sha256": "9a156a4dfd2f4c4c0ffbca8630bdd3dc2ce4fa22d3c68faef8c46370294b23e3",
+      "patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "replacements": [],
+      "inverse_exact": true
+    },
+    {
+      "source": "evidence-workspace/moss-v39-B-qa/assets-combined/actual_icon_identity_combined.gd",
+      "source_sha256": "19ca4e9de3bafb8415c9f50b3bbb6c2569d2b6e72332fa2d719e7501581e3b6a",
+      "bound": "evidence-workspace/moss-v39-B-qa/packed-harness/atlas240.gd",
+      "bound_sha256": "19ca4e9de3bafb8415c9f50b3bbb6c2569d2b6e72332fa2d719e7501581e3b6a",
+      "patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "replacements": [],
+      "inverse_exact": true
+    }
+  ],
+  "projection_binding": {
+    "source": "evidence-workspace/moss-v39-B-full/tests/support/v39_B_catalog_projection.gd",
+    "source_sha256": "ee5cee74555ea63285b1291987b3446255179542d99856b734f0d3b79a57684b",
+    "bound": "evidence-workspace/moss-v39-B-qa/packed-harness/v39_B_catalog_projection.gd",
+    "bound_sha256": "ce987bc7b318d81179f6149f2859a6b480df7ce99c9c309dada0c1f97b5bf04d",
+    "patch_sha256": "93c56a0cd6e54eafdc75bf3d27baabf01b40c9c6b5aa0b08fe394341be8227bb",
+    "replacements": [
+      [
+        "res://tests/fixtures/v39_B_catalog_additions.json",
+        "evidence-workspace/moss-v39-B-qa/packed-harness/v39_B_catalog_additions.json"
+      ]
+    ],
+    "inverse_exact": true
+  },
+  "support": [
+    {
+      "source": "evidence-workspace/moss-v39-qa/packed-harness/audio_teardown.gd",
+      "bound": "evidence-workspace/moss-v39-B-qa/packed-harness/audio_teardown.gd",
+      "sha256": "9e9676e34296cb55d4560b1169c5954a82508f70e9051fcc942d1bb6839c23bd",
+      "exact_copy": true
+    },
+    {
+      "source": "evidence-workspace/moss-v39-qa/packed-harness/geometry-api-cases.json",
+      "bound": "evidence-workspace/moss-v39-B-qa/packed-harness/geometry-api-cases.json",
+      "sha256": "9ae13f97bf2eb6f201972bb28135e97b20b8491b9c69d273ef7d67c011bad8d6",
+      "exact_copy": true
+    },
+    {
+      "source": "evidence-workspace/moss-v39-qa/packed-harness/A7_RAW_SOURCE_ORACLE.json",
+      "bound": "evidence-workspace/moss-v39-B-qa/packed-harness/A7_RAW_SOURCE_ORACLE.json",
+      "sha256": "27bc8b6148682955ef2394ef68d3eae6d30e929b25a76b02abc8e555d2b6d91d",
+      "exact_copy": true
+    },
+    {
+      "source": "evidence-workspace/moss-v39-qa/packed-harness/svg-oracle.json",
+      "bound": "evidence-workspace/moss-v39-B-qa/packed-harness/svg-oracle.json",
+      "sha256": "cc61e79859ec3b87ebefa558cd676bfb9350081d5f05b35ee2503edb2e63a475",
+      "exact_copy": true
+    },
+    {
+      "source": "evidence-workspace/moss-v39-qa/packed-harness/independent_scavenger_icon.gd",
+      "bound": "evidence-workspace/moss-v39-B-qa/packed-harness/independent_scavenger_icon.gd",
+      "sha256": "98a92a4c0a02b022ce3de27d2bd050487ad7ac640ec23749bf868257bdc71f3e",
+      "exact_copy": true
+    },
+    {
+      "source": "evidence-workspace/moss-v39-qa/packed-harness/independent_feedback_pcm.py",
+      "bound": "evidence-workspace/moss-v39-B-qa/packed-harness/independent_feedback_pcm.py",
+      "sha256": "e952b55586056bfb9c772e19035a0b7f357c6d620f56ca30ffab2ede92211d47",
+      "exact_copy": true
+    },
+    {
+      "source": "evidence-workspace/moss-v39-B-full/tests/fixtures/v39_B_catalog_additions.json",
+      "bound": "evidence-workspace/moss-v39-B-qa/packed-harness/v39_B_catalog_additions.json",
+      "sha256": "5ab1bb1f93b8b58706c6782d5729e104d8320d5a7668518cd48a8ee38dcbb65d",
+      "exact_copy": true
+    },
+    {
+      "source": "evidence-workspace/moss-v39-B-qa/assets-combined/EXPECTED_46.json",
+      "bound": "evidence-workspace/moss-v39-B-qa/packed-harness/EXPECTED_46.json",
+      "sha256": "fc5b63814e5915668b03f014d9bc380e5d9b9d616ef1d941f326faf604d86744",
+      "exact_copy": true
+    },
+    {
+      "source": "evidence-workspace/moss-v39-B-qa/assets-combined/EXPECTED_21.json",
+      "bound": "evidence-workspace/moss-v39-B-qa/packed-harness/EXPECTED_21.json",
+      "sha256": "4239175228d0f266742a8b385c12dd3c4706f74ef7f2abab73e0f5357ce454cc",
+      "exact_copy": true
+    }
+  ]
+}

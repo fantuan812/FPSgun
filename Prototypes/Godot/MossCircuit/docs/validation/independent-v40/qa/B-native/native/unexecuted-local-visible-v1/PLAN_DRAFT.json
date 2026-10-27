@@ -1,0 +1,121 @@
+{
+  "status": "DRAFT_UNEXECUTED_AWAITING_QA_STATIC_AND_NEW_B_IDENTITY",
+  "target_path": null,
+  "target_map": null,
+  "pck": null,
+  "icon_oracle": "evidence-workspace/moss-v39-B-qa/assets/NATIVE_B3_EXPECTED.json",
+  "expected_per_command_checks": 71,
+  "expected_per_command_records": 10,
+  "assertions_per_case": {
+    "01": 4,
+    "02": 7,
+    "03": 10,
+    "04": 6,
+    "05": 8,
+    "06": 5,
+    "07": 8,
+    "08": 9,
+    "09": 6,
+    "10": 8
+  },
+  "source_authority": "actual B-r2 inspected only for interface; not automatically the final target",
+  "pins": {
+    "evidence-workspace/moss-v39-ui/B/native/fixture.gd": "adb3339fce4507a302b49ddee4587b55fabec27a4caa1c4d87636cc4e493e337",
+    "evidence-workspace/moss-v39-ui/B/native/observed.gd": "67481cab8a64c2f963eef58173eeaa221c57db3cd548c49dbc1ec287d583f2e3",
+    "evidence-workspace/moss-v39-ui/B/native/support/audio_teardown.gd": "9e9676e34296cb55d4560b1169c5954a82508f70e9051fcc942d1bb6839c23bd",
+    "evidence-workspace/moss-v39-ui/B/NATIVE_STAGE_MATRIX_v2.md": "ad23f1e17c5f0602d6ed4e8dbab526e1913448f940ebab9b87eba0916c7212de",
+    "evidence-workspace/moss-v39-B-qa/assets/NATIVE_B3_EXPECTED.json": "d45315f45c3c0f62f228f226e511f093b4e7ced5ee189caacf69fd87b209ed4c"
+  },
+  "commands": [
+    {
+      "name": "arena_960",
+      "mode": "arena",
+      "os_requested": [
+        960,
+        540
+      ],
+      "timeout_seconds": 180,
+      "expected_checks": 71,
+      "expected_records": 10,
+      "images": [
+        "arena_960_01_old_build_before.png",
+        "arena_960_01_old_build_build.png",
+        "arena_960_01_old_build_closed.png",
+        "arena_960_02_three_cards_crossfire_pin.png",
+        "arena_960_02_three_cards_salvage_capacitor.png",
+        "arena_960_02_three_cards_medic_winch.png",
+        "arena_960_03_summaries_pin_row.png",
+        "arena_960_03_summaries_salvage_row.png",
+        "arena_960_03_summaries_winch_row.png",
+        "arena_960_04_pin_readiness_prerequisite.png",
+        "arena_960_04_pin_readiness_cooldown.png",
+        "arena_960_05_pin_vs_focus_normal.png",
+        "arena_960_05_pin_vs_focus_reduced.png",
+        "arena_960_05_pin_vs_focus_consumed.png",
+        "arena_960_06_invalid_mark_invalid.png",
+        "arena_960_06_invalid_mark_pruned.png",
+        "arena_960_07_salvage_fields_normal.png",
+        "arena_960_07_salvage_fields_reduced.png",
+        "arena_960_07_salvage_fields_expired.png",
+        "arena_960_08_winch_pipeline_normal.png",
+        "arena_960_08_winch_pipeline_reduced.png",
+        "arena_960_08_winch_pipeline_collected.png",
+        "arena_960_08_winch_pipeline_no_medicine.png",
+        "arena_960_09_sale_room_sold.png",
+        "arena_960_09_sale_room_room.png",
+        "arena_960_10_modal_layer_world.png",
+        "arena_960_10_modal_layer_build.png",
+        "arena_960_10_modal_layer_pause.png"
+      ]
+    },
+    {
+      "name": "rooms_1280",
+      "mode": "rooms",
+      "os_requested": [
+        1280,
+        720
+      ],
+      "timeout_seconds": 180,
+      "expected_checks": 71,
+      "expected_records": 10,
+      "images": [
+        "rooms_1280_01_old_build_before.png",
+        "rooms_1280_01_old_build_build.png",
+        "rooms_1280_01_old_build_closed.png",
+        "rooms_1280_02_three_cards_crossfire_pin.png",
+        "rooms_1280_02_three_cards_salvage_capacitor.png",
+        "rooms_1280_02_three_cards_medic_winch.png",
+        "rooms_1280_03_summaries_pin_row.png",
+        "rooms_1280_03_summaries_salvage_row.png",
+        "rooms_1280_03_summaries_winch_row.png",
+        "rooms_1280_04_pin_readiness_prerequisite.png",
+        "rooms_1280_04_pin_readiness_cooldown.png",
+        "rooms_1280_05_pin_vs_focus_normal.png",
+        "rooms_1280_05_pin_vs_focus_reduced.png",
+        "rooms_1280_05_pin_vs_focus_consumed.png",
+        "rooms_1280_06_invalid_mark_invalid.png",
+        "rooms_1280_06_invalid_mark_pruned.png",
+        "rooms_1280_07_salvage_fields_normal.png",
+        "rooms_1280_07_salvage_fields_reduced.png",
+        "rooms_1280_07_salvage_fields_expired.png",
+        "rooms_1280_08_winch_pipeline_normal.png",
+        "rooms_1280_08_winch_pipeline_reduced.png",
+        "rooms_1280_08_winch_pipeline_collected.png",
+        "rooms_1280_08_winch_pipeline_no_medicine.png",
+        "rooms_1280_09_sale_room_sold.png",
+        "rooms_1280_09_sale_room_room.png",
+        "rooms_1280_10_modal_layer_world.png",
+        "rooms_1280_10_modal_layer_build.png",
+        "rooms_1280_10_modal_layer_pause.png"
+      ]
+    }
+  ],
+  "limitations": [
+    "Controlled actual pipeline and viewport events, not natural acquisition or hardware mouse.",
+    "Second field requires controlled dash readiness reset before actual Motor, not ordinary cadence.",
+    "Room eligibility setup controlled; actual main complete_wave bridge, room modal may be upgrade/shop.",
+    "B cancellation changes batch_open/pending/winch_requested_this_batch even if pending already null.",
+    "Visual layering requires original-image direct review; state predicates alone insufficient.",
+    "B-only; equipment16 candidate not included."
+  ]
+}

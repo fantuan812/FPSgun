@@ -1,0 +1,11 @@
+--- evidence-workspace/moss-v39-B-full/tests/support/v39_B_catalog_projection.gd
++++ evidence-workspace/moss-v39-B-qa/packed-harness/v39_B_catalog_projection.gd
+@@ -3,7 +3,7 @@
+ const DECLARATION_SHA="5ab1bb1f93b8b58706c6782d5729e104d8320d5a7668518cd48a8ee38dcbb65d"
+ static func project(catalog:Dictionary,raw:String)->Dictionary:
+ 	var failure:Dictionary={"pass":false,"errors":[],"catalog":{},"bytes":""}
+-	var path:String="res://tests/fixtures/v39_B_catalog_additions.json"
++	var path:String="evidence-workspace/moss-v39-B-qa/packed-harness/v39_B_catalog_additions.json"
+ 	if FileAccess.get_sha256(path)!=DECLARATION_SHA:
+ 		failure.errors.append("B declaration identity");return failure
+ 	var declaration:Dictionary=JSON.parse_string(FileAccess.get_file_as_string(path))

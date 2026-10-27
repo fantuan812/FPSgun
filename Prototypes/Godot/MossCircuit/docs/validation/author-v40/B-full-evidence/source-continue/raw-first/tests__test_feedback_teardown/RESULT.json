@@ -1,0 +1,49 @@
+{
+  "name": "tests__test_feedback_teardown",
+  "native_exit": 0,
+  "timeout": false,
+  "seconds": 0.8838005599973258,
+  "stderr_bytes": 0,
+  "stderr_policy": {
+    "accepted": true,
+    "warning_count": 0
+  },
+  "tags": [],
+  "parse_errors": [],
+  "semantic": true,
+  "file_report_validation": null,
+  "helper_ok": true,
+  "reports": [
+    {
+      "checks": 13,
+      "drain": {
+        "discarded": 0,
+        "frames": 11264,
+        "peak": 0.249885559082031,
+        "pushed_after": 16384,
+        "pushed_before": 8192
+      },
+      "driver": "Dummy",
+      "failures": [],
+      "hot": {
+        "discarded": 0,
+        "frames": 1024,
+        "peak": 0.23941770195961,
+        "pushed_after": 8192,
+        "pushed_before": 4096
+      },
+      "mix_rate": 44100.0,
+      "scope": "Actual resource/playback weakref release after owner disposal and finite local mixer settling; no physical listening or all-backend timing guarantee.",
+      "silence": {
+        "discarded": 0,
+        "frames": 8192,
+        "peak": 0.0,
+        "pushed_after": 24576,
+        "pushed_before": 16384
+      }
+    }
+  ],
+  "helpers": [],
+  "exception": null,
+  "pass": true
+}

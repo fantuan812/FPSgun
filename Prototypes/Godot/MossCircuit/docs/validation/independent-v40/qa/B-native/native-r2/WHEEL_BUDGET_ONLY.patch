@@ -1,0 +1,11 @@
+--- evidence-workspace/moss-v39-ui/B/native/fixture.gd
++++ evidence-workspace/moss-v39-ui/B/native-r2/fixture.gd
+@@ -94,7 +94,7 @@
+ 	if first==null or last==null:return false
+ 	var scroll:ScrollContainer=scroll_of(first)
+ 	if scroll==null:return false
+-	for _step in range(24):
++	for _step in range(128):
+ 		var rect:Rect2=first.get_global_rect().merge(last.get_global_rect())
+ 		if fit_rect(scroll,rect):return true
+ 		var which:int=MOUSE_BUTTON_WHEEL_DOWN if rect.end.y>scroll.get_global_rect().end.y else MOUSE_BUTTON_WHEEL_UP

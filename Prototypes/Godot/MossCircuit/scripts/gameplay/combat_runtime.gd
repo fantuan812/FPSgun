@@ -18,6 +18,7 @@ static func step(frame:Context,dt:float)->void:
 	_prune_focus(frame.world)
 	frame.procs.recoil_area=frame.area
 	frame.world.combat_tick_serial+=1
+	frame.procs.begin_build_items_step(frame.area)
 	frame.world.new_weapon_motion.clear()
 	for prep_slot in range(frame.session.build.weapons.size()):
 		var soon:float=frame.world.weapon_clocks[prep_slot]
@@ -40,7 +41,7 @@ static func step(frame:Context,dt:float)->void:
 	for e in frame.world.enemies:
 		if e.hp <= 0: continue
 		var normal_speed: float = e.speed
-		e.speed *= Status.movement_factor(e,frame.session.elapsed)
+		e.speed *= minf(Status.movement_factor(e,frame.session.elapsed),frame.procs.build_items.movement_factor(e,frame.session.elapsed,frame.area))
 		var previous_ai:String=e.ai_state
 		var motion_start:Vector2=e.pos
 		var events: Array = EnemyAI.tick(e,frame.world.player_pos,dt,frame.session.elapsed)
@@ -153,6 +154,8 @@ static func step(frame:Context,dt:float)->void:
 	for i in range(frame.world.flashes.size() - 1, -1, -1):
 		frame.world.flashes[i].life -= dt
 		if frame.world.flashes[i].life <= 0: frame.world.flashes.remove_at(i)
+	# Item B defers medicine movement until the entire collection pass is over.
+	frame.procs.flush_build_items_pickups()
 	# B: all existing projectile, death and pickup callbacks precede repair.
 	var support_events:Array=EnemySupport.settle(frame.world.enemies,support_due,frame.session.state=="playing")
 	for event in support_events:

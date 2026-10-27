@@ -1,0 +1,183 @@
+{
+  "policies": {
+    "tests__independent_feedback_authority": {
+      "kind": "summary_with_details",
+      "checks": 435,
+      "summary_keys": [
+        "checks",
+        "failures"
+      ],
+      "full_keys": [
+        "checks",
+        "failures",
+        "observations",
+        "scope"
+      ],
+      "shared_keys": [
+        "checks",
+        "failures"
+      ],
+      "scope": "Controlled imported PCM identity, resolved authority, actual four hostile routes, disabled-audio gameplay equality, strict setting and explicit lifecycle. No fresh mixer capture/native/hardware claim.",
+      "collections": {
+        "observations": 36
+      },
+      "exact_fields": {}
+    },
+    "tests__independent_feedback_authority_rooms": {
+      "kind": "summary_with_details",
+      "checks": 338,
+      "summary_keys": [
+        "checks",
+        "failures"
+      ],
+      "full_keys": [
+        "checks",
+        "failures",
+        "observations",
+        "scope"
+      ],
+      "shared_keys": [
+        "checks",
+        "failures"
+      ],
+      "scope": "Controlled imported PCM identity, resolved authority, actual four hostile routes, disabled-audio gameplay equality, strict setting and explicit lifecycle. No fresh mixer capture/native/hardware claim.",
+      "collections": {
+        "observations": 36
+      },
+      "exact_fields": {}
+    },
+    "tests__independent_feedback_mixer": {
+      "kind": "mixer",
+      "checks": 236,
+      "summary_keys": [
+        "checks",
+        "failures",
+        "seconds"
+      ],
+      "full_keys": [
+        "buffer_frames",
+        "checks",
+        "driver",
+        "engine",
+        "failures",
+        "master_gain_db",
+        "mix_rate",
+        "node_gains",
+        "scope",
+        "seconds_since_ready",
+        "shapes",
+        "status",
+        "windows"
+      ],
+      "shared_keys": [
+        "checks",
+        "failures"
+      ],
+      "scope": "External exact-resource real internal Dummy mix driven by actual resolved damage/block. No physical listening, output device, subjective sound quality or Windows claim.",
+      "collections": {
+        "windows": 51,
+        "shapes": 5
+      },
+      "exact_fields": {
+        "status": "PASS",
+        "driver": "Dummy"
+      }
+    },
+    "tests__independent_feedback_views": {
+      "kind": "summary_with_details",
+      "checks": 168,
+      "summary_keys": [
+        "checks",
+        "failures"
+      ],
+      "full_keys": [
+        "checks",
+        "failures",
+        "samples",
+        "scope"
+      ],
+      "shared_keys": [
+        "checks",
+        "failures"
+      ],
+      "scope": "Actual GUI controls with synthetic mouse/ui_accept, title and paused routes, both modes at 960/1280. Not native hardware mouse, controller, WM focus, physical listening or audio mix proof.",
+      "collections": {
+        "samples": 8
+      },
+      "exact_fields": {}
+    },
+    "tests__independent_settlement_types": {
+      "kind": "exact",
+      "checks": 1164,
+      "summary_keys": [
+        "audio_observations",
+        "audio_scope",
+        "checks",
+        "failures",
+        "invalid_decisions",
+        "scope"
+      ],
+      "full_keys": [
+        "audio_observations",
+        "audio_scope",
+        "checks",
+        "failures",
+        "invalid_decisions",
+        "scope"
+      ],
+      "shared_keys": [
+        "checks",
+        "failures"
+      ],
+      "scope": "Controlled pure type-totality and exact invalid-settlement atomicity. Original malformed String repro retained separately; no ordinary authored-data failure or broad policy redesign claim.",
+      "collections": {
+        "audio_observations": 204
+      },
+      "exact_fields": {
+        "invalid_decisions": 102,
+        "audio_scope": "Exact explicit-stop authority: unchanged super implementation, zero calls across each invalid controller boundary, canonical re-request plus real stop positive control. Playing/elapsed remain telemetry, not a requirement that short clips survive arbitrary snapshot wall time. Historical two FAILs and nonreproducing diagnosis retained."
+      }
+    },
+    "independent_B_icons": {
+      "kind": "exact",
+      "checks": 201,
+      "summary_keys": [
+        "checks",
+        "failures",
+        "observations",
+        "scope"
+      ],
+      "full_keys": [
+        "checks",
+        "failures",
+        "observations",
+        "scope"
+      ],
+      "shared_keys": [
+        "checks",
+        "failures"
+      ],
+      "scope": "actual46 UI resource binding/loading plus B3 independent visible RGBA; no native layer/ordinary claim",
+      "collections": {
+        "observations": 3
+      },
+      "exact_fields": {}
+    }
+  },
+  "source_evidence_pins": {
+    "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_feedback_authority.json": "36439bf0ea2bb8a4df9fc81c717ed0dc26b259df7bfc08c946218cc3e4504b1d",
+    "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_feedback_authority.gd.log": "26bab2e9d560bbe1b903104334c9a6abfe46e1727309e9d341dbde0faa30e360",
+    "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_feedback_authority_rooms.json": "298b00e82f93c96250a81d624ab584e4516487df2023d0172c7c3f78fafc0647",
+    "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_feedback_authority_rooms.gd.log": "6b72d604b659eb2fe5bf4edfb3562d01076ebed2792fa27b817a6c1865e8d64d",
+    "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_feedback_mixer.json": "a7881830a47170a20b1b3b1ec87d6578a3d388c34af8976f7f3c9c8db5b4dcc4",
+    "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_feedback_mixer.gd.log": "c8c45d981d940dfbe252489a2746c668e1ec9047ed86a692f65cadd8ad994004",
+    "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_feedback_views.json": "10b109b08f157d2ab876e19036686b82ec488ad3b50fa43cc4abb97375668d4b",
+    "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_feedback_views.gd.log": "18ca2fc370c35914c0d5cbbd0f61e4c4712872fd580dff8f9c1870f25cea3dc6",
+    "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_settlement_types.json": "4a7db566886ce7d605845cb138a832da9f3dcdd0b63938d07470a0f64365652e",
+    "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_settlement_types.gd.log": "589078763d175b9c3a7ef23edeb39ce8c915e79a6c31c4820a85eb157fe1167f",
+    "evidence-workspace/moss-v39-B-qa/assets/independent_B_icons.gd": "ff021f1cdbfcf11f72a3eceec9cd368d8764baa1faa31340f7a33e1d9d3a3a01",
+    "evidence-workspace/moss-v39-items/B-full-evidence/source/raw-first/independent_B_icons/report.json": "e7d2c16190809b5c3966832ddd411659f2f3dabd9b1d9dad91eb2d97469792a2",
+    "evidence-workspace/moss-v39-items/B-full-evidence/source/raw-first/independent_B_icons/stdout.raw": "1d841abebbfda00316580e20e59ec9ef678c2ef8fd0898e31c8ad67ac4bf9d6f"
+  },
+  "scope": "Literal frozen prior-authority schema plus independent201 probe; not target gameplay expected regeneration"
+}

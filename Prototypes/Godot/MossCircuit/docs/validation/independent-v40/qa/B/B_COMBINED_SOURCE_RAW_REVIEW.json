@@ -1,0 +1,30 @@
+{
+  "review_pass": true,
+  "scope": "Combined926 cold and real-resource201/3+240/21; raw imported observations match accepted source-imported records, not raw PNG equality. Not packed/native/full gameplay rerun.",
+  "plan_sha256": "818fa4e43c7f2262f159d71d276df33ed030513189be57ed33ba74316695bdf3",
+  "exact_before_after926": true,
+  "rows": [
+    {
+      "name": "cold",
+      "native_exit": 0,
+      "seconds": 33.05320876699989,
+      "checks": null,
+      "observations": null
+    },
+    {
+      "name": "actual_B201",
+      "native_exit": 0,
+      "seconds": 0.8063699460035423,
+      "checks": 201,
+      "observations": 3
+    },
+    {
+      "name": "actual_atlas240",
+      "native_exit": 0,
+      "seconds": 0.5206811899988679,
+      "checks": 240,
+      "observations": 21
+    }
+  ],
+  "original907_and888_and_pins_recorded_unchanged": true
+}

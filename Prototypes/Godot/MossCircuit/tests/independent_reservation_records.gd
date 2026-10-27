@@ -31,7 +31,7 @@ func _initialize()->void:call_deferred("run")
 func run()->void:
  var c:Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://data/catalog.json"))
  var expanded_bytes:String=FileAccess.get_file_as_string("res://data/catalog.json")
- var a_history:Dictionary=preload("res://tests/support/v39_catalog_projection.gd").project(c,expanded_bytes)
+ var a_history:Dictionary=preload("res://tests/support/v39_B_then_A_catalog_projection.gd").project(c,expanded_bytes)
  if not a_history.pass:push_error(str(a_history.errors));quit(1);return
  var history:Dictionary=CatalogHistory.project(c,expanded_bytes)
  ck(history.get("pass",false),"exact v36 append-only declaration and original v35 byte identity")

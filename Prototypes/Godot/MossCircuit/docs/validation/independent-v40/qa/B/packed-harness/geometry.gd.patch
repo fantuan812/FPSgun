@@ -1,0 +1,10 @@
+--- evidence-workspace/moss-v39-qa/packed-harness/geometry.gd
++++ evidence-workspace/moss-v39-B-qa/packed-harness/geometry.gd
+@@ -1,6 +1,6 @@
+ extends SceneTree
+ const Geometry=preload("res://scripts/gameplay/pulse_wave_geometry.gd")
+-const CASES_PATH="evidence-workspace/moss-v39-qa/packed-harness/geometry-api-cases.json"
++const CASES_PATH="evidence-workspace/moss-v39-B-qa/packed-harness/geometry-api-cases.json"
+ var checks:=0
+ var failures:Array=[]
+ var observations:Array=[]

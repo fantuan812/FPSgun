@@ -1,0 +1,37 @@
+{
+  "review_pass": true,
+  "original_aggregate_pass": false,
+  "original_completed": 36,
+  "original_remaining_not_run": 129,
+  "prior35_original_routes_pass": true,
+  "actual_435_semantic_pass": true,
+  "original_435_runner_pass": false,
+  "reason": "runner compared abbreviated stdout to complete file as full dictionary equality; actual emitted summary counts/failures agree and complete file equals accepted A full435 report including all36 observations and exact scope",
+  "full_file_equivalent_to_accepted_A": true,
+  "source907_all_live_pins_unchanged": true,
+  "native_exit": 0,
+  "seconds": 104.14927683200222,
+  "helper_last": {
+    "discarded": 0,
+    "elapsed_us": 150246,
+    "game_owner_count": 1,
+    "invalid": 0,
+    "new_pushed": 8192,
+    "owner_count": 1,
+    "owners_released": true,
+    "prepare_errors": 0,
+    "required_frames": 6615,
+    "silent_frames": 8192,
+    "streams_released": true
+  },
+  "pins": {
+    "evidence-workspace/moss-v39-items/B-full-evidence/source/PLAN.json": "5b296d332bb269764c157274d8976ebb6b796a493ef348ce9a416ce2240bcbfa",
+    "evidence-workspace/moss-v39-items/B-full-evidence/source/raw-first/RESULT.json": "8f9c276cc312adcbfaff26e5b3e46a6b849f63584d497da1b035bb09b6b31120",
+    "evidence-workspace/moss-v39-items/B-full-evidence/source/raw-first/tests__independent_feedback_authority/RESULT.json": "349246eda0aa696a3cb0b9d1de271d2f30365fe1ed4e12e592b3a300066ac9b7",
+    "evidence-workspace/moss-v39-items/B-full-evidence/source/raw-first/tests__independent_feedback_authority/stdout.raw": "c160d8a074e10c82fd57912c2e54d57993bde1367de72ef93a7994a4c14e820a",
+    "evidence-workspace/moss-v39-items/B-full-evidence/source/raw-first/tests__independent_feedback_authority/stderr.raw": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence-workspace/moss-v39-items/B-full-evidence/source/raw-first/tests__independent_feedback_authority/report.json": "36439bf0ea2bb8a4df9fc81c717ed0dc26b259df7bfc08c946218cc3e4504b1d",
+    "evidence-workspace/moss-v39-prep/final-full/full-first/aggregate/independent_feedback_authority.json": "36439bf0ea2bb8a4df9fc81c717ed0dc26b259df7bfc08c946218cc3e4504b1d"
+  },
+  "scope": "Allows explicit composition with original35 plus independently reviewed435 then proposed remaining129; never one native165PASS or overwritten36STOPFAIL"
+}

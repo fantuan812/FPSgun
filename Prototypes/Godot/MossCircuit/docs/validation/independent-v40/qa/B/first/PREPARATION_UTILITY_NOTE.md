@@ -1,0 +1,1 @@
+2026-10-27 11:47 UTC: Initial inline Python plan-writing utility failed at parse time with SyntaxError (missing closing bracket on routes comprehension). It created no PLAN and ran no target; run.py had already been written by the separate shell heredoc. Corrected only this local plan-generation syntax. No runtime fixture/expectation/source change or target retry.

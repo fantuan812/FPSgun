@@ -1,0 +1,47 @@
+{
+  "pass": false,
+  "scope": "three separate author routes: validator63, controlled actual-chain56, pure UI20; not independent phase/native/full acceptance",
+  "completed": 2,
+  "exception": null,
+  "after_issues": [],
+  "rows": [
+    {
+      "name": "validator63",
+      "pass": true,
+      "native_exit": 0,
+      "timed_out": false,
+      "seconds": 3.958902862010291,
+      "stderr_bytes": 0,
+      "strict_tags": [],
+      "exception": null,
+      "records": [
+        {
+          "B_rules_configuration_checks": 63,
+          "failures": [],
+          "scope": "literal Rules and frozen helper admission consistency; not gameplay/legacy raw identity"
+        }
+      ],
+      "helpers": [],
+      "helper_ok": true,
+      "marker_errors": []
+    },
+    {
+      "name": "actual_hooks56",
+      "pass": false,
+      "native_exit": null,
+      "timed_out": true,
+      "seconds": 180.66756078100298,
+      "stderr_bytes": 1600,
+      "strict_tags": [
+        "SCRIPT ERROR",
+        "ERROR:"
+      ],
+      "exception": null,
+      "records": [],
+      "helpers": [],
+      "helper_ok": false,
+      "marker_errors": []
+    }
+  ],
+  "approved_plan": "a82985f08533958b99155be47ebeaf995eaa39645f04385b6bff9cc727e5f0d4"
+}

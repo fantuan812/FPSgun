@@ -1,0 +1,42 @@
+{
+  "status": "static API/parser review requested; never executed; independent pretarget expectations remain unchanged",
+  "expected_counts": {
+    "independent_B_initial_state.gd": 30,
+    "independent_B_admission.gd": 349,
+    "independent_B_mechanics.gd": 201,
+    "independent_B_configuration.gd": 61
+  },
+  "mechanics_count_derivation": {
+    "pin": {
+      "direct": 19,
+      "setup_calls": 14,
+      "setup_checks_each": 4,
+      "step_checks": 2,
+      "total": 77
+    },
+    "salvage": {
+      "direct": 16,
+      "setup_calls": 4,
+      "step_checks": 3,
+      "total": 35
+    },
+    "winch": {
+      "direct_with_loop": 14,
+      "setup_calls_with_loop": 12,
+      "step_checks": 1,
+      "total": 63
+    },
+    "guards": {
+      "direct_with_loop": 18,
+      "setup_calls": 2,
+      "total": 26
+    }
+  },
+  "files": {
+    "evidence-workspace/moss-v39-B-qa/checks/independent_B_admission.gd": "fc2c9cc11726cd8be513cd0da92dbcec28c9f5d618a30b6360270e264fd50662",
+    "evidence-workspace/moss-v39-B-qa/checks/independent_B_configuration.gd": "611a736611fa91cbb6a349334d5f9f9bf111872dbf908181ad111bae629b9ce8",
+    "evidence-workspace/moss-v39-B-qa/checks/independent_B_initial_state.gd": "59a8f87a1e0850639106e29903825f59dd7d6de343998c80686dc32faa4dd108",
+    "evidence-workspace/moss-v39-B-qa/checks/independent_B_mechanics.gd": "bdc0d75b199dacf36d9d455e8d3f6fbf60eeeba6b21129da790ff9dcb800963c"
+  },
+  "time_utc": "2026-10-27T11:38:06.419924+00:00"
+}

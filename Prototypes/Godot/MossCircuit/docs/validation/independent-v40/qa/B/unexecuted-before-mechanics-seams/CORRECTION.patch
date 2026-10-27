@@ -1,0 +1,63 @@
+--- unexecuted-r1
++++ corrected-seams
+@@ -17,7 +17,7 @@
+ func near(a:float,b:float)->bool:return absf(a-b)<0.00001
+ func catalog()->Dictionary:
+  return {"weapon_slots":4,"item_slots":8,"weapons":[{"id":"rivet_gun","kind":"weapon","max_stack":4},{"id":"scrap_shotgun","kind":"weapon","max_stack":4},{"id":"return_disc","kind":"weapon","max_stack":4}],"items":[{"id":"crossfire_pin","kind":"item","price":28,"max_stack":1,"effects":{},"mark_seconds":1.5,"pull_distance":45.0,"cooldown":1.0,"requires_distinct_weapon_types":2},{"id":"salvage_capacitor","kind":"item","price":28,"max_stack":1,"effects":{},"charge_limit":3,"field_limit":2,"field_radius":80.0,"field_seconds":1.8,"field_speed_factor":0.7,"pickup_sources":["normal"]},{"id":"medic_winch","kind":"item","price":24,"max_stack":1,"effects":{},"pickup_count":5,"max_pulls_per_step":1,"medical_range":220.0,"pull_distance":80.0,"pickup_sources":["normal"]}]}
+-func enemy(id:int,pos:Vector2)->Dictionary:return {"id":id,"pos":pos,"hp":50.0,"boss":false,"state":"move","kind":"crawler","behavior":"crawler","velocity":Vector2.ZERO,"timer":0.4}
++func enemy(id:int,pos:Vector2)->Dictionary:return {"id":id,"pos":pos,"hp":50.0,"boss":false,"ai_state":"move","kind":"crawler","behavior":"crawler","velocity":Vector2.ZERO,"timer":0.4}
+ func setup(item:String,ws:Array=["rivet_gun","scrap_shotgun"])->void:
+  r=Runtime.new();seq=0;tick=0;now=0.0;area={"width":800,"height":600};player=Vector2(300,300);enemies=[enemy(7,Vector2(200,200))];owned={item:1};weapons=ws.duplicate()
+  ck(r.clear_run(1),"setup epoch")
+@@ -39,14 +39,14 @@
+ func snap()->Dictionary:return r.debug_snapshot()
+ func pin_cases()->void:
+  setup("crossfire_pin");hit();ck(snap().mark=={"target_id":7,"weapon":"rivet_gun","position":Vector2(200,200),"expires":1.5},"pin first zero-damage primary exact mark")
+- now=.2;enemies[0].pos=Vector2(260,200);var cmds=hit("scrap_shotgun")
++ step(.2);enemies[0].pos=Vector2(260,200);var cmds=hit("scrap_shotgun")
+  ck(cmds.size()==1 and snap().mark==null and near(snap().pin_ready_at,1.2),"pin second consumes exact CD")
+  var before=enemies[0].duplicate(true);var moved=r.apply_control(cmds[0],enemies,area) if cmds.size()==1 else {}
+  before.pos=Vector2(215,200)
+  ck(moved.get("moved",false) and enemies[0]==before,"pin live position pull45 only position changes")
+- setup("crossfire_pin");hit();var mark=snap().mark.duplicate(true);now=.2;enemies[0].pos=Vector2(260,200)
++ setup("crossfire_pin");hit();var mark=snap().mark.duplicate(true);step(.2);enemies[0].pos=Vector2(260,200)
+  ck(hit().is_empty(),"same weapon no pull")
+- enemies.append(enemy(8,Vector2(220,200)));now=.4;ck(hit("scrap_shotgun",8).is_empty() and snap().mark==mark,"other target no overwrite or refresh")
++ enemies.append(enemy(8,Vector2(220,200)));step(.4);ck(hit("scrap_shotgun",8).is_empty() and snap().mark==mark,"other target no overwrite or refresh")
+  step(4.0);ck(snap().mark==null and near(snap().pin_ready_at,5.0),"observed expiry starts cooldown now not deadline")
+  setup("crossfire_pin",["rivet_gun","scrap_shotgun","return_disc"]);hit();now=.5
+  ck(r.sync_build(owned,["scrap_shotgun","return_disc"],now) and snap().mark==null and near(snap().pin_ready_at,1.5),"origin loss clears even two other types remain")
+@@ -54,11 +54,11 @@
+  ck(r.sync_build(owned,["rivet_gun","scrap_shotgun"],0.0) and snap().mark==mark,"one duplicate removed retains origin type")
+  setup("crossfire_pin",["rivet_gun","rivet_gun"]);ck(hit().is_empty() and snap().mark==null,"two copies not two types")
+  setup("crossfire_pin");enemies[0].hp=0;ck(hit().is_empty() and snap().mark==null and snap().pin_ready_at==null,"old proc killed before first no mark or CD")
+- setup("crossfire_pin");hit();enemies[0].hp=0;now=.6;ck(hit("scrap_shotgun").is_empty() and snap().mark==null and near(snap().pin_ready_at,1.6),"old proc killed before second cancels no resurrection")
++ setup("crossfire_pin");hit();enemies[0].hp=0;step(.6);ck(hit("scrap_shotgun").is_empty() and snap().mark==null and near(snap().pin_ready_at,1.6),"old proc killed before second cancels no resurrection")
+  setup("crossfire_pin");enemies[0].boss=true;ck(hit().is_empty() and snap().mark==null,"boss not marked")
+  setup("crossfire_pin");enemies.append(enemy(7,Vector2(220,200)));ck(hit().is_empty() and snap().mark==null,"duplicate live ID failclosed")
+  setup("crossfire_pin",["scrap_shotgun","return_disc"]);ck(hit().is_empty() and snap().mark==null,"sold in-flight origin excluded from B")
+- setup("crossfire_pin");hit();now=.25;cmds=hit("scrap_shotgun");moved=r.apply_control(cmds[0],enemies,area) if cmds.size()==1 else {}
++ setup("crossfire_pin");hit();step(.25);cmds=hit("scrap_shotgun");moved=r.apply_control(cmds[0],enemies,area) if cmds.size()==1 else {}
+  ck(not moved.get("moved",true) and enemies[0].pos==Vector2(200,200) and near(snap().pin_ready_at,1.25),"zero-distance consumes without position movement")
+  var out=enemy(7,Vector2(-50,200));before=out.duplicate(true)
+  moved=r.apply_control({"kind":"pin_pull","target_id":7,"anchor":Vector2(100,200),"distance":45.0,"source_item":"crossfire_pin"},[out],area)
+@@ -66,7 +66,7 @@
+  setup("crossfire_pin");hit();ck(r.reset_encounter(.5) and snap().mark==null and snap().pin_ready_at==null,"room clearing active mark creates no cooldown")
+  setup("crossfire_pin");step(6.0);hit();enemies[0].pos=Vector2(260,200);hit("scrap_shotgun")
+  ck(near(snap().pin_ready_at,7.0) and r.reset_encounter(6.0) and near(snap().pin_ready_at,7.0),"room preserves existing finite cooldown")
+- setup("crossfire_pin");now=1e308;ck(hit().is_empty() and snap().mark==null and snap().pin_ready_at==null,"unrepresentable future does not create mark/infinite timer")
++ setup("crossfire_pin");step(1e308);ck(hit().is_empty() and snap().mark==null and snap().pin_ready_at==null,"unrepresentable future does not create mark/infinite timer")
+ func salvage_cases()->void:
+  setup("salvage_capacitor");pickup(1);pickup(1,"energy");pickup(1);pickup(1,"medical");pickup(2)
+  ck(snap().charges==3,"normal-only capped charge")
+@@ -80,8 +80,8 @@
+  e.pos=Vector2(380.01,200);ck(near(r.movement_factor(e,2.0,area),1.0),"outside radius neutral")
+  e.pos=Vector2(300,200);ck(near(r.movement_factor(e,2.8,area),1.0),"expiry boundary excluded")
+  e.boss=true;ck(near(r.movement_factor(e,2.0,area),1.0),"boss not slowed by new field")
+- e.boss=false;e.state="charging";ck(near(r.movement_factor(e,2.0,area),1.0),"committed charging not slowed")
+- e.state="move";ck(near(minf(.5,r.movement_factor(e,2.0,area)),.5),"existing stronger slow preserved")
++ e.boss=false;e.ai_state="charging";ck(near(r.movement_factor(e,2.0,area),1.0),"committed charging not slowed")
++ e.ai_state="move";ck(near(minf(.5,r.movement_factor(e,2.0,area)),.5),"existing stronger slow preserved")
+  ck(snap()==before,"movement queries pure")
+  setup("salvage_capacitor")
+  for i in 3:

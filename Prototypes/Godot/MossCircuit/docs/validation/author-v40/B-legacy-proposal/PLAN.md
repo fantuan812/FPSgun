@@ -1,0 +1,8 @@
+# Strict B inverse proposal — outside all frozen candidates, not engine verified
+Two literal raw insertions lengths2664/979 remove only B3 item rows and B3 mechanism rows. Python read-only reconstruction verified exact A raw SHA67eb30bf64c36191f5e7609126da42b0195cb53840e00e60afa15ed55e13cccc and structured equivalence, not an engine test. Declaration SHA5ab1bb1f93b8b58706c6782d5729e104d8320d5a7668518cd48a8ee38dcbb65d. No weapons/affinity mutations; exact B counts10/36/17/14.
+
+Future integration must apply this projection before the unchanged strict A inverse, not relax old size/tail/hash checks. Explicit test input adapters must propagate actual catalog bytes+structure through both stages. This proposal deliberately does not rewrite A helper or current historical fixture call sites yet. Test identity/tail/count/multiplicity/old-field mutations and detached arrays before allowing full legacy routes. Pure output is only a fixture, never production data loader.
+
+Historical main installation also needs a trusted B configuration-window lifecycle to ensure registry/definitions reflect the historical input at title time; next actual start_run alone is not title-time coherence proof. No live forecast configure. Existing actual main/frame/weapon catalog aliases must remain shared in-place. No-B definitions empty, no B stock/proc state; retained old golden expectations unchanged. Real B actualcatalog36/17 transactions/preview/new3icons require separate accepted routes.
+
+Current R2 894 map and all engine plans remain unchanged. Earliest application is a separately reviewed candidate revision after current actual-chain/phase gates; this directory is planning only.

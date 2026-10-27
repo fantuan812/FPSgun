@@ -1,0 +1,51 @@
+{
+  "status": "FINITE_CONTROLLED_SOURCE_GATES_PASSED_NOT_RELEASE",
+  "source": "evidence-workspace/moss-v39-B-r2",
+  "source_count": 894,
+  "source_map_sha256": "085f23a8742f903e722ee9a6416e6ba7dd45dc9952819189cd30b71d72103bcd",
+  "passed_separate_evidence": {
+    "pure_author": 318,
+    "pure_independent": [
+      30,
+      349,
+      207,
+      61
+    ],
+    "cold_r2": "37.799s/no new paths",
+    "validator63": "separate original r2 route passed",
+    "corrected_author": [
+      56,
+      20
+    ],
+    "independent_corrected": [
+      126,
+      62
+    ],
+    "independent_observations": [
+      14,
+      2
+    ]
+  },
+  "retained_failures": [
+    "Original894 Rules63 four assertion failures before three-file r2 fixes",
+    "Author56 nonexistent scatter_rig setup:3 SCRIPT ERROR and180timeout, corrected fixture5ID references only",
+    "Independent126 typed near(CD Nil)SCRIPT ERROR and180timeout",
+    "Type-safe126 diagnostic completed native1 with4 assertions old_proc_death setup/CD; actualStringName key diagnostic proves contract mismatch, strictproduction unchanged"
+  ],
+  "corrections": "Original helper647 untouched; R2 production3paths explicit validator/Rules/Pinfinal_pos; later author and independent fixes externalfixture only",
+  "pending": [
+    "strictB->A->legacy adapters and actualB fullscope",
+    "source aggregate finite plan",
+    "B3 asset reproducibility/import identity",
+    "actual PCK/native mechanics/UI",
+    "ordinary B natural acquisition observations",
+    "release/publicprivacy/delivery/publishing"
+  ],
+  "receipts": {
+    "B_R2_COLD_RAW_REVIEW.json": "88e5f0c93bd55f1ddcfa725b0409fdd62accb08d682ca165b42cf1877c2e8e73",
+    "B_AUTHOR_R2_INITIAL_RAW_REVIEW.json": "07f856473caf35ff96d7b9ac4a24402ab3d25694fb8277b87863fdd51c95211d",
+    "B_AUTHOR_CORRECTED_RAW_REVIEW.json": "e8dcb376d6ed880c27fb2c63407e12a07e96f45eca87fe7bfbffd95db9ec3d79",
+    "integration/KEYTYPE_PRODUCTION_WRITE_AUDIT.json": "9ae11d61e74915019e03cb4dbbdd09515046617f90e0d0f7ddea4888a918f5b3",
+    "integration/corrected/raw-first/RESULT.json": "20236084bfbd8dbc96495dbe8ffd4662e7f4c7145faf8b190d19b526ee7420ca"
+  }
+}

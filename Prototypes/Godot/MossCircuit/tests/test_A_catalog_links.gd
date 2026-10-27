@@ -10,6 +10,10 @@ func _initialize()->void:call_deferred("run")
 func run()->void:
  var raw:String=FileAccess.get_file_as_string("res://data/catalog.json")
  var c:Dictionary=JSON.parse_string(raw)
+ var b_input:Dictionary=preload("res://tests/support/v39_B_catalog_projection.gd").project(c,raw)
+ if not b_input.pass:
+  push_error("historical A fixture strict B input rejected");quit(1);return
+ c=b_input.catalog;raw=b_input.bytes
  var base:Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://data/balance.json")).player
  ck(Rules.validate_catalog(c).is_empty(),"actual current catalog schema")
  ck(c.weapons.size()==10 and c.items.size()==33 and c.mechanism_synergies.size()==14 and c.affinity_links.size()==14,"exact actual10/33/14/14")
@@ -27,5 +31,5 @@ func run()->void:
   var error:String=Rules.transaction(b,c,row[1])
   ck(error.is_empty() and Forecast.mechanism_status(b,c)[row[3]].active and Rules.shop_affinity(b,c).missing_ids.is_empty(),"actual purchase completes pair and clears missing bias "+row[0])
   ck(Rules.derive(base,b,c)==stats,"mechanic module gives no hidden stat multiplier "+row[0])
- print(JSON.stringify({"checks":checks,"failures":failures,"scope":"17 author actual A catalog/tag/pair/affinity/forecast assertions, not combat or ordinaryplay"}))
+ print(JSON.stringify({"checks":checks,"failures":failures,"scope":"17 original A catalog/tag/pair/affinity/forecast assertions under explicit strict B-only inverse, not combat or ordinaryplay"}))
  quit(0 if failures.is_empty() else 1)

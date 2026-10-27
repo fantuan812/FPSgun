@@ -1,0 +1,710 @@
+{
+  "name": "real_hooks",
+  "pass": true,
+  "native_exit": 0,
+  "timeout": false,
+  "seconds": 6.892965906008612,
+  "stderr_bytes": 0,
+  "tags": [],
+  "exception": null,
+  "parse_errors": [],
+  "semantic": true,
+  "helper_ok": true,
+  "reports": [
+    {
+      "failures": [],
+      "independent_B_real_hook_checks": 62,
+      "observations": [
+        {
+          "mode": "arena",
+          "newrun_snapshot": {
+            "batch_open": false,
+            "batch_serial": -1,
+            "batch_time": 0.0,
+            "bound_epoch": 8,
+            "charges": 0,
+            "configuration_open": false,
+            "definitions": {
+              "crossfire_pin": {
+                "cooldown": 1.0,
+                "mark_seconds": 1.5,
+                "pull_distance": 45.0,
+                "requires_distinct_weapon_types": 2
+              },
+              "medic_winch": {
+                "max_pulls_per_step": 1,
+                "medical_range": 220.0,
+                "pickup_count": 5,
+                "pickup_sources": [
+                  "normal"
+                ],
+                "pull_distance": 80.0
+              },
+              "salvage_capacitor": {
+                "charge_limit": 3,
+                "field_limit": 2,
+                "field_radius": 80.0,
+                "field_seconds": 1.8,
+                "field_speed_factor": 0.7,
+                "pickup_sources": [
+                  "normal"
+                ]
+              }
+            },
+            "equipped_types": [
+              "rivet_gun"
+            ],
+            "fields": [],
+            "last_now": 0.0,
+            "last_sequence": 0,
+            "last_step_serial": -1,
+            "mark": null,
+            "next_field_sequence": 0,
+            "owned_items": {},
+            "pending": null,
+            "pin_ready_at": null,
+            "registry": {
+              "arc_relay": {
+                "kind": "item",
+                "max_stack": 1
+              },
+              "bankshot_driver": {
+                "kind": "weapon",
+                "max_stack": 4
+              },
+              "blast_fuse": {
+                "kind": "item",
+                "max_stack": 1
+              },
+              "blood_valve": {
+                "kind": "item",
+                "max_stack": 1
+              },
+              "bounce_guide": {
+                "kind": "item",
+                "max_stack": 1
+              },
+              "capacitor": {
+                "kind": "item",
+                "max_stack": 4
+              },
+              "cooling_fan": {
+                "kind": "item",
+                "max_stack": 5
+              },
+              "crossfire_pin": {
+                "kind": "item",
+                "max_stack": 1
+              },
+              "cryo_sprayer": {
+                "kind": "weapon",
+                "max_stack": 4
+              },
+              "dash_resin": {
+                "kind": "item",
+                "max_stack": 1
+              },
+              "echo_chamber": {
+                "kind": "item",
+                "max_stack": 1
+              },
+              "feedback_diode": {
+                "kind": "item",
+                "max_stack": 1
+              },
+              "fracture_coil": {
+                "kind": "item",
+                "max_stack": 1
+              },
+              "gear": {
+                "kind": "item",
+                "max_stack": 4
+              },
+              "gravity_anchor": {
+                "kind": "item",
+                "max_stack": 1
+              },
+              "iron_plate": {
+                "kind": "item",
+                "max_stack": 5
+              },
+              "kill_cell": {
+                "kind": "item",
+                "max_stack": 1
+              },
+              "lens": {
+                "kind": "item",
+                "max_stack": 3
+              },
+              "lock_memory": {
+                "kind": "item",
+                "max_stack": 1
+              },
+              "lucky_chip": {
+                "kind": "item",
+                "max_stack": 3
+              },
+              "medic_seed": {
+                "kind": "item",
+                "max_stack": 1
+              },
+              "medic_winch": {
+                "kind": "item",
+                "max_stack": 1
+              },
+              "mirror_shell": {
+                "kind": "item",
+                "max_stack": 1
+              },
+              "moss_patch": {
+                "kind": "item",
+                "max_stack": 4
+              },
+              "orbit_saw": {
+                "kind": "weapon",
+                "max_stack": 4
+              },
+              "pellet_pouch": {
+                "kind": "item",
+                "max_stack": 2
+              },
+              "phase_capacitor": {
+                "kind": "item",
+                "max_stack": 1
+              },
+              "power_coil": {
+                "kind": "item",
+                "max_stack": 5
+              },
+              "pulse_boots": {
+                "kind": "item",
+                "max_stack": 1
+              },
+              "rail_lance": {
+                "kind": "weapon",
+                "max_stack": 4
+              },
+              "recoil_plate": {
+                "kind": "item",
+                "max_stack": 1
+              },
+              "recycler": {
+                "kind": "item",
+                "max_stack": 2
+              },
+              "return_collar": {
+                "kind": "item",
+                "max_stack": 1
+              },
+              "return_disc": {
+                "kind": "weapon",
+                "max_stack": 4
+              },
+              "return_spool": {
+                "kind": "item",
+                "max_stack": 1
+              },
+              "rivet_gun": {
+                "kind": "weapon",
+                "max_stack": 4
+              },
+              "running_boots": {
+                "kind": "item",
+                "max_stack": 4
+              },
+              "salvage_capacitor": {
+                "kind": "item",
+                "max_stack": 1
+              },
+              "salvage_magnet": {
+                "kind": "item",
+                "max_stack": 4
+              },
+              "scavenger_reel": {
+                "kind": "item",
+                "max_stack": 1
+              },
+              "scrap_mine": {
+                "kind": "item",
+                "max_stack": 1
+              },
+              "scrap_shotgun": {
+                "kind": "weapon",
+                "max_stack": 4
+              },
+              "seismic_drum": {
+                "kind": "weapon",
+                "max_stack": 4
+              },
+              "shock_mortar": {
+                "kind": "weapon",
+                "max_stack": 4
+              },
+              "tether_emitter": {
+                "kind": "weapon",
+                "max_stack": 4
+              },
+              "thorn_crown": {
+                "kind": "item",
+                "max_stack": 1
+              }
+            },
+            "slot_caps": {
+              "items": 8,
+              "weapons": 4
+            },
+            "weapon_counts": {
+              "rivet_gun": 1
+            },
+            "winch_count": 0,
+            "winch_requested_this_batch": false
+          },
+          "normal_pickup_delta_coins": 5,
+          "normal_pickup_delta_xp": 5,
+          "pin_destination": [
+            515,
+            300
+          ]
+        },
+        {
+          "mode": "rooms",
+          "newrun_snapshot": {
+            "batch_open": false,
+            "batch_serial": -1,
+            "batch_time": 0.0,
+            "bound_epoch": 16,
+            "charges": 0,
+            "configuration_open": false,
+            "definitions": {
+              "crossfire_pin": {
+                "cooldown": 1.0,
+                "mark_seconds": 1.5,
+                "pull_distance": 45.0,
+                "requires_distinct_weapon_types": 2
+              },
+              "medic_winch": {
+                "max_pulls_per_step": 1,
+                "medical_range": 220.0,
+                "pickup_count": 5,
+                "pickup_sources": [
+                  "normal"
+                ],
+                "pull_distance": 80.0
+              },
+              "salvage_capacitor": {
+                "charge_limit": 3,
+                "field_limit": 2,
+                "field_radius": 80.0,
+                "field_seconds": 1.8,
+                "field_speed_factor": 0.7,
+                "pickup_sources": [
+                  "normal"
+                ]
+              }
+            },
+            "equipped_types": [
+              "rivet_gun"
+            ],
+            "fields": [],
+            "last_now": 0.0,
+            "last_sequence": 0,
+            "last_step_serial": -1,
+            "mark": null,
+            "next_field_sequence": 0,
+            "owned_items": {},
+            "pending": null,
+            "pin_ready_at": null,
+            "registry": {
+              "arc_relay": {
+                "kind": "item",
+                "max_stack": 1
+              },
+              "bankshot_driver": {
+                "kind": "weapon",
+                "max_stack": 4
+              },
+              "blast_fuse": {
+                "kind": "item",
+                "max_stack": 1
+              },
+              "blood_valve": {
+                "kind": "item",
+                "max_stack": 1
+              },
+              "bounce_guide": {
+                "kind": "item",
+                "max_stack": 1
+              },
+              "capacitor": {
+                "kind": "item",
+                "max_stack": 4
+              },
+              "cooling_fan": {
+                "kind": "item",
+                "max_stack": 5
+              },
+              "crossfire_pin": {
+                "kind": "item",
+                "max_stack": 1
+              },
+              "cryo_sprayer": {
+                "kind": "weapon",
+                "max_stack": 4
+              },
+              "dash_resin": {
+                "kind": "item",
+                "max_stack": 1
+              },
+              "echo_chamber": {
+                "kind": "item",
+                "max_stack": 1
+              },
+              "feedback_diode": {
+                "kind": "item",
+                "max_stack": 1
+              },
+              "fracture_coil": {
+                "kind": "item",
+                "max_stack": 1
+              },
+              "gear": {
+                "kind": "item",
+                "max_stack": 4
+              },
+              "gravity_anchor": {
+                "kind": "item",
+                "max_stack": 1
+              },
+              "iron_plate": {
+                "kind": "item",
+                "max_stack": 5
+              },
+              "kill_cell": {
+                "kind": "item",
+                "max_stack": 1
+              },
+              "lens": {
+                "kind": "item",
+                "max_stack": 3
+              },
+              "lock_memory": {
+                "kind": "item",
+                "max_stack": 1
+              },
+              "lucky_chip": {
+                "kind": "item",
+                "max_stack": 3
+              },
+              "medic_seed": {
+                "kind": "item",
+                "max_stack": 1
+              },
+              "medic_winch": {
+                "kind": "item",
+                "max_stack": 1
+              },
+              "mirror_shell": {
+                "kind": "item",
+                "max_stack": 1
+              },
+              "moss_patch": {
+                "kind": "item",
+                "max_stack": 4
+              },
+              "orbit_saw": {
+                "kind": "weapon",
+                "max_stack": 4
+              },
+              "pellet_pouch": {
+                "kind": "item",
+                "max_stack": 2
+              },
+              "phase_capacitor": {
+                "kind": "item",
+                "max_stack": 1
+              },
+              "power_coil": {
+                "kind": "item",
+                "max_stack": 5
+              },
+              "pulse_boots": {
+                "kind": "item",
+                "max_stack": 1
+              },
+              "rail_lance": {
+                "kind": "weapon",
+                "max_stack": 4
+              },
+              "recoil_plate": {
+                "kind": "item",
+                "max_stack": 1
+              },
+              "recycler": {
+                "kind": "item",
+                "max_stack": 2
+              },
+              "return_collar": {
+                "kind": "item",
+                "max_stack": 1
+              },
+              "return_disc": {
+                "kind": "weapon",
+                "max_stack": 4
+              },
+              "return_spool": {
+                "kind": "item",
+                "max_stack": 1
+              },
+              "rivet_gun": {
+                "kind": "weapon",
+                "max_stack": 4
+              },
+              "running_boots": {
+                "kind": "item",
+                "max_stack": 4
+              },
+              "salvage_capacitor": {
+                "kind": "item",
+                "max_stack": 1
+              },
+              "salvage_magnet": {
+                "kind": "item",
+                "max_stack": 4
+              },
+              "scavenger_reel": {
+                "kind": "item",
+                "max_stack": 1
+              },
+              "scrap_mine": {
+                "kind": "item",
+                "max_stack": 1
+              },
+              "scrap_shotgun": {
+                "kind": "weapon",
+                "max_stack": 4
+              },
+              "seismic_drum": {
+                "kind": "weapon",
+                "max_stack": 4
+              },
+              "shock_mortar": {
+                "kind": "weapon",
+                "max_stack": 4
+              },
+              "tether_emitter": {
+                "kind": "weapon",
+                "max_stack": 4
+              },
+              "thorn_crown": {
+                "kind": "item",
+                "max_stack": 1
+              }
+            },
+            "slot_caps": {
+              "items": 8,
+              "weapons": 4
+            },
+            "weapon_counts": {
+              "rivet_gun": 1
+            },
+            "winch_count": 0,
+            "winch_requested_this_batch": false
+          },
+          "normal_pickup_delta_coins": 5,
+          "normal_pickup_delta_xp": 5,
+          "pin_destination": [
+            515,
+            300
+          ]
+        }
+      ],
+      "scope": "Controlled actual main/runtime/AI/Motor/transactions. Notifications, actors and eligibility setup explicit; not ordinary acquisition or directFlow B ownership."
+    }
+  ],
+  "helpers": [
+    {
+      "capture_removed": true,
+      "complete": true,
+      "driver": "Dummy",
+      "game_owner_count": 1,
+      "mix_rate": 44100.0,
+      "observations": [
+        {
+          "discarded": 0,
+          "elapsed_us": 110,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 0,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 0,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 2407,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 0,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 0,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 10309,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 0,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 0,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 30099,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 0,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 0,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 43758,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 4096,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 4096,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 55979,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 4096,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 4096,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 70189,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 4096,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 4096,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 83751,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 4096,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 4096,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 97698,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 4096,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 4096,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 111165,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 4096,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 4096,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 125751,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 4096,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 4096,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 139718,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 8192,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 8192,
+          "streams_released": true
+        },
+        {
+          "discarded": 0,
+          "elapsed_us": 152959,
+          "game_owner_count": 1,
+          "invalid": 0,
+          "new_pushed": 8192,
+          "owner_count": 1,
+          "owners_released": true,
+          "prepare_errors": 0,
+          "required_frames": 6615,
+          "silent_frames": 8192,
+          "streams_released": true
+        }
+      ],
+      "pre_window_drained": 8192,
+      "prepare_errors": [],
+      "requested_owner_count": 1,
+      "scope": "Test-only bounded final-owner resource release and fresh internal silence; not physical output or a universal timing guarantee.",
+      "tracked_owner_count": 1,
+      "tracked_stream_count": 2
+    }
+  ]
+}

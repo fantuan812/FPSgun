@@ -1,0 +1,9 @@
+{
+  "pass": false,
+  "scope": "full source first-failure165 routes; excludes cold/PCK/native/ordinary",
+  "completed": 36,
+  "seconds": 231.95488430999103,
+  "exception": "Traceback (most recent call last):\n  File \"evidence-workspace/moss-v39-items/B-full-evidence/source/run_full.py\", line 102, in <module>\n    for route in plan['routes']:run(route)\n                                ^^^^^^^^^^\n  File \"evidence-workspace/moss-v39-items/B-full-evidence/source/run_full.py\", line 90, in run\n    if not record['pass']:raise RuntimeError('first FAIL '+route['name']+'; no further route or retry')\n                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: first FAIL tests__independent_feedback_authority; no further route or retry\n",
+  "after_issues": [],
+  "approved_plan": "5b296d332bb269764c157274d8976ebb6b796a493ef348ce9a416ce2240bcbfa"
+}

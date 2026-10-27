@@ -1,0 +1,18 @@
+{
+  "status": "UNEXECUTED_COMBINED_TARGET_PENDING",
+  "parent_fixture": "evidence-workspace/moss-v39-ui/equipment16-native-r2/cards.gd",
+  "parent_fixture_sha256": "6a4f1c01728361c1c09898b8b9871c86c4761501e8f795dba27a2cb41aab9782",
+  "candidate_fixture_sha256": "afe111a437a0b22ce9fdf05c9016293ab4e8fa083eaddeab47df0de6249fe4b1",
+  "only_delta": "Merged manifest total43→46 (three new B IDs); corresponding checklabel updated. Same21 card IDs,145totalchecks,allGUI/identity/clipping predicates unchanged.",
+  "runtime_target": null,
+  "pck_sha256": null,
+  "source_map": null,
+  "oracle21": "evidence-workspace/moss-equipment16-integration-review/EXPECTED_ICONS.json",
+  "oracle21_sha256": "4239175228d0f266742a8b385c12dd3c4706f74ef7f2abab73e0f5357ce454cc",
+  "expected_checks": 145,
+  "expected_cards": 21,
+  "expected_groups": 3,
+  "expected_images": 21,
+  "scope": "Combined B+accepted16 integration smoke for old16+A5 actualcards. Does not cover B3 cards (separateBnative20) or all46 icons.",
+  "original_equipment_gate": "Independent fac259 gate retains original178PASS,79/2FAIL and corrected145PASS; no overwrittenreceipt or inheritedcombinedPASS."
+}

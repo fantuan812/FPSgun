@@ -1,0 +1,522 @@
+--- a/tests/independent_forecast_authority.gd
++++ b/tests/independent_forecast_authority.gd
+@@ -21,7 +21,7 @@
+ func run()->void:
+ 	c=JSON.parse_string(FileAccess.get_file_as_string("res://data/catalog.json"))
+ 	# Exact historical data for the unchanged original case/count matrix.
+-	var a_history:Dictionary=preload("res://tests/support/v39_catalog_projection.gd").project(c,FileAccess.get_file_as_string("res://data/catalog.json"))
++	var a_history:Dictionary=preload("res://tests/support/v39_B_then_A_catalog_projection.gd").project(c,FileAccess.get_file_as_string("res://data/catalog.json"))
+ 	if not a_history.pass:push_error(str(a_history.errors));quit(1);return
+ 	c=a_history.catalog
+ 	base=JSON.parse_string(FileAccess.get_file_as_string("res://data/balance.json")).player
+--- a/tests/independent_forecast_legacy.gd
++++ b/tests/independent_forecast_legacy.gd
+@@ -32,7 +32,7 @@
+ func run()->void:
+ 	var c:Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://data/catalog.json"))
+ 	# Exact historical data for the unchanged original case/count matrix.
+-	var a_history:Dictionary=preload("res://tests/support/v39_catalog_projection.gd").project(c,FileAccess.get_file_as_string("res://data/catalog.json"))
++	var a_history:Dictionary=preload("res://tests/support/v39_B_then_A_catalog_projection.gd").project(c,FileAccess.get_file_as_string("res://data/catalog.json"))
+ 	if not a_history.pass:push_error(str(a_history.errors));quit(1);return
+ 	c=a_history.catalog
+ 	var base:Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://data/balance.json")).player
+--- a/tests/independent_reservation_records.gd
++++ b/tests/independent_reservation_records.gd
+@@ -31,7 +31,7 @@
+ func run()->void:
+  var c:Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://data/catalog.json"))
+  var expanded_bytes:String=FileAccess.get_file_as_string("res://data/catalog.json")
+- var a_history:Dictionary=preload("res://tests/support/v39_catalog_projection.gd").project(c,expanded_bytes)
++ var a_history:Dictionary=preload("res://tests/support/v39_B_then_A_catalog_projection.gd").project(c,expanded_bytes)
+  if not a_history.pass:push_error(str(a_history.errors));quit(1);return
+  var history:Dictionary=CatalogHistory.project(c,expanded_bytes)
+  ck(history.get("pass",false),"exact v36 append-only declaration and original v35 byte identity")
+--- a/tests/support/v36_catalog_projection.gd
++++ b/tests/support/v36_catalog_projection.gd
+@@ -3,7 +3,7 @@
+ const DECLARATION_SHA="b26ca154835eecd3ad85f7f1925aaa9f3089aac3f18d36d66b2425be99852622"
+ static func project(catalog:Dictionary,raw:String)->Dictionary:
+  if catalog.get("weapons") is Array and catalog.weapons.size()==10:
+-  var a:Dictionary=preload("res://tests/support/v39_catalog_projection.gd").project(catalog,raw)
++  var a:Dictionary=preload("res://tests/support/v39_B_then_A_catalog_projection.gd").project(catalog,raw)
+   if not a.pass:return a
+   catalog=a.catalog;raw=a.bytes
+  var errors:Array=[]
+--- a/tests/support/v39_legacy_inputs.gd
++++ b/tests/support/v39_legacy_inputs.gd
+@@ -1,6 +1,7 @@
+ extends RefCounted
+ ## Test-only historical fixture input, never a production loader path.
+-const Catalog=preload("res://tests/support/v39_catalog_projection.gd")
++const Catalog=preload("res://tests/support/v39_B_then_A_catalog_projection.gd")
++const BProfiles=preload("res://scripts/gameplay/build_items_profiles.gd")
+ const Loadouts=preload("res://tests/support/v39_loadout_projection.gd")
+ const MARKER="__test_history_alias_39__"
+ static func install(game:Node)->Dictionary:
+@@ -8,6 +9,8 @@
+  var c:Dictionary=Catalog.project(game.catalog,FileAccess.get_file_as_string("res://data/catalog.json"))
+  var k:Dictionary=Loadouts.project(game.starting_loadouts,FileAccess.get_file_as_string("res://data/starting_loadouts.json"))
+  if not c.pass or not k.pass:return {"pass":false,"errors":c.errors+k.errors}
++ var b_definition:Dictionary=BProfiles.configuration(c.catalog)
++ if not b_definition.ok or not game.effects.epoch is int or game.effects.epoch<0:return {"pass":false,"errors":["historical B input preflight"]}
+  # Prove actual cache aliasing before mutation; remove marker regardless of result.
+  if game.catalog.has(MARKER):return {"pass":false,"errors":["unexpected history marker"]}
+  game.catalog[MARKER]=true
+@@ -18,9 +21,15 @@
+  game.starting_loadouts.clear();game.starting_loadouts.merge(k.data,true)
+  game.effects.configure(game.catalog)
+  game.new_weapon_runtime.configure(game.catalog)
++ # Test-only title input reset, not a production loader or live preview mutation.
++ var b=game.effect_runtime.build_items
++ var b_reset:bool=b.clear_run(game.effects.epoch)
++ var b_configured:Dictionary=b.configure(game.catalog)
++ var b_state:Dictionary=b.debug_snapshot()
++ var b_coherent:bool=b_reset and b_configured.ok and b_state.registry==b_definition.registry and b_state.definitions==b_definition.definitions and b_state.slot_caps==b_definition.slot_caps and not b_state.configuration_open and b_state.bound_epoch==game.effects.epoch and b_state.owned_items.is_empty() and b_state.weapon_counts.is_empty() and b_state.equipped_types.is_empty() and b_state.mark==null and b_state.pin_ready_at==null and b_state.charges==0 and b_state.fields.is_empty() and b_state.next_field_sequence==0 and b_state.winch_count==0 and b_state.pending==null and not b_state.winch_requested_this_batch and b_state.last_sequence==0 and b_state.last_now==0.0 and b_state.last_step_serial==-1 and b_state.batch_serial==-1 and b_state.batch_time==0.0 and not b_state.batch_open
+  game.ui.show_title(game.run_seed,game.mode.id,game._starting_loadout_context())
+  var expected_fracture:Array=[]
+  for weapon in c.catalog.weapons:
+   if weapon.id!="cryo_sprayer":expected_fracture.append(str(weapon.id))
+- var coherent:bool=game.catalog==c.catalog and game.combat_frame.catalog==c.catalog and game.weapon_combat.catalog==c.catalog and game.starting_loadouts==k.data and game.effects.fracture_weapons==expected_fracture and game.effects.recoil_definition.is_empty() and game.new_weapon_runtime.weapons.is_empty() and game.new_weapon_runtime.memory.is_empty() and game.new_weapon_runtime.collar.is_empty()
++ var coherent:bool=b_coherent and game.catalog==c.catalog and game.combat_frame.catalog==c.catalog and game.weapon_combat.catalog==c.catalog and game.starting_loadouts==k.data and game.effects.fracture_weapons==expected_fracture and game.effects.recoil_definition.is_empty() and game.new_weapon_runtime.weapons.is_empty() and game.new_weapon_runtime.memory.is_empty() and game.new_weapon_runtime.collar.is_empty()
+  return {"pass":coherent,"errors":[] if coherent else ["historical cache coherence"],"catalog_bytes":c.bytes,"loadout_bytes":k.bytes,"scope":"Explicit original8/30/12/12/3 data under current production code; not current catalog acceptance"}
+--- a/tests/test_A_catalog_links.gd
++++ b/tests/test_A_catalog_links.gd
+@@ -10,6 +10,10 @@
+ func run()->void:
+  var raw:String=FileAccess.get_file_as_string("res://data/catalog.json")
+  var c:Dictionary=JSON.parse_string(raw)
++ var b_input:Dictionary=preload("res://tests/support/v39_B_catalog_projection.gd").project(c,raw)
++ if not b_input.pass:
++  push_error("historical A fixture strict B input rejected");quit(1);return
++ c=b_input.catalog;raw=b_input.bytes
+  var base:Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://data/balance.json")).player
+  ck(Rules.validate_catalog(c).is_empty(),"actual current catalog schema")
+  ck(c.weapons.size()==10 and c.items.size()==33 and c.mechanism_synergies.size()==14 and c.affinity_links.size()==14,"exact actual10/33/14/14")
+@@ -27,5 +31,5 @@
+   var error:String=Rules.transaction(b,c,row[1])
+   ck(error.is_empty() and Forecast.mechanism_status(b,c)[row[3]].active and Rules.shop_affinity(b,c).missing_ids.is_empty(),"actual purchase completes pair and clears missing bias "+row[0])
+   ck(Rules.derive(base,b,c)==stats,"mechanic module gives no hidden stat multiplier "+row[0])
+- print(JSON.stringify({"checks":checks,"failures":failures,"scope":"17 author actual A catalog/tag/pair/affinity/forecast assertions, not combat or ordinaryplay"}))
++ print(JSON.stringify({"checks":checks,"failures":failures,"scope":"17 original A catalog/tag/pair/affinity/forecast assertions under explicit strict B-only inverse, not combat or ordinaryplay"}))
+  quit(0 if failures.is_empty() else 1)
+--- a/tests/test_bankshot_build.gd
++++ b/tests/test_bankshot_build.gd
+@@ -22,7 +22,7 @@
+  g=load("res://scenes/main.tscn").instantiate();root.add_child(g);g.set_process(false)
+  check(Rules.validate_catalog(g.catalog).is_empty(),"catalog valid")
+  var expected:Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://docs/V23_CATALOG_ADDITIONS.json"))
+- var a_history:Dictionary=preload("res://tests/support/v39_catalog_projection.gd").project(g.catalog,FileAccess.get_file_as_string("res://data/catalog.json"))
++ var a_history:Dictionary=preload("res://tests/support/v39_B_then_A_catalog_projection.gd").project(g.catalog,FileAccess.get_file_as_string("res://data/catalog.json"))
+  check(a_history.pass and a_history.catalog.version==5 and a_history.catalog.weapons.size()==8 and a_history.catalog.items.size()==30 and a_history.catalog.items[-1].id=="scavenger_reel" and Rules.catalog_entry(a_history.catalog,"feedback_diode").id=="feedback_diode","explicit historical content version/count after strict A inverse")
+  check(Rules.catalog_entry(g.catalog,"bankshot_driver")==expected.weapon,"entire reviewed weapon definition")
+  check(Rules.catalog_entry(g.catalog,"bounce_guide")==expected.item,"entire reviewed guide definition")
+--- a/tests/test_builds.gd
++++ b/tests/test_builds.gd
+@@ -9,7 +9,7 @@
+ func run() -> void:
+ 	var c: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://data/catalog.json"))
+ 	# Exact historical data for the unchanged original case/count matrix.
+-	var a_history:Dictionary=preload("res://tests/support/v39_catalog_projection.gd").project(c,FileAccess.get_file_as_string("res://data/catalog.json"))
++	var a_history:Dictionary=preload("res://tests/support/v39_B_then_A_catalog_projection.gd").project(c,FileAccess.get_file_as_string("res://data/catalog.json"))
+ 	if not a_history.pass:push_error(str(a_history.errors));quit(1);return
+ 	c=a_history.catalog
+ 	var balance: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://data/balance.json"))
+--- a/tests/test_expansion.gd
++++ b/tests/test_expansion.gd
+@@ -16,7 +16,7 @@
+ func run() -> void:
+ 	var catalog: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://data/catalog.json"))
+ 	# Exact historical data for the unchanged original case/count matrix.
+-	var a_history:Dictionary=preload("res://tests/support/v39_catalog_projection.gd").project(catalog,FileAccess.get_file_as_string("res://data/catalog.json"))
++	var a_history:Dictionary=preload("res://tests/support/v39_B_then_A_catalog_projection.gd").project(catalog,FileAccess.get_file_as_string("res://data/catalog.json"))
+ 	if not a_history.pass:push_error(str(a_history.errors));quit(1);return
+ 	catalog=a_history.catalog
+ 	var build := Rules.new_build(catalog)
+--- a/tests/test_v39_legacy_inputs.gd
++++ b/tests/test_v39_legacy_inputs.gd
+@@ -1,7 +1,8 @@
+ extends SceneTree
+ ## Author integrity checks for explicit test-only old-data setup, not gameplay acceptance.
+ const Legacy=preload("res://tests/support/v39_legacy_inputs.gd")
+-const Catalog=preload("res://tests/support/v39_catalog_projection.gd")
++const Catalog=preload("res://tests/support/v39_B_then_A_catalog_projection.gd")
++const BProjection=preload("res://tests/support/v39_B_catalog_projection.gd")
+ const Kits=preload("res://tests/support/v39_loadout_projection.gd")
+ var checks:int=0
+ var failures:Array=[]
+@@ -14,7 +15,9 @@
+  var raw_c:String=FileAccess.get_file_as_string("res://data/catalog.json")
+  var raw_k:String=FileAccess.get_file_as_string("res://data/starting_loadouts.json")
+  var original_c:Dictionary=g.catalog.duplicate(true);var original_k:Dictionary=g.starting_loadouts.duplicate(true)
+- ck(g.catalog.weapons.size()==10 and g.catalog.items.size()==33 and g.starting_loadouts.loadouts.size()==5,"actual current loader before history")
++ ck(g.catalog.weapons.size()==10 and g.catalog.items.size()==36 and g.starting_loadouts.loadouts.size()==5,"actual current loader before history")
++ var intermediate:Dictionary=BProjection.project(g.catalog,raw_c)
++ ck(intermediate.pass and intermediate.catalog.items.size()==33 and intermediate.bytes.sha256_text()=="67eb30bf64c36191f5e7609126da42b0195cb53840e00e60afa15ed55e13cccc","strict B intermediate preserves exact A bytes and33 items")
+  var bad:Dictionary=g.catalog.duplicate(true);bad.weapons[0].damage+=1
+  ck(not Catalog.project(bad,raw_c).pass,"reject unrelated legacy field mutation")
+  bad=g.catalog.duplicate(true);bad.weapons[-1].damage+=1
+--- a/tests/test_weapon_readout.gd
++++ b/tests/test_weapon_readout.gd
+@@ -14,7 +14,7 @@
+ func run()->void:
+ 	var catalog:Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://data/catalog.json"))
+ 	# Exact historical data for the unchanged original case/count matrix.
+-	var a_history:Dictionary=preload("res://tests/support/v39_catalog_projection.gd").project(catalog,FileAccess.get_file_as_string("res://data/catalog.json"))
++	var a_history:Dictionary=preload("res://tests/support/v39_B_then_A_catalog_projection.gd").project(catalog,FileAccess.get_file_as_string("res://data/catalog.json"))
+ 	if not a_history.pass:push_error(str(a_history.errors));quit(1);return
+ 	catalog=a_history.catalog
+ 	var balance:Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://data/balance.json"))
+--- a/tests/support/v39_B_catalog_projection.gd
++++ b/tests/support/v39_B_catalog_projection.gd
+@@ -0,0 +1,26 @@
++extends RefCounted
++## Proposed test-only strict B inverse. Not installed into a candidate, never production.
++const DECLARATION_SHA="5ab1bb1f93b8b58706c6782d5729e104d8320d5a7668518cd48a8ee38dcbb65d"
++static func project(catalog:Dictionary,raw:String)->Dictionary:
++	var failure:Dictionary={"pass":false,"errors":[],"catalog":{},"bytes":""}
++	var path:String="res://tests/fixtures/v39_B_catalog_additions.json"
++	if FileAccess.get_sha256(path)!=DECLARATION_SHA:
++		failure.errors.append("B declaration identity");return failure
++	var declaration:Dictionary=JSON.parse_string(FileAccess.get_file_as_string(path))
++	var lengths:Dictionary={"weapons":10,"items":36,"mechanism_synergies":17,"affinity_links":14}
++	var historical:Dictionary=catalog.duplicate(true)
++	for key in lengths:
++		if not catalog.get(key) is Array or catalog[key].size()!=lengths[key]:
++			failure.errors.append("B exact size "+key);return failure
++		var addition:Array=declaration[key]
++		if not addition.is_empty() and catalog[key].slice(lengths[key]-addition.size())!=addition:failure.errors.append("B exact tail "+key)
++		historical[key]=catalog[key].slice(0,lengths[key]-addition.size()).duplicate(true)
++	var bytes:String=raw
++	for insertion in declaration.raw_insertions:
++		if bytes.count(insertion)!=1:failure.errors.append("B exact raw insertion multiplicity")
++		else:bytes=bytes.replace(insertion,"")
++	if bytes.sha256_text()!=declaration.baseline_sha256:failure.errors.append("accepted A catalog raw identity")
++	var parsed:Variant=JSON.parse_string(bytes)
++	if not parsed is Dictionary or parsed!=historical:failure.errors.append("B raw/structured inverse disagreement")
++	if not failure.errors.is_empty():return failure
++	return {"pass":true,"errors":[],"catalog":historical,"bytes":bytes,"scope":"exact B3 items/B3 mechanism rows removed to accepted A raw; not B catalog acceptance"}
+--- a/tests/support/v39_B_then_A_catalog_projection.gd
++++ b/tests/support/v39_B_then_A_catalog_projection.gd
+@@ -0,0 +1,8 @@
++extends RefCounted
++## Test-only strict B -> exact A -> unchanged historical A inverse.
++const B=preload("res://tests/support/v39_B_catalog_projection.gd")
++const A=preload("res://tests/support/v39_catalog_projection.gd")
++static func project(catalog:Dictionary,raw:String)->Dictionary:
++	var intermediate:Dictionary=B.project(catalog,raw)
++	if not intermediate.pass:return intermediate
++	return A.project(intermediate.catalog,intermediate.bytes)
+--- a/tests/fixtures/v39_B_catalog_additions.json
++++ b/tests/fixtures/v39_B_catalog_additions.json
+@@ -0,0 +1,121 @@
++{
++  "weapons": [],
++  "items": [
++    {
++      "id": "crossfire_pin",
++      "name": "Crossfire Pin",
++      "kind": "item",
++      "price": 28,
++      "max_stack": 1,
++      "rarity": "uncommon",
++      "tags": [
++        "control"
++      ],
++      "effects": {},
++      "description": "Mark one living ordinary target for 1.5s; a different weapon type pulls it toward the saved point by up to 45px.",
++      "trigger": "Primary hits from two distinct weapon types",
++      "cost": "1 module slot; no extra damage; other targets cannot replace the active mark",
++      "cooldown": 1.0,
++      "stack_rule": "Unique: maximum 1",
++      "synergy_targets": [],
++      "mark_seconds": 1.5,
++      "pull_distance": 45.0,
++      "requires_distinct_weapon_types": 2
++    },
++    {
++      "id": "salvage_capacitor",
++      "name": "Salvage Capacitor",
++      "kind": "item",
++      "price": 28,
++      "max_stack": 1,
++      "rarity": "uncommon",
++      "tags": [
++        "mobility",
++        "salvage"
++      ],
++      "effects": {},
++      "description": "Three normal pickups charge a dash-origin slow field: 80px, 1.8s, speed factor 0.70. Energy and medical do not charge.",
++      "trigger": "Dash starts with three charges from actual in-combat normal pickups; settlement sweep excluded",
++      "cost": "1 module slot; no damage; bosses and committed charges unaffected; at most two fields",
++      "cooldown": 0,
++      "stack_rule": "Unique: maximum 1",
++      "synergy_targets": [],
++      "charge_limit": 3,
++      "field_radius": 80.0,
++      "field_seconds": 1.8,
++      "field_speed_factor": 0.7,
++      "field_limit": 2,
++      "pickup_sources": [
++        "normal"
++      ]
++    },
++    {
++      "id": "medic_winch",
++      "name": "Medic Winch",
++      "kind": "item",
++      "price": 24,
++      "max_stack": 1,
++      "rarity": "uncommon",
++      "tags": [
++        "salvage"
++      ],
++      "effects": {},
++      "description": "Every five normal pickups pull the nearest medical orb within 220px toward you by up to 80px. Requires medical pickups, currently from Medic Seed. At most one pull per same-step collection batch (\u540c\u4e00\u6279\u6536\u96c6\u6700\u591a\u7275\u5f15\u4e00\u6b21); extra thresholds are spent.",
++      "trigger": "Fifth actual in-combat normal pickup; settlement sweep excluded; chance spent even without medicine",
++      "cost": "1 module slot; no healing, new orb, or remote collection; energy and medical do not count",
++      "cooldown": 0,
++      "stack_rule": "Unique: maximum 1",
++      "synergy_targets": [
++        "medic_seed"
++      ],
++      "pickup_count": 5,
++      "medical_range": 220.0,
++      "pull_distance": 80.0,
++      "pickup_sources": [
++        "normal"
++      ],
++      "max_pulls_per_step": 1
++    }
++  ],
++  "mechanism_synergies": [
++    {
++      "id": "crossfire_control",
++      "name": "Crossfire Control",
++      "requires": [
++        "crossfire_pin"
++      ],
++      "requires_distinct_weapon_types": 2,
++      "description": "Two different currently equipped weapon types mark then pull one ordinary target. No extra damage; one mark at a time."
++    },
++    {
++      "id": "salvage_field",
++      "name": "Salvage Field",
++      "requires": [
++        "salvage_capacitor"
++      ],
++      "description": "Three actual in-combat normal pickups charge a dash-origin slow field. Medical, energy and settlement rewards excluded. Inventory resets each room."
++    },
++    {
++      "id": "medical_recovery",
++      "name": "Medical Recovery",
++      "requires": [
++        "medic_winch",
++        "medic_seed"
++      ],
++      "description": "Medic Seed supplies existing medical orbs. Every five actual combat normal pickups request one pull; at most one per same batch. No direct healing; no target still spends the request."
++    }
++  ],
++  "affinity_links": [],
++  "raw_insertions": [
++    ",\n    {\n      \"id\": \"crossfire_pin\",\n      \"name\": \"Crossfire Pin\",\n      \"kind\": \"item\",\n      \"price\": 28,\n      \"max_stack\": 1,\n      \"rarity\": \"uncommon\",\n      \"tags\": [\n        \"control\"\n      ],\n      \"effects\": {},\n      \"description\": \"Mark one living ordinary target for 1.5s; a different weapon type pulls it toward the saved point by up to 45px.\",\n      \"trigger\": \"Primary hits from two distinct weapon types\",\n      \"cost\": \"1 module slot; no extra damage; other targets cannot replace the active mark\",\n      \"cooldown\": 1.0,\n      \"stack_rule\": \"Unique: maximum 1\",\n      \"synergy_targets\": [],\n      \"mark_seconds\": 1.5,\n      \"pull_distance\": 45.0,\n      \"requires_distinct_weapon_types\": 2\n    },\n    {\n      \"id\": \"salvage_capacitor\",\n      \"name\": \"Salvage Capacitor\",\n      \"kind\": \"item\",\n      \"price\": 28,\n      \"max_stack\": 1,\n      \"rarity\": \"uncommon\",\n      \"tags\": [\n        \"mobility\",\n        \"salvage\"\n      ],\n      \"effects\": {},\n      \"description\": \"Three normal pickups charge a dash-origin slow field: 80px, 1.8s, speed factor 0.70. Energy and medical do not charge.\",\n      \"trigger\": \"Dash starts with three charges from actual in-combat normal pickups; settlement sweep excluded\",\n      \"cost\": \"1 module slot; no damage; bosses and committed charges unaffected; at most two fields\",\n      \"cooldown\": 0,\n      \"stack_rule\": \"Unique: maximum 1\",\n      \"synergy_targets\": [],\n      \"charge_limit\": 3,\n      \"field_radius\": 80.0,\n      \"field_seconds\": 1.8,\n      \"field_speed_factor\": 0.7,\n      \"field_limit\": 2,\n      \"pickup_sources\": [\n        \"normal\"\n      ]\n    },\n    {\n      \"id\": \"medic_winch\",\n      \"name\": \"Medic Winch\",\n      \"kind\": \"item\",\n      \"price\": 24,\n      \"max_stack\": 1,\n      \"rarity\": \"uncommon\",\n      \"tags\": [\n        \"salvage\"\n      ],\n      \"effects\": {},\n      \"description\": \"Every five normal pickups pull the nearest medical orb within 220px toward you by up to 80px. Requires medical pickups, currently from Medic Seed. At most one pull per same-step collection batch (\\u540c\\u4e00\\u6279\\u6536\\u96c6\\u6700\\u591a\\u7275\\u5f15\\u4e00\\u6b21); extra thresholds are spent.\",\n      \"trigger\": \"Fifth actual in-combat normal pickup; settlement sweep excluded; chance spent even without medicine\",\n      \"cost\": \"1 module slot; no healing, new orb, or remote collection; energy and medical do not count\",\n      \"cooldown\": 0,\n      \"stack_rule\": \"Unique: maximum 1\",\n      \"synergy_targets\": [\n        \"medic_seed\"\n      ],\n      \"pickup_count\": 5,\n      \"medical_range\": 220.0,\n      \"pull_distance\": 80.0,\n      \"pickup_sources\": [\n        \"normal\"\n      ],\n      \"max_pulls_per_step\": 1\n    }",
++    ",\n    {\n      \"id\": \"crossfire_control\",\n      \"name\": \"Crossfire Control\",\n      \"requires\": [\n        \"crossfire_pin\"\n      ],\n      \"requires_distinct_weapon_types\": 2,\n      \"description\": \"Two different currently equipped weapon types mark then pull one ordinary target. No extra damage; one mark at a time.\"\n    },\n    {\n      \"id\": \"salvage_field\",\n      \"name\": \"Salvage Field\",\n      \"requires\": [\n        \"salvage_capacitor\"\n      ],\n      \"description\": \"Three actual in-combat normal pickups charge a dash-origin slow field. Medical, energy and settlement rewards excluded. Inventory resets each room.\"\n    },\n    {\n      \"id\": \"medical_recovery\",\n      \"name\": \"Medical Recovery\",\n      \"requires\": [\n        \"medic_winch\",\n        \"medic_seed\"\n      ],\n      \"description\": \"Medic Seed supplies existing medical orbs. Every five actual combat normal pickups request one pull; at most one per same batch. No direct healing; no target still spends the request.\"\n    }"
++  ],
++  "baseline_sha256": "67eb30bf64c36191f5e7609126da42b0195cb53840e00e60afa15ed55e13cccc",
++  "baseline_source": "accepted A final-r2 catalog; B inverse only, then unchanged strict A inverse",
++  "current_counts": {
++    "weapons": 10,
++    "items": 36,
++    "mechanism_synergies": 17,
++    "affinity_links": 14
++  }
++}
+--- a/tests/test_B_legacy_cache.gd
++++ b/tests/test_B_legacy_cache.gd
+@@ -0,0 +1,41 @@
++extends SceneTree
++## Test-only historical-domain reset; not normal-game B acceptance.
++const Legacy=preload("res://tests/support/v39_legacy_inputs.gd")
++const Profiles=preload("res://scripts/gameplay/build_items_profiles.gd")
++var checks:=0
++var failures:Array=[]
++func ck(ok:bool,label:String)->void:
++ checks+=1
++ if not ok:failures.append(label)
++func _initialize()->void:call_deferred("run")
++func run()->void:
++ var owners:Array=[]
++ for prior_run in [false,true]:
++  var g=load("res://scenes/main.tscn").instantiate();root.add_child(g);g.set_process(false);owners.append(g)
++  if prior_run:
++   g._start_run(39031);g.set_process(false)
++   g.build.items={"crossfire_pin":1,"salvage_capacitor":1,"medic_winch":1};g.build.weapons=["rivet_gun","scrap_shotgun"];g._recompute()
++   g.combat.combat_tick_serial+=1;g.effect_runtime.begin_build_items_step(g.config.arena)
++   for i in range(5):g._effect_event("pickup",{"source":"normal","pos":g.player_pos})
++  var runtime=g.effect_runtime.build_items
++  var before:Dictionary=runtime.debug_snapshot()
++  ck(not prior_run or (before.owned_items.size()==3 and before.charges==3 and before.pending!=null),"prior run genuinely owns B and has stocks/pending")
++  if prior_run:g._title()
++  ck(g.state=="title" and (not prior_run or g.build.items.size()==3),"title retains prior build, cannot use live-build sync for fixture configure")
++  var receipt:Dictionary=Legacy.install(g)
++  ck(receipt.pass,"historical installation accepted")
++  var s:Dictionary=runtime.debug_snapshot();var expected:Dictionary=Profiles.configuration(g.catalog)
++  ck(expected.ok and s.registry==expected.registry and s.definitions==expected.definitions and s.slot_caps==expected.slot_caps,"exact projected registry/definitions/caps")
++  ck(s.definitions.values().all(func(x):return x.is_empty()) and not s.configuration_open and s.bound_epoch==g.effects.epoch,"no B definitions and configure window closed on current epoch")
++  ck(s.owned_items.is_empty() and s.weapon_counts.is_empty() and s.equipped_types.is_empty(),"no prior owned or equipped caches")
++  ck(s.mark==null and s.pin_ready_at==null and s.charges==0 and s.fields.is_empty() and s.next_field_sequence==0 and s.winch_count==0 and s.pending==null and not s.winch_requested_this_batch,"all stocks controls and cooldowns reset")
++  ck(s.last_sequence==0 and s.last_now==0.0 and s.last_step_serial==-1 and s.batch_serial==-1 and s.batch_time==0.0 and not s.batch_open,"all replay/clock/batch guards reset")
++  var rejected:Dictionary=runtime.configure(g.catalog)
++  ck(not rejected.ok and runtime.debug_snapshot()==s,"live reconfigure rejected atomically after installer")
++  g._start_run(39);g.set_process(false);s=runtime.debug_snapshot()
++  ck(g.state=="playing" and g.build.weapons==["rivet_gun"] and g.build.coins==35 and s.equipped_types==["rivet_gun"] and s.owned_items.is_empty() and s.definitions==expected.definitions,"real subsequent historical start syncs fresh build")
++ var helper=preload("res://tests/support/audio_teardown.gd").new();helper.prepare(owners)
++ for g in owners:g.queue_free()
++ await process_frame;await helper.finish(self)
++ print(JSON.stringify({"checks":checks,"failures":failures,"scope":"20 author test-only fresh/prior-B-title historical cache assertions, not current B gameplay"}))
++ quit(0 if failures.is_empty() else 1)
+--- a/tests/test_B_projection.gd
++++ b/tests/test_B_projection.gd
+@@ -0,0 +1,40 @@
++extends SceneTree
++const B=preload("res://tests/support/v39_B_catalog_projection.gd")
++const Combined=preload("res://tests/support/v39_B_then_A_catalog_projection.gd")
++var checks:=0
++var failures:Array=[]
++func ck(ok:bool,label:String)->void:
++ checks+=1
++ if not ok:failures.append(label)
++func _initialize()->void:call_deferred("run")
++func run()->void:
++ var raw:String=FileAccess.get_file_as_string("res://data/catalog.json")
++ var c:Dictionary=JSON.parse_string(raw);var original:Dictionary=c.duplicate(true)
++ var a:Dictionary=B.project(c,raw)
++ ck(a.pass and a.catalog.weapons.size()==10 and a.catalog.items.size()==33 and a.catalog.mechanism_synergies.size()==14 and a.catalog.affinity_links.size()==14,"B inverse exact A structure")
++ ck(a.pass and a.bytes.sha256_text()=="67eb30bf64c36191f5e7609126da42b0195cb53840e00e60afa15ed55e13cccc","B inverse exact accepted A raw")
++ var history:Dictionary=Combined.project(c,raw)
++ ck(history.pass and history.catalog.weapons.size()==8 and history.catalog.items.size()==30 and history.catalog.mechanism_synergies.size()==12 and history.catalog.affinity_links.size()==12,"Combined reaches exact original catalog domain")
++ ck(c==original and FileAccess.get_file_as_string("res://data/catalog.json")==raw,"positive projections leave original source unchanged")
++ a.catalog.weapons[0].damage+=99
++ a.catalog.mechanism_synergies[0].requires.append("detached_test_only")
++ ck(c==original,"returned nested structures detached from actual input")
++ var again:Dictionary=B.project(c,raw)
++ ck(again.pass and again.catalog.weapons[0].damage==original.weapons[0].damage and not again.catalog.mechanism_synergies[0].requires.has("detached_test_only"),"new projection not contaminated by prior output mutation")
++ for case in range(9):
++  var bad:Dictionary=c.duplicate(true);var text:String=raw
++  match case:
++   0:bad.items[-1].price+=1
++   1:bad.weapons[0].damage+=1
++   2:bad.mechanism_synergies[-1].requires=["medic_winch"]
++   3:bad.items.pop_back()
++   4:bad.items.reverse()
++   5:bad.affinity_links.pop_back()
++   6:text+=" "
++   7:text=text.replace('"crossfire_pin"','"wrong_pin"')
++   8:text="{}"
++  var before:Dictionary=bad.duplicate(true);var failed:Dictionary=B.project(bad,text)
++  ck(not failed.pass and failed.catalog.is_empty() and failed.bytes.is_empty() and not failed.errors.is_empty(),"strict inverse rejects mutation atomically "+str(case))
++  ck(bad==before and c==original,"strict negative leaves input detached "+str(case))
++ print(JSON.stringify({"checks":checks,"failures":failures,"scope":"24 author test-only strict B inverse predicates; no production loader change"}))
++ quit(0 if failures.is_empty() else 1)
+--- a/tests/test_B_catalog_current.gd
++++ b/tests/test_B_catalog_current.gd
+@@ -0,0 +1,38 @@
++extends SceneTree
++const Rules=preload("res://scripts/rules.gd")
++const Forecast=preload("res://scripts/gameplay/build_forecast.gd")
++const Profiles=preload("res://scripts/gameplay/build_items_profiles.gd")
++var checks:=0
++var failures:Array=[]
++func ck(ok:bool,label:String)->void:
++ checks+=1
++ if not ok:failures.append(label)
++func _initialize()->void:call_deferred("run")
++func run()->void:
++ var c:Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://data/catalog.json"))
++ var base:Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://data/balance.json")).player
++ ck(Rules.validate_catalog(c).is_empty(),"actual B catalog valid")
++ ck(c.weapons.size()==10 and c.items.size()==36 and c.mechanism_synergies.size()==17 and c.affinity_links.size()==14,"actual10/36/17/14")
++ ck(c.weapon_slots==4 and c.item_slots==8,"actual slot caps4/8")
++ ck(Profiles.configuration(c).ok,"detached B registry valid")
++ for data in [["crossfire_pin",28,14,"crossfire_control"],["salvage_capacitor",28,15,"salvage_field"],["medic_winch",24,16,"medical_recovery"]]:
++  var id:String=data[0];var index:int=data[2];var entry:Dictionary=Rules.catalog_entry(c,id)
++  ck(entry.kind=="item" and entry.price==data[1] and entry.max_stack==1 and entry.effects.is_empty(),"B unique price and no stat effects "+id)
++  ck(not Profiles.definition(entry).is_empty() and c.mechanism_synergies[index].id==data[3],"exact profile and mechanism index "+id)
++  var b:Dictionary=Rules.new_build(c);b.weapons=["rivet_gun","scrap_shotgun"];b.coins=100
++  if id=="medic_winch":b.items={"medic_seed":1}
++  var before:Dictionary=b.duplicate(true);var stats:Dictionary=Rules.derive(base,b,c);var catalog_before:Dictionary=c.duplicate(true)
++  var statuses:Array=Forecast.mechanism_status(b,c)
++  ck(statuses.size()==17 and not statuses[index].active,"actual B pair initially incomplete "+id)
++  var predicted:Dictionary=Forecast.project(base,b,c,id)
++  ck(predicted.available and predicted.mechanisms.size()==1 and predicted.mechanisms[0].index==index and predicted.mechanisms[0].change=="enables" and predicted.mechanisms[0].after.active,"forecast enables intended B mechanism only "+id)
++  ck(b==before and c==catalog_before,"actual B forecast leaves build/catalog unchanged "+id)
++  var error:String=Rules.transaction(b,c,id)
++  ck(error.is_empty() and Forecast.mechanism_status(b,c)[index].active and b.coins==100-data[1],"actual B purchase activates exact mechanism and price "+id)
++  ck(Rules.derive(base,b,c)==stats,"B mechanic adds no hidden stat bonus "+id)
++ var pin:Dictionary=Rules.new_build(c);pin.items={"crossfire_pin":1};pin.weapons=["rivet_gun","rivet_gun"]
++ ck(not Forecast.mechanism_status(pin,c)[14].active,"same type copies cannot satisfy Pin forecast")
++ pin.weapons=["rivet_gun","scrap_shotgun"]
++ ck(Forecast.mechanism_status(pin,c)[14].active,"two current types satisfy Pin forecast")
++ print(JSON.stringify({"checks":checks,"failures":failures,"scope":"27 actual B catalog/profile/forecast/economy predicates; no texture or combat claim"}))
++ quit(0 if failures.is_empty() else 1)
+--- a/tests/test_B_pickup_sources.gd
++++ b/tests/test_B_pickup_sources.gd
+@@ -0,0 +1,59 @@
++extends SceneTree
++const Combat=preload("res://scripts/gameplay/combat_runtime.gd")
++var g
++var checks:=0
++var failures:Array=[]
++var origin:=Vector2(300,300)
++func ck(ok:bool,label:String)->void:
++ checks+=1
++ if not ok:failures.append(label)
++func setup(mode:String,reel:bool=false)->void:
++ g._title();g._select_mode(mode);g._start_run(39031);g.set_process(false)
++ g.build.weapons=["return_disc"] if reel else ["rivet_gun"]
++ g.build.items={"salvage_capacitor":1,"medic_winch":1}
++ if reel:g.build.items["scavenger_reel"]=1
++ g._recompute();g.weapon_clocks=[999.0];g.player_pos=origin;g.hero.position=origin;g.spawn_clock=999.0
++ g.elapsed=10.0;g.stats.pickup_radius=0.0;g.stats.bullet_speed=100.0;g.stats.coin_bonus=0.0;g.build.coins=0;g.build.coin_fraction=0.0;g.xp=0;g.stats.hp=g.stats.max_hp-20.0;g.combat_frame.area=g.config.arena
++ ck(g.effect_runtime.build_items.owned_items==g.build.items,"actual setup B owned synchronized "+mode)
++func item(distance:float,source:String="normal")->Dictionary:
++ var result:Dictionary={"pos":origin+Vector2(distance,0),"xp":1,"coins":1}
++ if source=="energy":result.merge({"source":"energy","xp":2},true)
++ if source=="medical":result.merge({"source":"medical","xp":0,"coins":0,"heal":8.0},true)
++ return result
++func _initialize()->void:call_deferred("run")
++func run()->void:
++ g=load("res://scenes/main.tscn").instantiate();root.add_child(g);g.set_process(false)
++ for mode in ["arena","rooms"]:
++  setup(mode);g.pickups=[item(10),item(10,"energy"),item(10,"medical")]
++  Combat.step(g.combat_frame,0.0)
++  ck(g.pickups.is_empty(),"local walk collects all three sources "+mode)
++  ck(g.xp==3 and g.build.coins==2 and g.stats.hp==g.stats.max_hp-12.0,"local source rewards exactly once "+mode)
++  ck(g.effect_runtime.build_items.charges==1 and g.effect_runtime.build_items.winch_count==1,"local only default normal counts for B "+mode)
++  Combat.step(g.combat_frame,0.0)
++  ck(g.xp==3 and g.build.coins==2 and g.effect_runtime.build_items.winch_count==1,"empty nextpass cannot duplicate local rewards "+mode)
++  setup(mode);g.stats.pickup_radius=30.0;g.pickups=[item(20)]
++  g.elapsed+=.05;Combat.step(g.combat_frame,.05)
++  ck(g.pickups.size()==1 and g.pickups[0].pos.is_equal_approx(origin+Vector2(7,0)),"magnet moves13 but original distance gates collection "+mode)
++  ck(g.xp==0 and g.build.coins==0 and g.effect_runtime.build_items.charges==0,"first magnet movement does not count pickup "+mode)
++  Combat.step(g.combat_frame,0.0)
++  ck(g.pickups.is_empty() and g.xp==1 and g.build.coins==1,"second magnet pass collects once "+mode)
++  ck(g.effect_runtime.build_items.charges==1 and g.effect_runtime.build_items.winch_count==1,"actual magnet normal event counts once "+mode)
++  setup(mode,true)
++  var target:Dictionary=g._spawn_kind("crawler",origin+Vector2(300,0));target.hp=1000.0;target.max_hp=1000.0;target.anim_hp=1000.0;target.speed=0.0;target.cooldown_left=999.0
++  g._fire_weapon("return_disc",0)
++  ck(g.bullets.size()==1 and g.bullets[0].has("scavenger") and g.bullets[0].scavenger.remaining==3,"real owned launch creates fresh quota3 "+mode)
++  if g.bullets.size()==1 and g.bullets[0].has("scavenger"):
++   var disc:Dictionary=g.bullets[0]
++   # Controlled return-phase placement, not an ordinary-play flight claim.
++   disc.pos=origin+Vector2(100,0);disc.velocity=Vector2(100,0);disc.life=2.0;disc.returning=true;disc.outbound_left=0.0;disc.erase("launch_start")
++   g.pickups=[item(50),item(60,"energy"),item(70,"medical")]
++   g.elapsed+=1.0;Combat.step(g.combat_frame,1.0)
++   ck(g.pickups.size()==1 and g.pickups[0].source=="medical" and disc.scavenger.remaining==1,"real return sweep normal+energy spend quota; medical excluded "+mode)
++   ck(g.xp==3 and g.build.coins==2 and g.stats.hp==g.stats.max_hp-20.0,"remote source rewards once with no remote heal "+mode)
++   ck(g.effect_runtime.build_items.charges==1 and g.effect_runtime.build_items.winch_count==1,"remote normal only counts for B "+mode)
++   g.player_pos=origin+Vector2(60,0);Combat.step(g.combat_frame,0.0)
++   ck(g.pickups.is_empty() and g.stats.hp==g.stats.max_hp-12.0 and g.xp==3 and g.build.coins==2,"excluded medical later locally collected normally "+mode)
++   ck(g.effect_runtime.build_items.charges==1 and g.effect_runtime.build_items.winch_count==1 and disc.scavenger.remaining==1,"local medicine neither B stock nor remote quota "+mode)
++ var helper=preload("res://tests/support/audio_teardown.gd").new();helper.prepare([g]);g.queue_free();await process_frame;await helper.finish(self)
++ print(JSON.stringify({"checks":checks,"failures":failures,"scope":"34 author controlled actual walk/magnet/ReturnDisc+Reel source and reward assertions, two modes; not natural acquisition"}))
++ quit(0 if failures.is_empty() else 1)

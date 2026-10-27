@@ -1,0 +1,13 @@
+[
+  "/usr/local/bin/godot",
+  "--headless",
+  "--audio-driver",
+  "Dummy",
+  "--path",
+  "evidence-workspace/moss-v39-B-qa/packed-combined-project",
+  "--script",
+  "res://tools/export_source_fingerprint.gd",
+  "--",
+  "evidence-workspace/moss-v39-B-qa/packed-combined-first/expected-resources.json",
+  "evidence-workspace/moss-v39-B-qa/packed-combined-first/source-imported-fingerprints.json"
+]
