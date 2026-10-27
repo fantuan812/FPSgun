@@ -1,0 +1,53 @@
+{
+  "pass": true,
+  "completed_session": 75777,
+  "completed_exit": 0,
+  "source_inputs_unchanged": 647,
+  "source_map_sha256": "a80da3ef91808a78fc03dfff6960d2942cc3a2e60e920c95012efa8abe933765",
+  "production_map_sha256": "ab6eaec62e94a422c9d3c57ad8720745e3bf4a9210c8790134393210928a0215",
+  "final_suite_path": "full-suite-recovered/result.json",
+  "final_suite": {
+    "entries": 104,
+    "passed": 105,
+    "import_included_in_passed": true,
+    "input_changes": [],
+    "all_pass": true
+  },
+  "previous_interrupted_attempt": "EXECUTION_RECOVERY.json; old outcome unknown/incomplete, not a pass",
+  "build_report_path": "runtime-r1/BUILD_REPORT.json",
+  "resource_only": true,
+  "files": {
+    "linux/MossCircuit.pck": {
+      "bytes": 41396276,
+      "sha256": "20fc0fb1a66cb0d12d7eda6a6f3c38086a9171fecdafbc5308552ec694c8cf99",
+      "mode": "0o644"
+    },
+    "windows/MossCircuit.pck": {
+      "bytes": 41396276,
+      "sha256": "20fc0fb1a66cb0d12d7eda6a6f3c38086a9171fecdafbc5308552ec694c8cf99",
+      "mode": "0o644"
+    },
+    "linux/MossCircuit.x86_64": {
+      "bytes": 71075864,
+      "sha256": "2c78919325d7f29fa7607287c7c1eeac367ea4c94e7b8b6f5f4c6b20492f73d0",
+      "mode": "0o755"
+    },
+    "source-imported-fingerprints.json": {
+      "bytes": 31014,
+      "sha256": "7833216125f7eeccebcb89926a1c325d4feb59a0a6dc25261c5f16e8a582d283",
+      "mode": "0o644"
+    }
+  },
+  "packed_resource_report": {
+    "action_frames": 281,
+    "actions": 25,
+    "checks": 847,
+    "exact_files": 63,
+    "failures": [],
+    "images": 58,
+    "scope": "editor reader of exported PCK, no source fallback; dynamic resources and controlled integration, not native GUI or Windows runtime acceptance"
+  },
+  "tracked_author_engine_job": "terminal exit0; lane released",
+  "independent_final_pack_and_ordinary_pending": true,
+  "external_actions": []
+}

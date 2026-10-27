@@ -7,6 +7,7 @@ const Rules=preload("res://scripts/rules.gd")
 const BoundaryShot=preload("res://scripts/gameplay/boundary_shot.gd")
 const Status=preload("res://scripts/gameplay/target_status.gd")
 const PrimaryDefense=preload("res://scripts/gameplay/primary_defense.gd")
+const WeaponTempering=preload("res://scripts/gameplay/weapon_tempering.gd")
 ## No mode, UI, progression, or input polling. Collision/proc semantics are shared by every mode.
 var world:CombatState
 var session:RunSession
@@ -20,7 +21,7 @@ func _init(w:CombatState,s:RunSession,c:Dictionary,p:WeaponPresentation,e:Callab
 func fire(id: String, slot: int, area:Dictionary={}) -> void:
 	if world.enemies.is_empty(): return
 	var weapon := Rules.catalog_entry(catalog, id)
-	var damage: float = Rules.weapon_damage(weapon,world.stats)
+	var damage: float = Rules.weapon_damage(weapon,world.stats,WeaponTempering.multiplier(session.build,catalog,slot,id))
 	if weapon.behavior == "field_bankshot":
 		fire_bankshot(weapon,slot,damage,area)
 		return

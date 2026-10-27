@@ -387,6 +387,7 @@ func show_shop(view: Dictionary) -> void:
 	for offer in view.get("offers", []):
 		var held:bool=bool(offer.get("reserved",false))
 		var c := _card(offers, offer, "  [RESERVED]" if held else "", view.get("synergy_status", []),true)
+		if offer.get("kind","") == "weapon": _text(c,"STANDARD / new purchases never inherit a tier",12)
 		_text(c, "%s / %s" % [str(offer.get("rarity", "common")).to_upper(), ", ".join(offer.get("tags", []))], 12)
 		if held: _text(c,"NOT OWNED / retained for later shops; only three fresh offers per draw.",12)
 		if offer.has("weight_multiplier"):
@@ -403,7 +404,7 @@ func show_shop(view: Dictionary) -> void:
 		if full and not sold:
 			var replacement_notice:=_text(c, "Slots full: replace destroys the old weapon (no refund).", 12)
 			var select := OptionButton.new(); select.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-			for w in view.get("weapons", []): select.add_item("Replace %s" % w.get("name", w.get("id", "")), int(w.get("slot", 0)))
+			for w in view.get("weapons", []): select.add_item("SLOT %d: %s [%s]" % [int(w.get("slot",0))+1,w.get("name",w.get("id","")),w.get("temper_label","STANDARD")], int(w.get("slot", 0)))
 			c.add_child(select)
 			var buy := Button.new(); buy.text = "REPLACE  /  %d SCRAP" % int(offer.get("price", 0))
 			buy.custom_minimum_size.y = 34
@@ -456,13 +457,28 @@ func _inventory(parent: Node, view: Dictionary, selling := false) -> void:
 	var order:Dictionary=view.get("weapon_order",{})
 	if selling:
 		_text(parent,"FREE ORDER / remaining cooldown follows each copy. SLOT 1 is the hand mount.",12)
+		var temper_notes:=_disclosure(parent,"TEMPER / DUPLICATE TRADE-OFF")
+		_text(temper_notes,"Consume one identical STANDARD copy to temper the retained one. One tier only: x%.2f nominal primary damage, one timer and one tag copy. No refund; selling returns only one ordinary copy's value. Fewer hits can weaken proc or chill cadence. Losing a tag can also reduce other weapons' bonuses." % float(view.get("weapon_tempering",{}).get("primary_damage_multiplier",1.0)),12)
 		var order_notes:=_disclosure(parent,"ORDER / HIT TIMING")
 		_text(order_notes,"Weapons ready this tick process by slot. Moving does not reset or synchronize their clocks. Projectile travel and delayed hits still matter; earlier slot is not guaranteed earlier impact or more damage.",12)
 		if not bool(order.get("available",false)) and not str(order.get("reason","")).is_empty(): _text(parent,str(order.reason),12)
 	for w in view.get("weapons", []):
 		var c := _card(parent, w, "  [SLOT %s]" % (int(w.get("slot", 0)) + 1))
+		_text(c,str(w.get("temper_label","STANDARD")),12).add_theme_color_override("font_color",AMBER if w.get("temper_label","")=="TEMPERED" else MOSS)
 		if selling:
 			var previous_focus:Control=first_focus
+			var temper:Dictionary=w.get("tempering",{})
+			if bool(temper.get("available",false)):
+				var preview:Dictionary=temper.preview
+				var summary:String="AFTER TEMPER: %.2f damage %s" % [float(preview.damage),str(preview.damage_unit)]
+				if preview.has("pellets"): summary+=" / %d pellets" % int(preview.pellets)
+				_text(c,summary,12)
+				_text(c,"Keep SLOT %d; destroy SLOT %d of this weapon. Irreversible / no refund. Frees one slot; removes one timer and tag copy. Preview includes lost tag bonuses." % [int(w.get("slot",0))+1,int(temper.donor_slot)+1],12)
+				var fuse:=_button(c,"TEMPER / CONSUME SLOT %d" % (int(temper.donor_slot)+1),"temper_weapon",{"slot":w.get("slot",-1),"donor_slot":temper.donor_slot,"generation":view.get("generation",0),"id":w.get("id",""),"donor_id":temper.donor_id})
+				fuse.tooltip_text="Keep this copy's exact remaining cooldown. Permanently consume the named STANDARD duplicate; no scrap refund."
+			else:
+				_text(c,str(temper.get("reason","Requires another STANDARD copy of this weapon.")),12)
+			first_focus=previous_focus # Destructive fusion must never become default activation.
 			var moves:=HBoxContainer.new();c.add_child(moves)
 			var slot:int=int(w.get("slot",0))
 			for step in [-1,1]:
@@ -470,7 +486,7 @@ func _inventory(parent: Node, view: Dictionary, selling := false) -> void:
 				move.size_flags_horizontal=Control.SIZE_EXPAND_FILL
 				move.tooltip_text="Swap with the adjacent owned copy for free. Remaining cooldowns are preserved."
 			first_focus=previous_focus # Reorder is explicit, never the initial/default action.
-			_button(c, "SELL  +%d" % int(w.get("sell_price", 0)), "sell_weapon", {"slot": w.get("slot", 0), "generation": view.get("generation", 0)}, view.get("weapons", []).size() <= 1)
+			_button(c, "SELL  +%d" % int(w.get("sell_price", 0)), "sell_weapon", {"slot": w.get("slot", 0), "generation": view.get("generation", 0)}, view.get("weapons", []).size() <= 1 or str(w.get("temper_label","")).begins_with("INVALID"))
 	_label(parent, "MODULES  %d / %d" % [view.get("items", []).size(), int(view.get("item_slots", 8))], 16)
 	if view.get("items", []).is_empty(): _text(parent, "No modules yet. Buy one to begin your build.")
 	for item in view.get("items", []):

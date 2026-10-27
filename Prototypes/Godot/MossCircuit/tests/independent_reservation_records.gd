@@ -10,7 +10,10 @@ func ck(ok:bool,label:String)->void:
 func _initialize()->void:call_deferred("run")
 func run()->void:
  var c:Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://data/catalog.json"))
- ck(FileAccess.get_sha256("res://data/catalog.json")=="88002883c5f1141e8d9adf2f95418c81b52b397a44feee46946876bbf8a984d7","exact v27 catalog bytes: all IDs/order/prices/weights/links")
+ var catalog_bytes:String=FileAccess.get_file_as_string("res://data/catalog.json")
+ var declared_profile:String='  "weapon_tempering": {\n    "max_tier": 1,\n    "primary_damage_multiplier": 1.6\n  },\n'
+ ck(catalog_bytes.sha256_text()=="317a2d343ba1a005cd44cc1c2ee91e894adf059d77e57c24f7a5ee9439ec56a0","exact reviewed v33 catalog bytes, including only the authored tempering profile")
+ ck(catalog_bytes.count(declared_profile)==1 and catalog_bytes.replace(declared_profile,"").sha256_text()=="88002883c5f1141e8d9adf2f95418c81b52b397a44feee46946876bbf8a984d7","exact v27 bytes after removing ONLY the declared v33 profile: all IDs/order/prices/weights/links")
  ck(c.items.map(func(e):return e.id)==ITEM_IDS,"exact ordered 29 module IDs")
  ck(c.weapons.map(func(e):return e.id)==["rivet_gun","scrap_shotgun","rail_lance","orbit_saw","return_disc","shock_mortar","cryo_sprayer","bankshot_driver"],"exact ordered eight weapon IDs")
  ck(FileAccess.get_sha256("res://data/balance.json")=="180c521a222f737a93498768acccdb98e6bb93f606de7e6719f88261eb41815c","six existing upgrades and economy unchanged")
@@ -59,7 +62,7 @@ func run()->void:
  ck(not g._buy(0,gen) and g.build.coins==coins and g.shop_generation==gen,"removed catalog ID never charges")
  ck(g._view().offers[0].reserved and not g._view().offers[0].can_buy,"removed catalog entry has safe reserved fallback card")
  g.queue_free();await process_frame
- var result:Dictionary={"checks":checks,"failures":failures,"scope":"Strict unchanged v27 catalog and reviewed v32 encounter preservation plus malformed reservation/catalog type guards and actual held-card association. Corruption is controlled diagnostic input, not an observed ordinary-run occurrence."}
+ var result:Dictionary={"checks":checks,"failures":failures,"scope":"Strict v27 catalog-byte preservation after only reviewed v33 profile removal, and reviewed v32 encounter preservation plus malformed reservation/catalog type guards and actual held-card association. Corruption is controlled diagnostic input, not an observed ordinary-run occurrence."}
  var args:=OS.get_cmdline_user_args()
  if not args.is_empty():FileAccess.open(args[0],FileAccess.WRITE).store_string(JSON.stringify(result,"  ")+"\n")
  print(JSON.stringify(result));quit(0 if failures.is_empty() else 1)

@@ -1,0 +1,14 @@
+--- R1/scripts/main.gd
++++ R2/scripts/main.gd
+@@ -836,7 +836,10 @@
+ 	if state != "shop": reason = "Tempering is only available in the shop."
+ 	elif not bullets.is_empty() or not pending_blasts.is_empty(): reason = "Weapon shots are still active; tempering is unavailable."
+ 	elif not WeaponTempering.metadata_error(build).is_empty(): reason = WeaponTempering.metadata_error(build)
+-	elif build.get("weapons") is Array and build.weapons.size() == 1: reason = "Requires another STANDARD copy of this weapon."
++	elif build.get("weapons") is Array and build.weapons.size() == 1:
++		# One retained tempered copy is already final; another purchase cannot re-temper it.
++		var single_id: Variant = build.weapons[0]
++		reason = "TEMPERED / maximum tier. Cannot be fused again." if slot == 0 and single_id is String and WeaponTempering.tier_at(build,0,single_id) == 1 else "Requires another STANDARD copy of this weapon."
+ 	else: reason = WeaponOrder.loadout_error(build,catalog,weapon_clocks)
+ 	var donor: int = -1
+ 	if reason.is_empty():

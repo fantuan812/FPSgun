@@ -24,6 +24,8 @@ func run()->void:
  check(baseline.baseline_manifest_sha256=="6db84a927b27cebfe16770a70036fe6b8979b9e13fa11c039c60d678203fcf25","pinned immutable v21 baseline")
  check(changes.allowed_text_changes.size()==4,"exactly four reviewed copy fields")
  var masked_catalog:Dictionary=catalog.duplicate(true)
+ check(catalog.get("weapon_tempering")==JSON.parse_string('{"max_tier":1,"primary_damage_multiplier":1.6}'),"exact v33 top-level profile separately asserted")
+ masked_catalog.erase("weapon_tempering") # Only the separately asserted addition leaves the old projection.
  var masked_balance:Dictionary=balance.duplicate(true)
  # v23 adds exactly one reviewed weapon/module/pair/link; old definitions remain strict.
  var additions:Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://docs/V23_CATALOG_ADDITIONS.json"))
@@ -99,5 +101,5 @@ func run()->void:
    game.ui.show_inventory(view);await process_frame;await process_frame
    for id in ["power_coil","cryo_sprayer","fracture_coil"]:check(entry(catalog,id).description in labels(game.ui.modal),"shared inventory exact copy "+id)
  game.queue_free();await process_frame
- print(JSON.stringify({"modifier_copy_checks":checks,"failures":failures,"scope":"v22 four-field copy preservation within the old catalog; exact v23/v26 additions separately asserted; native appearance separate"}))
+ print(JSON.stringify({"modifier_copy_checks":checks,"failures":failures,"scope":"v22 four-field copy preservation within the old catalog; exact v23/v26/v33 additions separately asserted; native appearance separate"}))
  quit(0 if failures.is_empty() else 1)

@@ -2,7 +2,7 @@ extends RefCounted
 ## Read-only presentation adapter; all numeric calculations are shared with combat.
 const Rules=preload("res://scripts/rules.gd")
 
-static func describe(weapon:Dictionary,stats:Dictionary,current:bool)->Dictionary:
+static func describe(weapon:Dictionary,stats:Dictionary,current:bool,tier_multiplier:float=1.0)->Dictionary:
 	if weapon.get("kind","")!="weapon":return {}
 	var input:Dictionary=stats if current else {"damage_bonus":0.0,"electric_bonus":0.0,"melee_bonus":0.0,"haste":0.0,"range_bonus":0.0,"extra_pellets":0}
 	var unit:String="per contact"
@@ -28,7 +28,7 @@ static func describe(weapon:Dictionary,stats:Dictionary,current:bool)->Dictionar
 		"field_bankshot":
 			reach_label="Acquisition reach"
 			note+=" One total path across all legs, not a fresh range per bounce. Guide changes direction only."
-	var result:Dictionary={"scope":"CURRENT" if current else "BASE","damage":Rules.weapon_damage(weapon,input),"damage_unit":unit,"interval":Rules.weapon_interval(weapon,input),"reach":Rules.weapon_reach(weapon,input),"reach_label":reach_label,"note":note}
+	var result:Dictionary={"scope":"CURRENT" if current else "BASE","damage":Rules.weapon_damage(weapon,input,tier_multiplier if current else 1.0),"damage_unit":unit,"interval":Rules.weapon_interval(weapon,input),"reach":Rules.weapon_reach(weapon,input),"reach_label":reach_label,"note":note}
 	if weapon.behavior=="spread":result.pellets=Rules.weapon_projectiles(weapon,input)
 	if weapon.behavior=="field_bankshot":result.total_path=result.reach
 	return result

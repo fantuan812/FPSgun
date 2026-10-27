@@ -4,6 +4,7 @@ var starting_loadouts:Dictionary={}
 var selected_loadout_id:String=StartingLoadouts.DEFAULT_ID
 var title_generation:int=0
 const WeaponOrder = preload("res://scripts/gameplay/weapon_order.gd")
+const WeaponTempering = preload("res://scripts/gameplay/weapon_tempering.gd")
 const WeaponReadout=preload("res://scripts/weapon_readout.gd")
 const ModeStatus=preload("res://ui/mode_status.gd")
 var mode_status:CanvasLayer
@@ -761,6 +762,7 @@ func _render_shop() -> void:
 func _buy(index: int, generation: int, replace_slot: int = -1) -> bool:
 	if state != "shop" or generation != shop_generation or index < 0 or index >= shop_offers.size(): return false
 	if shop_offers[index].sold: return false
+	if Rules.catalog_entry(catalog,shop_offers[index].id).get("kind","") == "weapon" and not WeaponTempering.metadata_error(build).is_empty(): return false
 	var held:bool=Reservation.matches(reserved_offer,shop_offers[index].id)
 	if held:
 		var reason:=Reservation.invalid_reason(build,catalog,reserved_offer)
@@ -799,6 +801,7 @@ func _weapon_order_view() -> Dictionary:
 	var reason := ""
 	if state != "shop": reason = "Weapon order can only change in the shop."
 	elif not bullets.is_empty() or not pending_blasts.is_empty(): reason = "Weapon shots are still active; ordering is unavailable."
+	elif not WeaponTempering.metadata_error(build).is_empty(): reason = WeaponTempering.metadata_error(build)
 	else: reason = WeaponOrder.loadout_error(build,catalog,weapon_clocks)
 	return {"available":reason.is_empty(),"reason":reason}
 
@@ -817,6 +820,10 @@ func _move_weapon(slot: Variant, step: Variant, generation: Variant, id: Variant
 	build.weapons[target] = moved_id
 	weapon_clocks[slot] = weapon_clocks[target]
 	weapon_clocks[target] = moved_clock
+	if build.has("weapon_temper"):
+		var moved_tier: int = build.weapon_temper[slot]
+		build.weapon_temper[slot] = build.weapon_temper[target]
+		build.weapon_temper[target] = moved_tier
 	weapon_rig.swap_copies(slot,target)
 	build.revision += 1
 	shop_generation += 1
@@ -824,8 +831,58 @@ func _move_weapon(slot: Variant, step: Variant, generation: Variant, id: Variant
 	_render_shop()
 	return true
 
+func _weapon_temper_view(slot: int) -> Dictionary:
+	var reason: String = ""
+	if state != "shop": reason = "Tempering is only available in the shop."
+	elif not bullets.is_empty() or not pending_blasts.is_empty(): reason = "Weapon shots are still active; tempering is unavailable."
+	elif not WeaponTempering.metadata_error(build).is_empty(): reason = WeaponTempering.metadata_error(build)
+	elif build.get("weapons") is Array and build.weapons.size() == 1:
+		# One retained tempered copy is already final; another purchase cannot re-temper it.
+		var single_id: Variant = build.weapons[0]
+		reason = "TEMPERED / maximum tier. Cannot be fused again." if slot == 0 and single_id is String and WeaponTempering.tier_at(build,0,single_id) == 1 else "Requires another STANDARD copy of this weapon."
+	else: reason = WeaponOrder.loadout_error(build,catalog,weapon_clocks)
+	var donor: int = -1
+	if reason.is_empty():
+		if slot < 0 or slot >= build.weapons.size(): reason = "Weapon copy is unavailable."
+		elif WeaponTempering.tier_at(build,slot,build.weapons[slot]) == 1: reason = "TEMPERED / maximum tier. Cannot be fused again."
+		else:
+			donor = WeaponTempering.donor_slot(build,slot)
+			if donor < 0: reason = "Requires another STANDARD copy of this weapon."
+	return {"available":reason.is_empty(),"reason":reason,"donor_slot":donor}
+
+func _temper_weapon(slot: Variant, donor: Variant, generation: Variant, id: Variant, donor_id: Variant) -> bool:
+	# The first side effect is after all guards, including the deterministic donor.
+	if not slot is int or not donor is int or not generation is int or not id is String or not donor_id is String: return false
+	if state != "shop" or generation != shop_generation: return false
+	var offer: Dictionary = _weapon_temper_view(slot)
+	if not offer.available or donor != offer.donor_slot: return false
+	if donor < 0 or donor >= build.weapons.size() or slot == donor: return false
+	if build.weapons[slot] != id or build.weapons[donor] != donor_id or id != donor_id: return false
+	var projected: Dictionary = WeaponTempering.projected_build(build,slot,donor)
+	if projected.is_empty(): return false
+	weapon_rig.sync_loadout(build.weapons)
+	build.weapons.remove_at(donor)
+	build.weapon_temper = projected.weapon_temper
+	weapon_clocks.remove_at(donor)
+	weapon_rig.consume_copy(donor)
+	# Only weapon-derived stats change. Do not sync effects or clean up hazards.
+	var hp: float = stats.hp
+	var dash: float = stats.get("dash_time",0.0)
+	var cooldown: float = stats.get("dash_cooldown",0.0)
+	stats = Rules.derive(config.player,build,catalog)
+	stats.hp = hp
+	stats.dash_time = dash
+	stats.dash_cooldown = cooldown
+	build.revision += 1
+	shop_generation += 1
+	var final_slot: int = slot - (1 if donor < slot else 0)
+	shop_message = "Retained SLOT %d; consumed SLOT %d. %s is TEMPERED in SLOT %d. No refund." % [slot+1,donor+1,Rules.catalog_entry(catalog,id).name,final_slot+1]
+	_render_shop()
+	return true
+
 func _sell_weapon(slot: int, generation: int) -> bool:
 	if state != "shop" or generation != shop_generation or slot < 0 or slot >= build.weapons.size(): return false
+	if not WeaponTempering.metadata_error(build).is_empty(): return false
 	if build.weapons.size() <= 1:
 		shop_message = "Keep at least one weapon."
 		_render_shop()
@@ -833,6 +890,7 @@ func _sell_weapon(slot: int, generation: int) -> bool:
 	var entry := Rules.catalog_entry(catalog, build.weapons[slot])
 	build.coins += floori(entry.price * stats.resale)
 	build.weapons.remove_at(slot)
+	if build.has("weapon_temper"): build.weapon_temper.remove_at(slot)
 	weapon_clocks.remove_at(slot)
 	build.revision += 1
 	shop_generation += 1
@@ -871,6 +929,7 @@ func _view() -> Dictionary:
 	view.dash_cooldown=stats.get("dash_cooldown",0.0)
 	view.settings=settings.duplicate(true)
 	view.weapon_order=_weapon_order_view()
+	view.weapon_tempering=catalog.weapon_tempering.duplicate(true)
 	view.reserved_offer=Reservation.describe(build,catalog,reserved_offer)
 	view.tag_synergy_status=Rules.tag_synergy_status(build,catalog)
 	if build.items.has("feedback_diode"):
@@ -897,7 +956,17 @@ func _view() -> Dictionary:
 		var entry := Rules.catalog_entry(catalog,build.weapons[i]).duplicate(true)
 		entry.slot = i
 		entry.sell_price = floori(entry.price * stats.resale)
-		entry.weapon_readout = WeaponReadout.describe(entry,stats,true)
+		entry.temper_label = "INVALID TIER DATA / NO BOOST" if not WeaponTempering.metadata_error(build).is_empty() else ("TEMPERED" if WeaponTempering.tier_at(build,i,entry.id) == 1 else "STANDARD")
+		entry.weapon_readout = WeaponReadout.describe(entry,stats,true,WeaponTempering.multiplier(build,catalog,i,entry.id))
+		entry.tempering = _weapon_temper_view(i)
+		if entry.tempering.available:
+			var donor: int = entry.tempering.donor_slot
+			var projected: Dictionary = WeaponTempering.projected_build(build,i,donor)
+			var final_slot: int = i - (1 if donor < i else 0)
+			var projected_stats: Dictionary = Rules.derive(config.player,projected,catalog)
+			entry.tempering.preview = WeaponReadout.describe(entry,projected_stats,true,WeaponTempering.multiplier(projected,catalog,final_slot,entry.id))
+			entry.tempering.donor_id = build.weapons[donor]
+			entry.tempering.multiplier = catalog.weapon_tempering.primary_damage_multiplier
 		view.weapons.append(entry)
 	for id in build.items:
 		var entry := Rules.catalog_entry(catalog,id).duplicate(true)
@@ -921,7 +990,9 @@ func _view() -> Dictionary:
 		entry.reservation_token=view.reserved_offer.get("token",-1) if entry.reserved else -1
 		entry.can_reserve=reserved_offer.is_empty() and Reservation.eligibility_error(build,catalog,offer).is_empty()
 		if entry.reserved and not view.reserved_offer.valid: entry.can_buy=false
-		if entry.kind == "weapon":entry.weapon_readout=WeaponReadout.describe(entry,stats,false)
+		if entry.kind == "weapon":
+			entry.weapon_readout=WeaponReadout.describe(entry,stats,false)
+			if not WeaponTempering.metadata_error(build).is_empty(): entry.can_buy=false
 		if entry.kind == "item":
 			entry.can_buy = entry.can_buy and build.items.get(entry.id,0) < entry.max_stack and (build.items.has(entry.id) or build.items.size() < catalog.item_slots)
 		view.offers.append(entry)
@@ -987,6 +1058,7 @@ func _on_intent(action: String, payload: Dictionary) -> void:
 		"buy": _buy(int(payload.get("index",-1)),int(payload.get("generation",-1)),int(payload.get("replace_slot",-1)))
 		"move_weapon": _move_weapon(payload.get("slot"),payload.get("step"),payload.get("generation"),payload.get("id"))
 		"sell_weapon": _sell_weapon(int(payload.get("slot",-1)),int(payload.get("generation",-1)))
+		"temper_weapon": _temper_weapon(payload.get("slot"),payload.get("donor_slot"),payload.get("generation"),payload.get("id"),payload.get("donor_id"))
 		"sell_item": _sell_item(str(payload.get("id","")),int(payload.get("generation",-1)))
 		"refresh": _refresh_shop(int(payload.get("generation",-1)))
 		"reserve_offer":

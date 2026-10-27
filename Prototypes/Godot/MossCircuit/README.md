@@ -1,3 +1,26 @@
+# MossCircuit v33 — temper duplicates, reclaim a slot
+
+A normal shop can now turn **two identical STANDARD copies into one TEMPERED copy**. Choose the survivor; the button explicitly names the consumed slot. The survivor gets ×1.6 nominal primary damage, but keeps only its own attack timer and one tag contribution. You free one slot and permanently lose the other copy, its cadence and resale value. No scrap is charged or refunded.
+
+The retained copy keeps its exact remaining cooldown, aim and recoil age. Existing shots or pending mortars block fusion rather than being discarded. Owned cards show the tier and current damage; the **AFTER TEMPER** preview includes lost tag thresholds. Three Rails, for example, drop from the three-tag bonus when fused: the survivor is 48 damage, not 57.6. One tempered timer is not two original timers, and fewer hits can weaken proc/chill opportunities.
+
+Only one tier exists per copy. New purchases and replacements are standard; selling a tempered weapon returns one ordinary copy's resale value. Tier follows copy order/sale/replacement, and every new run or retry starts standard. Existing weapon IDs, eight weapon / 29 module records, art, encounters and shop prices/weights are unchanged. There is no new save, account, hero, input binding or tier ladder.
+
+- Author held-source gates: 101 standalone entries + import, all 641 inputs unchanged; 397 authority/view and 290 actual-combat checks; Python safety 3. Initial fixture/oracle failures and two narrowly updated historical catalog-preservation expectations remain in evidence.
+- Independent held-source checks: 903 authority, 626 actual-combat and 872 ownership/view/UI assertions. Actual six-route no-temper transactions and 24-case shared-combat outputs equal pinned v32 outputs byte-for-byte. The new top-level tier profile is separately asserted; removing only its exact literal block restores the old catalog bytes.
+- Source-native review accepted 33 captures (plus one preserved early/stale frame) in both modes at 960×540 / 1280×720, explicit donor/irreversible loss, projected threshold changes, mixed tiers, replacement, inventory, and real mouse plus Tab→Return activation. Five native processes exited 0; root separately accepted four selected stills. R1 final source and exact-pack gates subsequently passed; the finite R1 ordinary route exposed the sole-TEMPERED hint issue described below.
+
+- R1 final source: 104 standalone entries + import passed independently; exact R1 packed resources 847 and packed authority/combat/views 903/626/872 passed. The ordinary Rooms/433 Rivet route earned 66 scrap, bought the duplicate for 24, tempered at unchanged 42, deployed and later inspected the retained tier before normal closure. These ordinary facts belong to R1 PCK `20fc0fb1…`, not the revised artifact.
+- R2 is a narrow truthful-copy correction: a sole TEMPERED weapon now says **“TEMPERED / maximum tier. Cannot be fused again.”** instead of suggesting another STANDARD purchase. No action eligibility or gameplay changes. Final R2 author aggregate105 standalone+import106, focused413+290, and independent scoped source/packed903+626+872+hint528 pass. Exact-pack resources847 and six old transaction routes also pass; all649 frozen inputs stayed exact. Independent QA did not repeat the complete106 aggregate. Original R1 evidence is preserved.
+
+Four final-R2 native hint samples (both modes and sizes) use the editor engine with the exact PCK and an external controlled fixture; they are not a release-ELF ordinary acquisition run. One early/stale Arena frame is preserved/excluded; the settled Rooms frame was recaptured with unchanged fixture/pack. Both native processes exited0. Root independently accepted two corrected-hint stills; only their bounded appearance is claimed. R1 ordinary proof stays tied to its earlier pack.
+
+[Complete PCK prerequisites and manual backup/rollback](../../../Deliveries/MossCircuit/v33/READ_ME_v33.txt) use the unchanged verified executable and original platform licenses. Final R2 PCK is41,396,596bytes, SHA-256 `8ec850cc2fd8b5490ee1f945d56cdb674fa38460191c3eb75be0fdb419ee9aba`. Independent helper10 checks and actual v32→R2→v32 file-only rollback passed, not old runtime execution. [Independent evidence](docs/validation/independent-v33/QA_REPORT.md) is separate from Git publication.
+
+See the [historical contract with portable status header](docs/V33_WEAPON_TEMPERING_CONTRACT.md) and [finite implementation/verification notes](docs/V33_WEAPON_TEMPERING.md). **Local acceptance is not publication.** No GitHub delivery, Windows runtime, audio, physical-controller, full-campaign or comprehensive balance claim is made here. Final delivery remains GitHub-only through the designated publisher; no chat attachment.
+
+---
+
 # MossCircuit v32 — flank the Amber Ram's warning brace
 
 The existing Amber Ram now halves frontal primary weapon damage inside its closed120-degree locked front **only while warning**. Flank it or wait until the charge starts; its side/rear and charge/recovery remain unguarded. An empty pale arc/end ticks communicates2Dfront without replacing the orange charge danger lane. The visual arc is not an extra collider; close range does not grant contact safety. Original warning/charge/cooldown/recovery timings, movement, roster, drops and art are unchanged.

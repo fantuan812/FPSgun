@@ -1,0 +1,36 @@
+{
+  "frozen": true,
+  "source_inputs": 649,
+  "production_inputs": 123,
+  "declared_delta_from_r1": [
+    "MANIFEST.json",
+    "README.md",
+    "docs/V33_WEAPON_TEMPERING.md",
+    "scripts/main.gd",
+    "tests/independent_tempering_hint.gd",
+    "tests/independent_tempering_hint.gd.uid",
+    "tests/test_weapon_tempering.gd"
+  ],
+  "production_changes": [
+    "scripts/main.gd"
+  ],
+  "production_diff_sha256": "e184945769ca0e4673eeae218dc2e2abfb46cc62a009ee50fb0b0fd4c155b298",
+  "manifest_sha256": "fd10aba88f0ef896c06a0485ed8f088e985fc062d0d1b66701de1d0a99783049",
+  "source_map_sha256": "2419d171dd9699e8b111697db327725102a1be9022ccc9565cf75fab4365e7cf",
+  "production_map_sha256": "be2b670b5850af6ee0ae3e90fea198ba4cf6956b8e23a21673994213d28f462e",
+  "r1_source_and_pack_unchanged": true,
+  "contract_unchanged": true,
+  "initial_import_cold": true,
+  "full_runner_import_reuses_cache": true,
+  "hint_script_exact_qa_promotion": true,
+  "hint_checks": 528,
+  "hint_exit": 0,
+  "focused_author_logs": {
+    "authority": 413,
+    "combat": 290,
+    "terminal_session_status": "6165 no longer registered after compaction; complete success logs, no fresh terminal exit inference; full frozen aggregate to establish terminal result"
+  },
+  "ordinary_r1_receipt_sha256": "cd92a6296174cdd659c1e447b3ae26d24e799507e1cce6fd73f67ef1dccef8f8",
+  "r2_final_gates_pending": true,
+  "external_actions": []
+}

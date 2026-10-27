@@ -1,4 +1,5 @@
 extends RefCounted
+const WeaponTempering = preload("res://scripts/gameplay/weapon_tempering.gd")
 ## Pure run rules; configuration owns balance, presentation owns no damage logic.
 # These are the three existing rules, not an open-ended catalog effect engine.
 # One definition supplies authority, activation and the read-only progress view.
@@ -71,11 +72,11 @@ static func catalog_entry(catalog: Dictionary, id: String) -> Dictionary:
 	return {}
 
 # Shared authority/readout calculations. Keep operation order identical to combat.
-static func weapon_damage(weapon: Dictionary, stats: Dictionary) -> float:
+static func weapon_damage(weapon: Dictionary, stats: Dictionary, tier_multiplier: float = 1.0) -> float:
 	var damage: float = weapon.damage * (1.0 + stats.damage_bonus)
 	if "electric" in weapon.tags: damage *= 1.0 + stats.electric_bonus
 	if "melee" in weapon.tags: damage *= 1.0 + stats.melee_bonus
-	return damage
+	return damage if tier_multiplier == 1.0 else damage * tier_multiplier
 
 static func weapon_interval(weapon: Dictionary, stats: Dictionary) -> float:
 	return maxf(.09, weapon.interval / (1.0 + stats.haste))
@@ -116,6 +117,7 @@ static func _positive_number(value: Variant, allow_zero: bool = false) -> bool:
 
 static func validate_catalog(catalog: Dictionary) -> Array:
 	var errors: Array = []
+	errors.append_array(WeaponTempering.validate_profile(catalog.get("weapon_tempering")))
 	for key in ["weapons", "items", "weapon_slots", "item_slots", "starting_coins", "refresh_price", "synergies"]:
 		if not catalog.has(key): errors.append("Missing " + key)
 	if not errors.is_empty(): return errors
@@ -253,6 +255,7 @@ static func derive(base: Dictionary, build: Dictionary, catalog: Dictionary) -> 
 static func transaction(build: Dictionary, catalog: Dictionary, id: String, replace_slot: int = -1) -> String:
 	var entry := catalog_entry(catalog, id)
 	if entry.is_empty(): return "Unknown item"
+	if entry.kind == "weapon" and not WeaponTempering.metadata_error(build).is_empty(): return WeaponTempering.metadata_error(build)
 	if build.coins < entry.price: return "Not enough scrap"
 	if entry.kind == "weapon":
 		var count: int = build.weapons.count(id) - (1 if replace_slot >= 0 and replace_slot < build.weapons.size() and build.weapons[replace_slot] == id else 0)
@@ -265,8 +268,12 @@ static func transaction(build: Dictionary, catalog: Dictionary, id: String, repl
 		if not build.items.has(id) and build.items.size() >= int(catalog.item_slots): return "Item slots full: sell an item"
 	build.coins -= int(entry.price)
 	if entry.kind == "weapon":
-		if replace_slot >= 0: build.weapons[replace_slot] = id
-		else: build.weapons.append(id)
+		if replace_slot >= 0:
+			build.weapons[replace_slot] = id
+			if build.has("weapon_temper"): build.weapon_temper[replace_slot] = 0
+		else:
+			build.weapons.append(id)
+			if build.has("weapon_temper"): build.weapon_temper.append(0)
 	else: build.items[id] = build.items.get(id, 0) + 1
 	build.revision += 1
 	return ""

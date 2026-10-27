@@ -69,6 +69,17 @@ func clear()->void:
 	for sprite in disc_sprites:
 		if is_instance_valid(sprite):sprite.queue_free()
 	disc_sprites.clear();mortar_marks.clear();last_shot.clear();visible_clock=0;generation+=1;queue_redraw()
+func consume_copy(index:int)->void:
+	# Shop tempering already rejected flight state. Delete only the disclosed donor.
+	if index<0 or index>=slots.size():return
+	var donor:Dictionary=slots[index]
+	if is_instance_valid(donor.sprite):donor.sprite.queue_free()
+	slots.remove_at(index)
+	for remaining in range(index,slots.size()):
+		slots[remaining].slot=remaining
+		slots[remaining].pose={}
+	# Keep surviving aim/age, visible clock, generation and historical last_shot.
+	queue_redraw()
 func advance(dt:float)->void:
 	visible_clock+=maxf(0,dt)
 	for slot in slots:slot.age+=maxf(0,dt)

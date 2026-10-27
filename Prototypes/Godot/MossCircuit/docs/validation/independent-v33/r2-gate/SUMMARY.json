@@ -1,0 +1,107 @@
+{
+  "status": "PASS",
+  "steps": [
+    {
+      "name": "reused-cache-import",
+      "exit": 0,
+      "seconds": 11.874,
+      "engine_error": false,
+      "pass": true
+    },
+    {
+      "name": "source-authority",
+      "exit": 0,
+      "seconds": 5.548,
+      "engine_error": false,
+      "pass": true
+    },
+    {
+      "name": "source-combat",
+      "exit": 0,
+      "seconds": 6.016,
+      "engine_error": false,
+      "pass": true
+    },
+    {
+      "name": "source-views",
+      "exit": 0,
+      "seconds": 16.565,
+      "engine_error": false,
+      "pass": true
+    },
+    {
+      "name": "source-hint",
+      "exit": 0,
+      "seconds": 5.905,
+      "engine_error": false,
+      "pass": true
+    },
+    {
+      "name": "old-six-transactions",
+      "exit": 0,
+      "seconds": 19.999,
+      "engine_error": false,
+      "pass": true
+    },
+    {
+      "name": "source-oracle",
+      "exit": 0,
+      "seconds": 5.326,
+      "engine_error": false,
+      "pass": true
+    },
+    {
+      "name": "packed-resources",
+      "exit": 0,
+      "seconds": 5.929,
+      "engine_error": false,
+      "pass": true
+    },
+    {
+      "name": "packed-authority",
+      "exit": 0,
+      "seconds": 6.576,
+      "engine_error": false,
+      "pass": true
+    },
+    {
+      "name": "packed-combat",
+      "exit": 0,
+      "seconds": 5.716,
+      "engine_error": false,
+      "pass": true
+    },
+    {
+      "name": "packed-views",
+      "exit": 0,
+      "seconds": 16.262,
+      "engine_error": false,
+      "pass": true
+    },
+    {
+      "name": "packed-hint",
+      "exit": 0,
+      "seconds": 7.511,
+      "engine_error": false,
+      "pass": true
+    }
+  ],
+  "source_inputs": 649,
+  "input_changes": [],
+  "source_oracle_exact": true,
+  "both_preset_packs_equal": true,
+  "runtime_changed": [
+    "scripts/main.gd"
+  ],
+  "main_outside_reason_branch_exact": true,
+  "import": "Reused-cache revalidation, not fresh cold import",
+  "r1_full_suite": "Separate completed104+import105 carried only across inspected copy-only delta; not a fresh R2 aggregate",
+  "pck": {
+    "bytes": 41396596,
+    "sha256": "8ec850cc2fd8b5490ee1f945d56cdb674fa38460191c3eb75be0fdb419ee9aba"
+  },
+  "elf_sha256": "2c78919325d7f29fa7607287c7c1eeac367ea4c94e7b8b6f5f4c6b20492f73d0",
+  "native_corrected_hint_pending": true,
+  "ordinary_route": "Separate R1 artifact only; no R2 ordinary acquisition claim",
+  "windows_executed": false
+}

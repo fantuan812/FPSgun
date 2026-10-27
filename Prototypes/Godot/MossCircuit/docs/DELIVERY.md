@@ -1,3 +1,19 @@
+# v33 GitHub-only complete resource pack — local verified preparation
+
+Final R2 is the complete41,396,596byte resource PCK, SHA-256 `8ec850cc2fd8b5490ee1f945d56cdb674fa38460191c3eb75be0fdb419ee9aba`. Both preset exports match. Unchanged Linux ELF SHA `2c78919325d7f29fa7607287c7c1eeac367ea4c94e7b8b6f5f4c6b20492f73d0`; Windows EXE retains its previously recorded identity, not rebuilt or run. This PCK is not a standalone game, ZIP or delta patch. First installation needs the existing full platform package and licenses.
+
+From a repository checkout containing the chunks: `python Deliveries/MossCircuit/restore_deliveries.py --version v33 --output recovered-v33`. Read the [exact prerequisites, identity and manual backup instructions](../../../../Deliveries/MossCircuit/v33/READ_ME_v33.txt). Close the game, uniquely back up and verify the actual old PCK, then replace only adjacent MossCircuit.pck. Never substitute a historical hash for the user's actual backup. Do not use release --main-pack. The unchanged helper performs no network/install/execute operation, verifies chunks and whole files, refuses existing outputs and unsafe paths, and is atomic per file, not per batch; hardlink support is required.
+
+All64 earlier LOCAL catalog records are preserved byte-for-byte as records; two new v33 entries use14 chunks plus exact instructions. v32 and v33 are not claimed published; accepted remote remains v31 until the designated writer reconciles its pending action and verifies the reachable final commit. A sparse local tree, local recovery checkpoint or computed Git blob ID is not remote delivery proof. No user attachment or new full platform ZIP is created.
+
+Independent unchanged-helper verification passed10 checks: literal verify/restore, no-overwrite, bad chunk/whole/Git hashes, noncontiguous offsets, unsafe name/source and symlink output. Actual file-only backup/replacement/rollback used accepted local v32 PCK16137dd9…→final R2 PCK8ec850cc…→v32; the unique backup and restored old file matched, and the original ELF stayed exact. No old-runtime execution, Windows test, remote download or Git publication is inferred.
+
+R1 ordinary Rooms433/default-Rivet acquisition→duplicate purchase→fusion→deploy→inventory is pinned to PCK20fc0fb1…, including the real sole-TEMPERED hint defect. Final R2 changes only that existing unavailable-reason branch; it is PCK8ec850cc… with author full106 and scoped independent903/626/872/528/resource847, plus four controlled editor-engine exact-pack native samples. Those samples are not a new release-ELF ordinary route; no independent full106 repeat is claimed. The older R1 independent full105 remains historical. See [finite QA evidence](validation/independent-v33/QA_REPORT.md) and [implementation chronology](V33_WEAPON_TEMPERING.md). No Windows, audio, controller, campaign-completion or comprehensive balance claim.
+
+Source history inherits every older accepted-local-v32 manifest path. Tested source649/production123 remain unchanged except five explicitly declared current-documentation/portable-header/manifest paths in the release overlay. No runtime binaries, templates, generated caches or private profiles are placed in source. Final publication and any metadata-only source-version update remain separate.
+
+---
+
 # v32 GitHub-only complete resource pack
 
 The full resource PCK is41,385,288bytes, SHA-256 `16137dd982d7f0f4a151a3b7a6d6d40fc8d56f97c6e5694f003b457133555353`. Both preset exports match. Unchanged Linux ELF SHA `2c78919325d7f29fa7607287c7c1eeac367ea4c94e7b8b6f5f4c6b20492f73d0`; Windows EXE identity remains published, not rebuilt or run. This is not a standalone game, ZIP or delta patch.
