@@ -1,0 +1,493 @@
+{
+  "status": "AUTHOR_CLOSURE_OF_ALREADY_ACCEPTED_HELD8_NOT_PUBLICATION",
+  "created_utc": "2026-10-27T18:21:06.341669+00:00",
+  "scope": "Exact asset lineage and closure handoff; no new engine/export/native gate, no modification of source935/base926, no new full-suite claim.",
+  "source935": "evidence-workspace/moss-held8-integration-candidate",
+  "source_pin_file": "evidence-workspace/moss-held8-integration-review/source-gate-first/POST_IMPORT_935_PINS.json",
+  "source_pin_file_sha256": "a1a53d4067e03b83cb1a70b6d8045bbcadc70d8af079d1b3fafd79883bb83e87",
+  "source_input_count": 935,
+  "assets": [
+    {
+      "id": "rivet_gun",
+      "formal_master": "art_source/legacy_held_L1_C2/rivet_gun_held.svg",
+      "master_sha256": "e1f668969d4012eb929f827b9fc85b6416a1f52c904a4b935d67d3ed2ca96f20",
+      "semantic_groups": [
+        "canonical-world-placement",
+        "grip-trigger",
+        "vertical-magazine",
+        "receiver",
+        "short-steel-barrel"
+      ],
+      "runtime_derivative": "assets/weapon_mounts/rivet_gun.png",
+      "runtime_png_sha256": "ebe94b043b40db712b9d743041cd907f5723103568fc02b52fa2cb8a1effc7a6",
+      "runtime_import_sha256": "e8e43276832e83bd4edbe46cbeb0307cf5f5a7789ccee53a8aebc16c2af1c7d5",
+      "old_raster_sha256": "38368dbf5fd26d516d151ab1f3222f9e4db0d3c4247aabe9c390cce7a983e32b",
+      "canonical_canvas": [
+        1774,
+        887
+      ],
+      "geometry": {
+        "region": [
+          0,
+          0,
+          1774,
+          887
+        ],
+        "grip": [
+          0.3100338218714769,
+          0.5862457722660653
+        ],
+        "muzzle": [
+          0.7570462232243518,
+          0.3945885005636979
+        ],
+        "projectile_anchor": [
+          0.7570462232243518,
+          0.3945885005636979
+        ],
+        "reference_width": 925,
+        "visible_length": 28
+      },
+      "measured_alpha_bbox": [
+        418,
+        205,
+        925,
+        390
+      ],
+      "source_C2": "evidence-workspace/moss-legacy-svg-L1-C2/svg/rivet_gun_held.svg"
+    },
+    {
+      "id": "scrap_shotgun",
+      "formal_master": "art_source/legacy_held_L1_C2/scrap_shotgun_held.svg",
+      "master_sha256": "50eefc0b72be041be7e2ffa10d2a50b3acb6087e926b2cb2faa80ea2a4fcaecc",
+      "semantic_groups": [
+        "canonical-world-placement",
+        "grip-trigger",
+        "hinged-receiver",
+        "twin-barrels",
+        "ribbed-pump"
+      ],
+      "runtime_derivative": "assets/weapon_mounts/scrap_shotgun.png",
+      "runtime_png_sha256": "6809412347b9cd065f8c98c76840785f712cd4debd3684c0a4bb923f845ea6d8",
+      "runtime_import_sha256": "e21df981b9d375beaf852448e3e6aa670742fb31da9e9c1682290fff44d610c1",
+      "old_raster_sha256": "9584418ae603032c73939237ba78b82472583c632b5c1205ddf40bc8afe6db11",
+      "canonical_canvas": [
+        1774,
+        887
+      ],
+      "geometry": {
+        "region": [
+          0,
+          0,
+          1774,
+          887
+        ],
+        "grip": [
+          0.18602029312288612,
+          0.608793686583991
+        ],
+        "muzzle": [
+          0.9301014656144306,
+          0.43404735062006766
+        ],
+        "projectile_anchor": [
+          0.9301014656144306,
+          0.43404735062006766
+        ],
+        "reference_width": 1546,
+        "visible_length": 34
+      },
+      "measured_alpha_bbox": [
+        104,
+        135,
+        1546,
+        544
+      ],
+      "source_C2": "evidence-workspace/moss-legacy-svg-L1-C2/svg/scrap_shotgun_held.svg"
+    },
+    {
+      "id": "rail_lance",
+      "formal_master": "art_source/legacy_held_L1_C2/rail_lance_held.svg",
+      "master_sha256": "c104c85d6dc26d55dc83c4c69d541a83c211c57261cebc45e97305f72a753657",
+      "semantic_groups": [
+        "canonical-world-placement",
+        "grip-trigger",
+        "stock-receiver",
+        "magnetic-coil",
+        "twin-long-rails"
+      ],
+      "runtime_derivative": "assets/weapon_mounts/rail_lance.png",
+      "runtime_png_sha256": "319b24f94169f2cdd2803bf2d657f89cadfb6cc5bba642680c94ee7c59c57151",
+      "runtime_import_sha256": "cc2adec02e5e18a8b17d883a455bc2a9a3283bb03f63adfea21f8a67afd3dc17",
+      "old_raster_sha256": "85803ef79ae37be35f89f82ffd67215863ec77df594d19897aaf0291258f908d",
+      "canonical_canvas": [
+        1774,
+        887
+      ],
+      "geometry": {
+        "region": [
+          0,
+          0,
+          1774,
+          887
+        ],
+        "grip": [
+          0.15219842164599776,
+          0.580608793686584
+        ],
+        "muzzle": [
+          0.9723788049605412,
+          0.48478015783540024
+        ],
+        "projectile_anchor": [
+          0.9723788049605412,
+          0.48478015783540024
+        ],
+        "reference_width": 1699,
+        "visible_length": 42
+      },
+      "measured_alpha_bbox": [
+        26,
+        256,
+        1699,
+        377
+      ],
+      "source_C2": "evidence-workspace/moss-legacy-svg-L1-C2/svg/rail_lance_held.svg"
+    },
+    {
+      "id": "orbit_saw",
+      "formal_master": "art_source/legacy_held_L1_C2/orbit_saw_held.svg",
+      "master_sha256": "20f75e93e6860b99bac74f650176cb9f17e608e4720d1e46ffc3ba2083773f9f",
+      "semantic_groups": [
+        "canonical-world-placement",
+        "steel-toothed-blade",
+        "central-hub"
+      ],
+      "runtime_derivative": "assets/weapon_mounts/orbit_saw.png",
+      "runtime_png_sha256": "2fd2dff64c31709e41e7d56dbdbc1fd6f80c5bc012bfbf004fdb8026f4208f5d",
+      "runtime_import_sha256": "e6ebe34c2b92fe0ea0e97436fae523236fbfa6137e089ad79a1c851dd34c6635",
+      "old_raster_sha256": "fcbd9230c3b9510cced1a3723c4838104a116df878307799342650114d335e32",
+      "canonical_canvas": [
+        1774,
+        887
+      ],
+      "geometry": {
+        "region": [
+          0,
+          0,
+          1774,
+          887
+        ],
+        "grip": [
+          0.5,
+          0.5016910935738444
+        ],
+        "muzzle": [
+          0.5,
+          0.5016910935738444
+        ],
+        "projectile_anchor": [
+          0.5,
+          0.5016910935738444
+        ],
+        "reference_width": 654,
+        "visible_length": 30
+      },
+      "measured_alpha_bbox": [
+        560,
+        118,
+        654,
+        654
+      ],
+      "source_C2": "evidence-workspace/moss-legacy-svg-L1-C2/svg/orbit_saw_held.svg"
+    },
+    {
+      "id": "return_disc",
+      "formal_master": "art_source/legacy_held_L1_C2/return_disc_held.svg",
+      "master_sha256": "3f3845350107c66cf1db887c6adfeb409763e4a667a7548e063521aabc23dcdc",
+      "semantic_groups": [
+        "canonical-world-placement",
+        "three-crescent-blades",
+        "central-hub"
+      ],
+      "runtime_derivative": "assets/weapon_mounts/return_disc.png",
+      "runtime_png_sha256": "aab1f5edd6b89dab934044dbf881c7eb62dff3d7409a5131f3dc2760212da509",
+      "runtime_import_sha256": "7f6d0a81af78dbc76db76b0aa45667146e2a24ce407754bde9bdc16c698b43e5",
+      "old_raster_sha256": "e779978affb19aaa681c1b7087d936c714f1fd042ea40af2642040041760911e",
+      "canonical_canvas": [
+        1254,
+        1254
+      ],
+      "geometry": {
+        "region": [
+          0,
+          0,
+          1254,
+          1254
+        ],
+        "grip": [
+          0.49760765550239233,
+          0.5334928229665071
+        ],
+        "muzzle": [
+          0.49760765550239233,
+          0.5334928229665071
+        ],
+        "projectile_anchor": [
+          0.49760765550239233,
+          0.5334928229665071
+        ],
+        "reference_width": 1092,
+        "visible_length": 30
+      },
+      "measured_alpha_bbox": [
+        53,
+        103,
+        1102,
+        1053
+      ],
+      "source_C2": "evidence-workspace/moss-legacy-svg-L1-C2/svg/return_disc_held.svg"
+    },
+    {
+      "id": "shock_mortar",
+      "formal_master": "art_source/legacy_held_L1_C2/shock_mortar_held.svg",
+      "master_sha256": "d0f3ffbfb3ca13bec26d3db1fe60eef2fa8bbeb74b5d2fd6df1dc3de306d2d1d",
+      "semantic_groups": [
+        "canonical-world-placement",
+        "stabilized-grip",
+        "short-pressure-chamber",
+        "wide-hollow-muzzle"
+      ],
+      "runtime_derivative": "assets/weapon_mounts/shock_mortar.png",
+      "runtime_png_sha256": "d0dd026fd75b5a6d25f38eafb039166a5f990c49c3eaf9b8403bd0c7131156bf",
+      "runtime_import_sha256": "8cecbbd0ff51f36a706393e7642785b12e72b55c173b21d5197a388ddb8ac289",
+      "old_raster_sha256": "aa8d73cc69ec3329dc6bc709480a0f311957d82345c009fded62859e5bd80877",
+      "canonical_canvas": [
+        1774,
+        887
+      ],
+      "geometry": {
+        "region": [
+          0,
+          0,
+          1774,
+          887
+        ],
+        "grip": [
+          0.3833145434047351,
+          0.6313416009019166
+        ],
+        "muzzle": [
+          0.7243517474633596,
+          0.46223224351747466
+        ],
+        "projectile_anchor": [
+          0.7243517474633596,
+          0.46223224351747466
+        ],
+        "reference_width": 962,
+        "visible_length": 32
+      },
+      "measured_alpha_bbox": [
+        323,
+        208,
+        962,
+        451
+      ],
+      "source_C2": "evidence-workspace/moss-legacy-svg-L1-C2/svg/shock_mortar_held.svg"
+    },
+    {
+      "id": "cryo_sprayer",
+      "formal_master": "art_source/legacy_held_L1_C2/cryo_sprayer_held.svg",
+      "master_sha256": "8740eb7353954eaacfc641b483c64f063bb5eec9e3be69a73b7734dad41c67a6",
+      "semantic_groups": [
+        "canonical-world-placement",
+        "grip-trigger",
+        "cyan-reservoir",
+        "cream-receiver",
+        "cyan-forward-cell",
+        "flared-spray-mouth"
+      ],
+      "runtime_derivative": "assets/weapon_mounts/cryo_sprayer.png",
+      "runtime_png_sha256": "ba558fae446703f4ed84c11755982b8a345a853b5346c044cf14990ffab02b0b",
+      "runtime_import_sha256": "c17072f31f9faabfd56458fb816edcf70dfb6b928735632f1a79df975229587d",
+      "old_raster_sha256": "f9723cac96652639c4d6e0e6750ce9fca58fe87c187ca4bb6736c58ccf3996fd",
+      "canonical_canvas": [
+        1774,
+        887
+      ],
+      "geometry": {
+        "region": [
+          0,
+          0,
+          1774,
+          887
+        ],
+        "grip": [
+          0.2254791431792559,
+          0.6538895152198422
+        ],
+        "muzzle": [
+          0.8906426155580609,
+          0.5264937993235626
+        ],
+        "projectile_anchor": [
+          0.8906426155580609,
+          0.5264937993235626
+        ],
+        "reference_width": 1403,
+        "visible_length": 32
+      },
+      "measured_alpha_bbox": [
+        177,
+        96,
+        1403,
+        605
+      ],
+      "source_C2": "evidence-workspace/moss-legacy-svg-L1-C2/svg/cryo_sprayer_held.svg"
+    },
+    {
+      "id": "bankshot_driver",
+      "formal_master": "art_source/legacy_held_L1_C2/bankshot_driver_held.svg",
+      "master_sha256": "122866a252acbccb7b470864c4d6dce3681595ba5bb6ec42b22fa5d496dc9329",
+      "semantic_groups": [
+        "canonical-world-placement",
+        "grip-trigger",
+        "rotary-receiver",
+        "gold-pronged-bounce-muzzle"
+      ],
+      "runtime_derivative": "assets/weapon_mounts/bankshot_driver.png",
+      "runtime_png_sha256": "403188bb25e486fc4d1ee7681483f882e2a542d77432372a245a556100cd28f2",
+      "runtime_import_sha256": "d121cb2b63df61763e1045f24759c80523eaebba0cfd74b60a82dd9389c82217",
+      "old_raster_sha256": "0e3e8b49a0d4bcca6b7e83a2c5f29e0effa9581ab33df8eb6817eb4f6e966c0c",
+      "canonical_canvas": [
+        1774,
+        887
+      ],
+      "geometry": {
+        "region": [
+          0,
+          0,
+          1774,
+          887
+        ],
+        "grip": [
+          0.18038331454340473,
+          0.6877113866967306
+        ],
+        "muzzle": [
+          0.9239007891770011,
+          0.47350620067643745
+        ],
+        "projectile_anchor": [
+          0.9239007891770011,
+          0.47350620067643745
+        ],
+        "reference_width": 1505,
+        "visible_length": 32
+      },
+      "measured_alpha_bbox": [
+        134,
+        157,
+        1505,
+        584
+      ],
+      "source_C2": "evidence-workspace/moss-legacy-svg-L1-C2/svg/bankshot_driver_held.svg"
+    }
+  ],
+  "authority": "Semantic layered SVG masters authored as geometry, never embedded raster/pixel autotrace. AI/legacy raster is reference-only. PNG is deterministic Inkscape1.4 antialias0 derivative. Original L1 superseded by C2; retained for history only.",
+  "accepted_contract": {
+    "geometry": "Six fields and old canvas exact; reference_width is authoritative calibration, not recomputed alpha width.",
+    "rail_bankshot": "Approximately1worldpixel open-muzzle alpha gap retained and disclosed; not exact occupied-pixel muzzle claim.",
+    "saw_disc": "Saw center/radial actual fire, not left-directed projectile; Disc held sprite actual hidden on fire.",
+    "A2": "TetherEmitter and SeismicDrum unchanged; held-only visual scope.",
+    "source_actual_pose": {
+      "checks": 23090,
+      "poses": 4608,
+      "ranges": 13824
+    },
+    "actual_fire": {
+      "checks": 1089,
+      "paired_cases": 136
+    },
+    "native": {
+      "checks": 239,
+      "held_scenes": 20,
+      "fire_scenes": 16,
+      "original_images": 36,
+      "author_originals_reviewed": 36,
+      "independent_representative_originals": 14,
+      "peer_raw_audit_checks": 474
+    },
+    "PCK": {
+      "sha256": "8a74dd872a22da4c2b15e1799207e885a9c604bbf58adc1f2fdb37196a23bffa",
+      "bytes": 39268876
+    },
+    "original_failure": "Original9phase final strict audio FAIL retained, with exact4.766303s queue_free→await diagnosis. Not rewritten to original9PASS.",
+    "fixture_correction": "External fixture-only pre-prepare one frame flushes historical queued nodes, with current gameplay/RNG/vector unchanged guards; ORIGINAL prepare, current free, await, helper retained. Source and same-packed strict discard0 PASS; shared helper and production unchanged."
+  },
+  "retirement_ledger": {
+    "current_formal_legacy": 55,
+    "held8_pending_retirements": 8,
+    "after_remote_held8_acceptance_only": 47,
+    "decrement_now": 0,
+    "condition": "Source+index exact remote readback and formal publisher acceptance, not local visual acceptance or upload acknowledgments alone.",
+    "L4_future_after_held8_if_accepted": 42,
+    "L3_L4_L5_total_if_all_accepted_after_held8": 40,
+    "L6_two_sheets_if_later_accepted": 38
+  },
+  "evidence": [
+    {
+      "path": "evidence-workspace/moss-held8-integration-review/ASSEMBLY_RESULT.json",
+      "sha256": "0a260c2eb376b82f296d2908a78376839cdfe82141fbb5569a8245fa6dd4564e",
+      "bytes": 2409
+    },
+    {
+      "path": "evidence-workspace/moss-held8-integration-review/SOURCE_PLAN.json",
+      "sha256": "5c4628a8a4c862887eaaa5c1b675ad5a8c8c5c75e63f3e2e17ed5a8520e88bc2",
+      "bytes": 4089
+    },
+    {
+      "path": "evidence-workspace/moss-held8-integration-review/source-gate-first/RESULT.json",
+      "sha256": "845c937c8803663c62ce72322e2ad6518eb320fffac3e93d27ae7008710ecd10",
+      "bytes": 4014
+    },
+    {
+      "path": "evidence-workspace/moss-held8-integration-review/pack-gate-first/RESULT.json",
+      "sha256": "01139b331ac9610e58705c8ac11d99f0ab859089b0898ca5292eef7aaa0d1f08",
+      "bytes": 10652
+    },
+    {
+      "path": "evidence-workspace/moss-held8-integration-review/pre-capture-r2/QA_RAW_REVIEW.json",
+      "sha256": "29b3f0a6a819b1acec598080135b4cf7581d48f30b83d1ef51b00e68b0264fe1",
+      "bytes": 3089
+    },
+    {
+      "path": "evidence-workspace/moss-held8-integration-review/native-first/RESULT.json",
+      "sha256": "702821cb13d921335e656f6a1a30293dc6a7c8de3b0cdf1e57e2e2f1ea3198cf",
+      "bytes": 792
+    },
+    {
+      "path": "evidence-workspace/moss-held8-integration-review/native-visual-review/AUTHOR_VISUAL_REVIEW.json",
+      "sha256": "5c72a256bc7c7a9d14273c819200c50a9c808cac2579ec65fcc7590075d03f32",
+      "bytes": 3034
+    },
+    {
+      "path": "evidence-workspace/moss-legacy-svg-L1-C2/migration-map.draft.json",
+      "sha256": "3982d573a121429d050e89c082d4ce7e4428455713b2f03b1de83eb1222e695f",
+      "bytes": 26007
+    },
+    {
+      "path": "evidence-workspace/moss-legacy-svg-L1-C2/placement-parameters.json",
+      "sha256": "7b5d6353d94f27992a69e4c200692ae2d11c5e85dbf75071864054c47897e107",
+      "bytes": 9748
+    },
+    {
+      "path": "evidence-workspace/moss-legacy-svg-L1-C2/fresh-export-receipt.json",
+      "sha256": "1f614bae8251020abcc3b6f8939652ecb797d4deeacbaa6122972de641ef912e",
+      "bytes": 301
+    }
+  ],
+  "public_prose_correction": "V40_HELD8.md old phrase moves capture preparation to final disposal is stale; use fixture_correction above.",
+  "browser_interaction": "NOT_VERIFIED; file protocol refusal honored, no browser bypass."
+}

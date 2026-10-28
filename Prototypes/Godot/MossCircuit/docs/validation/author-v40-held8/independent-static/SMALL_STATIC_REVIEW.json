@@ -1,0 +1,33 @@
+{
+  "status": "SMALL_STATIC_CHECKS_PASS_NOT_CANDIDATE_ACCEPTANCE",
+  "assembly_result_sha256": "0a260c2eb376b82f296d2908a78376839cdfe82141fbb5569a8245fa6dd4564e",
+  "candidate_map_sha256": "df13d3f2225ce0844c164ec60b1f7459db1641bdb65826da9dcc749ce17d1d4d",
+  "checks": [
+    "8 XML sources exact manifestSHA, noimage/text/foreignObject/script",
+    "6 canonical geometry values exactly matchB926",
+    "nonselected A2 records unchanged",
+    "Saw/Disc grip=muzzle hub",
+    "realRig usesreference_width, Disc calibration1092 remains distinct from newalpha1102",
+    "4runtime/catalog small files byteidentical"
+  ],
+  "visible_lengths": [
+    28,
+    34,
+    42,
+    30,
+    30,
+    32,
+    32,
+    32
+  ],
+  "not_performed": [
+    "whole927 bytehash",
+    "newPNG alpha/pixelreadback",
+    "cold8sidecar regeneration",
+    "new integrated geometry",
+    "actualPCK",
+    "native"
+  ],
+  "old21504_not_inherited": true,
+  "B926_not_modified": true
+}

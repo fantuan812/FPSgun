@@ -1,0 +1,35 @@
+{
+  "status": "unexecuted draft; requires independent static review and QA scope/lease after B work",
+  "tests": {
+    "actual_geometry.gd": "a3bf3260f612da6457721235b5f6a52d9572b50997d8b6e21fc72f4885bf1a17",
+    "actual_fire.gd": "da484a4278f32dd1015edafdaecc8424f4d27983e895dc356a40d9d9cae3d2e3",
+    "support/audio_teardown.gd": "9e9676e34296cb55d4560b1169c5954a82508f70e9051fcc942d1bb6839c23bd"
+  },
+  "actual_geometry": {
+    "checks": 23090,
+    "poses": 4608,
+    "range_comparisons": 13824,
+    "actual_path": "main._launch_pose \u2192 WeaponPresentation.pose \u2192 ActorDirector.socket_world + WeaponRig",
+    "limited_negative_center": "mathematical pose boundary only, not an actual valid arena fire position"
+  },
+  "actual_fire": {
+    "checks": 1089,
+    "paired_cases": 136,
+    "regular_cases": 128,
+    "bankshot_coincident_cases": 8,
+    "actual_fire_invocations": 272,
+    "reset": "separate full same-seed reset for golden/current sides; no continuous-fire shared animationstate"
+  },
+  "cold_expected_new_files": [
+    "assets/weapon_mounts/rivet_gun.png.import",
+    "assets/weapon_mounts/scrap_shotgun.png.import",
+    "assets/weapon_mounts/rail_lance.png.import",
+    "assets/weapon_mounts/orbit_saw.png.import",
+    "assets/weapon_mounts/return_disc.png.import",
+    "assets/weapon_mounts/shock_mortar.png.import",
+    "assets/weapon_mounts/cryo_sprayer.png.import",
+    "assets/weapon_mounts/bankshot_driver.png.import"
+  ],
+  "baseline_release_state": "B+atlas currently unfinalized; reconcile after B release, no publication permitted by this draft",
+  "no_engine_execution": true
+}

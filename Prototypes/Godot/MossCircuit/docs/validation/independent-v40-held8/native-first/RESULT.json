@@ -1,0 +1,25 @@
+{
+  "pass": true,
+  "native_exit": 0,
+  "supervisor_exit": 0,
+  "termination": "EXIT",
+  "elapsed_seconds": 12.674908540997421,
+  "errors": [],
+  "strict_findings": [],
+  "allowed_warning_blocks": [
+    {
+      "line": 2,
+      "text": "WARNING: Could not set V-Sync mode, as changing V-Sync mode is not supported by the graphics driver.",
+      "at": "     at: set_use_vsync (platform/linuxbsd/x11/gl_manager_x11.cpp:364)"
+    }
+  ],
+  "warning_policy": "Exact approved V-Sync block at most once; not a zero-warning claim",
+  "source935_unchanged": true,
+  "base926_unchanged": true,
+  "pins_unchanged": true,
+  "plan_unchanged": true,
+  "pck_unchanged": true,
+  "image_count": 36,
+  "checks": 239,
+  "scope": "finite native runtime evidence; human original-image review remains required"
+}

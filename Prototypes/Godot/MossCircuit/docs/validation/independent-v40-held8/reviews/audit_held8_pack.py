@@ -1,0 +1,62 @@
+from pathlib import Path
+import json,hashlib,struct,math,re
+B=Path('workspace/shared');Q=B/'moss-held8-integration-review';P=Q/'pack-prep';J=lambda p:json.loads(Path(p).read_text());H=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest();plan=J(P/'PLAN.json');O=Path(plan['output']);checks=[]
+def ck(v,s):
+ checks.append(s)
+ if not v:raise AssertionError(s)
+def inv(root):
+ root=Path(root);return {str(f.relative_to(root)):H(f) for f in root.rglob('*') if f.is_file() and '.godot' not in f.relative_to(root).parts}
+expected=J(plan['source_map']);base=J(Q/'BASE_926_PINS.json');review=J(plan['source_raw_independent_receipt']);ck(review['review_pass'] and review['checks']==220 and review['source935_and_base926_unchanged'],'source220 precondition')
+for f,h in plan['pins'].items():ck(H(f)==h,'pin '+f)
+ck(inv(plan['source'])==expected and len(expected)==935,'live935');ck(inv(plan['base'])==base and len(base)==926,'base926');result=J(O/'RESULT.json');ck(result['pass'] is False and result['completed']==9 and len(result['phases'])==9,'nine terminal routes')
+for phase,row in zip(plan['phases'],result['phases']):
+ name=phase['name'];text=(O/(name+'.log')).read_text();ck(row['phase']==name and row['command']==phase['command'],'command '+name);ck(row['pass']==(name!='actual_fire') and row['process_exit']==row['native_exit']==row['supervisor_exit']==0 and row['termination']=='EXIT' and not row['timeout'] and not row['launch_error'] and not row['guards_error'] and (not row['strict_log_findings'] if name!='actual_fire' else row['strict_log_findings']==[{'line':4,'text':'ERROR: Test final-owner audio teardown did not complete within its bounded contract'}]),'terminal '+name)
+ ck((O/(name+'.exit')).read_text().strip()=='0' and (O/(name+'.supervisor.exit')).read_text().strip()=='0','exitfiles '+name);ck(row['budget_ok'] and row['group_elapsed_seconds']<=(180 if name in ['actual_geometry','actual_fire'] else 240),'groupbudget '+name)
+ ck(not any(t in text for t in ['SCRIPT ERROR','Parse Error','WARNING:','ObjectDB instances leaked','resources still in use']) and (text.count('ERROR: Test final-owner audio teardown did not complete within its bounded contract')==1 if name=='actual_fire' else 'ERROR:' not in text),'raw strict failure preserved '+name)
+ ck(J(O/(name+'-before.json'))==expected==J(O/(name+'-after.json')) and row['source935_unchanged'] and row['base926_unchanged'] and row['test_pins_unchanged'] and row['plan_unchanged'],'afterguards '+name)
+ if name=='python-safety':ck(re.search(r'^Ran 3 tests in [0-9.]+s$',text,re.M) is not None and re.search(r'^OK$',text,re.M) is not None,'python3tests')
+ if name in ['actual_geometry','actual_fire']:
+  reports=[json.loads(x) for x in text.splitlines() if x.startswith('{')];helpers=[json.loads(x.split(' ',1)[1]) for x in text.splitlines() if x.startswith('TEST_AUDIO_TEARDOWN ')];d=reports[0] if name=='actual_fire' and len(reports)==1 else J(O/(name+'-report.json'));ck(reports==[d] and d['failures']==[],'rawheldreport');ck(len(helpers)==1 and (name=='actual_fire' or helpers[0]==J(O/(name+'-teardown.json'))),'rawheldhelper');h=helpers[0];rate=h['mix_rate'];ck(type(rate) in (int,float) and math.isfinite(rate) and rate>0,'strictmix');req=math.ceil(rate*.15);ck(h['driver']=='Dummy' and h['complete']==(name!='actual_fire') and h['capture_removed'] and not h['prepare_errors'] and h['requested_owner_count']==h['tracked_owner_count']==h['game_owner_count']==1 and h['tracked_stream_count']>0,'helperowners')
+  for o in h['observations']:ck(o['invalid']==o['prepare_errors']==0 and o['discarded']==(16896 if name=='actual_fire' else 0) and o['required_frames']==req and o['owner_count']==o['game_owner_count']==1,'helper everyobs')
+  z=h['observations'][-1];ck(z['owners_released'] and z['streams_released'] and z['new_pushed']>=req and z['silent_frames']>=req and 150000<=z['elapsed_us'] and (z['elapsed_us']<=1000000 if name!='actual_fire' else z['elapsed_us']>1000000),'freshsilence or preserved bounded failure')
+  if name=='actual_geometry':ck(d['checks']==23090 and d['poses']==4608 and d['ranges']==13824,'geometryfinitecounts')
+  else:ck(d['checks']==1089 and len(d['records'])==136 and d['records']==J(Q/'source-gate-first/actual_fire-report.json')['records'],'full136sourcevector')
+
+R=Q/'pre-capture-r2';rp=J(R/'PLAN.json');rr=J(R/'raw-first/RESULT.json')
+ck(H(R/'PLAN.json')=='0e4bc97b22393ea9906521a906a7c5c858ef18efb612749ae42ded47dbdc12ea','fixed repair plan')
+for f,h in rp['pins'].items():ck(H(f)==h,'repair pin '+f)
+ck(rr['pass'] is True and rr['pins_and_sources_unchanged'] is True and rr['errors']==[] and len(rr['steps'])==2,'repair actual two routes')
+for route,row in zip(rp['routes'],rr['steps']):
+ d=R/'raw-first'/route['name'];ck(J(d/'COMMAND.json')==route['command'] and row['name']==route['name'] and row['pass'] is True and row['native_exit']==0 and row['timeout'] is False and row['seconds']<=180 and row['errors']==[],'repair terminal')
+ ck((d/'native.exit').read_text().strip()=='0' and not (d/'stderr.raw').read_bytes(),'repair exit clean')
+ text=(d/'stdout.raw').read_text();ck(not any(t in text for t in ['ERROR','WARNING:','ObjectDB instances leaked','resources still in use']),'repair strict raw')
+ rs=[json.loads(x) for x in text.splitlines() if x.startswith('{')];gs=[json.loads(x.split(' ',1)[1]) for x in text.splitlines() if x.startswith('HELD_PRE_CAPTURE_GUARD ')];hs=[json.loads(x.split(' ',1)[1]) for x in text.splitlines() if x.startswith('TEST_AUDIO_TEARDOWN ')]
+ ck(len(rs)==len(gs)==len(hs)==1,'repair marker cardinality');r,g,h=rs[0],gs[0],hs[0]
+ ck(r['checks']==1089 and r['failures']==[] and r['records']==J(Q/'source-gate-first/actual_fire-report.json')['records'] and len(r['records'])==136,'repair original136')
+ ck(g==row['detail']['guard'] and set(g)==set(rp['guard_keys']) and all(g[k] is True for k in ['pass','before_current_owner_live_main_disabled','after_current_owner_live_main_disabled','capture_not_constructed_yet']) and g['authority_before']==g['authority_after'] and g['records_before']==g['records_after'] and g['records_count']==136,'repair frame preserves selected authority')
+ rate=h['mix_rate'];ck(type(rate) in (int,float) and math.isfinite(rate) and rate>0,'repair finite mix');req=math.ceil(rate*.15)
+ ck(h==row['detail']['helper'] and h['complete'] is True and h['capture_removed'] is True and h['prepare_errors']==[] and h['driver']=='Dummy' and h['requested_owner_count']==h['tracked_owner_count']==h['game_owner_count']==1,'repair strict owner')
+ for x in h['observations']:ck(x['discarded']==x['invalid']==x['prepare_errors']==0 and x['required_frames']==req and x['owner_count']==x['game_owner_count']==1,'repair everyobs')
+ z=h['observations'][-1];ck(z['owners_released'] is True and z['streams_released'] is True and z['new_pushed']>=req and z['silent_frames']>=req and 150000<=z['elapsed_us']<=1000000,'repair fresh final')
+diag=J(Q/'teardown-diagnostic/raw-first/RESULT.json');ck(diag['diagnostic_completed'] is True and diag['target_pass'] is False and diag['pins_and_sources_unchanged'] is True,'diagnostic retained failure')
+
+finger=J(O/'source-imported-fingerprints.json');resource=J(O/'packed-resource-report.json');ck(resource['checks']==998 and resource['failures']==[] and [resource[k] for k in ['exact_files','images','actions','action_frames']]==[84,72,28,308],'generic998');ck([len(finger[k]) for k in ['exact_files','images','actions']]==[84,72,28],'fingerprintcounts')
+S=Path(plan['source'])
+for n,h in finger['exact_files'].items():ck(H(S/n)==h,'source exact '+n)
+for n,m in finger['images'].items():ck(H(S/n)==m['raw_png_sha256'] and H(S/(n+'.import'))==m['import_settings_sha256'],'source image '+n)
+p=(O/'linux/MossCircuit.pck').read_bytes();ck(p==(O/'windows/MossCircuit.pck').read_bytes() and hashlib.sha256(p).hexdigest()==result['pck_sha256'],'both actualPCK');ck(p[:4]==b'GDPC' and struct.unpack_from('<I',p,4)[0]==3,'PCKv3');flags,offset0,index=struct.unpack_from('<IQQ',p,20);ck(flags==2 and index<len(p),'packheader');count=struct.unpack_from('<I',p,index)[0];pos=index+4;files={};payloads={}
+for i in range(count):
+ n=struct.unpack_from('<I',p,pos)[0];pos+=4;ck(n>0 and n%4==0,'pathlength');name=p[pos:pos+n].rstrip(b'\0').decode();pos+=n;off,size=struct.unpack_from('<QQ',p,pos);pos+=16;md5=p[pos:pos+16];pos+=16;ff=struct.unpack_from('<I',p,pos)[0];pos+=4;ck(ff==0 and name not in files and not name.startswith('/') and '\\' not in name and all(x not in ['', '.', '..'] for x in name.split('/')) and offset0+off+size<=index,'path/payloadbounds');data=p[offset0+off:offset0+off+size];ck(hashlib.md5(data).digest()==md5,'MD5 '+name);files[name]={'bytes':size,'sha256':hashlib.sha256(data).hexdigest(),'flags':ff};payloads[name]=data
+inventory=J(O/'PCK_INVENTORY.json');ck(count==273 and inventory['files']==files and inventory['pass'] and not inventory['errors'],'273directoryreport')
+old=J(P/'OLD_PAYLOAD_IDENTITIES.json');forbidden=set(old['other_reference_payload_hashes_forbidden'])
+for marker in old['privacy_markers']:ck(marker.encode() not in p,'wholeprivacy '+marker)
+for row in old['selected8']:
+ rel=row['runtime_path_kept'].removeprefix('res://');meta=(S/(rel+'.import')).read_bytes();ck(payloads[rel+'.import']==meta.split(b'[deps]')[0].rstrip(b'\n')+b'\n\0','new exactremap '+rel);ctex=re.search(rb'path="res://([^"]+)"',meta).group(1).decode();ck(ctex in files,'new ctex resolves '+rel);ck(H(S/rel)==row['new_raw_PNG_sha256_expected'],'new rawPNG '+rel);forbidden|={row['old_ctex_payload_sha256_forbidden'],row['old_raw_PNG_sha256_forbidden']}
+ for uid in row['old_UID_reference_to_check']:ck(uid.encode() not in p,'old UID absent')
+for n,m in files.items():ck(m['sha256'] not in forbidden and not n.startswith(('art_source/legacy_held_L1_C2/','reference_only/','validation_inputs/','art_source/icons/')) and 'equipment_atlas_editable.svg' not in n and 'equipment_atlas_v2' not in n,'stale/reference/source absent '+n)
+ck(b'equipment_atlas_v2' not in p and b'uid://chrklnkaqwl6m' not in p,'equipmentmigration retained')
+for n,h in finger['exact_files'].items():ck(files[n]['sha256']==h,'packed exact '+n)
+ck(inv(plan['source'])==expected and inv(plan['base'])==base,'finalmaps')
+for f,h in plan['pins'].items():ck(H(f)==h,'finalpin '+f)
+for f,h in rp['pins'].items():ck(H(f)==h,'repair finalpin '+f)
+out={'review_pass':True,'checks':len(checks),'pck_sha256':hashlib.sha256(p).hexdigest(),'pck_bytes':len(p),'actual_records':count,'original_commands':9,'original_first8_pass':True,'original_ninth_strict_failure_retained':True,'repair_commands':2,'repair_result_sha256':H(R/'raw-first/RESULT.json'),'source935_base926_allpins_exact':True,'scope':'Honest combination: original resource7+packedgeometry PASS and ninth fire strictFAIL retained; one telemetry diagnosis plus fixture-only pre-capture repair source/packed each180 PASS, all273members/MD5/path/old8payload+UID exclusion/new8exactremaps; runtime same paths intentionally retained.998/84/72/28/308 and original136sourcevector exact. No native visuals, old21504 reuse, B22repeat or publication acceptance.','result_sha256':H(O/'RESULT.json'),'checks_detail':checks};f=B/'moss-v39-prep/HELD8_PACK_RAW_REVIEW.json';f.write_text(json.dumps(out,indent=2)+'\n');print(json.dumps({'pass':True,'checks':len(checks),'pck_sha256':out['pck_sha256'],'sha256':H(f)}))

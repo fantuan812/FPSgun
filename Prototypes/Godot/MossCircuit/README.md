@@ -1,3 +1,21 @@
+# v40-held8 — editable held-weapon migration
+
+Eight existing held weapon sprites are now derived from semantic, editable SVG sources: Rivet Gun, Scrap Shotgun, Rail Lance, Orbit Saw, Return Disc, Shock Mortar, Cryo Sprayer, and Bankshot Driver. This is an asset-only continuation of v40. The accepted equipment16 inventory atlas and all v40 B gameplay remain intact; Tether Emitter and Seismic Drum held resources remain unchanged.
+
+The six existing geometry/calibration fields are preserved exactly, including visible lengths 28/34/42/30/30/32/32/32. Saw and Disc retain grip=muzzle hub geometry. Reference calibration is not silently recomputed from new alpha bounds (the Disc alpha width is 1102 while its retained calibration width is 1092).
+
+Evidence is a transparent combination, not a newly repeated full gameplay suite: cold import adds exactly eight replacement import sidecars; source socket/range checks 23090 and real-fire checks 1089 pass. The original nine-phase pack gate retains its final fire-helper FAIL. Exact telemetry locates cumulative capture discard in the 4.766303-second original queue_free → awaited process-frame interval, not before capture preparation; fresh-silence and owner release were already valid. The minimal external-fixture correction adds one process frame before capture construction to flush historical queued nodes. Its current-owner, selected gameplay/RNG authority and 136-record vector guards remain unchanged; the original prepare → current queue_free → await → strict shared-helper sequence is retained. Separate source/packed 1089-check routes then pass on the same PCK with zero discarded capture frames and unchanged production. The first eight original pack phases remain separately accepted; the original nine-phase result is not relabeled all-green.
+
+Actual native observation passes 239 checks over 20 held scenes and 36 saved viewports: 16 old-weapon fire scenes and four A2 held-only scenes. Saved viewports are 960×540, with the actual OS window 1180×812. The existing exact VSync warning is retained. Orbit Saw fire is radial/player-centered and its existing presentation uses a fixed rightward target; left-held coverage is not a claim of left-fire directional symmetry. Dummy-driver teardown proves bounded internal release/fresh silence, not physical speaker output. Image identity/raw checks and human visual review are separate evidence. The asset author directly reviewed all 36 originals; independent QA directly reviewed 14 representative originals covering all 10 IDs, not all 36. An approximately one-world-pixel exit gap remains a numerical geometry limit; still images do not prove continuous alignment at every angle.
+
+Runtime PCK: 39,268,876 bytes; SHA-256 `8a74dd872a22da4c2b15e1799207e885a9c604bbf58adc1f2fdb37196a23bffa`. No gameplay/data/UI/test authority changes, new B full-suite run, new ordinary run, Windows execution, or CI pass is claimed. The original v40 gameplay and ordinary evidence remains historical, with its original limits. Other legacy raster resources remain pending migration; eight held assets are not a whole-art migration claim.
+
+Local delivery verification passed all ten controls (two positive, eight exact negative rejection reasons), with 82 historical catalog rows preserved, 84 total, 14 chunks / 17 payload paths, and an actual v40 → held8 → v40 backup/replacement/rollback using the unchanged ELF. The original pre-target CLI-plan transcription failure is retained; no target command had started. Actual Git source/index publication remains separately pending.
+
+---
+
+## Accepted v40 history (verbatim)
+
 # MossCircuit v40 — control and collection builds
 
 The combined 926-file candidate and its exact exported PCK have completed the bounded source, packed and controlled-native evidence below. Ordinary play is limited to one first-shop observation. Delivery-helper checks passed; Git publication remains a separate pending gate.

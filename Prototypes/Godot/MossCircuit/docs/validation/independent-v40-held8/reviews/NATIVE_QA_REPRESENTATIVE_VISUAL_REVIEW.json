@@ -1,0 +1,72 @@
+{
+  "actual_original_viewports_directly_reviewed": [
+    {
+      "name": "rail_lance_right_held.png",
+      "sha256": "4d1f5c74b678af6e88ade73b997ed47d4cb26e7099bf0214d157dfe2e934b6a1"
+    },
+    {
+      "name": "rail_lance_right_fire.png",
+      "sha256": "bd97e17a93ed176359a7629401bc1ffe083a94b817ebed0c4505f37edf11bbd7"
+    },
+    {
+      "name": "bankshot_driver_left_held.png",
+      "sha256": "754c93413c0a5a36c7e39fa25ef6bcb4f4169d201afe18651f3f480c71159133"
+    },
+    {
+      "name": "bankshot_driver_left_fire.png",
+      "sha256": "f350dc305b4d305ec9727f5aefb54f00a493baa88647f5bd93f8a636513079a9"
+    },
+    {
+      "name": "orbit_saw_right_held.png",
+      "sha256": "fe4aaa4c2c971f8428fc80749145387e6be8fe4c6420b42c6891c3e0ba5d0f85"
+    },
+    {
+      "name": "orbit_saw_right_fire.png",
+      "sha256": "4b8253d44a1ee0c7fbfe9fb358463a61ea42b7273e1c7257a4c2c6af1e18ec40"
+    },
+    {
+      "name": "return_disc_left_held.png",
+      "sha256": "a3d8b39f9a091b58dcc686b78e6acdfe634a8b1b7dfff8374918916dd969f3ec"
+    },
+    {
+      "name": "return_disc_left_fire.png",
+      "sha256": "8976fda45e08aeda4e4c2b6cb70ae6667a2adae70d67183870c5f5e956f73a5c"
+    },
+    {
+      "name": "tether_emitter_right_held.png",
+      "sha256": "fd98ac50f9306d3d9acc89f3ee1199902e89da3ac85a671205683ec921ebe18a"
+    },
+    {
+      "name": "seismic_drum_left_held.png",
+      "sha256": "cb7c3477acabf37150f91917d1c08acdb75542f8fabfcdfec05d10397dae4f08"
+    },
+    {
+      "name": "rivet_gun_right_fire.png",
+      "sha256": "add806eab15a2ba4e15014e20b88cf40cc40a73a588a29ec71199c824da85ea5"
+    },
+    {
+      "name": "scrap_shotgun_left_fire.png",
+      "sha256": "3785476796713e0466e0cbc5148a3ea314f711ea9facaa2654fa39a18a8b6b97"
+    },
+    {
+      "name": "shock_mortar_right_fire.png",
+      "sha256": "72debc02fa22875f5c2f6e8964de579ae5d670ca3a88ee9f1e2f9b6bae30d907"
+    },
+    {
+      "name": "cryo_sprayer_left_fire.png",
+      "sha256": "2b1ef4f0b18a9a13655da97b6f361aae9fedceb19645ff5b123272fbe2c1cb4b"
+    }
+  ],
+  "count": 14,
+  "scope": "Representative direct QA visual review covering10IDs; not all36 or all angles. Native239/raw independently reviewed separately.",
+  "findings": [
+    "Held scale and HUD separation readable; no obvious floating separation in inspected Rail/Bank stills.",
+    "Saw player-centered ring and Disc held-to-flight representation visible; precise hub/origin depends on geometry assertions.",
+    "A2 held preserved in two inspected frames; no A2 fire claim."
+  ],
+  "limits": [
+    "Approximately1worldpixel exit gap remains numerical geometry limitation; stills do not prove continuous alignment or all angles.",
+    "Remaining22 originals delegated to full author visual review; no claim QA directly viewed all36."
+  ],
+  "result_sha256": "702821cb13d921335e656f6a1a30293dc6a7c8de3b0cdf1e57e2e2f1ea3198cf"
+}

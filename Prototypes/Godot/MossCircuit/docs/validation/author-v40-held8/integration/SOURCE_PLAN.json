@@ -1,0 +1,80 @@
+{
+  "status": "FROZEN_QA_APPROVED",
+  "source": "evidence-workspace/moss-held8-integration-candidate",
+  "base": "evidence-workspace/moss-v39-B-equipment16",
+  "cold_expected_new_sidecars": [
+    "assets/weapon_mounts/rivet_gun.png.import",
+    "assets/weapon_mounts/scrap_shotgun.png.import",
+    "assets/weapon_mounts/rail_lance.png.import",
+    "assets/weapon_mounts/orbit_saw.png.import",
+    "assets/weapon_mounts/return_disc.png.import",
+    "assets/weapon_mounts/shock_mortar.png.import",
+    "assets/weapon_mounts/cryo_sprayer.png.import",
+    "assets/weapon_mounts/bankshot_driver.png.import"
+  ],
+  "budgets": {
+    "cold_total_seconds": 180,
+    "two_source_routes_combined_seconds": 180,
+    "helper_included_no_extra_budget": true
+  },
+  "phases": [
+    {
+      "name": "cold_import",
+      "command": [
+        "godot",
+        "--headless",
+        "--editor",
+        "--path",
+        "evidence-workspace/moss-held8-integration-candidate",
+        "--import"
+      ]
+    },
+    {
+      "name": "actual_geometry",
+      "command": [
+        "godot",
+        "--headless",
+        "--path",
+        "evidence-workspace/moss-held8-integration-candidate",
+        "--audio-driver",
+        "Dummy",
+        "--script",
+        "evidence-workspace/moss-held8-integration-review/tests/actual_geometry.gd",
+        "--",
+        "evidence-workspace/moss-held8-integration-review/WORLD_MANIFEST_BEFORE.json"
+      ],
+      "expected_checks": 23090
+    },
+    {
+      "name": "actual_fire",
+      "command": [
+        "godot",
+        "--headless",
+        "--path",
+        "evidence-workspace/moss-held8-integration-candidate",
+        "--audio-driver",
+        "Dummy",
+        "--script",
+        "evidence-workspace/moss-held8-integration-review/tests/actual_fire.gd",
+        "--",
+        "evidence-workspace/moss-held8-integration-review/WORLD_MANIFEST_BEFORE.json"
+      ],
+      "expected_checks": 1089
+    }
+  ],
+  "scope": "isolated held8 only; base926 immutable, no v40 edit/no export/native/no publishing; B final release reconciliation remains required",
+  "policy": "CLI exactplanSHA; freshoutput; original exit/log/timeout/launcherrors and all postguards; first failure stop, no automatic retry; cold exactly8sidecars, source routes no changes; helper strict same accepted teardowncontract",
+  "provenance": "Old C2 21504 result not inherited; current true actor socket 4608poses+13824ranges and136paired fire cases independent expected counts",
+  "pins": {
+    "evidence-workspace/moss-held8-integration-review/run_source_gate.py": "827059e0679ed75ae3ef18c9b0de5caa704a9bf6173b57777f4b01298f106751",
+    "evidence-workspace/moss-held8-integration-review/CANDIDATE_927_PINS.json": "df13d3f2225ce0844c164ec60b1f7459db1641bdb65826da9dcc749ce17d1d4d",
+    "evidence-workspace/moss-held8-integration-review/BASE_926_PINS.json": "543d43c875b72b7682c312a4811094007e679c419d2142aa86c0d59728b57440",
+    "evidence-workspace/moss-held8-integration-review/WORLD_MANIFEST_BEFORE.json": "102fe6704036b1c857435a7f3760ca6f15ca4e04532c45a97222327db07a2761",
+    "evidence-workspace/moss-held8-integration-review/tests/actual_geometry.gd": "a3bf3260f612da6457721235b5f6a52d9572b50997d8b6e21fc72f4885bf1a17",
+    "evidence-workspace/moss-held8-integration-review/tests/actual_fire.gd": "da484a4278f32dd1015edafdaecc8424f4d27983e895dc356a40d9d9cae3d2e3",
+    "evidence-workspace/moss-held8-integration-review/tests/support/audio_teardown.gd": "9e9676e34296cb55d4560b1169c5954a82508f70e9051fcc942d1bb6839c23bd",
+    "evidence-workspace/moss-held8-independent-integration-review/FULL_STATIC_REVIEW.json": "e877515a60a17affc9aff782c49a57630ff1a025d4f16817d916eee0f287a664"
+  },
+  "independent_full_static_receipt": "evidence-workspace/moss-held8-independent-integration-review/FULL_STATIC_REVIEW.json",
+  "strict_marker_audio_exit_contract": "Dummy + finite positive mixrate, everyobs.required_frames==ceil(mixrate*.15); malformed bare TEST_AUDIO_TEARDOWN/checks/failures line rejected; timeout native_exit null, supervisor124/terminationTIMEOUT separate; launcherror native_exit null/supervisor125."
+}

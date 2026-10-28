@@ -1,3 +1,7 @@
+## v40-held8 — editable held weapons
+
+Eight existing held weapon sprites now use semantic editable SVG masters and derived PNGs. Geometry/calibration and v40 gameplay remain unchanged; the accepted equipment16 migration remains present. No UI R2 is included. See [restoration and exact evidence boundaries](v40-held8/READ_ME_v40-held8.txt). The accepted v40 delivery README below remains verbatim history; this pack has a different identity. Actual source publication is recorded separately in SOURCE_VERSIONS only after a reachable commit.
+
 ## v40 — control and collection builds
 
 Three mechanism items add cross-weapon pin control, dash-origin collection fields, and medical pickup pulls. The already accepted editable equipment16 migration remains present; no held8 candidate is included. See [restoration and exact evidence boundaries](v40/READ_ME_v40.txt). The accepted equipment16 delivery README below remains verbatim history; this pack has a different identity. Actual source publication is recorded separately in SOURCE_VERSIONS only after a reachable commit.

@@ -1,0 +1,52 @@
+{
+  "status": "isolated held8 next-candidate only; B not yet published and held8 may not bypass B release",
+  "utc": "2026-10-27T15:28:03.545532+00:00",
+  "base": "evidence-workspace/moss-v39-B-equipment16",
+  "base_map": "evidence-workspace/moss-v39-items/B-equipment16-combination/assembly-first/INPUTS.json",
+  "base_map_sha256": "543d43c875b72b7682c312a4811094007e679c419d2142aa86c0d59728b57440",
+  "base_count": 926,
+  "candidate": "evidence-workspace/moss-held8-integration-candidate",
+  "candidate_count_before_cold": 927,
+  "future_count_if_exact8sidecars_generated": 935,
+  "added": [
+    "art_source/legacy_held_L1_C2/.gdignore",
+    "art_source/legacy_held_L1_C2/bankshot_driver_held.svg",
+    "art_source/legacy_held_L1_C2/cryo_sprayer_held.svg",
+    "art_source/legacy_held_L1_C2/orbit_saw_held.svg",
+    "art_source/legacy_held_L1_C2/rail_lance_held.svg",
+    "art_source/legacy_held_L1_C2/return_disc_held.svg",
+    "art_source/legacy_held_L1_C2/rivet_gun_held.svg",
+    "art_source/legacy_held_L1_C2/scrap_shotgun_held.svg",
+    "art_source/legacy_held_L1_C2/shock_mortar_held.svg"
+  ],
+  "removed": [
+    "assets/weapon_mounts/bankshot_driver.png.import",
+    "assets/weapon_mounts/cryo_sprayer.png.import",
+    "assets/weapon_mounts/orbit_saw.png.import",
+    "assets/weapon_mounts/rail_lance.png.import",
+    "assets/weapon_mounts/return_disc.png.import",
+    "assets/weapon_mounts/rivet_gun.png.import",
+    "assets/weapon_mounts/scrap_shotgun.png.import",
+    "assets/weapon_mounts/shock_mortar.png.import"
+  ],
+  "changed": [
+    "assets/weapon_mounts/bankshot_driver.png",
+    "assets/weapon_mounts/cryo_sprayer.png",
+    "assets/weapon_mounts/orbit_saw.png",
+    "assets/weapon_mounts/rail_lance.png",
+    "assets/weapon_mounts/return_disc.png",
+    "assets/weapon_mounts/rivet_gun.png",
+    "assets/weapon_mounts/scrap_shotgun.png",
+    "assets/weapon_mounts/shock_mortar.png",
+    "assets/weapon_mounts/world_weapon_manifest.json",
+    "export_presets.cfg"
+  ],
+  "all_base926_before_after_unchanged": true,
+  "old6geometry_value_tokens_exact": true,
+  "other_weapon_records_unchanged": true,
+  "B_catalog_gameplay_UI_and_equipment16_unchanged": true,
+  "historical_docs_and_MANIFEST": "preserved currentB bytes; external927 map authority until explicit newdeliverymetadata",
+  "engine_or_PCK_or_native_run": false,
+  "legacy_active_formal": 55,
+  "held8_candidate_not_counted": true
+}

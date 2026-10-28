@@ -1,0 +1,8 @@
+--- unexecuted-stage
++++ final-stage
+@@ -24,4 +24,4 @@
+ for rel in [x['path'] for x in parts]+['Deliveries/MossCircuit/v40-held8/READ_ME_v40-held8.txt','Deliveries/MossCircuit/CATALOG.json','Deliveries/MossCircuit/README.md']:
+  b=(stage/rel).read_bytes();plan.append({'path':rel,'local_path':str(stage/rel),'size':len(b),'sha256':sha(b),'git_blob_sha':git(b),'mode':'100644'})
+ (root/'UPLOAD_PLAN_DRAFT.json').write_text(json.dumps(plan,indent=2)+'\n')
+-r={'staging_valid':True,'final_qa_pending':True,'pending_scope':'delivery verification and actual publication only; bounded native/ordinary evidence separately recorded','old_local_records_exact':82,'new_records':2,'total_records':84,'chunks':14,'runtime_size':len(pack),'runtime_sha256':sha(pack),'runtime_chunks_reassembly_equal':True,'helper_sha256':sha(helper),'new_delivery_paths':17,'staged_only_not_published':True,'no_history_or_platform_zip_copy':True,'external_actions':[]};(root/'STAGE_IDENTITY_DRAFT.json').write_text(json.dumps(r,indent=2)+'\n');print(json.dumps(r))
++r={'staging_valid':True,'final_qa_pending':True,'pending_scope':'delivery verification and actual publication only; bounded held8 native evidence separately recorded; no new ordinary run','old_local_records_exact':82,'new_records':2,'total_records':84,'chunks':14,'runtime_size':len(pack),'runtime_sha256':sha(pack),'runtime_chunks_reassembly_equal':True,'helper_sha256':sha(helper),'new_delivery_paths':17,'staged_only_not_published':True,'no_history_or_platform_zip_copy':True,'external_actions':[]};(root/'STAGE_IDENTITY_DRAFT.json').write_text(json.dumps(r,indent=2)+'\n');print(json.dumps(r))

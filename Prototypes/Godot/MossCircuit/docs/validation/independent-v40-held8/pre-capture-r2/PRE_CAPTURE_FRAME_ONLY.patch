@@ -1,0 +1,40 @@
+--- original/actual_fire.gd
++++ r2/actual_fire_r2.gd
+@@ -81,6 +81,15 @@
+  ck(b.disc_ok,"disc owning-slot hide and recovery "+label)
+  ck(b.rng_before==b.rng_after,"art launch consumes no gameplay RNG "+label)
+  records.append({"id":id,"mode":mode,"slot":slot,"left":left,"coincident":coincident,"pose":var_to_str(b.pose),"bullet_count":b.bullets.size(),"blast_count":b.blasts.size(),"cone_count":b.cones.size(),"target_hp":b.target_hp})
++func pre_capture_authority()->PackedByteArray:
++ var foes:Array=[]
++ for value in g.enemies:
++  var copy:Dictionary=value.duplicate(true)
++  copy.erase("sprite")
++  foes.append(copy)
++ return var_to_bytes({"build":g.build,"stats":g.stats,"elapsed":g.elapsed,"state":g.state,"clocks":g.weapon_clocks,"player":g.player_pos,"focus":g.combat.focus_enemy_id,"enemies":foes,"bullets":g.bullets,"blasts":g.pending_blasts,"pickups":g.pickups,"hazards":g.hazards,"B":g.effect_runtime.build_items.debug_snapshot(),"rng":g.rng.state,"loot_rng":g.loot_rng.state,"shop_rng":g.shop_rng.state})
++func byte_hash(value:PackedByteArray)->String:
++ var hash:=HashingContext.new();hash.start(HashingContext.HASH_SHA256);hash.update(value);return hash.finish().hex_encode()
+ func _initialize()->void:call_deferred("run")
+ func run()->void:
+  var args:=OS.get_cmdline_user_args()
+@@ -95,6 +104,21 @@
+   for slot in range(4):compare_case("bankshot_driver",mode,slot,false,old.weapons.bankshot_driver,actual.bankshot_driver,true)
+  g.weapon_rig.geometry=actual
+  ck(records.size()==136,"128regular+8literalbankcoincident cases")
++ # Explicit fixture-only drain of historical queued nodes before capture exists.
++ var before_authority:PackedByteArray=pre_capture_authority()
++ var before_records:PackedByteArray=var_to_bytes(records)
++ var before_live:bool=is_instance_valid(g) and not g.is_queued_for_deletion() and not g.is_processing()
++ var pre_capture_start:int=Time.get_ticks_usec()
++ await process_frame
++ var after_authority:PackedByteArray=pre_capture_authority()
++ var after_records:PackedByteArray=var_to_bytes(records)
++ var after_live:bool=is_instance_valid(g) and not g.is_queued_for_deletion() and not g.is_processing()
++ var guard:Dictionary={"before_current_owner_live_main_disabled":before_live,"after_current_owner_live_main_disabled":after_live,"capture_not_constructed_yet":true,"authority_before":byte_hash(before_authority),"authority_after":byte_hash(after_authority),"records_before":byte_hash(before_records),"records_after":byte_hash(after_records),"records_count":records.size(),"elapsed_us":Time.get_ticks_usec()-pre_capture_start}
++ guard["pass"]=before_live and after_live and before_authority==after_authority and before_records==after_records and records.size()==136
++ print("HELD_PRE_CAPTURE_GUARD "+JSON.stringify(guard))
++ if not guard["pass"]:
++  push_error("Held fixture pre-capture frame changed selected gameplay or records")
++  quit(2);return
+  var teardown=Teardown.new();teardown.prepare([g]);g.queue_free();await process_frame;await teardown.finish(self)
+  print(JSON.stringify({"checks":checks,"failures":failures,"records":records,"scope":"136paired actual main._fire_weapon cases; controlled runtime, no native visual acceptance"}))
+  quit(0 if failures.is_empty() else 1)

@@ -1,0 +1,7 @@
+{
+  "scope": "Auditor-only false extra direction assertion; no fixture/source/expected gameplay change",
+  "original_auditor_sha256": "beb5b2b67aaa8f2fab248fe7ae6540674bbb2db16449125ca5fc34b276739876",
+  "failure": "Assertion321 all-fire direction requested-left, Orbit Saw left fire only",
+  "basis": "Existing weapon_combat.gd lines33-35 orbit presentation uses player_pos+Vector2.RIGHT*100,true; radial player-centered damage unchanged",
+  "old_failure_retained": true
+}

@@ -1,0 +1,162 @@
+{
+  "status": "FROZEN_QA_APPROVED",
+  "source": "evidence-workspace/moss-held8-integration-candidate",
+  "base": "evidence-workspace/moss-v39-B-equipment16",
+  "source_map": "evidence-workspace/moss-held8-integration-review/source-gate-first/POST_IMPORT_935_PINS.json",
+  "source_raw_independent_receipt": "evidence-workspace/moss-v39-prep/HELD8_SOURCE_RAW_REVIEW.json",
+  "output": "evidence-workspace/moss-held8-integration-review/pack-gate-first",
+  "phases": [
+    {
+      "name": "engine-version",
+      "command": [
+        "godot",
+        "--headless",
+        "--version"
+      ]
+    },
+    {
+      "name": "python-safety",
+      "command": [
+        "/usr/bin/python3",
+        "evidence-workspace/moss-held8-integration-candidate/tests/test_export_tools.py"
+      ]
+    },
+    {
+      "name": "linux-pack",
+      "command": [
+        "godot",
+        "--headless",
+        "--path",
+        "evidence-workspace/moss-held8-integration-candidate",
+        "--export-pack",
+        "Linux x86_64",
+        "evidence-workspace/moss-held8-integration-review/pack-gate-first/linux/MossCircuit.pck"
+      ]
+    },
+    {
+      "name": "windows-pack",
+      "command": [
+        "godot",
+        "--headless",
+        "--path",
+        "evidence-workspace/moss-held8-integration-candidate",
+        "--export-pack",
+        "Windows x86_64",
+        "evidence-workspace/moss-held8-integration-review/pack-gate-first/windows/MossCircuit.pck"
+      ]
+    },
+    {
+      "name": "actual-pck-enumeration",
+      "command": [
+        "/usr/bin/python3",
+        "evidence-workspace/moss-held8-integration-review/pack-prep/audit_pck.py",
+        "evidence-workspace/moss-held8-integration-review/pack-gate-first/linux/MossCircuit.pck",
+        "evidence-workspace/moss-held8-integration-review/pack-gate-first/PCK_INVENTORY.json"
+      ]
+    },
+    {
+      "name": "source-fingerprint",
+      "command": [
+        "godot",
+        "--headless",
+        "--path",
+        "evidence-workspace/moss-held8-integration-candidate",
+        "--script",
+        "res://tools/export_source_fingerprint.gd",
+        "--",
+        "evidence-workspace/moss-held8-integration-review/pack-prep/expected-resources.json",
+        "evidence-workspace/moss-held8-integration-review/pack-gate-first/source-imported-fingerprints.json"
+      ]
+    },
+    {
+      "name": "packed-resources",
+      "command": [
+        "godot",
+        "--headless",
+        "--path",
+        "evidence-workspace/moss-held8-integration-review/pack-gate-first/empty-runtime",
+        "--main-pack",
+        "evidence-workspace/moss-held8-integration-review/pack-gate-first/linux/MossCircuit.pck",
+        "--script",
+        "evidence-workspace/moss-held8-integration-candidate/tools/verify_export_pack.gd",
+        "--",
+        "evidence-workspace/moss-held8-integration-review/pack-gate-first/source-imported-fingerprints.json",
+        "evidence-workspace/moss-held8-integration-review/pack-gate-first/packed-resource-report.json"
+      ]
+    },
+    {
+      "name": "actual_geometry",
+      "command": [
+        "godot",
+        "--headless",
+        "--path",
+        "evidence-workspace/moss-held8-integration-review/pack-gate-first/empty-runtime",
+        "--main-pack",
+        "evidence-workspace/moss-held8-integration-review/pack-gate-first/linux/MossCircuit.pck",
+        "--audio-driver",
+        "Dummy",
+        "--script",
+        "evidence-workspace/moss-held8-integration-review/tests/actual_geometry.gd",
+        "--",
+        "evidence-workspace/moss-held8-integration-review/WORLD_MANIFEST_BEFORE.json"
+      ]
+    },
+    {
+      "name": "actual_fire",
+      "command": [
+        "godot",
+        "--headless",
+        "--path",
+        "evidence-workspace/moss-held8-integration-review/pack-gate-first/empty-runtime",
+        "--main-pack",
+        "evidence-workspace/moss-held8-integration-review/pack-gate-first/linux/MossCircuit.pck",
+        "--audio-driver",
+        "Dummy",
+        "--script",
+        "evidence-workspace/moss-held8-integration-review/tests/actual_fire.gd",
+        "--",
+        "evidence-workspace/moss-held8-integration-review/WORLD_MANIFEST_BEFORE.json"
+      ]
+    }
+  ],
+  "proposed_budgets": {
+    "resource7phases_total_seconds": 240,
+    "packed2heldroutes_total_seconds": 180,
+    "shared_helper_included": true
+  },
+  "expectations": {
+    "source_count": 935,
+    "base_count": 926,
+    "generic_checks": 998,
+    "exact_files": 84,
+    "images": 72,
+    "actions": 28,
+    "frames": 308,
+    "pose_checks": 23090,
+    "poses": 4608,
+    "ranges": 13824,
+    "fire_checks": 1089,
+    "fire_cases": 136,
+    "PCK_member_count": 273
+  },
+  "scope": "new held8 resource-only2preset PCK, fullPCK stale-payload/privacy audit, importedpixel/sourcecode parity, two finite packedheld runtime routes. No GUI, B22repeat, v40 edit, native or publication.",
+  "counts_note": "A2/B mechanics/equipment16 remain byte-identical inputs to base926 except held8 manifest/presets and sourceadditions. Old path names intentionally retained, old payload identities banned.",
+  "pins": {
+    "evidence-workspace/moss-held8-integration-review/pack-prep/run_pack_gate.py": "a4e0a926a42017f668d77475a8f983442229d6224fa86b5beb5e60d25b49a046",
+    "evidence-workspace/moss-held8-integration-review/pack-prep/audit_pck.py": "7aaae9b0d7b6125e3a25a927530339bbe8d8115887dfaa2131e4996fb84a3c2c",
+    "evidence-workspace/moss-held8-integration-review/pack-prep/parse_pck.py": "7fa80ae74a9d209ecd52e7f1ba9baf8fb0ae2a9b951bffe86ec90b3df2b30e92",
+    "evidence-workspace/moss-held8-integration-review/pack-prep/OLD_PAYLOAD_IDENTITIES.json": "c1497248ee3d2e67ce5d8f8925e563081491824216c7877517185ca18e5744ae",
+    "evidence-workspace/moss-held8-integration-review/pack-prep/expected-resources.json": "6435ac687a7833ccc5f750f6578ca90ccc66abf678f9896c8547782533abcde3",
+    "evidence-workspace/moss-held8-integration-review/BASE_926_PINS.json": "543d43c875b72b7682c312a4811094007e679c419d2142aa86c0d59728b57440",
+    "evidence-workspace/moss-held8-integration-review/source-gate-first/POST_IMPORT_935_PINS.json": "a1a53d4067e03b83cb1a70b6d8045bbcadc70d8af079d1b3fafd79883bb83e87",
+    "evidence-workspace/moss-held8-integration-review/source-gate-first/RESULT.json": "845c937c8803663c62ce72322e2ad6518eb320fffac3e93d27ae7008710ecd10",
+    "evidence-workspace/moss-held8-integration-review/source-gate-first/actual_fire-report.json": "d6615f3fb564421504daca13805b81d71245fa6d0673279010ac01c9fe9fa05c",
+    "evidence-workspace/moss-held8-integration-review/WORLD_MANIFEST_BEFORE.json": "102fe6704036b1c857435a7f3760ca6f15ca4e04532c45a97222327db07a2761",
+    "evidence-workspace/moss-held8-integration-review/tests/actual_geometry.gd": "a3bf3260f612da6457721235b5f6a52d9572b50997d8b6e21fc72f4885bf1a17",
+    "evidence-workspace/moss-held8-integration-review/tests/actual_fire.gd": "da484a4278f32dd1015edafdaecc8424f4d27983e895dc356a40d9d9cae3d2e3",
+    "evidence-workspace/moss-held8-integration-review/tests/support/audio_teardown.gd": "9e9676e34296cb55d4560b1169c5954a82508f70e9051fcc942d1bb6839c23bd",
+    "evidence-workspace/moss-v39-prep/B_COMBINED_EXPORT_RAW_REVIEW.json": "3ac558ffc55cc1092fe4d9fc1f78c9d08b252eb9bf749be701a030f9aee14557",
+    "evidence-workspace/moss-v39-prep/HELD8_SOURCE_RAW_REVIEW.json": "4436c77dbf0208ea068a6dbb3f5468ca22cfc192c5c568c049dbed2d2ff0f626",
+    "evidence-workspace/moss-held8-integration-review/SOURCE_PLAN.json": "5c4628a8a4c862887eaaa5c1b675ad5a8c8c5c75e63f3e2e17ed5a8520e88bc2"
+  }
+}

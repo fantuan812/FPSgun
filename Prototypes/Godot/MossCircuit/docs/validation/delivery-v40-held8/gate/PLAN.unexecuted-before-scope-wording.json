@@ -1,0 +1,102 @@
+{
+  "status": "FROZEN_READY",
+  "scope": "Static held8 delivery template. QA lease required for actual stage and controls. No engine or remote publication.",
+  "source": "evidence-workspace/moss-held8-integration-candidate",
+  "source_map": "evidence-workspace/moss-held8-integration-review/source-gate-first/POST_IMPORT_935_PINS.json",
+  "pins": {
+    "evidence-workspace/moss-held8-delivery-gate/run.py": "4d083351fe5b17f8ed493dd9c05aa0babaf7922a247d0ee843703857c915e2a3",
+    "evidence-workspace/moss-held8-delivery-prep/stage_delivery.py": "962be119bd1b2d193755f6d88a2624b5a381812689a1fcc0b369ed0c66228006",
+    "evidence-workspace/moss-held8-delivery-prep/READ_ME_FINAL.txt": "0c43afc74264012211eb748999febb4ac361a45f55895c9147b1b3184d7c6877",
+    "evidence-workspace/moss-held8-delivery-qa/check_delivery.py": "c6da12480e85127c82a329b764a987da8101df864032101efe00041a91ea9239",
+    "evidence-workspace/moss-v40-delivery-prep/staging/Deliveries/MossCircuit/CATALOG.json": "fccfa49110c7963a10fd7b52272ede23c4129f895893b41149e0fc736b6d407b",
+    "evidence-workspace/moss-v40-delivery-prep/staging/Deliveries/MossCircuit/README.md": "f9d146c9f86e3c52dbbfc8d56e8e232ca406d69dd219df05453e6046de5faf06",
+    "evidence-workspace/moss-v40-delivery-prep/staging/Deliveries/MossCircuit/restore_deliveries.py": "3228782b92e9ec6573b7ba9842d950b3cb6c4dbe928fb3bdcb9a2b4f930b55ad",
+    "evidence-workspace/moss-held8-integration-review/source-gate-first/POST_IMPORT_935_PINS.json": "a1a53d4067e03b83cb1a70b6d8045bbcadc70d8af079d1b3fafd79883bb83e87",
+    "evidence-workspace/moss-v39-B-equipment16-pack/linux/MossCircuit.pck": "6743bf0f468c25ad28cc2776d1b1f28fd6356b23ee6f5a36ad977e90863dd775",
+    "evidence-workspace/moss-held8-integration-review/pack-gate-first/linux/MossCircuit.pck": "8a74dd872a22da4c2b15e1799207e885a9c604bbf58adc1f2fdb37196a23bffa",
+    "evidence-workspace/moss-v39-B-equipment16-pack/linux/MossCircuit.x86_64": "2c78919325d7f29fa7607287c7c1eeac367ea4c94e7b8b6f5f4c6b20492f73d0",
+    "evidence-workspace/moss-v39-prep/HELD8_SOURCE_RAW_REVIEW.json": "4436c77dbf0208ea068a6dbb3f5468ca22cfc192c5c568c049dbed2d2ff0f626",
+    "evidence-workspace/moss-v39-prep/HELD8_PACK_RAW_REVIEW.json": "678e3061f308e7b16c154c05baf229f96dcdf891a5e4fb8d78c7414736920c08",
+    "evidence-workspace/moss-held8-integration-review/pre-capture-r2/QA_RAW_REVIEW.json": "29b3f0a6a819b1acec598080135b4cf7581d48f30b83d1ef51b00e68b0264fe1",
+    "evidence-workspace/moss-held8-independent-integration-review/NATIVE_RAW_REVIEW.json": "574492ea76a1eccdb6cf54f187d39785c641a86f29c420029f9fa377a59dfeca"
+  },
+  "preconditions": [
+    {
+      "path": "evidence-workspace/moss-v39-prep/HELD8_SOURCE_RAW_REVIEW.json",
+      "required_true": [
+        "review_pass"
+      ]
+    },
+    {
+      "path": "evidence-workspace/moss-v39-prep/HELD8_PACK_RAW_REVIEW.json",
+      "required_true": [
+        "review_pass"
+      ]
+    },
+    {
+      "path": "evidence-workspace/moss-held8-integration-review/pre-capture-r2/QA_RAW_REVIEW.json",
+      "required_true": [
+        "review_pass"
+      ]
+    },
+    {
+      "path": "evidence-workspace/moss-held8-independent-integration-review/NATIVE_RAW_REVIEW.json",
+      "required_true": [
+        "pass"
+      ]
+    }
+  ],
+  "new_pck_sha256": "8a74dd872a22da4c2b15e1799207e885a9c604bbf58adc1f2fdb37196a23bffa",
+  "old_pck_sha256": "6743bf0f468c25ad28cc2776d1b1f28fd6356b23ee6f5a36ad977e90863dd775",
+  "elf_sha256": "2c78919325d7f29fa7607287c7c1eeac367ea4c94e7b8b6f5f4c6b20492f73d0",
+  "routes": [
+    {
+      "name": "stage",
+      "command": [
+        "/usr/bin/python3",
+        "evidence-workspace/moss-held8-delivery-prep/stage_delivery.py"
+      ]
+    },
+    {
+      "name": "delivery10",
+      "command": [
+        "/usr/bin/python3",
+        "evidence-workspace/moss-held8-delivery-qa/check_delivery.py",
+        "--delivery",
+        "evidence-workspace/moss-held8-delivery-prep",
+        "--baseline-pack",
+        "evidence-workspace/moss-v39-B-equipment16-pack/linux/MossCircuit.pck",
+        "--elf",
+        "evidence-workspace/moss-v39-B-equipment16-pack/linux/MossCircuit.x86_64"
+      ]
+    }
+  ],
+  "must_not_exist": [
+    "evidence-workspace/moss-held8-delivery-prep/staging",
+    "evidence-workspace/moss-held8-delivery-qa/delivery"
+  ],
+  "stage_receipt": "evidence-workspace/moss-held8-delivery-prep/STAGE_IDENTITY_DRAFT.json",
+  "check_receipt": "evidence-workspace/moss-held8-delivery-qa/delivery/DELIVERY_VERIFICATION.json",
+  "control_names": [
+    "literal-verify",
+    "literal-restore",
+    "no-overwrite",
+    "wrong-chunk-sha",
+    "wrong-whole-sha",
+    "wrong-git-object",
+    "noncontiguous-offset",
+    "unsafe-name",
+    "unsafe-source",
+    "symlink-output"
+  ],
+  "seconds_each": 180,
+  "expectations": {
+    "old_catalog_rows": 82,
+    "new_total_rows": 84,
+    "chunks": 14,
+    "last_chunk_bytes": 268876,
+    "payloads": 17,
+    "new_pck_bytes": 39268876
+  },
+  "original_failures": "Original ninth packed fire strictFAIL, teardown diagnostic and fixture-only repair remain separately recorded; no new full/ordinary/Windows run."
+}

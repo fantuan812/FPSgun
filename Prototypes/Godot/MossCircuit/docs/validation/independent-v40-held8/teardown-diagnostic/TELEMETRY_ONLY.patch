@@ -1,0 +1,37 @@
+--- original/actual_fire.gd
++++ diagnostic/diagnostic.gd
+@@ -81,6 +81,15 @@
+  ck(b.disc_ok,"disc owning-slot hide and recovery "+label)
+  ck(b.rng_before==b.rng_after,"art launch consumes no gameplay RNG "+label)
+  records.append({"id":id,"mode":mode,"slot":slot,"left":left,"coincident":coincident,"pose":var_to_str(b.pose),"bullet_count":b.bullets.size(),"blast_count":b.blasts.size(),"cone_count":b.cones.size(),"target_hp":b.target_hp})
++func teardown_point(label:String,observer,extra:Dictionary={})->void:
++ var cap=observer.capture
++ var data:Dictionary={"point":label,"ticks_usec":Time.get_ticks_usec(),"capture_exists":cap!=null,"available":-1,"pushed":-1,"discarded":-1}
++ if cap!=null:
++  data.available=cap.get_frames_available()
++  data.pushed=cap.get_pushed_frames()
++  data.discarded=cap.get_discarded_frames()
++ data.merge(extra)
++ print("HELD_TEARDOWN_POINT "+JSON.stringify(data))
+ func _initialize()->void:call_deferred("run")
+ func run()->void:
+  var args:=OS.get_cmdline_user_args()
+@@ -95,6 +104,17 @@
+   for slot in range(4):compare_case("bankshot_driver",mode,slot,false,old.weapons.bankshot_driver,actual.bankshot_driver,true)
+  g.weapon_rig.geometry=actual
+  ck(records.size()==136,"128regular+8literalbankcoincident cases")
+- var teardown=Teardown.new();teardown.prepare([g]);g.queue_free();await process_frame;await teardown.finish(self)
++ var teardown=Teardown.new()
++ teardown_point("before_prepare",teardown)
++ teardown.prepare([g])
++ teardown_point("after_prepare",teardown)
++ teardown_point("before_queue_free",teardown)
++ g.queue_free()
++ teardown_point("after_queue_free",teardown)
++ await process_frame
++ teardown_point("after_original_process_frame",teardown)
++ teardown_point("before_finish",teardown)
++ var teardown_result:Dictionary=await teardown.finish(self)
++ teardown_point("after_finish",teardown,{"complete":teardown_result.get("complete"),"pre_window_drained":teardown_result.get("pre_window_drained")})
+  print(JSON.stringify({"checks":checks,"failures":failures,"records":records,"scope":"136paired actual main._fire_weapon cases; controlled runtime, no native visual acceptance"}))
+  quit(0 if failures.is_empty() else 1)

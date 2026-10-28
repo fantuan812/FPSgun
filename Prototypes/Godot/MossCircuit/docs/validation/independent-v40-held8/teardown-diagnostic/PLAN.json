@@ -1,0 +1,53 @@
+{
+  "status": "FROZEN_STATIC_REVIEW_NOT_EXECUTION_LEASE",
+  "source": "evidence-workspace/moss-held8-integration-candidate",
+  "base": "evidence-workspace/moss-v39-B-equipment16",
+  "source_maps": {
+    "evidence-workspace/moss-held8-integration-candidate": "evidence-workspace/moss-held8-integration-review/source-gate-first/POST_IMPORT_935_PINS.json",
+    "evidence-workspace/moss-v39-B-equipment16": "evidence-workspace/moss-held8-integration-review/BASE_926_PINS.json"
+  },
+  "pins": {
+    "evidence-workspace/moss-held8-integration-review/teardown-diagnostic/run.py": "585694165549ac68fe2b8e683e7cc5b1d53f5b9d2d5d9f02db993099c6d0a276",
+    "evidence-workspace/moss-held8-integration-review/teardown-diagnostic/prepare_plan.py": "ec00d08dde41980c5fbb2368d5e10c77985de68843c450995b454bf82f5854fd",
+    "evidence-workspace/moss-held8-integration-review/teardown-diagnostic/diagnostic.gd": "d092e4e9871b2e7c46264de5735d41f4fad420b29173fbf11d817800ae1e54a0",
+    "evidence-workspace/moss-held8-integration-review/teardown-diagnostic/TELEMETRY_ONLY.patch": "870da36745f987741c26ab7985b3737ba12fabdbf06e95d63fd6b81d97472749",
+    "evidence-workspace/moss-held8-integration-review/tests/actual_fire.gd": "da484a4278f32dd1015edafdaecc8424f4d27983e895dc356a40d9d9cae3d2e3",
+    "evidence-workspace/moss-held8-integration-review/tests/support/audio_teardown.gd": "9e9676e34296cb55d4560b1169c5954a82508f70e9051fcc942d1bb6839c23bd",
+    "evidence-workspace/moss-held8-integration-review/WORLD_MANIFEST_BEFORE.json": "102fe6704036b1c857435a7f3760ca6f15ca4e04532c45a97222327db07a2761",
+    "evidence-workspace/moss-held8-integration-review/source-gate-first/actual_fire-report.json": "d6615f3fb564421504daca13805b81d71245fa6d0673279010ac01c9fe9fa05c",
+    "evidence-workspace/moss-held8-integration-review/pack-gate-first/RESULT.json": "01139b331ac9610e58705c8ac11d99f0ab859089b0898ca5292eef7aaa0d1f08",
+    "evidence-workspace/moss-held8-integration-review/pack-gate-first/actual_fire.log": "4f4d2d15c22e3f278511073991838fafb8614213fff7c6dd1b55e22b53bf3222",
+    "evidence-workspace/moss-held8-integration-review/pack-prep/PLAN.json": "1e05d76a677f08338c6caa264e8bcddea6a39851c75ed99b7f5656bada71c37c",
+    "evidence-workspace/moss-held8-integration-review/source-gate-first/POST_IMPORT_935_PINS.json": "a1a53d4067e03b83cb1a70b6d8045bbcadc70d8af079d1b3fafd79883bb83e87",
+    "evidence-workspace/moss-held8-integration-review/BASE_926_PINS.json": "543d43c875b72b7682c312a4811094007e679c419d2142aa86c0d59728b57440",
+    "evidence-workspace/moss-held8-integration-review/pack-gate-first/linux/MossCircuit.pck": "8a74dd872a22da4c2b15e1799207e885a9c604bbf58adc1f2fdb37196a23bffa",
+    "evidence-workspace/moss-held8-integration-review/pack-gate-first/windows/MossCircuit.pck": "8a74dd872a22da4c2b15e1799207e885a9c604bbf58adc1f2fdb37196a23bffa"
+  },
+  "pck_sha256": "8a74dd872a22da4c2b15e1799207e885a9c604bbf58adc1f2fdb37196a23bffa",
+  "source_fire_report": "evidence-workspace/moss-held8-integration-review/source-gate-first/actual_fire-report.json",
+  "command": [
+    "/usr/local/bin/godot",
+    "--headless",
+    "--audio-driver",
+    "Dummy",
+    "--main-pack",
+    "evidence-workspace/moss-held8-integration-review/pack-gate-first/linux/MossCircuit.pck",
+    "--script",
+    "evidence-workspace/moss-held8-integration-review/teardown-diagnostic/diagnostic.gd",
+    "--",
+    "evidence-workspace/moss-held8-integration-review/WORLD_MANIFEST_BEFORE.json"
+  ],
+  "point_names": [
+    "before_prepare",
+    "after_prepare",
+    "before_queue_free",
+    "after_queue_free",
+    "after_original_process_frame",
+    "before_finish",
+    "after_finish"
+  ],
+  "expected_checks": 1089,
+  "expected_records": 136,
+  "seconds": 180,
+  "scope": "Exactly one approved diagnostic. Literal136case1089assertions/unchanged9e967helper. Onlyseven getter/ticks telemetry, no extraawait/no drain/no buffer/budget changes. Diagnostic_completed separate from target_pass; helper may pass or reproduce ERROR, no predeclared cause or retest acceptance."
+}

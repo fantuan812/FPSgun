@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "evidence-workspace/moss-held8-delivery-prep/staging/Deliveries/MossCircuit/restore_deliveries.py", line 137, in <module>
+    main()
+    ~~~~^^
+  File "evidence-workspace/moss-held8-delivery-prep/staging/Deliveries/MossCircuit/restore_deliveries.py", line 131, in main
+    restore(root, record, args.output)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "evidence-workspace/moss-held8-delivery-prep/staging/Deliveries/MossCircuit/restore_deliveries.py", line 93, in restore
+    stream_verified(root, record, out)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "evidence-workspace/moss-held8-delivery-prep/staging/Deliveries/MossCircuit/restore_deliveries.py", line 67, in stream_verified
+    with source_path(root, part["path"]).open("rb") as f:
+         ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "evidence-workspace/moss-held8-delivery-prep/staging/Deliveries/MossCircuit/restore_deliveries.py", line 26, in source_path
+    rel = safe_relative(value)
+  File "evidence-workspace/moss-held8-delivery-prep/staging/Deliveries/MossCircuit/restore_deliveries.py", line 21, in safe_relative
+    raise ValueError("Unsafe relative path")
+ValueError: Unsafe relative path

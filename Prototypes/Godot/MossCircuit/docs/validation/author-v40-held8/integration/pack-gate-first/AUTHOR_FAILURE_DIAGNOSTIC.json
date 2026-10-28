@@ -1,0 +1,55 @@
+{
+  "status": "FAILED_GATE_DIAGNOSTIC_NOT_ACCEPTANCE",
+  "original_result_sha256": "01139b331ac9610e58705c8ac11d99f0ab859089b0898ca5292eef7aaa0d1f08",
+  "raw_log_sha256": "4f4d2d15c22e3f278511073991838fafb8614213fff7c6dd1b55e22b53bf3222",
+  "fire_checks": 1089,
+  "fire_failures": [],
+  "records_count": 136,
+  "records_exact_source": true,
+  "helper_complete": false,
+  "pre_window_drained": 130560,
+  "observations_count": 75,
+  "discarded_values": [
+    16896
+  ],
+  "first": {
+    "discarded": 16896,
+    "elapsed_us": 290,
+    "game_owner_count": 1,
+    "invalid": 0,
+    "new_pushed": 0,
+    "owner_count": 1,
+    "owners_released": true,
+    "prepare_errors": 0,
+    "required_frames": 6615,
+    "silent_frames": 0,
+    "streams_released": true
+  },
+  "last": {
+    "discarded": 16896,
+    "elapsed_us": 1010442,
+    "game_owner_count": 1,
+    "invalid": 0,
+    "new_pushed": 45056,
+    "owner_count": 1,
+    "owners_released": true,
+    "prepare_errors": 0,
+    "required_frames": 6615,
+    "silent_frames": 45056,
+    "streams_released": true
+  },
+  "first_fresh_enough": {
+    "discarded": 16896,
+    "elapsed_us": 167492,
+    "game_owner_count": 1,
+    "invalid": 0,
+    "new_pushed": 8192,
+    "owner_count": 1,
+    "owners_released": true,
+    "prepare_errors": 0,
+    "required_frames": 6615,
+    "silent_frames": 8192,
+    "streams_released": true
+  },
+  "limits": "Original FAIL retained. Constant positive discarded counter prevents helper completion; origin of pre-observation discard not established. No retry, source modification, helper relaxation or resource acceptance."
+}
