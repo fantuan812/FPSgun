@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generator": "built-in image_gen",
+  "generator": "Mixed provenance: muzzle_flash is a newly authored semantic SVG redraw; other five effects retain their historical built-in image_gen raster provenance.",
   "runtime_fps_authority": "data/vfx.json",
   "notes": "Fixed full-cell canvas. alpha_bbox is QA only; never crop/recenter each frame. Nine nonempty frames, then remove instance. High-resolution pixel-inspired art, not certified low-resolution pixel grid.",
   "effects": {
@@ -649,85 +649,85 @@
             418
           ],
           "alpha_bbox": [
-            104,
-            198,
-            87,
-            58
-          ],
-          "empty": false
-        },
-        {
-          "region": [
-            418,
-            0,
-            418,
-            418
-          ],
-          "alpha_bbox": [
-            79,
-            161,
-            184,
-            138
-          ],
-          "empty": false
-        },
-        {
-          "region": [
-            836,
-            0,
-            418,
-            418
-          ],
-          "alpha_bbox": [
-            37,
-            114,
-            357,
-            222
-          ],
-          "empty": false
-        },
-        {
-          "region": [
-            0,
-            418,
-            418,
-            418
-          ],
-          "alpha_bbox": [
             96,
-            83,
-            281,
-            270
+            186,
+            90,
+            60
           ],
           "empty": false
         },
         {
           "region": [
             418,
-            418,
+            0,
             418,
             418
           ],
           "alpha_bbox": [
-            88,
-            118,
-            285,
-            235
+            84,
+            174,
+            198,
+            90
           ],
           "empty": false
         },
         {
           "region": [
             836,
+            0,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            78,
+            132,
+            312,
+            156
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            0,
             418,
             418,
             418
           ],
           "alpha_bbox": [
             84,
-            150,
-            264,
-            164
+            90,
+            300,
+            258
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            418,
+            418,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            90,
+            126,
+            282,
+            222
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            836,
+            418,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            96,
+            174,
+            270,
+            120
           ],
           "empty": false
         },
@@ -739,10 +739,10 @@
             418
           ],
           "alpha_bbox": [
-            102,
-            180,
-            227,
-            98
+            96,
+            204,
+            228,
+            72
           ],
           "empty": false
         },
@@ -755,9 +755,9 @@
           ],
           "alpha_bbox": [
             102,
-            181,
+            204,
             126,
-            64
+            42
           ],
           "empty": false
         },
@@ -769,10 +769,10 @@
             418
           ],
           "alpha_bbox": [
-            103,
-            183,
-            52,
-            53
+            108,
+            210,
+            30,
+            18
           ],
           "empty": false
         }
@@ -787,7 +787,10 @@
       "frame_order": "row-major",
       "alpha_threshold_for_bbox": 8,
       "empty_frames_allowed": false,
-      "sha256": "6d69af60154377ba00c2b3383b58a30234757c909346a2c04dde19364db0a2c8"
+      "sha256": "7a0de020dffc8ad834b3f61c8ac528a2f410094b568c3e6b496bac9650508744",
+      "source_svg": "res://art_source/muzzle_flash_v44/muzzle_flash.svg",
+      "source_sha256": "cd72ae33a78fdf38b58d141d76253515a0a00bc35f09f529d16da31c394f94b2",
+      "generator": "Authored semantic SVG redraw; deterministic PNG export"
     },
     "shield_impact": {
       "path": "res://assets/vfx/shield_impact.png",

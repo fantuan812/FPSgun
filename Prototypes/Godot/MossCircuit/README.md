@@ -1,3 +1,21 @@
+# MossCircuit v44 — editable muzzle flash
+
+The muzzle flash now has a newly authored, self-contained SVG master: nine distinct stages from ignition and a directional tongue to split lobes and fading embers. The transparent sheet, frame layout, emitter anchor, timing and small in-game size are preserved. This is a new redraw, not a recovered historical master or pixel-identical restoration.
+
+Firing hooks, gameplay, the compact BUILD interface and the other five effects—including hit sparks—are unchanged. Finite source, packed-resource, controlled desktop and local resource-pack restoration checks have passed. Remote publication is still pending.
+
+- [Changes, validation and visibility limits](docs/V44_MUZZLE_FLASH.md)
+- [Edit the muzzle SVG](art_source/muzzle_flash_v44/AUTHORING_SCOPE.md)
+- [Restore the resource pack safely](docs/DELIVERY.md)
+
+After importing with Godot 4.6.3, run `python3 tools/run_build_ui_checks.py` from the project root. This existing 14-route entry passed on the current source; it is not the separate muzzle playback check or a fresh full-suite certification. See [runner options](docs/BUILD_UI_VALIDATION.md).
+
+---
+
+## Historical release notes
+
+The complete verified v43 README follows unchanged in the assembled release. Older version-specific claims and instructions remain historical; the links above describe this muzzle redraw.
+
 # MossCircuit v43 — eight editable build-expansion icons
 
 Return Disc, Shock Mortar, Return Spool, Blast Fuse, Echo Chamber, Gravity Anchor, Medic Seed and Phase Capacitor now use newly authored geometric SVG masters and separate transparent 64×64 PNGs. These are new redraws guided by the earlier atlas, not recovered historical masters or pixel-identical restoration.

@@ -1,3 +1,7 @@
+## v44-muzzle — editable nine-frame muzzle flash
+
+A new semantic SVG master supplies the muzzle-flash sheet while retaining the same frame layout, timing, anchor and runtime path. Other effects, gameplay and the BUILD layout are unchanged. See [restoration and validation limits](v44-muzzle/READ_ME_v44-muzzle.txt). Earlier delivery records follow unchanged.
+
 ## v43-build-expansion — eight editable build-expansion icons
 
 Two weapon and six module inventory icons now have new semantic SVG masters and direct64 PNG textures instead of the shared build-expansion atlas. Gameplay and the accepted BUILD layout are unchanged. See [restoration and validation limits](v43-build-expansion/READ_ME_v43-build-expansion.txt). Earlier delivery records follow unchanged.
