@@ -1,171 +1,165 @@
 {
   "version": 1,
-  "atlas": "res://assets/items/build_expansion_atlas_v5.png",
-  "size": [
-    1774,
-    887
-  ],
-  "grid": {
-    "columns": 4,
-    "rows": 2,
-    "order": "row-major",
-    "edges": "floor(i*size/cells)"
-  },
-  "source_sha256": "e729eae41caa9ee73cf9382468f5efba65aa60dd125f14175ed3946241571d1a",
   "icons": {
     "return_disc": {
+      "atlas": "res://assets/items/return_disc.png",
       "rect": [
         0,
         0,
-        443,
-        443
+        64,
+        64
       ],
       "name": "回旋飞盘",
       "category": "weapon",
-      "visible_alpha_bbox_local": [
-        30,
-        61,
-        425,
-        400
+      "source_sha256": "2d520db9d5a23783f8ce75bbff59bd4453651bed50b9a9decb98ab937613b227",
+      "alpha_bbox": [
+        5,
+        6,
+        53,
+        52
       ],
-      "cell_rgba_sha256": "1b97f6958542391ed754bc0d1e8926c17a25a4e2172a8ab16cf415fbad2c86ef"
+      "editable_source": "res://art_source/build_expansion_v43/return_disc.svg",
+      "svg_sha256": "d0cb517f99a68946692f33ca3f35aa3a6089be9d2580b04d4ac26e4ea986349c"
     },
     "shock_mortar": {
+      "atlas": "res://assets/items/shock_mortar.png",
       "rect": [
-        443,
         0,
-        444,
-        443
+        0,
+        64,
+        64
       ],
       "name": "震荡迫击炮",
       "category": "weapon",
-      "visible_alpha_bbox_local": [
-        39,
-        32,
-        418,
-        419
+      "source_sha256": "46fcfdf052c91cad0f8c8dde17ff25b9a4c0dd7424d975073c9a24e3228ae501",
+      "alpha_bbox": [
+        6,
+        7,
+        51,
+        51
       ],
-      "cell_rgba_sha256": "af80fc8fff5d3a34e8b73955dcdbc6e9b243ae0eb6722519cf522fde07be98c1"
+      "editable_source": "res://art_source/build_expansion_v43/shock_mortar.svg",
+      "svg_sha256": "a12cad72e1e73dd46f7455bec8eb9bbcd33ff3184d593a7a78fbb611bb8c227a"
     },
     "return_spool": {
+      "atlas": "res://assets/items/return_spool.png",
       "rect": [
-        887,
         0,
-        443,
-        443
+        0,
+        64,
+        64
       ],
       "name": "回收线轴",
       "category": "item",
-      "visible_alpha_bbox_local": [
-        64,
-        62,
-        426,
-        406
+      "source_sha256": "c9d023213c3c5e6814581728c1eafb2370a9ed0f6e54dd26a86d65fcbcc49739",
+      "alpha_bbox": [
+        9,
+        6,
+        50,
+        52
       ],
-      "cell_rgba_sha256": "5923e03c0e555675487eb74c62171a4d31460e1bc5bd31030048883681661892"
+      "editable_source": "res://art_source/build_expansion_v43/return_spool.svg",
+      "svg_sha256": "1381d1929037082a3c5a15f84b57ca75bd10adac87f24705d575a5d7eefe7c7c"
     },
     "blast_fuse": {
+      "atlas": "res://assets/items/blast_fuse.png",
       "rect": [
-        1330,
         0,
-        444,
-        443
+        0,
+        64,
+        64
       ],
       "name": "余烬引信",
       "category": "item",
-      "visible_alpha_bbox_local": [
-        101,
-        50,
-        420,
-        399
+      "source_sha256": "a14d96cf629061c747e442ed542744a95b25fab6a1d6aac1f083b32aee58ee10",
+      "alpha_bbox": [
+        12,
+        4,
+        48,
+        53
       ],
-      "cell_rgba_sha256": "765999f16ae7e3d09157bc1bb22d777b93a80faafffad0f13bf5d2bbb6a994ba"
+      "editable_source": "res://art_source/build_expansion_v43/blast_fuse.svg",
+      "svg_sha256": "2842fcbaf8d18284f14b67412bb2b3bbc6b921573bada2dd5468396a6ae95668"
     },
     "echo_chamber": {
+      "atlas": "res://assets/items/echo_chamber.png",
       "rect": [
         0,
-        443,
-        443,
-        444
+        0,
+        64,
+        64
       ],
       "name": "回声腔",
       "category": "item",
-      "visible_alpha_bbox_local": [
-        19,
-        15,
-        435,
-        392
+      "source_sha256": "bf0291b1e61c143c16c78ef5c071b6b8a63fef031bfa11330f652349a4996f2f",
+      "alpha_bbox": [
+        3,
+        5,
+        57,
+        54
       ],
-      "cell_rgba_sha256": "3f5e354947b3fe9642163635bf84f90b4800e06a6da5dbb118c8e7b3e4dc3f6a"
+      "editable_source": "res://art_source/build_expansion_v43/echo_chamber.svg",
+      "svg_sha256": "f209eebcb25103ce24f218b020a71431b21a643fb2e7b085e1d25b6eea331733"
     },
     "gravity_anchor": {
+      "atlas": "res://assets/items/gravity_anchor.png",
       "rect": [
-        443,
-        443,
-        444,
-        444
+        0,
+        0,
+        64,
+        64
       ],
       "name": "重力锚",
       "category": "item",
-      "visible_alpha_bbox_local": [
-        33,
-        16,
-        418,
-        405
+      "source_sha256": "0e552165f06c33087e85d401c0777496300cf1bc3f40e92596cab2c2d27a9ee7",
+      "alpha_bbox": [
+        6,
+        4,
+        52,
+        54
       ],
-      "cell_rgba_sha256": "57e6969f64f33d656c58f3b444d6972840a6218ea8abf0a57e861270f033910a"
+      "editable_source": "res://art_source/build_expansion_v43/gravity_anchor.svg",
+      "svg_sha256": "76bff1d985d2ee8ba66c94fd90efebe6c98e80a22d1ba04f344090c0c73de482"
     },
     "medic_seed": {
+      "atlas": "res://assets/items/medic_seed.png",
       "rect": [
-        887,
-        443,
-        443,
-        444
+        0,
+        0,
+        64,
+        64
       ],
       "name": "医疗种子",
       "category": "item",
-      "visible_alpha_bbox_local": [
-        64,
-        35,
-        364,
-        392
+      "source_sha256": "6102bc8b38e6f04b00c4c4c315cdd54923462a6c50cdc2af8be20cf6d7dfd6b5",
+      "alpha_bbox": [
+        11,
+        6,
+        42,
+        52
       ],
-      "cell_rgba_sha256": "f8e76bbf33feb40f27c553066a78208926e75029cf3e5c8bc8ec23191bdc75e5"
+      "editable_source": "res://art_source/build_expansion_v43/medic_seed.svg",
+      "svg_sha256": "78d21ee61f032ec772d928f118fc8de0f25f415269c7c5b15736b215d258057e"
     },
     "phase_capacitor": {
+      "atlas": "res://assets/items/phase_capacitor.png",
       "rect": [
-        1330,
-        443,
-        444,
-        444
+        0,
+        0,
+        64,
+        64
       ],
       "name": "相位电容",
       "category": "item",
-      "visible_alpha_bbox_local": [
-        11,
-        80,
-        427,
-        327
+      "source_sha256": "bdc4f348fc4526ae8e9522e1d4ede0cf9f595df7d7ee8235f0aec0d0118c24a7",
+      "alpha_bbox": [
+        3,
+        9,
+        59,
+        41
       ],
-      "cell_rgba_sha256": "08b0fd4f5c9bad9346b21be00b2ffcdfdc9f2b41c3842f9a4c386c66e20a5495"
+      "editable_source": "res://art_source/build_expansion_v43/phase_capacitor.svg",
+      "svg_sha256": "f6c4ad806e5c742bf6954a9d1004d8178fa41f9f2cc0474849db3796af4afb33"
     }
-  },
-  "generation": {
-    "tool": "image_gen built-in",
-    "date": "2026-10-22",
-    "source": "exec-3a8a8eaf-7b4a-43c0-afd8-9866c998ffa6.png",
-    "prompt": "docs/art/build_expansion_generation_prompt.txt",
-    "pixel_edits": "None, byte-identical PNG copy; runtime AtlasTexture slicing."
-  },
-  "qa": {
-    "nonempty_cells": 8,
-    "unique_rgba_cell_hashes": 8,
-    "visible_alpha_threshold": 32,
-    "all_visible_content_inside_cells": true,
-    "limits": [
-      "High-resolution pixel-art aesthetic, not strict native low-resolution grid.",
-      "Prompts request more spacing than generated; actual visible silhouettes inside bounds.",
-      "Near-transparent alpha residue preserved; no Python pixel edits."
-    ]
   }
 }

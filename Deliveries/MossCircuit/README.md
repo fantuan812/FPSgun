@@ -1,3 +1,7 @@
+## v43-build-expansion — eight editable build-expansion icons
+
+Two weapon and six module inventory icons now have new semantic SVG masters and direct64 PNG textures instead of the shared build-expansion atlas. Gameplay and the accepted BUILD layout are unchanged. See [restoration and validation limits](v43-build-expansion/READ_ME_v43-build-expansion.txt). Earlier delivery records follow unchanged.
+
 ## v42-L3 — eight editable mechanism icons
 
 Eight inventory icons now have individual semantic SVG masters and PNG textures instead of the shared mechanism atlas. Gameplay and the accepted BUILD layout are unchanged. See [restoration and validation limits](v42-L3/READ_ME_v42-L3.txt). Earlier delivery records follow unchanged.

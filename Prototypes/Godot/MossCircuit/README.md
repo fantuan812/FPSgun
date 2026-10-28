@@ -1,3 +1,22 @@
+# MossCircuit v43 — eight editable build-expansion icons
+
+Return Disc, Shock Mortar, Return Spool, Blast Fuse, Echo Chamber, Gravity Anchor, Medic Seed and Phase Capacitor now use newly authored geometric SVG masters and separate transparent 64×64 PNGs. These are new redraws guided by the earlier atlas, not recovered historical masters or pixel-identical restoration.
+
+The two weapon and six module identities, mechanics, prices, limits and accepted compact BUILD interface are unchanged. Held-weapon and projectile artwork are separate and unchanged. The former shared build-expansion atlas is retired; previous artwork retirements remain in effect.
+
+- [Changes and finite validation](docs/V43_BUILD_EXPANSION_ICONS.md)
+- [Edit the SVG masters](art_source/build_expansion_v43/AUTHORING_SCOPE.md)
+- [Preview the shipped artwork](art_source/build_expansion_v43/preview.html)
+- [Restore the resource pack safely](docs/DELIVERY.md)
+
+After importing with Godot 4.6.3, run `python3 tools/run_build_ui_checks.py` from the project root. This is the existing finite 14-route entry, not a fresh full-suite certification; see [runner options](docs/BUILD_UI_VALIDATION.md).
+
+---
+
+## Historical release notes
+
+The complete verified v42 README follows unchanged. Its older version-specific claims and instructions remain historical; the links above describe the current icon redraw.
+
 # MossCircuit v42-L3 — eight editable mechanism icons
 
 Eight inventory icons now use individual semantic SVG masters and 64×64 PNG textures instead of the shared mechanism atlas: `arc_relay`, `kill_cell`, `dash_resin`, `mirror_shell`, `thorn_crown`, `blood_valve`, `scrap_mine` and `pulse_boots`.

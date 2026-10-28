@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "scope": "Preserves 86 existing published catalog records exactly; appends two locally staged v42-L3 files. Remote publication is indexed separately.",
+  "scope": "Preserves 88 existing published catalog records exactly; appends two locally staged v43-build-expansion files. Remote publication is indexed separately.",
   "files": [
     {
       "version": "v1",
@@ -4077,6 +4077,111 @@
         "git_blob_sha": "df92306b65c0a8e58aa6f1b6f7bb766ecb8454a6"
       },
       "delivery_identity_basis": "Authored resource restoration and asset-editing instructions; no operational execution artifacts."
+    },
+    {
+      "version": "v43-build-expansion",
+      "name": "MossCircuit.pck",
+      "size": 32368112,
+      "sha256": "11c9d2c54b5671f7cf7306da5af48ba139cb33d1dd623ef3ab22ab7b29181d99",
+      "original_git_blob_sha": "3fa93bd7d6df5c57903b23c9754e992bb1f2bc4d",
+      "delivery_kind": "github_native_runtime_resource_pack",
+      "storage": {
+        "kind": "chunks",
+        "chunks": [
+          {
+            "path": "Deliveries/MossCircuit/v43-build-expansion/chunks/MossCircuit.pck/chunk-001.bin",
+            "offset": 0,
+            "size": 3000000,
+            "sha256": "a4d052d4f6179dabf098342aace2f8837e525e8127dee5d656d993736f3f7d00",
+            "git_blob_sha": "89da13030f89a1d05c39119e068acc668d345ff4"
+          },
+          {
+            "path": "Deliveries/MossCircuit/v43-build-expansion/chunks/MossCircuit.pck/chunk-002.bin",
+            "offset": 3000000,
+            "size": 3000000,
+            "sha256": "a027b4235220caf2f9d490b6e83a589e0d5f98c3341728fa2b46943cd2184204",
+            "git_blob_sha": "b5396cdcad57361ed446f26c4a1444dad1dddc79"
+          },
+          {
+            "path": "Deliveries/MossCircuit/v43-build-expansion/chunks/MossCircuit.pck/chunk-003.bin",
+            "offset": 6000000,
+            "size": 3000000,
+            "sha256": "f512a9ed05fe39ab12320f20d91a703bb167e259ba729631756eaa208f2e6f49",
+            "git_blob_sha": "042316997eae84bdeb97d5e48a3907ef85c877e6"
+          },
+          {
+            "path": "Deliveries/MossCircuit/v43-build-expansion/chunks/MossCircuit.pck/chunk-004.bin",
+            "offset": 9000000,
+            "size": 3000000,
+            "sha256": "10801b4219c85daef0ffcae9013566aaeb5d857005d5cba18f22260af91e1e0f",
+            "git_blob_sha": "9f08a4bd3001e082997b09be229d9a09f94881d8"
+          },
+          {
+            "path": "Deliveries/MossCircuit/v43-build-expansion/chunks/MossCircuit.pck/chunk-005.bin",
+            "offset": 12000000,
+            "size": 3000000,
+            "sha256": "9e0c83d383b555a0167aba08df0007d0fb9a28ffabec416698e1b5f461485e33",
+            "git_blob_sha": "6ebad33ae134dc9718ceaa933808c7342b43ca0d"
+          },
+          {
+            "path": "Deliveries/MossCircuit/v43-build-expansion/chunks/MossCircuit.pck/chunk-006.bin",
+            "offset": 15000000,
+            "size": 3000000,
+            "sha256": "6934c8d5b33b1d6eda1af05daa15e17f664c004b7086ea18b1e5e34a4ae7d938",
+            "git_blob_sha": "cf3d36b3e8477776a09372acf12b2d56da528981"
+          },
+          {
+            "path": "Deliveries/MossCircuit/v43-build-expansion/chunks/MossCircuit.pck/chunk-007.bin",
+            "offset": 18000000,
+            "size": 3000000,
+            "sha256": "f02faf1d617293e06bf3f9da4854bddc17f5f1afcd0b87564fbca6c34809fb48",
+            "git_blob_sha": "e9f041378281ffd8ac11f0ea51355331b4ac637d"
+          },
+          {
+            "path": "Deliveries/MossCircuit/v43-build-expansion/chunks/MossCircuit.pck/chunk-008.bin",
+            "offset": 21000000,
+            "size": 3000000,
+            "sha256": "0a6fd1fd83d205e7a3d90525f3762c1d48476a0d04e73ad9c0a1740c29314a90",
+            "git_blob_sha": "3ac42e0195bb7c1d6d15e242aa99202bd275bbc8"
+          },
+          {
+            "path": "Deliveries/MossCircuit/v43-build-expansion/chunks/MossCircuit.pck/chunk-009.bin",
+            "offset": 24000000,
+            "size": 3000000,
+            "sha256": "8e8db22a01e1b2e9f30b1b15c1e3ab505969cff0881d055e219360e49bc7298a",
+            "git_blob_sha": "bfe7cbdf1243a06831eba2a829149273aa24eadd"
+          },
+          {
+            "path": "Deliveries/MossCircuit/v43-build-expansion/chunks/MossCircuit.pck/chunk-010.bin",
+            "offset": 27000000,
+            "size": 3000000,
+            "sha256": "4a1abb41119f8f9f05dc6f67e96cce079ce8e4cc98ba46b0e8a5b402c8431fe0",
+            "git_blob_sha": "ea4b8058929b609693abcea9eb1b0524a4ff3422"
+          },
+          {
+            "path": "Deliveries/MossCircuit/v43-build-expansion/chunks/MossCircuit.pck/chunk-011.bin",
+            "offset": 30000000,
+            "size": 2368112,
+            "sha256": "57488a711b2c90a797e154ea97cbcbe44a3e6e18aba4bcb453852e8fa3a76162",
+            "git_blob_sha": "49b7419802e9c19b15aad9dff062a938e2f0f8cf"
+          }
+        ]
+      },
+      "delivery_identity_basis": "Complete eight-icon new geometric redraw resource pack; existing gameplay and responsive BUILD interface are unchanged. Restore from the listed chunks."
+    },
+    {
+      "version": "v43-build-expansion",
+      "name": "READ_ME_v43-build-expansion.txt",
+      "size": 3035,
+      "sha256": "980ac0e87baddcdf83ce824c2470e546b742d2854b374e0440fa36e1f13baa77",
+      "original_git_blob_sha": "5d2816672323cc561ac7a810b418d0a3835e9c08",
+      "delivery_kind": "github_native_runtime_instructions",
+      "storage": {
+        "kind": "direct",
+        "path": "Deliveries/MossCircuit/v43-build-expansion/READ_ME_v43-build-expansion.txt",
+        "git_blob_sha": "5d2816672323cc561ac7a810b418d0a3835e9c08"
+      },
+      "delivery_identity_basis": "Authored resource restoration and asset-editing instructions; no operational execution artifacts."
     }
   ],
   "reassembled_archives": [
@@ -4166,12 +4271,12 @@
     }
   ],
   "storage_counts": {
-    "direct": 32,
+    "direct": 33,
     "existing": 9,
-    "chunks": 47
+    "chunks": 48
   },
-  "original_bytes": 1168876365,
-  "reassembly_note": "Historical ZIPs remain reconstructable from their original delivered parts. v26-v42-L3 PCK files restore directly from their storage chunks; they are not ZIPs and require no second merge.",
+  "original_bytes": 1201247512,
+  "reassembly_note": "Historical ZIPs remain reconstructable from their original delivered parts. v26-v43-build-expansion PCK files restore directly from their storage chunks; they are not ZIPs and require no second merge.",
   "publication_status": {
     "v32": "locally accepted, not claimed published",
     "v33": "locally verified R2 source/pack; R1 ordinary and R2 controlled proof distinct; delivery helper evidence separate; not published",
@@ -4185,6 +4290,7 @@
     "v40": "local B + accepted equipment16 combined source/packed/native142/cards145 evidence; one ordinary Rooms first-shop observation without B acquisition, original strict-wrapper VSync failure retained and exact additive warning review; delivery verification and publication remain pending",
     "v40-held8": "local held8 asset-only source23090/fire1089; original pack ninth strictFAIL retained and separate fixture-only source/packed1089 repair; native239/36 images; delivery and publication remain separate, no new ordinary/full claim",
     "v41": "Finite source, packed-resource, controlled native-view, resize and local restoration checks completed. No new full-suite, ordinary-play, Windows execution or CI result is claimed. Raw operational records are excluded from this public release.",
-    "v42-L3": "Eight editable direct mechanism icons replace one atlas without gameplay or UI changes. Authored notes describe finite verification limits; no new full-suite, unrestricted ordinary-play, Windows execution or CI result is claimed."
+    "v42-L3": "Eight editable direct mechanism icons replace one atlas without gameplay or UI changes. Authored notes describe finite verification limits; no new full-suite, unrestricted ordinary-play, Windows execution or CI result is claimed.",
+    "v43-build-expansion": "Eight newly drawn editable build-expansion inventory icons replace one atlas without gameplay or UI changes. Authored notes describe finite verification limits; no new full-suite, unrestricted ordinary-play, Windows execution or CI result is claimed."
   }
 }
