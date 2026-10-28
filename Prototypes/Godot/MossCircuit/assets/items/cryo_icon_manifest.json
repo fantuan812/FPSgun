@@ -2,28 +2,44 @@
   "version": 1,
   "icons": {
     "cryo_sprayer": {
-      "atlas": "res://assets/items/cryo_sprayer_icon.png",
+      "atlas": "res://assets/items/cryo_sprayer_icon_editable.png",
       "rect": [
-        49,
-        79,
-        1314,
-        984
+        0,
+        0,
+        64,
+        64
       ],
       "name": "霜雾喷射器",
       "category": "weapon",
-      "source_sha256": "3013bc9aab42dce9a6d44eb42fd89617da565dea7f893828372f273941dee7e3"
+      "source_sha256": "cd145aee4e29a7286ef0a76e6d437abf5e344cda5db47dc8f4f8246944fd0a8f",
+      "alpha_bbox": [
+        6,
+        9,
+        55,
+        48
+      ],
+      "editable_source": "res://art_source/legacy_inventory_L4/cryo_sprayer_icon.svg",
+      "svg_sha256": "36bf30265faba1c2fb32b7c533074e2d2cfb6cf78789a0344047933bede1a127"
     },
     "fracture_coil": {
-      "atlas": "res://assets/items/fracture_coil.png",
+      "atlas": "res://assets/items/fracture_coil_editable.png",
       "rect": [
-        88,
-        75,
-        1153,
-        1041
+        0,
+        0,
+        64,
+        64
       ],
       "name": "裂霜线圈",
       "category": "item",
-      "source_sha256": "49262d6e14f9d311eafed4e83af62150ff8cdc3b4c7fca690e41805f6acd1351"
+      "source_sha256": "6adef741b99859ad448506cc79229f8cbb66b0810f50de8a8debb60c3d738791",
+      "alpha_bbox": [
+        5,
+        5,
+        53,
+        53
+      ],
+      "editable_source": "res://art_source/legacy_inventory_L4/fracture_coil.svg",
+      "svg_sha256": "c0e9545d8754724d0cfbc7b3aef942b0b31608b92ba549a4767d51a8cf02d0bf"
     }
   }
 }

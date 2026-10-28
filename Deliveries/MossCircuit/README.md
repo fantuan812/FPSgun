@@ -1,3 +1,9 @@
+## v41 — compact BUILD and editable inventory icons
+
+The update adds responsive shop columns, top-aligned icon/name groups and five editable SVG-backed icons without changing gameplay. Restore the complete resource pack using the existing helper; keep your actual previous resource file for rollback. See [v41 instructions and validation limits](v41/READ_ME_v41.txt).
+
+The complete held8 delivery README follows unchanged as version-specific history.
+
 ## v40-held8 — editable held weapons
 
 Eight existing held weapon sprites now use semantic editable SVG masters and derived PNGs. Geometry/calibration and v40 gameplay remain unchanged; the accepted equipment16 migration remains present. No UI R2 is included. See [restoration and exact evidence boundaries](v40-held8/READ_ME_v40-held8.txt). The accepted v40 delivery README below remains verbatim history; this pack has a different identity. Actual source publication is recorded separately in SOURCE_VERSIONS only after a reachable commit.

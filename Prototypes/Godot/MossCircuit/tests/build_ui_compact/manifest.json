@@ -1,0 +1,652 @@
+{
+  "schema_version": 1,
+  "exact_routes": 14,
+  "engine": "Godot4.6.3",
+  "baseline_source_count": 941,
+  "baseline_source_map_sha256": "e73be4b6de5e05df28f761d7fc879b26bc19e7aed6ce530fc834d69f8b294167",
+  "runtime_dependency_pins": {
+    "project.godot": "81308766e212e949545605aea2ac3ebd72006373313fc8ada93d7a78980b5e97",
+    "export_presets.cfg": "562c9a9c72846c1f3a4731e275723bd31e7e8ffc322d8d05dcce2492e4afc1fb",
+    "assets/beetle_walk.png": "2068796ffc83d19a44c047ec672c4e176d9b4b2f7001929ae42a52f53c38dada",
+    "assets/hero_walk.png.import": "98ee3143e802b3f1865653df15d23c84a5b4876c151dfb3d2583bad2f668c4f8",
+    "assets/ground_atlas.png": "8a9ca2b20d21e22ed0065427ef0067e9128ccf3a666b429085c05b684e0af5b1",
+    "assets/ground_atlas.png.import": "d1ec170e947ba86083d51ed6267f81bdad34e386645b22c994eea1fe4a0f68da",
+    "assets/hero_walk.png": "503ec7f1284e31c0994e09723a75cc12110767e0ecdbf77b41012c262cb94c29",
+    "assets/beetle_walk.png.import": "159d8b00e0ad3fadccbfbb5a19db1536852bc455606a9b4f7478c46847c2bbea",
+    "data/encounters.json": "4d802f8beb8e580ce4e72986c9c685c40ede232947983b6ea1fd6e2e4d5331c8",
+    "data/catalog.json": "12070828394102ea257f7e234690b1f51fe377b0640f72a89e121fe961c281ee",
+    "data/starting_loadouts.json": "745385ecbf290b24ca459c0847ff83390af3aa2c802045e224c8593023b7fb80",
+    "data/room_encounters.json": "0023a8337db5fdc8392dc4f4e3aa404c77cc692cad4b72dd3d1b3e2cf70bc9db",
+    "data/actor_actions.json": "efb767b047ea83d74657c0546a9264c27ca2810b23fb1361311832b32b971487",
+    "data/balance.json": "180c521a222f737a93498768acccdb98e6bb93f606de7e6719f88261eb41815c",
+    "data/vfx.json": "0602bb81d016a6e5c61f4b9be5f81a092a2e65e4a6b6164a4e7a06529527c3da",
+    "data/hero_sockets.json": "3d348eefdc7e301f7a644507cd5bd37acd5b0064bbbe86d64fd7ec6d3a6286a6",
+    "scripts/effects.gd": "6c6788e74803255ec489ab9a307619dfb4cbf8b511261483572b6c7db1582085",
+    "scripts/feedback_audio.gd": "395b372481a2f7e5374923e11cbf62afcf8e468f64fd432381b5ac2c9b591684",
+    "scripts/telegraph_layer.gd": "e9be823ab3ffe6fd0284f2b8c92e5ad4fcee53a195654f332f7ab3a93a3da1af",
+    "scripts/weapon_readout.gd": "664499759aacd9271e3290d39c59c34188ad2730297f88028ecfec4af3a16747",
+    "scripts/telegraph_layer.gd.uid": "d127d7b454d1fe1c68603b168e0d7630e1602c9ecce767f2a71d158da714de5a",
+    "scripts/main.gd.uid": "d41a71d3426455393b959db8531c07e17efa1b7e0c6f2238fc36e47e5644ce29",
+    "scripts/feedback_audio.gd.uid": "96e25cdfcb51cbd5589e22db242ea76f8c47975491f4068b5d1d1b99607d11c9",
+    "scripts/vfx_layer.gd.uid": "7b8647de0a64ba239fedc7a9030d2b6e6e399bb17cfd4b5717ab17e2d0fde7e0",
+    "scripts/weapon_rig.gd.uid": "4eeaab69b0558c320d2862ed037b372cec8c7fce7334cd03df8f861f5f801593",
+    "scripts/effects.gd.uid": "c152196fcaff4eadff0e36c958cfc72db6bc7c62bef495ddb768a9a03c345587",
+    "scripts/rules.gd.uid": "5551a65e121c445f0991439ff8c693a654d6ecbfb41070e568728c577776eb61",
+    "scripts/weapon_readout.gd.uid": "f540ec3059d654175933334654b2c12fc410f3b4b05b6094c30a9fb0815bfba9",
+    "scripts/enemy_ai.gd.uid": "e39e381021c8d275a983d7040e071ba35f0f09be2fb8551fcb6616373f077991",
+    "scripts/actor_director.gd.uid": "1b3b4ba15957348d590060b68bb349a103c6e78f41e33f1a9db05e29e7522568",
+    "scripts/art.gd.uid": "3cb75a7f220098772b4c0de331e3555ca75a85ee744525437a77a46a822bd2ae",
+    "scripts/main.gd": "36fdaa2b2b47e22c2955583eeb709e622605bc0c15fde43f940839c1327ae6e9",
+    "scripts/art.gd": "cb0e4ac9c5d3a30cfe2fdc462aada0409cfcdb663d0e6df9526dc3929438dbee",
+    "scripts/rules.gd": "cdd0aa59a7a8881bec1cfb1256bcbc988555d365813423459dba40a8244a8248",
+    "scripts/enemy_ai.gd": "0aaf15a066234049929792017278663cd555e5f87e59fb6be90165ecf20d07c2",
+    "scripts/actor_director.gd": "a3e95eb6573e2f3ddfc88b885f3883a8ba821ba297d95ae7274b97a3b9665c1a",
+    "scripts/weapon_rig.gd": "937b8d17f5f5598c6d0d82c87f654e16ea055257923f403d01cfcd8ac9ea499a",
+    "scripts/vfx_layer.gd": "a0473cccf84083fff122517bafd34a3eae1741ce63d90689e4159e9c2c8910bf",
+    "scenes/main.tscn": "dc2ae31e03a0a3f34cabb8d53f28067c4efbb484f9c9d4b851a174040812fe38",
+    "art_source/alpha_bounds.json": "95ef8a5a17693439b4d96c20208a144b49c417711a86981f4347fda5f58a121d",
+    "ui/mode_status.gd.uid": "dea0f0191dad441488ed05e5cb349c0dce9dec937fe92964bf75dfcfc53bdc66",
+    "ui/moss_ui.gd.uid": "7a4d0d8184156430cb84a62ee9a6537d9dc41082945fbbdbe4f501d6c69a7093",
+    "ui/mode_status.gd": "993f0afbeddf2b3f4ba3239748f61d317f22e411e86ebfad491b7f588220bff1",
+    "ui/moss_ui.gd": "a696f5ff05e0d72dccda4a1cd2e5545e18d01c1bb7311f9ecdd30cb987d8ef54",
+    "ui/forecast_glyph.gd": "10ba3c92ced4f4529e42ab7a81b511c61d0a5e7d8152bceb52bac65a0cd56dd4",
+    "ui/forecast_glyph.gd.uid": "8eff0cbe45d5b107b0dd470cce5435ca4b7de9e90cb39de2da7eaceecb1e4184",
+    "assets/items/equipment_atlas_editable.png.import": "9ba89aa6dc371577e3611810ceaa47b656004377f78bdf578559160c1420c49a",
+    "assets/items/build_expansion_atlas_v5.png.import": "082e9bfec7da83cd37e2ec08c49180aadbb5e5525a303842575f80ee16931de1",
+    "assets/items/tether_emitter_icon.png": "220d0ab1597c5d346ff4b37ab08a12d500f60a4d84df85902c15c0af703ad078",
+    "assets/items/salvage_capacitor.png.import": "93e7616ee5008d4a86af0a70a84a70e4877d71cb6d7039e68d7e27579b9ffe25",
+    "assets/items/recoil_plate.png": "859edc09d17ed4c78e02ee84164245894903396f74f595640841686fd3f119b8",
+    "assets/items/lock_memory.png.import": "1aea949b3b0f8b637fcc0d9d9386372ec265c4c819e5f1d916e9c47a905f66ca",
+    "assets/items/return_collar.png.import": "562a2aabf405dd2eee9ab9c856b74f7e5834af491b2888f57cd472b5576629d9",
+    "assets/items/feedback_icon_manifest.json": "3ab1c808fb22cd84d94ca9767c977e97fe6fc6cfa00c6d98858906ae615a895c",
+    "assets/items/crossfire_pin.png": "cb484f693183e4b45c7cc817864d3bef521c548fdfab33c56004858a228c82dd",
+    "assets/items/cryo_icon_manifest.json": "0774037415fa5cddc2923b96e0b5c63795de1fa0cc0b99d5dec2c80a0a81f7e6",
+    "assets/items/scavenger_icon_manifest.json": "180b647078f6c90cb866422d7a14a44fc5b81f801475856f0bcb531315d34336",
+    "assets/items/build_expansion_atlas_v5.png": "e729eae41caa9ee73cf9382468f5efba65aa60dd125f14175ed3946241571d1a",
+    "assets/items/seismic_drum_icon.png.import": "a7b8ea12a280726862fac8ac626fcca8b375bb9b07ed00e487c16179ffe9b912",
+    "assets/items/equipment_atlas_editable.png": "69823d89afb0cb1eaaf83d7986a017c591245bb19ee260abaefa8e920fad0bdd",
+    "assets/items/mechanism_atlas_v4.png.import": "b1ff81633995ccd73add8cfb26fe208fe14dc79c0ae7a21d334e85c4c424f96e",
+    "assets/items/expansion_B_icon_manifest.json": "b443c8ccce6ed31d7a5929e3792ccb94850a3eb57a8bf11c6206dc742be91148",
+    "assets/items/scavenger_reel.svg": "b426e007898fcd69c8654b6d0468bced2c2ff57cca3f3ddc40e80eebfa04c203",
+    "assets/items/salvage_capacitor.png": "db104fe6b3ba8fd93235162141ffecfe39261f59ce83f43258cd806b68439c9b",
+    "assets/items/tether_emitter_icon.png.import": "565c15b6e98668419571f5e99a56cfe8099c8fdc9f141c80062634f9611de1c8",
+    "assets/items/scavenger_reel.svg.import": "92e839918057055c68efeed2d3936b3d50e05017c4e2ce1a7736293eb7c8daa3",
+    "assets/items/recoil_plate.png.import": "b92802ffb0c04fa2960d402f983c0ecbb8f4606912b9c2d5b210339787ded5a3",
+    "assets/items/crossfire_pin.png.import": "f9a0a36dbdd963f7fbddd5ff0b75e88662e70a14e0fc07cc4348abe488a3a6ba",
+    "assets/items/mechanism_atlas_v4.png": "0ca0aa10d67ce1fd7b2d6097cc75c4b653fdc6ae659a7c282f1807609f6149a6",
+    "assets/items/lock_memory.png": "c2c0dc6bbfac54565b4a95c76fc8e14ac38e6e3d49aa258a3364b141018e917f",
+    "assets/items/medic_winch.png.import": "27e6a8370f6e0fce3fb0f57259436764279d11014a69a42117b1bd39eeee60ca",
+    "assets/items/return_collar.png": "e392610b32f9d96b3d8426ea165cf356d87f6c1673cf72b14c2b529482fb9aae",
+    "assets/items/expansion_A_icon_manifest.json": "72148bb9d47ffb888ec238a23136e44ff29e84bf54b83743cd89afe67fce55cf",
+    "assets/items/icon_manifest.json": "7b873a7ca56109d3b351cac7a4d6e415d718ade3cd48afb3fc08dc909da0f430",
+    "assets/items/mechanism_icon_manifest.json": "9a3d690bb873e7b200164e240914f428c1c0a465fae0742925fad3d98e9dc527",
+    "assets/items/medic_winch.png": "b37a9f835c284a80c353691a94e5e2b9d0ea63be5a71ab1eac11dbda0aaeb5e7",
+    "assets/items/bankshot_icon_manifest.json": "ceb35de901642b20861f04424878af05b35bee7c61f4b73dcb79bf6d3223a597",
+    "assets/items/build_expansion_icon_manifest.json": "491ca4d2ccc42714c708dc3fc42cc4cce7a6a5804fddcdb0d637f9ae2519a656",
+    "assets/items/seismic_drum_icon.png": "08689267d6062e7d1a90dc63ab2995218f0e82d744cf896dc49abfd4604bb21d",
+    "assets/vfx/dash_trail.png.import": "b4eb821f5faafcc3f198f2b9eafbffc67dffef07531db72b975f5aa3df3b449c",
+    "assets/vfx/chain_arc.png": "3367aa7bf9736a5058cb8ae5e5932169fbf7f2a3ec78123d03ca917b7f2e0eae",
+    "assets/vfx/shield_impact.png.import": "3c0d8c19beb0faec1ed15841fdf275d6dd30bc0e37e1c7a40039812b7d3402b5",
+    "assets/vfx/hit_spark.png": "3995cea2b90ffc0530e90833fa83e6f9d251ff7eaf0c5172403e5fcef466899e",
+    "assets/vfx/chain_arc.png.import": "b4402376451629cee46c14ce9d409344801dcca4956eee62d1e86f630a3e0d6b",
+    "assets/vfx/hit_spark.png.import": "a44953de67cce7173f7ec7089ec4493673c9a23ffb6806236bb66cf6fa3c4cd9",
+    "assets/vfx/shield_impact.png": "fb63a02e36c2c73ea717c2671d21844cca28166672c79adac89c4e209dc7bb4b",
+    "assets/vfx/muzzle_flash.png": "6d69af60154377ba00c2b3383b58a30234757c909346a2c04dde19364db0a2c8",
+    "assets/vfx/explosion.png": "c66cd61d38ce0f6acab3f4064a6f3423fb0c32584859f176c243ffd8048e20dd",
+    "assets/vfx/vfx_manifest.json": "f29c7963d89612b04c7c441f7e96a00209438f42f654f8ede58b1b1c209c1dc4",
+    "assets/vfx/explosion.png.import": "1612292664dcaf651edd942f141318493ab0902f16f55f5d6e9589812170ac55",
+    "assets/vfx/muzzle_flash.png.import": "ed326de9ffba0aa607f071d47cff3feb2c167cf18da5ea20a411b53fd141e899",
+    "assets/vfx/dash_trail.png": "376cfbd3b4a8958ae18d77865069f5f1ec6ec32cba012405dc368a52716c5d3f",
+    "assets/enemies/boss_core.png.import": "905e50408922d87d1f7112b29932c657423f790747dac8a86833c560370fb2dc",
+    "assets/enemies/boss_warden.png": "fcdc4d60e545f606c1c8c6d942c1c07f1f37767f20202074f47f51e6a582d0a0",
+    "assets/enemies/brood_keeper.png": "097786195cb741058bec4631eb2f9896986c7d9d41f7090172431a3eda4345a2",
+    "assets/enemies/charger.png.import": "d37a99ac59bb440690e516bc6ef630187e09b4718e552046624c4612964ffd0b",
+    "assets/enemies/charger.png": "ba72977655eaf057031460c93e4d85f3e0c53bc85a63a6463e1408fcc4086934",
+    "assets/enemies/spitter.png.import": "5a3a21cc1810f462a5cc7f714bf17671b0e3c6eb3b86e3a2c1d8e28dad5885e2",
+    "assets/enemies/stitch_drone.png": "ecf056d8b5a644e4762739facfb58a12590430e11078fbb1d7a3eb48a9873e0e",
+    "assets/enemies/boss_warden.png.import": "cc98016c01f41ccd72098c13f0e8ca43669eaba698188f4fb9526c1881ae5166",
+    "assets/enemies/brood_keeper.png.import": "649ac5db8a57efe131c3fde3ea7ede3c5fe148a0a45f49aa8aa52595a2e8fc5a",
+    "assets/enemies/stitch_drone.png.import": "c01c9ef3f290806611713102857e822443b40b6d06b9072452c3d8ffa6483b9c",
+    "assets/enemies/boss_core.png": "372c220e98f76e4b5f23dda5149741c0f48c20ed42ba03f8499f38ad9a5b3b60",
+    "assets/enemies/flanker.png": "90717d00348d4d72521c199d8a45666abecb98d261d7135737ae6ed0c811aab5",
+    "assets/enemies/flanker.png.import": "93df5da927a92b771673e67e0f33bc40560edc92257258675ef9efd272dacc86",
+    "assets/enemies/spitter.png": "d49d9ba91916850fa28f28db3c1ec5da9e602c315ace60460ccd2b29655332d4",
+    "assets/enemies/enemy_manifest.json": "8983de6a721fe7051d0aaed26bfa238ee11cedb3680b804c54beebb644bc114e",
+    "assets/weapon_mounts/bankshot_world_weapon_manifest.json": "4df726dd0a8877529713c29201b7ed91a7e86445b38c87cec8f15ee9162df31e",
+    "assets/weapon_mounts/tether_emitter_held.png.import": "3d01337f2f816f604b2c6a3a51aad9d2381cdaaf2195bf08bdd35c26127e29d3",
+    "assets/weapon_mounts/world_weapons_atlas.png": "b064fe1415819b5dfb353ccc9cbfe187ddc7a8b54b06764ea3bd66ca2e9e82e1",
+    "assets/weapon_mounts/seismic_drum_held.png": "48b817692c62d7a8edb0a58e718176286cd329e78b54b002d41078beabc9eb75",
+    "assets/weapon_mounts/clean_hero_attack.png": "b81294ed9b92f09f7030b86cf21d489daaa4ff2d402f4451b6d2c9b7bb068f46",
+    "assets/weapon_mounts/bankshot_driver.png.import": "d121cb2b63df61763e1045f24759c80523eaebba0cfd74b60a82dd9389c82217",
+    "assets/weapon_mounts/world_weapons_atlas.png.import": "dec3b30ec4a5853e501d8b9a8b950add3e40319f1ddfe8d2af865a11e00ee3af",
+    "assets/weapon_mounts/cryo_sprayer.png": "ba558fae446703f4ed84c11755982b8a345a853b5346c044cf14990ffab02b0b",
+    "assets/weapon_mounts/cryo_world_weapon_manifest.json": "2cdcabf8df60c36ef3ab72f032712b126f1c978e5e36efc1c51487f977e0be30",
+    "assets/weapon_mounts/rail_lance.png": "319b24f94169f2cdd2803bf2d657f89cadfb6cc5bba642680c94ee7c59c57151",
+    "assets/weapon_mounts/clean_hero_attack.png.import": "79d50ce2409c71c00d1fcb3d4584bf6013edf9c1a7c126fd6f82dfba7afc4255",
+    "assets/weapon_mounts/rivet_gun.png.import": "e8e43276832e83bd4edbe46cbeb0307cf5f5a7789ccee53a8aebc16c2af1c7d5",
+    "assets/weapon_mounts/shock_mortar.png.import": "8cecbbd0ff51f36a706393e7642785b12e72b55c173b21d5197a388ddb8ac289",
+    "assets/weapon_mounts/return_disc.png": "aab1f5edd6b89dab934044dbf881c7eb62dff3d7409a5131f3dc2760212da509",
+    "assets/weapon_mounts/return_disc.png.import": "7f6d0a81af78dbc76db76b0aa45667146e2a24ce407754bde9bdc16c698b43e5",
+    "assets/weapon_mounts/scrap_shotgun.png.import": "e21df981b9d375beaf852448e3e6aa670742fb31da9e9c1682290fff44d610c1",
+    "assets/weapon_mounts/shock_mortar.png": "d0dd026fd75b5a6d25f38eafb039166a5f990c49c3eaf9b8403bd0c7131156bf",
+    "assets/weapon_mounts/rail_lance.png.import": "cc2adec02e5e18a8b17d883a455bc2a9a3283bb03f63adfea21f8a67afd3dc17",
+    "assets/weapon_mounts/rivet_gun.png": "ebe94b043b40db712b9d743041cd907f5723103568fc02b52fa2cb8a1effc7a6",
+    "assets/weapon_mounts/orbit_saw.png.import": "e6ebe34c2b92fe0ea0e97436fae523236fbfa6137e089ad79a1c851dd34c6635",
+    "assets/weapon_mounts/scrap_shotgun.png": "6809412347b9cd065f8c98c76840785f712cd4debd3684c0a4bb923f845ea6d8",
+    "assets/weapon_mounts/world_weapon_manifest.json": "d627e1c19a49bb26464d16e610a4a5ba0e4499f7c3d6b0a6a30c5d18dc3de3c9",
+    "assets/weapon_mounts/seismic_drum_held.png.import": "68c30d32a7dd4a72da8b6b14a25dc83e0d598f60fbfe049e44cb77bc01e1375a",
+    "assets/weapon_mounts/orbit_saw.png": "2fd2dff64c31709e41e7d56dbdbc1fd6f80c5bc012bfbf004fdb8026f4208f5d",
+    "assets/weapon_mounts/bankshot_driver.png": "403188bb25e486fc4d1ee7681483f882e2a542d77432372a245a556100cd28f2",
+    "assets/weapon_mounts/tether_emitter_held.png": "86225968d40b3ac6bc6699039120c5fd55657d3645767abf21b8bf33c8f89f86",
+    "assets/weapon_mounts/cryo_sprayer.png.import": "c17072f31f9faabfd56458fb816edcf70dfb6b928735632f1a79df975229587d",
+    "assets/weapon_mounts/hero_modular_manifest.json": "9410acd56c7d62a850dc8423ecff2539fe71d9497d5eed5b031554d813978227",
+    "assets/actions/hero_attack.png": "7aa9c18439497b7fd43f8ac8f1fa95d4fef20cc398ff359e8e370da24781ce58",
+    "assets/actions/boss_core_attack.png": "aff001c3a1a5ad5b479f6e7c0cc6d598bcc98c7fb49254df49e7bbad7472728b",
+    "assets/actions/hero_hurt.png": "062e38b2513ef87d1496368ccc500774df44804b4fcadfb0b13b91cf804fdb02",
+    "assets/actions/hero_death.png": "2deec59bdb8527c97f36528eb1bdd650bc6410c34ac050b77546a20550206e1a",
+    "assets/actions/hero_hurt.png.import": "d5269898068e2410f6ab6f2fd5e796c7df5eec7e522093a411bb1297daa92fcc",
+    "assets/actions/hero_dash.png": "9dd43ba5700313334fa7ddf479d55c5ef2703a2cd5e98b43cc0f61f202d47da4",
+    "assets/actions/hero_death.png.import": "1a7d6de76cdffb6369facc876b6bcc76a279a1791a647dc0b6557c8d627b442c",
+    "assets/actions/boss_warden_attack.png": "4a2865fcd775af7503630c67146f05537f9ec987af15705a92c8d51f10fa49d5",
+    "assets/actions/boss_core_attack.png.import": "d362ebb3c34c6925d2528c1a7f8b7b2e34dc571309fb6bf343e2a0fb79701520",
+    "assets/actions/boss_warden_attack.png.import": "614a6f1e89e65a5cbc6ee05249388f96290b55cc55fe843f67558480bb364dc1",
+    "assets/actions/hero_attack.png.import": "0aecd04390c8165b4b190f7e92132ba77130cfb6f6727821ca915b9e07c4803e",
+    "assets/actions/action_manifest.json": "935794d18a623b8877ed0565cf1b2711ea40ae9592aec695a7fef2a2ee867d1b",
+    "assets/actions/hero_dash.png.import": "eff7b44fb0ab78c04bd061f2c88e7ddae83301d6096e6a8916f700cd2efdbb4c",
+    "assets/audio/shield_block.wav": "c4e21aa5500c8d4f01dd29c561e325a3f97173f103b29c1a291df54a6c8766f1",
+    "assets/audio/player_damage.wav.import": "becf42e81f6cd87f3872cdda27ba20132ee3ff5e13ba5e524d933988b9eef6f3",
+    "assets/audio/shield_block.wav.import": "d70d7ef87a93bbd8e9ef7d939e8143a598a9e95baf8f0ad9e225547a66dc8271",
+    "assets/audio/player_damage.wav": "34a9aa9fe8cab5273d2ea5199b127d303975df7ff088acce2441f14a922ec125",
+    "assets/audio/provenance.json": "29f69e877141c532644607c63a88ca4aa636022c0aee45c90daff5a41804dfed",
+    "assets/actions/spitter/spitter_hurt.png": "979a1912618d20bffcd44fc8d497329aa920c53fa5f71fe7bfd791bfd0dc4b80",
+    "assets/actions/spitter/spitter_hurt.png.import": "60916fccd535f0adbd5629868388c561c92e9fc2d2697e0d252eb67bcb847ed5",
+    "assets/actions/spitter/spitter_shoot.png.import": "d07ef205d596d0e79009c419e37f35dea5d2f9bc9d09be62840a70d16eb0bc70",
+    "assets/actions/spitter/spitter_death.png.import": "6d8af77997c0ea054f83d6d0a15af6cdeb2a43870537fc2a5c7fb29c5c9bbcea",
+    "assets/actions/spitter/spitter_shoot.png": "c5da82006497fce441104b245528c5ef5a414176983e120a304536cf9e6eab48",
+    "assets/actions/spitter/spitter_death.png": "5f19f18ff386439fd75780311776217b993cdf72e5b24b854fc6ac32a7cd9807",
+    "assets/actions/spitter/action_manifest.json": "7dabdfe3c7d8d08f09cb4af0fffc75162609d40f450e5b924341f692b3716db6",
+    "assets/actions/crawler/crawler_death.png.import": "c3c8e52509d1f7ab5a198a94e5f6d17c2244750bfc607375c60f1984197db6da",
+    "assets/actions/crawler/crawler_death.png": "bd7db67cd7e5d9e37e3c89119b09ca3fff6c701c94cb35b9d350bca340c76ecd",
+    "assets/actions/crawler/crawler_hurt.png.import": "4f7b6e8f147d0cc77badd8ef5d9e4e9cf171fdfab824debc60f39a3f53fd4f5c",
+    "assets/actions/crawler/crawler_hurt.png": "ba7ac243d092efc4df4078011fcc80f93945b9254d7e9ac4a15c7b3f20ff7230",
+    "assets/actions/crawler/action_manifest.json": "99546710d4015da3bd91f1c3c770bb13add88ba2124405c5d52a57dabd2861d8",
+    "assets/actions/boss_warden/boss_warden_charge.png.import": "296301ff47a0dcae1f7d1d34a069b964f829b90f203444a04604891e488fa5b0",
+    "assets/actions/boss_warden/boss_warden_charge.png": "1c27e2bda27f3ef64b318261612cfb64433277d3f8e7b3301c5e49c5e3779f99",
+    "assets/actions/boss_warden/boss_warden_hurt.png.import": "d78244459a5f8f1df98e7062d4c7e3b7430bc3170c0d741667b9b5b9766ee410",
+    "assets/actions/boss_warden/attack_manifest.json": "ea0d989a82c269559c7ef28b7f2852a91976f5413942b294b0b2272802c0ce68",
+    "assets/actions/boss_warden/boss_warden_hurt.png": "b67f2cd14042b441982e44080f26258ade3804961e42a0395b3cf1846c64b899",
+    "assets/actions/boss_warden/boss_warden_death.png": "40d6c1c70a7881c20410f7e8ba70e505e59eb06b1f39bb4b56e09ffd401c286d",
+    "assets/actions/boss_warden/action_manifest.json": "27cd51c4a60fedfbf76fdc8d861d3748528b9ce9ec84cbeea06cb02f56e6bba7",
+    "assets/actions/boss_warden/boss_warden_death.png.import": "05347053fefac9ea6ef84b644bf0ee426f307ba1a68db2fce5e1c88651feaf8d",
+    "assets/actions/flanker/flanker_death.png.import": "3396b5e6cd98dbb90ee4f27fe76a92dc1a5c801bb881a9728039d6cfc362759f",
+    "assets/actions/flanker/flanker_hurt.png": "bfebee1f99fc08335e0224294c88687b7308d48b5cc067e4c95ef9da5ed6a8dc",
+    "assets/actions/flanker/flanker_hurt.png.import": "9821a11eb6beac1217c7e27bbd45f230936d7cb69e55029db2f35478df902f3d",
+    "assets/actions/flanker/flanker_death.png": "c8a20f57ca87a10715b711f37dd606637e60daa3898082f0a6cef084b3bb57ac",
+    "assets/actions/flanker/action_manifest.json": "1402758cc1e50247967e348022390cfa41c63dad90c714653b8ee509c78b33d4",
+    "assets/actions/stitch_drone/stitch_drone_death.png.import": "7c529b389e24eb2b655fa1f582ae900de51b4e4d188ccbb1c29ee1adf9033f82",
+    "assets/actions/stitch_drone/stitch_drone_channel.png.import": "7c62ef1fb65ac259e440a40e006b9809e0b9361132123ed86fac813135fe6b0f",
+    "assets/actions/stitch_drone/stitch_drone_hurt.png.import": "1e63af936eab870fb54a7bdaabe8fcfe5c1f2fe9ab27d5774c52da96ee53730e",
+    "assets/actions/stitch_drone/stitch_drone_death.png": "87c0eaece4ee29fd4854b84eff36a354aa42e093695380241148374582a71e74",
+    "assets/actions/stitch_drone/stitch_drone_hurt.png": "8e7d29fa34ca8670658415103098760403ff4d0ca31a4125326cafa1ff30c879",
+    "assets/actions/stitch_drone/stitch_drone_channel.png": "6970cce2e0c9883789774fa5c118f7d69a093a739e085f07d9188783fee5a091",
+    "assets/actions/stitch_drone/action_manifest.json": "7a77702753e94c525a30df80c5acd4431eab89a30179f43fa74d8612d907c0c3",
+    "assets/actions/boss_core/boss_core_summon.png": "06db7c54121f75bccd25998f8973a065ff9f376669ff794b8ed569b2855522e0",
+    "assets/actions/boss_core/attack_manifest.json": "8d4e7106fcb9cec908f37ae4f2419708a73fa289ed5330ee82a21d815cacaa2c",
+    "assets/actions/boss_core/boss_core_hurt.png": "06032a84184dc2331177eb0bf3bc237edff4c6c981802e393fe1be492775fc89",
+    "assets/actions/boss_core/boss_core_death.png.import": "0716770d10e231c7c3b98861b90e6448028e94660b3f36cef1cb5d6adc71a7e6",
+    "assets/actions/boss_core/boss_core_death.png": "5e019c8810e00f013796c0b2c14f041ed637a12174eeb2fcea7a593dcfce9b4b",
+    "assets/actions/boss_core/boss_core_summon.png.import": "ff95cc276a85885898407ea66deb97b7c682753a82eba09e0fd11e2a7a34f350",
+    "assets/actions/boss_core/boss_core_hurt.png.import": "63a4bed05dfb0e0c095dcb35b64c0d987ffc3bd445fb3e521d8880305d6449c4",
+    "assets/actions/boss_core/action_manifest.json": "72028a64383be9350e6142731f7a8042cf6085d494e9e2e28cdf8b7aea1c59fa",
+    "assets/actions/brood_keeper/brood_keeper_hurt.png.import": "79cd048fbe29b1b0aa2bb14c91e7136c25b1ecbe3ef0f86c3fc37b69c4f30e56",
+    "assets/actions/brood_keeper/brood_keeper_summon.png.import": "e1a18f19943262b3248f8455fb54d607af17f37360b4b51dc558527cc8d86227",
+    "assets/actions/brood_keeper/brood_keeper_summon.png": "1f5faa0c330891fb2ffc4f0b6f3f398b4871452b6401e79407e5b3b0aceaf748",
+    "assets/actions/brood_keeper/brood_keeper_death.png.import": "c5ca11dc287f0d8a568b8d4fac6d3b6acd6b96b597db2d1e199ca4f6cdf463c3",
+    "assets/actions/brood_keeper/brood_keeper_death.png": "fe51277b16ac8bf7a58d4f12c02b30c72074415975847f524ff689f524daf7c3",
+    "assets/actions/brood_keeper/brood_keeper_hurt.png": "266f9110e1c3c2d730e9b89dd1802ddc2ca58ce59ef39afbca7cb1cd5d8a7a0d",
+    "assets/actions/brood_keeper/action_manifest.json": "be8abe0519f37d30650efd816d094318e21bafdc03ad0ffa3fb7433bb0db2766",
+    "assets/actions/charger/charger_death.png.import": "bc884b56bd48739655c6c97665dfe33313b7ebfc7d7c419a2aabe7abcd93908a",
+    "assets/actions/charger/charger_hurt.png": "80d04dcaf0c153567c939052154a429a9a3f93b030807ee852488388f7b4014d",
+    "assets/actions/charger/charger_charge.png": "dd6340053f224e0bc166a88ea6d59ac4ddf16de6e522cfd2f16b75c445358d73",
+    "assets/actions/charger/charger_hurt.png.import": "ca1ad06b0ca7d1d2ce0633411c84b3592d7dd8b3170370b5218f5cf49058dbd8",
+    "assets/actions/charger/charger_death.png": "a0ec5143ac1b3cdbefd4481984a135fa1c278f067f1af0c781866af545eb24e8",
+    "assets/actions/charger/charger_charge.png.import": "01fc8d71f82f2fc2af037ac46811cd83a0126bce0ecc266376e05e74463418a3",
+    "assets/actions/charger/action_manifest.json": "22963394019261d700f5a1bb00d8dc1f67f991b894447aec92d40ec15f95a8cb",
+    "tests/support/v39_catalog_projection.gd": "cf233fcb426046531873d7adffce6f05c1d3752f93804b69afb8ef406947ff88",
+    "tests/support/v39_catalog_projection.gd.uid": "15e57f70ee607a0323718d70ffebefb2d18873d308cd5b906c45516aca147ed1",
+    "tests/support/v39_legacy_inputs.gd.uid": "301977c5b385edc3ee96ba02c5b75f85bfbd16650772bf592d09657f58238e0b",
+    "tests/support/historical_feedback_authority_v35.gd.uid": "53586e03621ac786c7307c1ae8bcf6043363fda5eaab89a59158c8badc9246f0",
+    "tests/support/v39_B_then_A_catalog_projection.gd": "b00242194b4b3785ffca7db1b152316197c858f2c5f5c413b433eb1ed44665f8",
+    "tests/support/v39_B_catalog_projection.gd": "ee5cee74555ea63285b1291987b3446255179542d99856b734f0d3b79a57684b",
+    "tests/support/v36_catalog_projection.gd": "86f7303391797ccf7f5d36fc9be216fa597736b95cc85a1235c5b48e66f96a73",
+    "tests/support/audio_teardown.gd": "9e9676e34296cb55d4560b1169c5954a82508f70e9051fcc942d1bb6839c23bd",
+    "tests/support/v39_loadout_projection.gd": "37fb6121b340498f58b815abdad7355a3d927a15b488c3569d9cf98f379087b4",
+    "tests/support/v36_catalog_projection.gd.uid": "c921031050adc39049c4f5bcfff8d13b5d23f0a41c9d34c033959fb434614e12",
+    "tests/support/v38_encounter_projection.gd": "799286faa1319c03d5afd370efe6770a7ec98d41f06a879241b58eb6ea7a09de",
+    "tests/support/v39_legacy_inputs.gd": "229da020607db1b9c8135aa3b063aae47f006ed3b4155f1725f57fc939475a89",
+    "tests/support/historical_feedback_authority_v35.gd": "e733fc08d6ca4d3c16c6f3e8ae5a7abc415b5b96b4c20823da1b5ac5a96ba690",
+    "tests/support/v39_loadout_projection.gd.uid": "1a0d9d8cea9039a1193c8ec0f57f6f56aa40d66d3593eb5ee02c88f35846073e",
+    "tests/support/v39_B_then_A_catalog_projection.gd.uid": "ea3364cb3c10fc8b0a344caf67e24baa7256cbceb283d2ce0369bd57ef255459",
+    "tests/support/v38_encounter_projection.gd.uid": "2825f216f7fdb85e2fba4fe41cd905e3fe27798937f42f6996cdc22964850664",
+    "tests/support/audio_teardown.gd.uid": "8c18e546937cf1fb28d6cbd0c9a0f5a1032c9827a2666970df41536d81ab7747",
+    "tests/support/v39_B_catalog_projection.gd.uid": "8dc414cef64b6a3b50baad1994d8818ba68766580890d1e755f5b7c00fa6f4c0",
+    "tests/fixtures/v21_modifier_baseline.json": "e1a1c3c9c26b5c211bda7b17bb7ccd4e9572b3eb09dac6a46e8d9f15eb3c7b20",
+    "tests/fixtures/bankshot_analytic_vectors.json": "dd6b78082c273d7e69c14a87a4897f5571ccd136310a3f025530b76e56f662ee",
+    "tests/fixtures/v36_catalog_additions.json": "b26ca154835eecd3ad85f7f1925aaa9f3089aac3f18d36d66b2425be99852622",
+    "tests/fixtures/v39_geometry_api_cases.json": "9ae13f97bf2eb6f201972bb28135e97b20b8491b9c69d273ef7d67c011bad8d6",
+    "tests/fixtures/v39_catalog_additions.json": "d065fb56f5fa678e60a1d8ebdc7decdcbc580eb7f50ee8594c4a5227126af736",
+    "tests/fixtures/v39_loadout_additions.json": "201fdfa7de14d2fadd94af590dc2e2eb6c35798d3b30e2145bf50fa97b5c7bfa",
+    "tests/fixtures/v39_B_catalog_additions.json": "5ab1bb1f93b8b58706c6782d5729e104d8320d5a7668518cd48a8ee38dcbb65d",
+    "scripts/modes/arena_mode.gd.uid": "001c50358f752d1689c2560ad9a8d4e5f278e2023ba0ba0b9648cbe8a065ce82",
+    "scripts/modes/room_mode.gd.uid": "1be2b41186ed07883b2670fc08efe6a178a0ec426886b50cabc2eb5587948c73",
+    "scripts/modes/room_mode.gd": "114ca354bee08c92880c3ceb51d1ba10de8d06cb55680ec3eb6a24386195ea81",
+    "scripts/modes/arena_mode.gd": "89303d2a93cf4cc10976f5d6586082655b4ab146fb87daa28c00b20c0c9c7999",
+    "scripts/gameplay/build_forecast.gd": "78344eec56de8e83d45a959c5c36541cafabed134ffdb4752e4ade779083d1f2",
+    "scripts/gameplay/boundary_shot.gd": "a16ff996810c5b078cf73056941a1736ea91ef8653830a839af33b19c6e7faf1",
+    "scripts/gameplay/new_weapon_profiles.gd": "816aa5e4929d3b4fe65b2d1b8c6dddeeb8752e1ae1b183fcc1995300b951a536",
+    "scripts/gameplay/boundary_shot.gd.uid": "12cb29a16e15712bae86201f492c87c442668731c517cac7f24b237e5c19f629",
+    "scripts/gameplay/weapon_tempering.gd": "9268dda1a7100f897f6f31cc37c3f6ed91d1dfd4081f6a5b32ed616cf75d21e6",
+    "scripts/gameplay/build_items_readout.gd": "75fb7c3b301a9411ff7f6fe0cf5192bef2fc955134dba62e9881105bcab8ea3c",
+    "scripts/gameplay/build_forecast.gd.uid": "62a8890dd2914d431d0bc68e012102ccdb69a4e4db66d4a770df2ef56257cc45",
+    "scripts/gameplay/run_flow.gd.uid": "3de46f71f2fe8c7889cc3e1132d8dd5d99f53ee9a3e11c19cbba7d5e0769167c",
+    "scripts/gameplay/new_weapon_runtime.gd": "f96a0dcd5881142ee557e162975adf5ce20303e6928f29c4ace65c98bf2987fb",
+    "scripts/gameplay/weapon_presentation.gd.uid": "694530608973f6dd7ff53e441f31e841a86aa7b2068c347050a90991e475cf90",
+    "scripts/gameplay/combat_focus.gd": "933e987506a3a2d968b38ac13b50e1920d4802a25aee7ae91626b001379abdc2",
+    "scripts/gameplay/target_status.gd": "b6e6b9c1dd3ccef87a74b65196a433137f7b394a4eba9f86b6eccc79851a09c3",
+    "scripts/gameplay/pulse_wave_geometry.gd.uid": "5e267eed4749051f352fb3c51273cd5650f5d2043f6d0bb8b572bc51d7a30173",
+    "scripts/gameplay/target_status.gd.uid": "96e560f357c7422d0ffd41505faafb297e5369626f602ddf3300c38b0c734dfc",
+    "scripts/gameplay/recoil_plate.gd.uid": "c73452c8f5386f87ae7dc4407027befc5fac7ea94ed343e8d41d421d26684dd0",
+    "scripts/gameplay/build_items_visuals.gd.uid": "1709ead5ae4e470b1341325b3a7789afb9e70b762ccef3ece50d479a6e7c37e4",
+    "scripts/gameplay/character_motor.gd": "9945b4bf200c04e4eb170dd022d16be958edd5e28f1d5fa5bbc61738b828412e",
+    "scripts/gameplay/new_weapon_visuals.gd.uid": "a475fa026b101f862f08ddb620fe6ce10a7103c8f0c69ae6a0ba613ccb837bc8",
+    "scripts/gameplay/starting_loadouts.gd": "20b9bb00956e39aed333200a9f5bee7ddec024b9e5b20efc996c1d3963f72c21",
+    "scripts/gameplay/recoil_plate.gd": "5b309498c3c6880ff88e2103cf3533c11c848203d1219b99751b38ada3d80289",
+    "scripts/gameplay/primary_defense.gd.uid": "4f855fec35bacdba6fc2a6960493546d5602c74ecf7e22021685a52fe8f21d31",
+    "scripts/gameplay/scavenger_reel.gd": "e812dc82c9e8821a479649cfc57b1de0d8db965306cc35bd9bde8cb026c22e53",
+    "scripts/gameplay/primary_defense.gd": "b4b97241fe9b8c3fc75b105556c84d2047942c8af41d1d562a44ab907f7ee30b",
+    "scripts/gameplay/annulus_geometry.gd.uid": "4841b2039c4468f993b811a31c3d8a71d5313ca6328719a023a49cf63d378c1f",
+    "scripts/gameplay/weapon_combat.gd": "8b0184d7ae43b9b1eec71a6908dc2dcc1369004707d3b910622d740d42deb9c1",
+    "scripts/gameplay/run_flow.gd": "46e508bd4e26492b74fa02c5bd0e4e4dc9c42e2bafca05b9283e299c2351c8cc",
+    "scripts/gameplay/shop_reservation.gd.uid": "50bca830f22a0633850564a9ca9ff659171bbccc58d5c40246854a2778440dbb",
+    "scripts/gameplay/character_motor.gd.uid": "d5d83e2d7309643755dcfb04ba448a067b89c7d37df555ca083e60eae2de056f",
+    "scripts/gameplay/build_items_runtime.gd.uid": "f6b7d893e1739c18ffa0baa03e8592c01fbeafc6473d998c6be178d53736be04",
+    "scripts/gameplay/new_weapon_profiles.gd.uid": "4e4094769c161d8717c8a1cd4ec9c6fbc0c8571b19089e80c36c19c9e37bd003",
+    "scripts/gameplay/enemy_support.gd": "e6b966db7ae416e2baac00051f4d3b5e5a401b7f8964811fdbaedc4e452f9bd3",
+    "scripts/gameplay/combat_context.gd": "fbbe6c3b18c1c4db4e8323134e91e2c1df51bec2fec9f1d200b37d1ead4a28da",
+    "scripts/gameplay/combat_state.gd.uid": "f7d7e7a92c93d3825de7012d2bbb817e474f8e347ed7dac2ec9125540cb90d08",
+    "scripts/gameplay/shop_reservation.gd": "d4e6b770acbcfa216c56079366ad9c7129b13a4262a8e7c186b0f2e4891d8e11",
+    "scripts/gameplay/combat_focus.gd.uid": "f53eba806ecb88649e89cf18b92206d16b028798f27e770a0f4ab7d6321e3896",
+    "scripts/gameplay/pulse_wave_geometry.gd": "64835bc4bd6b61d73455e0ca544ea6f5215c255cc9dd42d23181ac2baceb84b0",
+    "scripts/gameplay/build_items_runtime.gd": "bddebbd960a25f6aa7abb8fbe239c67a0b9af8c273d985e95dd4a2afd41b8dac",
+    "scripts/gameplay/effect_runtime.gd.uid": "ba87a8a8d9f91c78cebac5efdd1b296b37ad8aeab5e9510969d6eb4852e3fa13",
+    "scripts/gameplay/weapon_order.gd.uid": "49094a735cf1d1f3a8c0afa4ac49e5c86198daa32320ed719934a5b036b97573",
+    "scripts/gameplay/starting_loadouts.gd.uid": "83f2a56d4b6ddb72bd8fd347077d6b39304507f62f5c34f2dc3dee695f482e9e",
+    "scripts/gameplay/build_items_profiles.gd.uid": "a024957d82a31b337bd34eeb12cfa983717648558036d804bcd821ad738af975",
+    "scripts/gameplay/combat_state.gd": "bb2020485737ac11137aa6fad9c5e9125cf46f4dc621372c0cd7a32031ead20a",
+    "scripts/gameplay/build_items_adapter.gd.uid": "9028e70b7c4af10899051f80dc72b78025ae3af3c90856d5022d90944a0456ca",
+    "scripts/gameplay/weapon_tempering.gd.uid": "b76a4d2aaa93df5442e3f9c05e8ad569aee8173457e66cbba1460a29073578b8",
+    "scripts/gameplay/combat_runtime.gd.uid": "8f7e27c9629fe23001d75066076e15f6326139522a104552cc6cb3a1a0a78826",
+    "scripts/gameplay/new_weapon_runtime.gd.uid": "d10062c3d4b63190a52381d7e53779829d47798dadc50a3e46e98ab84476ba48",
+    "scripts/gameplay/combat_context.gd.uid": "3022937255a57f8628b5ef165211727388623593f709bdf75e36a70d11ea41d3",
+    "scripts/gameplay/build_items_visuals.gd": "1bac2bc9cb3406308142f0e50dda6592adff48da669b6971cf96e2ed0a307225",
+    "scripts/gameplay/build_items_profiles.gd": "68c30feeac2926f463a730e5a2f90a9358a2ed19cb254da75cff2ceedd08e662",
+    "scripts/gameplay/weapon_order.gd": "695622c37d3d4f541b5b1de07f21c1b39cd2c01b2a4f0f0b9a2fd0827f171aa7",
+    "scripts/gameplay/new_weapon_visuals.gd": "43aeabd7728aae9265c22a490abab49426ee0c0d6d20ee772fffce7421485d9b",
+    "scripts/gameplay/annulus_geometry.gd": "1df7b867488fdc605ac3e50a21444c8b8d59a146c5971bda67627c5729ab3473",
+    "scripts/gameplay/weapon_combat.gd.uid": "d6ce4cf2b68ddeb68996039cb61316f925c009fdf54f20d37af6afd4a7f13465",
+    "scripts/gameplay/build_items_readout.gd.uid": "9817f989a1ce41eeaa4b9b94485c28126b83ca64e3dcaaf8c75efa64531d7d6c",
+    "scripts/gameplay/field_layout.gd": "9dbf663d66fe2c07d5de7b9df03d2c4c82d570c3994486f98d67c8061366c4c4",
+    "scripts/gameplay/field_layout.gd.uid": "05fd48b3295114c431f1941406261e243ae7f84cdbe6a16d8e3ef0f4544fc8ea",
+    "scripts/gameplay/build_items_adapter.gd": "9a35217024f5749248cb6a1158e37e87f03a5e6725f42f36ee1eda0a6ea67bb0",
+    "scripts/gameplay/enemy_support.gd.uid": "f70b8134c80671fd88795afa804c962d0d6089fbb44edfe962ca9ab29b50cb35",
+    "scripts/gameplay/scavenger_reel.gd.uid": "3dd62ebaf1ded52b6c27f132ca109348a2f9c64c90ddbb87119285e1a03391c4",
+    "scripts/gameplay/combat_runtime.gd": "4eb31895bb9e4840679b373e91a998601e37604399f1ae074599fdf40bbb763d",
+    "scripts/gameplay/weapon_presentation.gd": "1957c8c96be9b8eb0105aa7c8691402d622b8c5d5e08e601e6504cbd2ade0c88",
+    "scripts/gameplay/effect_runtime.gd": "ea7c1591a44a332fd345447e29582d0b52db4dbecdd1afceb3cfab0bb8406160",
+    "scripts/gameplay/run_session.gd.uid": "754acc0961e42ab150a2001ff4c16d5cb368d14562898be69581ac6a22180cd1",
+    "scripts/gameplay/run_session.gd": "f8cf819634c6c382c79d8d20d1f5d351f55224a9d88c66efe371c748b1bfe0b4",
+    "docs/V22_MODIFIER_COPY.json": "e51acf34375a7dfc8611fbdf9f13c9d73837d888cedc762f89b0cd8d4359af73",
+    "docs/V23_CATALOG_ADDITIONS.json": "e53da0892bae5a23b9085240ed039b9df1e51937120aeeeae6cf60301a08943e",
+    "docs/V26_CATALOG_ADDITIONS.json": "185d41231a7baca55700858df816868ecd26d5dbd8543bdbb0203cfdbd675602",
+    "assets/items/cryo_sprayer_icon_editable.png.import": "fee766496123c2765f0614b1d231ce87982cb46b4c17c327b720842d0df60704",
+    "assets/items/feedback_diode_editable.png": "99d27c04f1e855d95ede199d33d9f4e114ac0482f528246b78e514e5b73f436a",
+    "assets/items/bounce_guide_editable.png.import": "916d5947b4acf76986508019d5b849294295de9ce91a271e2d16bb85ef1789a2",
+    "assets/items/fracture_coil_editable.png": "6adef741b99859ad448506cc79229f8cbb66b0810f50de8a8debb60c3d738791",
+    "assets/items/fracture_coil_editable.png.import": "28adc3bdae9137d4ac274416903f766a20d178452bf43144feed3a56344f859e",
+    "assets/items/feedback_diode_editable.png.import": "499d79cc710701d49c2abb927fde72b0622e6bcd15743a9221d4b91dfe1fc00a",
+    "assets/items/bounce_guide_editable.png": "eb87895d880559050b828bf73aecd4675bf5b8d3a5cb875a343faf603f8b3691",
+    "assets/items/cryo_sprayer_icon_editable.png": "cd145aee4e29a7286ef0a76e6d437abf5e344cda5db47dc8f4f8246944fd0a8f",
+    "assets/items/bankshot_driver_icon_editable.png.import": "dd686662038a30866395bc012aad89353aed4a8031bb71dc6ae97672d192ec7a",
+    "assets/items/bankshot_driver_icon_editable.png": "4a9bca54617e5f21ab38d99267472080faeffa7258805509188769b3435d0588"
+  },
+  "fixture_pins": {
+    "tools/run_build_ui_checks.py": "5665235da3e9207952b58d5366c6f8434b57b10684d8da215c71565961e016a0",
+    "tools/build_ui_warning_policy.py": "cefe8e7f6c06d5bb4af43a83eaa63bf8d1ad12e13b8ade6a22a7fae70d54b30c",
+    "tests/build_ui_compact/independent_starting_loadout_views.gd": "14b040d80f163ceb2f8f80cdb5c287d8d588c32e3db1bb86aac1077b941c3087",
+    "tests/build_ui_compact/independent_focus_views.gd": "cf080437986d7f5e14289be7729c8f325f780bb01e2ff15627b525e85694eca2",
+    "tests/build_ui_compact/independent_tag_views.gd": "d183df7d068f033108330ad15307ce4653227e2e445006bae27b0ddb792354f8",
+    "tests/build_ui_compact/independent_weapon_readouts.gd": "f93bb62706c2533052f3e6723db5c8dac87b4d84a5ad86c9d6dfb44dfcdd43ae",
+    "tests/build_ui_compact/independent_scavenger_views.gd": "3af00e66d72f49ae40dc4b06086310ed3010400d1f662c8c4eb0d2eefdb162f5",
+    "tests/build_ui_compact/independent_tempering_views.gd": "53392a104cc3b75dbfa8cab12a4e1581018f35a3cd3d7012b28daa3705fd33c9",
+    "tests/build_ui_compact/test_tag_synergy_progress.gd": "8b7ec92c302b23397e6c23a787c09b1bf37156cf3bad3bb2e0212f0312da3d59",
+    "tests/build_ui_compact/test_weapon_readout.gd": "244b6448c61952bcab25378e12847646dcc5836e1da60acd43c48cf07f0aa956",
+    "tests/build_ui_compact/independent_weapon_order_views.gd": "0ba19997b8e38b5c4ee8560b075a3bec6d37b4cf487d6cc94192106fcd17d2e0",
+    "tests/build_ui_compact/context_guard.gd": "d80b29ba1927a933b4b30cbc760ff042cd5ecd7a77739d96fdbf8e410b5af650",
+    "tests/build_ui_compact/test_ui.gd": "6eb14d2209b5733db917be51c3973bfcdd317ba67ac59cce8de99c3dc841611e",
+    "tests/build_ui_compact/independent_ui.gd": "f63c923d39f0ab13f8838d351122ca5b2612e4bd4ecd6f9ab478eba4651022ad",
+    "tests/build_ui_compact/test_discrete_ui_numbers.gd": "3b15cadbb39a79f6735e2a908b7cbaa2ed5b0b803720ccd6f97b7cc9073a0f65",
+    "tests/build_ui_compact/test_modifier_copy.gd": "d6488c676720e19ee08d960a23b9e01fdbe54d4b967a53e9a021a98823ccc04c"
+  },
+  "routes": [
+    {
+      "name": "ui__test_ui",
+      "script": "tests/build_ui_compact/test_ui.gd",
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "marker": {
+        "kind": "text",
+        "text": "UI_STRUCTURE_AND_INTENTS_PASS"
+      },
+      "helper_schemas": [],
+      "original_script": "res://ui/test_ui.gd",
+      "disclosure_adapter": true
+    },
+    {
+      "name": "tests__independent_ui",
+      "script": "tests/build_ui_compact/independent_ui.gd",
+      "domain": "historical v38 (or v36 through its original inverse)",
+      "marker": {
+        "kind": "json",
+        "prefix": "",
+        "counts": {
+          "independent_ui_passed": 84
+        }
+      },
+      "helper_schemas": [
+        {
+          "owners": 1,
+          "game_owners": 1
+        }
+      ],
+      "original_script": "res://tests/independent_ui.gd",
+      "disclosure_adapter": false
+    },
+    {
+      "name": "tests__independent_focus_views",
+      "script": "tests/build_ui_compact/independent_focus_views.gd",
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "marker": {
+        "kind": "json",
+        "prefix": "",
+        "counts": {
+          "checks": 366
+        }
+      },
+      "helper_schemas": [
+        {
+          "owners": 1,
+          "game_owners": 1
+        }
+      ],
+      "original_script": "res://tests/independent_focus_views.gd",
+      "disclosure_adapter": false
+    },
+    {
+      "name": "tests__independent_tag_views",
+      "script": "tests/build_ui_compact/independent_tag_views.gd",
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "marker": {
+        "kind": "json",
+        "prefix": "",
+        "counts": {
+          "tag_view_checks": 848
+        }
+      },
+      "helper_schemas": [
+        {
+          "owners": 1,
+          "game_owners": 1
+        }
+      ],
+      "original_script": "res://tests/independent_tag_views.gd",
+      "disclosure_adapter": true
+    },
+    {
+      "name": "tests__test_tag_synergy_progress",
+      "script": "tests/build_ui_compact/test_tag_synergy_progress.gd",
+      "domain": "actual B (existing narrow scopes)",
+      "marker": {
+        "kind": "json",
+        "prefix": "",
+        "counts": {
+          "tag_synergy_progress_checks": 467
+        }
+      },
+      "helper_schemas": [
+        {
+          "owners": 1,
+          "game_owners": 1
+        }
+      ],
+      "original_script": "res://tests/test_tag_synergy_progress.gd",
+      "disclosure_adapter": true
+    },
+    {
+      "name": "tests__independent_weapon_readouts",
+      "script": "tests/build_ui_compact/independent_weapon_readouts.gd",
+      "domain": "historical v38 (or v36 through its original inverse)",
+      "marker": {
+        "kind": "json",
+        "prefix": "",
+        "counts": {
+          "checks": 465
+        }
+      },
+      "helper_schemas": [
+        {
+          "owners": 1,
+          "game_owners": 1
+        }
+      ],
+      "original_script": "res://tests/independent_weapon_readouts.gd",
+      "disclosure_adapter": true
+    },
+    {
+      "name": "tests__test_weapon_readout",
+      "script": "tests/build_ui_compact/test_weapon_readout.gd",
+      "domain": "historical v38 (or v36 through its original inverse)",
+      "marker": {
+        "kind": "json",
+        "prefix": "",
+        "counts": {
+          "weapon_readout_checks": 411
+        }
+      },
+      "helper_schemas": [
+        {
+          "owners": 1,
+          "game_owners": 1
+        }
+      ],
+      "original_script": "res://tests/test_weapon_readout.gd",
+      "disclosure_adapter": true
+    },
+    {
+      "name": "tests__independent_tempering_views",
+      "script": "tests/build_ui_compact/independent_tempering_views.gd",
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "marker": {
+        "kind": "json",
+        "prefix": "",
+        "counts": {
+          "checks": 872
+        }
+      },
+      "helper_schemas": [
+        {
+          "owners": 1,
+          "game_owners": 1
+        }
+      ],
+      "original_script": "res://tests/independent_tempering_views.gd",
+      "disclosure_adapter": true
+    },
+    {
+      "name": "tests__independent_weapon_order_views",
+      "script": "tests/build_ui_compact/independent_weapon_order_views.gd",
+      "domain": "actual B source with retained original subsystem predicates; not blanket B-owned coverage",
+      "marker": {
+        "kind": "json",
+        "prefix": "",
+        "counts": {
+          "checks": 512
+        }
+      },
+      "helper_schemas": [
+        {
+          "owners": 1,
+          "game_owners": 1
+        }
+      ],
+      "original_script": "res://tests/independent_weapon_order_views.gd",
+      "disclosure_adapter": true
+    },
+    {
+      "name": "tests__independent_scavenger_views",
+      "script": "tests/build_ui_compact/independent_scavenger_views.gd",
+      "domain": "actual B catalog / old-only synthetic fixture",
+      "marker": {
+        "kind": "json",
+        "prefix": "",
+        "counts": {
+          "checks": 132
+        }
+      },
+      "helper_schemas": [
+        {
+          "owners": 1,
+          "game_owners": 1
+        }
+      ],
+      "stderr_policy": {
+        "count": 48,
+        "block": "WARNING: The draw_rect() \"width\" argument has no effect when \"filled\" is \"true\".\n     at: draw_rect (scene/main/canvas_item.cpp:823)\n     GDScript backtrace (most recent call first):\n         [0] _draw (res://scripts/main.gd:797)\n",
+        "expression": "\t\t\t\t\tdraw_rect(Rect2(b.pos+offset-Vector2(1.5,1.5),Vector2(3,3)),Color(.55,.94,.76,.55 if settings.reduced_flashes else .85) if pip<b.scavenger.remaining else Color(.4,.48,.44,.4),pip<b.scavenger.remaining,1.0)",
+        "scope": "Only exact prior filled+width warning at unchanged expression. Full raw preserved; not warning-free acceptance."
+      },
+      "original_script": "res://tests/independent_scavenger_views.gd",
+      "disclosure_adapter": true
+    },
+    {
+      "name": "tests__independent_starting_loadout_views",
+      "script": "tests/build_ui_compact/independent_starting_loadout_views.gd",
+      "domain": "historical v38 (or v36 through its original inverse)",
+      "marker": {
+        "kind": "json",
+        "prefix": "",
+        "counts": {
+          "checks": 544
+        }
+      },
+      "helper_schemas": [
+        {
+          "owners": 1,
+          "game_owners": 1
+        }
+      ],
+      "original_script": "res://tests/independent_starting_loadout_views.gd",
+      "disclosure_adapter": true
+    },
+    {
+      "name": "tests__test_discrete_ui_numbers",
+      "script": "tests/build_ui_compact/test_discrete_ui_numbers.gd",
+      "domain": "actual B (existing narrow scopes)",
+      "marker": {
+        "kind": "json",
+        "prefix": "",
+        "counts": {
+          "discrete_ui_checks": 34
+        }
+      },
+      "helper_schemas": [],
+      "original_script": "res://tests/test_discrete_ui_numbers.gd",
+      "disclosure_adapter": true
+    },
+    {
+      "name": "tests__test_modifier_copy",
+      "script": "tests/build_ui_compact/test_modifier_copy.gd",
+      "domain": "historical v38 (or v36 through its original inverse)",
+      "marker": {
+        "kind": "json",
+        "prefix": "",
+        "counts": {
+          "modifier_copy_checks": 112
+        }
+      },
+      "helper_schemas": [
+        {
+          "owners": 1,
+          "game_owners": 1
+        }
+      ],
+      "original_script": "res://tests/test_modifier_copy.gd",
+      "disclosure_adapter": true
+    },
+    {
+      "name": "context_guard",
+      "script": "tests/build_ui_compact/context_guard.gd",
+      "domain": "Actual combined runtime controlled GUI contexts, not natural room completion",
+      "marker": {
+        "kind": "json",
+        "prefix": "",
+        "counts": {
+          "checks": 84
+        }
+      },
+      "helper_schemas": [
+        {
+          "owners": 1,
+          "game_owners": 1
+        }
+      ],
+      "records_count": 7,
+      "context_cases": [
+        [
+          "arena",
+          "playing",
+          "playing"
+        ],
+        [
+          "arena",
+          "paused",
+          "paused"
+        ],
+        [
+          "arena",
+          "shop",
+          "shop"
+        ],
+        [
+          "rooms",
+          "playing",
+          "playing"
+        ],
+        [
+          "rooms",
+          "paused",
+          "paused"
+        ],
+        [
+          "rooms",
+          "shop",
+          "shop"
+        ],
+        [
+          "rooms",
+          "room_clear",
+          "room_clear"
+        ]
+      ]
+    }
+  ],
+  "scope": "Finite affected BUILD UI14:11 exact accepted disclosure-adapter bodies+2 unchanged original UI routes+context84/7cases. Original counts, strict raw/audio/warning policies retained. Not new full165, PCK/native/ordinary or physical-audio acceptance. Runtime/helper pins include the three JSON documentation oracles read by test_modifier_copy; only non-oracle prose/release metadata is excluded; complete authored source snapshot must remain unchanged during each run."
+}

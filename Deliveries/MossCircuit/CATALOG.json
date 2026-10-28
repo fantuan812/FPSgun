@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "scope": "Preserves 82 historical catalog records exactly; appends 2 LOCAL v40-held8 files. Versions32–40 and v39-equipment16 have separately verified historical publication; v40-held8 publication is not yet claimed.",
+  "scope": "Preserves 84 historical catalog records exactly; appends two LOCAL v41 files. Held8 source708e9950/index9213fc4e are actually published; v41 publication is separately recorded only after remote acceptance.",
   "files": [
     {
       "version": "v1",
@@ -3853,6 +3853,118 @@
         "git_blob_sha": "be6d11de4e8a321fd79a1f5df55fa3ab6afb499a"
       },
       "delivery_identity_basis": "Local instructions record finite verification limits; helper result is separately recorded; not publication."
+    },
+    {
+      "version": "v41",
+      "name": "MossCircuit.pck",
+      "size": 34751752,
+      "sha256": "cd3671bf1e90a2a69f70cf8d625bee41bc4ba9107a071f8628253dee0aef86b2",
+      "original_git_blob_sha": "23898cc167263fc3357d2fa6271f3f9d2c9a1b25",
+      "delivery_kind": "github_native_runtime_resource_pack",
+      "storage": {
+        "kind": "chunks",
+        "chunks": [
+          {
+            "path": "Deliveries/MossCircuit/v41/chunks/MossCircuit.pck/chunk-001.bin",
+            "offset": 0,
+            "size": 3000000,
+            "sha256": "6763a39decefd6cd487646dfe06c9cd35db21d9d9c2be4f0c71d0960d9985c0b",
+            "git_blob_sha": "fff516aff310287e98c629edcf96dc34c929e1e8"
+          },
+          {
+            "path": "Deliveries/MossCircuit/v41/chunks/MossCircuit.pck/chunk-002.bin",
+            "offset": 3000000,
+            "size": 3000000,
+            "sha256": "a027b4235220caf2f9d490b6e83a589e0d5f98c3341728fa2b46943cd2184204",
+            "git_blob_sha": "b5396cdcad57361ed446f26c4a1444dad1dddc79"
+          },
+          {
+            "path": "Deliveries/MossCircuit/v41/chunks/MossCircuit.pck/chunk-003.bin",
+            "offset": 6000000,
+            "size": 3000000,
+            "sha256": "f512a9ed05fe39ab12320f20d91a703bb167e259ba729631756eaa208f2e6f49",
+            "git_blob_sha": "042316997eae84bdeb97d5e48a3907ef85c877e6"
+          },
+          {
+            "path": "Deliveries/MossCircuit/v41/chunks/MossCircuit.pck/chunk-004.bin",
+            "offset": 9000000,
+            "size": 3000000,
+            "sha256": "10801b4219c85daef0ffcae9013566aaeb5d857005d5cba18f22260af91e1e0f",
+            "git_blob_sha": "9f08a4bd3001e082997b09be229d9a09f94881d8"
+          },
+          {
+            "path": "Deliveries/MossCircuit/v41/chunks/MossCircuit.pck/chunk-005.bin",
+            "offset": 12000000,
+            "size": 3000000,
+            "sha256": "9e0c83d383b555a0167aba08df0007d0fb9a28ffabec416698e1b5f461485e33",
+            "git_blob_sha": "6ebad33ae134dc9718ceaa933808c7342b43ca0d"
+          },
+          {
+            "path": "Deliveries/MossCircuit/v41/chunks/MossCircuit.pck/chunk-006.bin",
+            "offset": 15000000,
+            "size": 3000000,
+            "sha256": "6934c8d5b33b1d6eda1af05daa15e17f664c004b7086ea18b1e5e34a4ae7d938",
+            "git_blob_sha": "cf3d36b3e8477776a09372acf12b2d56da528981"
+          },
+          {
+            "path": "Deliveries/MossCircuit/v41/chunks/MossCircuit.pck/chunk-007.bin",
+            "offset": 18000000,
+            "size": 3000000,
+            "sha256": "f02faf1d617293e06bf3f9da4854bddc17f5f1afcd0b87564fbca6c34809fb48",
+            "git_blob_sha": "e9f041378281ffd8ac11f0ea51355331b4ac637d"
+          },
+          {
+            "path": "Deliveries/MossCircuit/v41/chunks/MossCircuit.pck/chunk-008.bin",
+            "offset": 21000000,
+            "size": 3000000,
+            "sha256": "0a6fd1fd83d205e7a3d90525f3762c1d48476a0d04e73ad9c0a1740c29314a90",
+            "git_blob_sha": "3ac42e0195bb7c1d6d15e242aa99202bd275bbc8"
+          },
+          {
+            "path": "Deliveries/MossCircuit/v41/chunks/MossCircuit.pck/chunk-009.bin",
+            "offset": 24000000,
+            "size": 3000000,
+            "sha256": "9bb824d941e4240bb82e678f8f3bb450de70647c74725baa5d6be2150343bcdc",
+            "git_blob_sha": "8002dec0e6e7e61f0e9bca11780d7cd8af87f4fc"
+          },
+          {
+            "path": "Deliveries/MossCircuit/v41/chunks/MossCircuit.pck/chunk-010.bin",
+            "offset": 27000000,
+            "size": 3000000,
+            "sha256": "9427780da9d3b76fced17273f695e1679b5ae5f3a1aadecfd23f18ad5bae186f",
+            "git_blob_sha": "6823ace9e8cdafbc307f7dbb8014f683e9c6927d"
+          },
+          {
+            "path": "Deliveries/MossCircuit/v41/chunks/MossCircuit.pck/chunk-011.bin",
+            "offset": 30000000,
+            "size": 3000000,
+            "sha256": "b898df9d9108e251a8070ad7dc27a83c7375ee528ee5154b73edbc06f4ba79de",
+            "git_blob_sha": "48ae199d29e32f0f127cbf22cbdbb704b4b62410"
+          },
+          {
+            "path": "Deliveries/MossCircuit/v41/chunks/MossCircuit.pck/chunk-012.bin",
+            "offset": 33000000,
+            "size": 1751752,
+            "sha256": "4664edf61c35a93ecbce64674230cadc2c7d2b7c521b054e359e6c0c4ac2ee66",
+            "git_blob_sha": "878aca4a98dd582818e0485adebe4e7cea92674f"
+          }
+        ]
+      },
+      "delivery_identity_basis": "Complete responsive BUILD and editable-icon resource pack; restore from the listed chunks with the unchanged helper."
+    },
+    {
+      "version": "v41",
+      "name": "READ_ME_v41.txt",
+      "size": 2986,
+      "sha256": "38d6d537c997a37dcce199185a420ae29ce878da2b63e1e354e367ae0ea13b4e",
+      "original_git_blob_sha": "9a872d3afb31286890c2d6d2e37f75752d987dee",
+      "delivery_kind": "github_native_runtime_instructions",
+      "storage": {
+        "kind": "direct",
+        "path": "Deliveries/MossCircuit/v41/READ_ME_v41.txt",
+        "git_blob_sha": "9a872d3afb31286890c2d6d2e37f75752d987dee"
+      },
+      "delivery_identity_basis": "Authored restoration instructions and bounded validation summary; no operational execution artifacts."
     }
   ],
   "reassembled_archives": [
@@ -3942,12 +4054,12 @@
     }
   ],
   "storage_counts": {
-    "direct": 30,
+    "direct": 31,
     "existing": 9,
-    "chunks": 45
+    "chunks": 46
   },
-  "original_bytes": 1100504584,
-  "reassembly_note": "Historical ZIPs remain reconstructable from their original delivered parts. v26-v40-held8 PCK files restore directly from their storage chunks; they are not ZIPs and require no second merge.",
+  "original_bytes": 1135259322,
+  "reassembly_note": "Historical ZIPs remain reconstructable from their original delivered parts. v26-v41 PCK files restore directly from their storage chunks; they are not ZIPs and require no second merge.",
   "publication_status": {
     "v32": "locally accepted, not claimed published",
     "v33": "locally verified R2 source/pack; R1 ordinary and R2 controlled proof distinct; delivery helper evidence separate; not published",
@@ -3959,6 +4071,7 @@
     "v39": "local A combined-source and independent packed/native/ordinary evidence; delivery checks and publication separately recorded",
     "v39-equipment16": "local asset-only cold/source/packed/native evidence; inherited A gameplay, no new full/ordinary; delivery checks and publication separately recorded",
     "v40": "local B + accepted equipment16 combined source/packed/native142/cards145 evidence; one ordinary Rooms first-shop observation without B acquisition, original strict-wrapper VSync failure retained and exact additive warning review; delivery verification and publication remain pending",
-    "v40-held8": "local held8 asset-only source23090/fire1089; original pack ninth strictFAIL retained and separate fixture-only source/packed1089 repair; native239/36 images; delivery and publication remain separate, no new ordinary/full claim"
+    "v40-held8": "local held8 asset-only source23090/fire1089; original pack ninth strictFAIL retained and separate fixture-only source/packed1089 repair; native239/36 images; delivery and publication remain separate, no new ordinary/full claim",
+    "v41": "Finite source, packed-resource, controlled native-view, resize and local restoration checks completed. No new full-suite, ordinary-play, Windows execution or CI result is claimed. Raw operational records are excluded from this public release."
   }
 }

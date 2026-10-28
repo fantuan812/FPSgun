@@ -1,0 +1,103 @@
+extends SceneTree
+const Rules=preload("res://scripts/rules.gd")
+const IDS=["arc_grid","saw_rig","scatter_rig"]
+const NAMES=["ARC GRID","SAW RIG","SCATTER RIG"]
+const TAGS=["electric","melee","spread"]
+const WEAPONS=["rail_lance","orbit_saw","scrap_shotgun"]
+const MODULES=["capacitor","gear","pellet_pouch"]
+var checks:=0
+var failures:Array=[]
+var g
+func check(ok:bool,label:String)->void:
+ checks+=1
+ if not ok:failures.append(label)
+func nodes(n:Node)->Array:
+ var out:Array=[n]
+ for c in n.get_children():out.append_array(nodes(c))
+ return out
+func snapshot()->String:return JSON.stringify([g.build,g.stats,g.rng.state,g.shop_rng.state,g.loot_rng.state,g.weapon_clocks,g.effects.cooldowns,g.shop_offers,g.catalog])
+func _initialize()->void:call_deferred("run")
+func run()->void:
+ g=load("res://scenes/main.tscn").instantiate();root.add_child(g);g.set_process(false)
+ var cases:Array=[[["rivet_gun"],{}],[["rail_lance","rail_lance"],{}],[["rail_lance","rail_lance","rail_lance","rail_lance"],{}],[["rivet_gun"],{"capacitor":3,"gear":3}],[["rail_lance","orbit_saw","scrap_shotgun"],{"capacitor":2,"gear":2,"pellet_pouch":2}],[["rail_lance"],{"capacitor":1}],[["orbit_saw"],{"gear":1}],[["scrap_shotgun"],{"pellet_pouch":1}]]
+ for mode in ["arena","rooms"]:
+  g._title();g._select_mode(mode);g._start_run(25025)
+  for size in [Vector2i(960,540),Vector2i(1280,720)]:
+   root.size=size
+   for c in cases:
+    g.build.weapons=c[0].duplicate();g.build.items=c[1].duplicate();g.build.coins=1000;g._recompute()
+    var before:String=snapshot();var view:Dictionary=g._view();var rows:Array=view.tag_synergy_status
+    check(rows.size()==3,"exact three rows "+str(c))
+    for i in 3:
+     var expected_count:int=int(c[1].get(MODULES[i],0));var matching:Array=[]
+     for id in c[0]:
+      if id==WEAPONS[i]:expected_count+=1;matching.append(Rules.catalog_entry(g.catalog,id).name)
+     var r:Dictionary=rows[i]
+     check(r.id==IDS[i] and r.name==NAMES[i] and r.tag==TAGS[i] and r.threshold==3,"fixed identity/order")
+     check(r.count==expected_count and r.active==(expected_count>=3),"independent copy/stack count")
+     check(r.matching_weapons==matching,"exact repeated matching slot names")
+     check(r.description==g.catalog.synergies[i].description,"unchanged catalog wording")
+     check(r.qualifier.contains("Applies once") and (r.qualifier.contains("Additive matching-weapon") and r.qualifier.contains("Fixed module damage is not scaled") if i<2 else r.qualifier.contains("spread attacks only") and r.qualifier.contains("Pellet Pouch")),"scope qualifier")
+    g.ui.show_inventory(view);_open_build_disclosures(g.ui);await process_frame;await process_frame
+    var labels:Array=[]
+    for node in nodes(g.ui.modal):
+     if node is Label:labels.append(node.text)
+    check(labels.count("TAG SYNERGY PROGRESS")==1 and not "ACTIVE TAG SYNERGIES" in labels,"one current section")
+    check(labels.count("MECHANISM PAIRS")==1,"mechanism pairs remain distinct")
+    for r in rows:
+     var header:String="%s / %s / %d / 3 %s" % [r.name,"ACTIVE" if r.active else "INACTIVE",r.count,r.tag]
+     check(header in labels and r.description in labels and r.qualifier in labels,"actual Label full content")
+     var note:String="Active, but no equipped %s weapon currently benefits." % r.tag
+     check((note in labels)==(r.active and r.matching_weapons.is_empty()),"no false activation prerequisite")
+    var pair_before:Array=view.synergy_status.duplicate(true)
+    rows[0].count=999;rows[0].matching_weapons.append("not owned");rows[0].description="tampered"
+    var fresh:Dictionary=g._view();check(fresh.tag_synergy_status[0].count!=999 and fresh.synergy_status==pair_before,"returned row detached; pairs unchanged")
+    check(snapshot()==before,"view/actual inventory no authority/RNG mutation")
+   # Offer-only tag must not alter current ownership, first action must stay visible.
+   for full in [false,true]:
+    g.build.weapons=["rail_lance","rail_lance","rivet_gun","rivet_gun"] if full else ["rail_lance","rail_lance"]
+    g.build.items={};g._recompute();g._open_shop();g.shop_offers=[{"id":"rail_lance","sold":false}];g._render_shop();await process_frame;await process_frame
+    check(g._view().tag_synergy_status[0].count==2 and not g._view().tag_synergy_status[0].active,"offer not ownership")
+    var found:=false
+    for n in nodes(g.ui.modal):
+     if n is Button and n.text.begins_with("REPLACE" if full else "BUY"):
+      var p:Node=n.get_parent()
+      while p!=null and not p is ScrollContainer:p=p.get_parent()
+      if p is ScrollContainer:found=p.get_global_rect().encloses(n.get_global_rect()) and not n.disabled
+    check(found,"first purchase/replace fully visible at "+str(size))
+ var audio_teardown = preload("res://tests/support/audio_teardown.gd").new()
+ audio_teardown.prepare([g])
+ g.queue_free();await process_frame
+ await audio_teardown.finish(self)
+ print(JSON.stringify({"tag_view_checks":checks,"failures":failures}))
+ var args:=OS.get_cmdline_user_args()
+ if not args.is_empty():FileAccess.open(args[0],FileAccess.WRITE).store_string(JSON.stringify({"checks":checks,"failures":failures},"  ")+"\n")
+ quit(0 if failures.is_empty() else 1)
+
+# External presentation-only adapter: expand the actual new disclosure buttons.
+# Original assertions/counts/catalog adapters below remain unchanged; native input is separate.
+func _disclosure_adapter_nodes(n:Node)->Array:
+ var out:Array=[n]
+ for c in n.get_children():out.append_array(_disclosure_adapter_nodes(c))
+ return out
+func _open_build_disclosures(ui:Node)->void:
+ var found:Array=[]
+ for n in _disclosure_adapter_nodes(ui.modal):
+  if n is Button and n.toggle_mode and n.text.begins_with("SHOW "):
+   if n.text.begins_with("SHOW WEAPON CARDS /") or n.text.begins_with("SHOW MODULE CARDS /") or n.text=="SHOW SYNERGIES / COOLDOWNS / STATS" or n.text=="SHOW MODULE STATUS DETAILS":
+    found.append(n)
+ assert(found.size()==3 or found.size()==4,"expected all new BUILD disclosures initially collapsed")
+ for toggle in found:
+  assert(toggle.is_visible_in_tree() and not toggle.disabled,"actual disclosure button accessible")
+  toggle.button_pressed=true
+  var content:Node=toggle.get_parent().get_child(toggle.get_index()+1)
+  assert(toggle.text.begins_with("HIDE ") and content is VBoxContainer and content.is_visible_in_tree(),"real toggled handler expands content")
+  for child in _disclosure_adapter_nodes(content):
+   if child is Button and child.toggle_mode and child.text in ["SHOW STAT NOTES","SHOW ITEM DETAILS"]:
+    assert(child.is_visible_in_tree() and not child.disabled,"existing nested disclosure accessible")
+    child.button_pressed=true
+    var nested:Node=child.get_parent().get_child(child.get_index()+1)
+    assert(child.text.begins_with("HIDE ") and nested is VBoxContainer and nested.is_visible_in_tree(),"existing nested toggled handler expands content")
+  for child in _disclosure_adapter_nodes(content):
+   if child is Label:assert(child.is_visible_in_tree(),"prior label assertion must not pass on collapsed content")
+ print("DISCLOSURE_ADAPTER_OPEN "+str(found.size()))

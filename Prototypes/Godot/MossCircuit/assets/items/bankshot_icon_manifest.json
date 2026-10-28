@@ -2,28 +2,44 @@
   "version": 1,
   "icons": {
     "bankshot_driver": {
-      "atlas": "res://assets/items/bankshot_driver_icon.png",
+      "atlas": "res://assets/items/bankshot_driver_icon_editable.png",
       "rect": [
-        171,
-        85,
-        1261,
-        840
+        0,
+        0,
+        64,
+        64
       ],
       "name": "Bankshot Driver",
       "category": "weapon",
-      "source_sha256": "eda1ffc99a76e604a789008e26525fad048b246f81820124e80c02a0bfaab0d3"
+      "source_sha256": "4a9bca54617e5f21ab38d99267472080faeffa7258805509188769b3435d0588",
+      "alpha_bbox": [
+        9,
+        9,
+        52,
+        48
+      ],
+      "editable_source": "res://art_source/legacy_inventory_L4/bankshot_driver_icon.svg",
+      "svg_sha256": "fc6762bb9bc423bb0bf3b6add96e46a9b23390874079d01bab73ad663063384d"
     },
     "bounce_guide": {
-      "atlas": "res://assets/items/bounce_guide.png",
+      "atlas": "res://assets/items/bounce_guide_editable.png",
       "rect": [
-        285,
-        75,
-        930,
-        943
+        0,
+        0,
+        64,
+        64
       ],
       "name": "Bounce Guide",
       "category": "item",
-      "source_sha256": "6e6ec0c165102d179599bdf66a75c6ecdc37ac9ea65b141bc84dba79980a0889"
+      "source_sha256": "eb87895d880559050b828bf73aecd4675bf5b8d3a5cb875a343faf603f8b3691",
+      "alpha_bbox": [
+        4,
+        4,
+        56,
+        55
+      ],
+      "editable_source": "res://art_source/legacy_inventory_L4/bounce_guide.svg",
+      "svg_sha256": "2dba54bc13728bb7a4ebe8f8aaef12286a152de0d35b05169c013c7d31f26c56"
     }
   }
 }

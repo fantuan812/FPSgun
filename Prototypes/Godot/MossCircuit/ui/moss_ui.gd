@@ -23,6 +23,9 @@ var modal_suspended_focus: Dictionary = {}
 var manifest: Dictionary = {}
 var icon_cache: Dictionary = {}
 var current_screen := ""
+# One UI-owned reflow request; later modal construction replaces only the target ID.
+var shop_reflow_pending := false
+var shop_reflow_columns_id:int = 0
 var boss_panel: PanelContainer
 var boss_rows: VBoxContainer
 var boss_widgets: Array[Dictionary] = []
@@ -265,6 +268,9 @@ func _card(parent: Node, data: Dictionary, suffix := "", statuses: Array = [], c
 	var row := HBoxContainer.new(); p.add_child(row)
 	var image := TextureRect.new(); image.texture = icon(str(data.get("id", "")))
 	image.custom_minimum_size = Vector2(48, 48)
+	# Keep the actual 48px thumbnail beside the title, not centered down a tall card.
+	image.size_flags_horizontal = Control.SIZE_SHRINK_BEGIN
+	image.size_flags_vertical = Control.SIZE_SHRINK_BEGIN
 	image.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 	image.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 	image.tooltip_text = str(data.get("description", "")); row.add_child(image)
@@ -415,8 +421,9 @@ func _starting_loadout_card(parent:Node,data:Dictionary,selected:bool,generation
 func show_shop(view: Dictionary) -> void:
 	var generation: int = int(view.get("generation", 0))
 	_begin("shop", "SALVAGE EXCHANGE  /  %d SCRAP" % int(view.get("coins", 0)), str(view.get("message", "Buy, combine tags, then deploy. Selling returns only the shown scrap.")))
-	var columns := HBoxContainer.new(); columns.size_flags_vertical = Control.SIZE_EXPAND_FILL; body.add_child(columns)
-	var offers := _scroll(columns); offers.custom_minimum_size.x = 420
+	var columns := BoxContainer.new(); columns.size_flags_vertical = Control.SIZE_EXPAND_FILL; body.add_child(columns)
+	columns.add_theme_constant_override("separation", 10)
+	var offers := _scroll(columns)
 	var bag := _scroll(columns)
 	var reservation:Dictionary=view.get("reserved_offer",{})
 	_shop_bias(offers, view.get("shop_bias", {}),reservation)
@@ -468,10 +475,46 @@ func show_shop(view: Dictionary) -> void:
 			reserve=_button(actions,"RESERVE","reserve_offer",{"index":int(offer.get("index",-1)),"generation":generation},not bool(offer.get("can_reserve",false)))
 			reserve.tooltip_text="Reserve one unsold offer for later shops, free. Not ownership: only three fresh slots remain." if reservation.is_empty() else "One reservation at a time. Release the held offer first."
 	_inventory(bag, view, true)
+	# The local emitter disappears with this modal; no persistent viewport callbacks.
+	columns.resized.connect(func(): _fit_shop_columns(columns, offers))
+	_fit_shop_columns(columns, offers)
 	var footer := HBoxContainer.new(); body.add_child(footer)
 	_button(footer, ("REFRESH 3  /  %d SCRAP" if reservation.get("valid",false) else "REFRESH  /  %d SCRAP") % int(view.get("refresh_price", 5)), "refresh", {"generation": generation}, int(view.get("coins", 0)) < int(view.get("refresh_price", 5)))
 	_button(footer, "DEPLOY NEXT ROOM" if view.get("mode_id","")=="rooms" else "DEPLOY NEXT WAVE", "continue", {"generation": generation})
 	_finish()
+
+func _fit_shop_columns(columns:BoxContainer,offers:Control)->void:
+	if not is_instance_valid(columns) or not is_instance_valid(offers) or not columns.is_inside_tree():return
+	if current_screen!="shop" or columns.get_parent()!=body or not columns.is_visible_in_tree():return
+	# Use the real root width, not a container width inflated by child minimums.
+	# The modal has fixed 24px side margins; its panel style supplies inner padding.
+	var available_width:float=root.size.x-48.0-modal.get_theme_stylebox("panel").get_minimum_size().x
+	var narrow:bool=available_width<800.0
+	# Reflow the same controls: preserve focus, selectors, disclosures and intents.
+	if columns.vertical!=narrow:columns.vertical=narrow
+	var offer_minimum:float=0.0 if narrow else 420.0
+	if offers.custom_minimum_size.x!=offer_minimum:offers.custom_minimum_size.x=offer_minimum
+	# Signal identity is UI-owned: always retain the latest modal, connect only once.
+	shop_reflow_columns_id=columns.get_instance_id()
+	if not shop_reflow_pending:
+		shop_reflow_pending=true
+		get_tree().process_frame.connect(_keep_shop_focus_visible, CONNECT_ONE_SHOT | CONNECT_DEFERRED)
+
+func _keep_shop_focus_visible()->void:
+	# No await or bound RefCounted arguments survive teardown. Resolve only the latest ID.
+	shop_reflow_pending=false
+	var columns_id:int=shop_reflow_columns_id
+	shop_reflow_columns_id=0
+	if not is_inside_tree() or is_queued_for_deletion() or columns_id==0:return
+	var columns:BoxContainer=instance_from_id(columns_id) as BoxContainer
+	if not is_instance_valid(columns) or columns.is_queued_for_deletion():return
+	if not columns.is_inside_tree() or not columns.is_visible_in_tree() or current_screen!="shop" or columns.get_parent()!=body:return
+	var focused:Control=get_viewport().gui_get_focus_owner()
+	if not is_instance_valid(focused) or not focused.is_inside_tree() or not focused.is_visible_in_tree():return
+	for child in columns.get_children():
+		if child is ScrollContainer and child.is_inside_tree() and child.is_visible_in_tree() and child.is_ancestor_of(focused):
+			child.ensure_control_visible(focused)
+			break
 
 func _forecast_report(options:Array,slot:int)->Dictionary:
 	for option in options:
@@ -511,7 +554,8 @@ func _forecast_card(parent:VBoxContainer,options:Array,slot:int,sold:bool=false)
 	if not report.removed.is_empty():
 		_text(details,"DESTROY: SLOT %d %s [%s] / no refund" % [int(report.removed.slot)+1,report.removed.name,"TEMPERED" if int(report.removed.tier)>0 else "STANDARD"],12)
 	_text(details,"ADD: %s%s" % [report.added.name," / STANDARD" if report.added.kind=="weapon" else ""],12)
-	var item_icon:=TextureRect.new();item_icon.texture=icon(str(report.added.id));item_icon.custom_minimum_size=Vector2(24,24);item_icon.expand_mode=TextureRect.EXPAND_IGNORE_SIZE;item_icon.stretch_mode=TextureRect.STRETCH_KEEP_ASPECT_CENTERED;details.add_child(item_icon)
+	var item_icon:=TextureRect.new();item_icon.texture=icon(str(report.added.id));item_icon.custom_minimum_size=Vector2(24,24);item_icon.expand_mode=TextureRect.EXPAND_IGNORE_SIZE;item_icon.stretch_mode=TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+	item_icon.size_flags_horizontal=Control.SIZE_SHRINK_BEGIN;item_icon.size_flags_vertical=Control.SIZE_SHRINK_BEGIN;details.add_child(item_icon)
 	for row in report.mechanisms:
 		_text(details,str(row.change).to_upper()+": "+str(row.after.name),12).add_theme_color_override("font_color",AMBER if row.change!="enables" else MOSS)
 		if not row.after.missing.is_empty():_text(details,"NEEDS: "+", ".join(row.after.missing),12)
@@ -556,10 +600,41 @@ func _shop_bias(parent: Node, bias: Dictionary, reservation:Dictionary={}) -> vo
 	_text(details, "Higher weight improves likelihood, NOT a guarantee. Draws are without replacement; slot chances change. These are relative weights, not percentages.", 12)
 	_text(details, "Buying/selling updates the preference above immediately, for the NEXT refresh. Existing offers retain their draw-time weight and do not reroll. Next draws exclude max-stack items. Full weapon slots allow replacement. Unaffordable offers can appear; their purchase is disabled.", 12)
 
-func _inventory(parent: Node, view: Dictionary, selling := false) -> void:
+func _build_disclosure(parent:Node,title:String)->VBoxContainer:
+	# Inventory-only presentation: no intent, authority, RNG or simulation calls.
+	var toggle:=Button.new();toggle.text="SHOW "+title;toggle.toggle_mode=true
+	toggle.custom_minimum_size.y=34;parent.add_child(toggle)
+	var details:=VBoxContainer.new();details.visible=false;parent.add_child(details)
+	toggle.toggled.connect(func(expanded:bool):
+		var focused:=get_viewport().gui_get_focus_owner()
+		if not expanded and is_instance_valid(focused) and details.is_ancestor_of(focused):
+			toggle.grab_focus()
+		details.visible=expanded
+		toggle.text=("HIDE " if expanded else "SHOW ")+title)
+	return details
+
+func _build_overview(parent:Node,view:Dictionary)->void:
+	_label(parent,"CURRENT BUILD / PAUSED SNAPSHOT",16)
+	_text(parent,"Weapons %d/%d  /  Modules %d/%d" % [view.get("weapons",[]).size(),int(view.get("weapon_slots",4)),view.get("items",[]).size(),int(view.get("item_slots",8))],13)
+	var rows:Array=view.get("build_items",{}).get("rows",[])
+	var names:Dictionary={"crossfire_pin":"Pin","salvage_capacitor":"Salvage","medic_winch":"Winch"}
+	for row in rows:
+		# Preserve the authoritative status verbatim: only the display name is short.
+		_text(parent,str(names.get(str(row.id),row.id))+": "+str(row.status),13)
+	_text(parent,"Read-only. Expand details for conditions, costs and full cards.",12)
+	if not rows.is_empty():
+		var details:=_build_disclosure(parent,"MODULE STATUS DETAILS")
+		for row in rows:
+			_text(details,str(row.id).replace("_"," ").capitalize()+": "+str(row.status),13)
+			_text(details,str(row.detail),12)
+			if str(row.id)=="crossfire_pin":
+				_text(details,"Requires two distinct equipped weapon types; the second type must hit the same marked target.",12)
+
+func _inventory(parent: Node, view: Dictionary, selling := false, compact_build := false) -> void:
 	var origin:Dictionary=view.get("starting_loadout",{})
 	if not selling and not origin.is_empty():_text(parent,"STARTED WITH: "+str(origin.name)+" / origin only, not current equipment",12)
-	_label(parent, "WEAPONS  %d / %d" % [view.get("weapons", []).size(), int(view.get("weapon_slots", 4))], 16)
+	var weapon_parent:Node=_build_disclosure(parent,"WEAPON CARDS / %d" % view.get("weapons",[]).size()) if compact_build else parent
+	_label(weapon_parent, "WEAPONS  %d / %d" % [view.get("weapons", []).size(), int(view.get("weapon_slots", 4))], 16)
 	var order:Dictionary=view.get("weapon_order",{})
 	if selling:
 		_text(parent,"FREE ORDER / remaining cooldown follows each copy. SLOT 1 is the hand mount.",12)
@@ -569,7 +644,7 @@ func _inventory(parent: Node, view: Dictionary, selling := false) -> void:
 		_text(order_notes,"Weapons ready this tick process by slot. Moving does not reset or synchronize their clocks. Projectile travel and delayed hits still matter; earlier slot is not guaranteed earlier impact or more damage.",12)
 		if not bool(order.get("available",false)) and not str(order.get("reason","")).is_empty(): _text(parent,str(order.reason),12)
 	for w in view.get("weapons", []):
-		var c := _card(parent, w, "  [SLOT %s]" % (int(w.get("slot", 0)) + 1))
+		var c := _card(weapon_parent, w, "  [SLOT %s]" % (int(w.get("slot", 0)) + 1))
 		_text(c,str(w.get("temper_label","STANDARD")),12).add_theme_color_override("font_color",AMBER if w.get("temper_label","")=="TEMPERED" else MOSS)
 		if selling:
 			var previous_focus:Control=first_focus
@@ -593,17 +668,19 @@ func _inventory(parent: Node, view: Dictionary, selling := false) -> void:
 				move.tooltip_text="Swap with the adjacent owned copy for free. Remaining cooldowns are preserved."
 			first_focus=previous_focus # Reorder is explicit, never the initial/default action.
 			_button(c, "SELL  +%d" % int(w.get("sell_price", 0)), "sell_weapon", {"slot": w.get("slot", 0), "generation": view.get("generation", 0)}, view.get("weapons", []).size() <= 1 or str(w.get("temper_label","")).begins_with("INVALID"))
-	_label(parent, "MODULES  %d / %d" % [view.get("items", []).size(), int(view.get("item_slots", 8))], 16)
-	if view.get("items", []).is_empty(): _text(parent, "No modules yet. Buy one to begin your build.")
+	var item_parent:Node=_build_disclosure(parent,"MODULE CARDS / %d" % view.get("items",[]).size()) if compact_build else parent
+	_label(item_parent, "MODULES  %d / %d" % [view.get("items", []).size(), int(view.get("item_slots", 8))], 16)
+	if view.get("items", []).is_empty(): _text(item_parent, "No modules yet. Buy one to begin your build.")
 	for item in view.get("items", []):
-		var c := _card(parent, item, "  x%d / %s" % [int(item.get("count", 1)), str(int(item.max_stack)) if item.has("max_stack") else "?"], view.get("synergy_status", []))
+		var c := _card(item_parent, item, "  x%d / %s" % [int(item.get("count", 1)), str(int(item.max_stack)) if item.has("max_stack") else "?"], view.get("synergy_status", []))
 		if selling: _button(c, "SELL ONE  +%d" % int(item.get("sell_price", 0)), "sell_item", {"id": item.get("id", ""), "generation": view.get("generation", 0)})
 	var build_items:Dictionary=view.get("build_items",{})
-	if not build_items.get("rows",[]).is_empty():
+	if not compact_build and not build_items.get("rows",[]).is_empty():
 		_label(parent,"CONTROL MODULES / LIVE SNAPSHOT",16)
 		for row in build_items.rows:
 			_text(parent,str(row.id).replace("_"," ").capitalize()+": "+str(row.status),13)
 			_text(parent,str(row.detail),12)
+	if compact_build:parent=_build_disclosure(parent,"SYNERGIES / COOLDOWNS / STATS")
 	var rewards: Array = view.get("rewards", [])
 	if not rewards.is_empty():
 		_label(parent, "BOSS REWARDS / SECURED", 16).add_theme_color_override("font_color", AMBER)
@@ -658,7 +735,9 @@ func _synergy_line(parent: Node, status: Dictionary) -> void:
 
 func show_inventory(view: Dictionary) -> void:
 	_begin("inventory", "YOUR BUILD", "Simulation paused. Stats are calculated by the run controller.")
-	_inventory(_scroll(body), view)
+	var content:=_scroll(body)
+	_build_overview(content,view)
+	_inventory(content, view, false, true)
 	_button(body, "BACK", "close_inventory")
 	_finish()
 

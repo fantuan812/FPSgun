@@ -1,3 +1,26 @@
+# MossCircuit v41 — compact BUILD and narrow-screen layout
+
+BUILD now opens with a short paused snapshot and expandable details. Full cards and mechanics remain available. Item icons align with their complete names, narrow shops stack the existing offer/owned scroll areas, and BACK/shop actions stay outside those scrolls. Five editable L4 icons replace the Cryo Sprayer, Fracture Coil, Bankshot Driver, Bounce Guide and Feedback Diode inventory artwork; the held8 redraws remain intact.
+
+## Current source verification
+
+From this merged project root, with Python 3 and **Godot 4.6.3** available as `godot`:
+
+```sh
+godot --headless --editor --path . --import --quit
+python3 tools/run_build_ui_checks.py
+```
+
+The second command defaults to `--project .`. It actually passed on the current test-packaged source: **14 finite routes**, comprising 11 adapters that open the real disclosures, 2 unchanged fixtures and an 84-check/7-context guard. Original assertions and strict warning/audio policies remain. Use this entry rather than historical direct inventory-test commands. [Route list and runner options](docs/BUILD_UI_VALIDATION.md).
+
+The candidate also passed bounded packed integration, icon-resource checks, native BUILD/shop checks and a separate real-window/logical-viewport resize matrix. This is not a new full-suite, ordinary-gameplay, Windows or physical-audio certification. At 640 logical pixels, long cards still scroll; visible tops and tails do not mean whole-card fit. [Features and editable sources](docs/V41_COMPACT_BUILD.md) · [Authored validation summary and limits](docs/V41_VALIDATION_SUMMARY.md).
+
+---
+
+## Historical version notes — not the current validation recipe
+
+The complete previously published held8 history follows unchanged. Its commands and completion statements are version-specific snapshots; the current BUILD verification entry is the finite 14-route command above.
+
 # v40-held8 — editable held-weapon migration
 
 Eight existing held weapon sprites are now derived from semantic, editable SVG sources: Rivet Gun, Scrap Shotgun, Rail Lance, Orbit Saw, Return Disc, Shock Mortar, Cryo Sprayer, and Bankshot Driver. This is an asset-only continuation of v40. The accepted equipment16 inventory atlas and all v40 B gameplay remain intact; Tether Emitter and Seismic Drum held resources remain unchanged.
