@@ -1,3 +1,7 @@
+## v42-L3 — eight editable mechanism icons
+
+Eight inventory icons now have individual semantic SVG masters and PNG textures instead of the shared mechanism atlas. Gameplay and the accepted BUILD layout are unchanged. See [restoration and validation limits](v42-L3/READ_ME_v42-L3.txt). Earlier delivery records follow unchanged.
+
 ## v41 — compact BUILD and editable inventory icons
 
 The update adds responsive shop columns, top-aligned icon/name groups and five editable SVG-backed icons without changing gameplay. Restore the complete resource pack using the existing helper; keep your actual previous resource file for rollback. See [v41 instructions and validation limits](v41/READ_ME_v41.txt).

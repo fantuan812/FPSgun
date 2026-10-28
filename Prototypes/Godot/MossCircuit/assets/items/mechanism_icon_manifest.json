@@ -1,172 +1,165 @@
 {
   "version": 1,
-  "atlas": "res://assets/items/mechanism_atlas_v4.png",
-  "size": [
-    1774,
-    887
-  ],
-  "grid": {
-    "columns": 4,
-    "rows": 2,
-    "order": "row-major",
-    "edges": "floor(i*size/cells)"
-  },
-  "source_sha256": "0ca0aa10d67ce1fd7b2d6097cc75c4b653fdc6ae659a7c282f1807609f6149a6",
   "icons": {
     "arc_relay": {
+      "atlas": "res://assets/items/arc_relay.png",
       "rect": [
         0,
         0,
-        443,
-        443
+        64,
+        64
       ],
       "name": "链电继电器",
       "category": "item",
-      "visible_alpha_bbox_local": [
-        57,
-        83,
-        435,
-        404
+      "source_sha256": "1209e5802acaa4d30fcb363a8f9fc1c8dd44943efb2524cdc9a9cc4f2df1ccbb",
+      "alpha_bbox": [
+        8,
+        10,
+        49,
+        46
       ],
-      "cell_rgba_sha256": "f424991f63f68606460efba1ba238114ad813733b42345c67045e2dfaf134251"
+      "editable_source": "res://art_source/legacy_inventory_L3/arc_relay.svg",
+      "svg_sha256": "917150d5507bff6028e92cdc98fb530a7737c6acd318d1cc9c2e3129966cc37e"
     },
     "kill_cell": {
+      "atlas": "res://assets/items/kill_cell.png",
       "rect": [
-        443,
         0,
-        444,
-        443
+        0,
+        64,
+        64
       ],
       "name": "战利电池",
       "category": "item",
-      "visible_alpha_bbox_local": [
-        122,
-        42,
-        322,
-        412
+      "source_sha256": "24229441e66f1427c15e651e5dc2f17076d2bb88e255f2a7386f047d20765847",
+      "alpha_bbox": [
+        19,
+        4,
+        27,
+        53
       ],
-      "cell_rgba_sha256": "fdaf3c7561afc63bffbbd030d4f292d5546dd2e484194d1328cd136f10466815"
+      "editable_source": "res://art_source/legacy_inventory_L3/kill_cell.svg",
+      "svg_sha256": "cff199d6c9c7d5b97a81d1150a87b357408708bd10effde70db34c43d455285d"
     },
     "dash_resin": {
+      "atlas": "res://assets/items/dash_resin.png",
       "rect": [
-        887,
         0,
-        443,
-        443
+        0,
+        64,
+        64
       ],
       "name": "冲刺树脂",
       "category": "item",
-      "visible_alpha_bbox_local": [
-        70,
-        63,
-        383,
-        416
+      "source_sha256": "c6bf44f1f34a8146815a94babed0616cf426d093e21e68a7a64575eebe4a9572",
+      "alpha_bbox": [
+        8,
+        8,
+        49,
+        50
       ],
-      "cell_rgba_sha256": "4d460f050fef31c4c4f8272342c2432cfdbf682db4b4fced22fadd0f2a1e3d4f"
+      "editable_source": "res://art_source/legacy_inventory_L3/dash_resin.svg",
+      "svg_sha256": "ddaf8bee1f36953f63545c975e497d7f319d67b876d35725e14be9691e0a2c4d"
     },
     "mirror_shell": {
+      "atlas": "res://assets/items/mirror_shell.png",
       "rect": [
-        1330,
         0,
-        444,
-        443
+        0,
+        64,
+        64
       ],
       "name": "镜面护壳",
       "category": "item",
-      "visible_alpha_bbox_local": [
-        50,
-        66,
-        391,
-        408
+      "source_sha256": "e88860b8eda4f525eb25c416cb8bb5026189691876c3620c5c114b22aca1c0b3",
+      "alpha_bbox": [
+        5,
+        5,
+        54,
+        54
       ],
-      "cell_rgba_sha256": "7748b1285d8b2bd78a4066e95f640983b8b41d2399e9214dba3b4da6fc3e3f6c"
+      "editable_source": "res://art_source/legacy_inventory_L3/mirror_shell.svg",
+      "svg_sha256": "afbb89ed9843771d12249509ac5a9cf698b08abe53ef62f0a2899adb111749a4"
     },
     "thorn_crown": {
+      "atlas": "res://assets/items/thorn_crown.png",
       "rect": [
         0,
-        443,
-        443,
-        444
+        0,
+        64,
+        64
       ],
       "name": "荆棘冠",
       "category": "item",
-      "visible_alpha_bbox_local": [
-        33,
-        50,
-        435,
-        386
+      "source_sha256": "9447487947db732588df51ab2324670c2e262a697b09a325bc4808133bb4d730",
+      "alpha_bbox": [
+        3,
+        5,
+        58,
+        55
       ],
-      "cell_rgba_sha256": "55eb38245a140ab0727f320f8e396f0dd1e9a25b9e2d043bc55bcaf1a27033c8"
+      "editable_source": "res://art_source/legacy_inventory_L3/thorn_crown.svg",
+      "svg_sha256": "bd4868d7006ea642bf37a97bd73719107cfe5ee7b99e90fd251bae0099fa6286"
     },
     "blood_valve": {
+      "atlas": "res://assets/items/blood_valve.png",
       "rect": [
-        443,
-        443,
-        444,
-        444
+        0,
+        0,
+        64,
+        64
       ],
       "name": "血能阀",
       "category": "item",
-      "visible_alpha_bbox_local": [
-        40,
-        24,
-        410,
-        403
+      "source_sha256": "d17fa0d9d5d6ad64bbf2649ca7f4f1abc44a01d2b44fb4b27b1fc4f7c9158f43",
+      "alpha_bbox": [
+        5,
+        4,
+        51,
+        55
       ],
-      "cell_rgba_sha256": "7c418f7f4415d11b19a1120d49f5920264f12ca907d4d33b70152629cf4b0cb1"
+      "editable_source": "res://art_source/legacy_inventory_L3/blood_valve.svg",
+      "svg_sha256": "f18c3f9699baff94c7618ac19399ec481ac1ffbfa015a2fcf4e16ceb1277e408"
     },
     "scrap_mine": {
+      "atlas": "res://assets/items/scrap_mine.png",
       "rect": [
-        887,
-        443,
-        443,
-        444
+        0,
+        0,
+        64,
+        64
       ],
       "name": "拾荒地雷",
       "category": "item",
-      "visible_alpha_bbox_local": [
-        33,
-        49,
-        399,
-        378
+      "source_sha256": "7b5343bef5eaf62c79cc484214a9c107981466c49080eb2d00ca666dd593fb2f",
+      "alpha_bbox": [
+        5,
+        4,
+        54,
+        53
       ],
-      "cell_rgba_sha256": "3e817a59e391b69e3f1c801721972a6b8b2aced20f9be70d2629d0eb49b99222"
+      "editable_source": "res://art_source/legacy_inventory_L3/scrap_mine.svg",
+      "svg_sha256": "7b7c7a7a0984c7dcc4afa5c46313906bf6da11bc2c8668bfce92e4ffec0532d1"
     },
     "pulse_boots": {
+      "atlas": "res://assets/items/pulse_boots.png",
       "rect": [
-        1330,
-        443,
-        444,
-        444
+        0,
+        0,
+        64,
+        64
       ],
       "name": "脉冲靴",
       "category": "item",
-      "visible_alpha_bbox_local": [
-        13,
-        42,
-        422,
-        378
+      "source_sha256": "cef9f53c6efcc6162c1020a6d5c504ece84cff2288032d7e14dd016d652d4563",
+      "alpha_bbox": [
+        5,
+        10,
+        53,
+        48
       ],
-      "cell_rgba_sha256": "4ec706cdbba1c140cf09d172f7e631ad97e42873e558a3c573badc6d7c4576a0"
+      "editable_source": "res://art_source/legacy_inventory_L3/pulse_boots.svg",
+      "svg_sha256": "efe87af96fdd5dcbe04304e61bf52ba04871e0ba913bd3164135bfae20b9472f"
     }
-  },
-  "generation": {
-    "tool": "image_gen built-in",
-    "date": "2026-10-22",
-    "source": "exec-f6596186-824e-4082-adb3-f6b3992465c2.png",
-    "prompt": "docs/art/mechanism_generation_prompt.txt",
-    "pixel_edits": "None; byte-identical PNG copy. AtlasTexture runtime slices only."
-  },
-  "qa": {
-    "visual_review": "Eight mechanisms visibly distinct and correct order, no cut-off parts. Unified moss/industrial palette.",
-    "visible_alpha_threshold": 32,
-    "nonempty_cells": 8,
-    "unique_rgba_cell_hashes": 8,
-    "all_visible_content_inside_cells": true,
-    "limitations": [
-      "Stylized pixel-art appearance, not native low-resolution integer-grid artwork.",
-      "Fine near-transparent edge pixels preserved; no background removal or resampling.",
-      "Generated spacing is not exactly the prompted 17 percent; visible silhouettes remain wholly inside each cell."
-    ]
   }
 }

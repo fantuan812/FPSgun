@@ -1,3 +1,23 @@
+# MossCircuit v42-L3 — eight editable mechanism icons
+
+Eight inventory icons now use individual semantic SVG masters and 64×64 PNG textures instead of the shared mechanism atlas: `arc_relay`, `kill_cell`, `dash_resin`, `mirror_shell`, `thorn_crown`, `blood_valve`, `scrap_mine` and `pulse_boots`.
+
+The item IDs, catalog values, gameplay and accepted compact BUILD interface are unchanged. Each icon has its own full texture rectangle; the old mechanism atlas image and import sidecar are retired. Earlier artwork retirements remain in effect.
+
+- [Changes and bounded validation](docs/V42_L3_ICONS.md)
+- [Edit the SVG masters](art_source/legacy_inventory_L3/AUTHORING_SCOPE.md)
+- [Restore the resource pack safely](docs/DELIVERY.md)
+
+Local validation covers the eight icons in expanded BUILD, shop-owned cards, shop offers and purchase forecasts at controlled 960×540 and 640×360 logical sizes. The finite checks retain full identifying labels, logical 48/24-unit icons and unchanged gameplay authority. See the bounded validation note for results and limits.
+
+For the portable source checks, import the project with Godot 4.6.3, then run `python3 tools/run_build_ui_checks.py` from the project root. This remains the finite 14-route entry, not a new full-suite or ordinary-play certification. See [runner options](docs/BUILD_UI_VALIDATION.md).
+
+---
+
+## Historical release notes
+
+The complete verified v41 README follows unchanged. Its version-specific claims and older instructions remain historical; the links above describe the current icon replacement.
+
 # MossCircuit v41 — compact BUILD and narrow-screen layout
 
 BUILD now opens with a short paused snapshot and expandable details. Full cards and mechanics remain available. Item icons align with their complete names, narrow shops stack the existing offer/owned scroll areas, and BACK/shop actions stay outside those scrolls. Five editable L4 icons replace the Cryo Sprayer, Fracture Coil, Bankshot Driver, Bounce Guide and Feedback Diode inventory artwork; the held8 redraws remain intact.
