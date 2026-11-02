@@ -202,7 +202,12 @@
       "reference_height": 222,
       "duration_seconds": 0.27,
       "loop": false,
-      "source": "Recovered original Git blob, unchanged raster; new 2026-10-24 region/margin metadata"
+      "source": "Current PNG pixels are a newly authored semantic SVG redraw. The original recovered raster and unchanged-registration source history are preserved in art_source/provenance.json prior_raster_manifest_record; all original action regions, margins, reference heights and source-pose order remain unchanged.",
+      "source_sha256": "a46313c9d2a601762ba66679dc5c7a13e0294470a4d77034f7fda80c6bde40cd",
+      "source_svg": "res://art_source/flanker_v54/flanker_hurt.svg",
+      "source_svg_sha256": "67a3de3c6619c24cbac7c53091110b5e65e5917000c8e58cc8a38b9ae595b3cd",
+      "generator": "Newly authored semantic SVG creature redraw; deterministic PNG export",
+      "measurement_semantics": "source_sha256 is current PNG bytes; source_svg_sha256 is current SVG bytes. All frame records are retained unchanged. alpha_bbox is a historical QA measurement, not the current redraw bbox and not the scale/crop authority; explicit reference_height/anchor/window are runtime registration. New measured bbox/clearance are separately recorded in art_source/provenance.json current_derivations.flanker_hurt."
     },
     "flanker_death": {
       "path": "res://assets/actions/flanker/flanker_death.png",
@@ -551,7 +556,12 @@
       "reference_height": 178,
       "duration_seconds": 0.72,
       "loop": false,
-      "source": "Recovered original Git blob, unchanged raster; new 2026-10-24 region/margin metadata"
+      "source": "Current PNG pixels are a newly authored semantic SVG redraw. The original recovered raster and unchanged-registration source history are preserved in art_source/provenance.json prior_raster_manifest_record; all original action regions, margins, reference heights and source-pose order remain unchanged.",
+      "source_sha256": "67be0bf0a348e19bdfcca08f96bab751d4a53cde8138379a3d1b65ac2cc23076",
+      "source_svg": "res://art_source/flanker_v54/flanker_death.svg",
+      "source_svg_sha256": "cbb7781eb63ba7f290d5fe2e3e88465e44393048f8ae72b4682a6fafbe533a4b",
+      "generator": "Newly authored semantic SVG creature redraw; deterministic PNG export",
+      "measurement_semantics": "source_sha256 is current PNG bytes; source_svg_sha256 is current SVG bytes. All frame records are retained unchanged. alpha_bbox is a historical QA measurement, not the current redraw bbox and not the scale/crop authority; explicit reference_height/anchor/window are runtime registration. New measured bbox/clearance are separately recorded in art_source/provenance.json current_derivations.flanker_death."
     }
   }
 }

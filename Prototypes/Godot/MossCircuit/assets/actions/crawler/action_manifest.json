@@ -202,13 +202,18 @@
       "reference_height": 260,
       "duration_seconds": 0.27,
       "loop": false,
-      "source": "Recovered original Git blob, unchanged raster; new 2026-10-24 region/margin metadata",
+      "source": "Current PNG pixels are a newly authored semantic SVG redraw. The original recovered raster and unchanged-registration source history are preserved in art_source/provenance.json prior_raster_manifest_record; all original action regions, margins, reference heights and source-pose order remain unchanged.",
       "source_column_x_corrections": [
         -25,
         -4,
         26
       ],
-      "registration_policy": "Fixed source-column layout calibration plus one action-wide neutral-eye registration; no per-frame normalization or scale changes."
+      "registration_policy": "Fixed source-column layout calibration plus one action-wide neutral-eye registration; no per-frame normalization or scale changes.",
+      "source_sha256": "777a9a2d649ebe7b81c8c80e70d3c2145375b6f49a97904b8ea6bb92e5f5f9f3",
+      "source_svg": "res://art_source/crawler_v53/crawler_hurt.svg",
+      "source_svg_sha256": "c2895689d612d47a70c14821ef8995fed6842e5a9fe9f264fb0bb4ddf53b43c8",
+      "generator": "Newly authored semantic SVG creature redraw; deterministic PNG export",
+      "measurement_semantics": "source_sha256 is current PNG bytes; source_svg_sha256 is current SVG bytes. All frame records are retained unchanged. alpha_bbox is a historical QA measurement, not the current redraw bbox and not the scale/crop authority; explicit reference_height/anchor/window are runtime registration. New measured bbox/clearance are separately recorded in art_source/provenance.json current_derivations.crawler_hurt."
     },
     "crawler_death": {
       "path": "res://assets/actions/crawler/crawler_death.png",
@@ -557,7 +562,12 @@
       "reference_height": 215,
       "duration_seconds": 0.72,
       "loop": false,
-      "source": "Recovered original Git blob, unchanged raster; new 2026-10-24 region/margin metadata"
+      "source": "Current PNG pixels are a newly authored semantic SVG redraw. The original recovered raster and unchanged-registration source history are preserved in art_source/provenance.json prior_raster_manifest_record; all original action regions, margins, reference heights and source-pose order remain unchanged.",
+      "source_sha256": "068256e344bccad751dc112b262d7d0c72c872c256a6b1cd8ae2b6cbf8345a60",
+      "source_svg": "res://art_source/crawler_v53/crawler_death.svg",
+      "source_svg_sha256": "e21455d920e3bbd715284b6c0fcaa19e5a6ddad566162d43077e64718a5f986a",
+      "generator": "Newly authored semantic SVG creature redraw; deterministic PNG export",
+      "measurement_semantics": "source_sha256 is current PNG bytes; source_svg_sha256 is current SVG bytes. All frame records are retained unchanged. alpha_bbox is a historical QA measurement, not the current redraw bbox and not the scale/crop authority; explicit reference_height/anchor/window are runtime registration. New measured bbox/clearance are separately recorded in art_source/provenance.json current_derivations.crawler_death."
     }
   }
 }

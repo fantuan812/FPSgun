@@ -138,12 +138,17 @@
       "reference_height": 269,
       "release_frame": 0,
       "facing": "left",
-      "source_sha256": "266f9110e1c3c2d730e9b89dd1802ddc2ca58ce59ef39afbca7cb1cd5d8a7a0d",
+      "source_sha256": "faae384e85344ddb8216194c6e6c16e210e8162d9b78536bfc7c35a94d282dbd",
       "row_origins_y": [
         69,
         460,
         849
-      ]
+      ],
+      "source_svg": "res://art_source/broodkeeper_v55/brood_keeper_hurt.svg",
+      "source_svg_sha256": "33ed4bf1a60008912384540fc83ed8d4e54e91d2c623dc08cf20aeb02171c466",
+      "generator": "Newly authored semantic SVG creature redraw; deterministic PNG export",
+      "source": "Current PNG pixels are a newly authored semantic SVG redraw. The original recovered raster and unchanged-registration source history are preserved in art_source/provenance.json prior_raster_manifest_record; all original action regions, margins, reference heights, source_index and death order remain unchanged; overlapping transparent source bands are preserved.",
+      "measurement_semantics": "source_sha256 is current PNG bytes; source_svg_sha256 is current SVG bytes. All frame records are retained unchanged. alpha_bbox is a historical QA measurement, not the current redraw bbox and not the scale/crop authority; explicit reference_height/anchor/window are runtime registration. New measured bbox/clearance are separately recorded in art_source/provenance.json current_derivations.brood_keeper_hurt."
     },
     "brood_keeper_summon": {
       "path": "res://assets/actions/brood_keeper/brood_keeper_summon.png",
@@ -492,7 +497,7 @@
       "reference_height": 225,
       "release_frame": 7,
       "facing": "left",
-      "source_sha256": "1f5faa0c330891fb2ffc4f0b6f3f398b4871452b6401e79407e5b3b0aceaf748",
+      "source_sha256": "af1ded21ae92c45ad61f2aefd3c84d253b30f708b0663bfca31d8c973191d8af",
       "logical_canvas": [
         313,
         360
@@ -536,7 +541,12 @@
         13,
         14,
         15
-      ]
+      ],
+      "source_svg": "res://art_source/broodkeeper_v55/brood_keeper_summon.svg",
+      "source_svg_sha256": "b8bb5b3f279ef303553b79a5f47698a313d3409c2681f704a13c85b2f00bcf2b",
+      "generator": "Newly authored semantic SVG creature redraw; deterministic PNG export",
+      "source": "Current PNG pixels are a newly authored semantic SVG redraw. The original recovered raster and unchanged-registration source history are preserved in art_source/provenance.json prior_raster_manifest_record; all original action regions, margins, reference heights, source_index and death order remain unchanged; overlapping transparent source bands are preserved.",
+      "measurement_semantics": "source_sha256 is current PNG bytes; source_svg_sha256 is current SVG bytes. All frame records are retained unchanged. alpha_bbox is a historical QA measurement, not the current redraw bbox and not the scale/crop authority; explicit reference_height/anchor/window are runtime registration. New measured bbox/clearance are separately recorded in art_source/provenance.json current_derivations.brood_keeper_summon."
     },
     "brood_keeper_death": {
       "path": "res://assets/actions/brood_keeper/brood_keeper_death.png",
@@ -885,7 +895,7 @@
       "reference_height": 206,
       "release_frame": 0,
       "facing": "left",
-      "source_sha256": "fe51277b16ac8bf7a58d4f12c02b30c72074415975847f524ff689f524daf7c3",
+      "source_sha256": "72e7c66a4a352e947612aeb0e87ccfe5bb87594859911d1028b595eaf4502f47",
       "logical_canvas": [
         313,
         360
@@ -929,7 +939,12 @@
         13,
         14,
         15
-      ]
+      ],
+      "source_svg": "res://art_source/broodkeeper_v55/brood_keeper_death.svg",
+      "source_svg_sha256": "d5b083f8ea979634359ed5a6d45842eb93f5dc8699346f7ecda106cea8f567e8",
+      "generator": "Newly authored semantic SVG creature redraw; deterministic PNG export",
+      "source": "Current PNG pixels are a newly authored semantic SVG redraw. The original recovered raster and unchanged-registration source history are preserved in art_source/provenance.json prior_raster_manifest_record; all original action regions, margins, reference heights, source_index and death order remain unchanged; overlapping transparent source bands are preserved.",
+      "measurement_semantics": "source_sha256 is current PNG bytes; source_svg_sha256 is current SVG bytes. All frame records are retained unchanged. alpha_bbox is a historical QA measurement, not the current redraw bbox and not the scale/crop authority; explicit reference_height/anchor/window are runtime registration. New measured bbox/clearance are separately recorded in art_source/provenance.json current_derivations.brood_keeper_death."
     }
   }
 }

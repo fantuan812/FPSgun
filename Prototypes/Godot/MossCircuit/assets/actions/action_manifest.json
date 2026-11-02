@@ -313,9 +313,15 @@
         843
       ],
       "loop": false,
-      "sha256": "4a2865fcd775af7503630c67146f05537f9ec987af15705a92c8d51f10fa49d5",
+      "sha256": "5b1ef0b14966a6755188ddf46eb4d01a98a472160d6c16c7a1a685333af214c2",
       "alpha_threshold": 8,
-      "release_frame": 5
+      "release_frame": 5,
+      "source_sha256": "5b1ef0b14966a6755188ddf46eb4d01a98a472160d6c16c7a1a685333af214c2",
+      "source_svg": "res://art_source/warden_v56/boss_warden_attack.svg",
+      "source_svg_sha256": "721e9d6994fe9d1a69f53a0008b239b107a9295484c56236aa64e5be5ba27a42",
+      "generator": "Newly authored semantic SVG creature redraw; deterministic PNG export",
+      "source": "Current PNG pixels are a newly authored semantic SVG redraw. The original raster provenance and unchanged-registration source history are preserved in art_source/provenance.json prior_raster_manifest_record; all original action regions, margins, reference heights, base source_frame or charge/hurt/death source_pose_index, hurt6/7 swap, death order and embodied charge x corrections remain unchanged; overlapping transparent source bands are preserved.",
+      "measurement_semantics": "Existing sha256 when present and source_sha256 both mean current PNG bytes; source_svg_sha256 is current SVG bytes. All frame records are retained unchanged. alpha_bbox is a historical QA measurement, not the current redraw bbox and not the scale/crop authority; explicit reference_height/anchor/window are runtime registration. New measured bbox/clearance are separately recorded in art_source/provenance.json current_derivations.boss_warden_attack."
     },
     "hero_attack": {
       "path": "res://assets/actions/hero_attack.png",
@@ -486,10 +492,10 @@
             340
           ],
           "alpha_bbox": [
-            115,
-            53,
-            195,
-            275
+            117,
+            59,
+            197,
+            269
           ],
           "source_frame": 0
         },
@@ -501,10 +507,10 @@
             340
           ],
           "alpha_bbox": [
-            123,
-            100,
-            211,
-            228
+            132,
+            94,
+            182,
+            234
           ],
           "source_frame": 1
         },
@@ -516,10 +522,10 @@
             340
           ],
           "alpha_bbox": [
-            125,
-            86,
-            218,
-            242
+            111,
+            108,
+            225,
+            220
           ],
           "source_frame": 2
         },
@@ -531,10 +537,10 @@
             340
           ],
           "alpha_bbox": [
-            101,
-            102,
-            267,
-            226
+            85,
+            126,
+            287,
+            202
           ],
           "source_frame": 3
         },
@@ -546,10 +552,10 @@
             340
           ],
           "alpha_bbox": [
-            76,
-            120,
-            327,
-            191
+            77,
+            134,
+            314,
+            182
           ],
           "source_frame": 4
         },
@@ -561,10 +567,10 @@
             340
           ],
           "alpha_bbox": [
-            93,
-            117,
-            241,
-            211
+            92,
+            136,
+            279,
+            192
           ],
           "source_frame": 5
         },
@@ -577,9 +583,9 @@
           ],
           "alpha_bbox": [
             127,
-            68,
-            207,
-            256
+            112,
+            215,
+            216
           ],
           "source_frame": 6
         },
@@ -591,10 +597,10 @@
             340
           ],
           "alpha_bbox": [
-            115,
-            67,
-            196,
-            261
+            128,
+            81,
+            191,
+            247
           ],
           "source_frame": 7
         },
@@ -606,10 +612,10 @@
             340
           ],
           "alpha_bbox": [
-            116,
-            57,
-            203,
-            271
+            118,
+            66,
+            196,
+            262
           ],
           "source_frame": 8
         }
@@ -629,8 +635,11 @@
         858
       ],
       "loop": false,
-      "sha256": "9dd43ba5700313334fa7ddf479d55c5ef2703a2cd5e98b43cc0f61f202d47da4",
-      "alpha_threshold": 8
+      "sha256": "aae8afb762006fac2a2c05ef89d9d244734be3f83c450e4a5d7cbd332208bb6b",
+      "alpha_threshold": 8,
+      "source_svg": "res://art_source/player_v50/hero_dash.svg",
+      "source_sha256": "609501279ce54686e4f405a8412601833888fc7fdc9b377695edb13418fd5a00",
+      "generator": "Newly authored semantic SVG body redraw; deterministic PNG export"
     },
     "hero_death": {
       "path": "res://assets/actions/hero_death.png",
@@ -643,10 +652,10 @@
             340
           ],
           "alpha_bbox": [
-            138,
-            51,
-            197,
-            276
+            125,
+            56,
+            179,
+            272
           ],
           "source_frame": 0
         },
@@ -658,10 +667,10 @@
             340
           ],
           "alpha_bbox": [
-            119,
-            69,
-            202,
-            258
+            123,
+            72,
+            177,
+            256
           ],
           "source_frame": 1
         },
@@ -673,10 +682,10 @@
             340
           ],
           "alpha_bbox": [
+            125,
             97,
-            103,
-            202,
-            225
+            171,
+            231
           ],
           "source_frame": 2
         },
@@ -688,10 +697,10 @@
             340
           ],
           "alpha_bbox": [
-            142,
-            99,
-            208,
-            225
+            133,
+            122,
+            163,
+            206
           ],
           "source_frame": 3
         },
@@ -703,10 +712,10 @@
             340
           ],
           "alpha_bbox": [
-            86,
-            111,
-            241,
-            213
+            117,
+            149,
+            192,
+            179
           ],
           "source_frame": 4
         },
@@ -718,10 +727,10 @@
             340
           ],
           "alpha_bbox": [
-            63,
-            147,
-            277,
-            181
+            96,
+            167,
+            228,
+            161
           ],
           "source_frame": 5
         },
@@ -733,10 +742,10 @@
             340
           ],
           "alpha_bbox": [
-            81,
-            147,
-            302,
-            181
+            77,
+            167,
+            269,
+            161
           ],
           "source_frame": 6
         },
@@ -748,10 +757,10 @@
             340
           ],
           "alpha_bbox": [
-            74,
-            156,
-            293,
-            172
+            71,
+            171,
+            276,
+            157
           ],
           "source_frame": 7
         },
@@ -763,10 +772,10 @@
             340
           ],
           "alpha_bbox": [
-            67,
-            155,
-            291,
-            173
+            69,
+            172,
+            279,
+            156
           ],
           "source_frame": 8
         }
@@ -786,8 +795,11 @@
         850
       ],
       "loop": false,
-      "sha256": "2deec59bdb8527c97f36528eb1bdd650bc6410c34ac050b77546a20550206e1a",
-      "alpha_threshold": 8
+      "sha256": "2987d7ba7c005283699d3886fc09f1f98ac12802a0956bfefa76371c8e80e53c",
+      "alpha_threshold": 8,
+      "source_svg": "res://art_source/player_v50/hero_death.svg",
+      "source_sha256": "b8fbe9b202597e5ac7be77ceaa8eb50443d892da30ed334c26fcd990c627079d",
+      "generator": "Newly authored semantic SVG body redraw; deterministic PNG export"
     },
     "hero_hurt": {
       "path": "res://assets/actions/hero_hurt.png",
@@ -800,10 +812,10 @@
             340
           ],
           "alpha_bbox": [
-            123,
-            74,
-            179,
-            254
+            119,
+            80,
+            182,
+            248
           ],
           "source_frame": 0
         },
@@ -815,10 +827,10 @@
             340
           ],
           "alpha_bbox": [
-            108,
-            84,
-            204,
-            244
+            112,
+            80,
+            202,
+            248
           ],
           "source_frame": 1
         },
@@ -830,10 +842,10 @@
             340
           ],
           "alpha_bbox": [
-            83,
-            95,
-            231,
-            233
+            108,
+            94,
+            218,
+            234
           ],
           "source_frame": 2
         },
@@ -845,10 +857,10 @@
             340
           ],
           "alpha_bbox": [
-            96,
-            96,
-            238,
-            230
+            98,
+            111,
+            224,
+            218
           ],
           "source_frame": 3
         },
@@ -861,9 +873,9 @@
           ],
           "alpha_bbox": [
             112,
-            85,
-            208,
-            243
+            111,
+            210,
+            217
           ],
           "source_frame": 4
         },
@@ -875,10 +887,10 @@
             340
           ],
           "alpha_bbox": [
-            111,
-            66,
-            192,
-            262
+            118,
+            98,
+            204,
+            230
           ],
           "source_frame": 5
         },
@@ -891,9 +903,9 @@
           ],
           "alpha_bbox": [
             122,
-            60,
-            195,
-            268
+            85,
+            192,
+            243
           ],
           "source_frame": 6
         },
@@ -905,10 +917,10 @@
             340
           ],
           "alpha_bbox": [
-            113,
-            63,
-            179,
-            265
+            122,
+            88,
+            187,
+            240
           ],
           "source_frame": 7
         },
@@ -920,10 +932,10 @@
             340
           ],
           "alpha_bbox": [
-            109,
-            72,
-            181,
-            256
+            121,
+            92,
+            188,
+            236
           ],
           "source_frame": 8
         }
@@ -943,8 +955,11 @@
         843
       ],
       "loop": false,
-      "sha256": "062e38b2513ef87d1496368ccc500774df44804b4fcadfb0b13b91cf804fdb02",
-      "alpha_threshold": 8
+      "sha256": "fba55b39a1e3b94e4bbd0c1602eb2f3a025593bbe2ff120e5ac5d77735bbf64f",
+      "alpha_threshold": 8,
+      "source_svg": "res://art_source/player_v50/hero_hurt.svg",
+      "source_sha256": "d6a26051933e87771ec3e39d51b5dfa617d2bb8a2334d7eef747f24420a664a0",
+      "generator": "Newly authored semantic SVG body redraw; deterministic PNG export"
     }
   }
 }

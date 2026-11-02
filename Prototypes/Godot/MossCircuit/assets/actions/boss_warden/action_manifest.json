@@ -202,7 +202,12 @@
       "reference_height": 258,
       "duration_seconds": 0.27,
       "loop": false,
-      "source": "Built-in image_gen identity-preserving candidate; original PNG bytes unmodified."
+      "source": "Current PNG pixels are a newly authored semantic SVG redraw. The original raster provenance and unchanged-registration source history are preserved in art_source/provenance.json prior_raster_manifest_record; all original action regions, margins, reference heights, base source_frame or charge/hurt/death source_pose_index, hurt6/7 swap, death order and embodied charge x corrections remain unchanged; overlapping transparent source bands are preserved.",
+      "source_sha256": "c569c7228dfda7b599d47c870276820edd85379e3643777f6e0b798fc17c163c",
+      "source_svg": "res://art_source/warden_v56/boss_warden_hurt.svg",
+      "source_svg_sha256": "eb834b4aa37e7549898481081809194269aedacd3bd66a627af988d00e17c470",
+      "generator": "Newly authored semantic SVG creature redraw; deterministic PNG export",
+      "measurement_semantics": "Existing sha256 when present and source_sha256 both mean current PNG bytes; source_svg_sha256 is current SVG bytes. All frame records are retained unchanged. alpha_bbox is a historical QA measurement, not the current redraw bbox and not the scale/crop authority; explicit reference_height/anchor/window are runtime registration. New measured bbox/clearance are separately recorded in art_source/provenance.json current_derivations.boss_warden_hurt."
     },
     "boss_warden_death": {
       "path": "res://assets/actions/boss_warden/boss_warden_death.png",
@@ -551,7 +556,12 @@
       "reference_height": 213,
       "duration_seconds": 0.72,
       "loop": false,
-      "source": "Built-in image_gen identity-preserving candidate; original PNG bytes unmodified."
+      "source": "Current PNG pixels are a newly authored semantic SVG redraw. The original raster provenance and unchanged-registration source history are preserved in art_source/provenance.json prior_raster_manifest_record; all original action regions, margins, reference heights, base source_frame or charge/hurt/death source_pose_index, hurt6/7 swap, death order and embodied charge x corrections remain unchanged; overlapping transparent source bands are preserved.",
+      "source_sha256": "07165448a7f04cf0ff1e4b802962f7f153d4eb0c133d008161d7292cf9744f7f",
+      "source_svg": "res://art_source/warden_v56/boss_warden_death.svg",
+      "source_svg_sha256": "63c02db4732d3447a30652670c5b4e876b461ba60fbd6e8fdc3f8c8472b03f54",
+      "generator": "Newly authored semantic SVG creature redraw; deterministic PNG export",
+      "measurement_semantics": "Existing sha256 when present and source_sha256 both mean current PNG bytes; source_svg_sha256 is current SVG bytes. All frame records are retained unchanged. alpha_bbox is a historical QA measurement, not the current redraw bbox and not the scale/crop authority; explicit reference_height/anchor/window are runtime registration. New measured bbox/clearance are separately recorded in art_source/provenance.json current_derivations.boss_warden_death."
     }
   }
 }

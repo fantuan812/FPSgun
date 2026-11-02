@@ -1,3 +1,23 @@
+# MossCircuit — consolidated v56 artwork snapshot
+
+This single cumulative snapshot brings the locally accepted **V45–V56 artwork milestones** onto the last published v44 base. It does **not** represent twelve previously published releases, intermediate public downloads or reconstructed historical commits.
+
+The pass adds **34 editable SVG masters** for five effects, the ground atlas, the player and six enemy/boss families. Existing runtime texture paths, registration, timings, gameplay code and UI remain fixed. These are new redraws guided by the earlier raster art, not recovered original masters or pixel-identical restorations. This is not a claim that every game asset has been redrawn.
+
+- [Milestone index, current validation and historical-note boundaries](docs/V56_CONSOLIDATED_ARTWORK.md)
+- [Latest Warden details and visible limits](docs/V56_WARDEN.md)
+- [Current consolidated package restoration instructions](../../../Deliveries/MossCircuit/v56-consolidated/READ_ME_v56-consolidated.txt)
+
+For source development, import with **Godot 4.6.3**, then run `python3 tools/run_build_ui_checks.py` from the project root. The unchanged 14-route BUILD entry passed on the current source-and-test wrapper; it is not a full-game or all-weapons certification. See [BUILD runner options](docs/BUILD_UI_VALIDATION.md).
+
+The retained milestone notes describe their own local tests and failure history. Their publication-pending statements and local predecessor/rollback references are historical, not instructions to download unpublished intermediate packages. Use only the consolidated restoration instructions above for this snapshot. Local file-restoration checks do not establish Windows or delivery-executable launch success.
+
+---
+
+## Previously published v44 README — retained verbatim below
+
+The following is the actual earlier published README, not a synthetic V45–V55 release history. Its version-specific packages and instructions remain historical; the consolidated instructions above govern this snapshot.
+
 # MossCircuit v44 — editable muzzle flash
 
 The muzzle flash now has a newly authored, self-contained SVG master: nine distinct stages from ignition and a directional tongue to split lobes and fading embers. The transparent sheet, frame layout, emitter anchor, timing and small in-game size are preserved. This is a new redraw, not a recovered historical master or pixel-identical restoration.

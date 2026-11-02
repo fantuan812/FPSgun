@@ -1,3 +1,7 @@
+## v56-consolidated — accepted V45–V56 work in one latest snapshot
+
+This candidate preserves the existing public V44 delivery history and adds only the current accepted V56 resource pack and cumulative instructions. It does not invent intermediate V45–V55 public releases or insert their unpublished local catalog records. See [restoration and bounded validation](v56-consolidated/READ_ME_v56-consolidated.txt). The separate ten-control test exercises the actual public V44 resource baseline to current V56 and back, with the protected executable unchanged; local staging alone is not remote publication. Earlier public delivery records follow unchanged.
+
 ## v44-muzzle — editable nine-frame muzzle flash
 
 A new semantic SVG master supplies the muzzle-flash sheet while retaining the same frame layout, timing, anchor and runtime path. Other effects, gameplay and the BUILD layout are unchanged. See [restoration and validation limits](v44-muzzle/READ_ME_v44-muzzle.txt). Earlier delivery records follow unchanged.

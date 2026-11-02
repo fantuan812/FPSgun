@@ -364,7 +364,7 @@
           15
         ]
       },
-      "source_sha256": "1c27e2bda27f3ef64b318261612cfb64433277d3f8e7b3301c5e49c5e3779f99",
+      "source_sha256": "3481c910c3ab78e9e66dac5e3c98fbdfe17134de6a91adbe2d0a241520e725f8",
       "action_registration_offset_x": -20,
       "authored_recovery_x_corrections": {
         "12": 0,
@@ -378,7 +378,11 @@
         -583,
         -865
       ],
-      "source": "Built-in image_gen; original PNG preserved, no resize/repaint/mask."
+      "source": "Current PNG pixels are a newly authored semantic SVG redraw. The original raster provenance and unchanged-registration source history are preserved in art_source/provenance.json prior_raster_manifest_record; all original action regions, margins, reference heights, base source_frame or charge/hurt/death source_pose_index, hurt6/7 swap, death order and embodied charge x corrections remain unchanged; overlapping transparent source bands are preserved.",
+      "source_svg": "res://art_source/warden_v56/boss_warden_charge.svg",
+      "source_svg_sha256": "e02aaf7375c53a609eb0291d5ead0ea7f65a9d07e8aaa3f5788208efafaea87d",
+      "generator": "Newly authored semantic SVG creature redraw; deterministic PNG export",
+      "measurement_semantics": "Existing sha256 when present and source_sha256 both mean current PNG bytes; source_svg_sha256 is current SVG bytes. All frame records are retained unchanged. alpha_bbox is a historical QA measurement, not the current redraw bbox and not the scale/crop authority; explicit reference_height/anchor/window are runtime registration. New measured bbox/clearance are separately recorded in art_source/provenance.json current_derivations.boss_warden_charge."
     }
   }
 }

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generator": "Mixed provenance: muzzle_flash is a newly authored semantic SVG redraw; other five effects retain their historical built-in image_gen raster provenance.",
+  "generator": "All six effect sheets are newly authored semantic SVG redraws with deterministic PNG exports; historical AI-generated raster sheets served as visual references only.",
   "runtime_fps_authority": "data/vfx.json",
   "notes": "Fixed full-cell canvas. alpha_bbox is QA only; never crop/recenter each frame. Nine nonempty frames, then remove instance. High-resolution pixel-inspired art, not certified low-resolution pixel grid.",
   "effects": {
@@ -19,9 +19,9 @@
             418
           ],
           "alpha_bbox": [
-            48,
-            201,
-            336,
+            47,
+            198,
+            331,
             56
           ],
           "empty": false
@@ -34,10 +34,10 @@
             418
           ],
           "alpha_bbox": [
-            38,
-            197,
-            341,
-            81
+            41,
+            187,
+            340,
+            80
           ],
           "empty": false
         },
@@ -49,40 +49,40 @@
             418
           ],
           "alpha_bbox": [
-            34,
-            153,
-            338,
-            168
-          ],
-          "empty": false
-        },
-        {
-          "region": [
-            0,
-            418,
-            418,
-            418
-          ],
-          "alpha_bbox": [
-            48,
-            147,
-            337,
+            41,
+            137,
+            344,
             157
           ],
           "empty": false
         },
         {
           "region": [
-            418,
+            0,
             418,
             418,
             418
           ],
           "alpha_bbox": [
             40,
-            148,
-            340,
-            137
+            142,
+            346,
+            181
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            418,
+            418,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            41,
+            159,
+            344,
+            123
           ],
           "empty": false
         },
@@ -94,10 +94,10 @@
             418
           ],
           "alpha_bbox": [
-            34,
-            191,
-            338,
-            63
+            47,
+            198,
+            329,
+            56
           ],
           "empty": false
         },
@@ -109,10 +109,10 @@
             418
           ],
           "alpha_bbox": [
-            48,
-            185,
-            336,
-            55
+            46,
+            198,
+            333,
+            56
           ],
           "empty": false
         },
@@ -124,10 +124,10 @@
             418
           ],
           "alpha_bbox": [
-            40,
-            171,
-            340,
-            69
+            47,
+            193,
+            329,
+            61
           ],
           "empty": false
         },
@@ -139,10 +139,10 @@
             418
           ],
           "alpha_bbox": [
-            34,
-            175,
-            338,
-            71
+            47,
+            198,
+            329,
+            56
           ],
           "empty": false
         }
@@ -157,7 +157,7 @@
       "frame_order": "row-major",
       "alpha_threshold_for_bbox": 8,
       "empty_frames_allowed": false,
-      "sha256": "3367aa7bf9736a5058cb8ae5e5932169fbf7f2a3ec78123d03ca917b7f2e0eae",
+      "sha256": "d8312ed56ce36d9ccb1d78258bc5eabdf77c001b211a3d619840cf4add0b9de9",
       "endpoints": [
         [
           0.14,
@@ -167,7 +167,10 @@
           0.87,
           0.54
         ]
-      ]
+      ],
+      "source_svg": "res://art_source/dash_chain_v48/chain_arc.svg",
+      "source_sha256": "0bce120f90f2fc17280e9e0c1f28d1175b5609df26277e0853d162ede6f39ac4",
+      "generator": "Authored semantic SVG redraw; deterministic PNG export"
     },
     "dash_trail": {
       "path": "res://assets/vfx/dash_trail.png",
@@ -184,10 +187,10 @@
             418
           ],
           "alpha_bbox": [
-            302,
-            223,
-            32,
-            26
+            301,
+            200,
+            33,
+            34
           ],
           "empty": false
         },
@@ -199,25 +202,25 @@
             418
           ],
           "alpha_bbox": [
-            188,
-            218,
-            119,
-            46
-          ],
-          "empty": false
-        },
-        {
-          "region": [
-            836,
-            0,
-            418,
-            418
-          ],
-          "alpha_bbox": [
+            229,
+            200,
             105,
-            207,
-            190,
-            66
+            43
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            836,
+            0,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            159,
+            185,
+            175,
+            70
           ],
           "empty": false
         },
@@ -229,85 +232,85 @@
             418
           ],
           "alpha_bbox": [
-            96,
-            168,
-            254,
-            115
-          ],
-          "empty": false
-        },
-        {
-          "region": [
-            418,
-            418,
-            418,
-            418
-          ],
-          "alpha_bbox": [
-            96,
-            178,
-            214,
-            79
-          ],
-          "empty": false
-        },
-        {
-          "region": [
-            836,
-            418,
-            418,
-            418
-          ],
-          "alpha_bbox": [
-            105,
-            178,
-            195,
-            68
-          ],
-          "empty": false
-        },
-        {
-          "region": [
-            0,
-            836,
-            418,
-            418
-          ],
-          "alpha_bbox": [
-            190,
-            153,
-            153,
-            62
-          ],
-          "empty": false
-        },
-        {
-          "region": [
-            418,
-            836,
-            418,
-            418
-          ],
-          "alpha_bbox": [
-            201,
-            164,
-            108,
-            35
-          ],
-          "empty": false
-        },
-        {
-          "region": [
-            836,
-            836,
-            418,
-            418
-          ],
-          "alpha_bbox": [
-            209,
-            172,
             86,
-            27
+            165,
+            248,
+            122
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            418,
+            418,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            100,
+            185,
+            234,
+            87
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            836,
+            418,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            131,
+            190,
+            203,
+            65
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            0,
+            836,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            187,
+            192,
+            147,
+            49
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            418,
+            836,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            223,
+            200,
+            111,
+            34
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            836,
+            836,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            253,
+            200,
+            81,
+            34
           ],
           "empty": false
         }
@@ -322,7 +325,10 @@
       "frame_order": "row-major",
       "alpha_threshold_for_bbox": 8,
       "empty_frames_allowed": false,
-      "sha256": "376cfbd3b4a8958ae18d77865069f5f1ec6ec32cba012405dc368a52716c5d3f"
+      "sha256": "ec62f0a9723f31a86ba08680fdf1ffd81bd56ab1d4254f72976216319c5f6919",
+      "source_svg": "res://art_source/dash_chain_v48/dash_trail.svg",
+      "source_sha256": "56213d2427601477178714a4aa964730caa212e54523796690df0d6cd3aab5b4",
+      "generator": "Authored semantic SVG redraw; deterministic PNG export"
     },
     "explosion": {
       "path": "res://assets/vfx/explosion.png",
@@ -339,10 +345,10 @@
             418
           ],
           "alpha_bbox": [
-            167,
-            165,
-            119,
-            118
+            173,
+            171,
+            81,
+            70
           ],
           "empty": false
         },
@@ -354,10 +360,10 @@
             418
           ],
           "alpha_bbox": [
-            124,
-            132,
-            173,
-            176
+            139,
+            133,
+            137,
+            138
           ],
           "empty": false
         },
@@ -369,100 +375,100 @@
             418
           ],
           "alpha_bbox": [
-            70,
+            94,
+            83,
+            238,
+            236
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            0,
+            418,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            41,
+            46,
+            335,
+            331
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            418,
+            418,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            50,
+            50,
+            320,
+            315
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            836,
+            418,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            60,
+            62,
+            298,
+            292
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            0,
+            836,
+            418,
+            418
+          ],
+          "alpha_bbox": [
             99,
-            247,
-            247
+            99,
+            203,
+            225
           ],
           "empty": false
         },
         {
           "region": [
-            0,
             418,
+            836,
             418,
             418
           ],
           "alpha_bbox": [
+            157,
+            154,
+            108,
+            101
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            836,
+            836,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            192,
+            193,
             34,
-            19,
-            372,
-            369
-          ],
-          "empty": false
-        },
-        {
-          "region": [
-            418,
-            418,
-            418,
-            418
-          ],
-          "alpha_bbox": [
-            54,
-            25,
-            328,
-            345
-          ],
-          "empty": false
-        },
-        {
-          "region": [
-            836,
-            418,
-            418,
-            418
-          ],
-          "alpha_bbox": [
-            38,
-            44,
-            330,
-            326
-          ],
-          "empty": false
-        },
-        {
-          "region": [
-            0,
-            836,
-            418,
-            418
-          ],
-          "alpha_bbox": [
-            95,
-            64,
-            264,
-            264
-          ],
-          "empty": false
-        },
-        {
-          "region": [
-            418,
-            836,
-            418,
-            418
-          ],
-          "alpha_bbox": [
-            131,
-            126,
-            155,
-            160
-          ],
-          "empty": false
-        },
-        {
-          "region": [
-            836,
-            836,
-            418,
-            418
-          ],
-          "alpha_bbox": [
-            174,
-            173,
-            48,
-            47
+            34
           ],
           "empty": false
         }
@@ -477,7 +483,10 @@
       "frame_order": "row-major",
       "alpha_threshold_for_bbox": 8,
       "empty_frames_allowed": false,
-      "sha256": "c66cd61d38ce0f6acab3f4064a6f3423fb0c32584859f176c243ffd8048e20dd"
+      "sha256": "e66debac60f7906dea86515ccc461d3b4e46436c74f227378e80ecd4bc3be6b9",
+      "source_svg": "res://art_source/explosion_v46/explosion.svg",
+      "source_sha256": "820c8008215a91d1c7710595fa0c3eff29cea3087ecce06e307a3d0bf4226374",
+      "generator": "Authored semantic SVG redraw; deterministic PNG export"
     },
     "hit_spark": {
       "path": "res://assets/vfx/hit_spark.png",
@@ -494,115 +503,115 @@
             418
           ],
           "alpha_bbox": [
-            168,
-            197,
+            177,
+            181,
+            71,
+            59
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            418,
+            0,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            151,
+            147,
+            126,
+            120
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            836,
+            0,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            91,
+            83,
+            264,
+            237
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            0,
+            418,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            53,
+            43,
+            314,
+            321
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            418,
+            418,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            79,
+            82,
+            272,
+            267
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            836,
+            418,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            87,
+            92,
+            252,
+            246
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            0,
+            836,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            117,
+            118,
+            177,
+            213
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            418,
+            836,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            174,
+            184,
             73,
-            77
-          ],
-          "empty": false
-        },
-        {
-          "region": [
-            418,
-            0,
-            418,
-            418
-          ],
-          "alpha_bbox": [
-            133,
-            146,
-            152,
-            160
-          ],
-          "empty": false
-        },
-        {
-          "region": [
-            836,
-            0,
-            418,
-            418
-          ],
-          "alpha_bbox": [
-            94,
-            108,
-            238,
-            242
-          ],
-          "empty": false
-        },
-        {
-          "region": [
-            0,
-            418,
-            418,
-            418
-          ],
-          "alpha_bbox": [
-            57,
-            56,
-            317,
-            315
-          ],
-          "empty": false
-        },
-        {
-          "region": [
-            418,
-            418,
-            418,
-            418
-          ],
-          "alpha_bbox": [
-            57,
-            76,
-            297,
-            283
-          ],
-          "empty": false
-        },
-        {
-          "region": [
-            836,
-            418,
-            418,
-            418
-          ],
-          "alpha_bbox": [
-            84,
-            90,
-            254,
-            258
-          ],
-          "empty": false
-        },
-        {
-          "region": [
-            0,
-            836,
-            418,
-            418
-          ],
-          "alpha_bbox": [
-            94,
-            112,
-            246,
-            180
-          ],
-          "empty": false
-        },
-        {
-          "region": [
-            418,
-            836,
-            418,
-            418
-          ],
-          "alpha_bbox": [
-            171,
-            159,
-            64,
-            63
+            72
           ],
           "empty": false
         },
@@ -614,10 +623,10 @@
             418
           ],
           "alpha_bbox": [
-            199,
-            180,
-            21,
-            17
+            197,
+            197,
+            24,
+            24
           ],
           "empty": false
         }
@@ -632,7 +641,10 @@
       "frame_order": "row-major",
       "alpha_threshold_for_bbox": 8,
       "empty_frames_allowed": false,
-      "sha256": "3995cea2b90ffc0530e90833fa83e6f9d251ff7eaf0c5172403e5fcef466899e"
+      "sha256": "a8626912436d3670785f0f22b93391d0afc3745b1c57686765c69c45c6ccdde4",
+      "source_svg": "res://art_source/hit_spark_v45/hit_spark.svg",
+      "source_sha256": "2814d2b272e467d08928d30081c8d0972246ea47d1b5c97b414d020c47ecffc4",
+      "generator": "Authored semantic SVG redraw; deterministic PNG export"
     },
     "muzzle_flash": {
       "path": "res://assets/vfx/muzzle_flash.png",
@@ -807,10 +819,10 @@
             418
           ],
           "alpha_bbox": [
-            208,
-            160,
-            89,
-            144
+            186,
+            141,
+            96,
+            135
           ],
           "empty": false
         },
@@ -822,10 +834,10 @@
             418
           ],
           "alpha_bbox": [
-            160,
-            143,
-            115,
-            172
+            180,
+            110,
+            108,
+            194
           ],
           "empty": false
         },
@@ -837,40 +849,40 @@
             418
           ],
           "alpha_bbox": [
-            134,
-            131,
-            159,
-            207
+            158,
+            81,
+            153,
+            248
           ],
           "empty": false
         },
         {
           "region": [
             0,
-            418,
-            418,
-            418
-          ],
-          "alpha_bbox": [
-            128,
-            56,
-            213,
-            308
-          ],
-          "empty": false
-        },
-        {
-          "region": [
-            418,
             418,
             418,
             418
           ],
           "alpha_bbox": [
             130,
-            85,
-            205,
-            253
+            49,
+            208,
+            312
+          ],
+          "empty": false
+        },
+        {
+          "region": [
+            418,
+            418,
+            418,
+            418
+          ],
+          "alpha_bbox": [
+            156,
+            84,
+            173,
+            249
           ],
           "empty": false
         },
@@ -882,10 +894,10 @@
             418
           ],
           "alpha_bbox": [
-            109,
-            97,
             172,
-            218
+            105,
+            157,
+            228
           ],
           "empty": false
         },
@@ -897,10 +909,10 @@
             418
           ],
           "alpha_bbox": [
-            192,
-            104,
-            127,
-            156
+            188,
+            151,
+            119,
+            152
           ],
           "empty": false
         },
@@ -912,10 +924,10 @@
             418
           ],
           "alpha_bbox": [
-            201,
-            159,
-            65,
-            93
+            210,
+            187,
+            56,
+            83
           ],
           "empty": false
         },
@@ -927,10 +939,10 @@
             418
           ],
           "alpha_bbox": [
-            192,
-            176,
-            49,
-            56
+            219,
+            206,
+            37,
+            37
           ],
           "empty": false
         }
@@ -945,7 +957,10 @@
       "frame_order": "row-major",
       "alpha_threshold_for_bbox": 8,
       "empty_frames_allowed": false,
-      "sha256": "fb63a02e36c2c73ea717c2671d21844cca28166672c79adac89c4e209dc7bb4b"
+      "sha256": "ac80ef837e95fe4f5ae9f7344ad696564009e96b02dd9c5ca5f2fe1c41f5d0f9",
+      "source_svg": "res://art_source/shield_impact_v47/shield_impact.svg",
+      "source_sha256": "18880c392e3a248a5eb2b32e353d57fa893ea6fa7274894136330c1301a0668f",
+      "generator": "Authored semantic SVG redraw; deterministic PNG export"
     }
   }
 }

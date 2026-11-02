@@ -138,12 +138,16 @@
       "reference_height": 183,
       "release_frame": 4,
       "facing": "left",
-      "source_sha256": "dd6340053f224e0bc166a88ea6d59ac4ddf16de6e522cfd2f16b75c445358d73",
+      "source_sha256": "fce20aa0776391c37385677a866bc9c1832fe4d8ff5627770a38e367d26b1c0c",
       "row_origins_y": [
         41,
         445,
         854
-      ]
+      ],
+      "source_svg": "res://art_source/charger_v52/charger_charge.svg",
+      "source_svg_sha256": "a9994bab4624a2693f9fefa5d8980ab291b41e9f4b423d489bae8e94987aad32",
+      "generator": "Newly authored semantic SVG creature redraw; deterministic PNG export",
+      "measurement_semantics": "source_sha256 is current PNG bytes; source_svg_sha256 is current SVG bytes. All frame records are retained unchanged. alpha_bbox is a historical QA measurement, not the current redraw bbox and not the scale/crop authority; explicit reference_height/anchor/window are runtime registration. New measured bbox/clearance are separately recorded in art_source/provenance.json current_derivations.charger_charge."
     },
     "charger_hurt": {
       "path": "res://assets/actions/charger/charger_hurt.png",
@@ -282,12 +286,16 @@
       "reference_height": 174,
       "release_frame": 0,
       "facing": "left",
-      "source_sha256": "80d04dcaf0c153567c939052154a429a9a3f93b030807ee852488388f7b4014d",
+      "source_sha256": "7ccc162fa5d2fb5c2099030e5537db247b821ec959989a2a7d51573ba6471e5c",
       "row_origins_y": [
         37,
         436,
         837
-      ]
+      ],
+      "source_svg": "res://art_source/charger_v52/charger_hurt.svg",
+      "source_svg_sha256": "793efacbf277ef0578c2fbcae1c140efd374a5786e95b7ce2bedd16db3a46516",
+      "generator": "Newly authored semantic SVG creature redraw; deterministic PNG export",
+      "measurement_semantics": "source_sha256 is current PNG bytes; source_svg_sha256 is current SVG bytes. All frame records are retained unchanged. alpha_bbox is a historical QA measurement, not the current redraw bbox and not the scale/crop authority; explicit reference_height/anchor/window are runtime registration. New measured bbox/clearance are separately recorded in art_source/provenance.json current_derivations.charger_hurt."
     },
     "charger_death": {
       "path": "res://assets/actions/charger/charger_death.png",
@@ -426,7 +434,7 @@
       "reference_height": 199,
       "release_frame": 0,
       "facing": "left",
-      "source_sha256": "a0ec5143ac1b3cdbefd4481984a135fa1c278f067f1af0c781866af545eb24e8",
+      "source_sha256": "f9ed651c83b8297f1fdfbb40ed723834867de595691d100447bd72f7c6591f3c",
       "row_origins_y": [
         70,
         474,
@@ -441,7 +449,11 @@
           "region_y_delta": -7,
           "reason": "grounded_knee_buckle_keyframe"
         }
-      }
+      },
+      "source_svg": "res://art_source/charger_v52/charger_death.svg",
+      "source_svg_sha256": "bf854b8739996906884cc1c534fe6699a65317df6c85fdb3c76df9b97f943547",
+      "generator": "Newly authored semantic SVG creature redraw; deterministic PNG export",
+      "measurement_semantics": "source_sha256 is current PNG bytes; source_svg_sha256 is current SVG bytes. All frame records are retained unchanged. alpha_bbox is a historical QA measurement, not the current redraw bbox and not the scale/crop authority; explicit reference_height/anchor/window are runtime registration. New measured bbox/clearance are separately recorded in art_source/provenance.json current_derivations.charger_death."
     }
   }
 }
