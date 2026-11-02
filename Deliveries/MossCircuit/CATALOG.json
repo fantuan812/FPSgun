@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "scope": "Preserves the 92 actual public V44 catalog records exactly; appends two V56-consolidated latest-snapshot files. Unpublished intermediate local catalog records are not inserted. Staging and local controls do not establish remote publication.",
+  "scope": "Preserves all 94 preceding public V56-consolidated catalog records exactly; appends two V57-core files. Intermediate unpublished local records are not inserted. Remote publication is established separately by verified commits.",
   "files": [
     {
       "version": "v1",
@@ -4343,6 +4343,48 @@
         "git_blob_sha": "d2a1acbd2603cae77b21bc9e3f38556a7fefa2d1"
       },
       "delivery_identity_basis": "Authored resource restoration and asset-editing instructions; no operational execution artifacts."
+    },
+    {
+      "version": "v57-core",
+      "name": "MossCircuit.pck",
+      "size": 5065040,
+      "sha256": "a3618d474ee45c67644a9df364d1b104b4e81b346b4db5ac4e435870a9dddc76",
+      "original_git_blob_sha": "b3ad269774cc1d49158472d41da2acfba406ac75",
+      "delivery_kind": "github_native_runtime_resource_pack",
+      "storage": {
+        "kind": "chunks",
+        "chunks": [
+          {
+            "path": "Deliveries/MossCircuit/v57-core/chunks/MossCircuit.pck/chunk-001.bin",
+            "offset": 0,
+            "size": 3000000,
+            "sha256": "73557f7aa9de386ec586754cb304a9a41a113107b8471aad660649a0add30edc",
+            "git_blob_sha": "fb1c2b80daec5fc749af3467592751b22c929076"
+          },
+          {
+            "path": "Deliveries/MossCircuit/v57-core/chunks/MossCircuit.pck/chunk-002.bin",
+            "offset": 3000000,
+            "size": 2065040,
+            "sha256": "6935ef495783d193d6b5799cb5a3630b10991b67a2607b24989b5c85e71695d7",
+            "git_blob_sha": "a392046151f1a74e7c4949e2a3d4aa841e6514dd"
+          }
+        ]
+      },
+      "delivery_identity_basis": "Complete resource pack with new editable five-sheet Spore Reactor Core artwork; all 59 fixed mixed-sheet registrations, ring-ring-summon behavior and projectile/child origins remain unchanged, as do other assets, gameplay and the BUILD interface. Local glow and seed rays are decorative, not spawn authority. Restore from the listed chunks."
+    },
+    {
+      "version": "v57-core",
+      "name": "READ_ME_v57-core.txt",
+      "size": 7651,
+      "sha256": "df89cf4ecfc67a31f5f7d127cf7184bca05b920c580a8aed66e67cada98e7a1e",
+      "original_git_blob_sha": "6be71d1f0d992068e894927eefd121866734ac9a",
+      "delivery_kind": "github_native_runtime_instructions",
+      "storage": {
+        "kind": "direct",
+        "path": "Deliveries/MossCircuit/v57-core/READ_ME_v57-core.txt",
+        "git_blob_sha": "6be71d1f0d992068e894927eefd121866734ac9a"
+      },
+      "delivery_identity_basis": "Authored resource restoration and asset-editing instructions; no operational execution artifacts."
     }
   ],
   "reassembled_archives": [
@@ -4432,11 +4474,11 @@
     }
   ],
   "storage_counts": {
-    "direct": 35,
+    "direct": 36,
     "existing": 9,
-    "chunks": 50
+    "chunks": 51
   },
-  "original_bytes": 1243001028,
+  "original_bytes": 1248073719,
   "reassembly_note": "Historical ZIPs remain reconstructable from their original delivered parts. v26-v44-muzzle plus v56-consolidated PCK files restore directly from their storage chunks; they are not ZIPs and require no second merge.",
   "publication_status": {
     "v32": "locally accepted, not claimed published",
@@ -4454,6 +4496,7 @@
     "v42-L3": "Eight editable direct mechanism icons replace one atlas without gameplay or UI changes. Authored notes describe finite verification limits; no new full-suite, unrestricted ordinary-play, Windows execution or CI result is claimed.",
     "v43-build-expansion": "Eight newly drawn editable build-expansion inventory icons replace one atlas without gameplay or UI changes. Authored notes describe finite verification limits; no new full-suite, unrestricted ordinary-play, Windows execution or CI result is claimed.",
     "v44-muzzle": "New editable nine-frame muzzle-flash artwork replaces the earlier raster at the same runtime path without gameplay, timing or UI changes. Authored notes describe finite verification limits; no new full-suite, unrestricted ordinary-play, Windows execution or CI result is claimed.",
-    "v56-consolidated": "CONSOLIDATED PUBLICATION CANDIDATE, not yet a published result. Current accepted V56 source/resource content includes locally accepted V45-through-V56 work; earlier public catalog entries remain exact and unpublished intermediate delivery entries are omitted. Existing finite source/native/art acceptance is retained without replay. A separate actual public-V44-to-current delivery test is required; no Windows/executable launch, CI or all-history publication claim."
+    "v56-consolidated": "CONSOLIDATED PUBLICATION CANDIDATE, not yet a published result. Current accepted V56 source/resource content includes locally accepted V45-through-V56 work; earlier public catalog entries remain exact and unpublished intermediate delivery entries are omitted. Existing finite source/native/art acceptance is retained without replay. A separate actual public-V44-to-current delivery test is required; no Windows/executable launch, CI or all-history publication claim.",
+    "v57-core": "Five editable Core SVG masters and 59 poses, exact accepted resource pack, and bounded source/packed/native and local restoration evidence. Original failed attempts remain documented. This metadata composition does not establish a remote commit; verified source-version index records publication separately. No new gameplay tests, Windows launch or CI claim."
   }
 }

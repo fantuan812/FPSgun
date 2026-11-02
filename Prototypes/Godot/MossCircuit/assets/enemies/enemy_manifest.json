@@ -1039,7 +1039,7 @@
             218
           ],
           "minimum_clear_margin": 64,
-          "pixel_sha256": "630ef6afb48650e2f01426070d0d8b971569392a1639bc8e432d1ea4429e4525"
+          "pixel_sha256": "ea15f20c9a05822b1c25d50f062b6b0911bb10b48865a97e1b26482246629568"
         },
         {
           "region": [
@@ -1055,7 +1055,7 @@
             230
           ],
           "minimum_clear_margin": 56,
-          "pixel_sha256": "fe07de9c2e708893d47774b4afe77a1f1128da4d24931966378d11f70bd391f9"
+          "pixel_sha256": "0a510122cb37efb3b9764a2a3e63b3b297c0c6717306ef1b00db2a706a293c65"
         },
         {
           "region": [
@@ -1071,7 +1071,7 @@
             222
           ],
           "minimum_clear_margin": 64,
-          "pixel_sha256": "3c0f0a51dbed4071fe9f17559a57e01fde3d858b93b46edc93a7bdaa8c0ca600"
+          "pixel_sha256": "a23f62edd5d8ad218f17a186998ec11ace33c7df5ecb71b702a5e4c9bbb9a2b7"
         },
         {
           "region": [
@@ -1087,7 +1087,7 @@
             225
           ],
           "minimum_clear_margin": 74,
-          "pixel_sha256": "9dadeebe094a6f43bb779262f135b6b742d78471b9ac7663bd1c34f51b4ec663"
+          "pixel_sha256": "e511f68b02f7928f09eb1796b57af7cd8efb3a0760df936e427efe07c66013ba"
         },
         {
           "region": [
@@ -1103,7 +1103,7 @@
             228
           ],
           "minimum_clear_margin": 74,
-          "pixel_sha256": "bde52782d1b55c5f1c441e8d5b693723cd705dd97953d1de6f71d29972c0ebff"
+          "pixel_sha256": "6e8b5d3eb126138f30a502e8b18ff8649424a13afcc4a567e85d2f375a71cae2"
         },
         {
           "region": [
@@ -1119,7 +1119,7 @@
             227
           ],
           "minimum_clear_margin": 74,
-          "pixel_sha256": "9d2c34f0d5ac3aa3c47e2f6eeaf5ab48b269ac932848fd1f07c5eb6117e1f8ef"
+          "pixel_sha256": "236fbe06e3b89e2100ecea9401ec1083b1173d79e52ac7e5e20a8ad1ebaaab80"
         },
         {
           "region": [
@@ -1135,7 +1135,7 @@
             220
           ],
           "minimum_clear_margin": 87,
-          "pixel_sha256": "05e4e1f8cd16c49b01ee02af3b3f35d408368bef1a89cb4990257d76c8d9a7bc"
+          "pixel_sha256": "5d08eb8854ecbfb9312598742d711412b8dc2fe5d8f0e8233a6e0c8b512343e1"
         },
         {
           "region": [
@@ -1151,7 +1151,7 @@
             231
           ],
           "minimum_clear_margin": 82,
-          "pixel_sha256": "35cb74a204d890ef69e9b23cfd334b0a8a5bdc4b9ab301b6f4f77cb77de41d5e"
+          "pixel_sha256": "4944c49abe36f406504ffab1575d159f99f817bae71eac6168db34a42e658511"
         },
         {
           "region": [
@@ -1167,14 +1167,18 @@
             227
           ],
           "minimum_clear_margin": 86,
-          "pixel_sha256": "10febb34ad1b36ddd5f9d4588958f5a4aa3f3b74e11b0fa5632b928dba157bb5"
+          "pixel_sha256": "d69958d60733aab0c532599320ce64e97000fd8a2cd39da2c6a64cb33611256f"
         }
       ],
-      "source_sha256": "372c220e98f76e4b5f23dda5149741c0f48c20ed42ba03f8499f38ad9a5b3b60",
+      "source_sha256": "066327352f34bc7a8e3e8a5ba5bf6dac2b25a74befb72710d47782c660609c68",
       "alpha_extrema": [
         0,
         255
-      ]
+      ],
+      "source_svg": "res://art_source/core_v57/boss_core_walk.svg",
+      "source_svg_sha256": "ba87a2321062f8624a28bdd6c5fda44d2cbcb1fd0633678763b174eca36165a5",
+      "generator": "Newly authored semantic SVG creature redraw; deterministic PNG export",
+      "measurement_semantics": "source_sha256 is current PNG bytes; source_svg_sha256 is current SVG bytes; frame pixel_sha256 is current full418x418 source-cell ART RGBA, not a fixed-crop hash. The retained original region and alpha_bbox remain live runtime crop authority through enemy_manifest; alpha_bbox and minimum_clear_margin also retain their historical measurement provenance, NOT a newly measured redraw bbox or clearance. Whole art_source/alpha_bounds.json remains unchanged and supplies no Spore Reactor Core override. New measured bbox/clearance are separate in art_source/provenance.json current_derivations.boss_core_walk."
     },
     "stitch_drone": {
       "path": "res://assets/enemies/stitch_drone.png",

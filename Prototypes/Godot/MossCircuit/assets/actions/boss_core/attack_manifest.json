@@ -364,7 +364,7 @@
           15
         ]
       },
-      "source_sha256": "06db7c54121f75bccd25998f8973a065ff9f376669ff794b8ed569b2855522e0",
+      "source_sha256": "62c9054f32e28bd3638514f1c50f09b51cff4a413106787fdf1fbdab04a63a6f",
       "action_registration_offset_x": -6,
       "source_row_translation_y": [
         30,
@@ -372,7 +372,11 @@
         -565,
         -847
       ],
-      "source": "Built-in image_gen; original PNG preserved, no resize/repaint/mask."
+      "source": "Current PNG pixels are a newly authored semantic SVG redraw. The original raster provenance and unchanged-registration source history are preserved in art_source/provenance.json prior_raster_manifest_record; all original action regions, margins, reference heights, base source_frame or summon/hurt/death source_pose_index with exact identity source order and already embodied x/row corrections remain unchanged; no corrections are reapplied and the original source windows do not overlap.",
+      "source_svg": "res://art_source/core_v57/boss_core_summon.svg",
+      "source_svg_sha256": "52f127fbdd92fe2c6ee2370f4184b1f54e3b90cdab76687bde9d0569e2a84051",
+      "generator": "Newly authored semantic SVG creature redraw; deterministic PNG export",
+      "measurement_semantics": "Existing sha256 when present and source_sha256 both mean current PNG bytes; source_svg_sha256 is current SVG bytes. All frame records are retained unchanged. alpha_bbox is a historical QA measurement, not the current redraw bbox and not the scale/crop authority; explicit reference_height/anchor/window are runtime registration. New measured bbox/clearance are separately recorded in art_source/provenance.json current_derivations.boss_core_summon."
     }
   }
 }

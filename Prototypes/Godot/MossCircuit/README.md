@@ -1,3 +1,18 @@
+# MossCircuit v57 — editable Spore Reactor / Core
+
+Five new SVG masters provide 59 Core poses: nine walk/hover, nine base ring attack, sixteen summon, nine hurt and sixteen death. A mint orb, segmented bronze/olive ring, attached purple canisters, moss and articulated hanging roots preserve the floating reactor identity. These are redraws, not recovered original masters or pixel-identical restorations.
+
+Existing resource paths, crops, padding, source order, scale, registration, combat code, UI and other artwork remain unchanged. Separate source/packed resource checks, the documented BUILD entry and a bounded 65-view desktop observer are complete. The original observer failed on an optional dictionary-field read; a three-read external-fixture correction passed without changing gameplay or artwork. The separate local delivery check passed all ten controls, including actual resource restoration/rollback with unchanged executable bytes and mode; it is not an executable-launch test. This separate V57 snapshot adds Core after the V56 consolidated snapshot. Publication identity is recorded in the repository source-version index, not inferred from local tests.
+
+- [Changes, bounded checks and visual limits](docs/V57_CORE.md)
+- [Edit and export the five masters](art_source/core_v57/AUTHORING_SCOPE.md)
+
+After importing with Godot 4.6.3, run `python3 tools/run_build_ui_checks.py` from the project root. The unchanged 14-route entry passed on this source; it is separate from the Core observer, not a full-game suite. See [runner options](docs/BUILD_UI_VALIDATION.md).
+
+---
+
+## Previous V56 consolidated snapshot — retained history
+
 # MossCircuit — consolidated v56 artwork snapshot
 
 This single cumulative snapshot brings the locally accepted **V45–V56 artwork milestones** onto the last published v44 base. It does **not** represent twelve previously published releases, intermediate public downloads or reconstructed historical commits.

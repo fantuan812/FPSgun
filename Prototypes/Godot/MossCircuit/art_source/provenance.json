@@ -10406,6 +10406,2387 @@
         "loop": false,
         "source": "Built-in image_gen identity-preserving candidate; original PNG bytes unmodified."
       }
+    },
+    "boss_core_walk": {
+      "path": "assets/enemies/boss_core.png",
+      "sha256": "066327352f34bc7a8e3e8a5ba5bf6dac2b25a74befb72710d47782c660609c68",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "source_svg": "res://art_source/core_v57/boss_core_walk.svg",
+      "source_sha256": "066327352f34bc7a8e3e8a5ba5bf6dac2b25a74befb72710d47782c660609c68",
+      "source_svg_sha256": "ba87a2321062f8624a28bdd6c5fda44d2cbcb1fd0633678763b174eca36165a5",
+      "tool": "Newly authored semantic SVG creature redraw; deterministic PNG export",
+      "frame_count": 9,
+      "reference_pixel_identity_claimed": false,
+      "measurement": {
+        "alpha_threshold": 8,
+        "bbox_convention": "source-window-local LTRB; current QA facts only, never runtime crop",
+        "frames": [
+          {
+            "index": 0,
+            "source_window": [
+              0,
+              0,
+              418,
+              418
+            ],
+            "alpha_bbox_ltrb": [
+              129,
+              145,
+              323,
+              352
+            ],
+            "minimum_clear_margin": 66,
+            "source_window_raw_rgba_sha256": "ea15f20c9a05822b1c25d50f062b6b0911bb10b48865a97e1b26482246629568"
+          },
+          {
+            "index": 1,
+            "source_window": [
+              418,
+              0,
+              418,
+              418
+            ],
+            "alpha_bbox_ltrb": [
+              119,
+              148,
+              313,
+              354
+            ],
+            "minimum_clear_margin": 64,
+            "source_window_raw_rgba_sha256": "0a510122cb37efb3b9764a2a3e63b3b297c0c6717306ef1b00db2a706a293c65"
+          },
+          {
+            "index": 2,
+            "source_window": [
+              836,
+              0,
+              418,
+              418
+            ],
+            "alpha_bbox_ltrb": [
+              138,
+              145,
+              309,
+              351
+            ],
+            "minimum_clear_margin": 67,
+            "source_window_raw_rgba_sha256": "a23f62edd5d8ad218f17a186998ec11ace33c7df5ecb71b702a5e4c9bbb9a2b7"
+          },
+          {
+            "index": 3,
+            "source_window": [
+              0,
+              418,
+              418,
+              418
+            ],
+            "alpha_bbox_ltrb": [
+              148,
+              133,
+              319,
+              337
+            ],
+            "minimum_clear_margin": 81,
+            "source_window_raw_rgba_sha256": "e511f68b02f7928f09eb1796b57af7cd8efb3a0760df936e427efe07c66013ba"
+          },
+          {
+            "index": 4,
+            "source_window": [
+              418,
+              418,
+              418,
+              418
+            ],
+            "alpha_bbox_ltrb": [
+              120,
+              131,
+              313,
+              337
+            ],
+            "minimum_clear_margin": 81,
+            "source_window_raw_rgba_sha256": "6e8b5d3eb126138f30a502e8b18ff8649424a13afcc4a567e85d2f375a71cae2"
+          },
+          {
+            "index": 5,
+            "source_window": [
+              836,
+              418,
+              418,
+              418
+            ],
+            "alpha_bbox_ltrb": [
+              121,
+              125,
+              314,
+              337
+            ],
+            "minimum_clear_margin": 81,
+            "source_window_raw_rgba_sha256": "236fbe06e3b89e2100ecea9401ec1083b1173d79e52ac7e5e20a8ad1ebaaab80"
+          },
+          {
+            "index": 6,
+            "source_window": [
+              0,
+              836,
+              418,
+              418
+            ],
+            "alpha_bbox_ltrb": [
+              148,
+              99,
+              319,
+              302
+            ],
+            "minimum_clear_margin": 99,
+            "source_window_raw_rgba_sha256": "5d08eb8854ecbfb9312598742d711412b8dc2fe5d8f0e8233a6e0c8b512343e1"
+          },
+          {
+            "index": 7,
+            "source_window": [
+              418,
+              836,
+              418,
+              418
+            ],
+            "alpha_bbox_ltrb": [
+              118,
+              99,
+              312,
+              306
+            ],
+            "minimum_clear_margin": 99,
+            "source_window_raw_rgba_sha256": "4944c49abe36f406504ffab1575d159f99f817bae71eac6168db34a42e658511"
+          },
+          {
+            "index": 8,
+            "source_window": [
+              836,
+              836,
+              418,
+              418
+            ],
+            "alpha_bbox_ltrb": [
+              141,
+              100,
+              312,
+              307
+            ],
+            "minimum_clear_margin": 100,
+            "source_window_raw_rgba_sha256": "d69958d60733aab0c532599320ce64e97000fd8a2cd39da2c6a64cb33611256f"
+          }
+        ],
+        "transparent_source_overlap_bands": [],
+        "all_overlap_bands_transparent": true
+      },
+      "runtime_registration": "All59 original source windows, live walk XYWH crops, action margins/anchors/reference heights, scale and basefoot82.65 exact. Neutral165.3; walk418/ref218/scale1653/2180, base attack418x340/ref231/scale551/770, summon512x400/ref246/scale551/820 on1312x1199 sheet, hurt512x400/ref278/scale1653/2780, death512x400/ref248/scale1653/2480. Base source_frame versus source_pose_index fields retain exact identity order; authored x/row corrections already embodied, not reapplied. No source-window overlaps. Wholealpha_bounds unchanged/no Core override. AI phase2 ring-ring-summon/contact/ring bullet and child-spawn origins/telegraph/death cleanup code unchanged. Local seed glow/rays decorative, no socket/projectile/target footprint or hit authority",
+      "prior_raster_png_sha256": "372c220e98f76e4b5f23dda5149741c0f48c20ed42ba03f8499f38ad9a5b3b60",
+      "prior_raster_manifest_record": {
+        "name": "孢子反应堆",
+        "path": "res://assets/enemies/boss_core.png",
+        "size": [
+          1254,
+          1254
+        ],
+        "grid": [
+          3,
+          3
+        ],
+        "action": "hover_pulse",
+        "frames": [
+          {
+            "region": [
+              0,
+              0,
+              418,
+              418
+            ],
+            "alpha_bbox": [
+              124,
+              136,
+              201,
+              218
+            ],
+            "minimum_clear_margin": 64,
+            "pixel_sha256": "630ef6afb48650e2f01426070d0d8b971569392a1639bc8e432d1ea4429e4525"
+          },
+          {
+            "region": [
+              418,
+              0,
+              418,
+              418
+            ],
+            "alpha_bbox": [
+              113,
+              132,
+              203,
+              230
+            ],
+            "minimum_clear_margin": 56,
+            "pixel_sha256": "fe07de9c2e708893d47774b4afe77a1f1128da4d24931966378d11f70bd391f9"
+          },
+          {
+            "region": [
+              836,
+              0,
+              418,
+              418
+            ],
+            "alpha_bbox": [
+              113,
+              132,
+              203,
+              222
+            ],
+            "minimum_clear_margin": 64,
+            "pixel_sha256": "3c0f0a51dbed4071fe9f17559a57e01fde3d858b93b46edc93a7bdaa8c0ca600"
+          },
+          {
+            "region": [
+              0,
+              418,
+              418,
+              418
+            ],
+            "alpha_bbox": [
+              119,
+              119,
+              210,
+              225
+            ],
+            "minimum_clear_margin": 74,
+            "pixel_sha256": "9dadeebe094a6f43bb779262f135b6b742d78471b9ac7663bd1c34f51b4ec663"
+          },
+          {
+            "region": [
+              418,
+              418,
+              418,
+              418
+            ],
+            "alpha_bbox": [
+              110,
+              116,
+              209,
+              228
+            ],
+            "minimum_clear_margin": 74,
+            "pixel_sha256": "bde52782d1b55c5f1c441e8d5b693723cd705dd97953d1de6f71d29972c0ebff"
+          },
+          {
+            "region": [
+              836,
+              418,
+              418,
+              418
+            ],
+            "alpha_bbox": [
+              108,
+              117,
+              215,
+              227
+            ],
+            "minimum_clear_margin": 74,
+            "pixel_sha256": "9d2c34f0d5ac3aa3c47e2f6eeaf5ab48b269ac932848fd1f07c5eb6117e1f8ef"
+          },
+          {
+            "region": [
+              0,
+              836,
+              418,
+              418
+            ],
+            "alpha_bbox": [
+              123,
+              87,
+              203,
+              220
+            ],
+            "minimum_clear_margin": 87,
+            "pixel_sha256": "05e4e1f8cd16c49b01ee02af3b3f35d408368bef1a89cb4990257d76c8d9a7bc"
+          },
+          {
+            "region": [
+              418,
+              836,
+              418,
+              418
+            ],
+            "alpha_bbox": [
+              108,
+              82,
+              211,
+              231
+            ],
+            "minimum_clear_margin": 82,
+            "pixel_sha256": "35cb74a204d890ef69e9b23cfd334b0a8a5bdc4b9ab301b6f4f77cb77de41d5e"
+          },
+          {
+            "region": [
+              836,
+              836,
+              418,
+              418
+            ],
+            "alpha_bbox": [
+              114,
+              86,
+              207,
+              227
+            ],
+            "minimum_clear_margin": 86,
+            "pixel_sha256": "10febb34ad1b36ddd5f9d4588958f5a4aa3f3b74e11b0fa5632b928dba157bb5"
+          }
+        ],
+        "source_sha256": "372c220e98f76e4b5f23dda5149741c0f48c20ed42ba03f8499f38ad9a5b3b60",
+        "alpha_extrema": [
+          0,
+          255
+        ]
+      }
+    },
+    "boss_core_attack": {
+      "path": "assets/actions/boss_core_attack.png",
+      "sha256": "2781efa53f5c545c340aedaf1f47a50e0cc76a044eeb664ca1ea31a480d92922",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "source_svg": "res://art_source/core_v57/boss_core_attack.svg",
+      "source_sha256": "2781efa53f5c545c340aedaf1f47a50e0cc76a044eeb664ca1ea31a480d92922",
+      "source_svg_sha256": "06a10541989070c1a386f5576e512bed5155c782001d2b938b77af73dd5b9844",
+      "tool": "Newly authored semantic SVG creature redraw; deterministic PNG export",
+      "frame_count": 9,
+      "reference_pixel_identity_claimed": false,
+      "measurement": {
+        "alpha_threshold": 8,
+        "bbox_convention": "source-window-local LTRB; current QA facts only, never runtime crop",
+        "frames": [
+          {
+            "index": 0,
+            "source_window": [
+              0,
+              67,
+              418,
+              340
+            ],
+            "alpha_bbox_ltrb": [
+              139,
+              104,
+              320,
+              316
+            ],
+            "minimum_clear_margin": 24,
+            "source_window_raw_rgba_sha256": "6f46dccc473f452e4c2397dd5d103cec33f3297023a2f9986fb05a65083681cb"
+          },
+          {
+            "index": 1,
+            "source_window": [
+              418,
+              67,
+              418,
+              340
+            ],
+            "alpha_bbox_ltrb": [
+              114,
+              99,
+              319,
+              318
+            ],
+            "minimum_clear_margin": 22,
+            "source_window_raw_rgba_sha256": "ea84853375e79bbfec4c91e1919d2b1bc1f501a7966a800d17f0613834e3c2ac"
+          },
+          {
+            "index": 2,
+            "source_window": [
+              836,
+              67,
+              418,
+              340
+            ],
+            "alpha_bbox_ltrb": [
+              101,
+              96,
+              338,
+              320
+            ],
+            "minimum_clear_margin": 20,
+            "source_window_raw_rgba_sha256": "402ccc20676ebadb53f7d567ae69f6643010285d44183980e352e5640f240a22"
+          },
+          {
+            "index": 3,
+            "source_window": [
+              0,
+              458,
+              418,
+              340
+            ],
+            "alpha_bbox_ltrb": [
+              109,
+              90,
+              346,
+              322
+            ],
+            "minimum_clear_margin": 18,
+            "source_window_raw_rgba_sha256": "37b87940e25a1255bbb5a2177a5a8cecb968d5450a7a39af2e6d18f5837368d0"
+          },
+          {
+            "index": 4,
+            "source_window": [
+              418,
+              458,
+              418,
+              340
+            ],
+            "alpha_bbox_ltrb": [
+              84,
+              97,
+              340,
+              320
+            ],
+            "minimum_clear_margin": 20,
+            "source_window_raw_rgba_sha256": "a7fca485faa5224983462d5a1b038d5303aa76f856c38a6223aebb68f5836a5a"
+          },
+          {
+            "index": 5,
+            "source_window": [
+              836,
+              458,
+              418,
+              340
+            ],
+            "alpha_bbox_ltrb": [
+              107,
+              109,
+              344,
+              317
+            ],
+            "minimum_clear_margin": 23,
+            "source_window_raw_rgba_sha256": "bcb06cc01f2b2e7279fc7d7e2674ce92c0704dd98e4b76a3b21c9477c6e9c8ee"
+          },
+          {
+            "index": 6,
+            "source_window": [
+              0,
+              844,
+              418,
+              340
+            ],
+            "alpha_bbox_ltrb": [
+              106,
+              106,
+              362,
+              315
+            ],
+            "minimum_clear_margin": 25,
+            "source_window_raw_rgba_sha256": "10cbe0a8b4a0ba406e92a10bcde4e8796284ea135941ca4d7500004f14d45a92"
+          },
+          {
+            "index": 7,
+            "source_window": [
+              418,
+              844,
+              418,
+              340
+            ],
+            "alpha_bbox_ltrb": [
+              75,
+              111,
+              331,
+              319
+            ],
+            "minimum_clear_margin": 21,
+            "source_window_raw_rgba_sha256": "569293b0b07886250ee1358711fe410e8a92157722c530797faeb891008ae8b8"
+          },
+          {
+            "index": 8,
+            "source_window": [
+              836,
+              844,
+              418,
+              340
+            ],
+            "alpha_bbox_ltrb": [
+              135,
+              113,
+              317,
+              327
+            ],
+            "minimum_clear_margin": 13,
+            "source_window_raw_rgba_sha256": "9431603a61c13c9bf0ed4a2797cc5ae5694117d93c3dd529c3576a1845ae841c"
+          }
+        ],
+        "transparent_source_overlap_bands": [],
+        "all_overlap_bands_transparent": true
+      },
+      "runtime_registration": "All59 original source windows, live walk XYWH crops, action margins/anchors/reference heights, scale and basefoot82.65 exact. Neutral165.3; walk418/ref218/scale1653/2180, base attack418x340/ref231/scale551/770, summon512x400/ref246/scale551/820 on1312x1199 sheet, hurt512x400/ref278/scale1653/2780, death512x400/ref248/scale1653/2480. Base source_frame versus source_pose_index fields retain exact identity order; authored x/row corrections already embodied, not reapplied. No source-window overlaps. Wholealpha_bounds unchanged/no Core override. AI phase2 ring-ring-summon/contact/ring bullet and child-spawn origins/telegraph/death cleanup code unchanged. Local seed glow/rays decorative, no socket/projectile/target footprint or hit authority",
+      "prior_raster_png_sha256": "aff001c3a1a5ad5b479f6e7c0cc6d598bcc98c7fb49254df49e7bbad7472728b",
+      "prior_raster_manifest_record": {
+        "path": "res://assets/actions/boss_core_attack.png",
+        "frames": [
+          {
+            "region": [
+              0,
+              67,
+              418,
+              340
+            ],
+            "alpha_bbox": [
+              114,
+              92,
+              212,
+              231
+            ],
+            "source_frame": 0
+          },
+          {
+            "region": [
+              418,
+              67,
+              418,
+              340
+            ],
+            "alpha_bbox": [
+              100,
+              87,
+              231,
+              241
+            ],
+            "source_frame": 1
+          },
+          {
+            "region": [
+              836,
+              67,
+              418,
+              340
+            ],
+            "alpha_bbox": [
+              82,
+              87,
+              266,
+              236
+            ],
+            "source_frame": 2
+          },
+          {
+            "region": [
+              0,
+              458,
+              418,
+              340
+            ],
+            "alpha_bbox": [
+              88,
+              73,
+              270,
+              255
+            ],
+            "source_frame": 3
+          },
+          {
+            "region": [
+              418,
+              458,
+              418,
+              340
+            ],
+            "alpha_bbox": [
+              79,
+              84,
+              264,
+              244
+            ],
+            "source_frame": 4
+          },
+          {
+            "region": [
+              836,
+              458,
+              418,
+              340
+            ],
+            "alpha_bbox": [
+              102,
+              98,
+              246,
+              229
+            ],
+            "source_frame": 5
+          },
+          {
+            "region": [
+              0,
+              844,
+              418,
+              340
+            ],
+            "alpha_bbox": [
+              102,
+              95,
+              262,
+              232
+            ],
+            "source_frame": 6
+          },
+          {
+            "region": [
+              418,
+              844,
+              418,
+              340
+            ],
+            "alpha_bbox": [
+              62,
+              101,
+              280,
+              227
+            ],
+            "source_frame": 7
+          },
+          {
+            "region": [
+              836,
+              844,
+              418,
+              340
+            ],
+            "alpha_bbox": [
+              113,
+              102,
+              209,
+              226
+            ],
+            "source_frame": 8
+          }
+        ],
+        "anchor": [
+          0.5,
+          0.9647058823529412
+        ],
+        "reference_height": 231,
+        "sheet_size": [
+          1254,
+          1254
+        ],
+        "row_region_origins_y": [
+          67,
+          458,
+          844
+        ],
+        "loop": false,
+        "sha256": "aff001c3a1a5ad5b479f6e7c0cc6d598bcc98c7fb49254df49e7bbad7472728b",
+        "alpha_threshold": 8,
+        "release_frame": 4
+      }
+    },
+    "boss_core_summon": {
+      "path": "assets/actions/boss_core/boss_core_summon.png",
+      "sha256": "62c9054f32e28bd3638514f1c50f09b51cff4a413106787fdf1fbdab04a63a6f",
+      "dimensions": [
+        1312,
+        1199
+      ],
+      "source_svg": "res://art_source/core_v57/boss_core_summon.svg",
+      "source_sha256": "62c9054f32e28bd3638514f1c50f09b51cff4a413106787fdf1fbdab04a63a6f",
+      "source_svg_sha256": "52f127fbdd92fe2c6ee2370f4184b1f54e3b90cdab76687bde9d0569e2a84051",
+      "tool": "Newly authored semantic SVG creature redraw; deterministic PNG export",
+      "frame_count": 16,
+      "reference_pixel_identity_claimed": false,
+      "measurement": {
+        "alpha_threshold": 8,
+        "bbox_convention": "source-window-local LTRB; current QA facts only, never runtime crop",
+        "frames": [
+          {
+            "index": 0,
+            "source_window": [
+              47,
+              40,
+              242,
+              254
+            ],
+            "alpha_bbox_ltrb": [
+              13,
+              16,
+              231,
+              243
+            ],
+            "minimum_clear_margin": 11,
+            "source_window_raw_rgba_sha256": "94dbef505eb81a7994562b62567894ce53c57970778473a2c92cecacf204e63a"
+          },
+          {
+            "index": 1,
+            "source_window": [
+              377,
+              40,
+              243,
+              259
+            ],
+            "alpha_bbox_ltrb": [
+              34,
+              17,
+              229,
+              249
+            ],
+            "minimum_clear_margin": 10,
+            "source_window_raw_rgba_sha256": "294dff4feb4453c46e81705d76c66abc7c015b718d03b6feb1163a2bedfcb5db"
+          },
+          {
+            "index": 2,
+            "source_window": [
+              704,
+              40,
+              243,
+              267
+            ],
+            "alpha_bbox_ltrb": [
+              34,
+              19,
+              229,
+              255
+            ],
+            "minimum_clear_margin": 12,
+            "source_window_raw_rgba_sha256": "36cb44688efa882823449b1534119f61816592dbbca60ef8bd69ae825cac86e7"
+          },
+          {
+            "index": 3,
+            "source_window": [
+              1033,
+              40,
+              247,
+              267
+            ],
+            "alpha_bbox_ltrb": [
+              16,
+              18,
+              234,
+              252
+            ],
+            "minimum_clear_margin": 13,
+            "source_window_raw_rgba_sha256": "e612866295745281ee787bb4cff79e2ed8e8bf7b86f0084bcdac344b41046a23"
+          },
+          {
+            "index": 4,
+            "source_window": [
+              31,
+              333,
+              265,
+              275
+            ],
+            "alpha_bbox_ltrb": [
+              15,
+              20,
+              249,
+              261
+            ],
+            "minimum_clear_margin": 14,
+            "source_window_raw_rgba_sha256": "46c899bdcfe2ed4b68728509a740e87004a017bf0bf66f36c1e39ffe8b1acf7e"
+          },
+          {
+            "index": 5,
+            "source_window": [
+              348,
+              335,
+              288,
+              265
+            ],
+            "alpha_bbox_ltrb": [
+              28,
+              14,
+              255,
+              255
+            ],
+            "minimum_clear_margin": 10,
+            "source_window_raw_rgba_sha256": "d36fd0ba091508e2e157dd827039f155fbe2d80ca2f92ed1b58e37b2b6681d05"
+          },
+          {
+            "index": 6,
+            "source_window": [
+              665,
+              332,
+              310,
+              278
+            ],
+            "alpha_bbox_ltrb": [
+              39,
+              18,
+              266,
+              262
+            ],
+            "minimum_clear_margin": 16,
+            "source_window_raw_rgba_sha256": "b6bade808e1d89e1381b2a3edaa55142e60ef889a59edfc4c9260241069eaaa8"
+          },
+          {
+            "index": 7,
+            "source_window": [
+              1000,
+              334,
+              292,
+              274
+            ],
+            "alpha_bbox_ltrb": [
+              7,
+              16,
+              288,
+              254
+            ],
+            "minimum_clear_margin": 4,
+            "source_window_raw_rgba_sha256": "3dd5c9f18d952971c0f8d69c079b13d46e5c7d61764e9b1bd1b386634b1574ab"
+          },
+          {
+            "index": 8,
+            "source_window": [
+              30,
+              635,
+              273,
+              272
+            ],
+            "alpha_bbox_ltrb": [
+              6,
+              17,
+              267,
+              257
+            ],
+            "minimum_clear_margin": 6,
+            "source_window_raw_rgba_sha256": "b25b3ebc18131e35709b3ed3ca68fb9cd267e6b272f132b75f00a8ab3f81d1de"
+          },
+          {
+            "index": 9,
+            "source_window": [
+              374,
+              635,
+              249,
+              266
+            ],
+            "alpha_bbox_ltrb": [
+              12,
+              17,
+              236,
+              256
+            ],
+            "minimum_clear_margin": 10,
+            "source_window_raw_rgba_sha256": "d149fa5a58b8eee51206e9f560af12de2efac37800d25193301b2c7b71afc582"
+          },
+          {
+            "index": 10,
+            "source_window": [
+              706,
+              636,
+              245,
+              267
+            ],
+            "alpha_bbox_ltrb": [
+              35,
+              16,
+              230,
+              251
+            ],
+            "minimum_clear_margin": 15,
+            "source_window_raw_rgba_sha256": "dca77d728aa47d5c09365b6be5030a382d309ad0766e244cf0d2083308683122"
+          },
+          {
+            "index": 11,
+            "source_window": [
+              1035,
+              636,
+              245,
+              255
+            ],
+            "alpha_bbox_ltrb": [
+              35,
+              16,
+              230,
+              245
+            ],
+            "minimum_clear_margin": 10,
+            "source_window_raw_rgba_sha256": "b8cd101161059e85be04a1ed81175241f9c19a39f7b54e9aa110b90607f4460c"
+          },
+          {
+            "index": 12,
+            "source_window": [
+              46,
+              917,
+              247,
+              256
+            ],
+            "alpha_bbox_ltrb": [
+              35,
+              16,
+              230,
+              249
+            ],
+            "minimum_clear_margin": 7,
+            "source_window_raw_rgba_sha256": "2c8ecbf42aeaaa14117852abf36c48956154a396205a9f4c436bade634d2d581"
+          },
+          {
+            "index": 13,
+            "source_window": [
+              378,
+              917,
+              246,
+              252
+            ],
+            "alpha_bbox_ltrb": [
+              36,
+              16,
+              231,
+              244
+            ],
+            "minimum_clear_margin": 8,
+            "source_window_raw_rgba_sha256": "95fa9168afcfc4144d1c419d84774a482a7d6d4a63651c5c8ca0e5b914503852"
+          },
+          {
+            "index": 14,
+            "source_window": [
+              704,
+              918,
+              246,
+              249
+            ],
+            "alpha_bbox_ltrb": [
+              36,
+              15,
+              231,
+              240
+            ],
+            "minimum_clear_margin": 9,
+            "source_window_raw_rgba_sha256": "261e5be7df2d1c67fd1c04e6c168b3f7146c153b3f9b9e0bacf360c80e34b56f"
+          },
+          {
+            "index": 15,
+            "source_window": [
+              1035,
+              918,
+              245,
+              255
+            ],
+            "alpha_bbox_ltrb": [
+              15,
+              16,
+              233,
+              246
+            ],
+            "minimum_clear_margin": 9,
+            "source_window_raw_rgba_sha256": "3294f9d8b58d17b73e55a0f2dc990b6eb6743903fb67d1badff8562a51cf0506"
+          }
+        ],
+        "transparent_source_overlap_bands": [],
+        "all_overlap_bands_transparent": true
+      },
+      "runtime_registration": "All59 original source windows, live walk XYWH crops, action margins/anchors/reference heights, scale and basefoot82.65 exact. Neutral165.3; walk418/ref218/scale1653/2180, base attack418x340/ref231/scale551/770, summon512x400/ref246/scale551/820 on1312x1199 sheet, hurt512x400/ref278/scale1653/2780, death512x400/ref248/scale1653/2480. Base source_frame versus source_pose_index fields retain exact identity order; authored x/row corrections already embodied, not reapplied. No source-window overlaps. Wholealpha_bounds unchanged/no Core override. AI phase2 ring-ring-summon/contact/ring bullet and child-spawn origins/telegraph/death cleanup code unchanged. Local seed glow/rays decorative, no socket/projectile/target footprint or hit authority",
+      "prior_raster_png_sha256": "06db7c54121f75bccd25998f8973a065ff9f376669ff794b8ed569b2855522e0",
+      "prior_raster_manifest_record": {
+        "path": "res://assets/actions/boss_core/boss_core_summon.png",
+        "frames": [
+          {
+            "region": [
+              47,
+              40,
+              242,
+              254
+            ],
+            "margin": [
+              133,
+              70,
+              270,
+              146
+            ],
+            "alpha_bbox": [
+              137,
+              74,
+              234,
+              246
+            ],
+            "source_pose_index": 0
+          },
+          {
+            "region": [
+              377,
+              40,
+              243,
+              259
+            ],
+            "margin": [
+              135,
+              70,
+              269,
+              141
+            ],
+            "alpha_bbox": [
+              139,
+              74,
+              235,
+              251
+            ],
+            "source_pose_index": 1
+          },
+          {
+            "region": [
+              704,
+              40,
+              243,
+              267
+            ],
+            "margin": [
+              134,
+              70,
+              269,
+              133
+            ],
+            "alpha_bbox": [
+              138,
+              74,
+              235,
+              259
+            ],
+            "source_pose_index": 2
+          },
+          {
+            "region": [
+              1033,
+              40,
+              247,
+              267
+            ],
+            "margin": [
+              135,
+              70,
+              265,
+              133
+            ],
+            "alpha_bbox": [
+              139,
+              74,
+              239,
+              259
+            ],
+            "source_pose_index": 3
+          },
+          {
+            "region": [
+              31,
+              333,
+              265,
+              275
+            ],
+            "margin": [
+              117,
+              69,
+              247,
+              125
+            ],
+            "alpha_bbox": [
+              121,
+              73,
+              257,
+              267
+            ],
+            "source_pose_index": 4
+          },
+          {
+            "region": [
+              348,
+              335,
+              288,
+              265
+            ],
+            "margin": [
+              106,
+              71,
+              224,
+              135
+            ],
+            "alpha_bbox": [
+              110,
+              75,
+              280,
+              257
+            ],
+            "source_pose_index": 5
+          },
+          {
+            "region": [
+              665,
+              332,
+              310,
+              278
+            ],
+            "margin": [
+              95,
+              68,
+              202,
+              122
+            ],
+            "alpha_bbox": [
+              99,
+              72,
+              302,
+              270
+            ],
+            "source_pose_index": 6
+          },
+          {
+            "region": [
+              1000,
+              334,
+              292,
+              274
+            ],
+            "margin": [
+              102,
+              70,
+              220,
+              126
+            ],
+            "alpha_bbox": [
+              106,
+              74,
+              284,
+              266
+            ],
+            "source_pose_index": 7
+          },
+          {
+            "region": [
+              30,
+              635,
+              273,
+              272
+            ],
+            "margin": [
+              116,
+              70,
+              239,
+              128
+            ],
+            "alpha_bbox": [
+              120,
+              74,
+              265,
+              264
+            ],
+            "source_pose_index": 8
+          },
+          {
+            "region": [
+              374,
+              635,
+              249,
+              266
+            ],
+            "margin": [
+              132,
+              70,
+              263,
+              134
+            ],
+            "alpha_bbox": [
+              136,
+              74,
+              241,
+              258
+            ],
+            "source_pose_index": 9
+          },
+          {
+            "region": [
+              706,
+              636,
+              245,
+              267
+            ],
+            "margin": [
+              136,
+              71,
+              267,
+              133
+            ],
+            "alpha_bbox": [
+              140,
+              75,
+              237,
+              259
+            ],
+            "source_pose_index": 10
+          },
+          {
+            "region": [
+              1035,
+              636,
+              245,
+              255
+            ],
+            "margin": [
+              137,
+              71,
+              267,
+              145
+            ],
+            "alpha_bbox": [
+              141,
+              75,
+              237,
+              247
+            ],
+            "source_pose_index": 11
+          },
+          {
+            "region": [
+              46,
+              917,
+              247,
+              256
+            ],
+            "margin": [
+              132,
+              70,
+              265,
+              144
+            ],
+            "alpha_bbox": [
+              136,
+              74,
+              239,
+              248
+            ],
+            "source_pose_index": 12
+          },
+          {
+            "region": [
+              378,
+              917,
+              246,
+              252
+            ],
+            "margin": [
+              136,
+              70,
+              266,
+              148
+            ],
+            "alpha_bbox": [
+              140,
+              74,
+              238,
+              244
+            ],
+            "source_pose_index": 13
+          },
+          {
+            "region": [
+              704,
+              918,
+              246,
+              249
+            ],
+            "margin": [
+              134,
+              71,
+              266,
+              151
+            ],
+            "alpha_bbox": [
+              138,
+              75,
+              238,
+              241
+            ],
+            "source_pose_index": 14
+          },
+          {
+            "region": [
+              1035,
+              918,
+              245,
+              255
+            ],
+            "margin": [
+              137,
+              71,
+              267,
+              145
+            ],
+            "alpha_bbox": [
+              141,
+              75,
+              237,
+              247
+            ],
+            "source_pose_index": 15
+          }
+        ],
+        "anchor": [
+          0.5,
+          0.8
+        ],
+        "reference_height": 246,
+        "release_frame": 7,
+        "loop": false,
+        "facing": "left",
+        "phase_frames": {
+          "warning": [
+            0,
+            6
+          ],
+          "attack": [
+            7,
+            7
+          ],
+          "recover": [
+            7,
+            15
+          ]
+        },
+        "source_sha256": "06db7c54121f75bccd25998f8973a065ff9f376669ff794b8ed569b2855522e0",
+        "action_registration_offset_x": -6,
+        "source_row_translation_y": [
+          30,
+          -264,
+          -565,
+          -847
+        ],
+        "source": "Built-in image_gen; original PNG preserved, no resize/repaint/mask."
+      }
+    },
+    "boss_core_hurt": {
+      "path": "assets/actions/boss_core/boss_core_hurt.png",
+      "sha256": "3d0e767cdcd1999c42311fc167581ce8757232e2ee7a2bb235f789f62f184187",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "source_svg": "res://art_source/core_v57/boss_core_hurt.svg",
+      "source_sha256": "3d0e767cdcd1999c42311fc167581ce8757232e2ee7a2bb235f789f62f184187",
+      "source_svg_sha256": "5528397972c0b7db7cfe7764047b79c509f552ceed77867568c5253aee0e2f2e",
+      "tool": "Newly authored semantic SVG creature redraw; deterministic PNG export",
+      "frame_count": 9,
+      "reference_pixel_identity_claimed": false,
+      "measurement": {
+        "alpha_threshold": 8,
+        "bbox_convention": "source-window-local LTRB; current QA facts only, never runtime crop",
+        "frames": [
+          {
+            "index": 0,
+            "source_window": [
+              84,
+              111,
+              269,
+              286
+            ],
+            "alpha_bbox_ltrb": [
+              35,
+              20,
+              253,
+              275
+            ],
+            "minimum_clear_margin": 11,
+            "source_window_raw_rgba_sha256": "dd45065cee4ac69de29404bdb01b325d1d0fa002352194ea9f163d0e474a2b4b"
+          },
+          {
+            "index": 1,
+            "source_window": [
+              504,
+              108,
+              267,
+              284
+            ],
+            "alpha_bbox_ltrb": [
+              34,
+              18,
+              252,
+              273
+            ],
+            "minimum_clear_margin": 11,
+            "source_window_raw_rgba_sha256": "da3e0c5aab0803ebe502962f4bdd3aa43e0412ca774c51f1a3d6272beacef167"
+          },
+          {
+            "index": 2,
+            "source_window": [
+              930,
+              114,
+              267,
+              282
+            ],
+            "alpha_bbox_ltrb": [
+              33,
+              18,
+              251,
+              271
+            ],
+            "minimum_clear_margin": 11,
+            "source_window_raw_rgba_sha256": "795f9eea7fb2ffda4b510cd6b27bdd97c303746d132fe174cd7ce2a48f915a17"
+          },
+          {
+            "index": 3,
+            "source_window": [
+              89,
+              516,
+              262,
+              281
+            ],
+            "alpha_bbox_ltrb": [
+              29,
+              19,
+              247,
+              275
+            ],
+            "minimum_clear_margin": 6,
+            "source_window_raw_rgba_sha256": "2d5ba20f545970769acce04cee2802f474059c8355c76bcfc9994fcc62017b0a"
+          },
+          {
+            "index": 4,
+            "source_window": [
+              497,
+              514,
+              262,
+              274
+            ],
+            "alpha_bbox_ltrb": [
+              31,
+              18,
+              247,
+              262
+            ],
+            "minimum_clear_margin": 12,
+            "source_window_raw_rgba_sha256": "51c5aa73498f56b8a8f8a3c178d3eeeddd430c229c85d49281e2663fbeea5533"
+          },
+          {
+            "index": 5,
+            "source_window": [
+              930,
+              521,
+              264,
+              274
+            ],
+            "alpha_bbox_ltrb": [
+              31,
+              19,
+              248,
+              262
+            ],
+            "minimum_clear_margin": 12,
+            "source_window_raw_rgba_sha256": "93f3d36d49d8bdc3941f0e8f42483d92cfb581fec340ed9b58be13f73c3b52d6"
+          },
+          {
+            "index": 6,
+            "source_window": [
+              90,
+              903,
+              266,
+              281
+            ],
+            "alpha_bbox_ltrb": [
+              32,
+              19,
+              250,
+              270
+            ],
+            "minimum_clear_margin": 11,
+            "source_window_raw_rgba_sha256": "e37b913014b68f10aac2a1d585d09f8a40d76433e3b86c2ee3837a67dbf4500c"
+          },
+          {
+            "index": 7,
+            "source_window": [
+              502,
+              906,
+              264,
+              279
+            ],
+            "alpha_bbox_ltrb": [
+              31,
+              19,
+              249,
+              267
+            ],
+            "minimum_clear_margin": 12,
+            "source_window_raw_rgba_sha256": "2ddde3ffdfb37d29b81585227b1e6c8e9ed581e795b4a528c5bfd3e6e51f926a"
+          },
+          {
+            "index": 8,
+            "source_window": [
+              933,
+              902,
+              263,
+              278
+            ],
+            "alpha_bbox_ltrb": [
+              31,
+              19,
+              249,
+              267
+            ],
+            "minimum_clear_margin": 11,
+            "source_window_raw_rgba_sha256": "18d2f05dda5d10ca2bced6bc44fb1173ba7b8ef02819b223176eebb44e08872e"
+          }
+        ],
+        "transparent_source_overlap_bands": [],
+        "all_overlap_bands_transparent": true
+      },
+      "runtime_registration": "All59 original source windows, live walk XYWH crops, action margins/anchors/reference heights, scale and basefoot82.65 exact. Neutral165.3; walk418/ref218/scale1653/2180, base attack418x340/ref231/scale551/770, summon512x400/ref246/scale551/820 on1312x1199 sheet, hurt512x400/ref278/scale1653/2780, death512x400/ref248/scale1653/2480. Base source_frame versus source_pose_index fields retain exact identity order; authored x/row corrections already embodied, not reapplied. No source-window overlaps. Wholealpha_bounds unchanged/no Core override. AI phase2 ring-ring-summon/contact/ring bullet and child-spawn origins/telegraph/death cleanup code unchanged. Local seed glow/rays decorative, no socket/projectile/target footprint or hit authority",
+      "prior_raster_png_sha256": "06032a84184dc2331177eb0bf3bc237edff4c6c981802e393fe1be492775fc89",
+      "prior_raster_manifest_record": {
+        "path": "res://assets/actions/boss_core/boss_core_hurt.png",
+        "frames": [
+          {
+            "region": [
+              84,
+              111,
+              269,
+              286
+            ],
+            "margin": [
+              119,
+              38,
+              243,
+              114
+            ],
+            "alpha_bbox": [
+              123,
+              42,
+              261,
+              278
+            ],
+            "source_pose_index": 0
+          },
+          {
+            "region": [
+              504,
+              108,
+              267,
+              284
+            ],
+            "margin": [
+              121,
+              35,
+              245,
+              116
+            ],
+            "alpha_bbox": [
+              125,
+              39,
+              259,
+              276
+            ],
+            "source_pose_index": 1
+          },
+          {
+            "region": [
+              930,
+              114,
+              267,
+              282
+            ],
+            "margin": [
+              129,
+              41,
+              245,
+              118
+            ],
+            "alpha_bbox": [
+              133,
+              45,
+              259,
+              274
+            ],
+            "source_pose_index": 2
+          },
+          {
+            "region": [
+              89,
+              516,
+              262,
+              281
+            ],
+            "margin": [
+              124,
+              43,
+              250,
+              119
+            ],
+            "alpha_bbox": [
+              128,
+              47,
+              254,
+              273
+            ],
+            "source_pose_index": 3
+          },
+          {
+            "region": [
+              497,
+              514,
+              262,
+              274
+            ],
+            "margin": [
+              114,
+              41,
+              250,
+              126
+            ],
+            "alpha_bbox": [
+              118,
+              45,
+              254,
+              266
+            ],
+            "source_pose_index": 4
+          },
+          {
+            "region": [
+              930,
+              521,
+              264,
+              274
+            ],
+            "margin": [
+              129,
+              48,
+              248,
+              126
+            ],
+            "alpha_bbox": [
+              133,
+              52,
+              256,
+              266
+            ],
+            "source_pose_index": 5
+          },
+          {
+            "region": [
+              90,
+              903,
+              266,
+              281
+            ],
+            "margin": [
+              125,
+              38,
+              246,
+              119
+            ],
+            "alpha_bbox": [
+              129,
+              42,
+              258,
+              273
+            ],
+            "source_pose_index": 6
+          },
+          {
+            "region": [
+              502,
+              906,
+              264,
+              279
+            ],
+            "margin": [
+              119,
+              41,
+              248,
+              121
+            ],
+            "alpha_bbox": [
+              123,
+              45,
+              256,
+              271
+            ],
+            "source_pose_index": 7
+          },
+          {
+            "region": [
+              933,
+              902,
+              263,
+              278
+            ],
+            "margin": [
+              132,
+              37,
+              249,
+              122
+            ],
+            "alpha_bbox": [
+              136,
+              41,
+              255,
+              270
+            ],
+            "source_pose_index": 8
+          }
+        ],
+        "anchor": [
+          0.5,
+          0.8
+        ],
+        "reference_height": 278,
+        "duration_seconds": 0.27,
+        "action_registration_offset_x": -12,
+        "source_row_translation_y": [
+          -73,
+          -473,
+          -865
+        ],
+        "loop": false,
+        "source": "Built-in image_gen identity-preserving candidate; original PNG bytes unmodified."
+      }
+    },
+    "boss_core_death": {
+      "path": "assets/actions/boss_core/boss_core_death.png",
+      "sha256": "8c2448f5dce33345ce5d6ee541191ef66f0996922ac70abc52ba9dfe57b659e1",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "source_svg": "res://art_source/core_v57/boss_core_death.svg",
+      "source_sha256": "8c2448f5dce33345ce5d6ee541191ef66f0996922ac70abc52ba9dfe57b659e1",
+      "source_svg_sha256": "8d1af12dbbacae75795f5225a0377371088594680ec469c12542aefafb183b3f",
+      "tool": "Newly authored semantic SVG creature redraw; deterministic PNG export",
+      "frame_count": 16,
+      "reference_pixel_identity_claimed": false,
+      "measurement": {
+        "alpha_threshold": 8,
+        "bbox_convention": "source-window-local LTRB; current QA facts only, never runtime crop",
+        "frames": [
+          {
+            "index": 0,
+            "source_window": [
+              54,
+              85,
+              233,
+              256
+            ],
+            "alpha_bbox_ltrb": [
+              30,
+              18,
+              223,
+              244
+            ],
+            "minimum_clear_margin": 10,
+            "source_window_raw_rgba_sha256": "6f3919ba2c2c3a3819cf7a6957906236aa636bccf5c7f82a45e1f9b62b7c7f28"
+          },
+          {
+            "index": 1,
+            "source_window": [
+              370,
+              88,
+              230,
+              251
+            ],
+            "alpha_bbox_ltrb": [
+              30,
+              17,
+              221,
+              243
+            ],
+            "minimum_clear_margin": 8,
+            "source_window_raw_rgba_sha256": "0ceb846a5693b41391d1dfe202a79197a4220b806e86525be31cefbf94146cd0"
+          },
+          {
+            "index": 2,
+            "source_window": [
+              685,
+              94,
+              223,
+              249
+            ],
+            "alpha_bbox_ltrb": [
+              29,
+              16,
+              217,
+              240
+            ],
+            "minimum_clear_margin": 6,
+            "source_window_raw_rgba_sha256": "9596196f6c84e40e24247361964254a73cc35923c736172b1928f68f4efe32e9"
+          },
+          {
+            "index": 3,
+            "source_window": [
+              994,
+              105,
+              222,
+              242
+            ],
+            "alpha_bbox_ltrb": [
+              9,
+              11,
+              208,
+              232
+            ],
+            "minimum_clear_margin": 9,
+            "source_window_raw_rgba_sha256": "72f80f27f31a044382c565718bcb3f49bbd091ce36e71cb8bd321bfa3c3dac1b"
+          },
+          {
+            "index": 4,
+            "source_window": [
+              72,
+              425,
+              224,
+              239
+            ],
+            "alpha_bbox_ltrb": [
+              10,
+              10,
+              209,
+              223
+            ],
+            "minimum_clear_margin": 10,
+            "source_window_raw_rgba_sha256": "21567d1b2bbf18904d8b5a5d529e27a0528ef6c290066f34c888d5c7599ff158"
+          },
+          {
+            "index": 5,
+            "source_window": [
+              382,
+              438,
+              221,
+              229
+            ],
+            "alpha_bbox_ltrb": [
+              9,
+              9,
+              208,
+              214
+            ],
+            "minimum_clear_margin": 9,
+            "source_window_raw_rgba_sha256": "6c52daf37aac223a55c1d408da4f9cec36e06edd8edaa915034898134191168e"
+          },
+          {
+            "index": 6,
+            "source_window": [
+              690,
+              457,
+              221,
+              210
+            ],
+            "alpha_bbox_ltrb": [
+              7,
+              13,
+              214,
+              200
+            ],
+            "minimum_clear_margin": 7,
+            "source_window_raw_rgba_sha256": "cd94618489528d37cce724d5fb8144286e7241f22ca68a3d76cbc8f5ae3c0e0c"
+          },
+          {
+            "index": 7,
+            "source_window": [
+              999,
+              488,
+              224,
+              186
+            ],
+            "alpha_bbox_ltrb": [
+              8,
+              6,
+              211,
+              180
+            ],
+            "minimum_clear_margin": 6,
+            "source_window_raw_rgba_sha256": "155ac9c71b3c9866ef4efac0fcfea7ffd443d9222b4c3b5be44233d434b83b29"
+          },
+          {
+            "index": 8,
+            "source_window": [
+              72,
+              786,
+              222,
+              179
+            ],
+            "alpha_bbox_ltrb": [
+              7,
+              6,
+              210,
+              172
+            ],
+            "minimum_clear_margin": 6,
+            "source_window_raw_rgba_sha256": "5bd0078aab019e18bf3e12ca4cbd83d8524e4efefa302c9d36bd106a6b8e916e"
+          },
+          {
+            "index": 9,
+            "source_window": [
+              386,
+              787,
+              222,
+              175
+            ],
+            "alpha_bbox_ltrb": [
+              7,
+              7,
+              210,
+              167
+            ],
+            "minimum_clear_margin": 7,
+            "source_window_raw_rgba_sha256": "85bc7a55d0ee552ca72978b9e98c2c8f67e7441c1841a066f92792a039275ead"
+          },
+          {
+            "index": 10,
+            "source_window": [
+              679,
+              786,
+              238,
+              175
+            ],
+            "alpha_bbox_ltrb": [
+              6,
+              4,
+              232,
+              166
+            ],
+            "minimum_clear_margin": 4,
+            "source_window_raw_rgba_sha256": "cf13b445c2a991d415d30a89b50a3d254cbda56084bc5d4c7dc4d874f8a1bf7f"
+          },
+          {
+            "index": 11,
+            "source_window": [
+              983,
+              792,
+              242,
+              173
+            ],
+            "alpha_bbox_ltrb": [
+              10,
+              5,
+              232,
+              165
+            ],
+            "minimum_clear_margin": 5,
+            "source_window_raw_rgba_sha256": "7b3ccff6d95aab07b55fd58909b691e00db82c56fa303d04b1ddcd340e100467"
+          },
+          {
+            "index": 12,
+            "source_window": [
+              48,
+              1048,
+              251,
+              169
+            ],
+            "alpha_bbox_ltrb": [
+              9,
+              5,
+              241,
+              160
+            ],
+            "minimum_clear_margin": 5,
+            "source_window_raw_rgba_sha256": "2ba30a15ed5f97148fabe28c6addc322a6c74559454cb915f6febe2b5f3a48f4"
+          },
+          {
+            "index": 13,
+            "source_window": [
+              364,
+              1057,
+              253,
+              156
+            ],
+            "alpha_bbox_ltrb": [
+              10,
+              5,
+              248,
+              148
+            ],
+            "minimum_clear_margin": 5,
+            "source_window_raw_rgba_sha256": "48cb1d3139207eed0ff5b9c0b6c3ea08f4e7524bd20c564a4eb3b3fa2c0b75f9"
+          },
+          {
+            "index": 14,
+            "source_window": [
+              661,
+              1058,
+              272,
+              155
+            ],
+            "alpha_bbox_ltrb": [
+              12,
+              5,
+              265,
+              147
+            ],
+            "minimum_clear_margin": 5,
+            "source_window_raw_rgba_sha256": "fea5fe0e44ccf50c35987c5d6464d678759a51ab7d17df3b72d99515a73af6ff"
+          },
+          {
+            "index": 15,
+            "source_window": [
+              967,
+              1067,
+              266,
+              147
+            ],
+            "alpha_bbox_ltrb": [
+              6,
+              12,
+              260,
+              142
+            ],
+            "minimum_clear_margin": 5,
+            "source_window_raw_rgba_sha256": "99fbfbec053cb4888aafc296a551f2ae160392923f36f066163febe119a79127"
+          }
+        ],
+        "transparent_source_overlap_bands": [],
+        "all_overlap_bands_transparent": true
+      },
+      "runtime_registration": "All59 original source windows, live walk XYWH crops, action margins/anchors/reference heights, scale and basefoot82.65 exact. Neutral165.3; walk418/ref218/scale1653/2180, base attack418x340/ref231/scale551/770, summon512x400/ref246/scale551/820 on1312x1199 sheet, hurt512x400/ref278/scale1653/2780, death512x400/ref248/scale1653/2480. Base source_frame versus source_pose_index fields retain exact identity order; authored x/row corrections already embodied, not reapplied. No source-window overlaps. Wholealpha_bounds unchanged/no Core override. AI phase2 ring-ring-summon/contact/ring bullet and child-spawn origins/telegraph/death cleanup code unchanged. Local seed glow/rays decorative, no socket/projectile/target footprint or hit authority",
+      "prior_raster_png_sha256": "5e019c8810e00f013796c0b2c14f041ed637a12174eeb2fcea7a593dcfce9b4b",
+      "prior_raster_manifest_record": {
+        "path": "res://assets/actions/boss_core/boss_core_death.png",
+        "frames": [
+          {
+            "region": [
+              54,
+              85,
+              233,
+              256
+            ],
+            "margin": [
+              137,
+              68,
+              279,
+              144
+            ],
+            "alpha_bbox": [
+              141,
+              72,
+              225,
+              248
+            ],
+            "source_pose_index": 0
+          },
+          {
+            "region": [
+              370,
+              88,
+              230,
+              251
+            ],
+            "margin": [
+              140,
+              71,
+              282,
+              149
+            ],
+            "alpha_bbox": [
+              144,
+              75,
+              222,
+              243
+            ],
+            "source_pose_index": 1
+          },
+          {
+            "region": [
+              685,
+              94,
+              223,
+              249
+            ],
+            "margin": [
+              141,
+              77,
+              289,
+              151
+            ],
+            "alpha_bbox": [
+              145,
+              81,
+              215,
+              241
+            ],
+            "source_pose_index": 2
+          },
+          {
+            "region": [
+              994,
+              105,
+              222,
+              242
+            ],
+            "margin": [
+              137,
+              88,
+              290,
+              158
+            ],
+            "alpha_bbox": [
+              141,
+              92,
+              214,
+              234
+            ],
+            "source_pose_index": 3
+          },
+          {
+            "region": [
+              72,
+              425,
+              224,
+              239
+            ],
+            "margin": [
+              155,
+              88,
+              288,
+              161
+            ],
+            "alpha_bbox": [
+              159,
+              92,
+              216,
+              231
+            ],
+            "source_pose_index": 4
+          },
+          {
+            "region": [
+              382,
+              438,
+              221,
+              229
+            ],
+            "margin": [
+              152,
+              101,
+              291,
+              171
+            ],
+            "alpha_bbox": [
+              156,
+              105,
+              213,
+              221
+            ],
+            "source_pose_index": 5
+          },
+          {
+            "region": [
+              690,
+              457,
+              221,
+              210
+            ],
+            "margin": [
+              146,
+              120,
+              291,
+              190
+            ],
+            "alpha_bbox": [
+              150,
+              124,
+              213,
+              202
+            ],
+            "source_pose_index": 6
+          },
+          {
+            "region": [
+              999,
+              488,
+              224,
+              186
+            ],
+            "margin": [
+              142,
+              151,
+              288,
+              214
+            ],
+            "alpha_bbox": [
+              146,
+              155,
+              216,
+              178
+            ],
+            "source_pose_index": 7
+          },
+          {
+            "region": [
+              72,
+              786,
+              222,
+              179
+            ],
+            "margin": [
+              155,
+              151,
+              290,
+              221
+            ],
+            "alpha_bbox": [
+              159,
+              155,
+              214,
+              171
+            ],
+            "source_pose_index": 8
+          },
+          {
+            "region": [
+              386,
+              787,
+              222,
+              175
+            ],
+            "margin": [
+              156,
+              152,
+              290,
+              225
+            ],
+            "alpha_bbox": [
+              160,
+              156,
+              214,
+              167
+            ],
+            "source_pose_index": 9
+          },
+          {
+            "region": [
+              679,
+              786,
+              238,
+              175
+            ],
+            "margin": [
+              135,
+              151,
+              274,
+              225
+            ],
+            "alpha_bbox": [
+              139,
+              155,
+              230,
+              167
+            ],
+            "source_pose_index": 10
+          },
+          {
+            "region": [
+              983,
+              792,
+              242,
+              173
+            ],
+            "margin": [
+              126,
+              157,
+              270,
+              227
+            ],
+            "alpha_bbox": [
+              130,
+              161,
+              234,
+              165
+            ],
+            "source_pose_index": 11
+          },
+          {
+            "region": [
+              48,
+              1048,
+              251,
+              169
+            ],
+            "margin": [
+              131,
+              168,
+              261,
+              231
+            ],
+            "alpha_bbox": [
+              135,
+              172,
+              243,
+              161
+            ],
+            "source_pose_index": 12
+          },
+          {
+            "region": [
+              364,
+              1057,
+              253,
+              156
+            ],
+            "margin": [
+              134,
+              177,
+              259,
+              244
+            ],
+            "alpha_bbox": [
+              138,
+              181,
+              245,
+              148
+            ],
+            "source_pose_index": 13
+          },
+          {
+            "region": [
+              661,
+              1058,
+              272,
+              155
+            ],
+            "margin": [
+              117,
+              178,
+              240,
+              245
+            ],
+            "alpha_bbox": [
+              121,
+              182,
+              264,
+              147
+            ],
+            "source_pose_index": 14
+          },
+          {
+            "region": [
+              967,
+              1067,
+              266,
+              147
+            ],
+            "margin": [
+              110,
+              187,
+              246,
+              253
+            ],
+            "alpha_bbox": [
+              114,
+              191,
+              258,
+              139
+            ],
+            "source_pose_index": 15
+          }
+        ],
+        "anchor": [
+          0.5,
+          0.8
+        ],
+        "reference_height": 248,
+        "duration_seconds": 0.72,
+        "action_registration_offset_x": -16,
+        "source_row_translation_y": [
+          -17,
+          -337,
+          -635,
+          -880
+        ],
+        "loop": false,
+        "source": "Built-in image_gen identity-preserving candidate; original PNG bytes unmodified."
+      }
     }
   },
   "player_current_derivations_scope": "The five current hero_walk/hero_attack/hero_dash/hero_hurt/hero_death derivations below identify newly authored SVG body redraws at the existing effective runtime paths, not recovered historical masters. Original assets[]/notes and ground derivation remain unchanged historical/current records. The inactive baked assets/actions/hero_attack.png is not replaced or made active. New measured bboxes are source-window-local LTRB QA facts at alpha>8 only; existing walk alpha_bounds.json is frozen runtime crop/padding metadata and is not recalculated.",
@@ -10414,5 +12795,6 @@
   "crawler_current_derivations_scope": "Three current Crawler PNG paths are newly authored semantic SVG creature redraws, not recovered original masters. All preexisting history/current derivations remain unchanged. The root beetle walk alpha_bounds entire file remains exact live LTRB registration. enemy_manifest crawler region/alpha_bbox/minimum_clear_margin are retained historical non-live measurements; action frames remain exact historical registration. New alpha>8 source-window-local LTRB bboxes and clearance are QA/provenance only, not a recrop, scale change, socket or contact-origin change. Original selected manifest records are retained below as prior_raster_manifest_record.",
   "flanker_current_derivations_scope": "Three current Flanker PNG paths are newly authored semantic SVG creature redraws, not recovered original masters. All preexisting history/current derivations remain unchanged. The enemy_manifest Flanker region/alpha_bbox remain exact live XYWH registration, with their original historical measurement provenance; minimum_clear_margin is retained historical. Whole alpha_bounds remains unchanged with no Flanker override. Action frames remain exact historical registration. New alpha>8 source-window-local LTRB bboxes and clearance are QA/provenance only, not a recrop, scale change, socket or contact-origin change. Original selected manifest records are retained below as prior_raster_manifest_record.",
   "broodkeeper_current_derivations_scope": "Four current Brood Keeper PNG paths are newly authored semantic SVG creature redraws, not recovered original masters. All preexisting history/current derivations remain unchanged. The enemy_manifest Brood Keeper region/alpha_bbox remain exact live XYWH registration, with their original historical measurement provenance; minimum_clear_margin is retained historical. Whole alpha_bounds remains unchanged with no Brood Keeper override. Action frames remain exact historical registration. New alpha>8 source-window-local LTRB bboxes and clearance are QA/provenance only, not a recrop, scale change, socket or contact-origin change. Original selected manifest records are retained below as prior_raster_manifest_record.",
-  "warden_current_derivations_scope": "Five current Scrap Warden PNG paths are newly authored semantic SVG creature redraws, not recovered original masters. All preexisting history/current derivations remain unchanged. The enemy_manifest Scrap Warden region/alpha_bbox remain exact live XYWH registration, with their original historical measurement provenance; minimum_clear_margin is retained historical. Whole alpha_bounds remains unchanged with no Scrap Warden override. Action frames remain exact historical registration. New alpha>8 source-window-local LTRB bboxes and clearance are QA/provenance only, not a recrop, scale change, socket or contact-origin change. Original selected manifest records are retained below as prior_raster_manifest_record."
+  "warden_current_derivations_scope": "Five current Scrap Warden PNG paths are newly authored semantic SVG creature redraws, not recovered original masters. All preexisting history/current derivations remain unchanged. The enemy_manifest Scrap Warden region/alpha_bbox remain exact live XYWH registration, with their original historical measurement provenance; minimum_clear_margin is retained historical. Whole alpha_bounds remains unchanged with no Scrap Warden override. Action frames remain exact historical registration. New alpha>8 source-window-local LTRB bboxes and clearance are QA/provenance only, not a recrop, scale change, socket or contact-origin change. Original selected manifest records are retained below as prior_raster_manifest_record.",
+  "core_current_derivations_scope": "Five current Spore Reactor Core PNG paths are newly authored semantic SVG creature redraws, not recovered original masters. All preexisting history/current derivations remain unchanged. The enemy_manifest Spore Reactor Core region/alpha_bbox remain exact live XYWH registration, with their original historical measurement provenance; minimum_clear_margin is retained historical. Whole alpha_bounds remains unchanged with no Spore Reactor Core override. Action frames remain exact historical registration. New alpha>8 source-window-local LTRB bboxes and clearance are QA/provenance only, not a recrop, scale change, socket or contact-origin change. Original selected manifest records are retained below as prior_raster_manifest_record."
 }

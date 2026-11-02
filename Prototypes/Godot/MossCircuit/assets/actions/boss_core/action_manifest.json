@@ -208,7 +208,12 @@
         -865
       ],
       "loop": false,
-      "source": "Built-in image_gen identity-preserving candidate; original PNG bytes unmodified."
+      "source": "Current PNG pixels are a newly authored semantic SVG redraw. The original raster provenance and unchanged-registration source history are preserved in art_source/provenance.json prior_raster_manifest_record; all original action regions, margins, reference heights, base source_frame or summon/hurt/death source_pose_index with exact identity source order and already embodied x/row corrections remain unchanged; no corrections are reapplied and the original source windows do not overlap.",
+      "source_sha256": "3d0e767cdcd1999c42311fc167581ce8757232e2ee7a2bb235f789f62f184187",
+      "source_svg": "res://art_source/core_v57/boss_core_hurt.svg",
+      "source_svg_sha256": "5528397972c0b7db7cfe7764047b79c509f552ceed77867568c5253aee0e2f2e",
+      "generator": "Newly authored semantic SVG creature redraw; deterministic PNG export",
+      "measurement_semantics": "Existing sha256 when present and source_sha256 both mean current PNG bytes; source_svg_sha256 is current SVG bytes. All frame records are retained unchanged. alpha_bbox is a historical QA measurement, not the current redraw bbox and not the scale/crop authority; explicit reference_height/anchor/window are runtime registration. New measured bbox/clearance are separately recorded in art_source/provenance.json current_derivations.boss_core_hurt."
     },
     "boss_core_death": {
       "path": "res://assets/actions/boss_core/boss_core_death.png",
@@ -564,7 +569,12 @@
         -880
       ],
       "loop": false,
-      "source": "Built-in image_gen identity-preserving candidate; original PNG bytes unmodified."
+      "source": "Current PNG pixels are a newly authored semantic SVG redraw. The original raster provenance and unchanged-registration source history are preserved in art_source/provenance.json prior_raster_manifest_record; all original action regions, margins, reference heights, base source_frame or summon/hurt/death source_pose_index with exact identity source order and already embodied x/row corrections remain unchanged; no corrections are reapplied and the original source windows do not overlap.",
+      "source_sha256": "8c2448f5dce33345ce5d6ee541191ef66f0996922ac70abc52ba9dfe57b659e1",
+      "source_svg": "res://art_source/core_v57/boss_core_death.svg",
+      "source_svg_sha256": "8d1af12dbbacae75795f5225a0377371088594680ec469c12542aefafb183b3f",
+      "generator": "Newly authored semantic SVG creature redraw; deterministic PNG export",
+      "measurement_semantics": "Existing sha256 when present and source_sha256 both mean current PNG bytes; source_svg_sha256 is current SVG bytes. All frame records are retained unchanged. alpha_bbox is a historical QA measurement, not the current redraw bbox and not the scale/crop authority; explicit reference_height/anchor/window are runtime registration. New measured bbox/clearance are separately recorded in art_source/provenance.json current_derivations.boss_core_death."
     }
   }
 }
