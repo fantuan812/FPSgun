@@ -1,3 +1,19 @@
+# MossCircuit v58 — Medical Recovery, RECOVERY-R2 package
+
+Medic Winch and Medic Seed now use the existing bidirectional missing-partner shop bias. Owning one raises its eligible counterpart's selection weight through the unchanged bonus; this is not a guaranteed offer or a stated probability. Items, combat, prices, refunds, artwork and UI remain unchanged.
+
+The current delivery is the separately exported and freshly tested **RECOVERY-R2** pack, SHA-256 `0d68d99f05f7a7ad81b088d2d35b6a9b664fafa31294f4ccf1b18e42989acd07`. The original candidate binary and raw records were not recovered. Its historical acceptance is not used as proof for these new bytes. The seven reviewed feature/test/document files remain exact; the new package passed its own focused, compact BUILD, packed-resource and independent bounded checks.
+
+- [Current package identity, recovery provenance, fresh checks and limits](docs/V58_RECOVERY_R2_PACKAGE.md)
+- [Medical acquisition behavior and original-candidate evidence](docs/V58_MEDICAL_RECOVERY_ACQUISITION.md)
+- [Restore the current complete resource pack safely](../../../Deliveries/MossCircuit/v58-medical-recovery/READ_ME_v58-medical-recovery.txt)
+
+Import with Godot 4.6.3, then run `godot --headless --audio-driver Dummy --path . --script res://tests/test_medical_shop_affinity.gd` and `python3 tools/run_build_ui_checks.py` from the project root. The compact manifest reconciles ten previously stale v57 dependency pins as well as the two medical pins, without weakening its routes or warning policy. No new full-game suite, ordinary-play, native executable, GUI, Windows, physical-audio or CI result is claimed. Published identities are recorded separately in the source-version index.
+
+---
+
+## Previous v57 source README — retained verbatim
+
 # MossCircuit v57 — editable Spore Reactor / Core
 
 Five new SVG masters provide 59 Core poses: nine walk/hover, nine base ring attack, sixteen summon, nine hurt and sixteen death. A mint orb, segmented bronze/olive ring, attached purple canisters, moss and articulated hanging roots preserve the floating reactor identity. These are redraws, not recovered original masters or pixel-identical restorations.

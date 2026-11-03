@@ -12,7 +12,7 @@ func run()->void:
  var c:Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://data/catalog.json"))
  var base:Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://data/balance.json")).player
  ck(Rules.validate_catalog(c).is_empty(),"actual B catalog valid")
- ck(c.weapons.size()==10 and c.items.size()==36 and c.mechanism_synergies.size()==17 and c.affinity_links.size()==14,"actual10/36/17/14")
+ ck(c.weapons.size()==10 and c.items.size()==36 and c.mechanism_synergies.size()==17 and c.affinity_links.size()==15,"actual10/36/17/15")
  ck(c.weapon_slots==4 and c.item_slots==8,"actual slot caps4/8")
  ck(Profiles.configuration(c).ok,"detached B registry valid")
  for data in [["crossfire_pin",28,14,"crossfire_control"],["salvage_capacitor",28,15,"salvage_field"],["medic_winch",24,16,"medical_recovery"]]:

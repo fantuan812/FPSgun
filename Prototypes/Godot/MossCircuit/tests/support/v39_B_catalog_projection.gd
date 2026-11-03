@@ -3,6 +3,16 @@ extends RefCounted
 const DECLARATION_SHA="5ab1bb1f93b8b58706c6782d5729e104d8320d5a7668518cd48a8ee38dcbb65d"
 static func project(catalog:Dictionary,raw:String)->Dictionary:
 	var failure:Dictionary={"pass":false,"errors":[],"catalog":{},"bytes":""}
+	# V58 adds one acquisition link, not a B combat or economy definition.
+	# Only strip that exact addition; the original accepted B bytes remain the oracle.
+	if catalog.get("affinity_links") is Array and catalog.affinity_links.size()==15:
+		var insertion:String=",\n    [\n      \"medic_winch\",\n      \"medic_seed\"\n    ]"
+		if catalog.affinity_links[-1]!=["medic_winch","medic_seed"] or raw.count(insertion)!=1:
+			failure.errors.append("V58 exact medical affinity addition");return failure
+		catalog=catalog.duplicate(true);catalog.affinity_links.pop_back()
+		raw=raw.replace(insertion,"")
+		if raw.sha256_text()!="12070828394102ea257f7e234690b1f51fe377b0640f72a89e121fe961c281ee" or JSON.parse_string(raw)!=catalog:
+			failure.errors.append("V58 inverse accepted B identity");return failure
 	var path:String="res://tests/fixtures/v39_B_catalog_additions.json"
 	if FileAccess.get_sha256(path)!=DECLARATION_SHA:
 		failure.errors.append("B declaration identity");return failure

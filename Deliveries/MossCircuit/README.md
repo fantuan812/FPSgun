@@ -1,3 +1,7 @@
+## v58-medical-recovery — RECOVERY-R2 package
+
+Medic Winch and Medic Seed now use the existing missing-partner shop bias; combat, prices, artwork and UI remain unchanged. This delivery is a newly exported, separately tested RECOVERY-R2 pack, not recovery of the original candidate binary. Restore the complete 5,066,064-byte PCK from two chunks using the unchanged helper, preserving your actual adjacent resource file for rollback. See [current identity, restoration and fresh validation limits](v58-medical-recovery/READ_ME_v58-medical-recovery.txt) and the [recovery-provenance note](../../Prototypes/Godot/MossCircuit/docs/V58_RECOVERY_R2_PACKAGE.md). The catalog retains all 96 preceding file records exactly. Fresh source/PCK checks do not establish native executable, Windows, ordinary-play or full-suite acceptance. Earlier notes follow unchanged as version-specific history.
+
 ## v57-core — editable Spore Reactor Core
 
 Five semantic SVG masters provide 59 Core poses at the existing runtime paths. Gameplay and registration remain unchanged. The complete resource pack is restored from two chunks with the existing helper; preserve the actual adjacent resource file for rollback. See [restoration and bounded validation](v57-core/READ_ME_v57-core.txt). The public catalog retains its 94 previous records exactly and adds only this pack and its instructions. Earlier delivery notes follow unchanged as version-specific history.

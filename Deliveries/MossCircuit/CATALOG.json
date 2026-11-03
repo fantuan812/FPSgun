@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "scope": "Preserves all 94 preceding public V56-consolidated catalog records exactly; appends two V57-core files. Intermediate unpublished local records are not inserted. Remote publication is established separately by verified commits.",
+  "scope": "Preserves all 96 preceding public v57-core catalog file records and all seven reconstructed-archive records exactly; appends only the newly exported and separately verified v58-medical-recovery RECOVERY-R2 resource pack and instructions. The original uncommitted candidate is not claimed recovered or previously published. Verified commits establish publication separately.",
   "files": [
     {
       "version": "v1",
@@ -4385,6 +4385,48 @@
         "git_blob_sha": "6be71d1f0d992068e894927eefd121866734ac9a"
       },
       "delivery_identity_basis": "Authored resource restoration and asset-editing instructions; no operational execution artifacts."
+    },
+    {
+      "version": "v58-medical-recovery",
+      "name": "MossCircuit.pck",
+      "size": 5066064,
+      "sha256": "0d68d99f05f7a7ad81b088d2d35b6a9b664fafa31294f4ccf1b18e42989acd07",
+      "original_git_blob_sha": "1b7680e08e1e1b94b1e878344b61796ce4170e8f",
+      "delivery_kind": "github_native_runtime_resource_pack",
+      "storage": {
+        "kind": "chunks",
+        "chunks": [
+          {
+            "path": "Deliveries/MossCircuit/v58-medical-recovery/chunks/MossCircuit.pck/chunk-001.bin",
+            "offset": 0,
+            "size": 3000000,
+            "sha256": "65f20c6ebadc1d73a453b3f58487b6358d578ceac719440552ac99d97c44144a",
+            "git_blob_sha": "4f5eff272c188bfc2873ede5f7f5ec5deef55e4a"
+          },
+          {
+            "path": "Deliveries/MossCircuit/v58-medical-recovery/chunks/MossCircuit.pck/chunk-002.bin",
+            "offset": 3000000,
+            "size": 2066064,
+            "sha256": "7dfe7bfe351e615abebafc41b31ece5f5a6e3fb57ac3f39e32b786a2b9e3e11b",
+            "git_blob_sha": "480c32f3e4d92feabaa016613f1d451b16afd9c6"
+          }
+        ]
+      },
+      "delivery_identity_basis": "Newly exported RECOVERY-R2 complete resource pack from the unchanged reviewed seven-file Medical Recovery overlay, separately verified on these exact bytes. Not a byte-for-byte recovery of the unavailable original candidate. Existing code, economics, combat, artwork and UI remain unchanged; native executable and Windows acceptance are not established."
+    },
+    {
+      "version": "v58-medical-recovery",
+      "name": "READ_ME_v58-medical-recovery.txt",
+      "size": 5586,
+      "sha256": "2e032536fea0b5164d0192cd10ac342cafb56905e815158c3dd9a1d662818650",
+      "original_git_blob_sha": "1bdccbd7395001a7d4f35158eb07652502fa0aca",
+      "delivery_kind": "github_native_runtime_instructions",
+      "storage": {
+        "kind": "direct",
+        "path": "Deliveries/MossCircuit/v58-medical-recovery/READ_ME_v58-medical-recovery.txt",
+        "git_blob_sha": "1bdccbd7395001a7d4f35158eb07652502fa0aca"
+      },
+      "delivery_identity_basis": "Authored restoration instructions, distinct RECOVERY-R2 package provenance, fresh bounded validation and limits; no operational execution artifacts."
     }
   ],
   "reassembled_archives": [
@@ -4474,12 +4516,12 @@
     }
   ],
   "storage_counts": {
-    "direct": 36,
+    "direct": 37,
     "existing": 9,
-    "chunks": 51
+    "chunks": 52
   },
-  "original_bytes": 1248073719,
-  "reassembly_note": "Historical ZIPs remain reconstructable from their original delivered parts. v26-v44-muzzle plus v56-consolidated PCK files restore directly from their storage chunks; they are not ZIPs and require no second merge.",
+  "original_bytes": 1253145369,
+  "reassembly_note": "Historical ZIPs remain reconstructable from their original delivered parts. Complete PCK records, including v57-core and v58-medical-recovery RECOVERY-R2, restore directly from their ordered storage chunks; they are not ZIPs and require no second merge.",
   "publication_status": {
     "v32": "locally accepted, not claimed published",
     "v33": "locally verified R2 source/pack; R1 ordinary and R2 controlled proof distinct; delivery helper evidence separate; not published",
@@ -4497,6 +4539,7 @@
     "v43-build-expansion": "Eight newly drawn editable build-expansion inventory icons replace one atlas without gameplay or UI changes. Authored notes describe finite verification limits; no new full-suite, unrestricted ordinary-play, Windows execution or CI result is claimed.",
     "v44-muzzle": "New editable nine-frame muzzle-flash artwork replaces the earlier raster at the same runtime path without gameplay, timing or UI changes. Authored notes describe finite verification limits; no new full-suite, unrestricted ordinary-play, Windows execution or CI result is claimed.",
     "v56-consolidated": "CONSOLIDATED PUBLICATION CANDIDATE, not yet a published result. Current accepted V56 source/resource content includes locally accepted V45-through-V56 work; earlier public catalog entries remain exact and unpublished intermediate delivery entries are omitted. Existing finite source/native/art acceptance is retained without replay. A separate actual public-V44-to-current delivery test is required; no Windows/executable launch, CI or all-history publication claim.",
-    "v57-core": "Five editable Core SVG masters and 59 poses, exact accepted resource pack, and bounded source/packed/native and local restoration evidence. Original failed attempts remain documented. This metadata composition does not establish a remote commit; verified source-version index records publication separately. No new gameplay tests, Windows launch or CI claim."
+    "v57-core": "Five editable Core SVG masters and 59 poses, exact accepted resource pack, and bounded source/packed/native and local restoration evidence. Original failed attempts remain documented. This metadata composition does not establish a remote commit; verified source-version index records publication separately. No new gameplay tests, Windows launch or CI claim.",
+    "v58-medical-recovery": "New RECOVERY-R2 package with its own identity and fresh focused, compact14, packed-resource and independent review evidence. Original candidate binary and raw execution records were not recovered; earlier checks remain historical and are not relabeled as new results. The seven feature-overlay files remain exact. No new full-suite, native executable, GUI, Windows, physical-audio, ordinary-play or CI claim. Verified source-version index records publication separately."
   }
 }
